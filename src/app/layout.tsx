@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Health Wise | Independent Weight Loss Treatments UK",
+  title:
+    "Health Wise | Compare WeightLoss Treatments UK| Independent Weight Loss Treatments UK",
   description:
     "Independent UK comparison site for GLP-1 treatment prices, maintenance policies, pharmacy safety, and support options.",
 };
