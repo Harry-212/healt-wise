@@ -1,8 +1,70 @@
 @import "tailwindcss";
 
+/* Force tailwind to use explicit dark class */
+@variant dark (&:is(.dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light mode tokens: Deep purple and dark green */
+  --background: #fdfafc;
+  --foreground: #2d1b4e;
+  
+  --color-slate-50: #f5f0fa;
+  --color-slate-100: #ebdff4;
+  --color-slate-200: #dbc1ed;
+  --color-slate-300: #c59ee3;
+  --color-slate-400: #aa77d5;
+  --color-slate-500: #9051c5;
+  --color-slate-600: #773ba5;
+  --color-slate-700: #623087;
+  --color-slate-800: #52296e;
+  --color-slate-900: #2d1b4e; /* Deep thick purple */
+  --color-slate-950: #1d0f36;
+  
+  --color-emerald-50: rgba(107, 33, 168, 0.05); /* thin opacity purple */
+  --color-emerald-100: rgba(107, 33, 168, 0.1); 
+  --color-emerald-200: rgba(107, 33, 168, 0.2);
+  --color-emerald-300: #064e3b; /* dark green detail */
+  --color-emerald-400: #064e3b; /* dark green */
+  --color-emerald-500: #6b21a8; /* secondary action purple */
+  --color-emerald-600: #581c87; /* thick primary purple */
+  --color-emerald-700: #4c1d95;
+  --color-emerald-800: #0f172a;
+  --color-emerald-900: #064e3b; /* dark green detail */
+  --color-emerald-950: #022c22; /* very dark green */
+  
+  --color-card-bg: #ffffff;
+}
+
+:root[class~="dark"] {
+  /* Dark mode tokens: Deep green and purple accent */
+  --background: #020a05;
+  --foreground: #eefdf5;
+  
+  --color-slate-50: #031c11;
+  --color-slate-100: #042f1c;
+  --color-slate-200: #054e30;
+  --color-slate-300: #08754a;
+  --color-slate-400: #0ca166;
+  --color-slate-500: #10b981;
+  --color-slate-600: #34d399;
+  --color-slate-700: #6ee7b7;
+  --color-slate-800: #a7f3d0;
+  --color-slate-900: #ecfdf5; /* Off-white green for text */
+  --color-slate-950: #f0fdf4;
+  
+  --color-emerald-50: rgba(16, 185, 129, 0.05);
+  --color-emerald-100: rgba(16, 185, 129, 0.1);
+  --color-emerald-200: rgba(16, 185, 129, 0.2);
+  --color-emerald-300: #d8b4fe; /* purple detail */
+  --color-emerald-400: #c084fc; /* purple detail */
+  --color-emerald-500: #059669; 
+  --color-emerald-600: #047857; /* thick primary green */
+  --color-emerald-700: #065f46;
+  --color-emerald-800: #1e1b4b; /* deep purple background accent */
+  --color-emerald-900: #3b0764; /* purple detail */
+  --color-emerald-950: #581c87;
+  
+  --color-card-bg: #041f10;
 }
 
 @theme inline {
@@ -10,17 +72,37 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+  
+  --color-slate-50: var(--color-slate-50);
+  --color-slate-100: var(--color-slate-100);
+  --color-slate-200: var(--color-slate-200);
+  --color-slate-300: var(--color-slate-300);
+  --color-slate-400: var(--color-slate-400);
+  --color-slate-500: var(--color-slate-500);
+  --color-slate-600: var(--color-slate-600);
+  --color-slate-700: var(--color-slate-700);
+  --color-slate-800: var(--color-slate-800);
+  --color-slate-900: var(--color-slate-900);
+  --color-slate-950: var(--color-slate-950);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-emerald-50: var(--color-emerald-50);
+  --color-emerald-100: var(--color-emerald-100);
+  --color-emerald-200: var(--color-emerald-200);
+  --color-emerald-300: var(--color-emerald-300);
+  --color-emerald-400: var(--color-emerald-400);
+  --color-emerald-500: var(--color-emerald-500);
+  --color-emerald-600: var(--color-emerald-600);
+  --color-emerald-700: var(--color-emerald-700);
+  --color-emerald-800: var(--color-emerald-800);
+  --color-emerald-900: var(--color-emerald-900);
+  --color-emerald-950: var(--color-emerald-950);
+  
+  --color-card: var(--color-card-bg);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
