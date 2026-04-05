@@ -4,16 +4,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/weight-loss-treatment-price-comparison-uk',
+        source: "/weight-loss-treatment-price-comparison-uk",
+        destination: "/",
         permanent: true,
       },
       {
-        source: '/compare-weight-loss-treatments-uk',
-        destination: '/weight-loss-treatment-price-comparison-uk',
+        source: "/compare-weight-loss-treatments-uk",
+        destination: "/",
         permanent: true,
       },
-    ]
+    ];
   },
 };
 

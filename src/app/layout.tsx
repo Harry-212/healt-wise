@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/layout/NavBar";
+import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Footer from "@/components/layout/Footer";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,10 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Health Wise | Compare WeightLoss Treatments UK| Independent Weight Loss Treatments UK",
+  title: {
+    default: "Health Wise | Weight Loss Treatment Price Comparison UK (2026)",
+    template: "%s | Health Wise",
+  },
   description:
-    "Independent UK comparison site for GLP-1 treatment prices, maintenance policies, pharmacy safety, and support options.",
+    "Independent UK comparison for GLP-1 prices, safety, and support. Compare providers and monthly costs. Updated 2026.",
 };
 
 export default function RootLayout({
@@ -30,27 +32,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full max-w-full overflow-x-clip antialiased`}
       suppressHydrationWarning
     >
       <head>
-        <link
-          rel="icon"
-          href="/favicon_light.jpeg"
-          media="(prefers-color-scheme: light)"
-        />
-        <link
-          rel="icon"
-          href="/favincon_20dark.jpeg"
-          media="(prefers-color-scheme: dark)"
-        />
+        <link rel="icon" href="/favicon_light.jpeg" />
       </head>
-      <body className="min-h-full flex flex-col font-sans bg-slate-50 text-slate-900 dark:bg-[#020a05] dark:text-slate-100 transition-colors">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <NavBar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </ThemeProvider>
+      <body className="flex min-h-full max-w-full flex-col overflow-x-clip bg-background font-sans text-foreground antialiased">
+        <NavBar />
+        <AnnouncementBar />
+        <main className="min-w-0 flex-1 overflow-x-clip">{children}</main>
+        <Footer />
       </body>
     </html>
   );

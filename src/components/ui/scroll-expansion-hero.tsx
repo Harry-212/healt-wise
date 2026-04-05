@@ -40,6 +40,8 @@ export interface ScrollExpandMediaProps {
   title?: string;
   /** true: first word | remainder. false: smart split (e.g. at “Wegovy”). */
   splitTitle?: boolean;
+  /** Short line under the main headlines (visible to users and crawlers). */
+  tagline?: string;
   trustStatement?: string;
   ctas?: HeroCta[];
   date?: string;
@@ -55,6 +57,7 @@ const ScrollExpandMedia = ({
   bgImageSrc,
   title,
   splitTitle = true,
+  tagline,
   trustStatement,
   ctas,
   date,
@@ -338,7 +341,7 @@ const ScrollExpandMedia = ({
                 <div className="relative z-10 mt-4 flex flex-col items-center text-center transition-none">
                   {date && (
                     <p
-                      className="text-xl font-medium text-violet-100 md:text-2xl"
+                      className="text-xl font-medium text-white drop-shadow-md md:text-2xl"
                       style={{
                         transform: `translateX(-${textTranslateX}vw)`,
                       }}
@@ -348,7 +351,7 @@ const ScrollExpandMedia = ({
                   )}
                   {scrollToExpand && (
                     <p
-                      className="text-center text-sm font-medium text-violet-100/95 md:text-base"
+                      className="text-center text-sm font-medium text-white/95 drop-shadow md:text-base"
                       style={{
                         transform: `translateX(${textTranslateX}vw)`,
                       }}
@@ -367,7 +370,7 @@ const ScrollExpandMedia = ({
                 ) : null}
                 {headlineLeft ? (
                   <motion.h2
-                    className="text-4xl font-bold tracking-tight text-violet-100 transition-none sm:text-5xl md:text-6xl lg:text-7xl"
+                    className="text-4xl font-bold tracking-tight text-white drop-shadow-md transition-none sm:text-5xl md:text-6xl lg:text-7xl"
                     style={{
                       transform: `translateX(-${textTranslateX}vw)`,
                     }}
@@ -377,13 +380,19 @@ const ScrollExpandMedia = ({
                 ) : null}
                 {headlineRight ? (
                   <motion.h2
-                    className="text-center text-4xl font-bold tracking-tight text-violet-100 transition-none sm:text-5xl md:text-6xl lg:text-7xl"
+                    className="text-center text-4xl font-bold tracking-tight text-white drop-shadow-md transition-none sm:text-5xl md:text-6xl lg:text-7xl"
                     style={{
                       transform: `translateX(${textTranslateX}vw)`,
                     }}
                   >
                     {headlineRight}
                   </motion.h2>
+                ) : null}
+
+                {tagline ? (
+                  <p className="mt-3 max-w-2xl text-balance text-base font-medium text-white/95 drop-shadow md:text-lg">
+                    {tagline}
+                  </p>
                 ) : null}
 
                 {trustStatement ? (
@@ -400,7 +409,7 @@ const ScrollExpandMedia = ({
                       <Link
                         key={cta.href + cta.label}
                         href={cta.href}
-                        className="inline-flex min-w-[220px] justify-center rounded-xl bg-emerald-600 px-7 py-4 text-center text-base font-semibold text-white shadow-lg shadow-emerald-900/30 ring-1 ring-emerald-400/50 transition-all duration-300 hover:bg-violet-700 hover:shadow-violet-900/35 hover:ring-violet-400/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                        className="inline-flex min-w-[220px] justify-center rounded-xl bg-brand-cta px-7 py-4 text-center text-base font-semibold text-slate-900 shadow-lg ring-1 ring-amber-400/60 transition-all duration-300 hover:brightness-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                       >
                         {cta.label}
                       </Link>

@@ -1,0 +1,86 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { buildSeoMetadata } from "@/lib/seo/metadata";
+import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
+import { internalLinksFor } from "@/lib/internal-linking";
+import InternalLinks from "@/components/content/InternalLinks";
+import ComparisonTable from "@/components/comparison/ComparisonTable";
+import { HOME_PREVIEW_PROVIDERS } from "@/lib/data/home-preview-providers";
+import TrustSignals from "@/components/trust/TrustSignals";
+
+type Props = { params: Promise<{ slug: string }> };
+
+export function generateStaticParams() {
+  return Object.keys(PRICE_SLUGS).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const cfg = PRICE_SLUGS[slug];
+  if (!cfg) return {};
+  return buildSeoMetadata(cfg.keyword);
+}
+
+export default async function PricePage({ params }: Props) {
+  const { slug } = await params;
+  const cfg = PRICE_SLUGS[slug];
+  if (!cfg) notFound();
+
+  return (
+    <article className="mx-auto max-w-4xl px-4 py-12 md:px-6">
+      <p className="text-sm font-medium text-brand-primary">
+        Prices
+      </p>
+      <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+        {cfg.keyword}
+      </h1>
+      <p className="mt-4 text-slate-600">
+        Compare {cfg.keyword.toLowerCase()} figures in the UK. Figures are
+        illustrative snapshots—always confirm with the pharmacy before you pay.
+      </p>
+
+      <TrustSignals className="mt-8" />
+
+      <section className="mt-10 space-y-3">
+        <h2 className="text-xl font-semibold text-slate-900">
+          Price overview
+        </h2>
+        <p className="text-slate-600">
+          Starting-pack and maintenance pricing diverge by dose and provider.
+          Use{" "}
+          <Link href="/methodology" className="text-brand-primary underline">
+            our methodology
+          </Link>{" "}
+          to understand what we include in each line.
+        </p>
+      </section>
+
+      <section className="mt-10 space-y-3">
+        <h2 className="text-xl font-semibold text-slate-900">
+          Price by dosage &amp; monthly cost
+        </h2>
+        <p className="text-slate-600">
+          Monthly estimates depend on titration schedules. When we show a
+          monthly column, it is an illustrative 4-week equivalent unless
+          otherwise stated on the provider page.
+        </p>
+      </section>
+
+      <section className="mt-10 space-y-4">
+        <h2 className="text-xl font-semibold text-slate-900">
+          Cheapest providers &amp; comparison table
+        </h2>
+        <p className="text-sm text-slate-600">
+          Filter by medication and sort by price to shortlist options, then
+          verify GPhC registration and prescribing routes.
+        </p>
+        <ComparisonTable providers={HOME_PREVIEW_PROVIDERS} />
+      </section>
+
+      <div className="mt-12">
+        <InternalLinks links={internalLinksFor(cfg.internal)} />
+      </div>
+    </article>
+  );
+}

@@ -1,70 +1,78 @@
 @import "tailwindcss";
 
-/* Force tailwind to use explicit dark class */
+/* Optional .dark parent — palette stays neutral (no purple) */
 @variant dark (&:is(.dark *));
 
 :root {
-  /* Light mode tokens: Deep purple and dark green */
-  --background: #fdfafc;
-  --foreground: #2d1b4e;
-  
-  --color-slate-50: #f5f0fa;
-  --color-slate-100: #ebdff4;
-  --color-slate-200: #dbc1ed;
-  --color-slate-300: #c59ee3;
-  --color-slate-400: #aa77d5;
-  --color-slate-500: #9051c5;
-  --color-slate-600: #773ba5;
-  --color-slate-700: #623087;
-  --color-slate-800: #52296e;
-  --color-slate-900: #2d1b4e; /* Deep thick purple */
-  --color-slate-950: #1d0f36;
-  
-  --color-emerald-50: rgba(107, 33, 168, 0.05); /* thin opacity purple */
-  --color-emerald-100: rgba(107, 33, 168, 0.1); 
-  --color-emerald-200: rgba(107, 33, 168, 0.2);
-  --color-emerald-300: #064e3b; /* dark green detail */
-  --color-emerald-400: #064e3b; /* dark green */
-  --color-emerald-500: #6b21a8; /* secondary action purple */
-  --color-emerald-600: #581c87; /* thick primary purple */
-  --color-emerald-700: #4c1d95;
-  --color-emerald-800: #0f172a;
-  --color-emerald-900: #064e3b; /* dark green detail */
-  --color-emerald-950: #022c22; /* very dark green */
-  
+  --background: #f5f7fa;
+  --foreground: #1f2937;
+
+  /* Neutral slate scale — no purple tint */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1f2937;
+  --color-slate-900: #111827;
+  --color-slate-950: #020617;
+
+  /* Emerald = success / links (real green, not remapped purple) */
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+  --color-emerald-950: #022c22;
+
   --color-card-bg: #ffffff;
+
+  --brand-primary: #1f2937;
+  --brand-secondary: #4b5563;
+  --brand-surface: #f5f7fa;
+  --brand-card: #ffffff;
+  --brand-cta: #f59e0b;
+  --brand-success: #10b981;
+  --brand-danger: #ef4444;
+  --brand-border: #e5e7eb;
 }
 
 :root[class~="dark"] {
-  /* Dark mode tokens: Deep green and purple accent */
-  --background: #020a05;
-  --foreground: #eefdf5;
-  
-  --color-slate-50: #031c11;
-  --color-slate-100: #042f1c;
-  --color-slate-200: #054e30;
-  --color-slate-300: #08754a;
-  --color-slate-400: #0ca166;
-  --color-slate-500: #10b981;
-  --color-slate-600: #34d399;
-  --color-slate-700: #6ee7b7;
-  --color-slate-800: #a7f3d0;
-  --color-slate-900: #ecfdf5; /* Off-white green for text */
-  --color-slate-950: #f0fdf4;
-  
-  --color-emerald-50: rgba(16, 185, 129, 0.05);
-  --color-emerald-100: rgba(16, 185, 129, 0.1);
-  --color-emerald-200: rgba(16, 185, 129, 0.2);
-  --color-emerald-300: #d8b4fe; /* purple detail */
-  --color-emerald-400: #c084fc; /* purple detail */
-  --color-emerald-500: #059669; 
-  --color-emerald-600: #047857; /* thick primary green */
-  --color-emerald-700: #065f46;
-  --color-emerald-800: #1e1b4b; /* deep purple background accent */
-  --color-emerald-900: #3b0764; /* purple detail */
-  --color-emerald-950: #581c87;
-  
-  --color-card-bg: #041f10;
+  --background: #111827;
+  --foreground: #f9fafb;
+  --brand-surface: #1f2937;
+  --brand-border: #374151;
+  --color-card-bg: #1f2937;
+  --color-slate-50: #1f2937;
+  --color-slate-100: #374151;
+  --color-slate-200: #4b5563;
+  --color-slate-300: #6b7280;
+  --color-slate-400: #9ca3af;
+  --color-slate-500: #d1d5db;
+  --color-slate-600: #e5e7eb;
+  --color-slate-700: #f3f4f6;
+  --color-slate-800: #f9fafb;
+  --color-slate-900: #ffffff;
+  --color-slate-950: #ffffff;
+  --color-emerald-50: rgba(16, 185, 129, 0.1);
+  --color-emerald-100: rgba(16, 185, 129, 0.15);
+  --color-emerald-200: rgba(16, 185, 129, 0.25);
+  --color-emerald-300: #34d399;
+  --color-emerald-400: #6ee7b7;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #34d399;
+  --color-emerald-700: #6ee7b7;
+  --color-emerald-800: #a7f3d0;
+  --color-emerald-900: #d1fae5;
+  --color-emerald-950: #ecfdf5;
 }
 
 @theme inline {
@@ -72,7 +80,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  
+
   --color-slate-50: var(--color-slate-50);
   --color-slate-100: var(--color-slate-100);
   --color-slate-200: var(--color-slate-200);
@@ -96,13 +104,58 @@
   --color-emerald-800: var(--color-emerald-800);
   --color-emerald-900: var(--color-emerald-900);
   --color-emerald-950: var(--color-emerald-950);
-  
+
   --color-card: var(--color-card-bg);
+
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-card: var(--brand-card);
+  --color-brand-cta: var(--brand-cta);
+  --color-brand-success: var(--brand-success);
+  --color-brand-danger: var(--brand-danger);
+  --color-brand-border: var(--brand-border);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee-fast: marquee 120s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+html {
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+/* Announcement strip: explicit animation so speed always applies (not theme-var dependent) */
+@keyframes hw-announce-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.hw-announce-marquee-track {
+  animation: hw-announce-marquee 120s linear infinite;
+}
+
+.hw-announce-marquee-track:hover {
+  animation-play-state: paused;
 }

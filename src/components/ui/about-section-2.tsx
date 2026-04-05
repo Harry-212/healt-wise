@@ -44,14 +44,14 @@ const textVariants = {
   },
 };
 
-/** Bold green — same font size as surrounding text (inherited from h2) */
-const hlGreen = "font-bold text-emerald-800 dark:text-emerald-400";
+/** Success / emphasis — brand green */
+const hlGreen = "font-bold text-emerald-700";
 
-/** Bold purple — same font size as surrounding text (inherited from h2) */
-const hlViolet = "font-bold text-violet-700 dark:text-violet-400";
+/** Secondary emphasis — primary text */
+const hlAccent = "font-bold text-brand-primary";
 
 const ctaClass =
-  "inline-flex h-12 cursor-pointer items-center gap-2 rounded-full bg-emerald-800 px-5 text-sm font-medium text-white shadow-lg shadow-emerald-900/30 transition-all duration-300 hover:bg-violet-800 hover:shadow-violet-900/35 dark:bg-violet-800 dark:shadow-violet-950/40 dark:hover:bg-emerald-800 dark:hover:shadow-emerald-950/30";
+  "inline-flex h-12 cursor-pointer items-center gap-2 rounded-full bg-brand-cta px-5 text-sm font-semibold text-slate-900 shadow-md transition-all duration-300 hover:brightness-95 active:brightness-90";
 
 export default function AboutSection2() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -59,7 +59,7 @@ export default function AboutSection2() {
   return (
     <section
       id="about"
-      className="w-full scroll-mt-24 border-b border-violet-200/50 bg-gradient-to-b from-violet-100/90 via-violet-50/95 to-purple-50/80 py-10 md:py-14 dark:border-violet-900/40 dark:from-violet-950/50 dark:via-violet-950/35 dark:to-purple-950/40"
+      className="w-full scroll-mt-24 border-b border-slate-200/80 bg-gradient-to-b from-slate-100/95 via-brand-surface to-emerald-50/40 py-10 md:py-14"
       aria-labelledby="about-heading"
     >
       <TimelineSection className="w-full px-4 md:px-8 lg:px-10">
@@ -74,7 +74,7 @@ export default function AboutSection2() {
               timelineRef={heroRef}
               customVariants={revealVariants}
               id="about-heading"
-              className="mb-6 text-2xl leading-[110%] font-semibold text-black sm:text-4xl md:text-5xl dark:text-zinc-100"
+              className="mb-6 text-2xl leading-[110%] font-semibold text-brand-primary sm:text-4xl md:text-5xl"
             >
               Health Wise is an{" "}
               <TimelineContent
@@ -93,7 +93,7 @@ export default function AboutSection2() {
                 animationNum={2}
                 timelineRef={heroRef}
                 customVariants={textVariants}
-                className={hlViolet}
+                className={hlAccent}
               >
                 weight-loss treatments
               </TimelineContent>{" "}
@@ -109,10 +109,10 @@ export default function AboutSection2() {
                 customVariants={textVariants}
                 className="mb-0 text-xs sm:text-xl"
               >
-                <div className="mb-1 font-medium capitalize text-black dark:text-zinc-100">
+                <div className="mb-1 font-medium capitalize text-brand-primary">
                   Health Wise — we compare, we don&apos;t prescribe
                 </div>
-                <div className="font-semibold tracking-wide text-emerald-800 uppercase dark:text-emerald-400">
+                <div className="font-semibold tracking-wide text-emerald-700 uppercase">
                   Weight loss in the UK
                 </div>
               </TimelineContent>
@@ -125,10 +125,10 @@ export default function AboutSection2() {
                 className="shrink-0"
               >
                 <Link
-                  href="/compare-weight-loss-treatments-uk"
+                  href="/"
                   className={ctaClass}
                 >
-                  <Zap className="h-4 w-4 shrink-0 fill-white" aria-hidden />
+                  <Zap className="h-4 w-4 shrink-0 fill-slate-900" aria-hidden />
                   Compare weight-loss treatments
                 </Link>
               </TimelineContent>
