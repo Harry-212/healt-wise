@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const TEXT = "Compare Weight Loss UK";
+const TEXT = "Compare Weight Loss Treatment UK";
 const CTA = "Find the Best Price Today";
 const HREF = "/compare/wegovy-vs-mounjaro";
 

@@ -13,7 +13,7 @@ export default function HeroNumanStyle() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[22%_top] sm:object-[center_top] md:object-[center_15%]"
+          className="object-cover object-[center_30%] sm:object-[center_top] md:object-[center_15%]"
         />
         {/* Hapus background hitam/putih overlay sama sekali */}
       </div>

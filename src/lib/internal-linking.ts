@@ -86,6 +86,20 @@ const MAP = {
     price: DEFAULT_PRICE,
     tool: { href: "/tools/dosage-calculator", label: "Dosage calculator" },
   },
+  whatIsWegovy: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      {
+        href: "/compare/best-weight-loss-injections-uk",
+        label: "Best weight loss injections UK",
+      },
+    ],
+    price: DEFAULT_PRICE,
+    tool: {
+      href: "/tools/weight-loss-tracker",
+      label: "Weight loss tracker (My Hub)",
+    },
+  },
 } as const satisfies Record<string, Partial<InternalLinkSet>>;
 
 export type InternalTopic = keyof typeof MAP;
