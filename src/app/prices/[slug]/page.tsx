@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import CheapestOptionsUkPage from "@/components/prices/CheapestOptionsUkPage";
+import {
+  cheapestOptionsUkJsonLd,
+  cheapestOptionsUkMetadata,
+} from "@/lib/seo/cheapest-options-page-seo";
 import { buildSeoMetadata } from "@/lib/seo/metadata";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import { internalLinksFor } from "@/lib/internal-linking";
@@ -8,6 +12,7 @@ import InternalLinks from "@/components/content/InternalLinks";
 import ComparisonTable from "@/components/comparison/ComparisonTable";
 import { HOME_PREVIEW_PROVIDERS } from "@/lib/data/home-preview-providers";
 import TrustSignals from "@/components/trust/TrustSignals";
+import Link from "next/link";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -19,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const cfg = PRICE_SLUGS[slug];
   if (!cfg) return {};
+  if (slug === "cheapest-options-uk") return cheapestOptionsUkMetadata();
   return buildSeoMetadata(cfg.keyword);
 }
 
@@ -27,11 +33,22 @@ export default async function PricePage({ params }: Props) {
   const cfg = PRICE_SLUGS[slug];
   if (!cfg) notFound();
 
+  if (slug === "cheapest-options-uk") {
+    const jsonLd = cheapestOptionsUkJsonLd();
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <CheapestOptionsUkPage />
+      </>
+    );
+  }
+
   return (
     <article className="mx-auto max-w-4xl px-4 py-12 md:px-6">
-      <p className="text-sm font-medium text-brand-primary">
-        Prices
-      </p>
+      <p className="text-sm font-medium text-brand-primary">Prices</p>
       <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
         {cfg.keyword}
       </h1>
@@ -43,12 +60,9 @@ export default async function PricePage({ params }: Props) {
       <TrustSignals className="mt-8" />
 
       <section className="mt-10 space-y-3">
-        <h2 className="text-xl font-semibold text-slate-900">
-          Price overview
-        </h2>
+        <h2 className="text-xl font-semibold text-slate-900">Price overview</h2>
         <p className="text-slate-600">
-          Starting-pack and maintenance pricing diverge by dose and provider.
-          Use{" "}
+          Starting-pack and maintenance pricing diverge by dose and provider. Use{" "}
           <Link href="/methodology" className="text-brand-primary underline">
             our methodology
           </Link>{" "}
@@ -61,9 +75,9 @@ export default async function PricePage({ params }: Props) {
           Price by dosage &amp; monthly cost
         </h2>
         <p className="text-slate-600">
-          Monthly estimates depend on titration schedules. When we show a
-          monthly column, it is an illustrative 4-week equivalent unless
-          otherwise stated on the provider page.
+          Monthly estimates depend on titration schedules. When we show a monthly
+          column, it is an illustrative 4-week equivalent unless otherwise
+          stated on the provider page.
         </p>
       </section>
 

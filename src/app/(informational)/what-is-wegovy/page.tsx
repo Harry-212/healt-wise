@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import WegovyDoseComparisonTable from "@/components/wegovy/WegovyDoseComparisonTable";
+import MedicationPriceCompareTeaser from "@/components/content/MedicationPriceCompareTeaser";
 import WegovyWeightLossChart from "@/components/wegovy/WegovyWeightLossChart";
 import WegovyBodyJourneyFlow from "@/components/wegovy/WegovyBodyJourneyFlow";
 import WegovyMonthTimeline from "@/components/wegovy/WegovyMonthTimeline";
@@ -16,7 +16,6 @@ import {
   wegovyFaqJsonLd,
   WEGOVY_FAQ_ITEMS,
 } from "@/lib/seo/wegovy-json-ld";
-import { WEGOVY_PRICE_LAST_UPDATED } from "@/lib/data/wegovy-dose-comparison";
 
 export const metadata: Metadata = {
   title:
@@ -46,35 +45,6 @@ export default function WhatIsWegovyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
       <article className="w-full">
-        <div className="w-full border-b border-slate-200 bg-white">
-          <div className="flex w-full flex-col divide-y divide-slate-200 sm:flex-row sm:divide-x sm:divide-y-0">
-            <a
-              href="#wegovy-price-uk"
-              className="inline-flex flex-1 items-center justify-center gap-2 bg-slate-900 py-4 text-center text-sm font-bold text-white transition hover:bg-slate-800 sm:min-h-14 sm:justify-center sm:px-4"
-            >
-              Compare prices by dose
-              <ArrowRight className="h-4 w-4 shrink-0" />
-            </a>
-            <Link
-              href="/compare/wegovy-vs-mounjaro"
-              className="inline-flex flex-1 items-center justify-center py-4 text-center text-sm font-bold text-slate-800 transition hover:bg-slate-50 sm:min-h-14 sm:px-4"
-            >
-              Wegovy vs Mounjaro
-            </Link>
-            <Link
-              href="/prices/wegovy-price-uk"
-              className="inline-flex flex-1 items-center justify-center py-4 text-center text-sm font-semibold text-emerald-900 transition hover:bg-emerald-50/80 sm:min-h-14 sm:px-4"
-            >
-              Full Wegovy price hub
-            </Link>
-          </div>
-          <p className="border-t border-slate-100 px-4 py-3 text-center text-xs leading-relaxed text-slate-500 mx-auto max-w-3xl">
-            Information only—not medical advice. GLP-1 medicines are
-            prescription-only; a qualified clinician must assess you. Prices
-            updated {WEGOVY_PRICE_LAST_UPDATED} (illustrative).
-          </p>
-        </div>
-
         <section
           id="what-is-wegovy"
           className="scroll-mt-28 w-full border-b border-slate-200/80 bg-background"
@@ -456,7 +426,7 @@ export default function WhatIsWegovyPage() {
               </p>
             </section>
 
-            <WegovyDoseComparisonTable id="wegovy-price-uk" />
+            <MedicationPriceCompareTeaser variant="wegovy" />
 
             <section
               id="wegovy-vs-others"
@@ -658,10 +628,10 @@ export default function WhatIsWegovyPage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/prices/wegovy-price-uk"
+                  href="/wegovy-price-comparison"
                   className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-emerald-700"
                 >
-                  Wegovy price UK hub
+                  Compare Wegovy prices UK
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link

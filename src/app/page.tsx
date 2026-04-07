@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Stethoscope } from "lucide-react";
-import DecisionCard from "@/components/ui/DecisionCard";
 import HeroNumanStyle from "@/components/ui/HeroNumanStyle";
 import AboutSection2 from "@/components/ui/about-section-2";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";

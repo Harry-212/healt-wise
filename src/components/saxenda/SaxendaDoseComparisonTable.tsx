@@ -5,14 +5,14 @@ import Link from "next/link";
 import { Star } from "lucide-react";
 import { formatGBP } from "@/lib/provider-helpers";
 import {
-  WEGOVY_DOSE_COMPARISON,
-  WEGOVY_DOSE_LABEL,
-  WEGOVY_DOSES_ORDER,
-  WEGOVY_PRICE_LAST_UPDATED,
-  pricePerMg,
-  type WegovyDoseMg,
-  type WegovyProviderRow,
-} from "@/lib/data/wegovy-dose-comparison";
+  SAXENDA_DOSE_COMPARISON,
+  SAXENDA_DOSE_LABEL,
+  SAXENDA_DOSES_ORDER,
+  SAXENDA_PRICE_LAST_UPDATED,
+  saxendaPricePerMg,
+  type SaxendaDoseMg,
+  type SaxendaProviderRow,
+} from "@/lib/data/saxenda-dose-comparison";
 
 function Stars({ rating }: { rating: number }) {
   const full = Math.round(rating);
@@ -43,8 +43,8 @@ function RowCards({
   dose,
   rows,
 }: {
-  dose: WegovyDoseMg;
-  rows: WegovyProviderRow[];
+  dose: SaxendaDoseMg;
+  rows: SaxendaProviderRow[];
 }) {
   return (
     <div className="flex flex-col gap-4 md:hidden">
@@ -74,7 +74,7 @@ function RowCards({
           <dl className="mt-4 grid grid-cols-2 gap-2 text-sm">
             <div>
               <dt className="text-slate-500">
-                Price ({WEGOVY_DOSE_LABEL[dose]})
+                Price ({SAXENDA_DOSE_LABEL[dose]})
               </dt>
               <dd className="font-semibold text-slate-900">
                 {formatGBP(row.priceGbp)}
@@ -83,7 +83,7 @@ function RowCards({
             <div>
               <dt className="text-slate-500">£/mg</dt>
               <dd className="font-medium text-slate-800">
-                {formatGBP(pricePerMg(row.priceGbp, dose))}/mg
+                {formatGBP(saxendaPricePerMg(row.priceGbp, dose))}/mg
               </dd>
             </div>
             {row.repeatPriceGbp != null ? (
@@ -136,8 +136,8 @@ function RowTable({
   dose,
   rows,
 }: {
-  dose: WegovyDoseMg;
-  rows: WegovyProviderRow[];
+  dose: SaxendaDoseMg;
+  rows: SaxendaProviderRow[];
 }) {
   return (
     <div className="hidden overflow-x-auto rounded-2xl border border-brand-border bg-white shadow-sm md:block">
@@ -146,7 +146,7 @@ function RowTable({
           <tr className="border-b border-brand-border bg-slate-50/90">
             <th className="px-4 py-3 font-semibold text-slate-800">Provider</th>
             <th className="px-4 py-3 font-semibold text-slate-800">
-              Price ({WEGOVY_DOSE_LABEL[dose]})
+              Price ({SAXENDA_DOSE_LABEL[dose]})
             </th>
             <th className="px-4 py-3 font-semibold text-slate-800">£/mg</th>
             <th className="px-4 py-3 font-semibold text-slate-800">
@@ -189,7 +189,7 @@ function RowTable({
                 {formatGBP(row.priceGbp)}
               </td>
               <td className="px-4 py-4 align-top text-slate-700">
-                {formatGBP(pricePerMg(row.priceGbp, dose))}/mg
+                {formatGBP(saxendaPricePerMg(row.priceGbp, dose))}/mg
               </td>
               <td className="px-4 py-4 align-top text-slate-700">
                 {row.repeatPriceGbp != null
@@ -234,31 +234,30 @@ function RowTable({
   );
 }
 
-export default function WegovyDoseComparisonTable({
-  id = "wegovy-price-uk",
+export default function SaxendaDoseComparisonTable({
+  id = "saxenda-price-uk",
 }: {
   id?: string;
 }) {
-  const [dose, setDose] = useState<WegovyDoseMg>("0.25");
+  const [dose, setDose] = useState<SaxendaDoseMg>("0.6");
 
-  const rows = useMemo(() => WEGOVY_DOSE_COMPARISON[dose], [dose]);
+  const rows = useMemo(() => SAXENDA_DOSE_COMPARISON[dose], [dose]);
 
   return (
     <section id={id} className="scroll-mt-24">
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-            Wegovy price UK by dose
+            Saxenda price UK by dose
           </h2>
           <p className="mt-1 text-sm text-slate-600">
-            Illustrative snapshots — last updated {WEGOVY_PRICE_LAST_UPDATED}.
+            Illustrative snapshots — last updated {SAXENDA_PRICE_LAST_UPDATED}.
             Confirm on the provider site before you pay.
           </p>
         </div>
         <p className="text-xs text-slate-500">
-          UK private pricing often falls roughly between{" "}
-          <strong className="text-slate-700">£169–£269</strong> per order at
-          common maintenance doses in our sample; wider market tiers exist.
+          Saxenda is a daily pen; pricing is often quoted per supply
+          period—compare total monthly cost including consultation.
         </p>
       </div>
 
@@ -267,9 +266,9 @@ export default function WegovyDoseComparisonTable({
         <div
           className="flex flex-wrap gap-2"
           role="tablist"
-          aria-label="Wegovy dose"
+          aria-label="Saxenda dose"
         >
-          {WEGOVY_DOSES_ORDER.map((d) => (
+          {SAXENDA_DOSES_ORDER.map((d) => (
             <button
               key={d}
               type="button"
@@ -278,11 +277,11 @@ export default function WegovyDoseComparisonTable({
               onClick={() => setDose(d)}
               className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
                 dose === d
-                  ? "border-emerald-600 bg-emerald-50 text-emerald-900 shadow-sm"
+                  ? "border-sky-600 bg-sky-50 text-sky-900 shadow-sm"
                   : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
               }`}
             >
-              {WEGOVY_DOSE_LABEL[d]}
+              {SAXENDA_DOSE_LABEL[d]}
             </button>
           ))}
         </div>
@@ -293,10 +292,10 @@ export default function WegovyDoseComparisonTable({
 
       <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center">
         <Link
-          href="/wegovy-price-comparison"
+          href="/saxenda-price-comparison"
           className="inline-flex items-center justify-center rounded-xl bg-slate-900 px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-slate-800"
         >
-          Compare Wegovy prices UK
+          Compare Saxenda prices UK
         </Link>
       </div>
     </section>

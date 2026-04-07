@@ -2,36 +2,35 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
-import MounjaroCompareShaderHero from "@/components/mounjaro/MounjaroCompareShaderHero";
-import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable";
+import SaxendaCompareShaderHero from "@/components/saxenda/SaxendaCompareShaderHero";
+import SaxendaUkCompareTable from "@/components/saxenda/SaxendaUkCompareTable";
 import {
-  MounjaroUkDosageCostLineChart,
-  MounjaroUkPriceRangeByDoseChart,
-} from "@/components/mounjaro/MounjaroUkCompareCharts";
+  SaxendaUkAveragePackLineChart,
+  SaxendaUkPackPriceRangeChart,
+} from "@/components/saxenda/SaxendaUkCompareCharts";
 import InternalLinks from "@/components/content/InternalLinks";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
-  estimatedMonthlyCost,
-  startingPrice,
-  MOUNJARO_UK_COMPARE_LAST_UPDATED,
-  MOUNJARO_UK_COMPARE_PROVIDERS,
-} from "@/lib/data/mounjaro-uk-compare-providers";
+  SAXENDA_UK_COMPARE_LAST_UPDATED,
+  SAXENDA_UK_COMPARE_PROVIDERS,
+  headlinePackPrice,
+} from "@/lib/data/saxenda-uk-compare-providers";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
-  MOUNJARO_COMPARE_UK_FAQ_ITEMS,
-  mounjaroCompareUkFaqJsonLd,
-} from "@/lib/seo/mounjaro-json-ld";
+  SAXENDA_COMPARE_UK_FAQ_ITEMS,
+  saxendaCompareUkFaqJsonLd,
+} from "@/lib/seo/saxenda-json-ld";
 
 export const metadata: Metadata = {
   title:
-    "Compare Mounjaro Prices UK (2026) — Cheapest & safest providers",
+    "Compare Saxenda Prices UK (2026) — Cheapest & safest providers",
   description:
-    "Compare real Mounjaro prices across UK pharmacies: pen costs by strength (2.5–15 mg), estimated monthly spend, filters, sort, and discount mode. Independent snapshot — updated 2026.",
+    "Compare illustrative Saxenda (liraglutide) pack prices across UK pharmacies: 1, 3, and 5 pens, £/mg, total and repeat pricing, delivery, trust, and discount mode. Independent snapshot — updated 2026.",
   openGraph: {
     title:
-      "Compare Mounjaro Prices UK (2026) — Cheapest & safest providers | Health Wise",
+      "Compare Saxenda Prices UK (2026) — Cheapest & safest providers | Health Wise",
     description:
-      "Interactive UK Mounjaro price table: filter by provider, price band, rating, and delivery. Illustrative charts and FAQs.",
+      "Interactive UK Saxenda table: switch 1/3/5 pens, sort and filter, GPhC and cold-chain context. Pack charts and FAQs.",
   },
 };
 
@@ -40,10 +39,10 @@ function compareWebPageJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Compare Mounjaro Prices UK (2026)",
+    name: "Compare Saxenda Prices UK (2026)",
     description:
-      "Independent comparison of illustrative Mounjaro pen prices across UK online pharmacies and clinics.",
-    url: `${base}/mounjaro-price-comparison`,
+      "Independent comparison of illustrative Saxenda multi-pack (1/3/5 pens) prices across UK online pharmacies.",
+    url: `${base}/saxenda-price-comparison`,
     dateModified: "2026-04-07",
     isPartOf: {
       "@type": "WebSite",
@@ -53,16 +52,18 @@ function compareWebPageJsonLd() {
   };
 }
 
-export default function CompareMounjaroPricesUkPage() {
-  const faqLd = mounjaroCompareUkFaqJsonLd();
+export default function CompareSaxendaPricesUkPage() {
+  const faqLd = saxendaCompareUkFaqJsonLd();
   const webLd = compareWebPageJsonLd();
 
-  const cheapest = MOUNJARO_UK_COMPARE_PROVIDERS.reduce((a, b) =>
-    startingPrice(a) <= startingPrice(b) ? a : b,
+  const cheapest = SAXENDA_UK_COMPARE_PROVIDERS.reduce((a, b) =>
+    headlinePackPrice(a, "1") <= headlinePackPrice(b, "1") ? a : b,
   );
   const bestValue =
-    MOUNJARO_UK_COMPARE_PROVIDERS.find((p) => p.badges?.includes("bestValue")) ??
-    MOUNJARO_UK_COMPARE_PROVIDERS[0];
+    SAXENDA_UK_COMPARE_PROVIDERS.find((p) => p.promoNote) ??
+    SAXENDA_UK_COMPARE_PROVIDERS.reduce((a, b) =>
+      a.rating >= b.rating ? a : b,
+    );
 
   return (
     <>
@@ -76,14 +77,14 @@ export default function CompareMounjaroPricesUkPage() {
       />
 
       <article className="w-full">
-        <MounjaroCompareShaderHero lastUpdated={MOUNJARO_UK_COMPARE_LAST_UPDATED} />
+        <SaxendaCompareShaderHero lastUpdated={SAXENDA_UK_COMPARE_LAST_UPDATED} />
 
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />
         </section>
 
         <section
-          id="mounjaro-compare-table"
+          id="saxenda-compare-table"
           className="scroll-mt-28 border-b border-slate-200/80 bg-background py-12 md:py-16"
         >
           <div className="mx-auto max-w-7xl px-4 md:px-8">
@@ -91,17 +92,19 @@ export default function CompareMounjaroPricesUkPage() {
               Advanced comparison table
             </h2>
             <p className="mt-3 max-w-3xl text-slate-600">
-              Each pen strength has its own column (2.5 mg–15 mg). Filter by name,
-              starting price band, rating, and delivery type; every column header
-              shows sort controls. Tap a provider name for its profile page. Use{" "}
+              All three pack sizes appear side by side:{" "}
+              <strong className="font-semibold text-slate-800">1 pen</strong>,{" "}
+              <strong className="font-semibold text-slate-800">3 pens</strong>, and{" "}
+              <strong className="font-semibold text-slate-800">5 pens</strong> — each
+              cell shows the pack price and £/mg. Filter by name and rating; sort
+              any column. Use{" "}
               <strong className="font-semibold text-slate-800">
                 Discount price
               </strong>{" "}
-              to preview where verified offers will appear. Row tint and
-              highlighted cells show the lowest prices in your current view.
+              for member offers when verified.
             </p>
             <div className="mt-10">
-              <MounjaroUkCompareTable providers={MOUNJARO_UK_COMPARE_PROVIDERS} />
+              <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} />
             </div>
           </div>
         </section>
@@ -110,22 +113,21 @@ export default function CompareMounjaroPricesUkPage() {
           <div className="mx-auto max-w-6xl space-y-12 px-4 md:px-8">
             <div>
               <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-                Mounjaro price UK: what you can expect
+                Saxenda price UK: what you can expect
               </h2>
               <p className="mt-4 max-w-3xl text-slate-600 leading-relaxed">
-                Mounjaro prices in the UK vary depending on the provider, dose,
-                and included services. Entry-level pricing often starts lower,
-                but monthly costs can increase as you titrate to higher strengths.
-                The charts below summarise how listed prices spread and climb by
-                pen strength across our snapshot — not a quote for your care.
+                Saxenda is priced per pack of pens; ordering more pens at once
+                often lowers £/mg, but repeat pricing and delivery still vary by
+                provider. The charts below summarise how our illustrative
+                snapshot spreads by pack size — not a quote for your care.
               </p>
             </div>
             <div className="grid gap-8 lg:grid-cols-1">
-              <MounjaroUkPriceRangeByDoseChart
-                providers={MOUNJARO_UK_COMPARE_PROVIDERS}
+              <SaxendaUkPackPriceRangeChart
+                providers={SAXENDA_UK_COMPARE_PROVIDERS}
               />
-              <MounjaroUkDosageCostLineChart
-                providers={MOUNJARO_UK_COMPARE_PROVIDERS}
+              <SaxendaUkAveragePackLineChart
+                providers={SAXENDA_UK_COMPARE_PROVIDERS}
               />
             </div>
           </div>
@@ -134,15 +136,17 @@ export default function CompareMounjaroPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-slate-50/80 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Why do Mounjaro prices vary in the UK?
+              Why do Saxenda prices vary in the UK?
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
               Prices can differ based on:
             </p>
             <ul className="mt-4 list-inside list-disc space-y-2 text-slate-700">
               <li>
-                <strong className="font-semibold text-slate-900">Dose</strong>{" "}
-                — higher strengths typically cost more per month.
+                <strong className="font-semibold text-slate-900">
+                  Pack size
+                </strong>{" "}
+                — 3- and 5-pen bundles may improve £/mg versus a single pen.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">
@@ -155,13 +159,13 @@ export default function CompareMounjaroPricesUkPage() {
                 <strong className="font-semibold text-slate-900">
                   Delivery and cold-chain logistics
                 </strong>{" "}
-                — refrigerated shipping affects headline totals.
+                — refrigerated shipping and collection options affect totals.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">
-                  Support services
+                  Membership or promotions
                 </strong>{" "}
-                — reviews, apps, or coaching may be reflected in pricing.
+                — loyalty or member pricing can change the headline checkout.
               </li>
             </ul>
           </div>
@@ -170,13 +174,13 @@ export default function CompareMounjaroPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-4xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Cheapest Mounjaro vs best value: what matters?
+              Cheapest Saxenda vs best value: what matters?
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              The lowest price is not always the best option. Some providers
-              include consultations, support, or faster delivery, which may
-              offer better overall value once you factor in time, convenience,
-              and clinical follow-up.
+              The lowest single-pen price is not always the best option. Some
+              providers include consultations, support, or faster collection,
+              which may offer better overall value once you factor in time,
+              convenience, and clinical follow-up.
             </p>
             <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200/90 shadow-sm">
               <table className="w-full border-collapse text-left text-sm">
@@ -184,33 +188,33 @@ export default function CompareMounjaroPricesUkPage() {
                   <tr>
                     <th className="px-4 py-3">Lens</th>
                     <th className="px-4 py-3">Example in this snapshot</th>
-                    <th className="px-4 py-3">Starting pen (illustrative)</th>
-                    <th className="px-4 py-3">Monthly est.</th>
+                    <th className="px-4 py-3">1 pen (illustrative)</th>
+                    <th className="px-4 py-3">5 pens total</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  <tr className="bg-violet-50/50">
-                    <td className="px-4 py-3 font-semibold text-violet-900">
+                  <tr className="bg-sky-50/50">
+                    <td className="px-4 py-3 font-semibold text-sky-900">
                       Cheapest listed
                     </td>
                     <td className="px-4 py-3 text-slate-800">{cheapest.name}</td>
                     <td className="px-4 py-3 tabular-nums text-slate-900">
-                      £{startingPrice(cheapest)}
+                      £{headlinePackPrice(cheapest, "1").toFixed(2)}
                     </td>
                     <td className="px-4 py-3 tabular-nums text-slate-800">
-                      £{estimatedMonthlyCost(cheapest)}
+                      £{cheapest.packs["5"].totalCost.toFixed(2)}
                     </td>
                   </tr>
-                  <tr className="bg-violet-50/30">
-                    <td className="px-4 py-3 font-semibold text-violet-800">
+                  <tr className="bg-sky-50/30">
+                    <td className="px-4 py-3 font-semibold text-sky-800">
                       Best value pick
                     </td>
                     <td className="px-4 py-3 text-slate-800">{bestValue.name}</td>
                     <td className="px-4 py-3 tabular-nums text-slate-900">
-                      £{startingPrice(bestValue)}
+                      £{headlinePackPrice(bestValue, "1").toFixed(2)}
                     </td>
                     <td className="px-4 py-3 tabular-nums text-slate-800">
-                      £{estimatedMonthlyCost(bestValue)}
+                      £{bestValue.packs["5"].totalCost.toFixed(2)}
                     </td>
                   </tr>
                 </tbody>
@@ -227,7 +231,7 @@ export default function CompareMounjaroPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-slate-50/80 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              UK verified Mounjaro providers
+              UK verified Saxenda providers
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
               All providers in our table are presented for comparison in a UK
@@ -236,7 +240,7 @@ export default function CompareMounjaroPricesUkPage() {
                 href="https://www.pharmacyregulation.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-violet-800 underline-offset-2 hover:underline"
+                className="font-semibold text-sky-800 underline-offset-2 hover:underline"
               >
                 General Pharmaceutical Council (GPhC)
               </a>{" "}
@@ -246,7 +250,7 @@ export default function CompareMounjaroPricesUkPage() {
               For more on safety, see our{" "}
               <Link
                 href="/pharmacy-safety-gphc-verification"
-                className="font-semibold text-violet-800 underline-offset-2 hover:underline"
+                className="font-semibold text-sky-800 underline-offset-2 hover:underline"
               >
                 GPhC verification guide
               </Link>
@@ -258,12 +262,13 @@ export default function CompareMounjaroPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              How dose affects Mounjaro cost
+              Daily dosing and titration
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              As dose increases, the cost of treatment typically rises. Most
-              people begin at a lower strength and titrate over time; your
-              prescriber will individualise the schedule.
+              Saxenda is a daily injection; prescribers usually increase the dose
+              gradually. Pack purchases and repeat intervals can look different
+              from weekly GLP-1 pens — always follow the schedule your clinician
+              gives you.
             </p>
           </div>
         </section>
@@ -271,13 +276,13 @@ export default function CompareMounjaroPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-amber-50/40 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              How to find discounted Mounjaro prices
+              How to find discounted Saxenda prices
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              Some providers may offer introductory discounts, subscription
-              pricing, or bundles. We are verifying these per pharmacy — use the{" "}
+              Some providers may offer member pricing, introductory discounts, or
+              bundles. We are verifying these per pharmacy — use the{" "}
               <strong className="text-slate-900">Discount price</strong> toggle
-              above to see where promotional rows will appear once confirmed.
+              above to see where promotional cells will appear once confirmed.
             </p>
           </div>
         </section>
@@ -285,18 +290,18 @@ export default function CompareMounjaroPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              What is Mounjaro?
+              What is Saxenda?
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              Mounjaro (tirzepatide) is a dual GIP/GLP-1 injection used for weight
-              management in eligible adults alongside diet and activity changes.
-              It is not suitable for everyone and requires medical supervision.
+              Saxenda (liraglutide) is a GLP-1 injection for weight management in
+              eligible adults, taken once daily. It is not suitable for everyone
+              and requires medical supervision.
             </p>
             <Link
-              href="/what-is-mounjaro"
-              className="mt-6 inline-flex items-center gap-2 font-semibold text-violet-800 underline-offset-2 hover:underline"
+              href="/what-is-saxenda"
+              className="mt-6 inline-flex items-center gap-2 font-semibold text-sky-800 underline-offset-2 hover:underline"
             >
-              Learn more about how Mounjaro works
+              Learn more about how Saxenda works
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>
@@ -308,7 +313,7 @@ export default function CompareMounjaroPricesUkPage() {
               Frequently asked questions
             </h2>
             <div className="mt-8 space-y-3">
-              {MOUNJARO_COMPARE_UK_FAQ_ITEMS.map((item) => (
+              {SAXENDA_COMPARE_UK_FAQ_ITEMS.map((item) => (
                 <details
                   key={item.question}
                   className="group rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-sm open:shadow-md"
@@ -336,7 +341,7 @@ export default function CompareMounjaroPricesUkPage() {
             </p>
             <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <a
-                href="#mounjaro-compare-table"
+                href="#saxenda-compare-table"
                 className="inline-flex items-center justify-center rounded-2xl bg-amber-500 px-6 py-3.5 text-sm font-bold text-slate-900 shadow-lg transition hover:brightness-95"
               >
                 Compare prices now
@@ -352,7 +357,7 @@ export default function CompareMounjaroPricesUkPage() {
         </section>
 
         <div className="mx-auto max-w-4xl px-4 py-12 md:px-8">
-          <InternalLinks links={internalLinksFor("mounjaroPriceUk")} />
+          <InternalLinks links={internalLinksFor("saxendaPriceCompare")} />
         </div>
       </article>
     </>

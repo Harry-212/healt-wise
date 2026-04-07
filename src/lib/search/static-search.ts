@@ -28,6 +28,12 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
     keywords: "tirzepatide",
   },
   {
+    type: "Treatment",
+    title: "What is Saxenda?",
+    href: "/what-is-saxenda",
+    keywords: "liraglutide daily",
+  },
+  {
     type: "Compare",
     title: "Wegovy vs Mounjaro",
     href: "/compare/wegovy-vs-mounjaro",
@@ -44,23 +50,26 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
   },
   {
     type: "Price",
-    title: "Wegovy price UK",
-    href: "/prices/wegovy-price-uk",
+    title: "Compare Wegovy prices UK",
+    href: "/wegovy-price-comparison",
+    keywords: "wegovy comparison table cheapest pharmacy",
   },
   {
     type: "Price",
-    title: "Mounjaro price UK",
-    href: "/prices/mounjaro-price-uk",
+    title: "Compare Mounjaro prices UK",
+    href: "/mounjaro-price-comparison",
+    keywords: "mounjaro tirzepatide comparison table cheapest pharmacy",
+  },
+  {
+    type: "Price",
+    title: "Compare Saxenda prices UK",
+    href: "/saxenda-price-comparison",
+    keywords: "saxenda liraglutide comparison table cheapest pharmacy pens",
   },
   {
     type: "Price",
     title: "Cheapest GLP-1 options UK",
     href: "/prices/cheapest-options-uk",
-  },
-  {
-    type: "Price",
-    title: "Saxenda price UK",
-    href: "/prices/saxenda-price-uk",
   },
   {
     type: "Guide",

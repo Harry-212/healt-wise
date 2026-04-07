@@ -23,7 +23,7 @@ export const NAV_PANELS: NavPanel[] = [
         links: [
           { label: "Wegovy", href: "/what-is-wegovy", icon: "pill" },
           { label: "Mounjaro", href: "/what-is-mounjaro", icon: "syringe" },
-          { label: "Saxenda", href: "/prices/saxenda-price-uk", icon: "pill" },
+          { label: "Saxenda", href: "/what-is-saxenda", icon: "pill" },
         ],
       },
       {
@@ -49,8 +49,21 @@ export const NAV_PANELS: NavPanel[] = [
       {
         title: "Pricing",
         links: [
-          { label: "Wegovy Price UK", href: "/prices/wegovy-price-uk", icon: "pound" },
-          { label: "Mounjaro Price UK", href: "/prices/mounjaro-price-uk", icon: "pound" },
+          {
+            label: "Compare Wegovy prices UK",
+            href: "/wegovy-price-comparison",
+            icon: "pound",
+          },
+          {
+            label: "Compare Mounjaro prices UK",
+            href: "/mounjaro-price-comparison",
+            icon: "pound",
+          },
+          {
+            label: "Compare Saxenda prices UK",
+            href: "/saxenda-price-comparison",
+            icon: "pound",
+          },
           { label: "Cheapest Options UK", href: "/prices/cheapest-options-uk", icon: "pound" },
         ],
       },

@@ -9,4 +9,4 @@ description: "How starting and maintenance pricing differs across major UK provi
 
 Published figures on Health Wise are illustrative until your chosen pharmacy confirms live pricing.
 
-Use our [comparison table](/#compare-preview) and [Wegovy price UK](/prices/wegovy-price-uk) hub for the latest structure we track.
+Use our [comparison table](/#compare-preview) and [Wegovy price comparison](/wegovy-price-comparison) for the latest structure we track.
