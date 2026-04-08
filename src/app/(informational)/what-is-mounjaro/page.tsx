@@ -94,7 +94,8 @@ export default function WhatIsMounjaroPage() {
                     rel="noopener noreferrer"
                     className="font-medium underline underline-offset-2"
                   >
-                    NICE TA1026: tirzepatide (Mounjaro) for overweight and obesity
+                    NICE TA1026: tirzepatide (Mounjaro) for overweight and
+                    obesity
                   </a>
                 </li>
                 <li>
@@ -145,8 +146,8 @@ export default function WhatIsMounjaroPage() {
                 </h2>
                 <p className="text-base leading-relaxed">
                   Mounjaro contains tirzepatide, a dual GIP and GLP-1 receptor
-                  agonist. These hormones are naturally released after eating and
-                  help regulate appetite, digestion, and insulin response.
+                  agonist. These hormones are naturally released after eating
+                  and help regulate appetite, digestion, and insulin response.
                 </p>
                 <p className="text-base leading-relaxed">
                   By activating both pathways, Mounjaro helps reduce hunger,
@@ -164,7 +165,9 @@ export default function WhatIsMounjaroPage() {
                 </p>
                 <ol className="mt-4 list-inside list-decimal space-y-4 text-base leading-relaxed marker:font-semibold marker:text-violet-800">
                   <li>
-                    <strong className="text-slate-900">Appetite suppression</strong>
+                    <strong className="text-slate-900">
+                      Appetite suppression
+                    </strong>
                     <span className="mt-1 block pl-0 text-slate-700 md:pl-6">
                       Mounjaro acts on appetite centres in the brain, helping
                       reduce hunger signals and food cravings. Many users report
@@ -173,24 +176,32 @@ export default function WhatIsMounjaroPage() {
                     </span>
                   </li>
                   <li>
-                    <strong className="text-slate-900">Slower gastric emptying</strong>
+                    <strong className="text-slate-900">
+                      Slower gastric emptying
+                    </strong>
                     <span className="mt-1 block pl-0 text-slate-700 md:pl-6">
-                      It slows the rate at which food leaves the stomach, helping
-                      you feel fuller for longer after eating.
+                      It slows the rate at which food leaves the stomach,
+                      helping you feel fuller for longer after eating.
                     </span>
                   </li>
                   <li>
-                    <strong className="text-slate-900">Improved metabolic control</strong>
+                    <strong className="text-slate-900">
+                      Improved metabolic control
+                    </strong>
                     <span className="mt-1 block pl-0 text-slate-700 md:pl-6">
-                      By influencing insulin and blood sugar regulation, Mounjaro
-                      can support metabolic health, particularly in people with
-                      insulin resistance—always within a prescribed care plan.
+                      By influencing insulin and blood sugar regulation,
+                      Mounjaro can support metabolic health, particularly in
+                      people with insulin resistance—always within a prescribed
+                      care plan.
                     </span>
                   </li>
                 </ol>
               </div>
 
-              <div id="mounjaro-body-journey" className="scroll-mt-24 space-y-3">
+              <div
+                id="mounjaro-body-journey"
+                className="scroll-mt-24 space-y-3"
+              >
                 <h3 className="text-xl font-bold text-slate-900">
                   Journey of Mounjaro in the body
                 </h3>
@@ -201,7 +212,10 @@ export default function WhatIsMounjaroPage() {
                 <MounjaroDeferredBodyJourneyFlow />
               </div>
 
-              <div id="mounjaro-month-timeline" className="scroll-mt-24 space-y-4">
+              <div
+                id="mounjaro-month-timeline"
+                className="scroll-mt-24 space-y-4"
+              >
                 <h3 className="text-xl font-bold text-slate-900">
                   Mounjaro timeline: what to expect
                 </h3>
@@ -211,12 +225,16 @@ export default function WhatIsMounjaroPage() {
                 </p>
                 <p className="text-base leading-relaxed">
                   Early changes often include reduced appetite, while more
-                  noticeable weight loss develops at higher doses for many people.
+                  noticeable weight loss develops at higher doses for many
+                  people.
                 </p>
                 <MounjaroDeferredMonthTimeline />
               </div>
 
-              <div id="mounjaro-weight-progression" className="scroll-mt-24 space-y-3">
+              <div
+                id="mounjaro-weight-progression"
+                className="scroll-mt-24 space-y-3"
+              >
                 <h3 className="text-xl font-bold text-slate-900">
                   Weight loss progression over time
                 </h3>
@@ -232,9 +250,9 @@ export default function WhatIsMounjaroPage() {
                   When does Mounjaro start working?
                 </h3>
                 <p className="text-base leading-relaxed">
-                  Many users begin to notice reduced appetite within the first few
-                  weeks. However, more significant weight loss typically occurs as
-                  the dose increases.
+                  Many users begin to notice reduced appetite within the first
+                  few weeks. However, more significant weight loss typically
+                  occurs as the dose increases.
                 </p>
                 <p className="text-base leading-relaxed">
                   Higher doses are associated with stronger and more consistent
@@ -254,9 +272,9 @@ export default function WhatIsMounjaroPage() {
                   the body adapts.
                 </p>
                 <p className="text-base leading-relaxed">
-                  Follow your prescriber&apos;s titration plan; seek urgent advice
-                  for severe or persistent symptoms as described in your patient
-                  information.
+                  Follow your prescriber&apos;s titration plan; seek urgent
+                  advice for severe or persistent symptoms as described in your
+                  patient information.
                 </p>
               </div>
 
@@ -288,7 +306,8 @@ export default function WhatIsMounjaroPage() {
                       rel="noopener noreferrer"
                       className="font-medium underline underline-offset-2"
                     >
-                      NICE TA1026 — tirzepatide for managing overweight and obesity
+                      NICE TA1026 — tirzepatide for managing overweight and
+                      obesity
                     </a>
                   </li>
                   <li>
@@ -345,9 +364,9 @@ export default function WhatIsMounjaroPage() {
               <p>
                 In large randomised trials of tirzepatide for obesity (e.g.
                 SURMOUNT programme), mean weight change over extended follow-up
-                was substantially greater with active treatment than with placebo,
-                on top of lifestyle intervention. Individual results vary; not
-                everyone responds the same way.
+                was substantially greater with active treatment than with
+                placebo, on top of lifestyle intervention. Individual results
+                vary; not everyone responds the same way.
               </p>
               <MounjaroDeferredWeightLossChart />
             </section>
@@ -381,7 +400,9 @@ export default function WhatIsMounjaroPage() {
                   <tbody className="text-slate-700">
                     <tr className="border-b border-slate-100">
                       <td className="px-4 py-3">2.5 mg</td>
-                      <td className="px-4 py-3">Starting dose (often month 1)</td>
+                      <td className="px-4 py-3">
+                        Starting dose (often month 1)
+                      </td>
                     </tr>
                     <tr className="border-b border-slate-100">
                       <td className="px-4 py-3">5 mg</td>
@@ -393,11 +414,15 @@ export default function WhatIsMounjaroPage() {
                     </tr>
                     <tr className="border-b border-slate-100">
                       <td className="px-4 py-3">10 mg</td>
-                      <td className="px-4 py-3">Higher step toward maintenance</td>
+                      <td className="px-4 py-3">
+                        Higher step toward maintenance
+                      </td>
                     </tr>
                     <tr className="border-b border-slate-100">
                       <td className="px-4 py-3">12.5 mg</td>
-                      <td className="px-4 py-3">Approaching maximum for many</td>
+                      <td className="px-4 py-3">
+                        Approaching maximum for many
+                      </td>
                     </tr>
                     <tr>
                       <td className="px-4 py-3">15 mg</td>
@@ -409,8 +434,9 @@ export default function WhatIsMounjaroPage() {
                 </table>
               </div>
               <p className="text-sm text-slate-600">
-                Always follow the UK SmPC and your prescriber for the pen strength
-                you are issued; titration may be slower if side effects occur.
+                Always follow the UK SmPC and your prescriber for the pen
+                strength you are issued; titration may be slower if side effects
+                occur.
               </p>
             </section>
 
@@ -559,8 +585,7 @@ export default function WhatIsMounjaroPage() {
               </h2>
               <p>
                 Mounjaro may be prescribed for adults who meet clinical
-                criteria—for example{" "}
-                <strong>BMI of 30 or higher</strong>, or{" "}
+                criteria—for example <strong>BMI of 30 or higher</strong>, or{" "}
                 <strong>BMI of 27 or higher</strong> with weight-related
                 conditions—subject to consultation, exclusions, and SmPC rules.
                 NHS access follows national and local commissioning (see NICE
@@ -582,16 +607,17 @@ export default function WhatIsMounjaroPage() {
               </h2>
               <ul className="list-inside list-disc space-y-2">
                 <li>
-                  <strong>NHS</strong> — where NICE TA1026 and local commissioning
-                  apply; eligibility and waiting times vary.
+                  <strong>NHS</strong> — where NICE TA1026 and local
+                  commissioning apply; eligibility and waiting times vary.
                 </li>
                 <li>
                   <strong>Private online clinics &amp; pharmacies</strong> —
                   questionnaire and ID checks, then prescribing if appropriate.
                 </li>
                 <li>
-                  <strong>Private face-to-face services</strong> — some specialist
-                  obesity services offer GLP-1/GIP treatment pathways.
+                  <strong>Private face-to-face services</strong> — some
+                  specialist obesity services offer GLP-1/GIP treatment
+                  pathways.
                 </li>
               </ul>
               <div className="flex flex-wrap gap-3">
@@ -736,7 +762,8 @@ export default function WhatIsMounjaroPage() {
                     </a>
                   </li>
                   <li>
-                    NICE. Tirzepatide for managing overweight and obesity (TA1026).{" "}
+                    NICE. Tirzepatide for managing overweight and obesity
+                    (TA1026).{" "}
                     <a
                       href="https://www.nice.org.uk/guidance/ta1026"
                       target="_blank"
@@ -747,8 +774,8 @@ export default function WhatIsMounjaroPage() {
                     </a>
                   </li>
                   <li>
-                    Jastreboff AM et al. Tirzepatide once weekly for the treatment
-                    of obesity. <em>N Engl J Med</em>. 2023.
+                    Jastreboff AM et al. Tirzepatide once weekly for the
+                    treatment of obesity. <em>N Engl J Med</em>. 2023.
                   </li>
                   <li>
                     MHRA. UK medicines regulation &amp; safety updates.{" "}

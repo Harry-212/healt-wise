@@ -93,6 +93,11 @@ export const NAV_PANELS: NavPanel[] = [
         title: "Tools",
         links: [
           {
+            label: "BMI calculator UK",
+            href: "/tools/bmi-calculator",
+            icon: "scale",
+          },
+          {
             label: "Weight Loss Tracker",
             href: "/tools/weight-loss-tracker",
             icon: "activity",
@@ -120,6 +125,6 @@ export const NAV_PANELS: NavPanel[] = [
   {
     id: "my-hub",
     label: "My Hub",
-    directHref: "/my-hub",
+    directHref: "/tools/weight-loss-tracker",
   },
 ];

@@ -26,6 +26,7 @@ const STATIC_PATHS = [
   "/wegovy-maintenance-pharmacies",
   "/mounjaro-maintenance-pharmacies",
   "/tools/weight-loss-tracker",
+  "/tools/bmi-calculator",
   "/tools/progress-estimator",
   "/tools/dosage-calculator",
   "/tools/cost-calculator",

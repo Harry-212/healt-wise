@@ -1,31 +1,19 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { buildSeoMetadata } from "@/lib/seo/metadata";
-import InternalLinks from "@/components/content/InternalLinks";
-import { internalLinksFor } from "@/lib/internal-linking";
+import WeightTrackerClient from "@/components/tools/WeightTrackerClient";
+import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 
-export const metadata: Metadata = buildSeoMetadata("Weight loss tracker");
+export const metadata: Metadata = buildPageShareMetadata({
+  canonicalPath: "/tools/weight-loss-tracker",
+  title: "Weight loss tracker UK (2026) — private Wegovy & Mounjaro progress log",
+  metaDescription:
+    "Free private weight loss tracker for UK GLP-1 users. Log weight, medication, dose, and supplier over time. No account required — data stored securely in your browser. Built for Wegovy, Mounjaro, and Saxenda users.",
+  openGraphTitle: "Weight loss tracker UK — track Wegovy & Mounjaro progress privately",
+  openGraphDescription:
+    "Private, no-login weight tracker for UK adults on GLP-1 treatments. Visualise progress, compare weeks, and find the best refill prices.",
+  imagePath: "/window.svg",
+  imageAlt: "Health Wise — Weight Loss Tracker UK",
+});
 
-export default function WeightLossTrackerToolPage() {
-  return (
-    <div className="mx-auto max-w-2xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
-      <h1 className="text-balance text-2xl font-bold text-slate-900 sm:text-3xl">
-        Weight loss tracker
-      </h1>
-      <p className="mt-4 text-slate-600">
-        Log weight, dose, medication, and supplier over time in{" "}
-        <strong>My Hub</strong>. Create a free account to save entries securely
-        (Supabase-backed when configured).
-      </p>
-      <Link
-        href="/my-hub"
-        className="mt-8 inline-flex rounded-lg bg-brand-cta px-5 py-3 text-sm font-bold text-slate-900"
-      >
-        Open My Hub
-      </Link>
-      <div className="mt-12">
-        <InternalLinks links={internalLinksFor("home")} />
-      </div>
-    </div>
-  );
+export default function WeightLossTrackerPage() {
+  return <WeightTrackerClient />;
 }

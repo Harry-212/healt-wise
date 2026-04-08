@@ -29,7 +29,7 @@ const MAP = {
       },
     ],
     price: { href: "/prices/cheapest-options-uk", label: "Cheapest options UK" },
-    tool: { href: "/tools/weight-loss-tracker", label: "Weight loss tracker" },
+    tool: { href: "/tools/weight-loss-tracker", label: "Weight loss tracker (My Hub)" },
   },
   wegovyVsMounjaro: {
     compare: [
@@ -155,6 +155,23 @@ const MAP = {
     price: {
       href: "/saxenda-price-comparison",
       label: "Compare Saxenda prices UK",
+    },
+    tool: {
+      href: "/tools/cost-calculator",
+      label: "Cost calculator",
+    },
+  },
+  bmiCalculator: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      {
+        href: "/compare/best-weight-loss-injections-uk",
+        label: "Best weight loss injections UK",
+      },
+    ],
+    price: {
+      href: "/prices/cheapest-options-uk",
+      label: "Compare prices UK",
     },
     tool: {
       href: "/tools/cost-calculator",

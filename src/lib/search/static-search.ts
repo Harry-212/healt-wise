@@ -83,6 +83,11 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
   },
   {
     type: "Tool",
+    title: "BMI calculator UK",
+    href: "/tools/bmi-calculator",
+  },
+  {
+    type: "Tool",
     title: "Weight loss tracker (My Hub)",
     href: "/tools/weight-loss-tracker",
   },
