@@ -46,7 +46,7 @@ export default function Homepage() {
           id="safety"
           className="w-full scroll-mt-24 px-4 md:px-8 lg:px-10"
         >
-          <div className="flex flex-col items-center gap-8 rounded-2xl bg-slate-900 p-8 text-center text-white md:flex-row md:p-12 md:text-left">
+          <div className="flex flex-col items-center gap-6 rounded-2xl bg-slate-900 p-5 text-center text-white sm:gap-8 sm:p-8 md:flex-row md:p-12 md:text-left">
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-emerald-500/20">
               <Stethoscope className="h-8 w-8 text-emerald-400" />
             </div>
@@ -68,7 +68,7 @@ export default function Homepage() {
           id="alerts"
           className="w-full scroll-mt-24 px-4 text-center md:px-8 lg:px-10"
         >
-          <div className="rounded-2xl border border-emerald-100 bg-emerald-50/80 p-8 md:p-12">
+          <div className="rounded-2xl border border-emerald-100 bg-emerald-50/80 p-5 sm:p-8 md:p-12">
             <h2 className="mb-3 text-2xl font-bold text-emerald-950">
               Price &amp; policy alerts
             </h2>

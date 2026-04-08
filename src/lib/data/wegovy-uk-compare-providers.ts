@@ -41,7 +41,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     updatedLabel: "4 April",
     consultationIncluded: true,
     badges: ["mostPopular"],
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "care-pharmacy",
@@ -58,7 +58,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "pharmica",
@@ -75,7 +75,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "the-family-chemist",
@@ -93,7 +93,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     updatedLabel: "4 April",
     consultationIncluded: true,
     badges: ["bestValue"],
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "cuva-health",
@@ -110,7 +110,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "fylde-clinic",
@@ -127,7 +127,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "3 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "chemist4u",
@@ -144,7 +144,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "pharmulous",
@@ -161,7 +161,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "ashcroft-pharmacy",
@@ -178,7 +178,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "simply-meds-online",
@@ -195,7 +195,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "click2pharmacy",
@@ -212,7 +212,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "3 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "simple-online-pharmacy",
@@ -229,7 +229,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "tribelle",
@@ -246,7 +246,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "3 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "oushk",
@@ -263,7 +263,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "3 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "phlo-clinic",
@@ -280,7 +280,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "voy",
@@ -297,7 +297,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "farmeci",
@@ -314,7 +314,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "cloud-pharmacy",
@@ -331,7 +331,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "pharmacy2u",
@@ -348,7 +348,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "iq-doctor",
@@ -365,7 +365,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "getweightloss",
@@ -382,7 +382,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "click-pharmacy",
@@ -399,7 +399,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "asda-online-doctor",
@@ -416,7 +416,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "superdrug-online-doctor",
@@ -433,7 +433,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "boots-online-doctor",
@@ -450,7 +450,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "zava",
@@ -467,7 +467,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "lloyds-pharmacy-online-doctor",
@@ -484,7 +484,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
   {
     id: "medexpress",
@@ -501,7 +501,7 @@ export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-wegovy",
+    ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   },
 ];
 

@@ -20,19 +20,21 @@ import {
   SAXENDA_COMPARE_UK_FAQ_ITEMS,
   saxendaCompareUkFaqJsonLd,
 } from "@/lib/seo/saxenda-json-ld";
+import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageShareMetadata({
+  canonicalPath: "/saxenda-price-comparison",
   title:
     "Compare Saxenda Prices UK (2026) — Cheapest & safest providers",
-  description:
+  metaDescription:
     "Compare illustrative Saxenda (liraglutide) pack prices across UK pharmacies: 1, 3, and 5 pens, £/mg, total and repeat pricing, delivery, trust, and discount mode. Independent snapshot — updated 2026.",
-  openGraph: {
-    title:
-      "Compare Saxenda Prices UK (2026) — Cheapest & safest providers | Health Wise",
-    description:
-      "Interactive UK Saxenda table: switch 1/3/5 pens, sort and filter, GPhC and cold-chain context. Pack charts and FAQs.",
-  },
-};
+  openGraphTitle:
+    "Compare Saxenda Prices UK (2026) — Cheapest & safest providers | Health Wise",
+  openGraphDescription:
+    "Interactive UK Saxenda table: switch 1/3/5 pens, sort and filter, GPhC and cold-chain context. Pack charts and FAQs.",
+  imagePath: "/saxenda health wise.png",
+  imageAlt: "Compare Saxenda prices UK — Health Wise",
+});
 
 function compareWebPageJsonLd() {
   const base = siteOrigin();
@@ -347,7 +349,7 @@ export default function CompareSaxendaPricesUkPage() {
                 Compare prices now
               </a>
               <Link
-                href="/check-eligibility-weight-loss-treatment"
+                href="/what-is-saxenda#eligibility-uk"
                 className="inline-flex items-center justify-center rounded-2xl border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
               >
                 Start your treatment journey
@@ -356,7 +358,7 @@ export default function CompareSaxendaPricesUkPage() {
           </div>
         </section>
 
-        <div className="mx-auto max-w-4xl px-4 py-12 md:px-8">
+        <div className="mx-auto max-w-4xl px-4 pb-16 pt-8 sm:px-5 sm:py-10 md:px-8 md:py-12">
           <InternalLinks links={internalLinksFor("saxendaPriceCompare")} />
         </div>
       </article>

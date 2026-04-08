@@ -53,12 +53,6 @@ export default function WegovyCompareShaderHero({
             >
               What is Wegovy
             </Link>
-            <Link
-              href="/wegovy-price-comparison"
-              className="rounded-full px-3 py-2 text-xs font-light text-white/80 transition hover:bg-white/10 hover:text-white"
-            >
-              Compare prices
-            </Link>
             <a
               href="#wegovy-compare-table"
               className="rounded-full px-3 py-2 text-xs font-light text-white/80 transition hover:bg-white/10 hover:text-white"
@@ -72,13 +66,18 @@ export default function WegovyCompareShaderHero({
           <div className="mx-auto w-full max-w-4xl text-center lg:mx-0 lg:max-w-3xl lg:text-left">
             <GlassPill>
               <span className="inline-flex items-center gap-1.5">
-                <Sparkles className="h-3.5 w-3.5 shrink-0 text-amber-200" aria-hidden />
+                <Sparkles
+                  className="h-3.5 w-3.5 shrink-0 text-amber-200"
+                  aria-hidden
+                />
                 UK pharmacy comparison · {lastUpdated}
               </span>
             </GlassPill>
 
             <h1 className="mb-4 text-balance text-4xl leading-[1.08] font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-              <span className={`${instrumentSerif.className} text-teal-100/95 italic`}>
+              <span
+                className={`${instrumentSerif.className} text-teal-100/95 italic`}
+              >
                 Compare
               </span>{" "}
               <span className="font-bold text-white">Wegovy prices</span>
@@ -104,7 +103,7 @@ export default function WegovyCompareShaderHero({
                 Compare prices
               </a>
               <Link
-                href="/check-eligibility-weight-loss-treatment"
+                href="/what-is-wegovy#eligibility-uk"
                 className="inline-flex items-center justify-center rounded-full border border-white/35 bg-transparent px-8 py-3 text-xs font-normal text-white transition hover:border-white/55 hover:bg-white/10"
               >
                 Check eligibility
@@ -133,8 +132,9 @@ export default function WegovyCompareShaderHero({
             </div>
 
             <p className="mx-auto mt-8 max-w-xl text-center text-[11px] leading-relaxed text-white/45 lg:mx-0 lg:text-left">
-              Information only — not medical advice. Wegovy is prescription-only.
-              Prices are illustrative; confirm live rates before you pay.
+              Information only — not medical advice. Wegovy is
+              prescription-only. Prices are illustrative; confirm live rates
+              before you pay.
             </p>
 
             <div className="mt-6 flex justify-center lg:justify-start">

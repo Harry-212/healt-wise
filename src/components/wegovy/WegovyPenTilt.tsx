@@ -1,13 +1,16 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useRef } from "react";
 
 /** File: `public/wegovy healt wise.png` — use PNG with alpha; no CSS “frame”. */
 const PEN_IMAGE = "/wegovy healt wise.png";
 
+const RESET =
+  "perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)";
+
 /**
  * Transparent PNG: native &lt;img&gt; avoids Next/Image fill-box + optimizer quirks.
- * Pointer tilt (CSS perspective). No WebGL.
+ * Pointer tilt updates transform on the GPU via ref (no per-frame React re-renders).
  */
 export default function WegovyPenTilt({
   className = "",
@@ -15,27 +18,30 @@ export default function WegovyPenTilt({
   className?: string;
 }) {
   const wrapRef = useRef<HTMLDivElement>(null);
-  const [transform, setTransform] = useState(
-    "perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)",
-  );
+  const innerRef = useRef<HTMLDivElement>(null);
+  const rafRef = useRef<number | null>(null);
 
   const onMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const el = wrapRef.current;
-    if (!el) return;
-    const r = el.getBoundingClientRect();
+    const wrap = wrapRef.current;
+    const inner = innerRef.current;
+    if (!wrap || !inner) return;
+    const r = wrap.getBoundingClientRect();
     const px = (e.clientX - r.left) / r.width - 0.5;
     const py = (e.clientY - r.top) / r.height - 0.5;
     const ry = px * 18;
     const rx = -py * 14;
-    setTransform(
-      `perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg) scale3d(1.015,1.015,1.015)`,
-    );
+    const next = `perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg) scale3d(1.015,1.015,1.015)`;
+    if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+    rafRef.current = requestAnimationFrame(() => {
+      rafRef.current = null;
+      inner.style.transform = next;
+    });
   }, []);
 
   const onLeave = useCallback(() => {
-    setTransform(
-      "perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)",
-    );
+    if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
+    rafRef.current = null;
+    innerRef.current?.style.setProperty("transform", RESET);
   }, []);
 
   return (
@@ -47,8 +53,9 @@ export default function WegovyPenTilt({
       style={{ transformStyle: "preserve-3d" }}
     >
       <div
-        className="mx-auto w-fit max-w-[min(100%,280px)] transform-3d transition-[transform] duration-200 ease-out will-change-transform"
-        style={{ transform }}
+        ref={innerRef}
+        className="mx-auto w-fit max-w-[min(100%,280px)] transform-3d will-change-transform"
+        style={{ transform: RESET }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element -- transparency + no layout box artefact */}
         <img

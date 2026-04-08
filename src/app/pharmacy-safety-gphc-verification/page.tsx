@@ -2,26 +2,28 @@ import { ShieldCheck, Cross, Building2, SearchCheck } from 'lucide-react';
 
 export default function PharmacySafetyGphc() {
   return (
-    <div className="container mx-auto px-4 max-w-4xl py-12 pb-24">
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-100 mb-6">
+    <div className="container mx-auto max-w-4xl px-4 pb-24 pt-8 sm:px-5 sm:py-12 md:px-6">
+      <div className="mb-10 text-center sm:mb-16">
+        <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 sm:mb-6">
           <ShieldCheck className="h-8 w-8 text-emerald-600" />
         </div>
-        <h1 className="text-4xl font-extrabold text-slate-900 mb-6">Pharmacy Safety & GPhC Verification</h1>
-        <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+        <h1 className="mx-auto mb-4 max-w-[20ch] text-balance text-2xl font-extrabold text-slate-900 sm:mb-6 sm:max-w-none sm:text-3xl md:text-4xl">
+          Pharmacy Safety & GPhC Verification
+        </h1>
+        <p className="mx-auto max-w-2xl text-base text-slate-600 sm:text-lg md:text-xl">
           We only compare online pharmacies that are fully regulated and verified by the General Pharmaceutical Council (GPhC) in the UK.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-16">
-        <div className="p-8 bg-card border border-slate-200 rounded-2xl shadow-sm">
+      <div className="mb-12 grid gap-6 sm:mb-16 md:grid-cols-2 md:gap-8">
+        <div className="rounded-2xl border border-slate-200 bg-card p-5 shadow-sm sm:p-8">
           <Building2 className="h-6 w-6 text-emerald-600 mb-4" />
           <h2 className="text-xl font-bold text-slate-900 mb-3">What is the GPhC?</h2>
           <p className="text-slate-600 leading-relaxed">
             The General Pharmaceutical Council is the independent regulator for pharmacists, pharmacy technicians, and pharmacy premises in Great Britain. Registration ensures that the pharmacy meets strict safety and professional standards.
           </p>
         </div>
-        <div className="p-8 bg-card border border-slate-200 rounded-2xl shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-card p-5 shadow-sm sm:p-8">
           <SearchCheck className="h-6 w-6 text-emerald-600 mb-4" />
           <h2 className="text-xl font-bold text-slate-900 mb-3">Our Verification Process</h2>
           <p className="text-slate-600 leading-relaxed">

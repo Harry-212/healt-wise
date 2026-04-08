@@ -26,8 +26,8 @@ export default async function BlogIndexPage({ searchParams }: Props) {
   const posts = paginate(all, page, POSTS_PER_PAGE);
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 md:px-6">
-      <h1 className="text-3xl font-bold text-slate-900">
+    <div className="mx-auto max-w-3xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
+      <h1 className="text-balance text-2xl font-bold text-slate-900 sm:text-3xl">
         Blog
       </h1>
       <p className="mt-2 text-slate-600">
@@ -42,7 +42,7 @@ export default async function BlogIndexPage({ searchParams }: Props) {
             </p>
             <Link
               href={`/blog/${p.slug}`}
-              className="mt-1 block text-xl font-semibold text-slate-900 hover:text-brand-primary"
+              className="mt-1 block text-lg font-semibold text-slate-900 hover:text-brand-primary sm:text-xl"
             >
               {p.title}
             </Link>

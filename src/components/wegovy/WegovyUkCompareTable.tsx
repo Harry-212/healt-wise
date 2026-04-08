@@ -2,14 +2,8 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import {
-  ArrowDown,
-  ArrowUp,
-  ArrowUpDown,
-  Flame,
-  Sparkles,
-  Star,
-} from "lucide-react";
+import { ArrowDown, ArrowUp, ArrowUpDown, Star } from "lucide-react";
+import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import {
   estimatedMonthlyCost,
   pharmacyProfileHref,
@@ -27,8 +21,6 @@ type SortKey =
   | "updated"
   | WegovyDoseColumnKey;
 
-type PriceMode = "standard" | "discount";
-
 function doseHeaderLabel(key: WegovyDoseColumnKey): string {
   return key.replace("mg", " mg");
 }
@@ -44,6 +36,7 @@ function SortableTh({
   sortDir,
   onSort,
   narrow,
+  center,
   title,
 }: {
   label: string;
@@ -52,6 +45,8 @@ function SortableTh({
   sortDir: "asc" | "desc";
   onSort: (k: SortKey) => void;
   narrow?: boolean;
+  /** Center header label + sort control (e.g. Avg / mo). */
+  center?: boolean;
   title?: string;
 }) {
   const active = sortKey === columnKey;
@@ -61,12 +56,14 @@ function SortableTh({
       title={title ?? label}
       className={`border-b border-slate-200/90 bg-slate-50/95 px-2 py-3 font-semibold text-slate-700 backdrop-blur-sm ${
         narrow ? "w-[3.65rem] min-w-[3.65rem] max-w-[3.65rem] text-center" : "whitespace-nowrap"
-      }`}
+      } ${center ? "text-center" : ""}`}
     >
       <button
         type="button"
         onClick={() => onSort(columnKey)}
-        className="inline-flex w-full items-center justify-center gap-1 rounded-lg px-1 py-1 text-left text-xs uppercase tracking-wide transition hover:bg-slate-200/60 hover:text-slate-900 data-[active=true]:text-teal-800"
+        className={`inline-flex w-full items-center justify-center gap-1 rounded-lg px-1 py-1 text-xs uppercase tracking-wide transition hover:bg-slate-200/60 hover:text-slate-900 data-[active=true]:text-teal-800 ${
+          center ? "text-center" : "text-left"
+        }`}
         data-active={active}
       >
         <span className="min-w-0 leading-tight">{label}</span>
@@ -92,7 +89,6 @@ export default function WegovyUkCompareTable({
 }: {
   providers: WegovyUkProviderCompare[];
 }) {
-  const [priceMode, setPriceMode] = useState<PriceMode>("standard");
   const [providerQuery, setProviderQuery] = useState("");
   const [priceMin, setPriceMin] = useState("");
   const [priceMax, setPriceMax] = useState("");
@@ -204,12 +200,12 @@ export default function WegovyUkCompareTable({
   const colCount = 1 + WEGOVY_DOSE_KEYS.length + 3;
 
   const providerThClass =
-    "sticky left-0 z-50 min-w-[11rem] border-b border-r border-slate-200/90 bg-slate-50/95 px-3 py-3 pl-4 backdrop-blur-sm shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
+    "sticky left-0 z-50 min-w-[13rem] max-w-[14rem] border-b border-r border-slate-200/90 bg-slate-50/95 px-3 py-3 pl-4 backdrop-blur-sm shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
 
   return (
     <div className="space-y-4">
       <div className="grid gap-3 sm:grid-cols-3">
-        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-sm">
+        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 text-center shadow-sm sm:text-left">
           <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
             Cheapest price today
           </p>
@@ -218,16 +214,18 @@ export default function WegovyUkCompareTable({
           </p>
           <p className="mt-0.5 text-xs text-slate-500">Lowest starting pen (filtered)</p>
         </div>
-        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-sm">
+        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 text-center shadow-sm">
           <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
             Avg monthly estimate
           </p>
           <p className="mt-1 text-2xl font-bold tabular-nums text-slate-900">
             {insights.avgMonthly != null ? formatGBP(insights.avgMonthly) : "—"}
           </p>
-          <p className="mt-0.5 text-xs text-slate-500">Mean of dose averages (filtered)</p>
+          <p className="mt-0.5 text-xs text-slate-500">
+            Mean of dose averages (filtered)
+          </p>
         </div>
-        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-sm">
+        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 text-center shadow-sm sm:text-left">
           <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
             Providers compared
           </p>
@@ -239,39 +237,6 @@ export default function WegovyUkCompareTable({
       </div>
 
       <div className="flex flex-col gap-4 rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:flex-row md:flex-wrap md:items-end">
-        <div className="flex w-full flex-col gap-2 md:w-auto md:min-w-[200px]">
-          <span className="text-xs font-semibold text-slate-700">Price display</span>
-          <div
-            className="inline-flex rounded-xl border border-slate-200 bg-slate-50 p-1"
-            role="group"
-            aria-label="Standard or discount pricing"
-          >
-            <button
-              type="button"
-              onClick={() => setPriceMode("standard")}
-              className={`flex-1 rounded-lg px-3 py-2 text-sm font-semibold transition md:flex-none ${
-                priceMode === "standard"
-                  ? "bg-white text-slate-900 shadow-sm"
-                  : "text-slate-600 hover:text-slate-900"
-              }`}
-            >
-              Standard price
-            </button>
-            <button
-              type="button"
-              onClick={() => setPriceMode("discount")}
-              className={`flex flex-1 items-center justify-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition md:flex-none ${
-                priceMode === "discount"
-                  ? "bg-amber-100 text-amber-950 shadow-sm"
-                  : "text-slate-600 hover:text-slate-900"
-              }`}
-            >
-              <Flame className="h-4 w-4 shrink-0 text-amber-600" aria-hidden />
-              Discount price
-            </button>
-          </div>
-        </div>
-
         <label className="flex min-w-[160px] flex-1 flex-col gap-1 text-xs font-semibold text-slate-600">
           Provider name
           <input
@@ -363,16 +328,6 @@ export default function WegovyUkCompareTable({
         </Link>
       </p>
 
-      {priceMode === "discount" && (
-        <div className="flex items-start gap-3 rounded-2xl border border-amber-200/90 bg-amber-50/90 px-4 py-3 text-sm text-amber-950">
-          <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" aria-hidden />
-          <p>
-            <strong>Discount mode</strong> — verified per-pharmacy offers will
-            replace “Soon”. Use standard mode for list prices from our snapshot.
-          </p>
-        </div>
-      )}
-
       <div className="relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm">
         <p className="border-b border-slate-100 px-4 py-2 text-xs text-slate-500 md:hidden">
           Scroll sideways — provider column stays fixed.
@@ -423,6 +378,7 @@ export default function WegovyUkCompareTable({
                   sortKey={sortKey}
                   sortDir={sortDir}
                   onSort={toggleSort}
+                  center
                   title="Mean price across the five pen strengths"
                 />
                 <SortableTh
@@ -481,12 +437,12 @@ export default function WegovyUkCompareTable({
                           >
                             {p.name}
                           </Link>
-                          {priceMode === "standard" &&
-                            p.headlineFrom !== start && (
-                              <span className="text-[11px] leading-snug text-slate-500">
-                                Headline ~£{p.headlineFrom}
-                              </span>
-                            )}
+                          <ProviderGphcLine providerId={p.id} />
+                          {p.headlineFrom !== start && (
+                            <span className="text-[11px] leading-snug text-slate-500">
+                              Headline ~£{p.headlineFrom}
+                            </span>
+                          )}
                           <div className="flex flex-wrap gap-1">
                             {isLowestRow && (
                               <span className="inline-flex items-center rounded-full bg-emerald-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
@@ -515,27 +471,17 @@ export default function WegovyUkCompareTable({
                           <td
                             key={k}
                             className={`border-b border-slate-100/90 px-1 py-2.5 text-center align-middle text-xs tabular-nums sm:text-sm ${
-                              isColMin && priceMode === "standard"
+                              isColMin
                                 ? "bg-emerald-100/50 font-semibold text-emerald-950"
                                 : ""
                             }`}
                           >
-                            {priceMode === "discount" ? (
-                              <span className="text-[11px] text-slate-400">
-                                Soon
-                              </span>
-                            ) : (
-                              formatGBP(v)
-                            )}
+                            {formatGBP(v)}
                           </td>
                         );
                       })}
-                      <td className="border-b border-slate-100/90 px-2 py-2.5 align-middle tabular-nums text-slate-700">
-                        {priceMode === "discount" ? (
-                          <span className="text-slate-400">Soon</span>
-                        ) : (
-                          formatGBP(monthly)
-                        )}
+                      <td className="border-b border-slate-100/90 px-2 py-2.5 text-center align-middle tabular-nums text-slate-700">
+                        {formatGBP(monthly)}
                       </td>
                       <td className="border-b border-slate-100/90 px-2 py-2.5 align-middle tabular-nums font-medium text-slate-900">
                         <span className="inline-flex items-center gap-1.5">

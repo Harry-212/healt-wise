@@ -47,12 +47,12 @@ export default async function PricePage({ params }: Props) {
   }
 
   return (
-    <article className="mx-auto max-w-4xl px-4 py-12 md:px-6">
+    <article className="mx-auto min-w-0 max-w-4xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
       <p className="text-sm font-medium text-brand-primary">Prices</p>
-      <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+      <h1 className="mt-2 text-balance text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
         {cfg.keyword}
       </h1>
-      <p className="mt-4 text-slate-600">
+      <p className="mt-4 text-sm text-slate-600 sm:text-base">
         Compare {cfg.keyword.toLowerCase()} figures in the UK. Figures are
         illustrative snapshots—always confirm with the pharmacy before you pay.
       </p>

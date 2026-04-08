@@ -13,6 +13,7 @@ import {
   SAXENDA_MONTH_PROGRESSION,
   SAXENDA_MONTH_PROGRESSION_SOURCE,
 } from "@/lib/data/saxenda-month-weight-progression";
+import { RechartsShell } from "@/components/charts/recharts-shell";
 
 const data = SAXENDA_MONTH_PROGRESSION.map((p) => ({
   month: p.monthLabel,
@@ -31,12 +32,13 @@ export default function SaxendaWeightProgressionChart() {
           Mean-style curve for education only — individual results vary widely.
         </p>
       </figcaption>
-      <div
-        className="h-64 w-full min-h-[16rem] md:h-72"
-        role="img"
-        aria-label="Line chart of body weight percent change by month for liraglutide"
-      >
-        <ResponsiveContainer width="100%" height="100%">
+      <RechartsShell heightPx={288}>
+        <div
+          className="h-full w-full"
+          role="img"
+          aria-label="Line chart of body weight percent change by month for liraglutide"
+        >
+          <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 8, right: 12, left: 4, bottom: 4 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" className="opacity-60" />
             <XAxis
@@ -77,10 +79,12 @@ export default function SaxendaWeightProgressionChart() {
               strokeWidth={2.5}
               dot={{ r: 4, fill: "#0284c7" }}
               activeDot={{ r: 6 }}
+              isAnimationActive={false}
             />
           </LineChart>
-        </ResponsiveContainer>
-      </div>
+          </ResponsiveContainer>
+        </div>
+      </RechartsShell>
       <p className="mt-3 text-xs text-slate-500">{SAXENDA_MONTH_PROGRESSION_SOURCE}</p>
     </figure>
   );

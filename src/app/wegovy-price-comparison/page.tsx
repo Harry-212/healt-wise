@@ -21,19 +21,21 @@ import {
   WEGOVY_COMPARE_UK_FAQ_ITEMS,
   wegovyCompareUkFaqJsonLd,
 } from "@/lib/seo/wegovy-json-ld";
+import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageShareMetadata({
+  canonicalPath: "/wegovy-price-comparison",
   title:
     "Compare Wegovy Prices UK (2026) — Cheapest & safest providers",
-  description:
+  metaDescription:
     "Compare real Wegovy prices across UK pharmacies: starting pen costs, estimated monthly spend, delivery, and GPhC checks. Filter, sort, and switch discount mode. Independent snapshot — updated 2026.",
-  openGraph: {
-    title:
-      "Compare Wegovy Prices UK (2026) — Cheapest & safest providers | Health Wise",
-    description:
-      "Interactive UK Wegovy price table: filter by provider, price band, rating, and delivery. Illustrative charts and FAQs.",
-  },
-};
+  openGraphTitle:
+    "Compare Wegovy Prices UK (2026) — Cheapest & safest providers | Health Wise",
+  openGraphDescription:
+    "Interactive UK Wegovy price table: filter by provider, price band, rating, and delivery. Illustrative charts and FAQs.",
+  imagePath: "/wegovy healt wise.png",
+  imageAlt: "Compare Wegovy prices UK — Health Wise",
+});
 
 function compareWebPageJsonLd() {
   const base = siteOrigin();
@@ -360,7 +362,7 @@ export default function CompareWegovyPricesUkPage() {
                 Compare prices now
               </a>
               <Link
-                href="/check-eligibility-weight-loss-treatment"
+                href="/what-is-wegovy#eligibility-uk"
                 className="inline-flex items-center justify-center rounded-2xl border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
               >
                 Start your treatment journey
@@ -369,7 +371,7 @@ export default function CompareWegovyPricesUkPage() {
           </div>
         </section>
 
-        <div className="mx-auto max-w-4xl px-4 py-12 md:px-8">
+        <div className="mx-auto max-w-4xl px-4 pb-16 pt-8 sm:px-5 sm:py-10 md:px-8 md:py-12">
           <InternalLinks links={internalLinksFor("wegovyPriceUk")} />
         </div>
       </article>

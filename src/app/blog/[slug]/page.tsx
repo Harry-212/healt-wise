@@ -29,7 +29,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-12 md:px-6">
+    <article className="mx-auto max-w-3xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
       <Link
         href="/blog"
         className="text-sm font-medium text-brand-primary hover:underline"
@@ -39,7 +39,7 @@ export default async function BlogPostPage({ params }: Props) {
       <p className="mt-6 text-xs font-semibold uppercase text-brand-primary">
         {post.category}
       </p>
-      <h1 className="mt-2 text-3xl font-bold text-slate-900 md:text-4xl">
+      <h1 className="mt-2 text-balance text-2xl font-bold text-slate-900 sm:text-3xl md:text-4xl">
         {post.title}
       </h1>
       <p className="mt-2 text-sm text-slate-500">

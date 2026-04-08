@@ -50,13 +50,15 @@ export default function Footer() {
         <div className="mt-10">
           <TrustSignals />
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 text-center md:flex-row md:text-left">
           <p className="text-sm text-slate-500">
             © {new Date().getFullYear()} GLP-1 Compare UK. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 text-sm text-slate-500">
-            <ShieldCheck className="h-4 w-4 text-emerald-600" />
-            <span>Independent & unbiased. Not affiliated with Novo Nordisk or Eli Lilly.</span>
+          <div className="flex max-w-md flex-col items-center gap-2 text-sm text-slate-500 sm:max-w-none sm:flex-row sm:items-start md:max-w-xl">
+            <ShieldCheck className="h-4 w-4 shrink-0 text-emerald-600" />
+            <span className="text-balance sm:text-left">
+              Independent & unbiased. Not affiliated with Novo Nordisk or Eli Lilly.
+            </span>
           </div>
         </div>
       </div>

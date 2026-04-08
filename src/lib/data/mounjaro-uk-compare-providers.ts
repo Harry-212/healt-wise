@@ -47,7 +47,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     updatedLabel: "4 April",
     consultationIncluded: true,
     badges: ["mostPopular"],
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "care-pharmacy",
@@ -65,7 +65,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "pharmica",
@@ -83,7 +83,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "fylde-clinic",
@@ -101,7 +101,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "3 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "pharmulous",
@@ -119,7 +119,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "the-family-chemist",
@@ -138,7 +138,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     updatedLabel: "4 April",
     consultationIncluded: true,
     badges: ["bestValue"],
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "ashcroft-pharmacy",
@@ -156,7 +156,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "cuva-health",
@@ -174,7 +174,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "chemist4u",
@@ -192,7 +192,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "simply-meds-online",
@@ -210,7 +210,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "click2pharmacy",
@@ -228,7 +228,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "3 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "tribelle",
@@ -246,7 +246,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "3 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "phlo-clinic",
@@ -264,7 +264,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "oushk",
@@ -282,7 +282,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "3 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "simple-online-pharmacy",
@@ -300,7 +300,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "voy",
@@ -318,7 +318,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "farmeci",
@@ -336,7 +336,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "cloud-pharmacy",
@@ -354,7 +354,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "pharmacy2u",
@@ -372,7 +372,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "iq-doctor",
@@ -390,7 +390,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "click-pharmacy",
@@ -408,7 +408,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "getweightloss",
@@ -426,7 +426,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "4 April",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "asda-online-doctor",
@@ -444,7 +444,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "superdrug-online-doctor",
@@ -462,7 +462,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "boots-online-doctor",
@@ -480,7 +480,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "zava",
@@ -498,7 +498,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "lloyds-pharmacy-online-doctor",
@@ -516,7 +516,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
     id: "medexpress",
@@ -534,7 +534,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     },
     updatedLabel: "6 March",
     consultationIncluded: true,
-    ctaHref: "/how-to-get-mounjaro",
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
 ];
 

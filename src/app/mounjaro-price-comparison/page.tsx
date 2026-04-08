@@ -21,19 +21,21 @@ import {
   MOUNJARO_COMPARE_UK_FAQ_ITEMS,
   mounjaroCompareUkFaqJsonLd,
 } from "@/lib/seo/mounjaro-json-ld";
+import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageShareMetadata({
+  canonicalPath: "/mounjaro-price-comparison",
   title:
     "Compare Mounjaro Prices UK (2026) — Cheapest & safest providers",
-  description:
+  metaDescription:
     "Compare real Mounjaro prices across UK pharmacies: pen costs by strength (2.5–15 mg), estimated monthly spend, filters, sort, and discount mode. Independent snapshot — updated 2026.",
-  openGraph: {
-    title:
-      "Compare Mounjaro Prices UK (2026) — Cheapest & safest providers | Health Wise",
-    description:
-      "Interactive UK Mounjaro price table: filter by provider, price band, rating, and delivery. Illustrative charts and FAQs.",
-  },
-};
+  openGraphTitle:
+    "Compare Mounjaro Prices UK (2026) — Cheapest & safest providers | Health Wise",
+  openGraphDescription:
+    "Interactive UK Mounjaro price table: filter by provider, price band, rating, and delivery. Illustrative charts and FAQs.",
+  imagePath: "/mounjaro healt wise.png",
+  imageAlt: "Compare Mounjaro prices UK — Health Wise",
+});
 
 function compareWebPageJsonLd() {
   const base = siteOrigin();
@@ -342,7 +344,7 @@ export default function CompareMounjaroPricesUkPage() {
                 Compare prices now
               </a>
               <Link
-                href="/check-eligibility-weight-loss-treatment"
+                href="/what-is-mounjaro#eligibility-uk"
                 className="inline-flex items-center justify-center rounded-2xl border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
               >
                 Start your treatment journey
@@ -351,7 +353,7 @@ export default function CompareMounjaroPricesUkPage() {
           </div>
         </section>
 
-        <div className="mx-auto max-w-4xl px-4 py-12 md:px-8">
+        <div className="mx-auto max-w-4xl px-4 pb-16 pt-8 sm:px-5 sm:py-10 md:px-8 md:py-12">
           <InternalLinks links={internalLinksFor("mounjaroPriceUk")} />
         </div>
       </article>

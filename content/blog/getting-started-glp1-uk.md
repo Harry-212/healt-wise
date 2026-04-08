@@ -9,4 +9,4 @@ description: "Private pathways, NHS eligibility, and what to ask before you pay.
 
 You may access treatment via NHS programmes where you meet eligibility, or via private prescribers and pharmacies. Always confirm who holds clinical responsibility for your care.
 
-See [how to get started](/how-to-get-started-weight-loss-treatment) for a step-by-step framing.
+The **Pathways** section below gives step-by-step framing.

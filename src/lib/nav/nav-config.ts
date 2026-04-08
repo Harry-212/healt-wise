@@ -82,7 +82,7 @@ export const NAV_PANELS: NavPanel[] = [
   {
     id: "guides",
     label: "Helpful Guides",
-    directHref: "/how-to-get-started-weight-loss-treatment",
+    directHref: "/blog",
   },
   {
     id: "tools",

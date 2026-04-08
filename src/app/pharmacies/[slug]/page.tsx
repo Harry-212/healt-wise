@@ -347,7 +347,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           </Link>
         )}
         <Link
-          href="/check-eligibility-weight-loss-treatment"
+          href="/blog/getting-started-glp1-uk"
           className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-slate-300"
         >
           Check eligibility

@@ -9,6 +9,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { RechartsShell } from "@/components/charts/recharts-shell";
 
 const fill = "#0d9488";
 
@@ -33,12 +34,13 @@ export function CheapestOptionsEntryPricesChart({ data }: { data: Row[] }) {
           provider.
         </p>
       </figcaption>
-      <div
-        className="h-56 w-full min-h-56 md:h-64"
-        role="img"
-        aria-label="Bar chart of lowest listed entry prices for Wegovy, Mounjaro, and Saxenda"
-      >
-        <ResponsiveContainer width="100%" height="100%">
+      <RechartsShell heightPx={256}>
+        <div
+          className="h-full w-full"
+          role="img"
+          aria-label="Bar chart of lowest listed entry prices for Wegovy, Mounjaro, and Saxenda"
+        >
+          <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={chartRows}
             layout="vertical"
@@ -76,8 +78,9 @@ export function CheapestOptionsEntryPricesChart({ data }: { data: Row[] }) {
             />
             <Bar dataKey="gbp" name="Lowest listed" fill={fill} radius={[0, 6, 6, 0]} />
           </BarChart>
-        </ResponsiveContainer>
-      </div>
+          </ResponsiveContainer>
+        </div>
+      </RechartsShell>
     </figure>
   );
 }

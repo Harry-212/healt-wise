@@ -100,12 +100,12 @@ export default function ComparisonTable({
   }
 
   const thBtn =
-    "inline-flex items-center gap-1 font-semibold text-brand-secondary hover:text-brand-cta";
+    "inline-flex min-h-10 min-w-0 touch-manipulation items-center gap-1 rounded-md px-1 py-1 font-semibold text-brand-secondary hover:text-brand-cta sm:min-h-0 sm:px-0";
 
   return (
     <div className={className}>
-      <div className="mb-4 flex flex-col gap-3 rounded-xl border border-brand-border bg-brand-card p-4 shadow-sm md:flex-row md:flex-wrap md:items-end">
-        <label className="flex min-w-[140px] flex-col gap-1 text-xs font-medium text-brand-secondary">
+      <div className="mb-4 flex w-full flex-col gap-3 rounded-xl border border-brand-border bg-brand-card p-3 shadow-sm sm:p-4 md:flex-row md:flex-wrap md:items-end">
+        <label className="flex w-full min-w-0 flex-col gap-1 text-xs font-medium text-brand-secondary sm:min-w-[140px] sm:w-auto">
           Medication
           <select
             value={medication}
@@ -121,7 +121,7 @@ export default function ComparisonTable({
             <option value="Saxenda">Saxenda</option>
           </select>
         </label>
-        <label className="flex min-w-[140px] flex-col gap-1 text-xs font-medium text-brand-secondary">
+        <label className="flex w-full min-w-0 flex-col gap-1 text-xs font-medium text-brand-secondary sm:min-w-[140px] sm:w-auto">
           Max price (£)
           <input
             type="number"
@@ -133,7 +133,7 @@ export default function ComparisonTable({
             className="rounded-lg border border-brand-border bg-brand-card px-3 py-2 text-sm text-brand-primary"
           />
         </label>
-        <label className="flex min-w-[180px] flex-1 flex-col gap-1 text-xs font-medium text-brand-secondary">
+        <label className="flex w-full min-w-0 flex-1 flex-col gap-1 text-xs font-medium text-brand-secondary sm:min-w-[180px]">
           Provider
           <input
             type="search"
@@ -149,8 +149,8 @@ export default function ComparisonTable({
         <p className="px-4 pt-3 text-xs text-brand-secondary md:hidden">
           Scroll horizontally to see all columns
         </p>
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+        <div className="overflow-x-auto overscroll-x-contain [-webkit-overflow-scrolling:touch]">
+          <table className="w-full min-w-[720px] border-collapse text-left text-xs sm:text-sm">
             <thead className="sticky top-0 z-10 bg-brand-surface shadow-sm">
               <tr className="border-b border-brand-border">
                 <th className="px-4 py-3">
@@ -253,7 +253,7 @@ export default function ComparisonTable({
                       <td className="px-4 py-3 text-right">
                         <Link
                           href={href}
-                          className="inline-flex rounded-lg bg-brand-cta px-3 py-2 text-sm font-semibold text-slate-900 shadow-sm transition hover:brightness-95"
+                          className="inline-flex touch-manipulation rounded-lg bg-brand-cta px-3 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:brightness-95 sm:py-2"
                         >
                           Check Price
                         </Link>

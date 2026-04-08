@@ -17,6 +17,7 @@ import {
   dosePriceRangeByStrengthMounjaro,
   type MounjaroUkProviderCompare,
 } from "@/lib/data/mounjaro-uk-compare-providers";
+import { RechartsShell } from "@/components/charts/recharts-shell";
 
 const accent = "#7c3aed";
 const grey = "#94a3b8";
@@ -41,12 +42,13 @@ export function MounjaroUkPriceRangeByDoseChart({ providers }: Props) {
           = highest listed; grey = lowest listed for that strength.
         </p>
       </figcaption>
-      <div
-        className="h-64 w-full min-h-64 md:h-72"
-        role="img"
-        aria-label="Bar chart of minimum and maximum Mounjaro pen prices by dose"
-      >
-        <ResponsiveContainer width="100%" height="100%">
+      <RechartsShell heightPx={288}>
+        <div
+          className="h-full w-full"
+          role="img"
+          aria-label="Bar chart of minimum and maximum Mounjaro pen prices by dose"
+        >
+          <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
             margin={{ top: 8, right: 8, left: 4, bottom: 4 }}
@@ -74,8 +76,9 @@ export function MounjaroUkPriceRangeByDoseChart({ providers }: Props) {
             <Bar dataKey="min" name="Lowest listed" fill={grey} radius={[6, 6, 0, 0]} />
             <Bar dataKey="max" name="Highest listed" fill={accent} radius={[6, 6, 0, 0]} />
           </BarChart>
-        </ResponsiveContainer>
-      </div>
+          </ResponsiveContainer>
+        </div>
+      </RechartsShell>
     </figure>
   );
 }
@@ -97,12 +100,13 @@ export function MounjaroUkDosageCostLineChart({ providers }: Props) {
           dose increases.
         </p>
       </figcaption>
-      <div
-        className="h-64 w-full min-h-64 md:h-72"
-        role="img"
-        aria-label="Line chart of average Mounjaro price by dose"
-      >
-        <ResponsiveContainer width="100%" height="100%">
+      <RechartsShell heightPx={288}>
+        <div
+          className="h-full w-full"
+          role="img"
+          aria-label="Line chart of average Mounjaro price by dose"
+        >
+          <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 8, right: 12, left: 4, bottom: 4 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
             <XAxis dataKey="dose" tick={{ fontSize: 11 }} stroke="#64748b" />
@@ -132,8 +136,9 @@ export function MounjaroUkDosageCostLineChart({ providers }: Props) {
               activeDot={{ r: 6 }}
             />
           </LineChart>
-        </ResponsiveContainer>
-      </div>
+          </ResponsiveContainer>
+        </div>
+      </RechartsShell>
     </figure>
   );
 }

@@ -1,8 +1,53 @@
 "use client";
 
 import type React from "react";
-import { createContext, useContext, useId, useMemo } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useId,
+  useMemo,
+  useState,
+  useSyncExternalStore,
+} from "react";
 import { MeshGradient } from "@paper-design/shaders-react";
+
+/** Avoid mounting Paper Shaders when WebGL is unavailable (RDP, some VMs, locked-down browsers). */
+function detectWebGL(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    const canvas = document.createElement("canvas");
+    return !!(
+      canvas.getContext("webgl2") ||
+      canvas.getContext("webgl") ||
+      canvas.getContext("experimental-webgl" as "webgl")
+    );
+  } catch {
+    return false;
+  }
+}
+
+function subscribeReducedMotion(onChange: () => void) {
+  const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+  mq.addEventListener("change", onChange);
+  return () => mq.removeEventListener("change", onChange);
+}
+
+function getReducedMotionSnapshot() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function getReducedMotionServerSnapshot() {
+  return false;
+}
+
+function usePrefersReducedMotion() {
+  return useSyncExternalStore(
+    subscribeReducedMotion,
+    getReducedMotionSnapshot,
+    getReducedMotionServerSnapshot,
+  );
+}
 
 type HeroShaderFilterIds = {
   /** Use as `style={{ filter: ids.glassUrl }}` */
@@ -50,6 +95,15 @@ export function ShaderBackground({
   minHeight = "min-h-[560px] sm:min-h-[620px] lg:min-h-[650px]",
   variant = "teal",
 }: ShaderBackgroundProps) {
+  const reducedMotion = usePrefersReducedMotion();
+  const [webglOk, setWebglOk] = useState(false);
+  const [gpuChecked, setGpuChecked] = useState(false);
+
+  useEffect(() => {
+    setWebglOk(detectWebGL());
+    setGpuChecked(true);
+  }, []);
+
   const uid = useId().replace(/:/g, "");
   const glassId = `glass-effect-${uid}`;
   const gooeyId = `gooey-filter-${uid}`;
@@ -63,6 +117,14 @@ export function ShaderBackground({
   );
 
   const mesh = MESH_BY_VARIANT[variant];
+  const staticGradient = useMemo(
+    () =>
+      `linear-gradient(145deg, ${mesh.layer1[0]} 0%, ${mesh.layer1[2] ?? mesh.layer1[1]} 42%, ${mesh.layer1[1]} 78%, ${mesh.layer2[2] ?? mesh.layer1[0]} 100%)`,
+    [mesh.layer1, mesh.layer2],
+  );
+
+  const useAnimatedMesh =
+    gpuChecked && webglOk && !reducedMotion;
 
   return (
     <div className={`relative w-full overflow-hidden ${minHeight}`}>
@@ -93,25 +155,24 @@ export function ShaderBackground({
         </defs>
       </svg>
 
-      <div className="absolute inset-0 z-0">
-        <MeshGradient
-          className="absolute inset-0 h-full w-full"
-          colors={mesh.layer1}
-          speed={0.28}
-          distortion={0.75}
-          swirl={0.12}
+      {!useAnimatedMesh ? (
+        <div
+          className="absolute inset-0 z-0"
+          style={{ background: staticGradient }}
+          aria-hidden
         />
-      </div>
-      <div className="absolute inset-0 z-0 opacity-[0.55]">
-        <MeshGradient
-          className="absolute inset-0 h-full w-full"
-          colors={mesh.layer2}
-          speed={0.18}
-          distortion={0.85}
-          swirl={0.2}
-          grainOverlay={0.08}
-        />
-      </div>
+      ) : (
+        <div className="absolute inset-0 z-0">
+          <MeshGradient
+            className="absolute inset-0 h-full w-full"
+            colors={mesh.layer1}
+            speed={0.14}
+            distortion={0.72}
+            swirl={0.14}
+            grainOverlay={0.06}
+          />
+        </div>
+      )}
 
       <div
         className="pointer-events-none absolute inset-0 z-1 bg-linear-to-t from-black/75 via-black/35 to-black/25"

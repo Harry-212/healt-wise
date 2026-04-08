@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import MedicationPriceCompareTeaser from "@/components/content/MedicationPriceCompareTeaser";
-import WegovyWeightLossChart from "@/components/wegovy/WegovyWeightLossChart";
-import WegovyBodyJourneyFlow from "@/components/wegovy/WegovyBodyJourneyFlow";
-import WegovyMonthTimeline from "@/components/wegovy/WegovyMonthTimeline";
-import WegovyWeightProgressionChart from "@/components/wegovy/WegovyWeightProgressionChart";
+import {
+  WegovyDeferredBodyJourneyFlow,
+  WegovyDeferredMonthTimeline,
+  WegovyDeferredWeightLossChart,
+  WegovyDeferredWeightProgressionChart,
+} from "@/components/wegovy/wegovy-what-is-deferred";
 import WegovyPenTilt from "@/components/wegovy/WegovyPenTilt";
 import WegovyPageToc from "@/components/wegovy/WegovyPageToc";
 import InternalLinks from "@/components/content/InternalLinks";
@@ -16,19 +18,21 @@ import {
   wegovyFaqJsonLd,
   WEGOVY_FAQ_ITEMS,
 } from "@/lib/seo/wegovy-json-ld";
+import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageShareMetadata({
+  canonicalPath: "/what-is-wegovy",
   title:
     "What is Wegovy? UK guide (2026): how it works, side effects & prices",
-  description:
+  metaDescription:
     "Wegovy (semaglutide) explained for UK readers: GLP-1 mechanism, clinical trial weight loss, dosing titration, private prices by dose, eligibility, safety, NHS context, and verified provider comparison.",
-  openGraph: {
-    title:
-      "What is Wegovy? UK guide (2026): how it works, side effects & prices | Health Wise",
-    description:
-      "Independent guide to Wegovy: mechanism, results, dosage, UK prices, safety, and how to compare providers.",
-  },
-};
+  openGraphTitle:
+    "What is Wegovy? UK guide (2026): how it works, side effects & prices | Health Wise",
+  openGraphDescription:
+    "Independent guide to Wegovy: mechanism, results, dosage, UK prices, safety, and how to compare providers.",
+  imagePath: "/wegovy healt wise.png",
+  imageAlt: "Wegovy (semaglutide) pen — UK guide on Health Wise",
+});
 
 export default function WhatIsWegovyPage() {
   const articleLd = wegovyArticleJsonLd();
@@ -49,7 +53,7 @@ export default function WhatIsWegovyPage() {
           id="what-is-wegovy"
           className="scroll-mt-28 w-full border-b border-slate-200/80 bg-background"
         >
-          <div className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-16 lg:py-20">
+          <div className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-5 sm:py-12 md:px-8 md:py-16 lg:py-20">
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
               <div className="flex flex-col items-start gap-8">
                 <h1 className="max-w-[15ch] text-left text-3xl font-bold uppercase leading-[1.05] tracking-tight text-slate-900 sm:text-4xl lg:text-[2.65rem] lg:leading-[1.02]">
@@ -195,7 +199,7 @@ export default function WhatIsWegovyPage() {
                   From injection to appetite and digestion — interactive overview
                   (informational only).
                 </p>
-                <WegovyBodyJourneyFlow />
+                <WegovyDeferredBodyJourneyFlow />
               </div>
 
               <div id="wegovy-month-timeline" className="scroll-mt-24 space-y-4">
@@ -212,7 +216,7 @@ export default function WhatIsWegovyPage() {
                   noticeable weight loss tends to develop as the dosage
                   increases.
                 </p>
-                <WegovyMonthTimeline />
+                <WegovyDeferredMonthTimeline />
               </div>
 
               <div id="wegovy-weight-progression" className="scroll-mt-24 space-y-3">
@@ -223,7 +227,7 @@ export default function WhatIsWegovyPage() {
                   Illustrative chart: percentage change from baseline by month
                   marker (not a personal forecast).
                 </p>
-                <WegovyWeightProgressionChart />
+                <WegovyDeferredWeightProgressionChart />
               </div>
 
               <div className="space-y-4">
@@ -364,7 +368,7 @@ export default function WhatIsWegovyPage() {
                 on top of lifestyle intervention. Individual results vary; not
                 everyone responds the same way.
               </p>
-              <WegovyWeightLossChart />
+              <WegovyDeferredWeightLossChart />
             </section>
 
             <section

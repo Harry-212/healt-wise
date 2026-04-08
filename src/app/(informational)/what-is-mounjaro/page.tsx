@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import MedicationPriceCompareTeaser from "@/components/content/MedicationPriceCompareTeaser";
-import MounjaroWeightLossChart from "@/components/mounjaro/MounjaroWeightLossChart";
-import MounjaroBodyJourneyFlow from "@/components/mounjaro/MounjaroBodyJourneyFlow";
-import MounjaroMonthTimeline from "@/components/mounjaro/MounjaroMonthTimeline";
-import MounjaroWeightProgressionChart from "@/components/mounjaro/MounjaroWeightProgressionChart";
+import {
+  MounjaroDeferredBodyJourneyFlow,
+  MounjaroDeferredMonthTimeline,
+  MounjaroDeferredWeightLossChart,
+  MounjaroDeferredWeightProgressionChart,
+} from "@/components/mounjaro/mounjaro-what-is-deferred";
 import MounjaroPenTilt from "@/components/mounjaro/MounjaroPenTilt";
 import MounjaroPageToc from "@/components/mounjaro/MounjaroPageToc";
 import InternalLinks from "@/components/content/InternalLinks";
@@ -16,19 +18,21 @@ import {
   mounjaroFaqJsonLd,
   MOUNJARO_FAQ_ITEMS,
 } from "@/lib/seo/mounjaro-json-ld";
+import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageShareMetadata({
+  canonicalPath: "/what-is-mounjaro",
   title:
     "What is Mounjaro? UK guide (2026): how it works, weight loss & prices",
-  description:
+  metaDescription:
     "Mounjaro (tirzepatide) explained for UK readers: dual GIP/GLP-1 mechanism, SURMOUNT trial weight loss, dosing titration, private prices by dose, eligibility, safety, NHS/NICE context, and verified provider comparison.",
-  openGraph: {
-    title:
-      "What is Mounjaro? UK guide (2026): how it works, weight loss & prices | Health Wise",
-    description:
-      "Independent guide to Mounjaro: mechanism, results, dosage, UK prices, safety, and how to compare providers.",
-  },
-};
+  openGraphTitle:
+    "What is Mounjaro? UK guide (2026): how it works, weight loss & prices | Health Wise",
+  openGraphDescription:
+    "Independent guide to Mounjaro: mechanism, results, dosage, UK prices, safety, and how to compare providers.",
+  imagePath: "/mounjaro healt wise.png",
+  imageAlt: "Mounjaro (tirzepatide) pen — UK guide on Health Wise",
+});
 
 export default function WhatIsMounjaroPage() {
   const articleLd = mounjaroArticleJsonLd();
@@ -49,7 +53,7 @@ export default function WhatIsMounjaroPage() {
           id="what-is-mounjaro"
           className="scroll-mt-28 w-full border-b border-slate-200/80 bg-background"
         >
-          <div className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-16 lg:py-20">
+          <div className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-5 sm:py-12 md:px-8 md:py-16 lg:py-20">
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
               <div className="flex flex-col items-start gap-8">
                 <h1 className="max-w-[18ch] text-left text-3xl font-bold uppercase leading-[1.05] tracking-tight text-slate-900 sm:text-4xl lg:text-[2.65rem] lg:leading-[1.02]">
@@ -194,7 +198,7 @@ export default function WhatIsMounjaroPage() {
                   Dual hormone pathways (GIP + GLP-1) — interactive overview
                   (informational only).
                 </p>
-                <MounjaroBodyJourneyFlow />
+                <MounjaroDeferredBodyJourneyFlow />
               </div>
 
               <div id="mounjaro-month-timeline" className="scroll-mt-24 space-y-4">
@@ -209,7 +213,7 @@ export default function WhatIsMounjaroPage() {
                   Early changes often include reduced appetite, while more
                   noticeable weight loss develops at higher doses for many people.
                 </p>
-                <MounjaroMonthTimeline />
+                <MounjaroDeferredMonthTimeline />
               </div>
 
               <div id="mounjaro-weight-progression" className="scroll-mt-24 space-y-3">
@@ -220,7 +224,7 @@ export default function WhatIsMounjaroPage() {
                   Illustrative chart: percentage change from baseline by month
                   marker (not a personal forecast).
                 </p>
-                <MounjaroWeightProgressionChart />
+                <MounjaroDeferredWeightProgressionChart />
               </div>
 
               <div className="space-y-4">
@@ -345,7 +349,7 @@ export default function WhatIsMounjaroPage() {
                 on top of lifestyle intervention. Individual results vary; not
                 everyone responds the same way.
               </p>
-              <MounjaroWeightLossChart />
+              <MounjaroDeferredWeightLossChart />
             </section>
 
             <section

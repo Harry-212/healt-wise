@@ -1,1 +1,0 @@
-export default function Page() { return (<div className='py-24 text-center'><h1 className='text-4xl font-bold capitalize'>how to get started weight loss treatment</h1><p className='mt-4 text-slate-600'>Content for this SEO optimized hub is under construction.</p></div>); }

@@ -14,6 +14,7 @@ import {
   SAXENDA_TRIAL_CHART_POINTS,
   SAXENDA_TRIAL_CHART_SOURCE,
 } from "@/lib/data/saxenda-trial-chart-data";
+import { RechartsShell } from "@/components/charts/recharts-shell";
 
 const chartData = SAXENDA_TRIAL_CHART_POINTS.map((p) => ({
   week: p.week,
@@ -33,12 +34,13 @@ export default function SaxendaWeightLossChart() {
           change from baseline. Curve simplified for display.
         </p>
       </figcaption>
-      <div
-        className="h-72 w-full min-h-[18rem]"
-        role="img"
-        aria-label="Line chart: mean body weight change percent, liraglutide versus placebo by week"
-      >
-        <ResponsiveContainer width="100%" height="100%">
+      <RechartsShell heightPx={288}>
+        <div
+          className="h-full w-full"
+          role="img"
+          aria-label="Line chart: mean body weight change percent, liraglutide versus placebo by week"
+        >
+          <ResponsiveContainer width="100%" height="100%">
           <LineChart data={chartData} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" className="opacity-40" stroke="#e2e8f0" />
             <XAxis
@@ -73,6 +75,7 @@ export default function SaxendaWeightLossChart() {
               strokeWidth={2.5}
               dot={{ r: 3 }}
               activeDot={{ r: 5 }}
+              isAnimationActive={false}
             />
             <Line
               type="monotone"
@@ -80,10 +83,12 @@ export default function SaxendaWeightLossChart() {
               stroke="#94a3b8"
               strokeWidth={2}
               dot={{ r: 2 }}
+              isAnimationActive={false}
             />
           </LineChart>
-        </ResponsiveContainer>
-      </div>
+          </ResponsiveContainer>
+        </div>
+      </RechartsShell>
       <p className="mt-4 text-xs text-slate-500">
         Source (full trial): {SAXENDA_TRIAL_CHART_SOURCE}
       </p>

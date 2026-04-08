@@ -8,8 +8,8 @@ export default function DosageCalculatorPage() {
   const [brand, setBrand] = useState<"wegovy" | "mounjaro">("wegovy");
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-12 md:px-6">
-      <h1 className="text-3xl font-bold text-slate-900">
+    <div className="mx-auto max-w-2xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
+      <h1 className="text-balance text-2xl font-bold text-slate-900 sm:text-3xl">
         Dosage calculator
       </h1>
       <p className="mt-4 text-slate-600">

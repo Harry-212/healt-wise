@@ -11,6 +11,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { RechartsShell } from "@/components/charts/recharts-shell";
 import { createBrowserSupabaseClient } from "@/lib/supabase/client";
 import type { WeightEntryRow } from "@/lib/types/weight-entry";
 
@@ -276,27 +277,37 @@ export default function HubDashboard({
         </button>
       </form>
 
-      <div className="mt-10 h-64 w-full rounded-xl border border-brand-border p-4">
+      <div className="mt-10 w-full min-w-0 rounded-xl border border-brand-border p-4">
         {chartData.length > 0 ? (
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={chartData}>
-              <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
-              <XAxis dataKey="date" tick={{ fontSize: 11 }} />
-              <YAxis domain={["dataMin - 2", "dataMax + 2"]} tick={{ fontSize: 11 }} />
-              <Tooltip />
-              <Line
-                type="monotone"
-                dataKey="weight"
-                stroke="#1f2937"
-                strokeWidth={2}
-                dot={{ r: 3 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
+          <RechartsShell heightPx={256}>
+            <div className="h-full w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={chartData}>
+                  <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
+                  <XAxis dataKey="date" tick={{ fontSize: 11 }} />
+                  <YAxis
+                    domain={["dataMin - 2", "dataMax + 2"]}
+                    tick={{ fontSize: 11 }}
+                  />
+                  <Tooltip />
+                  <Line
+                    type="monotone"
+                    dataKey="weight"
+                    stroke="#1f2937"
+                    strokeWidth={2}
+                    dot={{ r: 3 }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+          </RechartsShell>
         ) : (
-          <p className="flex h-full items-center justify-center text-sm text-slate-500">
+          <div
+            className="flex items-center justify-center text-sm text-slate-500"
+            style={{ minHeight: 256 }}
+          >
             Add entries to see your weight trend.
-          </p>
+          </div>
         )}
       </div>
 

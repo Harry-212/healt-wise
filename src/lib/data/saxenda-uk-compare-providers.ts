@@ -82,7 +82,7 @@ export const SAXENDA_UK_COMPARE_PROVIDERS: SaxendaUkProviderCompare[] = [
       },
     },
     updatedLabel: "4 April",
-    ctaHref: "/how-to-get-started-weight-loss-treatment",
+    ctaHref: "/blog/getting-started-glp1-uk",
   },
   {
     id: "boots-online-doctor",
@@ -129,7 +129,7 @@ export const SAXENDA_UK_COMPARE_PROVIDERS: SaxendaUkProviderCompare[] = [
       },
     },
     updatedLabel: "4 April",
-    ctaHref: "/how-to-get-started-weight-loss-treatment",
+    ctaHref: "/blog/getting-started-glp1-uk",
   },
   {
     id: "superdrug-online-doctor",
@@ -177,7 +177,7 @@ export const SAXENDA_UK_COMPARE_PROVIDERS: SaxendaUkProviderCompare[] = [
       },
     },
     updatedLabel: "4 April",
-    ctaHref: "/how-to-get-started-weight-loss-treatment",
+    ctaHref: "/blog/getting-started-glp1-uk",
   },
 ];
 

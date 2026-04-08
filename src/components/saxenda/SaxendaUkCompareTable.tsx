@@ -2,15 +2,8 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import {
-  ArrowDown,
-  ArrowUp,
-  ArrowUpDown,
-  Flame,
-  Snowflake,
-  Sparkles,
-  Star,
-} from "lucide-react";
+import { ArrowDown, ArrowUp, ArrowUpDown, Snowflake, Star } from "lucide-react";
+import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import {
   minPackPriceForSize,
   SAXENDA_PACK_KEYS,
@@ -20,8 +13,6 @@ import {
 import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
 
 type SortKey = "provider" | "rating" | SaxendaPackKey;
-
-type PriceMode = "standard" | "discount";
 
 const PACK_HEADER: Record<SaxendaPackKey, string> = {
   "1": "1 pen",
@@ -84,33 +75,27 @@ function SortableTh({
 function PackPriceCell({
   packKey,
   p,
-  priceMode,
   isColMin,
 }: {
   packKey: SaxendaPackKey;
   p: SaxendaUkProviderCompare;
-  priceMode: PriceMode;
   isColMin: boolean;
 }) {
   const row = p.packs[packKey];
   return (
     <td
       className={`border-b border-slate-100/90 px-2 py-2.5 align-middle tabular-nums ${
-        isColMin && priceMode === "standard"
+        isColMin
           ? "bg-sky-100/60 font-semibold text-sky-950"
           : "text-slate-900"
       }`}
     >
-      {priceMode === "discount" ? (
-        <span className="text-slate-400">Soon</span>
-      ) : (
-        <div className="flex flex-col gap-0.5">
-          <span>{formatGBP(row.packPrice)}</span>
-          <span className="text-[11px] font-medium text-slate-500">
-            £{row.pricePerMg.toFixed(2)}/mg
-          </span>
-        </div>
-      )}
+      <div className="flex flex-col gap-0.5">
+        <span>{formatGBP(row.packPrice)}</span>
+        <span className="text-[11px] font-medium text-slate-500">
+          £{row.pricePerMg.toFixed(2)}/mg
+        </span>
+      </div>
     </td>
   );
 }
@@ -120,7 +105,6 @@ export default function SaxendaUkCompareTable({
 }: {
   providers: SaxendaUkProviderCompare[];
 }) {
-  const [priceMode, setPriceMode] = useState<PriceMode>("standard");
   const [providerQuery, setProviderQuery] = useState("");
   const [minRating, setMinRating] = useState("");
   const [sortKey, setSortKey] = useState<SortKey>("1");
@@ -197,7 +181,7 @@ export default function SaxendaUkCompareTable({
   }, [processed]);
 
   const providerThClass =
-    "sticky left-0 z-50 min-w-[11rem] border-b border-r border-slate-200/90 bg-slate-50/95 px-3 py-3 pl-4 backdrop-blur-sm shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
+    "sticky left-0 z-50 min-w-[13rem] max-w-[15rem] border-b border-r border-slate-200/90 bg-slate-50/95 px-3 py-3 pl-4 backdrop-blur-sm shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
 
   const colCount = 8;
 
@@ -206,7 +190,7 @@ export default function SaxendaUkCompareTable({
   return (
     <div className="space-y-4">
       <div className="grid gap-3 sm:grid-cols-3">
-        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-sm">
+        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 text-center shadow-sm sm:text-left">
           <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
             Cheapest 1 pen
           </p>
@@ -214,7 +198,7 @@ export default function SaxendaUkCompareTable({
             {insights.min1 != null ? formatGBP(insights.min1) : "—"}
           </p>
         </div>
-        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-sm">
+        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 text-center shadow-sm">
           <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
             Cheapest 3 pens
           </p>
@@ -222,7 +206,7 @@ export default function SaxendaUkCompareTable({
             {insights.min3 != null ? formatGBP(insights.min3) : "—"}
           </p>
         </div>
-        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-sm">
+        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 text-center shadow-sm sm:text-left">
           <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
             Cheapest 5 pens
           </p>
@@ -233,38 +217,6 @@ export default function SaxendaUkCompareTable({
       </div>
 
       <div className="flex flex-col gap-4 rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:flex-row md:flex-wrap md:items-end">
-        <div className="flex w-full flex-col gap-2 md:w-auto md:min-w-[200px]">
-          <span className="text-xs font-semibold text-slate-700">Price display</span>
-          <div
-            className="inline-flex rounded-xl border border-slate-200 bg-slate-50 p-1"
-            role="group"
-            aria-label="Standard or discount pricing"
-          >
-            <button
-              type="button"
-              onClick={() => setPriceMode("standard")}
-              className={`flex-1 rounded-lg px-3 py-2 text-sm font-semibold transition md:flex-none ${
-                priceMode === "standard"
-                  ? "bg-white text-slate-900 shadow-sm"
-                  : "text-slate-600 hover:text-slate-900"
-              }`}
-            >
-              Standard price
-            </button>
-            <button
-              type="button"
-              onClick={() => setPriceMode("discount")}
-              className={`flex flex-1 items-center justify-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition md:flex-none ${
-                priceMode === "discount"
-                  ? "bg-amber-100 text-amber-950 shadow-sm"
-                  : "text-slate-600 hover:text-slate-900"
-              }`}
-            >
-              <Flame className="h-4 w-4 shrink-0 text-amber-600" aria-hidden />
-              Discount price
-            </button>
-          </div>
-        </div>
         <label className="flex min-w-[160px] flex-1 flex-col gap-1 text-xs font-semibold text-slate-600">
           Provider name
           <input
@@ -311,16 +263,6 @@ export default function SaxendaUkCompareTable({
           Verification guide
         </Link>
       </p>
-
-      {priceMode === "discount" && (
-        <div className="flex items-start gap-3 rounded-2xl border border-amber-200/90 bg-amber-50/90 px-4 py-3 text-sm text-amber-950">
-          <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" aria-hidden />
-          <p>
-            <strong>Discount mode</strong> — member and promotional pricing is
-            being verified per provider. Cells show “Soon” until confirmed.
-          </p>
-        </div>
-      )}
 
       <div className="relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm">
         <p className="border-b border-slate-100 px-4 py-2 text-xs text-slate-500 md:hidden">
@@ -436,6 +378,7 @@ export default function SaxendaUkCompareTable({
                             >
                               {p.name}
                             </Link>
+                            <ProviderGphcLine providerId={p.id} />
                             {p.promoNote && (
                               <span className="text-[11px] font-medium text-amber-800">
                                 {p.promoNote}
@@ -468,7 +411,6 @@ export default function SaxendaUkCompareTable({
                           key={k}
                           packKey={k}
                           p={p}
-                          priceMode={priceMode}
                           isColMin={
                             processed.packMins[k] != null &&
                             p.packs[k].packPrice === processed.packMins[k]
@@ -490,12 +432,6 @@ export default function SaxendaUkCompareTable({
                               Cold chain
                             </span>
                           )}
-                          <span>
-                            GPhC:{" "}
-                            <span className="font-medium">
-                              {basePack(p).gphcRef}
-                            </span>
-                          </span>
                           <span className="font-medium text-emerald-800">
                             Verified provider
                           </span>

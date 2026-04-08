@@ -17,6 +17,7 @@ import {
   saxendaPackPriceRangeByPack,
   type SaxendaUkProviderCompare,
 } from "@/lib/data/saxenda-uk-compare-providers";
+import { RechartsShell } from "@/components/charts/recharts-shell";
 
 const sky = "#0284c7";
 const grey = "#94a3b8";
@@ -37,12 +38,13 @@ export function SaxendaUkPackPriceRangeChart({ providers }: Props) {
           Blue = highest listed; grey = lowest listed for that pack count.
         </p>
       </figcaption>
-      <div
-        className="h-64 w-full min-h-64 md:h-72"
-        role="img"
-        aria-label="Bar chart of minimum and maximum Saxenda pack prices by number of pens"
-      >
-        <ResponsiveContainer width="100%" height="100%">
+      <RechartsShell heightPx={288}>
+        <div
+          className="h-full w-full"
+          role="img"
+          aria-label="Bar chart of minimum and maximum Saxenda pack prices by number of pens"
+        >
+          <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
             margin={{ top: 8, right: 8, left: 4, bottom: 4 }}
@@ -70,8 +72,9 @@ export function SaxendaUkPackPriceRangeChart({ providers }: Props) {
             <Bar dataKey="min" name="Lowest listed" fill={grey} radius={[6, 6, 0, 0]} />
             <Bar dataKey="max" name="Highest listed" fill={sky} radius={[6, 6, 0, 0]} />
           </BarChart>
-        </ResponsiveContainer>
-      </div>
+          </ResponsiveContainer>
+        </div>
+      </RechartsShell>
     </figure>
   );
 }
@@ -90,12 +93,13 @@ export function SaxendaUkAveragePackLineChart({ providers }: Props) {
           reduce £/mg but not always the headline repeat cadence.
         </p>
       </figcaption>
-      <div
-        className="h-64 w-full min-h-64 md:h-72"
-        role="img"
-        aria-label="Line chart of average Saxenda pack price by pack size"
-      >
-        <ResponsiveContainer width="100%" height="100%">
+      <RechartsShell heightPx={288}>
+        <div
+          className="h-full w-full"
+          role="img"
+          aria-label="Line chart of average Saxenda pack price by pack size"
+        >
+          <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 8, right: 12, left: 4, bottom: 4 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
             <XAxis dataKey="pack" tick={{ fontSize: 11 }} stroke="#64748b" />
@@ -124,8 +128,9 @@ export function SaxendaUkAveragePackLineChart({ providers }: Props) {
               dot={{ r: 4, fill: sky }}
             />
           </LineChart>
-        </ResponsiveContainer>
-      </div>
+          </ResponsiveContainer>
+        </div>
+      </RechartsShell>
     </figure>
   );
 }

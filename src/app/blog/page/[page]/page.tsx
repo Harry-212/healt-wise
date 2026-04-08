@@ -36,8 +36,8 @@ export default async function BlogPaginatedPage({ params, searchParams }: Props)
     : "";
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 md:px-6">
-      <h1 className="text-3xl font-bold text-slate-900">
+    <div className="mx-auto max-w-3xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
+      <h1 className="text-balance text-2xl font-bold text-slate-900 sm:text-3xl">
         Blog — page {page}
       </h1>
       <ul className="mt-10 space-y-8">
@@ -48,7 +48,7 @@ export default async function BlogPaginatedPage({ params, searchParams }: Props)
             </p>
             <Link
               href={`/blog/${p.slug}`}
-              className="mt-1 block text-xl font-semibold text-slate-900 hover:text-brand-primary"
+              className="mt-1 block text-lg font-semibold text-slate-900 hover:text-brand-primary sm:text-xl"
             >
               {p.title}
             </Link>
@@ -62,7 +62,7 @@ export default async function BlogPaginatedPage({ params, searchParams }: Props)
       <nav className="mt-10 flex flex-wrap gap-2" aria-label="Pagination">
         <Link
           href={`/blog${q}`}
-          className="rounded-lg border border-brand-border px-3 py-2 text-sm"
+          className="inline-flex min-h-10 min-w-10 touch-manipulation items-center justify-center rounded-lg border border-brand-border px-3 py-2 text-sm"
         >
           1
         </Link>
@@ -70,7 +70,7 @@ export default async function BlogPaginatedPage({ params, searchParams }: Props)
           <Link
             key={n}
             href={`/blog/page/${n}${q}`}
-            className={`rounded-lg px-3 py-2 text-sm ${
+            className={`inline-flex min-h-10 min-w-10 touch-manipulation items-center justify-center rounded-lg px-3 py-2 text-sm ${
               n === page
                 ? "bg-brand-primary text-white"
                 : "border border-brand-border"

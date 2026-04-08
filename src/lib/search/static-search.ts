@@ -74,7 +74,7 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
   {
     type: "Guide",
     title: "How GLP-1 works",
-    href: "/how-glp-1-works",
+    href: "/what-is-wegovy#how-wegovy-works",
   },
   {
     type: "Guide",

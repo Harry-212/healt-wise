@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/layout/NavBar";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Footer from "@/components/layout/Footer";
+import { siteOrigin } from "@/lib/seo/site-origin";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,12 +17,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteOrigin()),
   title: {
     default: "Health Wise | Weight Loss Treatment Price Comparison UK (2026)",
     template: "%s | Health Wise",
   },
   description:
     "Independent UK comparison for GLP-1 prices, safety, and support. Compare providers and monthly costs. Updated 2026.",
+  openGraph: {
+    type: "website",
+    siteName: "Health Wise",
+    locale: "en_GB",
+  },
 };
 
 export default function RootLayout({
@@ -41,7 +48,9 @@ export default function RootLayout({
       <body className="flex min-h-full max-w-full flex-col overflow-x-clip bg-background font-sans text-foreground antialiased">
         <NavBar />
         <AnnouncementBar />
-        <main className="min-w-0 flex-1 overflow-x-clip">{children}</main>
+        <main className="min-w-0 flex-1 overflow-x-clip pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
