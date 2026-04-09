@@ -10,6 +10,7 @@ export type BmiCategory = {
   key: BmiCategoryKey;
   label: string;
   shortLabel: string;
+  color: string;
 };
 
 const CATEGORIES: Record<BmiCategoryKey, BmiCategory> = {
@@ -17,21 +18,25 @@ const CATEGORIES: Record<BmiCategoryKey, BmiCategory> = {
     key: "underweight",
     label: "Underweight",
     shortLabel: "Underweight",
+    color: "#38bdf8",
   },
   healthy: {
     key: "healthy",
     label: "Healthy weight",
     shortLabel: "Healthy",
+    color: "#10b981",
   },
   overweight: {
     key: "overweight",
     label: "Overweight",
     shortLabel: "Overweight",
+    color: "#f59e0b",
   },
   obese: {
     key: "obese",
     label: "Obese",
     shortLabel: "Obese",
+    color: "#f43f5e",
   },
 };
 
@@ -139,4 +144,106 @@ export function bmiBarPercent(bmi: number, min = 15, max = 40): number {
 export function bmiGaugeDegrees(bmi: number, min = 16, max = 42): number {
   const t = (bmi - min) / (max - min);
   return Math.max(0, Math.min(180, t * 180));
+}
+
+/* ── BMR (Mifflin-St Jeor equation) ─────────────────────────────── */
+
+export type Gender = "male" | "female";
+
+/**
+ * Mifflin-St Jeor BMR.
+ * Male:   10·w + 6.25·h − 5·a + 5
+ * Female: 10·w + 6.25·h − 5·a − 161
+ */
+export function computeBmr(
+  weightKg: number,
+  heightCm: number,
+  age: number,
+  gender: Gender,
+): number | null {
+  if (
+    !Number.isFinite(weightKg) ||
+    !Number.isFinite(heightCm) ||
+    !Number.isFinite(age) ||
+    weightKg <= 0 ||
+    heightCm <= 0 ||
+    age < 15 ||
+    age > 100
+  ) {
+    return null;
+  }
+  const base = 10 * weightKg + 6.25 * heightCm - 5 * age;
+  return Math.round(gender === "male" ? base + 5 : base - 161);
+}
+
+/* ── Activity levels & TDEE ─────────────────────────────────────── */
+
+export type ActivityLevel =
+  | "sedentary"
+  | "light"
+  | "moderate"
+  | "active"
+  | "very-active";
+
+export const ACTIVITY_LEVELS: Record<
+  ActivityLevel,
+  { label: string; short: string; multiplier: number }
+> = {
+  sedentary: {
+    label: "Sedentary — desk job, little or no exercise",
+    short: "Sedentary",
+    multiplier: 1.2,
+  },
+  light: {
+    label: "Lightly active — exercise 1–3 days/week",
+    short: "Light",
+    multiplier: 1.375,
+  },
+  moderate: {
+    label: "Moderately active — exercise 3–5 days/week",
+    short: "Moderate",
+    multiplier: 1.55,
+  },
+  active: {
+    label: "Active — exercise 6–7 days/week",
+    short: "Active",
+    multiplier: 1.725,
+  },
+  "very-active": {
+    label: "Very active — hard daily exercise + physical job",
+    short: "Very Active",
+    multiplier: 1.9,
+  },
+};
+
+/** Total Daily Energy Expenditure = BMR × activity multiplier. */
+export function computeTdee(bmr: number, activity: ActivityLevel): number {
+  return Math.round(bmr * ACTIVITY_LEVELS[activity].multiplier);
+}
+
+/** Calorie targets based on TDEE. */
+export type CalorieTargets = {
+  maintain: number;
+  mildLoss: number; // 0.5 kg/week — ~550 kcal deficit
+  modLoss: number; // 1.0 kg/week — ~1100 kcal deficit
+};
+
+export function calorieTargets(tdee: number): CalorieTargets {
+  return {
+    maintain: tdee,
+    mildLoss: Math.max(1200, tdee - 550),
+    modLoss: Math.max(1000, tdee - 1100),
+  };
+}
+
+/** BMR interpretation copy. */
+export function bmrInsight(bmr: number, gender: Gender): string {
+  const typical = gender === "male" ? [1500, 2000] : [1200, 1600];
+  if (bmr < typical[0]!) {
+    return `Your BMR is on the lower end for ${gender === "male" ? "men" : "women"}. This is normal and can reflect lower muscle mass. It's a useful baseline for designing a calorie plan.`;
+  }
+  if (bmr > typical[1]!) {
+    return `Your BMR is on the higher end, meaning your body burns more calories at rest — often linked to greater lean body mass. This gives you more flexibility when planning a calorie deficit.`;
+  }
+  return `Your BMR sits in a typical range for ${gender === "male" ? "men" : "women"}. Combined with your activity level, this guides a realistic calorie target for your goals.`;
 }

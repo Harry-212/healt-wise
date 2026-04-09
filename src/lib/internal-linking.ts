@@ -15,8 +15,8 @@ const DEFAULT_PRICE = {
 };
 
 const DEFAULT_TOOL = {
-  href: "/tools/cost-calculator",
-  label: "Cost calculator",
+  href: "/tools/bmi-calculator",
+  label: "BMI & Calorie calculator",
 };
 
 const MAP = {
@@ -43,7 +43,7 @@ const MAP = {
       href: "/mounjaro-price-comparison",
       label: "Compare Mounjaro prices UK",
     },
-    tool: { href: "/tools/dosage-calculator", label: "Dosage calculator" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
   },
   mounjaroVsSaxenda: {
     compare: [
@@ -57,7 +57,7 @@ const MAP = {
       href: "/wegovy-price-comparison",
       label: "Compare Wegovy prices UK",
     },
-    tool: { href: "/tools/progress-estimator", label: "Progress estimator" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
   },
   bestInjections: {
     compare: [
@@ -65,7 +65,7 @@ const MAP = {
       { href: "/compare/mounjaro-vs-saxenda", label: "Mounjaro vs Saxenda" },
     ],
     price: { href: "/prices/cheapest-options-uk", label: "Cheapest options UK" },
-    tool: { href: "/tools/cost-calculator", label: "Cost calculator" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
   },
   wegovyPriceUk: {
     compare: DEFAULT_COMPARE,
@@ -86,7 +86,7 @@ const MAP = {
       href: "/mounjaro-price-comparison",
       label: "Compare Mounjaro prices UK",
     },
-    tool: { href: "/tools/progress-estimator", label: "Progress estimator" },
+    tool: { href: "/tools/weight-loss-tracker", label: "Weight loss tracker" },
   },
   saxendaPriceUk: {
     compare: DEFAULT_COMPARE,
@@ -108,7 +108,7 @@ const MAP = {
   blog: {
     compare: DEFAULT_COMPARE,
     price: DEFAULT_PRICE,
-    tool: { href: "/tools/dosage-calculator", label: "Dosage calculator" },
+    tool: { href: "/tools/weight-loss-tracker", label: "Weight loss tracker" },
   },
   whatIsWegovy: {
     compare: [
@@ -140,8 +140,8 @@ const MAP = {
       label: "Compare Mounjaro prices UK",
     },
     tool: {
-      href: "/tools/dosage-calculator",
-      label: "Dosage calculator",
+      href: "/tools/bmi-calculator",
+      label: "BMI & Calorie calculator",
     },
   },
   whatIsSaxenda: {
@@ -157,8 +157,8 @@ const MAP = {
       label: "Compare Saxenda prices UK",
     },
     tool: {
-      href: "/tools/cost-calculator",
-      label: "Cost calculator",
+      href: "/tools/bmi-calculator",
+      label: "BMI & Calorie calculator",
     },
   },
   bmiCalculator: {
@@ -174,9 +174,174 @@ const MAP = {
       label: "Compare prices UK",
     },
     tool: {
-      href: "/tools/cost-calculator",
-      label: "Cost calculator",
+      href: "/tools/weight-loss-tracker",
+      label: "Weight loss tracker (My Hub)",
     },
+  },
+  helpfulGuide: {
+    compare: DEFAULT_COMPARE,
+    price: DEFAULT_PRICE,
+    tool: DEFAULT_TOOL,
+  },
+  guidePharmacy: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/compare/best-weight-loss-injections-uk", label: "Best weight loss injections UK" },
+    ],
+    price: { href: "/prices/cheapest-options-uk", label: "Compare UK prices" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaro: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/compare/mounjaro-vs-saxenda", label: "Mounjaro vs Saxenda" },
+    ],
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideGlp1: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/compare/best-weight-loss-injections-uk", label: "Best weight loss injections UK" },
+    ],
+    price: { href: "/prices/cheapest-options-uk", label: "Compare UK prices" },
+    tool: { href: "/tools/weight-loss-tracker", label: "Weight loss tracker" },
+  },
+  guideMounjaroPillar: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/compare/mounjaro-vs-saxenda", label: "Mounjaro vs Saxenda" },
+    ],
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroPlateau: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/compare/best-weight-loss-injections-uk", label: "Best weight loss injections UK" },
+    ],
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/weight-loss-tracker", label: "Weight loss tracker (My Hub)" },
+  },
+  guideMounjaroTimeline: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/compare/mounjaro-vs-saxenda", label: "Mounjaro vs Saxenda" },
+    ],
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroStorage: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroVitamins: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/compare/best-weight-loss-injections-uk", label: "Best weight loss injections UK" },
+    ],
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideLocalVsOnline: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/prices/cheapest-options-uk", label: "Compare UK prices" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideSwitchingWegovy: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/compare/mounjaro-vs-saxenda", label: "Mounjaro vs Saxenda" },
+    ],
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroGP: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideSwitchingPharmacy: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideCalorieCycling: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideEarlyWeightLoss: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroNutrition: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroMenopause: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/compare/best-weight-loss-injections-uk", label: "Best weight loss injections UK" },
+    ],
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroHealthBenefits: {
+    compare: [
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/compare/mounjaro-vs-saxenda", label: "Mounjaro vs Saxenda" },
+    ],
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroBMICutoff: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideNorovirus: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroEligibility: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroFeelCold: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroSkinPain: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroConstipation: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroSideEffects: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideRestartingMounjaro: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroDeliveryTimes: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
   },
 } as const satisfies Record<string, Partial<InternalLinkSet>>;
 

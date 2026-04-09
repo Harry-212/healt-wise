@@ -83,28 +83,13 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
   },
   {
     type: "Tool",
-    title: "BMI calculator UK",
+    title: "BMI, BMR & Calorie Calculator UK",
     href: "/tools/bmi-calculator",
   },
   {
     type: "Tool",
     title: "Weight loss tracker (My Hub)",
     href: "/tools/weight-loss-tracker",
-  },
-  {
-    type: "Tool",
-    title: "Cost calculator",
-    href: "/tools/cost-calculator",
-  },
-  {
-    type: "Tool",
-    title: "Dosage calculator",
-    href: "/tools/dosage-calculator",
-  },
-  {
-    type: "Tool",
-    title: "Progress estimator",
-    href: "/tools/progress-estimator",
   },
   { type: "Blog", title: "Blog home", href: "/blog" },
 ];

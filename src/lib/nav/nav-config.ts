@@ -82,7 +82,7 @@ export const NAV_PANELS: NavPanel[] = [
   {
     id: "guides",
     label: "Helpful Guides",
-    directHref: "/blog",
+    directHref: "/helpful-guide",
   },
   {
     id: "tools",
@@ -93,7 +93,7 @@ export const NAV_PANELS: NavPanel[] = [
         title: "Tools",
         links: [
           {
-            label: "BMI calculator UK",
+            label: "BMI, BMR & Calorie Calculator",
             href: "/tools/bmi-calculator",
             icon: "scale",
           },
@@ -101,17 +101,6 @@ export const NAV_PANELS: NavPanel[] = [
             label: "Weight Loss Tracker",
             href: "/tools/weight-loss-tracker",
             icon: "activity",
-          },
-          { label: "Cost Calculator", href: "/tools/cost-calculator", icon: "pound" },
-          {
-            label: "Dosage Calculator",
-            href: "/tools/dosage-calculator",
-            icon: "syringe",
-          },
-          {
-            label: "Progress Estimator",
-            href: "/tools/progress-estimator",
-            icon: "dashboard",
           },
         ],
       },

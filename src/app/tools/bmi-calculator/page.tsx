@@ -5,7 +5,8 @@ import BmiCalculatorClient from "@/components/tools/BmiCalculatorClient";
 import InternalLinks from "@/components/content/InternalLinks";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
-  BMI_CALCULATOR_FAQ_ITEMS,
+  BMI_CALCULATOR_FAQ_BMI_ITEMS,
+  BMI_CALCULATOR_FAQ_BMR_TDEE_ITEMS,
   bmiCalculatorFaqJsonLd,
   bmiCalculatorWebPageJsonLd,
 } from "@/lib/seo/bmi-calculator-json-ld";
@@ -211,8 +212,24 @@ export default function BmiCalculatorPage() {
           >
             FAQ
           </h2>
-          <dl className="mt-6 space-y-8">
-            {BMI_CALCULATOR_FAQ_ITEMS.map((item) => (
+          <h3 className="mt-8 scroll-mt-28 text-lg font-bold text-slate-900">
+            BMI &amp; UK weight loss treatment
+          </h3>
+          <dl className="mt-4 space-y-8">
+            {BMI_CALCULATOR_FAQ_BMI_ITEMS.map((item) => (
+              <div key={item.q}>
+                <dt className="text-lg font-semibold text-slate-900">
+                  {item.q}
+                </dt>
+                <dd className="mt-2 leading-relaxed text-slate-700">{item.a}</dd>
+              </div>
+            ))}
+          </dl>
+          <h3 className="mt-12 scroll-mt-28 text-lg font-bold text-slate-900">
+            BMR &amp; TDEE (metabolism &amp; calories)
+          </h3>
+          <dl className="mt-4 space-y-8">
+            {BMI_CALCULATOR_FAQ_BMR_TDEE_ITEMS.map((item) => (
               <div key={item.q}>
                 <dt className="text-lg font-semibold text-slate-900">
                   {item.q}
