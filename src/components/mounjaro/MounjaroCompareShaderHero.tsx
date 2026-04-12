@@ -30,7 +30,7 @@ export default function MounjaroCompareShaderHero({
 }) {
   return (
     <section className="border-b border-slate-200/80">
-      <ShaderBackground variant="violet">
+      <ShaderBackground variant="violet" staticOnly>
         <header className="relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-6 pb-2 md:px-10 lg:px-14">
           <Link
             href="/"

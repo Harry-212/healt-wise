@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import MedicationComparePricePreview from "@/components/content/MedicationComparePricePreview";
 
 type Variant = "wegovy" | "mounjaro" | "saxenda";
 
@@ -64,12 +63,22 @@ const CONFIG: Record<
   },
 };
 
-export default function MedicationPriceCompareTeaser({
+export default async function MedicationPriceCompareTeaser({
   variant,
 }: {
   variant: Variant;
 }) {
   const c = CONFIG[variant];
+
+  const Preview =
+    variant === "wegovy"
+      ? (await import("@/components/content/previews/MedicationComparePricePreviewWegovy"))
+          .default
+      : variant === "mounjaro"
+        ? (await import("@/components/content/previews/MedicationComparePricePreviewMounjaro"))
+            .default
+        : (await import("@/components/content/previews/MedicationComparePricePreviewSaxenda"))
+            .default;
 
   return (
     <section
@@ -85,7 +94,7 @@ export default function MedicationPriceCompareTeaser({
         <p className="text-slate-600 leading-relaxed">{c.lead}</p>
       </header>
 
-      <MedicationComparePricePreview variant={variant} />
+      <Preview />
 
       <div className="mt-6 flex flex-col items-center gap-3 border-t border-slate-200/80 pt-6 sm:flex-row sm:justify-center">
         <Link

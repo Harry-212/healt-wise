@@ -1,6 +1,7 @@
 "use client";
 
 import type React from "react";
+import dynamic from "next/dynamic";
 import {
   useEffect,
   useMemo,
@@ -8,7 +9,11 @@ import {
   useState,
   useSyncExternalStore,
 } from "react";
-import { MeshGradient } from "@paper-design/shaders-react";
+
+const HeroShaderAnimatedMesh = dynamic(
+  () => import("./hero-shader-animated-mesh"),
+  { ssr: false },
+);
 
 /** Avoid mounting Paper Shaders when WebGL is unavailable (RDP, some VMs, locked-down browsers). */
 function detectWebGL(): boolean {
@@ -78,6 +83,11 @@ interface ShaderBackgroundProps {
   minHeight?: string;
   /** Mesh gradient palette — teal (Wegovy), violet (Mounjaro), blue (Saxenda). */
   variant?: HeroShaderVariant;
+  /**
+   * When true, never runs WebGL or loads the shader chunk — static CSS gradient only.
+   * Use on data-heavy compare pages so the hero stays smooth like simpler routes.
+   */
+  staticOnly?: boolean;
 }
 
 const MESH_BY_VARIANT: Record<
@@ -102,6 +112,7 @@ export function ShaderBackground({
   children,
   minHeight = "min-h-[560px] sm:min-h-[620px] lg:min-h-[650px]",
   variant = "teal",
+  staticOnly = false,
 }: ShaderBackgroundProps) {
   const reducedMotion = usePrefersReducedMotion();
   const minLg = useMinLgViewport();
@@ -114,11 +125,13 @@ export function ShaderBackground({
   const inViewRaf = useRef<number | null>(null);
 
   useEffect(() => {
+    if (staticOnly) return;
     setWebglOk(detectWebGL());
     setGpuChecked(true);
-  }, []);
+  }, [staticOnly]);
 
   useEffect(() => {
+    if (staticOnly) return;
     let cancelled = false;
     const kick = () => {
       if (!cancelled) setMeshIdleReady(true);
@@ -135,15 +148,17 @@ export function ShaderBackground({
       cancelled = true;
       window.clearTimeout(t);
     };
-  }, []);
+  }, [staticOnly]);
 
   useEffect(() => {
+    if (staticOnly) return;
     const onVis = () => setTabVisible(document.visibilityState === "visible");
     document.addEventListener("visibilitychange", onVis);
     return () => document.removeEventListener("visibilitychange", onVis);
-  }, []);
+  }, [staticOnly]);
 
   useEffect(() => {
+    if (staticOnly) return;
     const el = rootRef.current;
     if (!el || typeof IntersectionObserver === "undefined") return;
 
@@ -159,7 +174,6 @@ export function ShaderBackground({
       },
       {
         root: null,
-        // Inflate root so brief scroll near the hero boundary does not thrash WebGL on/off.
         rootMargin: "160px 0px 280px 0px",
         threshold: 0,
       },
@@ -169,7 +183,7 @@ export function ShaderBackground({
       if (inViewRaf.current != null) cancelAnimationFrame(inViewRaf.current);
       obs.disconnect();
     };
-  }, []);
+  }, [staticOnly]);
 
   const mesh = MESH_BY_VARIANT[variant];
   const staticGradient = useMemo(
@@ -179,6 +193,7 @@ export function ShaderBackground({
   );
 
   const useAnimatedMesh =
+    !staticOnly &&
     gpuChecked &&
     webglOk &&
     !reducedMotion &&
@@ -199,19 +214,13 @@ export function ShaderBackground({
           aria-hidden
         />
       ) : (
-        <div
-          className="absolute inset-0 z-0 contain-strict"
-          aria-hidden
-        >
-          <MeshGradient
-            className="absolute inset-0 h-full w-full"
-            colors={mesh.layer1}
-            speed={0.085}
-            distortion={0.55}
-            swirl={0.1}
-            grainOverlay={0.03}
-          />
-        </div>
+        <HeroShaderAnimatedMesh
+          colors={mesh.layer1}
+          speed={0.085}
+          distortion={0.55}
+          swirl={0.1}
+          grainOverlay={0.03}
+        />
       )}
 
       <div

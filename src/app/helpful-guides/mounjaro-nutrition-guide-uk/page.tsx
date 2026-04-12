@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,19 +16,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results | Health Wise",
-  description:
-    "Mounjaro controls appetite—but what you eat determines the quality of your results. A practical, evidence-based guide to nutrition while using tirzepatide in the UK.",
-  openGraph: {
-    title: "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results",
-    description:
-      "Mounjaro controls appetite—but what you eat determines the quality of your results. A practical, evidence-based guide to nutrition while using tirzepatide in the UK.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/mounjaro-nutrition-guide-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-nutrition-guide-uk",
+  title: "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results | Health Wise",
+  description: "Mounjaro controls appetite—but what you eat determines the quality of your results. A practical, evidence-based guide to nutrition while using tirzepatide in the UK.",
+  openGraphTitle: "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results",
+});
+
 
 const TOC = [
   { id: "why-nutrition-matters", label: "Why Nutrition Still Matters" },

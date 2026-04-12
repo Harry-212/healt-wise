@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -17,22 +17,14 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline | Health Wise",
-  description:
-    "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process—medical review, eligibility checks, cold-chain delivery—and how to avoid delays.",
-  openGraph: {
-    title:
-      "How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline",
-    description:
-      "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process and how to avoid common delays.",
-    type: "article",
-  },
-  alternates: {
-    canonical: "/helpful-guides/mounjaro-prescription-timeline-uk",
-  },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-prescription-timeline-uk",
+  title: "How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline | Health Wise",
+  description: "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process—medical review, eligibility checks, cold-chain delivery—and how to avoid delays.",
+  openGraphTitle: "How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline",
+  openGraphDescription: "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process and how to avoid common delays.",
+});
+
 
 const TOC = [
   { id: "timeline", label: "Typical Timeline" },

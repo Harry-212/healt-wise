@@ -72,6 +72,11 @@ export default function Footer() {
                   Our methodology
                 </Link>
               </li>
+              <li>
+                <Link href="/helpful-guides" className={linkClass}>
+                  Helpful health guides
+                </Link>
+              </li>
             </ul>
           </nav>
 

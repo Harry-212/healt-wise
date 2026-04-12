@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -17,19 +17,14 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Mounjaro UK Eligibility Guide (2026): BMI Rules, Requirements & Exceptions | Health Wise",
-  description:
-    "Who qualifies for Mounjaro in the UK? A clear breakdown of BMI thresholds, accepted health conditions, ethnicity adjustments, what happens when BMI drops, and how to restart.",
-  openGraph: {
-    title: "Mounjaro UK Eligibility Guide (2026): BMI Rules, Requirements & Exceptions",
-    description:
-      "Who qualifies for Mounjaro in the UK? A clear breakdown of BMI thresholds, accepted health conditions, ethnicity adjustments, and what happens when your BMI drops.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/mounjaro-eligibility-bmi-requirements-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-eligibility-bmi-requirements-uk",
+  title: "Mounjaro UK Eligibility Guide (2026): BMI Rules, Requirements & Exceptions | Health Wise",
+  description: "Who qualifies for Mounjaro in the UK? A clear breakdown of BMI thresholds, accepted health conditions, ethnicity adjustments, what happens when BMI drops, and how to restart.",
+  openGraphTitle: "Mounjaro UK Eligibility Guide (2026): BMI Rules, Requirements & Exceptions",
+  openGraphDescription: "Who qualifies for Mounjaro in the UK? A clear breakdown of BMI thresholds, accepted health conditions, ethnicity adjustments, and what happens when your BMI drops.",
+});
+
 
 const TOC = [
   { id: "bmi-requirements", label: "Mounjaro BMI Requirements (UK)" },

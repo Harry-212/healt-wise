@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -15,22 +15,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Mounjaro and Pregnancy Risk: Fertility & Contraception Guide | Health Wise",
-  description:
-    "Mounjaro may increase fertility indirectly as metabolic health improves. Understand the clinical facts about tirzepatide, contraception, and pregnancy risk in the UK.",
-  openGraph: {
-    title:
-      "Mounjaro and Pregnancy Risk: What You Need to Know About Fertility & Contraception",
-    description:
-      "Mounjaro may increase fertility indirectly as metabolic health improves. Understand the clinical facts about tirzepatide, contraception, and pregnancy risk in the UK.",
-    type: "article",
-  },
-  alternates: {
-    canonical: "/helpful-guides/mounjaro-pregnancy-risk-fertility-contraception",
-  },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-pregnancy-risk-fertility-contraception",
+  title: "Mounjaro and Pregnancy Risk: Fertility & Contraception Guide | Health Wise",
+  description: "Mounjaro may increase fertility indirectly as metabolic health improves. Understand the clinical facts about tirzepatide, contraception, and pregnancy risk in the UK.",
+  openGraphTitle: "Mounjaro and Pregnancy Risk: What You Need to Know About Fertility & Contraception",
+});
+
 
 const TOC = [
   { id: "understanding", label: "Understanding Mounjaro and Pregnancy" },

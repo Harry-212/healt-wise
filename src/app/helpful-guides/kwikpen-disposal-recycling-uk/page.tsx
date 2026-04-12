@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,19 +16,14 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "KwikPen Disposal & Recycling UK (Mounjaro / Eli Lilly): Safe Sharps Guide | Health Wise",
-  description:
-    "How to dispose of used Mounjaro KwikPens and needles safely in the UK—sharps bins, general waste rules, returning unused medicine, and why household recycling is not suitable.",
-  openGraph: {
-    title: "KwikPen Disposal & Recycling UK (Mounjaro / Eli Lilly): Safe Sharps Guide",
-    description:
-      "How to dispose of used Mounjaro KwikPens and needles safely in the UK—sharps bins, general waste rules, and returning unused medicine.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/kwikpen-disposal-recycling-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "kwikpen-disposal-recycling-uk",
+  title: "KwikPen Disposal & Recycling UK (Mounjaro / Eli Lilly): Safe Sharps Guide | Health Wise",
+  description: "How to dispose of used Mounjaro KwikPens and needles safely in the UK—sharps bins, general waste rules, returning unused medicine, and why household recycling is not suitable.",
+  openGraphTitle: "KwikPen Disposal & Recycling UK (Mounjaro / Eli Lilly): Safe Sharps Guide",
+  openGraphDescription: "How to dispose of used Mounjaro KwikPens and needles safely in the UK—sharps bins, general waste rules, and returning unused medicine.",
+});
+
 
 const TOC = [
   { id: "can-recycle", label: "Can KwikPens Be Recycled?" },

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,19 +16,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery | Health Wise",
-  description:
-    "Norovirus can feel more intense on GLP-1 medications like Mounjaro or Wegovy. Here's why, what symptoms to watch for, when to delay your injection, and how to recover safely.",
-  openGraph: {
-    title: "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery",
-    description:
-      "Norovirus can feel more intense on GLP-1 medications like Mounjaro or Wegovy. Here's why, what symptoms to watch for, when to delay your injection, and how to recover safely.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/norovirus-mounjaro-wegovy-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "norovirus-mounjaro-wegovy-uk",
+  title: "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery | Health Wise",
+  description: "Norovirus can feel more intense on GLP-1 medications like Mounjaro or Wegovy. Here's why, what symptoms to watch for, when to delay your injection, and how to recover safely.",
+  openGraphTitle: "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery",
+});
+
 
 const TOC = [
   { id: "how-affects", label: "How Norovirus Affects GLP-1 Medication Users" },

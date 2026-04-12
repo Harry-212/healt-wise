@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,19 +16,14 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Travel Insurance for Mounjaro Users: UK Guide (2026) | Health Wise",
-  description:
-    "Travelling on Mounjaro is usually straightforward. What insurers ask, why you must declare tirzepatide, what cover to look for, and a practical pre-trip checklist.",
-  openGraph: {
-    title: "Travel Insurance for Mounjaro Users: UK Guide (2026)",
-    description:
-      "Travelling on Mounjaro is usually straightforward. What insurers ask, why disclosure matters, and what your policy should include.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/travel-insurance-mounjaro-users-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "travel-insurance-mounjaro-users-uk",
+  title: "Travel Insurance for Mounjaro Users: UK Guide (2026) | Health Wise",
+  description: "Travelling on Mounjaro is usually straightforward. What insurers ask, why you must declare tirzepatide, what cover to look for, and a practical pre-trip checklist.",
+  openGraphTitle: "Travel Insurance for Mounjaro Users: UK Guide (2026)",
+  openGraphDescription: "Travelling on Mounjaro is usually straightforward. What insurers ask, why disclosure matters, and what your policy should include.",
+});
+
 
 const TOC = [
   { id: "overview", label: "Travelling on Mounjaro" },

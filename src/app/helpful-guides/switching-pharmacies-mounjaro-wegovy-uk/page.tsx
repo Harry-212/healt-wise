@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,20 +16,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide | Health Wise",
-  description:
-    "Want to switch pharmacy for your Mounjaro or Wegovy prescription? Here's how to compare regulated providers, what documents you need, and how to switch safely.",
-  openGraph: {
-    title:
-      "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide",
-    description:
-      "Want to switch pharmacy for your Mounjaro or Wegovy prescription? Here's how to compare regulated providers, what documents you need, and how to switch safely.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "switching-pharmacies-mounjaro-wegovy-uk",
+  title: "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide | Health Wise",
+  description: "Want to switch pharmacy for your Mounjaro or Wegovy prescription? Here's how to compare regulated providers, what documents you need, and how to switch safely.",
+  openGraphTitle: "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide",
+});
+
 
 const TOC = [
   { id: "why-switch", label: "Why People Switch Pharmacies" },

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -17,19 +17,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss | Health Wise",
-  description:
-    "Mounjaro and Wegovy do more than reduce weight. From improved blood sugar control to cardiovascular and liver health, here's what the clinical evidence shows.",
-  openGraph: {
-    title: "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss",
-    description:
-      "Mounjaro and Wegovy do more than reduce weight. From improved blood sugar control to cardiovascular and liver health, here's what the clinical evidence shows.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/mounjaro-wegovy-health-benefits-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-wegovy-health-benefits-uk",
+  title: "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss | Health Wise",
+  description: "Mounjaro and Wegovy do more than reduce weight. From improved blood sugar control to cardiovascular and liver health, here's what the clinical evidence shows.",
+  openGraphTitle: "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss",
+});
+
 
 const TOC = [
   { id: "weight-loss", label: "1. Significant and Sustainable Weight Loss" },

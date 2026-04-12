@@ -3,8 +3,13 @@ import Link from "next/link";
 import InternalLinks from "@/components/content/InternalLinks";
 import type { InternalLinkSet } from "@/lib/internal-linking";
 import { GUIDE_IMAGES } from "@/lib/guide-images";
-import { HELPFUL_GUIDES_HUB_PATH } from "@/lib/helpful-guide-slugs";
+import {
+  HELPFUL_GUIDES_HUB_PATH,
+  helpfulGuidePath,
+} from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import GuideTocSidebar from "./GuideTocSidebar";
+import { GuideSharePanel } from "./GuideSharePanel";
 
 /** Splits a title at the first ":" so the subtitle starts on a new line. */
 function SplitTitle({ text }: { text: string }) {
@@ -48,6 +53,7 @@ export function GuideLayout({
   schemaJson,
 }: Props) {
   const thumbnail = slug ? GUIDE_IMAGES[slug] : undefined;
+  const shareUrl = slug ? `${siteOrigin()}${helpfulGuidePath(slug)}` : "";
   return (
     <>
       {schemaJson && (
@@ -185,6 +191,10 @@ export function GuideLayout({
             <article className="mt-8 space-y-10 text-slate-700">
               {children}
             </article>
+
+            {slug && shareUrl ? (
+              <GuideSharePanel url={shareUrl} title={title} description={description} />
+            ) : null}
 
             {/* Internal links */}
             <div className="mt-14">

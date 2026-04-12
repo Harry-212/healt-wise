@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,19 +16,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Mounjaro BMI Cutoffs in the UK: Why Stopping Too Early Can Backfire | Health Wise",
-  description:
-    "Many UK patients are stopped on Mounjaro once they reach a 'normal' BMI. Here's why that approach is flawed, what the evidence says about maintenance, and how to find a provider with a long-term plan.",
-  openGraph: {
-    title: "Mounjaro BMI Cutoffs in the UK: Why Stopping Too Early Can Backfire",
-    description:
-      "Many UK patients are stopped on Mounjaro once they reach a 'normal' BMI. Here's why that approach is flawed, what the evidence says about maintenance, and how to find a provider with a long-term plan.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/mounjaro-bmi-cutoff-stopping-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-bmi-cutoff-stopping-uk",
+  title: "Mounjaro BMI Cutoffs in the UK: Why Stopping Too Early Can Backfire | Health Wise",
+  description: "Many UK patients are stopped on Mounjaro once they reach a 'normal' BMI. Here's why that approach is flawed, what the evidence says about maintenance, and how to find a provider with a long-term plan.",
+  openGraphTitle: "Mounjaro BMI Cutoffs in the UK: Why Stopping Too Early Can Backfire",
+});
+
 
 const TOC = [
   { id: "bmi-problem", label: "The Problem with BMI-Based Cutoffs" },

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,19 +16,14 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Mounjaro and Hot Weather UK: Hydration, Sun Safety & Heatwave Tips | Health Wise",
-  description:
-    "On Mounjaro, heat and reduced thirst cues raise dehydration risk—even if you feel cold. UK summer safety: hydration targets, sun protection, GLP-1 digestive symptoms, and when to seek help.",
-  openGraph: {
-    title: "Mounjaro and Hot Weather UK: Hydration, Sun Safety & Heatwave Tips",
-    description:
-      "On Mounjaro, heat and reduced thirst cues raise dehydration risk. Hydration, sun protection, and when to seek help in UK heatwaves.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/mounjaro-hot-weather-safety-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-hot-weather-safety-uk",
+  title: "Mounjaro and Hot Weather UK: Hydration, Sun Safety & Heatwave Tips | Health Wise",
+  description: "On Mounjaro, heat and reduced thirst cues raise dehydration risk—even if you feel cold. UK summer safety: hydration targets, sun protection, GLP-1 digestive symptoms, and when to seek help.",
+  openGraphTitle: "Mounjaro and Hot Weather UK: Hydration, Sun Safety & Heatwave Tips",
+  openGraphDescription: "On Mounjaro, heat and reduced thirst cues raise dehydration risk. Hydration, sun protection, and when to seek help in UK heatwaves.",
+});
+
 
 const TOC = [
   { id: "heat-body", label: "Mounjaro, Heat, and Your Body" },

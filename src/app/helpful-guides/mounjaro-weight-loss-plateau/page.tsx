@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,22 +16,14 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Why Weight Loss Slows on Mounjaro: Understanding Plateaus & Long-Term Progress | Health Wise",
-  description:
-    "Weight loss naturally slows after the first weeks on Mounjaro. Learn why plateaus happen, what they mean for long-term progress, and how to stay on track with tirzepatide.",
-  openGraph: {
-    title:
-      "Why Weight Loss Slows on Mounjaro: Understanding Plateaus & Long-Term Progress",
-    description:
-      "Weight loss naturally slows after the first weeks on Mounjaro. Learn why plateaus happen, what they mean for long-term progress, and how to stay on track.",
-    type: "article",
-  },
-  alternates: {
-    canonical: "/helpful-guides/mounjaro-weight-loss-plateau",
-  },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-weight-loss-plateau",
+  title: "Why Weight Loss Slows on Mounjaro: Understanding Plateaus & Long-Term Progress | Health Wise",
+  description: "Weight loss naturally slows after the first weeks on Mounjaro. Learn why plateaus happen, what they mean for long-term progress, and how to stay on track with tirzepatide.",
+  openGraphTitle: "Why Weight Loss Slows on Mounjaro: Understanding Plateaus & Long-Term Progress",
+  openGraphDescription: "Weight loss naturally slows after the first weeks on Mounjaro. Learn why plateaus happen, what they mean for long-term progress, and how to stay on track.",
+});
+
 
 const TOC = [
   { id: "fast-start", label: "Why Weight Loss Is Faster at the Start" },

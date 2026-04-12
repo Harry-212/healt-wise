@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,19 +16,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Multivitamins and Mounjaro in the UK: Do You Really Need Them? | Health Wise",
-  description:
-    "Mounjaro reduces appetite, which can lower nutrient intake. We cut through the influencer noise and explain what the evidence says about multivitamins while using Mounjaro.",
-  openGraph: {
-    title: "Multivitamins and Mounjaro in the UK: Do You Really Need Them?",
-    description:
-      "Mounjaro reduces appetite, which can lower nutrient intake. We cut through the influencer noise and explain what the evidence says about multivitamins while using Mounjaro.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/mounjaro-multivitamins-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-multivitamins-uk",
+  title: "Multivitamins and Mounjaro in the UK: Do You Really Need Them? | Health Wise",
+  description: "Mounjaro reduces appetite, which can lower nutrient intake. We cut through the influencer noise and explain what the evidence says about multivitamins while using Mounjaro.",
+  openGraphTitle: "Multivitamins and Mounjaro in the UK: Do You Really Need Them?",
+});
+
 
 const TOC = [
   { id: "supplement-advice", label: "Be Careful with Supplement Advice Online" },

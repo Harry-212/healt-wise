@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,22 +16,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained | Health Wise",
-  description:
-    "Discover how Health Wise validates every pharmacy against the GPhC register. Learn our multi-layer safety verification process and how to check a pharmacy yourself.",
-  openGraph: {
-    title:
-      "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained",
-    description:
-      "Discover how Health Wise validates every pharmacy against the GPhC register. Learn our multi-layer safety verification process and how to check a pharmacy yourself.",
-    type: "article",
-  },
-  alternates: {
-    canonical: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
-  },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "how-we-verify-uk-pharmacies-gphc-safety-standards",
+  title: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained | Health Wise",
+  description: "Discover how Health Wise validates every pharmacy against the GPhC register. Learn our multi-layer safety verification process and how to check a pharmacy yourself.",
+  openGraphTitle: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained",
+});
+
 
 const TOC = [
   { id: "protection", label: "How We Protect Your Safety" },

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -17,20 +17,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice? | Health Wise",
-  description:
-    "Online pharmacies are cheaper, but local pharmacies offer face-to-face clinical support. Here's an honest breakdown of both options for Mounjaro patients in the UK.",
-  openGraph: {
-    title:
-      "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice?",
-    description:
-      "Online pharmacies are cheaper, but local pharmacies offer face-to-face clinical support. Here's an honest breakdown of both options for Mounjaro patients in the UK.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/local-vs-online-pharmacies-mounjaro-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "local-vs-online-pharmacies-mounjaro-uk",
+  title: "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice? | Health Wise",
+  description: "Online pharmacies are cheaper, but local pharmacies offer face-to-face clinical support. Here's an honest breakdown of both options for Mounjaro patients in the UK.",
+  openGraphTitle: "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice?",
+});
+
 
 const TOC = [
   { id: "local-matters", label: "Why Local Pharmacies Still Matter" },

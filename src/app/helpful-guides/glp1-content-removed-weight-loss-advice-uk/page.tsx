@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,22 +16,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK | Health Wise",
-  description:
-    "Social media platforms are restricting content about Mounjaro, Wegovy, and GLP-1 medications. We examine what is being removed, the regulatory context, and what patients are losing.",
-  openGraph: {
-    title:
-      "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK",
-    description:
-      "Social media platforms are restricting content about Mounjaro, Wegovy, and GLP-1 medications. We examine what is being removed, the regulatory context, and what patients are losing.",
-    type: "article",
-  },
-  alternates: {
-    canonical: "/helpful-guides/glp1-content-removed-weight-loss-advice-uk",
-  },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "glp1-content-removed-weight-loss-advice-uk",
+  title: "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK | Health Wise",
+  description: "Social media platforms are restricting content about Mounjaro, Wegovy, and GLP-1 medications. We examine what is being removed, the regulatory context, and what patients are losing.",
+  openGraphTitle: "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK",
+});
+
 
 const TOC = [
   { id: "restrictions", label: "Growing Restrictions on Weight Loss Content" },

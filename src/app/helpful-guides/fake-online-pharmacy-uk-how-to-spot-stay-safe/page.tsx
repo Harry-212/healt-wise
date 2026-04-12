@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,19 +16,14 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "How to Identify a Fake Online Pharmacy in the UK & Stay Safe | Health Wise",
-  description:
-    "Fake online pharmacies sell counterfeit or unsafe medicines. Learn the warning signs, who regulates UK pharmacies (GPhC, MHRA), and how to verify a site before you buy.",
-  openGraph: {
-    title: "How to Identify a Fake Online Pharmacy in the UK & Stay Safe",
-    description:
-      "Fake online pharmacies sell counterfeit or unsafe medicines. Learn the warning signs and how to verify a UK pharmacy before you buy.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "fake-online-pharmacy-uk-how-to-spot-stay-safe",
+  title: "How to Identify a Fake Online Pharmacy in the UK & Stay Safe | Health Wise",
+  description: "Fake online pharmacies sell counterfeit or unsafe medicines. Learn the warning signs, who regulates UK pharmacies (GPhC, MHRA), and how to verify a site before you buy.",
+  openGraphTitle: "How to Identify a Fake Online Pharmacy in the UK & Stay Safe",
+  openGraphDescription: "Fake online pharmacies sell counterfeit or unsafe medicines. Learn the warning signs and how to verify a UK pharmacy before you buy.",
+});
+
 
 const TOC = [
   { id: "benefits-risks", label: "Benefits and Risks of Online Pharmacies" },

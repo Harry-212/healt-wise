@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -17,19 +17,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Mounjaro Side Effects UK: What to Expect and How to Manage Them | Health Wise",
-  description:
-    "A complete, honest overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—with evidence-based management strategies for each.",
-  openGraph: {
-    title: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
-    description:
-      "A complete, honest overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—with evidence-based management strategies for each.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/mounjaro-side-effects-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-side-effects-uk",
+  title: "Mounjaro Side Effects UK: What to Expect and How to Manage Them | Health Wise",
+  description: "A complete, honest overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—with evidence-based management strategies for each.",
+  openGraphTitle: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
+});
+
 
 const TOC = [
   { id: "common-side-effects", label: "Common Side Effects" },

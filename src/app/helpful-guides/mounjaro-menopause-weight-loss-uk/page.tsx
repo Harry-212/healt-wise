@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -17,19 +17,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Mounjaro and Menopause: A Complete UK Guide to Weight Loss Support | Health Wise",
-  description:
-    "Menopause-related weight gain has distinct hormonal causes. Here's how Mounjaro's dual GLP-1/GIP mechanism can help menopausal women, who is eligible, and how to maximise results.",
-  openGraph: {
-    title: "Mounjaro and Menopause: A Complete UK Guide to Weight Loss Support",
-    description:
-      "Menopause-related weight gain has distinct hormonal causes. Here's how Mounjaro's dual GLP-1/GIP mechanism can help menopausal women, who is eligible, and how to maximise results.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/mounjaro-menopause-weight-loss-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-menopause-weight-loss-uk",
+  title: "Mounjaro and Menopause: A Complete UK Guide to Weight Loss Support | Health Wise",
+  description: "Menopause-related weight gain has distinct hormonal causes. Here's how Mounjaro's dual GLP-1/GIP mechanism can help menopausal women, who is eligible, and how to maximise results.",
+  openGraphTitle: "Mounjaro and Menopause: A Complete UK Guide to Weight Loss Support",
+});
+
 
 const TOC = [
   { id: "why-weight-gain", label: "Why Weight Gain Happens During Menopause" },

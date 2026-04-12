@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -16,19 +16,14 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Mounjaro Delivery Times UK: Why Safety Matters More Than Speed | Health Wise",
-  description:
-    "Online pharmacies advertise fast Mounjaro delivery—but responsible prescribing takes time. Here's what the dispensing process involves, why delays happen, and how to choose a trustworthy provider.",
-  openGraph: {
-    title: "Mounjaro Delivery Times UK: Why Safety Matters More Than Speed",
-    description:
-      "Online pharmacies advertise fast Mounjaro delivery—but responsible prescribing takes time. Here's what the dispensing process involves and how to choose a provider you can trust.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/mounjaro-delivery-times-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-delivery-times-uk",
+  title: "Mounjaro Delivery Times UK: Why Safety Matters More Than Speed | Health Wise",
+  description: "Online pharmacies advertise fast Mounjaro delivery—but responsible prescribing takes time. Here's what the dispensing process involves, why delays happen, and how to choose a trustworthy provider.",
+  openGraphTitle: "Mounjaro Delivery Times UK: Why Safety Matters More Than Speed",
+  openGraphDescription: "Online pharmacies advertise fast Mounjaro delivery—but responsible prescribing takes time. Here's what the dispensing process involves and how to choose a provider you can trust.",
+});
+
 
 const TOC = [
   { id: "fast-delivery-misleading", label: "Why Fast Delivery Can Be Misleading" },

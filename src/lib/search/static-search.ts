@@ -82,6 +82,12 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
     href: "/pharmacy-safety-gphc-verification",
   },
   {
+    type: "Guide",
+    title: "Helpful health guides",
+    href: "/helpful-guides",
+    keywords: "Mounjaro Wegovy pharmacy safety UK guides",
+  },
+  {
     type: "Tool",
     title: "BMI, BMR & Calorie Calculator UK",
     href: "/tools/bmi-calculator",

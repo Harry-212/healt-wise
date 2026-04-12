@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -17,20 +17,14 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down) | Health Wise",
-  description:
-    "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology behind initial results, what plateaus mean, and how to keep progressing sustainably.",
-  openGraph: {
-    title:
-      "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down)",
-    description:
-      "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology, what plateaus mean, and how to keep progressing sustainably.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/mounjaro-early-weight-loss-why-it-slows" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "mounjaro-early-weight-loss-why-it-slows",
+  title: "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down) | Health Wise",
+  description: "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology behind initial results, what plateaus mean, and how to keep progressing sustainably.",
+  openGraphTitle: "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down)",
+  openGraphDescription: "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology, what plateaus mean, and how to keep progressing sustainably.",
+});
+
 
 const TOC = [
   { id: "fast-at-first", label: "Why You Lose Weight Quickly at First" },

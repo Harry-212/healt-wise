@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
@@ -18,19 +18,13 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
-export const metadata: Metadata = {
-  title:
-    "Switching from Wegovy to Mounjaro in the UK: Safe Transition Guide | Health Wise",
-  description:
-    "Thinking of switching from Wegovy to Mounjaro? This guide covers why patients switch, the clinical differences, how to transition safely, and what to expect during the changeover.",
-  openGraph: {
-    title: "Switching from Wegovy to Mounjaro in the UK: Safe Transition Guide",
-    description:
-      "Thinking of switching from Wegovy to Mounjaro? This guide covers why patients switch, the clinical differences, how to transition safely, and what to expect during the changeover.",
-    type: "article",
-  },
-  alternates: { canonical: "/helpful-guides/switching-wegovy-to-mounjaro-uk" },
-};
+export const metadata = buildGuideShareMetadata({
+  slug: "switching-wegovy-to-mounjaro-uk",
+  title: "Switching from Wegovy to Mounjaro in the UK: Safe Transition Guide | Health Wise",
+  description: "Thinking of switching from Wegovy to Mounjaro? This guide covers why patients switch, the clinical differences, how to transition safely, and what to expect during the changeover.",
+  openGraphTitle: "Switching from Wegovy to Mounjaro in the UK: Safe Transition Guide",
+});
+
 
 const TOC = [
   { id: "why-switch", label: "Why People Switch Treatments" },
