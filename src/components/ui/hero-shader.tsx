@@ -2,11 +2,9 @@
 
 import type React from "react";
 import {
-  createContext,
-  useContext,
   useEffect,
-  useId,
   useMemo,
+  useRef,
   useState,
   useSyncExternalStore,
 } from "react";
@@ -49,17 +47,27 @@ function usePrefersReducedMotion() {
   );
 }
 
-type HeroShaderFilterIds = {
-  /** Use as `style={{ filter: ids.glassUrl }}` */
-  glassUrl: string;
-  /** Use as `style={{ filter: ids.gooeyUrl }}` for gooey button groups */
-  gooeyUrl: string;
-};
+function subscribeMinLg(onChange: () => void) {
+  const mq = window.matchMedia("(min-width: 1024px)");
+  mq.addEventListener("change", onChange);
+  return () => mq.removeEventListener("change", onChange);
+}
 
-const HeroShaderFilterContext = createContext<HeroShaderFilterIds | null>(null);
+function getMinLgSnapshot() {
+  return window.matchMedia("(min-width: 1024px)").matches;
+}
 
-export function useHeroShaderFilters(): HeroShaderFilterIds | null {
-  return useContext(HeroShaderFilterContext);
+function getMinLgServerSnapshot() {
+  return false;
+}
+
+/** Animated WebGL mesh is heavy on laptops and phones; reserve it for large viewports. */
+function useMinLgViewport() {
+  return useSyncExternalStore(
+    subscribeMinLg,
+    getMinLgSnapshot,
+    getMinLgServerSnapshot,
+  );
 }
 
 export type HeroShaderVariant = "teal" | "violet" | "blue";
@@ -96,25 +104,72 @@ export function ShaderBackground({
   variant = "teal",
 }: ShaderBackgroundProps) {
   const reducedMotion = usePrefersReducedMotion();
+  const minLg = useMinLgViewport();
   const [webglOk, setWebglOk] = useState(false);
   const [gpuChecked, setGpuChecked] = useState(false);
+  const [heroInView, setHeroInView] = useState(true);
+  const [tabVisible, setTabVisible] = useState(true);
+  const [meshIdleReady, setMeshIdleReady] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const inViewRaf = useRef<number | null>(null);
 
   useEffect(() => {
     setWebglOk(detectWebGL());
     setGpuChecked(true);
   }, []);
 
-  const uid = useId().replace(/:/g, "");
-  const glassId = `glass-effect-${uid}`;
-  const gooeyId = `gooey-filter-${uid}`;
+  useEffect(() => {
+    let cancelled = false;
+    const kick = () => {
+      if (!cancelled) setMeshIdleReady(true);
+    };
+    if (typeof requestIdleCallback !== "undefined") {
+      const id = requestIdleCallback(kick, { timeout: 1400 });
+      return () => {
+        cancelled = true;
+        cancelIdleCallback(id);
+      };
+    }
+    const t = window.setTimeout(kick, 400);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(t);
+    };
+  }, []);
 
-  const filterUrls = useMemo(
-    () => ({
-      glassUrl: `url(#${glassId})`,
-      gooeyUrl: `url(#${gooeyId})`,
-    }),
-    [glassId, gooeyId],
-  );
+  useEffect(() => {
+    const onVis = () => setTabVisible(document.visibilityState === "visible");
+    document.addEventListener("visibilitychange", onVis);
+    return () => document.removeEventListener("visibilitychange", onVis);
+  }, []);
+
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (inViewRaf.current != null) {
+          cancelAnimationFrame(inViewRaf.current);
+        }
+        inViewRaf.current = requestAnimationFrame(() => {
+          inViewRaf.current = null;
+          setHeroInView(entry.isIntersecting);
+        });
+      },
+      {
+        root: null,
+        // Inflate root so brief scroll near the hero boundary does not thrash WebGL on/off.
+        rootMargin: "160px 0px 280px 0px",
+        threshold: 0,
+      },
+    );
+    obs.observe(el);
+    return () => {
+      if (inViewRaf.current != null) cancelAnimationFrame(inViewRaf.current);
+      obs.disconnect();
+    };
+  }, []);
 
   const mesh = MESH_BY_VARIANT[variant];
   const staticGradient = useMemo(
@@ -124,37 +179,19 @@ export function ShaderBackground({
   );
 
   const useAnimatedMesh =
-    gpuChecked && webglOk && !reducedMotion;
+    gpuChecked &&
+    webglOk &&
+    !reducedMotion &&
+    minLg &&
+    heroInView &&
+    tabVisible &&
+    meshIdleReady;
 
   return (
-    <div className={`relative w-full overflow-hidden ${minHeight}`}>
-      <svg className="absolute inset-0 h-0 w-0" aria-hidden>
-        <defs>
-          <filter id={glassId} x="-50%" y="-50%" width="200%" height="200%">
-            <feTurbulence baseFrequency="0.005" numOctaves="1" result="noise" />
-            <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.3" />
-            <feColorMatrix
-              type="matrix"
-              values="1 0 0 0 0.02
-                      0 1 0 0 0.02
-                      0 0 1 0 0.05
-                      0 0 0 0.9 0"
-              result="tint"
-            />
-          </filter>
-          <filter id={gooeyId} x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-              result="gooey"
-            />
-            <feComposite in="SourceGraphic" in2="gooey" operator="atop" />
-          </filter>
-        </defs>
-      </svg>
-
+    <div
+      ref={rootRef}
+      className={`relative w-full overflow-hidden ${minHeight}`}
+    >
       {!useAnimatedMesh ? (
         <div
           className="absolute inset-0 z-0"
@@ -162,14 +199,17 @@ export function ShaderBackground({
           aria-hidden
         />
       ) : (
-        <div className="absolute inset-0 z-0">
+        <div
+          className="absolute inset-0 z-0 contain-strict"
+          aria-hidden
+        >
           <MeshGradient
             className="absolute inset-0 h-full w-full"
             colors={mesh.layer1}
-            speed={0.14}
-            distortion={0.72}
-            swirl={0.14}
-            grainOverlay={0.06}
+            speed={0.085}
+            distortion={0.55}
+            swirl={0.1}
+            grainOverlay={0.03}
           />
         </div>
       )}
@@ -179,11 +219,9 @@ export function ShaderBackground({
         aria-hidden
       />
 
-      <HeroShaderFilterContext.Provider value={filterUrls}>
-        <div className="relative z-10 flex h-full min-h-[inherit] flex-col">
-          {children}
-        </div>
-      </HeroShaderFilterContext.Provider>
+      <div className="relative z-10 flex h-full min-h-[inherit] flex-col">
+        {children}
+      </div>
     </div>
   );
 }

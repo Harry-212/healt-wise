@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   AnimatePresence,
   motion,
@@ -11,8 +12,11 @@ import {
 import {
   ArrowRight,
   ChevronDown,
+  FileDown,
   LayoutDashboard,
   Lock,
+  LogIn,
+  LogOut,
   Pencil,
   Plus,
   ShieldCheck,
@@ -32,7 +36,6 @@ import {
   Line,
   LineChart,
   ReferenceLine,
-  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
@@ -55,6 +58,9 @@ import {
   type TrackerEntry,
   type WeightUnit,
 } from "@/lib/tracker-store";
+import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
+import { isSupabaseConfigured } from "@/lib/supabase/env";
+import { exportWeightTrackerPdf } from "@/lib/tracker-pdf-export";
 
 /* ──────────────────────────────────────────────────────── constants */
 const MEDS = ["Wegovy", "Mounjaro", "Saxenda", "Orlistat", "Other"] as const;
@@ -69,8 +75,8 @@ const DOSES: Record<string, string[]> = {
 const BENEFITS = [
   {
     icon: Lock,
-    title: "Private by design",
-    body: "Your data stays in your browser. No account needed, no personal info collected.",
+    title: "Privacy-first tracking",
+    body: "Sign in to use the tracker. Your weigh-ins and chart are treated as sensitive health data — not for resale or ads.",
   },
   {
     icon: TrendingDown,
@@ -326,14 +332,106 @@ function MetricCard({
   );
 }
 
+function AuthGateModal({ onClose }: { onClose: () => void }) {
+  return (
+    <motion.div
+      className="fixed inset-0 z-[100] flex items-end justify-center p-0 sm:items-center sm:p-4"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tracker-auth-title"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="absolute inset-0 bg-slate-950/70 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      <motion.div
+        initial={{ opacity: 0, y: 48, scale: 0.97 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 32, scale: 0.97 }}
+        transition={{ type: "spring", stiffness: 420, damping: 34 }}
+        className="relative z-10 w-full max-w-md rounded-t-3xl bg-white p-6 shadow-2xl sm:rounded-3xl sm:p-8"
+      >
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-violet-100">
+              <LogIn className="h-5 w-5 text-violet-700" />
+            </div>
+            <div>
+              <h2 id="tracker-auth-title" className="text-xl font-bold text-slate-900">
+                Sign in to track free
+              </h2>
+              <p className="mt-1 text-sm leading-relaxed text-slate-600">
+                Use your Health Wise account to open the weight loss tracker. New here? Create a free account first —
+                it only takes a moment.
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 transition-colors"
+            aria-label="Close"
+          >
+            <X className="h-4 w-4 text-slate-600" />
+          </button>
+        </div>
+
+        <div className="mt-5 rounded-2xl border border-emerald-100 bg-emerald-50/90 p-4 text-sm leading-relaxed text-emerald-950">
+          <div className="flex gap-2">
+            <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" />
+            <p>
+              <span className="font-semibold text-emerald-900">Your data stays yours.</span> We do not sell your
+              tracking results or misuse them. Sign-in helps keep your progress private and tied to you — not shared
+              for unrelated marketing.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end">
+          <button
+            type="button"
+            onClick={onClose}
+            className="order-last inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 px-5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 sm:order-first"
+          >
+            Not now
+          </button>
+          <Link
+            href="/my-hub/login?signup=1"
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-violet-200 bg-violet-50 px-5 text-sm font-semibold text-violet-900 transition hover:bg-violet-100"
+          >
+            Sign up free
+          </Link>
+          <Link
+            href="/my-hub/login"
+            className="inline-flex min-h-11 items-center justify-center rounded-full bg-slate-900 px-6 text-sm font-semibold text-white shadow-md transition hover:bg-slate-800"
+          >
+            Log in
+          </Link>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
 /* ──────────────────────────────────────────────────────── main component */
 export default function WeightTrackerClient() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const { user, ready: authChecked, signOut } = useSupabaseAuth();
   const [entries, setEntries] = useState<TrackerEntry[]>([]);
   const [goals, setGoals] = useState<GoalSettings>({ goalWeightKg: null, preferredUnit: "kg" });
   const [started, setStarted] = useState(false);
   const [modal, setModal] = useState<{ mode: ModalMode; entry?: TrackerEntry } | null>(null);
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
   const [goalInput, setGoalInput] = useState("");
+  const [authGateOpen, setAuthGateOpen] = useState(false);
+  const [exportBusy, setExportBusy] = useState(false);
   const dashboardRef = useRef<HTMLDivElement | null>(null);
 
   // Load from localStorage once on mount
@@ -343,8 +441,34 @@ export default function WeightTrackerClient() {
     const g = getGoals();
     setGoals(g);
     setGoalInput(g.goalWeightKg != null ? fromKg(g.goalWeightKg, g.preferredUnit).toFixed(1) : "");
-    if (stored.length > 0) setStarted(true);
+    if (stored.length > 0 && !isSupabaseConfigured()) {
+      setStarted(true);
+    }
   }, []);
+
+  useEffect(() => {
+    if (!authChecked) return;
+    if (!isSupabaseConfigured()) return;
+    if (!user) {
+      setStarted(false);
+      return;
+    }
+    if (getEntries().length > 0) {
+      setStarted(true);
+    }
+  }, [authChecked, user]);
+
+  useEffect(() => {
+    if (searchParams.get("start") !== "1") return;
+    if (!authChecked) return;
+    if (!user) {
+      router.replace("/tools/weight-loss-tracker", { scroll: false });
+      return;
+    }
+    setStarted(true);
+    setModal({ mode: "add" });
+    router.replace("/tools/weight-loss-tracker", { scroll: false });
+  }, [searchParams, router, authChecked, user]);
 
   const refresh = useCallback(() => {
     setEntries(getEntries());
@@ -367,6 +491,10 @@ export default function WeightTrackerClient() {
   const goalLineVal = goalLineKg != null ? parseFloat(fromKg(goalLineKg, unit).toFixed(1)) : null;
 
   function handleStartTracking() {
+    if (!user) {
+      setAuthGateOpen(true);
+      return;
+    }
     setStarted(true);
     setModal({ mode: "add" });
   }
@@ -397,6 +525,12 @@ export default function WeightTrackerClient() {
   /* ── Landing page ─────────────────────────────────────────── */
   if (!started) {
     return (
+      <>
+        <AnimatePresence>
+          {authGateOpen && (
+            <AuthGateModal key="auth-gate" onClose={() => setAuthGateOpen(false)} />
+          )}
+        </AnimatePresence>
       <div className="relative w-full overflow-x-clip">
         {/* Sticky hero */}
         <section className="sticky top-0 z-0 flex min-h-svh flex-col">
@@ -420,7 +554,7 @@ export default function WeightTrackerClient() {
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 ring-1 ring-white/20 backdrop-blur-sm">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="text-[0.72rem] font-semibold uppercase tracking-widest text-emerald-300">
-                    Private · Free · No account needed
+                    Private · Free · Sign in to begin
                   </span>
                 </div>
 
@@ -432,7 +566,8 @@ export default function WeightTrackerClient() {
                 </h1>
 
                 <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-200/90 sm:text-lg">
-                  Monitor your progress, medication, and results in one secure dashboard — your data never leaves your device.
+                  Monitor your progress, medication, and results in one place. Sign in keeps your tracking results
+                  private and protected — we do not misuse your data.
                 </p>
 
                 <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
@@ -547,7 +682,7 @@ export default function WeightTrackerClient() {
                     <Plus className="h-4 w-4" />
                     Start Tracking Free
                   </button>
-                  <p className="text-xs text-slate-500">No account · No email · Stored locally</p>
+                  <p className="text-xs text-slate-500">Free · Sign in required · Your tracking stays private</p>
                 </div>
               </div>
             </motion.div>
@@ -555,6 +690,7 @@ export default function WeightTrackerClient() {
         </div>
         <div className="h-8 bg-background md:h-16" aria-hidden />
       </div>
+      </>
     );
   }
 
@@ -596,6 +732,7 @@ export default function WeightTrackerClient() {
                 </h1>
                 <p className="mt-1 text-sm text-slate-400">
                   {entries.length} {entries.length === 1 ? "entry" : "entries"} · Data stored privately in your browser
+                  {user?.email ? ` · ${user.email}` : ""}
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -615,11 +752,47 @@ export default function WeightTrackerClient() {
                 <button
                   type="button"
                   onClick={() => setModal({ mode: "add" })}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-violet-500 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-violet-400"
+                  className="inline-flex cursor-pointer items-center gap-1.5 rounded-xl bg-violet-500 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-violet-400"
                 >
                   <Plus className="h-4 w-4" />
                   Add entry
                 </button>
+                {entries.length > 0 && (
+                  <button
+                    type="button"
+                    disabled={exportBusy}
+                    onClick={() => {
+                      void (async () => {
+                        setExportBusy(true);
+                        try {
+                          await exportWeightTrackerPdf({
+                            entries,
+                            goals,
+                            unit,
+                            metrics,
+                            userEmail: user?.email ?? null,
+                          });
+                        } finally {
+                          setExportBusy(false);
+                        }
+                      })();
+                    }}
+                    className="inline-flex cursor-pointer items-center gap-1.5 rounded-xl border border-white/25 bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:border-white/45 hover:bg-white/20 disabled:pointer-events-none disabled:opacity-60"
+                  >
+                    <FileDown className="h-4 w-4 shrink-0" />
+                    {exportBusy ? "Exporting…" : "Export PDF"}
+                  </button>
+                )}
+                {user && (
+                  <button
+                    type="button"
+                    onClick={() => void signOut()}
+                    className="relative z-20 inline-flex cursor-pointer items-center gap-1.5 rounded-xl border border-white/25 bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:border-white/45 hover:bg-white/20 active:scale-[0.98]"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    Sign out
+                  </button>
+                )}
               </div>
             </div>
 
@@ -727,8 +900,13 @@ export default function WeightTrackerClient() {
                   </div>
                   {chartData.length > 0 ? (
                     <RechartsShell heightPx={260}>
-                      <ResponsiveContainer width="100%" height="100%">
-                        <LineChart data={chartData} margin={{ top: 4, right: 12, left: -8, bottom: 0 }}>
+                      {(dims) => (
+                        <LineChart
+                          width={dims.width}
+                          height={dims.height}
+                          data={chartData}
+                          margin={{ top: 4, right: 12, left: -8, bottom: 0 }}
+                        >
                           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
                           <XAxis dataKey="date" tick={{ fontSize: 11, fill: "#94a3b8" }} />
                           <YAxis
@@ -760,11 +938,10 @@ export default function WeightTrackerClient() {
                             strokeWidth={2.5}
                             dot={{ r: 3.5, fill: "#4f46e5", strokeWidth: 0 }}
                             activeDot={{ r: 5 }}
-                            animationDuration={900}
-                            animationEasing="ease-out"
+                            isAnimationActive={false}
                           />
                         </LineChart>
-                      </ResponsiveContainer>
+                      )}
                     </RechartsShell>
                   ) : (
                     <div className="flex h-48 items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white">
@@ -905,8 +1082,8 @@ export default function WeightTrackerClient() {
                 {/* Privacy footer */}
                 <div className="rounded-2xl border border-slate-200/80 bg-slate-50/60 p-5 text-center">
                   <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-500">
-                    <span className="flex items-center gap-1"><Lock className="h-3.5 w-3.5" /> Stored locally in your browser</span>
-                    <span className="flex items-center gap-1"><ShieldCheck className="h-3.5 w-3.5" /> No personal data collected</span>
+                    <span className="flex items-center gap-1"><Lock className="h-3.5 w-3.5" /> Entries stored on this device</span>
+                    <span className="flex items-center gap-1"><ShieldCheck className="h-3.5 w-3.5" /> Tracking data not sold or misused</span>
                     <button
                       type="button"
                       onClick={() => {

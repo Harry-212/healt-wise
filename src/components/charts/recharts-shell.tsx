@@ -1,30 +1,71 @@
-import type { ReactNode } from "react";
+"use client";
+
+import {
+  useLayoutEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
+
+export type RechartsDims = { width: number; height: number };
 
 /**
- * Fixed pixel height + min-w-0 so Recharts ResponsiveContainer never measures -1
- * inside flex/grid layouts (see Recharts console warning).
+ * Measures a fixed-height box and passes pixel width/height into children.
+ * Use explicit `width`/`height` on BarChart/LineChart — do not use ResponsiveContainer
+ * (it reports -1 during SSR/prerender and some flex layouts).
  */
 export function RechartsShell({
   children,
   heightPx = 288,
   className = "",
 }: {
-  children: ReactNode;
+  children: (dims: RechartsDims) => ReactNode;
   heightPx?: number;
   className?: string;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [dims, setDims] = useState<RechartsDims | null>(null);
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const read = () => {
+      const r = el.getBoundingClientRect();
+      const width = Math.max(1, Math.round(r.width));
+      const height = Math.max(1, Math.round(r.height));
+      setDims((prev) =>
+        prev && prev.width === width && prev.height === height
+          ? prev
+          : { width, height },
+      );
+    };
+
+    read();
+
+    if (typeof ResizeObserver === "undefined") {
+      return;
+    }
+
+    const ro = new ResizeObserver(() => {
+      read();
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [heightPx]);
+
   return (
     <div
+      ref={ref}
       className={`w-full min-w-0 shrink-0 ${className}`}
       style={{
         height: heightPx,
         minHeight: heightPx,
         width: "100%",
-        minWidth: 280,
         maxWidth: "100%",
       }}
     >
-      {children}
+      {dims != null ? children(dims) : null}
     </div>
   );
 }

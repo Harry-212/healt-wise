@@ -343,6 +343,26 @@ const MAP = {
     price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
     tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
   },
+  guideFakePharmacy: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideKwikpenDisposal: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideTravelInsuranceMounjaro: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
+  guideMounjaroHotWeather: {
+    compare: DEFAULT_COMPARE,
+    price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
 } as const satisfies Record<string, Partial<InternalLinkSet>>;
 
 export type InternalTopic = keyof typeof MAP;

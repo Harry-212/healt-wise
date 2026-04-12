@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import LoginGate from "./login-gate";
 
 export default function MyHubLoginPage() {
-  redirect("/tools/weight-loss-tracker");
+  return <LoginGate />;
 }

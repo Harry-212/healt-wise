@@ -1,14 +1,13 @@
 "use client";
 
 import {
-  LineChart,
+  CartesianGrid,
+  Legend,
   Line,
+  LineChart,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  Legend,
 } from "recharts";
 import {
   WEGOVY_TRIAL_CHART_POINTS,
@@ -35,59 +34,64 @@ export default function WegovyWeightLossChart() {
         </p>
       </figcaption>
       <RechartsShell heightPx={288}>
-        <div
-          className="h-full w-full"
-          role="img"
-          aria-label="Line chart: mean body weight change percent, semaglutide versus placebo by week"
-        >
-          <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={chartData} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
-            <CartesianGrid strokeDasharray="3 3" className="opacity-40" stroke="#e2e8f0" />
-            <XAxis
-              dataKey="week"
-              tick={{ fontSize: 11 }}
-              label={{ value: "Week", position: "insideBottom", offset: -4, fontSize: 12 }}
-            />
-            <YAxis
-              tick={{ fontSize: 11 }}
-              tickFormatter={(v) => `${v}%`}
-              label={{
-                value: "Change from baseline (%)",
-                angle: -90,
-                position: "insideLeft",
-                fontSize: 12,
-              }}
-            />
-            <Tooltip
-              formatter={(value) =>
-                value != null && (typeof value === "number" || typeof value === "string")
-                  ? [`${Number(value).toFixed(1)}%`, ""]
-                  : ["", ""]
-              }
-              labelFormatter={(w) => `Week ${w}`}
-              contentStyle={{ borderRadius: "12px", border: "1px solid #e5e7eb" }}
-            />
-            <Legend />
-            <Line
-              type="monotone"
-              dataKey="Semaglutide"
-              stroke="#059669"
-              strokeWidth={2.5}
-              dot={{ r: 3 }}
-              activeDot={{ r: 5 }}
-              isAnimationActive={false}
-            />
-            <Line
-              type="monotone"
-              dataKey="Placebo"
-              stroke="#94a3b8"
-              strokeWidth={2}
-              dot={{ r: 2 }}
-              isAnimationActive={false}
-            />
-          </LineChart>
-          </ResponsiveContainer>
-        </div>
+        {(dims) => (
+          <div
+            className="h-full w-full"
+            role="img"
+            aria-label="Line chart: mean body weight change percent, semaglutide versus placebo by week"
+          >
+            <LineChart
+              width={dims.width}
+              height={dims.height}
+              data={chartData}
+              margin={{ top: 8, right: 8, left: 0, bottom: 0 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" className="opacity-40" stroke="#e2e8f0" />
+              <XAxis
+                dataKey="week"
+                tick={{ fontSize: 11 }}
+                label={{ value: "Week", position: "insideBottom", offset: -4, fontSize: 12 }}
+              />
+              <YAxis
+                tick={{ fontSize: 11 }}
+                tickFormatter={(v) => `${v}%`}
+                label={{
+                  value: "Change from baseline (%)",
+                  angle: -90,
+                  position: "insideLeft",
+                  fontSize: 12,
+                }}
+              />
+              <Tooltip
+                formatter={(value) =>
+                  value != null && (typeof value === "number" || typeof value === "string")
+                    ? [`${Number(value).toFixed(1)}%`, ""]
+                    : ["", ""]
+                }
+                labelFormatter={(w) => `Week ${w}`}
+                contentStyle={{ borderRadius: "12px", border: "1px solid #e5e7eb" }}
+              />
+              <Legend />
+              <Line
+                type="monotone"
+                dataKey="Semaglutide"
+                stroke="#059669"
+                strokeWidth={2.5}
+                dot={{ r: 3 }}
+                activeDot={{ r: 5 }}
+                isAnimationActive={false}
+              />
+              <Line
+                type="monotone"
+                dataKey="Placebo"
+                stroke="#94a3b8"
+                strokeWidth={2}
+                dot={{ r: 2 }}
+                isAnimationActive={false}
+              />
+            </LineChart>
+          </div>
+        )}
       </RechartsShell>
       <p className="mt-4 text-xs text-slate-500">
         Source (full trial): {WEGOVY_TRIAL_CHART_SOURCE}

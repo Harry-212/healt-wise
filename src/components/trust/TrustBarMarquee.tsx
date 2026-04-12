@@ -28,9 +28,9 @@ export default function TrustBarMarquee() {
   const loop = [...ITEMS, ...ITEMS, ...ITEMS];
 
   return (
-    <div className="w-full max-w-full overflow-x-clip border-y border-brand-border bg-brand-card py-5">
+    <div className="w-full max-w-full overflow-x-clip border-y border-brand-border bg-brand-card py-5 contain-layout">
       <div className="group flex w-full max-w-full overflow-x-clip">
-        <div className="flex shrink-0 animate-marquee items-stretch gap-4 px-2 group-hover:[animation-play-state:paused]">
+        <div className="flex shrink-0 motion-safe:animate-marquee motion-safe:transform-gpu items-stretch gap-4 px-2 motion-safe:group-hover:[animation-play-state:paused]">
           {loop.map((item, i) => {
             const Icon = item.icon;
             return (
@@ -55,7 +55,7 @@ export default function TrustBarMarquee() {
         </div>
         {/* Exact duplicate for the seamless looping effect */}
         <div
-          className="flex shrink-0 animate-marquee items-stretch gap-4 px-2 group-hover:[animation-play-state:paused]"
+          className="flex shrink-0 motion-safe:animate-marquee motion-safe:transform-gpu items-stretch gap-4 px-2 motion-safe:group-hover:[animation-play-state:paused]"
           aria-hidden
         >
           {loop.map((item, i) => {

@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import SaxendaCompareChartsSection from "@/components/compare/SaxendaCompareChartsSection";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import SaxendaCompareShaderHero from "@/components/saxenda/SaxendaCompareShaderHero";
 import SaxendaUkCompareTable from "@/components/saxenda/SaxendaUkCompareTable";
-import {
-  SaxendaUkAveragePackLineChart,
-  SaxendaUkPackPriceRangeChart,
-} from "@/components/saxenda/SaxendaUkCompareCharts";
 import InternalLinks from "@/components/content/InternalLinks";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -125,10 +122,7 @@ export default function CompareSaxendaPricesUkPage() {
               </p>
             </div>
             <div className="grid gap-8 lg:grid-cols-1">
-              <SaxendaUkPackPriceRangeChart
-                providers={SAXENDA_UK_COMPARE_PROVIDERS}
-              />
-              <SaxendaUkAveragePackLineChart
+              <SaxendaCompareChartsSection
                 providers={SAXENDA_UK_COMPARE_PROVIDERS}
               />
             </div>

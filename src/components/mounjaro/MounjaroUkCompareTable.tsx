@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { startTransition, useMemo, useState } from "react";
 import { ArrowDown, ArrowUp, ArrowUpDown, Star } from "lucide-react";
 import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import {
@@ -53,7 +53,7 @@ function SortableTh({
     <th
       scope="col"
       title={title ?? label}
-      className={`border-b border-slate-200/90 bg-slate-50/95 px-2 py-3 font-semibold text-slate-700 backdrop-blur-sm ${
+      className={`border-b border-slate-200/90 bg-slate-50 px-2 py-3 font-semibold text-slate-700 ${
         narrow ? "w-[3.85rem] min-w-[3.85rem] max-w-[3.85rem] text-center" : "whitespace-nowrap"
       } ${center ? "text-center" : ""}`}
     >
@@ -199,7 +199,7 @@ export default function MounjaroUkCompareTable({
   const colCount = 1 + MOUNJARO_DOSE_KEYS.length + 3;
 
   const providerThClass =
-    "sticky left-0 z-50 min-w-[13rem] max-w-[14rem] border-b border-r border-slate-200/90 bg-slate-50/95 px-3 py-3 pl-4 backdrop-blur-sm shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
+    "sticky left-0 z-50 min-w-[13rem] max-w-[14rem] border-b border-r border-slate-200/90 bg-slate-50 px-3 py-3 pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
 
   return (
     <div className="space-y-4">
@@ -242,7 +242,9 @@ export default function MounjaroUkCompareTable({
             type="search"
             placeholder="Search…"
             value={providerQuery}
-            onChange={(e) => setProviderQuery(e.target.value)}
+            onChange={(e) =>
+              startTransition(() => setProviderQuery(e.target.value))
+            }
             className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
           />
         </label>
@@ -254,7 +256,9 @@ export default function MounjaroUkCompareTable({
             step={1}
             placeholder="Any"
             value={priceMin}
-            onChange={(e) => setPriceMin(e.target.value)}
+            onChange={(e) =>
+              startTransition(() => setPriceMin(e.target.value))
+            }
             className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
           />
         </label>
@@ -266,7 +270,9 @@ export default function MounjaroUkCompareTable({
             step={1}
             placeholder="Any"
             value={priceMax}
-            onChange={(e) => setPriceMax(e.target.value)}
+            onChange={(e) =>
+              startTransition(() => setPriceMax(e.target.value))
+            }
             className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
           />
         </label>
@@ -274,7 +280,9 @@ export default function MounjaroUkCompareTable({
           Min rating
           <select
             value={minRating}
-            onChange={(e) => setMinRating(e.target.value)}
+            onChange={(e) =>
+              startTransition(() => setMinRating(e.target.value))
+            }
             className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
           >
             <option value="">Any</option>
@@ -292,7 +300,9 @@ export default function MounjaroUkCompareTable({
           <select
             value={deliveryFilter}
             onChange={(e) =>
-              setDeliveryFilter(e.target.value as typeof deliveryFilter)
+              startTransition(() =>
+                setDeliveryFilter(e.target.value as typeof deliveryFilter),
+              )
             }
             className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
           >
@@ -331,7 +341,7 @@ export default function MounjaroUkCompareTable({
         <p className="border-b border-slate-100 px-4 py-2 text-xs text-slate-500 md:hidden">
           Scroll sideways — provider column stays fixed.
         </p>
-        <div className="max-h-[min(78vh,800px)] overflow-auto">
+        <div className="max-h-[min(78vh,800px)] min-h-0 overflow-auto overscroll-contain [overflow-anchor:none]">
           <table className="w-full min-w-[62rem] border-collapse text-left text-sm">
             <thead className="sticky top-0 z-20">
               <tr className="text-slate-600">
@@ -422,7 +432,7 @@ export default function MounjaroUkCompareTable({
                   return (
                     <tr
                       key={p.id}
-                      className={`group border-b border-slate-100/90 transition-colors last:border-0 ${
+                      className={`group border-b border-slate-100/90 last:border-0 ${
                         isLowestRow ? "bg-violet-50/40" : ""
                       }`}
                     >

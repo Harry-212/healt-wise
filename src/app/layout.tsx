@@ -4,7 +4,9 @@ import "./globals.css";
 import NavBar from "@/components/layout/NavBar";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Footer from "@/components/layout/Footer";
+import { SupabaseAuthProvider } from "@/components/providers/SupabaseAuthProvider";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { SITE_FAVICON_SRC, SITE_LOGO_SRC } from "@/lib/site-assets";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +30,11 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Health Wise",
     locale: "en_GB",
+    images: [{ url: SITE_LOGO_SRC, alt: "Health Wise" }],
+  },
+  icons: {
+    icon: [{ url: SITE_FAVICON_SRC, type: "image/webp" }],
+    apple: [{ url: SITE_FAVICON_SRC, type: "image/webp" }],
   },
 };
 
@@ -42,16 +49,15 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full max-w-full overflow-x-clip antialiased`}
       suppressHydrationWarning
     >
-      <head>
-        <link rel="icon" href="/favicon_light.jpeg" />
-      </head>
       <body className="flex min-h-full max-w-full flex-col overflow-x-clip bg-background font-sans text-foreground antialiased">
-        <NavBar />
-        <AnnouncementBar />
-        <main className="min-w-0 flex-1 overflow-x-clip pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-          {children}
-        </main>
-        <Footer />
+        <SupabaseAuthProvider>
+          <NavBar />
+          <AnnouncementBar />
+          <main className="min-w-0 flex-1 overflow-x-clip pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+            {children}
+          </main>
+          <Footer />
+        </SupabaseAuthProvider>
       </body>
     </html>
   );

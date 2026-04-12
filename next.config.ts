@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { HELPFUL_GUIDE_SLUGS } from "./src/lib/helpful-guide-slugs";
 
 const nextConfig: NextConfig = {
   images: {
@@ -17,6 +18,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/helpful-guide",
+        destination: "/helpful-guides",
+        permanent: true,
+      },
       {
         source: "/weight-loss-treatment-price-comparison-uk",
         destination: "/",
@@ -42,6 +48,11 @@ const nextConfig: NextConfig = {
         destination: "/saxenda-price-comparison",
         permanent: true,
       },
+      ...HELPFUL_GUIDE_SLUGS.map((slug) => ({
+        source: `/${slug}`,
+        destination: `/helpful-guides/${slug}`,
+        permanent: true,
+      })),
     ];
   },
 };

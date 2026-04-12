@@ -737,7 +737,7 @@ export default function WhatIsMounjaroPage() {
                   </div>
                   <div className="relative mx-auto aspect-3/4 w-full max-w-[200px] overflow-hidden rounded-xl border border-slate-200 md:mx-0 md:max-w-none">
                     <Image
-                      src="/uk-weight-loss-medical-expert-health-wise.jpg.jpeg"
+                      src="/uk-weight-loss-medical-expert-health-wise.jpg.webp"
                       alt="Reviewed against UK clinical references by Health Wise editorial standards."
                       fill
                       className="object-cover object-[center_15%]"

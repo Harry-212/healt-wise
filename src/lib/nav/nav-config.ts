@@ -82,7 +82,7 @@ export const NAV_PANELS: NavPanel[] = [
   {
     id: "guides",
     label: "Helpful Guides",
-    directHref: "/helpful-guide",
+    directHref: "/helpful-guides",
   },
   {
     id: "tools",
@@ -112,8 +112,8 @@ export const NAV_PANELS: NavPanel[] = [
     directHref: "/blog",
   },
   {
-    id: "my-hub",
-    label: "My Hub",
-    directHref: "/tools/weight-loss-tracker",
+    id: "about-us",
+    label: "About Us",
+    directHref: "/about",
   },
 ];

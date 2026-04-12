@@ -1,6 +1,6 @@
 /**
  * Weight tracker local store — persists to localStorage.
- * Shape is designed to be Firebase Firestore-compatible when auth is added.
+ * Optional future: sync rows to Supabase `weight_entries` for the signed-in user.
  */
 
 export type WeightUnit = "kg" | "lbs" | "stone";

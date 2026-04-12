@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Stethoscope } from "lucide-react";
 import HeroNumanStyle from "@/components/ui/HeroNumanStyle";
 import AboutSection2 from "@/components/ui/about-section-2";
@@ -7,9 +6,6 @@ import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import OurServices from "@/components/ui/OurServices";
 import OurMethodology from "@/components/ui/OurMethodology";
 import WhyChooseHealthWise from "@/components/ui/WhyChooseHealthWise";
-
-const jumpLinkClass =
-  "group relative overflow-hidden rounded-full border border-slate-200/90 bg-white/90 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-px hover:border-emerald-300/70 hover:text-emerald-900 hover:shadow-md";
 
 export const metadata: Metadata = {
   title: "Health Wise | Weight Loss Treatment Price Comparison UK (2026)",
@@ -61,48 +57,6 @@ export default function Homepage() {
                 does not replace medical advice.
               </p>
             </div>
-          </div>
-        </section>
-
-        <section
-          id="alerts"
-          className="w-full scroll-mt-24 px-4 text-center md:px-8 lg:px-10"
-        >
-          <div className="rounded-2xl border border-emerald-100 bg-emerald-50/80 p-5 sm:p-8 md:p-12">
-            <h2 className="mb-3 text-2xl font-bold text-emerald-950">
-              Price &amp; policy alerts
-            </h2>
-            <p className="mb-4 font-medium text-emerald-900/90">
-              Get email updates when it matters:
-            </p>
-            <ul className="mx-auto mb-8 w-full max-w-full list-inside list-disc text-left text-sm text-emerald-900/85 sm:max-w-xl md:max-w-2xl">
-              <li>Price drop alerts when starting or maintenance rates move</li>
-              <li>Stock alerts when a listed pharmacy changes availability</li>
-              <li>
-                Maintenance policy alerts when providers change long-term
-                prescribing rules
-              </li>
-            </ul>
-            <form className="mx-auto flex w-full max-w-full flex-col gap-3 sm:max-w-lg sm:flex-row">
-              <input
-                type="email"
-                name="email"
-                autoComplete="email"
-                placeholder="Your email"
-                className="flex-1 rounded-xl border border-emerald-200 bg-white px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
-                required
-              />
-              <button
-                type="submit"
-                className="rounded-xl bg-emerald-600 px-6 py-3 font-medium text-white transition-colors hover:bg-emerald-700"
-              >
-                Subscribe
-              </button>
-            </form>
-            <p className="mt-4 text-xs text-emerald-800/70">
-              No pharmacy spam—unsubscribe any time. (Form wiring can connect to
-              your ESP later.)
-            </p>
           </div>
         </section>
       </div>

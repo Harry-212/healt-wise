@@ -121,10 +121,10 @@
 
   @keyframes marquee {
     from {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
     to {
-      transform: translateX(-100%);
+      transform: translate3d(-100%, 0, 0);
     }
   }
 }
@@ -145,10 +145,10 @@ body {
 /* Announcement strip: explicit animation so speed always applies (not theme-var dependent) */
 @keyframes hw-announce-marquee {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 

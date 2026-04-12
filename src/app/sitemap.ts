@@ -11,6 +11,11 @@ import { MOUNJARO_UK_COMPARE_PROVIDERS } from "@/lib/data/mounjaro-uk-compare-pr
 import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-providers";
 import { WEGOVY_UK_COMPARE_PROVIDERS } from "@/lib/data/wegovy-uk-compare-providers";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import {
+  HELPFUL_GUIDE_SLUGS,
+  HELPFUL_GUIDES_HUB_PATH,
+  helpfulGuidePath,
+} from "@/lib/helpful-guide-slugs";
 
 const STATIC_PATHS = [
   "/",
@@ -35,6 +40,7 @@ const STATIC_PATHS = [
   "/mounjaro-faq",
   "/methodology",
   "/about",
+  HELPFUL_GUIDES_HUB_PATH,
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -51,6 +57,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const path of STATIC_PATHS) {
     push(path, path === "/" ? 1 : 0.75);
+  }
+
+  for (const slug of HELPFUL_GUIDE_SLUGS) {
+    push(helpfulGuidePath(slug), 0.72);
   }
 
   for (const slug of Object.keys(PRICE_SLUGS)) {

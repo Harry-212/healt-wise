@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { startTransition, useMemo, useState } from "react";
 import { ArrowDown, ArrowUp, ArrowUpDown, Snowflake, Star } from "lucide-react";
 import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import {
@@ -46,7 +46,7 @@ function SortableTh({
   return (
     <th
       scope="col"
-      className="border-b border-slate-200/90 bg-slate-50/95 px-2 py-3 text-left text-xs font-semibold text-slate-700 backdrop-blur-sm"
+      className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-left text-xs font-semibold text-slate-700"
     >
       <button
         type="button"
@@ -181,7 +181,7 @@ export default function SaxendaUkCompareTable({
   }, [processed]);
 
   const providerThClass =
-    "sticky left-0 z-50 min-w-[13rem] max-w-[15rem] border-b border-r border-slate-200/90 bg-slate-50/95 px-3 py-3 pl-4 backdrop-blur-sm shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
+    "sticky left-0 z-50 min-w-[13rem] max-w-[15rem] border-b border-r border-slate-200/90 bg-slate-50 px-3 py-3 pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
 
   const colCount = 8;
 
@@ -223,7 +223,9 @@ export default function SaxendaUkCompareTable({
             type="search"
             placeholder="Search…"
             value={providerQuery}
-            onChange={(e) => setProviderQuery(e.target.value)}
+            onChange={(e) =>
+              startTransition(() => setProviderQuery(e.target.value))
+            }
             className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
           />
         </label>
@@ -231,7 +233,9 @@ export default function SaxendaUkCompareTable({
           Min rating
           <select
             value={minRating}
-            onChange={(e) => setMinRating(e.target.value)}
+            onChange={(e) =>
+              startTransition(() => setMinRating(e.target.value))
+            }
             className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
           >
             <option value="">Any</option>
@@ -268,7 +272,7 @@ export default function SaxendaUkCompareTable({
         <p className="border-b border-slate-100 px-4 py-2 text-xs text-slate-500 md:hidden">
           Scroll sideways on small screens.
         </p>
-        <div className="max-h-[min(78vh,640px)] overflow-auto">
+        <div className="max-h-[min(78vh,640px)] min-h-0 overflow-auto overscroll-contain [overflow-anchor:none]">
           <table className="w-full min-w-[52rem] border-collapse text-left text-sm">
             <thead className="sticky top-0 z-20">
               <tr>
@@ -314,19 +318,19 @@ export default function SaxendaUkCompareTable({
                 ))}
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50/95 px-2 py-3 text-xs font-semibold text-slate-700"
+                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold text-slate-700"
                 >
                   Delivery
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50/95 px-2 py-3 text-xs font-semibold text-slate-700"
+                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold text-slate-700"
                 >
                   Trust &amp; safety
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50/95 px-2 py-3 text-xs font-semibold text-slate-700"
+                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold text-slate-700"
                 >
                   Action
                 </th>

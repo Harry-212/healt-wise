@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { TocEntry } from "./GuideLayout";
+import { HELPFUL_GUIDES_HUB_PATH } from "@/lib/helpful-guide-slugs";
 
 export default function GuideTocSidebar({ toc }: { toc: TocEntry[] }) {
   const [active, setActive] = useState<string>(toc[0]?.id ?? "");
@@ -145,7 +146,7 @@ export default function GuideTocSidebar({ toc }: { toc: TocEntry[] }) {
         {/* Footer */}
         <div className="border-t border-slate-100 px-5 py-3">
           <a
-            href="/helpful-guide"
+            href={HELPFUL_GUIDES_HUB_PATH}
             className="flex items-center gap-1.5 text-[12px] font-medium text-slate-400 transition-colors hover:text-slate-700"
           >
             <svg

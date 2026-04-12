@@ -1,11 +1,28 @@
+import Image from "next/image";
 import Link from "next/link";
 import InternalLinks from "@/components/content/InternalLinks";
 import type { InternalLinkSet } from "@/lib/internal-linking";
+import { GUIDE_IMAGES } from "@/lib/guide-images";
+import { HELPFUL_GUIDES_HUB_PATH } from "@/lib/helpful-guide-slugs";
 import GuideTocSidebar from "./GuideTocSidebar";
+
+/** Splits a title at the first ":" so the subtitle starts on a new line. */
+function SplitTitle({ text }: { text: string }) {
+  const idx = text.indexOf(":");
+  if (idx === -1) return <>{text}</>;
+  return (
+    <>
+      {text.slice(0, idx + 1)}
+      <br />
+      {text.slice(idx + 1).trimStart()}
+    </>
+  );
+}
 
 export type TocEntry = { id: string; label: string };
 
 type Props = {
+  slug?: string;
   category: string;
   categorySlug: string;
   title: string;
@@ -19,6 +36,7 @@ type Props = {
 };
 
 export function GuideLayout({
+  slug,
   category,
   title,
   description,
@@ -29,6 +47,7 @@ export function GuideLayout({
   children,
   schemaJson,
 }: Props) {
+  const thumbnail = slug ? GUIDE_IMAGES[slug] : undefined;
   return (
     <>
       {schemaJson && (
@@ -40,7 +59,7 @@ export function GuideLayout({
 
       {/* ── Page shell ── */}
       <div className="mx-auto max-w-7xl px-4 pb-24 pt-8 sm:px-6 sm:pt-10 md:pt-14 lg:px-8">
-        {/* Breadcrumb */}
+        {/* Breadcrumb — full width */}
         <nav
           aria-label="Breadcrumb"
           className="flex flex-wrap items-center gap-1 text-xs text-slate-400"
@@ -50,46 +69,64 @@ export function GuideLayout({
           </Link>
           <span aria-hidden>/</span>
           <Link
-            href="/helpful-guide"
+            href={HELPFUL_GUIDES_HUB_PATH}
             className="transition-colors hover:text-slate-700"
           >
             Helpful Guides
           </Link>
           <span aria-hidden>/</span>
           <Link
-            href={`/helpful-guide?category=${encodeURIComponent(category)}`}
+            href={`${HELPFUL_GUIDES_HUB_PATH}?category=${encodeURIComponent(category)}`}
             className="transition-colors hover:text-slate-700"
           >
             {category}
           </Link>
         </nav>
 
-        {/* Article header — full-width above the 2-col grid */}
-        <header className="mt-5 max-w-3xl border-b border-slate-200 pb-8">
-          <Link
-            href={`/helpful-guide?category=${encodeURIComponent(category)}`}
-            className="inline-block rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white transition-opacity hover:opacity-80"
-          >
-            {category}
-          </Link>
-          <h1 className="mt-3 text-balance text-2xl font-bold leading-tight text-slate-900 sm:text-3xl md:text-4xl">
-            {title}
-          </h1>
-          <p className="mt-3 text-base leading-relaxed text-slate-500">
-            {description}
-          </p>
-          <p className="mt-3 text-xs text-slate-400">
-            {readTime}&nbsp;&middot;&nbsp;Last updated {lastUpdated}
-          </p>
-        </header>
+        {/* ── 2-column layout: TOC left | article right ── */}
+        <div className="mt-6 flex flex-col gap-10 xl:flex-row xl:gap-14">
 
-        {/* ── 2-column layout: content + sidebar ── */}
-        <div className="mt-8 flex flex-col gap-10 xl:flex-row xl:gap-14">
-          {/* ── Left: mobile ToC + article body ── */}
+          {/* ── Left: desktop sticky TOC sidebar ── */}
+          {toc.length > 0 && <GuideTocSidebar toc={toc} />}
+
+          {/* ── Right: article header + body ── */}
           <div className="min-w-0 flex-1">
-            {/* Mobile / tablet ToC (collapsible) */}
+            {/* Article header */}
+            <header className="border-b border-slate-200 pb-8">
+              <Link
+                href={`${HELPFUL_GUIDES_HUB_PATH}?category=${encodeURIComponent(category)}`}
+                className="inline-block rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white transition-opacity hover:opacity-80"
+              >
+                {category}
+              </Link>
+              <h1 className="mt-3 text-2xl font-bold leading-tight text-slate-900 sm:text-3xl md:text-4xl">
+                <SplitTitle text={title} />
+              </h1>
+              <p className="mt-3 text-base leading-relaxed text-slate-500">
+                {description}
+              </p>
+              <p className="mt-3 text-xs text-slate-400">
+                {readTime}&nbsp;&middot;&nbsp;Last updated {lastUpdated}
+              </p>
+
+              {/* Hero thumbnail */}
+              {thumbnail && (
+                <div className="relative mt-6 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
+                  <Image
+                    src={thumbnail}
+                    alt={title}
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 768px) 100vw, 800px"
+                  />
+                </div>
+              )}
+            </header>
+
+            {/* Mobile / tablet ToC (collapsible) — hidden on xl+ */}
             {toc.length > 0 && (
-              <details className="group mb-8 rounded-2xl border border-slate-200 bg-slate-50 xl:hidden">
+              <details className="group mb-8 mt-6 rounded-2xl border border-slate-200 bg-slate-50 xl:hidden">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden">
                   <div className="flex items-center gap-2.5">
                     <span className="flex h-6 w-6 items-center justify-center rounded-md bg-emerald-100 text-emerald-600">
@@ -145,19 +182,19 @@ export function GuideLayout({
             )}
 
             {/* Article body */}
-            <article className="max-w-3xl space-y-10 text-slate-700">
+            <article className="mt-8 space-y-10 text-slate-700">
               {children}
             </article>
 
             {/* Internal links */}
-            <div className="mt-14 max-w-3xl">
+            <div className="mt-14">
               <InternalLinks links={internalLinks} />
             </div>
 
             {/* Back link */}
-            <div className="mt-8 max-w-3xl">
+            <div className="mt-8">
               <Link
-                href="/helpful-guide"
+                href={HELPFUL_GUIDES_HUB_PATH}
                 className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-400 transition-colors hover:text-slate-700"
               >
                 <svg
@@ -176,9 +213,6 @@ export function GuideLayout({
               </Link>
             </div>
           </div>
-
-          {/* ── Right: desktop sticky sidebar ToC ── */}
-          {toc.length > 0 && <GuideTocSidebar toc={toc} />}
         </div>
       </div>
     </>

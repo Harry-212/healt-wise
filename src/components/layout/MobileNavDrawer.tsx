@@ -7,8 +7,13 @@ import Image from "next/image";
 import { Menu, X, ChevronRight } from "lucide-react";
 import type { NavPanel } from "@/lib/nav/nav-config";
 import { NavLinkIcon } from "@/lib/nav/nav-icons";
+import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
+import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
+import { isSupabaseConfigured } from "@/lib/supabase/env";
+import { SITE_LOGO_SRC } from "@/lib/site-assets";
 
 export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
+  const { user, ready, signOut } = useSupabaseAuth();
   const [open, setOpen] = useState(false);
   const [acc, setAcc] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -87,11 +92,11 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
         <div className="flex h-14 shrink-0 items-center justify-between border-b border-slate-200 px-4">
           <Link href="/" onClick={close} className="min-w-0">
             <Image
-              src="/logo_hd_transparent.png"
+              src={SITE_LOGO_SRC}
               alt="Health Wise"
               width={160}
               height={48}
-              className="h-9 w-auto max-w-[9.5rem] object-contain object-left"
+              className="h-10 w-auto max-w-[11rem] object-contain object-left"
             />
           </Link>
           <button
@@ -183,20 +188,66 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
           style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
         >
           <div className="flex flex-col gap-2">
-            <Link
-              href="/my-hub/login"
-              onClick={close}
-              className="flex min-h-12 items-center justify-center rounded-xl border border-slate-200 text-sm font-semibold text-slate-800 active:bg-slate-50"
-            >
-              Log in
-            </Link>
-            <Link
-              href="/my-hub/login?signup=1"
-              onClick={close}
-              className="flex min-h-12 items-center justify-center rounded-xl bg-brand-cta text-sm font-bold text-slate-900 shadow-sm active:brightness-95"
-            >
-              Sign up
-            </Link>
+            {!isSupabaseConfigured() ? (
+              <>
+                <Link
+                  href="/my-hub/login"
+                  onClick={close}
+                  className="flex min-h-12 items-center justify-center rounded-xl border border-slate-200 text-sm font-semibold text-slate-800 active:bg-slate-50"
+                >
+                  Log in
+                </Link>
+                <Link
+                  href="/my-hub/login?signup=1"
+                  onClick={close}
+                  className="flex min-h-12 items-center justify-center rounded-xl bg-brand-cta text-sm font-bold text-slate-900 shadow-sm active:brightness-95"
+                >
+                  Sign up
+                </Link>
+              </>
+            ) : !ready ? (
+              <div className="min-h-12 animate-pulse rounded-xl bg-slate-100" aria-hidden />
+            ) : user ? (
+              <>
+                <p className="px-2 py-1 text-center text-sm font-semibold leading-snug text-slate-900">
+                  Hi, {user.email ? greetingNameFromEmail(user.email) : "there"}
+                </p>
+                <Link
+                  href="/tools/weight-loss-tracker"
+                  onClick={close}
+                  className="flex min-h-12 items-center justify-center rounded-xl border border-slate-200 text-sm font-semibold text-slate-800 active:bg-slate-50"
+                >
+                  Weight tracker
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => {
+                    void signOut();
+                    close();
+                  }}
+                  className="flex min-h-12 items-center justify-center rounded-xl bg-slate-900 text-sm font-bold text-white shadow-sm active:bg-slate-800"
+                >
+                  Log out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/my-hub/login"
+                  onClick={close}
+                  className="flex min-h-12 items-center justify-center rounded-xl border border-slate-200 text-sm font-semibold text-slate-800 active:bg-slate-50"
+                >
+                  Log in
+                </Link>
+                <Link
+                  href="/my-hub/login?signup=1"
+                  onClick={close}
+                  className="flex min-h-12 items-center justify-center rounded-xl bg-brand-cta text-sm font-bold text-slate-900 shadow-sm active:brightness-95"
+                >
+                  Sign up
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </div>

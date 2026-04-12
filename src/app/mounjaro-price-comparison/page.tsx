@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import MounjaroCompareChartsSection from "@/components/compare/MounjaroCompareChartsSection";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import MounjaroCompareShaderHero from "@/components/mounjaro/MounjaroCompareShaderHero";
 import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable";
-import {
-  MounjaroUkDosageCostLineChart,
-  MounjaroUkPriceRangeByDoseChart,
-} from "@/components/mounjaro/MounjaroUkCompareCharts";
 import InternalLinks from "@/components/content/InternalLinks";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -123,10 +120,7 @@ export default function CompareMounjaroPricesUkPage() {
               </p>
             </div>
             <div className="grid gap-8 lg:grid-cols-1">
-              <MounjaroUkPriceRangeByDoseChart
-                providers={MOUNJARO_UK_COMPARE_PROVIDERS}
-              />
-              <MounjaroUkDosageCostLineChart
+              <MounjaroCompareChartsSection
                 providers={MOUNJARO_UK_COMPARE_PROVIDERS}
               />
             </div>

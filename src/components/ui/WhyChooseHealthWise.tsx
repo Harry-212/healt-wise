@@ -125,7 +125,9 @@ export default function WhyChooseHealthWise() {
                         </span>
                         <div
                           className={`grid overflow-hidden transition-all duration-200 ease-out ${
-                            isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                            isOpen
+                              ? "grid-rows-[1fr] opacity-100"
+                              : "grid-rows-[0fr] opacity-0"
                           }`}
                         >
                           <div className="min-h-0">
@@ -155,7 +157,7 @@ export default function WhyChooseHealthWise() {
             {/* Mobile: use aspect ratio so full portrait is visible */}
             <div className="relative aspect-3/4 w-full lg:hidden">
               <Image
-                src="/uk-weight-loss-medical-expert-health-wise.jpg.jpeg"
+                src="/uk-weight-loss-medical-expert-health-wise.jpg.webp"
                 alt="Reviewed by a UK-based medical professional specialising in weight loss treatments."
                 fill
                 sizes="100vw"
@@ -166,7 +168,7 @@ export default function WhyChooseHealthWise() {
             {/* Desktop: fill the flex column */}
             <div className="relative hidden h-full min-h-[600px] lg:block">
               <Image
-                src="/uk-weight-loss-medical-expert-health-wise.jpg.jpeg"
+                src="/uk-weight-loss-medical-expert-health-wise.jpg.webp"
                 alt="Reviewed by a UK-based medical professional specialising in weight loss treatments."
                 fill
                 sizes="44vw"

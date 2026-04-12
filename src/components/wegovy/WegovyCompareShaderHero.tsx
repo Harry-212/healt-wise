@@ -4,10 +4,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { Instrument_Serif } from "next/font/google";
 import { ArrowRight, BadgeCheck, Scale, Sparkles } from "lucide-react";
-import {
-  ShaderBackground,
-  useHeroShaderFilters,
-} from "@/components/ui/hero-shader";
+import { ShaderBackground } from "@/components/ui/hero-shader";
 
 const instrumentSerif = Instrument_Serif({
   weight: "400",
@@ -16,13 +13,8 @@ const instrumentSerif = Instrument_Serif({
 });
 
 function GlassPill({ children }: { children: ReactNode }) {
-  const filters = useHeroShaderFilters();
-
   return (
-    <div
-      className="relative mb-4 inline-flex items-center rounded-full bg-white/5 px-3 py-1 backdrop-blur-sm"
-      style={filters ? { filter: filters.glassUrl } : undefined}
-    >
+    <div className="relative mb-4 inline-flex items-center rounded-full bg-white/15 px-3 py-1 ring-1 ring-white/25">
       <div className="pointer-events-none absolute top-0 right-1 left-1 h-px rounded-full bg-linear-to-r from-transparent via-white/25 to-transparent" />
       <span className="relative z-10 text-xs font-light text-white/90">
         {children}

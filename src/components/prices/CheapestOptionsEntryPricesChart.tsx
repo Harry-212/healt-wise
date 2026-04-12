@@ -4,7 +4,6 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
-  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
@@ -35,51 +34,59 @@ export function CheapestOptionsEntryPricesChart({ data }: { data: Row[] }) {
         </p>
       </figcaption>
       <RechartsShell heightPx={256}>
-        <div
-          className="h-full w-full"
-          role="img"
-          aria-label="Bar chart of lowest listed entry prices for Wegovy, Mounjaro, and Saxenda"
-        >
-          <ResponsiveContainer width="100%" height="100%">
-          <BarChart
-            data={chartRows}
-            layout="vertical"
-            margin={{ top: 4, right: 16, left: 8, bottom: 4 }}
+        {(dims) => (
+          <div
+            className="h-full w-full"
+            role="img"
+            aria-label="Bar chart of lowest listed entry prices for Wegovy, Mounjaro, and Saxenda"
           >
-            <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-            <XAxis
-              type="number"
-              tick={{ fontSize: 11 }}
-              stroke="#64748b"
-              tickFormatter={(v) => `£${v}`}
-            />
-            <YAxis
-              type="category"
-              dataKey="label"
-              width={72}
-              tick={{ fontSize: 12 }}
-              stroke="#64748b"
-            />
-            <Tooltip
-              formatter={(value, _name, item) => {
-                const row = item?.payload as
-                  | { gbp: number; detail: string }
-                  | undefined;
-                const n = typeof value === "number" ? value : Number(value);
-                const main = `£${Number.isFinite(n) ? n : value}`;
-                return [row?.detail ? `${main} — ${row.detail}` : main, ""];
-              }}
-              contentStyle={{
-                borderRadius: 12,
-                border: "1px solid #e2e8f0",
-                fontSize: 13,
-                maxWidth: 280,
-              }}
-            />
-            <Bar dataKey="gbp" name="Lowest listed" fill={fill} radius={[0, 6, 6, 0]} />
-          </BarChart>
-          </ResponsiveContainer>
-        </div>
+            <BarChart
+              width={dims.width}
+              height={dims.height}
+              data={chartRows}
+              layout="vertical"
+              margin={{ top: 4, right: 16, left: 8, bottom: 4 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+              <XAxis
+                type="number"
+                tick={{ fontSize: 11 }}
+                stroke="#64748b"
+                tickFormatter={(v) => `£${v}`}
+              />
+              <YAxis
+                type="category"
+                dataKey="label"
+                width={72}
+                tick={{ fontSize: 12 }}
+                stroke="#64748b"
+              />
+              <Tooltip
+                formatter={(value, _name, item) => {
+                  const row = item?.payload as
+                    | { gbp: number; detail: string }
+                    | undefined;
+                  const n = typeof value === "number" ? value : Number(value);
+                  const main = `£${Number.isFinite(n) ? n : value}`;
+                  return [row?.detail ? `${main} — ${row.detail}` : main, ""];
+                }}
+                contentStyle={{
+                  borderRadius: 12,
+                  border: "1px solid #e2e8f0",
+                  fontSize: 13,
+                  maxWidth: 280,
+                }}
+              />
+              <Bar
+                dataKey="gbp"
+                name="Lowest listed"
+                fill={fill}
+                radius={[0, 6, 6, 0]}
+                isAnimationActive={false}
+              />
+            </BarChart>
+          </div>
+        )}
       </RechartsShell>
     </figure>
   );

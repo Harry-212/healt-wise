@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import WegovyCompareChartsSection from "@/components/compare/WegovyCompareChartsSection";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import WegovyCompareShaderHero from "@/components/wegovy/WegovyCompareShaderHero";
 import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
-import {
-  WegovyUkDosageCostLineChart,
-  WegovyUkPriceRangeByDoseChart,
-} from "@/components/wegovy/WegovyUkCompareCharts";
 import InternalLinks from "@/components/content/InternalLinks";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -126,10 +123,7 @@ export default function CompareWegovyPricesUkPage() {
               </p>
             </div>
             <div className="grid gap-8 lg:grid-cols-1">
-              <WegovyUkPriceRangeByDoseChart
-                providers={WEGOVY_UK_COMPARE_PROVIDERS}
-              />
-              <WegovyUkDosageCostLineChart
+              <WegovyCompareChartsSection
                 providers={WEGOVY_UK_COMPARE_PROVIDERS}
               />
             </div>

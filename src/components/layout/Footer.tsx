@@ -1,64 +1,142 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { ShieldCheck } from 'lucide-react';
-import TrustSignals from '@/components/trust/TrustSignals';
+import Image from "next/image";
+import Link from "next/link";
+import { ShieldCheck } from "lucide-react";
+import TrustSignals from "@/components/trust/TrustSignals";
+import { SITE_LOGO_SRC } from "@/lib/site-assets";
+
+const linkClass =
+  "block rounded-md py-1 text-sm text-slate-600 transition-colors duration-200 hover:bg-emerald-50/60 hover:text-emerald-700";
+
+const headingClass =
+  "mb-3 text-xs font-bold uppercase tracking-[0.18em] text-emerald-800/90";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-brand-border bg-brand-surface py-12">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-6 flex flex-col">
-            <Link href="/" className="flex items-center gap-2">
-              <Image 
-                src="/logo_hd_transparent.png" 
-                alt="Health Wise Logo" 
-                width={400} 
-                height={125} 
-                className="h-16 md:h-20 w-auto object-contain"
+    <footer className="relative border-t border-slate-200/90 bg-linear-to-b from-slate-50/95 via-brand-surface to-slate-100/40">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-200/50 to-transparent"
+        aria-hidden
+      />
+      <div className="mx-auto max-w-[1400px] px-4 pb-12 pt-14 md:px-8 md:pb-14 md:pt-16">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-6 lg:gap-10">
+          <div className="flex flex-col space-y-5 sm:col-span-2 lg:col-span-2">
+            <Link
+              href="/"
+              className="inline-flex w-fit items-center rounded-lg outline-offset-4 transition-opacity hover:opacity-90"
+            >
+              <Image
+                src={SITE_LOGO_SRC}
+                alt="Health Wise Logo"
+                width={400}
+                height={125}
+                className="h-20 w-auto object-contain md:h-24"
               />
             </Link>
-            <p className="text-sm text-slate-600">
-              Independent UK comparison site for GLP-1 treatment prices, maintenance policies, pharmacy safety, and support options.
+            <p className="max-w-sm text-pretty text-sm leading-relaxed text-slate-600">
+              Independent UK comparison for GLP-1 treatment prices, maintenance policies, pharmacy
+              safety, and support—so you can compare with confidence.
             </p>
           </div>
-          <div>
-            <h3 className="font-semibold text-slate-900 mb-4">Treatments</h3>
-            <ul className="space-y-2 text-sm text-slate-600">
-              <li><Link href="/mounjaro-price-comparison" className="hover:text-emerald-600">Mounjaro Pricing</Link></li>
-              <li><Link href="/wegovy-price-comparison" className="hover:text-emerald-600">Wegovy Pricing</Link></li>
-              <li><Link href="/" className="hover:text-emerald-600">Compare All</Link></li>
+
+          <nav aria-label="Treatments">
+            <h3 className={headingClass}>Treatments</h3>
+            <ul className="space-y-0.5">
+              <li>
+                <Link href="/mounjaro-price-comparison" className={linkClass}>
+                  Mounjaro pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/wegovy-price-comparison" className={linkClass}>
+                  Wegovy pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className={linkClass}>
+                  Compare all
+                </Link>
+              </li>
             </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-900 mb-4">Trust & Safety</h3>
-            <ul className="space-y-2 text-sm text-slate-600">
-              <li><Link href="/pharmacy-safety-gphc-verification" className="hover:text-emerald-600">GPhC Verification</Link></li>
-              <li><Link href="/methodology" className="hover:text-emerald-600">Our Methodology</Link></li>
-              <li><Link href="/about" className="hover:text-emerald-600">About Us</Link></li>
+          </nav>
+
+          <nav aria-label="Trust and safety">
+            <h3 className={headingClass}>Trust &amp; safety</h3>
+            <ul className="space-y-0.5">
+              <li>
+                <Link href="/pharmacy-safety-gphc-verification" className={linkClass}>
+                  GPhC verification
+                </Link>
+              </li>
+              <li>
+                <Link href="/methodology" className={linkClass}>
+                  Our methodology
+                </Link>
+              </li>
             </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-900 mb-4">Support</h3>
-            <ul className="space-y-2 text-sm text-slate-600">
-              <li><Link href="/mounjaro-faq" className="hover:text-emerald-600">Mounjaro FAQs</Link></li>
-              <li><Link href="/wegovy-faq" className="hover:text-emerald-600">Wegovy FAQs</Link></li>
-              <li><Link href="/contact" className="hover:text-emerald-600">Contact</Link></li>
+          </nav>
+
+          <nav aria-label="Support">
+            <h3 className={headingClass}>Support</h3>
+            <ul className="space-y-0.5">
+              <li>
+                <Link href="/mounjaro-faq" className={linkClass}>
+                  Mounjaro FAQs
+                </Link>
+              </li>
+              <li>
+                <Link href="/wegovy-faq" className={linkClass}>
+                  Wegovy FAQs
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className={linkClass}>
+                  Contact
+                </Link>
+              </li>
             </ul>
-          </div>
+          </nav>
+
+          <nav aria-label="Company">
+            <h3 className={headingClass}>Company</h3>
+            <ul className="space-y-0.5">
+              <li>
+                <Link href="/about" className={linkClass}>
+                  About us
+                </Link>
+              </li>
+              <li>
+                <Link href="/editorial-policy" className={linkClass}>
+                  Editorial policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy" className={linkClass}>
+                  Privacy policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms-of-service" className={linkClass}>
+                  Terms of service
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div className="mt-10">
-          <TrustSignals />
+
+        <div className="mt-12 md:mt-14">
+          <TrustSignals variant="footer" />
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 text-center md:flex-row md:text-left">
-          <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} GLP-1 Compare UK. All rights reserved.
+
+        <div className="mt-10 flex flex-col gap-6 border-t border-slate-200/80 pt-10 md:mt-12 md:flex-row md:items-center md:justify-between md:gap-8 md:pt-10">
+          <p className="text-center text-sm font-medium text-slate-600 md:text-left">
+            © 2026 Health Wise. All rights reserved.
           </p>
-          <div className="flex max-w-md flex-col items-center gap-2 text-sm text-slate-500 sm:max-w-none sm:flex-row sm:items-start md:max-w-xl">
-            <ShieldCheck className="h-4 w-4 shrink-0 text-emerald-600" />
-            <span className="text-balance sm:text-left">
-              Independent & unbiased. Not affiliated with Novo Nordisk or Eli Lilly.
-            </span>
+          <div className="flex items-start justify-center gap-3 text-pretty text-sm text-slate-500 md:max-w-lg md:justify-end">
+            <ShieldCheck
+              className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
+              aria-hidden
+            />
+            <span>Independent and unbiased. Not affiliated with Novo Nordisk or Eli Lilly.</span>
           </div>
         </div>
       </div>
