@@ -1,51 +1,94 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Moon, Sun, ChevronDown } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import {
+  Activity,
+  BadgePoundSterling,
+  BookOpen,
+  ChevronDown,
+  LayoutGrid,
+  Pill,
+  Syringe,
+} from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ARTICLES = [
+export type ArticleTag = "wegovy" | "mounjaro" | "how-it-works" | "guides" | "safety";
+
+type Article = {
+  title: string;
+  image: string;
+  description: string;
+  href: string;
+  tags: ArticleTag[];
+};
+
+const ARTICLES: Article[] = [
   {
     title: "How Does Wegovy Work to Transform Your Weight Journey",
     image: "https://i.ibb.co.com/qYntkdQh/how-does-wegovy-work.png",
     description: "Discover exactly how the Wegovy weight loss injection works in your body, from mimicking the GLP-1 hormone to reducing appetite and slowing gastric emptying.",
     href: "/blog/how-does-wegovy-work-to-transform-your-weight-journey",
+    tags: ["wegovy", "how-it-works"],
   },
   {
     title: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
     image: "https://i.ibb.co.com/cSgqJLYC/image.png",
     description: "Learn how Mounjaro dosage works, the stages from 2.5 mg to higher doses, potential side effects, and long-term success strategies.",
     href: "/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust",
+    tags: ["mounjaro", "guides"],
   },
   {
     title: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
     image: "https://i.ibb.co.com/Ndr2MsY9/image.png",
     description: "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
     href: "/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk",
+    tags: ["wegovy", "safety"],
   },
   {
     title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
     image: "https://i.ibb.co.com/TjdVknY/image.png",
     description: "Follow clear wegovy injection instructions to confidently start your UK weight loss journey today.",
     href: "/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust",
+    tags: ["wegovy", "guides"],
   },
   {
     title: "Discover If Mounjaro Is Safe for Weight Loss and Right for You",
     image: "https://i.ibb.co.com/xqyv8wc3/image.png",
     description: "Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding.",
     href: "/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you",
+    tags: ["mounjaro", "safety"],
   },
   {
     title: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
     image: "https://i.ibb.co.com/k2NjLMfp/image.png",
     description: "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
     href: "/blog/does-mounjaro-really-work-for-weight-loss-find-out-here",
-  }
+    tags: ["mounjaro", "how-it-works"],
+  },
+];
+
+type FilterId = "all" | ArticleTag;
+
+type FilterOption = {
+  id: FilterId;
+  label: string;
+  icon: LucideIcon;
+  description: string;
+};
+
+const FILTER_OPTIONS: FilterOption[] = [
+  { id: "all", label: "All", icon: LayoutGrid, description: "Show every article" },
+  { id: "wegovy", label: "Wegovy", icon: Pill, description: "Wegovy & semaglutide topics" },
+  { id: "mounjaro", label: "Mounjaro", icon: Activity, description: "Mounjaro & tirzepatide topics" },
+  { id: "how-it-works", label: "How it works", icon: BookOpen, description: "Mechanism & effectiveness" },
+  { id: "guides", label: "How-to & dosage", icon: Syringe, description: "Dosing, injections & instructions" },
+  { id: "safety", label: "Costs & safety", icon: BadgePoundSterling, description: "UK cost, eligibility & safety" },
 ];
 
 export default function BlogClient() {
@@ -54,6 +97,19 @@ export default function BlogClient() {
   const articlesRef = useRef<HTMLDivElement>(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [sortMethod, setSortMethod] = useState("Date Desc");
+  const [activeFilter, setActiveFilter] = useState<FilterId>("all");
+
+  const filteredArticles = useMemo(() => {
+    const base =
+      activeFilter === "all"
+        ? [...ARTICLES]
+        : ARTICLES.filter((a) => a.tags.includes(activeFilter));
+
+    const byTitle = (a: Article, b: Article) => a.title.localeCompare(b.title);
+    if (sortMethod === "Title Asc") return [...base].sort(byTitle);
+    if (sortMethod === "Title Desc") return [...base].sort((a, b) => b.title.localeCompare(a.title));
+    return base;
+  }, [activeFilter, sortMethod]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -121,6 +177,7 @@ export default function BlogClient() {
                     unoptimized={ARTICLES[0].image.includes('ibb')}
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     priority
+                    loading="eager"
                   />
                   <div className="absolute top-5 left-5 z-10">
                     <span className="bg-[#c25e42] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
@@ -179,21 +236,43 @@ export default function BlogClient() {
         className="bg-white text-slate-900 rounded-t-[40px] px-4 sm:px-8 md:px-12 py-16 min-h-screen"
       >
         <div className="max-w-screen-2xl mx-auto">
-          {/* Top Bar Navigation */}
-          <div className="flex justify-between items-center mb-16 articles-header">
-            <Link href="#" className="flex items-center gap-4 text-sm font-medium text-slate-900 hover:opacity-75 transition-opacity">
-              <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center">
-                <ArrowLeft className="w-4 h-4" />
-              </div>
-              Back to News
-            </Link>
-            
-            <div className="flex items-center gap-3">
-              <Moon className="w-4 h-4 text-slate-700" />
-              <button className="w-12 h-6 bg-slate-100 rounded-full relative shadow-inner flex items-center p-1 transition-colors">
-                <div className="w-4 h-4 bg-white shadow rounded-full ml-auto" />
-              </button>
-              <Sun className="w-4 h-4 text-slate-400" />
+          {/* Article filters */}
+          <div
+            className="articles-header mb-10 -mt-2"
+            role="toolbar"
+            aria-label="Filter articles by topic"
+          >
+            <p className="text-xs font-medium uppercase tracking-wide text-slate-400 mb-3">
+              Topics
+            </p>
+            <div className="flex flex-wrap gap-2 sm:gap-3">
+              {FILTER_OPTIONS.map(({ id, label, icon: Icon, description }) => {
+                const selected = activeFilter === id;
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    title={description}
+                    aria-pressed={selected}
+                    onClick={() => setActiveFilter(id)}
+                    className={[
+                      "inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-sm font-medium transition-all duration-200",
+                      "hover:-translate-y-0.5 hover:shadow-md hover:border-slate-300 hover:bg-slate-50",
+                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3562ff] focus-visible:ring-offset-2",
+                      selected
+                        ? "border-[#3562ff] bg-[#3562ff] text-white shadow-sm hover:bg-[#2a4fd6] hover:border-[#2a4fd6]"
+                        : "border-slate-200 bg-white text-slate-800",
+                    ].join(" ")}
+                  >
+                    <Icon
+                      className={`h-4 w-4 shrink-0 ${selected ? "text-white" : "text-slate-500"}`}
+                      strokeWidth={2}
+                      aria-hidden
+                    />
+                    <span>{label}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -237,8 +316,13 @@ export default function BlogClient() {
 
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
-            {ARTICLES.map((article, idx) => (
-              <Link href={article.href} key={idx} className="group flex flex-col article-card cursor-pointer h-full">
+            {filteredArticles.length === 0 ? (
+              <p className="col-span-full text-center text-slate-500 py-12 text-[15px]">
+                No articles match this filter. Try another topic.
+              </p>
+            ) : null}
+            {filteredArticles.map((article) => (
+              <Link href={article.href} key={article.href} className="group flex flex-col article-card cursor-pointer h-full">
                 <div className="relative w-full aspect-[3/2] sm:aspect-[16/9] rounded-[20px] overflow-hidden bg-slate-100 mb-4 shrink-0">
                   <Image
                     src={article.image}

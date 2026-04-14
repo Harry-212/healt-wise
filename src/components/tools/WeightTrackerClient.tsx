@@ -122,8 +122,11 @@ interface EntryModalProps {
 }
 
 function EntryModal({ mode, initial, preferredUnit, onClose, onSaved }: EntryModalProps) {
-  const today = new Date().toISOString().slice(0, 10);
-  const [date, setDate] = useState(initial?.date ?? today);
+  const [date, setDate] = useState(initial?.date ?? "");
+  useEffect(() => {
+    if (initial?.date) return;
+    setDate((d) => d || new Date().toISOString().slice(0, 10));
+  }, [initial?.date]);
   const [weightStr, setWeightStr] = useState(
     initial ? fromKg(initial.weightKg, preferredUnit).toFixed(1) : "",
   );
@@ -207,7 +210,7 @@ function EntryModal({ mode, initial, preferredUnit, onClose, onSaved }: EntryMod
                 required
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                max={today}
+                max={new Date().toISOString().slice(0, 10)}
                 className="mt-1 block w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-slate-900 focus:border-violet-400 focus:outline-none focus:ring-2 focus:ring-violet-300/40"
               />
             </label>

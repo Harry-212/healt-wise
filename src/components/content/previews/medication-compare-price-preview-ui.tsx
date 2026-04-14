@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { formatUkGroupedInteger } from "@/lib/provider-helpers";
 
 export const PREVIEW_ROWS = 3;
 
@@ -26,7 +27,7 @@ export function ReviewsCell({
       <span className="font-semibold text-slate-900">{rating.toFixed(1)}</span>
       {reviewCount != null ? (
         <span className="text-xs text-slate-500">
-          ({reviewCount.toLocaleString("en-GB")})
+          ({formatUkGroupedInteger(reviewCount)})
         </span>
       ) : null}
     </span>

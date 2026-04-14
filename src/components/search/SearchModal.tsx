@@ -14,6 +14,7 @@ const ORDER: SearchItemType[] = [
   "Compare",
   "Price",
   "Guide",
+  "Lifestyle",
   "Blog",
   "Tool",
 ];

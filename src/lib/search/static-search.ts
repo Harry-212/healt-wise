@@ -4,7 +4,8 @@ export type SearchItemType =
   | "Price"
   | "Guide"
   | "Tool"
-  | "Blog";
+  | "Blog"
+  | "Lifestyle";
 
 export type SearchItem = {
   type: SearchItemType;
@@ -86,6 +87,36 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
     title: "Helpful health guides",
     href: "/helpful-guides",
     keywords: "Mounjaro Wegovy pharmacy safety UK guides",
+  },
+  {
+    type: "Lifestyle",
+    title: "Weight loss tips",
+    href: "/tips",
+    keywords: "nutrition appetite habits sleep stress GLP-1 science",
+  },
+  {
+    type: "Lifestyle",
+    title: "Diet for sustainable weight loss",
+    href: "/diet",
+    keywords: "diet weight loss nutrition protein fibre calorie deficit GLP-1 meal plan UK",
+  },
+  {
+    type: "Lifestyle",
+    title: "Weight loss exercise guide",
+    href: "/exercise",
+    keywords: "weight loss exercise cardio strength training walking running NEAT UK GLP-1",
+  },
+  {
+    type: "Lifestyle",
+    title: "Stress and weight loss",
+    href: "/stress",
+    keywords: "stress weight gain cortisol emotional eating sleep anxiety UK GLP-1",
+  },
+  {
+    type: "Lifestyle",
+    title: "Sleep and weight loss",
+    href: "/sleep",
+    keywords: "sleep weight loss sleep deprivation appetite ghrelin leptin insomnia UK GLP-1",
   },
   {
     type: "Tool",

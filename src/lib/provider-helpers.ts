@@ -9,13 +9,30 @@ export function getMonthlyCost(provider: PharmacyProvider): number {
   return provider.totalPrice;
 }
 
+/**
+ * Deterministic GBP display (no Intl) so SSR and the browser produce identical
+ * strings — Node and Chromium can disagree on narrow spaces in currency output.
+ */
 export function formatGBP(value: number): string {
-  return new Intl.NumberFormat("en-GB", {
-    style: "currency",
-    currency: "GBP",
-    minimumFractionDigits: value % 1 === 0 ? 0 : 2,
-    maximumFractionDigits: 2,
-  }).format(value);
+  if (!Number.isFinite(value)) return "£0";
+  const neg = value < 0;
+  const v = Math.abs(value);
+  const whole = Math.abs(v % 1) < 1e-9;
+  const str = whole ? String(Math.trunc(v)) : v.toFixed(2);
+  const [intPart, dec] = str.split(".");
+  const grouped = intPart!.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  const body = dec != null ? `${grouped}.${dec}` : grouped;
+  return neg ? `-£${body}` : `£${body}`;
+}
+
+/** Integer grouping for review counts etc. — same SSR/client string as formatGBP. */
+export function formatUkGroupedInteger(value: number): string {
+  if (!Number.isFinite(value)) return "0";
+  const n = Math.trunc(value);
+  const neg = n < 0;
+  const s = String(Math.abs(n));
+  const grouped = s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return neg ? `-${grouped}` : grouped;
 }
 
 export function consultationLabel(

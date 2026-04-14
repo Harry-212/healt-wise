@@ -11,6 +11,7 @@ import {
   type SaxendaUkProviderCompare,
 } from "@/lib/data/saxenda-uk-compare-providers";
 import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
+import { formatUkGroupedInteger } from "@/lib/provider-helpers";
 
 type SortKey = "provider" | "rating" | SaxendaPackKey;
 
@@ -406,7 +407,7 @@ export default function SaxendaUkCompareTable({
                             {p.rating.toFixed(1)}
                           </span>
                           <span className="text-xs text-slate-500">
-                            ({p.reviewCount.toLocaleString("en-GB")})
+                            ({formatUkGroupedInteger(p.reviewCount)})
                           </span>
                         </span>
                       </td>

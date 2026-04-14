@@ -5,15 +5,22 @@ import { Lock, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createBrowserSupabaseClient } from "@/lib/supabase/client";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 
-export default function LoginGate() {
+export default function LoginGate({
+  initialSignup,
+}: {
+  initialSignup: boolean;
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const signup = searchParams.get("signup") === "1";
+  const [signup, setSignup] = useState(initialSignup);
+  useEffect(() => {
+    setSignup(searchParams.get("signup") === "1");
+  }, [searchParams]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);

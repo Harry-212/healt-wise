@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Star } from "lucide-react";
-import { formatGBP } from "@/lib/provider-helpers";
+import { formatGBP, formatUkGroupedInteger } from "@/lib/provider-helpers";
 import {
   WEGOVY_DOSE_COMPARISON,
   WEGOVY_DOSE_LABEL,
@@ -61,7 +61,7 @@ function RowCards({
                 <Stars rating={row.rating} />
                 <span>
                   {row.rating.toFixed(1)} (
-                  {row.reviewCount.toLocaleString("en-GB")})
+                  {formatUkGroupedInteger(row.reviewCount)})
                 </span>
               </div>
               {row.promo ? (
@@ -174,7 +174,7 @@ function RowTable({
                       <Stars rating={row.rating} />
                       <span>
                         {row.rating.toFixed(1)} (
-                        {row.reviewCount.toLocaleString("en-GB")})
+                        {formatUkGroupedInteger(row.reviewCount)})
                       </span>
                     </div>
                     {row.promo ? (

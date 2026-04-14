@@ -62,8 +62,7 @@ export default function CheapestOptionsUkPage() {
             id="overview-heading"
             className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
           >
-            What “cheapest GLP-1 in the UK” really means in{" "}
-            {new Date().getFullYear()}
+            What “cheapest GLP-1 in the UK” really means in 2026
           </h2>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 md:text-[1.05rem]">
             People searching{" "}

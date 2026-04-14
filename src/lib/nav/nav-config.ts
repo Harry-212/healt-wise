@@ -1,3 +1,11 @@
+import {
+  PILLAR_DIET,
+  PILLAR_EXERCISE,
+  PILLAR_SLEEP,
+  PILLAR_STRESS,
+  PILLAR_TIPS,
+} from "@/lib/lifestyle/pillar-routes";
+
 export type NavLink = { label: string; href: string; icon?: string };
 
 export type NavColumn = { title: string; links: NavLink[] };
@@ -68,13 +76,13 @@ export const NAV_PANELS: NavPanel[] = [
         ],
       },
       {
-        title: "Tips",
+        title: "Lifestyle",
         links: [
-          { label: "Tips", href: "/lifestyle#tips", icon: "sparkles" },
-          { label: "Nutrition", href: "/lifestyle#nutrition", icon: "apple" },
-          { label: "Exercise", href: "/lifestyle#exercise", icon: "activity" },
-          { label: "Sleep", href: "/lifestyle#sleep", icon: "moon" },
-          { label: "Stress", href: "/lifestyle#stress", icon: "brain" },
+          { label: "Weight loss tips", href: PILLAR_TIPS, icon: "sparkles" },
+          { label: "Diet & nutrition", href: PILLAR_DIET, icon: "apple" },
+          { label: "Exercise", href: PILLAR_EXERCISE, icon: "activity" },
+          { label: "Sleep & weight", href: PILLAR_SLEEP, icon: "moon" },
+          { label: "Stress & weight", href: PILLAR_STRESS, icon: "brain" },
         ],
       },
     ],

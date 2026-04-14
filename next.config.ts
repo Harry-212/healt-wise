@@ -34,6 +34,41 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/lifestyle",
+        destination: "/tips",
+        permanent: true,
+      },
+      {
+        source: "/lifestyle/nutrition",
+        destination: "/diet",
+        permanent: true,
+      },
+      {
+        source: "/lifestyle/tips",
+        destination: "/tips",
+        permanent: true,
+      },
+      {
+        source: "/lifestyle/diet",
+        destination: "/diet",
+        permanent: true,
+      },
+      {
+        source: "/lifestyle/exercise",
+        destination: "/exercise",
+        permanent: true,
+      },
+      {
+        source: "/lifestyle/sleep",
+        destination: "/sleep",
+        permanent: true,
+      },
+      {
+        source: "/lifestyle/stress",
+        destination: "/stress",
+        permanent: true,
+      },
+      {
         source: "/helpful-guide/:slug+",
         destination: "/helpful-guides/:slug+",
         permanent: true,

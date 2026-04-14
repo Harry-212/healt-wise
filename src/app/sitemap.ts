@@ -19,7 +19,11 @@ import {
 
 const STATIC_PATHS = [
   "/",
-  "/lifestyle",
+  "/tips",
+  "/diet",
+  "/exercise",
+  "/stress",
+  "/sleep",
   "/contact",
   "/blog",
   "/pharmacy-safety-gphc-verification",
