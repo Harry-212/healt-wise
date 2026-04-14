@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import type { MetadataRoute } from "next";
 import {
   getAllPostsMeta,
@@ -11,40 +13,72 @@ import { MOUNJARO_UK_COMPARE_PROVIDERS } from "@/lib/data/mounjaro-uk-compare-pr
 import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-providers";
 import { WEGOVY_UK_COMPARE_PROVIDERS } from "@/lib/data/wegovy-uk-compare-providers";
 import { siteOrigin } from "@/lib/seo/site-origin";
-import {
-  HELPFUL_GUIDE_SLUGS,
-  HELPFUL_GUIDES_HUB_PATH,
-  helpfulGuidePath,
-} from "@/lib/helpful-guide-slugs";
+import { HELPFUL_GUIDES_HUB_PATH, helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 
+/** Guide URLs under /helpful-guides/: only folders on disk with a page.tsx file. */
+function helpfulGuideSlugsOnDisk(): string[] {
+  const base = path.join(process.cwd(), "src", "app", "helpful-guides");
+  if (!fs.existsSync(base)) return [];
+  return fs
+    .readdirSync(base, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .filter((slug) => fs.existsSync(path.join(base, slug, "page.tsx")))
+    .sort();
+}
+
+/**
+ * Static blog article routes under /blog/:slug/ (App Router folders with page.tsx).
+ * Excludes dynamic `[slug]` (Markdown) and `page` (pagination).
+ */
+function blogArticleSlugsOnDisk(): string[] {
+  const base = path.join(process.cwd(), "src", "app", "blog");
+  if (!fs.existsSync(base)) return [];
+  return fs
+    .readdirSync(base, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .filter(
+      (slug) =>
+        slug !== "[slug]" &&
+        slug !== "page" &&
+        fs.existsSync(path.join(base, slug, "page.tsx")),
+    )
+    .sort();
+}
+
+/** Fixed App Router paths without dynamic segments. */
 const STATIC_PATHS = [
   "/",
-  "/tips",
-  "/diet",
-  "/exercise",
-  "/stress",
-  "/sleep",
-  "/contact",
+  "/about",
   "/blog",
-  "/pharmacy-safety-gphc-verification",
-  "/wegovy-price-comparison",
-  "/mounjaro-price-comparison",
-  "/saxenda-price-comparison",
-  "/wegovy-price-list",
-  "/mounjaro-price-list",
-  "/wegovy-maintenance-pharmacies",
+  "/contact",
+  "/diet",
+  "/editorial-policy",
+  "/exercise",
+  HELPFUL_GUIDES_HUB_PATH,
+  "/methodology",
+  "/mounjaro-faq",
   "/mounjaro-maintenance-pharmacies",
-  "/tools/weight-loss-tracker",
+  "/mounjaro-price-comparison",
+  "/mounjaro-price-list",
+  "/pharmacy-safety-gphc-verification",
+  "/price-alerts",
+  "/privacy-policy",
+  "/saxenda-price-comparison",
+  "/sleep",
+  "/stress",
+  "/terms-of-service",
+  "/tips",
   "/tools/bmi-calculator",
-  "/what-is-wegovy",
+  "/tools/weight-loss-tracker",
+  "/wegovy-faq",
+  "/wegovy-maintenance-pharmacies",
+  "/wegovy-price-comparison",
+  "/wegovy-price-list",
   "/what-is-mounjaro",
   "/what-is-saxenda",
-  "/wegovy-faq",
-  "/price-alerts",
-  "/mounjaro-faq",
-  "/methodology",
-  "/about",
-  HELPFUL_GUIDES_HUB_PATH,
+  "/what-is-wegovy",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -63,7 +97,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push(path, path === "/" ? 1 : 0.75);
   }
 
-  for (const slug of HELPFUL_GUIDE_SLUGS) {
+  for (const slug of helpfulGuideSlugsOnDisk()) {
     push(helpfulGuidePath(slug), 0.72);
   }
 
@@ -84,8 +118,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  for (const slug of getAllSlugs()) {
-    push(`/blog/${slug}`, 0.65);
+  {
+    const blogSlugs = new Set<string>([
+      ...getAllSlugs(),
+      ...blogArticleSlugsOnDisk(),
+    ]);
+    for (const slug of blogSlugs) {
+      push(`/blog/${slug}`, 0.65);
+    }
   }
 
   const blogCount = getAllPostsMeta().length;

@@ -5,14 +5,14 @@ import { STRESS_FAQ } from "@/lib/lifestyle/stress-content";
 import { PILLAR_STRESS } from "@/lib/lifestyle/pillar-routes";
 
 export const metadata: Metadata = {
-  title: "Stress and weight loss | Health Wise",
+  title: "Stress and weight loss",
   description:
     "How chronic stress, cortisol, sleep, and emotional eating affect weight—and practical strategies that work alongside diet, exercise, and GLP-1 treatment in the UK.",
   alternates: {
     canonical: PILLAR_STRESS,
   },
   openGraph: {
-    title: "How stress affects your weight — and what you can do | Health Wise",
+    title: "How stress affects your weight — and what you can do",
     description:
       "Stress & weight pillar: acute vs chronic stress, habits, system approach, FAQs, and links to diet, exercise, and guides.",
     url: PILLAR_STRESS,

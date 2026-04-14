@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -18,7 +20,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-multivitamins-uk",
-  title: "Multivitamins and Mounjaro in the UK: Do You Really Need Them? | Health Wise",
+  title: "Multivitamins and Mounjaro in the UK: Do You Really Need Them?",
   description: "Mounjaro reduces appetite, which can lower nutrient intake. We cut through the influencer noise and explain what the evidence says about multivitamins while using Mounjaro.",
   openGraphTitle: "Multivitamins and Mounjaro in the UK: Do You Really Need Them?",
 });
@@ -119,7 +121,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-multivitamins-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-multivitamins-uk")}`,
   },
 };
 

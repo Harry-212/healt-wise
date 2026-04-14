@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -19,7 +21,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-side-effects-uk",
-  title: "Mounjaro Side Effects UK: What to Expect and How to Manage Them | Health Wise",
+  title: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
   description: "A complete, honest overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—with evidence-based management strategies for each.",
   openGraphTitle: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
 });
@@ -128,7 +130,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-side-effects-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-side-effects-uk")}`,
   },
 };
 

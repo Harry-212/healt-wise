@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
 import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
@@ -16,7 +16,7 @@ const TOC = [
   { id: "benefits-risks", label: "Benefits, risks, and what you are really paying for" },
   { id: "comparing-options", label: "Comparing Wegovy with other options" },
   { id: "how-to-decide", label: "How to decide if Wegovy is worth the cost for you" },
-  { id: "faq", label: "Frequently asked questions" },
+  { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
 ];
 
@@ -66,17 +66,10 @@ export default function ArticleClient() {
             </span>
           </div>
 
-          <div className="relative w-full aspect-[16/9] md:aspect-[2/1] overflow-hidden rounded-[32px] sm:rounded-[40px]">
-            <Image
-              src="https://i.ibb.co.com/Ndr2MsY9/image.png"
-              alt="The Truth About Wegovy Weight Loss Medication Costs in the UK"
-              unoptimized
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 1280px) 100vw, 1280px"
-            />
-          </div>
+          <BlogArticleHeroImage
+            src="https://i.ibb.co.com/Ndr2MsY9/image.png"
+            alt="The Truth About Wegovy Weight Loss Medication Costs in the UK"
+          />
         </header>
 
         {/* CONTENT SPLIT LAYOUT */}
@@ -95,7 +88,7 @@ export default function ArticleClient() {
                 This guide walks you through how Wegovy works, what affects the price you pay in the UK, and how to decide if it is a good fit for you financially as well as medically.
               </p>
 
-              <GuideSection id="what-is-wegovy" heading="What Wegovy weight loss medication is">
+              <GuideSection id="what-is-wegovy" heading="What Wegovy Weight Loss Medication Is">
                 <p>
                   Wegovy® (semaglutide) is a prescription weight loss medicine used alongside a reduced calorie diet and increased physical activity. It is licensed for adults with obesity, or who are overweight with at least one weight related medical problem.
                 </p>
@@ -113,7 +106,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="how-prescribed" heading="How Wegovy is prescribed and taken">
+              <GuideSection id="how-prescribed" heading="How Wegovy Is Prescribed And Taken">
                 <p>
                   The way you take Wegovy affects cost, because the dose is increased gradually. You start lower and build up to a maintenance dose that controls appetite effectively, which means your prescription strength and therefore price change over time.
                 </p>
@@ -138,7 +131,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="factors-costs" heading="Factors that affect Wegovy costs in the UK">
+              <GuideSection id="factors-costs" heading="Factors That Affect Wegovy Costs In The UK">
                 <p>
                   The truth is that there is no single “Wegovy price” in the UK. What you pay depends on several moving parts that include your eligibility, where you get your prescription, and your dose.
                 </p>
@@ -179,7 +172,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="benefits-risks" heading="Benefits, risks, and what you are really paying for">
+              <GuideSection id="benefits-risks" heading="Benefits, Risks, And What You Are Really Paying For">
                 <p>
                   When you look at monthly costs in isolation, Wegovy weight loss medication can seem expensive. To get a clearer picture, it helps to understand what you are actually buying and the potential trade offs.
                 </p>
@@ -232,7 +225,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="comparing-options" heading="Comparing Wegovy with other options">
+              <GuideSection id="comparing-options" heading="Comparing Wegovy With Other Options">
                 <p>
                   You may be weighing up Wegovy against other medications such as tirzepatide (for example Mounjaro) or older weight loss drugs, or even against lifestyle change alone.
                 </p>
@@ -248,7 +241,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="how-to-decide" heading="How to decide if Wegovy is worth the cost for you">
+              <GuideSection id="how-to-decide" heading="How To Decide If Wegovy Is Worth The Cost For You">
                 <p>Working out whether Wegovy is “worth it” is a personal decision, but there are some sensible questions to ask yourself.</p>
 
                 <ul className="list-disc pl-5 space-y-6 mt-6">
@@ -277,7 +270,7 @@ export default function ArticleClient() {
 
               <section id="faq" className={`mt-16 pt-10 border-t ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>
-                  Frequently asked questions about Wegovy and cost
+                  Frequently Asked Questions About Wegovy And Cost
                 </h2>
                 
                 <div className="space-y-8">
@@ -323,7 +316,7 @@ export default function ArticleClient() {
             </article>
 
             {/* Share Panel (Using the GuideSharePanel UI from the 'Guides' article context) */}
-            <div className="mt-16">
+            <div className="mt-10">
               <GuideSharePanel 
                 url={`${siteOrigin()}/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk`} 
                 title="The Truth About Wegovy Weight Loss Medication Costs in the UK"

@@ -4,11 +4,12 @@ import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { openGraphSizedImageUrl } from "@/lib/seo/open-graph-image-url";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { stripTitleTemplateSuffix } from "@/lib/seo/strip-title-template-suffix";
 
 export type BuildGuideShareMetadataInput = {
   /** Folder slug under `/helpful-guides/[slug]` */
   slug: string;
-  /** Value for `<title>` (include `| Health Wise` if you want it in the tab title) */
+  /** Value for `<title>` before root layout `template` appends ` | Health Wise` */
   title: string;
   description: string;
   /** Usually shorter than `title`; used for OG / Twitter */
@@ -33,7 +34,7 @@ export function buildGuideShareMetadata(
   const ogDescription = input.openGraphDescription ?? input.description;
 
   return {
-    title: input.title,
+    title: stripTitleTemplateSuffix(input.title),
     description: input.description,
     alternates: { canonical },
     openGraph: {

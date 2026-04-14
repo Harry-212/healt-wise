@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -18,7 +20,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-skin-pain-causes-treatment",
-  title: "Mounjaro Skin Pain Explained: Causes, Symptoms & How to Treat It | Health Wise",
+  title: "Mounjaro Skin Pain Explained: Causes, Symptoms & How to Treat It",
   description: "Some Mounjaro users report skin sensitivity, burning, or pain from light touch. Here's what may be causing it—nerve sensitivity, nutritional changes, blood sugar shifts—and how to manage symptoms.",
   openGraphTitle: "Mounjaro Skin Pain Explained: Causes, Symptoms & How to Treat It",
   openGraphDescription: "Some Mounjaro users report skin sensitivity, burning, or pain from light touch. Here's what may be causing it and how to manage symptoms effectively.",
@@ -126,7 +128,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-skin-pain-causes-treatment",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-skin-pain-causes-treatment")}`,
   },
 };
 

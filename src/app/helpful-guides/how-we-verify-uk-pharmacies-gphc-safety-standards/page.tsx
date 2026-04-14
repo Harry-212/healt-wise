@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -18,7 +20,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "how-we-verify-uk-pharmacies-gphc-safety-standards",
-  title: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained | Health Wise",
+  title: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained",
   description: "Discover how Health Wise validates every pharmacy against the GPhC register. Learn our multi-layer safety verification process and how to check a pharmacy yourself.",
   openGraphTitle: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained",
 });
@@ -121,7 +123,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    "@id": `${siteOrigin()}${helpfulGuidePath("how-we-verify-uk-pharmacies-gphc-safety-standards")}`,
   },
 };
 

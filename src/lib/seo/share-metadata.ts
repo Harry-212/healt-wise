@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteOrigin } from "./site-origin";
+import { stripTitleTemplateSuffix } from "./strip-title-template-suffix";
 
 /** Encode each path segment so spaces and special chars work in OG/Twitter URLs. */
 function encodedSitePath(path: string): string {
@@ -13,7 +14,7 @@ function encodedSitePath(path: string): string {
 export type PageShareMetadataInput = {
   /** Path only, e.g. `/what-is-wegovy` */
   canonicalPath: string;
-  /** `<title>` segment (layout template adds ` | Health Wise`) */
+  /** `<title>` segment before layout `template` appends ` | Health Wise` */
   title: string;
   metaDescription: string;
   /** Often slightly shorter; shown in WhatsApp, Facebook, X previews */
@@ -40,9 +41,10 @@ export function buildPageShareMetadata(
   const ogDescription =
     input.openGraphDescription ?? input.metaDescription;
   const imagePath = encodedSitePath(input.imagePath);
+  const documentTitle = stripTitleTemplateSuffix(input.title);
 
   return {
-    title: input.title,
+    title: documentTitle,
     description: input.metaDescription,
     alternates: { canonical },
     openGraph: {

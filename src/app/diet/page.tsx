@@ -5,14 +5,14 @@ import { DIET_FAQ } from "@/lib/lifestyle/diet-content";
 import { PILLAR_DIET } from "@/lib/lifestyle/pillar-routes";
 
 export const metadata: Metadata = {
-  title: "Diet for sustainable weight loss | Health Wise",
+  title: "Diet for sustainable weight loss",
   description:
     "Science-backed diet strategies: balanced meals, sustainable calorie control, protein and fibre habits, sleep & stress—and how GLP-1 options can support nutrition in the UK.",
   alternates: {
     canonical: PILLAR_DIET,
   },
   openGraph: {
-    title: "Diet smarter for sustainable weight loss | Health Wise",
+    title: "Diet smarter for sustainable weight loss",
     description:
       "Medically-informed diet pillar: realistic nutrition, calorie balance, habits, FAQs, and links to guides and treatments.",
     url: PILLAR_DIET,

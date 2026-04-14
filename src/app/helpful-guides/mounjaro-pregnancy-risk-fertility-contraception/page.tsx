@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -17,7 +19,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-pregnancy-risk-fertility-contraception",
-  title: "Mounjaro and Pregnancy Risk: Fertility & Contraception Guide | Health Wise",
+  title: "Mounjaro and Pregnancy Risk: Fertility & Contraception Guide",
   description: "Mounjaro may increase fertility indirectly as metabolic health improves. Understand the clinical facts about tirzepatide, contraception, and pregnancy risk in the UK.",
   openGraphTitle: "Mounjaro and Pregnancy Risk: What You Need to Know About Fertility & Contraception",
 });
@@ -136,7 +138,7 @@ const SCHEMA = {
   ],
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-pregnancy-risk-fertility-contraception",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-pregnancy-risk-fertility-contraception")}`,
   },
 };
 

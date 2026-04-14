@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -19,7 +21,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "local-vs-online-pharmacies-mounjaro-uk",
-  title: "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice? | Health Wise",
+  title: "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice?",
   description: "Online pharmacies are cheaper, but local pharmacies offer face-to-face clinical support. Here's an honest breakdown of both options for Mounjaro patients in the UK.",
   openGraphTitle: "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice?",
 });
@@ -123,7 +125,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/local-vs-online-pharmacies-mounjaro-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("local-vs-online-pharmacies-mounjaro-uk")}`,
   },
 };
 

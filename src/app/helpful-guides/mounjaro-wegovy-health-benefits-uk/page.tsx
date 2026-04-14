@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -19,7 +21,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-wegovy-health-benefits-uk",
-  title: "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss | Health Wise",
+  title: "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss",
   description: "Mounjaro and Wegovy do more than reduce weight. From improved blood sugar control to cardiovascular and liver health, here's what the clinical evidence shows.",
   openGraphTitle: "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss",
 });
@@ -133,7 +135,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-wegovy-health-benefits-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-wegovy-health-benefits-uk")}`,
   },
 };
 

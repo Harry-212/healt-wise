@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -18,7 +20,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-feeling-cold-why-fixes",
-  title: "Why Do You Feel Cold on Mounjaro? Causes, Science & Simple Fixes | Health Wise",
+  title: "Why Do You Feel Cold on Mounjaro? Causes, Science & Simple Fixes",
   description: "Unusual cold sensitivity is a commonly reported experience on Mounjaro. Here's the physiological explanation—reduced calorie intake, fat loss, and metabolic shifts—and what you can do about it.",
   openGraphTitle: "Why Do You Feel Cold on Mounjaro? Causes, Science & Simple Fixes",
   openGraphDescription: "Unusual cold sensitivity is a commonly reported experience on Mounjaro. Here's the physiological explanation and what you can do about it.",
@@ -126,7 +128,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-feeling-cold-why-fixes",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-feeling-cold-why-fixes")}`,
   },
 };
 

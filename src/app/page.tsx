@@ -8,7 +8,6 @@ import OurMethodology from "@/components/ui/OurMethodology";
 import WhyChooseHealthWise from "@/components/ui/WhyChooseHealthWise";
 
 export const metadata: Metadata = {
-  title: "Health Wise | Weight Loss Treatment Price Comparison UK (2026)",
   description:
     "Independent UK comparison for GLP-1 prices, safety, and support. Compare providers, monthly costs, and verified pharmacy options. Updated 2026.",
 };

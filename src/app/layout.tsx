@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import { SupabaseAuthProvider } from "@/components/providers/SupabaseAuthProvider";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { SITE_FAVICON_SRC, SITE_LOGO_SRC } from "@/lib/site-assets";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,6 +59,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </SupabaseAuthProvider>
+        <GoogleAnalytics />
       </body>
     </html>
   );

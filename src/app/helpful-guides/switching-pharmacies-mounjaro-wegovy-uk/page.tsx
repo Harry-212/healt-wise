@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -18,7 +20,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "switching-pharmacies-mounjaro-wegovy-uk",
-  title: "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide | Health Wise",
+  title: "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide",
   description: "Want to switch pharmacy for your Mounjaro or Wegovy prescription? Here's how to compare regulated providers, what documents you need, and how to switch safely.",
   openGraphTitle: "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide",
 });
@@ -132,7 +134,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("switching-pharmacies-mounjaro-wegovy-uk")}`,
   },
 };
 

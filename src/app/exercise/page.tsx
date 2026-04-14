@@ -5,14 +5,14 @@ import { EXERCISE_FAQ } from "@/lib/lifestyle/exercise-content";
 import { PILLAR_EXERCISE } from "@/lib/lifestyle/pillar-routes";
 
 export const metadata: Metadata = {
-  title: "Weight loss exercise guide | Health Wise",
+  title: "Weight loss exercise guide",
   description:
     "How exercise supports fat loss and maintenance: moderate vs vigorous activity, cardio vs strength, simple moves, sleep & stress, and how to combine movement with diet and GLP-1 treatment in the UK.",
   alternates: {
     canonical: PILLAR_EXERCISE,
   },
   openGraph: {
-    title: "Exercise that helps you lose weight — and keep it off | Health Wise",
+    title: "Exercise that helps you lose weight — and keep it off",
     description:
       "Science-aligned exercise pillar: intensity, cardio + resistance, NEAT, system habits, FAQs, and links to diet, tips, and treatments.",
     url: PILLAR_EXERCISE,

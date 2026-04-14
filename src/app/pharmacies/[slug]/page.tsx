@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${name} — ${meds.join(" & ")} UK prices (2026)`,
     description: `Independent snapshot: ${name} — illustrative ${meds.join(" and ")} pen prices and delivery notes on Health Wise.`,
     openGraph: {
-      title: `${name} — UK pharmacy | Health Wise`,
+      title: `${name} — UK pharmacy`,
       description: `Provider profile and illustrative pricing for ${name}.`,
     },
   };

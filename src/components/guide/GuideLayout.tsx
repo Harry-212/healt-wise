@@ -117,14 +117,15 @@ export function GuideLayout({
 
               {/* Hero thumbnail */}
               {thumbnail && (
-                <div className="relative mt-6 h-56 w-full overflow-hidden rounded-2xl sm:h-72">
+                <div className="relative mx-auto mt-5 h-40 w-full max-w-2xl overflow-hidden rounded-xl border border-slate-200/70 bg-slate-100 shadow-sm ring-1 ring-slate-900/5 sm:mt-6 sm:h-48 sm:max-w-3xl md:h-52">
                   <Image
                     src={thumbnail}
                     alt={title}
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
-                    sizes="(max-width: 768px) 100vw, 800px"
+                    sizes="(max-width: 768px) 100vw, 672px"
+                    quality={85}
                   />
                 </div>
               )}
@@ -193,7 +194,13 @@ export function GuideLayout({
             </article>
 
             {slug && shareUrl ? (
-              <GuideSharePanel url={shareUrl} title={title} description={description} />
+              <div className="mt-8 sm:mt-10">
+                <GuideSharePanel
+                  url={shareUrl}
+                  title={title}
+                  description={description}
+                />
+              </div>
             ) : null}
 
             {/* Internal links */}

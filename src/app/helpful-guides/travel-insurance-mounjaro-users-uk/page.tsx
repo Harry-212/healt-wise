@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -18,7 +20,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "travel-insurance-mounjaro-users-uk",
-  title: "Travel Insurance for Mounjaro Users: UK Guide (2026) | Health Wise",
+  title: "Travel Insurance for Mounjaro Users: UK Guide (2026)",
   description: "Travelling on Mounjaro is usually straightforward. What insurers ask, why you must declare tirzepatide, what cover to look for, and a practical pre-trip checklist.",
   openGraphTitle: "Travel Insurance for Mounjaro Users: UK Guide (2026)",
   openGraphDescription: "Travelling on Mounjaro is usually straightforward. What insurers ask, why disclosure matters, and what your policy should include.",
@@ -115,7 +117,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/travel-insurance-mounjaro-users-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("travel-insurance-mounjaro-users-uk")}`,
   },
 };
 

@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -19,7 +21,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-calorie-cycling-weight-loss",
-  title: "Mounjaro Calorie Cycling: A Smarter Approach to Sustainable Weight Loss | Health Wise",
+  title: "Mounjaro Calorie Cycling: A Smarter Approach to Sustainable Weight Loss",
   description: "Calorie cycling is a flexible nutrition strategy that can complement Mounjaro's appetite regulation—helping to prevent plateaus and improve long-term adherence to treatment.",
   openGraphTitle: "Mounjaro Calorie Cycling: A Smarter Approach to Sustainable Weight Loss",
   openGraphDescription: "Calorie cycling is a flexible nutrition strategy that can complement Mounjaro's appetite regulation—helping to prevent plateaus and improve long-term adherence.",
@@ -122,7 +124,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-calorie-cycling-weight-loss",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-calorie-cycling-weight-loss")}`,
   },
 };
 

@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -19,7 +21,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "restarting-mounjaro-after-break-uk",
-  title: "Restarting Mounjaro After a Break: UK Guide (2026) | Health Wise",
+  title: "Restarting Mounjaro After a Break: UK Guide (2026)",
   description: "Restarting Mounjaro after a gap is often possible—even if your BMI has dropped. Here's how break length affects your restart dose, what providers need, and how to do it safely.",
   openGraphTitle: "Restarting Mounjaro After a Break: UK Guide (2026)",
   openGraphDescription: "Restarting Mounjaro after a gap is often possible—even if your BMI has dropped. Here's how break length affects restart dose, what providers need, and how to do it safely.",
@@ -127,7 +129,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/restarting-mounjaro-after-break-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("restarting-mounjaro-after-break-uk")}`,
   },
 };
 

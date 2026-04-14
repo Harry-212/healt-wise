@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
 import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
@@ -66,17 +66,10 @@ export default function ArticleClient() {
             </span>
           </div>
 
-          <div className="relative w-full aspect-[16/9] md:aspect-[2/1] overflow-hidden rounded-[32px] sm:rounded-[40px]">
-            <Image
-              src="https://i.ibb.co.com/cSgqJLYC/image.png"
-              alt="Mounjaro Medication Guide"
-              unoptimized
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 1280px) 100vw, 1280px"
-            />
-          </div>
+          <BlogArticleHeroImage
+            src="https://i.ibb.co.com/cSgqJLYC/image.png"
+            alt="Mounjaro Medication Guide"
+          />
         </header>
 
         {/* CONTENT SPLIT LAYOUT */}
@@ -95,7 +88,7 @@ export default function ArticleClient() {
                 Different people respond differently to each dose, so it is vital to learn how Mounjaro’s incremental approach supports effective and safe weight loss. Below, you will find what you need to know about dosage levels, possible side effects, and how to set yourself up for success. As always, be sure to work closely with a GP or specialist so you can tailor the plan to your needs.
               </p>
 
-              <GuideSection id="understand-mounjaro" heading="Understand Mounjaro and Its Role in Weight Management">
+              <GuideSection id="understand-mounjaro" heading="Understand Mounjaro And Its Role In Weight Management">
                 <p>
                   Originally approved by the FDA to treat type 2 diabetes, Mounjaro (also sold under the brand name Zepbound) is now widely recognised for its weight loss potential. Despite not always being FDA-approved specifically for obesity when first released, many healthcare providers prescribe it off-label for people with excess weight or weight-related conditions like high blood pressure and high cholesterol [1]. Tirzepatide slows your digestion and helps signal a feeling of fullness more quickly, which can reduce how much you eat over time.
                 </p>
@@ -104,7 +97,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="dosage-works" heading="How Mounjaro Dosage for Weight Loss Works">
+              <GuideSection id="dosage-works" heading="How Mounjaro Dosage For Weight Loss Works">
                 <p>
                   Mounjaro dosages are carefully structured to optimise results while limiting side effects. The journey starts low and gradually scales up, giving your body time to adapt to changing hormone levels and reduced hunger. According to guidance from Nettles Pharmacy in Tooting, London, you typically begin on 2.5 mg for four weeks to help your body acclimate before dose increases [2].
                 </p>
@@ -127,7 +120,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="key-benefits" heading="Key Benefits Backed by Research">
+              <GuideSection id="key-benefits" heading="Key Benefits Backed By Research">
                 <p>
                   If you are wondering whether these dosage increments are truly worth navigating, research suggests you could see remarkable gains from sticking with the protocol. A 2024 meta-analysis of seven randomised controlled trials, involving nearly 4,800 individuals, found that once-weekly Mounjaro doses of 5 mg, 10 mg, and 15 mg led to mean weight reductions of approximately −8.07%, −10.79%, and −11.83% respectively [3]. In absolute terms, that equals around −7.5 kg of weight loss at a 5 mg dose and −11.5 kg at 15 mg.
                 </p>
@@ -136,7 +129,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="side-effects" heading="Potential Side Effects and Precautions">
+              <GuideSection id="side-effects" heading="Potential Side Effects And Precautions">
                 <p>
                   Like any weight loss medication, Mounjaro has associated side effects. The most common are gastrointestinal, including nausea, diarrhoea, vomiting, and constipation, which can be more noticeable when you are starting or increasing your dose. Typically, these issues are mild to moderate and resolve within a few weeks, but they can persist if you escalate dosages too rapidly [1].
                 </p>
@@ -224,7 +217,7 @@ export default function ArticleClient() {
             </article>
 
             {/* Share Panel (Using the GuideSharePanel UI from the 'Guides' article context) */}
-            <div className="mt-16">
+            <div className="mt-10">
               <GuideSharePanel 
                 url={`${siteOrigin()}/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust`} 
                 title="Mounjaro Dosage for Weight Loss: Facts You Can Trust"

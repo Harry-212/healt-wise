@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -18,7 +20,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "glp1-content-removed-weight-loss-advice-uk",
-  title: "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK | Health Wise",
+  title: "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK",
   description: "Social media platforms are restricting content about Mounjaro, Wegovy, and GLP-1 medications. We examine what is being removed, the regulatory context, and what patients are losing.",
   openGraphTitle: "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK",
 });
@@ -146,7 +148,7 @@ const SCHEMA = {
   ],
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/glp1-content-removed-weight-loss-advice-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("glp1-content-removed-weight-loss-advice-uk")}`,
   },
 };
 

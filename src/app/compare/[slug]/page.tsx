@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { buildSeoMetadata } from "@/lib/seo/metadata";
+import { ArrowRight, BadgeCheck, Scale, Shield } from "lucide-react";
 import { COMPARE_SLUGS } from "@/lib/routes/compare-slugs";
+import {
+  COMPARE_PAGE_LAYOUT,
+  type ComparePageLayoutConfig,
+} from "@/lib/routes/compare-page-layout";
 import { internalLinksFor } from "@/lib/internal-linking";
 import InternalLinks from "@/components/content/InternalLinks";
-import ComparisonTable from "@/components/comparison/ComparisonTable";
-import { HOME_PREVIEW_PROVIDERS } from "@/lib/data/home-preview-providers";
-import TrustSignals from "@/components/trust/TrustSignals";
+import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
+import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
+import CompareMedPriceTabs from "@/components/compare/CompareMedPriceTabs";
+import { siteOrigin } from "@/lib/seo/site-origin";
+import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -15,102 +21,177 @@ export function generateStaticParams() {
   return Object.keys(COMPARE_SLUGS).map((slug) => ({ slug }));
 }
 
+function layoutForSlug(slug: string): ComparePageLayoutConfig | null {
+  const base = COMPARE_SLUGS[slug];
+  const layout = COMPARE_PAGE_LAYOUT[slug];
+  if (!base || !layout) return null;
+  return layout;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const cfg = COMPARE_SLUGS[slug];
-  if (!cfg) return {};
-  return buildSeoMetadata(cfg.keyword);
+  const layout = layoutForSlug(slug);
+  if (!layout) return {};
+  return buildPageShareMetadata(layout.share);
+}
+
+function compareWebPageJsonLd(slug: string, name: string, description: string) {
+  const base = siteOrigin();
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name,
+    description,
+    url: `${base}/compare/${slug}`,
+    dateModified: "2026-04-14",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Health Wise",
+      url: base,
+    },
+  };
 }
 
 export default async function ComparePage({ params }: Props) {
   const { slug } = await params;
   const cfg = COMPARE_SLUGS[slug];
-  if (!cfg) notFound();
+  const layout = layoutForSlug(slug);
+  if (!cfg || !layout) notFound();
+
+  const webLd = compareWebPageJsonLd(
+    slug,
+    layout.hero.titleBold,
+    layout.share.metaDescription,
+  );
 
   return (
-    <article className="mx-auto min-w-0 max-w-4xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
-      <p className="text-sm font-medium text-brand-primary">
-        Comparison
-      </p>
-      <h1 className="mt-2 text-balance text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
-        {cfg.keyword}
-      </h1>
-      <p className="mt-4 text-sm text-slate-600 sm:text-base">
-        Independent UK comparison for GLP-1 prices, safety context, and support
-        options. Always confirm live prices and eligibility with your prescriber
-        or pharmacy.
-      </p>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webLd) }}
+      />
 
-      <TrustSignals className="mt-8" />
+      <article className="w-full">
+        <CompareTreatmentsHero
+          variant={layout.hero.variant}
+          eyebrow={layout.hero.eyebrow}
+          titleItalic={layout.hero.titleItalic}
+          titleBold={layout.hero.titleBold}
+          subtitle={layout.hero.subtitle}
+          snapshotLabel={layout.hero.snapshotLabel}
+          navLinks={layout.hero.navLinks}
+        />
 
-      <section className="mt-12 space-y-4">
-        <h2 className="text-xl font-semibold text-slate-900">
-          Overview
-        </h2>
-        <p className="text-slate-600">
-          Use the table below as a structured starting point. For brand-specific
-          titration and eligibility, see our{" "}
-          <Link href="/what-is-wegovy" className="text-brand-primary underline">
-            Wegovy
-          </Link>{" "}
-          and{" "}
-          <Link href="/what-is-mounjaro" className="text-brand-primary underline">
-            Mounjaro
-          </Link>{" "}
-          guides.
-        </p>
-      </section>
+        <section className="w-full border-b border-slate-200/80">
+          <TrustBarMarquee />
+        </section>
 
-      <section className="mt-10 space-y-4">
-        <h2 className="text-xl font-semibold text-slate-900">
-          Price comparison
-        </h2>
-        <ComparisonTable providers={HOME_PREVIEW_PROVIDERS} />
-      </section>
+        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-5xl px-4 md:px-8">
+            <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+              {layout.intro.heading}
+            </h2>
+            <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
+              {layout.intro.body.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                <Scale className="h-8 w-8 text-brand-primary" aria-hidden />
+                <p className="mt-3 font-semibold text-slate-900">Transparent pricing</p>
+                <p className="mt-1 text-sm text-slate-600">
+                  Sort every column, filter by band, and preview where discounts will
+                  surface.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                <Shield className="h-8 w-8 text-emerald-600" aria-hidden />
+                <p className="mt-3 font-semibold text-slate-900">UK regulatory lens</p>
+                <p className="mt-1 text-sm text-slate-600">
+                  GPhC lines and cold-chain cues match our standalone compare tools.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                <BadgeCheck className="h-8 w-8 text-violet-600" aria-hidden />
+                <p className="mt-3 font-semibold text-slate-900">Editorial balance</p>
+                <p className="mt-1 text-sm text-slate-600">
+                  “Cheapest” vs “balance pick” callouts mirror the price hub pages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <section className="mt-10 grid gap-6 md:grid-cols-2">
-        <div>
-          <h2 className="text-xl font-semibold text-slate-900">
-            Effectiveness
-          </h2>
-          <p className="mt-2 text-sm text-slate-600">
-            Outcomes depend on dose, adherence, diet, activity, and medical
-            history. Discuss trial evidence and personal goals with a
-            prescriber—this page is not medical advice.
-          </p>
+        <CompareMedPriceTabs medications={layout.medications} />
+
+        <section className="border-b border-slate-200/80 bg-slate-50/70 py-12 md:py-16">
+          <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:px-8">
+            <div className="rounded-2xl border border-white/80 bg-white/90 p-6 shadow-sm backdrop-blur-sm md:p-8">
+              <h2 className="text-xl font-bold text-slate-900 md:text-2xl">
+                {layout.effectivenessTitle}
+              </h2>
+              <p className="mt-3 text-sm text-slate-600 leading-relaxed md:text-base">
+                {layout.effectivenessBody}
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/80 bg-white/90 p-6 shadow-sm backdrop-blur-sm md:p-8">
+              <h2 className="text-xl font-bold text-slate-900 md:text-2xl">
+                {layout.sideEffectsTitle}
+              </h2>
+              <p className="mt-3 text-sm text-slate-600 leading-relaxed md:text-base">
+                {layout.sideEffectsBody}{" "}
+                <Link
+                  href="/helpful-guides"
+                  className="font-semibold text-brand-primary underline-offset-2 hover:underline"
+                >
+                  Helpful guides
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/pharmacy-safety-gphc-verification"
+                  className="font-semibold text-brand-primary underline-offset-2 hover:underline"
+                >
+                  GPhC verification
+                </Link>{" "}
+                go deeper.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-3xl px-4 md:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+              Best choice for you
+            </h2>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              {layout.bestChoiceBody}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                href="/prices/cheapest-options-uk"
+                className="inline-flex items-center gap-2 rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-95"
+              >
+                Cheapest options UK
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
+              <Link
+                href="/methodology"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition hover:bg-slate-50"
+              >
+                Our methodology
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <div className="border-b border-slate-200/80 bg-slate-50/80 py-12 md:py-16">
+          <div className="mx-auto max-w-4xl px-4 md:px-8">
+            <InternalLinks links={internalLinksFor(cfg.internal)} />
+          </div>
         </div>
-        <div>
-          <h2 className="text-xl font-semibold text-slate-900">
-            Side effects
-          </h2>
-          <p className="mt-2 text-sm text-slate-600">
-            Nausea, GI upset, and other adverse effects are common discussion
-            points. Read the patient information leaflet for your medicine and{" "}
-            <Link
-              href="/what-is-wegovy#side-effects-safety"
-              className="text-brand-primary underline"
-            >
-              our side effects overview
-            </Link>
-            .
-          </p>
-        </div>
-      </section>
-
-      <section className="mt-10">
-        <h2 className="text-xl font-semibold text-slate-900">
-          Best choice
-        </h2>
-        <p className="mt-2 text-slate-600">
-          The &ldquo;best&rdquo; option is individual: eligibility, tolerance,
-          cost stability, and prescriber preference all matter. Compare total
-          monthly cost (consultation + delivery + medication) before deciding.
-        </p>
-      </section>
-
-      <div className="mt-12">
-        <InternalLinks links={internalLinksFor(cfg.internal)} />
-      </div>
-    </article>
+      </article>
+    </>
   );
 }

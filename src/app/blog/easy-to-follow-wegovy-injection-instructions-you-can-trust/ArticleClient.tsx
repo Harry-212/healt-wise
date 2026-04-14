@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
 import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
@@ -19,7 +19,7 @@ const TOC = [
   { id: "missed-doses", label: "Handle missed Wegovy doses safely" },
   { id: "side-effects", label: "Know the common side effects and warnings" },
   { id: "disposal", label: "Dispose of used Wegovy pens correctly" },
-  { id: "faq", label: "Frequently asked questions" },
+  { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
 ];
 
@@ -69,17 +69,10 @@ export default function ArticleClient() {
             </span>
           </div>
 
-          <div className="relative w-full aspect-[16/9] md:aspect-[2/1] overflow-hidden rounded-[32px] sm:rounded-[40px]">
-            <Image
-              src="https://i.ibb.co.com/TjdVknY/image.png"
-              alt="Wegovy Injection Instructions Guide"
-              unoptimized
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 1280px) 100vw, 1280px"
-            />
-          </div>
+          <BlogArticleHeroImage
+            src="https://i.ibb.co.com/TjdVknY/image.png"
+            alt="Wegovy Injection Instructions Guide"
+          />
         </header>
 
         {/* CONTENT SPLIT LAYOUT */}
@@ -98,7 +91,7 @@ export default function ArticleClient() {
                 This guide supports, but does not replace, the patient leaflet that comes with your pen or the advice of your prescribing clinician. Always follow the directions you are given personally.
               </p>
 
-              <GuideSection id="what-is" heading="Understand what Wegovy injection is for">
+              <GuideSection id="what-is" heading="Understand What Wegovy Injection Is For">
                 <p>
                   Wegovy contains semaglutide, a GLP 1 receptor agonist that helps to regulate appetite and support weight loss in adults who are obese or overweight with at least one weight related health problem. It is available as a once weekly injection pen and as once daily tablets, both used alongside lifestyle changes.
                 </p>
@@ -110,7 +103,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="dosing-schedule" heading="Follow the Wegovy dosing schedule">
+              <GuideSection id="dosing-schedule" heading="Follow The Wegovy Dosing Schedule">
                 <p>
                   Your Wegovy injection instructions will include a dose escalation plan. This gradual increase helps your body adjust and lowers the chance of gastrointestinal side effects such as nausea.
                 </p>
@@ -130,7 +123,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="store" heading="Store your Wegovy pens correctly">
+              <GuideSection id="store" heading="Store Your Wegovy Pens Correctly">
                 <p>
                   Correct storage is a key part of safe Wegovy injection use. The pens contain a liquid solution that must be kept within specific temperature ranges to remain effective.
                 </p>
@@ -145,7 +138,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="prepare" heading="Prepare for each weekly injection">
+              <GuideSection id="prepare" heading="Prepare For Each Weekly Injection">
                 <p>
                   When your injection day arrives, a simple routine will make the process smoother and safer. You can inject Wegovy with or without food, as long as you stick to your weekly schedule.
                 </p>
@@ -160,7 +153,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="rotate-sites" heading="Choose and rotate your injection sites">
+              <GuideSection id="rotate-sites" heading="Choose And Rotate Your Injection Sites">
                 <p>
                   Wegovy injection is given subcutaneously, which means you inject into the fatty layer just under the skin. The main areas recommended are your upper legs, lower stomach, and upper arms.
                 </p>
@@ -178,7 +171,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="step-by-step" heading="Give yourself the Wegovy injection step by step">
+              <GuideSection id="step-by-step" heading="Give Yourself The Wegovy Injection Step By Step">
                 <p>
                   The Wegovy pen is designed so you do not see a separate needle, and the steps are the same each week. Your Patient Information Leaflet gives detailed diagrams, but the core process is straightforward.
                 </p>
@@ -195,7 +188,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="missed-doses" heading="Handle missed Wegovy doses safely">
+              <GuideSection id="missed-doses" heading="Handle Missed Wegovy Doses Safely">
                 <p>
                   Life happens, and you may occasionally miss a dose. Clear Wegovy injection instructions cover what to do so you can return to your regular schedule safely.
                 </p>
@@ -210,7 +203,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="side-effects" heading="Know the common side effects and warnings">
+              <GuideSection id="side-effects" heading="Know The Common Side Effects And Warnings">
                 <p>
                   Like all medicines, Wegovy can cause side effects. The most commonly reported problems are gastrointestinal, especially when you first start or when the dose increases.
                 </p>
@@ -242,7 +235,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="disposal" heading="Dispose of used Wegovy pens correctly">
+              <GuideSection id="disposal" heading="Dispose Of Used Wegovy Pens Correctly">
                 <p>
                   Safe disposal is an important part of your Wegovy injection instructions. Used pens still contain a needle and must not be thrown in normal household rubbish or recycling bins.
                 </p>
@@ -261,7 +254,7 @@ export default function ArticleClient() {
 
               <section id="faq" className={`mt-16 pt-10 border-t ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>
-                  Frequently asked questions about Wegovy injection instructions
+                  Frequently Asked Questions About Wegovy Injection Instructions
                 </h2>
                 
                 <div className="space-y-8">
@@ -304,7 +297,7 @@ export default function ArticleClient() {
             </article>
 
             {/* Share Panel (Using the GuideSharePanel UI from the 'Guides' article context) */}
-            <div className="mt-16">
+            <div className="mt-10">
               <GuideSharePanel 
                 url={`${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`} 
                 title="Easy-to-Follow Wegovy Injection Instructions You Can Trust"

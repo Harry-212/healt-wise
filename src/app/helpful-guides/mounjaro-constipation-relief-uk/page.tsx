@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -18,7 +20,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-constipation-relief-uk",
-  title: "Mounjaro Constipation: Easy Ways to Find Relief (UK Guide) | Health Wise",
+  title: "Mounjaro Constipation: Easy Ways to Find Relief (UK Guide)",
   description: "Constipation is a common early side effect of Mounjaro. Here's why it happens—and the most effective hydration, fibre, movement, routine, and OTC strategies to ease symptoms.",
   openGraphTitle: "Mounjaro Constipation: Easy Ways to Find Relief (UK Guide)",
   openGraphDescription: "Constipation is a common early side effect of Mounjaro. Here's why it happens and how to manage it with hydration, fibre, movement, and OTC options.",
@@ -127,7 +129,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-constipation-relief-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-constipation-relief-uk")}`,
   },
 };
 

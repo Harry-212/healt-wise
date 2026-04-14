@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -19,7 +21,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-delivery-storage-uk",
-  title: "Mounjaro Delivery & Storage UK: Temperature Rules, Safety Checks & What to Do | Health Wise",
+  title: "Mounjaro Delivery & Storage UK: Temperature Rules, Safety Checks & What to Do",
   description: "Mounjaro must be refrigerated between 2°C and 8°C. Learn how to check your delivery, understand the temperature safety zones, and what to do if your medication arrives warm.",
   openGraphTitle: "Mounjaro Delivery & Storage UK: Temperature Rules, Safety Checks & What to Do",
   openGraphDescription: "Mounjaro must be refrigerated between 2°C and 8°C. Learn how to check your delivery and what to do if your medication arrives warm.",
@@ -122,7 +124,7 @@ const SCHEMA = {
   about: [{ "@type": "Drug", name: "Mounjaro" }],
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-delivery-storage-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-delivery-storage-uk")}`,
   },
 };
 

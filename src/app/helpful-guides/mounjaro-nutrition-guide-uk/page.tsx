@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -18,7 +20,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-nutrition-guide-uk",
-  title: "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results | Health Wise",
+  title: "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results",
   description: "Mounjaro controls appetite—but what you eat determines the quality of your results. A practical, evidence-based guide to nutrition while using tirzepatide in the UK.",
   openGraphTitle: "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results",
 });
@@ -134,7 +136,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-nutrition-guide-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-nutrition-guide-uk")}`,
   },
 };
 

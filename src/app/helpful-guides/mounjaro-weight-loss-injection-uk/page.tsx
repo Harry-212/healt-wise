@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -20,7 +22,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-weight-loss-injection-uk",
-  title: "Mounjaro Weight Loss Injection UK (2026): How It Works, Results, Eligibility & Cost | Health Wise",
+  title: "Mounjaro Weight Loss Injection UK (2026): How It Works, Results, Eligibility & Cost",
   description: "Complete UK guide to Mounjaro (tirzepatide) for weight loss. Covers how the dual GLP-1/GIP mechanism works, clinical trial results, eligibility criteria, side effects, and 2026 costs.",
   openGraphTitle: "Mounjaro Weight Loss Injection UK (2026): How It Works, Results, Eligibility & Cost",
 });
@@ -146,7 +148,7 @@ const SCHEMA = {
   about: [{ "@type": "Drug", name: "Mounjaro" }, { "@type": "Drug", name: "tirzepatide" }],
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-weight-loss-injection-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-weight-loss-injection-uk")}`,
   },
 };
 

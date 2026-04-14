@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -18,7 +20,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "norovirus-mounjaro-wegovy-uk",
-  title: "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery | Health Wise",
+  title: "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery",
   description: "Norovirus can feel more intense on GLP-1 medications like Mounjaro or Wegovy. Here's why, what symptoms to watch for, when to delay your injection, and how to recover safely.",
   openGraphTitle: "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery",
 });
@@ -124,7 +126,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/norovirus-mounjaro-wegovy-uk",
+    "@id": `${siteOrigin()}${helpfulGuidePath("norovirus-mounjaro-wegovy-uk")}`,
   },
 };
 

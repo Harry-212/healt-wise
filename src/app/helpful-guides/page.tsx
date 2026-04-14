@@ -6,13 +6,14 @@ import {
   helpfulGuidePath,
   HELPFUL_GUIDES_HUB_PATH,
 } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 
 export const metadata: Metadata = {
-  title: "Helpful Health Guides | Health Wise",
+  title: "Helpful Health Guides",
   description:
     "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation. Written to help you make safer, more informed decisions.",
   openGraph: {
-    title: "Helpful Health Guides | Health Wise",
+    title: "Helpful Health Guides",
     description:
       "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
     type: "website",
@@ -379,11 +380,11 @@ export default async function HelpfulGuidePage({ searchParams }: Props) {
     name: "Helpful Health Guides | Health Wise",
     description:
       "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
-    url: `https://health-wise.co.uk${HELPFUL_GUIDES_HUB_PATH}`,
+    url: `${siteOrigin()}${HELPFUL_GUIDES_HUB_PATH}`,
     hasPart: ALL_GUIDES.map((g) => ({
       "@type": "Article",
       name: g.title,
-      url: `https://health-wise.co.uk${helpfulGuidePath(g.slug)}`,
+      url: `${siteOrigin()}${helpfulGuidePath(g.slug)}`,
     })),
   };
 

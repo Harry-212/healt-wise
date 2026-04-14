@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
 import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
@@ -65,17 +65,10 @@ export default function ArticleClient() {
             </span>
           </div>
 
-          <div className="relative w-full aspect-[16/9] md:aspect-[2/1] overflow-hidden rounded-[32px] sm:rounded-[40px]">
-            <Image
-              src="https://i.ibb.co.com/k2NjLMfp/image.png"
-              alt="Mounjaro effectiveness and mechanisms"
-              fill
-              unoptimized
-              className="object-cover"
-              priority
-              sizes="(max-width: 1280px) 100vw, 1280px"
-            />
-          </div>
+          <BlogArticleHeroImage
+            src="https://i.ibb.co.com/k2NjLMfp/image.png"
+            alt="Mounjaro effectiveness and mechanisms"
+          />
         </header>
 
         {/* CONTENT SPLIT LAYOUT */}
@@ -210,7 +203,7 @@ export default function ArticleClient() {
             </article>
 
             {/* Share Panel (Using the GuideSharePanel UI from the 'Guides' article context) */}
-            <div className="mt-16">
+            <div className="mt-10">
               <GuideSharePanel 
                 url={`${siteOrigin()}/blog/does-mounjaro-really-work-for-weight-loss-find-out-here`} 
                 title="Does Mounjaro Really Work for Weight Loss? Find Out Here"

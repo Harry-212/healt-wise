@@ -89,7 +89,7 @@ function IconPinterest({ className }: { className?: string }) {
 }
 
 const circleBtnBase =
-  "flex h-14 w-14 shrink-0 touch-manipulation items-center justify-center rounded-full shadow-sm transition-[transform,box-shadow,background-color,border-color,filter] duration-200 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400";
+  "flex h-9 w-9 shrink-0 touch-manipulation items-center justify-center rounded-full shadow-sm transition-[transform,box-shadow,background-color,border-color,filter] duration-200 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-400 sm:h-10 sm:w-10";
 
 const circleBtnBrand = `${circleBtnBase} hover:-translate-y-0.5 hover:shadow-lg hover:brightness-[1.03] active:translate-y-0 active:shadow-md active:brightness-100`;
 
@@ -140,33 +140,39 @@ export function GuideSharePanel({ url, title, description }: Props) {
   useEffect(() => () => clearCopyTimer(), [clearCopyTimer]);
 
   const descShort = snippet(description, 200);
+  let shareSource = "Health Wise";
+  try {
+    shareSource = new URL(url).hostname;
+  } catch {
+    /* keep default */
+  }
   const wa = `https://api.whatsapp.com/send?text=${encodeURIComponent(whatsAppBody(title, url, description))}`;
   const fb = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
   /** LinkedIn `share-offsite` often fails in-app; `shareArticle` is more reliable. */
-  const li = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(descShort)}&source=${encodeURIComponent("Health Wise")}`;
-  const x = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+  const li = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(descShort)}&source=${encodeURIComponent(shareSource)}`;
+  const x = `https://x.com/intent/post?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
   const tg = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(`${title}\n\n${descShort}`)}`;
   const pin = `https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(title)}`;
 
   return (
     <section
-      className="relative mt-12 overflow-hidden rounded-2xl border border-white/80 bg-white/40 px-5 py-6 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_12px_40px_rgba(15,23,42,0.06)] ring-1 ring-slate-900/4 backdrop-blur-2xl sm:px-7 sm:py-7"
+      className="relative mt-0 overflow-hidden rounded-xl border border-slate-200/90 bg-white/70 px-3 py-4 shadow-sm ring-1 ring-slate-900/5 backdrop-blur-md sm:px-4 sm:py-4"
       aria-labelledby="guide-share-heading"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-linear-to-b from-white/50 via-transparent to-white/20"
+        className="pointer-events-none absolute inset-0 bg-linear-to-b from-white/40 via-transparent to-white/15"
         aria-hidden
       />
       <div className="relative">
         <h2
           id="guide-share-heading"
-          className="text-sm font-semibold tracking-wide text-slate-800 sm:text-base"
+          className="text-xs font-semibold tracking-wide text-slate-700 sm:text-sm"
         >
-          Share to
+          Share
         </h2>
         {(copied || shareError) && (
           <p
-            className={`mt-2 text-xs font-medium ${copied ? "text-emerald-700" : "text-amber-800"}`}
+            className={`mt-1.5 text-[11px] font-medium sm:text-xs ${copied ? "text-emerald-700" : "text-amber-800"}`}
             role="status"
             aria-live="polite"
           >
@@ -174,7 +180,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
           </p>
         )}
 
-        <ul className="mt-5 grid grid-cols-4 gap-4 sm:gap-5">
+        <ul className="mt-3 grid grid-cols-4 gap-2 sm:mt-3.5 sm:gap-2.5">
           <li className="flex justify-center">
             <button
               type="button"
@@ -182,7 +188,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
               className={circleBtnGhost}
               aria-label="Copy page link"
             >
-              <Copy className="h-6 w-6" strokeWidth={2} />
+              <Copy className="h-3.5 w-3.5 sm:h-4 sm:w-4" strokeWidth={2} />
             </button>
           </li>
           <li className="flex justify-center">
@@ -193,7 +199,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
               className={`${circleBtnBrand} bg-[#25D366] text-white`}
               aria-label="Share on WhatsApp"
             >
-              <IconWhatsApp className="h-7 w-7" />
+              <IconWhatsApp className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
             </a>
           </li>
           <li className="flex justify-center">
@@ -204,7 +210,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
               className={`${circleBtnBrand} bg-[#1877F2] text-white`}
               aria-label="Share on Facebook"
             >
-              <IconFacebook className="h-7 w-7" />
+              <IconFacebook className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
             </a>
           </li>
           <li className="flex justify-center">
@@ -215,7 +221,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
               className={`${circleBtnBrand} bg-sky-500 text-white`}
               aria-label="Share on X"
             >
-              <IconX className="h-6 w-6" />
+              <IconX className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </a>
           </li>
 
@@ -227,7 +233,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
               className={`${circleBtnBrand} bg-[#26A5E4] text-white`}
               aria-label="Share on Telegram"
             >
-              <IconTelegram className="h-7 w-7" />
+              <IconTelegram className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
             </a>
           </li>
           <li className="flex justify-center">
@@ -238,7 +244,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
               className={`${circleBtnBrand} bg-[#0A66C2] text-white`}
               aria-label="Share on LinkedIn"
             >
-              <IconLinkedIn className="h-6 w-6" />
+              <IconLinkedIn className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </a>
           </li>
           <li className="flex justify-center">
@@ -249,7 +255,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
               className={`${circleBtnBrand} bg-[#E60023] text-white`}
               aria-label="Share on Pinterest"
             >
-              <IconPinterest className="h-7 w-7" />
+              <IconPinterest className="h-4 w-4 sm:h-[18px] sm:w-[18px]" />
             </a>
           </li>
           <li className="flex justify-center">
@@ -259,7 +265,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
               className={circleBtnGhost}
               aria-label="More share options"
             >
-              <MoreHorizontal className="h-6 w-6" strokeWidth={2} />
+              <MoreHorizontal className="h-3.5 w-3.5 sm:h-4 sm:w-4" strokeWidth={2} />
             </button>
           </li>
         </ul>

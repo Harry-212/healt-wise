@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
 import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
@@ -17,7 +17,7 @@ const TOC = [
   { id: "how-to-take", label: "How you take Wegovy in real life" },
   { id: "side-effects", label: "Side effects, safety and important precautions" },
   { id: "comparisons", label: "Wegovy compared with other GLP 1 options" },
-  { id: "faq", label: "Frequently asked questions" },
+  { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
 ];
 
@@ -67,19 +67,10 @@ export default function ArticleClient() {
             </span>
           </div>
 
-          <div className="relative w-full aspect-[16/9] md:aspect-[2/1] overflow-hidden rounded-[32px] sm:rounded-[40px]">
-            {/* Note: Update the src below with your actual WEBP file path after placing it in public folder */}
-            <Image
-              src="https://i.ibb.co.com/qYntkdQh/how-does-wegovy-work.png"
-              alt="How Wegovy Works Infographic"
-              unoptimized
-              fill
-              className="object-cover"
-              priority
-              loading="eager"
-              sizes="(max-width: 1280px) 100vw, 1280px"
-            />
-          </div>
+          <BlogArticleHeroImage
+            src="https://i.ibb.co.com/qYntkdQh/how-does-wegovy-work.png"
+            alt="How Wegovy Works Infographic"
+          />
         </header>
 
         {/* CONTENT SPLIT LAYOUT */}
@@ -98,7 +89,7 @@ export default function ArticleClient() {
                 Below, you will see how Wegovy works in your body, what the research shows about weight loss, and what you need to consider before starting.
               </p>
 
-              <GuideSection id="what-is-wegovy" heading="What Wegovy is and who it is for">
+              <GuideSection id="what-is-wegovy" heading="What Wegovy Is And Who It Is For">
                 <p>
                   Wegovy is a prescription weight loss medication that contains semaglutide. Semaglutide belongs to a group of medicines called GLP 1 receptor agonists. These are medicines that mimic one of your body’s natural hormones involved in appetite and blood sugar control.
                 </p>
@@ -115,7 +106,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="how-it-works" heading="How does Wegovy work inside your body?">
+              <GuideSection id="how-it-works" heading="How Does Wegovy Work Inside Your Body?">
                 <p>To understand how Wegovy works, it helps to look at the hormone it copies.</p>
                 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Imitating your natural GLP 1 hormone</h3>
@@ -159,7 +150,7 @@ export default function ArticleClient() {
                 <p>In some people with metabolic dysfunction associated steatohepatitis (MASH), also known as a severe form of fatty liver disease, Wegovy induced weight loss has been linked to reduced fat buildup in the liver and potential improvements in inflammation and scarring.</p>
               </GuideSection>
 
-              <GuideSection id="how-much-weight" heading="How much weight you might lose on Wegovy">
+              <GuideSection id="how-much-weight" heading="How Much Weight You Might Lose On Wegovy">
                 <p>No medication can promise a specific amount of weight loss for every person. However, large clinical trials give you a realistic picture of what is typical when Wegovy is combined with diet and activity changes.</p>
                 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Weight loss with weekly Wegovy injections</h3>
@@ -178,7 +169,7 @@ export default function ArticleClient() {
                 <p>These figures suggest that both the injectable and oral forms can deliver double digit percentage weight loss when used correctly with lifestyle changes.</p>
               </GuideSection>
 
-              <GuideSection id="health-benefits" heading="Cardiovascular and health benefits beyond weight loss">
+              <GuideSection id="health-benefits" heading="Cardiovascular And Health Benefits Beyond Weight Loss">
                 <p>When you lose weight with Wegovy, the benefits usually go beyond the numbers on the scales.</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Heart and blood vessel protection</h3>
@@ -202,7 +193,7 @@ export default function ArticleClient() {
                 <p>Taken together, these changes suggest that Wegovy can support your long term health as well as your weight.</p>
               </GuideSection>
 
-              <GuideSection id="how-to-take" heading="How you take Wegovy in real life">
+              <GuideSection id="how-to-take" heading="How You Take Wegovy In Real Life">
                 <p>Understanding how Wegovy works is only part of the picture. You also need to know how it fits into day to day life.</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Weekly injection vs daily tablet</h3>
@@ -232,7 +223,7 @@ export default function ArticleClient() {
                 <p>Over months, if you stay consistent with doses and lifestyle changes, you may see steady weight loss and improvements in energy, mobility and health markers. Regular check ins with a healthcare professional are essential to track progress and adjust your plan.</p>
               </GuideSection>
 
-              <GuideSection id="side-effects" heading="Side effects, safety and important precautions">
+              <GuideSection id="side-effects" heading="Side Effects, Safety And Important Precautions">
                 <p>Like all medicines, Wegovy can cause side effects. Knowing what to expect helps you prepare and decide if the benefits outweigh the risks for you.</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Common side effects</h3>
@@ -257,7 +248,7 @@ export default function ArticleClient() {
                 <p>Wegovy is intended to be used in combination with a reduced calorie diet and increased physical activity for chronic weight management, not as a substitute for lifestyle changes.</p>
               </GuideSection>
 
-              <GuideSection id="comparisons" heading="Wegovy compared with other GLP 1 weight loss options">
+              <GuideSection id="comparisons" heading="Wegovy Compared With Other GLP 1 Weight Loss Options">
                 <p>If you are in the UK and exploring GLP 1 medications, you might also be considering Mounjaro (tirzepatide) or Ozempic (another semaglutide product). While this article focuses on how Wegovy works, a few key points can guide your comparisons:</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li>All GLP 1 based medications aim to reduce appetite and slow gastric emptying</li>
@@ -269,7 +260,7 @@ export default function ArticleClient() {
 
               <section id="faq" className="mt-16 pt-10 border-t border-slate-200">
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>
-                  Frequently asked questions about how Wegovy works
+                  Frequently Asked Questions About How Wegovy Works
                 </h2>
                 
                 <div className="space-y-8">
@@ -309,7 +300,7 @@ export default function ArticleClient() {
             </article>
 
             {/* Share Panel (Using the GuideSharePanel UI from the 'Guides' article context) */}
-            <div className="mt-16">
+            <div className="mt-10">
               <GuideSharePanel 
                 url={`${siteOrigin()}/blog/how-does-wegovy-work-to-transform-your-weight-journey`} 
                 title="How Does Wegovy Work to Transform Your Weight Journey"

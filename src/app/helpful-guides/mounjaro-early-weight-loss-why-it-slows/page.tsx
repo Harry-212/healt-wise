@@ -1,3 +1,5 @@
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import { internalLinksFor } from "@/lib/internal-linking";
 import {
@@ -19,7 +21,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-early-weight-loss-why-it-slows",
-  title: "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down) | Health Wise",
+  title: "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down)",
   description: "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology behind initial results, what plateaus mean, and how to keep progressing sustainably.",
   openGraphTitle: "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down)",
   openGraphDescription: "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology, what plateaus mean, and how to keep progressing sustainably.",
@@ -127,7 +129,7 @@ const SCHEMA = {
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://health-wise.co.uk/helpful-guides/mounjaro-early-weight-loss-why-it-slows",
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-early-weight-loss-why-it-slows")}`,
   },
 };
 

@@ -5,14 +5,14 @@ import { SLEEP_FAQ } from "@/lib/lifestyle/sleep-content";
 import { PILLAR_SLEEP } from "@/lib/lifestyle/pillar-routes";
 
 export const metadata: Metadata = {
-  title: "Sleep and weight loss | Health Wise",
+  title: "Sleep and weight loss",
   description:
     "How sleep affects appetite, metabolism, and weight: poor sleep and weight gain, practical sleep hygiene, hormones, and how rest links with diet, exercise, stress, and GLP-1 treatment in the UK.",
   alternates: {
     canonical: PILLAR_SLEEP,
   },
   openGraph: {
-    title: "Sleep better. Lose weight more easily. | Health Wise",
+    title: "Sleep better. Lose weight more easily.",
     description:
       "Sleep & weight pillar: the sleep–weight cycle, impact cards, key insight, tips, system approach, FAQs, and internal links.",
     url: PILLAR_SLEEP,

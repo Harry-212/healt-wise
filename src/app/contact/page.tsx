@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact | Health Wise",
+  title: "Contact",
   description: "Contact Health Wise for corrections and editorial enquiries.",
 };
 
