@@ -89,7 +89,7 @@ export default function ArticleClient() {
                 Below, you will see how Wegovy works in your body, what the research shows about weight loss, and what you need to consider before starting.
               </p>
 
-              <GuideSection id="what-is-wegovy" heading="What Wegovy Is And Who It Is For">
+              <GuideSection darkMode={darkMode} id="what-is-wegovy" heading="What Wegovy Is And Who It Is For">
                 <p>
                   Wegovy is a prescription weight loss medication that contains semaglutide. Semaglutide belongs to a group of medicines called GLP 1 receptor agonists. These are medicines that mimic one of your body’s natural hormones involved in appetite and blood sugar control.
                 </p>
@@ -106,7 +106,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="how-it-works" heading="How Does Wegovy Work Inside Your Body?">
+              <GuideSection darkMode={darkMode} id="how-it-works" heading="How Does Wegovy Work Inside Your Body?">
                 <p>To understand how Wegovy works, it helps to look at the hormone it copies.</p>
                 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Imitating your natural GLP 1 hormone</h3>
@@ -150,7 +150,7 @@ export default function ArticleClient() {
                 <p>In some people with metabolic dysfunction associated steatohepatitis (MASH), also known as a severe form of fatty liver disease, Wegovy induced weight loss has been linked to reduced fat buildup in the liver and potential improvements in inflammation and scarring.</p>
               </GuideSection>
 
-              <GuideSection id="how-much-weight" heading="How Much Weight You Might Lose On Wegovy">
+              <GuideSection darkMode={darkMode} id="how-much-weight" heading="How Much Weight You Might Lose On Wegovy">
                 <p>No medication can promise a specific amount of weight loss for every person. However, large clinical trials give you a realistic picture of what is typical when Wegovy is combined with diet and activity changes.</p>
                 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Weight loss with weekly Wegovy injections</h3>
@@ -169,7 +169,7 @@ export default function ArticleClient() {
                 <p>These figures suggest that both the injectable and oral forms can deliver double digit percentage weight loss when used correctly with lifestyle changes.</p>
               </GuideSection>
 
-              <GuideSection id="health-benefits" heading="Cardiovascular And Health Benefits Beyond Weight Loss">
+              <GuideSection darkMode={darkMode} id="health-benefits" heading="Cardiovascular And Health Benefits Beyond Weight Loss">
                 <p>When you lose weight with Wegovy, the benefits usually go beyond the numbers on the scales.</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Heart and blood vessel protection</h3>
@@ -193,7 +193,7 @@ export default function ArticleClient() {
                 <p>Taken together, these changes suggest that Wegovy can support your long term health as well as your weight.</p>
               </GuideSection>
 
-              <GuideSection id="how-to-take" heading="How You Take Wegovy In Real Life">
+              <GuideSection darkMode={darkMode} id="how-to-take" heading="How You Take Wegovy In Real Life">
                 <p>Understanding how Wegovy works is only part of the picture. You also need to know how it fits into day to day life.</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Weekly injection vs daily tablet</h3>
@@ -223,7 +223,7 @@ export default function ArticleClient() {
                 <p>Over months, if you stay consistent with doses and lifestyle changes, you may see steady weight loss and improvements in energy, mobility and health markers. Regular check ins with a healthcare professional are essential to track progress and adjust your plan.</p>
               </GuideSection>
 
-              <GuideSection id="side-effects" heading="Side Effects, Safety And Important Precautions">
+              <GuideSection darkMode={darkMode} id="side-effects" heading="Side Effects, Safety And Important Precautions">
                 <p>Like all medicines, Wegovy can cause side effects. Knowing what to expect helps you prepare and decide if the benefits outweigh the risks for you.</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Common side effects</h3>
@@ -248,7 +248,7 @@ export default function ArticleClient() {
                 <p>Wegovy is intended to be used in combination with a reduced calorie diet and increased physical activity for chronic weight management, not as a substitute for lifestyle changes.</p>
               </GuideSection>
 
-              <GuideSection id="comparisons" heading="Wegovy Compared With Other GLP 1 Weight Loss Options">
+              <GuideSection darkMode={darkMode} id="comparisons" heading="Wegovy Compared With Other GLP 1 Weight Loss Options">
                 <p>If you are in the UK and exploring GLP 1 medications, you might also be considering Mounjaro (tirzepatide) or Ozempic (another semaglutide product). While this article focuses on how Wegovy works, a few key points can guide your comparisons:</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li>All GLP 1 based medications aim to reduce appetite and slow gastric emptying</li>
@@ -291,7 +291,7 @@ export default function ArticleClient() {
                 </div>
               </section>
 
-              <GuideSection id="conclusion" heading="Conclusion">
+              <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>Wegovy works by amplifying your body’s natural appetite control system. By mimicking the GLP 1 hormone, it reduces hunger, helps you feel full on smaller portions and slows how quickly food leaves your stomach. This makes it easier to stick to a reduced calorie diet and to lose a significant amount of weight over time.</p>
                 <p>Clinical trials show that many adults achieve 10% to 15% body weight loss with Wegovy, along with improvements in blood pressure, cholesterol, blood sugar and, in those with heart disease, a reduced risk of major cardiovascular events.</p>
                 <p>Wegovy is not a shortcut, and it is not right for everyone. It works best as part of a structured plan that includes dietary changes, physical activity and regular medical monitoring. If you are comparing Wegovy with medicines like Mounjaro and considering cost, eligibility and providers, understanding how Wegovy works gives you a solid foundation for an informed conversation with your healthcare professional.</p>

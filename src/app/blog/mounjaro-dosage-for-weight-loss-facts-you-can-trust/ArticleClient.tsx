@@ -88,7 +88,7 @@ export default function ArticleClient() {
                 Different people respond differently to each dose, so it is vital to learn how Mounjaro’s incremental approach supports effective and safe weight loss. Below, you will find what you need to know about dosage levels, possible side effects, and how to set yourself up for success. As always, be sure to work closely with a GP or specialist so you can tailor the plan to your needs.
               </p>
 
-              <GuideSection id="understand-mounjaro" heading="Understand Mounjaro And Its Role In Weight Management">
+              <GuideSection darkMode={darkMode} id="understand-mounjaro" heading="Understand Mounjaro And Its Role In Weight Management">
                 <p>
                   Originally approved by the FDA to treat type 2 diabetes, Mounjaro (also sold under the brand name Zepbound) is now widely recognised for its weight loss potential. Despite not always being FDA-approved specifically for obesity when first released, many healthcare providers prescribe it off-label for people with excess weight or weight-related conditions like high blood pressure and high cholesterol [1]. Tirzepatide slows your digestion and helps signal a feeling of fullness more quickly, which can reduce how much you eat over time.
                 </p>
@@ -97,7 +97,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="dosage-works" heading="How Mounjaro Dosage For Weight Loss Works">
+              <GuideSection darkMode={darkMode} id="dosage-works" heading="How Mounjaro Dosage For Weight Loss Works">
                 <p>
                   Mounjaro dosages are carefully structured to optimise results while limiting side effects. The journey starts low and gradually scales up, giving your body time to adapt to changing hormone levels and reduced hunger. According to guidance from Nettles Pharmacy in Tooting, London, you typically begin on 2.5 mg for four weeks to help your body acclimate before dose increases [2].
                 </p>
@@ -120,7 +120,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="key-benefits" heading="Key Benefits Backed By Research">
+              <GuideSection darkMode={darkMode} id="key-benefits" heading="Key Benefits Backed By Research">
                 <p>
                   If you are wondering whether these dosage increments are truly worth navigating, research suggests you could see remarkable gains from sticking with the protocol. A 2024 meta-analysis of seven randomised controlled trials, involving nearly 4,800 individuals, found that once-weekly Mounjaro doses of 5 mg, 10 mg, and 15 mg led to mean weight reductions of approximately −8.07%, −10.79%, and −11.83% respectively [3]. In absolute terms, that equals around −7.5 kg of weight loss at a 5 mg dose and −11.5 kg at 15 mg.
                 </p>
@@ -129,7 +129,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="side-effects" heading="Potential Side Effects And Precautions">
+              <GuideSection darkMode={darkMode} id="side-effects" heading="Potential Side Effects And Precautions">
                 <p>
                   Like any weight loss medication, Mounjaro has associated side effects. The most common are gastrointestinal, including nausea, diarrhoea, vomiting, and constipation, which can be more noticeable when you are starting or increasing your dose. Typically, these issues are mild to moderate and resolve within a few weeks, but they can persist if you escalate dosages too rapidly [1].
                 </p>
@@ -141,7 +141,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="long-term" heading="Long-Term Success Strategies">
+              <GuideSection darkMode={darkMode} id="long-term" heading="Long-Term Success Strategies">
                 <p>
                   Mounjaro dosage is just one piece of the puzzle. True, consistent weight loss relies on pairing medication with healthy lifestyle habits and a long-term mindset. Start by tracking what and when you eat, staying active with regular physical exercise, and prioritising sleep for optimal recovery. You might also:
                 </p>
@@ -189,7 +189,7 @@ export default function ArticleClient() {
                 </div>
               </section>
 
-              <GuideSection id="key-takeaways" heading="Key Takeaways">
+              <GuideSection darkMode={darkMode} id="key-takeaways" heading="Key Takeaways">
                 <ul className="list-disc pl-5 space-y-2">
                   <li>Mounjaro dosages increase gradually, allowing your body to adjust and reducing side effects.</li>
                   <li>Research indicates significant weight loss improvements, with higher Mounjaro doses leading to greater results for many.</li>
@@ -199,7 +199,7 @@ export default function ArticleClient() {
                 </ul>
               </GuideSection>
 
-              <GuideSection id="conclusion" heading="Conclusion">
+              <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
                   By understanding how Mounjaro dosage for weight loss unfolds step by step, you set yourself up for the healthiest experience possible. With thorough guidance from your GP, a supportive lifestyle, and a willingness to listen to your body’s signals, you can confidently advance through the dosage stages and move closer to the long-term well-being you seek.
                 </p>

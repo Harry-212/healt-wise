@@ -88,7 +88,7 @@ export default function ArticleClient() {
                 This guide walks you through how Wegovy works, what affects the price you pay in the UK, and how to decide if it is a good fit for you financially as well as medically.
               </p>
 
-              <GuideSection id="what-is-wegovy" heading="What Wegovy Weight Loss Medication Is">
+              <GuideSection darkMode={darkMode} id="what-is-wegovy" heading="What Wegovy Weight Loss Medication Is">
                 <p>
                   Wegovy® (semaglutide) is a prescription weight loss medicine used alongside a reduced calorie diet and increased physical activity. It is licensed for adults with obesity, or who are overweight with at least one weight related medical problem.
                 </p>
@@ -106,7 +106,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="how-prescribed" heading="How Wegovy Is Prescribed And Taken">
+              <GuideSection darkMode={darkMode} id="how-prescribed" heading="How Wegovy Is Prescribed And Taken">
                 <p>
                   The way you take Wegovy affects cost, because the dose is increased gradually. You start lower and build up to a maintenance dose that controls appetite effectively, which means your prescription strength and therefore price change over time.
                 </p>
@@ -131,7 +131,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="factors-costs" heading="Factors That Affect Wegovy Costs In The UK">
+              <GuideSection darkMode={darkMode} id="factors-costs" heading="Factors That Affect Wegovy Costs In The UK">
                 <p>
                   The truth is that there is no single “Wegovy price” in the UK. What you pay depends on several moving parts that include your eligibility, where you get your prescription, and your dose.
                 </p>
@@ -172,7 +172,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="benefits-risks" heading="Benefits, Risks, And What You Are Really Paying For">
+              <GuideSection darkMode={darkMode} id="benefits-risks" heading="Benefits, Risks, And What You Are Really Paying For">
                 <p>
                   When you look at monthly costs in isolation, Wegovy weight loss medication can seem expensive. To get a clearer picture, it helps to understand what you are actually buying and the potential trade offs.
                 </p>
@@ -225,7 +225,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="comparing-options" heading="Comparing Wegovy With Other Options">
+              <GuideSection darkMode={darkMode} id="comparing-options" heading="Comparing Wegovy With Other Options">
                 <p>
                   You may be weighing up Wegovy against other medications such as tirzepatide (for example Mounjaro) or older weight loss drugs, or even against lifestyle change alone.
                 </p>
@@ -241,7 +241,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="how-to-decide" heading="How To Decide If Wegovy Is Worth The Cost For You">
+              <GuideSection darkMode={darkMode} id="how-to-decide" heading="How To Decide If Wegovy Is Worth The Cost For You">
                 <p>Working out whether Wegovy is “worth it” is a personal decision, but there are some sensible questions to ask yourself.</p>
 
                 <ul className="list-disc pl-5 space-y-6 mt-6">
@@ -301,7 +301,7 @@ export default function ArticleClient() {
                 </div>
               </section>
 
-              <GuideSection id="conclusion" heading="Conclusion">
+              <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
                   Wegovy weight loss medication offers strong evidence for significant and sustained weight loss, along with unique data on reducing major heart events in people with heart disease and excess weight. For many adults in the UK, especially those who have tried for years to lose weight, that can be life changing.
                 </p>

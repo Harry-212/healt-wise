@@ -88,7 +88,7 @@ export default function ArticleClient() {
                 Mounjaro was approved by the US Food and Drug Administration (FDA) in 2022 as a treatment for type 2 diabetes, although many adults use it to help with weight management. Mounjaro contains tirzepatide, which is unique because it targets two hormones (GLP-1 and GIP) that regulate blood sugar and appetite. This dual-action approach has shown notable results when combined with a balanced diet, exercise, and ongoing support from healthcare professionals.
               </p>
 
-              <GuideSection id="explore" heading="Explore Mounjaro For Weight Loss">
+              <GuideSection darkMode={darkMode} id="explore" heading="Explore Mounjaro For Weight Loss">
                 <p>
                   Although Mounjaro is officially licensed for type 2 diabetes, you might encounter doctors prescribing it off-label for weight loss. This is because clinical studies suggest tirzepatide may lead to significant reductions in body weight for people with obesity or related health risks. According to a meta-analysis of 10 randomized controlled trials involving 9,873 patients between 2018 and 2022, individuals taking Mounjaro (tirzepatide) once weekly at 5 mg, 10 mg, or 15 mg experienced dose-dependent weight loss that ranged from -7.52 kg to -10.91 kg, which was greater than placebo [1].
                 </p>
@@ -97,7 +97,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="mechanism" heading="Understand Its Mechanism Of Action">
+              <GuideSection darkMode={darkMode} id="mechanism" heading="Understand Its Mechanism Of Action">
                 <p>
                   Mounjaro mimics your body’s natural satiety and blood sugar-regulating hormones, known as GLP-1 and GIP. Both hormones reduce food intake by signaling the brain that you feel full, and they help slow the speed at which your digestive system empties the stomach. Clinical trials showed that by activating these pathways simultaneously, Mounjaro significantly improves insulin release, enhances insulin sensitivity, curbs appetite, and stabilises blood sugar levels [2].
                 </p>
@@ -106,7 +106,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="side-effects" heading="Review Potential Side Effects">
+              <GuideSection darkMode={darkMode} id="side-effects" heading="Review Potential Side Effects">
                 <p>
                   As with any prescription, Mounjaro does not come without risks. Gastrointestinal symptoms are the most commonly reported and tend to occur during the first few weeks of treatment. Mild to moderate side effects can often be managed with dose adjustments, monitoring, and small tweaks to your diet.
                 </p>
@@ -125,7 +125,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="eligibility" heading="Determine Eligibility And Usage">
+              <GuideSection darkMode={darkMode} id="eligibility" heading="Determine Eligibility And Usage">
                 <p>
                   You will typically be considered for Mounjaro if you have type 2 diabetes and need better blood sugar control. However, you might also explore Mounjaro for weight loss if you have a body mass index (BMI) over 30, or over 27 with other obesity-related complications like high blood pressure or elevated cholesterol. This aligns with guidelines suggesting that medical weight management should be reserved for individuals who have unsuccessfully tried lifestyle changes alone [4].
                 </p>
@@ -137,7 +137,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="lifestyle-changes" heading="Make Lifestyle Changes For Long-Term Results">
+              <GuideSection darkMode={darkMode} id="lifestyle-changes" heading="Make Lifestyle Changes For Long-Term Results">
                 <p>
                   Mounjaro can provide a helpful push toward your weight management goals, but it does not replace the foundations of good health: balanced nutrition, regular activity, and self-care. You might feel fuller faster, yet quality and portion control of your meals remain key to losing weight safely. Focus on high-protein foods, complex carbohydrates, and plenty of vegetables to keep both your energy levels and digestion well-regulated.
                 </p>
@@ -191,7 +191,7 @@ export default function ArticleClient() {
                 </p>
               </section>
 
-              <GuideSection id="references" heading="References">
+              <GuideSection darkMode={darkMode} id="references" heading="References">
                 <ol className="list-decimal pl-5 space-y-2 text-sm">
                   <li>(PLOS ONE)</li>
                   <li>(Within Health)</li>

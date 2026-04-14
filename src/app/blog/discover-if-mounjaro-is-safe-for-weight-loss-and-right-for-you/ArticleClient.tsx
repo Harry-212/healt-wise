@@ -81,7 +81,7 @@ export default function ArticleClient() {
           <div className="min-w-0 flex-1 max-w-3xl">
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               
-              <GuideSection id="purpose" heading="Understand Mounjaro’s Purpose">
+              <GuideSection darkMode={darkMode} id="purpose" heading="Understand Mounjaro’s Purpose">
                 <p>
                   Mounjaro, known by its generic name tirzepatide, is a medication originally approved to help adults with type 2 diabetes manage their blood sugar levels. Its unique formulation targets two different hormone receptors to regulate appetite, slow digestion, and enhance insulin function [1]. Although its primary purpose is diabetes control, many people are also curious about its potential for weight management.
                 </p>
@@ -90,7 +90,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="evaluate-safety" heading="Evaluate Its Safety For Weight Loss">
+              <GuideSection darkMode={darkMode} id="evaluate-safety" heading="Evaluate Its Safety For Weight Loss">
                 <p>
                   Before starting any medication, you want to know if it is safe and effective. Mounjaro’s safety profile for weight loss is still being evaluated, but early clinical trials for people with obesity suggest promising outcomes. In one study, patients receiving higher doses lost an average of up to 21 percent of their body weight [2]. Another study comparing tirzepatide to existing treatments, such as GLP-1 receptor agonists, found that tirzepatide offered slightly enhanced weight loss results without a major spike in serious side effects [3].
                 </p>
@@ -99,7 +99,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="health-risks" heading="Potential Side Effects And Health Risks">
+              <GuideSection darkMode={darkMode} id="health-risks" heading="Potential Side Effects And Health Risks">
                 <p>
                   Like any medication, Mounjaro comes with risks. The most common side effects reported by patients include:
                 </p>
@@ -117,7 +117,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="real-stories" heading="Real People Share Their Stories">
+              <GuideSection darkMode={darkMode} id="real-stories" heading="Real People Share Their Stories">
                 <p>
                   You may find it helpful to look at the experiences of others who have taken Mounjaro for weight loss. According to user reviews, many appreciate the reduced appetite, improved energy, and steady weight decline once they reach a stable dose [7]. A 58-year-old woman reportedly lost more than 50 lbs and noticed improvements in her blood pressure, while other people have claimed triple-digit weight loss when Mounjaro was combined with lifestyle changes.
                 </p>
@@ -126,7 +126,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="informed-use" heading="Take Steps Toward Informed Use">
+              <GuideSection darkMode={darkMode} id="informed-use" heading="Take Steps Toward Informed Use">
                 <p>
                   If you are thinking of starting Mounjaro, it is wise to adopt a broader, long-term plan instead of treating the medication as a quick fix. Here are a few areas to focus on:
                 </p>
@@ -195,7 +195,7 @@ export default function ArticleClient() {
                 </p>
               </section>
 
-              <GuideSection id="references" heading="References">
+              <GuideSection darkMode={darkMode} id="references" heading="References">
                 <ol className="list-decimal pl-5 space-y-2 text-sm">
                   <li>(FDA)</li>
                   <li>(UCHealth)</li>

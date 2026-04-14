@@ -91,7 +91,7 @@ export default function ArticleClient() {
                 This guide supports, but does not replace, the patient leaflet that comes with your pen or the advice of your prescribing clinician. Always follow the directions you are given personally.
               </p>
 
-              <GuideSection id="what-is" heading="Understand What Wegovy Injection Is For">
+              <GuideSection darkMode={darkMode} id="what-is" heading="Understand What Wegovy Injection Is For">
                 <p>
                   Wegovy contains semaglutide, a GLP 1 receptor agonist that helps to regulate appetite and support weight loss in adults who are obese or overweight with at least one weight related health problem. It is available as a once weekly injection pen and as once daily tablets, both used alongside lifestyle changes.
                 </p>
@@ -103,7 +103,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="dosing-schedule" heading="Follow The Wegovy Dosing Schedule">
+              <GuideSection darkMode={darkMode} id="dosing-schedule" heading="Follow The Wegovy Dosing Schedule">
                 <p>
                   Your Wegovy injection instructions will include a dose escalation plan. This gradual increase helps your body adjust and lowers the chance of gastrointestinal side effects such as nausea.
                 </p>
@@ -123,7 +123,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="store" heading="Store Your Wegovy Pens Correctly">
+              <GuideSection darkMode={darkMode} id="store" heading="Store Your Wegovy Pens Correctly">
                 <p>
                   Correct storage is a key part of safe Wegovy injection use. The pens contain a liquid solution that must be kept within specific temperature ranges to remain effective.
                 </p>
@@ -138,7 +138,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="prepare" heading="Prepare For Each Weekly Injection">
+              <GuideSection darkMode={darkMode} id="prepare" heading="Prepare For Each Weekly Injection">
                 <p>
                   When your injection day arrives, a simple routine will make the process smoother and safer. You can inject Wegovy with or without food, as long as you stick to your weekly schedule.
                 </p>
@@ -153,7 +153,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="rotate-sites" heading="Choose And Rotate Your Injection Sites">
+              <GuideSection darkMode={darkMode} id="rotate-sites" heading="Choose And Rotate Your Injection Sites">
                 <p>
                   Wegovy injection is given subcutaneously, which means you inject into the fatty layer just under the skin. The main areas recommended are your upper legs, lower stomach, and upper arms.
                 </p>
@@ -171,7 +171,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="step-by-step" heading="Give Yourself The Wegovy Injection Step By Step">
+              <GuideSection darkMode={darkMode} id="step-by-step" heading="Give Yourself The Wegovy Injection Step By Step">
                 <p>
                   The Wegovy pen is designed so you do not see a separate needle, and the steps are the same each week. Your Patient Information Leaflet gives detailed diagrams, but the core process is straightforward.
                 </p>
@@ -188,7 +188,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="missed-doses" heading="Handle Missed Wegovy Doses Safely">
+              <GuideSection darkMode={darkMode} id="missed-doses" heading="Handle Missed Wegovy Doses Safely">
                 <p>
                   Life happens, and you may occasionally miss a dose. Clear Wegovy injection instructions cover what to do so you can return to your regular schedule safely.
                 </p>
@@ -203,7 +203,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="side-effects" heading="Know The Common Side Effects And Warnings">
+              <GuideSection darkMode={darkMode} id="side-effects" heading="Know The Common Side Effects And Warnings">
                 <p>
                   Like all medicines, Wegovy can cause side effects. The most commonly reported problems are gastrointestinal, especially when you first start or when the dose increases.
                 </p>
@@ -235,7 +235,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection id="disposal" heading="Dispose Of Used Wegovy Pens Correctly">
+              <GuideSection darkMode={darkMode} id="disposal" heading="Dispose Of Used Wegovy Pens Correctly">
                 <p>
                   Safe disposal is an important part of your Wegovy injection instructions. Used pens still contain a needle and must not be thrown in normal household rubbish or recycling bins.
                 </p>
@@ -285,7 +285,7 @@ export default function ArticleClient() {
                 </div>
               </section>
 
-              <GuideSection id="conclusion" heading="Conclusion">
+              <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
                   When you understand your Wegovy injection instructions clearly, the weekly routine becomes much more manageable. You choose a consistent injection day, follow the prescribed dose escalation, store your pens in the right temperature range, and give each subcutaneous injection using a simple, repeatable process.
                 </p>

@@ -242,14 +242,21 @@ export function GuideSection({
   id,
   heading,
   children,
+  darkMode,
 }: {
   id: string;
   heading: string;
   children: React.ReactNode;
+  /** When set (e.g. blog article night theme), section titles stay light for contrast on dark backgrounds. */
+  darkMode?: boolean;
 }) {
   return (
     <section id={id} className="scroll-mt-28">
-      <h2 className="text-xl font-semibold text-slate-900">{heading}</h2>
+      <h2
+        className={`text-xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
+      >
+        {heading}
+      </h2>
       <div className="mt-4 space-y-4">{children}</div>
     </section>
   );
