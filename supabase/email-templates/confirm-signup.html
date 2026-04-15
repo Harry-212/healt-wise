@@ -22,15 +22,16 @@
           <tr>
             <td style="padding:28px 32px 8px;">
               <p style="margin:0 0 16px;font-size:16px;line-height:1.6;color:#334155;">Thanks for signing up. Tap the button below to verify your email address and finish creating your account.</p>
+              <!-- PKCE + SSR: verify on /auth/confirm (see src/app/auth/confirm/route.ts). -->
               <table role="presentation" cellspacing="0" cellpadding="0" style="margin:0 0 24px;">
                 <tr>
                   <td align="center" style="border-radius:12px;background-color:#0f172a;">
-                    <a href="{{ .ConfirmationURL }}" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 28px;font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:12px;">Confirm email address</a>
+                    <a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email&amp;next=%2Ftools%2Fweight-loss-tracker%3Fstart%3D1" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:14px 28px;font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:12px;">Confirm email address</a>
                   </td>
                 </tr>
               </table>
               <p style="margin:0 0 8px;font-size:13px;line-height:1.5;color:#64748b;">If the button does not work, copy and paste this link into your browser:</p>
-              <p style="margin:0 0 24px;font-size:12px;line-height:1.5;word-break:break-all;color:#4f46e5;">{{ .ConfirmationURL }}</p>
+              <p style="margin:0 0 24px;font-size:12px;line-height:1.5;word-break:break-all;color:#4f46e5;">{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&amp;type=email&amp;next=%2Ftools%2Fweight-loss-tracker%3Fstart%3D1</p>
               <p style="margin:0;padding:16px 0 0;border-top:1px solid #e2e8f0;font-size:13px;line-height:1.5;color:#94a3b8;">If you did not create an account, you can safely ignore this message.</p>
             </td>
           </tr>

@@ -2,8 +2,8 @@
 -- Enables My Hub weight tracking with Row Level Security.
 -- Auth: use Supabase Authentication (email/password).
 -- Dashboard → Authentication → URL Configuration: add your site URL and Redirect URLs including
---   /auth/callback
---   /auth/callback?next=/my-hub/login/set-password   (password reset completes on /my-hub/login/set-password)
+--   /auth/callback   (OAuth / code exchange)
+--   /auth/confirm    (email links with token_hash — signup, recovery, etc.)
 -- Email templates: optional branded HTML lives in supabase/email-templates/ (paste body into the dashboard).
 
 create table if not exists public.weight_entries (

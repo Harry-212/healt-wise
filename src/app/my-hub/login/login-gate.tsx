@@ -63,7 +63,8 @@ export default function LoginGate({
 
     try {
       if (forgot) {
-        const redirectUrl = `${window.location.origin}/auth/callback?next=${encodeURIComponent("/my-hub/login/set-password")}`;
+        // Use a single-path redirectTo (allowed in Supabase) + token_hash link in email → /auth/confirm (PKCE/SSR).
+        const redirectUrl = `${window.location.origin}/auth/confirm`;
         const { error: resetError } = await supabase.auth.resetPasswordForEmail(email, {
           redirectTo: redirectUrl,
         });
@@ -78,7 +79,7 @@ export default function LoginGate({
       }
 
       if (signup) {
-        const redirectUrl = `${window.location.origin}/auth/callback?next=${encodeURIComponent("/tools/weight-loss-tracker?start=1")}`;
+        const redirectUrl = `${window.location.origin}/auth/confirm`;
         const { data, error: signUpError } = await supabase.auth.signUp({
           email,
           password,
