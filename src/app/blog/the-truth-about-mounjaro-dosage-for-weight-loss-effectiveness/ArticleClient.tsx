@@ -124,10 +124,17 @@ export default function ArticleClient() {
           </div>
 
           <BlogArticleHeroImage src={HERO_IMAGE} alt="Mounjaro dosing and weight loss effectiveness" />
+          <div
+            id="guide-article-hero-end"
+            aria-hidden
+            className="pointer-events-none h-0 w-full overflow-hidden"
+          />
         </header>
 
         <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          {TOC.length > 0 && <GuideTocSidebar toc={TOC} />}
+          {TOC.length > 0 && (
+            <GuideTocSidebar key={TOC.map((t) => t.id).join("-")} toc={TOC} />
+          )}
 
           <div className="min-w-0 max-w-3xl flex-1">
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>

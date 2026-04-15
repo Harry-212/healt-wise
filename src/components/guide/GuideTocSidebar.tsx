@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { TocEntry } from "./GuideLayout";
 import { HELPFUL_GUIDES_HUB_PATH } from "@/lib/helpful-guide-slugs";
 
@@ -10,12 +10,48 @@ const ACTIVE_SECTION_TOP_PX = 148;
 /** Matches Tailwind `top-28` (NavBar clearance). */
 const TOC_FIXED_TOP_PX = 112;
 
+/** Sentinel at end of article header (see `GuideLayout`). */
+const DEFAULT_HERO_END_ID = "guide-article-hero-end";
+
+/** Sidebar hides when this section reaches the reading band (FAQ or fallback). */
+const DEFAULT_STICKY_END_ID = "faq";
+
 type TocCoords = { left: number; width: number };
 
-export default function GuideTocSidebar({ toc }: { toc: TocEntry[] }) {
+type Props = {
+  toc: TocEntry[];
+  /** When set, overrides `#guide-article-hero-end` for “past hero” detection. */
+  heroEndId?: string;
+  /** When set, overrides `#faq` for where the sticky TOC should disappear. */
+  stickyEndId?: string;
+};
+
+function resolveStickyEndEl(stickyEndId: string): HTMLElement | null {
+  const primary = document.getElementById(stickyEndId);
+  if (primary) return primary;
+  if (stickyEndId === "faq") {
+    return document.getElementById("references");
+  }
+  return (
+    document.getElementById("faq") ?? document.getElementById("references")
+  );
+}
+
+export default function GuideTocSidebar({
+  toc,
+  heroEndId = DEFAULT_HERO_END_ID,
+  stickyEndId = DEFAULT_STICKY_END_ID,
+}: Props) {
   const anchorRef = useRef<HTMLDivElement>(null);
   const [coords, setCoords] = useState<TocCoords | null>(null);
-  const [active, setActive] = useState<string>(toc[0]?.id ?? "");
+  const [sidebarVisible, setSidebarVisible] = useState(false);
+
+  const displayToc = useMemo(() => {
+    const faqIdx = toc.findIndex((t) => t.id === "faq");
+    return faqIdx > 0 ? toc.slice(0, faqIdx) : toc;
+  }, [toc]);
+
+  const [active, setActive] = useState<string>(displayToc[0]?.id ?? "");
 
   const syncCoords = () => {
     const el = anchorRef.current;
@@ -38,20 +74,32 @@ export default function GuideTocSidebar({ toc }: { toc: TocEntry[] }) {
   }, []);
 
   useEffect(() => {
-    if (!toc.length) return;
+    if (!displayToc.length) return;
+
+    const computeVisibility = () => {
+      const heroEnd = document.getElementById(heroEndId);
+      const passedHero =
+        !heroEnd || heroEnd.getBoundingClientRect().top <= ACTIVE_SECTION_TOP_PX;
+
+      const endEl = resolveStickyEndEl(stickyEndId);
+      const pastEnd =
+        !!endEl && endEl.getBoundingClientRect().top <= ACTIVE_SECTION_TOP_PX + 4;
+
+      setSidebarVisible(passedHero && !pastEnd);
+    };
 
     const computeActive = () => {
       const doc = document.documentElement;
       const nearBottom =
         window.innerHeight + window.scrollY >= doc.scrollHeight - 100;
       if (nearBottom) {
-        setActive(toc[toc.length - 1]!.id);
+        setActive(displayToc[displayToc.length - 1]!.id);
         return;
       }
 
-      let current = toc[0]!.id;
-      for (let i = toc.length - 1; i >= 0; i--) {
-        const id = toc[i]!.id;
+      let current = displayToc[0]!.id;
+      for (let i = displayToc.length - 1; i >= 0; i--) {
+        const id = displayToc[i]!.id;
         const section = document.getElementById(id);
         if (!section) continue;
         if (section.getBoundingClientRect().top <= ACTIVE_SECTION_TOP_PX) {
@@ -68,11 +116,13 @@ export default function GuideTocSidebar({ toc }: { toc: TocEntry[] }) {
       ticking = true;
       requestAnimationFrame(() => {
         syncCoords();
+        computeVisibility();
         computeActive();
         ticking = false;
       });
     };
 
+    computeVisibility();
     computeActive();
     syncCoords();
     window.addEventListener("scroll", onScrollOrResize, { passive: true });
@@ -81,7 +131,7 @@ export default function GuideTocSidebar({ toc }: { toc: TocEntry[] }) {
       window.removeEventListener("scroll", onScrollOrResize);
       window.removeEventListener("resize", onScrollOrResize);
     };
-  }, [toc]);
+  }, [displayToc, heroEndId, stickyEndId]);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -92,9 +142,11 @@ export default function GuideTocSidebar({ toc }: { toc: TocEntry[] }) {
   };
 
   const progressPct =
-    toc.length
+    displayToc.length
       ? Math.round(
-          ((toc.findIndex((t) => t.id === active) + 1) / toc.length) * 100,
+          ((displayToc.findIndex((t) => t.id === active) + 1) /
+            displayToc.length) *
+            100,
         )
       : 0;
 
@@ -104,13 +156,16 @@ export default function GuideTocSidebar({ toc }: { toc: TocEntry[] }) {
       className="relative hidden w-64 shrink-0 self-start xl:block"
     >
       <aside
-        className="fixed z-[30] max-h-[calc(100dvh-8rem)] w-64"
+        className={`fixed z-[30] max-h-[calc(100dvh-8rem)] w-64 transition-opacity duration-300 ease-out ${
+          sidebarVisible ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
         style={{
           top: TOC_FIXED_TOP_PX,
           left: coords?.left ?? 0,
           width: coords?.width ?? 256,
           visibility: coords ? "visible" : "hidden",
         }}
+        aria-hidden={!sidebarVisible}
         aria-label="Table of contents"
       >
         <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm ring-1 ring-slate-900/4">
@@ -150,7 +205,7 @@ export default function GuideTocSidebar({ toc }: { toc: TocEntry[] }) {
             className="max-h-[calc(100dvh-16rem)] overflow-y-auto overscroll-contain px-2 py-3 [scrollbar-width:thin] [scrollbar-color:rgb(203_213_225)_transparent]"
           >
             <ol className="space-y-px">
-              {toc.map((entry, i) => {
+              {displayToc.map((entry, i) => {
                 const isActive = active === entry.id;
                 return (
                   <li key={entry.id}>

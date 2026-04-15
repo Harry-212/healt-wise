@@ -70,13 +70,20 @@ export default function ArticleClient() {
             src="https://i.ibb.co.com/Ndr2MsY9/image.png"
             alt="The Truth About Wegovy Weight Loss Medication Costs in the UK"
           />
+          <div
+            id="guide-article-hero-end"
+            aria-hidden
+            className="pointer-events-none h-0 w-full overflow-hidden"
+          />
         </header>
 
         {/* CONTENT SPLIT LAYOUT */}
         <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
           
           {/* LEFT: TOC */}
-          {TOC.length > 0 && <GuideTocSidebar toc={TOC} />}
+          {TOC.length > 0 && (
+            <GuideTocSidebar key={TOC.map((t) => t.id).join("-")} toc={TOC} />
+          )}
 
           {/* RIGHT: ARTICLE BODY */}
           <div className="min-w-0 flex-1 max-w-3xl">

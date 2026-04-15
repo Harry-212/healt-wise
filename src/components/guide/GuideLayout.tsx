@@ -54,6 +54,8 @@ export function GuideLayout({
 }: Props) {
   const thumbnail = slug ? GUIDE_IMAGES[slug] : undefined;
   const shareUrl = slug ? `${siteOrigin()}${helpfulGuidePath(slug)}` : "";
+  const faqIdx = toc.findIndex((e) => e.id === "faq");
+  const tocMobile = faqIdx > 0 ? toc.slice(0, faqIdx) : toc;
   return (
     <>
       {schemaJson && (
@@ -93,7 +95,9 @@ export function GuideLayout({
         <div className="mt-6 flex flex-col gap-10 xl:flex-row xl:gap-14">
 
           {/* ── Left: desktop sticky TOC sidebar ── */}
-          {toc.length > 0 && <GuideTocSidebar toc={toc} />}
+          {toc.length > 0 && (
+            <GuideTocSidebar key={slug ?? "toc"} toc={toc} />
+          )}
 
           {/* ── Right: article header + body ── */}
           <div className="min-w-0 flex-1">
@@ -129,6 +133,12 @@ export function GuideLayout({
                   />
                 </div>
               )}
+              {/* Marks end of hero for reading chrome (desktop TOC reveal). */}
+              <div
+                id="guide-article-hero-end"
+                aria-hidden
+                className="pointer-events-none h-0 w-full overflow-hidden"
+              />
             </header>
 
             {/* Mobile / tablet ToC (collapsible) — hidden on xl+ */}
@@ -154,7 +164,7 @@ export function GuideLayout({
                       In this guide
                     </span>
                     <span className="rounded-full bg-emerald-100 px-1.5 py-0.5 text-[10px] font-bold text-emerald-700">
-                      {toc.length}
+                      {tocMobile.length}
                     </span>
                   </div>
                   <svg
@@ -171,7 +181,7 @@ export function GuideLayout({
                   </svg>
                 </summary>
                 <ol className="divide-y divide-slate-100 px-5 pb-3">
-                  {toc.map((entry, i) => (
+                  {tocMobile.map((entry, i) => (
                     <li key={entry.id}>
                       <a
                         href={`#${entry.id}`}

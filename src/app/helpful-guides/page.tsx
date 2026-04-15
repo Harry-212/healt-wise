@@ -462,8 +462,12 @@ export default async function HelpfulGuidePage({ searchParams }: Props) {
             </p>
           ) : (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {filtered.map((guide) => (
-                <GuideCard key={guide.slug} guide={guide} />
+              {filtered.map((guide, index) => (
+                <GuideCard
+                  key={guide.slug}
+                  guide={guide}
+                  imagePriority={index < 9}
+                />
               ))}
             </div>
           )}
@@ -488,14 +492,20 @@ function SplitTitle({ text }: { text: string }) {
 
 type Guide = (typeof ALL_GUIDES)[number];
 
-function GuideCard({ guide }: { guide: Guide }) {
+function GuideCard({
+  guide,
+  imagePriority,
+}: {
+  guide: Guide;
+  imagePriority: boolean;
+}) {
   const colors = CATEGORY_COLORS[guide.category];
   const thumbnail = GUIDE_IMAGES[guide.slug];
 
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-slate-200/60">
       {/* Thumbnail image area */}
-      <div className="relative h-44 w-full overflow-hidden">
+      <div className="relative h-44 w-full overflow-hidden bg-slate-100">
         {thumbnail ? (
           <Image
             src={thumbnail}
@@ -503,7 +513,9 @@ function GuideCard({ guide }: { guide: Guide }) {
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            loading="lazy"
+            loading={imagePriority ? "eager" : "lazy"}
+            priority={imagePriority}
+            unoptimized
           />
         ) : (
           <div className={`h-full w-full ${colors.accent} opacity-20`} />
