@@ -9,7 +9,10 @@ import { MOUNJARO_UK_COMPARE_PROVIDERS } from "@/lib/data/mounjaro-uk-compare-pr
 import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-providers";
 import { WEGOVY_UK_COMPARE_PROVIDERS } from "@/lib/data/wegovy-uk-compare-providers";
 import { siteOrigin } from "@/lib/seo/site-origin";
-import { HELPFUL_GUIDES_HUB_PATH, helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import {
+  HELPFUL_GUIDES_HUB_PATH,
+  helpfulGuidePath,
+} from "@/lib/helpful-guide-slugs";
 import { getAllUkLocationArticleSlugs } from "@/lib/blog";
 
 /** Guide URLs under /helpful-guides/: only folders on disk with a page.tsx file. */
