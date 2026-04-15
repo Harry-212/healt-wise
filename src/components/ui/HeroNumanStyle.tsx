@@ -4,9 +4,20 @@ import { ArrowRight } from "lucide-react";
 
 export default function HeroNumanStyle() {
   return (
-    <section className="relative w-full max-w-full overflow-x-hidden overflow-y-visible bg-[#f4f7f5] pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
+    <section
+      className="relative w-full max-w-full overflow-x-hidden overflow-y-visible bg-[#f4f7f5] pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20"
+      style={{ position: "relative", overflowX: "hidden" }}
+    >
       {/* Background Image Container */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div
+        className="absolute inset-0 z-0 overflow-hidden"
+        style={{
+          position: "absolute",
+          inset: 0,
+          zIndex: 0,
+          overflow: "hidden",
+        }}
+      >
         <Image
           src="/comparing_weight_loss.jpeg"
           alt="Couple discussing weight loss treatments"
@@ -18,7 +29,10 @@ export default function HeroNumanStyle() {
         {/* Hapus background hitam/putih overlay sama sekali */}
       </div>
 
-      <div className="relative z-10 mx-auto max-w-[1200px] px-4 md:px-8">
+      <div
+        className="relative z-10 mx-auto max-w-[1200px] px-4 md:px-8"
+        style={{ position: "relative", zIndex: 10 }}
+      >
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           {/* Left Content — lebar agar judul max ~3 baris */}
           <div className="w-full min-w-0 lg:w-[58%] lg:max-w-none lg:pb-8">

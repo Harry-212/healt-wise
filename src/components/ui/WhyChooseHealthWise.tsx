@@ -91,7 +91,10 @@ export default function WhyChooseHealthWise() {
               </p>
             </div>
 
-            <ul className="mt-5 space-y-2 border-t border-slate-200/80 pt-5">
+            <ul
+              className="mt-5 list-none space-y-2 border-t border-slate-200/80 pt-5 pl-0"
+              style={{ listStyle: "none", paddingLeft: 0, marginLeft: 0 }}
+            >
               {FEATURES.map((feat) => {
                 const Icon = feat.icon;
                 const isOpen = openId === feat.id;

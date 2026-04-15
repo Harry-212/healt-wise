@@ -50,7 +50,14 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full max-w-full overflow-x-clip antialiased`}
       suppressHydrationWarning
     >
-      <body className="flex min-h-full max-w-full flex-col overflow-x-clip bg-background font-sans text-foreground antialiased">
+      <body
+        className="flex min-h-full max-w-full flex-col overflow-x-clip bg-background font-sans text-foreground antialiased"
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <SupabaseAuthProvider>
           <NavBar />
           <AnnouncementBar />
