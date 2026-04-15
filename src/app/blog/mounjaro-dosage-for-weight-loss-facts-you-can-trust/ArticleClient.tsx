@@ -15,8 +15,8 @@ const TOC = [
   { id: "key-benefits", label: "Key Benefits Backed by Research" },
   { id: "side-effects", label: "Potential Side Effects and Precautions" },
   { id: "long-term", label: "Long-Term Success Strategies" },
-  { id: "faq", label: "Frequently Asked Questions" },
   { id: "key-takeaways", label: "Key Takeaways" },
+  { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
 ];
 
@@ -163,6 +163,16 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
+              <GuideSection darkMode={darkMode} id="key-takeaways" heading="Key Takeaways">
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Mounjaro dosages increase gradually, allowing your body to adjust and reducing side effects.</li>
+                  <li>Research indicates significant weight loss improvements, with higher Mounjaro doses leading to greater results for many.</li>
+                  <li>The most common adverse effects appear in the GI tract, but you can often manage them by pacing dosage increments and maintaining open communication with your GP.</li>
+                  <li>Long-term weight management goes beyond medication—balanced nutrition, regular exercise, and mindful habits all matter.</li>
+                  <li>Stay vigilant about thyroid risks and disordered eating, especially at higher doses. Speak to a healthcare professional for personalised advice.</li>
+                </ul>
+              </GuideSection>
+
               <section id="faq" className={`mt-16 pt-10 border-t ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>
                   Frequently Asked Questions
@@ -195,16 +205,6 @@ export default function ArticleClient() {
                   </div>
                 </div>
               </section>
-
-              <GuideSection darkMode={darkMode} id="key-takeaways" heading="Key Takeaways">
-                <ul className="list-disc pl-5 space-y-2">
-                  <li>Mounjaro dosages increase gradually, allowing your body to adjust and reducing side effects.</li>
-                  <li>Research indicates significant weight loss improvements, with higher Mounjaro doses leading to greater results for many.</li>
-                  <li>The most common adverse effects appear in the GI tract, but you can often manage them by pacing dosage increments and maintaining open communication with your GP.</li>
-                  <li>Long-term weight management goes beyond medication—balanced nutrition, regular exercise, and mindful habits all matter.</li>
-                  <li>Stay vigilant about thyroid risks and disordered eating, especially at higher doses. Speak to a healthcare professional for personalised advice.</li>
-                </ul>
-              </GuideSection>
 
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>

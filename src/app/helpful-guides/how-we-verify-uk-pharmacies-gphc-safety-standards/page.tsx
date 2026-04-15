@@ -1,7 +1,6 @@
 import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
-import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
   GuideSection,
@@ -148,7 +147,6 @@ export default function GuidePharmacyVerification() {
       readTime="5 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      internalLinks={internalLinksFor("guidePharmacy")}
       schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       {/* ── Section 1 ── */}

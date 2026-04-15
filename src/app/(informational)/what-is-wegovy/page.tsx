@@ -11,8 +11,6 @@ import {
 } from "@/components/wegovy/wegovy-what-is-deferred";
 import WegovyPenTilt from "@/components/wegovy/WegovyPenTilt";
 import WegovyPageToc from "@/components/wegovy/WegovyPageToc";
-import InternalLinks from "@/components/content/InternalLinks";
-import { internalLinksFor } from "@/lib/internal-linking";
 import {
   wegovyArticleJsonLd,
   wegovyFaqJsonLd,
@@ -768,11 +766,6 @@ export default function WhatIsWegovyPage() {
                 </ol>
               </div>
             </section>
-
-            <InternalLinks
-              title="Keep exploring Health Wise"
-              links={internalLinksFor("whatIsWegovy")}
-            />
           </div>
         </div>
       </article>

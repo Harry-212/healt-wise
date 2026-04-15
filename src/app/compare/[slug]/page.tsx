@@ -7,8 +7,6 @@ import {
   COMPARE_PAGE_LAYOUT,
   type ComparePageLayoutConfig,
 } from "@/lib/routes/compare-page-layout";
-import { internalLinksFor } from "@/lib/internal-linking";
-import InternalLinks from "@/components/content/InternalLinks";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
 import CompareMedPriceTabs from "@/components/compare/CompareMedPriceTabs";
@@ -186,11 +184,6 @@ export default async function ComparePage({ params }: Props) {
           </div>
         </section>
 
-        <div className="border-b border-slate-200/80 bg-slate-50/80 py-12 md:py-16">
-          <div className="mx-auto max-w-4xl px-4 md:px-8">
-            <InternalLinks links={internalLinksFor(cfg.internal)} />
-          </div>
-        </div>
       </article>
     </>
   );

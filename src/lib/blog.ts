@@ -78,7 +78,7 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 }
 
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
-const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
+export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "how-does-wegovy-work-to-transform-your-weight-journey",
     title: "How Does Wegovy Work to Transform Your Weight Journey",
@@ -160,6 +160,10 @@ const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["mounjaro", "guides"],
   },
 ];
+
+/** Curated long-form `/blog/:slug` App Router articles (each includes an in-page FAQ). */
+export const CURATED_BLOG_ARTICLE_SLUGS: readonly string[] =
+  CURATED_APP_ROUTER_POSTS.map((p) => p.slug);
 
 const CURATED_SLUG_SET = new Set(CURATED_APP_ROUTER_POSTS.map((p) => p.slug));
 

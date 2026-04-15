@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import InternalLinks from "@/components/content/InternalLinks";
-import type { InternalLinkSet } from "@/lib/internal-linking";
 import { GUIDE_IMAGES } from "@/lib/guide-images";
 import {
   HELPFUL_GUIDES_HUB_PATH,
@@ -35,7 +33,6 @@ type Props = {
   readTime: string;
   lastUpdated: string;
   toc: TocEntry[];
-  internalLinks: InternalLinkSet;
   children: React.ReactNode;
   schemaJson?: Record<string, unknown>;
 };
@@ -48,7 +45,6 @@ export function GuideLayout({
   readTime,
   lastUpdated,
   toc,
-  internalLinks,
   children,
   schemaJson,
 }: Props) {
@@ -212,11 +208,6 @@ export function GuideLayout({
                 />
               </div>
             ) : null}
-
-            {/* Internal links */}
-            <div className="mt-14">
-              <InternalLinks links={internalLinks} />
-            </div>
 
             {/* Back link */}
             <div className="mt-8">

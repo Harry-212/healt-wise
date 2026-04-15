@@ -5,8 +5,6 @@ import WegovyCompareChartsSection from "@/components/compare/WegovyCompareCharts
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import WegovyCompareShaderHero from "@/components/wegovy/WegovyCompareShaderHero";
 import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
-import InternalLinks from "@/components/content/InternalLinks";
-import { internalLinksFor } from "@/lib/internal-linking";
 import {
   estimatedMonthlyCost,
   startingPrice,
@@ -364,10 +362,6 @@ export default function CompareWegovyPricesUkPage() {
             </div>
           </div>
         </section>
-
-        <div className="mx-auto max-w-4xl px-4 pb-16 pt-8 sm:px-5 sm:py-10 md:px-8 md:py-12">
-          <InternalLinks links={internalLinksFor("wegovyPriceUk")} />
-        </div>
       </article>
     </>
   );

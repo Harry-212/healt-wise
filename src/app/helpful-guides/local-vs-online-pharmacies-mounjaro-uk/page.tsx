@@ -1,7 +1,6 @@
 import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
-import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
   GuideSection,
@@ -150,7 +149,6 @@ export default function GuideLocalVsOnline() {
       readTime="4 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      internalLinks={internalLinksFor("guideLocalVsOnline")}
       schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="local-matters" heading="Why Local Pharmacies Still Matter">

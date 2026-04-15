@@ -15,8 +15,8 @@ const TOC = [
   { id: "health-risks", label: "Potential Side Effects And Health Risks" },
   { id: "real-stories", label: "Real People Share Their Stories" },
   { id: "informed-use", label: "Take Steps Toward Informed Use" },
-  { id: "faq", label: "FAQs About Mounjaro For Weight Loss" },
-  { id: "references", label: "References" }
+  { id: "faq", label: "Frequently Asked Questions" },
+  { id: "conclusion", label: "Conclusion" },
 ];
 
 export default function ArticleClient() {
@@ -162,7 +162,7 @@ export default function ArticleClient() {
 
               <section id="faq" className={`mt-16 pt-10 border-t ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>
-                  FAQs About Mounjaro For Weight Loss
+                  Frequently Asked Questions
                 </h2>
                 
                 <div className="space-y-8">
@@ -196,11 +196,13 @@ export default function ArticleClient() {
                     <p>Absolutely. While Mounjaro may help control hunger, lifestyle adjustments remain crucial for long-term stability. Regular physical activity, balanced nutrition, and mental health support all reinforce the medication’s benefits and reduce the likelihood of rebound weight gain.</p>
                   </div>
                 </div>
+              </section>
 
-                <p className="mt-8">
+              <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
+                <p>
                   Mounjaro can be a valuable ally in your weight loss journey, but it is not a standalone solution. Working closely with your GP, setting realistic expectations, and focusing on sustainable lifestyle changes can help you decide if Mounjaro is safe for weight loss and meets your needs. If you are in doubt, seek guidance from qualified healthcare professionals who can help you choose a plan that aligns with your current health and future goals.
                 </p>
-              </section>
+              </GuideSection>
 
               <GuideSection darkMode={darkMode} id="references" heading="References">
                 <ol className="list-decimal pl-5 space-y-2 text-sm">

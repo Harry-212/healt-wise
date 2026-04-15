@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/layout/NavBar";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Footer from "@/components/layout/Footer";
+import SiteEndSection from "@/components/layout/SiteEndSection";
 import { SupabaseAuthProvider } from "@/components/providers/SupabaseAuthProvider";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { SITE_FAVICON_SRC, SITE_LOGO_SRC } from "@/lib/site-assets";
@@ -63,6 +64,7 @@ export default function RootLayout({
           <AnnouncementBar />
           <main className="min-w-0 flex-1 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
             {children}
+            <SiteEndSection />
           </main>
           <Footer />
         </SupabaseAuthProvider>

@@ -11,8 +11,6 @@ import {
 } from "@/components/mounjaro/mounjaro-what-is-deferred";
 import MounjaroPenTilt from "@/components/mounjaro/MounjaroPenTilt";
 import MounjaroPageToc from "@/components/mounjaro/MounjaroPageToc";
-import InternalLinks from "@/components/content/InternalLinks";
-import { internalLinksFor } from "@/lib/internal-linking";
 import {
   mounjaroArticleJsonLd,
   mounjaroFaqJsonLd,
@@ -791,11 +789,6 @@ export default function WhatIsMounjaroPage() {
                 </ol>
               </div>
             </section>
-
-            <InternalLinks
-              title="Keep exploring Health Wise"
-              links={internalLinksFor("whatIsMounjaro")}
-            />
           </div>
         </div>
       </article>

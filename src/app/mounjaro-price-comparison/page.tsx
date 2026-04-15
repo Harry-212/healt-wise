@@ -5,8 +5,6 @@ import MounjaroCompareChartsSection from "@/components/compare/MounjaroCompareCh
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import MounjaroCompareShaderHero from "@/components/mounjaro/MounjaroCompareShaderHero";
 import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable";
-import InternalLinks from "@/components/content/InternalLinks";
-import { internalLinksFor } from "@/lib/internal-linking";
 import {
   estimatedMonthlyCost,
   startingPrice,
@@ -346,10 +344,6 @@ export default function CompareMounjaroPricesUkPage() {
             </div>
           </div>
         </section>
-
-        <div className="mx-auto max-w-4xl px-4 pb-16 pt-8 sm:px-5 sm:py-10 md:px-8 md:py-12">
-          <InternalLinks links={internalLinksFor("mounjaroPriceUk")} />
-        </div>
       </article>
     </>
   );

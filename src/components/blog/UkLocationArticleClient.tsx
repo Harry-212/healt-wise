@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useMemo, useState } from "react";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
-import InternalLinks from "@/components/content/InternalLinks";
 import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
@@ -18,7 +17,6 @@ import {
   UK_WEIGHT_LOSS_FLAT_INDEX_PATH,
   type UkWeightLossLocation,
 } from "@/lib/data/uk-weight-loss-locations";
-import { internalLinksFor } from "@/lib/internal-linking";
 import { capitalizeHeadingWords } from "@/lib/text/heading-case";
 
 type Props = {
@@ -26,25 +24,45 @@ type Props = {
   shareUrl: string;
 };
 
+/**
+ * Section titles shared by the sticky TOC and each heading — same pattern as
+ * `blog/how-does-wegovy-work-to-transform-your-weight-journey/ArticleClient.tsx`.
+ */
+function ukLocationSectionTitles(name: string) {
+  return {
+    intro: `How weight loss access works when you live in ${name}`,
+    popularSearches: `What people near ${name} actually type into Google`,
+    pathways: `Pathways that tend to show up around ${name}`,
+    terminology: `Terms that keep appearing in serious discussions (not ads)`,
+    sources: `Sources you can open in a second tab`,
+    trust: `Why you should treat Health Wise as a comparator, not a prescriber`,
+    nextSteps: `Practical next steps (UK-wide, including ${name})`,
+    disclaimer: "Disclaimer",
+    faq: "Frequently Asked Questions",
+    moreUk: "Other places in the UK",
+  };
+}
+
 export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
   const [darkMode, setDarkMode] = useState(false);
   const { name, nation, longtails, hero } = loc;
   const care = nationCareContext(nation);
   const faqItems = useMemo(() => buildLocationFaq(loc), [loc]);
+  const titles = useMemo(() => ukLocationSectionTitles(name), [name]);
   const toc = useMemo(
     () => [
-      { id: "intro", label: capitalizeHeadingWords("Overview") },
-      { id: "popular-searches", label: capitalizeHeadingWords("What people search") },
-      { id: "pathways", label: capitalizeHeadingWords("Treatment pathways") },
-      { id: "terminology", label: capitalizeHeadingWords("Key terms") },
-      { id: "sources", label: capitalizeHeadingWords("Sources") },
-      { id: "trust", label: capitalizeHeadingWords("Trust & methodology") },
-      { id: "next-steps", label: capitalizeHeadingWords("Next steps") },
-      { id: "disclaimer", label: capitalizeHeadingWords("Disclaimer") },
-      { id: "faq", label: capitalizeHeadingWords("FAQ") },
-      { id: "more-uk", label: capitalizeHeadingWords("More UK guides") },
+      { id: "intro", label: titles.intro },
+      { id: "popular-searches", label: titles.popularSearches },
+      { id: "pathways", label: titles.pathways },
+      { id: "terminology", label: titles.terminology },
+      { id: "sources", label: titles.sources },
+      { id: "trust", label: titles.trust },
+      { id: "next-steps", label: titles.nextSteps },
+      { id: "disclaimer", label: titles.disclaimer },
+      { id: "faq", label: titles.faq },
+      { id: "more-uk", label: titles.moreUk },
     ],
-    [],
+    [titles],
   );
 
   const pageTitle = capitalizeHeadingWords(`Best weight loss treatment in ${name}`);
@@ -111,54 +129,60 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
             </span>
           </div>
 
-          <div id="intro" className="scroll-mt-28">
-            <BlogArticleHeroImage
-              src={hero.url}
-              alt={`${name}, UK — ${hero.scene}`}
-            />
-            <p className={`mt-2 text-center text-xs ${muted}`}>
-              Photo:{" "}
-              <a
-                href={hero.profileUrl}
-                className="text-emerald-600 underline-offset-2 hover:underline"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {hero.photographer}
-              </a>{" "}
-              on {hero.source === "pexels" ? "Pexels" : "Unsplash"} · {hero.scene}
-            </p>
-
-            <div className={`mx-auto mt-8 max-w-3xl space-y-5 text-base leading-relaxed ${p}`}>
-              <p>
-                If you are trying to decide on the{" "}
-                <strong className={strong}>best weight loss treatment in {name}</strong>, you
-                have probably already noticed the same sentence copy-pasted across ten tabs. I am
-                not going to pretend postcode changes the chemistry of semaglutide. It does,
-                however, change who answers the phone when something goes wrong, how long you wait,
-                and whether your GP surgery even knows you have started a pen.
-              </p>
-              <p>Short version: location shapes access more than it rewrites biology.</p>
-              <p>
-                {care.nhsFrame} People near {name} still search the same handful of phrases—Wegovy,
-                Mounjaro, “online clinic,” sometimes “NHS tier 3”—and those searches can collide with
-                different realities on the ground.
-              </p>
-            </div>
-          </div>
+          <BlogArticleHeroImage
+            src={hero.url}
+            alt={`${name}, UK — ${hero.scene}`}
+          />
+          <p className={`mt-2 text-center text-xs ${muted}`}>
+            Photo:{" "}
+            <a
+              href={hero.profileUrl}
+              className="text-emerald-600 underline-offset-2 hover:underline"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {hero.photographer}
+            </a>{" "}
+            on {hero.source === "pexels" ? "Pexels" : "Unsplash"} · {hero.scene}
+          </p>
+          <div
+            id="guide-article-hero-end"
+            aria-hidden
+            className="pointer-events-none h-0 w-full overflow-hidden"
+          />
         </header>
 
         <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          {toc.length > 0 ? <GuideTocSidebar toc={toc} /> : null}
+          {toc.length > 0 ? (
+            <GuideTocSidebar
+              key={`uk-loc-toc-${loc.slug}`}
+              toc={toc}
+            />
+          ) : null}
 
           <div className="min-w-0 flex-1 max-w-3xl">
             <article className="space-y-8 leading-relaxed">
+              <GuideSection darkMode={darkMode} id="intro" heading={titles.intro}>
+                <p className={`text-lg md:text-xl ${p}`}>
+                  If you are trying to decide on the{" "}
+                  <strong className={strong}>best weight loss treatment in {name}</strong>, you have
+                  probably already noticed the same sentence copy-pasted across ten tabs. I am not
+                  going to pretend postcode changes the chemistry of semaglutide. It does, however,
+                  change who answers the phone when something goes wrong, how long you wait, and
+                  whether your GP surgery even knows you have started a pen.
+                </p>
+                <p className={p}>Short version: location shapes access more than it rewrites biology.</p>
+                <p className={p}>
+                  {care.nhsFrame} People near {name} still search the same handful of
+                  phrases—Wegovy, Mounjaro, “online clinic,” sometimes “NHS tier 3”—and those searches
+                  can collide with different realities on the ground.
+                </p>
+              </GuideSection>
+
               <GuideSection
                 darkMode={darkMode}
                 id="popular-searches"
-                heading={capitalizeHeadingWords(
-                  `What people near ${name} actually type into Google`,
-                )}
+                heading={titles.popularSearches}
               >
                 <p className={muted}>
                   These strings are not magic keywords on our side; they are a map of worry. A few
@@ -177,13 +201,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection
-                darkMode={darkMode}
-                id="pathways"
-                heading={capitalizeHeadingWords(
-                  `Pathways that tend to show up around ${name}`,
-                )}
-              >
+              <GuideSection darkMode={darkMode} id="pathways" heading={titles.pathways}>
                 <p className={p}>
                   NHS weight management in {nation} might still be the right first stop even when you
                   already know the name of a private drug. Dietitians can spot patterns—night shifts,
@@ -208,13 +226,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection
-                darkMode={darkMode}
-                id="terminology"
-                heading={capitalizeHeadingWords(
-                  "Terms that keep appearing in serious discussions (not ads)",
-                )}
-              >
+              <GuideSection darkMode={darkMode} id="terminology" heading={titles.terminology}>
                 <p className={p}>
                   <strong className={strong}>GLP-1 receptor agonists</strong> (for example
                   semaglutide) mimic a hormone line that affects appetite and gastric emptying.{" "}
@@ -234,11 +246,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection
-                darkMode={darkMode}
-                id="sources"
-                heading={capitalizeHeadingWords("Sources you can open in a second tab")}
-              >
+              <GuideSection darkMode={darkMode} id="sources" heading={titles.sources}>
                 <p className={muted}>
                   We link out on purpose. Health Wise should not be the only tab you trust.
                 </p>
@@ -264,11 +272,9 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 className={`scroll-mt-28 rounded-xl border p-5 ${border} ${boxBg}`}
               >
                 <h2
-                  className={`text-lg font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
+                  className={`text-xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
                 >
-                  {capitalizeHeadingWords(
-                    "Why you should treat Health Wise as a comparator, not a prescriber",
-                  )}
+                  {titles.trust}
                 </h2>
                 <div className={`mt-4 space-y-3 text-sm ${p}`}>
                   <p>
@@ -298,13 +304,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 </div>
               </section>
 
-              <GuideSection
-                darkMode={darkMode}
-                id="next-steps"
-                heading={capitalizeHeadingWords(
-                  `Practical next steps (UK-wide, including ${name})`,
-                )}
-              >
+              <GuideSection darkMode={darkMode} id="next-steps" heading={titles.nextSteps}>
                 <p className={p}>
                   Numbers on a screen can narrow choices; they cannot pick a pen for you. Start
                   somewhere small: compare two providers honestly, run your BMI with measurements you
@@ -353,9 +353,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 id="disclaimer"
                 className="scroll-mt-28 rounded-xl border border-amber-200 bg-amber-50/90 p-4 text-sm leading-relaxed text-amber-950"
               >
-                <h3 className="text-base font-semibold text-amber-950">
-                  {capitalizeHeadingWords("Disclaimer")}
-                </h3>
+                <h2 className="text-xl font-semibold text-amber-950">{titles.disclaimer}</h2>
                 <p className="mt-2">
                   This page is general information. Prescription medicines must be issued by someone
                   who can take responsibility for follow-up. If you are pregnant, planning pregnancy,
@@ -369,7 +367,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 <h2
                   className={`text-xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
                 >
-                  {capitalizeHeadingWords(`FAQ — ${name}`)}
+                  {titles.faq}
                 </h2>
                 <p className={`mt-2 text-sm ${muted}`}>
                   Same questions appear in the structured data on this page for search engines;
@@ -393,9 +391,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 id="more-uk"
                 className={`scroll-mt-28 rounded-xl border p-5 text-sm ${border} ${darkMode ? "bg-slate-900/60" : "bg-slate-50"}`}
               >
-                <h3 className={`text-lg font-semibold ${strong}`}>
-                  {capitalizeHeadingWords("Other places in the UK")}
-                </h3>
+                <h2 className={`text-xl font-semibold ${strong}`}>{titles.moreUk}</h2>
                 <p className={`mt-2 leading-relaxed ${p}`}>
                   Paginated blog grid for these posts:{" "}
                   <Link
@@ -413,10 +409,6 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                   </Link>
                   .
                 </p>
-              </div>
-
-              <div className="mt-10">
-                <InternalLinks links={internalLinksFor("blogUkLocation")} />
               </div>
             </article>
 

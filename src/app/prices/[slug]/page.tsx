@@ -7,8 +7,6 @@ import {
 } from "@/lib/seo/cheapest-options-page-seo";
 import { buildSeoMetadata } from "@/lib/seo/metadata";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
-import { internalLinksFor } from "@/lib/internal-linking";
-import InternalLinks from "@/components/content/InternalLinks";
 import ComparisonTable from "@/components/comparison/ComparisonTable";
 import { HOME_PREVIEW_PROVIDERS } from "@/lib/data/home-preview-providers";
 import TrustSignals from "@/components/trust/TrustSignals";
@@ -91,10 +89,6 @@ export default async function PricePage({ params }: Props) {
         </p>
         <ComparisonTable providers={HOME_PREVIEW_PROVIDERS} />
       </section>
-
-      <div className="mt-12">
-        <InternalLinks links={internalLinksFor(cfg.internal)} />
-      </div>
     </article>
   );
 }

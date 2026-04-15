@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BmiCalculatorClient from "@/components/tools/BmiCalculatorClient";
-import InternalLinks from "@/components/content/InternalLinks";
-import { internalLinksFor } from "@/lib/internal-linking";
 import {
   BMI_CALCULATOR_FAQ_BMI_ITEMS,
   BMI_CALCULATOR_FAQ_BMR_TDEE_ITEMS,
@@ -277,10 +275,6 @@ export default function BmiCalculatorPage() {
                 </Link>
               </li>
             </ul>
-          </div>
-
-          <div className="mt-16 border-t border-slate-200 pt-12">
-            <InternalLinks links={internalLinksFor("bmiCalculator")} />
           </div>
         </div>
       </article>

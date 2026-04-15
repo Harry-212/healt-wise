@@ -1,7 +1,6 @@
 import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
-import { internalLinksFor } from "@/lib/internal-linking";
 import {
   GuideLayout,
   GuideSection,
@@ -151,7 +150,6 @@ export default function GuideNorovirus() {
       readTime="4 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      internalLinks={internalLinksFor("guideNorovirus")}
       schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="how-affects" heading="How Norovirus Affects GLP-1 Medication Users">

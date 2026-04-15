@@ -15,8 +15,8 @@ const TOC = [
   { id: "side-effects", label: "Review Potential Side Effects" },
   { id: "eligibility", label: "Determine Eligibility And Usage" },
   { id: "lifestyle-changes", label: "Make Lifestyle Changes For Long-Term Results" },
-  { id: "faq", label: "FAQs About Mounjaro" },
-  { id: "references", label: "References" }
+  { id: "faq", label: "Frequently Asked Questions" },
+  { id: "conclusion", label: "Conclusion" },
 ];
 
 export default function ArticleClient() {
@@ -158,7 +158,7 @@ export default function ArticleClient() {
 
               <section id="faq" className={`mt-16 pt-10 border-t ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>
-                  FAQs About Mounjaro
+                  Frequently Asked Questions
                 </h2>
                 
                 <div className="space-y-8">
@@ -192,11 +192,13 @@ export default function ArticleClient() {
                     <p>A: Consult your GP before starting or stopping Mounjaro. You should also speak with them if you experience any severe side effects, or if you have any questions about dose changes, managing cravings, or your general health.</p>
                   </div>
                 </div>
+              </section>
 
-                <p className="mt-8">
+              <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
+                <p>
                   Mounjaro, or tirzepatide, can offer a valuable boost if you struggle with weight management, keeping you fuller for longer and helping lower blood sugar levels in the process. While it shows encouraging results, it is important to remember that any medication is just one part of a healthier, more balanced lifestyle. If you do choose Mounjaro, work closely with your healthcare provider, adopt beneficial eating and exercise habits, and monitor your well-being to help ensure lasting success. This information is not a substitute for professional medical advice. If you have further questions or concerns, always seek personalised guidance from your GP or a specialist.
                 </p>
-              </section>
+              </GuideSection>
 
               <GuideSection darkMode={darkMode} id="references" heading="References">
                 <ol className="list-decimal pl-5 space-y-2 text-sm">

@@ -112,6 +112,26 @@ const nextConfig: NextConfig = {
         destination: "/blog/best-weight-loss-treatment-in-:slug",
         permanent: true,
       },
+      {
+        source: "/blog/wegovy-uk-prices-overview",
+        destination: "/helpful-guides",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-vs-wegovy-costs",
+        destination: "/helpful-guides",
+        permanent: true,
+      },
+      {
+        source: "/blog/glp-1-safety-checklist",
+        destination: "/helpful-guides",
+        permanent: true,
+      },
+      {
+        source: "/blog/getting-started-glp1-uk",
+        destination: "/helpful-guides",
+        permanent: true,
+      },
       ...HELPFUL_GUIDE_SLUGS.map((slug) => ({
         source: `/${slug}`,
         destination: `/helpful-guides/${slug}`,

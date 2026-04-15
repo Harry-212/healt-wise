@@ -57,8 +57,12 @@ export default function CompareTreatmentsHero({
 }) {
   return (
     <section className="border-b border-slate-200/80">
-      <ShaderBackground variant={variant} staticOnly>
-        <header className="relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-6 pb-2 md:px-10 lg:px-14">
+      <ShaderBackground
+        variant={variant}
+        staticOnly
+        minHeight="min-h-[min(72svh,420px)] sm:min-h-[min(68svh,460px)] lg:min-h-[min(62svh,480px)]"
+      >
+        <header className="relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-4 pb-2 md:px-10 lg:px-14">
           <Link
             href="/"
             className="text-sm font-medium text-white/85 transition hover:text-white"
@@ -78,7 +82,7 @@ export default function CompareTreatmentsHero({
           </nav>
         </header>
 
-        <main className="relative z-20 flex flex-1 flex-col justify-end px-4 pb-12 pt-6 md:px-10 md:pb-16 lg:px-14 lg:pb-20">
+        <main className="relative z-20 flex flex-1 flex-col justify-start px-4 pt-2 pb-10 md:px-10 md:pb-14 lg:px-14 lg:pb-16">
           <div className="mx-auto w-full max-w-4xl text-center lg:mx-0 lg:max-w-3xl lg:text-left">
             <GlassPill>
               <span className="inline-flex items-center gap-1.5">

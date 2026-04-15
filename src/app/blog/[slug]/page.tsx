@@ -16,8 +16,6 @@ import {
   locationFaqJsonLd,
 } from "@/lib/content/uk-location-article-data";
 import { getUkWeightLossLocationBySlug } from "@/lib/data/uk-weight-loss-locations";
-import InternalLinks from "@/components/content/InternalLinks";
-import { internalLinksFor } from "@/lib/internal-linking";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { capitalizeHeadingWords } from "@/lib/text/heading-case";
 
@@ -119,9 +117,6 @@ export default async function BlogPostPage({ params }: Props) {
           >
             {mdPost.content}
           </ReactMarkdown>
-        </div>
-        <div className="mt-12">
-          <InternalLinks links={internalLinksFor("blog")} />
         </div>
       </article>
     );

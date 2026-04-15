@@ -17,7 +17,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-slate-200/90 bg-linear-to-b from-slate-50/95 via-brand-surface to-slate-100/40 pb-6 pt-16 mt-20">
+    <footer className="relative border-t border-slate-200/90 bg-linear-to-b from-slate-50/95 via-brand-surface to-slate-100/40 pb-6 pt-16 mt-0">
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-200/50 to-transparent"
         aria-hidden

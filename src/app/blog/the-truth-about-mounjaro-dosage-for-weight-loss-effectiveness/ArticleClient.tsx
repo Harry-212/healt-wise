@@ -17,9 +17,8 @@ const TOC = [
   { id: "side-effects", label: "Address potential side effects" },
   { id: "dosing-plan", label: "Build a clear dosing plan" },
   { id: "lasting", label: "Take steps for lasting results" },
-  { id: "faq", label: "FAQ" },
+  { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
-  { id: "references", label: "References" },
 ];
 
 const HERO_IMAGE = "https://i.ibb.co.com/N28zDM17/image.png";
@@ -70,11 +69,14 @@ export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}/blog/the-truth-about-mounjaro-dosage-for-weight-loss-effectiveness`;
 
+  const toggleDarkMode = () => setDarkMode(!darkMode);
+
   return (
     <div
       className={`w-full font-sans transition-colors duration-300 ${darkMode ? "bg-slate-950 text-slate-300" : "bg-white text-slate-800"}`}
     >
       <div className="mx-auto max-w-7xl px-4 pb-24 pt-8 sm:px-6 sm:pt-10 md:pt-12 lg:px-8">
+        {/* TOP NAVIGATION HEADER */}
         <div className="mb-10 flex items-center justify-between">
           <Link
             href="/blog"
@@ -92,7 +94,7 @@ export default function ArticleClient() {
             <Moon className={`h-4 w-4 ${darkMode ? "text-slate-300" : "text-slate-700"}`} />
             <button
               type="button"
-              onClick={() => setDarkMode(!darkMode)}
+              onClick={toggleDarkMode}
               className={`relative flex h-6 w-12 items-center rounded-full p-1 shadow-inner transition-colors ${darkMode ? "bg-slate-700" : "bg-slate-200"}`}
               aria-label="Toggle dark mode"
             >
@@ -104,6 +106,7 @@ export default function ArticleClient() {
           </div>
         </div>
 
+        {/* HERO HEADER */}
         <header className="mb-12">
           <h1
             className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? "text-white" : "text-slate-900"}`}
@@ -131,12 +134,15 @@ export default function ArticleClient() {
           />
         </header>
 
+        {/* CONTENT SPLIT LAYOUT */}
         <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
+          {/* LEFT: TOC */}
           {TOC.length > 0 && (
             <GuideTocSidebar key={TOC.map((t) => t.id).join("-")} toc={TOC} />
           )}
 
-          <div className="min-w-0 max-w-3xl flex-1">
+          {/* RIGHT: ARTICLE BODY */}
+          <div className="min-w-0 flex-1 max-w-3xl">
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <p className="text-lg md:text-xl">
                 Whether you have struggled with multiple diets or you are just beginning your weight loss journey, you
@@ -337,7 +343,9 @@ export default function ArticleClient() {
                 id="faq"
                 className={`mt-16 border-t pt-10 ${darkMode ? "border-slate-800" : "border-slate-200"}`}
               >
-                <h2 className={`mb-8 text-3xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>FAQ</h2>
+                <h2 className={`mb-8 text-3xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
+                  Frequently Asked Questions
+                </h2>
                 <div className="space-y-8">
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>

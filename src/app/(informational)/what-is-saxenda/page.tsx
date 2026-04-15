@@ -12,8 +12,6 @@ import {
 } from "@/components/saxenda/saxenda-what-is-deferred";
 import SaxendaPenTilt from "@/components/saxenda/SaxendaPenTilt";
 import SaxendaPageToc from "@/components/saxenda/SaxendaPageToc";
-import InternalLinks from "@/components/content/InternalLinks";
-import { internalLinksFor } from "@/lib/internal-linking";
 import {
   saxendaArticleJsonLd,
   saxendaFaqJsonLd,
@@ -723,11 +721,6 @@ export default function WhatIsSaxendaPage() {
                 </ol>
               </div>
             </section>
-
-            <InternalLinks
-              title="Keep exploring Health Wise"
-              links={internalLinksFor("whatIsSaxenda")}
-            />
           </div>
         </div>
       </article>

@@ -5,8 +5,6 @@ import SaxendaCompareChartsSection from "@/components/compare/SaxendaCompareChar
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import SaxendaCompareShaderHero from "@/components/saxenda/SaxendaCompareShaderHero";
 import SaxendaUkCompareTable from "@/components/saxenda/SaxendaUkCompareTable";
-import InternalLinks from "@/components/content/InternalLinks";
-import { internalLinksFor } from "@/lib/internal-linking";
 import {
   SAXENDA_UK_COMPARE_LAST_UPDATED,
   SAXENDA_UK_COMPARE_PROVIDERS,
@@ -351,10 +349,6 @@ export default function CompareSaxendaPricesUkPage() {
             </div>
           </div>
         </section>
-
-        <div className="mx-auto max-w-4xl px-4 pb-16 pt-8 sm:px-5 sm:py-10 md:px-8 md:py-12">
-          <InternalLinks links={internalLinksFor("saxendaPriceCompare")} />
-        </div>
       </article>
     </>
   );
