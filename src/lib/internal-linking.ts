@@ -363,6 +363,15 @@ const MAP = {
     price: { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
     tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
   },
+  blogUkLocation: {
+    compare: [
+      { href: "/compare/best-weight-loss-injections-uk", label: "Best weight loss injections UK" },
+      { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+      { href: "/blog?topic=locations", label: "UK city guides on the blog" },
+    ],
+    price: { href: "/prices/cheapest-options-uk", label: "Cheapest options UK" },
+    tool: { href: "/tools/bmi-calculator", label: "BMI & Calorie calculator" },
+  },
 } as const satisfies Record<string, Partial<InternalLinkSet>>;
 
 export type InternalTopic = keyof typeof MAP;

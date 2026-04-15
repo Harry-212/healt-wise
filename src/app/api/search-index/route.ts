@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
 import { STATIC_SEARCH_ITEMS } from "@/lib/search/static-search";
-import { getAllPostsMeta } from "@/lib/blog";
+import { blogPostHref, getAllPostsMeta } from "@/lib/blog";
 
 export async function GET() {
   const posts = getAllPostsMeta().map((p) => ({
     type: "Blog" as const,
     title: p.title,
-    href: `/blog/${p.slug}`,
+    href: blogPostHref(p),
     keywords: `${p.category} ${p.description}`,
   }));
 

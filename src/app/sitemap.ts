@@ -1,12 +1,8 @@
 import fs from "fs";
 import path from "path";
 import type { MetadataRoute } from "next";
-import {
-  getAllPostsMeta,
-  getAllSlugs,
-  POSTS_PER_PAGE,
-  totalPages,
-} from "@/lib/blog";
+import { getAllPostsMeta, getAllSlugs, totalPages } from "@/lib/blog";
+import { POSTS_PER_PAGE } from "@/lib/blog-feed";
 import { COMPARE_SLUGS } from "@/lib/routes/compare-slugs";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import { MOUNJARO_UK_COMPARE_PROVIDERS } from "@/lib/data/mounjaro-uk-compare-providers";
@@ -14,6 +10,7 @@ import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-prov
 import { WEGOVY_UK_COMPARE_PROVIDERS } from "@/lib/data/wegovy-uk-compare-providers";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { HELPFUL_GUIDES_HUB_PATH, helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { getAllUkLocationArticleSlugs } from "@/lib/blog";
 
 /** Guide URLs under /helpful-guides/: only folders on disk with a page.tsx file. */
 function helpfulGuideSlugsOnDisk(): string[] {
@@ -122,6 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const blogSlugs = new Set<string>([
       ...getAllSlugs(),
       ...blogArticleSlugsOnDisk(),
+      ...getAllUkLocationArticleSlugs(),
     ]);
     for (const slug of blogSlugs) {
       push(`/blog/${slug}`, 0.65);

@@ -1,6 +1,10 @@
 -- Run in Supabase SQL editor after creating a project.
 -- Enables My Hub weight tracking with Row Level Security.
--- Auth: use Supabase Authentication (email/password). Add /auth/callback to Redirect URLs in the dashboard.
+-- Auth: use Supabase Authentication (email/password).
+-- Dashboard → Authentication → URL Configuration: add your site URL and Redirect URLs including
+--   /auth/callback
+--   /auth/callback?next=/my-hub/login/set-password   (password reset completes on /my-hub/login/set-password)
+-- Email templates: optional branded HTML lives in supabase/email-templates/ (paste body into the dashboard).
 
 create table if not exists public.weight_entries (
   id uuid primary key default gen_random_uuid(),

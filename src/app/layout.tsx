@@ -47,11 +47,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full max-w-full overflow-x-clip antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full max-w-full antialiased`}
       suppressHydrationWarning
     >
       <body
-        className="flex min-h-full max-w-full flex-col overflow-x-clip bg-background font-sans text-foreground antialiased"
+        className="flex min-h-full max-w-full flex-col bg-background font-sans text-foreground antialiased"
         style={{
           minHeight: "100vh",
           display: "flex",
@@ -61,7 +61,7 @@ export default function RootLayout({
         <SupabaseAuthProvider>
           <NavBar />
           <AnnouncementBar />
-          <main className="min-w-0 flex-1 overflow-x-clip pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+          <main className="min-w-0 flex-1 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
             {children}
           </main>
           <Footer />

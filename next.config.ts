@@ -3,6 +3,10 @@ import { HELPFUL_GUIDE_SLUGS } from "./src/lib/helpful-guide-slugs";
 
 const nextConfig: NextConfig = {
   images: {
+    /** Allow `quality` on `<Image>` — include 80 so older chunks / defaults never throw at runtime. */
+    qualities: [50, 60, 70, 75, 80, 85, 90],
+    /** Prefer modern formats from the image optimizer (smaller than JPEG/PNG). */
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         protocol: "https",
@@ -101,6 +105,11 @@ const nextConfig: NextConfig = {
       {
         source: "/prices/saxenda-price-uk",
         destination: "/saxenda-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/blog/uk-weight-loss/:slug",
+        destination: "/blog/best-weight-loss-treatment-in-:slug",
         permanent: true,
       },
       ...HELPFUL_GUIDE_SLUGS.map((slug) => ({

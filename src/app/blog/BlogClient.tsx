@@ -10,70 +10,19 @@ import {
   BookOpen,
   ChevronDown,
   LayoutGrid,
+  MapPin,
   Pill,
   Syringe,
 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import type { BlogFeedTag } from "@/lib/blog-feed";
+import type { FeedArticle } from "@/lib/blog-feed";
+import { imgbbDisplaySrc } from "@/lib/imgbb-display-src";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export type ArticleTag = "wegovy" | "mounjaro" | "how-it-works" | "guides" | "safety";
-
-type Article = {
-  title: string;
-  image: string;
-  description: string;
-  href: string;
-  tags: ArticleTag[];
-};
-
-const ARTICLES: Article[] = [
-  {
-    title: "How Does Wegovy Work to Transform Your Weight Journey",
-    image: "https://i.ibb.co.com/qYntkdQh/how-does-wegovy-work.png",
-    description: "Discover exactly how the Wegovy weight loss injection works in your body, from mimicking the GLP-1 hormone to reducing appetite and slowing gastric emptying.",
-    href: "/blog/how-does-wegovy-work-to-transform-your-weight-journey",
-    tags: ["wegovy", "how-it-works"],
-  },
-  {
-    title: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
-    image: "https://i.ibb.co.com/cSgqJLYC/image.png",
-    description: "Learn how Mounjaro dosage works, the stages from 2.5 mg to higher doses, potential side effects, and long-term success strategies.",
-    href: "/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust",
-    tags: ["mounjaro", "guides"],
-  },
-  {
-    title: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
-    image: "https://i.ibb.co.com/Ndr2MsY9/image.png",
-    description: "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
-    href: "/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk",
-    tags: ["wegovy", "safety"],
-  },
-  {
-    title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
-    image: "https://i.ibb.co.com/TjdVknY/image.png",
-    description: "Follow clear wegovy injection instructions to confidently start your UK weight loss journey today.",
-    href: "/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust",
-    tags: ["wegovy", "guides"],
-  },
-  {
-    title: "Discover If Mounjaro Is Safe for Weight Loss and Right for You",
-    image: "https://i.ibb.co.com/xqyv8wc3/image.png",
-    description: "Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding.",
-    href: "/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you",
-    tags: ["mounjaro", "safety"],
-  },
-  {
-    title: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
-    image: "https://i.ibb.co.com/k2NjLMfp/image.png",
-    description: "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
-    href: "/blog/does-mounjaro-really-work-for-weight-loss-find-out-here",
-    tags: ["mounjaro", "how-it-works"],
-  },
-];
-
-type FilterId = "all" | ArticleTag;
+type FilterId = "all" | BlogFeedTag;
 
 type FilterOption = {
   id: FilterId;
@@ -89,55 +38,116 @@ const FILTER_OPTIONS: FilterOption[] = [
   { id: "how-it-works", label: "How it works", icon: BookOpen, description: "Mechanism & effectiveness" },
   { id: "guides", label: "How-to & dosage", icon: Syringe, description: "Dosing, injections & instructions" },
   { id: "safety", label: "Costs & safety", icon: BadgePoundSterling, description: "UK cost, eligibility & safety" },
+  {
+    id: "locations",
+    label: "Locations in UK",
+    icon: MapPin,
+    description: "City & town weight loss treatment guides",
+  },
 ];
 
-export default function BlogClient() {
+function topicHref(topic: FilterId): string {
+  if (topic === "all") return "/blog";
+  return `/blog?topic=${topic}`;
+}
+
+function pageHref(page: number, topic: BlogFeedTag | "all"): string {
+  const q = topic !== "all" ? `?topic=${topic}` : "";
+  if (page <= 1) return `/blog${q}`;
+  return `/blog/page/${page}${q}`;
+}
+
+function TopicFilterLinks({ activeTopic }: { activeTopic: BlogFeedTag | "all" }) {
+  return (
+    <div className="flex flex-wrap gap-2 sm:gap-3">
+      {FILTER_OPTIONS.map(({ id, label, icon: Icon, description }) => {
+        const selected = activeTopic === id;
+        return (
+          <Link
+            key={id}
+            href={topicHref(id)}
+            title={description}
+            aria-current={selected ? "page" : undefined}
+            className={[
+              "inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-sm font-medium transition-all duration-200",
+              "hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-50 hover:shadow-md",
+              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3562ff] focus-visible:ring-offset-2",
+              selected
+                ? "border-[#3562ff] bg-[#3562ff] text-white shadow-sm hover:border-[#2a4fd6] hover:bg-[#2a4fd6]"
+                : "border-slate-200 bg-white text-slate-800",
+            ].join(" ")}
+          >
+            <Icon
+              className={`h-4 w-4 shrink-0 ${selected ? "text-white" : "text-slate-500"}`}
+              strokeWidth={2}
+              aria-hidden
+            />
+            <span>{label}</span>
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
+export type BlogClientProps = {
+  articles: FeedArticle[];
+  currentPage: number;
+  totalPages: number;
+  activeTopic: BlogFeedTag | "all";
+};
+
+export default function BlogClient({
+  articles,
+  currentPage,
+  totalPages,
+  activeTopic,
+}: BlogClientProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const articlesRef = useRef<HTMLDivElement>(null);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [sortMethod, setSortMethod] = useState("Date Desc");
-  const [activeFilter, setActiveFilter] = useState<FilterId>("all");
 
-  const filteredArticles = useMemo(() => {
-    const base =
-      activeFilter === "all"
-        ? [...ARTICLES]
-        : ARTICLES.filter((a) => a.tags.includes(activeFilter));
-
-    const byTitle = (a: Article, b: Article) => a.title.localeCompare(b.title);
-    if (sortMethod === "Title Asc") return [...base].sort(byTitle);
-    if (sortMethod === "Title Desc") return [...base].sort((a, b) => b.title.localeCompare(a.title));
+  const sortedArticles = useMemo(() => {
+    const base = [...articles];
+    const byTitle = (a: FeedArticle, b: FeedArticle) => a.title.localeCompare(b.title);
+    if (sortMethod === "Title Asc") return base.sort(byTitle);
+    if (sortMethod === "Title Desc") return base.sort((a, b) => b.title.localeCompare(a.title));
     return base;
-  }, [activeFilter, sortMethod]);
+  }, [articles, sortMethod]);
+
+  const featured = sortedArticles[0];
+  /** Hero right column — three posts after the featured slot (1 large + 3 list). */
+  const heroSideList = sortedArticles.slice(1, 4);
+  /** Every post on this page still appears as a card in the grid below the hero. */
+  const gridArticles = sortedArticles;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Hero Animation
       const tl = gsap.timeline();
       tl.fromTo(
         ".hero-stagger",
         { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out" }
+        { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out" },
       );
 
-      // Articles Scroll Animation
       gsap.fromTo(
         ".article-card",
-        { y: 50, opacity: 0 },
+        { y: 28, opacity: 1 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
-          stagger: 0.1,
+          duration: 0.55,
+          stagger: 0.06,
           ease: "power2.out",
           scrollTrigger: {
             trigger: articlesRef.current,
-            start: "top 75%",
+            start: "top 82%",
           },
-        }
+        },
       );
-      
+
       gsap.fromTo(
         ".articles-header",
         { y: 20, opacity: 0 },
@@ -150,157 +160,147 @@ export default function BlogClient() {
             trigger: articlesRef.current,
             start: "top 85%",
           },
-        }
+        },
       );
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [sortedArticles, currentPage, activeTopic]);
 
   return (
-    <div ref={containerRef} className="w-full bg-slate-950 font-sans">
-      {/* HERO SECTION */}
+    <div
+      ref={containerRef}
+      key={`${currentPage}-${activeTopic}`}
+      className="w-full bg-slate-950 font-sans"
+    >
       <section
         ref={heroRef}
-        className="text-white px-4 pt-10 pb-16 sm:px-8 md:px-12 max-w-screen-xl mx-auto"
+        className="mx-auto max-w-screen-xl px-4 pb-16 pt-10 text-white sm:px-8 md:px-12"
       >
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          {/* Left: Featured */}
-          {ARTICLES.length > 0 && (
-            <div className="lg:w-7/12 flex flex-col gap-6 hero-stagger">
-              <Link href={ARTICLES[0].href} className="group cursor-pointer block relative">
-                <div className="relative w-full aspect-[16/9] md:aspect-[2/1] lg:aspect-video rounded-[24px] overflow-hidden bg-slate-800">
+        {featured ? (
+          <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
+            <div className="flex flex-col gap-6 lg:w-7/12 hero-stagger">
+              <Link href={featured.href} className="group relative block cursor-pointer">
+                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[24px] bg-slate-800 md:aspect-[2/1] lg:aspect-video">
                   <Image
-                    src={ARTICLES[0].image}
-                    alt={ARTICLES[0].title}
+                    src={imgbbDisplaySrc(featured.image)}
+                    alt={featured.title}
                     fill
-                    unoptimized={ARTICLES[0].image.includes('ibb')}
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                    quality={70}
+                    unoptimized={imgbbDisplaySrc(featured.image).startsWith("/api/")}
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     priority
+                    fetchPriority="high"
                     loading="eager"
                   />
-                  <div className="absolute top-5 left-5 z-10">
-                    <span className="bg-[#c25e42] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                  <div className="absolute left-5 top-5 z-10">
+                    <span className="rounded-full bg-[#c25e42] px-3 py-1.5 text-xs font-semibold text-white">
                       Featured
                     </span>
                   </div>
                 </div>
-                <h1 className="mt-6 text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-white transition-colors group-hover:text-[#9ea7ff] leading-tight">
-                  {ARTICLES[0].title}
+                <h1 className="mt-6 text-2xl font-medium leading-tight tracking-tight text-white transition-colors group-hover:text-[#9ea7ff] sm:text-3xl md:text-4xl">
+                  {featured.title}
                 </h1>
               </Link>
               <div>
                 <Link
-                  href={ARTICLES[0].href}
-                  className="text-[#9ea7ff] hover:text-[#b5bcff] text-sm font-medium flex items-center transition-colors w-fit"
+                  href={featured.href}
+                  className="flex w-fit items-center text-sm font-medium text-[#9ea7ff] transition-colors hover:text-[#b5bcff]"
                 >
-                  Continue Reading <span className="ml-1 transition-transform group-hover:translate-x-1">&rarr;</span>
+                  Continue Reading{" "}
+                  <span className="ml-1 transition-transform group-hover:translate-x-1">&rarr;</span>
                 </Link>
               </div>
             </div>
-          )}
 
-          {/* Right: Most Recent */}
-          <div className="lg:w-5/12 flex flex-col gap-5 pt-2">
-            <h2 className="text-lg font-medium mb-1 hero-stagger text-slate-300">Most recent</h2>
-            <div className="flex flex-col gap-6">
-              {ARTICLES.slice(0, 4).map((post, idx) => (
-                <Link href={post.href} key={idx} className="group flex gap-4 items-center hero-stagger cursor-pointer">
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-[16px] overflow-hidden bg-slate-800">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      unoptimized={post.image.includes('ibb')}
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-center">
-                    <h3 className="text-[15px] sm:text-[16px] font-medium leading-snug text-white transition-colors group-hover:text-[#9ea7ff] line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <div className="text-slate-400 group-hover:text-slate-300 text-[13px] font-medium mt-2 flex items-center transition-colors">
-                      Read <span className="ml-1 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0">&rarr;</span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+            <div className="flex flex-col gap-5 pt-2 lg:w-5/12">
+              <h2 className="mb-1 text-lg font-medium text-slate-300 hero-stagger">On this page</h2>
+              <div className="flex flex-col gap-6">
+                {heroSideList.map((post, idx) => {
+                  const thumbSrc = imgbbDisplaySrc(post.image);
+                  const thumbUnopt = thumbSrc.startsWith("/api/");
+                  return (
+                    <Link
+                      href={post.href}
+                      key={`${post.href}-${idx}`}
+                      className="group hero-stagger flex cursor-pointer items-center gap-4"
+                    >
+                      <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-[16px] bg-slate-800 sm:h-24 sm:w-24">
+                        <Image
+                          src={thumbSrc}
+                          alt={post.title}
+                          fill
+                          sizes="96px"
+                          quality={70}
+                          unoptimized={thumbUnopt}
+                          loading="lazy"
+                          fetchPriority="low"
+                          priority={false}
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                      </div>
+                      <div className="flex flex-col justify-center">
+                        <h3 className="line-clamp-2 text-[15px] font-medium leading-snug text-white transition-colors group-hover:text-[#9ea7ff] sm:text-[16px]">
+                          {post.title}
+                        </h3>
+                        <div className="mt-2 flex items-center text-[13px] font-medium text-slate-400 transition-colors group-hover:text-slate-300">
+                          Read{" "}
+                          <span className="ml-1 opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100 -translate-x-2">
+                            &rarr;
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <p className="py-12 text-center text-slate-400">
+            No articles match this filter. Try &quot;All&quot; or another topic.
+          </p>
+        )}
       </section>
 
-      {/* ARTICLES SECTION */}
       <section
         ref={articlesRef}
-        className="bg-white text-slate-900 rounded-t-[40px] px-4 sm:px-8 md:px-12 py-16 min-h-screen"
+        className="min-h-screen rounded-t-[40px] bg-white px-4 py-16 text-slate-900 sm:px-8 md:px-12"
       >
-        <div className="max-w-screen-2xl mx-auto">
-          {/* Article filters */}
-          <div
-            className="articles-header mb-10 -mt-2"
-            role="toolbar"
-            aria-label="Filter articles by topic"
-          >
-            <p className="text-xs font-medium uppercase tracking-wide text-slate-400 mb-3">
-              Topics
-            </p>
-            <div className="flex flex-wrap gap-2 sm:gap-3">
-              {FILTER_OPTIONS.map(({ id, label, icon: Icon, description }) => {
-                const selected = activeFilter === id;
-                return (
-                  <button
-                    key={id}
-                    type="button"
-                    title={description}
-                    aria-pressed={selected}
-                    onClick={() => setActiveFilter(id)}
-                    className={[
-                      "inline-flex items-center gap-2 rounded-full border px-3.5 py-2 text-sm font-medium transition-all duration-200",
-                      "hover:-translate-y-0.5 hover:shadow-md hover:border-slate-300 hover:bg-slate-50",
-                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3562ff] focus-visible:ring-offset-2",
-                      selected
-                        ? "border-[#3562ff] bg-[#3562ff] text-white shadow-sm hover:bg-[#2a4fd6] hover:border-[#2a4fd6]"
-                        : "border-slate-200 bg-white text-slate-800",
-                    ].join(" ")}
-                  >
-                    <Icon
-                      className={`h-4 w-4 shrink-0 ${selected ? "text-white" : "text-slate-500"}`}
-                      strokeWidth={2}
-                      aria-hidden
-                    />
-                    <span>{label}</span>
-                  </button>
-                );
-              })}
-            </div>
+        <div className="mx-auto max-w-screen-2xl">
+          <div className="articles-header -mt-2 mb-10" role="toolbar" aria-label="Filter articles by topic">
+            <p className="mb-3 text-xs font-medium uppercase tracking-wide text-slate-400">Topics</p>
+            <TopicFilterLinks activeTopic={activeTopic} />
           </div>
 
-          {/* Section Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 articles-header relative z-20">
+          <div className="articles-header relative z-20 mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
-              <h2 className="text-3xl font-medium mb-3">Articles</h2>
-              <p className="text-slate-500 text-[15px]">
-                Stay informed with the latest news, views, product releases and more.
-              </p>
+              <h2 className="mb-3 text-3xl font-medium">Articles</h2>
             </div>
-            
-            {/* Sort Dropdown */}
+
             <div className="relative">
-              <button 
+              <button
+                type="button"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center justify-between w-40 px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded-lg text-sm font-medium text-slate-800 transition-colors border border-transparent shadow-sm"
+                className="flex w-40 items-center justify-between rounded-lg border border-transparent bg-slate-100 px-4 py-2 text-sm font-medium text-slate-800 shadow-sm transition-colors hover:bg-slate-200"
               >
                 {sortMethod}
-                <ChevronDown className="w-4 h-4 text-slate-500" />
+                <ChevronDown className="h-4 w-4 text-slate-500" />
               </button>
-              
-              {dropdownOpen && (
-                <div className="absolute right-0 mt-2 w-40 bg-white border border-slate-200 rounded-lg shadow-lg overflow-hidden py-1 z-30 flex flex-col">
+
+              {dropdownOpen ? (
+                <div className="absolute right-0 z-30 mt-2 flex w-40 flex-col overflow-hidden rounded-lg border border-slate-200 bg-white py-1 shadow-lg">
                   {["Date Asc", "Date Desc", "Title Asc", "Title Desc"].map((option) => (
                     <button
                       key={option}
-                      className={`text-left px-4 py-2.5 text-sm hover:bg-slate-50 transition-colors ${sortMethod === option ? 'bg-[#3562ff] text-white hover:bg-[#3562ff]' : 'text-slate-700'}`}
+                      type="button"
+                      className={`px-4 py-2.5 text-left text-sm transition-colors hover:bg-slate-50 ${
+                        sortMethod === option
+                          ? "bg-[#3562ff] text-white hover:bg-[#3562ff]"
+                          : "text-slate-700"
+                      }`}
                       onClick={() => {
                         setSortMethod(option);
                         setDropdownOpen(false);
@@ -310,44 +310,86 @@ export default function BlogClient() {
                     </button>
                   ))}
                 </div>
-              )}
+              ) : null}
             </div>
           </div>
 
-          {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
-            {filteredArticles.length === 0 ? (
-              <p className="col-span-full text-center text-slate-500 py-12 text-[15px]">
-                No articles match this filter. Try another topic.
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+            {gridArticles.length === 0 ? (
+              <p className="col-span-full py-12 text-center text-[15px] text-slate-500">
+                No more cards on this page slice, or empty page.
               </p>
             ) : null}
-            {filteredArticles.map((article) => (
-              <Link href={article.href} key={article.href} className="group flex flex-col article-card cursor-pointer h-full">
-                <div className="relative w-full aspect-[3/2] sm:aspect-[16/9] rounded-[20px] overflow-hidden bg-slate-100 mb-4 shrink-0">
-                  <Image
-                    src={article.image}
-                    alt={article.title}
-                    fill
-                    unoptimized={article.image.includes('ibb')}
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-col flex-1 pl-1 pr-2">
-                  <h3 className="text-lg sm:text-[20px] font-semibold text-slate-900 transition-colors group-hover:text-[#3562ff] leading-snug mb-2">
-                    {article.title}
-                  </h3>
-                  {article.description && (
-                    <p className="text-[15px] leading-relaxed text-slate-500 line-clamp-3 mb-5 flex-1">
-                      {article.description}
-                    </p>
-                  )}
-                  <div className="mt-auto text-[#3562ff] font-semibold text-[15px] flex items-center group-hover:text-[#1e3bb3] transition-colors">
-                    Read more <span className="ml-1.5 transition-transform group-hover:translate-x-1">&rarr;</span>
+            {gridArticles.map((article, index) => {
+              const cardSrc = imgbbDisplaySrc(article.image);
+              const cardUnopt = cardSrc.startsWith("/api/");
+              return (
+                <Link
+                  href={article.href}
+                  key={`${article.href}-${index}`}
+                  className="article-card group flex h-full cursor-pointer flex-col"
+                >
+                  <div className="relative mb-4 aspect-[3/2] w-full shrink-0 overflow-hidden rounded-[20px] bg-slate-100 sm:aspect-[16/9]">
+                    <Image
+                      src={cardSrc}
+                      alt={article.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      quality={70}
+                      unoptimized={cardUnopt}
+                      loading="lazy"
+                      decoding="async"
+                      fetchPriority="low"
+                      priority={false}
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
                   </div>
-                </div>
-              </Link>
-            ))}
+                  <div className="flex flex-1 flex-col pl-1 pr-2">
+                    <h3 className="mb-2 text-lg font-semibold leading-snug text-slate-900 transition-colors group-hover:text-[#3562ff] sm:text-[20px]">
+                      {article.title}
+                    </h3>
+                    {article.description ? (
+                      <p className="mb-5 line-clamp-3 flex-1 text-[15px] leading-relaxed text-slate-500">
+                        {article.description}
+                      </p>
+                    ) : null}
+                    <div className="mt-auto flex items-center text-[15px] font-semibold text-[#3562ff] transition-colors group-hover:text-[#1e3bb3]">
+                      Read more{" "}
+                      <span className="ml-1.5 transition-transform group-hover:translate-x-1">&rarr;</span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
+
+          {totalPages > 1 ? (
+            <>
+              <div
+                className="mt-14 border-t border-slate-100 pt-10"
+                role="toolbar"
+                aria-label="Filter articles by topic (repeat)"
+              >
+                <p className="mb-3 text-xs font-medium uppercase tracking-wide text-slate-400">Topics</p>
+                <TopicFilterLinks activeTopic={activeTopic} />
+              </div>
+              <nav className="mt-10 flex flex-wrap justify-center gap-2" aria-label="Blog pagination">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+                  <Link
+                    key={n}
+                    href={pageHref(n, activeTopic)}
+                    className={`inline-flex min-h-10 min-w-10 touch-manipulation items-center justify-center rounded-lg px-3 py-2 text-sm ${
+                      n === currentPage
+                        ? "bg-[#3562ff] text-white"
+                        : "border border-slate-200 text-slate-800 hover:bg-slate-50"
+                    }`}
+                  >
+                    {n}
+                  </Link>
+                ))}
+              </nav>
+            </>
+          ) : null}
         </div>
       </section>
     </div>

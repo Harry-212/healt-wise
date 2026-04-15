@@ -74,7 +74,7 @@ export default function ArticleClient() {
         </header>
 
         {/* CONTENT SPLIT LAYOUT */}
-        <div className="flex flex-col xl:flex-row gap-10 xl:gap-16">
+        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
           
           {/* LEFT: TOC */}
           {TOC.length > 0 && <GuideTocSidebar toc={TOC} />}
