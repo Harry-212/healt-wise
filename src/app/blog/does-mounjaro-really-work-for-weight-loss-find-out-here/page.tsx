@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
   keywords: "how does mounjaro work for weight loss",
+  alternates: {
+    canonical: `${siteOrigin()}/blog/does-mounjaro-really-work-for-weight-loss-find-out-here`,
+  },
   openGraph: {
     title: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
     description:

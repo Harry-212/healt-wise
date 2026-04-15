@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Stethoscope } from "lucide-react";
+import { siteOrigin } from "@/lib/seo/site-origin";
 import HeroNumanStyle from "@/components/ui/HeroNumanStyle";
 import AboutSection2 from "@/components/ui/about-section-2";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
@@ -10,6 +11,9 @@ import WhyChooseHealthWise from "@/components/ui/WhyChooseHealthWise";
 export const metadata: Metadata = {
   description:
     "Independent UK comparison for GLP-1 prices, safety, and support. Compare providers, monthly costs, and verified pharmacy options. Updated 2026.",
+  alternates: {
+    canonical: `${siteOrigin()}/`,
+  },
 };
 
 export default function Homepage() {

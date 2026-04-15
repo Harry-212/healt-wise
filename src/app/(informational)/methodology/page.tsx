@@ -1,4 +1,15 @@
-import { Activity, Clock, Scale } from 'lucide-react';
+import type { Metadata } from "next";
+import { Activity, Clock, Scale } from "lucide-react";
+import { siteOrigin } from "@/lib/seo/site-origin";
+
+export const metadata: Metadata = {
+  title: "Our Methodology",
+  description:
+    "How Health Wise evaluates and ranks UK GLP-1 providers: independence, data sources, and safety checks.",
+  alternates: {
+    canonical: `${siteOrigin()}/methodology`,
+  },
+};
 
 export default function Methodology() {
   return (

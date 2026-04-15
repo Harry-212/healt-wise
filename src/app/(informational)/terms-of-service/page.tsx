@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import LegalScrollyClient from "@/components/legal/LegalScrollyClient";
+import { siteOrigin } from "@/lib/seo/site-origin";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms governing use of the Health Wise website: acceptable use, disclaimers, intellectual property, liability limits, and governing law.",
+  alternates: {
+    canonical: `${siteOrigin()}/terms-of-service`,
+  },
 };
 
 const LAST = "12 April 2026";

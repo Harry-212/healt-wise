@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cfg = PRICE_SLUGS[slug];
   if (!cfg) return {};
   if (slug === "cheapest-options-uk") return cheapestOptionsUkMetadata();
-  return buildSeoMetadata(cfg.keyword);
+  return buildSeoMetadata(cfg.keyword, `/prices/${slug}`);
 }
 
 export default async function PricePage({ params }: Props) {

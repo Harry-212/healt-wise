@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "Find out how your mounjaro dosage for weight loss can deliver safe, effective results with trusted UK advice.",
   keywords: "mounjaro dosage for weight loss",
+  alternates: {
+    canonical: `${siteOrigin()}/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust`,
+  },
   openGraph: {
     title: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
     description:

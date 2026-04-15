@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import LegalScrollyClient from "@/components/legal/LegalScrollyClient";
+import { siteOrigin } from "@/lib/seo/site-origin";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "How Health Wise handles personal data for accounts and tools, what we store locally, cookies, and your UK GDPR-aligned rights.",
+  alternates: {
+    canonical: `${siteOrigin()}/privacy-policy`,
+  },
 };
 
 const LAST = "12 April 2026";

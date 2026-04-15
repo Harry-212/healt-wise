@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords: "mounjaro weight loss",
+  alternates: {
+    canonical: `${siteOrigin()}${PATH}`,
+  },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,

@@ -24,6 +24,7 @@ import {
   SAXENDA_UK_COMPARE_LAST_UPDATED,
   SAXENDA_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/saxenda-uk-compare-providers";
+import { siteOrigin } from "@/lib/seo/site-origin";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -52,10 +53,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (m) meds.push("Mounjaro");
   if (s) meds.push("Saxenda");
 
+  const canonical = `${siteOrigin()}/pharmacies/${slug}`;
   return {
     title: `${name} — ${meds.join(" & ")} UK prices (2026)`,
     description: `Independent snapshot: ${name} — illustrative ${meds.join(" and ")} pen prices and delivery notes on Health Wise.`,
+    alternates: { canonical },
     openGraph: {
+      type: "website",
+      url: canonical,
       title: `${name} — UK pharmacy`,
       description: `Provider profile and illustrative pricing for ${name}.`,
     },

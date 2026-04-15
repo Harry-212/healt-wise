@@ -1,7 +1,18 @@
-import Link from 'next/link';
-import { ArrowLeft, Stethoscope } from 'lucide-react';
-import ProviderCard from '@/components/ui/ProviderCard';
-import { PharmacyProvider } from '@/lib/types/provider';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft, Stethoscope } from "lucide-react";
+import ProviderCard from "@/components/ui/ProviderCard";
+import { PharmacyProvider } from "@/lib/types/provider";
+import { siteOrigin } from "@/lib/seo/site-origin";
+
+export const metadata: Metadata = {
+  title: "Wegovy price list UK",
+  description:
+    "Dose-by-dose Wegovy price index across UK pharmacies — illustrative snapshot on Health Wise.",
+  alternates: {
+    canonical: `${siteOrigin()}/wegovy-price-list`,
+  },
+};
 
 const MOCK_PROVIDERS: PharmacyProvider[] = [
   {

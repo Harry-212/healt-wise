@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "Follow clear wegovy injection instructions to confidently start your UK weight loss journey today.",
   keywords: "wegovy injection instructions",
+  alternates: {
+    canonical: `${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`,
+  },
   openGraph: {
     title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
     description:

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
   keywords: "wegovy weight loss medication",
+  alternates: {
+    canonical: `${siteOrigin()}/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk`,
+  },
   openGraph: {
     title: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
     description:

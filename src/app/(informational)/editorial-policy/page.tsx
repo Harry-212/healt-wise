@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import LegalScrollyClient from "@/components/legal/LegalScrollyClient";
+import { siteOrigin } from "@/lib/seo/site-origin";
 
 export const metadata: Metadata = {
   title: "Editorial Policy",
   description:
     "How Health Wise produces independent UK GLP-1 comparison content: standards, corrections, conflicts, and medical-information boundaries.",
+  alternates: {
+    canonical: `${siteOrigin()}/editorial-policy`,
+  },
 };
 
 const LAST = "12 April 2026";

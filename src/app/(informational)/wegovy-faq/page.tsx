@@ -1,4 +1,15 @@
-import { HelpCircle } from 'lucide-react';
+import type { Metadata } from "next";
+import { HelpCircle } from "lucide-react";
+import { siteOrigin } from "@/lib/seo/site-origin";
+
+export const metadata: Metadata = {
+  title: "Wegovy FAQs",
+  description:
+    "Common questions about Wegovy in the UK: maintenance dosing, pricing, and pharmacy policies.",
+  alternates: {
+    canonical: `${siteOrigin()}/wegovy-faq`,
+  },
+};
 
 export default function WegovyFaq() {
   return (

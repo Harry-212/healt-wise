@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { siteOrigin } from "@/lib/seo/site-origin";
 
 export const metadata: Metadata = {
   title: "Contact",
   description: "Contact Health Wise for corrections and editorial enquiries.",
+  alternates: {
+    canonical: `${siteOrigin()}/contact`,
+  },
 };
 
 export default function ContactPage() {

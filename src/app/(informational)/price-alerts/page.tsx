@@ -1,4 +1,15 @@
-import { Bell } from 'lucide-react';
+import type { Metadata } from "next";
+import { Bell } from "lucide-react";
+import { siteOrigin } from "@/lib/seo/site-origin";
+
+export const metadata: Metadata = {
+  title: "Price drop alerts",
+  description:
+    "Get notified when UK GLP-1 provider prices change for Wegovy, Mounjaro, and Saxenda.",
+  alternates: {
+    canonical: `${siteOrigin()}/price-alerts`,
+  },
+};
 
 export default function PriceAlerts() {
   return (

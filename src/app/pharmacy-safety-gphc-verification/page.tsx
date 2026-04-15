@@ -1,4 +1,15 @@
-import { ShieldCheck, Cross, Building2, SearchCheck } from 'lucide-react';
+import type { Metadata } from "next";
+import { ShieldCheck, Cross, Building2, SearchCheck } from "lucide-react";
+import { siteOrigin } from "@/lib/seo/site-origin";
+
+export const metadata: Metadata = {
+  title: "Pharmacy Safety & GPhC Verification",
+  description:
+    "How Health Wise only compares GPhC-registered UK pharmacies and what the General Pharmaceutical Council means for patient safety.",
+  alternates: {
+    canonical: `${siteOrigin()}/pharmacy-safety-gphc-verification`,
+  },
+};
 
 export default function PharmacySafetyGphc() {
   return (

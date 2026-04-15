@@ -1,7 +1,18 @@
-import Link from 'next/link';
-import { ArrowLeft, CheckCircle2 } from 'lucide-react';
-import ProviderCard from '@/components/ui/ProviderCard';
-import { PharmacyProvider } from '@/lib/types/provider';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import ProviderCard from "@/components/ui/ProviderCard";
+import { PharmacyProvider } from "@/lib/types/provider";
+import { siteOrigin } from "@/lib/seo/site-origin";
+
+export const metadata: Metadata = {
+  title: "Mounjaro maintenance pharmacies",
+  description:
+    "UK pharmacies with maintenance policies for Mounjaro after target weight — illustrative listing on Health Wise.",
+  alternates: {
+    canonical: `${siteOrigin()}/mounjaro-maintenance-pharmacies`,
+  },
+};
 
 const MOCK_PROVIDERS: PharmacyProvider[] = [
   {

@@ -1,4 +1,15 @@
-import { HelpCircle } from 'lucide-react';
+import type { Metadata } from "next";
+import { HelpCircle } from "lucide-react";
+import { siteOrigin } from "@/lib/seo/site-origin";
+
+export const metadata: Metadata = {
+  title: "Mounjaro FAQs",
+  description:
+    "Common questions about Mounjaro in the UK: consultation fees, dose changes, and pharmacy policies.",
+  alternates: {
+    canonical: `${siteOrigin()}/mounjaro-faq`,
+  },
+};
 
 export default function MounjaroFaq() {
   return (

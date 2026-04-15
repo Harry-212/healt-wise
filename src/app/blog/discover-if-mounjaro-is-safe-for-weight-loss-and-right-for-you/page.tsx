@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding.",
   keywords: "is mounjaro safe for weight loss",
+  alternates: {
+    canonical: `${siteOrigin()}/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you`,
+  },
   openGraph: {
     title: "Discover If Mounjaro Is Safe for Weight Loss and Right for You",
     description:

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   description:
     "Find out how does Wegovy work to kickstart your weight loss, with guides on eligibility, cost and UK providers.",
   keywords: "how does wegovy work",
+  alternates: {
+    canonical: `${siteOrigin()}/blog/how-does-wegovy-work-to-transform-your-weight-journey`,
+  },
   openGraph: {
     title: "How Does Wegovy Work to Transform Your Weight Journey",
     description:
