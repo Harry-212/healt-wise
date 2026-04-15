@@ -25,7 +25,12 @@ export async function updateSession(request: NextRequest) {
     },
   });
 
-  await supabase.auth.getUser();
+  try {
+    await supabase.auth.getUser();
+  } catch {
+    // Never fail the request if auth refresh fails (timeouts → 503 on edge).
+    return NextResponse.next({ request });
+  }
 
   return supabaseResponse;
 }
