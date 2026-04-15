@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Stethoscope } from "lucide-react";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import HeroNumanStyle from "@/components/ui/HeroNumanStyle";
-import AboutSection2 from "@/components/ui/about-section-2";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
-import OurServices from "@/components/ui/OurServices";
-import OurMethodology from "@/components/ui/OurMethodology";
-import WhyChooseHealthWise from "@/components/ui/WhyChooseHealthWise";
+
+/** Below-the-fold client sections (framer-motion / heavy UI) load in separate chunks for faster TTI. */
+const AboutSection2 = dynamic(() => import("@/components/ui/about-section-2"));
+const OurServices = dynamic(() => import("@/components/ui/OurServices"));
+const OurMethodology = dynamic(() => import("@/components/ui/OurMethodology"));
+const WhyChooseHealthWise = dynamic(() => import("@/components/ui/WhyChooseHealthWise"));
 
 export const metadata: Metadata = {
   description:

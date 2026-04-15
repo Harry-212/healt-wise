@@ -31,17 +31,38 @@ export function SupabaseAuthProvider({ children }: { children: React.ReactNode }
       setReady(true);
       return;
     }
-    const supabase = createBrowserSupabaseClient();
-    void supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-      setReady(true);
-    });
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null);
-    });
-    return () => subscription.unsubscribe();
+
+    let cancelled = false;
+    let subscription: { unsubscribe: () => void } | null = null;
+
+    const start = () => {
+      if (cancelled) return;
+      const supabase = createBrowserSupabaseClient();
+      void supabase.auth.getSession().then(({ data: { session } }) => {
+        if (cancelled) return;
+        setUser(session?.user ?? null);
+        setReady(true);
+      });
+      const {
+        data: { subscription: sub },
+      } = supabase.auth.onAuthStateChange((_event, session) => {
+        if (!cancelled) setUser(session?.user ?? null);
+      });
+      subscription = sub;
+    };
+
+    const idle =
+      typeof requestIdleCallback !== "undefined"
+        ? requestIdleCallback(start, { timeout: 2500 })
+        : null;
+    const timeoutId = idle == null ? setTimeout(start, 0) : null;
+
+    return () => {
+      cancelled = true;
+      if (idle != null) cancelIdleCallback(idle);
+      if (timeoutId != null) clearTimeout(timeoutId);
+      subscription?.unsubscribe();
+    };
   }, []);
 
   const signOut = useCallback(async () => {

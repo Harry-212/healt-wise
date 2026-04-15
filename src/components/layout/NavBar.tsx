@@ -2,16 +2,31 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { Search } from "lucide-react";
 import { useState } from "react";
 import { NAV_PANELS } from "@/lib/nav/nav-config";
-import MegaMenuDesktop from "@/components/layout/MegaMenuDesktop";
 import MobileNavDrawer from "@/components/layout/MobileNavDrawer";
-import SearchModal from "@/components/search/SearchModal";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
 import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
+
+const MegaMenuDesktop = dynamic(
+  () => import("@/components/layout/MegaMenuDesktop"),
+  {
+    loading: () => (
+      <div
+        className="hidden min-h-[2.75rem] min-w-[18rem] justify-self-center lg:block"
+        aria-hidden
+      />
+    ),
+  },
+);
+
+const SearchModal = dynamic(() => import("@/components/search/SearchModal"), {
+  ssr: false,
+});
 
 function NavBarAuthCluster() {
   const { user, ready, signOut } = useSupabaseAuth();
@@ -102,7 +117,7 @@ export default function NavBar() {
                   width={800}
                   height={250}
                   className="h-9 w-auto max-w-[118px] object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.08)] sm:h-14 sm:max-w-none md:h-[4.5rem]"
-                  priority
+                  fetchPriority="low"
                 />
               </div>
             </Link>
@@ -129,7 +144,9 @@ export default function NavBar() {
           </div>
         </div>
       </header>
-      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
+      {searchOpen ? (
+        <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
+      ) : null}
     </>
   );
 }

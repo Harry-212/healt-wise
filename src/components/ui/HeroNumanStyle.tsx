@@ -23,7 +23,9 @@ export default function HeroNumanStyle() {
           alt="Couple discussing weight loss treatments"
           fill
           priority
+          quality={70}
           sizes="100vw"
+          fetchPriority="high"
           className="object-cover object-[center_30%] sm:object-[center_top] md:object-[center_15%]"
         />
         {/* Hapus background hitam/putih overlay sama sekali */}
