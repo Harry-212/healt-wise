@@ -174,7 +174,7 @@ export default function AboutScrollyClient() {
       {/* Hero — scroll-linked zoom + fade */}
       <section
         ref={heroRef}
-        className="relative flex min-h-[min(88dvh,760px)] flex-col justify-end overflow-hidden px-4 pb-14 pt-20 sm:px-6 sm:pb-16 sm:pt-24 md:px-10"
+        className="relative flex min-h-[min(68dvh,560px)] flex-col justify-start overflow-hidden px-4 pb-12 pt-20 sm:min-h-[min(70dvh,600px)] sm:px-6 sm:pb-14 sm:pt-24 md:px-10 md:pt-28"
       >
         <motion.div
           className="absolute inset-0 bg-slate-950"
