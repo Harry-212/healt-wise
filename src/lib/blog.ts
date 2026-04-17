@@ -80,6 +80,37 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "mounjaro-weight-loss-results-change-your-life",
+    title: "Mounjaro Weight Loss Results That May Finally Change Your Life",
+    date: "2026-04-19",
+    category: "Guides",
+    description:
+      "Discover if mounjaro weight loss results can finally change your life and help you shed stubborn kilos.",
+    heroImage: "/blog/mounjaro%20weight%20loss%20results.webp",
+    feedTags: ["mounjaro", "guides"],
+  },
+  {
+    slug: "mounjaro-weight-loss-injections-game-changer",
+    title: "Could Mounjaro Weight Loss Injections Be Your Game-Changer?",
+    date: "2026-04-18",
+    category: "Guides",
+    description:
+      "Could mounjaro weight loss injections be your breakthrough to finally conquer stubborn diet plateaus?",
+    heroImage: "/blog/mounjaro%20weight%20loss%20injections.webp",
+    feedTags: ["mounjaro", "guides"],
+  },
+  {
+    slug: "mounjaro-weight-loss-before-and-after",
+    title: "Your Ultimate Guide to Mounjaro Weight Loss Before and After",
+    date: "2026-04-17",
+    category: "Guides",
+    description:
+      "Explore the mounjaro weight loss before and after results to see how you can finally conquer stubborn pounds.",
+    heroImage:
+      "/blog/mounjaro%20weight%20loss%20before%20and%20after.webp",
+    feedTags: ["mounjaro", "guides"],
+  },
+  {
     slug: "how-does-wegovy-work-to-transform-your-weight-journey",
     title: "How Does Wegovy Work to Transform Your Weight Journey",
     date: "2026-05-18",
