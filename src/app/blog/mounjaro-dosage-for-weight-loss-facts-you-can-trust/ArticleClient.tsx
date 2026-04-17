@@ -67,8 +67,8 @@ export default function ArticleClient() {
           </div>
 
           <BlogArticleHeroImage
-            src="https://i.ibb.co.com/cSgqJLYC/image.png"
-            alt="Mounjaro Medication Guide"
+            src="/Mounjaro%20Dosage%20for%20Weight%20Loss%20Facts%20You%20Can%20Trust.webp"
+            alt="Mounjaro Dosage for Weight Loss: Facts You Can Trust"
           />
           <div
             id="guide-article-hero-end"

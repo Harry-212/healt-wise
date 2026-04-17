@@ -93,8 +93,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   };
 
+  /** Strong internal hubs — higher sitemap weight (does not guarantee sitelinks). */
+  const HIGH_PRIORITY_HUBS = new Set<string>([
+    "/wegovy-price-comparison",
+    "/mounjaro-price-comparison",
+    "/saxenda-price-comparison",
+    "/blog",
+    HELPFUL_GUIDES_HUB_PATH,
+  ]);
+
   for (const path of STATIC_PATHS) {
-    push(path, path === "/" ? 1 : 0.75);
+    const priority =
+      path === "/" ? 1 : HIGH_PRIORITY_HUBS.has(path) ? 0.9 : 0.75;
+    push(path, priority);
   }
 
   for (const slug of helpfulGuideSlugsOnDisk()) {

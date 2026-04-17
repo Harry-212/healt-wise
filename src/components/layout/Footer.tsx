@@ -70,6 +70,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><Link href="/mounjaro-price-comparison" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Mounjaro pricing</Link></li>
               <li><Link href="/wegovy-price-comparison" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Wegovy pricing</Link></li>
+              <li><Link href="/saxenda-price-comparison" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Saxenda pricing</Link></li>
               <li><Link href="/" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Compare all</Link></li>
             </ul>
           </div>

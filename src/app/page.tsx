@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { Stethoscope } from "lucide-react";
+import HomePopularNav from "@/components/layout/HomePopularNav";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { homePageJsonLdGraph } from "@/lib/seo/home-json-ld";
 import HeroNumanStyle from "@/components/ui/HeroNumanStyle";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 
@@ -20,8 +22,14 @@ export const metadata: Metadata = {
 };
 
 export default function Homepage() {
+  const homeLd = homePageJsonLdGraph();
+
   return (
     <div className="flex flex-col pb-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeLd) }}
+      />
       <HeroNumanStyle />
       <div className="flex flex-col gap-4 pt-6 md:gap-6 md:pt-8">
         <AboutSection2 />
@@ -30,6 +38,8 @@ export default function Homepage() {
         <section id="trust-bar" className="w-full scroll-mt-4">
           <TrustBarMarquee />
         </section>
+
+        <HomePopularNav />
 
         {/* Our Services */}
         <section id="our-services" className="w-full scroll-mt-4">

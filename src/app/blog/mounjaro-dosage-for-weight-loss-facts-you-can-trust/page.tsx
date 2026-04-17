@@ -2,6 +2,8 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
+const HERO_IMAGE = `${siteOrigin()}/Mounjaro%20Dosage%20for%20Weight%20Loss%20Facts%20You%20Can%20Trust.webp`;
+
 export const metadata: Metadata = {
   title: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
   description:
@@ -17,6 +19,14 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust`,
     type: "article",
     publishedTime: "2026-04-14T00:00:00.000Z",
+    images: [{ url: HERO_IMAGE, alt: "Mounjaro Dosage for Weight Loss: Facts You Can Trust" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
+    description:
+      "Find out how your mounjaro dosage for weight loss can deliver safe, effective results with trusted UK advice.",
+    images: [HERO_IMAGE],
   },
 };
 
@@ -27,6 +37,7 @@ export default function MounjaroArticlePage() {
     headline: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
     description:
       "Learn how Mounjaro dosage for weight loss works, from starting at 2.5 mg to potential long-term success. Discover exactly how this GLP-1 & GIP medication helps curb appetite.",
+    image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
     datePublished: "2026-04-14",
