@@ -37,6 +37,17 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Legacy / mistaken URLs (e.g. ads) — avoid 403/404 noise in Search Console.
+      {
+        source: "/lander",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/lander/",
+        destination: "/",
+        permanent: true,
+      },
       {
         source: "/lifestyle",
         destination: "/tips",
