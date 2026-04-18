@@ -9,6 +9,9 @@ import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection, GuideTable } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
+const INLINE_DOSAGE_IMG_1 = "/blog/Mounjaro%20Dosage%202.webp";
+const INLINE_DOSAGE_IMG_2 = "/blog/Mounjaro%20Dosage.webp";
+
 const TOC = [
   { id: "understand-mounjaro", label: "Understand Mounjaro and Its Role in Weight Management" },
   { id: "dosage-works", label: "How Mounjaro Dosage for Weight Loss Works" },
@@ -136,6 +139,15 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_DOSAGE_IMG_1}
+                  alt="Mounjaro dosage titration and weight loss dose stages"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
+
               <GuideSection darkMode={darkMode} id="side-effects" heading="Potential Side Effects And Precautions">
                 <p>
                   Like any weight loss medication, Mounjaro has associated side effects. The most common are gastrointestinal, including nausea, diarrhoea, vomiting, and constipation, which can be more noticeable when you are starting or increasing your dose. Typically, these issues are mild to moderate and resolve within a few weeks, but they can persist if you escalate dosages too rapidly [1].
@@ -172,6 +184,15 @@ export default function ArticleClient() {
                   <li>Stay vigilant about thyroid risks and disordered eating, especially at higher doses. Speak to a healthcare professional for personalised advice.</li>
                 </ul>
               </GuideSection>
+
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_DOSAGE_IMG_2}
+                  alt="Mounjaro injection dosing overview for weight management"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
 
               <section id="faq" className={`mt-16 pt-10 border-t ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>

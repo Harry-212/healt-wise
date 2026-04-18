@@ -9,6 +9,9 @@ import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
+const INLINE_MOUNT_SAFE_IMG_DISCOVER = "/blog/Discover.webp";
+const INLINE_MOUNT_SAFE_IMG_DISCUSS = "/blog/Discuss.webp";
+
 const TOC = [
   { id: "purpose", label: "Understand Mounjaro’s Purpose" },
   { id: "evaluate-safety", label: "Evaluate Its Safety For Weight Loss" },
@@ -124,6 +127,15 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_MOUNT_SAFE_IMG_DISCOVER}
+                  alt="Discover whether Mounjaro is safe for weight loss and right for you"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
+
               <GuideSection darkMode={darkMode} id="real-stories" heading="Real People Share Their Stories">
                 <p>
                   You may find it helpful to look at the experiences of others who have taken Mounjaro for weight loss. According to user reviews, many appreciate the reduced appetite, improved energy, and steady weight decline once they reach a stable dose [7]. A 58-year-old woman reportedly lost more than 50 lbs and noticed improvements in her blood pressure, while other people have claimed triple-digit weight loss when Mounjaro was combined with lifestyle changes.
@@ -159,6 +171,15 @@ export default function ArticleClient() {
                   A single tool rarely solves all weight concerns. Yet, if used responsibly, Mounjaro could be part of a well-rounded strategy that provides a powerful push toward a healthier future.
                 </p>
               </GuideSection>
+
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_MOUNT_SAFE_IMG_DISCUSS}
+                  alt="Discuss Mounjaro for weight loss with your GP — eligibility and safety"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
 
               <section id="faq" className={`mt-16 pt-10 border-t ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>

@@ -80,6 +80,17 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "mounjaro-vs-wegovy-key-differences-explained",
+    title:
+      "How Mounjaro vs Wegovy: The Key Differences Explained Help You Choose",
+    date: "2026-04-20",
+    category: "Comparisons",
+    description:
+      "See how mounjaro vs wegovy: the key differences explained helps you choose your ideal UK weight loss shot.",
+    heroImage: `/blog/A-fiTXpbVkmhwjsp3cuYQM2huWvK0viH-ZUgmbJc-LsNznNX-q1CkBk57RiUxF1pPsvAFSANlu82zJ-kBO5FIHP81uSUbMLq_I3_X1zAx6Sc-314jsebYaRMu83aYB-kbliiLmKiLKHXAkYHodC7hi4SBN6LviIgIYE8LTNy9mmGvicH6LlFNjgRq1utPdBf.webp`,
+    feedTags: ["mounjaro", "wegovy", "guides"],
+  },
+  {
     slug: "mounjaro-weight-loss-results-change-your-life",
     title: "Mounjaro Weight Loss Results That May Finally Change Your Life",
     date: "2026-04-19",

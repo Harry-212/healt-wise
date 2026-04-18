@@ -9,6 +9,11 @@ import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
+const INLINE_WEGOVY_INJECT_IMG_1 =
+  "/blog/Easy-to-Follow%20Wegovy%20Injection%20Instructions%20You%20Can%20Trust%201.webp";
+const INLINE_WEGOVY_INJECT_IMG_2 =
+  "/blog/Easy-to-Follow%20Wegovy%20Injection%20Instructions%20You%20Can%20Trust%202.webp";
+
 const TOC = [
   { id: "what-is", label: "Understand what Wegovy injection is for" },
   { id: "dosing-schedule", label: "Follow the Wegovy dosing schedule" },
@@ -178,6 +183,15 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_WEGOVY_INJECT_IMG_1}
+                  alt="Easy-to-follow Wegovy injection instructions — pen, sites, and preparation"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
+
               <GuideSection darkMode={darkMode} id="step-by-step" heading="Give Yourself The Wegovy Injection Step By Step">
                 <p>
                   The Wegovy pen is designed so you do not see a separate needle, and the steps are the same each week. Your Patient Information Leaflet gives detailed diagrams, but the core process is straightforward.
@@ -258,6 +272,15 @@ export default function ArticleClient() {
                   Never share your Wegovy pen with anyone else, even if the needle is changed. Sharing can transmit infections and is unsafe.
                 </p>
               </GuideSection>
+
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_WEGOVY_INJECT_IMG_2}
+                  alt="Wegovy pen disposal and safe injection routine — UK weight loss guide"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
 
               <section id="faq" className={`mt-16 pt-10 border-t ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>

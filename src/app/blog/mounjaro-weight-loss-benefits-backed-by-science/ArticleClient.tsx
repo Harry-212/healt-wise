@@ -27,6 +27,8 @@ const TOC = [
 ];
 
 const HERO_IMAGE = "https://i.ibb.co.com/rKvC8NDp/image.png";
+const INLINE_BENEFITS_IMG_WOMAN = "/blog/Woman.webp";
+const INLINE_BENEFITS_IMG_EATING = "/blog/Eating.webp";
 
 function TableStoppingResearch({ darkMode }: { darkMode: boolean }) {
   const cell = darkMode ? "border-slate-700 text-slate-300" : "border-slate-200 text-slate-700";
@@ -307,6 +309,15 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_BENEFITS_IMG_WOMAN}
+                  alt="Mounjaro weight loss journey — science-backed results and wellbeing"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
+
               <GuideSection darkMode={darkMode} id="dosage" heading="Finding the right dosage">
                 <p>
                   Dose decisions belong with your prescriber, based on weight, comorbidities, tolerability, and
@@ -417,6 +428,15 @@ export default function ArticleClient() {
                   commit to sustainable habits alongside medical oversight.
                 </p>
               </GuideSection>
+
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_BENEFITS_IMG_EATING}
+                  alt="Balanced eating habits alongside Mounjaro for lasting weight loss"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
 
               <section
                 id="faq"

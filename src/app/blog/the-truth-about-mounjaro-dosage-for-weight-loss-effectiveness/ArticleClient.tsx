@@ -22,6 +22,8 @@ const TOC = [
 ];
 
 const HERO_IMAGE = "https://i.ibb.co.com/N28zDM17/image.png";
+const INLINE_DOSAGE_EFFECT_IMG_WEIGHT = "/blog/Weight.webp";
+const INLINE_DOSAGE_EFFECT_IMG_TAKING = "/blog/taking.webp";
 
 function DosageScheduleTable({ darkMode }: { darkMode: boolean }) {
   const cell = darkMode ? "border-slate-700 px-3 py-2 text-slate-300" : "border-slate-200 px-3 py-2 text-slate-700";
@@ -270,6 +272,15 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_DOSAGE_EFFECT_IMG_WEIGHT}
+                  alt="Mounjaro dosage and weight loss effectiveness — dose and scale"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
+
               <GuideSection darkMode={darkMode} id="side-effects" heading="Address potential side effects">
                 <p>
                   GI symptoms—nausea, vomiting, diarrhoea—are common, especially after starting or stepping up (ZAVA).
@@ -338,6 +349,15 @@ export default function ArticleClient() {
                   weight—small signals may mean a dose review or habit refresh, not “failure.”
                 </p>
               </GuideSection>
+
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_DOSAGE_EFFECT_IMG_TAKING}
+                  alt="Taking Mounjaro as prescribed — weekly injection and titration"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
 
               <section
                 id="faq"

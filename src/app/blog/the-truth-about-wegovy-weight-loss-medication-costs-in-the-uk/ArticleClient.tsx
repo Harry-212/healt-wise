@@ -9,6 +9,11 @@ import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
+const INLINE_WEGOVY_COST_IMG_1 =
+  "/blog/The%20Truth%20About%20Wegovy%20Weight%20Loss%20Medication%20Costs%20in%20the%20UK%202.webp";
+const INLINE_WEGOVY_COST_IMG_2 =
+  "/blog/The%20Truth%20About%20Wegovy%20Weight%20Loss%20Medication%20Costs%20in%20the%20UK.webp";
+
 const TOC = [
   { id: "what-is-wegovy", label: "What Wegovy weight loss medication is" },
   { id: "how-prescribed", label: "How Wegovy is prescribed and taken" },
@@ -179,6 +184,15 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_WEGOVY_COST_IMG_1}
+                  alt="Wegovy weight loss medication costs in the UK — pricing and factors"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
+
               <GuideSection darkMode={darkMode} id="benefits-risks" heading="Benefits, Risks, And What You Are Really Paying For">
                 <p>
                   When you look at monthly costs in isolation, Wegovy weight loss medication can seem expensive. To get a clearer picture, it helps to understand what you are actually buying and the potential trade offs.
@@ -274,6 +288,15 @@ export default function ArticleClient() {
                   </li>
                 </ul>
               </GuideSection>
+
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_WEGOVY_COST_IMG_2}
+                  alt="The truth about Wegovy costs — NHS versus private and budgeting"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
 
               <section id="faq" className={`mt-16 pt-10 border-t ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>

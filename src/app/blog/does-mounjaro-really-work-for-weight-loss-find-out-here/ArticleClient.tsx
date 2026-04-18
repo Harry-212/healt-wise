@@ -9,6 +9,9 @@ import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
+const INLINE_MOUNT_WORK_IMG_JOGGING = "/blog/jogging.webp";
+const INLINE_MOUNT_WORK_IMG_CONSULTATION = "/blog/consultaion.webp";
+
 const TOC = [
   { id: "explore", label: "Explore Mounjaro For Weight Loss" },
   { id: "mechanism", label: "Understand Its Mechanism Of Action" },
@@ -132,6 +135,15 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_MOUNT_WORK_IMG_JOGGING}
+                  alt="Exercise and activity alongside Mounjaro for weight loss"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
+
               <GuideSection darkMode={darkMode} id="eligibility" heading="Determine Eligibility And Usage">
                 <p>
                   You will typically be considered for Mounjaro if you have type 2 diabetes and need better blood sugar control. However, you might also explore Mounjaro for weight loss if you have a body mass index (BMI) over 30, or over 27 with other obesity-related complications like high blood pressure or elevated cholesterol. This aligns with guidelines suggesting that medical weight management should be reserved for individuals who have unsuccessfully tried lifestyle changes alone [4].
@@ -155,6 +167,15 @@ export default function ArticleClient() {
                   If you choose to stop taking Mounjaro eventually, those same healthy routines become even more important. Without medication, you will need to rely on lifestyle strategies and your body’s natural appetite signals for weight control, which can be easier if you have already built consistent eating, exercise, and stress-management habits.
                 </p>
               </GuideSection>
+
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_MOUNT_WORK_IMG_CONSULTATION}
+                  alt="Consult your GP or specialist about Mounjaro for weight loss"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
 
               <section id="faq" className={`mt-16 pt-10 border-t ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>

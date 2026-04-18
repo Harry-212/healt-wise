@@ -9,6 +9,9 @@ import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
+const INLINE_ARTICLE_IMG_1 = "/blog/wegovy%20work%201.webp";
+const INLINE_ARTICLE_IMG_2 = "/blog/wegovy%20works%202.webp";
+
 const TOC = [
   { id: "what-is-wegovy", label: "What Wegovy is and who it is for" },
   { id: "how-it-works", label: "How does Wegovy work inside your body?" },
@@ -176,6 +179,15 @@ export default function ArticleClient() {
                 <p>These figures suggest that both the injectable and oral forms can deliver double digit percentage weight loss when used correctly with lifestyle changes.</p>
               </GuideSection>
 
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_ARTICLE_IMG_1}
+                  alt="How Wegovy works — GLP-1 appetite and weight management"
+                  priority={false}
+                  showFullImage
+                />
+              </div>
+
               <GuideSection darkMode={darkMode} id="health-benefits" heading="Cardiovascular And Health Benefits Beyond Weight Loss">
                 <p>When you lose weight with Wegovy, the benefits usually go beyond the numbers on the scales.</p>
 
@@ -265,7 +277,18 @@ export default function ArticleClient() {
                 <p>Your choice between Wegovy, Mounjaro or other options will depend on your medical history, other conditions, previous response to treatments and what is available and approved in your region. This decision should be made with a healthcare professional who can balance risks and benefits for your situation.</p>
               </GuideSection>
 
-              <section id="faq" className="mt-16 pt-10 border-t border-slate-200">
+              <div className="my-10">
+                <BlogArticleHeroImage
+                  src={INLINE_ARTICLE_IMG_2}
+                  alt="Wegovy injection and your weight journey"
+                  priority={false}
+                />
+              </div>
+
+              <section
+                id="faq"
+                className={`mt-16 border-t pt-10 ${darkMode ? "border-slate-800" : "border-slate-200"}`}
+              >
                 <h2 className={`text-3xl font-semibold mb-8 ${darkMode ? "text-white" : "text-slate-900"}`}>
                   Frequently Asked Questions About How Wegovy Works
                 </h2>
