@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUp, ShieldCheck } from "lucide-react";
+import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 
 const MediumIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -36,16 +38,16 @@ export default function Footer() {
         {/* Top Section: Email Subscribe & Socials */}
         <div className="flex flex-col lg:flex-row justify-between mb-16 gap-12 lg:gap-0 border-b border-slate-200/80 pb-16">
           <div className="flex flex-col gap-6 max-w-xl">
-            <h2 className="text-xl md:text-[22px] font-medium text-slate-900 leading-snug text-pretty">
-              Get updates you'll actually want—new treatments, special offers, and more ways to feel good.
+            <h2 className="text-2xl font-bold leading-snug text-slate-900 text-pretty md:text-3xl md:leading-tight">
+              Get updates you'll actually want: new treatments, special offers, and more ways to feel good.
             </h2>
             <div className="flex flex-col sm:flex-row w-full max-w-md items-center rounded-full bg-white border border-slate-200 p-1.5 shadow-sm focus-within:border-emerald-500 focus-within:ring-1 focus-within:ring-emerald-500 transition-shadow">
               <input 
                 type="email" 
                 placeholder="Enter your email address" 
-                className="w-full bg-transparent px-5 py-3 text-[15px] outline-none text-slate-900 placeholder:text-slate-500"
+                className="w-full bg-transparent px-5 py-3 text-base font-medium outline-none text-slate-900 placeholder:text-slate-500"
               />
-              <button type="button" className="w-full sm:w-auto mt-2 sm:mt-0 h-11 shrink-0 rounded-full bg-slate-900 px-8 text-sm font-medium text-white hover:bg-slate-800 transition-colors">
+              <button type="button" className="w-full sm:w-auto mt-2 sm:mt-0 h-12 shrink-0 rounded-full bg-slate-900 px-8 text-base font-bold text-white hover:bg-slate-800 transition-colors">
                 Submit
               </button>
             </div>
@@ -53,7 +55,7 @@ export default function Footer() {
           
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-10 md:gap-16">
             <div className="flex flex-col gap-4">
-              <span className="text-[15px] font-medium text-slate-900">Follow the feeling</span>
+              <span className="text-lg font-bold text-slate-900">Follow the feeling</span>
               <div className="flex items-center gap-3">
                 <a href="#" className="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-200/60 hover:bg-slate-300 transition-colors text-slate-700 hover:text-slate-900">
                   <MediumIcon className="w-5 h-5" />
@@ -66,52 +68,67 @@ export default function Footer() {
         {/* Middle Section: Links Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-12 mb-20">
           <div>
-            <h3 className="mb-6 font-semibold text-slate-900 text-[15px]">Treatments</h3>
+            <h3 className="mb-6 text-lg font-bold tracking-tight text-slate-900">Treatments</h3>
             <ul className="space-y-4">
-              <li><Link href="/mounjaro-price-comparison" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Mounjaro pricing</Link></li>
-              <li><Link href="/wegovy-price-comparison" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Wegovy pricing</Link></li>
-              <li><Link href="/saxenda-price-comparison" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Saxenda pricing</Link></li>
-              <li><Link href="/" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Compare all</Link></li>
+              <li>
+                <Link
+                  href={HOME_COMPARE_HUB_HREF}
+                  className="text-xl font-extrabold text-slate-900 hover:text-emerald-800 transition-colors"
+                >
+                  Compare treatments
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/helpful-guides"
+                  className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+                >
+                  Helpful guides
+                </Link>
+              </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="mb-6 font-semibold text-slate-900 text-[15px]">Trust & safety</h3>
+            <h3 className="mb-6 text-lg font-bold tracking-tight text-slate-900">Trust & safety</h3>
             <ul className="space-y-4">
-              <li><Link href="/pharmacy-safety-gphc-verification" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">GPhC verification</Link></li>
-              <li><Link href="/methodology" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Our methodology</Link></li>
-              <li><Link href="/helpful-guides" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Helpful health guides</Link></li>
+              <li><Link href="/pharmacy-safety-gphc-verification" className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors">GPhC verification</Link></li>
+              <li><Link href="/methodology" className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors">{SITE_BRAND_NAME} methodology</Link></li>
+              <li><Link href="/helpful-guides" className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors">Helpful health guides</Link></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="mb-6 font-semibold text-slate-900 text-[15px]">Support</h3>
+            <h3 className="mb-6 text-lg font-bold tracking-tight text-slate-900">Support</h3>
             <ul className="space-y-4">
-              <li><Link href="/mounjaro-faq" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Mounjaro FAQs</Link></li>
-              <li><Link href="/wegovy-faq" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Wegovy FAQs</Link></li>
-              <li><Link href="/contact" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Contact</Link></li>
+              <li><Link href="/helpful-guides" className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors">Weight loss FAQs</Link></li>
+              <li><Link href="/contact" className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors">Contact</Link></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="mb-6 font-semibold text-slate-900 text-[15px]">Company</h3>
+            <h3 className="mb-6 text-lg font-bold tracking-tight text-slate-900">Company</h3>
             <ul className="space-y-4">
-              <li><Link href="/about" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">About us</Link></li>
-              <li><Link href="/editorial-policy" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Editorial policy</Link></li>
-              <li><Link href="/privacy-policy" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Privacy policy</Link></li>
-              <li><Link href="/terms-of-service" className="text-[15px] text-slate-500 hover:text-slate-900 transition-colors">Terms of service</Link></li>
+              <li><Link href="/about" className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors">About us</Link></li>
+              <li><Link href="/editorial-policy" className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors">Editorial policy</Link></li>
+              <li><Link href="/privacy-policy" className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors">Privacy policy</Link></li>
+              <li><Link href="/terms-of-service" className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors">Terms of service</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-6 font-semibold text-slate-900 text-[15px]">Commitment</h3>
+            <h3 className="mb-6 text-lg font-bold tracking-tight text-slate-900">Commitment</h3>
             <div className="flex flex-col gap-5">
-              <div className="text-[14px] text-slate-500 leading-relaxed max-w-[200px]">
-                <strong className="text-slate-900 font-medium">Headquarters:</strong><br />
-                London, United Kingdom<br />
-                <span className="flex items-start gap-2 mt-3 p-3 rounded-lg bg-emerald-50/50 border border-emerald-100/50">
-                  <ShieldCheck className="h-5 w-5 shrink-0 text-emerald-600 mt-0.5" />
-                  <span className="text-xs text-slate-600 font-medium">Independent and unbiased. Not affiliated with manufacturers.</span>
+              <div className="max-w-[220px] text-base leading-relaxed text-slate-600">
+                <strong className="font-bold text-slate-900">Headquarters:</strong>
+                <br />
+                London, United Kingdom
+                <br />
+                <span className="mt-3 flex items-start gap-2 rounded-lg border border-emerald-100/50 bg-emerald-50/50 p-3">
+                  <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" />
+                  <span className="text-sm font-semibold leading-snug text-slate-700">
+                    Independent and unbiased. Not affiliated with manufacturers.
+                  </span>
                 </span>
               </div>
             </div>
@@ -124,27 +141,27 @@ export default function Footer() {
             <Link href="/" className="hover:opacity-80 transition-opacity">
               <Image 
                 src={SITE_LOGO_SRC} 
-                alt="Health Wise Logo" 
+                alt={`${SITE_BRAND_NAME} logo`} 
                 width={200} 
                 height={54} 
                 className="h-10 w-auto object-contain brightness-0 invert" 
               />
             </Link>
-            <div className="hidden md:flex items-center gap-4 text-[13px] font-medium text-slate-400">
-              <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy policy</Link>
+            <div className="hidden items-center gap-4 text-sm font-semibold text-slate-400 md:flex">
+              <Link href="/privacy-policy" className="transition-colors hover:text-white">Privacy policy</Link>
               <span className="text-slate-600">|</span>
-              <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of use</Link>
+              <Link href="/terms-of-service" className="transition-colors hover:text-white">Terms of use</Link>
             </div>
           </div>
           
           <div className="flex flex-col items-center md:items-end gap-3 w-full md:w-auto mt-2 md:mt-0">
-            <div className="flex md:hidden items-center gap-4 text-[13px] font-medium text-slate-400 mb-2">
-              <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy policy</Link>
+            <div className="mb-2 flex items-center gap-4 text-sm font-semibold text-slate-400 md:hidden">
+              <Link href="/privacy-policy" className="transition-colors hover:text-white">Privacy policy</Link>
               <span className="text-slate-600">|</span>
-              <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of use</Link>
+              <Link href="/terms-of-service" className="transition-colors hover:text-white">Terms of use</Link>
             </div>
-            <div className="text-[13px] font-bold text-slate-500">
-              Copyright © Health Wise 2026
+            <div className="text-sm font-bold tracking-tight text-slate-400">
+              Copyright © {SITE_BRAND_NAME} 2026
             </div>
           </div>
         </div>

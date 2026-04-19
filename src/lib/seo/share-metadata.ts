@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { siteOrigin } from "./site-origin";
 import { stripTitleTemplateSuffix } from "./strip-title-template-suffix";
 
@@ -14,7 +15,7 @@ function encodedSitePath(path: string): string {
 export type PageShareMetadataInput = {
   /** Path only, e.g. `/what-is-wegovy` */
   canonicalPath: string;
-  /** `<title>` segment before layout `template` appends ` | Health Wise` */
+  /** `<title>` segment before layout `template` appends ` | ${SITE_BRAND_NAME}` */
   title: string;
   metaDescription: string;
   /** Often slightly shorter; shown in WhatsApp, Facebook, X previews */
@@ -50,7 +51,7 @@ export function buildPageShareMetadata(
     openGraph: {
       type: "website",
       url: canonical,
-      siteName: "Health Wise",
+      siteName: SITE_BRAND_NAME,
       locale: "en_GB",
       title: input.openGraphTitle,
       description: ogDescription,

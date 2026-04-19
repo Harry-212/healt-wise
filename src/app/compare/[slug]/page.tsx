@@ -10,6 +10,12 @@ import {
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
 import CompareMedPriceTabs from "@/components/compare/CompareMedPriceTabs";
+import CompareTripleShowcase from "@/components/compare/CompareTripleShowcase";
+import CompareFaqSection from "@/components/compare/CompareFaqSection";
+import {
+  compareFaqPageJsonLd,
+  getCompareFaqsForSlug,
+} from "@/lib/routes/compare-faqs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 
@@ -61,6 +67,7 @@ export default async function ComparePage({ params }: Props) {
     layout.hero.titleBold,
     layout.share.metaDescription,
   );
+  const faqItems = getCompareFaqsForSlug(slug);
 
   return (
     <>
@@ -68,6 +75,14 @@ export default async function ComparePage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webLd) }}
       />
+      {faqItems.length > 0 ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(compareFaqPageJsonLd(faqItems)),
+          }}
+        />
+      ) : null}
 
       <article className="w-full">
         <CompareTreatmentsHero
@@ -79,6 +94,8 @@ export default async function ComparePage({ params }: Props) {
           snapshotLabel={layout.hero.snapshotLabel}
           navLinks={layout.hero.navLinks}
         />
+
+        <CompareMedPriceTabs medications={layout.medications} />
 
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />
@@ -97,7 +114,7 @@ export default async function ComparePage({ params }: Props) {
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
                 <Scale className="h-8 w-8 text-brand-primary" aria-hidden />
-                <p className="mt-3 font-semibold text-slate-900">Transparent pricing</p>
+                <p className="mt-3 font-semibold text-slate-900">Transparent Pricing</p>
                 <p className="mt-1 text-sm text-slate-600">
                   Sort every column, filter by band, and preview where discounts will
                   surface.
@@ -105,14 +122,14 @@ export default async function ComparePage({ params }: Props) {
               </div>
               <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
                 <Shield className="h-8 w-8 text-emerald-600" aria-hidden />
-                <p className="mt-3 font-semibold text-slate-900">UK regulatory lens</p>
+                <p className="mt-3 font-semibold text-slate-900">UK Regulatory Lens</p>
                 <p className="mt-1 text-sm text-slate-600">
                   GPhC lines and cold-chain cues match our standalone compare tools.
                 </p>
               </div>
               <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
                 <BadgeCheck className="h-8 w-8 text-violet-600" aria-hidden />
-                <p className="mt-3 font-semibold text-slate-900">Editorial balance</p>
+                <p className="mt-3 font-semibold text-slate-900">Editorial Balance</p>
                 <p className="mt-1 text-sm text-slate-600">
                   “Cheapest” vs “balance pick” callouts mirror the price hub pages.
                 </p>
@@ -121,7 +138,9 @@ export default async function ComparePage({ params }: Props) {
           </div>
         </section>
 
-        <CompareMedPriceTabs medications={layout.medications} />
+        {slug === "mounjaro-vs-wegovy-vs-saxenda" ? (
+          <CompareTripleShowcase />
+        ) : null}
 
         <section className="border-b border-slate-200/80 bg-slate-50/70 py-12 md:py-16">
           <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:px-8">
@@ -161,7 +180,7 @@ export default async function ComparePage({ params }: Props) {
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Best choice for you
+              Best Choice For You
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
               {layout.bestChoiceBody}
@@ -183,6 +202,8 @@ export default async function ComparePage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        <CompareFaqSection items={faqItems} />
 
       </article>
     </>

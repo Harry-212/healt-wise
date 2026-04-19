@@ -48,6 +48,11 @@ export const NAV_PANELS: NavPanel[] = [
             icon: "compare",
           },
           {
+            label: "Mounjaro vs Wegovy vs Saxenda",
+            href: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+            icon: "compare",
+          },
+          {
             label: "Best Weight Loss Injections UK",
             href: "/compare/best-weight-loss-injections-uk",
             icon: "sparkles",

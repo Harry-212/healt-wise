@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 /**
@@ -11,7 +12,7 @@ export function buildSeoMetadata(
 ): Metadata {
   const title = `${keyword} UK (2026): Price, Comparison & Best Options`;
   const description = `Compare ${keyword.toLowerCase()} prices in the UK. See cheapest providers, monthly costs, and best options. Updated 2026.`;
-  const shareTitle = `${title} | Health Wise`;
+  const shareTitle = `${title} | ${SITE_BRAND_NAME}`;
   const path = canonicalPath.startsWith("/") ? canonicalPath : `/${canonicalPath}`;
   const canonical = `${siteOrigin()}${path}`;
   return {

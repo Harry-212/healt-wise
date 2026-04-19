@@ -5,11 +5,12 @@ import { openGraphSizedImageUrl } from "@/lib/seo/open-graph-image-url";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { stripTitleTemplateSuffix } from "@/lib/seo/strip-title-template-suffix";
+import { SITE_BRAND_NAME } from "@/lib/site-brand";
 
 export type BuildGuideShareMetadataInput = {
   /** Folder slug under `/helpful-guides/[slug]` */
   slug: string;
-  /** Value for `<title>` before root layout `template` appends ` | Health Wise` */
+  /** Value for `<title>` before root layout `template` appends ` | ${SITE_BRAND_NAME}` */
   title: string;
   description: string;
   /** Usually shorter than `title`; used for OG / Twitter */
@@ -40,7 +41,7 @@ export function buildGuideShareMetadata(
     openGraph: {
       type: input.openGraphType ?? "article",
       url: canonical,
-      siteName: "Health Wise",
+      siteName: SITE_BRAND_NAME,
       locale: "en_GB",
       title: input.openGraphTitle,
       description: ogDescription,

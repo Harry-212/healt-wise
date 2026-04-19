@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useRef } from "react";
 import { Zap } from "lucide-react";
+import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import {
   TimelineContent,
   TimelineSection,
@@ -76,7 +78,7 @@ export default function AboutSection2() {
               id="about-heading"
               className="mb-6 text-2xl leading-[110%] font-semibold text-brand-primary sm:text-4xl md:text-5xl"
             >
-              Health Wise is an{" "}
+              {SITE_BRAND_NAME} is an{" "}
               <TimelineContent
                 as="span"
                 animationNum={1}
@@ -87,7 +89,7 @@ export default function AboutSection2() {
                 independent UK comparison
               </TimelineContent>{" "}
               site that helps you review pricing and delivery for
-              prescription-only{" "}
+              prescription only{" "}
               <TimelineContent
                 as="span"
                 animationNum={2}
@@ -95,9 +97,9 @@ export default function AboutSection2() {
                 customVariants={textVariants}
                 className={hlAccent}
               >
-                weight-loss treatments
+                weight loss treatments
               </TimelineContent>{" "}
-              from GPhC-registered online pharmacies—so you see the full cost
+              from GPhC registered online pharmacies, so you see the full cost
               picture before you start a consultation.
             </TimelineContent>
 
@@ -110,7 +112,7 @@ export default function AboutSection2() {
                 className="mb-0 text-xs sm:text-xl"
               >
                 <div className="mb-1 font-medium capitalize text-brand-primary">
-                  Health Wise — we compare, we don&apos;t prescribe
+                  {SITE_BRAND_NAME}: we compare, we don&apos;t prescribe
                 </div>
                 <div className="font-semibold tracking-wide text-emerald-700 uppercase">
                   Weight loss in the UK
@@ -125,11 +127,11 @@ export default function AboutSection2() {
                 className="shrink-0"
               >
                 <Link
-                  href="/"
+                  href={HOME_COMPARE_HUB_HREF}
                   className={ctaClass}
                 >
                   <Zap className="h-4 w-4 shrink-0 fill-slate-900" aria-hidden />
-                  Compare weight-loss treatments
+                  Compare here
                 </Link>
               </TimelineContent>
             </div>

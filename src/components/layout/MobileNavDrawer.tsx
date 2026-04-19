@@ -10,6 +10,7 @@ import { NavLinkIcon } from "@/lib/nav/nav-icons";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
 import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
+import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 
 export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
@@ -93,7 +94,7 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
           <Link href="/" onClick={close} className="min-w-0">
             <Image
               src={SITE_LOGO_SRC}
-              alt="Health Wise"
+              alt={SITE_BRAND_NAME}
               width={160}
               height={48}
               className="h-10 w-auto max-w-[11rem] object-contain object-left"

@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import SiteEndSection from "@/components/layout/SiteEndSection";
 import { SupabaseAuthProvider } from "@/components/providers/SupabaseAuthProvider";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { SITE_FAVICON_SRC, SITE_LOGO_SRC } from "@/lib/site-assets";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 
@@ -23,16 +24,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin()),
   title: {
-    default: "Health Wise | Weight Loss Treatment Price Comparison UK 2026",
-    template: "%s | Health Wise",
+    default: `${SITE_BRAND_NAME} | Weight loss treatment comparison UK 2026`,
+    template: `%s | ${SITE_BRAND_NAME}`,
   },
   description:
-    "Independent UK comparison for GLP-1 prices, safety, and support. Compare providers and monthly costs. Updated 2026.",
+    "Independent UK comparison for weight loss treatment prices, safety, and support. Compare providers and monthly costs. Updated 2026.",
   openGraph: {
     type: "website",
-    siteName: "Health Wise",
+    siteName: SITE_BRAND_NAME,
     locale: "en_GB",
-    images: [{ url: SITE_LOGO_SRC, alt: "Health Wise" }],
+    images: [{ url: SITE_LOGO_SRC, alt: SITE_BRAND_NAME }],
   },
   icons: {
     icon: [{ url: SITE_FAVICON_SRC, type: "image/webp" }],

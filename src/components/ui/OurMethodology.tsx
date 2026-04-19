@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import { SITE_BRAND_NAME } from "@/lib/site-brand";
 
 const METHOD_STEPS: {
   id: string;
@@ -22,34 +24,34 @@ const METHOD_STEPS: {
   icon: LucideIcon;
 }[] = [
   {
-    id: "pricing",
-    icon: LineChart,
-    label: "Pricing Transparency",
-    desc: "We compare published prices by dosage and stage—true cost, not just headline prices—and flag hidden fees (consultation, delivery, maintenance).",
-  },
-  {
-    id: "regulatory",
+    id: "gphc",
     icon: ShieldCheck,
-    label: "GPhC Registration & Regulatory Compliance",
-    desc: "Each pharmacy is verified on the GPhC register for UK authorisation. We prioritise strict standards and clear accountability.",
-  },
-  {
-    id: "delivery",
-    icon: Package,
-    label: "Delivery & Cold-Chain Handling",
-    desc: "Injections need cold-chain delivery. We assess packaging, shipping times, and compliance so medication arrives safely.",
+    label: "GPhC and pharmacy regulation",
+    desc: "We check pharmacies against the General Pharmaceutical Council (GPhC) register so listed supply routes meet UK regulatory expectations.",
   },
   {
     id: "clinical",
     icon: Stethoscope,
-    label: "Clinical Safety & Prescribing Process",
-    desc: "We review eligibility, consultations, and prescribing—checking that qualified professionals and proper medical checks sit behind every approval.",
+    label: "Clinical safety and prescribing",
+    desc: "We review eligibility, consultations, and prescribing pathways so approvals involve qualified professionals and appropriate clinical checks.",
+  },
+  {
+    id: "delivery",
+    icon: Package,
+    label: "Delivery",
+    desc: "We assess packaging, cold chain handling where needed, shipping times, and courier practices so treatment reaches you reliably.",
   },
   {
     id: "support",
     icon: Headphones,
-    label: "Ongoing Support & Treatment Management",
-    desc: "We factor in follow-ups, guidance, and long-term care—especially for extended GLP-1 treatment.",
+    label: "Ongoing support",
+    desc: "We factor in follow up access, guidance, and longer term care arrangements as part of a rounded view of each provider.",
+  },
+  {
+    id: "pricing",
+    icon: LineChart,
+    label: "Price transparency",
+    desc: "We compare published prices by dosage and programme stage, flag hidden fees, and highlight total cost where possible.",
   },
 ];
 
@@ -60,18 +62,18 @@ const FOOTER_BLOCKS: {
 }[] = [
   {
     icon: Scale,
-    title: "Independent & unbiased approach",
-    body: "We're independent. Commissions don't drive rankings—data, safety standards, and user value do, not promotional deals.",
+    title: "Independent and unbiased",
+    body: "We are independent. Commissions do not drive rankings: data, safety standards, and user value do, not promotional deals.",
   },
   {
     icon: RefreshCw,
-    title: "Data accuracy & updates",
-    body: "We aim to keep pricing and listings current; prices and availability still change—confirm details with the provider before you buy.",
+    title: "Data accuracy and updates",
+    body: "We aim to keep pricing and listings current; prices and availability still change. Confirm details with the provider before you buy.",
   },
   {
     icon: AlertCircle,
-    title: "Important medical information",
-    body: "UK weight-loss prescription meds are POM: a licensed professional must approve. Eligibility (e.g. BMI, history) varies. This isn't medical advice—speak to a clinician before treatment.",
+    title: "Important information",
+    body: "UK prescription weight loss medicines are POM: a licensed professional must approve supply. Eligibility varies. This is not medical advice. Speak to a clinician before treatment.",
   },
 ];
 
@@ -79,38 +81,61 @@ export default function OurMethodology() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section
-      className="w-full py-10 text-white md:py-16"
-      style={{
-        background:
-          "linear-gradient(165deg, #1a4d3e 0%, #124236 38%, #0d352c 72%, #0a2a24 100%)",
-      }}
-    >
+    <section className="w-full bg-linear-to-br from-emerald-50/95 via-teal-50/60 to-emerald-100/85 py-10 text-slate-800 md:py-16">
       <div className="mx-auto max-w-[1200px] px-4 md:px-8 lg:px-10">
-        <div className="mb-10 max-w-3xl">
-          <span className="inline-block rounded-sm bg-brand-cta px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-slate-900">
-            Our Methodology
-          </span>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-[2.5rem] lg:leading-[1.15]">
-            Accurate, transparent, and independent comparisons
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-emerald-50/90 md:text-[17px]">
-            Health Wise compares UK weight-loss treatments with no
-            single-provider bias—we weigh pricing, safety, and patient
-            experience so you can decide with confidence.
-          </p>
-          <h3 className="mt-8 text-base font-bold text-white md:text-lg">
-            How we evaluate providers
-          </h3>
-          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-emerald-100/80 md:text-base">
-            Every listed provider gets the same structured review across cost,
-            safety, and reliability.
-          </p>
+        <div className="mb-10 md:mb-12">
+          <div className="overflow-hidden rounded-3xl border border-emerald-200/70 bg-white/85 shadow-md shadow-emerald-900/6 ring-1 ring-emerald-100/90 backdrop-blur-sm">
+            <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-stretch sm:gap-8 sm:p-8">
+              <div
+                className="flex shrink-0 flex-col items-center justify-center gap-1 rounded-2xl bg-linear-to-b from-amber-50 via-white to-emerald-50/90 px-8 py-6 text-center ring-1 ring-amber-200/40 sm:w-28 sm:py-8"
+                aria-hidden
+              >
+                <span className="text-5xl font-black leading-none text-brand-cta sm:text-[3.25rem]">
+                  5
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-emerald-800/75">
+                  steps
+                </span>
+              </div>
+              <div className="min-w-0 flex-1 space-y-3">
+                <span className="inline-block rounded-md bg-emerald-600/12 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-emerald-900">
+                  {SITE_BRAND_NAME}
+                </span>
+                <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl lg:text-[2.15rem] lg:leading-tight">
+                  How we evaluate providers
+                </h2>
+                <p className="max-w-3xl text-[15px] leading-relaxed text-slate-600 md:text-base">
+                  {SITE_BRAND_NAME} compares UK weight loss treatment options
+                  fairly, with no preferred pharmacy. We balance pricing, safety, and
+                  patient experience so you can choose with confidence. Every
+                  listing is scored on the same five pillars:{" "}
+                  <span className="font-semibold text-slate-800">
+                    regulation
+                  </span>
+                  ,{" "}
+                  <span className="font-semibold text-slate-800">
+                    clinical prescribing
+                  </span>
+                  ,{" "}
+                  <span className="font-semibold text-slate-800">delivery</span>
+                  ,{" "}
+                  <span className="font-semibold text-slate-800">
+                    ongoing support
+                  </span>
+                  , and{" "}
+                  <span className="font-semibold text-slate-800">
+                    price transparency
+                  </span>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="relative">
           <div className="relative z-10 hidden grid-cols-5 gap-3 md:grid lg:gap-4">
-            <div className="absolute left-0 top-[52px] -z-10 h-[2px] w-full bg-white/15" />
+            <div className="absolute left-0 top-[52px] -z-10 h-[2px] w-full bg-emerald-200/80" />
 
             {METHOD_STEPS.map((step, idx) => {
               const isActive = idx === activeStep;
@@ -122,17 +147,17 @@ export default function OurMethodology() {
                   onClick={() => setActiveStep(idx)}
                   onMouseEnter={() => setActiveStep(idx)}
                 >
-                  <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 transition-colors group-hover:bg-white/15">
+                  <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-white/90 shadow-sm ring-1 ring-emerald-100 transition-colors group-hover:bg-white">
                     <Icon
                       className={`h-4 w-4 transition-colors ${
-                        isActive ? "text-brand-cta" : "text-emerald-200/80"
+                        isActive ? "text-emerald-700" : "text-emerald-500/80"
                       }`}
                       strokeWidth={1.75}
                       aria-hidden
                     />
                   </div>
                   <div className="mb-3">
-                    <span className="inline-block rounded-sm bg-emerald-400/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-200/90">
+                    <span className="inline-block rounded-sm bg-emerald-600/12 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-900">
                       Step {String(idx + 1).padStart(2, "0")}
                     </span>
                   </div>
@@ -141,20 +166,18 @@ export default function OurMethodology() {
                     <div
                       className={`relative z-10 h-3.5 w-3.5 rounded-full transition-all duration-300 ${
                         isActive
-                          ? "bg-brand-cta ring-4 ring-brand-cta/25"
-                          : "bg-white/35 group-hover:bg-white/55"
+                          ? "bg-brand-cta ring-4 ring-amber-300/40"
+                          : "bg-emerald-300 group-hover:bg-emerald-400"
                       }`}
                     />
                     {isActive && (
-                      <div className="absolute left-0 top-1/2 h-[2px] w-full -translate-y-1/2 bg-brand-cta/90 transition-all duration-500" />
+                      <div className="absolute left-0 top-1/2 h-[2px] w-full -translate-y-1/2 bg-brand-cta/80 transition-all duration-500" />
                     )}
                   </div>
 
                   <h4
                     className={`text-[13px] font-bold leading-snug transition-colors duration-300 lg:text-[15px] ${
-                      isActive
-                        ? "text-white"
-                        : "text-white/65 group-hover:text-white/85"
+                      isActive ? "text-slate-900" : "text-slate-600 group-hover:text-slate-800"
                     }`}
                   >
                     {step.label}
@@ -168,7 +191,7 @@ export default function OurMethodology() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="text-[11px] leading-relaxed text-emerald-100/75 lg:text-xs">
+                      <p className="text-[11px] leading-relaxed text-slate-600 lg:text-xs">
                         {step.desc}
                       </p>
                     </div>
@@ -192,8 +215,8 @@ export default function OurMethodology() {
                     <div
                       className={`h-3.5 w-3.5 shrink-0 rounded-full transition-all duration-300 ${
                         isActive
-                          ? "bg-brand-cta ring-4 ring-brand-cta/25"
-                          : "bg-white/35"
+                          ? "bg-brand-cta ring-4 ring-amber-300/40"
+                          : "bg-emerald-300"
                       }`}
                     />
                     {idx !== METHOD_STEPS.length - 1 && (
@@ -201,7 +224,7 @@ export default function OurMethodology() {
                         className={`mb-[-8px] mt-2 flex-1 transition-colors duration-300 ${
                           isActive
                             ? "w-[2px] bg-brand-cta/80"
-                            : "w-[2px] bg-white/12"
+                            : "w-[2px] bg-emerald-200"
                         }`}
                       />
                     )}
@@ -209,20 +232,20 @@ export default function OurMethodology() {
 
                   <div className="min-w-0 pb-3">
                     <div className="mb-2 flex items-center gap-2">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white shadow-sm ring-1 ring-emerald-100">
                         <Icon
-                          className={`h-4 w-4 ${isActive ? "text-brand-cta" : "text-emerald-200/80"}`}
+                          className={`h-4 w-4 ${isActive ? "text-emerald-700" : "text-emerald-500/80"}`}
                           strokeWidth={1.75}
                           aria-hidden
                         />
                       </div>
-                      <span className="rounded-sm bg-emerald-400/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-200/90">
+                      <span className="rounded-sm bg-emerald-600/12 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-900">
                         Step {String(idx + 1).padStart(2, "0")}
                       </span>
                     </div>
                     <h4
                       className={`text-[15px] font-bold transition-colors duration-300 ${
-                        isActive ? "text-white" : "text-white/65"
+                        isActive ? "text-slate-900" : "text-slate-600"
                       }`}
                     >
                       {step.label}
@@ -235,7 +258,7 @@ export default function OurMethodology() {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="text-sm leading-relaxed text-emerald-100/80">
+                        <p className="text-sm leading-relaxed text-slate-600">
                           {step.desc}
                         </p>
                       </div>
@@ -253,19 +276,19 @@ export default function OurMethodology() {
             return (
               <div
                 key={block.title}
-                className="rounded-2xl border border-white/10 bg-white/6 p-5 backdrop-blur-sm md:p-5"
+                className="rounded-2xl border border-emerald-100/90 bg-white/90 p-5 shadow-sm backdrop-blur-sm md:p-5"
               >
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 ring-1 ring-emerald-100">
                   <FIcon
-                    className="h-5 w-5 text-brand-cta"
+                    className="h-5 w-5 text-emerald-700"
                     strokeWidth={1.75}
                     aria-hidden
                   />
                 </div>
-                <h4 className="text-sm font-bold text-white md:text-base">
+                <h4 className="text-sm font-bold text-slate-900 md:text-base">
                   {block.title}
                 </h4>
-                <p className="mt-2 text-xs leading-relaxed text-emerald-100/80 md:text-sm">
+                <p className="mt-2 text-xs leading-relaxed text-slate-600 md:text-sm">
                   {block.body}
                 </p>
               </div>
@@ -274,16 +297,25 @@ export default function OurMethodology() {
         </div>
 
         <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-emerald-100/70 md:text-sm">
-            More on how we collect and update data—see the full safety guide.
+          <p className="text-xs text-slate-600 md:text-sm">
+            More on how we collect and update data: see the full safety guide.
           </p>
-          <Link
-            href="/methodology"
-            className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/15"
-          >
-            Read full Guide
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+          <div className="flex flex-wrap items-center gap-2 sm:justify-end">
+            <Link
+              href={HOME_COMPARE_HUB_HREF}
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-emerald-200 bg-white px-5 py-2.5 text-sm font-semibold text-emerald-900 shadow-sm transition-colors hover:bg-emerald-50"
+            >
+              Compare here
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/methodology"
+              className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-emerald-800"
+            >
+              Read full guide
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -6,17 +6,7 @@ import { usePathname } from "next/navigation";
 import { useMemo, useRef } from "react";
 import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import type { RecommendedItem } from "@/lib/recommended-reading";
-
-const INSIGHTS = [
-  "GLP-1 treatments work best alongside the diet and activity plan your clinician supports.",
-  "Prices and stock change often—compare regulated UK pharmacies before you commit.",
-  "Always check the GPhC register when buying prescription medicines online.",
-  "Titration slowly often means fewer digestive side effects in the first weeks.",
-  "Weight regain after stopping medication is common without long-term habit change.",
-  "NHS and private pathways differ by region—confirm eligibility with your prescriber.",
-  "Report severe abdominal pain or persistent vomiting to a clinician urgently.",
-  "Independent guides help you ask better questions; they are not a substitute for medical advice.",
-] as const;
+import { sanitizeBrandDisplayNames } from "@/lib/text/sanitize-brand-display-names";
 
 function hashToSeed(s: string): number {
   let h = 2166136261;
@@ -44,7 +34,7 @@ function seededShuffle<T>(items: T[], seed: number): T[] {
 function normalizePath(p: string): string {
   if (!p) return "/";
   const x = p.split("?")[0]?.split("#")[0] ?? "/";
-  return x.length > 1 && x.endsWith("/") ? x.slice(0, -1) : x;
+  return x.length > 1 && x.endsWith("/") ? x.slice(0, -1) : "/";
 }
 
 type Props = {
@@ -54,14 +44,12 @@ type Props = {
 
 const CARD_COUNT = 6;
 
+const KEEP_EXPLORING_INTRO =
+  "Most people benefit from reading independent guides alongside a clinician led plan. Prices and eligibility change often: confirm details on a regulated pharmacy site before you pay.";
+
 export default function SiteEndSectionClient({ pool, dayKey }: Props) {
   const pathname = usePathname();
   const carouselRef = useRef<HTMLDivElement>(null);
-
-  const insight = useMemo(() => {
-    const i = hashToSeed(dayKey) % INSIGHTS.length;
-    return INSIGHTS[i]!;
-  }, [dayKey]);
 
   const picks = useMemo(() => {
     const path = normalizePath(pathname ?? "");
@@ -91,7 +79,7 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
               Keep exploring
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
-              {insight}
+              {KEEP_EXPLORING_INTRO}
             </p>
           </div>
           <div className="flex gap-2 sm:shrink-0">
@@ -119,47 +107,51 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
           data-carousel
           className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:thin] sm:mx-0 sm:px-0"
         >
-          {picks.map((item, idx) => (
-            <Link
-              key={`${item.href}-${idx}`}
-              href={item.href}
-              className="group relative flex w-[min(280px,85vw)] shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm ring-1 ring-slate-900/5 transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md"
-            >
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
-                <Image
-                  src={item.imageUrl}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition duration-500 group-hover:scale-105"
-                  sizes="280px"
-                  unoptimized={
-                    item.imageUrl.includes("unsplash.com") ||
-                    item.imageUrl.includes("ibb.co")
-                  }
-                />
-                <span
-                  className={`absolute left-3 top-3 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
-                    item.kind === "guide"
-                      ? "bg-emerald-600 text-white"
-                      : "bg-violet-600 text-white"
-                  }`}
-                >
-                  {item.kind === "guide" ? "Guide" : "Article"}
-                </span>
-              </div>
-              <div className="flex flex-1 flex-col p-4">
-                <h3 className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900 group-hover:text-emerald-800">
-                  {item.title}
-                </h3>
-                <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-slate-500">
-                  {item.description}
-                </p>
-                <span className="mt-3 text-xs font-semibold text-emerald-700">
-                  Read →
-                </span>
-              </div>
-            </Link>
-          ))}
+          {picks.map((item, idx) => {
+            const title = sanitizeBrandDisplayNames(item.title);
+            const description = sanitizeBrandDisplayNames(item.description);
+            return (
+              <Link
+                key={`${item.href}-${idx}`}
+                href={item.href}
+                className="group relative flex w-[min(280px,85vw)] shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm ring-1 ring-slate-900/5 transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md"
+              >
+                <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-100">
+                  <Image
+                    src={item.imageUrl}
+                    alt={title}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                    sizes="280px"
+                    unoptimized={
+                      item.imageUrl.includes("unsplash.com") ||
+                      item.imageUrl.includes("ibb.co")
+                    }
+                  />
+                  <span
+                    className={`absolute left-3 top-3 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
+                      item.kind === "guide"
+                        ? "bg-emerald-600 text-white"
+                        : "bg-violet-600 text-white"
+                    }`}
+                  >
+                    {item.kind === "guide" ? "Guide" : "Article"}
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-4">
+                  <h3 className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900 group-hover:text-emerald-800">
+                    {title}
+                  </h3>
+                  <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-slate-500">
+                    {description}
+                  </p>
+                  <span className="mt-3 text-xs font-semibold text-emerald-700">
+                    Read →
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

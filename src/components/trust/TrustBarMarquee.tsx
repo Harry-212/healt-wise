@@ -14,17 +14,16 @@ const ITEMS = [
   {
     icon: Package,
     title: "Capable",
-    desc: "Doctor-reviewed guides",
+    desc: "Doctor reviewed guides",
   },
   {
     icon: Stethoscope,
-    title: "Compare Prices",
-    desc: "Find the best deals on Mounjaro & Wegovy",
+    title: "Compare prices",
+    desc: "Compare weight loss treatment options from regulated providers",
   },
-];
+] as const;
 
 export default function TrustBarMarquee() {
-  // Triple the items so it flows seamlessly across ultra-wide monitors
   const loop = [...ITEMS, ...ITEMS, ...ITEMS];
 
   return (
@@ -35,8 +34,8 @@ export default function TrustBarMarquee() {
             const Icon = item.icon;
             return (
               <div
-                key={i}
-                className="flex w-[280px] shrink-0 flex-col rounded-2xl bg-brand-surface p-6 border border-brand-border/60 transition-colors hover:border-brand-border"
+                key={`a-${i}`}
+                className="flex w-[280px] shrink-0 flex-col rounded-2xl border border-brand-border/60 bg-brand-surface p-6 transition-colors hover:border-brand-border"
               >
                 <Icon
                   className="h-6 w-6 text-brand-primary"
@@ -46,14 +45,13 @@ export default function TrustBarMarquee() {
                 <h3 className="mt-4 font-bold text-brand-primary">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-sm text-brand-secondary leading-relaxed">
+                <p className="mt-1 text-sm leading-relaxed text-brand-secondary">
                   {item.desc}
                 </p>
               </div>
             );
           })}
         </div>
-        {/* Exact duplicate for the seamless looping effect */}
         <div
           className="flex shrink-0 motion-safe:animate-marquee motion-safe:transform-gpu items-stretch gap-4 px-2 motion-safe:group-hover:[animation-play-state:paused]"
           aria-hidden
@@ -62,17 +60,18 @@ export default function TrustBarMarquee() {
             const Icon = item.icon;
             return (
               <div
-                key={i + loop.length}
-                className="flex w-[280px] shrink-0 flex-col rounded-2xl bg-brand-surface p-6 border border-brand-border/60 transition-colors hover:border-brand-border"
+                key={`b-${i}`}
+                className="flex w-[280px] shrink-0 flex-col rounded-2xl border border-brand-border/60 bg-brand-surface p-6 transition-colors hover:border-brand-border"
               >
                 <Icon
                   className="h-6 w-6 text-brand-primary"
                   strokeWidth={1.5}
+                  aria-hidden
                 />
                 <h3 className="mt-4 font-bold text-brand-primary">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-sm text-brand-secondary leading-relaxed">
+                <p className="mt-1 text-sm leading-relaxed text-brand-secondary">
                   {item.desc}
                 </p>
               </div>

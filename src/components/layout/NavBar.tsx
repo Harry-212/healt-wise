@@ -10,6 +10,7 @@ import MobileNavDrawer from "@/components/layout/MobileNavDrawer";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
 import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
+import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 
 const MegaMenuDesktop = dynamic(
@@ -113,7 +114,7 @@ export default function NavBar() {
               <div className="relative flex items-center transition-opacity hover:opacity-90">
                 <Image
                   src={SITE_LOGO_SRC}
-                  alt="Health Wise Logo"
+                  alt={`${SITE_BRAND_NAME} logo`}
                   width={800}
                   height={250}
                   className="h-9 w-auto max-w-[118px] object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.08)] sm:h-14 sm:max-w-none md:h-[4.5rem]"

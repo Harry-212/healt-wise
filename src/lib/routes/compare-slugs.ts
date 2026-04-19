@@ -5,6 +5,9 @@ export const COMPARE_SLUGS: Record<string, { keyword: string }> = {
   "mounjaro-vs-saxenda": {
     keyword: "Mounjaro vs Saxenda",
   },
+  "mounjaro-vs-wegovy-vs-saxenda": {
+    keyword: "Mounjaro vs Wegovy vs Saxenda",
+  },
   "best-weight-loss-injections-uk": {
     keyword: "Best weight loss injections UK",
   },
