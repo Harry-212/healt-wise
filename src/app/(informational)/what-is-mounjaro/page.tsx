@@ -98,7 +98,7 @@ export default function WhatIsMounjaroPage() {
                 </li>
                 <li>
                   <a
-                    href="https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/weight-loss-medicines/"
+                    href="https://www.nhs.uk/conditions/obesity/treatment/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium underline underline-offset-2"
@@ -108,12 +108,12 @@ export default function WhatIsMounjaroPage() {
                 </li>
                 <li>
                   <a
-                    href="https://www.nhs.uk/medicines/mounjaro/"
+                    href="https://www.nice.org.uk/guidance/ta1026/informationforpublic"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium underline underline-offset-2"
                   >
-                    NHS medicines: Mounjaro
+                    NICE: information for the public (tirzepatide / Mounjaro)
                   </a>
                 </li>
                 <li>
@@ -310,12 +310,12 @@ export default function WhatIsMounjaroPage() {
                   </li>
                   <li>
                     <a
-                      href="https://www.nhs.uk/medicines/mounjaro/"
+                      href="https://www.nice.org.uk/guidance/ta1026/informationforpublic"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-medium underline underline-offset-2"
                     >
-                      NHS — Mounjaro (tirzepatide)
+                      NICE — information for the public (tirzepatide / Mounjaro)
                     </a>
                   </li>
                   <li>
@@ -553,12 +553,12 @@ export default function WhatIsMounjaroPage() {
               <ul className="list-inside list-disc space-y-2 text-sm">
                 <li>
                   <a
-                    href="https://www.nhs.uk/medicines/mounjaro/"
+                    href="https://www.nice.org.uk/guidance/ta1026/informationforpublic"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium text-violet-900 underline"
                   >
-                    NHS medicines: Mounjaro
+                    NICE: information for the public (tirzepatide / Mounjaro)
                   </a>
                 </li>
                 <li>
@@ -749,14 +749,14 @@ export default function WhatIsMounjaroPage() {
                 <h3 className="text-lg font-bold text-slate-900">References</h3>
                 <ol className="mt-4 list-inside list-decimal space-y-2 text-sm text-slate-700">
                   <li>
-                    NHS. Mounjaro (tirzepatide).{" "}
+                    NICE. Information for the public — tirzepatide (Mounjaro).{" "}
                     <a
-                      href="https://www.nhs.uk/medicines/mounjaro/"
+                      href="https://www.nice.org.uk/guidance/ta1026/informationforpublic"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-violet-900 underline"
                     >
-                      nhs.uk
+                      nice.org.uk
                     </a>
                   </li>
                   <li>

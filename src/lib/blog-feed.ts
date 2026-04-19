@@ -12,6 +12,8 @@ export const POSTS_PER_PAGE = 20;
 
 export type FeedArticle = {
   title: string;
+  /** ISO date string `YYYY-MM-DD` for client-side sorting. */
+  date: string;
   image: string;
   description: string;
   href: string;
@@ -21,6 +23,7 @@ export type FeedArticle = {
 export type FeedArticleMeta = {
   slug: string;
   title: string;
+  date: string;
   description: string;
   category: string;
   heroImage?: string;
@@ -51,6 +54,7 @@ export function inferMarkdownFeedTags(meta: FeedArticleMeta): BlogFeedTag[] {
 export function blogMetaToFeedArticle(meta: FeedArticleMeta): FeedArticle {
   return {
     title: meta.title,
+    date: meta.date,
     description: meta.description,
     href: `/blog/${meta.slug}`,
     image: meta.heroImage ?? DEFAULT_CARD_IMAGE,

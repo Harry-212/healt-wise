@@ -72,13 +72,13 @@ const REFERENCES = [
     label: "MHRA — Buying medicines online safely",
     description:
       "MHRA guidance on how to identify legitimate online pharmacies and avoid counterfeit or unlicensed medicines.",
-    href: "https://www.gov.uk/guidance/medicines-and-online-pharmacies",
+    href: "https://fakemeds.campaign.gov.uk/",
   },
   {
     label: "MHRA — Reporting fake medicines and illegal sales",
     description:
       "How to report suspected counterfeit medicines or illegal online medicine sales to UK regulators.",
-    href: "https://www.gov.uk/report-counterfeit-medicine-or-device",
+    href: "https://www.gov.uk/report-problem-medicine-medical-device",
   },
   {
     label: "How we verify UK pharmacies — Health Wise",
@@ -290,7 +290,7 @@ export default function GuideFakePharmacy() {
         />
         <GuideParagraph>
           Always cross-check registration before you buy. The{" "}
-          <EL href="https://www.gov.uk/guidance/medicines-and-online-pharmacies">
+          <EL href="https://fakemeds.campaign.gov.uk/">
             MHRA's online medicines guidance
           </EL>{" "}
           explains what legitimate distance-selling pharmacies must display.

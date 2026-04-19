@@ -299,6 +299,7 @@ export function getAllPostsMeta(): BlogPostMeta[] {
       const feedTags = inferMarkdownFeedTags({
         slug: meta.slug,
         title: meta.title,
+        date: meta.date,
         description: meta.description,
         category: meta.category,
       });
@@ -374,6 +375,7 @@ export function getBlogPageFeed(
     blogMetaToFeedArticle({
       slug: p.slug,
       title: p.title,
+      date: p.date,
       description: p.description,
       category: p.category,
       heroImage: p.heroImage,

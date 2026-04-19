@@ -129,22 +129,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
             </span>
           </div>
 
-          <BlogArticleHeroImage
-            src={hero.url}
-            alt={`${name}, UK — ${hero.scene}`}
-          />
-          <p className={`mt-2 text-center text-xs ${muted}`}>
-            Photo:{" "}
-            <a
-              href={hero.profileUrl}
-              className="text-emerald-600 underline-offset-2 hover:underline"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              {hero.photographer}
-            </a>{" "}
-            on {hero.source === "pexels" ? "Pexels" : "Unsplash"} · {hero.scene}
-          </p>
+          <BlogArticleHeroImage src={hero.url} alt={hero.alt} />
           <div
             id="guide-article-hero-end"
             aria-hidden

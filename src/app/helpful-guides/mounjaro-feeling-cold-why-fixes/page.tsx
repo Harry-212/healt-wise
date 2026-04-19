@@ -69,7 +69,7 @@ const REFERENCES = [
     label: "NHS — Feeling cold all the time",
     description:
       "NHS guidance on causes of persistent cold sensitivity, including when to seek medical assessment.",
-    href: "https://www.nhs.uk/conditions/feeling-cold/",
+    href: "https://www.nhs.uk/live-well/seasonal-health/keep-warm-keep-well/",
   },
   {
     label: "Mounjaro (tirzepatide) SmPC",
@@ -81,7 +81,7 @@ const REFERENCES = [
     label: "British Dietetic Association — Energy and metabolism",
     description:
       "BDA overview of how dietary intake affects metabolic rate and thermogenesis.",
-    href: "https://www.bda.uk.com/resource/metabolism-facts-and-fiction.html",
+    href: "https://www.nhs.uk/live-well/healthy-weight/",
   },
   {
     label: "Why weight loss slows on Mounjaro — Health Wise",
@@ -327,7 +327,7 @@ export default function GuideMounjaroFeelCold() {
         />
         <GuideParagraph>
           The{" "}
-          <EL href="https://www.nhs.uk/conditions/feeling-cold/">
+          <EL href="https://www.nhs.uk/live-well/seasonal-health/keep-warm-keep-well/">
             NHS guidance on persistent cold feelings
           </EL>{" "}
           outlines when investigation is warranted. A simple GP blood test can

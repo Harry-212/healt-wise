@@ -74,7 +74,7 @@ const REFERENCES = [
     label: "NHS — How your health information is used",
     description:
       "NHS guidance on how patient health information is shared between clinical services and what rights patients have.",
-    href: "https://www.nhs.uk/using-the-nhs/about-the-nhs/how-your-health-information-is-used/",
+    href: "https://www.nhs.uk/your-nhs-data-matters/",
   },
   {
     label: "NICE — Tirzepatide for managing overweight and obesity",
@@ -86,7 +86,7 @@ const REFERENCES = [
     label: "MHRA — Prescription-only medicines (POMs)",
     description:
       "MHRA guidance on the legal classification of prescription-only medicines and the obligations this places on prescribers and dispensers.",
-    href: "https://www.gov.uk/guidance/prescriptions-for-controlled-drugs-and-other-prescription-only-medicines",
+    href: "https://www.gov.uk/government/publications/rules-for-the-sale-supply-and-administration-of-medicines",
   },
   {
     label: "How we verify UK pharmacies — Health Wise",
@@ -220,7 +220,7 @@ export default function GuideMounjaroGP() {
         <GuideParagraph>
           This communication is conducted through secure clinical channels and
           is subject to NHS and{" "}
-          <EL href="https://www.nhs.uk/using-the-nhs/about-the-nhs/how-your-health-information-is-used/">
+          <EL href="https://www.nhs.uk/your-nhs-data-matters/">
             GDPR data protection requirements
           </EL>
           . Your information is not shared beyond your clinical care team
@@ -235,7 +235,7 @@ export default function GuideMounjaroGP() {
         <GuideParagraph>
           Because{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is a{" "}
-          <EL href="https://www.gov.uk/guidance/prescriptions-for-controlled-drugs-and-other-prescription-only-medicines">
+          <EL href="https://www.gov.uk/government/publications/rules-for-the-sale-supply-and-administration-of-medicines">
             prescription-only medicine (POM)
           </EL>{" "}
           classified as high-risk by the{" "}

@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -80,7 +80,7 @@ const REFERENCES = [
     label: "NHS — Tirzepatide (Mounjaro)",
     description:
       "NHS information on tirzepatide including side effects, dosing, and important patient safety advice.",
-    href: "https://www.nhs.uk/medicines/tirzepatide/",
+    href: "https://www.england.nhs.uk/long-read/tirzepatide-in-primary-care-for-weight-management-information-on-wraparound-care/",
   },
   {
     label: "NICE — Obesity: identification, assessment and management (CG189)",
@@ -327,7 +327,7 @@ export default function GuideMounjaroPillar() {
         <GuideParagraph>
           Most side effects are mild and improve over time as your body adjusts
           to the medication. The{" "}
-          <EL href="https://www.nhs.uk/medicines/tirzepatide/">
+          <EL href="https://www.england.nhs.uk/long-read/tirzepatide-in-primary-care-for-weight-management-information-on-wraparound-care/">
             NHS tirzepatide page
           </EL>{" "}
           and the{" "}

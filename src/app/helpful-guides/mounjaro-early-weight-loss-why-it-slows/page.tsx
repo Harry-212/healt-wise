@@ -75,7 +75,7 @@ const REFERENCES = [
     label: "NHS — Why weight loss slows down",
     description:
       "NHS explanation of why weight loss naturally decelerates over time and what to do about it.",
-    href: "https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/managing-your-weight/",
+    href: "https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/",
   },
   {
     label: "British Dietetic Association — Sustainable weight management",
@@ -355,7 +355,7 @@ export default function GuideEarlyWeightLoss() {
             <>
               <strong>Stay hydrated</strong> — dehydration can temporarily
               affect the scale and mask fat loss. The{" "}
-              <EL href="https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/managing-your-weight/">
+              <EL href="https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/">
                 NHS recommends
               </EL>{" "}
               approximately 6–8 glasses of water per day.

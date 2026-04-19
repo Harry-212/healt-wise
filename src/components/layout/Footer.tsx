@@ -7,6 +7,18 @@ import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 
+/** Matches `UK_LOCATION_ARTICLE_PREFIX` in `@/lib/blog` — avoid importing `blog` in a client component. */
+const UK_LOCATION_BLOG_HREF = (citySlug: string) =>
+  `/blog/best-weight-loss-treatment-in-${citySlug}`;
+
+const FOOTER_UK_LOCATION_CITIES = [
+  { slug: "london", name: "London" },
+  { slug: "birmingham", name: "Birmingham" },
+  { slug: "manchester", name: "Manchester" },
+  { slug: "glasgow", name: "Glasgow" },
+  { slug: "leeds", name: "Leeds" },
+] as const;
+
 const MediumIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
     <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.5 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
@@ -66,7 +78,7 @@ export default function Footer() {
         </div>
 
         {/* Middle Section: Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-12 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-12 mb-20">
           <div>
             <h3 className="mb-6 text-lg font-bold tracking-tight text-slate-900">Treatments</h3>
             <ul className="space-y-4">
@@ -84,6 +96,32 @@ export default function Footer() {
                   className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors"
                 >
                   Helpful guides
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-span-2 md:col-span-1 lg:col-span-1">
+            <h3 className="mb-6 text-lg font-bold tracking-tight text-slate-900">
+              Locations
+            </h3>
+            <ul className="space-y-4">
+              {FOOTER_UK_LOCATION_CITIES.map(({ slug, name }) => (
+                <li key={slug}>
+                  <Link
+                    href={UK_LOCATION_BLOG_HREF(slug)}
+                    className="text-base font-semibold text-slate-600 hover:text-slate-900 transition-colors leading-snug"
+                  >
+                    Best weight loss treatment in {name}
+                  </Link>
+                </li>
+              ))}
+              <li className="pt-3 mt-1 border-t border-slate-200/90">
+                <Link
+                  href="/blog/locations-in-uk"
+                  className="text-base font-bold text-slate-900 hover:text-emerald-800 transition-colors"
+                >
+                  All UK locations
                 </Link>
               </li>
             </ul>

@@ -77,7 +77,7 @@ const REFERENCES = [
     label: "British Dietetic Association — Protein and muscle health",
     description:
       "BDA evidence summary on protein requirements for weight management and muscle preservation.",
-    href: "https://www.bda.uk.com/resource/protein.html",
+    href: "https://www.bda.uk.com/resource/healthy-eating.html",
   },
   {
     label: "NHS — Fibre in your diet",

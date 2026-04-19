@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -65,7 +65,7 @@ const REFERENCES = [
     label: "NHS — Tirzepatide (Mounjaro)",
     description:
       "NHS patient information on Mounjaro including expected treatment outcomes and what to discuss with your clinician.",
-    href: "https://www.nhs.uk/medicines/tirzepatide/",
+    href: "https://www.england.nhs.uk/long-read/tirzepatide-in-primary-care-for-weight-management-information-on-wraparound-care/",
   },
   {
     label: "NICE — Managing overweight and obesity: lifestyle interventions",

@@ -73,16 +73,16 @@ const REFERENCES = [
     href: "https://www.pharmacyregulation.org/standards/standards-registered-pharmacies",
   },
   {
-    label: "MHRA — Buying medicines online",
+    label: "MHRA — #FakeMeds (buying medicines online)",
     description:
-      "UK government guidance from the Medicines and Healthcare products Regulatory Agency on safely purchasing medicines online.",
-    href: "https://www.gov.uk/buy-safely-online",
+      "MHRA campaign site with practical checks for buying medicines safely online in the UK.",
+    href: "https://fakemeds.campaign.gov.uk/",
   },
   {
-    label: "NHS — Buying medicines online safely",
+    label: "NHS — How pharmacies can help",
     description:
-      "NHS guidance on how to verify an online pharmacy and avoid illegal or unregulated suppliers.",
-    href: "https://www.nhs.uk/nhs-services/pharmacies/buying-medicines-online/",
+      "NHS overview of pharmacy services, including safe use of medicines and returning unwanted medicines for disposal.",
+    href: "https://www.nhs.uk/nhs-services/pharmacies/how-pharmacies-can-help/",
   },
   {
     label: "Compare verified UK pharmacies — Health Wise",
@@ -264,7 +264,7 @@ export default function GuidePharmacyVerification() {
       <GuideSection id="risks" heading="Risks of Unregulated Online Pharmacies">
         <GuideParagraph>
           Using unverified providers can expose you to serious risks. The{" "}
-          <EL href="https://www.gov.uk/buy-safely-online">MHRA warns</EL> that
+          <EL href="https://fakemeds.campaign.gov.uk/">MHRA warns</EL> that
           unregulated online pharmacies are one of the most common routes by
           which counterfeit medicines enter the UK. Common dangers include:
         </GuideParagraph>
@@ -274,7 +274,7 @@ export default function GuidePharmacyVerification() {
             <>
               Fraudulent websites designed to collect payment and personal
               data. The{" "}
-              <EL href="https://www.nhs.uk/nhs-services/pharmacies/buying-medicines-online/">
+              <EL href="https://www.nhs.uk/nhs-services/pharmacies/how-pharmacies-can-help/">
                 NHS recommends
               </EL>{" "}
               always checking for a GPhC logo before purchasing.

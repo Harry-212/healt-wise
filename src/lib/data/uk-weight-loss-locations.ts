@@ -1,9 +1,14 @@
 import {
-  resolveUkWeightLossHero,
-  type UkHeroImage,
-} from "@/lib/data/uk-weight-loss-hero-pool";
+  getUkLocationCityImageUrl,
+  getUkLocationHeroAlt,
+} from "@/lib/data/uk-location-city-image";
 
 export type UkNation = "England" | "Scotland" | "Wales" | "Northern Ireland";
+
+export type UkLocationHero = {
+  url: string;
+  alt: string;
+};
 
 export type UkWeightLossLocation = {
   slug: string;
@@ -11,7 +16,7 @@ export type UkWeightLossLocation = {
   nation: UkNation;
   /** Synthetic long-tail phrases woven into copy (unique per row). */
   longtails: string[];
-  hero: UkHeroImage;
+  hero: UkLocationHero;
 };
 
 /** GOV.UK list of UK cities (2022) — two Bangors disambiguated; excludes Crown Dependencies. */
@@ -152,13 +157,15 @@ function rowToLocation([slug, name, nation]: readonly [
   string,
   UkNation,
 ]): UkWeightLossLocation {
-  const hero = resolveUkWeightLossHero(slug);
   return {
     slug,
     name,
     nation,
     longtails: buildLongtails(name, nation, slug),
-    hero,
+    hero: {
+      url: getUkLocationCityImageUrl(slug),
+      alt: getUkLocationHeroAlt(name),
+    },
   };
 }
 

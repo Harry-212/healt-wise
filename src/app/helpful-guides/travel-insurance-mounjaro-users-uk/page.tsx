@@ -65,7 +65,7 @@ const REFERENCES = [
     label: "NHS — Travelling with medicines",
     description:
       "NHS guidance on carrying prescription medicines abroad, proof of prescription, and quantities.",
-    href: "https://www.nhs.uk/common-health-questions/medicines/can-i-take-my-medicine-abroad/",
+    href: "https://www.fitfortravel.nhs.uk/",
   },
   {
     label: "GOV.UK — Foreign travel advice",
@@ -77,7 +77,7 @@ const REFERENCES = [
     label: "Financial Conduct Authority — Travel insurance",
     description:
       "FCA information on buying travel insurance and understanding policy terms in the UK market.",
-    href: "https://www.fca.org.uk/consumers/travel-insurance",
+    href: "https://www.fca.org.uk/news/news-stories/fca-urges-consumers-carefully-consider-what-cover-they-require-when-buying-travel-insurance",
   },
   {
     label: "Mounjaro delivery & storage UK — Health Wise",
@@ -219,7 +219,7 @@ export default function GuideTravelInsuranceMounjaro() {
         <GuideParagraph>
           Use FCA-regulated comparison services and read policy summaries for
           medical limits, exclusions, and excess. The{" "}
-          <EL href="https://www.fca.org.uk/consumers/travel-insurance">
+          <EL href="https://www.fca.org.uk/news/news-stories/fca-urges-consumers-carefully-consider-what-cover-they-require-when-buying-travel-insurance">
             FCA consumer pages on travel insurance
           </EL>{" "}
           explain what to look for when buying cover in the UK.
@@ -255,7 +255,7 @@ export default function GuideTravelInsuranceMounjaro() {
               Keep{" "}
               <IL href="/what-is-mounjaro">Mounjaro</IL> in original packaging
               with the pharmacy label and a copy of your prescription. See{" "}
-              <EL href="https://www.nhs.uk/common-health-questions/medicines/can-i-take-my-medicine-abroad/">
+              <EL href="https://www.fitfortravel.nhs.uk/">
                 NHS guidance on travelling with medicines
               </EL>
               .

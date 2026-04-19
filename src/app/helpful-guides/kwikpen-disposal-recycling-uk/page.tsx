@@ -65,13 +65,13 @@ const REFERENCES = [
     label: "NHS — How to get rid of used needles",
     description:
       "NHS guidance on sharps disposal, obtaining sharps bins, and what never to do with used needles.",
-    href: "https://www.nhs.uk/common-health-questions/medicines/how-should-i-dispose-of-used-needles-or-syringes/",
+    href: "https://www.nhs.uk/common-health-questions/accidents-first-aid-and-treatments/how-should-i-dispose-of-used-needles-or-sharps/",
   },
   {
     label: "NHS — How to dispose of unused medicines",
     description:
       "NHS advice on returning unused medicines to a pharmacy and why home disposal can harm the environment.",
-    href: "https://www.nhs.uk/common-health-questions/medicines/how-can-i-dispose-of-unwanted-medicine/",
+    href: "https://www.nhs.uk/nhs-services/pharmacies/how-pharmacies-can-help/",
   },
   {
     label: "Mounjaro (tirzepatide) patient information — EMC",
@@ -171,7 +171,7 @@ export default function GuideKwikpenDisposal() {
       <GuideSection id="step-needles" heading="Step 1: Handle Needles Safely">
         <GuideParagraph>
           The{" "}
-          <EL href="https://www.nhs.uk/common-health-questions/medicines/how-should-i-dispose-of-used-needles-or-syringes/">
+          <EL href="https://www.nhs.uk/common-health-questions/accidents-first-aid-and-treatments/how-should-i-dispose-of-used-needles-or-sharps/">
             NHS is clear
           </EL>
           : used needles must not go in household waste loose, and you should
@@ -221,7 +221,7 @@ export default function GuideKwikpenDisposal() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> pens you no longer need
           —for example after a dose change or if treatment stops—return them to
           a pharmacy. The{" "}
-          <EL href="https://www.nhs.uk/common-health-questions/medicines/how-can-i-dispose-of-unwanted-medicine/">
+          <EL href="https://www.nhs.uk/nhs-services/pharmacies/how-pharmacies-can-help/">
             NHS recommends
           </EL>{" "}
           returning unused medicines rather than binning or flushing them, to

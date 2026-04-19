@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -74,7 +74,7 @@ const REFERENCES = [
     label: "NHS — Tirzepatide (Mounjaro)",
     description:
       "NHS information on tirzepatide including side effects, dosing, and important safety advice.",
-    href: "https://www.nhs.uk/medicines/tirzepatide/",
+    href: "https://www.england.nhs.uk/long-read/tirzepatide-in-primary-care-for-weight-management-information-on-wraparound-care/",
   },
   {
     label: "NICE — Obesity: identification, assessment and management",
@@ -267,7 +267,7 @@ export default function GuideMounjaroPregnancy() {
             </>,
             "Patient information leaflets distributed with the medication include contraception guidance.",
             <>
-              <EL href="https://www.nhs.uk/medicines/tirzepatide/">
+              <EL href="https://www.england.nhs.uk/long-read/tirzepatide-in-primary-care-for-weight-management-information-on-wraparound-care/">
                 NHS guidance on tirzepatide
               </EL>{" "}
               recommends discussing contraception with your clinician before
@@ -300,7 +300,7 @@ export default function GuideMounjaroPregnancy() {
           The decision about which contraception is most appropriate should
           always be made in discussion with a qualified healthcare professional.
           The{" "}
-          <EL href="https://www.nhs.uk/medicines/tirzepatide/">
+          <EL href="https://www.england.nhs.uk/long-read/tirzepatide-in-primary-care-for-weight-management-information-on-wraparound-care/">
             NHS Mounjaro page
           </EL>{" "}
           provides additional guidance on this.

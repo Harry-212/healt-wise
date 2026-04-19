@@ -77,7 +77,7 @@ const REFERENCES = [
     label: "MHRA — Buying medicines online safely",
     description:
       "MHRA guidance on how to identify legitimate online pharmacies and avoid counterfeit or unlicensed medicines.",
-    href: "https://www.gov.uk/guidance/medicines-and-online-pharmacies",
+    href: "https://fakemeds.campaign.gov.uk/",
   },
   {
     label: "How we verify UK pharmacies — Health Wise",
@@ -311,7 +311,7 @@ export default function GuideLocalVsOnline() {
         <GuideCallout variant="warning">
           Always verify an online pharmacy is GPhC-registered before ordering.
           The{" "}
-          <EL href="https://www.gov.uk/guidance/medicines-and-online-pharmacies">
+          <EL href="https://fakemeds.campaign.gov.uk/">
             MHRA provides guidance
           </EL>{" "}
           on how to identify legitimate online providers and avoid counterfeit

@@ -98,7 +98,7 @@ export default function WhatIsSaxendaPage() {
                 </li>
                 <li>
                   <a
-                    href="https://www.nhs.uk/medicines/saxenda/"
+                    href="https://www.nice.org.uk/guidance/ta664/informationforpublic"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium underline underline-offset-2"
@@ -108,7 +108,7 @@ export default function WhatIsSaxendaPage() {
                 </li>
                 <li>
                   <a
-                    href="https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/weight-loss-medicines/"
+                    href="https://www.nhs.uk/conditions/obesity/treatment/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium underline underline-offset-2"
@@ -263,7 +263,7 @@ export default function WhatIsSaxendaPage() {
                   </li>
                   <li>
                     <a
-                      href="https://www.nhs.uk/medicines/saxenda/"
+                      href="https://www.nice.org.uk/guidance/ta664/informationforpublic"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-medium underline underline-offset-2"
@@ -490,7 +490,7 @@ export default function WhatIsSaxendaPage() {
               <ul className="list-inside list-disc space-y-2 text-sm">
                 <li>
                   <a
-                    href="https://www.nhs.uk/medicines/saxenda/"
+                    href="https://www.nice.org.uk/guidance/ta664/informationforpublic"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium text-sky-900 underline"
@@ -684,7 +684,7 @@ export default function WhatIsSaxendaPage() {
                   <li>
                     NHS. Saxenda.{" "}
                     <a
-                      href="https://www.nhs.uk/medicines/saxenda/"
+                      href="https://www.nice.org.uk/guidance/ta664/informationforpublic"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sky-900 underline"

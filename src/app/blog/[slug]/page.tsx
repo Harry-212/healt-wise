@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       type: "article",
       locale: "en_GB",
-      images: [{ url: loc.hero.url, width: 1600, height: 900, alt: loc.hero.scene }],
+      images: [{ url: loc.hero.url, width: 1600, height: 900, alt: loc.hero.alt }],
     },
     twitter: {
       card: "summary_large_image",

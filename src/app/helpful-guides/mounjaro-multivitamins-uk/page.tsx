@@ -69,13 +69,13 @@ const REFERENCES = [
     label: "NHS — Supplements: who needs them?",
     description:
       "NHS overview of when supplements are and are not necessary, and what to look for in a multivitamin.",
-    href: "https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/vitamins-supplements/",
+    href: "https://www.nhs.uk/common-health-questions/food-and-diet/do-i-need-vitamin-supplements/",
   },
   {
     label: "MHRA — Regulating food supplements in the UK",
     description:
       "MHRA framework for the regulation of food supplements including safety standards and ingredient limits applicable in the UK.",
-    href: "https://www.gov.uk/guidance/food-supplements",
+    href: "https://www.gov.uk/government/publications/food-supplements-guidance-and-faqs",
   },
   {
     label: "Mounjaro (tirzepatide) SmPC",
@@ -186,7 +186,7 @@ export default function GuideMounjaroVitamins() {
         />
         <GuideCallout variant="tip">
           A multivitamin should never replace a balanced diet. The{" "}
-          <EL href="https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/vitamins-supplements/">
+          <EL href="https://www.nhs.uk/common-health-questions/food-and-diet/do-i-need-vitamin-supplements/">
             NHS advises
           </EL>{" "}
           that most people get sufficient nutrients from food alone. Speak to
@@ -227,7 +227,7 @@ export default function GuideMounjaroVitamins() {
       <GuideSection id="cheap-vs-expensive" heading="Cheap vs Expensive Multivitamins: Is There a Difference?">
         <GuideParagraph>
           In the UK, food supplements are regulated by the{" "}
-          <EL href="https://www.gov.uk/guidance/food-supplements">
+          <EL href="https://www.gov.uk/government/publications/food-supplements-guidance-and-faqs">
             MHRA under the Food Supplements Regulations
           </EL>
           . This means all compliant products must meet standards for:

@@ -74,7 +74,7 @@ const REFERENCES = [
     label: "MHRA — Buying prescription medicines online safely",
     description:
       "MHRA guidance on how to identify legitimate online pharmacies and protect yourself from counterfeit medications.",
-    href: "https://www.gov.uk/guidance/medicines-and-online-pharmacies",
+    href: "https://fakemeds.campaign.gov.uk/",
   },
   {
     label: "NICE — Tirzepatide for managing overweight and obesity (TA1026)",
@@ -86,7 +86,7 @@ const REFERENCES = [
     label: "NHS — Wegovy prescribing criteria",
     description:
       "NHS information on who is eligible for GLP-1 weight management treatments including Wegovy in England.",
-    href: "https://www.nhs.uk/medicines/semaglutide-weight-loss/",
+    href: "https://www.nice.org.uk/guidance/ta875/informationforpublic",
   },
   {
     label: "How we verify UK pharmacies — Health Wise",

@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -70,13 +70,13 @@ const REFERENCES = [
     label: "MHRA — Cold chain guidance for medicines",
     description:
       "MHRA guidance on the transport and storage of temperature-sensitive medicines in the UK supply chain.",
-    href: "https://www.gov.uk/government/publications/rules-and-guidance-for-pharmaceutical-manufacturers-and-distributors-2017",
+    href: "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency",
   },
   {
     label: "NHS — Tirzepatide (Mounjaro) — storage information",
     description:
       "NHS patient information on how to store and handle Mounjaro correctly at home.",
-    href: "https://www.nhs.uk/medicines/tirzepatide/",
+    href: "https://www.england.nhs.uk/long-read/tirzepatide-in-primary-care-for-weight-management-information-on-wraparound-care/",
   },
   {
     label: "GPhC — Standards for registered pharmacies: premises and equipment",

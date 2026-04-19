@@ -112,9 +112,20 @@ export default function BlogClient({
   const sortedArticles = useMemo(() => {
     const base = [...articles];
     const byTitle = (a: FeedArticle, b: FeedArticle) => a.title.localeCompare(b.title);
+    const byDateAsc = (a: FeedArticle, b: FeedArticle) => {
+      const d = a.date.localeCompare(b.date);
+      return d !== 0 ? d : a.title.localeCompare(b.title);
+    };
+    const byDateDesc = (a: FeedArticle, b: FeedArticle) => {
+      const d = b.date.localeCompare(a.date);
+      return d !== 0 ? d : a.title.localeCompare(b.title);
+    };
     if (sortMethod === "Title Asc") return base.sort(byTitle);
-    if (sortMethod === "Title Desc") return base.sort((a, b) => b.title.localeCompare(a.title));
-    return base;
+    if (sortMethod === "Title Desc")
+      return base.sort((a, b) => b.title.localeCompare(a.title));
+    if (sortMethod === "Date Asc") return base.sort(byDateAsc);
+    if (sortMethod === "Date Desc") return base.sort(byDateDesc);
+    return base.sort(byDateDesc);
   }, [articles, sortMethod]);
 
   const featured = sortedArticles[0];

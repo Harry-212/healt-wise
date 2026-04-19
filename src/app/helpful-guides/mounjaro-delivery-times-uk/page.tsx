@@ -75,13 +75,13 @@ const REFERENCES = [
     label: "MHRA — Black Triangle scheme",
     description:
       "MHRA guidance on medicines under additional monitoring, including how to identify Black Triangle medicines and report side effects.",
-    href: "https://www.gov.uk/guidance/report-a-safety-issue-with-a-medicine-or-medical-device",
+    href: "https://www.gov.uk/report-problem-medicine-medical-device",
   },
   {
     label: "MHRA — Buying prescription medicines safely online",
     description:
       "MHRA guidance on how to identify legitimate online pharmacies and avoid unsafe providers.",
-    href: "https://www.gov.uk/guidance/medicines-and-online-pharmacies",
+    href: "https://fakemeds.campaign.gov.uk/",
   },
   {
     label: "Mounjaro delivery & storage UK — Health Wise",
@@ -200,7 +200,7 @@ export default function GuideMounjaroDeliveryTimes() {
           Yes—{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> is
           classified as a{" "}
-          <EL href="https://www.gov.uk/guidance/report-a-safety-issue-with-a-medicine-or-medical-device">
+          <EL href="https://www.gov.uk/report-problem-medicine-medical-device">
             Black Triangle (▼) medication
           </EL>{" "}
           by the MHRA. This designation applies to newer medicines under
@@ -232,7 +232,7 @@ export default function GuideMounjaroDeliveryTimes() {
             GPhC standards
           </EL>{" "}
           and{" "}
-          <EL href="https://www.gov.uk/guidance/medicines-and-online-pharmacies">
+          <EL href="https://fakemeds.campaign.gov.uk/">
             MHRA guidance
           </EL>
           :

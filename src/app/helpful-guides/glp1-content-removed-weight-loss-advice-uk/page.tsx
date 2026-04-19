@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -83,13 +83,13 @@ const REFERENCES = [
     label: "NHS — Wegovy (semaglutide) information",
     description:
       "NHS clinical information on Wegovy, including how it works, prescribing criteria, and patient safety guidance.",
-    href: "https://www.nhs.uk/medicines/semaglutide-weight-loss/",
+    href: "https://www.nice.org.uk/guidance/ta875/informationforpublic",
   },
   {
     label: "NHS — Tirzepatide (Mounjaro) information",
     description:
       "NHS clinical information on Mounjaro, including side effects, dosing, and important safety considerations.",
-    href: "https://www.nhs.uk/medicines/tirzepatide/",
+    href: "https://www.england.nhs.uk/long-read/tirzepatide-in-primary-care-for-weight-management-information-on-wraparound-care/",
   },
   {
     label: "GPhC — Registered pharmacy standards",
@@ -461,11 +461,11 @@ export default function GuideGlp1ContentRemoval() {
           <GuideBulletListRich
             items={[
               <>
-                <EL href="https://www.nhs.uk/medicines/semaglutide-weight-loss/">
+                <EL href="https://www.nice.org.uk/guidance/ta875/informationforpublic">
                   NHS — Wegovy (semaglutide)
                 </EL>{" "}
                 and{" "}
-                <EL href="https://www.nhs.uk/medicines/tirzepatide/">
+                <EL href="https://www.england.nhs.uk/long-read/tirzepatide-in-primary-care-for-weight-management-information-on-wraparound-care/">
                   NHS — Mounjaro (tirzepatide)
                 </EL>{" "}
                 for clinical information.

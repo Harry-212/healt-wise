@@ -92,7 +92,7 @@ export default function WhatIsWegovyPage() {
               <ul className="mt-3 list-inside list-disc space-y-2 text-sm text-emerald-900">
                 <li>
                   <a
-                    href="https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/weight-loss-medicines/"
+                    href="https://www.nhs.uk/conditions/obesity/treatment/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium underline underline-offset-2"
@@ -300,7 +300,7 @@ export default function WhatIsWegovyPage() {
                 <ul className="mt-3 list-inside list-disc space-y-2 text-sm text-emerald-900">
                   <li>
                     <a
-                      href="https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/weight-loss-medicines/"
+                      href="https://www.nhs.uk/conditions/obesity/treatment/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-medium underline underline-offset-2"
@@ -536,7 +536,7 @@ export default function WhatIsWegovyPage() {
               <ul className="list-inside list-disc space-y-2 text-sm">
                 <li>
                   <a
-                    href="https://www.nhs.uk/medicines/wegovy/"
+                    href="https://www.nice.org.uk/guidance/ta875/informationforpublic"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium text-emerald-900 underline"
@@ -729,7 +729,7 @@ export default function WhatIsWegovyPage() {
                   <li>
                     NHS. Weight loss medicines.{" "}
                     <a
-                      href="https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/weight-loss-medicines/"
+                      href="https://www.nhs.uk/conditions/obesity/treatment/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-emerald-900 underline"

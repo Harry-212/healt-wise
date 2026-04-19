@@ -66,7 +66,7 @@ const REFERENCES = [
     label: "MHRA — Prescription-only medicines in the UK",
     description:
       "MHRA guidance on the legal framework for prescription-only medicines, including what a valid prescription requires.",
-    href: "https://www.gov.uk/guidance/prescribing-and-dispensing",
+    href: "https://www.gov.uk/government/publications/rules-for-the-sale-supply-and-administration-of-medicines",
   },
   {
     label: "NHS — How to get a prescription",
@@ -185,7 +185,7 @@ export default function GuideMounjaroTimeline() {
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> is a prescription-only
           medicine regulated by the{" "}
-          <EL href="https://www.gov.uk/guidance/prescribing-and-dispensing">
+          <EL href="https://www.gov.uk/government/publications/rules-for-the-sale-supply-and-administration-of-medicines">
             MHRA
           </EL>
           . This means it cannot simply be ordered like an over-the-counter
