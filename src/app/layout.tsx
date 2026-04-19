@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin()),
   title: {
-    default: "Health Wise | Weight Loss Treatment Price Comparison UK (2026)",
+    default: "Health Wise | Weight Loss Treatment Price Comparison UK 2026",
     template: "%s | Health Wise",
   },
   description:

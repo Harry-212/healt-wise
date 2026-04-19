@@ -80,6 +80,37 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "weight-loss-injection-shortages-in-the-uk-what-you-need-to-know",
+    title: "What You Should Know About Weight Loss Injection Shortages in the UK",
+    date: "2026-04-23",
+    category: "Guides",
+    description:
+      "Stay ahead of weight loss injection shortages in the UK: what you need to know to reach your goals.",
+    heroImage: "/blog/pharmacies.webp",
+    feedTags: ["wegovy", "mounjaro", "guides"],
+  },
+  {
+    slug: "side-effects-of-wegovy-and-how-to-manage-them",
+    title: "Effective Tips for Handling Side Effects of Wegovy Yourself",
+    date: "2026-04-22",
+    category: "Guides",
+    description:
+      "Boost your weight loss with friendly tips on side effects of Wegovy and how to manage them in the UK.",
+    heroImage: "/blog/tired.webp",
+    feedTags: ["wegovy", "guides", "safety"],
+  },
+  {
+    slug: "understanding-the-mounjaro-kwikpen-a-user-guide",
+    title:
+      "Feel Confident with Understanding the Mounjaro Kwikpen: A User Guide",
+    date: "2026-04-21",
+    category: "Guides",
+    description:
+      "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss injection journey.",
+    heroImage: "/blog/Woman%20(1).webp",
+    feedTags: ["mounjaro", "guides", "how-it-works"],
+  },
+  {
     slug: "mounjaro-vs-wegovy-key-differences-explained",
     title:
       "How Mounjaro vs Wegovy: The Key Differences Explained Help You Choose",
