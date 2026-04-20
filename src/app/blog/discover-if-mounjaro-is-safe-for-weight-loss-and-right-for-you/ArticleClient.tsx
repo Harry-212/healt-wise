@@ -94,18 +94,18 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="purpose" heading="Understand Mounjaro’s Purpose">
                 <p>
                   Mounjaro, known by its generic name tirzepatide, is a medication originally approved to help adults with type 2 diabetes manage their blood sugar levels. Its unique formulation targets two different hormone receptors to regulate appetite, slow digestion, and enhance insulin function [1]. Although its primary purpose is diabetes control, many people are also curious about its potential for weight management.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</Link>.</p>
                 <p>
-                  Recently, there has been interest in prescribing Mounjaro off-label solely for weight loss. The rationale comes from clinical observations indicating that patients often experience significant reductions in body weight along with improved blood sugar control. However, if you are considering this medication to support your weight loss goals, it is vital to understand its risks, benefits, and place in a holistic plan that includes diet and exercise.
+                  Recently, there has been interest in prescribing Mounjaro off label solely for weight loss. The rationale comes from clinical observations indicating that patients often experience significant reductions in body weight along with improved blood sugar control. However, if you are considering this medication to support your weight loss goals, it is vital to understand its risks, benefits, and place in a holistic plan that includes diet and exercise.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="evaluate-safety" heading="Evaluate Its Safety For Weight Loss">
                 <p>
-                  Before starting any medication, you want to know if it is safe and effective. Mounjaro’s safety profile for weight loss is still being evaluated, but early clinical trials for people with obesity suggest promising outcomes. In one study, patients receiving higher doses lost an average of up to 21 percent of their body weight [2]. Another study comparing tirzepatide to existing treatments, such as GLP-1 receptor agonists, found that tirzepatide offered slightly enhanced weight loss results without a major spike in serious side effects [3].
+                  Before starting any medication, you want to know if it is safe and effective. Mounjaro’s safety profile for weight loss is still being evaluated, but early clinical trials for people with obesity suggest promising outcomes. In one study, patients receiving higher doses lost an average of up to 21 percent of their body weight [2]. Another study comparing tirzepatide to existing treatments, such as GLP 1 receptor agonists, found that tirzepatide offered slightly enhanced weight loss results without a major spike in serious side effects [3].
                 </p>
                 <p>
-                  However, the evidence largely comes from pharmaceutical-sponsored research and relatively short-term trials. The FDA granted Mounjaro official approval for diabetes but not initially for weight management. This changed somewhat with the recent approval of Zepbound (another form of tirzepatide) for chronic weight management, which signals increased acceptance within the medical community [4]. Nonetheless, you should speak to your GP about whether Mounjaro is appropriate for your situation, especially if you have underlying health conditions.
+                  However, the evidence largely comes from pharmaceutical sponsored research and relatively short term trials. The FDA granted Mounjaro official approval for diabetes but not initially for weight management. This changed somewhat with the recent approval of Zepbound (another form of tirzepatide) for chronic weight management, which signals increased acceptance within the medical community [4]. Nonetheless, you should speak to your GP about whether Mounjaro is appropriate for your situation, especially if you have underlying health conditions.
                 </p>
               </GuideSection>
 
@@ -123,8 +123,8 @@ export default function ArticleClient() {
                   These gastrointestinal symptoms may ease as your body adjusts, but they can be uncomfortable in the early stages. Some individuals also experience fatigue or headaches. More serious risks, such as pancreatitis or gallbladder disease, remain relatively rare but can occur [5].
                 </p>
                 <p>
-                  Another concern is the possibility of thyroid C-cell tumours. Animal studies discovered an increased risk of this type of tumour, although it is not confirmed in humans [6]. Mounjaro is therefore not recommended for anyone with a personal or family history of medullary thyroid cancer or Multiple Endocrine Neoplasia syndrome type 2. If you have thyroid concerns, make sure your doctor is aware before starting any injections.
-                </p>
+                  Another concern is the possibility of thyroid C cell tumours. Animal studies discovered an increased risk of this type of tumour, although it is not confirmed in humans [6]. Mounjaro is therefore not recommended for anyone with a personal or family history of medullary thyroid cancer or Multiple Endocrine Neoplasia syndrome type 2. If you have thyroid concerns, make sure your doctor is aware before starting any injections.
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
               </GuideSection>
 
               <div className="my-10">
@@ -138,7 +138,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="real-stories" heading="Real People Share Their Stories">
                 <p>
-                  You may find it helpful to look at the experiences of others who have taken Mounjaro for weight loss. According to user reviews, many appreciate the reduced appetite, improved energy, and steady weight decline once they reach a stable dose [7]. A 58-year-old woman reportedly lost more than 50 lbs and noticed improvements in her blood pressure, while other people have claimed triple-digit weight loss when Mounjaro was combined with lifestyle changes.
+                  You may find it helpful to look at the experiences of others who have taken Mounjaro for weight loss. According to user reviews, many appreciate the reduced appetite, improved energy, and steady weight decline once they reach a stable dose [7]. A 58 year old woman reportedly lost more than 50 lbs and noticed improvements in her blood pressure, while other people have claimed triple digit weight loss when Mounjaro was combined with lifestyle changes.
                 </p>
                 <p>
                   It is important to remember that everyone’s body reacts differently. Some individuals breeze through treatment with minimal side effects, while others struggle with persistent nausea. If you decide to use Mounjaro, tracking your body’s response and maintaining clear communication with your GP can improve the likelihood of a successful outcome.
@@ -147,12 +147,12 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="informed-use" heading="Take Steps Toward Informed Use">
                 <p>
-                  If you are thinking of starting Mounjaro, it is wise to adopt a broader, long-term plan instead of treating the medication as a quick fix. Here are a few areas to focus on:
+                  If you are thinking of starting Mounjaro, it is wise to adopt a broader, long term plan instead of treating the medication as a quick fix. Here are a few areas to focus on:
                 </p>
                 <ul className="list-disc pl-5 space-y-6 mt-6">
                   <li>
                     <strong className={`block mb-1 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Consult your GP regularly.</strong>
-                    Before scheduling your first dose, undergo a thorough check-up. Monitor your progress and review your results regularly to address any abnormalities right away.
+                    Before scheduling your first dose, undergo a thorough check up. Monitor your progress and review your results regularly to address any abnormalities right away.
                   </li>
                   <li>
                     <strong className={`block mb-1 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Incorporate lifestyle changes.</strong>
@@ -160,7 +160,7 @@ export default function ArticleClient() {
                   </li>
                   <li>
                     <strong className={`block mb-1 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Track your mental health.</strong>
-                    Some medications affecting appetite can lead to disordered eating patterns if taken recklessly. Be mindful of your emotional well-being and seek professional help if you experience signs of depression, excessive anxiety, or obsessive thoughts about weight.
+                    Some medications affecting appetite can lead to disordered eating patterns if taken recklessly. Be mindful of your emotional well being and seek professional help if you experience signs of depression, excessive anxiety, or obsessive thoughts about weight.
                   </li>
                   <li>
                     <strong className={`block mb-1 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Discuss dose adjustments.</strong>
@@ -168,7 +168,7 @@ export default function ArticleClient() {
                   </li>
                 </ul>
                 <p className="mt-6">
-                  A single tool rarely solves all weight concerns. Yet, if used responsibly, Mounjaro could be part of a well-rounded strategy that provides a powerful push toward a healthier future.
+                  A single tool rarely solves all weight concerns. Yet, if used responsibly, Mounjaro could be part of a well rounded strategy that provides a powerful push toward a healthier future.
                 </p>
               </GuideSection>
 
@@ -189,12 +189,12 @@ export default function ArticleClient() {
                 <div className="space-y-8">
                   <div>
                     <h3 className={`text-xl font-bold mb-3 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>1. Is Mounjaro Officially Approved For Weight Loss?</h3>
-                    <p>In the United States, Mounjaro was originally approved for managing type 2 diabetes. While it has shown promise in weight management, it is only now gaining recognition in that area, partly due to the FDA’s recent approval of Zepbound for obesity [4]. In the UK, your GP may prescribe it off-label if they believe benefits outweigh potential risks.</p>
+                    <p>In the United States, Mounjaro was originally approved for managing type 2 diabetes. While it has shown promise in weight management, it is only now gaining recognition in that area, partly due to the FDA’s recent approval of Zepbound for obesity [4]. In the UK, your GP may prescribe it off label if they believe benefits outweigh potential risks.</p>
                   </div>
 
                   <div>
                     <h3 className={`text-xl font-bold mb-3 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>2. How Does Mounjaro Cause Weight Loss?</h3>
-                    <p>Mounjaro helps regulate two hormones that control how quickly food leaves your stomach and how insulin is released. You typically feel full sooner and consume fewer calories. This can translate to steady weight loss over months, especially when paired with a healthy diet and exercise.</p>
+                    <p>Mounjaro helps regulate two hormones that control how quickly food leaves your stomach and how insulin is released. You typically feel full sooner and consume fewer calories. This can translate to steady weight loss over months, especially when paired with a healthy diet and exercise. For more context, explore our resources on <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</Link>.</p>
                   </div>
 
                   <div>
@@ -214,7 +214,7 @@ export default function ArticleClient() {
 
                   <div>
                     <h3 className={`text-xl font-bold mb-3 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>6. Are Lifestyle Changes Still Necessary?</h3>
-                    <p>Absolutely. While Mounjaro may help control hunger, lifestyle adjustments remain crucial for long-term stability. Regular physical activity, balanced nutrition, and mental health support all reinforce the medication’s benefits and reduce the likelihood of rebound weight gain.</p>
+                    <p>Absolutely. While Mounjaro may help control hunger, lifestyle adjustments remain crucial for long term stability. Regular physical activity, balanced nutrition, and mental health support all reinforce the medication’s benefits and reduce the likelihood of rebound weight gain.</p>
                   </div>
                 </div>
               </section>
@@ -222,7 +222,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
                   Mounjaro can be a valuable ally in your weight loss journey, but it is not a standalone solution. Working closely with your GP, setting realistic expectations, and focusing on sustainable lifestyle changes can help you decide if Mounjaro is safe for weight loss and meets your needs. If you are in doubt, seek guidance from qualified healthcare professionals who can help you choose a plan that aligns with your current health and future goals.
-                </p>
+                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="references" heading="References">

@@ -13,7 +13,6 @@ import {
   UK_LOCATION_SOURCES,
 } from "@/lib/content/uk-location-article-data";
 import {
-  LOCATIONS_IN_UK_HUB_PATH,
   UK_WEIGHT_LOSS_FLAT_INDEX_PATH,
   type UkWeightLossLocation,
 } from "@/lib/data/uk-weight-loss-locations";
@@ -110,7 +109,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
         <header className="mb-12">
           <p className="mb-2 text-xs font-semibold tracking-wide text-emerald-600">
             {capitalizeHeadingWords("Locations in UK")}
-          </p>
+           For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</Link>.</p>
           <h1
             className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? "text-white" : "text-slate-900"}`}
           >
@@ -151,7 +150,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 <p className={`text-lg md:text-xl ${p}`}>
                   If you are trying to decide on the{" "}
                   <strong className={strong}>best weight loss treatment in {name}</strong>, you have
-                  probably already noticed the same sentence copy-pasted across ten tabs. I am not
+                  probably already noticed the same sentence copy pasted across ten tabs. I am not
                   going to pretend postcode changes the chemistry of semaglutide. It does, however,
                   change who answers the phone when something goes wrong, how long you wait, and
                   whether your GP surgery even knows you have started a pen.
@@ -159,7 +158,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 <p className={p}>Short version: location shapes access more than it rewrites biology.</p>
                 <p className={p}>
                   {care.nhsFrame} People near {name} still search the same handful of
-                  phrases—Wegovy, Mounjaro, “online clinic,” sometimes “NHS tier 3”—and those searches
+                  phrases Wegovy, Mounjaro, “online clinic,” sometimes “NHS tier 3” and those searches
                   can collide with different realities on the ground.
                 </p>
               </GuideSection>
@@ -182,30 +181,30 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 <p className={muted}>
                   If nothing on that list fits, you need not force it. Sometimes the useful question
                   is smaller: whether your surgery will accept shared care, or whether you can get a
-                  repeat blood test without a three-week delay.
+                  repeat blood test without a three week delay.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="pathways" heading={titles.pathways}>
                 <p className={p}>
                   NHS weight management in {nation} might still be the right first stop even when you
-                  already know the name of a private drug. Dietitians can spot patterns—night shifts,
-                  caring responsibilities, antidepressant history—that a fifteen-minute advertorial will
-                  miss. The trade-off is patience. A referral letter is not a promise of pharmacotherapy;
+                  already know the name of a private drug. Dietitians can spot patterns night shifts,
+                  caring responsibilities, antidepressant history that a fifteen minute advertorial will
+                  miss. The trade off is patience. A referral letter is not a promise of pharmacotherapy;
                   it may only get you into a group that meets fortnightly.
-                </p>
+                 For more context, explore our resources on <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</Link>.</p>
                 <p className={p}>
-                  Private GLP-1 prescribing near {name} can feel more legible: a price, a calendar
+                  Private GLP 1 prescribing near {name} can feel more legible: a price, a calendar
                   link, a courier tracking code. That clarity can be genuine. It can also skip the
                   boring conversations about gallstones, pregnancy planning, or whether your BMI
-                  calculation should use ethnicity-adjusted thresholds (a detail some services handle
+                  calculation should use ethnicity adjusted thresholds (a detail some services handle
                   thoughtfully; others barely mention it). You are allowed to ask blunt questions
                   here.
                 </p>
                 <p className={p}>
                   Online pharmacies that deliver to {name} are neither automatically safer nor
-                  automatically riskier than a bricks-and-mortar clinic. What matters is whether
-                  prescribing appears proportionate—whether someone can say no—and whether cold-chain
+                  automatically riskier than a bricks and mortar clinic. What matters is whether
+                  prescribing appears proportionate whether someone can say no and whether cold chain
                   logistics survive a Friday afternoon in the rain.{" "}
                   {care.postcodeNote.replace("{name}", name)}
                 </p>
@@ -213,15 +212,15 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="terminology" heading={titles.terminology}>
                 <p className={p}>
-                  <strong className={strong}>GLP-1 receptor agonists</strong> (for example
+                  <strong className={strong}>GLP 1 receptor agonists</strong> (for example
                   semaglutide) mimic a hormone line that affects appetite and gastric emptying.{" "}
-                  <strong className={strong}>Tirzepatide</strong> adds a GIP-related mechanism; it is
-                  not simply “a stronger GLP-1,” though marketing sometimes implies that.{" "}
+                  <strong className={strong}>Tirzepatide</strong> adds a GIP related mechanism; it is
+                  not simply “a stronger GLP 1,” though marketing sometimes implies that.{" "}
                   <strong className={strong}>Obesity pharmacotherapy</strong> is the umbrella term
                   clinicians use when they are not tied to a brand name.{" "}
                   <strong className={strong}>Titration</strong> means stepping the dose slowly because
-                  side effects are dose-dependent for many people, not because the clinic wants to
-                  drag out payments—though you should still read the invoice.
+                  side effects are dose dependent for many people, not because the clinic wants to
+                  drag out payments though you should still read the invoice.
                 </p>
                 <p className={p}>
                   NICE guidance (see sources below) may influence which medicines appear on local
@@ -246,7 +245,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                       >
                         {s.label}
                       </a>
-                      <span className={muted}> — {s.note}</span>
+                      <span className={muted}>   {s.note}</span>
                     </li>
                   ))}
                 </ul>
@@ -268,7 +267,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                     tests, and we should not guess your eligibility from a paragraph about {name}. That
                     limitation is deliberate: comparison journalism sits next to medicine; it must not
                     pretend to replace it.
-                  </p>
+                   For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
                   <p>
                     If you want the house rules in plain English:{" "}
                     <Link
@@ -341,9 +340,9 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 <h2 className="text-xl font-semibold text-amber-950">{titles.disclaimer}</h2>
                 <p className="mt-2">
                   This page is general information. Prescription medicines must be issued by someone
-                  who can take responsibility for follow-up. If you are pregnant, planning pregnancy,
+                  who can take responsibility for follow up. If you are pregnant, planning pregnancy,
                   or have had pancreatitis or certain thyroid conditions, some options may be off the
-                  table entirely—not merely “delayed.” When in doubt, your own clinician in {name}{" "}
+                  table entirely not merely “delayed.” When in doubt, your own clinician in {name}{" "}
                   or online should win the argument over a blog.
                 </p>
               </section>
@@ -378,22 +377,15 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
               >
                 <h2 className={`text-xl font-semibold ${strong}`}>{titles.moreUk}</h2>
                 <p className={`mt-2 leading-relaxed ${p}`}>
-                  Paginated blog grid for these posts:{" "}
+                  Browse every UK city guide in the paginated blog grid:{" "}
                   <Link
                     href={UK_WEIGHT_LOSS_FLAT_INDEX_PATH}
-                    className="font-medium text-emerald-600 underline-offset-2 hover:underline"
+                    className="font-medium text-emerald-600 underline-offset-2 transition-colors hover:text-emerald-500 hover:underline"
                   >
-                    Locations on the blog
-                  </Link>
-                  . Grouped by nation:{" "}
-                  <Link
-                    href={LOCATIONS_IN_UK_HUB_PATH}
-                    className="font-medium text-emerald-600 underline-offset-2 hover:underline"
-                  >
-                    Locations hub
+                    All UK location articles
                   </Link>
                   .
-                </p>
+                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
               </div>
             </article>
 

@@ -159,7 +159,7 @@ export default function GuideMounjaroTimeline() {
         <GuideParagraph>
           Most patients receive{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> within:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideStatCards
           stats={[
             { value: "1–3", label: "Days for approval", sub: "After consultation" },
@@ -172,7 +172,7 @@ export default function GuideMounjaroTimeline() {
           The total time from starting your consultation to receiving your
           medication is typically 2–4 working days with most{" "}
           <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
-            GPhC-registered online pharmacies
+            GPhC registered online pharmacies
           </IL>
           . You can use our{" "}
           <IL href="/mounjaro-price-comparison">Mounjaro price comparison</IL>{" "}
@@ -183,14 +183,14 @@ export default function GuideMounjaroTimeline() {
       {/* ── Section 2 ── */}
       <GuideSection id="why-time" heading="Why It Takes Time">
         <GuideParagraph>
-          <IL href="/what-is-mounjaro">Mounjaro</IL> is a prescription-only
+          <IL href="/what-is-mounjaro">Mounjaro</IL> is a prescription only
           medicine regulated by the{" "}
           <EL href="https://www.gov.uk/government/publications/rules-for-the-sale-supply-and-administration-of-medicines">
             MHRA
           </EL>
-          . This means it cannot simply be ordered like an over-the-counter
-          product—each prescription must go through a proper clinical process:
-        </GuideParagraph>
+          . This means it cannot simply be ordered like an over the counter
+          product each prescription must go through a proper clinical process:
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Medical review — a registered clinician reviews your consultation questionnaire and health history",
@@ -216,9 +216,9 @@ export default function GuideMounjaroTimeline() {
           <EL href="https://www.medicines.org.uk/emc/product/15481">
             official SmPC
           </EL>{" "}
-          and means that pharmacies must use specialist cold-chain packaging
+          and means that pharmacies must use specialist cold chain packaging
           for delivery.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Medication is dispatched in insulated packaging with cooling elements (ice packs or gel packs)",
@@ -251,7 +251,7 @@ export default function GuideMounjaroTimeline() {
           Most delays in receiving{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> are preventable. Follow
           these steps:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             "Complete your consultation questionnaire accurately and thoroughly — incomplete answers are the most common cause of delays.",

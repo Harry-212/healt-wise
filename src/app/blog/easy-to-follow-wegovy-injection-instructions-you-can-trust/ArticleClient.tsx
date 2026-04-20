@@ -98,7 +98,7 @@ export default function ArticleClient() {
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <p className="text-lg md:text-xl">
                 A clear set of Wegovy injection instructions can make starting treatment feel much less daunting. You use Wegovy once a week, alongside a reduced calorie diet and more physical activity, to help with weight loss and long term weight management. Below, you will find simple, step by step guidance based on current manufacturer instructions, plus safety tips to discuss with your healthcare professional.
-              </p>
+               For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
               <p>
                 This guide supports, but does not replace, the patient leaflet that comes with your pen or the advice of your prescribing clinician. Always follow the directions you are given personally.
               </p>
@@ -156,7 +156,7 @@ export default function ArticleClient() {
                 </p>
                 <p>
                   Start by checking that you have the right pen and dose, especially during dose escalation. Look through the pen window to ensure the liquid is clear and colourless. If it looks cloudy, has particles, or has changed colour, do not use it and contact your pharmacy or clinician.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</Link>.</p>
                 <p>
                   You can inject the medicine straight from the fridge, but some people find cold fluid uncomfortable. If that is the case for you, you can allow the pen to reach room temperature before use. Do not try to speed this up with a microwave, hot water, or direct heat.
                 </p>
@@ -244,7 +244,7 @@ export default function ArticleClient() {
                 </ul>
                 <p className="mt-4">
                   Nausea is the most frequently reported gastrointestinal side effect, and research indicates that it is usually mild or moderate, tends to be temporary, and rarely leads to permanent discontinuation. Eating smaller meals, avoiding rich or greasy foods, and staying well hydrated can help ease this while your body adjusts.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</Link>.</p>
                 <p>
                   More serious risks exist, although they are less common. Wegovy slows stomach emptying, so it can alter the absorption and effectiveness of other medicines, particularly some diabetes drugs that carry a risk of low blood sugar. You should watch for signs of hypoglycaemia if you use sulfonylureas or insulin and discuss adjustments with your clinician.
                 </p>
@@ -321,7 +321,7 @@ export default function ArticleClient() {
                 </p>
                 <p>
                   You also keep track of side effects, rotate your injection sites, and handle missed doses according to the 48 hour guidance, involving your prescriber whenever you are unsure. Combined with a reduced calorie diet and increased physical activity, this careful, informed approach helps you get the most benefit from Wegovy while keeping safety at the centre of your treatment.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
               </GuideSection>
 
             </article>

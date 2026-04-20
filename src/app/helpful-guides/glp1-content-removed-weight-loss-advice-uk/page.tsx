@@ -178,17 +178,17 @@ export default function GuideGlp1ContentRemoval() {
       <GuideSection id="restrictions" heading="Growing Restrictions on Weight Loss Content">
         <GuideParagraph>
           Social media platforms, including TikTok, have significantly increased
-          restrictions on content related to weight loss treatments—particularly
-          GLP-1 medications such as{" "}
+          restrictions on content related to weight loss treatments particularly
+          GLP 1 medications such as{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> and{" "}
           <IL href="/what-is-wegovy">Wegovy (semaglutide)</IL>. Similar
           restrictions are also affecting content about{" "}
           <IL href="/what-is-saxenda">Saxenda (liraglutide)</IL>.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideParagraph>
           These changes are officially positioned as patient safety measures
           aimed at reducing misleading health claims. In practice, they are also
-          limiting access to valuable, compliant health information—including
+          limiting access to valuable, compliant health information including
           patient experiences, safety guidance, and content from regulated
           providers like{" "}
           <IL href="/">Health Wise</IL>.
@@ -198,7 +198,7 @@ export default function GuideGlp1ContentRemoval() {
       {/* ── Section 2 ── */}
       <GuideSection id="what-removed" heading="What Is Being Restricted?">
         <GuideParagraph>
-          Content containing specific terms associated with GLP-1 medications is
+          Content containing specific terms associated with GLP 1 medications is
           increasingly removed, suppressed algorithmically, or prevented from
           being amplified. Affected content includes posts referencing:
         </GuideParagraph>
@@ -222,7 +222,7 @@ export default function GuideGlp1ContentRemoval() {
         />
         <GuideParagraph>
           The restrictions apply inconsistently. Content that is clearly
-          commercial or misleading is the intended target—but automated
+          commercial or misleading is the intended target but automated
           enforcement tools are poorly calibrated, and a significant volume of
           educational content is caught in the same net.
         </GuideParagraph>
@@ -232,7 +232,7 @@ export default function GuideGlp1ContentRemoval() {
       <GuideSection id="patient-loss" heading="What Patients Are Losing">
         <GuideParagraph>
           The practical consequence for patients is a reduction in access to
-          peer-level information many people rely on when navigating new
+          peer level information many people rely on when navigating new
           treatments. This includes:
         </GuideParagraph>
         <GuideBulletListRich
@@ -257,7 +257,7 @@ export default function GuideGlp1ContentRemoval() {
         <GuideParagraph>
           When this content disappears, the vacuum is not filled by better
           sources. It is often filled by unverified content that evades
-          detection by avoiding flagged terms—precisely the opposite of what
+          detection by avoiding flagged terms precisely the opposite of what
           moderation intends.
         </GuideParagraph>
       </GuideSection>
@@ -274,13 +274,13 @@ export default function GuideGlp1ContentRemoval() {
             Human Medicines Regulations 2012
           </EL>
           . These regulations prohibit the direct advertising of
-          prescription-only medicines (POMs) to the general public.
+          prescription only medicines (POMs) to the general public.
         </GuideParagraph>
         <GuideParagraph>
           This means a commercial clinic cannot run an advertisement promoting{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> to a consumer audience.
           However, there is an important legal distinction:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -327,7 +327,7 @@ export default function GuideGlp1ContentRemoval() {
         <GuideParagraph>
           There is also a paradoxical risk: when legitimate information becomes
           harder to find, patients may turn to less accurate or less regulated
-          sources—precisely the outcome that moderation is meant to prevent.
+          sources precisely the outcome that moderation is meant to prevent.
           This is why platforms like{" "}
           <IL href="/">Health Wise</IL> that verify content quality and
           pharmacy compliance matter more, not less, in a restricted
@@ -338,11 +338,11 @@ export default function GuideGlp1ContentRemoval() {
       {/* ── Section 6 ── */}
       <GuideSection id="commercial" heading="Commercial Influence and Market Competition">
         <GuideParagraph>
-          The GLP-1 weight loss treatment market in the UK is highly
+          The GLP 1 weight loss treatment market in the UK is highly
           competitive. Smaller digital clinics often offer faster access, lower
-          prices—as visible on our{" "}
+          prices as visible on our{" "}
           <IL href="/prices/cheapest-options-uk">price comparison tool</IL>
-          —and more flexible service models than established providers.
+           and more flexible service models than established providers.
         </GuideParagraph>
         <GuideParagraph>
           This competitive dynamic creates an additional concern: that content
@@ -369,7 +369,7 @@ export default function GuideGlp1ContentRemoval() {
           Reports from regulated providers and patient advocacy groups suggest
           that enforcement of content restrictions has not been applied
           consistently:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Smaller clinics and independent practitioners face more frequent content removal than established providers.",
@@ -378,7 +378,7 @@ export default function GuideGlp1ContentRemoval() {
           ]}
         />
         <GuideParagraph>
-          Uneven enforcement does not simply limit harmful content—it
+          Uneven enforcement does not simply limit harmful content it
           systematically disadvantages certain providers while leaving the
           broader information landscape unchanged. Independent, regulated
           comparison platforms become more important in this environment.
@@ -420,7 +420,7 @@ export default function GuideGlp1ContentRemoval() {
       <GuideSection id="what-patients-need" heading="What Patients Need">
         <GuideParagraph>
           Effective moderation and genuine patient safety are not mutually
-          exclusive—but they require more precision than keyword blocking
+          exclusive but they require more precision than keyword blocking
           delivers. What patients need is:
         </GuideParagraph>
         <GuideBulletListRich
@@ -455,9 +455,9 @@ export default function GuideGlp1ContentRemoval() {
 
         <GuideSubSection heading="Where to Find Reliable Information">
           <GuideParagraph>
-            If you are seeking trustworthy guidance on GLP-1 treatments, use
+            If you are seeking trustworthy guidance on GLP 1 treatments, use
             regulated and verified sources:
-          </GuideParagraph>
+           For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
           <GuideBulletListRich
             items={[
               <>

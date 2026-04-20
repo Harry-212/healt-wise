@@ -397,14 +397,16 @@ export function GuideBulletListRich({
 export function IL({
   href,
   children,
+  className,
 }: {
   href: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
     <Link
       href={href}
-      className="font-medium text-emerald-700 underline underline-offset-2 decoration-emerald-300 transition-colors hover:text-emerald-900 hover:decoration-emerald-500"
+      className={className || "font-medium text-emerald-700 underline underline-offset-2 decoration-emerald-300 transition-colors hover:text-emerald-900 hover:decoration-emerald-500"}
     >
       {children}
     </Link>

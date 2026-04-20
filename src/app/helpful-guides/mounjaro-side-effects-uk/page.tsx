@@ -160,13 +160,13 @@ export default function GuideMounjaroSideEffects() {
         <GuideParagraph>
           The most frequently reported side effects of{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> are
-          gastrointestinal—a direct consequence of how the medication slows
+          gastrointestinal a direct consequence of how the medication slows
           gastric emptying and reduces gut motility. According to the{" "}
           <EL href="https://www.medicines.org.uk/emc/product/15481">
             Mounjaro SmPC
           </EL>
           , the following occur in more than 1 in 10 patients:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Nausea — the most commonly reported symptom, particularly at treatment initiation and after dose increases",
@@ -189,7 +189,7 @@ export default function GuideMounjaroSideEffects() {
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> is administered as a
           weekly subcutaneous injection, and localised reactions at the
-          injection site are common—reported in approximately 1 in 7 patients.
+          injection site are common reported in approximately 1 in 7 patients.
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -214,8 +214,8 @@ export default function GuideMounjaroSideEffects() {
       <GuideSection id="other-effects" heading="Other Possible Effects">
         <GuideParagraph>
           Beyond gastrointestinal symptoms, other side effects reported in
-          clinical trials and real-world use include:
-        </GuideParagraph>
+          clinical trials and real world use include:
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Fatigue — particularly in the first few weeks as the body adapts to reduced calorie intake",
@@ -230,7 +230,7 @@ export default function GuideMounjaroSideEffects() {
           <EL href="https://yellowcard.mhra.gov.uk/">
             MHRA Yellow Card Scheme
           </EL>
-          . This system helps regulators monitor real-world drug safety.
+          . This system helps regulators monitor real world drug safety.
         </GuideParagraph>
       </GuideSection>
 
@@ -263,7 +263,7 @@ export default function GuideMounjaroSideEffects() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> is titrated gradually
           from 2.5mg to a maximum of 15mg over several months. Each dose
           increase typically brings a temporary return of gastrointestinal
-          symptoms—particularly nausea, fatigue, and stomach discomfort.
+          symptoms particularly nausea, fatigue, and stomach discomfort.
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -278,7 +278,7 @@ export default function GuideMounjaroSideEffects() {
           hydration, rest) and allow 2–4 weeks for adaptation. If side effects
           at a new dose are severe or unmanageable, discuss a slower titration
           schedule with your clinician.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="managing" heading="Managing Symptoms">
@@ -380,7 +380,7 @@ export default function GuideMounjaroSideEffects() {
           with your clinician first. Abrupt cessation causes appetite to
           return rapidly, and most side effects are manageable with clinical
           support rather than stopping treatment.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

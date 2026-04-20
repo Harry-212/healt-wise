@@ -95,7 +95,7 @@ export default function ArticleClient() {
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <p className="text-lg md:text-xl">
                 A new weight loss medication like Wegovy® can sound promising, but the costs, eligibility rules, and UK availability are often confusing. If you are comparing Wegovy weight loss medication with other options and trying to work out what you might really pay, it helps to break things down step by step.
-              </p>
+               For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
               <p>
                 This guide walks you through how Wegovy works, what affects the price you pay in the UK, and how to decide if it is a good fit for you financially as well as medically.
               </p>
@@ -152,7 +152,7 @@ export default function ArticleClient() {
                 <p>The biggest cost difference is whether you are eligible on the NHS or paying privately.</p>
                 <p>
                   On the NHS, patients do not typically see the full list price. Instead, you pay standard prescription charges in England, or no charge in Scotland, Wales, and Northern Ireland, if Wegovy is prescribed for you. However, Wegovy access on the NHS is limited and prioritised for people with obesity and specific health risks, according to local criteria and NICE guidance. Not everyone who wants Wegovy for weight loss will meet those thresholds, even if they are struggling with their weight.
-                </p>
+                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
                 <p>
                   If you do not qualify, you are likely to look at private weight management clinics or online prescribing services, which set their own pricing structures.
                 </p>
@@ -237,7 +237,7 @@ export default function ArticleClient() {
                 </p>
                 <p>
                   Wegovy slows stomach emptying, which can affect the absorption and effectiveness of some medicines, particularly diabetes drugs like sulfonylureas or insulin, and this may increase the risk of low blood sugar. If you are on these medicines, you will need close medical supervision and education on recognising and managing hypoglycaemia.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</Link>.</p>
                 <p>
                   Wegovy should not be used with any other semaglutide containing products or GLP 1 receptor agonists, and it is not known to be safe or effective in people under 18 years for weight management.
                 </p>
@@ -340,7 +340,7 @@ export default function ArticleClient() {
                 </p>
                 <p>
                   If you are considering Wegovy, a practical next step is to speak to a healthcare professional about your eligibility, medical history, and budget. With clear information and realistic expectations, you can decide whether this particular medication fits your health goals and your finances, or whether another weight management route might serve you better.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
               </GuideSection>
 
             </article>

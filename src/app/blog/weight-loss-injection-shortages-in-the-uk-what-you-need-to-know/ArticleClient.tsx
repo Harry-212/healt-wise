@@ -42,7 +42,7 @@ function SubHeading({
   darkMode: boolean;
 }) {
   return (
-    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children}</p>
+    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children} For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
   );
 }
 
@@ -157,7 +157,7 @@ export default function ArticleClient() {
                   Over the past few years, people across the UK have become increasingly aware of the role injections can
                   play in balancing appetite, especially if you have struggled with other weight management approaches. In
                   fact, these injections first gained major attention when doctors prescribed them to patients dealing with
-                  obesity-related health risks. Over time, more and more individuals have turned to them for a helpful
+                  obesity related health risks. Over time, more and more individuals have turned to them for a helpful
                   nudge toward healthier daily routines.
                 </p>
                 <p>
@@ -204,9 +204,9 @@ export default function ArticleClient() {
                   you have been prescribed is momentarily unavailable, your GP or pharmacist might suggest switching to a
                   comparable alternative for a short time. However, it can take a little while to adjust to a new treatment
                   protocol.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</Link>.</p>
                 <p>
-                  In addition, you might notice dosage adjustments if your preferred concentration is not on-hand. Some
+                  In addition, you might notice dosage adjustments if your preferred concentration is not on hand. Some
                   people also experience more frequent side effects when making changes, which is why you will want to keep
                   notes on any new symptoms. If you are interested in possible side effects when trying other medications,
                   see{" "}
@@ -278,7 +278,7 @@ export default function ArticleClient() {
                   />
                 </div>
                 <p className="text-sm opacity-90">
-                  While this table only touches on a few well-known treatments, there are additional prescription
+                  While this table only touches on a few well known treatments, there are additional prescription
                   medications or methods besides injections, such as weight loss pills or medically supervised programmes.
                   If supply chains continue to stabilise, your original choice may become more accessible once again.
                 </p>
@@ -286,9 +286,9 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="steps" heading="Steps to manage supply constraints">
                 <p>
-                  First and foremost, keep in close contact with your GP or consultant. They will likely have up-to-date
+                  First and foremost, keep in close contact with your GP or consultant. They will likely have up to date
                   information and can tip you off the moment your preferred medication becomes available. You can
-                  also—and should—stay on top of pharmacy re-stock updates. Pop in occasionally or make a quick phone call to
+                  also and should stay on top of pharmacy re stock updates. Pop in occasionally or make a quick phone call to
                   check if a particular dosage has arrived. For continuity tips when moving between suppliers, read our{" "}
                   <Link
                     href="/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk"
@@ -317,7 +317,7 @@ export default function ArticleClient() {
                 <p>
                   A shortage does not have to signal the end of your weight loss efforts. You still hold plenty of power
                   over daily habits, and the key is to look for ways to adapt until supplies improve. If this period leaves
-                  you feeling disillusioned, it can help to connect with others in a similar situation—social media groups
+                  you feeling disillusioned, it can help to connect with others in a similar situation social media groups
                   or local health clubs can offer both practical advice and emotional support.
                 </p>
                 <p>
@@ -334,10 +334,10 @@ export default function ArticleClient() {
                       1. Why are weight loss injections sometimes out of stock in the UK?
                     </h3>
                     <p>
-                      Global demand for GLP-1 medicines has risen faster than production and distribution can always
+                      Global demand for GLP 1 medicines has risen faster than production and distribution can always
                       match. Manufacturing schedules, ingredient supply and batch release all affect what reaches pharmacy
                       shelves.
-                    </p>
+                     For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -362,7 +362,7 @@ export default function ArticleClient() {
                       4. Are all injections affected equally?
                     </h3>
                     <p>
-                      No—shortages can differ by product, strength and region. One option may be easier to obtain than
+                      No shortages can differ by product, strength and region. One option may be easier to obtain than
                       another at any given time.
                     </p>
                   </div>
@@ -371,7 +371,7 @@ export default function ArticleClient() {
                       5. Can a clinician suggest an alternative if your usual medicine is unavailable?
                     </h3>
                     <p>
-                      Sometimes, yes—depending on your health profile and what is licensed and in stock. Only a qualified
+                      Sometimes, yes depending on your health profile and what is licensed and in stock. Only a qualified
                       prescriber should authorise a switch.
                     </p>
                   </div>
@@ -380,7 +380,7 @@ export default function ArticleClient() {
                       6. How can you stay safe while chasing supply?
                     </h3>
                     <p>
-                      Use GPhC-registered pharmacies, verify sources, and be sceptical of “guaranteed stock” from unknown
+                      Use GPhC registered pharmacies, verify sources, and be sceptical of “guaranteed stock” from unknown
                       websites. Counterfeit medicines are a real risk.
                     </p>
                   </div>
@@ -391,12 +391,12 @@ export default function ArticleClient() {
                 <p>
                   Staying informed about weight loss injection shortages in the UK is your first step. You will not be
                   caught off guard if you understand why certain brands are running low and what you can do until they
-                  restock. By talking to your GP and actively seeking out resources, you can find short-term alternatives
+                  restock. By talking to your GP and actively seeking out resources, you can find short term alternatives
                   or strengthen the healthy routines you already have in place.
                 </p>
                 <p>
                   Remember, your wellbeing includes far more than just one approach. If your usual injection is scarce,
-                  redefining your strategy may lead you to discover something else that works just as well—or even better.
+                  redefining your strategy may lead you to discover something else that works just as well or even better.
                   Ultimately, the best plan is one that aligns with your lifestyle, your goals, and what is realistically
                   accessible. You have got plenty of options at your fingertips, so keep exploring until you find what fits
                   you best.
@@ -410,7 +410,7 @@ export default function ArticleClient() {
                 >
                   <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
                   {SOCIAL_HASHTAGS}
-                </p>
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
               </GuideSection>
             </article>
 

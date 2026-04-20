@@ -151,7 +151,7 @@ export default function GuideKwikpenDisposal() {
           currently be recycled through standard UK household recycling. They
           combine plastic, metal, and other components, and may retain traces
           of medication after use.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Never reuse or refill a KwikPen — pens are single-patient devices; reuse risks infection and dosing errors",
@@ -205,7 +205,7 @@ export default function GuideKwikpenDisposal() {
       <GuideSection id="step-pen" heading="Step 2: Dispose of the Pen Body">
         <GuideParagraph>
           Once the needle has been removed and disposed of safely:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Place the empty pen body in your general household waste (not recycling)",
@@ -219,7 +219,7 @@ export default function GuideKwikpenDisposal() {
         <GuideParagraph>
           If you have{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> pens you no longer need
-          —for example after a dose change or if treatment stops—return them to
+           for example after a dose change or if treatment stops return them to
           a pharmacy. The{" "}
           <EL href="https://www.nhs.uk/nhs-services/pharmacies/how-pharmacies-can-help/">
             NHS recommends
@@ -233,15 +233,15 @@ export default function GuideKwikpenDisposal() {
         <GuideParagraph>
           Pharmaceutical packaging and device recycling schemes evolve. Industry
           initiatives and NHS pilot programmes occasionally introduce
-          take-back options for specific devices or regions. There is no
+          take back options for specific devices or regions. There is no
           guarantee that a scheme available in one country applies in the UK.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
         <GuideParagraph>
           Names such as PenCycle or similar programmes may exist for certain
-          product lines in some markets—always confirm with your pharmacist,
+          product lines in some markets always confirm with your pharmacist,
           prescriber, or the current patient information for your device rather
           than assuming a scheme accepts Mounjaro KwikPens.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="why-matters" heading="Why Proper Disposal Matters">

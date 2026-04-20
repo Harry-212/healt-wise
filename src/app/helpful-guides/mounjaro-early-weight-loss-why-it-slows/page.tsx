@@ -159,9 +159,9 @@ export default function GuideEarlyWeightLoss() {
         <GuideParagraph>
           Many users of{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> notice significant weight
-          loss in the first few weeks of treatment. This can be encouraging—but
+          loss in the first few weeks of treatment. This can be encouraging but
           it is important to understand what is actually driving it.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
         <GuideParagraph>
           Early rapid weight loss is typically a combination of:
         </GuideParagraph>
@@ -213,11 +213,11 @@ export default function GuideEarlyWeightLoss() {
           After the first few weeks on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, the rate of weight loss
           typically stabilises. This is not a sign the medication has stopped
-          working—it is a predictable physiological response.
+          working it is a predictable physiological response.
         </GuideParagraph>
         <GuideParagraph>
           Progress slows for three main reasons:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -244,18 +244,18 @@ export default function GuideEarlyWeightLoss() {
         <GuideParagraph>
           The{" "}
           <EL href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038">
-            SURMOUNT-1 trial
+            SURMOUNT 1 trial
           </EL>{" "}
           data shows this pattern clearly: the steepest weight loss curve
           occurs in the first 16–20 weeks, with gradual deceleration
-          thereafter—even as total weight loss continues to accumulate.
+          thereafter even as total weight loss continues to accumulate.
         </GuideParagraph>
       </GuideSection>
 
       <GuideSection id="plateaus-normal" heading="Plateaus Are Normal">
         <GuideParagraph>
-          A weight loss plateau—where the scale does not move for a period of
-          weeks despite consistent treatment—is a normal part of the process,
+          A weight loss plateau where the scale does not move for a period of
+          weeks despite consistent treatment is a normal part of the process,
           not a clinical failure.
         </GuideParagraph>
         <GuideParagraph>
@@ -283,9 +283,9 @@ export default function GuideEarlyWeightLoss() {
           Weight loss varies significantly between individuals, even among
           people taking the same dose of{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. Comparing your results
-          to others—on social media, in forums, or against clinical trial
-          averages—is rarely helpful and often misleading.
-        </GuideParagraph>
+          to others on social media, in forums, or against clinical trial
+          averages is rarely helpful and often misleading.
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideParagraph>
           Individual outcomes depend on:
         </GuideParagraph>
@@ -315,9 +315,9 @@ export default function GuideEarlyWeightLoss() {
       <GuideSection id="keep-progressing" heading="How to Keep Progressing">
         <GuideParagraph>
           If your rate of weight loss has genuinely slowed and you want to
-          support continued progress, the following evidence-based strategies
+          support continued progress, the following evidence based strategies
           can help:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

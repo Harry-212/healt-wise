@@ -156,15 +156,15 @@ export default function GuideLocalVsOnline() {
           Online pharmacies frequently advertise lower prices for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. But local, community
           pharmacies offer something that online services cannot always
-          replicate: direct, face-to-face clinical support.
-        </GuideParagraph>
+          replicate: direct, face to face clinical support.
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideParagraph>
           You can use the{" "}
           <EL href="https://www.nhs.uk/service-search/pharmacy/find-a-pharmacy">
             NHS pharmacy finder
           </EL>{" "}
-          to locate regulated providers near you. Every UK pharmacy—whether
-          local or online—must be registered with the{" "}
+          to locate regulated providers near you. Every UK pharmacy whether
+          local or online must be registered with the{" "}
           <EL href="https://www.pharmacyregulation.org/registers/pharmacy">
             General Pharmaceutical Council (GPhC)
           </EL>
@@ -184,7 +184,7 @@ export default function GuideLocalVsOnline() {
       <GuideSection id="what-is-mounjaro" heading="What You Need to Know About Mounjaro">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> is a
-          prescription-only medication used for:
+          prescription only medication used for:
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -193,17 +193,17 @@ export default function GuideLocalVsOnline() {
           ]}
         />
         <GuideParagraph>
-          It works by activating two receptors—GLP-1 and GIP—to regulate
+          It works by activating two receptors GLP 1 and GIP to regulate
           appetite, insulin response, and blood sugar levels. Because it is a
-          prescription-only medicine (POM), it must be prescribed by a
+          prescription only medicine (POM), it must be prescribed by a
           qualified clinician regardless of whether you obtain it from a local
           or online pharmacy.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="pricing" heading="Local vs Online Pricing">
         <GuideParagraph>
-          Local pharmacies may appear more expensive at first glance—but the
+          Local pharmacies may appear more expensive at first glance but the
           price often includes services that online providers charge separately
           for, or do not offer at all. When comparing costs, consider what is
           included:
@@ -229,7 +229,7 @@ export default function GuideLocalVsOnline() {
         <GuideParagraph>
           Local pharmacies provide a level of personalised clinical support that
           is difficult to replicate online:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           1. Personalised Advice
@@ -279,7 +279,7 @@ export default function GuideLocalVsOnline() {
       <GuideSection id="benefits-online" heading="Benefits of Online Pharmacies">
         <GuideParagraph>
           Regulated online pharmacies have become an important part of the UK
-          healthcare ecosystem—particularly for repeat prescriptions and
+          healthcare ecosystem particularly for repeat prescriptions and
           treatments like{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>.
         </GuideParagraph>
@@ -322,7 +322,7 @@ export default function GuideLocalVsOnline() {
       <GuideSection id="how-to-choose" heading="How to Choose the Right Option for You">
         <GuideParagraph>
           The right choice depends on your individual circumstances:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

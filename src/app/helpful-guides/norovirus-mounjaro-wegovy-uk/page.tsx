@@ -159,9 +159,9 @@ export default function GuideNorovirus() {
           within 1–3 days. For people using{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL>, the experience may feel
-          more intense—not because the virus is worse, but because GLP-1
+          more intense not because the virus is worse, but because GLP 1
           medications alter how your body processes food and fluids.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideParagraph>
           Key interactions to understand:
         </GuideParagraph>
@@ -234,11 +234,11 @@ export default function GuideNorovirus() {
           1. Stay Hydrated
         </h3>
         <GuideParagraph>
-          Hydration is the most critical priority—particularly for{" "}
+          Hydration is the most critical priority particularly for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> and{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> users, who already have
           reduced fluid intake due to appetite suppression.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Sip fluids slowly and frequently — large amounts at once may trigger vomiting",
@@ -277,7 +277,7 @@ export default function GuideNorovirus() {
           suppression from{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> means hunger cues may be
-          very weak during recovery—focus on nutritional completeness rather
+          very weak during recovery focus on nutritional completeness rather
           than volume.
         </GuideParagraph>
 
@@ -302,7 +302,7 @@ export default function GuideNorovirus() {
           </EL>{" "}
           provides guidance on missed doses, but does not specifically address
           norovirus. General clinical guidance suggests:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -335,7 +335,7 @@ export default function GuideNorovirus() {
 
       <GuideSection id="when-seek-help" heading="When to Seek Medical Help">
         <GuideParagraph>
-          Most norovirus cases in GLP-1 medication users resolve safely with
+          Most norovirus cases in GLP 1 medication users resolve safely with
           home management. However, seek medical help promptly if you experience:
         </GuideParagraph>
         <GuideBulletList
@@ -355,7 +355,7 @@ export default function GuideNorovirus() {
           </EL>{" "}
           provides clear criteria for when to attend A&E or call 999. When in
           doubt, call 111 for clinical triage advice.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

@@ -45,7 +45,7 @@ function SubHeading({
   darkMode: boolean;
 }) {
   return (
-    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children}</p>
+    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children} For more context, explore our resources on <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</Link>.</p>
   );
 }
 
@@ -179,8 +179,8 @@ export default function ArticleClient() {
                 </p>
                 <p>
                   You might find it helpful to eat more slowly, giving your brain and body time to register that you are
-                  satisfied. If your appetite fluctuates, opt for nutrient-dense foods like fresh produce, lean proteins
-                  and moderate amounts of healthy fats. Slow-releasing carbohydrates, such as oats or brown rice, can
+                  satisfied. If your appetite fluctuates, opt for nutrient dense foods like fresh produce, lean proteins
+                  and moderate amounts of healthy fats. Slow releasing carbohydrates, such as oats or brown rice, can
                   provide steady energy and reduce sudden cravings.
                 </p>
               </GuideSection>
@@ -207,7 +207,7 @@ export default function ArticleClient() {
                   regular breaks into your schedule or try brief power naps. Processed foods and sugary snacks might give
                   you quick bursts of energy, but these can lead to crashes. Instead, emphasise whole foods that supply
                   stable energy and support your health goals.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="wellbeing" heading="Watch your mental wellbeing">
@@ -233,7 +233,7 @@ export default function ArticleClient() {
                   includes exploring other weight loss injections and how they compare in terms of benefits and drawbacks.
                 </p>
                 <p>
-                  For a deeper comparison of injection-based treatments, check out{" "}
+                  For a deeper comparison of injection based treatments, check out{" "}
                   <Link
                     href="/blog/mounjaro-vs-wegovy-key-differences-explained"
                     className="font-medium text-brand-primary underline"
@@ -263,7 +263,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="on-track" heading="Stay on track">
                 <p>
                   Alongside Wegovy, you have other factors to consider in your weight management journey. With weight loss
-                  injections in high demand, it is worth keeping up with supply and continuity — our{" "}
+                  injections in high demand, it is worth keeping up with supply and continuity   our{" "}
                   <Link
                     href="/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk"
                     className="font-medium text-brand-primary underline"
@@ -294,7 +294,7 @@ export default function ArticleClient() {
                   potential side effects, you are setting yourself up for success. Whether you are new to weight loss
                   injections or have been exploring different paths for a while, small adjustments can add up to major
                   improvements in how you feel daily. For instance, if you find that early mornings are when you have the
-                  most energy, schedule a quick workout or walk during that time. If you are prone to late-night snacking,
+                  most energy, schedule a quick workout or walk during that time. If you are prone to late night snacking,
                   plan a satisfying snack that does not derail your goals. Over time, you will discover strategies and
                   routines that align with your body&apos;s shifts on Wegovy.
                 </p>
@@ -316,14 +316,14 @@ export default function ArticleClient() {
                       Nausea, diarrhoea, constipation and other digestive symptoms are frequently reported, especially
                       after dose increases. Headache, fatigue and dizziness also occur for some people. Tell your prescriber
                       if symptoms are severe or do not improve.
-                    </p>
+                     For more context, explore our resources on <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</Link>.</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
                       2. How can you reduce nausea on Wegovy?
                     </h3>
                     <p>
-                      Try smaller meals, slower eating, hydration, and avoiding very large or high-fat meals. Ginger or
+                      Try smaller meals, slower eating, hydration, and avoiding very large or high fat meals. Ginger or
                       peppermint tea helps some people. Do not change your prescribed dose without medical advice.
                     </p>
                   </div>
@@ -332,7 +332,7 @@ export default function ArticleClient() {
                       3. Can your clinician adjust your dose if side effects are difficult?
                     </h3>
                     <p>
-                      Yes — dose changes should only be directed by a qualified prescriber. Contact your healthcare team
+                      Yes   dose changes should only be directed by a qualified prescriber. Contact your healthcare team
                       rather than adjusting the pen yourself.
                     </p>
                   </div>
@@ -360,7 +360,7 @@ export default function ArticleClient() {
                     </h3>
                     <p>
                       Physical changes can coincide with mood shifts. If you notice persistent low mood, anxiety, or thoughts
-                      of self-harm, seek help immediately and inform your prescriber.
+                      of self harm, seek help immediately and inform your prescriber.
                     </p>
                   </div>
                 </div>
@@ -384,7 +384,7 @@ export default function ArticleClient() {
                 >
                   <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
                   {SOCIAL_HASHTAGS}
-                </p>
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</Link>.</p>
               </GuideSection>
             </article>
 

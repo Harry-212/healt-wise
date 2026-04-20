@@ -145,7 +145,7 @@ export default function GuideMounjaroPlateau() {
           Early results on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> can feel rapid. This is
           mainly due to:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Reduced appetite — leading to a sharp initial reduction in calorie intake",
@@ -165,10 +165,10 @@ export default function GuideMounjaroPlateau() {
         <GuideParagraph>
           Weight loss naturally becomes slower after the first few weeks. This
           is not a failure of{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL>—it is a well-understood
+          <IL href="/what-is-mounjaro">Mounjaro</IL> it is a well understood
           physiological response. The{" "}
           <EL href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038">
-            SURMOUNT-1 trial
+            SURMOUNT 1 trial
           </EL>{" "}
           data clearly shows this pattern across all dose groups. Reasons
           include:
@@ -194,7 +194,7 @@ export default function GuideMounjaroPlateau() {
           <EL href="https://www.nice.org.uk/guidance/cg189">NICE guidelines</EL>{" "}
           for obesity management recognise multiple markers of meaningful
           progress. Focus on:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             "Energy levels — improved stamina and reduced fatigue are common early benefits of weight loss.",
@@ -207,7 +207,7 @@ export default function GuideMounjaroPlateau() {
         <GuideParagraph>
           Use our{" "}
           <IL href="/tools/weight-loss-tracker">weight loss tracker</IL> to
-          visualise your progress over weeks and months—not just day to day.
+          visualise your progress over weeks and months not just day to day.
           Trends matter far more than daily fluctuations.
         </GuideParagraph>
       </GuideSection>
@@ -215,9 +215,9 @@ export default function GuideMounjaroPlateau() {
       {/* ── Section 4 ── */}
       <GuideSection id="maintain" heading="How to Maintain Progress">
         <GuideParagraph>
-          To move through a plateau and sustain long-term results on{" "}
+          To move through a plateau and sustain long term results on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Adjust calorie intake over time — as weight falls, total daily energy needs reduce",
@@ -235,7 +235,7 @@ export default function GuideMounjaroPlateau() {
           </IL>{" "}
           to understand how other options compare if Mounjaro is not producing
           expected results.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
       </GuideSection>
 
       {/* ── Key Takeaways ── */}

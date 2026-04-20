@@ -155,14 +155,14 @@ export default function GuidePharmacyVerification() {
           When purchasing medication online, safety should always come first. At{" "}
           <IL href="/">Health Wise</IL>, we prioritise patient protection by
           carefully reviewing every pharmacy before it is listed on our
-          platform. This applies to all GLP-1 treatments we cover, including{" "}
+          platform. This applies to all GLP 1 treatments we cover, including{" "}
           <IL href="/what-is-wegovy">Wegovy</IL>,{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, and{" "}
           <IL href="/what-is-saxenda">Saxenda</IL>.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
         <GuideParagraph>
           Our verification process is designed to ensure that only legitimate,
-          regulated UK pharmacies are included—helping you make safer, more
+          regulated UK pharmacies are included helping you make safer, more
           informed decisions. Below, we explain exactly what we check and why
           each step matters. You can also{" "}
           <IL href="/prices/cheapest-options-uk">compare verified UK pharmacy prices</IL>{" "}
@@ -205,14 +205,14 @@ export default function GuidePharmacyVerification() {
       {/* ── Section 3 ── */}
       <GuideSection id="process" heading="Our Pharmacy Verification Process">
         <GuideParagraph>
-          We apply a multi-layered verification system to assess each provider.
+          We apply a multi layered verification system to assess each provider.
           No pharmacy is listed until all three stages are passed.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
 
         <GuideSubSection heading="1. GPhC Registration Validation">
           <GuideParagraph>
             We confirm that each pharmacy is officially listed and compliant by
-            cross-checking directly with the{" "}
+            cross checking directly with the{" "}
             <EL href="https://www.pharmacyregulation.org/registers/pharmacy">
               official GPhC register
             </EL>{" "}
@@ -235,9 +235,9 @@ export default function GuidePharmacyVerification() {
           <GuideParagraph>
             Each pharmacy is assessed for how it handles medication throughout
             the supply and delivery process. This is particularly important for
-            temperature-sensitive treatments—{" "}
+            temperature sensitive treatments {" "}
             <IL href="/what-is-wegovy">Wegovy</IL> and{" "}
-            <IL href="/what-is-mounjaro">Mounjaro</IL> both require cold-chain
+            <IL href="/what-is-mounjaro">Mounjaro</IL> both require cold chain
             handling. We check for:
           </GuideParagraph>
           <GuideBulletList
@@ -267,7 +267,7 @@ export default function GuidePharmacyVerification() {
           <EL href="https://fakemeds.campaign.gov.uk/">MHRA warns</EL> that
           unregulated online pharmacies are one of the most common routes by
           which counterfeit medicines enter the UK. Common dangers include:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             "Counterfeit or substandard medication that may be ineffective or actively harmful—particularly relevant for high-demand treatments like Mounjaro and Wegovy.",
@@ -325,11 +325,11 @@ export default function GuidePharmacyVerification() {
       <GuideSection id="trust" heading="Why Trust Health Wise?">
         <GuideParagraph>
           We go beyond basic registration checks. Every pharmacy listed on{" "}
-          <IL href="/">Health Wise</IL> has passed a multi-stage review covering
+          <IL href="/">Health Wise</IL> has passed a multi stage review covering
           GPhC compliance, website legitimacy, and supply chain safety. Our{" "}
           <IL href="/methodology">methodology page</IL> explains the full
           process in detail.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             "Full GPhC registration validation for every listed provider.",

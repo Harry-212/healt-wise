@@ -159,15 +159,15 @@ export default function GuideMounjaroDeliveryTimes() {
           Speed is frequently used as a competitive differentiator among online
           pharmacies offering{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. Claims like
-          "same-day dispatch" or "approved in minutes" are designed to appeal
+          "same day dispatch" or "approved in minutes" are designed to appeal
           to patients who want treatment quickly.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
         <GuideParagraph>
           But responsible prescribing takes time. Before{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is legally and safely
           dispensed, a series of clinical checks must be completed. A provider
           that skips or compresses these steps to enable faster delivery is
-          not offering a better service—it is offering an unsafe one.
+          not offering a better service it is offering an unsafe one.
         </GuideParagraph>
         <GuideParagraph>
           Be cautious of:
@@ -197,19 +197,19 @@ export default function GuideMounjaroDeliveryTimes() {
 
       <GuideSection id="black-triangle" heading="Is Mounjaro High-Risk?">
         <GuideParagraph>
-          Yes—{" "}
+          Yes {" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> is
           classified as a{" "}
           <EL href="https://www.gov.uk/report-problem-medicine-medical-device">
             Black Triangle (▼) medication
           </EL>{" "}
           by the MHRA. This designation applies to newer medicines under
-          additional post-market safety monitoring, and signals that extra
+          additional post market safety monitoring, and signals that extra
           care is required when prescribing, dispensing, and reporting.
         </GuideParagraph>
         <GuideParagraph>
           For patients, Black Triangle status means:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "The medication is subject to closer regulatory scrutiny than standard medicines",
@@ -226,7 +226,7 @@ export default function GuideMounjaroDeliveryTimes() {
       <GuideSection id="dispensing-process" heading="How Mounjaro Is Dispensed: Step by Step">
         <GuideParagraph>
           A responsible UK pharmacy dispensing{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL> follows a multi-step
+          <IL href="/what-is-mounjaro">Mounjaro</IL> follows a multi step
           process aligned with{" "}
           <EL href="https://www.pharmacyregulation.org/standards/standards-registered-pharmacies">
             GPhC standards
@@ -251,7 +251,7 @@ export default function GuideMounjaroDeliveryTimes() {
           2. Identity verification
         </h3>
         <GuideParagraph>
-          For online pharmacies, identity checks are required—this may involve
+          For online pharmacies, identity checks are required this may involve
           ID document upload, selfie verification, or a brief video
           consultation. This step prevents prescription fraud and ensures the
           medication goes to the right person.
@@ -269,14 +269,14 @@ export default function GuideMounjaroDeliveryTimes() {
             NICE eligibility criteria (TA1026)
           </EL>
           .
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           4. Dispensing
         </h3>
         <GuideParagraph>
-          The medication is labelled, accuracy-checked, and packaged—including
-          temperature-controlled cold-chain packaging to maintain the 2°C–8°C
+          The medication is labelled, accuracy checked, and packaged including
+          temperature controlled cold chain packaging to maintain the 2°C–8°C
           storage requirement during transit.
         </GuideParagraph>
 
@@ -286,7 +286,7 @@ export default function GuideMounjaroDeliveryTimes() {
         <GuideParagraph>
           Orders are dispatched based on when clinical approval is confirmed
           and courier collection schedules. Most regulated providers use
-          tracked, next-day delivery services for temperature-sensitive
+          tracked, next day delivery services for temperature sensitive
           medications. For detailed guidance on what to check when your
           delivery arrives, see:{" "}
           <IL href="/helpful-guides/mounjaro-delivery-storage-uk">
@@ -300,7 +300,7 @@ export default function GuideMounjaroDeliveryTimes() {
         <GuideParagraph>
           Delays in receiving{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> are almost always due
-          to one of the following—and most are safety-related:
+          to one of the following and most are safety related:
         </GuideParagraph>
         <GuideBulletListRich
           items={[
@@ -350,7 +350,7 @@ export default function GuideMounjaroDeliveryTimes() {
           When selecting a pharmacy for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, look beyond delivery
           claims. Evaluate providers on:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

@@ -154,11 +154,11 @@ export default function GuideMounjaroGP() {
     >
       <GuideSection id="short-answer" heading="Short Answer: Yes">
         <GuideParagraph>
-          In the UK, pharmacies—both local and registered online providers—are
-          required to notify your GP when dispensing high-risk prescription
+          In the UK, pharmacies both local and registered online providers are
+          required to notify your GP when dispensing high risk prescription
           medications like{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL>.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
         <GuideCallout variant="info">
           This is not about surveillance—it is a patient safety requirement.
           Keeping your GP informed ensures your treatment is properly
@@ -177,7 +177,7 @@ export default function GuideMounjaroGP() {
           <EL href="https://www.nice.org.uk/guidance/ta1026">
             NICE guidance on tirzepatide
           </EL>
-          , which includes monitoring and follow-up requirements.
+          , which includes monitoring and follow up requirements.
         </GuideParagraph>
         <GuideParagraph>
           Key reasons the notification requirement exists:
@@ -208,7 +208,7 @@ export default function GuideMounjaroGP() {
         <GuideParagraph>
           The GP notification process is straightforward and happens behind the
           scenes:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "You provide your GP's details when registering with the pharmacy or during your consultation",
@@ -236,15 +236,15 @@ export default function GuideMounjaroGP() {
           Because{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is a{" "}
           <EL href="https://www.gov.uk/government/publications/rules-for-the-sale-supply-and-administration-of-medicines">
-            prescription-only medicine (POM)
+            prescription only medicine (POM)
           </EL>{" "}
-          classified as high-risk by the{" "}
+          classified as high risk by the{" "}
           <EL href="https://www.pharmacyregulation.org/registers/pharmacy">
             GPhC
           </EL>
           , GP notification is a mandatory clinical safeguard. Patients cannot
           opt out of this process.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
         <GuideCallout variant="info">
           This requirement applies equally to regulated online pharmacies. If a
           pharmacy offers to dispense Mounjaro without notifying your GP and
@@ -295,7 +295,7 @@ export default function GuideMounjaroGP() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> prescription. If you
           have a GP appointment shortly after starting treatment, it is worth
           confirming they have received the notification.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

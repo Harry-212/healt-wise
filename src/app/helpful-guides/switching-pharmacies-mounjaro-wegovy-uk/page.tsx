@@ -165,9 +165,9 @@ export default function GuideSwitchingPharmacy() {
           Switching pharmacies for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> is increasingly common in the
-          UK. Patients may find a better-suited provider as the market matures
+          UK. Patients may find a better suited provider as the market matures
           and more regulated options become available.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
         <GuideParagraph>
           Typical reasons people switch include:
         </GuideParagraph>
@@ -194,7 +194,7 @@ export default function GuideSwitchingPharmacy() {
             NICE eligibility criteria
           </EL>{" "}
           for Mounjaro include:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "BMI ≥ 30 (obesity), or",
@@ -298,7 +298,7 @@ export default function GuideSwitchingPharmacy() {
         <GuideParagraph>
           These documents are typically uploaded through the new pharmacy's
           secure patient portal during your consultation.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="consultation" heading="Consultation Process Explained">
@@ -307,7 +307,7 @@ export default function GuideSwitchingPharmacy() {
           issuing a prescription for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL>. This applies even if you
-          are switching—not starting fresh.
+          are switching not starting fresh.
         </GuideParagraph>
         <GuideParagraph>
           You will typically need to:
@@ -332,7 +332,7 @@ export default function GuideSwitchingPharmacy() {
         <GuideParagraph>
           Once your new prescription is approved and your first order has been
           dispatched, keep the following in mind:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

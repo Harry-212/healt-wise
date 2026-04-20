@@ -169,17 +169,17 @@ export default function GuideMounjaroPregnancy() {
         <GuideParagraph>
           Recent headlines about unexpected pregnancies while using{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> have caused
-          confusion—and in some cases, alarm. However, this is not new or
+          confusion and in some cases, alarm. However, this is not new or
           previously hidden information.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
         <GuideParagraph>
           The potential impact of{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> on fertility
-          has been clearly documented in clinical guidance—including the{" "}
+          has been clearly documented in clinical guidance including the{" "}
           <EL href="https://www.medicines.org.uk/emc/product/15481">
             official SmPC
           </EL>
-          —and is routinely discussed during medical consultations. This guide
+           and is routinely discussed during medical consultations. This guide
           explains what the evidence actually shows and what you should do if
           you are taking Mounjaro.
         </GuideParagraph>
@@ -188,14 +188,14 @@ export default function GuideMounjaroPregnancy() {
       {/* ── Section 2 ── */}
       <GuideSection id="pregnancy-risk" heading="Can Mounjaro Affect Pregnancy Risk?">
         <GuideParagraph>
-          Yes—but not in the way many headlines suggest.{" "}
+          Yes but not in the way many headlines suggest.{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> is a dual
-          GLP-1 and GIP receptor agonist that supports significant weight loss
+          GLP 1 and GIP receptor agonist that supports significant weight loss
           and improves metabolic health. Unlike{" "}
           <IL href="/what-is-wegovy">Wegovy (semaglutide)</IL>, which targets
-          only GLP-1 receptors, Mounjaro's dual action tends to produce{" "}
+          only GLP 1 receptors, Mounjaro's dual action tends to produce{" "}
           <IL href="/compare/wegovy-vs-mounjaro">greater average weight loss</IL>
-          —and with greater weight loss comes a more pronounced effect on
+           and with greater weight loss comes a more pronounced effect on
           hormonal health. These changes can indirectly increase fertility:
         </GuideParagraph>
         <GuideBulletList
@@ -221,11 +221,11 @@ export default function GuideMounjaroPregnancy() {
       {/* ── Section 3 ── */}
       <GuideSection id="why-happens" heading="Why This Happens">
         <GuideParagraph>
-          As the body loses weight and metabolic health improves—a core outcome
+          As the body loses weight and metabolic health improves a core outcome
           of treatment with{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL>—a chain of hormonal
+          <IL href="/what-is-mounjaro">Mounjaro</IL> a chain of hormonal
           changes takes place:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Insulin sensitivity improves, which reduces circulating insulin levels.",
@@ -234,8 +234,8 @@ export default function GuideMounjaroPregnancy() {
           ]}
         />
         <GuideParagraph>
-          These are well-understood physiological responses to meaningful weight
-          loss. They are not unexpected side effects unique to Mounjaro—they
+          These are well understood physiological responses to meaningful weight
+          loss. They are not unexpected side effects unique to Mounjaro they
           occur with any effective weight loss intervention, including{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> and{" "}
           <IL href="/what-is-saxenda">Saxenda</IL>. Mounjaro's speed and
@@ -251,7 +251,7 @@ export default function GuideMounjaroPregnancy() {
       {/* ── Section 4 ── */}
       <GuideSection id="not-new" heading="Why This Is Not New Information">
         <GuideParagraph>
-          The fertility-related effects and contraceptive interaction of
+          The fertility related effects and contraceptive interaction of
           tirzepatide are documented across multiple regulatory and clinical
           sources:
         </GuideParagraph>
@@ -277,7 +277,7 @@ export default function GuideMounjaroPregnancy() {
         />
         <GuideParagraph>
           If a patient was not informed about this before starting treatment, it
-          represents a gap in the consultation process—not a failure of the
+          represents a gap in the consultation process not a failure of the
           medication to disclose a hidden risk.
         </GuideParagraph>
       </GuideSection>
@@ -288,7 +288,7 @@ export default function GuideMounjaroPregnancy() {
           If pregnancy is not planned, effective contraception is essential
           while using <IL href="/what-is-mounjaro">Mounjaro</IL>. Healthcare
           professionals may recommend:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Reviewing your current contraception method to confirm it remains appropriate.",
@@ -326,7 +326,7 @@ export default function GuideMounjaroPregnancy() {
           ]}
         />
         <GuideParagraph>
-          The same dynamic applies, to varying degrees, to other GLP-1
+          The same dynamic applies, to varying degrees, to other GLP 1
           treatments including{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> and{" "}
           <IL href="/what-is-saxenda">Saxenda</IL>. Framing this as an
@@ -341,7 +341,7 @@ export default function GuideMounjaroPregnancy() {
           If you are currently taking{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> or are considering
           starting treatment, take the following steps:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

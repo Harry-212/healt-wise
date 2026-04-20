@@ -1,4 +1,4 @@
-﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -36,6 +36,7 @@ const TOC = [
   { id: "side-effects", label: "Side Effects of Mounjaro" },
   { id: "cost", label: "Cost of Mounjaro in the UK" },
   { id: "worth-it", label: "Is Mounjaro Worth It?" },
+  { id: "local-options", label: "Finding Providers in UK Cities" },
   { id: "references", label: "Sources & Further Reading" },
   { id: "faq", label: "Frequently Asked Questions" },
 ];
@@ -178,11 +179,11 @@ export default function GuideMounjaroPillar() {
       <GuideSection id="what-is" heading="What Is Mounjaro?">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> is a
-          once-weekly prescription injection used for weight management in
+          once weekly prescription injection used for weight management in
           adults. Originally developed to treat type 2 diabetes, it is now
           approved in the UK as a medical treatment for obesity and overweight
           conditions.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideParagraph>
           It works differently from older medications by targeting two key
           appetite and metabolic hormones:
@@ -198,7 +199,7 @@ export default function GuideMounjaroPillar() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> apart from other weight
           loss injections such as{" "}
           <IL href="/what-is-wegovy">Wegovy (semaglutide)</IL>, which targets
-          only GLP-1.
+          only GLP 1.
         </GuideParagraph>
       </GuideSection>
 
@@ -218,11 +219,11 @@ export default function GuideMounjaroPillar() {
         />
         <GuideParagraph>
           The result: most people naturally eat less without strict dieting.
-          The dual GLP-1 and GIP action is believed to produce a stronger
-          combined appetite-suppressing effect than a single-hormone approach,
+          The dual GLP 1 and GIP action is believed to produce a stronger
+          combined appetite suppressing effect than a single hormone approach,
           as evidenced by the{" "}
           <EL href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038">
-            SURMOUNT-1 clinical trial
+            SURMOUNT 1 clinical trial
           </EL>
           .
         </GuideParagraph>
@@ -234,7 +235,7 @@ export default function GuideMounjaroPillar() {
           Clinical trials show significant weight loss outcomes when combined
           with lifestyle support. Average results from the{" "}
           <EL href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038">
-            SURMOUNT-1 trial
+            SURMOUNT 1 trial
           </EL>{" "}
           published in the New England Journal of Medicine:
         </GuideParagraph>
@@ -252,15 +253,15 @@ export default function GuideMounjaroPillar() {
           dosage, and lifestyle adherence. Use our{" "}
           <IL href="/tools/bmi-calculator">BMI calculator</IL> to understand
           what these percentages mean in absolute terms for your weight.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 4 ── */}
       <GuideSection id="vs-others" heading="Mounjaro vs Other Weight Loss Injections">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> is often compared with
-          other GLP-1-based treatments available in the UK. The key difference
-          is Mounjaro's dual-hormone mechanism:
+          other GLP 1 based treatments available in the UK. The key difference
+          is Mounjaro's dual hormone mechanism:
         </GuideParagraph>
         <GuideTable
           headers={["Treatment", "Frequency", "Average Weight Loss"]}
@@ -276,7 +277,7 @@ export default function GuideMounjaroPillar() {
         <GuideParagraph>
           Key difference: Mounjaro targets two hormones instead of one, which
           may lead to stronger results for some patients. However, individual
-          response varies—see our full{" "}
+          response varies see our full{" "}
           <IL href="/compare/wegovy-vs-mounjaro">Wegovy vs Mounjaro comparison</IL>{" "}
           and{" "}
           <IL href="/compare/mounjaro-vs-saxenda">Mounjaro vs Saxenda comparison</IL>{" "}
@@ -345,7 +346,7 @@ export default function GuideMounjaroPillar() {
         <GuideParagraph>
           Always follow guidance from your clinician. If you experience severe
           or persistent abdominal pain, seek medical advice promptly.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 7 ── */}
@@ -369,10 +370,10 @@ export default function GuideMounjaroPillar() {
           </IL>{" "}
           to find the lowest verified prices from{" "}
           <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
-            GPhC-registered pharmacies
+            GPhC registered pharmacies
           </IL>
           . You can also{" "}
-          <IL href="/prices/cheapest-options-uk">compare cheapest GLP-1 options</IL>{" "}
+          <IL href="/prices/cheapest-options-uk">compare cheapest GLP 1 options</IL>{" "}
           across all treatments.
         </GuideParagraph>
       </GuideSection>
@@ -396,11 +397,36 @@ export default function GuideMounjaroPillar() {
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> represents a significant
           advancement in medical weight loss treatment in the UK. Its
-          dual-hormone mechanism and strong clinical outcomes make it one of
+          dual hormone mechanism and strong clinical outcomes make it one of
           the most effective options currently available. Whether it is right
           for you depends on your individual health profile, eligibility, and
           access to a prescribing clinician.
         </GuideParagraph>
+      </GuideSection>
+
+      {/* ── Section 9 ── */}
+      <GuideSection id="local-options" heading="Finding Providers in UK Cities">
+        <GuideParagraph>
+          Accessing Mounjaro is becoming more straightforward across the UK, but finding a trusted local provider or pharmacy is essential for ongoing support. Depending on your location, you might have access to specialised weight management clinics that offer face to face consultations.
+        </GuideParagraph>
+        <GuideParagraph>
+          For instance, if you reside in the capital, you might want to explore our guide on the <IL href="/blog/best-weight-loss-treatment-in-london">best weight loss treatment in London</IL>. Similarly, we have dedicated resources for finding <IL href="/blog/best-weight-loss-treatment-in-manchester">treatment in Manchester</IL> or evaluating <IL href="/blog/best-weight-loss-treatment-in-liverpool">options in Liverpool</IL> and other major cities.
+        </GuideParagraph>
+        <GuideParagraph>
+          You can also dive deeper into the clinical data in our article on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science">Mounjaro weight loss benefits backed by science</IL>.
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+        
+        <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-6">
+          <h3 className="mb-2 text-lg font-semibold text-slate-900">
+            Explore treatments in your area
+          </h3>
+          <p className="mb-4 text-slate-600">
+            Review registered pharmacies and specialist weight loss clinics across various UK cities to find the right fit for your needs.
+          </p>
+          <IL href="/blog?topic=locations" className="inline-flex items-center justify-center rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-700 hover:text-white">
+            Discover UK locations
+          </IL>
+        </div>
       </GuideSection>
 
       {/* ── Key Takeaways ── */}

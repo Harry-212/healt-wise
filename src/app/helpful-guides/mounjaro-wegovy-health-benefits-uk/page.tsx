@@ -167,10 +167,10 @@ export default function GuideMounjaroHealthBenefits() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> and{" "}
           <IL href="/what-is-wegovy">Wegovy</IL>'s health impact is the
           quality and sustainability of the weight loss they produce. Unlike
-          short-term calorie restriction, GLP-1 medications work by directly
-          modifying the hormonal signals that regulate hunger and satiety—
+          short term calorie restriction, GLP 1 medications work by directly
+          modifying the hormonal signals that regulate hunger and satiety 
           making lower intake feel natural rather than forced.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideStatCards
           stats={[
             {
@@ -199,7 +199,7 @@ export default function GuideMounjaroHealthBenefits() {
           Both{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> and{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> were originally developed in
-          the context of type 2 diabetes management—and their glucose-lowering
+          the context of type 2 diabetes management and their glucose lowering
           effects are among their most clinically significant benefits.
         </GuideParagraph>
         <GuideBulletList
@@ -212,8 +212,8 @@ export default function GuideMounjaroHealthBenefits() {
         />
         <GuideParagraph>
           <EL href="https://www.diabetes.org.uk/">Diabetes UK</EL> highlights
-          GLP-1 receptor agonists as an important class of treatment for type
-          2 diabetes management, noting both the glucose-lowering and weight
+          GLP 1 receptor agonists as an important class of treatment for type
+          2 diabetes management, noting both the glucose lowering and weight
           loss effects that benefit patients.
         </GuideParagraph>
         <GuideCallout variant="info">
@@ -226,8 +226,8 @@ export default function GuideMounjaroHealthBenefits() {
 
       <GuideSection id="cardiovascular" heading="3. Cardiovascular Health Benefits">
         <GuideParagraph>
-          One of the most significant recent developments in GLP-1 research is
-          the demonstration of cardiovascular risk reduction—independent of
+          One of the most significant recent developments in GLP 1 research is
+          the demonstration of cardiovascular risk reduction independent of
           weight loss alone. The landmark{" "}
           <EL href="https://www.nejm.org/doi/full/10.1056/NEJMoa2307563">
             SELECT trial
@@ -235,7 +235,7 @@ export default function GuideMounjaroHealthBenefits() {
           showed that semaglutide (Wegovy) reduced the risk of major adverse
           cardiovascular events (heart attack, stroke, cardiovascular death) by
           20% in people with obesity and established cardiovascular disease.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Reduced blood pressure — particularly systolic blood pressure, a key cardiovascular risk factor",
@@ -254,8 +254,8 @@ export default function GuideMounjaroHealthBenefits() {
 
       <GuideSection id="liver-health" heading="4. Liver Health Support">
         <GuideParagraph>
-          Non-alcoholic fatty liver disease (NAFLD)—now often termed metabolic
-          dysfunction-associated steatotic liver disease (MASLD)—affects an
+          Non alcoholic fatty liver disease (NAFLD) now often termed metabolic
+          dysfunction associated steatotic liver disease (MASLD) affects an
           estimated 25–30% of UK adults and is closely linked to obesity and
           insulin resistance.
         </GuideParagraph>
@@ -282,7 +282,7 @@ export default function GuideMounjaroHealthBenefits() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> can produce significant
           improvements in sleep apnoea severity.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Reduced airway obstruction — less fat tissue pressing on the airway during sleep",
@@ -296,7 +296,7 @@ export default function GuideMounjaroHealthBenefits() {
       <GuideSection id="joint-pain" heading="6. Reduced Joint Pain & Inflammation">
         <GuideParagraph>
           Excess body weight places disproportionate mechanical stress on the
-          joints—particularly the knees, hips, and spine. For every kilogram of
+          joints particularly the knees, hips, and spine. For every kilogram of
           body weight lost, joint load decreases by approximately 4kg. The
           significant weight loss achievable with{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> and{" "}
@@ -314,9 +314,9 @@ export default function GuideMounjaroHealthBenefits() {
 
       <GuideSection id="mental-health" heading="7. Mental Health Benefits">
         <GuideParagraph>
-          The psychological benefits of sustained weight loss with GLP-1
-          medications are increasingly documented in patient-reported outcome
-          data from clinical trials and real-world evidence.
+          The psychological benefits of sustained weight loss with GLP 1
+          medications are increasingly documented in patient reported outcome
+          data from clinical trials and real world evidence.
         </GuideParagraph>
         <GuideBulletListRich
           items={[
@@ -351,10 +351,10 @@ export default function GuideMounjaroHealthBenefits() {
         <GuideParagraph>
           Both{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> and{" "}
-          <IL href="/what-is-wegovy">Wegovy</IL> have a well-characterised
+          <IL href="/what-is-wegovy">Wegovy</IL> have a well characterised
           safety profile from extensive clinical trials. Understanding common
           and rare side effects helps patients manage treatment effectively.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           Common side effects

@@ -61,8 +61,8 @@ function DosageScheduleTable({ darkMode }: { darkMode: boolean }) {
       <p
         className={`px-3 py-2 text-xs ${darkMode ? "border-t border-slate-700 text-slate-500" : "border-t border-slate-200 text-slate-500"}`}
       >
-        Illustrative schedule only—your prescriber will personalise titration and intervals.
-      </p>
+        Illustrative schedule only your prescriber will personalise titration and intervals.
+       For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</Link>.</p>
     </div>
   );
 }
@@ -149,7 +149,7 @@ export default function ArticleClient() {
               <p className="text-lg md:text-xl">
                 Whether you have struggled with multiple diets or you are just beginning your weight loss journey, you
                 may be curious about Mounjaro dosage for weight loss. Mounjaro (tirzepatide), originally approved for
-                type 2 diabetes, has garnered significant attention for its off-label use in shedding pounds.
+                type 2 diabetes, has garnered significant attention for its off label use in shedding pounds.
                 Researchers have found that it can help reduce calorie intake, support your metabolism, and make it
                 easier to lose weight. This guide unpacks what Mounjaro is, how it works, and how you can navigate its
                 dosing schedule effectively.
@@ -163,13 +163,13 @@ export default function ArticleClient() {
                 <p>
                   Mounjaro is a weekly prescription injection that primarily addresses type 2 diabetes by improving
                   insulin sensitivity and regulating blood sugar. It contains tirzepatide, which acts on two key
-                  incretin pathways. While officially licensed for diabetes, it is also commonly prescribed off-label
+                  incretin pathways. While officially licensed for diabetes, it is also commonly prescribed off label
                   for weight loss because it targets appetite and food intake (Healthline).
                 </p>
                 <p>
-                  Its dual action mimics both GIP and GLP-1, influencing appetite and digestion more strongly than many
-                  single-hormone options—so you may feel full sooner and satisfied with smaller meals. Use for weight
-                  management remains off-label; always speak with a medical professional to see if Mounjaro fits your
+                  Its dual action mimics both GIP and GLP 1, influencing appetite and digestion more strongly than many
+                  single hormone options so you may feel full sooner and satisfied with smaller meals. Use for weight
+                  management remains off label; always speak with a medical professional to see if Mounjaro fits your
                   plan.
                 </p>
                 <p>
@@ -194,20 +194,20 @@ export default function ArticleClient() {
                   >
                     whether Mounjaro is safe and right for you
                   </Link>
-                  . Dosing and outcomes vary by person—the more you understand, the better you can partner with your
+                  . Dosing and outcomes vary by person the more you understand, the better you can partner with your
                   care team.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="effect" heading="Uncover Mounjaro’s weight loss effect">
                 <p>
-                  Effectiveness is tied to dual hormonal action on GIP and GLP-1 receptors, regulating blood sugar and
-                  fullness. GLP-1 slows gastric emptying and signals satiety; GIP supports insulin release in a
-                  glucose-dependent way (Healthline). Together they can lower calorie intake and make portions easier to
+                  Effectiveness is tied to dual hormonal action on GIP and GLP 1 receptors, regulating blood sugar and
+                  fullness. GLP 1 slows gastric emptying and signals satiety; GIP supports insulin release in a
+                  glucose dependent way (Healthline). Together they can lower calorie intake and make portions easier to
                   manage.
                 </p>
                 <p>
-                  Many patients notice early changes within roughly weeks two to four—helpful if past progress felt slow.
+                  Many patients notice early changes within roughly weeks two to four helpful if past progress felt slow.
                   For a deeper dive, read{" "}
                   <Link
                     href="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here"
@@ -218,7 +218,7 @@ export default function ArticleClient() {
                   .
                 </p>
                 <p>
-                  Mounjaro is not a miracle fix. It works best with balanced eating and regular movement—walks, gym
+                  Mounjaro is not a miracle fix. It works best with balanced eating and regular movement walks, gym
                   sessions, or whatever you can sustain. If you plateau, your clinician can review dose, nutrition, and
                   activity rather than you pushing changes alone.
                 </p>
@@ -231,9 +231,9 @@ export default function ArticleClient() {
                 </p>
                 <p>
                   A common pattern starts at 2.5 mg weekly for four weeks, then 5 mg, then 7.5 mg, and so on, up to a
-                  maximum of 15 mg. Higher tolerated doses are associated with greater average weight loss in trials—but
+                  maximum of 15 mg. Higher tolerated doses are associated with greater average weight loss in trials but
                   titration should never be rushed without medical oversight.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
                 <DosageScheduleTable darkMode={darkMode} />
                 <p>
                   Some people reach goals at 10 mg or 12.5 mg and stay there; others need the top dose. You might also
@@ -248,16 +248,16 @@ export default function ArticleClient() {
                   sensitive gut, your clinician may keep you on lower doses longer.
                 </p>
                 <p>
-                  In a 72-week study, roughly{" "}
-                  <strong className={darkMode ? "text-white" : "text-slate-900"}>15%</strong> body-weight reduction was
+                  In a 72 week study, roughly{" "}
+                  <strong className={darkMode ? "text-white" : "text-slate-900"}>15%</strong> body weight reduction was
                   reported at 5 mg weekly, about <strong className={darkMode ? "text-white" : "text-slate-900"}>19.5%</strong>{" "}
                   at 10 mg, and about <strong className={darkMode ? "text-white" : "text-slate-900"}>20.9%</strong> at 15
-                  mg (Forbes Health, summarising trial data). Higher dose can mean more loss on average—but skipping
+                  mg (Forbes Health, summarising trial data). Higher dose can mean more loss on average but skipping
                   steps can sharply increase side effects.
                 </p>
                 <p>
                   Consider daily life: intense nausea can disrupt work or caring for family. Sometimes a moderate dose
-                  (e.g. 7.5–10 mg) delivers steady loss without wiping you out—even if you have a deadline like a wedding.
+                  (e.g. 7.5–10 mg) delivers steady loss without wiping you out even if you have a deadline like a wedding.
                 </p>
                 <p>
                   Plateaus are normal. Your doctor might adjust the dose, or you might tweak protein, training, or sleep.
@@ -283,12 +283,12 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="side-effects" heading="Address potential side effects">
                 <p>
-                  GI symptoms—nausea, vomiting, diarrhoea—are common, especially after starting or stepping up (ZAVA).
+                  GI symptoms nausea, vomiting, diarrhoea are common, especially after starting or stepping up (ZAVA).
                   Fullness can feel strong because emptying slows. Many effects ease after a few weeks on a stable dose,
                   which is why gradual titration matters.
                 </p>
                 <p>
-                  If symptoms stay intense, your clinician may pause escalation or step back to a better-tolerated dose.
+                  If symptoms stay intense, your clinician may pause escalation or step back to a better tolerated dose.
                   Rotate injection sites (abdomen, thigh, arm) weekly to reduce local reactions.
                 </p>
                 <p>
@@ -299,8 +299,8 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="dosing-plan" heading="Build a clear dosing plan">
                 <p>
-                  Start from concrete goals—e.g. percentage weight change or steadier meal patterns—and align titration
-                  timing with your prescriber. If you are nausea-prone, five- or six-week blocks instead of four may be
+                  Start from concrete goals e.g. percentage weight change or steadier meal patterns and align titration
+                  timing with your prescriber. If you are nausea prone, five  or six week blocks instead of four may be
                   sensible.
                 </p>
                 <p>
@@ -322,16 +322,16 @@ export default function ArticleClient() {
                   .
                 </p>
                 <p>
-                  Stack medication with meal planning, activity, and stress care—hormonal support multiplies when
+                  Stack medication with meal planning, activity, and stress care hormonal support multiplies when
                   lifestyle levers move too. Revisit nutrition and training as your weight changes.
-                </p>
+                 For more context, explore our resources on <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</Link>.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="lasting" heading="Take steps for lasting results">
                 <p>
                   After strong initial loss, evidence suggests many people regain weight if tirzepatide is stopped
-                  without maintenance habits (Healthline). Long-term or maintenance dosing may be part of the picture for
-                  some—not everyone needs 15 mg forever; some settle at a moderate dose while monitoring appetite and
+                  without maintenance habits (Healthline). Long term or maintenance dosing may be part of the picture for
+                  some not everyone needs 15 mg forever; some settle at a moderate dose while monitoring appetite and
                   weight.
                 </p>
                 <p>
@@ -342,11 +342,11 @@ export default function ArticleClient() {
                   >
                     Mounjaro price comparison
                   </Link>{" "}
-                  — Health Wise does not sell medicines.
+                    Health Wise does not sell medicines.
                 </p>
                 <p>
                   Friends, family, or structured support can help you stay consistent. Watch for creeping cravings or
-                  weight—small signals may mean a dose review or habit refresh, not “failure.”
+                  weight small signals may mean a dose review or habit refresh, not “failure.”
                 </p>
               </GuideSection>
 
@@ -373,7 +373,7 @@ export default function ArticleClient() {
                     </h3>
                     <p>
                       Many pathways titrate every few weeks from a low start toward a maximum, with changes based on
-                      tolerance, side effects, and goals—always under prescriber supervision.
+                      tolerance, side effects, and goals always under prescriber supervision.
                     </p>
                   </div>
                   <div>
@@ -400,7 +400,7 @@ export default function ArticleClient() {
                     </h3>
                     <p>
                       Studies suggest regain is common after stopping without strong maintenance. Plan tapering,
-                      possible maintenance dosing, and lifestyle with your clinician—do not stop suddenly on your own.
+                      possible maintenance dosing, and lifestyle with your clinician do not stop suddenly on your own.
                     </p>
                   </div>
                   <div>
@@ -423,18 +423,18 @@ export default function ArticleClient() {
                   and keep meaningful loss.
                 </p>
                 <p>
-                  The schedules and study figures here are educational—they do not replace personalised advice. By
+                  The schedules and study figures here are educational they do not replace personalised advice. By
                   understanding titration, realistic dose–response patterns, and strategies to limit setbacks, you are
                   better placed to act with confidence. The next step is a conversation with your healthcare team and a
                   plan you can follow for the long term.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</Link>.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="references" heading="References">
                 <ol className="list-decimal space-y-2 pl-5 text-sm">
-                  <li>Healthline—overview of tirzepatide / Mounjaro mechanism and weight-related reporting.</li>
-                  <li>ZAVA—patient-facing information on GLP-1 medicines and titration principles.</li>
-                  <li>Forbes Health—summary of trial weight outcomes across Mounjaro dose strengths.</li>
+                  <li>Healthline overview of tirzepatide / Mounjaro mechanism and weight related reporting.</li>
+                  <li>ZAVA patient facing information on GLP 1 medicines and titration principles.</li>
+                  <li>Forbes Health summary of trial weight outcomes across Mounjaro dose strengths.</li>
                 </ol>
               </GuideSection>
             </article>

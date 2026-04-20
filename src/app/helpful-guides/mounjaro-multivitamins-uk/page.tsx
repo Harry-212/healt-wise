@@ -152,11 +152,11 @@ export default function GuideMounjaroVitamins() {
           Not all supplement advice online is trustworthy. On platforms like
           TikTok, Instagram, and Facebook, many influencers promote
           multivitamins through paid partnerships.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
         <GuideParagraph>
           This means recommendations are often driven by commission rather than
           clinical effectiveness. A product that trends today may simply reflect
-          marketing—not quality or scientific backing.
+          marketing not quality or scientific backing.
         </GuideParagraph>
         <GuideCallout variant="warning">
           The same applies to "fat-burning" supplements frequently marketed
@@ -171,12 +171,12 @@ export default function GuideMounjaroVitamins() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> can significantly reduce
           appetite, leading to smaller portion sizes. While this is central to
           how it supports weight loss, it may also reduce overall nutrient
-          intake—particularly if meals become very small or food variety
+          intake particularly if meals become very small or food variety
           decreases.
         </GuideParagraph>
         <GuideParagraph>
           A daily multivitamin can help:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Fill minor nutritional gaps caused by reduced portion sizes",
@@ -197,7 +197,7 @@ export default function GuideMounjaroVitamins() {
 
       <GuideSection id="are-safe" heading="Are Multivitamins Safe with Mounjaro?">
         <GuideParagraph>
-          In most cases, yes—standard multivitamins do not interfere with how{" "}
+          In most cases, yes standard multivitamins do not interfere with how{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> works. The{" "}
           <EL href="https://www.medicines.org.uk/emc/product/15481">
             Mounjaro SmPC
@@ -231,7 +231,7 @@ export default function GuideMounjaroVitamins() {
             MHRA under the Food Supplements Regulations
           </EL>
           . This means all compliant products must meet standards for:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Safety — ingredients must be safe at the stated doses",
@@ -259,7 +259,7 @@ export default function GuideMounjaroVitamins() {
 
       <GuideSection id="key-nutrients" heading="Key Nutrients to Look For">
         <GuideParagraph>
-          A well-balanced multivitamin for someone using{" "}
+          A well balanced multivitamin for someone using{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> should include:
         </GuideParagraph>
         <GuideBulletListRich
@@ -301,11 +301,11 @@ export default function GuideMounjaroVitamins() {
         <GuideParagraph>
           Multivitamins can support your nutrition while using{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, especially if your
-          appetite is significantly reduced. However, most UK-approved
+          appetite is significantly reduced. However, most UK approved
           supplements offer similar benefits regardless of price. Focus on
-          consistency, not branding—and always check with your pharmacist if
+          consistency, not branding and always check with your pharmacist if
           you are unsure about a specific product.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

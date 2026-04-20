@@ -105,8 +105,8 @@ export default function ArticleClient() {
               className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}
             >
               <p className="text-lg md:text-xl">
-                Mounjaro has gained attention as a promising option for people who want to lose weight after trying countless diets with limited success. It is designed to help you manage your appetite more effectively, reduce your food cravings and gradually achieve a healthier body composition. In this ultimate guide to Mounjaro weight loss before and after, you will discover what the treatment involves, how it works, and the real-world outcomes people have experienced. By understanding the data and practical steps, you can decide whether Mounjaro fits your weight loss goals and plan your next steps confidently.
-              </p>
+                Mounjaro has gained attention as a promising option for people who want to lose weight after trying countless diets with limited success. It is designed to help you manage your appetite more effectively, reduce your food cravings and gradually achieve a healthier body composition. In this ultimate guide to Mounjaro weight loss before and after, you will discover what the treatment involves, how it works, and the real world outcomes people have experienced. By understanding the data and practical steps, you can decide whether Mounjaro fits your weight loss goals and plan your next steps confidently.
+               For more context, explore our resources on <Link href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</Link>.</p>
 
               <GuideSection darkMode={darkMode} id="meet-mounjaro" heading="Meet Mounjaro For Weight Loss">
                 <p>
@@ -145,7 +145,7 @@ export default function ArticleClient() {
                   One of the first questions you probably have about Mounjaro is how much weight you can realistically lose. According to research, patients typically lose around 15 kg (33 lbs) during the course of treatment while also dropping approximately 4 inches off their waist circumference, though timeline and results vary by individual (ZAVA).
                 </p>
                 <p>
-                  Many people notice progress within the first few months. Clinical data shows that, on average, people lose around 4% of initial body weight in the first month, with consistent improvements continuing over time (Prescription Doctor). If you augment each day with nutrient-dense meals and physical activities you enjoy, the visual and numerical changes can boost your commitment to the treatment.
+                  Many people notice progress within the first few months. Clinical data shows that, on average, people lose around 4% of initial body weight in the first month, with consistent improvements continuing over time (Prescription Doctor). If you augment each day with nutrient dense meals and physical activities you enjoy, the visual and numerical changes can boost your commitment to the treatment.
                 </p>
               </GuideSection>
 
@@ -201,7 +201,7 @@ export default function ArticleClient() {
                     Mounjaro dosage for weight loss
                   </Link>{" "}
                   to see recommended practices and starting points.
-                </p>
+                 For more context, explore our resources on <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</Link>.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="stories" heading="See Real-Life Success Stories">
@@ -209,7 +209,7 @@ export default function ArticleClient() {
                   Part of the growing interest in Mounjaro comes from firsthand testimonials of people who found renewed motivation. For instance, Heike reported losing 13 kg over four months. She combined Mounjaro injections with small, healthy adjustments to her routine and regained the energy to manage daily tasks without exhaustion (ZAVA).
                 </p>
                 <p>
-                  Other remarkable stories include individuals who have transformed their BMI from a severely obese range to near-normal levels. In one case, a user reported shedding over 200 pounds in under two years, attributing much of that success to consistent injections and a patient approach to diet (Prescription Doctor). These accounts remind you that steady effort, rather than dramatic overnight changes, is truly key. If you want more insight into potential outcomes and timelines, you can check{" "}
+                  Other remarkable stories include individuals who have transformed their BMI from a severely obese range to near normal levels. In one case, a user reported shedding over 200 pounds in under two years, attributing much of that success to consistent injections and a patient approach to diet (Prescription Doctor). These accounts remind you that steady effort, rather than dramatic overnight changes, is truly key. If you want more insight into potential outcomes and timelines, you can check{" "}
                   <Link href="/what-is-mounjaro#weight-loss-results" className="font-medium text-brand-primary underline">
                     Mounjaro weight loss results
                   </Link>
@@ -219,10 +219,10 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="dosing-safety" heading="Use Dosing Tips For Safety">
                 <p>
-                  To minimise side effects and optimise your progress, Mounjaro typically starts at a 2.5 mg dose for four weeks. This introductory period allows your body to adapt, reducing the likelihood of severe digestion-related issues like nausea or constipation (ZAVA). Over time, your healthcare provider may adjust the dose to enhance appetite suppression or address specific concerns.
+                  To minimise side effects and optimise your progress, Mounjaro typically starts at a 2.5 mg dose for four weeks. This introductory period allows your body to adapt, reducing the likelihood of severe digestion related issues like nausea or constipation (ZAVA). Over time, your healthcare provider may adjust the dose to enhance appetite suppression or address specific concerns.
                 </p>
                 <p>
-                  You will self-administer the treatment using carefully measured injections. For a practical overview of what that routine looks like, see{" "}
+                  You will self administer the treatment using carefully measured injections. For a practical overview of what that routine looks like, see{" "}
                   <Link
                     href="/helpful-guides/mounjaro-weight-loss-injection-uk"
                     className="font-medium text-brand-primary underline"
@@ -239,24 +239,24 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="maximise-plan" heading="Maximise Your Mounjaro Plan">
                 <p>
-                  Long-term success with Mounjaro hinges on forming strong dietary and lifestyle habits. Consider prioritising protein-rich meals, vegetables, and moderate exercise like brisk walking or low-impact workouts. These daily habits foster consistent weight loss and guard against stalls. Tracking progress in a journal or mobile app can also help you identify positive patterns and troubleshoot any plateaus.
+                  Long term success with Mounjaro hinges on forming strong dietary and lifestyle habits. Consider prioritising protein rich meals, vegetables, and moderate exercise like brisk walking or low impact workouts. These daily habits foster consistent weight loss and guard against stalls. Tracking progress in a journal or mobile app can also help you identify positive patterns and troubleshoot any plateaus.
                 </p>
                 <p>
-                  Staying in close communication with a healthcare professional is equally important. They can monitor how you respond to Mounjaro, recommend slight dosage changes and make sure potential side effects remain manageable. By pairing their guidance with consistent self-care, you gain the best chance of achieving and sustaining your weight loss goals over the long haul.
+                  Staying in close communication with a healthcare professional is equally important. They can monitor how you respond to Mounjaro, recommend slight dosage changes and make sure potential side effects remain manageable. By pairing their guidance with consistent self care, you gain the best chance of achieving and sustaining your weight loss goals over the long haul.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="next-steps" heading="Take Your Next Steps">
                 <p>
-                  Committing to Mounjaro is easier when you understand the before-and-after possibilities. On average, many people experience a notable drop in weight and a trimmer waistline after a few months. That is encouraging news, especially if you have struggled with weight management for years. Staying motivated, following a realistic eating plan, and keeping up regular injections all work together to support you on this journey.
+                  Committing to Mounjaro is easier when you understand the before and after possibilities. On average, many people experience a notable drop in weight and a trimmer waistline after a few months. That is encouraging news, especially if you have struggled with weight management for years. Staying motivated, following a realistic eating plan, and keeping up regular injections all work together to support you on this journey.
                 </p>
                 <p>
-                  Remember that your personal milestone might not match someone else’s speed — and that is entirely normal. As you begin, focus on small wins such as feeling lighter on your feet or sticking to your meal schedule for a full week. If you are interested in a more detailed breakdown of what you might achieve, take a look at{" "}
+                  Remember that your personal milestone might not match someone else’s speed   and that is entirely normal. As you begin, focus on small wins such as feeling lighter on your feet or sticking to your meal schedule for a full week. If you are interested in a more detailed breakdown of what you might achieve, take a look at{" "}
                   <Link href="/what-is-mounjaro#weight-loss-results" className="font-medium text-brand-primary underline">
                     Mounjaro weight loss results
                   </Link>
                   . With the right support, consistent effort, and a clear plan, you can set yourself up for a healthier future.
-                </p>
+                 For more context, explore our resources on <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</Link>.</p>
               </GuideSection>
 
               <section
@@ -277,7 +277,7 @@ export default function ArticleClient() {
                       1. What kind of Mounjaro weight loss before and after results are typical in studies?
                     </h3>
                     <p>
-                      Trial and real-world summaries often report meaningful average weight change over months of treatment, but individual results vary widely. Waist circumference and other measures can improve alongside scale weight. Your clinician can interpret what is realistic for you.
+                      Trial and real world summaries often report meaningful average weight change over months of treatment, but individual results vary widely. Waist circumference and other measures can improve alongside scale weight. Your clinician can interpret what is realistic for you.
                     </p>
                   </div>
 
@@ -310,7 +310,7 @@ export default function ArticleClient() {
                       4. What factors most influence my personal Mounjaro outcomes?
                     </h3>
                     <p>
-                      Diet quality, exercise, sleep, stress, medication timing, dose titration, and conditions such as PCOS or type 2 diabetes can all matter. Sustainable habits usually amplify medication-supported loss.
+                      Diet quality, exercise, sleep, stress, medication timing, dose titration, and conditions such as PCOS or type 2 diabetes can all matter. Sustainable habits usually amplify medication supported loss.
                     </p>
                   </div>
 
@@ -332,7 +332,7 @@ export default function ArticleClient() {
                       6. Where can I read more about dosing and injections?
                     </h3>
                     <p>
-                      Use clinician-led resources on titration, side-effect monitoring, and injection technique. Health Wise publishes guides on{" "}
+                      Use clinician led resources on titration, side effect monitoring, and injection technique. Health Wise publishes guides on{" "}
                       <Link
                         href="/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust"
                         className="font-medium text-brand-primary underline"
@@ -346,7 +346,7 @@ export default function ArticleClient() {
                       >
                         injections
                       </Link>{" "}
-                      for general education—always follow your own prescriber’s instructions.
+                      for general education always follow your own prescriber’s instructions.
                     </p>
                   </div>
                 </div>
@@ -354,7 +354,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
-                  Mounjaro weight loss before and after stories—whether from trials, clinics, or individual journeys—highlight what is possible when medication, nutrition, and follow-up care work together. Average figures can guide your expectations, but your path will be personal. Use reputable information, stay in touch with your healthcare team, and treat sustainable habits as the foundation that makes results last.
+                  Mounjaro weight loss before and after stories whether from trials, clinics, or individual journeys highlight what is possible when medication, nutrition, and follow up care work together. Average figures can guide your expectations, but your path will be personal. Use reputable information, stay in touch with your healthcare team, and treat sustainable habits as the foundation that makes results last.
                 </p>
                 <p
                   className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
@@ -363,7 +363,7 @@ export default function ArticleClient() {
                     Suggested hashtags:
                   </span>{" "}
                   {SOCIAL_HASHTAGS}
-                </p>
+                 For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
                 <div
                   className={`mt-8 border-t pt-6 ${darkMode ? "border-slate-800" : "border-slate-200"}`}
                 >
@@ -373,8 +373,8 @@ export default function ArticleClient() {
                     References
                   </h4>
                   <ul className="space-y-2 text-sm opacity-80">
-                    <li>[1] ZAVA — patient information and outcomes cited in public summaries.</li>
-                    <li>[2] Prescription Doctor — clinical and patient-reported context on Mounjaro weight loss.</li>
+                    <li>[1] ZAVA   patient information and outcomes cited in public summaries.</li>
+                    <li>[2] Prescription Doctor   clinical and patient reported context on Mounjaro weight loss.</li>
                   </ul>
                 </div>
               </GuideSection>

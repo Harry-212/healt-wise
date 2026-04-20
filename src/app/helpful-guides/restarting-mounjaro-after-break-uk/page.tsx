@@ -157,16 +157,16 @@ export default function GuideRestartingMounjaro() {
     >
       <GuideSection id="can-you-restart" heading="Can You Restart Mounjaro?">
         <GuideParagraph>
-          Yes—restarting{" "}
+          Yes restarting{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> after a break is
           generally possible under clinical supervision. The weight regain that
-          follows stopping GLP-1 medications—documented clearly in the{" "}
+          follows stopping GLP 1 medications documented clearly in the{" "}
           <EL href="https://www.nejm.org/doi/full/10.1056/NEJMoa2311017">
-            SURMOUNT-4 trial
+            SURMOUNT 4 trial
           </EL>{" "}
-          —supports the clinical case for restarting when long-term weight
+           supports the clinical case for restarting when long term weight
           management is the goal.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
         <GuideParagraph>
           Standard eligibility applies:
         </GuideParagraph>
@@ -178,7 +178,7 @@ export default function GuideRestartingMounjaro() {
         />
         <GuideParagraph>
           However, many providers take a more flexible approach for previous
-          patients—particularly those who can demonstrate prior successful
+          patients particularly those who can demonstrate prior successful
           treatment. For the full eligibility picture, see our{" "}
           <IL href="/helpful-guides/mounjaro-eligibility-bmi-requirements-uk">
             Mounjaro eligibility guide
@@ -210,17 +210,17 @@ export default function GuideRestartingMounjaro() {
           ]}
         />
         <GuideParagraph>
-          Starting at a lower dose after a break—or returning to the lowest
-          dose—significantly reduces the risk of gastrointestinal side effects
+          Starting at a lower dose after a break or returning to the lowest
+          dose significantly reduces the risk of gastrointestinal side effects
           during readaptation. Do not attempt to skip ahead to your previous
           dose without clinical guidance.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="lower-bmi" heading="Restarting with a Lower BMI">
         <GuideParagraph>
           If your BMI has dropped below the standard threshold during your
-          break—or even during your previous treatment—many providers will
+          break or even during your previous treatment many providers will
           still consider restarting you on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, provided you can
           demonstrate:
@@ -236,7 +236,7 @@ export default function GuideRestartingMounjaro() {
           This reflects the growing recognition of obesity as a chronic,
           relapsing condition. A patient who lost weight on Mounjaro and
           regained it after stopping is arguably a stronger clinical case for
-          restart than a new patient—the medication has already demonstrated
+          restart than a new patient the medication has already demonstrated
           it works for them. See our guide on{" "}
           <IL href="/helpful-guides/mounjaro-bmi-cutoff-stopping-uk">
             why BMI cutoffs alone are a flawed basis for stopping treatment
@@ -296,16 +296,16 @@ export default function GuideRestartingMounjaro() {
         />
         <GuideParagraph>
           Always confirm the specific requirements with your chosen provider
-          before booking a consultation—requirements vary and being prepared
+          before booking a consultation requirements vary and being prepared
           speeds up the process significantly.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="switching-provider" heading="Switching Provider to Restart">
         <GuideParagraph>
-          If your original pharmacy cannot support a restart—for example,
+          If your original pharmacy cannot support a restart for example,
           because their BMI eligibility criteria do not accommodate patients
-          below threshold—switching to a different registered provider is a
+          below threshold switching to a different registered provider is a
           practical option.
         </GuideParagraph>
         <GuideParagraph>
@@ -320,13 +320,13 @@ export default function GuideRestartingMounjaro() {
           ]}
         />
         <GuideParagraph>
-          For a step-by-step guide to the pharmacy switching process—including
-          what documents to prepare—see:{" "}
+          For a step by step guide to the pharmacy switching process including
+          what documents to prepare see:{" "}
           <IL href="/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk">
             Switching Pharmacies for Mounjaro or Wegovy in the UK
           </IL>
           .
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

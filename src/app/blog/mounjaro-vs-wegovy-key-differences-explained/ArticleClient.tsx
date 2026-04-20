@@ -44,7 +44,7 @@ function SubHeading({
   darkMode: boolean;
 }) {
   return (
-    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children}</p>
+    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children} For more context, explore our resources on <Link href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</Link>.</p>
   );
 }
 
@@ -125,12 +125,12 @@ export default function ArticleClient() {
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <p className="text-lg md:text-xl">
                 When you are weighing up Mounjaro vs Wegovy: The Key Differences Explained, you are looking at two of
-                the most talked-about weight loss injections in the UK right now. Both medications fall into the growing
-                category of GLP-1 receptor agonists, designed to help you shed pounds by curbing appetite, slowing gastric
+                the most talked about weight loss injections in the UK right now. Both medications fall into the growing
+                category of GLP 1 receptor agonists, designed to help you shed pounds by curbing appetite, slowing gastric
                 emptying and improving blood sugar control. Yet despite these similarities, important distinctions in
                 efficacy, dosing schedules, cost and side effects can make one option feel like a better fit for your
-                lifestyle and goals. In this guide you will find everything you need—from how each drug works to
-                real-world results—to help you decide which injection could work best for you.
+                lifestyle and goals. In this guide you will find everything you need from how each drug works to
+                real world results to help you decide which injection could work best for you.
               </p>
               <p>
                 If you are new to this class of therapies, you may also want to explore our{" "}
@@ -164,16 +164,16 @@ export default function ArticleClient() {
                 </p>
                 <SubHeading darkMode={darkMode}>What is Mounjaro?</SubHeading>
                 <p>
-                  Mounjaro is the trade name for tirzepatide, a dual-action peptide that targets two hormones—GLP-1
-                  (glucagon-like peptide-1) and GIP (glucose-dependent insulinotropic polypeptide). By engaging both
+                  Mounjaro is the trade name for tirzepatide, a dual action peptide that targets two hormones GLP 1
+                  (glucagon like peptide 1) and GIP (glucose dependent insulinotropic polypeptide). By engaging both
                   receptors, Mounjaro can amplify feelings of fullness and improve insulin response. Initially approved
                   for type 2 diabetes management, it earned a UK indication for weight loss in adults with obesity or
-                  overweight plus at least one weight-related condition.
+                  overweight plus at least one weight related condition.
                 </p>
                 <SubHeading darkMode={darkMode}>What is Wegovy?</SubHeading>
                 <p>
-                  Wegovy contains semaglutide, a GLP-1 receptor agonist that mimics the natural GLP-1 hormone. This
-                  encourages satiety, reduces hunger-driven snacking and supports better blood sugar control. First
+                  Wegovy contains semaglutide, a GLP 1 receptor agonist that mimics the natural GLP 1 hormone. This
+                  encourages satiety, reduces hunger driven snacking and supports better blood sugar control. First
                   authorised specifically for weight management, Wegovy has become a leading choice for those who need
                   to lose 5 percent or more of their body weight.
                 </p>
@@ -181,8 +181,8 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="mechanism" heading="Mechanism Of Action">
                 <p>
-                  While both drugs slow gastric emptying and reduce appetite, Mounjaro&apos;s dual GIP/GLP-1 action may
-                  deliver a slightly different metabolic response than Wegovy&apos;s GLP-1-only profile. Some research
+                  While both drugs slow gastric emptying and reduce appetite, Mounjaro&apos;s dual GIP/GLP 1 action may
+                  deliver a slightly different metabolic response than Wegovy&apos;s GLP 1 only profile. Some research
                   suggests tirzepatide users experience faster weight loss, especially during the initial titration phase.
                   However, individual results vary based on dosage, diet, exercise and metabolic factors.
                 </p>
@@ -221,9 +221,9 @@ export default function ArticleClient() {
                   />
                 </div>
                 <p className="text-sm opacity-90">
-                  ¹ Source narrative: SELECT trial (cardiovascular outcomes trial with semaglutide context) — use for
-                  general class education only. ² Source narrative: STEP programme — illustrative; not a direct
-                  head-to-head at identical time points. Always follow your clinician&apos;s judgement.
+                  ¹ Source narrative: SELECT trial (cardiovascular outcomes trial with semaglutide context)   use for
+                  general class education only. ² Source narrative: STEP programme   illustrative; not a direct
+                  head to head at identical time points. Always follow your clinician&apos;s judgement.
                 </p>
               </GuideSection>
 
@@ -234,27 +234,27 @@ export default function ArticleClient() {
                 </p>
                 <SubHeading darkMode={darkMode}>Clinical trial outcomes</SubHeading>
                 <p>
-                  In head-to-head studies, tirzepatide often edges out semaglutide on average weight reduction. In the
-                  SURPASS-2 trial, participants taking 15 mg of Mounjaro lost an average of 13 percent of their body weight
+                  In head to head studies, tirzepatide often edges out semaglutide on average weight reduction. In the
+                  SURPASS 2 trial, participants taking 15 mg of Mounjaro lost an average of 13 percent of their body weight
                   over 40 weeks, while those on 1 mg semaglutide lost about 10 percent in the STEP 2 study. Even at lower
                   doses, many Mounjaro users report steeper early declines on the scale.
                 </p>
                 <p>
                   Yet semaglutide trials show strong cardiovascular benefits and sustained weight maintenance. If you
-                  prioritise long-term health markers alongside weight loss, Wegovy&apos;s track record—backed by
-                  large-scale STEP research—may appeal.
+                  prioritise long term health markers alongside weight loss, Wegovy&apos;s track record backed by
+                  large scale STEP research may appeal.
                 </p>
                 <SubHeading darkMode={darkMode}>Real-world effectiveness</SubHeading>
                 <p>
                   Clinical figures do not always translate fully outside trial settings. In everyday UK practice, your
-                  diet, exercise habits and support system play a pivotal role. Some clinics report similar real-world
+                  diet, exercise habits and support system play a pivotal role. Some clinics report similar real world
                   results for both drugs, with average losses of 8 to 12 percent after six months when combined with
                   lifestyle coaching.
                 </p>
                 <p>
-                  The key takeaway is that whichever injection you choose, a structured plan—regular check-ins,
-                  nutritional guidance and an exercise regimen—maximises your odds of success.
-                </p>
+                  The key takeaway is that whichever injection you choose, a structured plan regular check ins,
+                  nutritional guidance and an exercise regimen maximises your odds of success.
+                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
               </GuideSection>
 
               <div className="my-10">
@@ -286,19 +286,19 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="side-effects" heading="Evaluate Side Effects">
                 <p>
-                  No medication is without trade-offs. Understanding side-effect profiles helps you plan for discomfort
+                  No medication is without trade offs. Understanding side effect profiles helps you plan for discomfort
                   and decide how much you can tolerate.
                 </p>
                 <SubHeading darkMode={darkMode}>Common reactions</SubHeading>
                 <p>
                   Both Mounjaro and Wegovy share gastrointestinal complaints: nausea, diarrhoea, constipation and
-                  occasional vomiting. You might also experience mild headache, fatigue or injection-site irritation.
-                  With Wegovy&apos;s slower titration, some users report fewer early-stage symptoms, while
-                  Mounjaro&apos;s dual-hormone activity can heighten GI effects during dose increases.
+                  occasional vomiting. You might also experience mild headache, fatigue or injection site irritation.
+                  With Wegovy&apos;s slower titration, some users report fewer early stage symptoms, while
+                  Mounjaro&apos;s dual hormone activity can heighten GI effects during dose increases.
                 </p>
                 <SubHeading darkMode={darkMode}>Managing side effects</SubHeading>
                 <p>
-                  To keep side effects at bay, start with small sips of water, eat slowly and favour low-fat, modest-fibre meals in the first few weeks. Ginger tea can settle nausea, and over-the-counter remedies like loperamide can help with diarrhoea. For a deeper dive, read our{" "}
+                  To keep side effects at bay, start with small sips of water, eat slowly and favour low fat, modest fibre meals in the first few weeks. Ginger tea can settle nausea, and over the counter remedies like loperamide can help with diarrhoea. For a deeper dive, read our{" "}
                   <Link
                     href="/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust"
                     className="font-medium text-brand-primary underline"
@@ -310,7 +310,7 @@ export default function ArticleClient() {
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="cost" heading="Consider Cost And Access">
-                <p>Price and availability often determine which therapy you choose, especially in a private-pay environment.</p>
+                <p>Price and availability often determine which therapy you choose, especially in a private pay environment.</p>
                 <div
                   className={`my-6 overflow-hidden rounded-xl border ${darkMode ? "border-slate-800" : "border-slate-200"}`}
                 >
@@ -359,15 +359,15 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="experience" heading="Assess Patient Experience">
                 <p>
-                  Choosing an injection is not just about the molecule—it is about how you will live with it week after
+                  Choosing an injection is not just about the molecule it is about how you will live with it week after
                   week.
                 </p>
                 <SubHeading darkMode={darkMode}>Administration methods</SubHeading>
                 <p>
-                  Both medications come in pre-filled disposable pens. You administer a subcutaneous shot—usually in the
-                  abdomen, thigh or upper arm—on the same day each week at any time that suits you. Rotating sites
+                  Both medications come in pre filled disposable pens. You administer a subcutaneous shot usually in the
+                  abdomen, thigh or upper arm on the same day each week at any time that suits you. Rotating sites
                   prevents irritation.
-                </p>
+                 For more context, explore our resources on <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</Link>.</p>
                 <SubHeading darkMode={darkMode}>Pen devices</SubHeading>
                 <p>
                   Mounjaro&apos;s KwikPen delivers doses from 2.5 mg up to 15 mg in one device. If you need multiple pen
@@ -386,7 +386,7 @@ export default function ArticleClient() {
                   .
                 </p>
                 <p>
-                  Wegovy pens come in single-dose increments that match each titration stage, so you swap pens as you
+                  Wegovy pens come in single dose increments that match each titration stage, so you swap pens as you
                   advance. The simplicity of one dose per pen means fewer dosing errors.
                 </p>
               </GuideSection>
@@ -394,7 +394,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="choose" heading="Choose Your Ideal Option">
                 <p>
                   By now you have seen how Mounjaro vs Wegovy: The Key Differences Explained can steer you toward the
-                  best fit for your weight-loss journey. Here are some final pointers.
+                  best fit for your weight loss journey. Here are some final pointers.
                 </p>
                 <SubHeading darkMode={darkMode}>Suitability considerations</SubHeading>
                 <ul className="list-disc space-y-3 pl-5">
@@ -403,10 +403,10 @@ export default function ArticleClient() {
                     better.
                   </li>
                   <li>
-                    If you prefer a gradual ramp-up and emphasise cardiovascular evidence from large trials, Wegovy
+                    If you prefer a gradual ramp up and emphasise cardiovascular evidence from large trials, Wegovy
                     could be your pick.
                   </li>
-                  <li>For milder early side effects, Wegovy&apos;s five-step dosing may feel gentler.</li>
+                  <li>For milder early side effects, Wegovy&apos;s five step dosing may feel gentler.</li>
                   <li>
                     If you do not mind juggling pen strengths for a potential efficacy boost, Mounjaro&apos;s dual
                     action could pay dividends.
@@ -415,21 +415,21 @@ export default function ArticleClient() {
                 <SubHeading darkMode={darkMode}>Tips for starting</SubHeading>
                 <ul className="list-disc space-y-3 pl-5">
                   <li>
-                    Synchronise your injection day with a routine task—like Monday morning breakfast—to build
+                    Synchronise your injection day with a routine task like Monday morning breakfast to build
                     consistency.
                   </li>
-                  <li>Keep a diary or app reminder for dose escalations and appointment check-ins.</li>
+                  <li>Keep a diary or app reminder for dose escalations and appointment check ins.</li>
                   <li>
                     Pair your injection plan with a balanced diet rich in vegetables, protein and whole grains, plus
                     around 150 minutes of moderate exercise weekly.
                   </li>
                   <li>
                     Stay in touch with your prescribing clinic, especially during the first 8 weeks when most dose
-                    changes and side-effect troubleshooting occur.
+                    changes and side effect troubleshooting occur.
                   </li>
-                  <li>Celebrate each milestone—whether it is 5 percent weight loss or two weeks of steadier mornings.</li>
+                  <li>Celebrate each milestone whether it is 5 percent weight loss or two weeks of steadier mornings.</li>
                   <li>
-                    Reach out to support groups or online communities—many people share tips on meal planning and
+                    Reach out to support groups or online communities many people share tips on meal planning and
                     mindset shifts.
                   </li>
                 </ul>
@@ -457,7 +457,7 @@ export default function ArticleClient() {
                       1. Is Mounjaro more effective than Wegovy on average in trials?
                     </h3>
                     <p>
-                      Head-to-head and class comparisons often show greater average weight loss with tirzepatide than
+                      Head to head and class comparisons often show greater average weight loss with tirzepatide than
                       semaglutide at commonly used doses, but individual response, tolerability and medical eligibility
                       vary. Your prescriber should interpret trial data for you.
                     </p>
@@ -467,7 +467,7 @@ export default function ArticleClient() {
                       2. Do Mounjaro and Wegovy both use weekly injections?
                     </h3>
                     <p>
-                      Both are typically given as once-weekly subcutaneous injections with gradual dose titration, though
+                      Both are typically given as once weekly subcutaneous injections with gradual dose titration, though
                       formats and strengths differ by product and market.
                     </p>
                   </div>
@@ -477,7 +477,7 @@ export default function ArticleClient() {
                     </h3>
                     <p>
                       Wegovy&apos;s semaglutide pens often use smaller incremental steps from a very low starting dose.
-                      Mounjaro&apos;s tirzepatide schedule uses different mg strengths—both require medical oversight
+                      Mounjaro&apos;s tirzepatide schedule uses different mg strengths both require medical oversight
                       during increases.
                     </p>
                   </div>
@@ -487,7 +487,7 @@ export default function ArticleClient() {
                     </h3>
                     <p>
                       Access varies by nation, trust and eligibility criteria. Many people obtain these medicines
-                      privately; NHS availability for obesity alone is often limited and criteria-based.
+                      privately; NHS availability for obesity alone is often limited and criteria based.
                     </p>
                   </div>
                   <div>
@@ -496,7 +496,7 @@ export default function ArticleClient() {
                     </h3>
                     <p>
                       Gastrointestinal symptoms such as nausea, diarrhoea or constipation, and vomiting are frequently
-                      reported, especially after dose increases. Injection-site reactions and headache can also occur.
+                      reported, especially after dose increases. Injection site reactions and headache can also occur.
                     </p>
                   </div>
                   <div>
@@ -512,7 +512,7 @@ export default function ArticleClient() {
                       <Link href="/wegovy-price-comparison" className="font-medium text-brand-primary underline">
                         Wegovy price comparison
                       </Link>{" "}
-                      for structured UK snapshots—and always verify quotes with regulated providers.
+                      for structured UK snapshots and always verify quotes with regulated providers.
                     </p>
                   </div>
                 </div>
@@ -523,11 +523,11 @@ export default function ArticleClient() {
                   Selecting between Mounjaro and Wegovy comes down to your personal goals, how your body responds and
                   practical factors like cost and supply. By understanding mechanism, trial data, dosing and side
                   effects, you are better equipped to make an informed choice with your clinician. Remember that
-                  medication is one piece of the puzzle—pairing it with a healthy lifestyle and professional guidance
+                  medication is one piece of the puzzle pairing it with a healthy lifestyle and professional guidance
                   will help you achieve lasting success.
                 </p>
                 <p>
-                  Good luck on your journey to a healthier you—and compare regulated UK options before you pay; Health
+                  Good luck on your journey to a healthier you and compare regulated UK options before you pay; Health
                   Wise does not sell medicines.
                 </p>
                 <p
@@ -535,7 +535,7 @@ export default function ArticleClient() {
                 >
                   <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
                   {SOCIAL_HASHTAGS}
-                </p>
+                 For more context, explore our resources on <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</Link>.</p>
               </GuideSection>
             </article>
 

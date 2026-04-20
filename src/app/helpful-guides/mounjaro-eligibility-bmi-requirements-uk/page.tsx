@@ -165,8 +165,8 @@ export default function GuideMounjaroEligibility() {
             NICE technology appraisal TA1026
           </EL>
           . While Mounjaro is available as a private prescription, most
-          responsible providers follow these evidence-based clinical guidelines.
-        </GuideParagraph>
+          responsible providers follow these evidence based clinical guidelines.
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
         <GuideTable
           headers={["BMI", "Eligibility"]}
           rows={[
@@ -191,7 +191,7 @@ export default function GuideMounjaroEligibility() {
       <GuideSection id="health-conditions" heading="Accepted Health Conditions (Comorbidities)">
         <GuideParagraph>
           If your BMI is between 27 and 29.9, you need at least one
-          weight-related health condition to qualify. The following are
+          weight related health condition to qualify. The following are
           commonly accepted:
         </GuideParagraph>
 
@@ -231,7 +231,7 @@ export default function GuideMounjaroEligibility() {
           Standard BMI thresholds were originally derived from studies in
           predominantly white European populations. Research consistently shows
           that people from certain ethnic backgrounds face higher metabolic
-          risk at lower BMI levels—meaning the standard thresholds
+          risk at lower BMI levels meaning the standard thresholds
           underestimate health risk for these groups.
         </GuideParagraph>
         <GuideParagraph>
@@ -242,7 +242,7 @@ export default function GuideMounjaroEligibility() {
           and{" "}
           <EL href="https://www.nice.org.uk/guidance/ph53">NICE guidance</EL>{" "}
           both recognise lower BMI thresholds for the following groups:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -289,7 +289,7 @@ export default function GuideMounjaroEligibility() {
         />
         <GuideParagraph>
           For a full clinical discussion of why abrupt cessation based on BMI
-          is problematic—and the evidence for weight regain—see our guide:{" "}
+          is problematic and the evidence for weight regain see our guide:{" "}
           <IL href="/helpful-guides/mounjaro-bmi-cutoff-stopping-uk">
             Mounjaro BMI Cutoffs: Why Stopping Too Early Can Backfire
           </IL>
@@ -305,9 +305,9 @@ export default function GuideMounjaroEligibility() {
           recommends{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> for up to two years
           initially, subject to clinical review at regular intervals. This is
-          not a fixed endpoint—it is a review point where continued
+          not a fixed endpoint it is a review point where continued
           prescription is assessed based on ongoing clinical benefit.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Standard providers: up to 2 years with periodic clinical reviews",
@@ -326,7 +326,7 @@ export default function GuideMounjaroEligibility() {
 
       <GuideSection id="restart" heading="Can You Restart Mounjaro?">
         <GuideParagraph>
-          Yes—restarting{" "}
+          Yes restarting{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> after a break is
           possible. Most providers require:
         </GuideParagraph>
@@ -339,7 +339,7 @@ export default function GuideMounjaroEligibility() {
         />
         <GuideParagraph>
           When restarting, providers will almost always begin at the lowest
-          dose (2.5mg) and re-titrate gradually—regardless of the dose you
+          dose (2.5mg) and re titrate gradually regardless of the dose you
           were previously taking. This reduces the risk of side effects and
           allows your body to readapt.
         </GuideParagraph>
@@ -350,7 +350,7 @@ export default function GuideMounjaroEligibility() {
             switching pharmacies for Mounjaro or Wegovy
           </IL>
           .
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

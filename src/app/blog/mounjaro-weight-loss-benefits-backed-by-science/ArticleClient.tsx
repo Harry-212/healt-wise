@@ -22,6 +22,7 @@ const TOC = [
   { id: "future-health", label: "Future health implications" },
   { id: "support", label: "Supporting long-term results" },
   { id: "informed-choice", label: "Making an informed choice" },
+  { id: "local-availability", label: "Finding support in your local area" },
   { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
 ];
@@ -71,7 +72,7 @@ function TableStoppingResearch({ darkMode }: { darkMode: boolean }) {
       <p className={`border-t px-3 py-2 text-xs ${darkMode ? "border-slate-700 text-slate-500" : "border-slate-200 text-slate-500"}`}>
         Summary figures reported in coverage of tirzepatide discontinuation studies (see{" "}
         <em>Pharmaceutical Journal</em>).
-      </p>
+       For more context, explore our resources on <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</Link>.</p>
     </div>
   );
 }
@@ -165,10 +166,10 @@ export default function ArticleClient() {
                 loss in recent clinical trials.
               </p>
               <p>
-                Though it recently became available in specialist NHS weight-loss clinics in England and Wales,
+                Though it recently became available in specialist NHS weight loss clinics in England and Wales,
                 understanding how it actually works can be crucial before you decide whether it is right for you.
                 You will find lots of data from trials that highlight effectiveness, but also considerations you
-                should explore—from side effects to maintaining results over time. Weight loss is never just about a
+                should explore from side effects to maintaining results over time. Weight loss is never just about a
                 single solution.
               </p>
 
@@ -176,17 +177,17 @@ export default function ArticleClient() {
                 <p>
                   You may have heard about Mounjaro through health news, or you might know someone currently taking it.
                   The promise is straightforward: by subduing your appetite and helping regulate how your body uses
-                  energy, Mounjaro provides measurable weight-loss benefits. As you read on, keep in mind how Mounjaro
+                  energy, Mounjaro provides measurable weight loss benefits. As you read on, keep in mind how Mounjaro
                   might fit into your broader approach, including diet, exercise, and daily habits.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="how-it-works" heading="How does Mounjaro work">
                 <p>
-                  Mounjaro, also known by its active ingredient tirzepatide, works by mimicking GLP-1, which helps
+                  Mounjaro, also known by its active ingredient tirzepatide, works by mimicking GLP 1, which helps
                   regulate fullness and how your body manages energy. When you eat, hormones in your stomach signal
                   satisfaction to your brain. Mounjaro enhances this process, so you feel full sooner. It also slows
-                  digestion, so you remain satisfied longer—often reducing snacking and overeating.
+                  digestion, so you remain satisfied longer often reducing snacking and overeating.
                 </p>
                 <p>
                   An additional mechanism is how Mounjaro influences metabolism and insulin sensitivity, so your body
@@ -205,7 +206,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="clinical-trials" heading="Key findings from clinical trials">
                 <p>
-                  Multiple clinical studies have examined Mounjaro&apos;s impact on weight loss. A 72-week trial
+                  Multiple clinical studies have examined Mounjaro&apos;s impact on weight loss. A 72 week trial
                   reported by the BBC involved 750 participants with obesity, with an average weight of 113 kg.
                   Those on Mounjaro achieved around a{" "}
                   <strong className={darkMode ? "text-white" : "text-slate-900"}>20% reduction in body weight</strong>{" "}
@@ -214,18 +215,18 @@ export default function ArticleClient() {
                   comfort, energy, and overall health (BBC).
                 </p>
                 <p>
-                  The SURMOUNT-4 trial, discussed in a 2025 analysis in <em>JAMA Internal Medicine</em>, included 670
+                  The SURMOUNT 4 trial, discussed in a 2025 analysis in <em>JAMA Internal Medicine</em>, included 670
                   participants without diabetes but with obesity or excess weight. Results indicated that{" "}
                   <strong className={darkMode ? "text-white" : "text-slate-900"}>
                     82% of those who stopped Mounjaro and switched to placebo regained at least a quarter of the weight
                     they had lost within nine months
                   </strong>{" "}
-                  (British Heart Foundation). That is a reminder that consistent use and follow-up may be crucial for
+                  (British Heart Foundation). That is a reminder that consistent use and follow up may be crucial for
                   continued success.
                 </p>
                 <p>
-                  Trials typically included medical supervision and lifestyle support—balanced diet and exercise—not
-                  injections alone. For sustainable loss, align medication with healthy living, regular check-ups, and
+                  Trials typically included medical supervision and lifestyle support balanced diet and exercise not
+                  injections alone. For sustainable loss, align medication with healthy living, regular check ups, and
                   therapy if needed.
                 </p>
               </GuideSection>
@@ -244,19 +245,19 @@ export default function ArticleClient() {
                   <li>Diarrhoea</li>
                 </ul>
                 <p>
-                  Rare but serious problems—including gallbladder or kidney issues and mood changes—have been
+                  Rare but serious problems including gallbladder or kidney issues and mood changes have been
                   reported; causality is not always confirmed (BBC). Seek urgent advice for severe or persistent
                   symptoms or unusual changes in mood or wellbeing.
                 </p>
                 <p>
-                  Day-to-day awareness helps you spot problems early. More fibre and fluids can ease constipation;
+                  Day to day awareness helps you spot problems early. More fibre and fluids can ease constipation;
                   smaller, frequent meals can help early nausea.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="weight-regain" heading="The challenge of weight regain">
                 <p>
-                  A major theme in Mounjaro discussions is regaining weight after stopping. SURMOUNT-4 and related
+                  A major theme in Mounjaro discussions is regaining weight after stopping. SURMOUNT 4 and related
                   analyses found that many who stopped saw reversal of progress. The British Heart Foundation reported
                   increases in waist circumference, blood pressure, LDL cholesterol, and fasting glucose alongside
                   regain (British Heart Foundation).
@@ -267,9 +268,9 @@ export default function ArticleClient() {
                     many who stopped tirzepatide after losing at least 10% body weight regained 25% or more of that loss
                     within a year
                   </strong>
-                  . Once appetite suppression is removed, older appetite signals can return—especially challenging if
+                  . Once appetite suppression is removed, older appetite signals can return especially challenging if
                   you struggle with portions or emotional eating.
-                </p>
+                 For more context, explore our resources on <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</Link>.</p>
                 <p>
                   This pattern is not unique to Mounjaro. The lesson: medication can accelerate progress, but it is not
                   a standalone cure. If you plan to stop, build eating patterns and activity you can sustain, and plan
@@ -286,7 +287,7 @@ export default function ArticleClient() {
                   <li>
                     <strong className={darkMode ? "text-slate-200" : "text-slate-800"}>Balanced diet.</strong> Lean
                     proteins, whole grains, fruit, vegetables, and healthy fats support weight goals and micronutrient
-                    needs—without extreme restriction.
+                    needs without extreme restriction.
                   </li>
                   <li>
                     <strong className={darkMode ? "text-slate-200" : "text-slate-800"}>Ongoing exercise.</strong>{" "}
@@ -299,7 +300,7 @@ export default function ArticleClient() {
                     app or notebook can highlight patterns.
                   </li>
                   <li>
-                    <strong className={darkMode ? "text-slate-200" : "text-slate-800"}>Regular check-ups.</strong>{" "}
+                    <strong className={darkMode ? "text-slate-200" : "text-slate-800"}>Regular check ups.</strong>{" "}
                     Periodic reviews help catch issues early and align other medicines with your goals.
                   </li>
                 </ul>
@@ -332,8 +333,8 @@ export default function ArticleClient() {
                 </p>
                 <p>
                   NHS England and Wales pathways and GP eligibility have evolved; coverage and private costs vary by
-                  region and indication. Lower starting doses are common to test tolerance before increases—with
-                  follow-up to balance benefit and side effects.
+                  region and indication. Lower starting doses are common to test tolerance before increases with
+                  follow up to balance benefit and side effects.
                 </p>
               </GuideSection>
 
@@ -347,7 +348,7 @@ export default function ArticleClient() {
                   >
                     whether Mounjaro is safe and right for you
                   </Link>{" "}
-                  and trial-style outcomes on{" "}
+                  and trial style outcomes on{" "}
                   <Link
                     href="/what-is-mounjaro#weight-loss-results"
                     className="font-semibold text-brand-primary underline-offset-2 hover:underline"
@@ -357,7 +358,7 @@ export default function ArticleClient() {
                   .
                 </p>
                 <p>
-                  Communities sometimes discuss injection technique; for UK-focused practical context, see{" "}
+                  Communities sometimes discuss injection technique; for UK focused practical context, see{" "}
                   <Link
                     href="/helpful-guides/mounjaro-weight-loss-injection-uk"
                     className="font-semibold text-brand-primary underline-offset-2 hover:underline"
@@ -377,28 +378,28 @@ export default function ArticleClient() {
                 </p>
                 <TableStoppingResearch darkMode={darkMode} />
                 <p>
-                  More regain tended to mean greater loss of cardiometabolic gains—another reason to plan before
-                  stopping rather than quitting abruptly. Eli Lilly has described obesity as often requiring longer-term
+                  More regain tended to mean greater loss of cardiometabolic gains another reason to plan before
+                  stopping rather than quitting abruptly. Eli Lilly has described obesity as often requiring longer term
                   therapy; early discontinuation can set the stage for substantial regain (Pharmaceutical Journal).
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="future-health" heading="Considering future health implications">
                 <p>
-                  <em>The Guardian</em> has reported on discussions around pregnancy and weight-loss medicines:
+                  <em>The Guardian</em> has reported on discussions around pregnancy and weight loss medicines:
                   stopping tirzepatide before or early in pregnancy may be linked to greater weight gain and possible
-                  complications in some analyses, but evidence is not yet definitive—speak to your clinician if
+                  complications in some analyses, but evidence is not yet definitive speak to your clinician if
                   pregnancy is possible (The Guardian).
                 </p>
                 <p>
                   Regain after stopping often tracks with rising blood pressure, glucose, and cardiovascular risk.
-                  Longer-term use warrants monitoring blood tests and symptoms so your care plan can adapt.
+                  Longer term use warrants monitoring blood tests and symptoms so your care plan can adapt.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="support" heading="Supporting long-term results">
                 <p>
-                  Long-term success depends on partnership with your healthcare team—GPs, specialists, dietitians, and
+                  Long term success depends on partnership with your healthcare team GPs, specialists, dietitians, and
                   trainers. If you compare regulated UK supply routes, start from our{" "}
                   <Link
                     href="/mounjaro-price-comparison"
@@ -406,27 +407,47 @@ export default function ArticleClient() {
                   >
                     Mounjaro price comparison
                   </Link>{" "}
-                  and verify any online pharmacy is GPhC-registered; counterfeit products are dangerous.
+                  and verify any online pharmacy is GPhC registered; counterfeit products are dangerous.
                 </p>
                 <p>
                   Structured eating plans, activity targets (for example toward UK activity guidelines), and
-                  medication—where appropriate—work best together. That stack improves the odds of steady progress even
+                  medication where appropriate work best together. That stack improves the odds of steady progress even
                   if doses change later.
-                </p>
+                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="informed-choice" heading="Making an informed choice">
                 <p>
-                  Mounjaro can offer meaningful weight reduction—some trials around{" "}
-                  <strong className={darkMode ? "text-white" : "text-slate-900"}>20%</strong>—and improvements in
+                  Mounjaro can offer meaningful weight reduction some trials around{" "}
+                  <strong className={darkMode ? "text-white" : "text-slate-900"}>20%</strong> and improvements in
                   blood pressure, lipids, and glucose. Keeping those gains may require ongoing therapy and lifestyle
                   discipline; stopping without a plan can return you toward your previous trajectory.
                 </p>
                 <p>
                   Refine decisions with professionals who know your history, weigh cost and side effects, and consider
-                  long-term need. If previous diets and exercise were insufficient, Mounjaro may help—provided you
+                  long term need. If previous diets and exercise were insufficient, Mounjaro may help provided you
                   commit to sustainable habits alongside medical oversight.
                 </p>
+              </GuideSection>
+
+              <GuideSection darkMode={darkMode} id="local-availability" heading="Finding support in your local area">
+                <p>
+                  While Mounjaro can be a powerful tool, having the right local support can make a significant difference in your journey. Many patients prefer finding clinics or pharmacies near them to get personalised guidance.
+                </p>
+                <p>
+                  Whether you are looking for the <Link href="/blog/best-weight-loss-treatment-in-london" className="font-semibold text-[#3562ff] underline-offset-2 hover:underline">best weight loss treatment in London</Link>, seeking options for <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-semibold text-[#3562ff] underline-offset-2 hover:underline">weight management in Manchester</Link>, or exploring <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-semibold text-[#3562ff] underline-offset-2 hover:underline">clinics in Birmingham</Link>, comparing local regulated providers ensures you receive safe and continuous care.
+                </p>
+                <div className={`mt-6 rounded-xl border p-6 ${darkMode ? "border-slate-800 bg-slate-900" : "border-slate-100 bg-slate-50"}`}>
+                  <h3 className={`mb-2 text-lg font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
+                    Ready to explore options near you?
+                  </h3>
+                  <p className={`mb-4 ${darkMode ? "text-slate-400" : "text-slate-600"}`}>
+                    Discover verified providers in your city and find the right medical weight loss plan tailored to your needs. Visit our comprehensive UK locations guide to see options available in your local area.
+                  </p>
+                  <Link href="/blog?topic=locations" className={`inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium transition-colors ${darkMode ? "bg-[#3562ff] text-white hover:bg-[#2a4fd6]" : "bg-[#3562ff] text-white hover:bg-[#2a4fd6]"}`}>
+                    Explore local UK providers
+                  </Link>
+                </div>
               </GuideSection>
 
               <div className="my-10">
@@ -451,8 +472,8 @@ export default function ArticleClient() {
                       What weight loss has Mounjaro shown in trials?
                     </h3>
                     <p>
-                      In a widely reported 72-week trial, participants achieved around a 20% reduction in body weight
-                      on Mounjaro versus about 14% on another GLP-1 option; individual results vary and require medical
+                      In a widely reported 72 week trial, participants achieved around a 20% reduction in body weight
+                      on Mounjaro versus about 14% on another GLP 1 option; individual results vary and require medical
                       supervision.
                     </p>
                   </div>
@@ -461,8 +482,8 @@ export default function ArticleClient() {
                       Can I regain weight if I stop Mounjaro?
                     </h3>
                     <p>
-                      Yes. Studies such as SURMOUNT-4 suggest many people regain a substantial portion of lost weight
-                      after stopping unless strong diet, exercise, and follow-up plans are in place.
+                      Yes. Studies such as SURMOUNT 4 suggest many people regain a substantial portion of lost weight
+                      after stopping unless strong diet, exercise, and follow up plans are in place.
                     </p>
                   </div>
                   <div>
@@ -488,7 +509,7 @@ export default function ArticleClient() {
                       Who should I speak to before starting Mounjaro in the UK?
                     </h3>
                     <p>
-                      Always discuss with a GMC-registered prescriber or your GP. Eligibility, NHS pathways, and
+                      Always discuss with a GMC registered prescriber or your GP. Eligibility, NHS pathways, and
                       private options differ; Health Wise compares information and does not prescribe.
                     </p>
                   </div>
@@ -498,7 +519,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
                   Mounjaro weight loss is backed by serious trial data: meaningful reductions in weight and supportive
-                  cardiometabolic changes for many participants. It is not a magic bullet—side effects, cost, long-term
+                  cardiometabolic changes for many participants. It is not a magic bullet side effects, cost, long term
                   use, and regain after stopping are all part of an honest picture.
                 </p>
                 <p>
@@ -506,23 +527,23 @@ export default function ArticleClient() {
                   habits you can keep. If you move forward, do it with licensed UK supply, realistic expectations, and
                   the same patience you would bring to any major health decision. This article is informational only and
                   not medical advice; always follow personalised guidance from your care team.
-                </p>
+                 For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="references" heading="References">
                 <ol className="list-decimal space-y-2 pl-5 text-sm">
-                  <li>BBC News—reporting on tirzepatide / Mounjaro weight-loss trial outcomes and NHS context.</li>
-                  <li>British Heart Foundation—coverage of SURMOUNT-4 and regain after stopping tirzepatide.</li>
+                  <li>BBC News reporting on tirzepatide / Mounjaro weight loss trial outcomes and NHS context.</li>
+                  <li>British Heart Foundation coverage of SURMOUNT 4 and regain after stopping tirzepatide.</li>
                   <li>
-                    <em>The Guardian</em>—reporting on weight regain after stopping tirzepatide and related public health
+                    <em>The Guardian</em> reporting on weight regain after stopping tirzepatide and related public health
                     discussion.
                   </li>
                   <li>
-                    <em>Pharmaceutical Journal</em>—analysis of cardiometabolic changes after discontinuation; Eli Lilly
+                    <em>Pharmaceutical Journal</em> analysis of cardiometabolic changes after discontinuation; Eli Lilly
                     commentary on obesity as a chronic condition.
                   </li>
                   <li>
-                    <em>JAMA Internal Medicine</em> (2025)—analysis context for SURMOUNT-4 (as cited in secondary
+                    <em>JAMA Internal Medicine</em> (2025) analysis context for SURMOUNT 4 (as cited in secondary
                     reporting).
                   </li>
                 </ol>

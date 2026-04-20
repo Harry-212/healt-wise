@@ -157,11 +157,11 @@ export default function GuideCalorieCycling() {
           the week rather than staying constant. Instead of targeting the same
           deficit every day, you eat more on active or training days and less
           on rest or recovery days.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideParagraph>
           When combined with{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, calorie cycling can
-          complement the medication's appetite-regulating effects and help:
+          complement the medication's appetite regulating effects and help:
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -180,11 +180,11 @@ export default function GuideCalorieCycling() {
       <GuideSection id="how-it-works" heading="How It Works with Mounjaro">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> regulates
-          appetite through its dual GLP-1/GIP mechanism—reducing hunger signals
+          appetite through its dual GLP 1/GIP mechanism reducing hunger signals
           and slowing gastric emptying. This makes it easier to eat less, but
           does not automatically determine the quality or structure of what you
           eat.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideParagraph>
           Calorie cycling enhances Mounjaro's effect by aligning calorie intake
           with your body's actual energy needs on a given day:
@@ -205,7 +205,7 @@ export default function GuideCalorieCycling() {
         />
         <GuideParagraph>
           This variable approach reduces the degree of metabolic adaptation
-          that often occurs with prolonged, fixed-calorie restriction—a common
+          that often occurs with prolonged, fixed calorie restriction a common
           cause of{" "}
           <IL href="/helpful-guides/mounjaro-weight-loss-plateau">weight loss plateaus</IL>.
         </GuideParagraph>
@@ -245,11 +245,11 @@ export default function GuideCalorieCycling() {
 
       <GuideSection id="weekly-framework" heading="Example Weekly Framework">
         <GuideParagraph>
-          There is no single correct calorie cycling framework—the right
+          There is no single correct calorie cycling framework the right
           structure depends on your activity level, goals, and how{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is affecting your
           appetite. A commonly used structure is:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
         <GuideTable
           headers={["Day Type", "Calorie Target", "Activity Focus"]}
           rows={[
@@ -262,7 +262,7 @@ export default function GuideCalorieCycling() {
           ]}
         />
         <GuideParagraph>
-          On both higher and lower-calorie days, prioritise:
+          On both higher and lower calorie days, prioritise:
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -286,7 +286,7 @@ export default function GuideCalorieCycling() {
           Calorie cycling is not suitable for everyone, and requires careful
           implementation alongside a medication like{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Always consult a healthcare professional before implementing calorie cycling—particularly if you have type 2 diabetes, as blood sugar management needs careful monitoring",

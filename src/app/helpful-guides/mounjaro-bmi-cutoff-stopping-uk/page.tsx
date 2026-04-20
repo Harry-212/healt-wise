@@ -162,12 +162,12 @@ export default function GuideMounjaroBMICutoff() {
       <GuideSection id="bmi-problem" heading="The Problem with BMI-Based Cutoffs">
         <GuideParagraph>
           BMI (Body Mass Index) is the most widely used tool for classifying
-          weight in UK clinical practice—and it underpins the eligibility
+          weight in UK clinical practice and it underpins the eligibility
           criteria for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> and other weight
-          management treatments. But BMI has well-documented limitations as a
+          management treatments. But BMI has well documented limitations as a
           standalone measure of health.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
         <GuideParagraph>
           BMI does not measure:
         </GuideParagraph>
@@ -182,7 +182,7 @@ export default function GuideMounjaroBMICutoff() {
         <GuideParagraph>
           The{" "}
           <EL href="https://www.nhs.uk/conditions/obesity/">NHS acknowledges</EL>{" "}
-          that BMI should be used alongside broader clinical assessment—not as
+          that BMI should be used alongside broader clinical assessment not as
           a standalone determinant of health or treatment decisions.
         </GuideParagraph>
         <GuideCallout variant="info">
@@ -196,38 +196,38 @@ export default function GuideMounjaroBMICutoff() {
       <GuideSection id="obesity-chronic" heading="Obesity Is a Chronic Condition">
         <GuideParagraph>
           A foundational shift in how the medical community understands obesity
-          is recognising it as a chronic, relapsing condition—not a temporary
+          is recognising it as a chronic, relapsing condition not a temporary
           problem solved by a course of medication.
         </GuideParagraph>
         <GuideParagraph>
           This is increasingly supported by clinical evidence. The{" "}
           <EL href="https://www.nejm.org/doi/full/10.1056/NEJMoa2311017">
-            SURMOUNT-4 trial
+            SURMOUNT 4 trial
           </EL>{" "}
           specifically studied what happens when patients stop tirzepatide
           after achieving weight loss. The results were stark: patients who
-          discontinued tirzepatide regained approximately two-thirds of their
+          discontinued tirzepatide regained approximately two thirds of their
           lost weight within 12 months, while those who continued lost an
           additional 6%.
         </GuideParagraph>
         <GuideParagraph>
-          This is not a personal failing—it is the pharmacological reality of
-          how GLP-1 medications work. They suppress appetite and regulate
+          This is not a personal failing it is the pharmacological reality of
+          how GLP 1 medications work. They suppress appetite and regulate
           metabolism while active. When stopped, hunger returns to its previous
           biological set point.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="maintenance-matters" heading="Why Maintenance Therapy Matters">
         <GuideParagraph>
-          GLP-1 medications like{" "}
+          GLP 1 medications like{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> regulate appetite,
           support insulin sensitivity, and help maintain metabolic rate during
           weight loss. Stopping them abruptly reverses all of these effects
           simultaneously.
         </GuideParagraph>
         <GuideParagraph>
-          A structured maintenance approach—rather than abrupt cessation—is
+          A structured maintenance approach rather than abrupt cessation is
           aligned with how other chronic conditions are managed:
         </GuideParagraph>
         <GuideBulletListRich
@@ -252,8 +252,8 @@ export default function GuideMounjaroBMICutoff() {
         <GuideParagraph>
           The same logic applies to{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. The underlying
-          biological drivers of obesity—appetite regulation, insulin
-          sensitivity, metabolic rate—do not permanently resolve because a
+          biological drivers of obesity appetite regulation, insulin
+          sensitivity, metabolic rate do not permanently resolve because a
           treatment target has been reached.
         </GuideParagraph>
       </GuideSection>
@@ -261,8 +261,8 @@ export default function GuideMounjaroBMICutoff() {
       <GuideSection id="risks-stopping" heading="Risks of Stopping Mounjaro Too Early">
         <GuideParagraph>
           Discontinuing{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL> prematurely—particularly
-          based solely on a BMI threshold—carries real clinical risks:
+          <IL href="/what-is-mounjaro">Mounjaro</IL> prematurely particularly
+          based solely on a BMI threshold carries real clinical risks:
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -284,9 +284,9 @@ export default function GuideMounjaroBMICutoff() {
       <GuideSection id="personalised-treatment" heading="The Case for Personalised Treatment">
         <GuideParagraph>
           Rather than applying rigid BMI cutoffs, a more clinically appropriate
-          approach to long-term{" "}
+          approach to long term{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> management includes:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -322,10 +322,10 @@ export default function GuideMounjaroBMICutoff() {
 
       <GuideSection id="finding-provider" heading="Finding the Right Provider">
         <GuideParagraph>
-          Not all UK providers approach long-term{" "}
+          Not all UK providers approach long term{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> management the same way.
           Some apply rigid BMI eligibility criteria that result in patients
-          losing access to treatment once they reach a 'normal' BMI—even when
+          losing access to treatment once they reach a 'normal' BMI even when
           clinical need continues.
         </GuideParagraph>
         <GuideParagraph>
@@ -352,8 +352,8 @@ export default function GuideMounjaroBMICutoff() {
           <IL href="/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk">
             how to switch pharmacies
           </IL>{" "}
-          if you need a provider better suited to long-term management.
-        </GuideParagraph>
+          if you need a provider better suited to long term management.
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

@@ -158,11 +158,11 @@ export default function GuideMounjaroSkinPain() {
         <GuideParagraph>
           Some people using{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> report
-          unusual skin symptoms—ranging from mild surface sensitivity to more
+          unusual skin symptoms ranging from mild surface sensitivity to more
           uncomfortable burning or tingling sensations. A subset describe
           pain or discomfort from light touch, a phenomenon clinically known
           as allodynia.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
         <GuideParagraph>
           Reported symptoms include:
         </GuideParagraph>
@@ -204,17 +204,17 @@ export default function GuideMounjaroSkinPain() {
 
       <GuideSection id="nerve-sensitivity" heading="Nerve Sensitivity Changes">
         <GuideParagraph>
-          GLP-1 and GIP receptors are present in peripheral nerve tissue. As{" "}
+          GLP 1 and GIP receptors are present in peripheral nerve tissue. As{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> activates these
           receptors systemically, there may be transient changes in how
           peripheral nerves process and transmit sensory signals.
         </GuideParagraph>
         <GuideParagraph>
-          Additionally, rapid weight loss—which Mounjaro can produce—is
+          Additionally, rapid weight loss which Mounjaro can produce is
           associated with changes in nerve behaviour in some patients. As
           adipose tissue decreases, the mechanical and metabolic environment
           around peripheral nerves changes, which may alter sensory thresholds.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -285,13 +285,13 @@ export default function GuideMounjaroSkinPain() {
       <GuideSection id="blood-sugar" heading="Blood Sugar Fluctuations">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> significantly affects
-          blood sugar regulation through its GLP-1 and GIP mechanisms. During
-          the initial weeks of treatment—particularly at higher doses—some
+          blood sugar regulation through its GLP 1 and GIP mechanisms. During
+          the initial weeks of treatment particularly at higher doses some
           patients experience blood sugar fluctuations as the body adapts.
         </GuideParagraph>
         <GuideParagraph>
           Unstable blood sugar can affect peripheral nerve function:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "High blood sugar (hyperglycaemia) — can damage small nerve fibres over time, causing burning, tingling, and sensitivity",
@@ -366,15 +366,15 @@ export default function GuideMounjaroSkinPain() {
         />
         <GuideParagraph>
           These symptoms may indicate a more significant neurological issue
-          that requires clinical investigation—independent of{" "}
+          that requires clinical investigation independent of{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. Unexpected or severe
           side effects should also be reported to the{" "}
           <EL href="https://yellowcard.mhra.gov.uk/">
             MHRA Yellow Card Scheme
           </EL>
-          , which monitors real-world drug safety and helps identify emerging
+          , which monitors real world drug safety and helps identify emerging
           adverse effects.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

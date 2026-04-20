@@ -165,12 +165,12 @@ export default function GuideMounjaroNutrition() {
       <GuideSection id="why-nutrition-matters" heading="Why Nutrition Still Matters">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> works by
-          suppressing appetite and regulating blood sugar—making it
+          suppressing appetite and regulating blood sugar making it
           significantly easier to eat less. But the medication controls
           quantity, not quality. What you choose to eat within your reduced
           intake determines your energy levels, body composition, and the
           sustainability of your results.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideParagraph>
           A structured nutrition approach alongside{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> improves:
@@ -198,8 +198,8 @@ export default function GuideMounjaroNutrition() {
         <GuideParagraph>
           Protein is the most important macronutrient to prioritise while using{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. When in a calorie
-          deficit, the body can break down muscle tissue for energy—a process
-          that slows metabolism and reduces long-term results. Adequate protein
+          deficit, the body can break down muscle tissue for energy a process
+          that slows metabolism and reduces long term results. Adequate protein
           intake helps prevent this.
         </GuideParagraph>
         <GuideParagraph>
@@ -234,14 +234,14 @@ export default function GuideMounjaroNutrition() {
 
       <GuideSection id="carbs" heading="2. Choose Low-Glycaemic Carbs">
         <GuideParagraph>
-          Carbohydrates are not the enemy—but the type matters. Low-glycaemic
+          Carbohydrates are not the enemy but the type matters. Low glycaemic
           index (GI) foods release energy more slowly, helping to stabilise
           blood sugar levels. This is particularly important alongside{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, which already works in
           part by improving insulin response.
         </GuideParagraph>
         <GuideParagraph>
-          Good low-GI carbohydrate choices include:
+          Good low GI carbohydrate choices include:
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -253,20 +253,20 @@ export default function GuideMounjaroNutrition() {
           ]}
         />
         <GuideParagraph>
-          Limit high-GI refined carbohydrates (white bread, pastries, sugary
-          breakfast cereals) — they cause rapid blood sugar spikes and
+          Limit high GI refined carbohydrates (white bread, pastries, sugary
+          breakfast cereals)   they cause rapid blood sugar spikes and
           subsequent hunger, working against Mounjaro's stabilising effect.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="fibre" heading="3. Increase Fibre Intake">
         <GuideParagraph>
-          Fibre is consistently under-consumed in UK diets, yet it plays a
+          Fibre is consistently under consumed in UK diets, yet it plays a
           critical role in supporting weight loss and gut health. The{" "}
           <EL href="https://www.nhs.uk/live-well/eat-well/digestive-health/how-to-get-more-fibre-into-your-diet/">
             NHS recommends 30g of fibre per day
           </EL>{" "}
-          for adults—most people consume considerably less.
+          for adults most people consume considerably less.
         </GuideParagraph>
         <GuideParagraph>
           Fibre improves:
@@ -279,7 +279,7 @@ export default function GuideMounjaroNutrition() {
           ]}
         />
         <GuideParagraph>
-          High-fibre foods to include:
+          High fibre foods to include:
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -293,8 +293,8 @@ export default function GuideMounjaroNutrition() {
 
       <GuideSection id="fats" heading="4. Include Healthy Fats">
         <GuideParagraph>
-          Dietary fat is essential—not optional. Healthy fats support brain
-          function, hormonal balance, and the absorption of fat-soluble
+          Dietary fat is essential not optional. Healthy fats support brain
+          function, hormonal balance, and the absorption of fat soluble
           vitamins (A, D, E, K). When appetite is significantly reduced by{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, ensuring adequate fat
           intake from quality sources becomes especially important.
@@ -312,8 +312,8 @@ export default function GuideMounjaroNutrition() {
           ]}
         />
         <GuideParagraph>
-          Limit saturated fats (found in fatty meats, butter, full-fat dairy,
-          and ultra-processed foods) and avoid trans fats (partially
+          Limit saturated fats (found in fatty meats, butter, full fat dairy,
+          and ultra processed foods) and avoid trans fats (partially
           hydrogenated oils found in some processed baked goods) entirely.
         </GuideParagraph>
       </GuideSection>
@@ -321,11 +321,11 @@ export default function GuideMounjaroNutrition() {
       <GuideSection id="hydration" heading="5. Stay Hydrated">
         <GuideParagraph>
           Adequate hydration supports appetite control, digestion, and
-          metabolism—all of which interact with how{" "}
+          metabolism all of which interact with how{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> functions. Dehydration
           can also temporarily affect the scale, masking genuine fat loss and
           causing unnecessary concern.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Aim for 6–8 glasses (approximately 1.5–2 litres) of water per day — more if physically active or in warm weather",
@@ -338,9 +338,9 @@ export default function GuideMounjaroNutrition() {
 
       <GuideSection id="processed-foods" heading="6. Limit Processed Foods">
         <GuideParagraph>
-          Ultra-processed foods are a key driver of poor nutritional outcomes
+          Ultra processed foods are a key driver of poor nutritional outcomes
           even at lower calorie levels. They tend to be low in protein, fibre,
-          and micronutrients—while being high in refined carbohydrates,
+          and micronutrients while being high in refined carbohydrates,
           saturated fats, sugar, and sodium.
         </GuideParagraph>
         <GuideParagraph>
@@ -367,7 +367,7 @@ export default function GuideMounjaroNutrition() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> significantly reduces
           appetite, but it does not eliminate the habit of eating quickly or
           eating past fullness. Mindful eating techniques help you tune into
-          your body's actual hunger and satiety signals—particularly important
+          your body's actual hunger and satiety signals particularly important
           when those signals are being pharmacologically altered.
         </GuideParagraph>
         <GuideBulletList
@@ -398,7 +398,7 @@ export default function GuideMounjaroNutrition() {
           ]}
         />
         <GuideParagraph>
-          For evidence-based UK dietary guidance, the{" "}
+          For evidence based UK dietary guidance, the{" "}
           <EL href="https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/">
             NHS Eatwell Guide
           </EL>{" "}
@@ -408,7 +408,7 @@ export default function GuideMounjaroNutrition() {
             weight management resources
           </EL>{" "}
           are also valuable for those seeking professional dietary support.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideCallout variant="tip">
           Nutrition is the multiplier—not the replacement—for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. The medication manages

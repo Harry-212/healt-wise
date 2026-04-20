@@ -162,11 +162,11 @@ export default function GuideMounjaroMenopause() {
     >
       <GuideSection id="why-weight-gain" heading="Why Weight Gain Happens During Menopause">
         <GuideParagraph>
-          Menopause can bring a wave of unexpected changes—weight gain being
+          Menopause can bring a wave of unexpected changes weight gain being
           one of the most frustrating. Many women notice fat accumulating
           around the abdomen, even when diet and lifestyle habits have not
-          changed. This is not a matter of willpower—it is physiology.
-        </GuideParagraph>
+          changed. This is not a matter of willpower it is physiology.
+         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
         <GuideParagraph>
           The driving force is hormonal. Declining oestrogen during
           perimenopause and menopause profoundly affects how the body stores
@@ -212,11 +212,11 @@ export default function GuideMounjaroMenopause() {
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> works
           differently from traditional weight loss methods. Rather than simply
           restricting intake through willpower, it targets the hormonal
-          regulation of appetite and metabolism directly—making it particularly
+          regulation of appetite and metabolism directly making it particularly
           relevant for menopausal weight gain.
         </GuideParagraph>
         <GuideParagraph>
-          Its dual-hormone mechanism acts on two pathways:
+          Its dual hormone mechanism acts on two pathways:
         </GuideParagraph>
         <GuideBulletListRich
           items={[
@@ -254,7 +254,7 @@ export default function GuideMounjaroMenopause() {
           is important to note that most major trials did not isolate
           menopausal women as a specific subgroup. The overall results provide
           a strong indication of what is achievable:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
         <GuideStatCards
           stats={[
             {
@@ -322,7 +322,7 @@ export default function GuideMounjaroMenopause() {
           This is one of the most common questions from menopausal women
           considering{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. In most cases, the
-          answer is yes—HRT and Mounjaro address different aspects of
+          answer is yes HRT and Mounjaro address different aspects of
           menopause and can be used together.
         </GuideParagraph>
         <GuideBulletListRich
@@ -364,7 +364,7 @@ export default function GuideMounjaroMenopause() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> works best when paired
           with a structured lifestyle approach. During menopause, specific
           strategies are particularly effective:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           1. Strength Training
@@ -383,7 +383,7 @@ export default function GuideMounjaroMenopause() {
         />
         <GuideParagraph>
           Even 2–3 sessions per week of moderate resistance training makes a
-          clinically meaningful difference. This does not require a gym—
+          clinically meaningful difference. This does not require a gym 
           bodyweight exercises, resistance bands, or free weights at home are
           all effective.
         </GuideParagraph>
@@ -406,7 +406,7 @@ export default function GuideMounjaroMenopause() {
         </h3>
         <GuideParagraph>
           Chronic stress elevates cortisol, which directly promotes visceral
-          fat accumulation—the primary site of menopause-related fat gain.
+          fat accumulation the primary site of menopause related fat gain.
           Strategies such as mindfulness, adequate sleep, and moderate aerobic
           exercise all help manage cortisol levels and support weight loss
           outcomes.
@@ -415,11 +415,11 @@ export default function GuideMounjaroMenopause() {
           Menopause does not have to mean inevitable weight gain. With a
           treatment like{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> and a targeted lifestyle
-          approach—strength training, adequate protein, and stress management—
+          approach strength training, adequate protein, and stress management 
           sustainable weight loss is achievable. The key is combining clinical
           support with consistent lifestyle habits, rather than relying on
           either alone.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

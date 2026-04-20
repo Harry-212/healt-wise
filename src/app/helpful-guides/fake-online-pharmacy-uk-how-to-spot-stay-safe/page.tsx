@@ -156,10 +156,10 @@ export default function GuideFakePharmacy() {
           Online pharmacies have grown rapidly in popularity in the UK. They
           offer 24/7 access, competitive pricing, privacy for sensitive
           conditions, and the ability to complete consultations without an
-          in-person visit—benefits that matter for treatments such as{" "}
+          in person visit benefits that matter for treatments such as{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL>.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
         <GuideParagraph>
           However, convenience also creates risk. Not every website that looks
           like a pharmacy is registered, regulated, or selling genuine
@@ -170,10 +170,10 @@ export default function GuideFakePharmacy() {
 
       <GuideSection id="dangers" heading="Dangers of Buying Medication Online">
         <GuideParagraph>
-          Rising demand for weight-loss and other sensitive treatments has
+          Rising demand for weight loss and other sensitive treatments has
           attracted fraudulent operators. These sites may look professional but
           expose you to serious harm:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -243,7 +243,7 @@ export default function GuideFakePharmacy() {
           ]}
         />
         <GuideParagraph>
-          If a pharmacy fails these checks, it is best to avoid it entirely—
+          If a pharmacy fails these checks, it is best to avoid it entirely 
           even if the site looks polished.
         </GuideParagraph>
       </GuideSection>
@@ -260,7 +260,7 @@ export default function GuideFakePharmacy() {
         <GuideParagraph>
           Trusted UK pharmacies and prescribers operate under overlapping
           oversight:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -289,11 +289,11 @@ export default function GuideFakePharmacy() {
           ]}
         />
         <GuideParagraph>
-          Always cross-check registration before you buy. The{" "}
+          Always cross check registration before you buy. The{" "}
           <EL href="https://fakemeds.campaign.gov.uk/">
             MHRA's online medicines guidance
           </EL>{" "}
-          explains what legitimate distance-selling pharmacies must display.
+          explains what legitimate distance selling pharmacies must display.
         </GuideParagraph>
       </GuideSection>
 
@@ -332,7 +332,7 @@ export default function GuideFakePharmacy() {
         <GuideParagraph>
           By staying cautious, you can benefit from legitimate online pharmacies
           while protecting your health and your personal data.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

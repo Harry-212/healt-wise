@@ -155,7 +155,7 @@ export default function GuideMounjaroStorage() {
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> must be kept
           refrigerated at:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideCallout variant="info">
           <strong>2°C to 8°C</strong> — refrigerated storage is required at
           all times until use. This is a mandatory requirement set out in the{" "}
@@ -173,7 +173,7 @@ export default function GuideMounjaroStorage() {
           ]}
         />
         <GuideParagraph>
-          These requirements apply throughout the entire supply chain—from the
+          These requirements apply throughout the entire supply chain from the
           manufacturer, to the{" "}
           <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
             pharmacy
@@ -186,12 +186,12 @@ export default function GuideMounjaroStorage() {
       {/* ── Section 2 ── */}
       <GuideSection id="safe-delivery" heading="What Safe Delivery Looks Like">
         <GuideParagraph>
-          A proper cold-chain delivery from a{" "}
+          A proper cold chain delivery from a{" "}
           <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
-            GPhC-registered pharmacy
+            GPhC registered pharmacy
           </IL>{" "}
           should include:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Insulated packaging — typically a polystyrene box or specialist insulated bag",
@@ -200,7 +200,7 @@ export default function GuideMounjaroStorage() {
           ]}
         />
         <GuideParagraph>
-          The packaging should also be sealed, tamper-evident, and include
+          The packaging should also be sealed, tamper evident, and include
           your prescription details and patient information leaflet. If any of
           these elements are absent, contact the pharmacy before using the
           medication.
@@ -250,14 +250,14 @@ export default function GuideMounjaroStorage() {
           not use it. Contact your pharmacy to report the issue and request a
           replacement. Keep the packaging as evidence of the temperature
           breach.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 4 ── */}
       <GuideSection id="warning-signs" heading="Warning Signs">
         <GuideParagraph>
           Be cautious if your delivery shows any of the following signs of
-          inadequate cold-chain handling:
+          inadequate cold chain handling:
         </GuideParagraph>
         <GuideBulletListRich
           items={[
@@ -289,7 +289,7 @@ export default function GuideMounjaroStorage() {
           unsafe ones. All pharmacies listed on{" "}
           <IL href="/">Health Wise</IL> are verified against these standards
           before listing.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
       </GuideSection>
 
       {/* ── Key Takeaways ── */}

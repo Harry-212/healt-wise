@@ -156,12 +156,12 @@ export default function GuideMounjaroFeelCold() {
     >
       <GuideSection id="why-cold" heading="Why Mounjaro Can Make You Feel Cold">
         <GuideParagraph>
-          Feeling unusually cold—particularly in the hands, feet, and skin
-          generally—is a commonly reported experience among{" "}
+          Feeling unusually cold particularly in the hands, feet, and skin
+          generally is a commonly reported experience among{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> users. It is not listed
           as a formal adverse effect in the medication's prescribing
           information, but the physiological reasons are well understood.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
         <GuideParagraph>
           There are three main mechanisms at work:
         </GuideParagraph>
@@ -185,13 +185,13 @@ export default function GuideMounjaroFeelCold() {
           One of the most direct causes of cold sensitivity on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is the significant
           reduction in calorie intake that the medication produces. Food
-          generates heat through a process called diet-induced thermogenesis
-          (DIT)—your body burns calories to digest, absorb, and process
+          generates heat through a process called diet induced thermogenesis
+          (DIT) your body burns calories to digest, absorb, and process
           nutrients, and this generates warmth.
         </GuideParagraph>
         <GuideParagraph>
           When overall intake decreases substantially:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -220,7 +220,7 @@ export default function GuideMounjaroFeelCold() {
 
       <GuideSection id="fat-loss" heading="Fat Loss and Insulation">
         <GuideParagraph>
-          Body fat performs an important thermal insulation function—it
+          Body fat performs an important thermal insulation function it
           maintains core temperature by reducing heat loss through the skin.
           As{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> produces meaningful fat
@@ -242,11 +242,11 @@ export default function GuideMounjaroFeelCold() {
 
       <GuideSection id="metabolic-shifts" heading="Metabolic and Circulatory Changes">
         <GuideParagraph>
-          <IL href="/what-is-mounjaro">Mounjaro</IL>'s GLP-1 and GIP
+          <IL href="/what-is-mounjaro">Mounjaro</IL>'s GLP 1 and GIP
           mechanisms produce meaningful cardiovascular effects, including modest
           reductions in blood pressure. While these are beneficial for
-          long-term health, reduced blood pressure can also mean slightly
-          reduced peripheral circulation—particularly to the extremities.
+          long term health, reduced blood pressure can also mean slightly
+          reduced peripheral circulation particularly to the extremities.
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -268,7 +268,7 @@ export default function GuideMounjaroFeelCold() {
           Most cold sensitivity on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is manageable with
           simple practical adjustments:
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           Clothing and environment
@@ -331,10 +331,10 @@ export default function GuideMounjaroFeelCold() {
             NHS guidance on persistent cold feelings
           </EL>{" "}
           outlines when investigation is warranted. A simple GP blood test can
-          rule out thyroid dysfunction and anaemia—two common causes of cold
+          rule out thyroid dysfunction and anaemia two common causes of cold
           intolerance that are unrelated to{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

@@ -94,7 +94,7 @@ export default function ArticleClient() {
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <p className="text-lg md:text-xl">
                 A medication like Wegovy can feel like a big step. Understanding exactly how Wegovy works helps you decide if it fits into your long term weight management plan, especially if you are also comparing it with options such as Mounjaro or other GLP 1 medications.
-              </p>
+               For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</Link>.</p>
               <p>
                 Below, you will see how Wegovy works in your body, what the research shows about weight loss, and what you need to consider before starting.
               </p>
@@ -161,7 +161,7 @@ export default function ArticleClient() {
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="how-much-weight" heading="How Much Weight You Might Lose On Wegovy">
-                <p>No medication can promise a specific amount of weight loss for every person. However, large clinical trials give you a realistic picture of what is typical when Wegovy is combined with diet and activity changes.</p>
+                <p>No medication can promise a specific amount of weight loss for every person. However, large clinical trials give you a realistic picture of what is typical when Wegovy is combined with diet and activity changes. For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
                 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Weight loss with weekly Wegovy injections</h3>
                 <p>In a 68 week study of 1,961 adults with obesity or overweight and weight related medical problems, but without type 2 diabetes, those using the Wegovy 2.4 mg injection lost on average about 35 pounds, which is around 15% of their starting body weight. People on placebo lost about 6 pounds, or 2.5% of their starting weight, while following similar diet and activity guidance.</p>
@@ -229,7 +229,7 @@ export default function ArticleClient() {
                   <li>Wait at least 30 minutes before eating, drinking anything else or taking other oral medicines</li>
                 </ul>
                 <p>These instructions are important so that the tablet can dissolve and the SNAC technology can help semaglutide cross the stomach lining effectively.</p>
-                <p>Your healthcare provider will advise which form suits you and how to step up your dose safely.</p>
+                <p>Your healthcare provider will advise which form suits you and how to step up your dose safely. For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>What results feel like week by week</h3>
                 <p>Wegovy starts working in your body soon after the first dose. Its half life is about 7 days, which means a single injection lasts in your system for around a week. However, noticeable changes in appetite and weight typically take several weeks.</p>
@@ -324,7 +324,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>Wegovy works by amplifying your body’s natural appetite control system. By mimicking the GLP 1 hormone, it reduces hunger, helps you feel full on smaller portions and slows how quickly food leaves your stomach. This makes it easier to stick to a reduced calorie diet and to lose a significant amount of weight over time.</p>
                 <p>Clinical trials show that many adults achieve 10% to 15% body weight loss with Wegovy, along with improvements in blood pressure, cholesterol, blood sugar and, in those with heart disease, a reduced risk of major cardiovascular events.</p>
-                <p>Wegovy is not a shortcut, and it is not right for everyone. It works best as part of a structured plan that includes dietary changes, physical activity and regular medical monitoring. If you are comparing Wegovy with medicines like Mounjaro and considering cost, eligibility and providers, understanding how Wegovy works gives you a solid foundation for an informed conversation with your healthcare professional.</p>
+                <p>Wegovy is not a shortcut, and it is not right for everyone. It works best as part of a structured plan that includes dietary changes, physical activity and regular medical monitoring. If you are comparing Wegovy with medicines like Mounjaro and considering cost, eligibility and providers, understanding how Wegovy works gives you a solid foundation for an informed conversation with your healthcare professional. For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
               </GuideSection>
 
             </article>

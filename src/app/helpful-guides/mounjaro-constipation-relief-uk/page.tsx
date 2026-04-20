@@ -158,12 +158,12 @@ export default function GuideMounjaroConstipation() {
       <GuideSection id="why-it-happens" heading="Why Mounjaro Causes Constipation">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> slows
-          gastric emptying—meaning food moves through the digestive system more
+          gastric emptying meaning food moves through the digestive system more
           slowly. This is central to how the medication reduces appetite and
           improves blood sugar control. But it also reduces gut motility
           throughout the intestines, which can result in less frequent or
-          harder-to-pass bowel movements.
-        </GuideParagraph>
+          harder to pass bowel movements.
+         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
         <GuideParagraph>
           Constipation is most common:
         </GuideParagraph>
@@ -192,7 +192,7 @@ export default function GuideMounjaroConstipation() {
           Adequate fluid intake softens stool and supports overall digestive
           function. Because{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> reduces appetite and
-          thirst cues alongside hunger, fluid intake often drops—making
+          thirst cues alongside hunger, fluid intake often drops making
           deliberate hydration especially important.
         </GuideParagraph>
         <GuideBulletList
@@ -217,16 +217,16 @@ export default function GuideMounjaroConstipation() {
           <EL href="https://www.nhs.uk/live-well/eat-well/digestive-health/how-to-get-more-fibre-into-your-diet/">
             NHS recommends 30g of fibre per day
           </EL>
-          —most UK adults consume significantly less.
+           most UK adults consume significantly less.
         </GuideParagraph>
         <GuideParagraph>
           The key is to increase intake gradually. Adding too much fibre too
-          quickly—particularly on{" "}
+          quickly particularly on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, where digestion is
-          already slowed—can cause bloating and gas before providing relief.
-        </GuideParagraph>
+          already slowed can cause bloating and gas before providing relief.
+         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
         <GuideParagraph>
-          Good fibre-rich foods to incorporate progressively:
+          Good fibre rich foods to incorporate progressively:
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -247,7 +247,7 @@ export default function GuideMounjaroConstipation() {
       <GuideSection id="activity" heading="Stay Active">
         <GuideParagraph>
           Physical activity directly stimulates gut motility. Even light
-          movement can make a meaningful difference to constipation—and
+          movement can make a meaningful difference to constipation and
           exercise has additional benefits for metabolic health and overall
           Mounjaro outcomes.
         </GuideParagraph>
@@ -264,9 +264,9 @@ export default function GuideMounjaroConstipation() {
       <GuideSection id="routine" heading="Build a Bathroom Routine">
         <GuideParagraph>
           Establishing consistent habits can encourage the body's natural
-          bowel rhythm—which is regulated by internal circadian cues that
+          bowel rhythm which is regulated by internal circadian cues that
           respond well to routine.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -293,7 +293,7 @@ export default function GuideMounjaroConstipation() {
       <GuideSection id="otc" heading="Over-the-Counter Options">
         <GuideParagraph>
           If dietary and lifestyle measures are not sufficient, several
-          over-the-counter options are generally safe alongside{" "}
+          over the counter options are generally safe alongside{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. Ask your pharmacist
           before starting any new product:
         </GuideParagraph>
@@ -346,7 +346,7 @@ export default function GuideMounjaroConstipation() {
           </EL>{" "}
           sets out clear criteria for when to seek medical help. In the UK,
           you can also call NHS 111 for triage advice.
-        </GuideParagraph>
+         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways
