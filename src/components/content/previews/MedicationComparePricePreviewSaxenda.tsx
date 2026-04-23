@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { TrustpilotColumnHeaderContent } from "@/components/compare/TrustpilotRatingPresentation";
 import {
   formatPrice,
   PREVIEW_ROWS,
@@ -48,8 +49,9 @@ export default function MedicationComparePricePreviewSaxenda() {
               <th
                 scope="col"
                 className="px-2 py-2.5 text-xs font-semibold uppercase tracking-wide"
+                title="Trustpilot rating"
               >
-                Reviews
+                <TrustpilotColumnHeaderContent />
               </th>
               {SAXENDA_PACK_KEYS.map((k) => (
                 <th

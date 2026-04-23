@@ -29,8 +29,8 @@ export const NAV_PANELS: NavPanel[] = [
       {
         title: "By Medication",
         links: [
-          { label: "Wegovy", href: "/what-is-wegovy", icon: "pill" },
           { label: "Mounjaro", href: "/what-is-mounjaro", icon: "syringe" },
+          { label: "Wegovy", href: "/what-is-wegovy", icon: "pill" },
           { label: "Saxenda", href: "/what-is-saxenda", icon: "pill" },
         ],
       },
@@ -38,7 +38,7 @@ export const NAV_PANELS: NavPanel[] = [
         title: "Compare Treatments",
         links: [
           {
-            label: "Wegovy vs Mounjaro",
+            label: "Mounjaro vs Wegovy",
             href: "/compare/wegovy-vs-mounjaro",
             icon: "compare",
           },
@@ -63,13 +63,13 @@ export const NAV_PANELS: NavPanel[] = [
         title: "Pricing",
         links: [
           {
-            label: "Compare Wegovy prices UK",
-            href: "/wegovy-price-comparison",
+            label: "Compare Mounjaro prices UK",
+            href: "/mounjaro-price-comparison",
             icon: "pound",
           },
           {
-            label: "Compare Mounjaro prices UK",
-            href: "/mounjaro-price-comparison",
+            label: "Compare Wegovy prices UK",
+            href: "/wegovy-price-comparison",
             icon: "pound",
           },
           {
@@ -114,6 +114,11 @@ export const NAV_PANELS: NavPanel[] = [
             label: "Weight Loss Tracker",
             href: "/tools/weight-loss-tracker",
             icon: "activity",
+          },
+          {
+            label: "Mounjaro Click Calculator & Chart",
+            href: "/tools/mounjaro-click-calculator",
+            icon: "syringe",
           },
         ],
       },

@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import AsdaOnlineDoctorContent from "@/components/pharmacies/content/AsdaOnlineDoctorContent";
+import AshcroftPharmacyContent from "@/components/pharmacies/content/AshcroftPharmacyContent";
+import AypHealthcareContent from "@/components/pharmacies/content/AypHealthcareContent";
+import BoltPharmacyContent from "@/components/pharmacies/content/BoltPharmacyContent";
 import {
   getWegovyCompareProviderById,
   pharmacyProfileHref,
@@ -24,15 +28,30 @@ import {
   SAXENDA_UK_COMPARE_LAST_UPDATED,
   SAXENDA_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/saxenda-uk-compare-providers";
+import { TrustpilotStarIcon } from "@/components/compare/TrustpilotRatingPresentation";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import {
+  asdaPharmacyLandingJsonGraph,
+  ashcroftPharmacyLandingJsonGraph,
+  aypPharmacyLandingJsonGraph,
+  boltPharmacyLandingJsonGraph,
+  pharmacyProfileJsonGraph,
+} from "@/lib/seo/pharmacy-landing-json-ld";
 
 type Props = { params: Promise<{ slug: string }> };
+
+/** Slugs with custom landing pages not (yet) in compare tables. */
+const EXTRA_PHARMACY_LANDING_SLUGS: string[] = [
+  "ayp-healthcare",
+  "bolt-pharmacy",
+];
 
 function allPharmacySlugs(): string[] {
   const ids = new Set<string>();
   for (const p of WEGOVY_UK_COMPARE_PROVIDERS) ids.add(p.id);
   for (const p of MOUNJARO_UK_COMPARE_PROVIDERS) ids.add(p.id);
   for (const p of SAXENDA_UK_COMPARE_PROVIDERS) ids.add(p.id);
+  for (const s of EXTRA_PHARMACY_LANDING_SLUGS) ids.add(s);
   return [...ids];
 }
 
@@ -42,6 +61,44 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  const canonical = `${siteOrigin()}/pharmacies/${slug}`;
+
+  if (slug === "ayp-healthcare") {
+    const title =
+      "AYP Healthcare weight management (UK) — Wegovy, Mounjaro, online review";
+    const description =
+      "AYP Healthcare: online weight management, Wegovy and Mounjaro context, delivery, costs and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "bolt-pharmacy") {
+    const title =
+      "Bolt Pharmacy weight loss (UK) — Wegovy, Mounjaro, online review";
+    const description =
+      "Bolt Pharmacy: online weight loss, Wegovy, Mounjaro and Saxenda context, delivery, costs and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   const w = getWegovyCompareProviderById(slug);
   const m = getMounjaroCompareProviderById(slug);
   const s = getSaxendaCompareProviderById(slug);
@@ -53,7 +110,42 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (m) meds.push("Mounjaro");
   if (s) meds.push("Saxenda");
 
-  const canonical = `${siteOrigin()}/pharmacies/${slug}`;
+  if (slug === "asda-online-doctor") {
+    const title =
+      "Asda Online Doctor weight loss (UK) — Wegovy, Mounjaro, Saxenda guide";
+    const description =
+      "How Asda Online Doctor works: online consultation, UK prescribers, Wegovy and Mounjaro pricing context, delivery and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "ashcroft-pharmacy") {
+    const title =
+      "Ashcroft Pharmacy weight loss (UK) — Wegovy, Mounjaro, review & guide";
+    const description =
+      "Ashcroft Pharmacy online weight loss: consultation, range of treatments, delivery, safety and cost context. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   return {
     title: `${name} — ${meds.join(" & ")} UK prices (2026)`,
     description: `Independent snapshot: ${name} — illustrative ${meds.join(" and ")} pen prices and delivery notes on Health Wise.`,
@@ -69,6 +161,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PharmacyProfilePage({ params }: Props) {
   const { slug } = await params;
+
+  if (slug === "ayp-healthcare") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(aypPharmacyLandingJsonGraph()),
+          }}
+        />
+        <AypHealthcareContent />
+      </>
+    );
+  }
+
+  if (slug === "bolt-pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(boltPharmacyLandingJsonGraph()),
+          }}
+        />
+        <BoltPharmacyContent />
+      </>
+    );
+  }
+
   const w = getWegovyCompareProviderById(slug);
   const m = getMounjaroCompareProviderById(slug);
   const s = getSaxendaCompareProviderById(slug);
@@ -76,7 +197,56 @@ export default async function PharmacyProfilePage({ params }: Props) {
 
   const displayName = w?.name ?? m?.name ?? s!.name;
 
+  if (slug === "asda-online-doctor") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(asdaPharmacyLandingJsonGraph()),
+          }}
+        />
+        <AsdaOnlineDoctorContent />
+      </>
+    );
+  }
+
+  if (slug === "ashcroft-pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(ashcroftPharmacyLandingJsonGraph()),
+          }}
+        />
+        <AshcroftPharmacyContent />
+      </>
+    );
+  }
+
+  const meds: string[] = [];
+  if (w) meds.push("Wegovy");
+  if (m) meds.push("Mounjaro");
+  if (s) meds.push("Saxenda");
+  const profileTitle = `${displayName} — ${meds.join(" & ")} UK prices (2026)`;
+  const profileDescription = `Independent snapshot: ${displayName} — illustrative ${meds.join(" and ")} pen prices and delivery notes on Health Wise.`;
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            pharmacyProfileJsonGraph({
+              slug,
+              name: displayName,
+              title: profileTitle,
+              description: profileDescription,
+            }),
+          ),
+        }}
+      />
     <article className="mx-auto max-w-3xl px-4 py-10 md:px-6 md:py-14">
       <div className="flex flex-col gap-2 border-b border-slate-200 pb-6">
         {w && (
@@ -135,8 +305,9 @@ export default async function PharmacyProfilePage({ params }: Props) {
               Saxenda from £{s.packs["1"].packPrice.toFixed(2)} (1 pen)
             </span>
           )}
-          <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-            Reviews {(w ?? m ?? s)!.rating.toFixed(1)}
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+            <TrustpilotStarIcon className="h-3.5 w-3.5 shrink-0" />
+            <span>Trustpilot {(w ?? m ?? s)!.rating.toFixed(1)}</span>
           </span>
         </div>
       </header>
@@ -359,5 +530,6 @@ export default async function PharmacyProfilePage({ params }: Props) {
         </Link>
       </div>
     </article>
+    </>
   );
 }

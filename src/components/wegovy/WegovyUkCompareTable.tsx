@@ -2,8 +2,13 @@
 
 import Link from "next/link";
 import { startTransition, useMemo, useState } from "react";
-import { ArrowDown, ArrowUp, ArrowUpDown, Star } from "lucide-react";
+import type { ReactNode } from "react";
+import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react";
 import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
+import {
+  TrustpilotColumnHeaderContent,
+  TrustpilotStarIcon,
+} from "@/components/compare/TrustpilotRatingPresentation";
 import {
   estimatedMonthlyCost,
   pharmacyProfileHref,
@@ -39,7 +44,7 @@ function SortableTh({
   center,
   title,
 }: {
-  label: string;
+  label: ReactNode;
   columnKey: SortKey;
   sortKey: SortKey;
   sortDir: "asc" | "desc";
@@ -50,10 +55,16 @@ function SortableTh({
   title?: string;
 }) {
   const active = sortKey === columnKey;
+  const thTitle =
+    title !== undefined
+      ? title
+      : typeof label === "string"
+        ? label
+        : undefined;
   return (
     <th
       scope="col"
-      title={title ?? label}
+      title={thTitle}
       className={`border-b border-slate-200/90 bg-slate-50 px-2 py-3 font-semibold text-slate-700 ${
         narrow ? "w-[3.65rem] min-w-[3.65rem] max-w-[3.65rem] text-center" : "whitespace-nowrap"
       } ${center ? "text-center" : ""}`}
@@ -278,7 +289,7 @@ export default function WegovyUkCompareTable({
           />
         </label>
         <label className="flex min-w-[120px] flex-col gap-1 text-xs font-semibold text-slate-600">
-          Min rating
+          Min Trustpilot
           <select
             value={minRating}
             onChange={(e) =>
@@ -392,11 +403,12 @@ export default function WegovyUkCompareTable({
                   title="Mean price across the five pen strengths"
                 />
                 <SortableTh
-                  label="Reviews"
+                  label={<TrustpilotColumnHeaderContent />}
                   columnKey="rating"
                   sortKey={sortKey}
                   sortDir={sortDir}
                   onSort={toggleSort}
+                  title="Trustpilot rating"
                 />
                 <SortableTh
                   label="Updated"
@@ -415,7 +427,7 @@ export default function WegovyUkCompareTable({
                     className="px-4 py-12 text-center text-slate-500"
                   >
                     No providers match your filters — try widening price or
-                    rating.
+                    Trustpilot score.
                   </td>
                 </tr>
               ) : (
@@ -495,10 +507,7 @@ export default function WegovyUkCompareTable({
                       </td>
                       <td className="border-b border-slate-100/90 px-2 py-2.5 align-middle tabular-nums font-medium text-slate-900">
                         <span className="inline-flex items-center gap-1.5">
-                          <Star
-                            className="h-4 w-4 shrink-0 fill-amber-400 text-amber-400"
-                            aria-hidden
-                          />
+                          <TrustpilotStarIcon className="h-4 w-4 shrink-0" />
                           {p.rating.toFixed(1)}
                         </span>
                       </td>
