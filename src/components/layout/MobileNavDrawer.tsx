@@ -12,6 +12,7 @@ import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
+import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 
 export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
   const { user, ready, signOut } = useSupabaseAuth();
@@ -108,6 +109,16 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
           >
             <X className="h-5 w-5" strokeWidth={2} />
           </button>
+        </div>
+
+        <div className="shrink-0 border-b border-slate-200 px-3 py-2">
+          <Link
+            href={HOME_COMPARE_HUB_HREF}
+            onClick={close}
+            className="flex min-h-11 items-center justify-center rounded-xl border border-emerald-300/70 bg-emerald-100 text-sm font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90"
+          >
+            Compare
+          </Link>
         </div>
 
         <nav

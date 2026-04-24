@@ -24,7 +24,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin()),
   title: {
-    default: `${SITE_BRAND_NAME} | Weight loss treatment comparison UK 2026`,
+    default: `${SITE_BRAND_NAME} | Weight Loss Treatment Price Comparison UK 2026`,
     template: `%s | ${SITE_BRAND_NAME}`,
   },
   description:

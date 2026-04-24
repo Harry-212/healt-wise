@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import { Search } from "lucide-react";
 import { useState } from "react";
 import { NAV_PANELS } from "@/lib/nav/nav-config";
+import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import MobileNavDrawer from "@/components/layout/MobileNavDrawer";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
 import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
@@ -133,6 +134,12 @@ export default function NavBar() {
 
           <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2 md:gap-3 lg:flex-none lg:justify-self-end">
             <MobileNavDrawer panels={NAV_PANELS} />
+            <Link
+              href={HOME_COMPARE_HUB_HREF}
+              className="hidden shrink-0 rounded-full border border-emerald-300/70 bg-emerald-100 px-3.5 py-2 text-xs font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90 sm:inline-flex sm:items-center sm:justify-center sm:px-4 sm:text-sm"
+            >
+              Compare
+            </Link>
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
