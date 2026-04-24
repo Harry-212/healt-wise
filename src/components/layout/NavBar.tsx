@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { Search } from "lucide-react";
+import { Search, Zap } from "lucide-react";
 import { useState } from "react";
 import { NAV_PANELS } from "@/lib/nav/nav-config";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
@@ -136,8 +136,9 @@ export default function NavBar() {
             <MobileNavDrawer panels={NAV_PANELS} />
             <Link
               href={HOME_COMPARE_HUB_HREF}
-              className="hidden shrink-0 rounded-full border border-emerald-300/70 bg-emerald-100 px-3.5 py-2 text-xs font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90 sm:inline-flex sm:items-center sm:justify-center sm:px-4 sm:text-sm"
+              className="hidden shrink-0 items-center gap-1.5 rounded-full border border-emerald-300/70 bg-emerald-100 px-3.5 py-2 text-xs font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90 sm:inline-flex sm:justify-center sm:px-4 sm:text-sm"
             >
+              <Zap className="h-3.5 w-3.5 shrink-0 fill-emerald-950" aria-hidden />
               Compare
             </Link>
             <button

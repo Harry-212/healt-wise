@@ -4,7 +4,7 @@ import Link from "next/link";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import {
-  ArrowRight,
+  Zap,
   ShieldCheck,
   PoundSterling,
   BarChart2,
@@ -98,7 +98,7 @@ export default function OurServices() {
                 className="group inline-flex min-h-[56px] items-center gap-3 rounded-full bg-brand-primary px-10 py-4 text-lg font-extrabold text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.98] sm:min-h-[60px] sm:px-12 sm:py-4 sm:text-xl"
               >
                 Compare here
-                <ArrowRight className="h-5 w-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1 sm:h-6 sm:w-6" />
+                <Zap className="h-5 w-5 shrink-0 fill-white transition-transform duration-300 group-hover:scale-110 sm:h-6 sm:w-6" aria-hidden />
               </Link>
               <Link
                 href={HOME_COMPARE_HUB_HREF}

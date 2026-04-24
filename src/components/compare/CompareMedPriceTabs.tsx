@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import {
-  ArrowRight,
+  Zap,
   ChevronRight,
   Pill,
   Sparkles,
@@ -35,11 +35,11 @@ import {
   headlinePackPrice,
 } from "@/lib/data/saxenda-uk-compare-providers";
 
-/** Display names (INN), Title Case — used in compare UI only */
+/** UK brand names — used in triple-compare tab UI */
 const TAB_LABEL: Record<CompareMedicationTab, string> = {
-  wegovy: "Semaglutide",
-  mounjaro: "Tirzepatide",
-  saxenda: "Liraglutide",
+  mounjaro: "Mounjaro",
+  wegovy: "Wegovy",
+  saxenda: "Saxenda",
 };
 
 const TAB_ACCENTS: Record<
@@ -214,7 +214,7 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
           className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
         >
           Open Full Price Comparison Page
-          <ArrowRight className="h-4 w-4 text-brand-primary" aria-hidden />
+          <Zap className="h-4 w-4 fill-brand-primary" aria-hidden />
         </Link>
       </div>
 
@@ -263,7 +263,7 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
           className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 underline-offset-2 hover:underline"
         >
           Dedicated Price Comparison
-          <ArrowRight className="h-4 w-4" aria-hidden />
+          <Zap className="h-4 w-4 fill-slate-700" aria-hidden />
         </Link>
       </div>
     </motion.div>

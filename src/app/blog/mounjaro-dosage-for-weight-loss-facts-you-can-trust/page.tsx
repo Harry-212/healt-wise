@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
-const HERO_IMAGE = `${siteOrigin()}/Mounjaro%20Dosage%20for%20Weight%20Loss%20Facts%20You%20Can%20Trust.webp`;
+const HERO_IMAGE = `${siteOrigin()}/blog/Healthy.webp`;
 
 export const metadata: Metadata = {
   title: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
@@ -19,7 +19,12 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust`,
     type: "article",
     publishedTime: "2026-04-14T00:00:00.000Z",
-    images: [{ url: HERO_IMAGE, alt: "Mounjaro Dosage for Weight Loss: Facts You Can Trust" }],
+    images: [
+      {
+        url: HERO_IMAGE,
+        alt: "Healthy lifestyle supporting weight management information in the UK",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

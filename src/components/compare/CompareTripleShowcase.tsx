@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
+  Zap,
   Calendar,
   GitCompare,
   Layers,
@@ -50,7 +50,7 @@ const CARDS: {
   {
     key: "mounjaro",
     brand: "Mounjaro",
-    inn: "Tirzepatide",
+    inn: "Dual-pathway weekly pen (UK)",
     tag: "Dual GIP / GLP-1",
     schedule: "Once weekly (titrated strengths)",
     mechanism:
@@ -63,7 +63,7 @@ const CARDS: {
   {
     key: "wegovy",
     brand: "Wegovy",
-    inn: "Semaglutide",
+    inn: "GLP-1 weekly pen (UK)",
     tag: "GLP-1 receptor agonist",
     schedule: "Once weekly (titrated strengths)",
     mechanism:
@@ -76,7 +76,7 @@ const CARDS: {
   {
     key: "saxenda",
     brand: "Saxenda",
-    inn: "Liraglutide",
+    inn: "Daily injection pen (UK)",
     tag: "GLP-1 · daily pen",
     schedule: "Once daily (escalating dose schedule)",
     mechanism:
@@ -91,10 +91,10 @@ const CARDS: {
 const MATRIX: { label: string; mounjaro: string; wegovy: string; saxenda: string }[] =
   [
     {
-      label: "Active Ingredient",
-      mounjaro: "Tirzepatide",
-      wegovy: "Semaglutide",
-      saxenda: "Liraglutide",
+      label: "Brand",
+      mounjaro: "Mounjaro",
+      wegovy: "Wegovy",
+      saxenda: "Saxenda",
     },
     {
       label: "Typical Injection Rhythm",
@@ -145,7 +145,7 @@ export default function CompareTripleShowcase() {
             className="inline-flex shrink-0 items-center gap-2 self-start rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 md:self-auto"
           >
             Jump To Price Tables
-            <ArrowRight className="h-4 w-4" aria-hidden />
+            <Zap className="h-4 w-4 fill-white" aria-hidden />
           </Link>
         </div>
 
@@ -219,7 +219,7 @@ export default function CompareTripleShowcase() {
                       className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold text-brand-primary underline-offset-2 hover:underline"
                     >
                       Full Price Page
-                      <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                      <Zap className="h-3.5 w-3.5 fill-brand-primary" aria-hidden />
                     </Link>
                   </div>
                 </div>
@@ -308,14 +308,14 @@ export default function CompareTripleShowcase() {
                 className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-800 shadow-sm transition hover:border-emerald-300 hover:text-emerald-900"
               >
                 Wegovy vs Mounjaro
-                <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                <Zap className="h-3.5 w-3.5 fill-slate-800" aria-hidden />
               </Link>
               <Link
                 href="/compare/mounjaro-vs-saxenda"
                 className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-800 shadow-sm transition hover:border-emerald-300 hover:text-emerald-900"
               >
                 Mounjaro vs Saxenda
-                <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                <Zap className="h-3.5 w-3.5 fill-slate-800" aria-hidden />
               </Link>
             </div>
           </div>

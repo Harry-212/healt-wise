@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion";
 import {
-  ArrowRight,
+  Zap,
   Calculator,
   Grid3X3,
   Syringe,
@@ -330,7 +330,7 @@ export default function MounjaroClickCalculatorClient() {
 
                           <div className="flex flex-wrap gap-2 pt-2">
                             <Link href="/compare/wegovy-vs-mounjaro" className="inline-flex min-h-10 items-center gap-1.5 rounded-full bg-violet-600 px-5 text-sm font-semibold text-white transition hover:bg-violet-700 shadow-sm">
-                              Compare GLP-1s <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                              Compare GLP-1s <Zap className="inline h-3.5 w-3.5 fill-current" aria-hidden />
                             </Link>
                             <Link href="/mounjaro-price-comparison" className="inline-flex min-h-10 items-center rounded-full border border-slate-200 bg-white px-5 text-sm font-semibold text-slate-800 transition hover:bg-slate-50 hover:border-slate-300">
                               Mounjaro Prices

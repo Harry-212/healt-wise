@@ -10,7 +10,7 @@ import {
   useSpring,
 } from "framer-motion";
 import {
-  ArrowRight,
+  Zap,
   ChevronDown,
   FileDown,
   LayoutDashboard,
@@ -587,7 +587,7 @@ export default function WeightTrackerClient() {
                     className="inline-flex min-h-12 items-center gap-2 rounded-full border border-white/20 bg-white/10 px-7 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
                   >
                     Compare treatments
-                    <ArrowRight className="h-4 w-4" />
+                    <Zap className="h-4 w-4 fill-white" aria-hidden />
                   </Link>
                 </div>
               </motion.div>

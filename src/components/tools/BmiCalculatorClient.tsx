@@ -5,7 +5,6 @@ import Link from "next/link";
 import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion";
 import {
   Activity,
-  ArrowRight,
   ChevronDown,
   Scale,
   Stethoscope,
@@ -590,7 +589,8 @@ export default function BmiCalculatorClient() {
                       {/* CTAs */}
                       <div className="flex flex-wrap gap-2 pt-1">
                         <Link href="/compare/wegovy-vs-mounjaro" className="inline-flex min-h-10 items-center gap-1.5 rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700">
-                          Compare treatments <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                          Compare treatments{" "}
+                          <Zap className="inline h-3.5 w-3.5 fill-current" aria-hidden />
                         </Link>
                         <Link href="/prices/cheapest-options-uk" className="inline-flex min-h-10 items-center rounded-full border-2 border-slate-200 bg-white px-5 text-sm font-semibold text-slate-800 transition hover:border-slate-400">
                           See prices
@@ -673,7 +673,8 @@ export default function BmiCalculatorClient() {
 
                       <div className="flex flex-wrap gap-2 pt-1">
                         <Link href="/compare/wegovy-vs-mounjaro" className="inline-flex min-h-10 items-center gap-1.5 rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700">
-                          Compare treatments <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                          Compare treatments{" "}
+                          <Zap className="inline h-3.5 w-3.5 fill-current" aria-hidden />
                         </Link>
                         <a href="#faq" className="inline-flex min-h-10 items-center rounded-full bg-slate-100 px-5 text-sm font-semibold text-slate-700 transition hover:bg-slate-200">
                           Show FAQ
@@ -741,7 +742,8 @@ export default function BmiCalculatorClient() {
 
                       <div className="flex flex-wrap gap-2 pt-1">
                         <Link href="/compare/wegovy-vs-mounjaro" className="inline-flex min-h-10 items-center gap-1.5 rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700">
-                          Compare treatments <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                          Compare treatments{" "}
+                          <Zap className="inline h-3.5 w-3.5 fill-current" aria-hidden />
                         </Link>
                         <Link href="/prices/cheapest-options-uk" className="inline-flex min-h-10 items-center rounded-full border-2 border-slate-200 bg-white px-5 text-sm font-semibold text-slate-800 transition hover:border-slate-400">
                           See prices

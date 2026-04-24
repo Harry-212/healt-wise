@@ -3,11 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight,
+  Zap,
   Scale,
   PoundSterling,
   ShieldCheck,
-  Zap,
   Lock,
   LineChart,
   ChevronDown,
@@ -165,7 +164,7 @@ export default function WhyChooseHealthWise() {
                 className="inline-flex w-full min-h-[56px] items-center justify-center gap-3 rounded-full bg-brand-primary px-10 py-4 text-lg font-extrabold text-white shadow-lg transition hover:scale-[1.02] hover:brightness-110 sm:w-auto sm:min-h-[60px] sm:self-start sm:px-12 sm:text-xl"
               >
                 Compare here
-                <ArrowRight className="h-5 w-5 shrink-0 sm:h-6 sm:w-6" aria-hidden />
+                <Zap className="h-5 w-5 shrink-0 fill-white sm:h-6 sm:w-6" aria-hidden />
               </Link>
             </div>
           </div>

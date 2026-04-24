@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useMemo, useRef } from "react";
 import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import type { RecommendedItem } from "@/lib/recommended-reading";
+import { applyHomeKeepExploringOverrides } from "@/lib/home-keep-exploring-overrides";
 import { sanitizeBrandDisplayNames } from "@/lib/text/sanitize-brand-display-names";
 
 function hashToSeed(s: string): number {
@@ -109,34 +110,39 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
         >
           {picks.map((item, idx) => {
             const isHome = pathname === "/";
-            const title = sanitizeBrandDisplayNames(item.title, isHome);
-            const description = sanitizeBrandDisplayNames(item.description, isHome);
+            const display = isHome ? applyHomeKeepExploringOverrides(item) : item;
+            const title = sanitizeBrandDisplayNames(display.title, isHome);
+            const description = sanitizeBrandDisplayNames(
+              display.description,
+              isHome,
+            );
+            const imageUrl = display.imageUrl;
             return (
               <Link
-                key={`${item.href}-${idx}`}
-                href={item.href}
+                key={`${display.href}-${idx}`}
+                href={display.href}
                 className="group relative flex w-[min(280px,85vw)] shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm ring-1 ring-slate-900/5 transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md"
               >
                 <div className="relative aspect-16/10 w-full overflow-hidden bg-slate-100">
                   <Image
-                    src={item.imageUrl}
+                    src={imageUrl}
                     alt={title}
                     fill
                     className="object-cover transition duration-500 group-hover:scale-105"
                     sizes="280px"
                     unoptimized={
-                      item.imageUrl.includes("unsplash.com") ||
-                      item.imageUrl.includes("ibb.co")
+                      imageUrl.includes("unsplash.com") ||
+                      imageUrl.includes("ibb.co")
                     }
                   />
                   <span
                     className={`absolute left-3 top-3 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
-                      item.kind === "guide"
+                      display.kind === "guide"
                         ? "bg-emerald-600 text-white"
                         : "bg-violet-600 text-white"
                     }`}
                   >
-                    {item.kind === "guide" ? "Guide" : "Article"}
+                    {display.kind === "guide" ? "Guide" : "Article"}
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-4">

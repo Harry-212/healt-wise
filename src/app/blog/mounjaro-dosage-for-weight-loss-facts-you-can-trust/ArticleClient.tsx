@@ -70,8 +70,8 @@ export default function ArticleClient() {
           </div>
 
           <BlogArticleHeroImage
-            src="/Mounjaro%20Dosage%20for%20Weight%20Loss%20Facts%20You%20Can%20Trust.webp"
-            alt="Mounjaro Dosage for Weight Loss: Facts You Can Trust"
+            src="/blog/Healthy.webp"
+            alt="Healthy lifestyle and balanced nutrition — context for UK weight management information"
           />
           <div
             id="guide-article-hero-end"

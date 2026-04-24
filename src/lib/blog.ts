@@ -200,8 +200,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     category: "Guides",
     description:
       "Learn how Mounjaro dosage works, the stages from 2.5 mg to higher doses, potential side effects, and long-term success strategies.",
-    heroImage:
-      "/Mounjaro%20Dosage%20for%20Weight%20Loss%20Facts%20You%20Can%20Trust.webp",
+    heroImage: "/blog/Healthy.webp",
     feedTags: ["mounjaro", "guides"],
   },
   {

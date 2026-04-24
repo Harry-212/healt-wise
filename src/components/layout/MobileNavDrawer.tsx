@@ -4,7 +4,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronRight, Zap } from "lucide-react";
 import type { NavPanel } from "@/lib/nav/nav-config";
 import { NavLinkIcon } from "@/lib/nav/nav-icons";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
@@ -115,8 +115,9 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
           <Link
             href={HOME_COMPARE_HUB_HREF}
             onClick={close}
-            className="flex min-h-11 items-center justify-center rounded-xl border border-emerald-300/70 bg-emerald-100 text-sm font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90"
+            className="flex min-h-11 items-center justify-center gap-2 rounded-xl border border-emerald-300/70 bg-emerald-100 text-sm font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90"
           >
+            <Zap className="h-4 w-4 shrink-0 fill-emerald-950" aria-hidden />
             Compare
           </Link>
         </div>

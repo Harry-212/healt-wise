@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Scale, Activity, Syringe } from "lucide-react";
+import { Zap, Calculator, Activity, Syringe } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 
 const TOOL_CARDS = [
@@ -8,7 +8,7 @@ const TOOL_CARDS = [
     href: "/tools/bmi-calculator",
     label: "BMI Calculator",
     desc: "Check your BMI & calorie needs",
-    Icon: Scale,
+    Icon: Calculator,
     color: "emerald",
     iconBg: "from-emerald-50 to-emerald-100/60",
     iconBorder: "border-emerald-100",
@@ -95,8 +95,8 @@ export default function HeroNumanStyle() {
                 className="group relative inline-flex w-full min-h-[80px] max-w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-brand-cta px-8 py-6 text-2xl font-extrabold leading-tight tracking-tight text-slate-900 shadow-2xl ring-[3px] ring-amber-400/50 transition-all duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-amber-500/35 hover:ring-amber-400/80 active:scale-[0.98] sm:min-h-[92px] sm:w-auto sm:px-16 sm:py-6 sm:text-3xl md:min-h-[100px] md:px-20 md:py-7 md:text-[2.125rem]"
               >
                 <span>Compare The Price</span>
-                <ArrowRight
-                  className="h-7 w-7 shrink-0 transition-transform duration-300 group-hover:translate-x-1 sm:h-8 sm:w-8 md:h-9 md:w-9"
+                <Zap
+                  className="h-7 w-7 shrink-0 fill-slate-900 transition-transform duration-300 group-hover:scale-110 sm:h-8 sm:w-8 md:h-9 md:w-9"
                   aria-hidden
                 />
               </Link>
@@ -112,13 +112,13 @@ export default function HeroNumanStyle() {
                   className={`group relative flex flex-col justify-between overflow-hidden rounded-xl bg-white/95 p-2.5 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl ${tool.offset}`}
                 >
                   <div className="z-10 flex flex-col gap-0.5">
-                    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-slate-100 sm:h-8 sm:w-8">
-                      <tool.Icon className="h-3.5 w-3.5 text-slate-700 sm:h-4 sm:w-4" aria-hidden />
+                    <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 sm:h-10 sm:w-10">
+                      <tool.Icon className="h-4 w-4 text-slate-700 sm:h-5 sm:w-5" aria-hidden />
                     </span>
-                    <h3 className="mt-1.5 text-[11px] font-bold leading-tight text-slate-900 sm:text-sm">
+                    <h3 className="mt-2 text-sm font-bold leading-tight text-slate-900 sm:text-base md:text-lg">
                       {tool.label}
                     </h3>
-                    <p className="hidden text-[10px] leading-tight text-slate-500 sm:block">
+                    <p className="mt-0.5 text-[11px] leading-snug text-slate-600 sm:text-xs md:text-sm">
                       {tool.desc}
                     </p>
                   </div>
@@ -130,7 +130,7 @@ export default function HeroNumanStyle() {
                     </div>
                   </div>
                   <div className="mt-1.5 flex items-center text-slate-900">
-                    <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1 sm:h-3.5 sm:w-3.5" />
+                    <Zap className="h-3.5 w-3.5 fill-slate-900 transition-transform duration-300 group-hover:scale-110 sm:h-4 sm:w-4" aria-hidden />
                   </div>
                 </Link>
               ))}

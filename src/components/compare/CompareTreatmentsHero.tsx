@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Instrument_Serif } from "next/font/google";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Zap, Sparkles } from "lucide-react";
 import {
   ShaderBackground,
   type HeroShaderVariant,
@@ -131,14 +131,14 @@ export default function CompareTreatmentsHero({
                 className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-md transition hover:brightness-95"
               >
                 Explore Price Tables
-                <ArrowRight className="h-4 w-4" aria-hidden />
+                <Zap className="h-4 w-4 fill-slate-900" aria-hidden />
               </a>
               <Link
                 href="/prices/cheapest-options-uk"
                 className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
               >
                 Cheapest Options Hub
-                <ArrowRight className="h-4 w-4 opacity-90" aria-hidden />
+                <Zap className="h-4 w-4 fill-white opacity-90" aria-hidden />
               </Link>
             </div>
           </div>
