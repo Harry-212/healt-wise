@@ -80,6 +80,26 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "mounjaro-vs-ozempic-smart-comparisons-for-better-results",
+    title: "Mounjaro vs Ozempic: Smart Comparisons for Better Results",
+    date: "2026-04-24",
+    category: "Comparisons",
+    description:
+      "Mounjaro vs Ozempic: find which treatment fits your diabetes goals in the UK with clear, confident advice.",
+    heroImage: "/blog/guide mounjaro vs ozempic.webp",
+    feedTags: ["mounjaro", "how-it-works", "guides"],
+  },
+  {
+    slug: "the-surprising-mounjaro-side-effects-you-might-experience",
+    title: "The Surprising Mounjaro Side Effects You Might Experience",
+    date: "2026-04-24",
+    category: "Guides",
+    description:
+      "Discover surprising mounjaro side effects you might experience and how you can manage them with confidence.",
+    heroImage: "/blog/mounjaro side effects.webp",
+    feedTags: ["mounjaro", "guides", "safety"],
+  },
+  {
     slug: "weight-loss-injection-shortages-in-the-uk-what-you-need-to-know",
     title: "What You Should Know About Weight Loss Injection Shortages in the UK",
     date: "2026-04-23",

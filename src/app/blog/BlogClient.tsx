@@ -272,7 +272,7 @@ export default function BlogClient({
         ) : (
           <p className="py-12 text-center text-slate-400">
             No articles match this filter. Try &quot;All&quot; or another topic.
-           For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</Link>.</p>
+          </p>
         )}
       </section>
 
@@ -282,7 +282,7 @@ export default function BlogClient({
       >
         <div className="mx-auto max-w-screen-2xl">
           <div className="articles-header -mt-2 mb-10" role="toolbar" aria-label="Filter articles by topic">
-            <p className="mb-3 text-xs font-medium uppercase tracking-wide text-slate-400">Topics For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
+            <p className="mb-3 text-xs font-medium uppercase tracking-wide text-slate-400">Topics</p>
             <TopicFilterLinks activeTopic={activeTopic} />
           </div>
 
@@ -362,7 +362,7 @@ export default function BlogClient({
                     {article.description ? (
                       <p className="mb-5 line-clamp-3 flex-1 text-[15px] leading-relaxed text-slate-500">
                         {article.description}
-                       For more context, explore our resources on <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</Link>.</p>
+                      </p>
                     ) : null}
                     <div className="mt-auto flex items-center text-[15px] font-semibold text-[#3562ff] transition-colors group-hover:text-[#1e3bb3]">
                       Read more{" "}
@@ -381,7 +381,7 @@ export default function BlogClient({
                 role="toolbar"
                 aria-label="Filter articles by topic (repeat)"
               >
-                <p className="mb-3 text-xs font-medium uppercase tracking-wide text-slate-400">Topics For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</Link>.</p>
+                <p className="mb-3 text-xs font-medium uppercase tracking-wide text-slate-400">Topics</p>
                 <TopicFilterLinks activeTopic={activeTopic} />
               </div>
               <nav className="mt-10 flex flex-wrap justify-center gap-2" aria-label="Blog pagination">
