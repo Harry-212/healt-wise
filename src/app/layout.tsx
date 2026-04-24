@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     images: [{ url: SITE_LOGO_SRC, alt: SITE_BRAND_NAME }],
   },
   icons: {
-    icon: [{ url: SITE_FAVICON_SRC, type: "image/webp" }],
-    apple: [{ url: SITE_FAVICON_SRC, type: "image/webp" }],
+    icon: [{ url: SITE_FAVICON_SRC, type: "image/png" }],
+    apple: [{ url: SITE_FAVICON_SRC, type: "image/png" }],
   },
 };
 
