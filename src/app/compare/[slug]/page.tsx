@@ -93,6 +93,7 @@ export default async function ComparePage({ params }: Props) {
           subtitle={layout.hero.subtitle}
           snapshotLabel={layout.hero.snapshotLabel}
           navLinks={layout.hero.navLinks}
+          wideDesktopHero={slug === "mounjaro-vs-wegovy-vs-saxenda"}
         />
 
         <CompareMedPriceTabs medications={layout.medications} />

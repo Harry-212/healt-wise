@@ -303,17 +303,17 @@ export default function OurMethodology() {
           <div className="flex flex-wrap items-center gap-2 sm:justify-end">
             <Link
               href={HOME_COMPARE_HUB_HREF}
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-emerald-200 bg-white px-5 py-2.5 text-sm font-semibold text-emerald-900 shadow-sm transition-colors hover:bg-emerald-50"
+              className="inline-flex min-h-[52px] shrink-0 items-center justify-center gap-3 rounded-full border-2 border-emerald-200 bg-white px-8 py-3.5 text-base font-extrabold text-emerald-900 shadow-md transition-colors hover:bg-emerald-50 sm:min-h-[56px] sm:px-10 sm:py-4 sm:text-lg"
             >
               Compare here
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-5 w-5 shrink-0 sm:h-6 sm:w-6" />
             </Link>
             <Link
               href="/methodology"
-              className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-emerald-800"
+              className="group inline-flex min-h-[52px] shrink-0 items-center justify-center gap-2 rounded-full bg-emerald-700 px-8 py-3.5 text-base font-bold text-white transition-colors hover:bg-emerald-800 sm:min-h-[56px] sm:px-10 sm:text-lg"
             >
               Read full guide
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1 sm:h-6 sm:w-6" />
             </Link>
           </div>
         </div>

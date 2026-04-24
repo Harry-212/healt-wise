@@ -46,6 +46,7 @@ export default function CompareTreatmentsHero({
   subtitle,
   snapshotLabel,
   navLinks,
+  wideDesktopHero = false,
 }: {
   variant: HeroShaderVariant;
   eyebrow: string;
@@ -54,22 +55,40 @@ export default function CompareTreatmentsHero({
   subtitle: string;
   snapshotLabel: string;
   navLinks: { href: string; label: string }[];
+  /** Wider text column + extra vertical rhythm on large screens (triple compare hub). */
+  wideDesktopHero?: boolean;
 }) {
+  const shaderMinH = wideDesktopHero
+    ? "min-h-[min(72svh,440px)] sm:min-h-[min(70svh,480px)] lg:min-h-[min(72svh,600px)]"
+    : "min-h-[min(72svh,420px)] sm:min-h-[min(68svh,460px)] lg:min-h-[min(62svh,480px)]";
+
+  const headerClass = wideDesktopHero
+    ? "relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-5 pb-3 md:px-10 md:pt-6 lg:px-16 lg:pt-10 lg:pb-5 xl:px-20"
+    : "relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-4 pb-2 md:px-10 lg:px-14";
+
+  const mainClass = wideDesktopHero
+    ? "relative z-20 flex flex-1 flex-col justify-start px-4 pt-4 pb-12 md:px-10 md:pt-6 md:pb-16 lg:px-16 lg:pt-8 lg:pb-24 xl:px-20"
+    : "relative z-20 flex flex-1 flex-col justify-start px-4 pt-2 pb-10 md:px-10 md:pb-14 lg:px-14 lg:pb-16";
+
+  const contentMaxClass = wideDesktopHero
+    ? "mx-auto w-full max-w-4xl text-center lg:mx-0 lg:max-w-5xl xl:max-w-6xl lg:text-left"
+    : "mx-auto w-full max-w-4xl text-center lg:mx-0 lg:max-w-3xl lg:text-left";
+
+  const navClass = wideDesktopHero
+    ? "flex max-w-[min(100%,520px)] flex-wrap items-center justify-end gap-1 sm:gap-2 lg:max-w-[min(100%,44rem)]"
+    : "flex max-w-[min(100%,520px)] flex-wrap items-center justify-end gap-1 sm:gap-2";
+
   return (
     <section className="border-b border-slate-200/80">
-      <ShaderBackground
-        variant={variant}
-        staticOnly
-        minHeight="min-h-[min(72svh,420px)] sm:min-h-[min(68svh,460px)] lg:min-h-[min(62svh,480px)]"
-      >
-        <header className="relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-4 pb-2 md:px-10 lg:px-14">
+      <ShaderBackground variant={variant} staticOnly minHeight={shaderMinH}>
+        <header className={headerClass}>
           <Link
             href="/"
             className="text-sm font-medium text-white/85 transition hover:text-white"
           >
             Health Wise
           </Link>
-          <nav className="flex max-w-[min(100%,520px)] flex-wrap items-center justify-end gap-1 sm:gap-2">
+          <nav className={navClass}>
             {navLinks.map((l) => (
               <Link
                 key={l.href + l.label}
@@ -82,8 +101,8 @@ export default function CompareTreatmentsHero({
           </nav>
         </header>
 
-        <main className="relative z-20 flex flex-1 flex-col justify-start px-4 pt-2 pb-10 md:px-10 md:pb-14 lg:px-14 lg:pb-16">
-          <div className="mx-auto w-full max-w-4xl text-center lg:mx-0 lg:max-w-3xl lg:text-left">
+        <main className={mainClass}>
+          <div className={contentMaxClass}>
             <GlassPill>
               <span className="inline-flex items-center gap-1.5">
                 <Sparkles

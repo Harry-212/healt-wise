@@ -108,8 +108,9 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
           className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:thin] sm:mx-0 sm:px-0"
         >
           {picks.map((item, idx) => {
-            const title = sanitizeBrandDisplayNames(item.title);
-            const description = sanitizeBrandDisplayNames(item.description);
+            const isHome = pathname === "/";
+            const title = sanitizeBrandDisplayNames(item.title, isHome);
+            const description = sanitizeBrandDisplayNames(item.description, isHome);
             return (
               <Link
                 key={`${item.href}-${idx}`}

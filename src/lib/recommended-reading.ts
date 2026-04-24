@@ -43,7 +43,7 @@ export function getRecommendedReadingPool(): RecommendedItem[] {
         href: helpfulGuidePath(slug),
         title: labelFromGuideSlug(slug),
         description:
-          "Evidence-based UK guide on GLP-1 treatment, safety, and regulation.",
+          "Evidence-based UK guide on weight loss treatment, safety, and regulation.",
         imageUrl,
       },
     ];

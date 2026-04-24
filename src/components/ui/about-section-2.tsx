@@ -53,7 +53,7 @@ const hlGreen = "font-bold text-emerald-700";
 const hlAccent = "font-bold text-brand-primary";
 
 const ctaClass =
-  "inline-flex h-12 cursor-pointer items-center gap-2 rounded-full bg-brand-cta px-5 text-sm font-semibold text-slate-900 shadow-md transition-all duration-300 hover:brightness-95 active:brightness-90";
+  "inline-flex min-h-[56px] cursor-pointer items-center gap-3 rounded-full bg-brand-cta px-10 py-3.5 text-base font-extrabold text-slate-900 shadow-lg ring-2 ring-amber-400/35 transition-all duration-300 hover:brightness-105 hover:ring-amber-400/55 active:brightness-95 sm:min-h-[60px] sm:px-12 sm:text-lg";
 
 export default function AboutSection2() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -130,7 +130,7 @@ export default function AboutSection2() {
                   href={HOME_COMPARE_HUB_HREF}
                   className={ctaClass}
                 >
-                  <Zap className="h-4 w-4 shrink-0 fill-slate-900" aria-hidden />
+                  <Zap className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6" aria-hidden />
                   Compare here
                 </Link>
               </TimelineContent>

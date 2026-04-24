@@ -162,10 +162,10 @@ export default function WhyChooseHealthWise() {
               </div>
               <Link
                 href={HOME_COMPARE_HUB_HREF}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-primary px-5 py-3.5 text-base font-bold text-white shadow-sm transition hover:brightness-110 sm:w-auto sm:self-start"
+                className="inline-flex w-full min-h-[56px] items-center justify-center gap-3 rounded-full bg-brand-primary px-10 py-4 text-lg font-extrabold text-white shadow-lg transition hover:scale-[1.02] hover:brightness-110 sm:w-auto sm:min-h-[60px] sm:self-start sm:px-12 sm:text-xl"
               >
                 Compare here
-                <ArrowRight className="h-4 w-4" aria-hidden />
+                <ArrowRight className="h-5 w-5 shrink-0 sm:h-6 sm:w-6" aria-hidden />
               </Link>
             </div>
           </div>
