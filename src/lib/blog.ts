@@ -80,6 +80,17 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "understanding-prescription-weight-loss-injections-uk",
+    title:
+      "Understanding Prescription Weight Loss Injections in the UK: What They May Actually Offer",
+    date: "2026-04-25",
+    category: "Guides",
+    description:
+      "Explore uk prescription weight loss injections and discover if they're the safe, effective boost you need.",
+    heroImage: "/blog/weight%20loss%20injection.webp",
+    feedTags: ["wegovy", "mounjaro", "guides", "how-it-works"],
+  },
+  {
     slug: "mounjaro-vs-ozempic-smart-comparisons-for-better-results",
     title: "Mounjaro vs Ozempic: Smart Comparisons for Better Results",
     date: "2026-04-24",

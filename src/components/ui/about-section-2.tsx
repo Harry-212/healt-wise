@@ -64,19 +64,19 @@ export default function AboutSection2() {
       className="w-full scroll-mt-24 border-b border-slate-200/80 bg-gradient-to-b from-slate-100/95 via-brand-surface to-emerald-50/40 py-10 md:py-14"
       aria-labelledby="about-heading"
     >
-      <TimelineSection className="w-full px-4 md:px-8 lg:px-10">
+      <TimelineSection className="w-full px-5 sm:px-6 md:px-10 lg:px-16 xl:px-20">
         <div
           ref={heroRef}
-          className="flex w-full flex-col items-start gap-8 lg:flex-row"
+          className="mx-auto flex w-full max-w-4xl flex-col items-start gap-8 lg:flex-row"
         >
-          <div className="w-full flex-1">
+          <div className="w-full min-w-0 flex-1">
             <TimelineContent
               as="h2"
               animationNum={0}
               timelineRef={heroRef}
               customVariants={revealVariants}
               id="about-heading"
-              className="mb-6 text-2xl leading-[110%] font-semibold text-brand-primary sm:text-4xl md:text-5xl"
+              className="mb-6 text-lg leading-snug font-semibold text-brand-primary sm:text-xl md:text-2xl"
             >
               {SITE_BRAND_NAME} is an{" "}
               <TimelineContent
