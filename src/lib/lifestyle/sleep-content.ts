@@ -10,16 +10,18 @@ import {
 const px = (id: number, w: number) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 
-export const SLEEP_HERO_IMAGE = px(1571453, 1400);
+export const SLEEP_HERO_IMAGE =
+  "https://images.pexels.com/photos/7445175/pexels-photo-7445175.jpeg";
 
 export const SLEEP_ZIGZAG_IMAGES = {
   connection: px(935777, 1200),
-  optimise: px(164186, 1200),
+  optimise: "https://images.pexels.com/photos/7445308/pexels-photo-7445308.jpeg",
 } as const;
 
 export const SLEEP_SYSTEM_IMAGE = px(3771069, 1200);
 
-export const SLEEP_PROMO_IMAGE = px(6695773, 1200);
+export const SLEEP_PROMO_IMAGE =
+  "https://images.pexels.com/photos/6603663/pexels-photo-6603663.jpeg";
 
 export const SLEEP_IMPACT_CARDS = [
   {

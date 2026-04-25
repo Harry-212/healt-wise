@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Zap, Calculator, Activity, Syringe } from "lucide-react";
+import { Zap, Calculator, Activity, Scale } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 
 const TOOL_CARDS = [
@@ -8,7 +8,7 @@ const TOOL_CARDS = [
     href: "/tools/bmi-calculator",
     label: "BMI Calculator",
     desc: "Check your BMI & calorie needs",
-    Icon: Calculator,
+    Icon: Scale,
     color: "emerald",
     iconBg: "from-emerald-50 to-emerald-100/60",
     iconBorder: "border-emerald-100",
@@ -32,7 +32,7 @@ const TOOL_CARDS = [
     href: "/tools/mounjaro-click-calculator",
     label: "Click Calculator",
     desc: "KwikPen dose & click guide",
-    Icon: Syringe,
+    Icon: Calculator,
     color: "violet",
     iconBg: "from-violet-50 to-violet-100/60",
     iconBorder: "border-violet-100",

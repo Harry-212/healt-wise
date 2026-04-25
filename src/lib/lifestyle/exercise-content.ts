@@ -10,17 +10,20 @@ import {
 const px = (id: number, w: number) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 
-export const EXERCISE_HERO_IMAGE = px(1882167, 1400);
+export const EXERCISE_HERO_IMAGE =
+  "https://images.pexels.com/photos/6285189/pexels-photo-6285189.jpeg";
 
 export const EXERCISE_ZIGZAG_IMAGES = {
-  role: px(1472886, 1200),
-  intensity: px(2940259, 1200),
+  role: "https://images.pexels.com/photos/6455814/pexels-photo-6455814.jpeg",
+  intensity: "https://images.pexels.com/photos/6551098/pexels-photo-6551098.jpeg",
   cardioStrength: px(3823039, 1200),
 } as const;
 
-export const EXERCISE_SYSTEM_IMAGE = px(4978382, 1200);
+export const EXERCISE_SYSTEM_IMAGE =
+  "https://images.pexels.com/photos/9171160/pexels-photo-9171160.jpeg";
 
-export const EXERCISE_PROMO_IMAGE = px(6695773, 1200);
+export const EXERCISE_PROMO_IMAGE =
+  "https://images.pexels.com/photos/5750469/pexels-photo-5750469.jpeg";
 
 export const EXERCISE_BENEFITS = [
   {

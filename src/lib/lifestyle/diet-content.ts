@@ -13,14 +13,16 @@ const px = (id: number, w: number) =>
 export const DIET_HERO_IMAGE = px(1153370, 1400);
 
 export const DIET_ZIGZAG_IMAGES = {
-  balanced: px(5939040, 1200),
+  balanced: "https://images.pexels.com/photos/1640775/pexels-photo-1640775.jpeg",
   calories: px(842571, 1200),
   consistency: px(1640772, 1200),
 } as const;
 
-export const DIET_SUPPORT_IMAGE = px(7176311, 1200);
+export const DIET_SUPPORT_IMAGE =
+  "https://images.pexels.com/photos/10714032/pexels-photo-10714032.jpeg";
 
-export const DIET_PROMO_IMAGE = px(3669700, 1200);
+export const DIET_PROMO_IMAGE =
+  "https://images.pexels.com/photos/6942017/pexels-photo-6942017.jpeg";
 
 export const DIET_PRINCIPLES = [
   {

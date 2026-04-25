@@ -13,7 +13,7 @@ export const TIPS_HERO_IMAGE = px(1640777, 1400);
 
 export const TIPS_ZIGZAG_IMAGES = {
   /** Nutrition — colourful balanced plates */
-  nutrition: px(5939040, 1200),
+  nutrition: "https://images.pexels.com/photos/5714348/pexels-photo-5714348.jpeg",
   /** Appetite — food & dining context */
   appetite: px(1640774, 1200),
   /** Consistency — training / sustainable movement */
@@ -24,7 +24,8 @@ export const TIPS_ZIGZAG_IMAGES = {
 export const TIPS_SUPPORT_IMAGE = px(4056723, 1200);
 
 /** Promo — clinical / consultation context */
-export const TIPS_PROMO_IMAGE = px(3762379, 1200);
+export const TIPS_PROMO_IMAGE =
+  "https://images.pexels.com/photos/7801341/pexels-photo-7801341.jpeg";
 
 export const TIPS_PRINCIPLES = [
   {

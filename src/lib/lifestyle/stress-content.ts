@@ -13,13 +13,15 @@ const px = (id: number, w: number) =>
 export const STRESS_HERO_IMAGE = px(3771089, 1400);
 
 export const STRESS_ZIGZAG_IMAGES = {
-  connection: px(4099468, 1200),
+  connection: "https://images.pexels.com/photos/34395933/pexels-photo-34395933.jpeg",
   calm: px(4056723, 1200),
 } as const;
 
-export const STRESS_SYSTEM_IMAGE = px(3823490, 1200);
+export const STRESS_SYSTEM_IMAGE =
+  "https://images.pexels.com/photos/5622219/pexels-photo-5622219.jpeg";
 
-export const STRESS_PROMO_IMAGE = px(6695773, 1200);
+export const STRESS_PROMO_IMAGE =
+  "https://images.pexels.com/photos/6670943/pexels-photo-6670943.jpeg";
 
 export const STRESS_IMPACT_CARDS = [
   {

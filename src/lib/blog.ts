@@ -80,6 +80,17 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "weekly-weight-loss-injections-uk-what-they-may-actually-do",
+    title: "Weekly Weight Loss Injections in the UK: What They May Actually Do",
+    date: "2026-04-25",
+    category: "Guides",
+    description:
+      "Weekly weight loss injections in the UK explained: how Wegovy and Mounjaro may affect appetite, access (NHS vs private), side effects, and what happens after stopping.",
+    heroImage:
+      "https://images.pexels.com/photos/5726708/pexels-photo-5726708.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    feedTags: ["wegovy", "mounjaro", "guides", "how-it-works"],
+  },
+  {
     slug: "understanding-prescription-weight-loss-injections-uk",
     title:
       "Understanding Prescription Weight Loss Injections in the UK: What They May Actually Offer",
