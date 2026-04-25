@@ -35,7 +35,7 @@ function NavBarAuthCluster() {
 
   if (!isSupabaseConfigured()) {
     return (
-      <div className="hidden shrink-0 items-center gap-2 sm:flex">
+      <div className="hidden shrink-0 items-center gap-2 xl:flex">
         <Link
           href="/my-hub/login"
           className="text-sm font-semibold text-brand-secondary hover:text-brand-primary"
@@ -55,7 +55,7 @@ function NavBarAuthCluster() {
   if (!ready) {
     return (
       <div
-        className="hidden h-9 w-32 shrink-0 animate-pulse rounded-lg bg-slate-200/80 sm:block"
+        className="hidden h-9 w-32 shrink-0 animate-pulse rounded-lg bg-slate-200/80 xl:block"
         aria-hidden
       />
     );
@@ -64,9 +64,9 @@ function NavBarAuthCluster() {
   if (user) {
     const name = user.email ? greetingNameFromEmail(user.email) : "there";
     return (
-      <div className="hidden shrink-0 items-center gap-2 md:gap-3 sm:flex">
+      <div className="hidden shrink-0 items-center gap-2 md:gap-3 xl:flex">
         <span
-          className="max-w-[7.5rem] truncate text-sm font-semibold text-slate-800 md:max-w-[11rem]"
+          className="max-w-[7.5rem] truncate text-sm font-semibold text-slate-800 xl:max-w-[11rem]"
           title={user.email ?? undefined}
         >
           Hi, {name}
@@ -83,7 +83,7 @@ function NavBarAuthCluster() {
   }
 
   return (
-    <div className="hidden shrink-0 items-center gap-2 sm:flex">
+    <div className="hidden shrink-0 items-center gap-2 xl:flex">
       <Link
         href="/my-hub/login"
         className="text-sm font-semibold text-brand-secondary hover:text-brand-primary"
@@ -106,8 +106,8 @@ export default function NavBar() {
   return (
     <>
       <header className="sticky top-0 z-[90] w-full max-w-full overflow-x-clip overflow-y-visible border-b border-brand-border bg-brand-card/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-brand-card/90">
-        <div className="relative mx-auto flex h-16 max-w-[1400px] min-h-0 min-w-0 items-center gap-2 px-3 sm:h-24 md:h-28 sm:gap-3 sm:px-4 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-3 lg:px-6">
-          <div className="flex min-w-0 flex-1 justify-start lg:flex-none lg:justify-self-start">
+        <div className="relative mx-auto flex h-16 max-w-[1400px] min-h-0 min-w-0 items-center gap-2 px-3 sm:h-24 md:h-28 sm:gap-3 sm:px-4 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-4 lg:px-6 xl:gap-6">
+          <div className="flex min-w-0 shrink-0 justify-start lg:justify-self-start">
             <Link
               href="/"
               className="group flex min-w-0 items-center gap-2 py-1"
@@ -126,13 +126,13 @@ export default function NavBar() {
           </div>
 
           <nav
-            className="hidden min-w-0 justify-self-center lg:block"
+            className="hidden min-w-0 justify-self-center lg:flex lg:justify-center"
             aria-label="Main"
           >
             <MegaMenuDesktop panels={NAV_PANELS} />
           </nav>
 
-          <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2 md:gap-3 lg:flex-none lg:justify-self-end">
+          <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2 md:gap-3 lg:shrink-0 lg:flex-none lg:justify-self-end">
             <MobileNavDrawer panels={NAV_PANELS} />
             <Link
               href={HOME_COMPARE_HUB_HREF}
