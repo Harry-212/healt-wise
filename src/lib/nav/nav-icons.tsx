@@ -6,6 +6,7 @@ import {
   BadgePoundSterling,
   BookOpen,
   Brain,
+  Calculator,
   ClipboardList,
   GitCompare,
   HeartPulse,
@@ -24,6 +25,7 @@ import {
 export const NAV_LINK_ICONS: Record<string, LucideIcon> = {
   pill: Pill,
   syringe: Syringe,
+  calculator: Calculator,
   compare: GitCompare,
   pound: BadgePoundSterling,
   book: BookOpen,

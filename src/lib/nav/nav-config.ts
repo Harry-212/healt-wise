@@ -118,7 +118,7 @@ export const NAV_PANELS: NavPanel[] = [
           {
             label: "Mounjaro Click Calculator & Chart",
             href: "/tools/mounjaro-click-calculator",
-            icon: "syringe",
+            icon: "calculator",
           },
         ],
       },
