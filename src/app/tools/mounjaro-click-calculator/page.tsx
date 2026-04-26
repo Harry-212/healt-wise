@@ -55,8 +55,8 @@ export default function MounjaroClickCalculatorPage() {
 
           <div className="relative mt-12 aspect-16/10 w-full overflow-hidden rounded-2xl bg-slate-200 shadow-lg ring-1 ring-slate-200/80">
             <Image
-              src="https://images.unsplash.com/photo-1584308666744-24d5e4708779?auto=format&fit=crop&q=75&w=1600"
-              alt="Medical syringe and treatment concepts"
+              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=75&w=1600"
+              alt="Patient consultation and medical care context"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 768px"
