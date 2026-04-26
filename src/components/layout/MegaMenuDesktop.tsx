@@ -1,42 +1,42 @@
-"use client";
+'use client';
 
-import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-import type { NavPanel } from "@/lib/nav/nav-config";
-import { NavLinkIcon } from "@/lib/nav/nav-icons";
+import { useCallback, useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+import type { NavPanel } from '@/lib/nav/nav-config';
+import { NavLinkIcon } from '@/lib/nav/nav-icons';
 
 /* Match NavBar row exactly: h-16 sm:h-24 md:h-28 */
-const PANEL_TOP = "top-16 sm:top-24 md:top-28";
+const PANEL_TOP = 'top-16 sm:top-24 md:top-28';
 
 const scrollAreaClass =
-  "min-h-0 flex-1 overflow-y-auto overscroll-contain p-4 sm:p-5 [scrollbar-gutter:stable] [scrollbar-width:thin] [scrollbar-color:rgb(203_213_225)_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:my-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-300/90 hover:[&::-webkit-scrollbar-thumb]:bg-slate-400/90";
+  'min-h-0 flex-1 overflow-y-auto overscroll-contain p-4 sm:p-5 [scrollbar-gutter:stable] [scrollbar-width:thin] [scrollbar-color:rgb(203_213_225)_transparent] [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:my-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-slate-300/90 hover:[&::-webkit-scrollbar-thumb]:bg-slate-400/90';
 
-function panelShellWidth(menuWidth: NavPanel["menuWidth"]): string {
-  if (menuWidth === "content") {
-    return "w-max max-w-[min(100vw-1.5rem,22rem)]";
+function panelShellWidth(menuWidth: NavPanel['menuWidth']): string {
+  if (menuWidth === 'content') {
+    return 'w-max max-w-[min(100vw-1.5rem,22rem)]';
   }
-  if (menuWidth === "content-md") {
-    return "w-max max-w-[min(100vw-1.5rem,28rem)]";
+  if (menuWidth === 'content-md') {
+    return 'w-max max-w-[min(100vw-1.5rem,28rem)]';
   }
-  return "w-[min(100vw-1.25rem,1200px)]";
+  return 'w-[min(100vw-1.25rem,1200px)]';
 }
 
 function panelGridClass(panel: NavPanel, colCount: number): string {
-  if (panel.menuWidth === "content" || panel.menuWidth === "content-md") {
-    return "grid min-w-0 grid-cols-1 gap-2";
+  if (panel.menuWidth === 'content' || panel.menuWidth === 'content-md') {
+    return 'grid min-w-0 grid-cols-1 gap-2';
   }
-  if (panel.id === "treatments") {
-    return "grid min-w-0 grid-cols-2 gap-x-4 gap-y-5 md:grid-cols-2 lg:grid-cols-4";
+  if (panel.id === 'treatments') {
+    return 'grid min-w-0 grid-cols-2 gap-x-4 gap-y-5 md:grid-cols-2 lg:grid-cols-4';
   }
   if (colCount >= 5) {
-    return "grid min-w-0 grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-3 lg:grid-cols-5";
+    return 'grid min-w-0 grid-cols-2 gap-x-4 gap-y-5 sm:grid-cols-3 lg:grid-cols-5';
   }
   if (colCount === 1) {
-    return "grid min-w-0 grid-cols-1 gap-3 sm:max-w-md";
+    return 'grid min-w-0 grid-cols-1 gap-3 sm:max-w-md';
   }
-  return "grid min-w-0 grid-cols-2 gap-x-4 gap-y-5 md:grid-cols-2 lg:grid-cols-4";
+  return 'grid min-w-0 grid-cols-2 gap-x-4 gap-y-5 md:grid-cols-2 lg:grid-cols-4';
 }
 
 export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
@@ -67,16 +67,14 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
   /* Close when clicking/touching outside the nav */
   useEffect(() => {
     if (!openId) return;
-    const handler = (e: MouseEvent | TouchEvent) => {
+    const handler = (e: PointerEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         closeNow();
       }
     };
-    document.addEventListener("mousedown", handler, true);
-    document.addEventListener("touchstart", handler, true);
+    document.addEventListener('pointerdown', handler, true);
     return () => {
-      document.removeEventListener("mousedown", handler, true);
-      document.removeEventListener("touchstart", handler, true);
+      document.removeEventListener('pointerdown', handler, true);
     };
   }, [openId, closeNow]);
 
@@ -97,10 +95,7 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
   };
 
   return (
-    <ul
-      ref={navRef}
-      className="relative flex min-w-0 flex-nowrap items-center justify-center gap-x-0.5 xl:gap-x-1"
-    >
+    <ul ref={navRef} className="relative flex min-w-0 flex-nowrap items-center justify-center gap-x-0.5 xl:gap-x-1">
       {panels.map((panel) => {
         if (panel.directHref) {
           return (
@@ -124,32 +119,27 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
           <li
             key={panel.id}
             className="relative flex shrink-0"
-            onMouseEnter={() => {
+            onPointerEnter={() => {
               if (!isTouch.current) openPanel(panel.id);
             }}
-            onMouseLeave={() => {
+            onPointerLeave={() => {
               if (!isTouch.current) scheduleClose();
             }}
           >
             <button
               type="button"
               onPointerDown={(e) => {
-                isTouch.current = e.pointerType === "touch" || e.pointerType === "pen";
+                isTouch.current = e.pointerType === 'touch' || e.pointerType === 'pen';
               }}
               onClick={() => handleButtonClick(panel.id)}
               className={`inline-flex h-10 items-center gap-1 whitespace-nowrap rounded-lg px-3 text-[13px] font-semibold leading-none transition-colors xl:px-3.5 ${
-                isOpen
-                  ? "text-brand-cta"
-                  : "text-brand-secondary hover:bg-brand-surface/80 hover:text-brand-cta"
+                isOpen ? 'text-brand-cta' : 'text-brand-secondary hover:bg-brand-surface/80 hover:text-brand-cta'
               }`}
               aria-expanded={isOpen}
               aria-haspopup="true"
             >
               {panel.label}
-              <ChevronDown
-                className={`h-3.5 w-3.5 shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`}
-                aria-hidden
-              />
+              <ChevronDown className={`h-3.5 w-3.5 shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} aria-hidden />
             </button>
 
             <AnimatePresence>
@@ -159,11 +149,12 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-                  className={`fixed left-1/2 z-[100] ${shellW} -translate-x-1/2 px-1 ${PANEL_TOP}`}
-                  onMouseEnter={() => {
+                  className={`fixed left-1/2 z-[1000] ${shellW} -translate-x-1/2 px-1 ${PANEL_TOP}`}
+                  style={{ willChange: 'transform' }}
+                  onPointerEnter={() => {
                     if (!isTouch.current) cancelClose();
                   }}
-                  onMouseLeave={() => {
+                  onPointerLeave={() => {
                     if (!isTouch.current) scheduleClose();
                   }}
                 >
@@ -171,15 +162,8 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
                     <div className={scrollAreaClass}>
                       <div className={gridClass}>
                         {cols.map((col) => (
-                          <div
-                            key={col.title || col.links[0]?.href}
-                            className="min-w-0"
-                          >
-                            {col.title ? (
-                              <h3 className="mb-2 border-b border-brand-border pb-1.5 text-[11px] font-bold uppercase tracking-wide text-brand-secondary">
-                                {col.title}
-                              </h3>
-                            ) : null}
+                          <div key={col.title || col.links[0]?.href} className="min-w-0">
+                            {col.title ? <h3 className="mb-2 border-b border-brand-border pb-1.5 text-[11px] font-bold uppercase tracking-wide text-brand-secondary">{col.title}</h3> : null}
                             <ul className="space-y-0.5">
                               {col.links.map((link) => (
                                 <li key={link.href + link.label}>
