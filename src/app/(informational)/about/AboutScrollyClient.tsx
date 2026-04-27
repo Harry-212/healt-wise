@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import {
   motion,
   useReducedMotion,
@@ -439,12 +440,7 @@ export default function AboutScrollyClient() {
             >
               Weight loss tracker
             </Link>
-            <Link
-              href="/wegovy-price-comparison"
-              className="inline-flex items-center justify-center rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
-            >
-              Compare Wegovy prices
-            </Link>
+            <CompareHereLink href="/wegovy-price-comparison" />
           </motion.div>
         </motion.div>
       </section>

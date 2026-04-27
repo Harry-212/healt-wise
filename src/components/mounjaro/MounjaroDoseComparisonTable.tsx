@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import { Star } from "lucide-react";
 import { formatGBP, formatUkGroupedInteger } from "@/lib/provider-helpers";
 import {
@@ -291,12 +291,7 @@ export default function MounjaroDoseComparisonTable({
       <RowCards dose={dose} rows={rows} />
 
       <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center">
-        <Link
-          href="/mounjaro-price-comparison"
-          className="inline-flex items-center justify-center rounded-xl bg-slate-900 px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-slate-800"
-        >
-          Compare Mounjaro prices UK
-        </Link>
+        <CompareHereLink href="/mounjaro-price-comparison" />
       </div>
     </section>
   );

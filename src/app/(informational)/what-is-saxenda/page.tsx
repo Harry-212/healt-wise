@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import MedicationPriceCompareTeaser from "@/components/content/MedicationPriceCompareTeaser";
 import SaxendaExpectationPhases from "@/components/saxenda/SaxendaExpectationPhases";
 import {
@@ -584,13 +585,7 @@ export default function WhatIsSaxendaPage() {
                 cost, consultation rules, and cold-chain delivery before you choose.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/saxenda-price-comparison"
-                  className="inline-flex items-center gap-2 rounded-xl bg-sky-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-sky-700"
-                >
-                  Compare Saxenda prices UK
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                <CompareHereLink href="/saxenda-price-comparison" />
                 <Link
                   href="/compare/best-weight-loss-injections-uk"
                   className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:border-sky-300"

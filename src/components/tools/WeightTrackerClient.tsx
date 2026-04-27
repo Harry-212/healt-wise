@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   AnimatePresence,
@@ -962,12 +963,8 @@ export default function WeightTrackerClient() {
                   <Link href="/prices/cheapest-options-uk" className="inline-flex items-center gap-1 rounded-xl bg-amber-500 px-4 py-2 text-sm font-bold text-white shadow hover:bg-amber-400">
                     Cheapest options UK
                   </Link>
-                  <Link href="/wegovy-price-comparison" className="inline-flex items-center gap-1 rounded-xl border border-amber-300 bg-white px-4 py-2 text-sm font-semibold text-amber-900 hover:bg-amber-50">
-                    Wegovy prices
-                  </Link>
-                  <Link href="/mounjaro-price-comparison" className="inline-flex items-center gap-1 rounded-xl border border-amber-300 bg-white px-4 py-2 text-sm font-semibold text-amber-900 hover:bg-amber-50">
-                    Mounjaro prices
-                  </Link>
+                  <CompareHereLink href="/wegovy-price-comparison" size="sm" />
+                  <CompareHereLink href="/mounjaro-price-comparison" size="sm" />
                 </div>
 
                 {/* Table */}

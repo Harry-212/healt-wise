@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -19,6 +20,108 @@ import {
 
 const providerUrl =
   "https://www.boltpharmacy.co.uk/prelanding30?utm_source=healthwise360";
+
+/** Subtle “official paper” border: double rules, corner scrollwork, and margin guilloché. */
+function BoltOfficialDocumentFrame({ children }: { children: ReactNode }) {
+  return (
+    <div className="relative">
+      <div
+        className="pointer-events-none absolute inset-0 -m-3 rounded-sm opacity-[0.45] sm:-m-4"
+        aria-hidden
+        style={{
+          background: `
+            repeating-linear-gradient(
+              90deg,
+              rgba(120, 83, 32, 0.07) 0px,
+              rgba(120, 83, 32, 0.07) 1px,
+              transparent 1px,
+              transparent 10px
+            ),
+            repeating-linear-gradient(
+              0deg,
+              rgba(120, 83, 32, 0.05) 0px,
+              rgba(120, 83, 32, 0.05) 1px,
+              transparent 1px,
+              transparent 10px
+            )
+          `,
+        }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0 -m-3 overflow-hidden rounded-sm sm:-m-4"
+        aria-hidden
+      >
+        <div className="absolute inset-x-4 top-0 h-2.5 border-y border-amber-900/25 bg-[repeating-linear-gradient(90deg,transparent,transparent_3px,rgba(120,53,15,0.12)_3px,rgba(120,53,15,0.12)_4px)]" />
+        <div className="absolute inset-x-4 bottom-0 h-2.5 border-y border-amber-900/25 bg-[repeating-linear-gradient(90deg,transparent,transparent_3px,rgba(120,53,15,0.12)_3px,rgba(120,53,15,0.12)_4px)]" />
+        <div className="absolute inset-y-4 left-0 w-2.5 border-x border-amber-900/25 bg-[repeating-linear-gradient(0deg,transparent,transparent_3px,rgba(120,53,15,0.12)_3px,rgba(120,53,15,0.12)_4px)]" />
+        <div className="absolute inset-y-4 right-0 w-2.5 border-x border-amber-900/25 bg-[repeating-linear-gradient(0deg,transparent,transparent_3px,rgba(120,53,15,0.12)_3px,rgba(120,53,15,0.12)_4px)]" />
+        <svg
+          className="absolute left-0 top-0 h-14 w-14 text-amber-900/35"
+          viewBox="0 0 56 56"
+          fill="none"
+        >
+          <path
+            stroke="currentColor"
+            strokeWidth="1.15"
+            d="M2 54V14Q2 2 14 2H54M4 50V16Q4 4 16 4H50"
+          />
+          <path
+            stroke="currentColor"
+            strokeWidth="0.75"
+            opacity="0.65"
+            d="M6 18H20M10 22H20M6 26H20M10 8V18"
+          />
+        </svg>
+        <svg
+          className="absolute right-0 top-0 h-14 w-14 rotate-90 text-amber-900/35"
+          viewBox="0 0 56 56"
+          fill="none"
+        >
+          <path
+            stroke="currentColor"
+            strokeWidth="1.15"
+            d="M2 54V14Q2 2 14 2H54M4 50V16Q4 4 16 4H50"
+          />
+        </svg>
+        <svg
+          className="absolute bottom-0 left-0 h-14 w-14 -rotate-90 text-amber-900/35"
+          viewBox="0 0 56 56"
+          fill="none"
+        >
+          <path
+            stroke="currentColor"
+            strokeWidth="1.15"
+            d="M2 54V14Q2 2 14 2H54M4 50V16Q4 4 16 4H50"
+          />
+        </svg>
+        <svg
+          className="absolute bottom-0 right-0 h-14 w-14 rotate-180 text-amber-900/35"
+          viewBox="0 0 56 56"
+          fill="none"
+        >
+          <path
+            stroke="currentColor"
+            strokeWidth="1.15"
+            d="M2 54V14Q2 2 14 2H54M4 50V16Q4 4 16 4H50"
+          />
+        </svg>
+      </div>
+      <div
+        className="relative z-[1] rounded-sm border-2 border-amber-900/40 bg-white shadow-[inset_0_0_0_1px_rgba(196,160,80,0.25),0_0_0_1px_rgba(120,53,15,0.1),0_32px_90px_rgba(15,23,42,0.09)]"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(15, 23, 42, 0.018) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(15, 23, 42, 0.018) 1px, transparent 1px)
+          `,
+          backgroundSize: "20px 20px",
+        }}
+      >
+        <div className="pointer-events-none absolute inset-3 rounded-sm border border-dashed border-amber-800/20 sm:inset-4" aria-hidden />
+        {children}
+      </div>
+    </div>
+  );
+}
 
 export default function BoltPharmacyContent() {
   const [copied, setCopied] = useState(false);
@@ -44,13 +147,13 @@ export default function BoltPharmacyContent() {
     "font-semibold text-amber-800 underline decoration-amber-200 underline-offset-2 hover:text-amber-950";
 
   return (
-    <article className="min-h-screen bg-slate-200 pb-20">
+    <article className="min-h-screen bg-[#ddd7cd] pb-20 [background-image:radial-gradient(ellipse_at_30%_0%,#ebe6dc_0%,transparent_55%),radial-gradient(ellipse_at_70%_100%,#d4cec3_0%,#e8e3d8_100%)]">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="rounded-[2.5rem] border-2 border-slate-300 bg-slate-100 p-6 shadow-[0_30px_80px_rgba(15,23,42,0.08)]">
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-lg">
-            <div className="flex flex-col gap-6 border-b border-slate-200 pb-6 sm:flex-row sm:items-end sm:justify-between">
+        <BoltOfficialDocumentFrame>
+          <div className="p-6 sm:p-8 md:p-10">
+            <div className="flex flex-col gap-6 border-b border-amber-900/15 pb-6 sm:flex-row sm:items-end sm:justify-between">
               <div className="space-y-3">
-                <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
+                <p className="font-medium text-xs uppercase tracking-[0.28em] text-amber-950/70">
                   Health Wise — pharmacy briefing
                 </p>
                 <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
@@ -60,8 +163,8 @@ export default function BoltPharmacyContent() {
                   Official summary: how Bolt Pharmacy delivers online consultation, clinical review, prescription delivery, and ongoing support in the UK.
                 </p>
               </div>
-              <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
-              <div className="mb-3 text-xs uppercase tracking-[0.22em] text-slate-500">
+              <div className="rounded-sm border border-amber-900/20 bg-[#faf8f4] p-4 text-sm text-slate-700 shadow-[inset_0_0_0_1px_rgba(180,140,60,0.12)]">
+              <div className="mb-3 text-xs uppercase tracking-[0.22em] text-amber-900/60">
                 Document details
               </div>
               <div className="space-y-3">
@@ -347,9 +450,9 @@ export default function BoltPharmacyContent() {
               </div>
             </section>
           </div>
-        </div>
+          </div>
+        </BoltOfficialDocumentFrame>
       </div>
-    </div>
     </article>
   );
 }

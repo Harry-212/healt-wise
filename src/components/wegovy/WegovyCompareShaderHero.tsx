@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import Link from "next/link";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import { Instrument_Serif } from "next/font/google";
 import { ArrowRight, BadgeCheck, Scale, Sparkles } from "lucide-react";
 import { ShaderBackground } from "@/components/ui/hero-shader";
@@ -88,12 +89,7 @@ export default function WegovyCompareShaderHero({
             </p>
 
             <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:justify-start">
-              <a
-                href="#wegovy-compare-table"
-                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-xs font-medium text-slate-900 transition hover:bg-white/90"
-              >
-                Compare prices
-              </a>
+              <CompareHereLink href="#wegovy-compare-table" size="hero" />
               <Link
                 href="/what-is-wegovy#eligibility-uk"
                 className="inline-flex items-center justify-center rounded-full border border-white/35 bg-transparent px-8 py-3 text-xs font-normal text-white transition hover:border-white/55 hover:bg-white/10"

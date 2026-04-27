@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import { motion } from "framer-motion";
 import {
   Zap,
@@ -214,13 +215,7 @@ export default function CompareTripleShowcase() {
                       <Layers className="h-3.5 w-3.5" aria-hidden />
                       What Is {c.brand}?
                     </Link>
-                    <Link
-                      href={c.priceHref}
-                      className="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-xs font-semibold text-brand-primary underline-offset-2 hover:underline"
-                    >
-                      Full Price Page
-                      <Zap className="h-3.5 w-3.5 fill-brand-primary" aria-hidden />
-                    </Link>
+                    <CompareHereLink href={c.priceHref} size="card" />
                   </div>
                 </div>
               </motion.article>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import ProviderCard from "@/components/ui/ProviderCard";
 import { PharmacyProvider } from "@/lib/types/provider";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -19,9 +19,9 @@ const MOCK_PROVIDERS: PharmacyProvider[] = [];
 export default function WegovyMaintenanceList() {
   return (
     <div className="container mx-auto px-4 max-w-5xl py-12">
-      <Link href="/wegovy-price-comparison" className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium mb-8">
-        <ArrowLeft className="h-4 w-4" /> Back to Wegovy Hub
-      </Link>
+      <div className="mb-8">
+        <CompareHereLink href="/wegovy-price-comparison" />
+      </div>
       
       <div className="mb-10 p-8 bg-emerald-50 rounded-2xl border border-emerald-100">
         <h1 className="text-3xl font-bold text-emerald-950 mb-4">Wegovy Maintenance Policies</h1>

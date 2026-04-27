@@ -1,14 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  Zap,
-  ChevronRight,
-  Pill,
-  Sparkles,
-  Syringe,
-} from "lucide-react";
+import { ChevronRight, Pill, Sparkles, Syringe } from "lucide-react";
 import { useState } from "react";
 import type { CompareMedicationTab } from "@/lib/routes/compare-page-layout";
 import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
@@ -209,13 +204,7 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
             <span className="font-semibold text-slate-800">{last}</span>.
           </p>
         </div>
-        <Link
-          href={FULL_PAGE[med]}
-          className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
-        >
-          Open Full Price Comparison Page
-          <Zap className="h-4 w-4 fill-brand-primary" aria-hidden />
-        </Link>
+        <CompareHereLink href={FULL_PAGE[med]} size="sm" className="shrink-0" />
       </div>
 
       <SnapshotStrip med={med} />
@@ -257,13 +246,6 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
         >
           <Pill className="h-4 w-4" aria-hidden />
           What Is {TAB_LABEL[med]}?
-        </Link>
-        <Link
-          href={FULL_PAGE[med]}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 underline-offset-2 hover:underline"
-        >
-          Dedicated Price Comparison
-          <Zap className="h-4 w-4 fill-slate-700" aria-hidden />
         </Link>
       </div>
     </motion.div>

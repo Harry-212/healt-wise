@@ -1,13 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import {
-  ArrowRight,
-  BarChart3,
-  BookOpen,
-  HelpCircle,
-  Link2,
-  Sparkles,
-} from "lucide-react";
+import { BarChart3, BookOpen, HelpCircle, Link2, Sparkles } from "lucide-react";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import TrustSignals from "@/components/trust/TrustSignals";
 import { CHEAPEST_OPTIONS_FAQS } from "@/lib/seo/cheapest-options-page-seo";
 import { getCheapestOptionsMarketSummary } from "@/lib/data/cheapest-options-market-summary";
@@ -356,31 +350,22 @@ export default function CheapestOptionsUkPage() {
           </p>
           <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <li className="flex-1 sm:flex-none">
-              <Link
+              <CompareHereLink
                 href="/wegovy-price-comparison"
-                className="group flex items-center justify-between gap-3 rounded-2xl bg-teal-600 px-5 py-4 text-sm font-bold text-white shadow-lg shadow-teal-950/30 transition hover:bg-teal-500 sm:min-w-[200px]"
-              >
-                Wegovy prices UK
-                <ArrowRight className="h-4 w-4 shrink-0 transition group-hover:translate-x-0.5" />
-              </Link>
+                className="w-full sm:min-w-[200px]"
+              />
             </li>
             <li className="flex-1 sm:flex-none">
-              <Link
+              <CompareHereLink
                 href="/mounjaro-price-comparison"
-                className="group flex items-center justify-between gap-3 rounded-2xl bg-violet-600 px-5 py-4 text-sm font-bold text-white shadow-lg shadow-violet-950/30 transition hover:bg-violet-500 sm:min-w-[200px]"
-              >
-                Mounjaro prices UK
-                <ArrowRight className="h-4 w-4 shrink-0 transition group-hover:translate-x-0.5" />
-              </Link>
+                className="w-full sm:min-w-[200px]"
+              />
             </li>
             <li className="flex-1 sm:flex-none">
-              <Link
+              <CompareHereLink
                 href="/saxenda-price-comparison"
-                className="group flex items-center justify-between gap-3 rounded-2xl bg-sky-600 px-5 py-4 text-sm font-bold text-white shadow-lg shadow-sky-950/30 transition hover:bg-sky-500 sm:min-w-[200px]"
-              >
-                Saxenda prices UK
-                <ArrowRight className="h-4 w-4 shrink-0 transition group-hover:translate-x-0.5" />
-              </Link>
+                className="w-full sm:min-w-[200px]"
+              />
             </li>
           </ul>
         </SectionInner>

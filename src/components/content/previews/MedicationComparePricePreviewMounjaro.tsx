@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import { TrustpilotColumnHeaderContent } from "@/components/compare/TrustpilotRatingPresentation";
 import {
   doseLabel,
@@ -124,13 +124,7 @@ export default function MedicationComparePricePreviewMounjaro() {
                     </>
                   )}
                 </p>
-                <Link
-                  href={COMPARE_HREF}
-                  className="inline-flex items-center gap-2 rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-violet-700"
-                >
-                  Open full comparison table
-                  <ArrowRight className="h-4 w-4" aria-hidden />
-                </Link>
+                <CompareHereLink href={COMPARE_HREF} size="sm" />
               </td>
             </tr>
           </tfoot>

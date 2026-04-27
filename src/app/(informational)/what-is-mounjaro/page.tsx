@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import MedicationPriceCompareTeaser from "@/components/content/MedicationPriceCompareTeaser";
 import {
   MounjaroDeferredBodyJourneyFlow,
@@ -651,13 +652,7 @@ export default function WhatIsMounjaroPage() {
                 rather than a single headline price.
               </p>
               <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/mounjaro-price-comparison"
-                  className="inline-flex items-center gap-2 rounded-xl bg-violet-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-violet-700"
-                >
-                  Compare Mounjaro prices UK
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                <CompareHereLink href="/mounjaro-price-comparison" />
                 <Link
                   href="/compare/best-weight-loss-injections-uk"
                   className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:border-violet-300"

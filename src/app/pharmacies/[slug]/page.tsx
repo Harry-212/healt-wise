@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import AsdaOnlineDoctorContent from "@/components/pharmacies/content/AsdaOnlineDoctorContent";
 import AshcroftPharmacyContent from "@/components/pharmacies/content/AshcroftPharmacyContent";
 import AypHealthcareContent from "@/components/pharmacies/content/AypHealthcareContent";
@@ -496,31 +497,13 @@ export default async function PharmacyProfilePage({ params }: Props) {
 
       <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         {w && (
-          <Link
-            href="/wegovy-price-comparison#wegovy-compare-table"
-            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-teal-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-teal-700"
-          >
-            All Wegovy providers
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </Link>
+          <CompareHereLink href="/wegovy-price-comparison#wegovy-compare-table" />
         )}
         {m && (
-          <Link
-            href="/mounjaro-price-comparison#mounjaro-compare-table"
-            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-violet-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-violet-700"
-          >
-            All Mounjaro providers
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </Link>
+          <CompareHereLink href="/mounjaro-price-comparison#mounjaro-compare-table" />
         )}
         {s && (
-          <Link
-            href="/saxenda-price-comparison#saxenda-compare-table"
-            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-sky-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-sky-700"
-          >
-            All Saxenda providers
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </Link>
+          <CompareHereLink href="/saxenda-price-comparison#saxenda-compare-table" />
         )}
         <Link
           href="/helpful-guides"

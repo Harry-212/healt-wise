@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft, Stethoscope } from "lucide-react";
+import { Stethoscope } from "lucide-react";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import ProviderCard from "@/components/ui/ProviderCard";
 import { PharmacyProvider } from "@/lib/types/provider";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -24,9 +24,9 @@ const MOCK_PROVIDERS: PharmacyProvider[] = [
 export default function MounjaroPriceList() {
   return (
     <div className="container mx-auto px-4 max-w-5xl py-12">
-      <Link href="/mounjaro-price-comparison" className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium mb-8">
-        <ArrowLeft className="h-4 w-4" /> Back to Mounjaro Hub
-      </Link>
+      <div className="mb-8">
+        <CompareHereLink href="/mounjaro-price-comparison" />
+      </div>
       
       <div className="mb-10 lg:w-2/3">
         <h1 className="text-3xl font-bold text-slate-900 mb-4">Complete Mounjaro Price List UK</h1>

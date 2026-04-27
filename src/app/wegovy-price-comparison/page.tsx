@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import CompareHereLink from "@/components/ui/CompareHereLink";
 import WegovyCompareChartsSection from "@/components/compare/WegovyCompareChartsSection";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import WegovyCompareShaderHero from "@/components/wegovy/WegovyCompareShaderHero";
@@ -347,12 +348,7 @@ export default function CompareWegovyPricesUkPage() {
               live pricing on regulated sites.
             </p>
             <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-              <a
-                href="#wegovy-compare-table"
-                className="inline-flex items-center justify-center rounded-2xl bg-amber-500 px-6 py-3.5 text-sm font-bold text-slate-900 shadow-lg transition hover:brightness-95"
-              >
-                Compare prices now
-              </a>
+              <CompareHereLink href="#wegovy-compare-table" size="footer" />
               <Link
                 href="/what-is-wegovy#eligibility-uk"
                 className="inline-flex items-center justify-center rounded-2xl border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
