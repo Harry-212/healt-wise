@@ -16,6 +16,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 
 const METHOD_STEPS: {
   id: string;
@@ -303,17 +304,17 @@ export default function OurMethodology() {
           <div className="flex flex-wrap items-center gap-2 sm:justify-end">
             <Link
               href={HOME_COMPARE_HUB_HREF}
-              className="inline-flex min-h-[52px] shrink-0 items-center justify-center gap-3 rounded-full border-2 border-emerald-200 bg-white px-8 py-3.5 text-base font-extrabold text-emerald-900 shadow-md transition-colors hover:bg-emerald-50 sm:min-h-[56px] sm:px-10 sm:py-4 sm:text-lg"
+              className={`${homepageYellowCtaSolid} min-h-[52px] shrink-0 px-8 py-3.5 text-base ring-2 ring-amber-300/40 hover:ring-amber-400/60 sm:min-h-[56px] sm:px-10 sm:py-4 sm:text-lg`}
             >
               Compare here
-              <Zap className="h-5 w-5 shrink-0 fill-emerald-900 sm:h-6 sm:w-6" aria-hidden />
+              <Zap className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6" aria-hidden />
             </Link>
             <Link
               href="/methodology"
-              className="group inline-flex min-h-[52px] shrink-0 items-center justify-center gap-2 rounded-full bg-emerald-700 px-8 py-3.5 text-base font-bold text-white transition-colors hover:bg-emerald-800 sm:min-h-[56px] sm:px-10 sm:text-lg"
+              className="group inline-flex min-h-[52px] shrink-0 items-center justify-center gap-2 rounded-full border-2 border-amber-500/50 bg-amber-300 px-8 py-3.5 text-base font-extrabold text-slate-900 shadow-lg transition hover:scale-[1.02] hover:bg-amber-400 active:scale-[0.98] sm:min-h-[56px] sm:px-10 sm:text-lg"
             >
               Read full guide
-              <Zap className="h-5 w-5 fill-white transition-transform group-hover:scale-110 sm:h-6 sm:w-6" aria-hidden />
+              <Zap className="h-5 w-5 fill-slate-900 transition-transform group-hover:scale-110 sm:h-6 sm:w-6" aria-hidden />
             </Link>
           </div>
         </div>

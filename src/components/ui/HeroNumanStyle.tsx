@@ -1,14 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Zap, Calculator, Activity, Scale } from "lucide-react";
+import { Zap, Calculator, Activity, Syringe } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 
 const TOOL_CARDS = [
   {
     href: "/tools/bmi-calculator",
     label: "BMI Calculator",
     desc: "Check your BMI & calorie needs",
-    Icon: Scale,
+    Icon: Calculator,
     color: "emerald",
     iconBg: "from-emerald-50 to-emerald-100/60",
     iconBorder: "border-emerald-100",
@@ -32,7 +33,7 @@ const TOOL_CARDS = [
     href: "/tools/mounjaro-click-calculator",
     label: "Click Calculator",
     desc: "KwikPen dose & click guide",
-    Icon: Calculator,
+    Icon: Syringe,
     color: "violet",
     iconBg: "from-violet-50 to-violet-100/60",
     iconBorder: "border-violet-100",
@@ -92,7 +93,7 @@ export default function HeroNumanStyle() {
             <div className="mt-6 flex w-full sm:mt-7">
               <Link
                 href={HOME_COMPARE_HUB_HREF}
-                className="group relative inline-flex w-full min-h-[80px] max-w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-brand-cta px-8 py-6 text-2xl font-extrabold leading-tight tracking-tight text-slate-900 shadow-2xl ring-[3px] ring-amber-400/50 transition-all duration-300 hover:scale-[1.02] hover:brightness-105 hover:shadow-amber-500/35 hover:ring-amber-400/80 active:scale-[0.98] sm:min-h-[92px] sm:w-auto sm:px-16 sm:py-6 sm:text-3xl md:min-h-[100px] md:px-20 md:py-7 md:text-[2.125rem]"
+                className={`${homepageYellowCtaSolid} group relative w-full min-h-[80px] max-w-full overflow-hidden rounded-full px-8 py-6 text-2xl leading-tight tracking-tight ring-[3px] ring-amber-300/50 hover:ring-amber-400/80 hover:shadow-amber-500/30 sm:min-h-[92px] sm:w-auto sm:px-16 sm:py-6 sm:text-3xl md:min-h-[100px] md:px-20 md:py-7 md:text-[2.125rem]`}
               >
                 <span>Compare The Price</span>
                 <Zap
@@ -124,7 +125,7 @@ export default function HeroNumanStyle() {
                   </div>
                   <div className="relative mt-2 h-10 w-full transition-transform duration-500 group-hover:scale-105 sm:h-12">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className={`flex h-5 w-4/5 items-center justify-start rounded bg-gradient-to-br ${tool.iconBg} border ${tool.iconBorder} px-1.5 shadow-sm sm:h-7 sm:px-2`}>
+                      <div className={`flex h-5 w-4/5 items-center justify-start rounded bg-linear-to-br ${tool.iconBg} border ${tool.iconBorder} px-1.5 shadow-sm sm:h-7 sm:px-2`}>
                         <div className={`h-1 w-4 rounded-full ${tool.iconDot} sm:h-1.5 sm:w-6`} />
                       </div>
                     </div>

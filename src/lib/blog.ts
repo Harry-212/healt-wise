@@ -175,7 +175,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     category: 'Guides',
     description: 'Learn how licensed weight loss injections in the UK can support appetite control, clinical oversight, and longer-term progress with regulated treatment pathways.',
     heroImage: '/blog/How%20Licensed%20Weight%20Loss%20Injections%20UK%20Can%20Boost%20Your%20Journey.webp',
-    feedTags: ['mounjaro', 'wegovy', 'prescription', 'uk'],
+    feedTags: ['mounjaro', 'wegovy', 'guides', 'safety'],
   },
   {
     slug: 'discover-the-powerful-benefits-of-prescription-slimming-injections-uk',
@@ -184,7 +184,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     category: 'Guides',
     description: 'Discover the powerful benefits of prescription slimming injections in the UK, including how Wegovy, Mounjaro and Saxenda support appetite, blood sugar and long-term progress.',
     heroImage: '/blog/Discover%20the%20Powerful%20Benefits%20of%20Prescription%20Slimming%20Injections%20UK.webp',
-    feedTags: ['mounjaro', 'wegovy', 'saxenda', 'uk'],
+    feedTags: ['mounjaro', 'wegovy', 'guides', 'safety'],
   },
   {
     slug: 'how-to-compare-uk-weight-loss-pens-and-find-the-best',
@@ -193,7 +193,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     category: 'Comparisons',
     description: 'Learn how to compare UK weight loss pens, including Saxenda, Wegovy and Mounjaro, to find the best option for your goals, tolerance and budget.',
     heroImage: '/blog/How%20to%20Compare%20UK%20Weight%20Loss%20Pens%20and%20Find%20the%20Best.webp',
-    feedTags: ['mounjaro', 'wegovy', 'saxenda', 'comparison'],
+    feedTags: ['mounjaro', 'wegovy', 'guides', 'safety'],
   },
   {
     slug: 'mounjaro-weight-loss-injections-game-changer',

@@ -16,6 +16,7 @@ import { useState } from "react";
 import type { LucideIcon } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 
 const FEATURES: {
   id: string;
@@ -161,10 +162,10 @@ export default function WhyChooseHealthWise() {
               </div>
               <Link
                 href={HOME_COMPARE_HUB_HREF}
-                className="inline-flex w-full min-h-[56px] items-center justify-center gap-3 rounded-full bg-brand-primary px-10 py-4 text-lg font-extrabold text-white shadow-lg transition hover:scale-[1.02] hover:brightness-110 sm:w-auto sm:min-h-[60px] sm:self-start sm:px-12 sm:text-xl"
+                className={`${homepageYellowCtaSolid} w-full min-h-[56px] px-10 py-4 text-lg sm:w-auto sm:min-h-[60px] sm:self-start sm:px-12 sm:text-xl`}
               >
                 Compare here
-                <Zap className="h-5 w-5 shrink-0 fill-white sm:h-6 sm:w-6" aria-hidden />
+                <Zap className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6" aria-hidden />
               </Link>
             </div>
           </div>

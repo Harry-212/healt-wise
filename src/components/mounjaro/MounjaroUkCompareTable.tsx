@@ -17,6 +17,7 @@ import {
   type MounjaroUkProviderCompare,
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
+import { trustpilotHrefForProvider } from "@/lib/seo/trustpilot-link";
 
 type SortKey =
   | "provider"
@@ -31,7 +32,7 @@ function doseHeaderLabel(key: MounjaroDoseColumnKey): string {
 }
 
 function formatGBP(n: number) {
-  return `£${n}`;
+  return `£${Number.isInteger(n) ? n : n.toFixed(2)}`;
 }
 
 function SortableTh({
@@ -436,6 +437,8 @@ export default function MounjaroUkCompareTable({
                   const isLowestRow =
                     processed.minStart != null && start === processed.minStart;
                   const profile = pharmacyProfileHref(p.id);
+                  const linkProfile = p.linkProfilePage !== false;
+                  const tpHref = trustpilotHrefForProvider(p.name, p.trustpilotUrl);
 
                   const stickyProviderBg = isLowestRow
                     ? "bg-violet-50/90 group-hover:bg-violet-50"
@@ -452,16 +455,25 @@ export default function MounjaroUkCompareTable({
                         className={`sticky left-0 z-10 border-r border-slate-200/80 px-3 py-2.5 pl-4 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] ${stickyProviderBg}`}
                       >
                         <div className="flex flex-col gap-1.5">
-                          <Link
-                            href={profile}
-                            className="font-semibold text-violet-800 underline decoration-violet-300/70 underline-offset-2 transition hover:text-violet-950 hover:decoration-violet-600"
-                          >
-                            {p.name}
-                          </Link>
-                          <ProviderGphcLine providerId={p.id} />
+                          {linkProfile ? (
+                            <Link
+                              href={profile}
+                              className="font-semibold text-violet-800 underline decoration-violet-300/70 underline-offset-2 transition hover:text-violet-950 hover:decoration-violet-600"
+                            >
+                              {p.name}
+                            </Link>
+                          ) : (
+                            <span className="font-semibold text-slate-900">
+                              {p.name}
+                            </span>
+                          )}
+                          <ProviderGphcLine
+                            providerId={p.id}
+                            gphcRegNo={p.gphcRegNo}
+                          />
                           {p.headlineFrom !== start && (
                             <span className="text-[11px] leading-snug text-slate-500">
-                              Headline ~£{p.headlineFrom}
+                              Headline ~{formatGBP(p.headlineFrom)}
                             </span>
                           )}
                           <div className="flex flex-wrap gap-1">
@@ -505,10 +517,16 @@ export default function MounjaroUkCompareTable({
                         {formatGBP(monthly)}
                       </td>
                       <td className="border-b border-slate-100/90 px-2 py-2.5 align-middle tabular-nums font-medium text-slate-900">
-                        <span className="inline-flex items-center gap-1.5">
+                        <a
+                          href={tpHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-violet-800 underline decoration-violet-300/70 underline-offset-2 transition hover:text-violet-950 hover:decoration-violet-600"
+                        >
                           <TrustpilotStarIcon className="h-4 w-4 shrink-0" />
                           {p.rating.toFixed(1)}
-                        </span>
+                          <span className="sr-only">Trustpilot (opens in a new tab)</span>
+                        </a>
                       </td>
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
                         {p.updatedLabel}

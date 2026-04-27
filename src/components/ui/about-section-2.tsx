@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Zap } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 import {
   TimelineContent,
   TimelineSection,
@@ -52,8 +53,7 @@ const hlGreen = "font-bold text-emerald-700";
 /** Secondary emphasis — primary text */
 const hlAccent = "font-bold text-brand-primary";
 
-const ctaClass =
-  "inline-flex min-h-[56px] cursor-pointer items-center gap-3 rounded-full bg-brand-cta px-10 py-3.5 text-base font-extrabold text-slate-900 shadow-lg ring-2 ring-amber-400/35 transition-all duration-300 hover:brightness-105 hover:ring-amber-400/55 active:brightness-95 sm:min-h-[60px] sm:px-12 sm:text-lg";
+const ctaClass = `${homepageYellowCtaSolid} min-h-[56px] cursor-pointer px-10 py-3.5 text-base ring-2 ring-amber-300/40 hover:ring-amber-400/60 sm:min-h-[60px] sm:px-12 sm:text-lg`;
 
 export default function AboutSection2() {
   const heroRef = useRef<HTMLDivElement>(null);
