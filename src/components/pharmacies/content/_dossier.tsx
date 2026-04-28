@@ -19,8 +19,8 @@ export function HazardBox({
       style={{
         background: `repeating-linear-gradient(
           -45deg,
-          #b91c1c,
-          #b91c1c 7px,
+          #047857,
+          #047857 7px,
           #ffffff 7px,
           #ffffff 14px
         )`,
@@ -36,12 +36,12 @@ export function HazardBox({
 export function ClassifiedStamp({ label }: { label: string }) {
   return (
     <div
-      className="pointer-events-none select-none font-mono text-[10px] font-bold uppercase tracking-widest text-red-700/90 sm:text-xs"
+      className="pointer-events-none select-none font-mono text-[10px] font-bold uppercase tracking-widest text-emerald-800/95 sm:text-xs"
       aria-hidden
     >
-      <div className="inline-block -rotate-12 border-4 border-double border-red-700/80 px-3 py-1.5 text-center opacity-90">
+      <div className="inline-block -rotate-12 border-4 border-double border-emerald-700/70 bg-white/70 px-3 py-1.5 text-center opacity-95">
         {label}
-        <span className="mt-0.5 block text-[0.65rem] font-normal normal-case tracking-normal text-red-800/80">
+        <span className="mt-0.5 block text-[0.65rem] font-normal normal-case tracking-normal text-emerald-900/70">
           Confidential
         </span>
       </div>
@@ -85,12 +85,12 @@ function DiscountCodeBox({
 
   return (
     <section className="scroll-mt-24" aria-labelledby="discount-heading">
-      <HazardBox className="ring-1 ring-red-900/5">
+      <HazardBox className="ring-1 ring-emerald-900/5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p
               id="discount-heading"
-              className="inline-flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-wider text-red-900"
+              className="inline-flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-wider text-emerald-900"
             >
               <Tag className="h-4 w-4" aria-hidden />
               Discounts &amp; offers
@@ -227,17 +227,17 @@ export function PharmacyDossierPage({
           <div className="absolute -right-1 -top-2 z-20 sm:right-0 sm:top-0">
             <ClassifiedStamp label={stampLabel} />
           </div>
-          <div className="rounded-sm border border-red-900/20 bg-[#f7f3eb]/95 p-5 shadow-md ring-1 ring-red-900/10 sm:p-7">
-            <p className="mb-2 font-mono text-[0.7rem] uppercase tracking-[0.35em] text-red-900/70">
+          <div className="rounded-sm border border-emerald-900/15 bg-white/80 p-5 shadow-md ring-1 ring-emerald-900/10 sm:p-7">
+            <p className="mb-2 font-mono text-[0.7rem] uppercase tracking-[0.35em] text-emerald-900/70">
               File ref · {fileRef}
             </p>
-            <h1 className="text-balance font-sans text-xl font-black uppercase leading-tight tracking-tight text-red-900 sm:text-2xl md:text-3xl">
+            <h1 className="text-balance font-sans text-xl font-black uppercase leading-tight tracking-tight text-emerald-950 sm:text-2xl md:text-3xl">
               {title}
             </h1>
             <p className="mt-4 text-base font-medium text-slate-800 md:text-lg">
               {subtitle}
             </p>
-            <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-red-900/10 pt-4 text-xs text-slate-600 sm:text-sm">
+            <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-emerald-900/10 pt-4 text-xs text-slate-600 sm:text-sm">
               <span className="font-mono">Published {publishedYear}</span>
               <span className="text-slate-400" aria-hidden>
                 ·
@@ -279,8 +279,8 @@ export function PharmacyDossierPage({
           {/* Desktop: details + discount */}
           <aside className="hidden xl:block">
             <div className="sticky top-24 space-y-4">
-              <HazardBox className="ring-1 ring-red-900/5">
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-red-900">
+              <HazardBox className="ring-1 ring-emerald-900/5">
+                <p className="text-xs font-bold uppercase tracking-[0.22em] text-emerald-900">
                   Document details
                 </p>
                 <dl className="mt-3 space-y-2 text-sm text-slate-800">
@@ -294,7 +294,7 @@ export function PharmacyDossierPage({
                     </div>
                   ))}
                 </dl>
-                <div className="mt-4 border-t border-dashed border-red-900/15 pt-4">
+                <div className="mt-4 border-t border-dashed border-emerald-900/15 pt-4">
                   <a
                     href={providerUrl}
                     target="_blank"

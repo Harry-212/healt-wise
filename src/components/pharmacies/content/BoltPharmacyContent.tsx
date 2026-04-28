@@ -6,6 +6,7 @@ import { useState } from "react";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import {
   ArrowRight,
+  Calculator,
   CheckCircle2,
   Copy,
   Tag,
@@ -20,7 +21,7 @@ import {
 const providerUrl =
   "https://www.boltpharmacy.co.uk/prelanding30?utm_source=healthwise360";
 
-/** Diagonal red / white hazard border (official “caution” dossier). */
+/** Diagonal green / white hazard border (official “caution” dossier). */
 function HazardBox({
   children,
   className = "",
@@ -34,8 +35,8 @@ function HazardBox({
       style={{
         background: `repeating-linear-gradient(
           -45deg,
-          #b91c1c,
-          #b91c1c 7px,
+          #047857,
+          #047857 7px,
           #ffffff 7px,
           #ffffff 14px
         )`,
@@ -49,12 +50,12 @@ function HazardBox({
 function ClassifiedStamp({ label = "Top Secret" }: { label?: string }) {
   return (
     <div
-      className="pointer-events-none select-none font-mono text-[10px] font-bold uppercase tracking-widest text-red-700/90 sm:text-xs"
+      className="pointer-events-none select-none font-mono text-[10px] font-bold uppercase tracking-widest text-emerald-800/95 sm:text-xs"
       aria-hidden
     >
-      <div className="inline-block -rotate-12 border-4 border-double border-red-700/80 px-3 py-1.5 text-center opacity-90">
+      <div className="inline-block -rotate-12 border-4 border-double border-emerald-700/70 bg-white/70 px-3 py-1.5 text-center opacity-95">
         {label}
-        <span className="mt-0.5 block text-[0.65rem] font-normal normal-case tracking-normal text-red-800/80">
+        <span className="mt-0.5 block text-[0.65rem] font-normal normal-case tracking-normal text-emerald-900/70">
           Confidential
         </span>
       </div>
@@ -103,7 +104,7 @@ export default function BoltPharmacyContent() {
 
   const body = "text-slate-800 leading-relaxed";
   const sectionLabel =
-    "font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm";
+    "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
   const h2 = "font-sans text-lg font-bold text-slate-900 sm:text-xl";
   const h3 = "font-sans text-base font-bold text-slate-900 sm:text-lg";
 
@@ -142,11 +143,11 @@ export default function BoltPharmacyContent() {
           <div className="absolute -right-1 -top-2 z-20 sm:right-0 sm:top-0">
             <ClassifiedStamp />
           </div>
-          <div className="rounded-sm border border-red-900/20 bg-[#f7f3eb]/95 p-5 shadow-md ring-1 ring-red-900/10 sm:p-7">
-            <p className="mb-2 font-mono text-[0.7rem] uppercase tracking-[0.35em] text-red-900/70">
+          <div className="rounded-sm border border-emerald-900/15 bg-white/80 p-5 shadow-md ring-1 ring-emerald-900/10 sm:p-7">
+            <p className="mb-2 font-mono text-[0.7rem] uppercase tracking-[0.35em] text-emerald-900/70">
               File ref · HW-BOLT-2026
             </p>
-            <h1 className="text-balance font-sans text-xl font-black uppercase leading-tight tracking-tight text-red-900 sm:text-2xl md:text-3xl">
+            <h1 className="text-balance font-sans text-xl font-black uppercase leading-tight tracking-tight text-emerald-950 sm:text-2xl md:text-3xl">
               Bolt Pharmacy weight loss treatment review: Wegovy, Mounjaro and
               prescription support in the UK
             </h1>
@@ -154,7 +155,7 @@ export default function BoltPharmacyContent() {
               Official dossier: online consultation, clinical review, home delivery, and
               what to expect before you choose a provider.
             </p>
-            <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-red-900/10 pt-4 text-xs text-slate-600 sm:text-sm">
+            <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-emerald-900/10 pt-4 text-xs text-slate-600 sm:text-sm">
               <span className="font-mono">Published 2026</span>
               <span className="text-slate-400" aria-hidden>
                 ·
@@ -170,7 +171,7 @@ export default function BoltPharmacyContent() {
                 href={providerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 bg-red-800 px-5 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md transition hover:bg-red-900 sm:w-auto sm:px-8"
+                className="inline-flex w-full items-center justify-center gap-2 bg-emerald-700 px-5 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md transition hover:bg-emerald-800 sm:w-auto sm:px-8"
               >
                 View Bolt Pharmacy
                 <ArrowRight className="h-4 w-4 shrink-0" />
@@ -182,7 +183,7 @@ export default function BoltPharmacyContent() {
         {/* Pricing + hazard: tablet vs injectable */}
         <div className="mb-8 grid gap-4 sm:grid-cols-2">
           <HazardBox>
-            <p className="font-sans text-xs font-bold uppercase tracking-wider text-red-900">
+            <p className="font-sans text-xs font-bold uppercase tracking-wider text-emerald-900">
               Tablet &amp; entry options
             </p>
             <ul className="mt-3 space-y-2 text-sm text-slate-800">
@@ -196,7 +197,7 @@ export default function BoltPharmacyContent() {
             </ul>
           </HazardBox>
           <HazardBox>
-            <p className="font-sans text-xs font-bold uppercase tracking-wider text-red-900">
+            <p className="font-sans text-xs font-bold uppercase tracking-wider text-emerald-900">
               Injectable costs
             </p>
             <ul className="mt-3 space-y-2 text-sm text-slate-800">
@@ -217,12 +218,12 @@ export default function BoltPharmacyContent() {
           className="mb-10 scroll-mt-24"
           aria-labelledby="bolt-discount-heading"
         >
-          <HazardBox className="ring-1 ring-red-900/5">
+          <HazardBox className="ring-1 ring-emerald-900/5">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
               <div>
                 <p
                   id="bolt-discount-heading"
-                  className="inline-flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-wider text-red-900"
+                  className="inline-flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-wider text-emerald-900"
                 >
                   <Tag className="h-4 w-4" aria-hidden />
                   Discounts &amp; offers
@@ -245,7 +246,7 @@ export default function BoltPharmacyContent() {
                 </p>
               </div>
             </div>
-            <div className="mt-4 flex flex-col gap-2 border-t border-dashed border-red-900/15 pt-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-4 flex flex-col gap-2 border-t border-dashed border-emerald-900/15 pt-4 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-xs text-slate-600">
                 {!hasDiscountCode
                   ? "Promotional code will be shown here when available. Always confirm live pricing at checkout."
@@ -304,7 +305,7 @@ export default function BoltPharmacyContent() {
 
           <section>
             <p className={sectionLabel}>What is Bolt Pharmacy weight loss treatment?</p>
-            <div className="mt-3 space-y-4 rounded-sm border border-red-900/10 bg-white/60 p-5 shadow-sm sm:p-6">
+            <div className="mt-3 space-y-4 rounded-sm border border-emerald-900/10 bg-white/60 p-5 shadow-sm sm:p-6">
               <p className={body}>
                 Bolt Pharmacy offers an online prescribing service for weight management
                 medications.
@@ -445,7 +446,7 @@ export default function BoltPharmacyContent() {
 
           <section>
             <p className={sectionLabel}>Delivery and packaging</p>
-            <div className="mt-3 space-y-4 rounded-sm border border-red-900/10 bg-white/60 p-5 sm:p-6">
+            <div className="mt-3 space-y-4 rounded-sm border border-emerald-900/10 bg-white/60 p-5 sm:p-6">
               <p className={body}>
                 Delivery is often overlooked until something goes wrong. Late shipment. Missed
                 doses. Supply gaps. Those things matter.
@@ -476,7 +477,7 @@ export default function BoltPharmacyContent() {
 
           <section>
             <p className={sectionLabel}>Safety and supervision</p>
-            <div className="mt-3 rounded-sm border border-red-900/10 bg-white/60 p-5 sm:p-6">
+            <div className="mt-3 rounded-sm border border-emerald-900/10 bg-white/60 p-5 sm:p-6">
               <h3 className={h3}>Safe handling of prescription injections</h3>
               <p className={`mt-3 text-sm sm:text-base ${body}`}>
                 Injectable medications require proper handling, especially if
@@ -544,7 +545,7 @@ export default function BoltPharmacyContent() {
               ].map((item) => (
                 <div key={item.q} className="border-b border-slate-200/90 pb-4">
                   <p
-                    className="font-sans text-sm font-bold leading-snug text-red-900 underline decoration-red-800/30 decoration-1 underline-offset-2 sm:text-[0.95rem]"
+                    className="font-sans text-sm font-bold leading-snug text-emerald-950 underline decoration-emerald-800/30 decoration-1 underline-offset-2 sm:text-[0.95rem]"
                   >
                     {item.q}
                   </p>
@@ -568,16 +569,18 @@ export default function BoltPharmacyContent() {
                 <Link
                   key={x.href}
                   href={x.href}
-                  className="group border border-slate-200/90 bg-white/70 p-4 text-center text-sm font-semibold text-slate-800 shadow-sm transition hover:border-red-900/20 hover:bg-[#fbf9f4]"
+                  className="group border border-slate-200/90 bg-white/70 p-4 text-center text-sm font-semibold text-slate-800 shadow-sm transition hover:border-emerald-900/20 hover:bg-[#fbf9f4]"
                 >
-                  <span className="text-red-900/90 group-hover:underline">{x.label}</span>
+                  <span className="text-emerald-950/90 group-hover:underline">
+                    {x.label}
+                  </span>
                 </Link>
               ))}
             </div>
           </section>
 
-          <section className="rounded-sm border border-red-900/15 bg-[#f7f3eb]/90 px-4 py-6 text-center shadow-inner sm:px-8 sm:py-8">
-            <h2 className="font-sans text-lg font-bold uppercase tracking-wide text-red-900 sm:text-xl">
+          <section className="rounded-sm border border-emerald-900/15 bg-white/70 px-4 py-6 text-center shadow-inner sm:px-8 sm:py-8">
+            <h2 className="font-sans text-lg font-bold uppercase tracking-wide text-emerald-950 sm:text-xl">
               Conclusion
             </h2>
             <p className={`mx-auto mt-4 max-w-2xl text-sm sm:text-base ${body}`}>
@@ -597,14 +600,14 @@ export default function BoltPharmacyContent() {
                 href={providerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full max-w-sm items-center justify-center gap-2 bg-red-800 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow transition hover:bg-red-900 sm:w-auto"
+                className="inline-flex w-full max-w-sm items-center justify-center gap-2 bg-emerald-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow transition hover:bg-emerald-800 sm:w-auto"
               >
                 View Bolt Pharmacy
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
             <p
-              className="mx-auto mt-6 max-w-2xl border-t border-red-900/10 pt-4 text-xs text-slate-600"
+              className="mx-auto mt-6 max-w-2xl border-t border-emerald-900/10 pt-4 text-xs text-slate-600"
             >
               <FileWarning
                 className="inline-block h-3.5 w-3.5 -translate-y-px text-amber-800/80"
