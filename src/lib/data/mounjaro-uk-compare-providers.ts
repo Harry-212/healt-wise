@@ -4,6 +4,78 @@ export const MOUNJARO_UK_COMPARE_LAST_UPDATED = "April 2026";
 
 export type MounjaroUkCompareBadge = "mostPopular" | "bestValue";
 
+const TRUSTPILOT_URL_BY_PROVIDER_ID: Record<string, string> = {
+  "asda-online-doctor": "https://uk.trustpilot.com/review/onlinedoctor.asda.com",
+  "ashcroft-pharmacy": "https://uk.trustpilot.com/review/ashcroftpharmacy.co.uk",
+  "ayp-healthcare": "https://uk.trustpilot.com/review/ayp.healthcare",
+  "bolt-pharmacy": "https://uk.trustpilot.com/review/boltpharmacy.co.uk",
+  "boots-online-doctor": "https://www.trustpilot.com/review/onlinedoctor.boots.com",
+  click2pharmacy: "https://uk.trustpilot.com/review/click2pharmacy.co.uk",
+  "cloud-pharmacy": "https://uk.trustpilot.com/review/www.cloudpharmacy.co.uk",
+  curate: "https://uk.trustpilot.com/review/curatehealth.co.uk",
+  curely: "https://uk.trustpilot.com/review/curely.co.uk",
+  "cuva-health": "https://www.trustpilot.com/review/cuvahealth.co.uk",
+  dotor: "https://www.trustpilot.com/review/dotor.co.uk",
+  "dr-weightmans": "https://www.trustpilot.com/review/drweightmans.com",
+  "e-surgery": "https://uk.trustpilot.com/review/e-surgery.com",
+  envigore: "https://www.trustpilot.com/review/envigore.com",
+  farmeci: "https://uk.trustpilot.com/review/www.farmeci.com",
+  "fella-health": "https://uk.trustpilot.com/review/fellahealth.com",
+  genmeds: "https://uk.trustpilot.com/review/genmeds.co.uk",
+  "get-a-drip": "https://uk.trustpilot.com/review/getadrip.shop",
+  getweightloss: "https://uk.trustpilot.com/review/getweightloss.co.uk",
+  "goodbody-clinic": "https://uk.trustpilot.com/review/goodbodyclinic.com",
+  "happy-pharmacy": "https://www.trustpilot.com/review/happypharmacy.co.uk",
+  "hey-slim": "https://www.trustpilot.com/review/heyslim.co.uk",
+  "iq-doctor": "https://uk.trustpilot.com/review/iqdoctor.co.uk",
+  juniper: "https://uk.trustpilot.com/review/myjuniper.co.uk",
+  "live-well-weight-loss":
+    "https://www.trustpilot.com/review/livewellweightloss.co.uk",
+  "lloyds-pharmacy-online-doctor":
+    "https://uk.trustpilot.com/review/onlinedoctor.lloydspharmacy.com",
+  "lotus-weight-loss": "https://uk.trustpilot.com/review/lotusweightloss.co.uk",
+  "manchester-chemist": "https://uk.trustpilot.com/review/manchesterchemist.com",
+  medexpress: "https://uk.trustpilot.com/review/www.medexpress.co.uk",
+  medhut: "https://uk.trustpilot.com/review/medhut.co.uk",
+  "medicine-marketplace":
+    "https://www.trustpilot.com/review/medicinemarketplace.com",
+  medino: "https://uk.trustpilot.com/review/medino.com",
+  "msh-weight-loss": "https://uk.trustpilot.com/review/mshweightloss.co.uk",
+  "my-london-pharmacy": "https://uk.trustpilot.com/review/mylondonpharmacy.co.uk",
+  "next-script": "https://uk.trustpilot.com/review/nextscript.co.uk",
+  "nulife-pharmacy": "https://www.trustpilot.com/review/thenulife.com",
+  numan: "https://uk.trustpilot.com/review/numan.com",
+  onlinemeds: "https://www.trustpilot.com/review/onlinemeds.co.uk",
+  "pharmacy-advance": "https://uk.trustpilot.com/review/pharmacyadvance.co.uk",
+  "pharmacy-express": "https://www.trustpilot.com/review/pharmacy-express.co.uk",
+  pharmacy2u: "https://uk.trustpilot.com/review/www.pharmacy2u.co.uk",
+  pharmica: "https://uk.trustpilot.com/review/pharmica.co.uk",
+  pharmulous: "https://uk.trustpilot.com/review/pharmulous.co.uk",
+  pills2u: "https://www.trustpilot.com/review/pills2u.co.uk",
+  pillsorted: "https://uk.trustpilot.com/review/pillsorted.com",
+  pillsphere: "https://uk.trustpilot.com/review/pillsphere.com",
+  quickmeds: "https://uk.trustpilot.com/review/quickmeds.co.uk",
+  "second-nature": "https://uk.trustpilot.com/review/secondnature.io",
+  shape8: "https://www.trustpilot.com/review/shape8.com",
+  "simple-online-pharmacy":
+    "https://uk.trustpilot.com/review/simpleonlinepharmacy.co.uk",
+  "slimming-direct": "https://uk.trustpilot.com/review/slimmingdirect.co.uk",
+  "superdrug-online-doctor":
+    "https://uk.trustpilot.com/review/onlinedoctor.superdrug.com",
+  "swift-doctor": "https://www.trustpilot.com/review/swift-doctor.com",
+  "swift-medi": "https://uk.trustpilot.com/review/swiftmedi.co.uk",
+  "care-pharmacy": "https://uk.trustpilot.com/review/thecarepharmacy.com",
+  "the-family-chemist": "https://uk.trustpilot.com/review/thefamilychemist.co.uk",
+  "the-independent-pharmacy":
+    "https://uk.trustpilot.com/review/www.theindependentpharmacy.co.uk",
+  tribelle: "https://uk.trustpilot.com/review/tribelle.co.uk",
+  voy: "https://uk.trustpilot.com/review/www.joinvoy.com",
+  "well-pharmacy": "https://uk.trustpilot.com/review/www.well.co.uk",
+  weprescribe: "https://uk.trustpilot.com/review/weprescribe.co.uk",
+  yourpharmacy: "https://uk.trustpilot.com/review/yourpharmacy.uk",
+  zava: "https://uk.trustpilot.com/review/zavamed.com/uk",
+};
+
 export type MounjaroUkProviderCompare = {
   id: string;
   name: string;
@@ -38,7 +110,7 @@ export const MOUNJARO_DOSE_KEYS: readonly (keyof MounjaroUkProviderCompare["pric
 
 export type MounjaroDoseColumnKey = (typeof MOUNJARO_DOSE_KEYS)[number];
 
-export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
+const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
   {
     id: "asda-online-doctor",
     name: "Asda",
@@ -1237,6 +1309,12 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] = [
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
 ];
+
+export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] =
+  MOUNJARO_UK_COMPARE_PROVIDERS_BASE.map((p) => ({
+    ...p,
+    trustpilotUrl: TRUSTPILOT_URL_BY_PROVIDER_ID[p.id] ?? p.trustpilotUrl,
+  }));
 
 export function getMounjaroCompareProviderById(
   id: string,
