@@ -61,7 +61,7 @@ export default function AboutSection2() {
   return (
     <section
       id="about"
-      className="w-full scroll-mt-24 border-b border-slate-200/80 bg-gradient-to-b from-slate-100/95 via-brand-surface to-emerald-50/40 py-10 md:py-14"
+      className="w-full scroll-mt-24 border-b border-slate-200/80 bg-linear-to-b from-slate-100/95 via-brand-surface to-emerald-50/40 py-10 md:py-14"
       aria-labelledby="about-heading"
     >
       <TimelineSection className="w-full px-5 sm:px-6 md:px-10 lg:px-16 xl:px-20">
@@ -111,11 +111,12 @@ export default function AboutSection2() {
                 customVariants={textVariants}
                 className="mb-0 text-xs sm:text-xl"
               >
-                <div className="mb-1 font-medium capitalize text-brand-primary">
-                  {SITE_BRAND_NAME}: we compare, we don&apos;t prescribe
+                <div className="mb-2 font-medium capitalize text-brand-primary">
+                  {SITE_BRAND_NAME}: <span className="font-bold">we compare</span>,
+                  {" "}we don&apos;t prescribe
                 </div>
                 <div className="font-semibold tracking-wide text-emerald-700 uppercase">
-                  Weight loss in the UK
+                  Weight Loss Treatment in the UK
                 </div>
               </TimelineContent>
 

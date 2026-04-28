@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { Zap } from "lucide-react";
 import type { ComponentProps } from "react";
 
 export const COMPARE_HERE_LABEL = "Compare Here";
@@ -12,7 +12,7 @@ const sizeClass = {
   sm: "rounded-xl px-4 py-2.5 text-sm",
   card: "rounded-lg px-3 py-2 text-xs",
   hero: "rounded-full px-8 py-3 text-sm",
-  footer: "rounded-2xl px-6 py-3.5 text-sm shadow-lg",
+  footer: "rounded-2xl px-9 py-4 text-base shadow-lg",
 } as const;
 
 export type CompareHereSize = keyof typeof sizeClass;
@@ -28,22 +28,27 @@ type Props = Omit<ComponentProps<typeof Link>, "className" | "children"> & {
   className?: string;
   size?: CompareHereSize;
   showArrow?: boolean;
+  label?: string;
 };
 
 export default function CompareHereLink({
   className = "",
   size = "default",
   showArrow = true,
+  label = COMPARE_HERE_LABEL,
   ...rest
 }: Props) {
+  const iconClass =
+    size === "footer" ? "h-5 w-5 shrink-0" : "h-4 w-4 shrink-0";
+
   return (
     <Link
       {...rest}
       className={compareHereButtonClass(size, className)}
     >
-      {COMPARE_HERE_LABEL}
+      {label}
       {showArrow ? (
-        <ArrowRight className="h-4 w-4 shrink-0" aria-hidden />
+        <Zap className={iconClass} aria-hidden />
       ) : null}
     </Link>
   );

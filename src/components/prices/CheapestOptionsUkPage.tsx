@@ -333,7 +333,7 @@ export default function CheapestOptionsUkPage() {
       >
         <SectionInner>
           <SectionLabel icon={Link2}>
-            <span className="text-teal-300">Full tables</span>
+            <span className="text-teal-300">Compare Here</span>
           </SectionLabel>
           <h2
             id="compare-heading"
@@ -351,20 +351,26 @@ export default function CheapestOptionsUkPage() {
           <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <li className="flex-1 sm:flex-none">
               <CompareHereLink
-                href="/wegovy-price-comparison"
-                className="w-full sm:min-w-[200px]"
+                href="/mounjaro-price-comparison"
+                label="Compare Mounjaro costs here"
+                size="footer"
+                className="w-full sm:min-w-[260px]"
               />
             </li>
             <li className="flex-1 sm:flex-none">
               <CompareHereLink
-                href="/mounjaro-price-comparison"
-                className="w-full sm:min-w-[200px]"
+                href="/wegovy-price-comparison"
+                label="Compare Wegovy costs here"
+                size="footer"
+                className="w-full sm:min-w-[260px]"
               />
             </li>
             <li className="flex-1 sm:flex-none">
               <CompareHereLink
                 href="/saxenda-price-comparison"
-                className="w-full sm:min-w-[200px]"
+                label="Compare Saxenda costs here"
+                size="footer"
+                className="w-full sm:min-w-[260px]"
               />
             </li>
           </ul>
