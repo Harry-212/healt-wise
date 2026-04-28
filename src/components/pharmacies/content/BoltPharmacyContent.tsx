@@ -62,6 +62,27 @@ function ClassifiedStamp({ label = "Top Secret" }: { label?: string }) {
   );
 }
 
+function Points({ items }: { items: string[] }) {
+  return (
+    <div className="mt-4 grid gap-2 sm:grid-cols-2">
+      {items.map((t) => (
+        <div
+          key={t}
+          className="flex items-start gap-2 border border-slate-200/90 bg-white/80 px-4 py-3 text-sm text-slate-800 shadow-sm"
+        >
+          <span
+            className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded border border-amber-200/80 bg-[#f5f0e6]"
+            aria-hidden
+          >
+            <span className="h-2 w-2 rounded-full bg-amber-800/70" />
+          </span>
+          <span className="leading-relaxed">{t}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function BoltPharmacyContent() {
   const [copied, setCopied] = useState(false);
   /** Empty until you provide the live code — then set the string here. */
@@ -289,12 +310,14 @@ export default function BoltPharmacyContent() {
                 medications.
               </p>
               <p className={body}>Instead of booking a traditional appointment, patients generally:</p>
-              <ul className="list-disc space-y-2 pl-5 text-slate-800">
-                <li>Complete an online health questionnaire</li>
-                <li>Receive prescriber review</li>
-                <li>Get approved if clinically suitable</li>
-                <li>Have medication shipped directly home</li>
-              </ul>
+              <Points
+                items={[
+                  "Complete an online health questionnaire",
+                  "Receive prescriber review",
+                  "Get approved if clinically suitable",
+                  "Have medication shipped directly home",
+                ]}
+              />
               <p className={body}>
                 That process may suit people who prefer privacy or who have struggled with delays
                 accessing treatment elsewhere.
@@ -314,11 +337,13 @@ export default function BoltPharmacyContent() {
                   Convenience is not a minor feature here. It’s arguably central. With Bolt
                   Pharmacy, the process happens online, which may help avoid:
                 </p>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-800">
-                  <li>Waiting for GP appointments</li>
-                  <li>Repeat clinic visits</li>
-                  <li>Delays accessing prescriptions</li>
-                </ul>
+                <Points
+                  items={[
+                    "Waiting for GP appointments",
+                    "Repeat clinic visits",
+                    "Delays accessing prescriptions",
+                  ]}
+                />
                 <p className={`mt-3 ${body}`}>
                   For someone working full-time or juggling family schedules, that may be more than
                   convenience — it may be what makes treatment realistic.
@@ -331,11 +356,13 @@ export default function BoltPharmacyContent() {
                   including Wegovy, Mounjaro and Saxenda. These treatments may support weight loss
                   by:
                 </p>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-800">
-                  <li>Helping reduce appetite</li>
-                  <li>Increasing satiety</li>
-                  <li>Supporting lower calorie intake</li>
-                </ul>
+                <Points
+                  items={[
+                    "Helping reduce appetite",
+                    "Increasing satiety",
+                    "Supporting lower calorie intake",
+                  ]}
+                />
                 <p className={`mt-3 ${body}`}>
                   They do not replace behaviour change. That’s worth saying clearly. But they may
                   help make those changes more sustainable.
@@ -347,10 +374,7 @@ export default function BoltPharmacyContent() {
                   Not everyone wants injections. Some patients prefer oral treatment for cost,
                   comfort, or practicality. Bolt Pharmacy also appears to offer:
                 </p>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-800">
-                  <li>Orlistat</li>
-                  <li>Mysimba</li>
-                </ul>
+                <Points items={["Orlistat", "Mysimba"]} />
                 <p className={`mt-3 ${body}`}>
                   Those options work differently. Some may reduce fat absorption. Others may
                   influence appetite or cravings.
@@ -458,11 +482,13 @@ export default function BoltPharmacyContent() {
                 Injectable medications require proper handling, especially if
                 temperature-sensitive.
               </p>
-              <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-800">
-                <li>Professional dispensing — regulated pharmacy controls</li>
-                <li>Protective packaging — stability and transit protection</li>
-                <li>Efficient shipping — faster shipping can reduce risk from delays</li>
-              </ul>
+              <Points
+                items={[
+                  "Professional dispensing — regulated pharmacy controls",
+                  "Protective packaging — stability and transit protection",
+                  "Efficient shipping — faster shipping can reduce risk from delays",
+                ]}
+              />
             </div>
           </section>
 

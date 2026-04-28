@@ -7,6 +7,14 @@ import AsdaOnlineDoctorContent from "@/components/pharmacies/content/AsdaOnlineD
 import AshcroftPharmacyContent from "@/components/pharmacies/content/AshcroftPharmacyContent";
 import AypHealthcareContent from "@/components/pharmacies/content/AypHealthcareContent";
 import BoltPharmacyContent from "@/components/pharmacies/content/BoltPharmacyContent";
+import BootsOnlineDoctorContent from "@/components/pharmacies/content/BootsOnlineDoctorContent";
+import Click2PharmacyMounjaroContent from "@/components/pharmacies/content/Click2PharmacyMounjaroContent";
+import CloudPharmacyContent from "@/components/pharmacies/content/CloudPharmacyContent";
+import CuratePharmacyContent from "@/components/pharmacies/content/CuratePharmacyContent";
+import CurelyPharmacyContent from "@/components/pharmacies/content/CurelyPharmacyContent";
+import CuvaHealthContent from "@/components/pharmacies/content/CuvaHealthContent";
+import DotorPharmacyContent from "@/components/pharmacies/content/DotorPharmacyContent";
+import DrWeightmansContent from "@/components/pharmacies/content/DrWeightmansContent";
 import {
   getWegovyCompareProviderById,
   pharmacyProfileHref,
@@ -36,6 +44,14 @@ import {
   ashcroftPharmacyLandingJsonGraph,
   aypPharmacyLandingJsonGraph,
   boltPharmacyLandingJsonGraph,
+  bootsPharmacyLandingJsonGraph,
+  click2pharmacyLandingJsonGraph,
+  cloudPharmacyLandingJsonGraph,
+  curatePharmacyLandingJsonGraph,
+  curelyPharmacyLandingJsonGraph,
+  cuvaHealthPharmacyLandingJsonGraph,
+  dotorPharmacyLandingJsonGraph,
+  drWeightmansPharmacyLandingJsonGraph,
   pharmacyProfileJsonGraph,
 } from "@/lib/seo/pharmacy-landing-json-ld";
 
@@ -66,9 +82,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "ayp-healthcare") {
     const title =
-      "AYP Healthcare weight management (UK) — Wegovy, Mounjaro, online review";
+      "AYP Healthcare Weight Management Review — Wegovy & Mounjaro (UK)";
     const description =
-      "AYP Healthcare: online weight management, Wegovy and Mounjaro context, delivery, costs and FAQs. Information from Health Wise — not medical advice.";
+      "AYP Healthcare weight management: online consultation, clinical assessment, home delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -100,6 +116,149 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  if (slug === "boots-online-doctor") {
+    const title =
+      "Boots Online Doctor Weight Loss Review — Wegovy support (UK)";
+    const description =
+      "Boots Online Doctor: online consultation, clinical review, delivery or pharmacy collection, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "click2pharmacy") {
+    const title =
+      "Click2Pharmacy Mounjaro review (UK) — buying Mounjaro injections online";
+    const description =
+      "Click2Pharmacy: Mounjaro-focused online consultation, prescription approval, delivery notes, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "cloud-pharmacy") {
+    const title =
+      "Cloud Pharmacy weight loss (UK) — Wegovy, Mounjaro, online review";
+    const description =
+      "Cloud Pharmacy: online consultation, Wegovy and Mounjaro context, delivery and temperature handling, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "curate") {
+    const title = "Curate weight loss (UK) — Wegovy, Saxenda, online review";
+    const description =
+      "Curate: online consultation, Wegovy and Saxenda context, delivery or collection, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "curely") {
+    const title =
+      "Curely weight loss (UK) — Wegovy, Mounjaro, online review";
+    const description =
+      "Curely: pharmacist-led consultation, regulated supply, tracked delivery options, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "cuva-health") {
+    const title =
+      "Cuva Health weight loss (UK) — Mounjaro, Wegovy, clinician-led support";
+    const description =
+      "Cuva Health: clinician-led review, cold-chain delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "dotor") {
+    const title =
+      "Dotor weight loss (UK) — Mounjaro, Wegovy, online review";
+    const description =
+      "Dotor: online assessment, prescriber review, in-house dispensing, DPD tracked delivery options, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "dr-weightmans") {
+    const title =
+      "Dr Weightmans weight loss (UK) — clinically supported products, delivery & review";
+    const description =
+      "Dr Weightmans: clinically guided weight management overview, ordering flow, delivery expectations, cost components and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   const w = getWegovyCompareProviderById(slug);
   const m = getMounjaroCompareProviderById(slug);
   const s = getSaxendaCompareProviderById(slug);
@@ -113,9 +272,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "asda-online-doctor") {
     const title =
-      "Asda Online Doctor weight loss (UK) — Wegovy, Mounjaro, Saxenda guide";
+      "Asda Online Doctor Weight Loss Treatment Review — Wegovy & Mounjaro (UK)";
     const description =
-      "How Asda Online Doctor works: online consultation, UK prescribers, Wegovy and Mounjaro pricing context, delivery and FAQs. Information from Health Wise — not medical advice.";
+      "Asda Online Doctor: how online consultation and prescribing works, treatment options (Wegovy, Mounjaro, Saxenda, Orlistat), delivery and pricing context. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -131,9 +290,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "ashcroft-pharmacy") {
     const title =
-      "Ashcroft Pharmacy weight loss (UK) — Wegovy, Mounjaro, review & guide";
+      "Ashcroft Pharmacy Weight Loss Treatment Review — Wegovy & Mounjaro (UK)";
     const description =
-      "Ashcroft Pharmacy online weight loss: consultation, range of treatments, delivery, safety and cost context. Information from Health Wise — not medical advice.";
+      "Ashcroft Pharmacy: online consultation, treatment range, delivery expectations, safety notes and cost context. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -187,6 +346,118 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <BoltPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "boots-online-doctor") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(bootsPharmacyLandingJsonGraph()),
+          }}
+        />
+        <BootsOnlineDoctorContent />
+      </>
+    );
+  }
+
+  if (slug === "click2pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(click2pharmacyLandingJsonGraph()),
+          }}
+        />
+        <Click2PharmacyMounjaroContent />
+      </>
+    );
+  }
+
+  if (slug === "cloud-pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(cloudPharmacyLandingJsonGraph()),
+          }}
+        />
+        <CloudPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "curate") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(curatePharmacyLandingJsonGraph()),
+          }}
+        />
+        <CuratePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "curely") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(curelyPharmacyLandingJsonGraph()),
+          }}
+        />
+        <CurelyPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "cuva-health") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(cuvaHealthPharmacyLandingJsonGraph()),
+          }}
+        />
+        <CuvaHealthContent />
+      </>
+    );
+  }
+
+  if (slug === "dotor") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(dotorPharmacyLandingJsonGraph()),
+          }}
+        />
+        <DotorPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "dr-weightmans") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(drWeightmansPharmacyLandingJsonGraph()),
+          }}
+        />
+        <DrWeightmansContent />
       </>
     );
   }
