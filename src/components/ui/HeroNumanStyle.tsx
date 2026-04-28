@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Zap, Calculator, Activity, Syringe } from "lucide-react";
+import { Zap, Calculator, Activity, Syringe, Scale } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 
@@ -9,7 +9,7 @@ const TOOL_CARDS = [
     href: "/tools/bmi-calculator",
     label: "BMI Calculator",
     desc: "Check your BMI & calorie needs",
-    Icon: Calculator,
+    Icon: Scale,
     color: "emerald",
     iconBg: "from-emerald-50 to-emerald-100/60",
     iconBorder: "border-emerald-100",
@@ -33,7 +33,7 @@ const TOOL_CARDS = [
     href: "/tools/mounjaro-click-calculator",
     label: "Click Calculator",
     desc: "KwikPen dose & click guide",
-    Icon: Syringe,
+    Icon: Calculator,
     color: "violet",
     iconBg: "from-violet-50 to-violet-100/60",
     iconBorder: "border-violet-100",
@@ -76,7 +76,7 @@ export default function HeroNumanStyle() {
       >
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div className="w-full min-w-0 lg:w-[58%] lg:max-w-none lg:pb-8">
-            <div className="relative w-full max-w-[min(100%,44rem)] rounded-2xl bg-linear-to-br from-white/92 via-white/72 to-white/25 px-4 py-5 shadow-sm ring-1 ring-white/60 backdrop-blur-[2px] sm:px-6 sm:py-6 lg:max-w-[min(100%,52rem)] xl:max-w-[56rem]">
+            <div className="relative w-full max-w-[min(100%,44rem)] rounded-2xl bg-linear-to-br from-white/92 via-white/72 to-white/25 px-4 py-5 shadow-sm ring-1 ring-white/60 backdrop-blur-[2px] sm:px-6 sm:py-6 lg:max-w-[min(100%,52rem)] xl:max-w-4xl">
               <h1 className="text-[1.65rem] font-black leading-[1.08] tracking-tight text-slate-950 sm:text-3xl md:text-4xl md:leading-[1.1] lg:text-[3.1rem] lg:leading-[1.06] xl:text-[3.4rem]">
                 Compare Weight Loss Treatments
                 <br />
@@ -114,7 +114,10 @@ export default function HeroNumanStyle() {
                 >
                   <div className="z-10 flex flex-col gap-0.5">
                     <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 sm:h-10 sm:w-10">
-                      <tool.Icon className="h-4 w-4 text-slate-700 sm:h-5 sm:w-5" aria-hidden />
+                      <tool.Icon
+                        className="h-4 w-4 text-slate-700 sm:h-5 sm:w-5"
+                        aria-hidden
+                      />
                     </span>
                     <h3 className="mt-2 text-sm font-bold leading-tight text-slate-900 sm:text-base md:text-lg">
                       {tool.label}

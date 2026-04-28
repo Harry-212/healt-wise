@@ -109,12 +109,15 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
           className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 [scrollbar-width:thin] sm:mx-0 sm:px-0"
         >
           {picks.map((item, idx) => {
-            const isHome = pathname === "/";
+            const path = normalizePath(pathname ?? "");
+            const isHome = path === "/";
+            const shouldSanitize =
+              isHome || path === "/prices/cheapest-options-uk";
             const display = isHome ? applyHomeKeepExploringOverrides(item) : item;
-            const title = sanitizeBrandDisplayNames(display.title, isHome);
+            const title = sanitizeBrandDisplayNames(display.title, shouldSanitize);
             const description = sanitizeBrandDisplayNames(
               display.description,
-              isHome,
+              shouldSanitize,
             );
             const imageUrl = display.imageUrl;
             return (
