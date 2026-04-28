@@ -153,7 +153,7 @@ export default function CurelyPharmacyContent() {
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
           How Curely works
         </p>
-        <div className="mt-4 grid gap-3 sm:grid-cols-3">
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {[
             {
               t: "Step 1: Online consultation",
@@ -180,7 +180,7 @@ export default function CurelyPharmacyContent() {
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
           Curely delivery and shipping options
         </p>
-        <div className="mt-3 grid gap-4 sm:grid-cols-2">
+        <div className="mt-3 grid gap-4 md:grid-cols-2">
           <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
             <p className="font-bold text-slate-900">Tracked delivery options</p>
             <Points
@@ -206,7 +206,7 @@ export default function CurelyPharmacyContent() {
         </div>
       </section>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             How much does Curely weight loss treatment cost?

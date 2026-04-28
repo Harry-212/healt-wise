@@ -3,13 +3,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { useState } from "react";
-import {
-  CheckCircle2,
-  ChevronRight,
-  Copy,
-  Home,
-  Tag,
-} from "lucide-react";
+import { CheckCircle2, ChevronRight, Copy, Home, Tag } from "lucide-react";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 
 export function HazardBox({
@@ -32,7 +26,9 @@ export function HazardBox({
         )`,
       }}
     >
-      <div className="h-full bg-[#fbf9f4] p-4 shadow-inner sm:p-5">{children}</div>
+      <div className="h-full bg-[#fbf9f4] p-4 shadow-inner sm:p-5">
+        {children}
+      </div>
     </div>
   );
 }
@@ -55,7 +51,7 @@ export function ClassifiedStamp({ label }: { label: string }) {
 
 export function Points({ items }: { items: string[] }) {
   return (
-    <div className="mt-4 grid gap-2 sm:grid-cols-2">
+    <div className="mt-4 grid gap-2 xl:grid-cols-2">
       {items.map((t) => (
         <div
           key={t}
@@ -100,8 +96,8 @@ function DiscountCodeBox({
               Discounts &amp; offers
             </p>
             <p className="mt-2 text-sm text-slate-800 leading-relaxed">
-              When a public code is available, you can try it at checkout on the provider&apos;s
-              site. Always confirm live pricing before payment.
+              When a public code is available, you can try it at checkout on the
+              provider&apos;s site. Always confirm live pricing before payment.
             </p>
           </div>
           <div className="shrink-0 rounded border border-amber-200/80 bg-amber-50/80 px-3 py-2 text-center min-w-28">
@@ -203,7 +199,7 @@ export function PharmacyDossierPage({
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-10 lg:max-w-4xl">
+      <div className="relative z-10 mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-10 lg:max-w-4xl xl:max-w-6xl">
         <nav
           className="mb-6 flex flex-wrap items-center gap-1.5 text-sm text-slate-600"
           aria-label="Breadcrumb"
@@ -215,9 +211,15 @@ export function PharmacyDossierPage({
             <Home className="h-4 w-4 shrink-0" aria-hidden />
             Home
           </Link>
-          <ChevronRight className="h-4 w-4 shrink-0 text-slate-400" aria-hidden />
+          <ChevronRight
+            className="h-4 w-4 shrink-0 text-slate-400"
+            aria-hidden
+          />
           <span className="text-slate-500">UK online pharmacies</span>
-          <ChevronRight className="h-4 w-4 shrink-0 text-slate-400" aria-hidden />
+          <ChevronRight
+            className="h-4 w-4 shrink-0 text-slate-400"
+            aria-hidden
+          />
           <span className="font-semibold text-slate-900">{slugLabel}</span>
         </nav>
 
@@ -249,8 +251,8 @@ export function PharmacyDossierPage({
           </div>
         </div>
 
-        {/* Mobile: discount above */}
-        <div className="mb-6 lg:hidden">
+        {/* Mobile/tablet: discount above */}
+        <div className="mb-6 xl:hidden">
           <DiscountCodeBox
             discountCode={discountCode}
             hasDiscount={hasDiscount}
@@ -259,12 +261,12 @@ export function PharmacyDossierPage({
           />
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1fr_320px] lg:items-start">
+        <div className="grid gap-6 xl:grid-cols-[1fr_320px] xl:items-start">
           <div className="space-y-8">
             {children}
 
-            {/* Mobile: discount below */}
-            <div className="lg:hidden">
+            {/* Mobile/tablet: discount below */}
+            <div className="xl:hidden">
               <DiscountCodeBox
                 discountCode={discountCode}
                 hasDiscount={hasDiscount}
@@ -275,7 +277,7 @@ export function PharmacyDossierPage({
           </div>
 
           {/* Desktop: details + discount */}
-          <aside className="hidden lg:block">
+          <aside className="hidden xl:block">
             <div className="sticky top-24 space-y-4">
               <HazardBox className="ring-1 ring-red-900/5">
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-red-900">
@@ -283,7 +285,10 @@ export function PharmacyDossierPage({
                 </p>
                 <dl className="mt-3 space-y-2 text-sm text-slate-800">
                   {docDetails.map((d) => (
-                    <div key={d.k} className="flex items-start justify-between gap-3">
+                    <div
+                      key={d.k}
+                      className="flex items-start justify-between gap-3"
+                    >
                       <dt className="font-semibold text-slate-900">{d.k}</dt>
                       <dd className="text-right text-slate-700">{d.v}</dd>
                     </div>
@@ -299,8 +304,8 @@ export function PharmacyDossierPage({
                     Visit {providerName}
                   </a>
                   <p className="mt-2 text-xs text-slate-600">
-                    Information only — confirm eligibility, pricing and prescribing rules on the
-                    provider&apos;s own site.
+                    Information only — confirm eligibility, pricing and
+                    prescribing rules on the provider&apos;s own site.
                   </p>
                 </div>
               </HazardBox>
@@ -313,8 +318,12 @@ export function PharmacyDossierPage({
               />
 
               <div className="border border-slate-300/80 bg-white/70 p-4 text-xs text-slate-700 shadow-sm">
-                <p className="font-semibold text-slate-900">{SITE_BRAND_NAME}</p>
-                <p className="mt-1">Independent overview. Not medical advice.</p>
+                <p className="font-semibold text-slate-900">
+                  {SITE_BRAND_NAME}
+                </p>
+                <p className="mt-1">
+                  Independent overview. Not medical advice.
+                </p>
               </div>
             </div>
           </aside>
@@ -323,4 +332,3 @@ export function PharmacyDossierPage({
     </article>
   );
 }
-
