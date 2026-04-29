@@ -17,11 +17,14 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
+const GUIDE_PAGE_TITLE =
+  "Why Weight Loss Treatment Content Is Being Removed by Social Media: Impact on Weight Loss Advice in the UK";
+
 export const metadata = buildGuideShareMetadata({
   slug: "glp1-content-removed-weight-loss-advice-uk",
-  title: "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK",
+  title: GUIDE_PAGE_TITLE,
   description: "Social media platforms are restricting content about Mounjaro, Wegovy, and GLP-1 medications. We examine what is being removed, the regulatory context, and what patients are losing.",
-  openGraphTitle: "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK",
+  openGraphTitle: GUIDE_PAGE_TITLE,
 });
 
 
@@ -133,8 +136,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline:
-    "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK",
+  headline: GUIDE_PAGE_TITLE,
   description:
     "Social media platforms are restricting content about Mounjaro, Wegovy, and GLP-1 medications. We examine what is being removed, the regulatory context, and what patients are losing.",
   author: { "@type": "Organization", name: "Health Wise" },
@@ -167,7 +169,7 @@ export default function GuideGlp1ContentRemoval() {
       slug="glp1-content-removed-weight-loss-advice-uk"
       category="Regulation"
       categorySlug="regulation"
-      title="Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK"
+      title={GUIDE_PAGE_TITLE}
       description="Platforms are suppressing content about Mounjaro, Wegovy, and other GLP-1 treatments. We look at what is being removed, who is affected, and what it means for patients seeking reliable health information."
       readTime="4 min read"
       lastUpdated="April 2026"

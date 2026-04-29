@@ -356,7 +356,7 @@ const ALL_GUIDES = [
   {
     slug: "glp1-content-removed-weight-loss-advice-uk",
     title:
-      "Why GLP-1 Content Is Being Removed: Impact on Weight Loss Advice in the UK",
+      "Why Weight Loss Treatment Content Is Being Removed by Social Media: Impact on Weight Loss Advice in the UK",
     description:
       "Platforms are restricting content about Mounjaro and Wegovy. We examine what's being removed, why it matters, and how to find trustworthy guidance.",
     category: "Regulation" as Category,

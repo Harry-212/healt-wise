@@ -33,6 +33,12 @@ function labelFromGuideSlug(slug: string): string {
   return words.join(" ");
 }
 
+/** Canonical display titles for guides where the slug-derived label is misleading. */
+const GUIDE_TITLE_OVERRIDES: Partial<Record<string, string>> = {
+  "glp1-content-removed-weight-loss-advice-uk":
+    "Why Weight Loss Treatment Content Is Being Removed by Social Media: Impact on Weight Loss Advice in the UK",
+};
+
 export function getRecommendedReadingPool(): RecommendedItem[] {
   const guides: RecommendedItem[] = HELPFUL_GUIDE_SLUGS.flatMap((slug) => {
     const imageUrl = GUIDE_IMAGES[slug];
@@ -41,7 +47,7 @@ export function getRecommendedReadingPool(): RecommendedItem[] {
       {
         kind: "guide" as const,
         href: helpfulGuidePath(slug),
-        title: labelFromGuideSlug(slug),
+        title: GUIDE_TITLE_OVERRIDES[slug] ?? labelFromGuideSlug(slug),
         description:
           "Evidence-based UK guide on weight loss treatment, safety, and regulation.",
         imageUrl,
