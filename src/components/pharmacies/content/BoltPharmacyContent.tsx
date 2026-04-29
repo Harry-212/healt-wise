@@ -6,7 +6,6 @@ import { useState } from "react";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import {
   ArrowRight,
-  Calculator,
   CheckCircle2,
   Copy,
   Tag,
@@ -110,11 +109,11 @@ export default function BoltPharmacyContent() {
 
   return (
     <article
-      className="min-h-screen font-sans pb-16 [background:radial-gradient(ellipse_120%_80%_at_50%_-20%,#e5e0d4_0%,#d8d2c4_45%,#cfc7b8_100%)]"
+      className="min-h-screen font-sans pb-16 [background:radial-gradient(ellipse_120%_80%_at_50%_-20%,#f2f0ea_0%,#ece9e2_45%,#e7e3dc_100%)]"
     >
       {/* Aged paper grain */}
       <div
-        className="pointer-events-none fixed inset-0 z-0 opacity-[0.14] mix-blend-multiply"
+        className="pointer-events-none fixed inset-0 z-0 opacity-[0.08] mix-blend-multiply"
         aria-hidden
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E")`,

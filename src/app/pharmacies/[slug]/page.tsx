@@ -15,6 +15,15 @@ import CurelyPharmacyContent from "@/components/pharmacies/content/CurelyPharmac
 import CuvaHealthContent from "@/components/pharmacies/content/CuvaHealthContent";
 import DotorPharmacyContent from "@/components/pharmacies/content/DotorPharmacyContent";
 import DrWeightmansContent from "@/components/pharmacies/content/DrWeightmansContent";
+import EnvigorePharmacyContent from "@/components/pharmacies/content/EnvigorePharmacyContent";
+import FarmeciPharmacyContent from "@/components/pharmacies/content/FarmeciPharmacyContent";
+import FyldeClinicPharmacyContent from "@/components/pharmacies/content/FyldeClinicPharmacyContent";
+import GenmedsPharmacyContent from "@/components/pharmacies/content/GenmedsPharmacyContent";
+import GetADripPharmacyContent from "@/components/pharmacies/content/GetADripPharmacyContent";
+import GetWeightLossPharmacyContent from "@/components/pharmacies/content/GetWeightLossPharmacyContent";
+import GoodBodyClinicPharmacyContent from "@/components/pharmacies/content/GoodBodyClinicPharmacyContent";
+import HappyPharmacyContent from "@/components/pharmacies/content/HappyPharmacyContent";
+import HeySlimPharmacyContent from "@/components/pharmacies/content/HeySlimPharmacyContent";
 import {
   getWegovyCompareProviderById,
   pharmacyProfileHref,
@@ -52,6 +61,15 @@ import {
   cuvaHealthPharmacyLandingJsonGraph,
   dotorPharmacyLandingJsonGraph,
   drWeightmansPharmacyLandingJsonGraph,
+  envigorePharmacyLandingJsonGraph,
+  farmeciPharmacyLandingJsonGraph,
+  fyldeClinicPharmacyLandingJsonGraph,
+  genmedsPharmacyLandingJsonGraph,
+  getADripPharmacyLandingJsonGraph,
+  getWeightLossPharmacyLandingJsonGraph,
+  goodBodyClinicPharmacyLandingJsonGraph,
+  happyPharmacyLandingJsonGraph,
+  heySlimPharmacyLandingJsonGraph,
   pharmacyProfileJsonGraph,
 } from "@/lib/seo/pharmacy-landing-json-ld";
 
@@ -61,6 +79,14 @@ type Props = { params: Promise<{ slug: string }> };
 const EXTRA_PHARMACY_LANDING_SLUGS: string[] = [
   "ayp-healthcare",
   "bolt-pharmacy",
+  "farmeci",
+  "fylde-clinic",
+  "genmeds",
+  "get-weight-loss",
+  "getadrip",
+  "goodbody-clinic",
+  "happy-pharmacy",
+  "hey-slim",
 ];
 
 function allPharmacySlugs(): string[] {
@@ -246,6 +272,168 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Dr Weightmans weight loss (UK) — clinically supported products, delivery & review";
     const description =
       "Dr Weightmans: clinically guided weight management overview, ordering flow, delivery expectations, cost components and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "envigore") {
+    const title =
+      "Envigore weight loss (UK) — Wegovy, Mounjaro, clinician-led support";
+    const description =
+      "Envigore: online assessment, pharmacist and prescriber review, programme-style support, cold-chain delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "farmeci") {
+    const title =
+      "Farmeci Weight Loss Treatment Review — Wegovy, Mounjaro, UK clinician support";
+    const description =
+      "Farmeci: My Health Stop Ltd platform, partner pharmacies, consultations, cold-chain delivery, pricing from ~£92/dose and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "fylde-clinic") {
+    const title =
+      "Fylde Clinic Weight Loss Treatment Review — Wegovy, Mounjaro (UK)";
+    const description =
+      "Fylde Clinic: clinician-led online pharmacy, Royal Mail Tracked 24, 2–8°C packaging, Wegovy from ~£99, Mounjaro from ~£134 and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "genmeds") {
+    const title =
+      "Genmeds Weight Loss Review — Wegovy & Mounjaro, UK registered pharmacy";
+    const description =
+      "Genmeds: pharmacy-led Wegovy and Mounjaro access, listed from ~£129.99 / ~£179.99, accessories, discreet delivery and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "get-weight-loss") {
+    const title =
+      "Get Weight Loss Review — Wegovy, medically supervised, UK delivery";
+    const description =
+      "Get Weight Loss: digital clinical pathway, tracked delivery, ~£179.99/pen Wegovy example, no mandatory subscription, optional blood tests and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "getadrip") {
+    const title =
+      "GetADrip Weight Loss Review — Wegovy, Mounjaro, UK programme";
+    const description =
+      "GetADrip: programme-style GLP-1 access, app support, DPD cold-chain delivery, ~£109 / ~£159 monthly-style pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "goodbody-clinic") {
+    const title =
+      "GoodBody Clinic Weight Loss Review — Wegovy, UK medical support";
+    const description =
+      "GoodBody Clinic: programme-style Wegovy access, nurse and doctor oversight, subscriptions, delivery often included, ~£129/mo examples and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "happy-pharmacy") {
+    const title =
+      "Happy Pharmacy Weight Loss Review — Wegovy, Mounjaro, GPhC (UK)";
+    const description =
+      "Happy Pharmacy: GPhC-regulated Wegovy and Mounjaro from ~£89.99 / ~£139.99, Orlistat/Alli, discreet tracked delivery and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "hey-slim") {
+    const title =
+      "Hey Slim Weight Loss Review — Wegovy, Mounjaro, clinician-led (UK)";
+    const description =
+      "Hey Slim: doctor-led programme, GLP-1 access, delivery often 1–2 days and included (stated), dose-dependent pricing and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -458,6 +646,132 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <DrWeightmansContent />
+      </>
+    );
+  }
+
+  if (slug === "envigore") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(envigorePharmacyLandingJsonGraph()),
+          }}
+        />
+        <EnvigorePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "farmeci") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(farmeciPharmacyLandingJsonGraph()),
+          }}
+        />
+        <FarmeciPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "fylde-clinic") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(fyldeClinicPharmacyLandingJsonGraph()),
+          }}
+        />
+        <FyldeClinicPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "genmeds") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(genmedsPharmacyLandingJsonGraph()),
+          }}
+        />
+        <GenmedsPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "get-weight-loss") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getWeightLossPharmacyLandingJsonGraph()),
+          }}
+        />
+        <GetWeightLossPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "getadrip") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getADripPharmacyLandingJsonGraph()),
+          }}
+        />
+        <GetADripPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "goodbody-clinic") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(goodBodyClinicPharmacyLandingJsonGraph()),
+          }}
+        />
+        <GoodBodyClinicPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "happy-pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(happyPharmacyLandingJsonGraph()),
+          }}
+        />
+        <HappyPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "hey-slim") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(heySlimPharmacyLandingJsonGraph()),
+          }}
+        />
+        <HeySlimPharmacyContent />
       </>
     );
   }

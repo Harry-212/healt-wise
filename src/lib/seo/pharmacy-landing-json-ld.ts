@@ -399,6 +399,302 @@ const DR_WEIGHTMANS_FAQ: FaqItem[] = [
   },
 ];
 
+const ENVIGORE_FAQ: FaqItem[] = [
+  {
+    question: "Can I get Wegovy from Envigore?",
+    answer:
+      "Yes. Wegovy may be available through Envigore following a clinical assessment and approval.",
+  },
+  {
+    question: "Does Envigore offer Mounjaro for weight loss?",
+    answer:
+      "Yes. Mounjaro appears to be available for eligible patients through Envigore's prescribing service.",
+  },
+  {
+    question: "How much does Envigore weight loss treatment cost?",
+    answer:
+      "Standard GLP-1 treatment may start around £124–£129 per month, with higher doses potentially costing more.",
+  },
+  {
+    question: "Does Envigore offer next-day or fast delivery?",
+    answer:
+      "Orders often appear to arrive within 1–2 working days after approval, usually with tracked delivery.",
+  },
+  {
+    question: "Is Envigore regulated?",
+    answer:
+      "Envigore operates as a regulated dispensing provider with clinician and pharmacist oversight.",
+  },
+  {
+    question: "Does Envigore offer support after you start treatment?",
+    answer:
+      "Yes. Support may include maintenance planning, dose reviews, coaching tools and follow-up check-ins.",
+  },
+];
+
+const FARMECI_FAQ: FaqItem[] = [
+  {
+    question: "Can I get Wegovy from Farmeci?",
+    answer:
+      "Yes, Wegovy may be available through Farmeci following a consultation and clinician approval.",
+  },
+  {
+    question: "Does Farmeci offer Mounjaro for weight loss?",
+    answer:
+      "Yes, Mounjaro appears to be among available treatment options, subject to suitability review.",
+  },
+  {
+    question: "How much does Farmeci weight loss treatment cost?",
+    answer:
+      "Some prices appear to start around £92 per dose or pen, though total costs may vary depending on medication, dosage and shipping.",
+  },
+  {
+    question: "Does Farmeci deliver medication to your home?",
+    answer:
+      "Yes. Approved prescriptions are shipped directly to your chosen address, with tracking and cold-chain handling where required.",
+  },
+  {
+    question: "Is Farmeci regulated?",
+    answer:
+      "Farmeci works with GPhC-registered partner pharmacies and independent prescribing clinicians.",
+  },
+  {
+    question: "Are there consultation fees?",
+    answer:
+      "Farmeci generally appears to offer a free online consultation, though users should confirm any charges during checkout.",
+  },
+];
+
+const FYLDE_CLINIC_FAQ: FaqItem[] = [
+  {
+    question: "Can I get Wegovy from Fylde Clinic?",
+    answer:
+      "Yes, Wegovy may be available through Fylde Clinic after an online consultation and clinician approval.",
+  },
+  {
+    question: "Does Fylde Clinic offer Mounjaro for weight loss?",
+    answer:
+      "Yes, Mounjaro appears to be one of its core weight loss treatments, subject to eligibility review.",
+  },
+  {
+    question: "How much does Fylde Clinic weight loss treatment cost?",
+    answer:
+      "Pricing may start around £99 for Wegovy and £134 for Mounjaro, with higher doses costing more.",
+  },
+  {
+    question: "Does Fylde Clinic provide temperature-controlled delivery?",
+    answer:
+      "Yes. Injectable medications appear to be shipped in insulated packaging designed to maintain 2–8°C during transit.",
+  },
+  {
+    question: "Is Fylde Clinic regulated?",
+    answer:
+      "Fylde Clinic operates as a regulated UK provider using clinician review and pharmacist oversight before treatment is supplied.",
+  },
+  {
+    question: "Is delivery included in the price?",
+    answer:
+      "Fylde Clinic states tracked UK delivery is included, with no separate shipping charge.",
+  },
+];
+
+const GENMEDS_FAQ: FaqItem[] = [
+  {
+    question: "Can I buy Wegovy from Genmeds?",
+    answer:
+      "Yes, Wegovy appears available through Genmeds following a consultation and approval.",
+  },
+  {
+    question: "Does Genmeds offer Mounjaro for weight loss?",
+    answer: "Yes, Mounjaro is listed among available treatments.",
+  },
+  {
+    question: "How much does Genmeds weight loss treatment cost?",
+    answer:
+      "Listed prices currently appear to start around £129.99 for Wegovy and £179.99 for Mounjaro, excluding any potential delivery or consultation costs that may apply at checkout.",
+  },
+  {
+    question: "Does Genmeds deliver weight loss medication to your home?",
+    answer:
+      "Yes. Approved prescriptions appear delivered to your chosen address in discreet packaging, likely using courier services.",
+  },
+  {
+    question: "Does Genmeds sell needles and sharps bins?",
+    answer:
+      "Yes. Support supplies such as pen needles, swabs and sharps bins are listed alongside treatment products.",
+  },
+  {
+    question: "Is Genmeds a regulated UK pharmacy?",
+    answer:
+      "Yes, Genmeds operates as a UK-registered online pharmacy under regulatory standards.",
+  },
+];
+
+const GET_WEIGHT_LOSS_FAQ: FaqItem[] = [
+  {
+    question: "Can I get Wegovy through Get Weight Loss?",
+    answer:
+      "Yes, Wegovy may be available through Get Weight Loss after clinical assessment and approval.",
+  },
+  {
+    question: "How much does Get Weight Loss charge for Wegovy?",
+    answer:
+      "Listed pricing has included around £179.99 per pen (4 doses), though costs may vary.",
+  },
+  {
+    question: "Does Get Weight Loss use subscriptions?",
+    answer:
+      "No, the service appears to offer month-to-month ordering rather than mandatory subscription billing.",
+  },
+  {
+    question: "Does Get Weight Loss deliver medication to your home?",
+    answer:
+      "Yes. Approved prescriptions are typically shipped via tracked UK delivery, often arriving within a few working days.",
+  },
+  {
+    question: "Is Get Weight Loss regulated?",
+    answer:
+      "Get Weight Loss operates through a clinically supervised prescribing model with medicines dispensed through regulated pharmacy channels.",
+  },
+  {
+    question: "Are there support services beyond medication?",
+    answer:
+      "Yes. Optional services may include nutrition consultations, blood testing and follow-up support.",
+  },
+];
+
+const GETADRIP_FAQ: FaqItem[] = [
+  {
+    question: "Can I get Wegovy from GetADrip?",
+    answer:
+      "Yes, Wegovy may be available through GetADrip after clinical assessment and approval.",
+  },
+  {
+    question: "Does GetADrip offer Mounjaro for weight loss?",
+    answer:
+      "Yes, Mounjaro appears to be one of the prescription options available, subject to suitability checks.",
+  },
+  {
+    question: "How much does GetADrip weight loss treatment cost?",
+    answer:
+      "Pricing may start around £109 per month for Wegovy and £159 per month for Mounjaro, depending on programme structure.",
+  },
+  {
+    question: "Does GetADrip deliver medication to your home?",
+    answer:
+      "Yes. Approved prescriptions are shipped directly to patients, often through DPD using cold-chain delivery where required.",
+  },
+  {
+    question: "Is GetADrip a regulated provider?",
+    answer:
+      "GetADrip provides treatment through UK-registered clinicians with medically reviewed prescribing.",
+  },
+  {
+    question: "Is GetADrip different from a normal online pharmacy?",
+    answer:
+      "Potentially, yes. It appears to combine medication access with coaching, app tracking and longer-term support, rather than functioning purely as a dispensing service.",
+  },
+];
+
+const GOODBODY_CLINIC_FAQ: FaqItem[] = [
+  {
+    question: "Can I get Wegovy through GoodBody Clinic?",
+    answer:
+      "Yes, Wegovy appears available through GoodBody Clinic following medical assessment and approval.",
+  },
+  {
+    question: "Does GoodBody Clinic include delivery in the price?",
+    answer:
+      "Delivery often appears included in programme pricing, which may help avoid unexpected shipping costs.",
+  },
+  {
+    question: "How much does GoodBody Clinic weight loss treatment cost?",
+    answer:
+      "Some plans appear to start around £129 per month, with longer-term subscription bundles potentially reducing overall cost.",
+  },
+  {
+    question: "Does GoodBody Clinic offer subscription treatment plans?",
+    answer:
+      "Yes. Patients may choose one-off purchases or subscription-based treatment plans, depending on medication and preference.",
+  },
+  {
+    question: "Is GoodBody Clinic regulated?",
+    answer:
+      "GoodBody Clinic appears to operate through medically supervised prescribing and registered pharmacy fulfilment partners.",
+  },
+  {
+    question: "Is GoodBody Clinic better than buying from a standard online seller?",
+    answer:
+      "For patients who want clinical oversight, support and regulated prescribing, it may offer advantages over unregulated or anonymous sellers.",
+  },
+];
+
+const HAPPY_PHARMACY_FAQ: FaqItem[] = [
+  {
+    question: "Can I get Wegovy from Happy Pharmacy?",
+    answer:
+      "Yes, Wegovy may be available through Happy Pharmacy after completing an online consultation and receiving approval.",
+  },
+  {
+    question: "Does Happy Pharmacy offer Mounjaro for weight loss?",
+    answer:
+      "Yes, Mounjaro appears among available treatment options, subject to clinical suitability.",
+  },
+  {
+    question: "How much does Happy Pharmacy weight loss treatment cost?",
+    answer:
+      "Costs may start around £89.99 for Wegovy, £139.99 for Mounjaro, and £34.98 for Orlistat, depending on treatment and dosage.",
+  },
+  {
+    question: "Does Happy Pharmacy deliver medication to your home?",
+    answer:
+      "Yes. Approved prescriptions are shipped directly to your address using discreet, tracked delivery.",
+  },
+  {
+    question: "Is Happy Pharmacy regulated?",
+    answer:
+      "Happy Pharmacy operates as a GPhC-regulated pharmacy provider supplying medication through a clinically reviewed process.",
+  },
+  {
+    question: "Are non-injection options available?",
+    answer:
+      "Yes. Options may include Orlistat and Alli for patients preferring oral treatment.",
+  },
+];
+
+const HEY_SLIM_FAQ: FaqItem[] = [
+  {
+    question: "Can I get Wegovy through Hey Slim?",
+    answer:
+      "Yes, Wegovy may be available through Hey Slim after clinician review and approval.",
+  },
+  {
+    question: "Does Hey Slim offer Mounjaro for weight loss?",
+    answer:
+      "Yes, Mounjaro appears among available treatment options, subject to suitability checks.",
+  },
+  {
+    question: "How much does Hey Slim weight loss treatment cost?",
+    answer:
+      "Costs may range from around £79–£159 initially for Wegovy, and £129–£269 initially for Mounjaro, with ongoing monthly costs varying by dose.",
+  },
+  {
+    question: "Does Hey Slim include delivery?",
+    answer:
+      "Yes. Delivery appears included in treatment pricing, with shipping often taking around 1–2 business days.",
+  },
+  {
+    question: "Is Hey Slim a regulated provider?",
+    answer:
+      "Hey Slim states treatment is provided through UK clinicians and a GPhC-registered pharmacy partner.",
+  },
+  {
+    question: "Is Hey Slim better than a standard online pharmacy?",
+    answer:
+      "Possibly, if you value ongoing monitoring and clinician involvement. If you only want prescription fulfilment, a simpler pharmacy model may also suit some patients.",
+  },
+];
+
 function siteId(): string {
   return `${siteOrigin()}/#website`;
 }
@@ -868,6 +1164,357 @@ export function drWeightmansPharmacyLandingJsonGraph(): Record<string, unknown> 
       ]),
       {
         ...faqPageEntity(DR_WEIGHTMANS_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Envigore.
+ */
+export function envigorePharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/envigore";
+  const url = `${origin}${path}`;
+  const name =
+    "Envigore weight loss review (UK) — Wegovy, Mounjaro, clinician-led support";
+  const description =
+    "Envigore: online assessment, pharmacist and prescriber review, cold-chain delivery, maintenance support and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Envigore", item: url },
+      ]),
+      {
+        ...faqPageEntity(ENVIGORE_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Farmeci.
+ */
+export function farmeciPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/farmeci";
+  const url = `${origin}${path}`;
+  const name =
+    "Farmeci weight loss review (UK) — Wegovy, Mounjaro, clinician-supervised support";
+  const description =
+    "Farmeci: online assessment, partner-pharmacy dispensing, cold-chain delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Farmeci", item: url },
+      ]),
+      {
+        ...faqPageEntity(FARMECI_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Fylde Clinic.
+ */
+export function fyldeClinicPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/fylde-clinic";
+  const url = `${origin}${path}`;
+  const name =
+    "Fylde Clinic weight loss review (UK) — Wegovy, Mounjaro, clinician-led support";
+  const description =
+    "Fylde Clinic: clinician-led assessment, temperature-controlled delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Fylde Clinic", item: url },
+      ]),
+      {
+        ...faqPageEntity(FYLDE_CLINIC_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Genmeds.
+ */
+export function genmedsPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/genmeds";
+  const url = `${origin}${path}`;
+  const name =
+    "Genmeds weight loss review (UK) — Wegovy, Mounjaro, pharmacy-led access";
+  const description =
+    "Genmeds: UK-registered online pharmacy, listed Wegovy and Mounjaro prices, accessories, delivery notes and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Genmeds", item: url },
+      ]),
+      {
+        ...faqPageEntity(GENMEDS_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Get Weight Loss.
+ */
+export function getWeightLossPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/get-weight-loss";
+  const url = `${origin}${path}`;
+  const name =
+    "Get Weight Loss review (UK) — Wegovy, medically supervised, no subscription";
+  const description =
+    "Get Weight Loss: digital clinical pathway, tracked delivery, optional extras, month-to-month ordering and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Get Weight Loss", item: url },
+      ]),
+      {
+        ...faqPageEntity(GET_WEIGHT_LOSS_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — GetADrip.
+ */
+export function getADripPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/getadrip";
+  const url = `${origin}${path}`;
+  const name =
+    "GetADrip weight loss review (UK) — Wegovy, Mounjaro, programme support";
+  const description =
+    "GetADrip: GLP-1 programmes, app and coaching, DPD delivery, subscription-style pricing and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "GetADrip", item: url },
+      ]),
+      {
+        ...faqPageEntity(GETADRIP_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — GoodBody Clinic.
+ */
+export function goodBodyClinicPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/goodbody-clinic";
+  const url = `${origin}${path}`;
+  const name =
+    "GoodBody Clinic weight loss review (UK) — Wegovy, medical support, delivery";
+  const description =
+    "GoodBody Clinic: programme-style Wegovy access, nurse and doctor oversight, subscriptions, delivery often included and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "GoodBody Clinic", item: url },
+      ]),
+      {
+        ...faqPageEntity(GOODBODY_CLINIC_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Happy Pharmacy.
+ */
+export function happyPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/happy-pharmacy";
+  const url = `${origin}${path}`;
+  const name =
+    "Happy Pharmacy weight loss review (UK) — Wegovy, Mounjaro, GPhC pharmacy";
+  const description =
+    "Happy Pharmacy: GPhC-regulated access, injections and tablets, discreet tracked delivery, pricing from guide and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Happy Pharmacy", item: url },
+      ]),
+      {
+        ...faqPageEntity(HAPPY_PHARMACY_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Hey Slim.
+ */
+export function heySlimPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/hey-slim";
+  const url = `${origin}${path}`;
+  const name =
+    "Hey Slim weight loss review (UK) — Wegovy, Mounjaro, clinician-led";
+  const description =
+    "Hey Slim: clinician-led programme, GLP-1 access, delivery included (stated), dose-dependent pricing and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Hey Slim", item: url },
+      ]),
+      {
+        ...faqPageEntity(HEY_SLIM_FAQ),
         "@id": `${url}#faq`,
         url,
       },

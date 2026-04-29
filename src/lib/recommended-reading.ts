@@ -13,6 +13,11 @@ export type RecommendedItem = {
   imageUrl: string;
 };
 
+/** Blog slugs still on `/blog` but omitted from the Keep exploring carousel pool. */
+const EXCLUDED_FROM_RECOMMENDED_READING_SLUGS = new Set<string>([
+  "top-benefits-of-doctor-prescribed-weight-loss-injections-uk-for-you",
+]);
+
 const ACRONYMS: Record<string, string> = {
   uk: "UK",
   nhs: "NHS",
@@ -55,13 +60,17 @@ export function getRecommendedReadingPool(): RecommendedItem[] {
     ];
   });
 
-  const blogs: RecommendedItem[] = CURATED_APP_ROUTER_POSTS.map((p) => ({
-    kind: "blog" as const,
-    href: `/blog/${p.slug}`,
-    title: p.title,
-    description: p.description,
-    imageUrl: p.heroImage ?? "",
-  })).filter((x) => x.imageUrl.length > 0);
+  const blogs: RecommendedItem[] = CURATED_APP_ROUTER_POSTS.filter(
+    (p) => !EXCLUDED_FROM_RECOMMENDED_READING_SLUGS.has(p.slug),
+  )
+    .map((p) => ({
+      kind: "blog" as const,
+      href: `/blog/${p.slug}`,
+      title: p.title,
+      description: p.description,
+      imageUrl: p.heroImage ?? "",
+    }))
+    .filter((x) => x.imageUrl.length > 0);
 
   return [...guides, ...blogs];
 }
