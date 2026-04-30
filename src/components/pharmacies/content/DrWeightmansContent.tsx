@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://drweightmans.com/weight-loss-treatment/";
 
@@ -62,7 +67,7 @@ export default function DrWeightmansContent() {
           <p className="mt-4 text-slate-800 leading-relaxed">Common categories may include:</p>
           <Points
             items={[
-              "Prescription weight-loss medications (e.g. Wegovy, Mounjaro, Saxenda)",
+              "Prescription weight-loss medications (e.g. Mounjaro, Wegovy, Saxenda)",
               "Over-the-counter supplements (evidence varies)",
               "Meal replacement products (structured nutrition plans)",
               "Digital coaching and tracking tools",
@@ -183,6 +188,7 @@ export default function DrWeightmansContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             Cost breakdown: what you may be paying for
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Costs often involve more than the headline product price. Depending on the provider,
             you may see a mix of:

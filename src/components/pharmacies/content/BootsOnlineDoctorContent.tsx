@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 export default function BootsOnlineDoctorContent() {
   /** Paste your live code here later. */
@@ -147,6 +152,7 @@ export default function BootsOnlineDoctorContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             Cost (illustrative)
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Tablet options may range around <strong>£30–£100+</strong> monthly. Injectable
             treatment may range around <strong>£150–£300+</strong> per month, with higher doses

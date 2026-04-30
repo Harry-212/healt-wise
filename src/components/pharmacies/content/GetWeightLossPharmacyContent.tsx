@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://getweightloss.co.uk/";
 
@@ -191,6 +196,7 @@ export default function GetWeightLossPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
             How much does Get Weight Loss cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             One listed example: <strong>Wegovy from around £179.99 per pen (4 doses)</strong>. Other
             treatment costs may vary. Optional services may carry separate costs — e.g. blood tests

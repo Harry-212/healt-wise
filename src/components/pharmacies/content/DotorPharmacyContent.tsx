@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://dotor.co.uk/";
 
@@ -244,6 +249,7 @@ export default function DotorPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             How much does Dotor weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Pricing varies by medication and dose. Example entry pricing referenced publicly may
             include Mounjaro from around <strong>£134.99+</strong>, with higher doses increasing

@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://getadrip.shop/";
 
@@ -12,15 +17,15 @@ export default function GetADripPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="GetADrip"
       fileRef="HW-GETADRIP-2026"
-      title="GetADrip Weight Loss Review: Online Access to Wegovy, Mounjaro and Clinically Supervised Weight Management"
+      title="GetADrip Weight Loss Review: Online Access to Mounjaro, Wegovy and Clinically Supervised Weight Management"
       subtitle="Official dossier: programme-style GLP-1 access, app and coaching, DPD delivery, subscription pricing and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · UK telehealth"
+      scopeLabel="Scope: Mounjaro · Wegovy · UK telehealth"
       providerName="Get A Drip"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Model", v: "UK telehealth · weight management programme" },
-        { k: "Pricing guide", v: "~£109/mo Wegovy · ~£159/mo Mounjaro (typical)" },
+        { k: "Pricing guide", v: "~£159/mo Mounjaro · ~£109/mo Wegovy (typical)" },
         { k: "Delivery", v: "DPD · cold-chain · tracking" },
       ]}
       discountCode={discountCode}
@@ -34,8 +39,8 @@ export default function GetADripPharmacyContent() {
           management more complicated than simple calorie math.
         </p>
         <p className="text-slate-800 leading-relaxed">
-          That may help explain why medically supported programmes using treatments like Wegovy and
-          Mounjaro have gained so much attention in the UK. GetADrip weight loss treatment takes a
+          That may help explain why medically supported programmes using treatments like Mounjaro and
+          Wegovy have gained so much attention in the UK. GetADrip weight loss treatment takes a
           slightly broader approach than many online providers: rather than positioning itself only as
           a prescription service, GetADrip combines GLP-1 medication access, clinician oversight,
           behaviour change support, nutrition guidance and app-based tracking within a digital
@@ -125,7 +130,7 @@ export default function GetADripPharmacyContent() {
             },
             {
               t: "Step 2: Clinical review",
-              d: "A UK-registered clinician reviews the assessment and may recommend Wegovy, Mounjaro, behaviour support, or nutrition guidance. Not everyone will qualify.",
+              d: "A UK-registered clinician reviews the assessment and may recommend Mounjaro, Wegovy, behaviour support, or nutrition guidance. Not everyone will qualify.",
             },
             {
               t: "Step 3: Ongoing support and programme access",
@@ -183,6 +188,7 @@ export default function GetADripPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
             How much does GetADrip weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Pricing appears to use a <strong>subscription model</strong> — slightly different from
             one-off pharmacy purchasing. Typical examples: <strong>Mounjaro around £159 per month</strong>
@@ -280,7 +286,7 @@ export default function GetADripPharmacyContent() {
             },
             {
               q: "How much does GetADrip weight loss treatment cost?",
-              a: "Pricing may start around £109 per month for Wegovy and £159 per month for Mounjaro, depending on programme structure.",
+              a: "Pricing may start around £159 per month for Mounjaro and £109 per month for Wegovy, depending on programme structure.",
             },
             {
               q: "Does GetADrip deliver medication to your home?",
@@ -310,7 +316,7 @@ export default function GetADripPharmacyContent() {
         <p className="mt-3 text-slate-800 leading-relaxed">
           If you&apos;re looking for a more structured route into prescription weight management, GetADrip
           weight loss treatment appears to offer something slightly broader than many online pharmacy
-          providers. Access to treatments such as Wegovy and Mounjaro, combined with clinician oversight,
+          providers. Access to treatments such as Mounjaro and Wegovy, combined with clinician oversight,
           behavioural support, app-based tracking and cold-chain delivery, gives the model more depth
           than medication alone.
         </p>

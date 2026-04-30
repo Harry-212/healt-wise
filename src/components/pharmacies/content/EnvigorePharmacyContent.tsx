@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://www.envigore.com/";
 
@@ -12,15 +17,15 @@ export default function EnvigorePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Envigore"
       fileRef="HW-ENVIGORE-2026"
-      title="Envigore Weight Loss Treatment Review: Online Access to Wegovy, Mounjaro and Clinician-Led Support in the UK"
+      title="Envigore Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Clinician-Led Support in the UK"
       subtitle="Official dossier: how Envigore works, programme-style support, delivery, pricing context and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · clinical programme · UK"
+      scopeLabel="Scope: Mounjaro · Wegovy · clinical programme · UK"
       providerName="Envigore"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Envigore" },
-        { k: "Treatments", v: "Wegovy · Mounjaro (where appropriate)" },
+        { k: "Treatments", v: "Mounjaro · Wegovy (where appropriate)" },
         { k: "Fulfilment", v: "Tracked delivery · cold-chain (injectables)" },
       ]}
       discountCode={discountCode}
@@ -33,7 +38,7 @@ export default function EnvigorePharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           That advice is not wrong, exactly — but it can be incomplete. For many people, hunger
           signals, metabolic resistance, emotional eating or long-term weight cycling may complicate
-          things. That may help explain why prescription treatments like Wegovy and Mounjaro have
+          things. That may help explain why prescription treatments like Mounjaro and Wegovy have
           become a growing part of the conversation.
         </p>
         <p className="text-slate-800 leading-relaxed">
@@ -88,7 +93,7 @@ export default function EnvigorePharmacyContent() {
             <p className="mt-3 text-slate-800 leading-relaxed">
               Envigore offers prescription GLP-1 treatments including:
             </p>
-            <Points items={["Wegovy", "Mounjaro"]} />
+            <Points items={["Mounjaro", "Wegovy"]} />
             <p className="mt-4 text-slate-800 leading-relaxed">
               These medications may support weight management by influencing appetite regulation and
               satiety. They may help reduce hunger, increase fullness and support lower calorie
@@ -200,7 +205,7 @@ export default function EnvigorePharmacyContent() {
           <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
             <p className="font-bold text-slate-900">Cold-chain shipping for injections</p>
             <p className="mt-2 text-slate-800 leading-relaxed">
-              Injectables like Wegovy and Mounjaro often require controlled temperatures. Envigore
+              Injectables like Mounjaro and Wegovy often require controlled temperatures. Envigore
               appears to use cold-chain packaging designed to maintain around{" "}
               <strong>2–8°C</strong> for up to <strong>48 hours</strong>, which may help support
               medication stability, effectiveness and safe transit.
@@ -233,6 +238,7 @@ export default function EnvigorePharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
             How much does Envigore weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Costs depend on medication and dose. Standard GLP-1 pricing may start around{" "}
             <strong>£124–£129 per month</strong>; higher doses or more intensive plans may cost

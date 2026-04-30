@@ -61,7 +61,7 @@ export default function AboutSection2() {
   return (
     <section
       id="about"
-      className="w-full scroll-mt-24 border-b border-slate-200/80 bg-linear-to-b from-slate-100/95 via-brand-surface to-emerald-50/40 py-10 md:py-14"
+      className="w-full scroll-mt-24 border-b border-slate-200/80 bg-linear-to-b from-slate-100/95 via-brand-surface to-emerald-50/40 py-4 md:py-6"
       aria-labelledby="about-heading"
     >
       <TimelineSection className="w-full px-5 sm:px-6 md:px-10 lg:px-16 xl:px-20">

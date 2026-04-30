@@ -1,7 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Points, PharmacyDossierPage } from "./_dossier";
+import {
+  PHARMACY_PROVIDER_CTA_CLASSNAME,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 export default function AypHealthcareContent() {
   const providerUrl =
@@ -15,15 +20,15 @@ export default function AypHealthcareContent() {
     <PharmacyDossierPage
       slugLabel="AYP Healthcare"
       fileRef="HW-AYP-2026"
-      title="AYP Healthcare Weight Management Review: Online Access to Wegovy, Mounjaro and Medically Supported Weight Loss"
+      title="AYP Healthcare Weight Management Review: Online Access to Mounjaro, Wegovy and Medically Supported Weight Loss"
       subtitle="Official dossier: how AYP Healthcare works, what treatments may be available, delivery, pricing context, and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro"
+      scopeLabel="Scope: Mounjaro · Wegovy"
       providerName="AYP Healthcare"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "AYP Healthcare" },
-        { k: "Treatments", v: "Wegovy · Mounjaro" },
+        { k: "Treatments", v: "Mounjaro · Wegovy" },
         { k: "Fulfilment", v: "Home delivery" },
       ]}
       discountCode={discountCode}
@@ -182,6 +187,7 @@ export default function AypHealthcareContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             How much does AYP Healthcare weight management cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Cost depends on medication and dose. Typical injection costs may be around{" "}
             <strong>£130 per month</strong> at lower entry points and <strong>£350+</strong> at
@@ -256,7 +262,7 @@ export default function AypHealthcareContent() {
         <p className="mt-3 text-slate-800 leading-relaxed">
           If you’re looking for a private route into prescription weight loss treatment, AYP
           Healthcare weight management appears to offer a credible option. Access to treatments
-          like Wegovy and Mounjaro, paired with online consultations, home delivery and ongoing
+          like Mounjaro and Wegovy, paired with online consultations, home delivery and ongoing
           monitoring, makes it more than a simple online pharmacy model.
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">
@@ -269,9 +275,9 @@ export default function AypHealthcareContent() {
             href={providerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center bg-slate-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800 sm:w-auto"
+            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
           >
-            View AYP Healthcare
+            Visit AYP Healthcare
           </a>
         </div>
       </section>

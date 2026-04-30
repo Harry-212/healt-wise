@@ -82,11 +82,11 @@ export default function OurMethodology() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="w-full bg-linear-to-br from-emerald-50/95 via-teal-50/60 to-emerald-100/85 py-10 text-slate-800 md:py-16">
-      <div className="mx-auto max-w-[1200px] px-4 md:px-8 lg:px-10">
-        <div className="mb-10 md:mb-12">
-          <div className="overflow-hidden rounded-3xl border border-emerald-200/70 bg-white/85 shadow-md shadow-emerald-900/6 ring-1 ring-emerald-100/90 backdrop-blur-sm">
-            <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-stretch sm:gap-8 sm:p-8">
+    <section className="w-full bg-white px-4 py-3 text-slate-800 sm:px-6 md:px-8 lg:px-10">
+      <div className="mx-auto max-w-[1400px] overflow-x-clip rounded-2xl border border-slate-200/90 bg-linear-to-br from-emerald-50/50 via-white to-slate-50/80 shadow-sm ring-1 ring-slate-100">
+        <div className="mx-auto max-w-[1200px] p-5 sm:p-6 md:p-8 lg:p-10">
+          <div className="mb-8 border-b border-slate-200/80 pb-8 md:mb-10 md:pb-10">
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-stretch sm:gap-8">
               <div
                 className="flex shrink-0 flex-col items-center justify-center gap-1 rounded-2xl bg-linear-to-b from-amber-50 via-white to-emerald-50/90 px-8 py-6 text-center ring-1 ring-amber-200/40 sm:w-28 sm:py-8"
                 aria-hidden
@@ -132,9 +132,8 @@ export default function OurMethodology() {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="relative">
+          <div className="relative">
           <div className="relative z-10 hidden grid-cols-5 gap-3 md:grid lg:gap-4">
             <div className="absolute left-0 top-[52px] -z-10 h-[2px] w-full bg-emerald-200/80" />
 
@@ -317,6 +316,7 @@ export default function OurMethodology() {
               <Zap className="h-5 w-5 fill-slate-900 transition-transform group-hover:scale-110 sm:h-6 sm:w-6" aria-hidden />
             </Link>
           </div>
+        </div>
         </div>
       </div>
     </section>

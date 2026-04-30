@@ -1,7 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Points, PharmacyDossierPage } from "./_dossier";
+import {
+  PHARMACY_PROVIDER_CTA_CLASSNAME,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 export default function AshcroftPharmacyContent() {
   const providerUrl =
@@ -15,15 +20,15 @@ export default function AshcroftPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Ashcroft Pharmacy"
       fileRef="HW-ASHCROFT-2026"
-      title="Ashcroft Pharmacy Weight Loss Treatment Review: Safe Online Access to Wegovy, Mounjaro and More"
+      title="Ashcroft Pharmacy Weight Loss Treatment Review: Safe Online Access to Mounjaro, Wegovy and More"
       subtitle="Official dossier: how Ashcroft’s online doctor process works, treatment range, delivery expectations, and safety notes (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · Saxenda · tablets"
+      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · tablets"
       providerName="Ashcroft Pharmacy"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Ashcroft Pharmacy" },
-        { k: "Treatments", v: "Wegovy · Mounjaro · Saxenda · tablets" },
+        { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda · tablets" },
         { k: "Fulfilment", v: "Home delivery" },
       ]}
       discountCode={discountCode}
@@ -200,7 +205,7 @@ export default function AshcroftPharmacyContent() {
         <div className="mt-3 grid gap-4 sm:grid-cols-2">
           <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
             <p className="font-bold text-slate-900">Injection treatments</p>
-            <Points items={["Wegovy", "Mounjaro", "Saxenda"]} />
+            <Points items={["Mounjaro", "Wegovy", "Saxenda"]} />
             <p className="mt-4 text-slate-800 leading-relaxed">
               These medications may support reduced hunger, portion control, and sustained weight
               loss efforts — though realistically, medication alone rarely does all the work.
@@ -225,11 +230,12 @@ export default function AshcroftPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             How much does Ashcroft Pharmacy weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Pricing depends on product and dose. Entry-level costs may start around{" "}
             <strong>£11.99</strong> for some Orlistat options and <strong>£100+</strong> for
-            certain tablets. Typical starting prices may include Wegovy from around{" "}
-            <strong>£119.99</strong> and Mounjaro from around <strong>£149.99</strong>, with higher
+            certain tablets. Typical starting prices may include Mounjaro from around{" "}
+            <strong>£149.99</strong> and Wegovy from around <strong>£119.99</strong>, with higher
             doses generally costing more.
           </p>
         </section>
@@ -294,7 +300,7 @@ export default function AshcroftPharmacyContent() {
           people who want convenience without sacrificing safety.
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">
-          Access to treatments like Wegovy and Mounjaro, paired with discreet home delivery, makes
+          Access to treatments like Mounjaro and Wegovy, paired with discreet home delivery, makes
           the service more than just an online storefront. It may not suit everyone, but for
           patients looking for private, faster access, it’s one provider worth considering.
         </p>
@@ -303,9 +309,9 @@ export default function AshcroftPharmacyContent() {
             href={providerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center bg-slate-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800 sm:w-auto"
+            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
           >
-            View Ashcroft Pharmacy
+            Visit Ashcroft Pharmacy
           </a>
         </div>
       </section>

@@ -1,6 +1,12 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PHARMACY_PROVIDER_CTA_CLASSNAME,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl =
   "https://www.cloudpharmacy.co.uk/online-doctor/weight-loss-treatments/";
@@ -14,15 +20,15 @@ export default function CloudPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Cloud Pharmacy"
       fileRef="HW-CLOUD-2026"
-      title="Cloud Pharmacy Weight Loss Treatment Review: Online Access to Wegovy, Mounjaro and Prescription Support in the UK"
+      title="Cloud Pharmacy Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Prescription Support in the UK"
       subtitle="Official dossier: how Cloud Pharmacy works, treatments that may be available, delivery/temperature handling, pricing context and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · Saxenda · Orlistat · Mysimba"
+      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat · Mysimba"
       providerName="Cloud Pharmacy"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Cloud Pharmacy" },
-        { k: "Treatments", v: "Wegovy · Mounjaro · Saxenda · Orlistat · Mysimba" },
+        { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda · Orlistat · Mysimba" },
         { k: "Fulfilment", v: "Home delivery" },
       ]}
       discountCode={discountCode}
@@ -36,7 +42,7 @@ export default function CloudPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Real life tends to interfere. Hunger cues, stress eating, hormonal factors, sedentary
           work, family routines — all of it can make long-term progress harder than standard advice
-          suggests. That may be part of why prescription treatments like Wegovy and Mounjaro have
+          suggests. That may be part of why prescription treatments like Mounjaro and Wegovy have
           become more widely considered across the UK.
         </p>
         <p className="text-slate-800 leading-relaxed">
@@ -105,9 +111,9 @@ export default function CloudPharmacyContent() {
             <p className="mt-3 text-slate-800 leading-relaxed">
               Cloud Pharmacy offers access to several prescription options, including:
             </p>
-            <Points items={["Wegovy", "Mounjaro", "Saxenda", "Orlistat", "Mysimba"]} />
+            <Points items={["Mounjaro", "Wegovy", "Saxenda", "Orlistat", "Mysimba"]} />
             <p className="mt-4 text-slate-800 leading-relaxed">
-              GLP-1 treatments such as Wegovy and Mounjaro may help regulate appetite by increasing
+              GLP-1 treatments such as Mounjaro and Wegovy may help regulate appetite by increasing
               satiety and reducing hunger signals, supporting lower calorie intake. Medication
               doesn’t replace lifestyle change — but it may help some patients sustain it more
               realistically.
@@ -182,6 +188,7 @@ export default function CloudPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             How much does Cloud Pharmacy weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Pricing depends on medication and dose. Tablet costs may range around{" "}
             <strong>£20–£100+</strong> per month, while injection costs may sit around{" "}
@@ -251,8 +258,8 @@ export default function CloudPharmacyContent() {
         <h2 className="text-lg font-bold text-slate-900 sm:text-xl">Conclusion</h2>
         <p className="mt-3 text-slate-800 leading-relaxed">
           If you’re looking for a private route to prescription weight loss treatment, Cloud
-          Pharmacy appears to offer a practical option. Access to medications such as Wegovy and
-          Mounjaro, combined with online assessment, discreet delivery and ongoing support, gives
+          Pharmacy appears to offer a practical option. Access to medications such as Mounjaro and
+          Wegovy, combined with online assessment, discreet delivery and ongoing support, gives
           it more depth than a basic online checkout.
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">
@@ -264,9 +271,9 @@ export default function CloudPharmacyContent() {
             href={providerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center bg-slate-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800 sm:w-auto"
+            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
           >
-            View Cloud Pharmacy
+            Visit Cloud Pharmacy
           </a>
         </div>
       </section>

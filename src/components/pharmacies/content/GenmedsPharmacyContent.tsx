@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://www.genmeds.co.uk/";
 
@@ -12,15 +17,15 @@ export default function GenmedsPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Genmeds"
       fileRef="HW-GENMEDS-2026"
-      title="Genmeds Weight Loss Treatment Review: Buying Wegovy and Mounjaro Online from a UK Registered Pharmacy"
+      title="Genmeds Weight Loss Treatment Review: Buying Mounjaro and Wegovy Online from a UK Registered Pharmacy"
       subtitle="Official dossier: pharmacy-led access, listed prices, accessories, delivery notes and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · UK online pharmacy"
+      scopeLabel="Scope: Mounjaro · Wegovy · UK online pharmacy"
       providerName="Genmeds"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Model", v: "UK-registered online pharmacy" },
-        { k: "Listed from (guide)", v: "Wegovy £129.99 · Mounjaro £179.99" },
+        { k: "Listed from (guide)", v: "Mounjaro £179.99 · Wegovy £129.99" },
         { k: "Fulfilment", v: "Consultation · discreet courier-style delivery" },
       ]}
       discountCode={discountCode}
@@ -30,7 +35,7 @@ export default function GenmedsPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Trying to choose an online provider for weight loss medication can be harder than choosing
           the medication itself. There are dozens of online clinics now offering access to treatments
-          like Wegovy and Mounjaro, but not all operate the same way. Some build in subscriptions. Some
+          like Mounjaro and Wegovy, but not all operate the same way. Some build in subscriptions. Some
           push coaching add-ons. Some focus more narrowly on medication supply.
         </p>
         <p className="text-slate-800 leading-relaxed">
@@ -192,6 +197,7 @@ export default function GenmedsPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
             How much does Genmeds weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Current listed prices in this guide include <strong>Mounjaro — £179.99</strong> and{" "}
             <strong>Wegovy — £129.99</strong> as retail product figures. The consultation may be
@@ -267,7 +273,7 @@ export default function GenmedsPharmacyContent() {
             },
             {
               q: "How much does Genmeds weight loss treatment cost?",
-              a: "Listed prices currently appear to start around £129.99 for Wegovy and £179.99 for Mounjaro, excluding any potential delivery or consultation costs that may apply at checkout.",
+              a: "Listed prices currently appear to start around £179.99 for Mounjaro and £129.99 for Wegovy, excluding any potential delivery or consultation costs that may apply at checkout.",
             },
             {
               q: "Does Genmeds deliver weight loss medication to your home?",
@@ -296,8 +302,8 @@ export default function GenmedsPharmacyContent() {
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">
           If you&apos;re looking for a more direct, pharmacy-led route to prescription weight loss
-          treatment, Genmeds weight loss treatment may be worth considering. Access to Wegovy and
-          Mounjaro, straightforward online consultations, discreet delivery and practical
+          treatment, Genmeds weight loss treatment may be worth considering. Access to Mounjaro and
+          Wegovy, straightforward online consultations, discreet delivery and practical
           accessories gives it a slightly different feel from subscription-heavy online clinics.
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">

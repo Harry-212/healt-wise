@@ -108,7 +108,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "ayp-healthcare") {
     const title =
-      "AYP Healthcare Weight Management Review — Wegovy & Mounjaro (UK)";
+      "AYP Healthcare Weight Management Review — Mounjaro & Wegovy (UK)";
     const description =
       "AYP Healthcare weight management: online consultation, clinical assessment, home delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
     return {
@@ -126,9 +126,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "bolt-pharmacy") {
     const title =
-      "Bolt Pharmacy weight loss (UK) — Wegovy, Mounjaro, online review";
+      "Bolt Pharmacy weight loss (UK) — Mounjaro, Wegovy, online review";
     const description =
-      "Bolt Pharmacy: online weight loss, Wegovy, Mounjaro and Saxenda context, delivery, costs and FAQs. Information from Health Wise — not medical advice.";
+      "Bolt Pharmacy: online weight loss, Mounjaro, Wegovy and Saxenda context, delivery, costs and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -180,9 +180,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "cloud-pharmacy") {
     const title =
-      "Cloud Pharmacy weight loss (UK) — Wegovy, Mounjaro, online review";
+      "Cloud Pharmacy weight loss (UK) — Mounjaro, Wegovy, online review";
     const description =
-      "Cloud Pharmacy: online consultation, Wegovy and Mounjaro context, delivery and temperature handling, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "Cloud Pharmacy: online consultation, Mounjaro and Wegovy context, delivery and temperature handling, pricing context and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -215,7 +215,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "curely") {
     const title =
-      "Curely weight loss (UK) — Wegovy, Mounjaro, online review";
+      "Curely weight loss (UK) — Mounjaro, Wegovy, online review";
     const description =
       "Curely: pharmacist-led consultation, regulated supply, tracked delivery options, pricing context and FAQs. Information from Health Wise — not medical advice.";
     return {
@@ -287,7 +287,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "envigore") {
     const title =
-      "Envigore weight loss (UK) — Wegovy, Mounjaro, clinician-led support";
+      "Envigore weight loss (UK) — Mounjaro, Wegovy, clinician-led support";
     const description =
       "Envigore: online assessment, pharmacist and prescriber review, programme-style support, cold-chain delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
     return {
@@ -305,7 +305,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "farmeci") {
     const title =
-      "Farmeci Weight Loss Treatment Review — Wegovy, Mounjaro, UK clinician support";
+      "Farmeci Weight Loss Treatment Review — Mounjaro, Wegovy, UK clinician support";
     const description =
       "Farmeci: My Health Stop Ltd platform, partner pharmacies, consultations, cold-chain delivery, pricing from ~£92/dose and FAQs. Information from Health Wise — not medical advice.";
     return {
@@ -323,9 +323,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "fylde-clinic") {
     const title =
-      "Fylde Clinic Weight Loss Treatment Review — Wegovy, Mounjaro (UK)";
+      "Fylde Clinic Weight Loss Treatment Review — Mounjaro, Wegovy (UK)";
     const description =
-      "Fylde Clinic: clinician-led online pharmacy, Royal Mail Tracked 24, 2–8°C packaging, Wegovy from ~£99, Mounjaro from ~£134 and FAQs. Information from Health Wise — not medical advice.";
+      "Fylde Clinic: clinician-led online pharmacy, Royal Mail Tracked 24, 2–8°C packaging, Mounjaro from ~£134, Wegovy from ~£99 and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -341,9 +341,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "genmeds") {
     const title =
-      "Genmeds Weight Loss Review — Wegovy & Mounjaro, UK registered pharmacy";
+      "Genmeds Weight Loss Review — Mounjaro & Wegovy, UK registered pharmacy";
     const description =
-      "Genmeds: pharmacy-led Wegovy and Mounjaro access, listed from ~£129.99 / ~£179.99, accessories, discreet delivery and FAQs. Information from Health Wise — not medical advice.";
+      "Genmeds: pharmacy-led Mounjaro and Wegovy access, listed from ~£179.99 / ~£129.99, accessories, discreet delivery and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -377,7 +377,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "getadrip") {
     const title =
-      "GetADrip Weight Loss Review — Wegovy, Mounjaro, UK programme";
+      "GetADrip Weight Loss Review — Mounjaro, Wegovy, UK programme";
     const description =
       "GetADrip: programme-style GLP-1 access, app support, DPD cold-chain delivery, ~£109 / ~£159 monthly-style pricing and FAQs. Information from Health Wise — not medical advice.";
     return {
@@ -413,9 +413,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "happy-pharmacy") {
     const title =
-      "Happy Pharmacy Weight Loss Review — Wegovy, Mounjaro, GPhC (UK)";
+      "Happy Pharmacy Weight Loss Review — Mounjaro, Wegovy, GPhC (UK)";
     const description =
-      "Happy Pharmacy: GPhC-regulated Wegovy and Mounjaro from ~£89.99 / ~£139.99, Orlistat/Alli, discreet tracked delivery and FAQs. Information from Health Wise — not medical advice.";
+      "Happy Pharmacy: GPhC-regulated Mounjaro and Wegovy from ~£139.99 / ~£89.99, Orlistat/Alli, discreet tracked delivery and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -431,7 +431,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "hey-slim") {
     const title =
-      "Hey Slim Weight Loss Review — Wegovy, Mounjaro, clinician-led (UK)";
+      "Hey Slim Weight Loss Review — Mounjaro, Wegovy, clinician-led (UK)";
     const description =
       "Hey Slim: doctor-led programme, GLP-1 access, delivery often 1–2 days and included (stated), dose-dependent pricing and FAQs. Information from Health Wise — not medical advice.";
     return {
@@ -454,15 +454,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!name) return { title: "Pharmacy" };
 
   const meds: string[] = [];
-  if (w) meds.push("Wegovy");
   if (m) meds.push("Mounjaro");
+  if (w) meds.push("Wegovy");
   if (s) meds.push("Saxenda");
 
   if (slug === "asda-online-doctor") {
     const title =
-      "Asda Online Doctor Weight Loss Treatment Review — Wegovy & Mounjaro (UK)";
+      "Asda Online Doctor Weight Loss Treatment Review — Mounjaro & Wegovy (UK)";
     const description =
-      "Asda Online Doctor: how online consultation and prescribing works, treatment options (Wegovy, Mounjaro, Saxenda, Orlistat), delivery and pricing context. Information from Health Wise — not medical advice.";
+      "Asda Online Doctor: how online consultation and prescribing works, treatment options (Mounjaro, Wegovy, Saxenda, Orlistat), delivery and pricing context. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -478,7 +478,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "ashcroft-pharmacy") {
     const title =
-      "Ashcroft Pharmacy Weight Loss Treatment Review — Wegovy & Mounjaro (UK)";
+      "Ashcroft Pharmacy Weight Loss Treatment Review — Mounjaro & Wegovy (UK)";
     const description =
       "Ashcroft Pharmacy: online consultation, treatment range, delivery expectations, safety notes and cost context. Information from Health Wise — not medical advice.";
     return {
@@ -812,8 +812,8 @@ export default async function PharmacyProfilePage({ params }: Props) {
   }
 
   const meds: string[] = [];
-  if (w) meds.push("Wegovy");
   if (m) meds.push("Mounjaro");
+  if (w) meds.push("Wegovy");
   if (s) meds.push("Saxenda");
   const profileTitle = `${displayName} — ${meds.join(" & ")} UK prices (2026)`;
   const profileDescription = `Independent snapshot: ${displayName} — illustrative ${meds.join(" and ")} pen prices and delivery notes on Health Wise.`;

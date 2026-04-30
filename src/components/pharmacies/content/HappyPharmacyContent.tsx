@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://happypharmacy.co.uk/pages/weight-loss";
 
@@ -12,15 +17,15 @@ export default function HappyPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Happy Pharmacy"
       fileRef="HW-HAPPY-2026"
-      title="Happy Pharmacy Weight Loss Treatment Review: Online Access to Wegovy, Mounjaro and Regulated Prescription Support"
+      title="Happy Pharmacy Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Regulated Prescription Support"
       subtitle="Official dossier: GPhC-regulated supply, injections and tablets, pricing context, discreet tracked delivery and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · Orlistat · Alli · UK"
+      scopeLabel="Scope: Mounjaro · Wegovy · Orlistat · Alli · UK"
       providerName="Happy Pharmacy"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Regulation", v: "GPhC-registered UK online pharmacy" },
-        { k: "From (guide)", v: "Wegovy ~£89.99 · Mounjaro ~£139.99" },
+        { k: "From (guide)", v: "Mounjaro ~£139.99 · Wegovy ~£89.99" },
         { k: "Fulfilment", v: "Consultation · discreet tracked delivery" },
       ]}
       discountCode={discountCode}
@@ -33,7 +38,7 @@ export default function HappyPharmacyContent() {
           work routines get in the way; emotional eating shows up; sometimes biology seems to push back.
         </p>
         <p className="text-slate-800 leading-relaxed">
-          That may help explain why prescription treatments like Wegovy and Mounjaro have become more
+          That may help explain why prescription treatments like Mounjaro and Wegovy have become more
           widely considered in the UK. Happy Pharmacy weight loss treatment is one provider operating in
           that space — through its online service, it offers consultations, access to prescription
           medications, discreet delivery, and ongoing support for eligible patients.
@@ -90,7 +95,7 @@ export default function HappyPharmacyContent() {
               2. Clinically proven weight loss treatments
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
-              Happy Pharmacy offers a mix of injectable and oral options: Wegovy, Mounjaro, Orlistat,
+              Happy Pharmacy offers a mix of injectable and oral options: Mounjaro, Wegovy, Orlistat,
               Alli. GLP-1 medications may help regulate appetite through satiety pathways — increase
               fullness, reduce hunger, support lower calorie intake. Lifestyle changes are not optional.
             </p>
@@ -115,7 +120,7 @@ export default function HappyPharmacyContent() {
           {[
             {
               t: "Step 1: Choose your treatment",
-              d: "Wegovy, Mounjaro, Orlistat, or Alli — product pages generally explain what each may suit.",
+              d: "Mounjaro, Wegovy, Orlistat, or Alli — product pages generally explain what each may suit.",
             },
             {
               t: "Step 2: Complete online consultation",
@@ -179,9 +184,10 @@ export default function HappyPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
             How much does Happy Pharmacy weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
-            <strong>Injectables:</strong> Wegovy from around <strong>£89.99</strong>, Mounjaro from around{" "}
-            <strong>£139.99</strong> — higher doses may increase price. <strong>Tablets:</strong> Orlistat
+            <strong>Injectables:</strong> Mounjaro from around <strong>£139.99</strong>, Wegovy from around{" "}
+            <strong>£89.99</strong> — higher doses may increase price. <strong>Tablets:</strong> Orlistat
             from <strong>£34.98</strong>, Alli from <strong>£39.98</strong>.
           </p>
           <p className="mt-3 text-slate-800 leading-relaxed">
@@ -252,7 +258,7 @@ export default function HappyPharmacyContent() {
             },
             {
               q: "How much does Happy Pharmacy weight loss treatment cost?",
-              a: "Costs may start around £89.99 for Wegovy, £139.99 for Mounjaro, and £34.98 for Orlistat, depending on treatment and dosage.",
+              a: "Costs may start around £139.99 for Mounjaro, £89.99 for Wegovy, and £34.98 for Orlistat, depending on treatment and dosage.",
             },
             {
               q: "Does Happy Pharmacy deliver medication to your home?",
@@ -282,7 +288,7 @@ export default function HappyPharmacyContent() {
         <p className="mt-3 text-slate-800 leading-relaxed">
           If you&apos;re looking for a private route to prescription weight loss treatment, Happy
           Pharmacy weight loss treatment appears to offer a credible option. Access to medications such
-          as Wegovy and Mounjaro, combined with regulated prescribing, discreet delivery and ongoing
+          as Mounjaro and Wegovy, combined with regulated prescribing, discreet delivery and ongoing
           support, gives it more depth than a basic online pharmacy model.
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">

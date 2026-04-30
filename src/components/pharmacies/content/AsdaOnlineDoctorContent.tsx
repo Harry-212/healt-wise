@@ -1,7 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { Points, PharmacyDossierPage } from "./_dossier";
+import {
+  PHARMACY_PROVIDER_CTA_CLASSNAME,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 export default function AsdaOnlineDoctorContent() {
   const providerUrl =
@@ -17,13 +22,13 @@ export default function AsdaOnlineDoctorContent() {
       fileRef="HW-ASDA-2026"
       title="Asda Online Doctor Weight Loss Treatment: Safe, Convenient and Affordable Weight Loss Medication in the UK"
       subtitle="Official dossier: how Asda Online Doctor works, what treatments may be available, delivery notes, pricing context, and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · Saxenda · Orlistat"
+      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat"
       providerName="Asda Online Doctor"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Asda Online Doctor" },
-        { k: "Treatments", v: "Wegovy · Mounjaro · Saxenda · Orlistat" },
+        { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda · Orlistat" },
         { k: "Fulfilment", v: "Home delivery" },
       ]}
       discountCode={discountCode}
@@ -75,7 +80,7 @@ export default function AsdaOnlineDoctorContent() {
           <p className="mt-4 text-slate-800 leading-relaxed">
             Its weight loss service includes access to:
           </p>
-          <Points items={["Wegovy", "Mounjaro", "Saxenda", "Orlistat"]} />
+          <Points items={["Mounjaro", "Wegovy", "Saxenda", "Orlistat"]} />
           <p className="mt-4 text-slate-800 leading-relaxed">
             These treatments can help support weight loss by:
           </p>
@@ -262,6 +267,7 @@ export default function AsdaOnlineDoctorContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             How much does Asda Online Doctor weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Pricing depends on medication and dosage. Typical ranges may include Wegovy from around
             <strong> £88.97 per month</strong> (higher doses up to <strong>£248.97</strong>) and
@@ -311,7 +317,7 @@ export default function AsdaOnlineDoctorContent() {
           solutions.
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">
-          With access to treatments like Wegovy, Mounjaro and Orlistat, plus discreet delivery,
+          With access to treatments like Mounjaro, Wegovy and Orlistat, plus discreet delivery,
           transparent pricing, and ongoing doctor support, Asda provides a trusted route to
           accessing prescription weight loss medication in the UK.
         </p>
@@ -320,9 +326,9 @@ export default function AsdaOnlineDoctorContent() {
             href={providerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center bg-slate-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800 sm:w-auto"
+            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
           >
-            View Asda Online Doctor
+            Visit Asda Online Doctor
           </a>
         </div>
       </section>

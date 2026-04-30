@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://health.goodbodyclinic.com/weight-loss-treatments/";
 
@@ -264,6 +269,8 @@ export default function GoodBodyClinicPharmacyContent() {
           subscription models or want face-to-face clinic support.
         </p>
       </section>
+
+      <PharmacyPriceCompareHint className="mb-8 mt-2" />
 
       <section className="border border-slate-200/90 bg-[#fbf9f4] p-6">
         <h2 className="font-sans text-xl font-bold text-slate-900">Frequently asked questions</h2>

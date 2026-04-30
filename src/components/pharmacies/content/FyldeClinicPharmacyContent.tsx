@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://fyldeclinic.co.uk/";
 
@@ -12,15 +17,15 @@ export default function FyldeClinicPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Fylde Clinic"
       fileRef="HW-FYLDE-2026"
-      title="Fylde Clinic Weight Loss Treatment Review: Online Access to Wegovy, Mounjaro and Clinician-Led Support in the UK"
+      title="Fylde Clinic Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Clinician-Led Support in the UK"
       subtitle="Official dossier: how Fylde Clinic works, temperature-controlled delivery, pricing context and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · UK online pharmacy"
+      scopeLabel="Scope: Mounjaro · Wegovy · UK online pharmacy"
       providerName="Fylde Clinic"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Fylde Clinic (UK-regulated online pharmacy)" },
-        { k: "Treatments", v: "Wegovy · Mounjaro (where appropriate)" },
+        { k: "Treatments", v: "Mounjaro · Wegovy (where appropriate)" },
         { k: "Fulfilment", v: "Tracked delivery · 2–8°C insulated packaging (injectables)" },
       ]}
       discountCode={discountCode}
@@ -31,7 +36,7 @@ export default function FyldeClinicPharmacyContent() {
           Weight loss tends to get framed as a discipline problem. Eat less. Move more. Try harder.
           But for many people, that advice barely scratches the surface. Appetite regulation, long-term
           habits, stress, metabolic factors — these can all complicate what sounds simple in theory.
-          That may help explain why prescription treatments like Wegovy and Mounjaro have become
+          That may help explain why prescription treatments like Mounjaro and Wegovy have become
           increasingly considered across the UK.
         </p>
         <p className="text-slate-800 leading-relaxed">
@@ -216,6 +221,7 @@ export default function FyldeClinicPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
             How much does Fylde Clinic weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Pricing depends on medication and dose. <strong>Wegovy</strong> appears to start around{" "}
             <strong>£99</strong>; higher doses increase in price. <strong>Mounjaro</strong> appears to
@@ -292,7 +298,7 @@ export default function FyldeClinicPharmacyContent() {
             },
             {
               q: "How much does Fylde Clinic weight loss treatment cost?",
-              a: "Pricing may start around £99 for Wegovy and £134 for Mounjaro, with higher doses costing more.",
+              a: "Pricing may start around £134 for Mounjaro and £99 for Wegovy, with higher doses costing more.",
             },
             {
               q: "Does Fylde Clinic provide temperature-controlled delivery?",
@@ -322,7 +328,7 @@ export default function FyldeClinicPharmacyContent() {
         <p className="mt-3 text-slate-800 leading-relaxed">
           If you&apos;re looking for a private route into prescription weight loss treatment, Fylde
           Clinic weight loss treatment appears to offer a credible option. Access to treatments such as
-          Wegovy and Mounjaro, paired with clinician-led assessment, temperature-controlled delivery
+          Mounjaro and Wegovy, paired with clinician-led assessment, temperature-controlled delivery
           and ongoing support, gives the service more substance than a simple online pharmacy model.
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">

@@ -1,6 +1,6 @@
 "use client";
 
-import type { ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
@@ -16,51 +16,15 @@ import {
   RefreshCw,
   FileWarning,
 } from "lucide-react";
+import {
+  HazardBox,
+  PHARMACY_PROVIDER_CTA_CLASSNAME,
+  PharmacyBrandLogoFooter,
+  PharmacyPriceCompareHint,
+} from "./_dossier";
 
 const providerUrl =
   "https://www.boltpharmacy.co.uk/prelanding30?utm_source=healthwise360";
-
-/** Diagonal green / white hazard border (official “caution” dossier). */
-function HazardBox({
-  children,
-  className = "",
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`p-[3px] sm:p-1 ${className}`}
-      style={{
-        background: `repeating-linear-gradient(
-          -45deg,
-          #047857,
-          #047857 7px,
-          #ffffff 7px,
-          #ffffff 14px
-        )`,
-      }}
-    >
-      <div className="h-full bg-[#fbf9f4] p-4 shadow-inner sm:p-5">{children}</div>
-    </div>
-  );
-}
-
-function ClassifiedStamp({ label = "Top Secret" }: { label?: string }) {
-  return (
-    <div
-      className="pointer-events-none select-none font-mono text-[10px] font-bold uppercase tracking-widest text-emerald-800/95 sm:text-xs"
-      aria-hidden
-    >
-      <div className="inline-block -rotate-12 border-4 border-double border-emerald-700/70 bg-white/70 px-3 py-1.5 text-center opacity-95">
-        {label}
-        <span className="mt-0.5 block text-[0.65rem] font-normal normal-case tracking-normal text-emerald-900/70">
-          Confidential
-        </span>
-      </div>
-    </div>
-  );
-}
 
 function Points({ items }: { items: string[] }) {
   return (
@@ -120,10 +84,10 @@ export default function BoltPharmacyContent() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-10 lg:max-w-4xl">
+      <div className="relative z-10 mx-auto max-w-3xl px-4 pt-5 pb-8 sm:px-6 sm:pt-6 sm:pb-10 lg:max-w-4xl xl:max-w-6xl">
         {/* Breadcrumb */}
         <nav
-          className="mb-6 flex flex-wrap items-center gap-1.5 text-sm text-slate-600"
+          className="mb-4 flex flex-wrap items-center gap-1.5 text-sm text-slate-600 sm:mb-5"
           aria-label="Breadcrumb"
         >
           <Link
@@ -137,24 +101,148 @@ export default function BoltPharmacyContent() {
           <span className="text-slate-500">UK online pharmacies</span>
         </nav>
 
-        {/* Stamps + hero */}
+        {/* Hero — file ref + title only; GPhC mark top-right */}
         <div className="relative mb-8">
-          <div className="absolute -right-1 -top-2 z-20 sm:right-0 sm:top-0">
-            <ClassifiedStamp />
+          <div className="pointer-events-none absolute -right-1 -top-2 z-20 w-[100px] max-w-[28%] sm:right-0 sm:top-0 sm:w-[112px] sm:max-w-none">
+            <Image
+              src="/logo_stamp_GPhc.webp"
+              alt="GPhC registration mark"
+              width={112}
+              height={112}
+              className="h-auto w-full object-contain opacity-95 drop-shadow-sm"
+              sizes="(max-width: 640px) 28vw, 112px"
+            />
           </div>
-          <div className="rounded-sm border border-emerald-900/15 bg-white/80 p-5 shadow-md ring-1 ring-emerald-900/10 sm:p-7">
+          <div className="rounded-sm border border-emerald-900/15 bg-white/85 p-5 pr-[min(7.5rem,26%)] shadow-[0_20px_50px_-24px_rgba(6,78,59,0.18)] ring-1 ring-emerald-900/10 backdrop-blur-[2px] sm:p-7 sm:pr-7">
             <p className="mb-2 font-mono text-[0.7rem] uppercase tracking-[0.35em] text-emerald-900/70">
               File ref · HW-BOLT-2026
             </p>
-            <h1 className="text-balance font-sans text-xl font-black uppercase leading-tight tracking-tight text-emerald-950 sm:text-2xl md:text-3xl">
-              Bolt Pharmacy weight loss treatment review: Wegovy, Mounjaro and
-              prescription support in the UK
+            <h1 className="text-balance pr-2 font-sans text-lg font-black uppercase leading-tight tracking-tight text-emerald-950 sm:text-xl md:text-2xl">
+              Bolt Pharmacy weight loss treatment review: Mounjaro, Wegovy and prescription
+              support in the UK
             </h1>
-            <p className={`mt-4 text-base font-medium text-slate-800 md:text-lg`}>
-              Official dossier: online consultation, clinical review, home delivery, and
-              what to expect before you choose a provider.
+          </div>
+        </div>
+
+        {/* Document details + discount — 2-col grid; hazard = thin frame only */}
+        <div className="mb-8 space-y-4">
+          <div className="grid gap-4 md:grid-cols-2 md:items-stretch">
+            <HazardBox className="h-full min-h-0 shadow-md shadow-emerald-900/12">
+              <p className="text-center text-xs font-bold uppercase tracking-[0.22em] text-emerald-900/80">
+                Link to Bolt Pharmacy
+              </p>
+              <p className="mt-1 text-center text-sm font-extrabold uppercase tracking-[0.16em] text-emerald-950">
+                Document details
+              </p>
+              <dl className="mt-5 min-h-0 flex-1 space-y-0 text-base text-slate-800">
+                {[
+                  { k: "Published", v: "2026" },
+                  { k: "Provider", v: "Bolt Pharmacy" },
+                  { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda" },
+                  { k: "Fulfilment", v: "Home delivery" },
+                ].map((d, i) => (
+                  <div
+                    key={d.k}
+                    className={`flex flex-col gap-0.5 border-emerald-900/10 py-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6 ${
+                      i > 0 ? "border-t border-dashed" : ""
+                    }`}
+                  >
+                    <dt className="shrink-0 font-bold text-slate-900">{d.k}</dt>
+                    <dd className="min-w-0 font-semibold text-slate-700 sm:text-right">{d.v}</dd>
+                  </div>
+                ))}
+              </dl>
+              <div className="mt-auto border-t border-dashed border-emerald-900/18 pt-5">
+                <a
+                  href={providerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} gap-2`}
+                >
+                  Visit Bolt Pharmacy
+                  <ArrowRight className="h-4 w-4 shrink-0" />
+                </a>
+                <p className="mt-3 text-center text-sm font-medium leading-relaxed text-slate-600">
+                  Information only — confirm eligibility, pricing and prescribing rules on the
+                  provider&apos;s own site.
+                </p>
+              </div>
+            </HazardBox>
+
+            <section
+              className="flex h-full min-h-0 min-w-0 flex-col scroll-mt-24"
+              aria-labelledby="bolt-discount-heading"
+            >
+              <HazardBox className="h-full min-h-0 shadow-md shadow-emerald-900/12">
+                <div className="flex min-h-0 flex-1 flex-col">
+                  <div className="flex items-center justify-center gap-2">
+                    <Tag className="h-4 w-4 shrink-0 text-emerald-900/85" aria-hidden />
+                    <p
+                      id="bolt-discount-heading"
+                      className="text-center text-xs font-bold uppercase tracking-[0.22em] text-emerald-900/80"
+                    >
+                      Discounts &amp; offers
+                    </p>
+                  </div>
+                  <div className="mt-4 flex min-h-0 flex-1 flex-col gap-4 sm:flex-row sm:items-stretch sm:justify-between sm:gap-6">
+                    <div className="min-w-0 flex-1">
+                      <p className={`text-base font-medium leading-relaxed ${body}`}>
+                        When a public code is available, you can try it at checkout on the
+                        provider&apos;s site. We don&apos;t guarantee eligibility or stackability —
+                        always confirm live pricing.
+                      </p>
+                    </div>
+                    <div className="shrink-0 self-center rounded-md border border-emerald-800/20 bg-emerald-50/40 px-4 py-3.5 text-center shadow-sm sm:self-start min-w-30 sm:min-w-32">
+                      <p className="font-mono text-xs font-bold uppercase tracking-widest text-emerald-900/75">
+                        Code
+                      </p>
+                      <p
+                        className="mt-1 font-mono text-xl font-extrabold tracking-tight text-emerald-950 tabular-nums"
+                        aria-live="polite"
+                      >
+                        {hasDiscountCode ? discountCode : "—"}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-auto flex flex-col gap-3 border-t border-dashed border-emerald-900/18 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                    <p className="text-sm font-medium leading-relaxed text-slate-600">
+                      {!hasDiscountCode
+                        ? "Promotional code will be shown here when available. Always confirm live pricing at checkout."
+                        : hasDiscount
+                          ? "This code is currently flagged as active on the provider site (verify before payment)."
+                          : "Confirm validity on Bolt Pharmacy before you pay."}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={handleCopy}
+                      disabled={!hasDiscountCode}
+                      title={!hasDiscountCode ? "No code to copy yet" : undefined}
+                      className="inline-flex items-center justify-center gap-2 self-start rounded-md border-2 border-emerald-800/25 bg-white px-4 py-3 text-sm font-bold uppercase tracking-wide text-emerald-950 shadow-sm transition hover:border-emerald-700/40 hover:bg-emerald-50/80 disabled:cursor-not-allowed disabled:opacity-45"
+                    >
+                      {copied ? (
+                        <>
+                          <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                          Copied
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="h-4 w-4 text-emerald-800" />
+                          Copy code
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </HazardBox>
+            </section>
+          </div>
+
+          <div className="rounded-md border border-emerald-900/12 bg-white/75 px-4 py-4 shadow-sm ring-1 ring-emerald-900/6 sm:px-5">
+            <p className="text-base font-semibold leading-relaxed text-slate-800 md:text-lg">
+              Official dossier: online consultation, clinical review, home delivery, and what to
+              expect before you choose a provider.
             </p>
-            <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-emerald-900/10 pt-4 text-xs text-slate-600 sm:text-sm">
+            <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-emerald-900/10 pt-3 text-sm font-semibold text-slate-700 sm:text-base">
               <span className="font-mono">Published 2026</span>
               <span className="text-slate-400" aria-hidden>
                 ·
@@ -163,20 +251,11 @@ export default function BoltPharmacyContent() {
               <span className="text-slate-400" aria-hidden>
                 ·
               </span>
-              <span>Scope: Wegovy · Mounjaro · Saxenda</span>
-            </div>
-            <div className="mt-6">
-              <a
-                href={providerUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-full items-center justify-center gap-2 bg-emerald-700 px-5 py-3.5 text-center text-sm font-bold uppercase tracking-wide text-white shadow-md transition hover:bg-emerald-800 sm:w-auto sm:px-8"
-              >
-                View Bolt Pharmacy
-                <ArrowRight className="h-4 w-4 shrink-0" />
-              </a>
+              <span>Scope: Mounjaro · Wegovy · Saxenda</span>
             </div>
           </div>
+
+          <PharmacyBrandLogoFooter />
         </div>
 
         {/* Pricing + hazard: tablet vs injectable */}
@@ -212,70 +291,6 @@ export default function BoltPharmacyContent() {
           </HazardBox>
         </div>
 
-        {/* Discount / promotional — dedicated section */}
-        <section
-          className="mb-10 scroll-mt-24"
-          aria-labelledby="bolt-discount-heading"
-        >
-          <HazardBox className="ring-1 ring-emerald-900/5">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-              <div>
-                <p
-                  id="bolt-discount-heading"
-                  className="inline-flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-wider text-emerald-900"
-                >
-                  <Tag className="h-4 w-4" aria-hidden />
-                  Discounts &amp; offers
-                </p>
-                <p className={`mt-2 text-sm ${body}`}>
-                  When a public code is available, you can try it at checkout on the
-                  provider&apos;s site. We don&apos;t guarantee eligibility or
-                  stackability—always confirm live pricing.
-                </p>
-              </div>
-              <div className="shrink-0 rounded border border-amber-200/80 bg-amber-50/80 px-3 py-2 text-center min-w-28">
-                <p className="font-mono text-[0.65rem] uppercase tracking-widest text-amber-900/80">
-                  Code
-                </p>
-                <p
-                  className="font-mono text-lg font-bold text-amber-950 tabular-nums"
-                  aria-live="polite"
-                >
-                  {hasDiscountCode ? discountCode : "—"}
-                </p>
-              </div>
-            </div>
-            <div className="mt-4 flex flex-col gap-2 border-t border-dashed border-emerald-900/15 pt-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-xs text-slate-600">
-                {!hasDiscountCode
-                  ? "Promotional code will be shown here when available. Always confirm live pricing at checkout."
-                  : hasDiscount
-                    ? "This code is currently flagged as active on the provider site (verify before payment)."
-                    : "Confirm validity on Bolt Pharmacy before you pay."}
-              </p>
-              <button
-                type="button"
-                onClick={handleCopy}
-                disabled={!hasDiscountCode}
-                title={!hasDiscountCode ? "No code to copy yet" : undefined}
-                className="inline-flex items-center justify-center gap-2 self-start rounded border border-slate-300 bg-white px-3 py-2 text-xs font-semibold text-slate-800 shadow-sm transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                {copied ? (
-                  <>
-                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
-                    Copied
-                  </>
-                ) : (
-                  <>
-                    <Copy className="h-3.5 w-3.5" />
-                    Copy code
-                  </>
-                )}
-              </button>
-            </div>
-          </HazardBox>
-        </section>
-
         <div className="space-y-10 text-slate-800">
           <section className="space-y-4">
             <p className={body}>
@@ -289,8 +304,8 @@ export default function BoltPharmacyContent() {
             </p>
             <p className={body}>
               Bolt Pharmacy weight loss treatment has become one of the UK providers offering
-              that option through an online model, with access to medications such as Wegovy,
-              Mounjaro and other medically supervised treatments.
+              that option through an online model, with access to medications such as Mounjaro,
+              Wegovy and other medically supervised treatments.
             </p>
             <p className={body}>
               Through Bolt Pharmacy, eligible patients may complete an online consultation,
@@ -353,7 +368,7 @@ export default function BoltPharmacyContent() {
                 <h2 className={h2}>2. Access to clinically backed weight loss injections</h2>
                 <p className={`mt-3 ${body}`}>
                   A major reason people look at Bolt Pharmacy is access to prescription injections,
-                  including Wegovy, Mounjaro and Saxenda. These treatments may support weight loss
+                  including Mounjaro, Wegovy and Saxenda. These treatments may support weight loss
                   by:
                 </p>
                 <Points
@@ -433,6 +448,7 @@ export default function BoltPharmacyContent() {
               <p className={sectionLabel}>
                 How much does Bolt Pharmacy weight loss treatment cost?
               </p>
+              <PharmacyPriceCompareHint />
               <p className={`mt-3 text-sm sm:text-base ${body}`}>
                 Costs depend on treatment choice. Tablet options may start around{" "}
                 <strong>£10–£70</strong>. Injection costs typically fall around{" "}
@@ -494,6 +510,7 @@ export default function BoltPharmacyContent() {
 
           <section>
             <p className={sectionLabel}>Price</p>
+            <PharmacyPriceCompareHint />
             <p className={`mt-3 ${body}`}>Costs depend on treatment choice.</p>
             <p className={`mt-3 ${body}`}>
               Tablet options may start around <strong>£10–£70</strong>. Injection costs typically
@@ -563,7 +580,7 @@ export default function BoltPharmacyContent() {
               {[
                 { href: "/what-is-wegovy", label: "What is Wegovy?" },
                 { href: "/what-is-mounjaro", label: "What is Mounjaro?" },
-                { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
+                { href: "/compare/wegovy-vs-mounjaro", label: "Mounjaro vs Wegovy" },
               ].map((x) => (
                 <Link
                   key={x.href}
@@ -585,7 +602,7 @@ export default function BoltPharmacyContent() {
             <p className={`mx-auto mt-4 max-w-2xl text-sm sm:text-base ${body}`}>
               If you want a private and practical route into prescription weight loss treatment, Bolt
               Pharmacy weight loss treatment appears to offer a credible option. Access to
-              medications such as Wegovy and Mounjaro, combined with online assessment, discreet
+              medications such as Mounjaro and Wegovy, combined with online assessment, discreet
               delivery and ongoing support, gives it more substance than a basic online pharmacy
               checkout.
             </p>
@@ -599,9 +616,9 @@ export default function BoltPharmacyContent() {
                 href={providerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full max-w-sm items-center justify-center gap-2 bg-emerald-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow transition hover:bg-emerald-800 sm:w-auto"
+                className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} max-w-sm gap-2`}
               >
-                View Bolt Pharmacy
+                Visit Bolt Pharmacy
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>

@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://www.heyslim.co.uk/";
 
@@ -12,16 +17,16 @@ export default function HeySlimPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Hey Slim"
       fileRef="HW-HEY-SLIM-2026"
-      title="Hey Slim Weight Loss Review: Online Access to Wegovy, Mounjaro and Clinician-Led Support in the UK"
+      title="Hey Slim Weight Loss Review: Online Access to Mounjaro, Wegovy and Clinician-Led Support in the UK"
       subtitle="Official dossier: clinician-led programme, GLP-1 access, delivery often included, pricing ranges and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · UK"
+      scopeLabel="Scope: Mounjaro · Wegovy · UK"
       providerName="heySlim"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Model", v: "Clinician-led weight management programme" },
         { k: "Delivery", v: "Often 1–2 business days · included in pricing (stated)" },
-        { k: "From (guide)", v: "Plans from ~£89/mo · dose-dependent Wegovy/Mounjaro" },
+        { k: "From (guide)", v: "Plans from ~£89/mo · dose-dependent Mounjaro/Wegovy" },
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
@@ -90,7 +95,7 @@ export default function HeySlimPharmacyContent() {
               2. Access to prescription weight loss medications
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
-              Hey Slim focuses largely on GLP-1 based treatments including Wegovy and Mounjaro. They may
+              Hey Slim focuses largely on GLP-1 based treatments including Mounjaro and Wegovy. They may
               support weight loss by influencing appetite mechanisms — increased satiety, reduced hunger,
               lower calorie intake. That does not make weight loss effortless.
             </p>
@@ -183,6 +188,7 @@ export default function HeySlimPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
             How much does Hey Slim cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             <strong>Wegovy:</strong> reported ranges include roughly <strong>£79–£159</strong> initial
             month and <strong>£119–£199</strong> ongoing depending on strength.{" "}
@@ -226,7 +232,7 @@ export default function HeySlimPharmacyContent() {
         <Points
           items={[
             "Clinician-led care — more medical involvement than some competitors",
-            "GLP-1 access — Wegovy and Mounjaro",
+            "GLP-1 access — Mounjaro and Wegovy",
             "Fast delivery — often 1–2 business days",
             "Support structure — monitoring beyond first prescription",
             "Transparent pricing — shipping included (as stated)",
@@ -248,7 +254,7 @@ export default function HeySlimPharmacyContent() {
             },
             {
               q: "How much does Hey Slim weight loss treatment cost?",
-              a: "Costs may range from around £79–£159 initially for Wegovy, and £129–£269 initially for Mounjaro, with ongoing monthly costs varying by dose.",
+              a: "Costs may range from around £129–£269 initially for Mounjaro, and £79–£159 initially for Wegovy, with ongoing monthly costs varying by dose.",
             },
             {
               q: "Does Hey Slim include delivery?",
@@ -278,7 +284,7 @@ export default function HeySlimPharmacyContent() {
         <p className="mt-3 text-slate-800 leading-relaxed">
           If you&apos;re looking for a more structured approach to prescription weight loss treatment,
           Hey Slim weight loss treatment appears to offer something slightly different from standard online
-          pharmacy providers. Access to medications such as Wegovy and Mounjaro, combined with clinician
+          pharmacy providers. Access to medications such as Mounjaro and Wegovy, combined with clinician
           review, included delivery and ongoing support, gives it a programme-style feel rather than a
           one-time transaction.
         </p>

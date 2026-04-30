@@ -24,13 +24,13 @@ export default function Homepage() {
   const homeLd = homePageJsonLdGraph();
 
   return (
-    <div className="flex flex-col pb-12">
+    <div className="flex flex-col pb-6">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeLd) }}
       />
       <HeroNumanStyle />
-      <div className="flex flex-col gap-4 pt-6 md:gap-6 md:pt-8">
+      <div className="flex flex-col gap-0 pt-0">
         <AboutSection2 />
 
         {/* Trust bar: full bleed scrolling marquee */}

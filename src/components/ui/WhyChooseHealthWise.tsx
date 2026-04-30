@@ -16,6 +16,7 @@ import { useState } from "react";
 import type { LucideIcon } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { SITE_LOGO_SRC } from "@/lib/site-assets";
 import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 
 const FEATURES: {
@@ -72,15 +73,22 @@ export default function WhyChooseHealthWise() {
   return (
     <section
       id="why-choose-healthwise360"
-      className="w-full scroll-mt-4 bg-white px-4 py-6 sm:px-6 md:px-8 lg:px-10"
+      className="w-full scroll-mt-4 bg-white px-4 py-3 sm:px-6 md:px-8 lg:px-10"
     >
       <div className="mx-auto max-w-[1400px] overflow-x-clip rounded-2xl border border-slate-200/90 bg-linear-to-br from-emerald-50/50 via-white to-slate-50/80 shadow-sm ring-1 ring-slate-100">
         <div className="flex flex-col lg:flex-row lg:items-stretch">
           <div className="order-2 flex min-w-0 flex-1 flex-col px-5 py-6 sm:px-8 sm:py-8 lg:order-1 lg:w-[56%] lg:max-w-[56%] lg:py-10">
-            <h2 className="text-2xl font-black uppercase leading-[0.95] tracking-tight text-slate-950 sm:text-3xl md:text-[2.35rem]">
-              Why choose
-              <br />
-              {SITE_BRAND_NAME}
+            <h2 className="flex min-w-0 flex-nowrap items-center gap-x-3 text-2xl font-black uppercase leading-none tracking-tight text-slate-950 sm:gap-x-4 sm:text-3xl md:text-[2.35rem]">
+              <span className="shrink-0">Why choose</span>
+              <span className="min-w-0 shrink">
+                <Image
+                  src={SITE_LOGO_SRC}
+                  alt={SITE_BRAND_NAME}
+                  width={800}
+                  height={250}
+                  className="h-9 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-12 sm:max-w-[min(100%,280px)] md:h-16 md:max-w-[min(100%,340px)] lg:h-20 lg:max-w-none"
+                />
+              </span>
             </h2>
 
             <div className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600 md:text-[15px]">

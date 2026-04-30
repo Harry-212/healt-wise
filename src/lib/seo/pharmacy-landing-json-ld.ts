@@ -314,7 +314,7 @@ const CUVA_FAQ: FaqItem[] = [
   {
     question: "How much does Cuva Health weight loss treatment cost?",
     answer:
-      "Costs may range from around £199–£249 monthly for Wegovy and £200–£300 monthly for Mounjaro, depending on treatment and dose.",
+      "Costs may range from around £200–£300 monthly for Mounjaro and £199–£249 monthly for Wegovy, depending on treatment and dose.",
   },
   {
     question: "Does Cuva Health use temperature-controlled delivery?",
@@ -479,7 +479,7 @@ const FYLDE_CLINIC_FAQ: FaqItem[] = [
   {
     question: "How much does Fylde Clinic weight loss treatment cost?",
     answer:
-      "Pricing may start around £99 for Wegovy and £134 for Mounjaro, with higher doses costing more.",
+      "Pricing may start around £134 for Mounjaro and £99 for Wegovy, with higher doses costing more.",
   },
   {
     question: "Does Fylde Clinic provide temperature-controlled delivery?",
@@ -511,7 +511,7 @@ const GENMEDS_FAQ: FaqItem[] = [
   {
     question: "How much does Genmeds weight loss treatment cost?",
     answer:
-      "Listed prices currently appear to start around £129.99 for Wegovy and £179.99 for Mounjaro, excluding any potential delivery or consultation costs that may apply at checkout.",
+      "Listed prices currently appear to start around £179.99 for Mounjaro and £129.99 for Wegovy, excluding any potential delivery or consultation costs that may apply at checkout.",
   },
   {
     question: "Does Genmeds deliver weight loss medication to your home?",
@@ -577,7 +577,7 @@ const GETADRIP_FAQ: FaqItem[] = [
   {
     question: "How much does GetADrip weight loss treatment cost?",
     answer:
-      "Pricing may start around £109 per month for Wegovy and £159 per month for Mounjaro, depending on programme structure.",
+      "Pricing may start around £159 per month for Mounjaro and £109 per month for Wegovy, depending on programme structure.",
   },
   {
     question: "Does GetADrip deliver medication to your home?",
@@ -643,7 +643,7 @@ const HAPPY_PHARMACY_FAQ: FaqItem[] = [
   {
     question: "How much does Happy Pharmacy weight loss treatment cost?",
     answer:
-      "Costs may start around £89.99 for Wegovy, £139.99 for Mounjaro, and £34.98 for Orlistat, depending on treatment and dosage.",
+      "Costs may start around £139.99 for Mounjaro, £89.99 for Wegovy, and £34.98 for Orlistat, depending on treatment and dosage.",
   },
   {
     question: "Does Happy Pharmacy deliver medication to your home?",
@@ -676,7 +676,7 @@ const HEY_SLIM_FAQ: FaqItem[] = [
   {
     question: "How much does Hey Slim weight loss treatment cost?",
     answer:
-      "Costs may range from around £79–£159 initially for Wegovy, and £129–£269 initially for Mounjaro, with ongoing monthly costs varying by dose.",
+      "Costs may range from around £129–£269 initially for Mounjaro, and £79–£159 initially for Wegovy, with ongoing monthly costs varying by dose.",
   },
   {
     question: "Does Hey Slim include delivery?",
@@ -751,9 +751,9 @@ export function asdaPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/asda-online-doctor";
   const url = `${origin}${path}`;
   const name =
-    "Asda Online Doctor weight loss (UK) — Wegovy, Mounjaro, Saxenda guide";
+    "Asda Online Doctor weight loss (UK) — Mounjaro, Wegovy, Saxenda guide";
   const description =
-    "How Asda Online Doctor works: online consultation, UK prescribers, Wegovy and Mounjaro pricing context, delivery and FAQs. Information from Health Wise — not medical advice.";
+    "How Asda Online Doctor works: online consultation, UK prescribers, Mounjaro and Wegovy pricing context, delivery and FAQs. Information from Health Wise — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -790,9 +790,9 @@ export function aypPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/ayp-healthcare";
   const url = `${origin}${path}`;
   const name =
-    "AYP Healthcare weight management (UK) — Wegovy, Mounjaro, online review";
+    "AYP Healthcare weight management (UK) — Mounjaro, Wegovy, online review";
   const description =
-    "How AYP Healthcare online weight management works: consultations, Wegovy and Mounjaro context, delivery, monitoring and FAQs. Information from Health Wise — not medical advice.";
+    "How AYP Healthcare online weight management works: consultations, Mounjaro and Wegovy context, delivery, monitoring and FAQs. Information from Health Wise — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -829,9 +829,9 @@ export function boltPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/bolt-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Bolt Pharmacy weight loss (UK) — Wegovy, Mounjaro, online review";
+    "Bolt Pharmacy weight loss (UK) — Mounjaro, Wegovy, online review";
   const description =
-    "Bolt Pharmacy: online weight loss, Wegovy and Mounjaro context, delivery, pricing and FAQs. Information from Health Wise — not medical advice.";
+    "Bolt Pharmacy: online weight loss, Mounjaro, Wegovy and Saxenda context, delivery, pricing and FAQs. Information from Health Wise — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -946,9 +946,9 @@ export function cloudPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/cloud-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Cloud Pharmacy weight loss review (UK) — Wegovy, Mounjaro, online prescribing";
+    "Cloud Pharmacy weight loss review (UK) — Mounjaro, Wegovy, online prescribing";
   const description =
-    "Cloud Pharmacy: online consultation, Wegovy and Mounjaro context, delivery and temperature handling, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    "Cloud Pharmacy: online consultation, Mounjaro and Wegovy context, delivery and temperature handling, pricing context and FAQs. Information from Health Wise — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -1024,7 +1024,7 @@ export function curelyPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/curely";
   const url = `${origin}${path}`;
   const name =
-    "Curely weight loss review (UK) — Wegovy, Mounjaro, online prescribing";
+    "Curely weight loss review (UK) — Mounjaro, Wegovy, online prescribing";
   const description =
     "Curely: pharmacist-led consultation, regulated supply, tracked delivery options, pricing context and FAQs. Information from Health Wise — not medical advice.";
 
@@ -1179,7 +1179,7 @@ export function envigorePharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/envigore";
   const url = `${origin}${path}`;
   const name =
-    "Envigore weight loss review (UK) — Wegovy, Mounjaro, clinician-led support";
+    "Envigore weight loss review (UK) — Mounjaro, Wegovy, clinician-led support";
   const description =
     "Envigore: online assessment, pharmacist and prescriber review, cold-chain delivery, maintenance support and FAQs. Information from Health Wise — not medical advice.";
 
@@ -1218,7 +1218,7 @@ export function farmeciPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/farmeci";
   const url = `${origin}${path}`;
   const name =
-    "Farmeci weight loss review (UK) — Wegovy, Mounjaro, clinician-supervised support";
+    "Farmeci weight loss review (UK) — Mounjaro, Wegovy, clinician-supervised support";
   const description =
     "Farmeci: online assessment, partner-pharmacy dispensing, cold-chain delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
 
@@ -1257,7 +1257,7 @@ export function fyldeClinicPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/fylde-clinic";
   const url = `${origin}${path}`;
   const name =
-    "Fylde Clinic weight loss review (UK) — Wegovy, Mounjaro, clinician-led support";
+    "Fylde Clinic weight loss review (UK) — Mounjaro, Wegovy, clinician-led support";
   const description =
     "Fylde Clinic: clinician-led assessment, temperature-controlled delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
 
@@ -1296,9 +1296,9 @@ export function genmedsPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/genmeds";
   const url = `${origin}${path}`;
   const name =
-    "Genmeds weight loss review (UK) — Wegovy, Mounjaro, pharmacy-led access";
+    "Genmeds weight loss review (UK) — Mounjaro, Wegovy, pharmacy-led access";
   const description =
-    "Genmeds: UK-registered online pharmacy, listed Wegovy and Mounjaro prices, accessories, delivery notes and FAQs. Information from Health Wise — not medical advice.";
+    "Genmeds: UK-registered online pharmacy, listed Mounjaro and Wegovy prices, accessories, delivery notes and FAQs. Information from Health Wise — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -1374,7 +1374,7 @@ export function getADripPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/getadrip";
   const url = `${origin}${path}`;
   const name =
-    "GetADrip weight loss review (UK) — Wegovy, Mounjaro, programme support";
+    "GetADrip weight loss review (UK) — Mounjaro, Wegovy, programme support";
   const description =
     "GetADrip: GLP-1 programmes, app and coaching, DPD delivery, subscription-style pricing and FAQs. Information from Health Wise — not medical advice.";
 
@@ -1452,7 +1452,7 @@ export function happyPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/happy-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Happy Pharmacy weight loss review (UK) — Wegovy, Mounjaro, GPhC pharmacy";
+    "Happy Pharmacy weight loss review (UK) — Mounjaro, Wegovy, GPhC pharmacy";
   const description =
     "Happy Pharmacy: GPhC-regulated access, injections and tablets, discreet tracked delivery, pricing from guide and FAQs. Information from Health Wise — not medical advice.";
 
@@ -1491,7 +1491,7 @@ export function heySlimPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/hey-slim";
   const url = `${origin}${path}`;
   const name =
-    "Hey Slim weight loss review (UK) — Wegovy, Mounjaro, clinician-led";
+    "Hey Slim weight loss review (UK) — Mounjaro, Wegovy, clinician-led";
   const description =
     "Hey Slim: clinician-led programme, GLP-1 access, delivery included (stated), dose-dependent pricing and FAQs. Information from Health Wise — not medical advice.";
 
@@ -1530,7 +1530,7 @@ export function ashcroftPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/ashcroft-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Ashcroft Pharmacy weight loss (UK) — Wegovy, Mounjaro, review & guide";
+    "Ashcroft Pharmacy weight loss (UK) — Mounjaro, Wegovy, review & guide";
   const description =
     "Ashcroft Pharmacy online weight loss: consultation, range of treatments, delivery, safety and cost context. Information from Health Wise — not medical advice.";
 

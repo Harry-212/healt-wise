@@ -46,7 +46,7 @@ const TOOL_CARDS = [
 export default function HeroNumanStyle() {
   return (
     <section
-      className="relative w-full max-w-full overflow-x-hidden overflow-y-visible bg-[#f4f7f5] pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20"
+      className="relative w-full max-w-full overflow-x-hidden overflow-y-visible bg-[#f4f7f5] pt-10 pb-5 md:pt-12 md:pb-6 lg:pt-14 lg:pb-8"
       style={{ position: "relative", overflowX: "hidden" }}
     >
       <div
@@ -66,7 +66,7 @@ export default function HeroNumanStyle() {
           quality={70}
           sizes="100vw"
           fetchPriority="high"
-          className="object-cover object-[center_30%] sm:object-[center_top] md:object-[center_15%]"
+          className="origin-top scale-110 object-cover object-top"
         />
       </div>
 
@@ -74,8 +74,8 @@ export default function HeroNumanStyle() {
         className="relative z-10 mx-auto max-w-[1200px] px-4 md:px-8"
         style={{ position: "relative", zIndex: 10 }}
       >
-        <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-          <div className="w-full min-w-0 lg:w-[58%] lg:max-w-none lg:pb-8">
+        <div className="flex flex-col justify-between gap-5 md:gap-6 lg:flex-row lg:items-end">
+          <div className="w-full min-w-0 lg:w-[58%] lg:max-w-none lg:pb-3">
             <div className="relative w-full max-w-[min(100%,44rem)] rounded-2xl bg-linear-to-br from-white/92 via-white/72 to-white/25 px-4 py-5 shadow-sm ring-1 ring-white/60 backdrop-blur-[2px] sm:px-6 sm:py-6 lg:max-w-[min(100%,52rem)] xl:max-w-4xl">
               <h1 className="text-[1.65rem] font-black leading-[1.08] tracking-tight text-slate-950 sm:text-3xl md:text-4xl md:leading-[1.1] lg:text-[3.1rem] lg:leading-[1.06] xl:text-[3.4rem]">
                 Compare Weight Loss Treatments
@@ -90,7 +90,7 @@ export default function HeroNumanStyle() {
               </p>
             </div>
 
-            <div className="mt-6 flex w-full sm:mt-7">
+            <div className="mt-4 flex w-full sm:mt-5">
               <Link
                 href={HOME_COMPARE_HUB_HREF}
                 className={`${homepageYellowCtaSolid} group relative w-full min-h-[80px] max-w-full overflow-hidden rounded-full px-8 py-6 text-2xl leading-tight tracking-tight ring-[3px] ring-amber-300/50 hover:ring-amber-400/80 hover:shadow-amber-500/30 sm:min-h-[92px] sm:w-auto sm:px-16 sm:py-6 sm:text-3xl md:min-h-[100px] md:px-20 md:py-7 md:text-[2.125rem]`}

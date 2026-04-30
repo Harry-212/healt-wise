@@ -1,6 +1,12 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PHARMACY_PROVIDER_CTA_CLASSNAME,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://click2pharmacy.co.uk/product/mounjaro-weight-loss-injections/";
 
@@ -196,6 +202,7 @@ export default function Click2PharmacyMounjaroContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             How much does Click2Pharmacy Mounjaro cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Pricing depends on dose and stage of treatment. Patients may expect roughly{" "}
             <strong>£140–£180</strong> monthly for lower doses and <strong>£200–£300+</strong> at
@@ -277,9 +284,9 @@ export default function Click2PharmacyMounjaroContent() {
             href={providerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center bg-slate-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800 sm:w-auto"
+            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
           >
-            View Click2Pharmacy
+            Visit Click2Pharmacy
           </a>
         </div>
       </section>

@@ -1,6 +1,11 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://farmeci.com/";
 
@@ -12,15 +17,15 @@ export default function FarmeciPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Farmeci"
       fileRef="HW-FARMECI-2026"
-      title="Farmeci Weight Loss Treatment Review: Online Access to Wegovy, Mounjaro and Clinician-Supervised Support in the UK"
+      title="Farmeci Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Clinician-Supervised Support in the UK"
       subtitle="Official dossier: how Farmeci works, partner-pharmacy dispensing, delivery, pricing context and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · GLP-1 · UK"
+      scopeLabel="Scope: Mounjaro · Wegovy · GLP-1 · UK"
       providerName="Farmeci"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Operator", v: "My Health Stop Ltd" },
-        { k: "Treatments", v: "Wegovy · Mounjaro · GLP-1 injectables (where appropriate)" },
+        { k: "Treatments", v: "Mounjaro · Wegovy · GLP-1 injectables (where appropriate)" },
         { k: "Fulfilment", v: "Partner pharmacies · home delivery · cold-chain (injectables)" },
       ]}
       discountCode={discountCode}
@@ -39,7 +44,7 @@ export default function FarmeciPharmacyContent() {
           consultations, partner-pharmacy dispensing, and home delivery for eligible patients.
         </p>
         <p className="text-slate-800 leading-relaxed">
-          For people exploring buy Wegovy online UK, Mounjaro online prescription, or regulated GLP-1
+          For people exploring Mounjaro online prescription, buy Wegovy online UK, or regulated GLP-1
           weight loss injections, Farmeci is often part of that conversation. This review looks at how
           the service works, delivery, pricing, safety, and whether Farmeci may be worth considering.
         </p>
@@ -94,7 +99,7 @@ export default function FarmeciPharmacyContent() {
               2. Access to evidence-based weight loss medications
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
-              Farmeci offers access to prescription treatments such as Wegovy, Mounjaro, and GLP-1
+              Farmeci offers access to prescription treatments such as Mounjaro, Wegovy, and GLP-1
               based injectable options — potentially other treatment pathways depending on suitability.
               These medications may support weight loss by helping regulate appetite and increasing
               satiety. They may reduce hunger signals, help people feel fuller longer, and support
@@ -177,7 +182,7 @@ export default function FarmeciPharmacyContent() {
           <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
             <p className="font-bold text-slate-900">Cold-chain delivery for injections</p>
             <p className="mt-2 text-slate-800 leading-relaxed">
-              Injectables like Wegovy and Mounjaro may require refrigerated transport. Farmeci
+              Injectables like Mounjaro and Wegovy may require refrigerated transport. Farmeci
               indicates cold-chain conditions may be used where necessary — to help preserve potency,
               stability, and product quality. For GLP-1 injectables, that should be treated as
               non-negotiable.
@@ -199,6 +204,7 @@ export default function FarmeciPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
             How much does Farmeci weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Costs depend on medication, dose and treatment duration. Some treatment pages indicate
             prices starting around <strong>£92 per dose or pen</strong>, though actual costs may vary.
@@ -262,7 +268,7 @@ export default function FarmeciPharmacyContent() {
           items={[
             "Convenience — everything happens online",
             "Clinical oversight — treatment involves medical review",
-            "Treatment access — includes options like Wegovy and Mounjaro",
+            "Treatment access — includes options like Mounjaro and Wegovy",
             "Delivery support — tracked shipping and cold-chain handling where needed",
             "Transparent pricing — consultation appears included",
           ]}
@@ -313,7 +319,7 @@ export default function FarmeciPharmacyContent() {
         <p className="mt-3 text-slate-800 leading-relaxed">
           If you are looking for regulated online access to prescription weight loss treatment,
           Farmeci weight loss treatment appears to offer a credible option. Access to treatments like
-          Wegovy and Mounjaro, paired with clinician review, partner-pharmacy dispensing, and tracked
+          Mounjaro and Wegovy, paired with clinician review, partner-pharmacy dispensing, and tracked
           home delivery, gives it more substance than a basic online pharmacy storefront.
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">

@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Zap } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 
@@ -8,6 +11,11 @@ const CTA = "Find the Best Price Today";
 const ITEMS = Array.from({ length: 8 }, (_, i) => ({ id: i }));
 
 export default function AnnouncementBar() {
+  const pathname = usePathname();
+  if (pathname?.startsWith("/pharmacies")) {
+    return null;
+  }
+
   return (
     <div className="w-full max-w-full overflow-x-clip border-b border-amber-300/60 bg-brand-cta py-2.5">
       <div className="flex w-full max-w-full select-none overflow-x-clip">

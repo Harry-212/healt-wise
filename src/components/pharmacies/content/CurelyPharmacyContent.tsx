@@ -1,6 +1,12 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PHARMACY_PROVIDER_CTA_CLASSNAME,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://www.curely.co.uk/online-doctor/weight-loss";
 
@@ -13,15 +19,15 @@ export default function CurelyPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Curely"
       fileRef="HW-CURELY-2026"
-      title="Curely Weight Loss Treatment Review: Online Access to Wegovy, Mounjaro and Prescription Support in the UK"
+      title="Curely Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Prescription Support in the UK"
       subtitle="Official dossier: how Curely works, treatments that may be available, delivery options, pricing context and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Mounjaro · Saxenda · Orlistat · Xenical · Alli"
+      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat · Xenical · Alli"
       providerName="Curely"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Curely" },
-        { k: "Treatments", v: "Wegovy · Mounjaro · Saxenda · Orlistat · Xenical · Alli" },
+        { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda · Orlistat · Xenical · Alli" },
         { k: "Fulfilment", v: "Tracked delivery" },
       ]}
       discountCode={discountCode}
@@ -35,7 +41,7 @@ export default function CurelyPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Appetite signalling, stress, medication side effects, metabolic differences — those
           factors may make weight loss harder than generic advice implies. That may be one reason
-          prescription treatments such as Wegovy and Mounjaro have drawn increasing attention in
+          prescription treatments such as Mounjaro and Wegovy have drawn increasing attention in
           the UK.
         </p>
         <p className="text-slate-800 leading-relaxed">
@@ -211,6 +217,7 @@ export default function CurelyPharmacyContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             How much does Curely weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Pricing varies by medication and dose. Some higher-dose Mounjaro may be priced in the
             low <strong>£200s+</strong> per pen, with examples reported around <strong>£230+</strong>{" "}
@@ -278,7 +285,7 @@ export default function CurelyPharmacyContent() {
         <h2 className="text-lg font-bold text-slate-900 sm:text-xl">Conclusion</h2>
         <p className="mt-3 text-slate-800 leading-relaxed">
           If you’re looking for a private route to prescription weight loss treatment, Curely
-          appears to offer a practical option. Access to medications such as Wegovy and Mounjaro,
+          appears to offer a practical option. Access to medications such as Mounjaro and Wegovy,
           combined with pharmacist-led assessment, tracked delivery and discreet packaging, gives
           it more depth than a basic online storefront.
         </p>
@@ -291,9 +298,9 @@ export default function CurelyPharmacyContent() {
             href={providerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center bg-slate-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800 sm:w-auto"
+            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
           >
-            View Curely
+            Visit Curely
           </a>
         </div>
       </section>

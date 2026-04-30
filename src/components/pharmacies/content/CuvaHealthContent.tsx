@@ -1,6 +1,12 @@
 "use client";
 
-import { HazardBox, PharmacyDossierPage, Points } from "./_dossier";
+import {
+  HazardBox,
+  PHARMACY_PROVIDER_CTA_CLASSNAME,
+  PharmacyDossierPage,
+  PharmacyPriceCompareHint,
+  Points,
+} from "./_dossier";
 
 const providerUrl = "https://cuvahealth.co.uk/treatment/weight-loss";
 
@@ -149,7 +155,7 @@ export default function CuvaHealthContent() {
           <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
             <p className="font-bold text-slate-900">Cold-chain delivery for injections</p>
             <p className="mt-2 text-slate-800 leading-relaxed">
-              Temperature-sensitive treatments such as Wegovy and Mounjaro may require proper
+              Temperature-sensitive treatments such as Mounjaro and Wegovy may require proper
               refrigeration. Cuva Health appears to use temperature-controlled packaging and
               cold-chain handling to help protect medication stability.
             </p>
@@ -165,9 +171,10 @@ export default function CuvaHealthContent() {
           <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
             How much does Cuva Health weight loss treatment cost?
           </p>
+          <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Pricing depends on medication and dosage. Typical monthly costs may be around{" "}
-            <strong>£199–£249</strong> for Wegovy and <strong>£200–£300</strong> for Mounjaro, with
+            <strong>£200–£300</strong> for Mounjaro and <strong>£199–£249</strong> for Wegovy, with
             higher doses often increasing costs.
           </p>
           <p className="mt-3 text-slate-800 leading-relaxed">
@@ -203,7 +210,7 @@ export default function CuvaHealthContent() {
             },
             {
               q: "How much does Cuva Health weight loss treatment cost?",
-              a: "Costs may range from around £199–£249 monthly for Wegovy and £200–£300 monthly for Mounjaro, depending on treatment and dose.",
+              a: "Costs may range from around £200–£300 monthly for Mounjaro and £199–£249 monthly for Wegovy, depending on treatment and dose.",
             },
             {
               q: "Does Cuva Health use temperature-controlled delivery?",
@@ -243,9 +250,9 @@ export default function CuvaHealthContent() {
             href={providerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center bg-slate-900 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800 sm:w-auto"
+            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
           >
-            View Cuva Health
+            Visit Cuva Health
           </a>
         </div>
       </section>
