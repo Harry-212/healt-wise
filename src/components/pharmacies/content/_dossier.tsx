@@ -228,6 +228,9 @@ export function PharmacyDossierPage({
   hasDiscount,
   /** `"logo"` — large project logo only (default). `"text"` — legacy name + tagline card. */
   brandDisclaimerVariant = "logo",
+  /** Centered above the title card, outside the hero container (e.g. retailer mark). */
+  heroProviderLogoSrc,
+  heroProviderLogoAlt = "",
   children,
 }: {
   slugLabel: string;
@@ -242,6 +245,8 @@ export function PharmacyDossierPage({
   discountCode: string;
   hasDiscount: boolean;
   brandDisclaimerVariant?: "text" | "logo";
+  heroProviderLogoSrc?: string;
+  heroProviderLogoAlt?: string;
   children: ReactNode;
 }) {
   const [copied, setCopied] = useState(false);
@@ -292,6 +297,19 @@ export function PharmacyDossierPage({
           />
           <span className="font-semibold text-slate-900">{slugLabel}</span>
         </nav>
+
+        {heroProviderLogoSrc ? (
+          <div className="mb-5 flex justify-center sm:mb-6">
+            <Image
+              src={heroProviderLogoSrc}
+              alt={heroProviderLogoAlt || `${slugLabel} logo`}
+              width={480}
+              height={180}
+              sizes="(max-width: 640px) 280px, 360px"
+              className="h-20 w-auto max-w-[min(100%,22rem)] object-contain object-center sm:h-24 md:h-28 md:max-w-[min(100%,28rem)]"
+            />
+          </div>
+        ) : null}
 
         <div className="relative mb-8">
           <div className="pointer-events-none absolute -right-1 -top-2 z-20 w-[100px] max-w-[28%] sm:right-0 sm:top-0 sm:w-[112px] sm:max-w-none">
