@@ -303,10 +303,10 @@ export function PharmacyDossierPage({
             <Image
               src={heroProviderLogoSrc}
               alt={heroProviderLogoAlt || `${slugLabel} logo`}
-              width={480}
-              height={180}
-              sizes="(max-width: 640px) 280px, 360px"
-              className="h-20 w-auto max-w-[min(100%,22rem)] object-contain object-center sm:h-24 md:h-28 md:max-w-[min(100%,28rem)]"
+              width={400}
+              height={150}
+              sizes="(max-width: 640px) 240px, 300px"
+              className="h-16 w-auto max-w-[min(100%,18rem)] object-contain object-center sm:h-18 md:h-20 md:max-w-[min(100%,22rem)]"
             />
           </div>
         ) : null}

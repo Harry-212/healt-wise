@@ -33,8 +33,8 @@ export default function AsdaOnlineDoctorContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
-      heroProviderLogoSrc="/logo pharmacy/Asda.webp"
-      heroProviderLogoAlt="Asda"
+      heroProviderLogoSrc="/logo pharmacy/Asda Online Doctor.webp"
+      heroProviderLogoAlt="Asda Online Doctor"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
