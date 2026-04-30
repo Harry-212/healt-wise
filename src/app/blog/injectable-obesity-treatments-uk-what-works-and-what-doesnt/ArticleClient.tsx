@@ -145,7 +145,7 @@ export default function ArticleClient() {
                   food cravings knows it often is not.
                 </p>
                 <p>
-                  Still, it helps to be realistic. These injections do not override every driver of weight gain. They may help with hunger, but they do not necessarily fix emotional eating, stress-related habits, or years of metabolic
+                  Still, it helps to be realistic. These treatments do not override every driver of weight gain. They may help with hunger, but they do not necessarily fix emotional eating, stress-related habits, or years of metabolic
                   complexity.
                 </p>
                 <p>
@@ -192,7 +192,7 @@ export default function ArticleClient() {
                 </p>
                 <SubHeading darkMode={darkMode}>Saxenda</SubHeading>
                 <p>
-                  Saxenda differs partly because it is taken daily. For some, daily injections feel inconvenient. Others prefer the dose flexibility. It may depend on the person. And that comes up often in obesity medicine: there may not be
+                  Saxenda differs partly because it is taken daily. For some, daily treatments feel inconvenient. Others prefer the dose flexibility. It may depend on the person. And that comes up often in obesity medicine: there may not be
                   one universally "best" option. There may only be a best fit.
                 </p>
               </GuideSection>
@@ -232,7 +232,7 @@ export default function ArticleClient() {
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="eligibility" heading="Eligibility is often stricter than people assume">
-                <p>A common misunderstanding is that anyone can request these injections and receive them. Usually not.</p>
+                <p>A common misunderstanding is that anyone can request these treatments and receive them. Usually not.</p>
                 <p>
                   NICE and NHS pathways often involve BMI criteria, obesity-related conditions, previous attempts at lifestyle intervention, and ongoing review requirements. Some NHS pathways may stop prescribing if expected progress is not
                   achieved—often around 5 percent body weight loss thresholds. That can surprise people. But from a system perspective, it reflects treatment evaluation.
@@ -248,7 +248,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="additional-faq" heading="Additional frequently asked questions">
                 <div className="space-y-6">
                   <div>
-                    <h3 className={`mb-3 text-lg font-semibold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>Which weight loss injection is most effective in the UK?</h3>
+                    <h3 className={`mb-3 text-lg font-semibold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>Which weight loss treatment is most effective in the UK?</h3>
                     <p>Current evidence often points to Mounjaro as producing the greatest average weight loss, though effectiveness can depend on individual response, tolerability, and adherence.</p>
                   </div>
                   <div>
@@ -277,7 +277,7 @@ export default function ArticleClient() {
                     <p>That varies. Some people respond quickly. Others lose steadily over longer periods. Rapid results should not be assumed.</p>
                   </div>
                   <div>
-                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>Can I switch between injections?</h3>
+                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>Can I switch between treatments?</h3>
                     <p>Possibly, but only with clinical supervision.</p>
                   </div>
                   <div>
@@ -296,7 +296,7 @@ export default function ArticleClient() {
                   <li>Can I sustain the cost?</li>
                   <li>Can I use this to support habits, not outsource them?</li>
                 </ul>
-                <p>Those may be better questions than asking which injection sounds strongest on paper.</p>
+                <p>Those may be better questions than asking which treatment sounds strongest on paper.</p>
                 <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>Health Wise does not sell medicines. This page is general information and is not medical advice.</p>
                 <p className={`text-sm leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                   <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span> {SOCIAL_HASHTAGS}

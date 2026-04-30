@@ -151,7 +151,7 @@ export default function GuideTravelInsuranceMounjaro() {
           to insurance is transparency: declare your prescription and any
           conditions the insurer asks about, so your cover matches your actual
           risk profile.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
         <GuideParagraph>
           This guide is not a substitute for reading your policy wording or
           speaking to an insurer it explains what to expect and how to prepare.

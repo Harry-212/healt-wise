@@ -110,7 +110,7 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
     category: "Medications",
-    title: "Mounjaro Weight Loss Injection UK (2026): Full Guide",
+    title: "Mounjaro Weight Loss Treatment UK (2026): Full Guide",
     description:
       "Everything about Mounjaro—mechanism, clinical results, eligibility, and UK pricing.",
   },
@@ -155,7 +155,7 @@ export default function GuideMounjaroHealthBenefits() {
       category="Medications"
       categorySlug="medications"
       title="Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss"
-      description="Weight loss injections like Mounjaro and Wegovy are increasingly recognised as metabolic health therapies—not simply fat-loss tools. Here's what the clinical evidence shows about their broader health benefits."
+      description="Weight loss treatments like Mounjaro and Wegovy are increasingly recognised as metabolic health therapies—not simply fat-loss tools. Here's what the clinical evidence shows about their broader health benefits."
       readTime="5 min read"
       lastUpdated="April 2026"
       toc={TOC}

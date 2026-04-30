@@ -15,11 +15,11 @@ const HERO_SRC = TOP_BENEFITS_WEIGHT_LOSS_INJECTIONS_HERO;
 
 const TOC = [
   { id: 'introduction', label: 'Introduction' },
-  { id: 'what-are-injections', label: 'What these injections are' },
+  { id: 'what-are-treatments', label: 'What these treatments are' },
   { id: 'how-they-help', label: 'How they may help' },
   { id: 'benefits', label: 'UK benefits' },
   { id: 'what-doctors-give', label: 'What your doctor can prescribe' },
-  { id: 'which-is-most-effective', label: 'Which injection is most effective' },
+  { id: 'which-is-most-effective', label: 'Which treatment is most effective' },
   { id: 'side-effects', label: 'Risks & side effects' },
   { id: 'after-starting', label: 'After starting' },
   { id: 'if-you-stop', label: 'If you stop' },
@@ -40,8 +40,8 @@ export default function ArticleClient() {
   const ARTICLE_SCHEMA = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Top Benefits of Doctor Prescribed Weight Loss Injections UK for You',
-    description: 'A clear UK guide to the benefits of doctor prescribed weight loss injections, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda.',
+    headline: 'Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You',
+    description: 'A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda.',
     image: [HERO_SRC],
     author: { '@type': 'Organization', name: 'Health Wise' },
     publisher: { '@type': 'Organization', name: 'Health Wise' },
@@ -58,7 +58,7 @@ export default function ArticleClient() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What are the benefits of weight loss injections in the UK?',
+        name: 'What are the benefits of weight loss treatments in the UK?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Benefits may include reduced appetite, better blood sugar regulation, more consistent support, and improved long-term weight maintenance for eligible patients.',
@@ -66,7 +66,7 @@ export default function ArticleClient() {
       },
       {
         '@type': 'Question',
-        name: 'Which weight loss injection is most effective?',
+        name: 'Which weight loss treatment is most effective?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Mounjaro often shows the strongest average weight loss in trials, but Wegovy and Saxenda may still be the better fit for some patients depending on tolerability, cost, and access.',
@@ -74,7 +74,7 @@ export default function ArticleClient() {
       },
       {
         '@type': 'Question',
-        name: 'Can I get these injections through the NHS?',
+        name: 'Can I get these treatments through the NHS?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'NHS access is usually limited to people who meet BMI and health risk criteria and are referred into specialist weight management pathways. Private prescribing is more widely available but can be expensive.',
@@ -117,7 +117,7 @@ export default function ArticleClient() {
         </div>
 
         <header className="mb-12">
-          <h1 className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? 'text-white' : 'text-slate-900'}`}>Top Benefits of Doctor Prescribed Weight Loss Injections UK for You</h1>
+          <h1 className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? 'text-white' : 'text-slate-900'}`}>Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You</h1>
           <div className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
             <span className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
@@ -129,7 +129,7 @@ export default function ArticleClient() {
             </span>
           </div>
 
-          <BlogArticleHeroImage src={HERO_SRC} alt="Doctor prescribed weight loss injection treatment in the UK, clinical support for obesity management" />
+          <BlogArticleHeroImage src={HERO_SRC} alt="Doctor prescribed weight loss treatment treatment in the UK, clinical support for obesity management" />
           <div id="guide-article-hero-end" aria-hidden className="pointer-events-none h-0 w-full overflow-hidden" />
         </header>
 
@@ -141,28 +141,28 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="introduction" heading="Introduction">
                 <p>Trying to lose weight can feel frustrating, especially when you have already done what people keep recommending: eat less, move more, track calories. For some people, those basics help. For others, progress stalls.</p>
                 <p>
-                  That gap is partly why doctor prescribed weight loss injections have gained traction across the UK. Treatments such as Wegovy, Mounjaro and Saxenda are not cosmetic shortcuts. They are prescription medicines intended for
+                  That gap is partly why doctor prescribed weight loss treatments have gained traction across the UK. Treatments such as Wegovy, Mounjaro and Saxenda are not cosmetic shortcuts. They are prescription medicines intended for
                   people with clinical need and medical supervision.
                 </p>
                 <p>They may make change more manageable, but they are not effortless. That distinction matters for anyone deciding whether to explore these options.</p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="what-are-injections" heading="What are doctor prescribed weight loss injections?">
+              <GuideSection darkMode={darkMode} id="what-are-treatments" heading="What are doctor prescribed weight loss treatments?">
                 <p>
                   In simple terms, these are prescription medicines used to support obesity treatment under medical supervision. Most available UK options are GLP-1 or related incretin-based medicines that affect appetite, fullness and
                   blood sugar regulation.
                 </p>
                 <p>They are not designed as a quick fix. They are usually offered to people who meet BMI and health risk criteria and when conventional diet and lifestyle efforts have not delivered the desired progress.</p>
                 <p>
-                  If you want a wider view of how these injections fit into UK weight loss care, see our guide on{' '}
+                  If you want a wider view of how these treatments fit into UK weight loss care, see our guide on{' '}
                   <Link href="/blog/understanding-prescription-weight-loss-injections-uk" className="font-medium text-brand-primary underline">
-                    understanding prescription weight loss injections in the UK
+                    understanding prescription weight loss treatments in the UK
                   </Link>
                   .
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="how-they-help" heading="How these injections may help">
+              <GuideSection darkMode={darkMode} id="how-they-help" heading="How these treatments may help">
                 <p>The main improvement many people notice first is reduced appetite. They feel full sooner, portions shrink, and cravings tend to quiet.</p>
                 <p>That effect can make it easier to follow a structured eating plan. For people who have struggled with persistent hunger, that alone can feel like a significant benefit.</p>
                 <p>
@@ -171,7 +171,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="benefits" heading="What are the benefits of weight loss injections in the UK?">
+              <GuideSection darkMode={darkMode} id="benefits" heading="What are the benefits of weight loss treatments in the UK?">
                 <p>The most common benefits include:</p>
                 <ul className="list-disc space-y-2 pl-6">
                   <li>Meaningful body weight reduction when combined with ongoing support</li>
@@ -181,7 +181,7 @@ export default function ArticleClient() {
                 </ul>
                 <p>For some people, the best benefit is less mental energy spent thinking about food. That mental relief may be powerful if it helps someone stay consistent with the basics.</p>
                 <p>
-                  Evidence is still evolving, but some research suggests GLP-1 medicines may have benefits beyond weight loss, especially for heart health in people with obesity and metabolic risk. This is one reason these injections are
+                  Evidence is still evolving, but some research suggests GLP-1 medicines may have benefits beyond weight loss, especially for heart health in people with obesity and metabolic risk. This is one reason these treatments are
                   usually offered as part of a broader treatment plan.
                 </p>
               </GuideSection>
@@ -201,7 +201,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="which-is-most-effective" heading="Which weight loss injection is most effective?">
+              <GuideSection darkMode={darkMode} id="which-is-most-effective" heading="Which weight loss treatment is most effective?">
                 <p>Right now, Mounjaro is often considered the strongest performer for average weight reduction. Some studies suggest around 20 percent body weight reduction under structured treatment settings.</p>
                 <p>That sounds impressive. And it is. But averages can mislead. Tolerability, access, cost and personal response matter too. For some people, Wegovy or Saxenda may still be the better fit.</p>
                 <p>Effectiveness is not only about headline percentages. It is also about whether a treatment is sustainable, tolerable and available to you.</p>
@@ -236,7 +236,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="after-starting" heading="What happens after starting?">
                 <p>
-                  Starting injections is one thing. Maintaining progress is another. People often do best when they pair treatment with practical habits like higher protein meals, regular walking, hydration, symptom tracking and routine
+                  Starting treatments is one thing. Maintaining progress is another. People often do best when they pair treatment with practical habits like higher protein meals, regular walking, hydration, symptom tracking and routine
                   follow-up appointments.
                 </p>
                 <p>It is often the boring habits that do the heavy lifting, not the dramatic ones.</p>
@@ -245,14 +245,14 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="if-you-stop" heading="What happens if you stop?">
                 <p>Stopping treatment may lead to weight regain, especially if underlying eating patterns have not shifted.</p>
-                <p>That does not mean regain is guaranteed. It may mean maintenance needs planning and ongoing support. That is different from expecting the injections to be a permanent shortcut.</p>
+                <p>That does not mean regain is guaranteed. It may mean maintenance needs planning and ongoing support. That is different from expecting the treatments to be a permanent shortcut.</p>
                 <p>If you are considering stopping, ask your clinician about how to transition and whether a maintenance plan can help protect your progress.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="faq" heading="Frequently Asked Questions">
                 <div className="space-y-8">
                   <div>
-                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>What are the benefits of weight loss injections UK?</h3>
+                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>What are the benefits of weight loss treatments UK?</h3>
                     <p>Benefits may include greater weight loss than lifestyle changes alone, reduced appetite, improved blood sugar regulation, and possible reductions in obesity-related health risks.</p>
                   </div>
                   <div>
@@ -268,11 +268,11 @@ export default function ArticleClient() {
                     <p>Depending on your eligibility, a doctor may discuss Wegovy, Mounjaro or Saxenda. Suitability depends on your medical history and prescribing criteria.</p>
                   </div>
                   <div>
-                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>Who qualifies for doctor prescribed weight loss injections?</h3>
+                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>Who qualifies for doctor prescribed weight loss treatments?</h3>
                     <p>Usually people who meet BMI thresholds and have weight-related health risks, although criteria can vary by service and region.</p>
                   </div>
                   <div>
-                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>Are these injections safe for everyone?</h3>
+                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>Are these treatments safe for everyone?</h3>
                     <p>No. They are not suitable for everyone, which is why a clinical assessment and prescription are essential.</p>
                   </div>
                   <div>
@@ -287,7 +287,7 @@ export default function ArticleClient() {
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="final-thoughts" heading="Final thoughts">
-                <p>Doctor prescribed weight loss injections may be useful, but they are not magic. They are not effortless. For some people, they can provide the support needed to finally make progress feel sustainable.</p>
+                <p>Doctor prescribed weight loss treatments may be useful, but they are not magic. They are not effortless. For some people, they can provide the support needed to finally make progress feel sustainable.</p>
                 <p>Before deciding, ask yourself:</p>
                 <ul className="list-decimal space-y-2 pl-6">
                   <li>Can I commit to the habits around this?</li>
@@ -305,8 +305,8 @@ export default function ArticleClient() {
             <div className="mt-10">
               <GuideSharePanel
                 url={shareUrl}
-                title="Top Benefits of Doctor Prescribed Weight Loss Injections UK for You"
-                description="A clear UK guide to the benefits of doctor prescribed weight loss injections, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda."
+                title="Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You"
+                description="A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda."
               />
             </div>
           </div>

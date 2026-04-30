@@ -256,7 +256,7 @@ export default function GuideMounjaroNutrition() {
           Limit high GI refined carbohydrates (white bread, pastries, sugary
           breakfast cereals)   they cause rapid blood sugar spikes and
           subsequent hunger, working against Mounjaro's stabilising effect.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="fibre" heading="3. Increase Fibre Intake">

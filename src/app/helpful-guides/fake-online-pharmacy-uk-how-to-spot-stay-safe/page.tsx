@@ -52,7 +52,7 @@ const FAQ_ITEMS = [
     a: "While genuine pharmacies compete on price, prices that are dramatically lower than the UK market average can indicate counterfeit product, unlicensed imports, or fraud. If a price seems unrealistically low compared to GPhC-registered competitors, treat it as a major red flag.",
   },
   {
-    q: "What should I do if I receive spam emails offering cheap weight loss injections?",
+    q: "What should I do if I receive spam emails offering cheap weight loss treatments?",
     a: "Do not click links or reply. Unsolicited offers for prescription medicines are almost always scams. Report phishing to the National Cyber Security Centre (NCSC) and delete the message. Only obtain medication through a verified GPhC-registered pharmacy after a proper clinical assessment.",
   },
   {
@@ -332,7 +332,7 @@ export default function GuideFakePharmacy() {
         <GuideParagraph>
           By staying cautious, you can benefit from legitimate online pharmacies
           while protecting your health and your personal data.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

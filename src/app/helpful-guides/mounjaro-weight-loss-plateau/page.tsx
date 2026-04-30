@@ -86,7 +86,7 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
     category: "Medications",
-    title: "Mounjaro Weight Loss Injection UK: Full Guide",
+    title: "Mounjaro Weight Loss Treatment UK: Full Guide",
     description:
       "How Mounjaro works, clinical results, eligibility, and costs—everything you need to know before starting treatment.",
   },
@@ -235,7 +235,7 @@ export default function GuideMounjaroPlateau() {
           </IL>{" "}
           to understand how other options compare if Mounjaro is not producing
           expected results.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
       </GuideSection>
 
       {/* ── Key Takeaways ── */}

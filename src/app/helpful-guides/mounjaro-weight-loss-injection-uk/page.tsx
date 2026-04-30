@@ -21,9 +21,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-weight-loss-injection-uk",
-  title: "Mounjaro Weight Loss Injection UK (2026): How It Works, Results, Eligibility & Cost",
+  title: "Mounjaro Weight Loss Treatment UK (2026): How It Works, Results, Eligibility & Cost",
   description: "Complete UK guide to Mounjaro (tirzepatide) for weight loss. Covers how the dual GLP-1/GIP mechanism works, clinical trial results, eligibility criteria, side effects, and 2026 costs.",
-  openGraphTitle: "Mounjaro Weight Loss Injection UK (2026): How It Works, Results, Eligibility & Cost",
+  openGraphTitle: "Mounjaro Weight Loss Treatment UK (2026): How It Works, Results, Eligibility & Cost",
 });
 
 
@@ -31,7 +31,7 @@ const TOC = [
   { id: "what-is", label: "What Is Mounjaro?" },
   { id: "how-works", label: "How Mounjaro Works in the Body" },
   { id: "results", label: "Clinical Results: How Much Weight Can You Lose?" },
-  { id: "vs-others", label: "Mounjaro vs Other Weight Loss Injections" },
+  { id: "vs-others", label: "Mounjaro vs Other Weight Loss Treatments" },
   { id: "eligibility", label: "Who Can Get Mounjaro in the UK?" },
   { id: "side-effects", label: "Side Effects of Mounjaro" },
   { id: "cost", label: "Cost of Mounjaro in the UK" },
@@ -47,7 +47,7 @@ const FAQ_ITEMS = [
     a: "Many users notice appetite changes within the first few weeks, but significant weight loss typically develops over several months. Clinical trials show the most rapid losses in months 1–3, with continued but slower progress through month 12.",
   },
   {
-    q: "Is Mounjaro better than other injections?",
+    q: "Is Mounjaro better than other treatments?",
     a: "It may produce greater average weight loss due to its dual-hormone action targeting both GLP-1 and GIP receptors, but suitability depends on individual health factors. A clinician will assess whether Mounjaro, Wegovy, or Saxenda is most appropriate for you.",
   },
   {
@@ -139,7 +139,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Mounjaro Weight Loss Injection UK (2026): How It Works, Results, Eligibility & Cost",
+    "Mounjaro Weight Loss Treatment UK (2026): How It Works, Results, Eligibility & Cost",
   description:
     "Complete UK guide to Mounjaro (tirzepatide) for weight loss. Covers how the dual GLP-1/GIP mechanism works, clinical trial results, eligibility criteria, side effects, and 2026 costs.",
   author: { "@type": "Organization", name: "Health Wise" },
@@ -148,7 +148,7 @@ const SCHEMA = {
   about: [{ "@type": "Drug", name: "Mounjaro" }, { "@type": "Drug", name: "tirzepatide" }],
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-weight-loss-injection-uk")}`,
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-weight-loss-treatment-uk")}`,
   },
 };
 
@@ -168,7 +168,7 @@ export default function GuideMounjaroPillar() {
       slug="mounjaro-weight-loss-injection-uk"
       category="Medications"
       categorySlug="medications"
-      title="Mounjaro Weight Loss Injection UK (2026): How It Works, Results, Eligibility & Cost"
+      title="Mounjaro Weight Loss Treatment UK (2026): How It Works, Results, Eligibility & Cost"
       description="Everything you need to know about Mounjaro (tirzepatide) in the UK—the dual-hormone mechanism, clinical weight loss data, who qualifies, side effects, and current costs."
       readTime="6 min read"
       lastUpdated="April 2026"
@@ -179,7 +179,7 @@ export default function GuideMounjaroPillar() {
       <GuideSection id="what-is" heading="What Is Mounjaro?">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> is a
-          once weekly prescription injection used for weight management in
+          once weekly prescription treatment used for weight management in
           adults. Originally developed to treat type 2 diabetes, it is now
           approved in the UK as a medical treatment for obesity and overweight
           conditions.
@@ -197,7 +197,7 @@ export default function GuideMounjaroPillar() {
         <GuideParagraph>
           This dual mechanism is what sets{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> apart from other weight
-          loss injections such as{" "}
+          loss treatments such as{" "}
           <IL href="/what-is-wegovy">Wegovy (semaglutide)</IL>, which targets
           only GLP 1.
         </GuideParagraph>
@@ -244,7 +244,7 @@ export default function GuideMounjaroPillar() {
             { value: "~10–15%", label: "Body weight loss", sub: "Within 6 months" },
             { value: "20%+", label: "Body weight loss", sub: "After 12 months" },
             { value: "22.5%", label: "Max average loss", sub: "Highest dose group" },
-            { value: "1×/week", label: "Injection frequency", sub: "Subcutaneous pen" },
+            { value: "1×/week", label: "Treatment frequency", sub: "Subcutaneous pen" },
           ]}
         />
         <GuideParagraph>
@@ -257,7 +257,7 @@ export default function GuideMounjaroPillar() {
       </GuideSection>
 
       {/* ── Section 4 ── */}
-      <GuideSection id="vs-others" heading="Mounjaro vs Other Weight Loss Injections">
+      <GuideSection id="vs-others" heading="Mounjaro vs Other Weight Loss Treatments">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> is often compared with
           other GLP 1 based treatments available in the UK. The key difference
@@ -383,7 +383,7 @@ export default function GuideMounjaroPillar() {
         <GuideProsConsBlock
           pros={[
             "Higher average weight loss compared to other GLP-1 treatments",
-            "Once-weekly injection — easier to maintain than daily medications",
+            "Once-weekly treatment — easier to maintain than daily medications",
             "Supports long-term appetite control beyond the initial phase",
             "Dual-hormone mechanism may be more effective for those with insulin resistance",
           ]}
@@ -432,7 +432,7 @@ export default function GuideMounjaroPillar() {
       {/* ── Key Takeaways ── */}
       <GuideKeyTakeaways
         items={[
-          "Mounjaro (tirzepatide) is a once-weekly injection targeting both GLP-1 and GIP receptors—a dual mechanism not found in Wegovy or Saxenda.",
+          "Mounjaro (tirzepatide) is a once-weekly treatment targeting both GLP-1 and GIP receptors—a dual mechanism not found in Wegovy or Saxenda.",
           "Clinical trials show average weight loss of 15–22% body weight, with some patients losing over 20% at 12 months.",
           "Eligibility requires BMI ≥ 30, or ≥ 27 with a related health condition, assessed by a licensed clinician.",
           "Most side effects are mild and temporary; serious side effects are less common but require medical attention.",

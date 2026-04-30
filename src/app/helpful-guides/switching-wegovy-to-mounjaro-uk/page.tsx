@@ -103,7 +103,7 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
     category: "Medications",
-    title: "Mounjaro Weight Loss Injection UK: Full Guide (2026)",
+    title: "Mounjaro Weight Loss Treatment UK: Full Guide (2026)",
     description:
       "Everything you need to know about Mounjaro—mechanism, clinical results, eligibility, and UK pricing.",
   },
@@ -199,7 +199,7 @@ export default function GuideSwitchingWegovy() {
           rows={[
             { cells: ["Active ingredient", "Semaglutide", "Tirzepatide"] },
             { cells: ["Receptor targets", "GLP-1", "GLP-1 + GIP"] },
-            { cells: ["Injection frequency", "Once weekly", "Once weekly"] },
+            { cells: ["Treatment frequency", "Once weekly", "Once weekly"] },
             { cells: ["Starting dose", "0.25mg", "2.5mg"] },
             { cells: ["Maximum dose", "2.4mg", "15mg"] },
             { cells: ["Approved for weight", "Yes", "Yes"] },

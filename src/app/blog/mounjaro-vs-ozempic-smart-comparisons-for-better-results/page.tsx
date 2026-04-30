@@ -61,7 +61,7 @@ export default function MounjaroVsOzempicArticlePage() {
       },
       {
         "@type": "Question",
-        name: "Are injections painful?",
+        name: "Are treatments painful?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "The pens use very fine needles, so discomfort is minimal for most users. Applying a cold pack beforehand or injecting after a warm shower can further reduce any sting.",

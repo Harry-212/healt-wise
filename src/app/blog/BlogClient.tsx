@@ -36,7 +36,7 @@ const FILTER_OPTIONS: FilterOption[] = [
   { id: "wegovy", label: "Wegovy", icon: Pill, description: "Wegovy & semaglutide topics" },
   { id: "mounjaro", label: "Mounjaro", icon: Activity, description: "Mounjaro & tirzepatide topics" },
   { id: "how-it-works", label: "How it works", icon: BookOpen, description: "Mechanism & effectiveness" },
-  { id: "guides", label: "How-to & dosage", icon: Syringe, description: "Dosing, injections & instructions" },
+  { id: "guides", label: "How-to & dosage", icon: Syringe, description: "Dosing, treatments & instructions" },
   { id: "safety", label: "Costs & safety", icon: BadgePoundSterling, description: "UK cost, eligibility & safety" },
   {
     id: "locations",

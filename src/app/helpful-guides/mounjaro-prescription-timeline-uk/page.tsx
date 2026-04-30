@@ -101,7 +101,7 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
     category: "Medications",
-    title: "Mounjaro Weight Loss Injection UK: Full Guide",
+    title: "Mounjaro Weight Loss Treatment UK: Full Guide",
     description:
       "How Mounjaro works, clinical results, eligibility, and costs—everything you need to know.",
   },

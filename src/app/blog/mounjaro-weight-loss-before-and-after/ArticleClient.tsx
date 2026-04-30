@@ -144,7 +144,7 @@ export default function ArticleClient() {
                         cells: ['Exercise frequency', 'Activity preserves fitness and can support waist and weight trends.'],
                       },
                       {
-                        cells: ['Proper medication schedule', 'Weekly injections on schedule help maintain steady drug levels.'],
+                        cells: ['Proper medication schedule', 'Weekly treatments on schedule help maintain steady drug levels.'],
                       },
                       {
                         cells: ['Underlying health conditions', 'Conditions such as PCOS or type 2 diabetes can influence response.'],
@@ -168,12 +168,12 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="stories" heading="See Real-Life Success Stories">
                 <p>
-                  Part of the growing interest in Mounjaro comes from firsthand testimonials of people who found renewed motivation. For instance, Heike reported losing 13 kg over four months. She combined Mounjaro injections with small,
+                  Part of the growing interest in Mounjaro comes from firsthand testimonials of people who found renewed motivation. For instance, Heike reported losing 13 kg over four months. She combined Mounjaro treatments with small,
                   healthy adjustments to her routine and regained the energy to manage daily tasks without exhaustion (ZAVA).
                 </p>
                 <p>
                   Other remarkable stories include individuals who have transformed their BMI from a severely obese range to near normal levels. In one case, a user reported shedding over 200 pounds in under two years, attributing much of
-                  that success to consistent injections and a patient approach to diet (Prescription Doctor). These accounts remind you that steady effort, rather than dramatic overnight changes, is truly key. If you want more insight into
+                  that success to consistent treatments and a patient approach to diet (Prescription Doctor). These accounts remind you that steady effort, rather than dramatic overnight changes, is truly key. If you want more insight into
                   potential outcomes and timelines, you can check{' '}
                   <Link href="/what-is-mounjaro#weight-loss-results" className="font-medium text-brand-primary underline">
                     Mounjaro weight loss results
@@ -188,9 +188,9 @@ export default function ArticleClient() {
                   like nausea or constipation (ZAVA). Over time, your healthcare provider may adjust the dose to enhance appetite suppression or address specific concerns.
                 </p>
                 <p>
-                  You will self administer the treatment using carefully measured injections. For a practical overview of what that routine looks like, see{' '}
+                  You will self administer the treatment using carefully measured treatments. For a practical overview of what that routine looks like, see{' '}
                   <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-brand-primary underline">
-                    Mounjaro weight loss injections
+                    Mounjaro weight loss treatments
                   </Link>
                   . If you are located in the UK and curious about how to obtain your prescription, explore{' '}
                   <Link href="/mounjaro-price-comparison" className="font-medium text-brand-primary underline">
@@ -214,7 +214,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="next-steps" heading="Take Your Next Steps">
                 <p>
                   Committing to Mounjaro is easier when you understand the before and after possibilities. On average, many people experience a notable drop in weight and a trimmer waistline after a few months. That is encouraging news,
-                  especially if you have struggled with weight management for years. Staying motivated, following a realistic eating plan, and keeping up regular injections all work together to support you on this journey.
+                  especially if you have struggled with weight management for years. Staying motivated, following a realistic eating plan, and keeping up regular treatments all work together to support you on this journey.
                 </p>
                 <p>
                   Remember that your personal milestone might not match someone else’s speed and that is entirely normal. As you begin, focus on small wins such as feeling lighter on your feet or sticking to your meal schedule for a full
@@ -266,7 +266,7 @@ export default function ArticleClient() {
                   </div>
 
                   <div>
-                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>6. Where can I read more about dosing and injections?</h3>
+                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>6. Where can I read more about dosing and treatments?</h3>
                     <p>
                       Use clinician led resources on titration, side effect monitoring, and injection technique. Health Wise publishes guides on{' '}
                       <Link href="/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust" className="font-medium text-brand-primary underline">
@@ -274,7 +274,7 @@ export default function ArticleClient() {
                       </Link>{' '}
                       and{' '}
                       <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-brand-primary underline">
-                        injections
+                        treatments
                       </Link>{' '}
                       for general education always follow your own prescriber’s instructions.
                     </p>

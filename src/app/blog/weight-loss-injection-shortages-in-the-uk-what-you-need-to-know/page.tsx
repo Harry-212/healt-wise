@@ -7,32 +7,32 @@ const PATH = "/blog/weight-loss-injection-shortages-in-the-uk-what-you-need-to-k
 const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(SHORTAGES_HERO_WEBP)}`;
 
 export const metadata: Metadata = {
-  title: "What You Should Know About Weight Loss Injection Shortages in the UK",
+  title: "What You Should Know About Weight Loss Treatment Shortages in the UK",
   description:
-    "Stay ahead of weight loss injection shortages in the UK: what you need to know to reach your goals.",
-  keywords: "weight loss injection shortages in the uk: what you need to know",
+    "Stay ahead of weight loss treatment shortages in the UK: what you need to know to reach your goals.",
+  keywords: "weight loss treatment shortages in the uk: what you need to know",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "What You Should Know About Weight Loss Injection Shortages in the UK",
+    title: "What You Should Know About Weight Loss Treatment Shortages in the UK",
     description:
-      "Stay ahead of weight loss injection shortages in the UK: what you need to know to reach your goals.",
+      "Stay ahead of weight loss treatment shortages in the UK: what you need to know to reach your goals.",
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-04-23T00:00:00.000Z",
     images: [
       {
         url: HERO_IMAGE,
-        alt: "UK pharmacies and weight loss injections — navigating stock and supply for GLP-1 medicines",
+        alt: "UK pharmacies and weight loss treatments — navigating stock and supply for GLP-1 medicines",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "What You Should Know About Weight Loss Injection Shortages in the UK",
+    title: "What You Should Know About Weight Loss Treatment Shortages in the UK",
     description:
-      "Stay ahead of weight loss injection shortages in the UK: what you need to know to reach your goals.",
+      "Stay ahead of weight loss treatment shortages in the UK: what you need to know to reach your goals.",
     images: [HERO_IMAGE],
   },
 };
@@ -41,9 +41,9 @@ export default function WeightLossInjectionShortagesUkPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "What You Should Know About Weight Loss Injection Shortages in the UK",
+    headline: "What You Should Know About Weight Loss Treatment Shortages in the UK",
     description:
-      "Why GLP-1 weight loss injections can be in short supply in the UK, how shortages may affect you, practical steps with your prescriber and pharmacy, and alternatives — informational only, not medical advice.",
+      "Why GLP-1 weight loss treatments can be in short supply in the UK, how shortages may affect you, practical steps with your prescriber and pharmacy, and alternatives — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
@@ -60,7 +60,7 @@ export default function WeightLossInjectionShortagesUkPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Why are weight loss injections sometimes out of stock in the UK?",
+        name: "Why are weight loss treatments sometimes out of stock in the UK?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Demand for GLP-1 class medicines has grown quickly, while manufacturing capacity, raw materials, batch release and distribution can lag behind. Different brands and strengths can be affected at different times.",
@@ -84,7 +84,7 @@ export default function WeightLossInjectionShortagesUkPage() {
       },
       {
         "@type": "Question",
-        name: "Are all weight loss injections affected equally by shortages?",
+        name: "Are all weight loss treatments affected equally by shortages?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Not necessarily. Availability can vary by product, strength, region and supplier. One brand may be easier to obtain than another at a given time.",
@@ -92,7 +92,7 @@ export default function WeightLossInjectionShortagesUkPage() {
       },
       {
         "@type": "Question",
-        name: "Can a clinician suggest an alternative if your usual injection is unavailable?",
+        name: "Can a clinician suggest an alternative if your usual treatment is unavailable?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Sometimes yes—alternatives depend on your medical history, eligibility and what is licensed and available. Only a qualified prescriber should decide whether to change medicine or dose.",

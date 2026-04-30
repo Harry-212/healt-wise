@@ -191,7 +191,7 @@ export default function GuideMounjaroFeelCold() {
         </GuideParagraph>
         <GuideParagraph>
           When overall intake decreases substantially:
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

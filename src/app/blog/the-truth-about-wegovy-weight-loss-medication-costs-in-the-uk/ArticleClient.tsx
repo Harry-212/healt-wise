@@ -139,7 +139,7 @@ export default function ArticleClient() {
                   The tablet uses SNAC technology, salcaprozate sodium, which protects semaglutide from stomach acid and enzymes so it can be absorbed into the bloodstream when taken by mouth.
                 </p>
                 <p>
-                  As of now, Wegovy tablets are not as widely available as the injection in all markets, so you will usually find more pricing information for the weekly pen.
+                  As of now, Wegovy tablets are not as widely available as the treatment in all markets, so you will usually find more pricing information for the weekly pen.
                 </p>
               </GuideSection>
 
@@ -152,7 +152,7 @@ export default function ArticleClient() {
                 <p>The biggest cost difference is whether you are eligible on the NHS or paying privately.</p>
                 <p>
                   On the NHS, patients do not typically see the full list price. Instead, you pay standard prescription charges in England, or no charge in Scotland, Wales, and Northern Ireland, if Wegovy is prescribed for you. However, Wegovy access on the NHS is limited and prioritised for people with obesity and specific health risks, according to local criteria and NICE guidance. Not everyone who wants Wegovy for weight loss will meet those thresholds, even if they are struggling with their weight.
-                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
+                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
                 <p>
                   If you do not qualify, you are likely to look at private weight management clinics or online prescribing services, which set their own pricing structures.
                 </p>
@@ -212,7 +212,7 @@ export default function ArticleClient() {
                   <li>Around 28% achieved 20% or more weight loss, compared with 3% in the placebo group</li>
                 </ul>
                 <p>
-                  Similar patterns are seen with the injection, and real world observational data from the WeGoTogether® study suggests that people in clinical practice can also lose a significant amount of weight, although that study relies on self reported data and has no control group.
+                  Similar patterns are seen with the treatment, and real world observational data from the WeGoTogether® study suggests that people in clinical practice can also lose a significant amount of weight, although that study relies on self reported data and has no control group.
                 </p>
                 <p>
                   Some of the STEP 5 participants also saw improvements in waist circumference, blood pressure, triglycerides, and A1c, although Wegovy is not indicated to treat hypertension, diabetes, or dyslipidaemia. Wegovy is unique as the only weight loss medication proven to reduce the risk of major cardiovascular events, such as heart attack, stroke, or death in adults who already have heart disease with obesity or overweight.

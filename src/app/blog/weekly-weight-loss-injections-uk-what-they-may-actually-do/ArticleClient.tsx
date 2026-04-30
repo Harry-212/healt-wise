@@ -15,7 +15,7 @@ const SHARE_PATH = "/blog/weekly-weight-loss-injections-uk-what-they-may-actuall
 const TOC = [
   { id: "overview", label: "Overview" },
   { id: "options", label: "The main options people compare" },
-  { id: "hunger", label: "How these injections affect hunger" },
+  { id: "hunger", label: "How these treatments affect hunger" },
   { id: "access", label: "NHS or private access?" },
   { id: "side-effects", label: "Side effects and safety" },
   { id: "after", label: "What happens after weight loss?" },
@@ -96,7 +96,7 @@ export default function ArticleClient() {
               darkMode ? "text-white" : "text-slate-900"
             }`}
           >
-            Weekly Weight Loss Injections in the UK: What They May Actually Do
+            Weekly Weight Loss Treatments in the UK: What They May Actually Do
           </h1>
           <div
             className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${
@@ -115,7 +115,7 @@ export default function ArticleClient() {
 
           <BlogArticleHeroImage
             src={WEEKLY_INJECTIONS_HERO_URL}
-            alt="Weekly weight loss injections in the UK — prescription GLP-1 support alongside lifestyle change"
+            alt="Weekly weight loss treatments in the UK — prescription GLP-1 support alongside lifestyle change"
           />
           <div
             id="guide-article-hero-end"
@@ -131,7 +131,7 @@ export default function ArticleClient() {
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <GuideSection darkMode={darkMode} id="overview" heading="Overview">
                 <p className="text-lg md:text-xl">
-                  Weekly weight loss injections have moved from niche treatment to mainstream conversation rather quickly.
+                  Weekly weight loss treatments have moved from niche treatment to mainstream conversation rather quickly.
                   A few years ago, most people outside obesity medicine probably had not heard of them. Now they show up
                   everywhere, from GP discussions to WhatsApp groups to celebrity headlines.
                 </p>
@@ -143,7 +143,7 @@ export default function ArticleClient() {
                 </p>
                 <p>And for some, they may be.</p>
                 <p>
-                  These injections appear to work mainly by influencing appetite signalling, slowing digestion, and
+                  These treatments appear to work mainly by influencing appetite signalling, slowing digestion, and
                   increasing satiety. Put simply, many users report feeling full sooner, thinking about food less often,
                   and finding it easier to maintain a calorie deficit.
                 </p>
@@ -201,7 +201,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="hunger" heading="How these injections affect hunger">
+              <GuideSection darkMode={darkMode} id="hunger" heading="How these treatments affect hunger">
                 <p>A lot of the benefit appears to come down to appetite regulation.</p>
                 <p>These medicines may:</p>
                 <ul className="list-disc space-y-2 pl-6">
@@ -267,7 +267,7 @@ export default function ArticleClient() {
                 <p>
                   Some obesity specialists increasingly frame this less as short-term dieting and more as chronic condition
                   management. Not everyone likes that framing. Still, it may explain why long-term strategy matters as much
-                  as the injections themselves.
+                  as the treatments themselves.
                 </p>
               </GuideSection>
 
@@ -303,7 +303,7 @@ export default function ArticleClient() {
                 <div className="space-y-8">
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
-                      1. Which weekly weight loss injection is most effective in the UK?
+                      1. Which weekly weight loss treatment is most effective in the UK?
                     </h3>
                     <p>
                       Current trial averages often show higher weight loss with Mounjaro (tirzepatide) than Wegovy
@@ -342,7 +342,7 @@ export default function ArticleClient() {
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
-                      5. Can I get these injections on the NHS?
+                      5. Can I get these treatments on the NHS?
                     </h3>
                     <p>
                       Possibly, but criteria are strict and vary by region. It often involves BMI thresholds, weight-related
@@ -351,7 +351,7 @@ export default function ArticleClient() {
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
-                      6. What happens if I stop weekly injections?
+                      6. What happens if I stop weekly treatments?
                     </h3>
                     <p>
                       Appetite may return and weight regain can happen, especially if habits and support are not maintained.
@@ -363,7 +363,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
-                  Weekly weight loss injections may genuinely help some people—especially when persistent hunger and appetite
+                  Weekly weight loss treatments may genuinely help some people—especially when persistent hunger and appetite
                   signals make calorie control feel unmanageable. But they are not a miracle fix. They support the process;
                   they do not replace it.
                 </p>
@@ -384,8 +384,8 @@ export default function ArticleClient() {
             <div className="mt-10">
               <GuideSharePanel
                 url={shareUrl}
-                title="Weekly Weight Loss Injections in the UK: What They May Actually Do"
-                description="A realistic UK guide to weekly injections (Wegovy, Mounjaro): appetite effects, access, side effects, and long-term expectations."
+                title="Weekly Weight Loss Treatments in the UK: What They May Actually Do"
+                description="A realistic UK guide to weekly treatments (Wegovy, Mounjaro): appetite effects, access, side effects, and long-term expectations."
               />
             </div>
           </div>

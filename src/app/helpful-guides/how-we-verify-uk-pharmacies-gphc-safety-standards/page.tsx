@@ -159,7 +159,7 @@ export default function GuidePharmacyVerification() {
           <IL href="/what-is-wegovy">Wegovy</IL>,{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, and{" "}
           <IL href="/what-is-saxenda">Saxenda</IL>.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
         <GuideParagraph>
           Our verification process is designed to ensure that only legitimate,
           regulated UK pharmacies are included helping you make safer, more

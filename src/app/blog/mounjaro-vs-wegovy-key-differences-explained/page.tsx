@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: HERO_IMAGE,
-        alt: "Mounjaro vs Wegovy — comparing UK GLP-1 weight loss injections",
+        alt: "Mounjaro vs Wegovy — comparing UK GLP-1 weight loss treatments",
       },
     ],
   },
@@ -73,10 +73,10 @@ export default function MounjaroVsWegovyPage() {
       },
       {
         "@type": "Question",
-        name: "Do Mounjaro and Wegovy both use weekly injections?",
+        name: "Do Mounjaro and Wegovy both use weekly treatments?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Both are typically given as once-weekly subcutaneous injections with gradual dose titration, though formats and strengths differ by product and market.",
+          text: "Both are typically given as once-weekly subcutaneous treatments with gradual dose titration, though formats and strengths differ by product and market.",
         },
       },
       {
@@ -100,7 +100,7 @@ export default function MounjaroVsWegovyPage() {
         name: "What side effects are common to both Mounjaro and Wegovy?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Gastrointestinal symptoms such as nausea, diarrhoea or constipation, and vomiting are frequently reported, especially after dose increases. Injection-site reactions and headache can also occur.",
+          text: "Gastrointestinal symptoms such as nausea, diarrhoea or constipation, and vomiting are frequently reported, especially after dose increases. Treatment-site reactions and headache can also occur.",
         },
       },
       {

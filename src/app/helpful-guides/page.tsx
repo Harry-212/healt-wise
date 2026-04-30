@@ -99,7 +99,7 @@ const ALL_GUIDES = [
   {
     slug: "mounjaro-weight-loss-injection-uk",
     title:
-      "Mounjaro Weight Loss Injection UK (2026): How It Works, Results, Eligibility & Cost",
+      "Mounjaro Weight Loss Treatment UK (2026): How It Works, Results, Eligibility & Cost",
     description:
       "The complete guide to Mounjaro (tirzepatide) in the UK—how the dual GLP-1/GIP mechanism works, clinical weight loss results, eligibility criteria, and what it costs.",
     category: "Medications" as Category,

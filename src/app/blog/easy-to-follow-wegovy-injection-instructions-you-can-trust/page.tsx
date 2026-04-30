@@ -5,15 +5,15 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 export const metadata: Metadata = {
   title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
   description:
-    "Follow clear wegovy injection instructions to confidently start your UK weight loss journey today.",
-  keywords: "wegovy injection instructions",
+    "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
+  keywords: "wegovy treatment instructions",
   alternates: {
-    canonical: `${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`,
+    canonical: `${siteOrigin()}/blog/easy-to-follow-wegovy-treatment-instructions-you-can-trust`,
   },
   openGraph: {
     title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
     description:
-      "Follow clear wegovy injection instructions to confidently start your UK weight loss journey today.",
+      "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
     url: `${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`,
     type: "article",
     publishedTime: "2026-04-14T00:00:00.000Z",
@@ -26,13 +26,13 @@ export default function WegovyInjectionInstructionsArticlePage() {
     "@type": "Article",
     headline: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
     description:
-      "Follow clear wegovy injection instructions to confidently start your UK weight loss journey today.",
+      "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
     datePublished: "2026-04-14",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`,
+      "@id": `${siteOrigin()}/blog/easy-to-follow-wegovy-treatment-instructions-you-can-trust`,
     },
   };
 

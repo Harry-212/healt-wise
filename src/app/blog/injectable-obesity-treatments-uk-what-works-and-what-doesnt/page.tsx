@@ -9,7 +9,7 @@ const HERO_IMAGE = `${siteOrigin()}${INJECTABLE_OBESITY_TREATMENTS_HERO}`;
 export const metadata: Metadata = {
   title: "Injectable Obesity Treatments UK: What Works and What Doesn't",
   description: 'Injectable obesity treatments in the UK: understand how Wegovy, Mounjaro and Saxenda work, NHS vs private access, costs, side effects and realistic expectations.',
-  keywords: 'injectable obesity treatments uk, Wegovy, Mounjaro, Saxenda, GLP-1, GIP, weight loss injections, obesity treatment UK, prescription weight loss, semaglutide, tirzepatide',
+  keywords: 'injectable obesity treatments uk, Wegovy, Mounjaro, Saxenda, GLP-1, GIP, weight loss treatments, obesity treatment UK, prescription weight loss, semaglutide, tirzepatide',
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },

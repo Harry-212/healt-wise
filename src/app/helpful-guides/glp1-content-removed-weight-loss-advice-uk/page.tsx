@@ -209,7 +209,7 @@ export default function GuideGlp1ContentRemoval() {
             <><IL href="/what-is-mounjaro">Mounjaro</IL> and tirzepatide.</>,
             <><IL href="/what-is-wegovy">Wegovy</IL> and semaglutide.</>,
             <>
-              Weight loss injections and{" "}
+              Weight loss treatments and{" "}
               <IL href="/compare/best-weight-loss-injections-uk">
                 GLP-1 receptor agonists
               </IL>{" "}

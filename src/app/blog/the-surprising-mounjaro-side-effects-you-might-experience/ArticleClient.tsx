@@ -173,7 +173,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="understanding" heading="Understanding Mounjaro">
                 <p>
-                  Mounjaro is the brand name for tirzepatide, a prescription injection approved for managing type 2 diabetes in adults. It belongs to a class of drugs called incretin mimetics and is administered once a week under the skin. Your healthcare team will start you on a low dose and gradually increase it over several weeks to minimise unwanted reactions.
+                  Mounjaro is the brand name for tirzepatide, a prescription treatment approved for managing type 2 diabetes in adults. It belongs to a class of drugs called incretin mimetics and is administered once a week under the skin. Your healthcare team will start you on a low dose and gradually increase it over several weeks to minimise unwanted reactions.
                 </p>
                 <p>
                   Many people also appreciate Mounjaro for its appetite-suppressing properties, which can support healthier eating habits and <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-semibold text-[#3562ff] underline-offset-2 hover:underline">weight loss</Link>. However, this same effect on your digestive pace can trigger gastrointestinal side effects, especially during the initial weeks of therapy.
@@ -207,7 +207,7 @@ export default function ArticleClient() {
                   Nausea is the most frequently reported side effect, and many people also notice vomiting, diarrhoea or constipation. These reactions stem from slowed gastric emptying and changes in gut hormones. Symptoms tend to peak shortly after a dose increase and then subside as your digestive system adapts.
                 </p>
                 <p>
-                  To reduce discomfort, try eating smaller meals more frequently and choosing low-fat, bland foods on injection days. Staying hydrated and eating slowly can also ease queasiness. If symptoms persist or worsen, discuss <Link href="/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust" className="font-semibold text-[#3562ff] underline-offset-2 hover:underline">adjusting your dosage</Link> schedule with your healthcare provider.
+                  To reduce discomfort, try eating smaller meals more frequently and choosing low-fat, bland foods on treatment days. Staying hydrated and eating slowly can also ease queasiness. If symptoms persist or worsen, discuss <Link href="/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust" className="font-semibold text-[#3562ff] underline-offset-2 hover:underline">adjusting your dosage</Link> schedule with your healthcare provider.
                 </p>
                 
                 <h3 className={`mt-6 mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>

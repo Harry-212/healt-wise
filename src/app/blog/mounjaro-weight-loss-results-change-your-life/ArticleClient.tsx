@@ -96,7 +96,7 @@ export default function ArticleClient() {
                 tirzepatide) stands out as a dual action treatment that may finally help you overturn years of frustrating weight fluctuations.
               </p>
               <p>
-                However, any weight loss journey requires steady commitment, realistic expectations, and an understanding of how these injections fit into your overall wellbeing. Below, you will learn how Mounjaro works, hear from real
+                However, any weight loss journey requires steady commitment, realistic expectations, and an understanding of how these treatments fit into your overall wellbeing. Below, you will learn how Mounjaro works, hear from real
                 users who have successfully shed pounds, and discover practical steps to maintain your results over the long term. If you have been searching for a lifeline in your weight loss efforts, this guide will help you see whether
                 Mounjaro might become the support you have been looking for.
               </p>
@@ -174,7 +174,7 @@ export default function ArticleClient() {
                 </p>
                 <SubHeading darkMode={darkMode}>Rapid utilisation across the UK</SubHeading>
                 <p>
-                  Mounjaro’s popularity has soared in the past year, contributing to roughly 1.6 million UK adults trying weight loss injections often through private prescriptions. (BBC) If you are thinking of following suit, these real
+                  Mounjaro’s popularity has soared in the past year, contributing to roughly 1.6 million UK adults trying weight loss treatments often through private prescriptions. (BBC) If you are thinking of following suit, these real
                   experiences validate that you are far from alone. Many individuals are stepping forward, supported by medical experts, and aiming to find a truly sustainable path to health.
                 </p>
               </GuideSection>
@@ -212,7 +212,7 @@ export default function ArticleClient() {
                 <p>
                   Once you get the hang of how your body responds, you can often maintain a comfortable routine. If you want additional information on the medication itself, see{' '}
                   <Link href="/blog/mounjaro-weight-loss-injections-game-changer" className="font-medium text-brand-primary underline">
-                    Mounjaro weight loss injections
+                    Mounjaro weight loss treatments
                   </Link>{' '}
                   for a closer look at how these treatments are typically administered under medical supervision.
                 </p>
@@ -251,8 +251,8 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="professional" heading="Work With Professional Guidance">
                 <p>
-                  Involve a qualified healthcare professional at each step of your Mounjaro journey. Although you might be tempted to self prescribe or look for shortcuts, these injections work best when administered carefully and combined
-                  with expert oversight to track your health. For instance, consultant bariatric surgeon James Hewes recommends patients use weight loss injections like Mounjaro through specialised NHS weight management clinics, though
+                  Involve a qualified healthcare professional at each step of your Mounjaro journey. Although you might be tempted to self prescribe or look for shortcuts, these treatments work best when administered carefully and combined
+                  with expert oversight to track your health. For instance, consultant bariatric surgeon James Hewes recommends patients use weight loss treatments like Mounjaro through specialised NHS weight management clinics, though
                   availability can be limited. (BBC)
                 </p>
                 <SubHeading darkMode={darkMode}>Private prescriptions and consultations</SubHeading>
@@ -285,7 +285,7 @@ export default function ArticleClient() {
                 <p>
                   Clinical studies, such as the SURMOUNT 4 trial, suggest people can experience notable weight regain within a year once they no longer take tirzepatide. (Apollo247) This does not have to happen if you put a strong
                   foundation in place. Think of Mounjaro as a training phase for better eating habits, exercise consistency, and mindfulness. Once the medication is phased out, you want to rely more on the routines you have established than
-                  on an injection.
+                  on an treatment.
                 </p>
                 <SubHeading darkMode={darkMode}>Strategies for keeping the weight off</SubHeading>
                 <p>The main challenge is sustaining healthy behaviours when your body no longer receives appetite regulating assistance. Here are a few proven tactics to manage weight maintenance:</p>
@@ -361,7 +361,7 @@ export default function ArticleClient() {
                   </li>
                   <li>
                     <Link href="/blog/mounjaro-weight-loss-injections-game-changer" className="font-medium text-brand-primary underline">
-                      Mounjaro weight loss injections
+                      Mounjaro weight loss treatments
                     </Link>
                   </li>
                 </ul>
@@ -423,7 +423,7 @@ export default function ArticleClient() {
                   <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span> {SOCIAL_HASHTAGS}
                   For more context, explore our resources on{' '}
                   <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">
-                    Mounjaro weight loss injection UK
+                    Mounjaro weight loss treatment UK
                   </Link>
                   .
                 </p>

@@ -268,7 +268,7 @@ export default function ArticleClient() {
                 <p>
                   Communities sometimes discuss injection technique; for UK focused practical context, see{' '}
                   <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-semibold text-brand-primary underline-offset-2 hover:underline">
-                    Mounjaro weight loss injections (UK)
+                    Mounjaro weight loss treatments (UK)
                   </Link>
                   .
                 </p>
@@ -306,7 +306,7 @@ export default function ArticleClient() {
                   Structured eating plans, activity targets (for example toward UK activity guidelines), and medication where appropriate work best together. That stack improves the odds of steady progress even if doses change later. For
                   more context, explore our resources on{' '}
                   <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">
-                    Mounjaro weight loss injection UK
+                    Mounjaro weight loss treatment UK
                   </Link>
                   .
                 </p>

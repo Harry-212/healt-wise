@@ -108,7 +108,7 @@ export default function ArticleClient() {
                   Wegovy contains semaglutide, a GLP 1 receptor agonist that helps to regulate appetite and support weight loss in adults who are obese or overweight with at least one weight related health problem. It is available as a once weekly injection pen and as once daily tablets, both used alongside lifestyle changes.
                 </p>
                 <p>
-                  With the injection, you give yourself a small dose of medicine under the skin. You do not inject into a vein or muscle. Because Wegovy slows stomach emptying, it can affect how quickly some other medicines are absorbed, especially diabetes treatments such as sulfonylureas or insulin, so you need to tell your prescriber about everything you take, including over the counter and herbal products.
+                  With the treatment, you give yourself a small dose of medicine under the skin. You do not inject into a vein or muscle. Because Wegovy slows stomach emptying, it can affect how quickly some other medicines are absorbed, especially diabetes treatments such as sulfonylureas or insulin, so you need to tell your prescriber about everything you take, including over the counter and herbal products.
                 </p>
                 <p>
                   You should not use Wegovy injection if you have severe gastroparesis, if you are taking another semaglutide product, or if you are using another GLP 1 medicine at the same time. Safety and effectiveness have not been established in people under 18 years of age, so it is not routinely used in children.
@@ -161,7 +161,7 @@ export default function ArticleClient() {
                   You can inject the medicine straight from the fridge, but some people find cold fluid uncomfortable. If that is the case for you, you can allow the pen to reach room temperature before use. Do not try to speed this up with a microwave, hot water, or direct heat.
                 </p>
                 <p>
-                  Wash your hands thoroughly with soap and water. Gather your supplies, including the Wegovy pen, an alcohol swab or soap and water for your skin, and a sharps container for disposal afterwards. Having everything ready avoids interruptions in the middle of the injection.
+                  Wash your hands thoroughly with soap and water. Gather your supplies, including the Wegovy pen, an alcohol swab or soap and water for your skin, and a sharps container for disposal afterwards. Having everything ready avoids interruptions in the middle of the treatment.
                 </p>
               </GuideSection>
 
@@ -276,7 +276,7 @@ export default function ArticleClient() {
               <div className="my-10">
                 <BlogArticleHeroImage
                   src={INLINE_WEGOVY_INJECT_IMG_2}
-                  alt="Wegovy pen disposal and safe injection routine — UK weight loss guide"
+                  alt="Wegovy pen disposal and safe treatment routine — UK weight loss guide"
                   priority={false}
                   showFullImage
                 />
@@ -317,7 +317,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
-                  When you understand your Wegovy injection instructions clearly, the weekly routine becomes much more manageable. You choose a consistent injection day, follow the prescribed dose escalation, store your pens in the right temperature range, and give each subcutaneous injection using a simple, repeatable process.
+                  When you understand your Wegovy injection instructions clearly, the weekly routine becomes much more manageable. You choose a consistent treatment day, follow the prescribed dose escalation, store your pens in the right temperature range, and give each subcutaneous injection using a simple, repeatable process.
                 </p>
                 <p>
                   You also keep track of side effects, rotate your injection sites, and handle missed doses according to the 48 hour guidance, involving your prescriber whenever you are unsure. Combined with a reduced calorie diet and increased physical activity, this careful, informed approach helps you get the most benefit from Wegovy while keeping safety at the centre of your treatment.
@@ -329,9 +329,9 @@ export default function ArticleClient() {
             {/* Share Panel (Using the GuideSharePanel UI from the 'Guides' article context) */}
             <div className="mt-10">
               <GuideSharePanel 
-                url={`${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`} 
+                url={`${siteOrigin()}/blog/easy-to-follow-wegovy-treatment-instructions-you-can-trust`} 
                 title="Easy-to-Follow Wegovy Injection Instructions You Can Trust"
-                description="Follow clear wegovy injection instructions to confidently start your UK weight loss journey today."
+                description="Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today."
               />
             </div>
             

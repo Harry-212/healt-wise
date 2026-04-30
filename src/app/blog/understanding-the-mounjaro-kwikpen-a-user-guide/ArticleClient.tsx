@@ -24,7 +24,7 @@ const TOC = [
   { id: "overview", label: "Get to know Mounjaro KwikPen" },
   { id: "support", label: "How it supports weight loss" },
   { id: "safe-use", label: "Use it correctly and safely" },
-  { id: "compare", label: "Compare with other injections" },
+  { id: "compare", label: "Compare with other treatments" },
   { id: "decision", label: "Make your purchase decision easier" },
   { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
@@ -41,7 +41,7 @@ function SubHeading({
   darkMode: boolean;
 }) {
   return (
-    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children} For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
+    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children} For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
   );
 }
 
@@ -122,7 +122,7 @@ export default function ArticleClient() {
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <GuideSection darkMode={darkMode} id="overview" heading="Get to know Mounjaro KwikPen">
                 <p className="text-lg md:text-xl">
-                  When you hear about weight loss injection options in the UK, you might immediately think of products like
+                  When you hear about weight loss treatment options in the UK, you might immediately think of products like
                   Wegovy or Saxenda. However, Mounjaro KwikPen is another contender that has recently drawn attention among
                   people looking to manage their weight more effectively. If you are interested in understanding the
                   Mounjaro KwikPen, a user guide can help you build confidence before deciding whether this medication is
@@ -145,7 +145,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="support" heading="Understand how it supports weight loss">
                 <p>
-                  Like other weight loss injections in the UK, Mounjaro is designed to assist people who are struggling
+                  Like other weight loss treatments in the UK, Mounjaro is designed to assist people who are struggling
                   with obesity or weight related health concerns. The active ingredients in this medication help regulate
                   certain hormonal processes in your body, with the goal of moderating appetite. In some cases, you may
                   feel satisfied after smaller meals, so you are less likely to overeat or snack between them.
@@ -163,16 +163,16 @@ export default function ArticleClient() {
                     href="/compare/best-weight-loss-injections-uk"
                     className="font-medium text-brand-primary underline"
                   >
-                    UK weight loss injections comparison hub
+                    UK weight loss treatments comparison hub
                   </Link>
-                  . This can give you more context around the popularity of injections like Mounjaro, as well as options
+                  . This can give you more context around the popularity of treatments like Mounjaro, as well as options
                   that aim to support long term weight management.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="safe-use" heading="Use it correctly and safely">
                 <p>
-                  One of the most common concerns about injection based treatments is whether you will be able to
+                  One of the most common concerns about treatment based options is whether you will be able to
                   administer them correctly. Fortunately, Mounjaro KwikPen includes features that make preparation as simple
                   as possible, and you will soon feel more at ease with the process. Here are a few basic points you will
                   want to keep in mind:
@@ -203,7 +203,7 @@ export default function ArticleClient() {
                   >
                     Wegovy injection instructions and side effects
                   </Link>
-                  . Even though these two injections differ, some side effects can overlap.
+                  . Even though these two treatments differ, some side effects can overlap.
                  For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</Link>.</p>
               </GuideSection>
 
@@ -216,7 +216,7 @@ export default function ArticleClient() {
                 />
               </div>
 
-              <GuideSection darkMode={darkMode} id="compare" heading="Compare Mounjaro with other injections">
+              <GuideSection darkMode={darkMode} id="compare" heading="Compare Mounjaro with other treatments">
                 <p>
                   You may wonder if Mounjaro stands out from other treatments on the market. To begin with, it is believed
                   to work in a unique way compared to Wegovy, although both are used to tackle weight management issues. If
@@ -238,7 +238,7 @@ export default function ArticleClient() {
                   >
                     switching pharmacies for Mounjaro or Wegovy in the UK
                   </Link>
-                  . Checking current inventory before you start any injection will help you plan ahead, avoiding unexpected
+                  . Checking current inventory before you start any treatment will help you plan ahead, avoiding unexpected
                   gaps in your treatment.
                 </p>
                 <SubHeading darkMode={darkMode}>Cost and convenience</SubHeading>
@@ -260,14 +260,14 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="decision" heading="Make your purchase decision easier">
                 <p>
-                  Taking the step toward injection based weight management is never trivial, so it is crucial you feel
+                  Taking the step toward treatment based weight management is never trivial, so it is crucial you feel
                   confident about your choice. By learning how Mounjaro KwikPen works, understanding its benefits, and
-                  comparing it with other injections, you give yourself the chance to make a fully informed decision.
+                  comparing it with other treatments, you give yourself the chance to make a fully informed decision.
                 </p>
                 <p>
                   Keep in mind that Mounjaro is designed to aid your weight loss, not completely replace a healthy
                   lifestyle. You will want to combine its benefits with balanced meals, regular physical activity, and any
-                  advice your doctor has provided. Everyone&apos;s journey is unique, and injections can offer extra
+                  advice your doctor has provided. Everyone&apos;s journey is unique, and treatments can offer extra
                   support when you need it most.
                 </p>
                 <p>
@@ -346,7 +346,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
                   Understanding the Mounjaro KwikPen: a user guide is really about pairing clear expectations with
-                  professional support. The pen is built to simplify injections, but your dosing, storage, and monitoring
+                  professional support. The pen is built to simplify treatments, but your dosing, storage, and monitoring
                   still belong in conversation with a qualified prescriber. Compare options, plan for supply and cost,
                   and keep lifestyle change at the centre of your programme.
                 </p>

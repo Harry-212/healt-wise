@@ -293,7 +293,7 @@ export default function GuideMounjaroPregnancy() {
           items={[
             "Reviewing your current contraception method to confirm it remains appropriate.",
             "Using additional contraception, such as a barrier method, alongside oral contraceptive pills—particularly during the first four weeks of treatment or if vomiting and diarrhoea occur.",
-            "Considering non-oral contraception methods, such as a hormonal IUD, implant, or injection, which are unaffected by gastric emptying changes.",
+            "Considering non-oral contraception methods, such as a hormonal IUD, implant, or treatment, which are unaffected by gastric emptying changes.",
           ]}
         />
         <GuideParagraph>

@@ -302,7 +302,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                       href="/compare/best-weight-loss-injections-uk"
                       className="font-medium text-emerald-600 underline-offset-2 hover:underline"
                     >
-                      Best weight loss injections in the UK
+                      Best weight loss treatments in the UK
                     </Link>
                   </li>
                   <li>
@@ -385,7 +385,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                     All UK location articles
                   </Link>
                   .
-                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
+                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
               </div>
             </article>
 

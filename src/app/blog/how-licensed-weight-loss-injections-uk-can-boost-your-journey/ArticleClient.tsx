@@ -9,16 +9,16 @@ import { siteOrigin } from '@/lib/seo/site-origin';
 
 const SHARE_PATH = '/blog/how-licensed-weight-loss-injections-uk-can-boost-your-journey';
 const HERO_SRC = '/blog/How%20Licensed%20Weight%20Loss%20Injections%20UK%20Can%20Boost%20Your%20Journey.webp';
-const HERO_ALT = 'Licensed weight loss injections in the UK';
+const HERO_ALT = 'Licensed weight loss treatments in the UK';
 const SOCIAL_HASHTAGS = '#LicensedWeightLossInjections #UKWeightLoss #Mounjaro #Wegovy #PrescriptionWeightLoss';
 
 const TOC = [
-  { id: 'understanding-licensed-injections', label: 'Understanding Licensed Weight Loss Injections' },
-  { id: 'how-they-work', label: 'How These Injections Work' },
+  { id: 'understanding-licensed-treatments', label: 'Understanding Licensed Weight Loss Treatments' },
+  { id: 'how-they-work', label: 'How These Treatments Work' },
   { id: 'mounjaro-vs-wegovy', label: 'Exploring Mounjaro and Wegovy' },
   { id: 'access-pathways', label: 'NHS and Private Prescriptions' },
   { id: 'benefits-and-risks', label: 'Benefits and Potential Side Effects' },
-  { id: 'lifestyle', label: 'Pairing Injections With Lifestyle Change' },
+  { id: 'lifestyle', label: 'Pairing Treatments With Lifestyle Change' },
   { id: 'maintenance', label: 'Maintaining Progress' },
   { id: 'faq', label: 'Additional FAQs' },
 ];
@@ -51,24 +51,24 @@ export default function ArticleClient() {
         <div className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-12">
           <main>
             <div className="mb-10 rounded-3xl border border-slate-200/90 bg-white/80 p-6 shadow-sm shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-lg sm:p-8">
-              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">How Licensed Weight Loss Injections UK Can Boost Your Journey</h1>
-              <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Discover how MHRA-approved, prescription weight loss injections can support appetite control, clinical oversight and sustainable progress in the UK.</p>
+              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">How Licensed Weight Loss Treatments UK Can Boost Your Journey</h1>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Discover how MHRA-approved, prescription weight loss treatments can support appetite control, clinical oversight and sustainable progress in the UK.</p>
               <div className="mt-8">
                 <BlogArticleHeroImage src={HERO_SRC} alt={HERO_ALT} />
               </div>
             </div>
 
             <div className="space-y-10">
-              <GuideSection darkMode={darkMode} id="understanding-licensed-injections" heading="Understanding Licensed Weight Loss Injections">
+              <GuideSection darkMode={darkMode} id="understanding-licensed-treatments" heading="Understanding Licensed Weight Loss Treatments">
                 <p className="leading-8 text-slate-600">
-                  If you have found yourself struggling to manage weight through diet changes, gym memberships, or another round of “starting fresh on Monday,” licensed weight loss injections may seem worth exploring.
+                  If you have found yourself struggling to manage weight through diet changes, gym memberships, or another round of “starting fresh on Monday,” licensed weight loss treatments may seem worth exploring.
                 </p>
                 <p className="mt-4 leading-8 text-slate-600">For some people, they probably are. These prescription treatments can help regulate appetite, reduce persistent hunger, and make portion control feel less difficult.</p>
                 <p className="mt-4 leading-8 text-slate-600">That may sound modest, but for someone dealing with constant cravings, that can be meaningful. Still, it helps to keep expectations grounded. These medicines are not magic.</p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="how-they-work" heading="How These Injections Work">
-                <p className="leading-8 text-slate-600">Most licensed weight loss injections work by affecting appetite signalling pathways. Wegovy acts through GLP-1 receptors. Mounjaro acts on GLP-1 and GIP pathways.</p>
+              <GuideSection darkMode={darkMode} id="how-they-work" heading="How These Treatments Work">
+                <p className="leading-8 text-slate-600">Most licensed weight loss treatments work by affecting appetite signalling pathways. Wegovy acts through GLP-1 receptors. Mounjaro acts on GLP-1 and GIP pathways.</p>
                 <p className="mt-4 leading-8 text-slate-600">
                   That difference may matter. Some researchers believe dual pathway activity may partly explain why tirzepatide sometimes appears associated with greater average weight reduction.
                 </p>
@@ -103,7 +103,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="lifestyle" heading="Pairing Injections With Lifestyle Change">
+              <GuideSection darkMode={darkMode} id="lifestyle" heading="Pairing Treatments With Lifestyle Change">
                 <p className="leading-8 text-slate-600">This part may be less glamorous, but arguably matters more. Medication can help regulate appetite. It does not build habits for you. That part still belongs to you.</p>
                 <p className="mt-4 leading-8 text-slate-600">
                   A balanced reduced calorie diet still matters. Movement still matters. Sleep likely matters more than many people realise. Sometimes small changes carry more weight than dramatic ones.
@@ -133,8 +133,8 @@ export default function ArticleClient() {
               <div className="mt-4">
                 <GuideSharePanel
                   url={shareUrl}
-                  title="How Licensed Weight Loss Injections UK Can Boost Your Journey"
-                  description="Learn how licensed weight loss injections in the UK can support appetite control, clinical oversight, and longer-term progress with regulated treatment pathways."
+                  title="How Licensed Weight Loss Treatments UK Can Boost Your Journey"
+                  description="Learn how licensed weight loss treatments in the UK can support appetite control, clinical oversight, and longer-term progress with regulated treatment pathways."
                 />
               </div>
               <p className="mt-4 text-sm text-slate-500">Tags: {SOCIAL_HASHTAGS}</p>

@@ -127,7 +127,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="overview" heading="Get to know Wegovy">
                 <p className="text-lg md:text-xl">
                   Wegovy is an injectable prescription medication that many people like you use to support weight
-                  management goals. As part of the growing popularity of weight loss injections in the UK, Wegovy can be a
+                  management goals. As part of the growing popularity of weight loss treatments in the UK, Wegovy can be a
                   helpful tool if you are looking to control your appetite and reach a healthier size. However, it is
                   important to understand the side effects of Wegovy and how to manage them. With the right knowledge, you
                   can keep discomfort to a minimum while staying on track with your progress.
@@ -188,7 +188,7 @@ export default function ArticleClient() {
               <div className="my-10">
                 <BlogArticleHeroImage
                   src={INLINE_WEGOVY}
-                  alt="Wegovy (semaglutide) weight-loss injection — context for prescription use and managing common side effects in the UK"
+                  alt="Wegovy (semaglutide) weight-loss treatment — context for prescription use and managing common side effects in the UK"
                   priority={false}
                   showFullImage
                 />
@@ -230,10 +230,10 @@ export default function ArticleClient() {
                   Any ongoing or severe side effect is a signal that you should speak with your doctor. They might
                   recommend adjusting your dosage or providing a more personalised plan for you. If you ever feel uncertain
                   about combining Wegovy with other treatments or supplements, simply ask for a professional opinion. That
-                  includes exploring other weight loss injections and how they compare in terms of benefits and drawbacks.
+                  includes exploring other weight loss treatments and how they compare in terms of benefits and drawbacks.
                 </p>
                 <p>
-                  For a deeper comparison of injection based treatments, check out{" "}
+                  For a deeper comparison of treatment based options, check out{" "}
                   <Link
                     href="/blog/mounjaro-vs-wegovy-key-differences-explained"
                     className="font-medium text-brand-primary underline"
@@ -263,7 +263,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="on-track" heading="Stay on track">
                 <p>
                   Alongside Wegovy, you have other factors to consider in your weight management journey. With weight loss
-                  injections in high demand, it is worth keeping up with supply and continuity   our{" "}
+                  treatments in high demand, it is worth keeping up with supply and continuity   our{" "}
                   <Link
                     href="/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk"
                     className="font-medium text-brand-primary underline"
@@ -275,7 +275,7 @@ export default function ArticleClient() {
                     href="/compare/best-weight-loss-injections-uk"
                     className="font-medium text-brand-primary underline"
                   >
-                    UK weight loss injections comparison hub
+                    UK weight loss treatments comparison hub
                   </Link>
                   , which offers insight into options, cost context and availability.
                 </p>
@@ -292,7 +292,7 @@ export default function ArticleClient() {
                 <p>
                   When you combine mindful eating, consistent exercise, medical support and an awareness of Wegovy&apos;s
                   potential side effects, you are setting yourself up for success. Whether you are new to weight loss
-                  injections or have been exploring different paths for a while, small adjustments can add up to major
+                  treatments or have been exploring different paths for a while, small adjustments can add up to major
                   improvements in how you feel daily. For instance, if you find that early mornings are when you have the
                   most energy, schedule a quick workout or walk during that time. If you are prone to late night snacking,
                   plan a satisfying snack that does not derail your goals. Over time, you will discover strategies and

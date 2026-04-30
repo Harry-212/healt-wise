@@ -15,8 +15,8 @@ const HERO_SRC = blogWebpPath(UK_RX_INJECTIONS_HERO_WEBP);
 
 const TOC = [
   { id: "overview", label: "Introduction" },
-  { id: "why", label: "Why some people consider injections" },
-  { id: "mechanism", label: "How GLP-1 injections work" },
+  { id: "why", label: "Why some people consider treatments" },
+  { id: "mechanism", label: "How GLP-1 treatments work" },
   { id: "options", label: "Main prescription options" },
   { id: "access", label: "NHS vs private access" },
   { id: "side-effects", label: "Side effects and risks" },
@@ -84,7 +84,7 @@ export default function ArticleClient() {
           <h1
             className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? "text-white" : "text-slate-900"}`}
           >
-            Understanding Prescription Weight Loss Injections in the UK: What They May Actually Offer
+            Understanding Prescription Weight Loss Treatments in the UK: What They May Actually Offer
           </h1>
           <div
             className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}
@@ -101,7 +101,7 @@ export default function ArticleClient() {
 
           <BlogArticleHeroImage
             src={HERO_SRC}
-            alt="UK prescription weight loss injection — GLP-1 class medicine used with diet, activity, and clinical follow-up"
+            alt="UK prescription weight loss treatment — GLP-1 class medicine used with diet, activity, and clinical follow-up"
           />
           <div
             id="guide-article-hero-end"
@@ -121,7 +121,7 @@ export default function ArticleClient() {
                 <p className="text-lg md:text-xl">
                   If you have been looking into ways to manage weight, you have probably seen increasing attention
                   around{" "}
-                  <span className="font-medium">uk prescription weight loss injections</span>. They are often framed as
+                  <span className="font-medium">uk prescription weight loss treatments</span>. They are often framed as
                   breakthrough solutions. That may be overstating it.
                 </p>
                 <p>
@@ -149,14 +149,14 @@ export default function ArticleClient() {
                     href="/compare/best-weight-loss-injections-uk"
                     className="font-medium text-brand-primary underline"
                   >
-                    UK weight loss injections comparison hub
+                    UK weight loss treatments comparison hub
                   </Link>
                   , and for supply reality checks,{" "}
                   <Link
                     href="/blog/weight-loss-injection-shortages-in-the-uk-what-you-need-to-know"
                     className="font-medium text-brand-primary underline"
                   >
-                    weight loss injection shortages in the UK: what you need to know
+                    weight loss treatment shortages in the UK: what you need to know
                   </Link>
                   .
                 </p>
@@ -165,7 +165,7 @@ export default function ArticleClient() {
               <GuideSection
                 darkMode={darkMode}
                 id="why"
-                heading="Why some people consider injections"
+                heading="Why some people consider treatments"
               >
                 <p>
                   For many adults, weight loss has not been a simple &ldquo;eat less, move more&rdquo; equation.
@@ -195,7 +195,7 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="mechanism" heading="How GLP-1 and related injections work">
+              <GuideSection darkMode={darkMode} id="mechanism" heading="How GLP-1 and related treatments work">
                 <p>These medicines act on pathways involved in satiety and metabolism.</p>
                 <p>Broadly, they may:</p>
                 <ul className="list-disc space-y-2 pl-6">
@@ -328,9 +328,9 @@ export default function ArticleClient() {
                 heading="A realistic perspective on long term weight maintenance"
               >
                 <p>This is probably the hardest part.</p>
-                <p>People often ask: &ldquo;If I lose weight on injections, will it stay off?&rdquo;</p>
+                <p>People often ask: &ldquo;If I lose weight on treatments, will it stay off?&rdquo;</p>
                 <p>Maybe. Maybe not.</p>
-                <p>Stopping treatment without sustaining dietary habits often appears associated with weight regain. That is not unique to injections. That is common across weight interventions. Which is why many specialists increasingly treat obesity less as a short term project and more as chronic disease management. That framing may be uncomfortable, but it may also be closer to reality.</p>
+                <p>Stopping treatment without sustaining dietary habits often appears associated with weight regain. That is not unique to treatments. That is common across weight interventions. Which is why many specialists increasingly treat obesity less as a short term project and more as chronic disease management. That framing may be uncomfortable, but it may also be closer to reality.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="also-ask" heading="Questions people also ask">
@@ -359,7 +359,7 @@ export default function ArticleClient() {
                 <div className="space-y-8">
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
-                      1. Are prescription weight loss injections worth trying?
+                      1. Are prescription weight loss treatments worth trying?
                     </h3>
                     <p>They may be worth considering if conventional approaches have not worked and you meet prescribing criteria. Whether they are worth it often depends on side effects, cost, and whether you can sustain changes around them.</p>
                   </div>
@@ -377,7 +377,7 @@ export default function ArticleClient() {
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
-                      4. What happens if I stop injections?
+                      4. What happens if I stop treatments?
                     </h3>
                     <p>Weight regain may occur, particularly if appetite returns and behavioural changes have not been maintained.</p>
                   </div>
@@ -398,7 +398,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
-                  Prescription weight loss injections may represent a meaningful option for some people. But they are not
+                  Prescription weight loss treatments may represent a meaningful option for some people. But they are not
                   magic. They are not effortless. And they are unlikely to solve every driver of obesity on their own. Used
                   carefully, with realistic expectations and medical supervision, they might support significant progress.
                   Used as a shortcut? That expectation often seems harder to defend.
@@ -426,8 +426,8 @@ export default function ArticleClient() {
             <div className="mt-10">
               <GuideSharePanel
                 url={shareUrl}
-                title="Understanding Prescription Weight Loss Injections in the UK: What They May Actually Offer"
-                description="What GLP-1 weight loss injections may offer in the UK: Wegovy, Mounjaro, NHS vs private, risks, and realistic expectations."
+                title="Understanding Prescription Weight Loss Treatments in the UK: What They May Actually Offer"
+                description="What GLP-1 weight loss treatments may offer in the UK: Wegovy, Mounjaro, NHS vs private, risks, and realistic expectations."
               />
             </div>
           </div>

@@ -107,7 +107,7 @@ export default function ArticleClient() {
 
           <BlogArticleHeroImage
             src={HERO_SRC}
-            alt="Mounjaro vs Wegovy — comparing UK GLP-1 weight loss injections"
+            alt="Mounjaro vs Wegovy — comparing UK GLP-1 weight loss treatments"
           />
           <div
             id="guide-article-hero-end"
@@ -125,12 +125,12 @@ export default function ArticleClient() {
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <p className="text-lg md:text-xl">
                 When you are weighing up Mounjaro vs Wegovy: The Key Differences Explained, you are looking at two of
-                the most talked about weight loss injections in the UK right now. Both medications fall into the growing
+                the most talked about weight loss treatments in the UK right now. Both medications fall into the growing
                 category of GLP 1 receptor agonists, designed to help you shed pounds by curbing appetite, slowing gastric
                 emptying and improving blood sugar control. Yet despite these similarities, important distinctions in
                 efficacy, dosing schedules, cost and side effects can make one option feel like a better fit for your
                 lifestyle and goals. In this guide you will find everything you need from how each drug works to
-                real world results to help you decide which injection could work best for you.
+                real world results to help you decide which treatment could work best for you.
               </p>
               <p>
                 If you are new to this class of therapies, you may also want to explore our{" "}
@@ -138,14 +138,14 @@ export default function ArticleClient() {
                   href="/compare/best-weight-loss-injections-uk"
                   className="font-medium text-brand-primary underline"
                 >
-                  UK weight loss injections comparison hub
+                  UK weight loss treatments comparison hub
                 </Link>
                 . Once you have narrowed your choice, our linked articles on{" "}
                 <Link
                   href="/helpful-guides/mounjaro-weight-loss-injection-uk"
                   className="font-medium text-brand-primary underline"
                 >
-                  Mounjaro weight loss injection (UK)
+                  Mounjaro weight loss treatment (UK)
                 </Link>{" "}
                 and{" "}
                 <Link
@@ -252,7 +252,7 @@ export default function ArticleClient() {
                   lifestyle coaching.
                 </p>
                 <p>
-                  The key takeaway is that whichever injection you choose, a structured plan regular check ins,
+                  The key takeaway is that whichever treatment you choose, a structured plan regular check ins,
                   nutritional guidance and an exercise regimen maximises your odds of success.
                  For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
               </GuideSection>
@@ -260,14 +260,14 @@ export default function ArticleClient() {
               <div className="my-10">
                 <BlogArticleHeroImage
                   src={INLINE_1}
-                  alt="Mounjaro KwikPen and Wegovy pens — weekly GLP-1 injections compared"
+                  alt="Mounjaro KwikPen and Wegovy pens — weekly GLP-1 treatments compared"
                   priority={false}
                   showFullImage
                 />
               </div>
 
               <GuideSection darkMode={darkMode} id="dosing" heading="Review Dosage Schedules">
-                <p>Dosing strategies can influence how quickly you ramp up, how many injections you administer and how manageable your routine feels.</p>
+                <p>Dosing strategies can influence how quickly you ramp up, how many treatments you administer and how manageable your routine feels.</p>
                 <SubHeading darkMode={darkMode}>Mounjaro dosing</SubHeading>
                 <p>
                   You will start Mounjaro at 2.5 mg once weekly, usually on the same day each week. Every four weeks you
@@ -340,10 +340,10 @@ export default function ArticleClient() {
                 <p>
                   Currently neither Mounjaro nor Wegovy is routinely prescribed on the NHS for weight loss alone. Some NHS
                   trusts run pilot programmes, but coverage is limited and often focused on patients with type 2 diabetes
-                  or severe obesity. Most people access these injections via private clinics, medical spas or online
+                  or severe obesity. Most people access these treatments via private clinics, medical spas or online
                   telehealth providers.
                 </p>
-                <SubHeading darkMode={darkMode}>Injection shortages and supply</SubHeading>
+                <SubHeading darkMode={darkMode}>Treatment shortages and supply</SubHeading>
                 <p>
                   Global demand has occasionally outpaced supply, leading to intermittent shortages. Before committing,
                   read our{" "}
@@ -359,7 +359,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="experience" heading="Assess Patient Experience">
                 <p>
-                  Choosing an injection is not just about the molecule it is about how you will live with it week after
+                  Choosing an treatment is not just about the molecule it is about how you will live with it week after
                   week.
                 </p>
                 <SubHeading darkMode={darkMode}>Administration methods</SubHeading>
@@ -381,7 +381,7 @@ export default function ArticleClient() {
                     href="/helpful-guides/mounjaro-weight-loss-injection-uk"
                     className="font-medium text-brand-primary underline"
                   >
-                    Mounjaro weight loss injection UK
+                    Mounjaro weight loss treatment UK
                   </Link>
                   .
                 </p>
@@ -464,10 +464,10 @@ export default function ArticleClient() {
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
-                      2. Do Mounjaro and Wegovy both use weekly injections?
+                      2. Do Mounjaro and Wegovy both use weekly treatments?
                     </h3>
                     <p>
-                      Both are typically given as once weekly subcutaneous injections with gradual dose titration, though
+                      Both are typically given as once weekly subcutaneous treatments with gradual dose titration, though
                       formats and strengths differ by product and market.
                     </p>
                   </div>

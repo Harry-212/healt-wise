@@ -289,7 +289,7 @@ export default function GuideMounjaroStorage() {
           unsafe ones. All pharmacies listed on{" "}
           <IL href="/">Health Wise</IL> are verified against these standards
           before listing.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
       </GuideSection>
 
       {/* ── Key Takeaways ── */}

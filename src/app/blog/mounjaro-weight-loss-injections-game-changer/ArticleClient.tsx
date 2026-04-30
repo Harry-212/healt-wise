@@ -11,10 +11,10 @@ import { siteOrigin } from '@/lib/seo/site-origin';
 
 const SHARE_PATH = '/blog/mounjaro-weight-loss-injections-game-changer';
 const HERO_SRC = '/blog/Could%20Mounjaro%20Weight%20Loss%20Injections%20Be%20Your%20Game-Changer.webp';
-const HERO_ALT = 'Could Mounjaro weight loss injections be your game-changer?';
+const HERO_ALT = 'Could Mounjaro weight loss treatments be your game-changer?';
 
 const TOC = [
-  { id: 'meet-mounjaro', label: 'Meet Mounjaro weight loss injections' },
+  { id: 'meet-mounjaro', label: 'Meet Mounjaro weight loss treatments' },
   { id: 'fresh-option', label: 'A fresh option for stubborn weight' },
   { id: 'how-works', label: 'See how Mounjaro works' },
   { id: 'dosage-note', label: 'Important note about dosage' },
@@ -72,7 +72,7 @@ export default function ArticleClient() {
         </div>
 
         <header className="mb-12">
-          <h1 className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? 'text-white' : 'text-slate-900'}`}>Could Mounjaro Weight Loss Injections Be Your Game-Changer?</h1>
+          <h1 className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? 'text-white' : 'text-slate-900'}`}>Could Mounjaro Weight Loss Treatments Be Your Game-Changer?</h1>
           <div className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
             <span className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
@@ -94,12 +94,12 @@ export default function ArticleClient() {
           <div className="min-w-0 max-w-3xl flex-1">
             <article className={`space-y-8 leading-relaxed ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               <p className="text-lg md:text-xl">
-                Mounjaro weight loss injections have been called a “game changer” for adults struggling to drop pounds they have fought against for years. If you have tried countless diets without the success you hoped for, you might be
+                Mounjaro weight loss treatments have been called a “game changer” for adults struggling to drop pounds they have fought against for years. If you have tried countless diets without the success you hoped for, you might be
                 wondering if this new medication could finally help you reach your goals. You are not alone. Plenty of people feel stuck and are curious about medical options that claim to assist in managing hunger, reducing calorie intake,
                 and ultimately leading to significant weight loss. The information below will guide you through what Mounjaro is, how it works, and whether it might fit into your plan for healthier living.
               </p>
 
-              <GuideSection darkMode={darkMode} id="meet-mounjaro" heading="Meet Mounjaro Weight Loss Injections">
+              <GuideSection darkMode={darkMode} id="meet-mounjaro" heading="Meet Mounjaro Weight Loss Treatments">
                 <p>
                   Mounjaro is an injectable medication primarily designed to treat Type 2 diabetes, but it has shown remarkable potential for weight loss even among individuals without diabetes. The drug, also known by its generic name
                   tirzepatide, taps into a dual agonist mechanism that targets two hormones related to appetite control. By mimicking the effects of these hormones, Mounjaro can help you feel satiated faster, making it easier to resist
@@ -107,7 +107,7 @@ export default function ArticleClient() {
                 </p>
                 <p>
                   Described by one GP as particularly beneficial for patients who have found it hard to manage their weight through traditional dieting alone, Mounjaro entered surgeries in England in early June 2026 (BBC). Many people who
-                  decide to try the injections report fewer hunger pangs and a renewed sense of control, especially when combining medication with healthy habits.
+                  decide to try the treatments report fewer hunger pangs and a renewed sense of control, especially when combining medication with healthy habits.
                 </p>
                 <p>
                   Still, you may wonder what truly sets this drug apart in a world already populated with other weight loss aids. One big difference is that Mounjaro acts on two hormone pathways (GLP 1 and GIP), which can potentially yield
@@ -146,7 +146,7 @@ export default function ArticleClient() {
                   </li>
                 </ul>
                 <p>
-                  In many clinical trials, participants who take the highest dose of Mounjaro lost up to 21% of their body weight, outpacing other popular injections like semaglutide (UCHealth). That can translate to significant changes in
+                  In many clinical trials, participants who take the highest dose of Mounjaro lost up to 21% of their body weight, outpacing other popular treatments like semaglutide (UCHealth). That can translate to significant changes in
                   clothing size, physical energy, and even self confidence. However, the process is not instantaneous. Like most medical treatments, Mounjaro shows its best results when combined with ongoing efforts toward a holistic
                   healthier lifestyle.
                 </p>
@@ -170,7 +170,7 @@ export default function ArticleClient() {
                   results.
                 </p>
                 <p>
-                  Recent news stories have highlighted that many people who want to access the injection through the NHS face stringent criteria. According to Dr. Rachel Ward, a GP in Didcot, Oxfordshire, most individuals applying for NHS
+                  Recent news stories have highlighted that many people who want to access the treatment through the NHS face stringent criteria. According to Dr. Rachel Ward, a GP in Didcot, Oxfordshire, most individuals applying for NHS
                   prescriptions did not meet all the requirements. These requirements include having a BMI of 40 or over (37.5 for certain ethnic backgrounds) plus four out of five weight related health issues (BBC).
                 </p>
               </GuideSection>
@@ -202,7 +202,7 @@ export default function ArticleClient() {
                   </Link>{' '}
                   success stories. However, keep in mind that your experience can vary based on your diet, activity level, dosage, and other lifestyle factors. For more context, explore our resources on{' '}
                   <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">
-                    Mounjaro weight loss injection UK
+                    Mounjaro weight loss treatment UK
                   </Link>
                   .
                 </p>
@@ -214,7 +214,7 @@ export default function ArticleClient() {
                   year, though some individuals continue to lose weight even longer than that. In the Surmount 1 trial, participants reached their lowest weight by around 22 months on average, then maintained most of their progress through
                   the third year (The Guardian).
                 </p>
-                <p>Weight loss injections like Mounjaro do not replace standard weight management strategies. Think of them as a booster or a supportive tool that helps minimise your hunger and keep you on track for the long haul.</p>
+                <p>Weight loss treatments like Mounjaro do not replace standard weight management strategies. Think of them as a booster or a supportive tool that helps minimise your hunger and keep you on track for the long haul.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="side-effects" heading="Note Possible Side Effects">
@@ -239,7 +239,7 @@ export default function ArticleClient() {
                         cells: ['Decreased appetite', 'Key to weight loss, but the shift in eating patterns can feel drastic'],
                       },
                       {
-                        cells: ['Abdominal pain', 'Generally temporary; often relieved as you become accustomed to the injections'],
+                        cells: ['Abdominal pain', 'Generally temporary; often relieved as you become accustomed to the treatments'],
                       },
                     ]}
                   />
@@ -303,13 +303,13 @@ export default function ArticleClient() {
                 </ul>
                 <p>
                   Even Dr. Ward, the GP who witnessed Mounjaro’s potential, cautions that focusing too heavily on the drug alone is risky. She emphasises that you need to retain a holistic approach for durable results (BBC). If you rely
-                  solely on injections while ignoring daily habits, you could see the pounds return once you stop the medication.
+                  solely on treatments while ignoring daily habits, you could see the pounds return once you stop the medication.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="plan-next" heading="Plan Your Next Steps">
                 <p>
-                  The journey with Mounjaro typically means committing to a few things all at once. You might explore how the injection works by diving into topics such as{' '}
+                  The journey with Mounjaro typically means committing to a few things all at once. You might explore how the treatment works by diving into topics such as{' '}
                   <Link href="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here" className="font-medium text-brand-primary underline">
                     how does Mounjaro work for weight loss
                   </Link>
@@ -325,7 +325,7 @@ export default function ArticleClient() {
                 </p>
                 <SubHeading darkMode={darkMode}>Securing ongoing treatment</SubHeading>
                 <p>
-                  Studies point out that you must continue taking Mounjaro to sustain results and maintain diabetes symptom control if you have Type 2 diabetes (UCHealth). Discontinuing the injections typically leads to the weight creeping
+                  Studies point out that you must continue taking Mounjaro to sustain results and maintain diabetes symptom control if you have Type 2 diabetes (UCHealth). Discontinuing the treatments typically leads to the weight creeping
                   back if you have not entrenched solid eating and exercise routines. If you choose to pursue this path, plan for how you will finance long term medication and incorporate healthful habits you can keep for life.
                 </p>
                 <SubHeading darkMode={darkMode}>Speaking with professionals</SubHeading>
@@ -352,7 +352,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="key-takeaways" heading="Your Ultimate Guide Takeaway">
                 <ul className="list-disc space-y-2 pl-5">
-                  <li>Mounjaro weight loss injections have garnered attention for their ability to curb appetite and foster significant weight reduction.</li>
+                  <li>Mounjaro weight loss treatments have garnered attention for their ability to curb appetite and foster significant weight reduction.</li>
                   <li>They work by mimicking two key hormones, potentially offering greater effects than single agonist medications.</li>
                   <li>NHS access is limited, prompting many to consider private sources.</li>
                   <li>Mild to moderate side effects, especially in the digestive system, are common.</li>
@@ -365,12 +365,12 @@ export default function ArticleClient() {
 
                 <div className="space-y-8">
                   <div>
-                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>1. Are Mounjaro weight loss injections a game-changer for everyone?</h3>
+                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>1. Are Mounjaro weight loss treatments a game-changer for everyone?</h3>
                     <p>They help many adults by reducing appetite and supporting calorie reduction, but results vary. Mounjaro works best alongside nutrition, activity, sleep, and medical follow up not as a standalone shortcut.</p>
                   </div>
 
                   <div>
-                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>2. How do Mounjaro injections work for weight loss?</h3>
+                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>2. How do Mounjaro treatments work for weight loss?</h3>
                     <p>
                       Tirzepatide activates GLP 1 and GIP receptors, influencing appetite, digestion, and glucose regulation. That can mean earlier fullness, fewer hunger signals, and steadier progress when paired with lifestyle change.
                     </p>
@@ -417,7 +417,7 @@ export default function ArticleClient() {
                   limitations that have held you back.
                 </p>
                 <p>
-                  Mounjaro weight loss injections sit at the intersection of metabolic science and behaviour change: they can blunt hunger and make calorie control feel more achievable, but they do not replace professional judgement, safe
+                  Mounjaro weight loss treatments sit at the intersection of metabolic science and behaviour change: they can blunt hunger and make calorie control feel more achievable, but they do not replace professional judgement, safe
                   titration, or sustainable habits. Anchor decisions in your own health profile not someone else’s highlight reel.
                 </p>
                 <p className={`text-sm leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
@@ -443,8 +443,8 @@ export default function ArticleClient() {
             <div className="mt-10">
               <GuideSharePanel
                 url={shareUrl}
-                title="Could Mounjaro Weight Loss Injections Be Your Game-Changer?"
-                description="Mounjaro injections for weight loss: how they work, NHS vs private access, side effects, and realistic expectations."
+                title="Could Mounjaro Weight Loss Treatments Be Your Game-Changer?"
+                description="Mounjaro treatments for weight loss: how they work, NHS vs private access, side effects, and realistic expectations."
               />
             </div>
           </div>

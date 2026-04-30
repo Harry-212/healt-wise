@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title:
     "Feel Confident with Understanding the Mounjaro Kwikpen: A User Guide",
   description:
-    "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss injection journey.",
+    "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss treatment journey.",
   keywords: "understanding the mounjaro kwikpen: a user guide",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title:
       "Feel Confident with Understanding the Mounjaro Kwikpen: A User Guide",
     description:
-      "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss injection journey.",
+      "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss treatment journey.",
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-04-21T00:00:00.000Z",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title:
       "Feel Confident with Understanding the Mounjaro Kwikpen: A User Guide",
     description:
-      "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss injection journey.",
+      "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss treatment journey.",
     images: [HERO_IMAGE],
   },
 };
@@ -47,7 +47,7 @@ export default function MounjaroKwikpenUserGuidePage() {
     headline:
       "Feel Confident with Understanding the Mounjaro Kwikpen: A User Guide",
     description:
-      "How the Mounjaro KwikPen works, safe use, storage, comparison with other UK injections, and planning your journey — informational only, not medical advice.",
+      "How the Mounjaro KwikPen works, safe use, storage, comparison with other UK treatments, and planning your journey — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
@@ -99,7 +99,7 @@ export default function MounjaroKwikpenUserGuidePage() {
         name: "Where can you inject Mounjaro?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Subcutaneous injections are commonly given in areas such as the abdomen, thigh, or upper arm, rotating sites as advised to reduce irritation. Confirm technique with your clinician or trained healthcare professional.",
+          text: "Subcutaneous treatments are commonly given in areas such as the abdomen, thigh, or upper arm, rotating sites as advised to reduce irritation. Confirm technique with your clinician or trained healthcare professional.",
         },
       },
       {

@@ -103,7 +103,7 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
     category: "Medications",
-    title: "Mounjaro Weight Loss Injection UK: Full Guide",
+    title: "Mounjaro Weight Loss Treatment UK: Full Guide",
     description:
       "The complete UK guide to Mounjaro—how it works, results, eligibility, and costs.",
   },
@@ -231,7 +231,7 @@ export default function GuideMounjaroVitamins() {
             MHRA under the Food Supplements Regulations
           </EL>
           . This means all compliant products must meet standards for:
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Safety — ingredients must be safe at the stated doses",

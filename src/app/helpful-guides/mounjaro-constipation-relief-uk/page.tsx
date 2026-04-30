@@ -266,7 +266,7 @@ export default function GuideMounjaroConstipation() {
           Establishing consistent habits can encourage the body's natural
           bowel rhythm which is regulated by internal circadian cues that
           respond well to routine.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

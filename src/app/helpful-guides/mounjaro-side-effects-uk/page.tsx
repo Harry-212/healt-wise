@@ -28,7 +28,7 @@ export const metadata = buildGuideShareMetadata({
 
 const TOC = [
   { id: "common-side-effects", label: "Common Side Effects" },
-  { id: "injection-reactions", label: "Injection Site Reactions" },
+  { id: "treatment-reactions", label: "Injection Site Reactions" },
   { id: "other-effects", label: "Other Possible Effects" },
   { id: "how-long", label: "How Long Do Side Effects Last?" },
   { id: "dose-increases", label: "Side Effects with Dose Increases" },
@@ -185,11 +185,11 @@ export default function GuideMounjaroSideEffects() {
         </GuideCallout>
       </GuideSection>
 
-      <GuideSection id="injection-reactions" heading="Injection Site Reactions">
+      <GuideSection id="treatment-reactions" heading="Injection Site Reactions">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> is administered as a
           weekly subcutaneous injection, and localised reactions at the
-          injection site are common reported in approximately 1 in 7 patients.
+          treatment site are common reported in approximately 1 in 7 patients.
         </GuideParagraph>
         <GuideBulletList
           items={[
@@ -206,7 +206,7 @@ export default function GuideMounjaroSideEffects() {
           items={[
             "Rotate injection sites — use the abdomen, thigh, or upper arm, and change location each week",
             "Allow the pen to reach room temperature before injecting — cold medication from the fridge causes more discomfort",
-            "Apply a cool compress for a few minutes after injection to reduce localised inflammation",
+            "Apply a cool compress for a few minutes after treatment to reduce localised inflammation",
           ]}
         />
       </GuideSection>
@@ -332,7 +332,7 @@ export default function GuideMounjaroSideEffects() {
           items={[
             "Rotate injection sites consistently — abdomen, thigh, upper arm",
             "Let the pen warm to room temperature before use",
-            "Apply a cool compress after injection to reduce swelling and itching",
+            "Apply a cool compress after treatment to reduce swelling and itching",
           ]}
         />
       </GuideSection>
@@ -380,7 +380,7 @@ export default function GuideMounjaroSideEffects() {
           with your clinician first. Abrupt cessation causes appetite to
           return rapidly, and most side effects are manageable with clinical
           support rather than stopping treatment.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

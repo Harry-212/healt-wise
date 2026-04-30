@@ -161,10 +161,10 @@ export default function ArticleClient() {
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="how-much-weight" heading="How Much Weight You Might Lose On Wegovy">
-                <p>No medication can promise a specific amount of weight loss for every person. However, large clinical trials give you a realistic picture of what is typical when Wegovy is combined with diet and activity changes. For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
+                <p>No medication can promise a specific amount of weight loss for every person. However, large clinical trials give you a realistic picture of what is typical when Wegovy is combined with diet and activity changes. For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
                 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Weight loss with weekly Wegovy injections</h3>
-                <p>In a 68 week study of 1,961 adults with obesity or overweight and weight related medical problems, but without type 2 diabetes, those using the Wegovy 2.4 mg injection lost on average about 35 pounds, which is around 15% of their starting body weight. People on placebo lost about 6 pounds, or 2.5% of their starting weight, while following similar diet and activity guidance.</p>
+                <p>In a 68 week study of 1,961 adults with obesity or overweight and weight related medical problems, but without type 2 diabetes, those using the Wegovy 2.4 mg treatment lost on average about 35 pounds, which is around 15% of their starting body weight. People on placebo lost about 6 pounds, or 2.5% of their starting weight, while following similar diet and activity guidance.</p>
                 <p>Other semaglutide trials, known as STEP 1 to STEP 4 and STEP 8, showed weight reductions of roughly 6.2% to 14.75% more than placebo or another treatment (liraglutide) over 68 weeks. These studies also found:</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li>76% of adults taking Wegovy achieved at least 5% weight loss</li>
@@ -221,7 +221,7 @@ export default function ArticleClient() {
                   <li>A once weekly subcutaneous injection of 2.4 mg semaglutide at full dose, or</li>
                   <li>A once daily oral tablet, taken in the morning</li>
                 </ul>
-                <p>With the injection, you use a pre filled pen that delivers the dose under the skin. You usually start on a lower dose and gradually increase over several weeks so your body can adjust and side effects are more manageable.</p>
+                <p>With the treatment, you use a pre filled pen that delivers the dose under the skin. You usually start on a lower dose and gradually increase over several weeks so your body can adjust and side effects are more manageable.</p>
                 <p>With the tablet, you are advised to:</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li>Take it once a day on an empty stomach</li>
@@ -232,7 +232,7 @@ export default function ArticleClient() {
                 <p>Your healthcare provider will advise which form suits you and how to step up your dose safely. For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>What results feel like week by week</h3>
-                <p>Wegovy starts working in your body soon after the first dose. Its half life is about 7 days, which means a single injection lasts in your system for around a week. However, noticeable changes in appetite and weight typically take several weeks.</p>
+                <p>Wegovy starts working in your body soon after the first dose. Its half life is about 7 days, which means a single treatment lasts in your system for around a week. However, noticeable changes in appetite and weight typically take several weeks.</p>
                 <p>In the early weeks, you may notice:</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li>Feeling full sooner in meals</li>

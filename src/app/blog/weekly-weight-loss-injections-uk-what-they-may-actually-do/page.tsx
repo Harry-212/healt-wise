@@ -7,32 +7,32 @@ const PATH = "/blog/weekly-weight-loss-injections-uk-what-they-may-actually-do";
 const HERO_IMAGE = WEEKLY_INJECTIONS_HERO_URL;
 
 export const metadata: Metadata = {
-  title: "Weekly Weight Loss Injections in the UK: What They May Actually Do",
+  title: "Weekly Weight Loss Treatments in the UK: What They May Actually Do",
   description:
-    "Weekly weight loss injections in the UK explained: how Wegovy and Mounjaro may affect appetite, access (NHS vs private), side effects, and what happens after stopping.",
-  keywords: "weekly weight loss injections UK",
+    "Weekly weight loss treatments in the UK explained: how Wegovy and Mounjaro may affect appetite, access (NHS vs private), side effects, and what happens after stopping.",
+  keywords: "weekly weight loss treatments UK",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "Weekly Weight Loss Injections in the UK: What They May Actually Do",
+    title: "Weekly Weight Loss Treatments in the UK: What They May Actually Do",
     description:
-      "Weekly weight loss injections in the UK explained: how Wegovy and Mounjaro may affect appetite, access (NHS vs private), side effects, and what happens after stopping.",
+      "Weekly weight loss treatments in the UK explained: how Wegovy and Mounjaro may affect appetite, access (NHS vs private), side effects, and what happens after stopping.",
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-04-25T00:00:00.000Z",
     images: [
       {
         url: HERO_IMAGE,
-        alt: "Weekly weight loss injections in the UK — prescription GLP-1 treatment discussed with a clinician",
+        alt: "Weekly weight loss treatments in the UK — prescription GLP-1 treatment discussed with a clinician",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Weekly Weight Loss Injections in the UK: What They May Actually Do",
+    title: "Weekly Weight Loss Treatments in the UK: What They May Actually Do",
     description:
-      "Weekly weight loss injections in the UK explained: how Wegovy and Mounjaro may affect appetite, access (NHS vs private), side effects, and what happens after stopping.",
+      "Weekly weight loss treatments in the UK explained: how Wegovy and Mounjaro may affect appetite, access (NHS vs private), side effects, and what happens after stopping.",
     images: [HERO_IMAGE],
   },
 };
@@ -41,9 +41,9 @@ export default function WeeklyWeightLossInjectionsUkPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Weekly Weight Loss Injections in the UK: What They May Actually Do",
+    headline: "Weekly Weight Loss Treatments in the UK: What They May Actually Do",
     description:
-      "A realistic guide to weekly weight loss injections in the UK (GLP-1 medicines): what Wegovy and Mounjaro may do, access routes, side effects, and long-term expectations — informational only, not medical advice.",
+      "A realistic guide to weekly weight loss treatments in the UK (GLP-1 medicines): what Wegovy and Mounjaro may do, access routes, side effects, and long-term expectations — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
@@ -60,7 +60,7 @@ export default function WeeklyWeightLossInjectionsUkPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Which weekly weight loss injection is most effective in the UK?",
+        name: "Which weekly weight loss treatment is most effective in the UK?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Trial averages often show larger weight loss with tirzepatide (Mounjaro) than semaglutide (Wegovy), but “most effective” depends on response, tolerability, access, and whether you can stay on a plan long enough. Your prescriber should help you choose.",
@@ -92,7 +92,7 @@ export default function WeeklyWeightLossInjectionsUkPage() {
       },
       {
         "@type": "Question",
-        name: "Can you get weekly weight loss injections on the NHS in the UK?",
+        name: "Can you get weekly weight loss treatments on the NHS in the UK?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Sometimes, but eligibility is strict and access varies by region. It often involves BMI thresholds, weight-related conditions, and referral into specialist weight management services with lifestyle support.",
@@ -100,7 +100,7 @@ export default function WeeklyWeightLossInjectionsUkPage() {
       },
       {
         "@type": "Question",
-        name: "What happens after you stop weekly injections?",
+        name: "What happens after you stop weekly treatments?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Many people find appetite increases again, and weight regain can occur if habits and support are not maintained. Stopping or switching should be planned with your prescriber, especially around dosing schedules and side effects.",

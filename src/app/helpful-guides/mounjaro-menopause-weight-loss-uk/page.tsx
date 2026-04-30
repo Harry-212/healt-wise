@@ -90,7 +90,7 @@ const REFERENCES = [
     href: "https://thebms.org.uk/",
   },
   {
-    label: "Mounjaro weight loss injection UK — full guide — Health Wise",
+    label: "Mounjaro weight loss treatment UK — full guide — Health Wise",
     description:
       "Complete independent guide to Mounjaro—mechanism, clinical results, eligibility, and UK pricing.",
     href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
@@ -109,7 +109,7 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
     category: "Medications",
-    title: "Mounjaro Weight Loss Injection UK (2026): Full Guide",
+    title: "Mounjaro Weight Loss Treatment UK (2026): Full Guide",
     description:
       "Everything about Mounjaro—mechanism, clinical results, eligibility, dosing, and UK pricing.",
   },
@@ -419,7 +419,7 @@ export default function GuideMounjaroMenopause() {
           sustainable weight loss is achievable. The key is combining clinical
           support with consistent lifestyle habits, rather than relying on
           either alone.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

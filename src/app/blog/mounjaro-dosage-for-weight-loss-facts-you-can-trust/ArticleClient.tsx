@@ -93,7 +93,7 @@ export default function ArticleClient() {
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <p className="text-lg md:text-xl">
                 Mounjaro (tirzepatide) is attracting attention as a promising medication for weight loss, particularly among those who have struggled to see results with diet and exercise alone. By slowing digestion and mimicking two hormones GLP 1 and GIP Mounjaro helps curb appetite and manage blood sugar. Yet the real key to its success lies in understanding the dosage journey, from your first injection to steady, long term progress.
-               For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
+               For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
               <p>
                 Different people respond differently to each dose, so it is vital to learn how Mounjaro’s incremental approach supports effective and safe weight loss. Below, you will find what you need to know about dosage levels, possible side effects, and how to set yourself up for success. As always, be sure to work closely with a GP or specialist so you can tailor the plan to your needs.
               </p>

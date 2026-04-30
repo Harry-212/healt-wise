@@ -9,11 +9,11 @@ import { siteOrigin } from '@/lib/seo/site-origin';
 
 const SHARE_PATH = '/blog/discover-the-powerful-benefits-of-prescription-slimming-injections-uk';
 const HERO_SRC = '/blog/Discover%20the%20Powerful%20Benefits%20of%20Prescription%20Slimming%20Injections%20UK.webp';
-const HERO_ALT = 'Prescription slimming injections in the UK';
+const HERO_ALT = 'Prescription slimming treatments in the UK';
 const SOCIAL_HASHTAGS = '#SlimmingInjectionsUK #PrescriptionWeightLoss #Mounjaro #Wegovy #Saxenda';
 
 const TOC = [
-  { id: 'intro', label: 'Why Prescription Slimming Injections Matter' },
+  { id: 'intro', label: 'Why Prescription Slimming Treatments Matter' },
   { id: 'how-they-work', label: 'How They Work in Your Body' },
   { id: 'uk-options', label: 'What Are Your Options in the UK' },
   { id: 'eligibility', label: 'Are You Eligible?' },
@@ -51,26 +51,26 @@ export default function ArticleClient() {
         <div className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-12">
           <main>
             <div className="mb-10 rounded-3xl border border-slate-200/90 bg-white/80 p-6 shadow-sm shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-lg sm:p-8">
-              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Discover the Powerful Benefits of Prescription Slimming Injections UK</h1>
-              <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">If you have been wrestling with weight for years, not weeks, prescription slimming injections may feel worth looking into for real support.</p>
+              <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Discover the Powerful Benefits of Prescription Slimming Treatments UK</h1>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">If you have been wrestling with weight for years, not weeks, prescription slimming treatments may feel worth looking into for real support.</p>
               <div className="mt-8">
                 <BlogArticleHeroImage src={HERO_SRC} alt={HERO_ALT} />
               </div>
             </div>
 
             <div className="space-y-10">
-              <GuideSection darkMode={darkMode} id="intro" heading="Why Prescription Slimming Injections Matter">
+              <GuideSection darkMode={darkMode} id="intro" heading="Why Prescription Slimming Treatments Matter">
                 <p className="leading-8 text-slate-600">
                   People often focus on kilograms lost. But sometimes the first noticeable change is quieter — fewer cravings in the evening, smaller portions without effort, and less constant negotiation with hunger.
                 </p>
                 <p className="mt-4 leading-8 text-slate-600">
-                  In the UK, prescription slimming injections generally refer to regulated medicines such as Wegovy, Mounjaro, and Saxenda. These are not over-the-counter products. They require prescribing oversight.
+                  In the UK, prescription slimming treatments generally refer to regulated medicines such as Wegovy, Mounjaro, and Saxenda. These are not over-the-counter products. They require prescribing oversight.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="how-they-work" heading="How They Work in Your Body">
                 <p className="leading-8 text-slate-600">
-                  Most prescription slimming injections act through hormone pathways linked to appetite. Wegovy and Saxenda work through GLP-1 receptor activity. Mounjaro acts on GLP-1 and GIP pathways.
+                  Most prescription slimming treatments act through hormone pathways linked to appetite. Wegovy and Saxenda work through GLP-1 receptor activity. Mounjaro acts on GLP-1 and GIP pathways.
                 </p>
                 <p className="mt-4 leading-8 text-slate-600">
                   These medicines also tend to slow gastric emptying, which may help people stay full longer after eating. That is often why cravings change, not because willpower suddenly improves.
@@ -79,7 +79,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="uk-options" heading="What Are Your Options in the UK?">
                 <p className="leading-8 text-slate-600">
-                  Saxenda is taken daily. Some people dislike daily injections. Others prefer the routine. It depends. Wegovy is taken weekly and has become a major reference point for obesity treatment.
+                  Saxenda is taken daily. Some people dislike daily treatments. Others prefer the routine. It depends. Wegovy is taken weekly and has become a major reference point for obesity treatment.
                 </p>
                 <p className="mt-4 leading-8 text-slate-600">
                   Mounjaro has generated attention because of its dual-action mechanism. Some clinicians see it as potentially the strongest injectable option currently available, while others note that long-term comparisons are still
@@ -118,7 +118,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="faq" heading="Frequently Asked Questions">
                 <p className="leading-8 text-slate-600">
-                  Prescription slimming injections are not over the counter. They require a prescription and clinical supervision. Serious complications appear uncommon, but they can occur. That is why monitoring matters.
+                  Prescription slimming treatments are not over the counter. They require a prescription and clinical supervision. Serious complications appear uncommon, but they can occur. That is why monitoring matters.
                 </p>
                 <p className="mt-4 leading-8 text-slate-600">If I were weighing them up personally, I would probably ask: Can I tolerate the side effects? Can I sustain the cost? Can I use this to build habits, not outsource them?</p>
               </GuideSection>
@@ -132,8 +132,8 @@ export default function ArticleClient() {
               <div className="mt-4">
                 <GuideSharePanel
                   url={shareUrl}
-                  title="Discover the Powerful Benefits of Prescription Slimming Injections UK"
-                  description="Discover the powerful benefits of prescription slimming injections in the UK, including how Wegovy, Mounjaro and Saxenda support appetite, blood sugar and long-term progress."
+                  title="Discover the Powerful Benefits of Prescription Slimming Treatments UK"
+                  description="Discover the powerful benefits of prescription slimming treatments in the UK, including how Wegovy, Mounjaro and Saxenda support appetite, blood sugar and long-term progress."
                 />
               </div>
               <p className="mt-4 text-sm text-slate-500">Tags: {SOCIAL_HASHTAGS}</p>

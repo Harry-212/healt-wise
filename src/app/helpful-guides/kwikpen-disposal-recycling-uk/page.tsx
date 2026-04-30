@@ -101,7 +101,7 @@ const RELATED_GUIDES = [
     category: "Side Effects",
     title: "Norovirus & Mounjaro/Wegovy: Symptoms & Safe Recovery",
     description:
-      "Illness can affect how you manage injections and waste—hygiene and safe disposal matter more when unwell.",
+      "Illness can affect how you manage treatments and waste—hygiene and safe disposal matter more when unwell.",
   },
 ];
 
@@ -151,11 +151,11 @@ export default function GuideKwikpenDisposal() {
           currently be recycled through standard UK household recycling. They
           combine plastic, metal, and other components, and may retain traces
           of medication after use.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</IL>.</GuideParagraph>
+         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
         <GuideBulletList
           items={[
             "Never reuse or refill a KwikPen — pens are single-patient devices; reuse risks infection and dosing errors",
-            "Remove the needle after each injection and dispose of it in a sharps bin",
+            "Remove the needle after each treatment and dispose of it in a sharps bin",
             "Dispose of the empty pen body in general household waste (not recycling), unless your pharmacist or local authority specifies a clinical waste route",
           ]}
         />
@@ -254,7 +254,7 @@ export default function GuideKwikpenDisposal() {
         />
         <GuideCallout variant="tip">
           Best practice: always keep a sharps bin at home, dispose of pens
-          responsibly after each injection, and return unused medicine to a
+          responsibly after each treatment, and return unused medicine to a
           pharmacy. Stay updated via your clinic or{" "}
           <EL href="https://www.nhs.uk/">NHS.uk</EL> if local collection
           services change.

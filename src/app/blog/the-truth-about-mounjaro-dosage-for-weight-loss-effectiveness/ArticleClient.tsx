@@ -129,7 +129,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="basics" heading="Discover Mounjaro basics">
                 <p>
-                  Mounjaro is a weekly prescription injection that primarily addresses type 2 diabetes by improving insulin sensitivity and regulating blood sugar. It contains tirzepatide, which acts on two key incretin pathways. While
+                  Mounjaro is a weekly prescription treatment that primarily addresses type 2 diabetes by improving insulin sensitivity and regulating blood sugar. It contains tirzepatide, which acts on two key incretin pathways. While
                   officially licensed for diabetes, it is also commonly prescribed off label for weight loss because it targets appetite and food intake (Healthline).
                 </p>
                 <p>
@@ -227,7 +227,7 @@ export default function ArticleClient() {
                   </Link>{' '}
                   and practical injection habits in{' '}
                   <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-semibold text-brand-primary underline-offset-2 hover:underline">
-                    Mounjaro weight loss injections (UK)
+                    Mounjaro weight loss treatments (UK)
                   </Link>
                   .
                 </p>

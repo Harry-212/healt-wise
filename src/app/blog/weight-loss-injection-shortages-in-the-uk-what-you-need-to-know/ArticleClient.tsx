@@ -21,7 +21,7 @@ const INLINE_DEMAND = blogWebpPath(SHORTAGES_INLINE_DEMAND_WEBP);
 const TOC = [
   { id: "overview", label: "Introduction" },
   { id: "recognise", label: "Recognise the current shortage" },
-  { id: "demand", label: "Why injections are in demand" },
+  { id: "demand", label: "Why treatments are in demand" },
   { id: "factors", label: "Factors behind the shortages" },
   { id: "affect", label: "How the shortage might affect you" },
   { id: "alternatives", label: "Exploring potential alternatives" },
@@ -42,7 +42,7 @@ function SubHeading({
   darkMode: boolean;
 }) {
   return (
-    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children} For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
+    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children} For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
   );
 }
 
@@ -88,7 +88,7 @@ export default function ArticleClient() {
           <h1
             className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? "text-white" : "text-slate-900"}`}
           >
-            What You Should Know About Weight Loss Injection Shortages in the UK
+            What You Should Know About Weight Loss Treatment Shortages in the UK
           </h1>
           <div
             className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}
@@ -105,7 +105,7 @@ export default function ArticleClient() {
 
           <BlogArticleHeroImage
             src={HERO_SRC}
-            alt="UK pharmacy counter and medicines supply — finding GLP-1 weight loss injections when stock is limited"
+            alt="UK pharmacy counter and medicines supply — finding GLP-1 weight loss treatments when stock is limited"
           />
           <div
             id="guide-article-hero-end"
@@ -121,13 +121,13 @@ export default function ArticleClient() {
 
           <div className="min-w-0 max-w-3xl flex-1">
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
-              <GuideSection darkMode={darkMode} id="overview" heading="Weight loss injection shortages in the UK">
+              <GuideSection darkMode={darkMode} id="overview" heading="Weight loss treatment shortages in the UK">
                 <p className="text-lg md:text-xl">
-                  <span className="font-medium">Weight loss injection shortages in the UK: what you need to know.</span> If
-                  you have been looking into weight loss injections as part of your health journey, you might already sense
+                  <span className="font-medium">Weight loss treatment shortages in the UK: what you need to know.</span> If
+                  you have been looking into weight loss treatments as part of your health journey, you might already sense
                   the growing demand and the challenges of finding a steady supply. These treatments, often used alongside
                   diet and exercise, have gained considerable popularity for helping people control their appetite and
-                  manage portion sizes. However, a rising shortage is making it trickier to access certain injections,
+                  manage portion sizes. However, a rising shortage is making it trickier to access certain treatments,
                   leaving many of you concerned about what comes next.
                 </p>
                 <p>
@@ -140,7 +140,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="recognise" heading="Recognise the current shortage">
                 <p>
                   Step into any pharmacy or online provider and you will likely notice that supplies of popular weight
-                  loss injections are lower than usual. This shortage means you might have to visit multiple outlets to find
+                  loss treatments are lower than usual. This shortage means you might have to visit multiple outlets to find
                   your prescription, or experience delays if you are on a waiting list. Although it can feel frustrating,
                   it is not a permanent situation and many healthcare providers are exploring solutions.
                 </p>
@@ -152,22 +152,22 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="demand" heading="Why weight loss injections are in demand">
+              <GuideSection darkMode={darkMode} id="demand" heading="Why weight loss treatments are in demand">
                 <p>
-                  Over the past few years, people across the UK have become increasingly aware of the role injections can
+                  Over the past few years, people across the UK have become increasingly aware of the role treatments can
                   play in balancing appetite, especially if you have struggled with other weight management approaches. In
-                  fact, these injections first gained major attention when doctors prescribed them to patients dealing with
+                  fact, these treatments first gained major attention when doctors prescribed them to patients dealing with
                   obesity related health risks. Over time, more and more individuals have turned to them for a helpful
                   nudge toward healthier daily routines.
                 </p>
                 <p>
-                  It is no wonder then that the demand has soared. If you are curious about how weight loss injections rose
+                  It is no wonder then that the demand has soared. If you are curious about how weight loss treatments rose
                   to prominence, you might enjoy our{" "}
                   <Link
                     href="/compare/best-weight-loss-injections-uk"
                     className="font-medium text-brand-primary underline"
                   >
-                    UK weight loss injections comparison hub
+                    UK weight loss treatments comparison hub
                   </Link>
                   . It delves into where this trend sits in context and offers a broader picture of why surging popularity
                   can affect today&apos;s supply.
@@ -199,7 +199,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="affect" heading="How the shortage might affect you">
                 <p>
-                  When you rely on a weight loss injection to support your health, any supply issue can cause stress and
+                  When you rely on a weight loss treatment to support your health, any supply issue can cause stress and
                   uncertainty. You may worry about missing doses or discontinuing your progress altogether. If a medication
                   you have been prescribed is momentarily unavailable, your GP or pharmacist might suggest switching to a
                   comparable alternative for a short time. However, it can take a little while to adjust to a new treatment
@@ -223,9 +223,9 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="alternatives" heading="Exploring potential alternatives">
                 <p>
                   Because supply issues can crop up unexpectedly, it pays to know what else is out there.{" "}
-                  <span className="font-medium">Weight loss injection shortages in the UK: what you need to know</span> often
+                  <span className="font-medium">Weight loss treatment shortages in the UK: what you need to know</span> often
                   starts with knowing your options, so you do not feel stuck if your first choice is unavailable. Popular
-                  injections like Mounjaro and Wegovy have garnered significant interest, but you might also come across
+                  treatments like Mounjaro and Wegovy have garnered significant interest, but you might also come across
                   other treatments you have never considered.
                 </p>
                 <p>
@@ -236,7 +236,7 @@ export default function ArticleClient() {
                   >
                     Mounjaro vs Wegovy: the key differences explained
                   </Link>
-                  . It details how these injections work, their strengths, and why one might suit you better than another.
+                  . It details how these treatments work, their strengths, and why one might suit you better than another.
                   You may also benefit from learning how to properly handle certain devices, like in{" "}
                   <Link
                     href="/blog/understanding-the-mounjaro-kwikpen-a-user-guide"
@@ -246,7 +246,7 @@ export default function ArticleClient() {
                   </Link>
                   , to ensure you get the best out of your choice.
                 </p>
-                <SubHeading darkMode={darkMode}>Snapshot of some injection options</SubHeading>
+                <SubHeading darkMode={darkMode}>Snapshot of some treatment options</SubHeading>
                 <div
                   className={`my-6 overflow-hidden rounded-xl border ${darkMode ? "border-slate-800" : "border-slate-200"}`}
                 >
@@ -256,7 +256,7 @@ export default function ArticleClient() {
                       {
                         cells: [
                           "Mounjaro",
-                          "A newer injection gaining attention",
+                          "A newer treatment gaining attention",
                           "May help with both weight loss and appetite",
                         ],
                       },
@@ -270,7 +270,7 @@ export default function ArticleClient() {
                       {
                         cells: [
                           "Other GLP-1 meds",
-                          "Similar injections that reduce hunger",
+                          "Similar treatments that reduce hunger",
                           "Confirm availability with your GP or pharmacy",
                         ],
                       },
@@ -279,7 +279,7 @@ export default function ArticleClient() {
                 </div>
                 <p className="text-sm opacity-90">
                   While this table only touches on a few well known treatments, there are additional prescription
-                  medications or methods besides injections, such as weight loss pills or medically supervised programmes.
+                  medications or methods besides treatments, such as weight loss pills or medically supervised programmes.
                   If supply chains continue to stabilise, your original choice may become more accessible once again.
                 </p>
               </GuideSection>
@@ -331,7 +331,7 @@ export default function ArticleClient() {
                 <div className="space-y-8">
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
-                      1. Why are weight loss injections sometimes out of stock in the UK?
+                      1. Why are weight loss treatments sometimes out of stock in the UK?
                     </h3>
                     <p>
                       Global demand for GLP 1 medicines has risen faster than production and distribution can always
@@ -359,7 +359,7 @@ export default function ArticleClient() {
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
-                      4. Are all injections affected equally?
+                      4. Are all treatments affected equally?
                     </h3>
                     <p>
                       No shortages can differ by product, strength and region. One option may be easier to obtain than
@@ -389,13 +389,13 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
-                  Staying informed about weight loss injection shortages in the UK is your first step. You will not be
+                  Staying informed about weight loss treatment shortages in the UK is your first step. You will not be
                   caught off guard if you understand why certain brands are running low and what you can do until they
                   restock. By talking to your GP and actively seeking out resources, you can find short term alternatives
                   or strengthen the healthy routines you already have in place.
                 </p>
                 <p>
-                  Remember, your wellbeing includes far more than just one approach. If your usual injection is scarce,
+                  Remember, your wellbeing includes far more than just one approach. If your usual treatment is scarce,
                   redefining your strategy may lead you to discover something else that works just as well or even better.
                   Ultimately, the best plan is one that aligns with your lifestyle, your goals, and what is realistically
                   accessible. You have got plenty of options at your fingertips, so keep exploring until you find what fits
@@ -417,8 +417,8 @@ export default function ArticleClient() {
             <div className="mt-10">
               <GuideSharePanel
                 url={shareUrl}
-                title="What You Should Know About Weight Loss Injection Shortages in the UK"
-                description="GLP-1 weight loss injection shortages in the UK: causes, what to expect, and practical steps with your clinician."
+                title="What You Should Know About Weight Loss Treatment Shortages in the UK"
+                description="GLP-1 weight loss treatment shortages in the UK: causes, what to expect, and practical steps with your clinician."
               />
             </div>
           </div>

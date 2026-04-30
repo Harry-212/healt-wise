@@ -287,7 +287,7 @@ export default function ArticleClient() {
                     <p>Yes, but only under medical supervision. Your clinician will recommend an appropriate equivalent starting dose and schedule to avoid overlapping side effects.</p>
                   </div>
                   <div>
-                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>Are injections painful?</h3>
+                    <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>Are treatments painful?</h3>
                     <p>The pens use very fine needles, so discomfort is minimal for most users. Applying a cold pack beforehand or injecting after a warm shower can further reduce any sting.</p>
                   </div>
                   <div>
@@ -315,7 +315,7 @@ export default function ArticleClient() {
                 <ul className="list-disc space-y-2 pl-5 mt-4">
                   <li>Mounjaro offers dual GIP and GLP-1 agonism, often yielding greater weight loss than GLP-1 alone.</li>
                   <li>Ozempic is a pure GLP-1 agonist with an established safety profile and easier NHS access for diabetes.</li>
-                  <li>Both drugs require once-weekly injections, gradual dose titration and monitoring for gastrointestinal side effects.</li>
+                  <li>Both drugs require once-weekly treatments, gradual dose titration and monitoring for gastrointestinal side effects.</li>
                   <li>Private prescriptions can be costly, while NHS coverage depends on specific clinical criteria.</li>
                   <li>Work closely with your healthcare provider to choose and adjust treatment, aiming for sustainable, long-term success.</li>
                 </ul>

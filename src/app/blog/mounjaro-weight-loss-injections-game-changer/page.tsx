@@ -6,29 +6,29 @@ const PATH = '/blog/mounjaro-weight-loss-injections-game-changer';
 const HERO_IMAGE = `${siteOrigin()}/blog/Could%20Mounjaro%20Weight%20Loss%20Injections%20Be%20Your%20Game-Changer.webp`;
 
 export const metadata: Metadata = {
-  title: 'Could Mounjaro Weight Loss Injections Be Your Game-Changer?',
-  description: 'Could mounjaro weight loss injections be your breakthrough to finally conquer stubborn diet plateaus?',
-  keywords: 'mounjaro weight loss injections',
+  title: 'Could Mounjaro Weight Loss Treatments Be Your Game-Changer?',
+  description: 'Could mounjaro weight loss treatments be your breakthrough to finally conquer stubborn diet plateaus?',
+  keywords: 'mounjaro weight loss treatments',
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: 'Could Mounjaro Weight Loss Injections Be Your Game-Changer?',
-    description: 'Could mounjaro weight loss injections be your breakthrough to finally conquer stubborn diet plateaus?',
+    title: 'Could Mounjaro Weight Loss Treatments Be Your Game-Changer?',
+    description: 'Could mounjaro weight loss treatments be your breakthrough to finally conquer stubborn diet plateaus?',
     url: `${siteOrigin()}${PATH}`,
     type: 'article',
     publishedTime: '2026-04-18T00:00:00.000Z',
     images: [
       {
         url: HERO_IMAGE,
-        alt: 'Mounjaro weight loss injections',
+        alt: 'Mounjaro weight loss treatments',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Could Mounjaro Weight Loss Injections Be Your Game-Changer?',
-    description: 'Could mounjaro weight loss injections be your breakthrough to finally conquer stubborn diet plateaus?',
+    title: 'Could Mounjaro Weight Loss Treatments Be Your Game-Changer?',
+    description: 'Could mounjaro weight loss treatments be your breakthrough to finally conquer stubborn diet plateaus?',
     images: [HERO_IMAGE],
   },
 };
@@ -37,8 +37,8 @@ export default function MounjaroInjectionsGameChangerPage() {
   const ARTICLE_SCHEMA = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Could Mounjaro Weight Loss Injections Be Your Game-Changer?',
-    description: 'An overview of Mounjaro (tirzepatide) injections for weight management: mechanism, eligibility context, NHS vs private access, side effects, and realistic expectations—informational only, not medical advice.',
+    headline: 'Could Mounjaro Weight Loss Treatments Be Your Game-Changer?',
+    description: 'An overview of Mounjaro (tirzepatide) treatments for weight management: mechanism, eligibility context, NHS vs private access, side effects, and realistic expectations—informational only, not medical advice.',
     image: [HERO_IMAGE],
     author: { '@type': 'Organization', name: 'Health Wise' },
     publisher: { '@type': 'Organization', name: 'Health Wise' },
@@ -55,7 +55,7 @@ export default function MounjaroInjectionsGameChangerPage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Are Mounjaro weight loss injections a game-changer for everyone?',
+        name: 'Are Mounjaro weight loss treatments a game-changer for everyone?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'They help many adults by reducing appetite and supporting calorie reduction, but results vary. Mounjaro works best alongside nutrition, activity, sleep, and medical follow-up—not as a standalone shortcut.',
@@ -63,7 +63,7 @@ export default function MounjaroInjectionsGameChangerPage() {
       },
       {
         '@type': 'Question',
-        name: 'How do Mounjaro injections work for weight loss?',
+        name: 'How do Mounjaro treatments work for weight loss?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Tirzepatide activates GLP-1 and GIP receptors, influencing appetite, digestion, and glucose regulation. That can mean earlier fullness, fewer hunger signals, and steadier progress when paired with lifestyle change.',

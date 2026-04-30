@@ -9,6 +9,9 @@ import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
+const HERO_SRC =
+  "/blog/Discover%20If%20Mounjaro%20Is%20Safe%20for%20Weight%20Loss%20and%20Right.webp";
+
 const INLINE_MOUNT_SAFE_IMG_DISCOVER = "/blog/Discover.webp";
 const INLINE_MOUNT_SAFE_IMG_DISCUSS = "/blog/Discuss.webp";
 
@@ -69,8 +72,8 @@ export default function ArticleClient() {
           </div>
 
           <BlogArticleHeroImage
-            src="https://i.ibb.co.com/xqyv8wc3/image.png"
-            alt="Mounjaro safety verification check"
+            src={HERO_SRC}
+            alt="Discover if Mounjaro is safe for weight loss and right for you"
           />
           <div
             id="guide-article-hero-end"
@@ -123,7 +126,7 @@ export default function ArticleClient() {
                   These gastrointestinal symptoms may ease as your body adjusts, but they can be uncomfortable in the early stages. Some individuals also experience fatigue or headaches. More serious risks, such as pancreatitis or gallbladder disease, remain relatively rare but can occur [5].
                 </p>
                 <p>
-                  Another concern is the possibility of thyroid C cell tumours. Animal studies discovered an increased risk of this type of tumour, although it is not confirmed in humans [6]. Mounjaro is therefore not recommended for anyone with a personal or family history of medullary thyroid cancer or Multiple Endocrine Neoplasia syndrome type 2. If you have thyroid concerns, make sure your doctor is aware before starting any injections.
+                  Another concern is the possibility of thyroid C cell tumours. Animal studies discovered an increased risk of this type of tumour, although it is not confirmed in humans [6]. Mounjaro is therefore not recommended for anyone with a personal or family history of medullary thyroid cancer or Multiple Endocrine Neoplasia syndrome type 2. If you have thyroid concerns, make sure your doctor is aware before starting any treatments.
                  For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
               </GuideSection>
 
@@ -222,7 +225,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
                   Mounjaro can be a valuable ally in your weight loss journey, but it is not a standalone solution. Working closely with your GP, setting realistic expectations, and focusing on sustainable lifestyle changes can help you decide if Mounjaro is safe for weight loss and meets your needs. If you are in doubt, seek guidance from qualified healthcare professionals who can help you choose a plan that aligns with your current health and future goals.
-                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss injection UK</Link>.</p>
+                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="references" heading="References">

@@ -99,10 +99,10 @@ export default function MounjaroBeforeAfterArticlePage() {
       },
       {
         "@type": "Question",
-        name: "Where can I read more about dosing and injections?",
+        name: "Where can I read more about dosing and treatments?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Use clinician-led resources on titration, side-effect monitoring, and injection technique. Health Wise publishes guides on Mounjaro dosage and injections for general education—always follow your own prescriber’s instructions.",
+          text: "Use clinician-led resources on titration, side-effect monitoring, and injection technique. Health Wise publishes guides on Mounjaro dosage and treatments for general education—always follow your own prescriber’s instructions.",
         },
       },
     ],
