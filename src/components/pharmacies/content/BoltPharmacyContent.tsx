@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import {
   ArrowRight,
   CheckCircle2,
@@ -14,7 +13,6 @@ import {
   Truck,
   ClipboardList,
   RefreshCw,
-  FileWarning,
 } from "lucide-react";
 import {
   HazardBox,
@@ -531,7 +529,9 @@ export default function BoltPharmacyContent() {
           </section>
 
           <section>
-            <p className={sectionLabel}>Frequently asked questions</p>
+            <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
+              Frequently asked questions
+            </p>
             <div className="mt-4 grid gap-5 sm:grid-cols-2">
               {[
                 {
@@ -559,80 +559,39 @@ export default function BoltPharmacyContent() {
                   a: "Yes. Tablet options such as Orlistat and Mysimba may be available.",
                 },
               ].map((item) => (
-                <div key={item.q} className="border-b border-slate-200/90 pb-4">
-                  <p
-                    className="font-sans text-sm font-bold leading-snug text-emerald-950 underline decoration-emerald-800/30 decoration-1 underline-offset-2 sm:text-[0.95rem]"
-                  >
-                    {item.q}
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-800">{item.a}</p>
+                <div key={item.q} className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
+                  <p className="font-bold text-slate-900">{item.q}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-700">{item.a}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          <section>
-            <p className={sectionLabel}>Keep exploring</p>
-            <p className={`mt-2 text-sm ${body}`}>
-              Independent guides to compare treatments before you speak to a prescriber.
-            </p>
-            <div className="mt-4 grid gap-3 sm:grid-cols-3">
-              {[
-                { href: "/what-is-wegovy", label: "What is Wegovy?" },
-                { href: "/what-is-mounjaro", label: "What is Mounjaro?" },
-                { href: "/compare/wegovy-vs-mounjaro", label: "Mounjaro vs Wegovy" },
-              ].map((x) => (
-                <Link
-                  key={x.href}
-                  href={x.href}
-                  className="group border border-slate-200/90 bg-white/70 p-4 text-center text-sm font-semibold text-slate-800 shadow-sm transition hover:border-emerald-900/20 hover:bg-[#fbf9f4]"
-                >
-                  <span className="text-emerald-950/90 group-hover:underline">
-                    {x.label}
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          <section className="rounded-sm border border-emerald-900/15 bg-white/70 px-4 py-6 text-center shadow-inner sm:px-8 sm:py-8">
-            <h2 className="font-sans text-lg font-bold uppercase tracking-wide text-emerald-950 sm:text-xl">
-              Conclusion
-            </h2>
-            <p className={`mx-auto mt-4 max-w-2xl text-sm sm:text-base ${body}`}>
+          <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
+            <h2 className="text-lg font-bold text-slate-900 sm:text-xl">Conclusion</h2>
+            <p className="mt-3 text-slate-800 leading-relaxed">
               If you want a private and practical route into prescription weight loss treatment, Bolt
               Pharmacy weight loss treatment appears to offer a credible option. Access to
               medications such as Mounjaro and Wegovy, combined with online assessment, discreet
               delivery and ongoing support, gives it more substance than a basic online pharmacy
               checkout.
             </p>
-            <p className={`mx-auto mt-3 max-w-2xl text-sm sm:text-base ${body}`}>
+            <p className="mt-3 text-slate-800 leading-relaxed">
               Is it right for everyone? Probably not. Some people may prefer traditional GP-led
               care. But for those prioritising convenience, access and medically supervised
               treatment, Bolt Pharmacy may well be worth considering.
             </p>
-            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="mt-6">
               <a
                 href={providerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} max-w-sm gap-2`}
+                className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} inline-flex gap-2`}
               >
                 Visit Bolt Pharmacy
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
-            <p
-              className="mx-auto mt-6 max-w-2xl border-t border-emerald-900/10 pt-4 text-xs text-slate-600"
-            >
-              <FileWarning
-                className="inline-block h-3.5 w-3.5 -translate-y-px text-amber-800/80"
-                aria-hidden
-              />{" "}
-              Informational summary only—does not replace medical advice.{" "}
-              <span className="font-semibold text-slate-800">{SITE_BRAND_NAME}</span> is a
-              comparison site, not a prescriber.
-            </p>
           </section>
         </div>
       </div>
