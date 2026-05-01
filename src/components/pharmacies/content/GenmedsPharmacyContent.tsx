@@ -30,6 +30,8 @@ export default function GenmedsPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/GenMeds.webp"
+      heroProviderLogoAlt="Genmeds"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

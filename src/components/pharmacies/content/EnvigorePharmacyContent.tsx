@@ -30,6 +30,8 @@ export default function EnvigorePharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/Envigore.webp"
+      heroProviderLogoAlt="Envigore"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

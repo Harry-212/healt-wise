@@ -30,6 +30,8 @@ export default function FarmeciPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/Farmeci.webp"
+      heroProviderLogoAlt="Farmeci"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

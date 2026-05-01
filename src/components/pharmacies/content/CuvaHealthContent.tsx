@@ -32,6 +32,8 @@ export default function CuvaHealthContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/cuva.webp"
+      heroProviderLogoAlt="Cuva Health"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

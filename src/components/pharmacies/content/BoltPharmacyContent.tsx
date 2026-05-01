@@ -18,6 +18,7 @@ import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
   PharmacyBrandLogoFooter,
+  PharmacyHeroProviderLogo,
   PharmacyPriceCompareHint,
 } from "./_dossier";
 
@@ -98,6 +99,11 @@ export default function BoltPharmacyContent() {
           <ChevronRight className="h-4 w-4 shrink-0 text-slate-400" aria-hidden />
           <span className="text-slate-500">UK online pharmacies</span>
         </nav>
+
+        <PharmacyHeroProviderLogo
+          src="/logo pharmacy/bolt.webp"
+          alt="Bolt Pharmacy"
+        />
 
         {/* Hero — file ref + title only; GPhC mark top-right */}
         <div className="relative mb-8">

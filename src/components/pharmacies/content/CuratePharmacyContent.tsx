@@ -32,6 +32,8 @@ export default function CuratePharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/Curate.webp"
+      heroProviderLogoAlt="Curate"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

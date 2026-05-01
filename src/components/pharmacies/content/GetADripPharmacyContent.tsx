@@ -30,6 +30,8 @@ export default function GetADripPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/get a drip.webp"
+      heroProviderLogoAlt="GetADrip"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

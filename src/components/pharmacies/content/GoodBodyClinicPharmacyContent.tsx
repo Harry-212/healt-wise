@@ -30,6 +30,8 @@ export default function GoodBodyClinicPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/goodbody.webp"
+      heroProviderLogoAlt="GoodBody Clinic"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

@@ -15,6 +15,28 @@ export const PHARMACY_PROVIDER_CTA_CLASSNAME =
 const pharmacyCompareLinkClass =
   "font-semibold text-emerald-800 underline underline-offset-2 hover:text-emerald-950";
 
+/** Retailer / pharmacy mark above the title card (outside hero container). */
+export function PharmacyHeroProviderLogo({
+  src,
+  alt,
+}: {
+  src: string;
+  alt: string;
+}) {
+  return (
+    <div className="mb-5 flex justify-center sm:mb-6">
+      <Image
+        src={src}
+        alt={alt}
+        width={400}
+        height={150}
+        sizes="(max-width: 640px) 240px, 300px"
+        className="h-16 w-auto max-w-[min(100%,18rem)] object-contain object-center sm:h-18 md:h-20 md:max-w-[min(100%,22rem)]"
+      />
+    </div>
+  );
+}
+
 /** Large footer logo (matches dossier “logo” disclaimer; reuse e.g. Bolt). */
 export function PharmacyBrandLogoFooter() {
   return (
@@ -299,16 +321,10 @@ export function PharmacyDossierPage({
         </nav>
 
         {heroProviderLogoSrc ? (
-          <div className="mb-5 flex justify-center sm:mb-6">
-            <Image
-              src={heroProviderLogoSrc}
-              alt={heroProviderLogoAlt || `${slugLabel} logo`}
-              width={400}
-              height={150}
-              sizes="(max-width: 640px) 240px, 300px"
-              className="h-16 w-auto max-w-[min(100%,18rem)] object-contain object-center sm:h-18 md:h-20 md:max-w-[min(100%,22rem)]"
-            />
-          </div>
+          <PharmacyHeroProviderLogo
+            src={heroProviderLogoSrc}
+            alt={heroProviderLogoAlt || `${slugLabel} logo`}
+          />
         ) : null}
 
         <div className="relative mb-8">

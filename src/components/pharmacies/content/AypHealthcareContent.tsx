@@ -33,6 +33,8 @@ export default function AypHealthcareContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/Ayp Healthcare.webp"
+      heroProviderLogoAlt="AYP Healthcare"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

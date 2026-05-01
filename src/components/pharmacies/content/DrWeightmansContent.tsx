@@ -31,6 +31,8 @@ export default function DrWeightmansContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/Dr Weightmans.webp"
+      heroProviderLogoAlt="Dr Weightmans"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

@@ -24,6 +24,26 @@ import GetWeightLossPharmacyContent from "@/components/pharmacies/content/GetWei
 import GoodBodyClinicPharmacyContent from "@/components/pharmacies/content/GoodBodyClinicPharmacyContent";
 import HappyPharmacyContent from "@/components/pharmacies/content/HappyPharmacyContent";
 import HeySlimPharmacyContent from "@/components/pharmacies/content/HeySlimPharmacyContent";
+import IqDoctorPharmacyContent from "@/components/pharmacies/content/IqDoctorPharmacyContent";
+import JuniperPharmacyContent from "@/components/pharmacies/content/JuniperPharmacyContent";
+import LiveWellWeightLossPharmacyContent from "@/components/pharmacies/content/LiveWellWeightLossPharmacyContent";
+import LloydsPharmacyOnlineDoctorContent from "@/components/pharmacies/content/LloydsPharmacyOnlineDoctorContent";
+import LotusWeightLossPharmacyContent from "@/components/pharmacies/content/LotusWeightLossPharmacyContent";
+import MedExpressPharmacyContent from "@/components/pharmacies/content/MedExpressPharmacyContent";
+import MedicineMarketplacePharmacyContent from "@/components/pharmacies/content/MedicineMarketplacePharmacyContent";
+import MedicspotPharmacyContent from "@/components/pharmacies/content/MedicspotPharmacyContent";
+import MedinoPharmacyContent from "@/components/pharmacies/content/MedinoPharmacyContent";
+import MshWeightLossPharmacyContent from "@/components/pharmacies/content/MshWeightLossPharmacyContent";
+import MyLondonPharmacyContent from "@/components/pharmacies/content/MyLondonPharmacyContent";
+import NextScriptPharmacyContent from "@/components/pharmacies/content/NextScriptPharmacyContent";
+import NulifePharmacyContent from "@/components/pharmacies/content/NulifePharmacyContent";
+import NumanPharmacyContent from "@/components/pharmacies/content/NumanPharmacyContent";
+import OnlinemedsPharmacyContent from "@/components/pharmacies/content/OnlinemedsPharmacyContent";
+import OushkPharmacyContent from "@/components/pharmacies/content/OushkPharmacyContent";
+import PharmacyAdvanceContent from "@/components/pharmacies/content/PharmacyAdvanceContent";
+import Pharmacy2uPharmacyContent from "@/components/pharmacies/content/Pharmacy2uPharmacyContent";
+import PharmicaPharmacyContent from "@/components/pharmacies/content/PharmicaPharmacyContent";
+import Pills2uPharmacyContent from "@/components/pharmacies/content/Pills2uPharmacyContent";
 import {
   getWegovyCompareProviderById,
   pharmacyProfileHref,
@@ -70,7 +90,27 @@ import {
   goodBodyClinicPharmacyLandingJsonGraph,
   happyPharmacyLandingJsonGraph,
   heySlimPharmacyLandingJsonGraph,
+  iqDoctorPharmacyLandingJsonGraph,
+  juniperPharmacyLandingJsonGraph,
+  liveWellWeightLossPharmacyLandingJsonGraph,
+  lloydsPharmacyOnlineDoctorLandingJsonGraph,
+  lotusWeightLossPharmacyLandingJsonGraph,
+  medExpressPharmacyLandingJsonGraph,
+  medicineMarketplacePharmacyLandingJsonGraph,
+  medicspotPharmacyLandingJsonGraph,
+  medinoPharmacyLandingJsonGraph,
+  mshWeightLossPharmacyLandingJsonGraph,
+  myLondonPharmacyLandingJsonGraph,
+  nextScriptPharmacyLandingJsonGraph,
+  nulifePharmacyLandingJsonGraph,
+  numanPharmacyLandingJsonGraph,
+  onlinemedsPharmacyLandingJsonGraph,
+  oushkPharmacyLandingJsonGraph,
+  pharmicaPharmacyLandingJsonGraph,
+  pharmacy2uPharmacyLandingJsonGraph,
+  pharmacyAdvancePharmacyLandingJsonGraph,
   pharmacyProfileJsonGraph,
+  pills2uPharmacyLandingJsonGraph,
 } from "@/lib/seo/pharmacy-landing-json-ld";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -87,6 +127,8 @@ const EXTRA_PHARMACY_LANDING_SLUGS: string[] = [
   "goodbody-clinic",
   "happy-pharmacy",
   "hey-slim",
+  "medicspot",
+  "oushk",
 ];
 
 function allPharmacySlugs(): string[] {
@@ -447,6 +489,366 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  if (slug === "iq-doctor") {
+    const title =
+      "IQ Doctor Weight Loss Review: Mounjaro, Wegovy, Saxenda, tablets (UK)";
+    const description =
+      "IQ Doctor: online questionnaire, UK prescriber review, Royal Mail/DPD delivery, cold chain for injectables, indicative pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "juniper") {
+    const title =
+      "Juniper Weight Loss Review: Mounjaro, Wegovy, UK programme & app";
+    const description =
+      "Juniper: eligibility check, remote clinician consultation, monthly programme with app and coaching, UK delivery and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "live-well-weight-loss") {
+    const title =
+      "Live Well Weight Loss Review: Mounjaro, Wegovy, GPhC pharmacy (UK)";
+    const description =
+      "Live Well Weight Loss: pharmacist prescriber assessment, transparent pen pricing, discreet delivery, ongoing support and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "lloyds-pharmacy-online-doctor") {
+    const title =
+      "Lloyds Pharmacy Online Doctor Weight Loss — Mounjaro, Wegovy, tablets (UK)";
+    const description =
+      "Lloyds Online Doctor: online consultation, injections and tablets, next-day and standard delivery, ParcelShop, store collection, pricing guide and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "lotus-weight-loss") {
+    const title =
+      "Lotus Weight Loss Review — Mounjaro, Wegovy, CQC clinic (UK)";
+    const description =
+      "Lotus Weight Loss: CQC-registered clinic, GLP-1 injectables, Orlistat, Lotus Programme, discreet delivery, subscriptions and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "medexpress") {
+    const title =
+      "MedExpress Weight Loss Review — Mounjaro, Wegovy, UK online pharmacy";
+    const description =
+      "MedExpress: regulated consultation, GLP-1 and oral weight loss medicines, refrigerated dispatch, delivery tiers, fees and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "medicine-marketplace") {
+    const title =
+      "Medicine Market Place Review — UK online pharmacy, weight loss products";
+    const description =
+      "Medicine Market Place: Preston-based pharmacy, weight loss range, tracked delivery, free delivery thresholds, prescription checks and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "medicspot") {
+    const title =
+      "Medicspot Weight Loss Review — Mounjaro, coaching, UK subscription programme";
+    const description =
+      "Medicspot: clinician-led assessment, NHS record checks, health coaching, 28-day medication cycles, discreet tracked delivery and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "medino") {
+    const title =
+      "Medino Weight Loss Review — pharmacist-led, PGD supply, UK delivery";
+    const description =
+      "Medino: online consultation, pharmacist review, PGD pathways where applicable, inclusive pricing, next-day delivery on many lines and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "msh-weight-loss") {
+    const title =
+      "MSH Weight Loss Review — Mounjaro, Wegovy, nurse support (UK)";
+    const description =
+      "MSH Weight Loss: 28-day subscription, DPD signed next-day delivery, cold chain, wellbeing surveys, bundled pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "my-london-pharmacy") {
+    const title =
+      "My London Pharmacy Weight Loss Review — GLP-1, UK next-day delivery";
+    const description =
+      "My London Pharmacy: quick online assessment, GLP-1 pathways, discreet packaging, patient portal, nationwide delivery and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "next-script") {
+    const title =
+      "Next Script Weight Loss Review — Wegovy, Mounjaro, Saxenda (UK)";
+    const description =
+      "Next Script: online questionnaire, document checks, first-order video consult, GPhC pharmacy, discreet delivery, indicative pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "nulife-pharmacy") {
+    const title =
+      "NuLife Pharmacy Weight Loss Review — UK programme, GLP-1, signed delivery";
+    const description =
+      "NuLife Pharmacy: GPhC-regulated management programme, pharmacist review, nutrition support, discreet signed delivery, timelines and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "numan") {
+    const title =
+      "Numan Weight Loss Review — Wegovy, Mounjaro, UK subscription & coaching";
+    const description =
+      "Numan: digital assessment, GLP-1 plans, coaching and app support, 28-day deliveries, discreet Royal Mail-style shipping, subscription costs and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "onlinemeds") {
+    const title =
+      "OnlineMeds Weight Loss Review — Wegovy, Mounjaro, UK pharmacist prescribers";
+    const description =
+      "OnlineMeds: specialist weight-loss pharmacy, pharmacist prescriber pathway, free tracked delivery, Orlistat and GLP-1 context, support and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "oushk") {
+    const title =
+      "Oushk Pharmacy Weight Loss Review — online doctor, GLP-1, UK delivery";
+    const description =
+      "Oushk Pharmacy: video-verified consultation, UK prescribers, injectable and oral options, DPD/Royal Mail choices, next-day claims and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "pharmacy-advance") {
+    const title =
+      "Pharmacy Advance Weight Loss Review — Mounjaro, Wegovy, UK consultation & delivery";
+    const description =
+      "Pharmacy Advance: online questionnaire, prescriber review, GLP-1 injectables, tracked discreet delivery, cold-chain claims and cost context. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "pharmacy2u") {
+    const title =
+      "Pharmacy2U Weight Loss Review — Mounjaro, Wegovy, online doctor, UK delivery";
+    const description =
+      "Pharmacy2U: online doctor assessment, GLP-1 and Orlistat options, express delivery, two-month supply notes and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "pharmica") {
+    const title =
+      "Pharmica Weight Loss Review — Mounjaro, Wegovy, delivery tiers & pricing (UK)";
+    const description =
+      "Pharmica: pharmacist-led checks, injectable and capsule ranges, discreet delivery, premium and same-day options where offered, FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "pills2u") {
+    const title =
+      "Pills2U Weight Loss Review — Mounjaro, Wegovy, prescriber pathway (UK)";
+    const description =
+      "Pills2U: medical questionnaire, licensed prescriber review, GLP-1 injectables, fast tracked delivery claims, bundled pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   const w = getWegovyCompareProviderById(slug);
   const m = getMounjaroCompareProviderById(slug);
   const s = getSaxendaCompareProviderById(slug);
@@ -772,6 +1174,286 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <HeySlimPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "iq-doctor") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(iqDoctorPharmacyLandingJsonGraph()),
+          }}
+        />
+        <IqDoctorPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "juniper") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(juniperPharmacyLandingJsonGraph()),
+          }}
+        />
+        <JuniperPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "live-well-weight-loss") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(liveWellWeightLossPharmacyLandingJsonGraph()),
+          }}
+        />
+        <LiveWellWeightLossPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "lloyds-pharmacy-online-doctor") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(lloydsPharmacyOnlineDoctorLandingJsonGraph()),
+          }}
+        />
+        <LloydsPharmacyOnlineDoctorContent />
+      </>
+    );
+  }
+
+  if (slug === "lotus-weight-loss") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(lotusWeightLossPharmacyLandingJsonGraph()),
+          }}
+        />
+        <LotusWeightLossPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "medexpress") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(medExpressPharmacyLandingJsonGraph()),
+          }}
+        />
+        <MedExpressPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "medicine-marketplace") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(medicineMarketplacePharmacyLandingJsonGraph()),
+          }}
+        />
+        <MedicineMarketplacePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "medicspot") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(medicspotPharmacyLandingJsonGraph()),
+          }}
+        />
+        <MedicspotPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "medino") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(medinoPharmacyLandingJsonGraph()),
+          }}
+        />
+        <MedinoPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "msh-weight-loss") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(mshWeightLossPharmacyLandingJsonGraph()),
+          }}
+        />
+        <MshWeightLossPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "my-london-pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(myLondonPharmacyLandingJsonGraph()),
+          }}
+        />
+        <MyLondonPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "next-script") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(nextScriptPharmacyLandingJsonGraph()),
+          }}
+        />
+        <NextScriptPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "nulife-pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(nulifePharmacyLandingJsonGraph()),
+          }}
+        />
+        <NulifePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "numan") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(numanPharmacyLandingJsonGraph()),
+          }}
+        />
+        <NumanPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "onlinemeds") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(onlinemedsPharmacyLandingJsonGraph()),
+          }}
+        />
+        <OnlinemedsPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "oushk") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(oushkPharmacyLandingJsonGraph()),
+          }}
+        />
+        <OushkPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "pharmacy-advance") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(pharmacyAdvancePharmacyLandingJsonGraph()),
+          }}
+        />
+        <PharmacyAdvanceContent />
+      </>
+    );
+  }
+
+  if (slug === "pharmacy2u") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(pharmacy2uPharmacyLandingJsonGraph()),
+          }}
+        />
+        <Pharmacy2uPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "pharmica") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(pharmicaPharmacyLandingJsonGraph()),
+          }}
+        />
+        <PharmicaPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "pills2u") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(pills2uPharmacyLandingJsonGraph()),
+          }}
+        />
+        <Pills2uPharmacyContent />
       </>
     );
   }

@@ -30,6 +30,8 @@ export default function HappyPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/Happy Pharmacy.webp"
+      heroProviderLogoAlt="Happy Pharmacy"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

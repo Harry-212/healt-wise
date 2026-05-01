@@ -28,6 +28,8 @@ export default function BootsOnlineDoctorContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/boots.webp"
+      heroProviderLogoAlt="Boots Online Doctor"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

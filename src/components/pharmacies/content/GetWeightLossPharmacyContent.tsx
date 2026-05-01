@@ -30,6 +30,8 @@ export default function GetWeightLossPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/Get Weightloss.webp"
+      heroProviderLogoAlt="Get Weight Loss"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

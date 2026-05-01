@@ -32,6 +32,8 @@ export default function CurelyPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/Curely.webp"
+      heroProviderLogoAlt="Curely"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">

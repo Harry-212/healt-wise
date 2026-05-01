@@ -32,6 +32,8 @@ export default function Click2PharmacyMounjaroContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/click2pharmacy.webp"
+      heroProviderLogoAlt="Click2Pharmacy"
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
