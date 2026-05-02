@@ -317,6 +317,36 @@ export function getAllSlugs(): string[] {
     .map((f) => f.replace(/\.md$/, ''));
 }
 
+/**
+ * Static blog article routes under /blog/:slug/ (App Router folders with page.tsx).
+ * Excludes dynamic `[slug]` (Markdown) and `page` (pagination).
+ */
+function blogArticleSlugsOnDisk(): string[] {
+  const base = path.join(process.cwd(), 'src', 'app', 'blog');
+  if (!fs.existsSync(base)) return [];
+  return fs
+    .readdirSync(base, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .filter(
+      (slug) =>
+        slug !== '[slug]' &&
+        slug !== 'page' &&
+        fs.existsSync(path.join(base, slug, 'page.tsx')),
+    )
+    .sort();
+}
+
+/** Unique `/blog/:slug` targets for sitemap and llms (markdown + disk routes + UK location articles). */
+export function getAllBlogSitemapSlugs(): string[] {
+  const slugs = new Set<string>([
+    ...getAllSlugs(),
+    ...blogArticleSlugsOnDisk(),
+    ...getAllUkLocationArticleSlugs(),
+  ]);
+  return [...slugs].sort();
+}
+
 export function getPostBySlug(slug: string): BlogPost | null {
   const file = path.join(postsDir(), `${slug}.md`);
   if (!fs.existsSync(file)) return null;

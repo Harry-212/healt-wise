@@ -1355,6 +1355,534 @@ const PILLS2U_FAQ: FaqItem[] = [
   },
 ];
 
+const PILLSORTED_FAQ: FaqItem[] = [
+  {
+    question: "Does PillSorted offer NHS and private weight loss routes?",
+    answer:
+      "Marketing describes choosing between NHS-connected workflows and private treatment where the platform supports both — confirm current eligibility on PillSorted.",
+  },
+  {
+    question: "How fast is PillSorted delivery?",
+    answer:
+      "Royal Mail 24/48 hour tiers are cited with same-day review and next-working-day dispatch in many narratives, typically totalling about 1–3 working days after approval.",
+  },
+  {
+    question: "What medicines does PillSorted highlight?",
+    answer:
+      "Public copy references GLP-1 injectables such as tirzepatide and semaglutide plus oral orlistat, always subject to clinician suitability.",
+  },
+  {
+    question: "Is delivery free?",
+    answer:
+      "Many recurring prescription services advertise free delivery and subscription repeats — verify basket rules for your SKU.",
+  },
+  {
+    question: "How does PillSorted compare on price?",
+    answer:
+      "Illustrative injectable bands around £91–£159+ per month and oral bands near £21.99–£45.99 appear in summaries — compare live checkout with Health Wise tables.",
+  },
+  {
+    question: "Is PillSorted regulated?",
+    answer:
+      "Claims reference UK-licensed clinicians and pharmacists; always verify the dispensing pharmacy on the GPhC register before ordering.",
+  },
+];
+
+const PILLSPHERE_FAQ: FaqItem[] = [
+  {
+    question: "Is PillSphere a regulated UK clinic?",
+    answer:
+      "Legitimate providers require consultation and pharmacy dispensing under UK rules — verify GPhC registration and prescriber credentials on official sources.",
+  },
+  {
+    question: "How long does PillSphere delivery take?",
+    answer:
+      "Industry-style timelines cite roughly 1–2 working days processing plus about 2–5 days delivery; reviewer quotes mention prompt arrival within a few days in many cases.",
+  },
+  {
+    question: "Does PillSphere use discreet packaging?",
+    answer:
+      "Marketing emphasises plain outer cartons without obvious medical branding.",
+  },
+  {
+    question: "What do PillSphere reviews emphasise?",
+    answer:
+      "Aggregated feedback often mentions competitive pricing, fast delivery, and reliable service — still cross-check with your own clinical needs.",
+  },
+  {
+    question: "Are cold-chain injectables supported?",
+    answer:
+      "UK pharmacies typically use insulated packaging and timed dispatch for refrigerated pens — confirm specifics on your order confirmation.",
+  },
+  {
+    question: "What monthly costs are realistic?",
+    answer:
+      "Supporting estimates span roughly £173–£313 depending on dose, plus possible consultation add-ons — read the live basket breakdown.",
+  },
+];
+
+const QUICKMEDS_FAQ: FaqItem[] = [
+  {
+    question: "Is Quickmeds GPhC registered?",
+    answer:
+      "Quickmeds presents as a UK GPhC-registered online pharmacy — verify the current premises register entry before purchase.",
+  },
+  {
+    question: "How fast can Quickmeds dispatch?",
+    answer:
+      "Marketing cites same-day dispatch before weekday cut-offs and next-day delivery options via Royal Mail Tracked 24/48 or Special Delivery where offered.",
+  },
+  {
+    question: "Which medicines are commonly listed?",
+    answer:
+      "Public pathways reference GLP-1 injections such as Wegovy and Mounjaro plus Orlistat and related therapies subject to assessment.",
+  },
+  {
+    question: "Is packaging discreet?",
+    answer:
+      "Orders ship in plain confidential parcels without obvious contents labelling.",
+  },
+  {
+    question: "What are typical monthly injection costs?",
+    answer:
+      "Illustrative bands around £175–£250 per month appear alongside starter figures near £169.95 — dose dominates totals.",
+  },
+  {
+    question: "Why do reviewers rate Quickmeds highly?",
+    answer:
+      "Trustpilot-style sentiment highlights speed, professionalism, and customer care — pair reviews with regulatory verification.",
+  },
+];
+
+const SECOND_NATURE_FAQ: FaqItem[] = [
+  {
+    question: "What is Second Nature’s approach?",
+    answer:
+      "It combines prescription GLP-1 therapy where suitable with app-based coaching, peer support, and habit-building content rather than medication alone.",
+  },
+  {
+    question: "Does Second Nature include dietitian support?",
+    answer:
+      "Marketing describes access to registered dietitians or nutritionists for messaging about five days a week alongside daily digital lessons.",
+  },
+  {
+    question: "How does delivery work before programme start?",
+    answer:
+      "Shipments often dispatch the week before cohort launch with tracked ~48-hour style delivery so pens and starter kits arrive roughly Wednesday–Saturday before day one.",
+  },
+  {
+    question: "What is bundled in the monthly price?",
+    answer:
+      "All-inclusive messaging covers medication, delivery, coaching, app access, and support on many plans — confirm your tier on-site.",
+  },
+  {
+    question: "What Wegovy price bands are cited?",
+    answer:
+      "Public summaries reference roughly £149–£249 per month depending on dose within programme bundles.",
+  },
+  {
+    question: "Who is Second Nature best for?",
+    answer:
+      "Patients wanting structured behavioural support alongside injectable therapy rather than the lowest medication-only price.",
+  },
+];
+
+const CARE_PHARMACY_FAQ: FaqItem[] = [
+  {
+    question: "Is The Care Pharmacy a regulated UK pharmacy?",
+    answer:
+      "Their materials describe GPhC-registered pharmacies in Bradford and Lowmoor with superintendent pharmacists — always verify the active premises on the official GPhC register.",
+  },
+  {
+    question: "Which weight loss medicines does The Care Pharmacy list?",
+    answer:
+      "Marketing references Mounjaro, Wegovy, Nevolat, Orlistat, Saxenda and related lines, all subject to consultation approval.",
+  },
+  {
+    question: "How does delivery work for cold injectables?",
+    answer:
+      "They advertise temperature-controlled packaging and discreet outer wraps, often with tracking; refrigerated lines may require signature on delivery.",
+  },
+  {
+    question: "What delivery speeds are cited?",
+    answer:
+      "Royal Mail Tracked 24 is described as roughly 1–3 working days; paid next-day Royal Mail Special Delivery or DPD options appear around £9.99 in summaries.",
+  },
+  {
+    question: "Are consultations free?",
+    answer:
+      "Promotional copy often states online consultations are free, with charges focused on medication and shipping.",
+  },
+  {
+    question: "What illustrative prices appear?",
+    answer:
+      "Summaries cite examples such as Mounjaro from about £149.99, Wegovy from about £99.99, Orlistat from about £39.99 and Saxenda near £279.99 — confirm live checkout.",
+  },
+];
+
+const SIMPLE_ONLINE_PHARMACY_FAQ: FaqItem[] = [
+  {
+    question: "Is Simple Online Pharmacy regulated in the UK?",
+    answer:
+      "Their narrative describes a UK-registered pharmacy aligned with MHRA and GPhC expectations — verify the dispensing pharmacy on the GPhC register before ordering.",
+  },
+  {
+    question: "How does the weight loss pathway work?",
+    answer:
+      "Patients complete an online assessment, a UK clinician reviews eligibility, and if appropriate a prescription is dispensed and couriered to their address.",
+  },
+  {
+    question: "Which injectables are commonly mentioned?",
+    answer:
+      "Marketing highlights GLP-1 options such as Mounjaro and Wegovy alongside other prescription lines subject to suitability.",
+  },
+  {
+    question: "How fast is delivery?",
+    answer:
+      "Public copy cites fast dispatch after approval and next-day delivery options in many cases, plus tracking where offered.",
+  },
+  {
+    question: "What pricing themes appear for Wegovy?",
+    answer:
+      "Illustrative summaries mention starting doses from around £99 with higher strengths costing more, free delivery on orders over about £35 where advertised, and no separate prescription fee in stated bundles.",
+  },
+  {
+    question: "Is packaging discreet?",
+    answer:
+      "Yes — promotional materials emphasise plain, unbranded outer packaging for confidentiality.",
+  },
+];
+
+const SLIMMING_DIRECT_FAQ: FaqItem[] = [
+  {
+    question: "Is Slimming Direct clinically supervised?",
+    answer:
+      "Their marketing describes UK clinicians and pharmacy professionals reviewing assessments before prescription medicines are supplied.",
+  },
+  {
+    question: "How quickly will medication arrive?",
+    answer:
+      "Reviews and service information often cite about 1–3 working days after approval, with some faster anecdotes — confirm at checkout.",
+  },
+  {
+    question: "What GLP-1 pricing bands are quoted?",
+    answer:
+      "Summaries cite roughly £120–£295 per month for injectables depending on dosage, and Orlistat from about £57.99.",
+  },
+  {
+    question: "Are there extra fees if I cancel late?",
+    answer:
+      "Materials mention a clinical fee around £25–£35 if you cancel after review but before a prescription is issued.",
+  },
+  {
+    question: "Can I refund dispensed medication?",
+    answer:
+      "Generally not once prescription medicines are dispensed and dispatched, except narrow regulatory exceptions — standard UK pharmacy practice.",
+  },
+  {
+    question: "How strong is Slimming Direct’s reputation?",
+    answer:
+      "Third-party summaries reference Trustpilot ratings around 4.5/5; always read recent reviews yourself.",
+  },
+];
+
+const SUPERDRUG_ONLINE_DOCTOR_FAQ: FaqItem[] = [
+  {
+    question: "Can I collect Superdrug Online Doctor prescriptions in store?",
+    answer:
+      "Yes — marketing offers home delivery or collection from a local Superdrug pharmacy where available for your treatment.",
+  },
+  {
+    question: "How long does delivery take?",
+    answer:
+      "Public timelines often cite dispatch within about five working days after approval plus roughly 2–3 working days transit, i.e. around a week overall in many cases.",
+  },
+  {
+    question: "Does Superdrug use cold-chain packaging for injections?",
+    answer:
+      "Yes — insulated packaging is described for medicines such as Mounjaro or Wegovy that need temperature control.",
+  },
+  {
+    question: "What Wegovy price examples appear?",
+    answer:
+      "Illustrative tables mention starter doses near £99/month up to maintenance tiers around £285/month depending on strength — compare Health Wise tables.",
+  },
+  {
+    question: "Is consultation cost bundled?",
+    answer:
+      "Many SKUs advertise consultation review, prescription and delivery within the headline price — verify your basket.",
+  },
+  {
+    question: "Do home deliveries require a signature?",
+    answer:
+      "Marketing emphasises signed receipt for secure delivery of prescription medicines.",
+  },
+];
+
+const SWIFT_DOCTOR_FAQ: FaqItem[] = [
+  {
+    question: "How fast is Swift Doctor?",
+    answer:
+      "User reports and marketing cite reviews often within 1–2 days (sometimes same day), rapid dispatch, and delivery commonly within about 1–2 days for many orders.",
+  },
+  {
+    question: "Which couriers does Swift Doctor use?",
+    answer:
+      "Summaries reference partners such as Royal Mail and DPD with tracked and express options.",
+  },
+  {
+    question: "Does Swift Doctor ship refrigerated medicines safely?",
+    answer:
+      "They describe insulated packaging and coolant packs for cold-chain lines plus fast transit to protect stability.",
+  },
+  {
+    question: "What are indicative pen prices?",
+    answer:
+      "Community quotes often land around £150–£200 per pen for some GLP-1 doses — confirm live pricing.",
+  },
+  {
+    question: "Are consultations always extra?",
+    answer:
+      "Sometimes bundled; optional consults around £30 appear in anecdotes, occasionally with promotional refunds.",
+  },
+  {
+    question: "Is Swift Doctor highly rated?",
+    answer:
+      "Aggregated references cite Trustpilot scores near 4.9/5, but ratings move over time.",
+  },
+];
+
+const THE_FAMILY_CHEMIST_FAQ: FaqItem[] = [
+  {
+    question: "Is The Family Chemist a regulated UK pharmacy?",
+    answer:
+      "Their marketing describes GPhC registration with MHRA-aligned medicines standards and pharmacist-led dispensing — verify the active premises on the official GPhC register.",
+  },
+  {
+    question: "What delivery options does The Family Chemist advertise?",
+    answer:
+      "Summaries include standard (~£2.99, free over ~£20), next-day (£6.99), Saturday (£9.99), free fridge Royal Mail for cold medicines, and Local Collect (£9.99) — confirm live policies.",
+  },
+  {
+    question: "When does delivery timing start?",
+    answer:
+      "Public notes say timelines begin after prescriber/pharmacist approval, not immediately after checkout.",
+  },
+  {
+    question: "Can approval take up to a week?",
+    answer:
+      "Yes — materials warn new weight-loss approvals may take up to about 7 days under updated regulatory expectations.",
+  },
+  {
+    question: "What starting prices are quoted for Mounjaro and Wegovy?",
+    answer:
+      "Illustrative listings cite about £139.99 for Mounjaro and £97.99 for Wegovy before dose-dependent increases.",
+  },
+  {
+    question: "Does The Family Chemist sell accessories?",
+    answer:
+      "Marketing lists needles, sharps bins, swabs and travel letters alongside medicines.",
+  },
+];
+
+const THE_INDEPENDENT_PHARMACY_FAQ: FaqItem[] = [
+  {
+    question: "Who regulates The Independent Pharmacy?",
+    answer:
+      "Their materials reference GPhC pharmacy regulation and CQC oversight — confirm details on official registers.",
+  },
+  {
+    question: "Do I need a GP referral?",
+    answer:
+      "No — the advertised journey is an online assessment reviewed by UK clinicians/pharmacists, then dispatch.",
+  },
+  {
+    question: "How fast is dispatch?",
+    answer:
+      "Marketing claims same-day dispatch for many orders approved before a ~15:00 cutoff.",
+  },
+  {
+    question: "When is delivery free?",
+    answer:
+      "Orders over about £40 often qualify for free delivery depending on the shipping method selected.",
+  },
+  {
+    question: "Are injectables shipped cold?",
+    answer:
+      "Promotional copy describes appropriate temperature-controlled packaging where required.",
+  },
+  {
+    question: "What delivery tiers are quoted?",
+    answer:
+      "Examples include Special Delivery ~£8.99, Express ~£4.99, and Standard ~£2.99 — verify at checkout.",
+  },
+];
+
+const TRIBELLE_FAQ: FaqItem[] = [
+  {
+    question: "Is Tribelle regulated?",
+    answer:
+      "Marketing presents a GPhC-registered online pharmacy model with licensed dispensing partners — verify on the official register.",
+  },
+  {
+    question: "How fast is clinical review?",
+    answer:
+      "Their copy commonly cites review within about 24 hours.",
+  },
+  {
+    question: "Is a subscription mandatory?",
+    answer:
+      "Tribelle advertises pay-as-you-go prescribing without a compulsory subscription.",
+  },
+  {
+    question: "What pen prices are illustrated?",
+    answer:
+      "Summaries often cite ~£147 for Mounjaro pens and ~£111 for Wegovy pens before strength-dependent pricing.",
+  },
+  {
+    question: "How long does delivery take?",
+    answer:
+      "Many descriptions mention about 2–3 working days after dispatch with tracking.",
+  },
+  {
+    question: "Does Tribelle include ongoing support?",
+    answer:
+      "Yes — follow-ups, messaging and titration support are central to their advertised model.",
+  },
+];
+
+const VOY_FAQ: FaqItem[] = [
+  {
+    question: "Where do I confirm Voy’s medicines and pricing?",
+    answer:
+      "Use Voy’s official weight-loss pages; Health Wise provides contextual comparison only.",
+  },
+  {
+    question: "Is Voy associated with a GPhC registration in Health Wise data?",
+    answer:
+      "Our dataset references GPhC 9012134 — always verify the dispensing pharmacy on the official register before ordering.",
+  },
+  {
+    question: "How should I compare Voy with other providers?",
+    answer:
+      "Compare total monthly cost at your dose, approval speed, cold-chain handling, and clinician access.",
+  },
+  {
+    question: "Do I still need lifestyle changes with Voy?",
+    answer:
+      "Yes — medicated weight management should complement nutrition, activity and behavioural support.",
+  },
+  {
+    question: "Can Health Wise guarantee stock?",
+    answer:
+      "No — availability changes; confirm live formulary and dispatch timelines on Voy’s site.",
+  },
+  {
+    question: "Is Voy prescription-only where applicable?",
+    answer:
+      "Legitimate UK routes require clinical suitability checks for prescription obesity medicines — confirm Voy’s pathway on their pages.",
+  },
+];
+
+const WE_PRESCRIBE_FAQ: FaqItem[] = [
+  {
+    question: "Who prescribes at WePrescribe?",
+    answer:
+      "Marketing highlights UK registered pharmacist prescribers/clinicians reviewing questionnaires before prescriptions are issued.",
+  },
+  {
+    question: "How fast are GLP-1 deliveries?",
+    answer:
+      "Summaries often cite about 2–3 working days for standard tracked injectable shipment, with faster paid options where offered.",
+  },
+  {
+    question: "How does cold-chain shipping work?",
+    answer:
+      "Insulated packaging is described; manufacturer-aligned guidance may allow defined transit windows even if coolant melts.",
+  },
+  {
+    question: "What Wegovy price examples appear?",
+    answer:
+      "Illustrative figures mention ~£114.99 at lower strengths up to ~£239.99 at higher strengths — confirm live checkout.",
+  },
+  {
+    question: "Are referral discounts available?",
+    answer:
+      "Terms may reference referral/promotional programmes subject to qualifying consultations — read current conditions.",
+  },
+  {
+    question: "Which treatments are listed on the weight-loss hub?",
+    answer:
+      "Examples include alli, Mounjaro, Orlistat, Saxenda, Wegovy and Xenical — subject to suitability.",
+  },
+];
+
+const WELL_PHARMACY_FAQ: FaqItem[] = [
+  {
+    question: "Can I access Well online and in-store?",
+    answer:
+      "Marketing describes remote consultations (often including video) and in-pharmacy assessments.",
+  },
+  {
+    question: "Which injectables does Well highlight?",
+    answer:
+      "Educational copy commonly references Mounjaro and Wegovy alongside oral options like Orlistat.",
+  },
+  {
+    question: "How often are follow-ups?",
+    answer:
+      "Monthly monitoring sessions are cited for progress and safety reviews.",
+  },
+  {
+    question: "What delivery fees are quoted?",
+    answer:
+      "Illustrative bands mention ~£3.95 standard and ~£4.95 express with free delivery above qualifying order values where stated.",
+  },
+  {
+    question: "Who is typically eligible?",
+    answer:
+      "Messaging commonly references BMI 30+ or BMI 27+ with weight-related conditions, subject to clinical judgement.",
+  },
+  {
+    question: "Is Well regulated?",
+    answer:
+      "Materials present UK pharmacy standards with GPhC oversight — verify premises on the register.",
+  },
+];
+
+const ZAVA_FAQ: FaqItem[] = [
+  {
+    question: "Does Zava require BMI photo verification?",
+    answer:
+      "Their weight-loss pathway typically asks for photo evidence alongside the questionnaire for clinician verification.",
+  },
+  {
+    question: "How fast are doctor reviews?",
+    answer:
+      "Marketing commonly cites up to ~24 hours, with possible delays during busy periods.",
+  },
+  {
+    question: "What happens if I’m not approved?",
+    answer:
+      "Their materials state you are not charged when treatment is deemed inappropriate or unsafe.",
+  },
+  {
+    question: "How are refrigerated injections delivered?",
+    answer:
+      "Cold insulated packaging with signature delivery is described, often targeting next working day by 1pm when cutoff rules are met.",
+  },
+  {
+    question: "What prices are quoted for Wegovy and Mounjaro?",
+    answer:
+      "Summaries cite starting tiers around £99 for Wegovy and ~£169.99 for Mounjaro before dose-dependent pricing.",
+  },
+  {
+    question: "Are tablet deliveries sometimes free?",
+    answer:
+      "Standard 48-hour UK postage is often advertised as free with optional paid express upgrades.",
+  },
+];
+
 function siteId(): string {
   return `${siteOrigin()}/#website`;
 }
@@ -2994,6 +3522,630 @@ export function ashcroftPharmacyLandingJsonGraph(): Record<string, unknown> {
       ]),
       {
         ...faqPageEntity(ASHCROFT_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — PillSorted.
+ */
+export function pillSortedPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/pillsorted";
+  const url = `${origin}${path}`;
+  const name =
+    "PillSorted weight loss review (UK) — telehealth, GLP-1, NHS integration, delivery";
+  const description =
+    "PillSorted: personalised consultations, licensed injectable and oral options, Royal Mail delivery tiers, subscription repeats, NHS/private routing themes and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "PillSorted", item: url },
+      ]),
+      {
+        ...faqPageEntity(PILLSORTED_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — PillSphere.
+ */
+export function pillSpherePharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/pillsphere";
+  const url = `${origin}${path}`;
+  const name =
+    "PillSphere weight loss review (UK) — online clinic, prescribing, delivery";
+  const description =
+    "PillSphere: consultation pathway, prescriber review, discreet tracked delivery, cold-chain norms, pricing context and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "PillSphere", item: url },
+      ]),
+      {
+        ...faqPageEntity(PILLSPHERE_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Quickmeds.
+ */
+export function quickmedsPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/quickmeds";
+  const url = `${origin}${path}`;
+  const name =
+    "Quickmeds weight loss review (UK) — GPhC clinic, GLP-1, fast delivery";
+  const description =
+    "Quickmeds: online consultation, personalised plans, Mounjaro/Wegovy context, same-day dispatch claims, Royal Mail tracking, discreet packaging and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Quickmeds", item: url },
+      ]),
+      {
+        ...faqPageEntity(QUICKMEDS_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Second Nature.
+ */
+export function secondNaturePharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/second-nature";
+  const url = `${origin}${path}`;
+  const name =
+    "Second Nature weight loss review (UK) — programme, GLP-1, coaching app";
+  const description =
+    "Second Nature: assessment, pharmacy partner supply, app coaching, peer support, scheduled delivery kits, bundled pricing and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Second Nature", item: url },
+      ]),
+      {
+        ...faqPageEntity(SECOND_NATURE_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — The Care Pharmacy.
+ */
+export function theCarePharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/care-pharmacy";
+  const url = `${origin}${path}`;
+  const name =
+    "The Care Pharmacy weight loss review (UK) — online clinic, GLP-1 range, delivery";
+  const description =
+    "The Care Pharmacy: GPhC-registered service, multiple injectable and oral weight-loss options, discreet and cold-chain delivery tiers, pricing context and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "The Care Pharmacy", item: url },
+      ]),
+      {
+        ...faqPageEntity(CARE_PHARMACY_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Simple Online Pharmacy.
+ */
+export function simpleOnlinePharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/simple-online-pharmacy";
+  const url = `${origin}${path}`;
+  const name =
+    "Simple Online Pharmacy weight loss review (UK) — regulated service, delivery, pricing";
+  const description =
+    "Simple Online Pharmacy: clinician-led online weight management, four-step pathway, discreet delivery, transparent pricing themes and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Simple Online Pharmacy", item: url },
+      ]),
+      {
+        ...faqPageEntity(SIMPLE_ONLINE_PHARMACY_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Slimming Direct.
+ */
+export function slimmingDirectPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/slimming-direct";
+  const url = `${origin}${path}`;
+  const name =
+    "Slimming Direct weight loss review (UK) — clinical programme, GLP-1, delivery";
+  const description =
+    "Slimming Direct: clinically led online weight loss, personalised plans, GLP-1 and capsule options, delivery timelines, pricing and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Slimming Direct", item: url },
+      ]),
+      {
+        ...faqPageEntity(SLIMMING_DIRECT_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Superdrug Online Doctor.
+ */
+export function superdrugOnlineDoctorLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/superdrug-online-doctor";
+  const url = `${origin}${path}`;
+  const name =
+    "Superdrug Online Doctor weight loss review (UK) — consultation, delivery or collection";
+  const description =
+    "Superdrug Online Doctor: regulated weight-loss pathway, doctor review, discreet delivery or pharmacy collection, cold-chain injectables, pricing context and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Superdrug Online Doctor", item: url },
+      ]),
+      {
+        ...faqPageEntity(SUPERDRUG_ONLINE_DOCTOR_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Swift Doctor.
+ */
+export function swiftDoctorPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/swift-doctor";
+  const url = `${origin}${path}`;
+  const name =
+    "Swift Doctor weight loss review (UK) — fast consultation, GLP-1 delivery";
+  const description =
+    "Swift Doctor: rapid online assessments, clinician-led prescribing where appropriate, tracked courier delivery, cold-chain options, pricing themes and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Swift Doctor", item: url },
+      ]),
+      {
+        ...faqPageEntity(SWIFT_DOCTOR_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — The Family Chemist.
+ */
+export function theFamilyChemistPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/the-family-chemist";
+  const url = `${origin}${path}`;
+  const name =
+    "The Family Chemist weight loss review (UK) — regulated pharmacy, delivery tiers, pricing";
+  const description =
+    "The Family Chemist: GPhC-aligned online pharmacy narrative, consultation pathway, tiered delivery including fridge lines, transparent product pricing and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "The Family Chemist", item: url },
+      ]),
+      {
+        ...faqPageEntity(THE_FAMILY_CHEMIST_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — The Independent Pharmacy.
+ */
+export function theIndependentPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/the-independent-pharmacy";
+  const url = `${origin}${path}`;
+  const name =
+    "The Independent Pharmacy weight loss review (UK) — assessment, delivery, pricing";
+  const description =
+    "The Independent Pharmacy: regulated online pathway, clinician-reviewed assessments, discreet delivery options, competitive pricing themes and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "The Independent Pharmacy", item: url },
+      ]),
+      {
+        ...faqPageEntity(THE_INDEPENDENT_PHARMACY_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Tribelle.
+ */
+export function tribellePharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/tribelle";
+  const url = `${origin}${path}`;
+  const name =
+    "Tribelle weight loss review (UK) — injectable GLP-1, clinician-led delivery";
+  const description =
+    "Tribelle: GPhC-registered service narrative, GLP-1 injectables, consultation and dispatch timelines, pricing themes and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Tribelle", item: url },
+      ]),
+      {
+        ...faqPageEntity(TRIBELLE_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Voy.
+ */
+export function voyPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/voy";
+  const url = `${origin}${path}`;
+  const name =
+    "Voy weight loss review (UK) — digital obesity care context & comparisons";
+  const description =
+    "Voy: how to evaluate regulated digital weight-loss pathways, budgeting context with Health Wise comparisons, and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Voy", item: url },
+      ]),
+      {
+        ...faqPageEntity(VOY_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — WePrescribe.
+ */
+export function wePrescribePharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/weprescribe";
+  const url = `${origin}${path}`;
+  const name =
+    "WePrescribe weight loss review (UK) — pharmacist prescribers, delivery, pricing";
+  const description =
+    "WePrescribe: clinician-led prescribing narrative, GLP-1 and oral options, tracked delivery and cold-chain notes, pricing examples and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "WePrescribe", item: url },
+      ]),
+      {
+        ...faqPageEntity(WE_PRESCRIBE_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Well Pharmacy.
+ */
+export function wellPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/well-pharmacy";
+  const url = `${origin}${path}`;
+  const name =
+    "Well Pharmacy weight loss review (UK) — medicated programme, delivery";
+  const description =
+    "Well Pharmacy: pharmacist-led assessments and follow-ups, GLP-1 and oral options, delivery fees/timeframes and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Well Pharmacy", item: url },
+      ]),
+      {
+        ...faqPageEntity(WELL_PHARMACY_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Zava.
+ */
+export function zavaPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/zava";
+  const url = `${origin}${path}`;
+  const name =
+    "Zava weight loss review (UK) — online doctors, cold delivery, tablets & injections";
+  const description =
+    "Zava: doctor-reviewed questionnaires, BMI verification, partner pharmacy dispensing, delivery options and pricing themes — FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Zava", item: url },
+      ]),
+      {
+        ...faqPageEntity(ZAVA_FAQ),
         "@id": `${url}#faq`,
         url,
       },

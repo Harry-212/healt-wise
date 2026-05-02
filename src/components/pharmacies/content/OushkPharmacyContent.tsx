@@ -30,7 +30,7 @@ export default function OushkPharmacyContent() {
         { k: "Published", v: "2026" },
         {
           k: "Provider",
-          v: "Oushk Pharmacy (GPhC 9011598 — verify premises on register)",
+          v: "Oushk Pharmacy (GPhC 9012610 — verify premises on register)",
         },
         {
           k: "Pathway",

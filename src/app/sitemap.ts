@@ -1,20 +1,20 @@
 import fs from "fs";
 import path from "path";
 import type { MetadataRoute } from "next";
-import { getAllPostsMeta, getAllSlugs, totalPages } from "@/lib/blog";
+import {
+  getAllBlogSitemapSlugs,
+  getAllPostsMeta,
+  totalPages,
+} from "@/lib/blog";
 import { POSTS_PER_PAGE } from "@/lib/blog-feed";
 import { COMPARE_SLUGS } from "@/lib/routes/compare-slugs";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
-import { MOUNJARO_UK_COMPARE_PROVIDERS } from "@/lib/data/mounjaro-uk-compare-providers";
-import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-providers";
-import { WEGOVY_UK_COMPARE_PROVIDERS } from "@/lib/data/wegovy-uk-compare-providers";
+import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
   HELPFUL_GUIDES_HUB_PATH,
   helpfulGuidePath,
 } from "@/lib/helpful-guide-slugs";
-import { getAllUkLocationArticleSlugs } from "@/lib/blog";
-
 /** Guide URLs under /helpful-guides/: only folders on disk with a page.tsx file. */
 function helpfulGuideSlugsOnDisk(): string[] {
   const base = path.join(process.cwd(), "src", "app", "helpful-guides");
@@ -24,26 +24,6 @@ function helpfulGuideSlugsOnDisk(): string[] {
     .filter((e) => e.isDirectory())
     .map((e) => e.name)
     .filter((slug) => fs.existsSync(path.join(base, slug, "page.tsx")))
-    .sort();
-}
-
-/**
- * Static blog article routes under /blog/:slug/ (App Router folders with page.tsx).
- * Excludes dynamic `[slug]` (Markdown) and `page` (pagination).
- */
-function blogArticleSlugsOnDisk(): string[] {
-  const base = path.join(process.cwd(), "src", "app", "blog");
-  if (!fs.existsSync(base)) return [];
-  return fs
-    .readdirSync(base, { withFileTypes: true })
-    .filter((e) => e.isDirectory())
-    .map((e) => e.name)
-    .filter(
-      (slug) =>
-        slug !== "[slug]" &&
-        slug !== "page" &&
-        fs.existsSync(path.join(base, slug, "page.tsx")),
-    )
     .sort();
 }
 
@@ -71,6 +51,7 @@ const STATIC_PATHS = [
   "/terms-of-service",
   "/tips",
   "/tools/bmi-calculator",
+  "/tools/mounjaro-click-calculator",
   "/tools/weight-loss-tracker",
   "/wegovy-faq",
   "/wegovy-maintenance-pharmacies",
@@ -119,25 +100,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push(`/compare/${slug}`, 0.8);
   }
 
-  {
-    const ids = new Set<string>();
-    for (const p of WEGOVY_UK_COMPARE_PROVIDERS) ids.add(p.id);
-    for (const p of MOUNJARO_UK_COMPARE_PROVIDERS) ids.add(p.id);
-    for (const p of SAXENDA_UK_COMPARE_PROVIDERS) ids.add(p.id);
-    for (const id of ids) {
-      push(`/pharmacies/${id}`, 0.72);
-    }
+  for (const id of allPharmacySlugs()) {
+    push(`/pharmacies/${id}`, 0.72);
   }
 
-  {
-    const blogSlugs = new Set<string>([
-      ...getAllSlugs(),
-      ...blogArticleSlugsOnDisk(),
-      ...getAllUkLocationArticleSlugs(),
-    ]);
-    for (const slug of blogSlugs) {
-      push(`/blog/${slug}`, 0.65);
-    }
+  for (const slug of getAllBlogSitemapSlugs()) {
+    push(`/blog/${slug}`, 0.65);
   }
 
   const blogCount = getAllPostsMeta().length;

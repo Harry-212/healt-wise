@@ -16,7 +16,7 @@ export const GPHC_NUMBER_BY_PROVIDER_ID: Record<string, string> = {
   click2pharmacy: "9010298",
   tribelle: "9011933",
   "phlo-clinic": "9011116",
-  oushk: "9011598",
+  oushk: "9012610",
   voy: "9012117",
   farmeci: "9012351",
   "cloud-pharmacy": "9012073",

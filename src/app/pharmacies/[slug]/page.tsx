@@ -43,7 +43,23 @@ import OushkPharmacyContent from "@/components/pharmacies/content/OushkPharmacyC
 import PharmacyAdvanceContent from "@/components/pharmacies/content/PharmacyAdvanceContent";
 import Pharmacy2uPharmacyContent from "@/components/pharmacies/content/Pharmacy2uPharmacyContent";
 import PharmicaPharmacyContent from "@/components/pharmacies/content/PharmicaPharmacyContent";
+import PillSortedPharmacyContent from "@/components/pharmacies/content/PillSortedPharmacyContent";
+import PillSpherePharmacyContent from "@/components/pharmacies/content/PillSpherePharmacyContent";
 import Pills2uPharmacyContent from "@/components/pharmacies/content/Pills2uPharmacyContent";
+import QuickmedsPharmacyContent from "@/components/pharmacies/content/QuickmedsPharmacyContent";
+import SecondNaturePharmacyContent from "@/components/pharmacies/content/SecondNaturePharmacyContent";
+import SimpleOnlinePharmacyContent from "@/components/pharmacies/content/SimpleOnlinePharmacyContent";
+import SlimmingDirectPharmacyContent from "@/components/pharmacies/content/SlimmingDirectPharmacyContent";
+import SuperdrugOnlineDoctorContent from "@/components/pharmacies/content/SuperdrugOnlineDoctorContent";
+import SwiftDoctorPharmacyContent from "@/components/pharmacies/content/SwiftDoctorPharmacyContent";
+import TheCarePharmacyContent from "@/components/pharmacies/content/TheCarePharmacyContent";
+import TheFamilyChemistPharmacyContent from "@/components/pharmacies/content/TheFamilyChemistPharmacyContent";
+import TheIndependentPharmacyContent from "@/components/pharmacies/content/TheIndependentPharmacyContent";
+import TribellePharmacyContent from "@/components/pharmacies/content/TribellePharmacyContent";
+import VoyPharmacyContent from "@/components/pharmacies/content/VoyPharmacyContent";
+import WePrescribePharmacyContent from "@/components/pharmacies/content/WePrescribePharmacyContent";
+import WellPharmacyContent from "@/components/pharmacies/content/WellPharmacyContent";
+import ZavaPharmacyContent from "@/components/pharmacies/content/ZavaPharmacyContent";
 import {
   getWegovyCompareProviderById,
   pharmacyProfileHref,
@@ -66,6 +82,7 @@ import {
   SAXENDA_UK_COMPARE_LAST_UPDATED,
   SAXENDA_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/saxenda-uk-compare-providers";
+import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
 import { TrustpilotStarIcon } from "@/components/compare/TrustpilotRatingPresentation";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
@@ -110,35 +127,26 @@ import {
   pharmacy2uPharmacyLandingJsonGraph,
   pharmacyAdvancePharmacyLandingJsonGraph,
   pharmacyProfileJsonGraph,
+  pillSortedPharmacyLandingJsonGraph,
+  pillSpherePharmacyLandingJsonGraph,
   pills2uPharmacyLandingJsonGraph,
+  quickmedsPharmacyLandingJsonGraph,
+  secondNaturePharmacyLandingJsonGraph,
+  simpleOnlinePharmacyLandingJsonGraph,
+  slimmingDirectPharmacyLandingJsonGraph,
+  superdrugOnlineDoctorLandingJsonGraph,
+  swiftDoctorPharmacyLandingJsonGraph,
+  theCarePharmacyLandingJsonGraph,
+  theFamilyChemistPharmacyLandingJsonGraph,
+  theIndependentPharmacyLandingJsonGraph,
+  tribellePharmacyLandingJsonGraph,
+  voyPharmacyLandingJsonGraph,
+  wePrescribePharmacyLandingJsonGraph,
+  wellPharmacyLandingJsonGraph,
+  zavaPharmacyLandingJsonGraph,
 } from "@/lib/seo/pharmacy-landing-json-ld";
 
 type Props = { params: Promise<{ slug: string }> };
-
-/** Slugs with custom landing pages not (yet) in compare tables. */
-const EXTRA_PHARMACY_LANDING_SLUGS: string[] = [
-  "ayp-healthcare",
-  "bolt-pharmacy",
-  "farmeci",
-  "fylde-clinic",
-  "genmeds",
-  "get-weight-loss",
-  "getadrip",
-  "goodbody-clinic",
-  "happy-pharmacy",
-  "hey-slim",
-  "medicspot",
-  "oushk",
-];
-
-function allPharmacySlugs(): string[] {
-  const ids = new Set<string>();
-  for (const p of WEGOVY_UK_COMPARE_PROVIDERS) ids.add(p.id);
-  for (const p of MOUNJARO_UK_COMPARE_PROVIDERS) ids.add(p.id);
-  for (const p of SAXENDA_UK_COMPARE_PROVIDERS) ids.add(p.id);
-  for (const s of EXTRA_PHARMACY_LANDING_SLUGS) ids.add(s);
-  return [...ids];
-}
 
 export function generateStaticParams() {
   return allPharmacySlugs().map((slug) => ({ slug }));
@@ -849,6 +857,294 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  if (slug === "pillsorted") {
+    const title =
+      "PillSorted Weight Loss Review — telehealth, GLP-1, NHS integration (UK)";
+    const description =
+      "PillSorted: personalised consultation, licensed injectable and oral options, Royal Mail delivery, subscription repeats, NHS/private themes and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "pillsphere") {
+    const title =
+      "PillSphere Weight Loss Review — online clinic, prescribing, UK delivery";
+    const description =
+      "PillSphere: consultation pathway, prescriber review, discreet tracked delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "quickmeds") {
+    const title =
+      "Quickmeds Weight Loss Review — GPhC clinic, Mounjaro, Wegovy, fast delivery (UK)";
+    const description =
+      "Quickmeds: online consultation, personalised plans, GLP-1 and oral options, same-day dispatch claims, Royal Mail tracking and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "second-nature") {
+    const title =
+      "Second Nature Weight Loss Review — programme, GLP-1, coaching app (UK)";
+    const description =
+      "Second Nature: assessment, pharmacy partner supply, app coaching, peer support, scheduled kit delivery, bundled pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "care-pharmacy") {
+    const title =
+      "The Care Pharmacy Weight Loss Review — Mounjaro, Wegovy, UK delivery (UK)";
+    const description =
+      "The Care Pharmacy: GPhC-regulated online clinic, injectable and oral options, cold-chain delivery tiers, illustrative pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "simple-online-pharmacy") {
+    const title =
+      "Simple Online Pharmacy Weight Loss Review — clinician-led, UK delivery (UK)";
+    const description =
+      "Simple Online Pharmacy: regulated pathway, online assessment, GLP-1 options where suitable, discreet delivery, pricing themes and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "slimming-direct") {
+    const title =
+      "Slimming Direct Weight Loss Review — GLP-1 programme, UK pharmacy (UK)";
+    const description =
+      "Slimming Direct: clinically supervised plans, Mounjaro and Wegovy context, delivery timelines, costs, Trustpilot themes and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "superdrug-online-doctor") {
+    const title =
+      "Superdrug Online Doctor Weight Loss Review — Wegovy, Mounjaro, collect or deliver (UK)";
+    const description =
+      "Superdrug Online Doctor: doctor-reviewed consultations, home delivery or pharmacy collection, cold-chain injectables, bundled pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "swift-doctor") {
+    const title =
+      "Swift Doctor Weight Loss Review — fast GLP-1 access, tracked delivery (UK)";
+    const description =
+      "Swift Doctor: rapid online assessments, clinician oversight, courier delivery, cold-chain options, pricing themes and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "the-family-chemist") {
+    const title =
+      "The Family Chemist Weight Loss Review — delivery tiers, fridge post, pricing (UK)";
+    const description =
+      "The Family Chemist: regulated online pharmacy narrative, consultation steps, Royal Mail delivery bands, fridge medicines, product price anchors and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "the-independent-pharmacy") {
+    const title =
+      "The Independent Pharmacy Weight Loss Review — GPhC, CQC, tracked post (UK)";
+    const description =
+      "The Independent Pharmacy: regulated assessments, discreet packaging, delivery tiers, free postage threshold and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "tribelle") {
+    const title =
+      "Tribelle Weight Loss Review — Mounjaro, Wegovy, clinician-led (UK)";
+    const description =
+      "Tribelle: GLP-1 injectables, ~24h review claims, tracked discreet delivery, pricing themes, Trustpilot context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "voy") {
+    const title =
+      "Voy Weight Loss Review — digital programme context & UK comparisons";
+    const description =
+      "Voy: how to evaluate regulated digital weight-loss routes, budgeting with Health Wise tables, safety checklist and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "weprescribe") {
+    const title =
+      "WePrescribe Weight Loss Review — pharmacist prescribers, GLP-1 delivery (UK)";
+    const description =
+      "WePrescribe: structured questionnaires, cold-chain injectables, Royal Mail tiers, illustrative Wegovy pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "well-pharmacy") {
+    const title =
+      "Well Pharmacy Weight Loss Review — Mounjaro, Wegovy, pharmacist follow-ups (UK)";
+    const description =
+      "Well Pharmacy: online/in-store consultations, monthly monitoring themes, delivery fees, illustrative pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "zava") {
+    const title =
+      "Zava Weight Loss Review — doctor review, BMI photos, cold delivery (UK)";
+    const description =
+      "Zava (ZavaMed): questionnaire plus photo verification, injectable cold courier lanes, tablet postage, pricing anchors and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   const w = getWegovyCompareProviderById(slug);
   const m = getMounjaroCompareProviderById(slug);
   const s = getSaxendaCompareProviderById(slug);
@@ -1454,6 +1750,230 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <Pills2uPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "pillsorted") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(pillSortedPharmacyLandingJsonGraph()),
+          }}
+        />
+        <PillSortedPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "pillsphere") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(pillSpherePharmacyLandingJsonGraph()),
+          }}
+        />
+        <PillSpherePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "quickmeds") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(quickmedsPharmacyLandingJsonGraph()),
+          }}
+        />
+        <QuickmedsPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "second-nature") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(secondNaturePharmacyLandingJsonGraph()),
+          }}
+        />
+        <SecondNaturePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "care-pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(theCarePharmacyLandingJsonGraph()),
+          }}
+        />
+        <TheCarePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "simple-online-pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(simpleOnlinePharmacyLandingJsonGraph()),
+          }}
+        />
+        <SimpleOnlinePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "slimming-direct") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(slimmingDirectPharmacyLandingJsonGraph()),
+          }}
+        />
+        <SlimmingDirectPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "superdrug-online-doctor") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(superdrugOnlineDoctorLandingJsonGraph()),
+          }}
+        />
+        <SuperdrugOnlineDoctorContent />
+      </>
+    );
+  }
+
+  if (slug === "swift-doctor") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(swiftDoctorPharmacyLandingJsonGraph()),
+          }}
+        />
+        <SwiftDoctorPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "the-family-chemist") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(theFamilyChemistPharmacyLandingJsonGraph()),
+          }}
+        />
+        <TheFamilyChemistPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "the-independent-pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(theIndependentPharmacyLandingJsonGraph()),
+          }}
+        />
+        <TheIndependentPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "tribelle") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(tribellePharmacyLandingJsonGraph()),
+          }}
+        />
+        <TribellePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "voy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(voyPharmacyLandingJsonGraph()),
+          }}
+        />
+        <VoyPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "weprescribe") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(wePrescribePharmacyLandingJsonGraph()),
+          }}
+        />
+        <WePrescribePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "well-pharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(wellPharmacyLandingJsonGraph()),
+          }}
+        />
+        <WellPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "zava") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(zavaPharmacyLandingJsonGraph()),
+          }}
+        />
+        <ZavaPharmacyContent />
       </>
     );
   }
