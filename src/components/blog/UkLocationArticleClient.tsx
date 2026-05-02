@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
@@ -10,6 +11,7 @@ import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import {
   buildLocationFaq,
   nationCareContext,
+  placeSnapshotLeadingSentence,
   UK_LOCATION_SOURCES,
 } from "@/lib/content/uk-location-article-data";
 import {
@@ -30,6 +32,7 @@ type Props = {
 function ukLocationSectionTitles(name: string) {
   return {
     intro: `How weight loss access works when you live in ${name}`,
+    localContext: `${name} in brief: place and public-health backdrop`,
     popularSearches: `What people near ${name} actually type into Google`,
     pathways: `Pathways that tend to show up around ${name}`,
     terminology: `Terms that keep appearing in serious discussions (not ads)`,
@@ -44,13 +47,14 @@ function ukLocationSectionTitles(name: string) {
 
 export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
   const [darkMode, setDarkMode] = useState(false);
-  const { name, nation, longtails, hero } = loc;
+  const { name, nation, longtails, hero, placeSnapshot, healthLandscape } = loc;
   const care = nationCareContext(nation);
   const faqItems = useMemo(() => buildLocationFaq(loc), [loc]);
   const titles = useMemo(() => ukLocationSectionTitles(name), [name]);
   const toc = useMemo(
     () => [
       { id: "intro", label: titles.intro },
+      { id: "local-context", label: titles.localContext },
       { id: "popular-searches", label: titles.popularSearches },
       { id: "pathways", label: titles.pathways },
       { id: "terminology", label: titles.terminology },
@@ -71,6 +75,38 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
   const strong = darkMode ? "text-white" : "text-slate-900";
   const border = darkMode ? "border-slate-700" : "border-slate-200";
   const boxBg = darkMode ? "bg-slate-900/80" : "bg-slate-50/90";
+  const linkCls =
+    "font-medium text-emerald-600 underline-offset-2 hover:underline";
+
+  const faqMarkdownComponents = useMemo(
+    () => ({
+      p: ({ children }: { children?: React.ReactNode }) => (
+        <span className="block">{children}</span>
+      ),
+      a: ({
+        href,
+        children,
+      }: {
+        href?: string;
+        children?: React.ReactNode;
+      }) =>
+        href?.startsWith("/") ? (
+          <Link href={href} className={linkCls}>
+            {children}
+          </Link>
+        ) : (
+          <a
+            href={href}
+            className={linkCls}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {children}
+          </a>
+        ),
+    }),
+    [linkCls],
+  );
 
   return (
     <div
@@ -109,7 +145,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
         <header className="mb-12">
           <p className="mb-2 text-xs font-semibold tracking-wide text-emerald-600">
             {capitalizeHeadingWords("Locations in UK")}
-           For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</Link>.</p>
+          </p>
           <h1
             className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? "text-white" : "text-slate-900"}`}
           >
@@ -148,6 +184,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={titles.intro}>
                 <p className={`text-lg md:text-xl ${p}`}>
+                  {placeSnapshotLeadingSentence(placeSnapshot)}{" "}
                   If you are trying to decide on the{" "}
                   <strong className={strong}>best weight loss treatment in {name}</strong>, you have
                   probably already noticed the same sentence copy pasted across ten tabs. I am not
@@ -158,8 +195,52 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 <p className={p}>Short version: location shapes access more than it rewrites biology.</p>
                 <p className={p}>
                   {care.nhsFrame} People near {name} still search the same handful of
-                  phrases Wegovy, Mounjaro, “online clinic,” sometimes “NHS tier 3” and those searches
-                  can collide with different realities on the ground.
+                  phrases{" "}
+                  <Link href="/what-is-mounjaro" className={linkCls}>
+                    Mounjaro
+                  </Link>
+                  ,{" "}
+                  <Link href="/what-is-wegovy" className={linkCls}>
+                    Wegovy
+                  </Link>
+                  ,{" "}
+                  <Link href="/what-is-saxenda" className={linkCls}>
+                    Saxenda
+                  </Link>
+                  , “online clinic,” sometimes “NHS tier 3” and those searches can collide with
+                  different realities on the ground.
+                </p>
+              </GuideSection>
+
+              <GuideSection darkMode={darkMode} id="local-context" heading={titles.localContext}>
+                <h3
+                  className={`text-base font-semibold tracking-tight ${strong}`}
+                >{`About ${name}`}</h3>
+                <p className={`mt-2 ${p}`}>{placeSnapshot}</p>
+
+                <h3
+                  className={`mt-8 text-base font-semibold tracking-tight ${strong}`}
+                >
+                  {`Weight and health in the wider area (${healthLandscape.widerAreaLabel})`}
+                </h3>
+                <p className={`mt-2 ${p}`}>{healthLandscape.body}</p>
+                <p className={`mt-3 text-sm ${muted}`}>
+                  Source:{" "}
+                  <a
+                    href={healthLandscape.sourceUrl}
+                    className="font-medium text-emerald-600 underline-offset-2 hover:underline"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {healthLandscape.sourceLabel}
+                  </a>
+                  {` — statistical geography is wider than ${name} alone; context as of ${healthLandscape.dataYear}.`}
+                </p>
+                <p className={`mt-3 text-sm ${muted}`}>
+                  Figures for overweight and obesity are usually published at regional or national
+                  level (for example ONS and NHS Digital summaries), not as a single evergreen
+                  percentage for every postcode—local nuance here is context for access and services,
+                  not a substitute for your clinician’s assessment.
                 </p>
               </GuideSection>
 
@@ -192,7 +273,34 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                   caring responsibilities, antidepressant history that a fifteen minute advertorial will
                   miss. The trade off is patience. A referral letter is not a promise of pharmacotherapy;
                   it may only get you into a group that meets fortnightly.
-                 For more context, explore our resources on <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</Link>.</p>
+                </p>
+                <p className={muted}>
+                  Related:{" "}
+                  <Link href="/mounjaro-price-comparison" className={linkCls}>
+                    Mounjaro price comparison
+                  </Link>
+                  ,{" "}
+                  <Link href="/wegovy-price-comparison" className={linkCls}>
+                    Wegovy price comparison
+                  </Link>
+                  ,{" "}
+                  <Link href="/saxenda-price-comparison" className={linkCls}>
+                    Saxenda price comparison
+                  </Link>
+                  . Definitions:{" "}
+                  <Link href="/what-is-mounjaro" className={linkCls}>
+                    what Mounjaro is
+                  </Link>
+                  ,{" "}
+                  <Link href="/what-is-wegovy" className={linkCls}>
+                    what Wegovy is
+                  </Link>
+                  ,{" "}
+                  <Link href="/what-is-saxenda" className={linkCls}>
+                    what Saxenda is
+                  </Link>
+                  .
+                </p>
                 <p className={p}>
                   Private GLP 1 prescribing near {name} can feel more legible: a price, a calendar
                   link, a courier tracking code. That clarity can be genuine. It can also skip the
@@ -221,6 +329,33 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                   <strong className={strong}>Titration</strong> means stepping the dose slowly because
                   side effects are dose dependent for many people, not because the clinic wants to
                   drag out payments though you should still read the invoice.
+                </p>
+                <p className={p}>
+                  Brand guides people compare most often:{" "}
+                  <Link href="/what-is-mounjaro" className={linkCls}>
+                    Mounjaro
+                  </Link>{" "}
+                  (tirzepatide),{" "}
+                  <Link href="/what-is-wegovy" className={linkCls}>
+                    Wegovy
+                  </Link>{" "}
+                  (semaglutide),{" "}
+                  <Link href="/what-is-saxenda" className={linkCls}>
+                    Saxenda
+                  </Link>{" "}
+                  (liraglutide)—then check{" "}
+                  <Link href="/mounjaro-price-comparison" className={linkCls}>
+                    Mounjaro prices
+                  </Link>
+                  ,{" "}
+                  <Link href="/wegovy-price-comparison" className={linkCls}>
+                    Wegovy prices
+                  </Link>
+                  , and{" "}
+                  <Link href="/saxenda-price-comparison" className={linkCls}>
+                    Saxenda prices
+                  </Link>{" "}
+                  if you are budgeting UK-facing totals.
                 </p>
                 <p className={p}>
                   NICE guidance (see sources below) may influence which medicines appear on local
@@ -267,7 +402,17 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                     tests, and we should not guess your eligibility from a paragraph about {name}. That
                     limitation is deliberate: comparison journalism sits next to medicine; it must not
                     pretend to replace it.
-                   For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
+                  </p>
+                  <p className={muted}>
+                    Example location guide:{" "}
+                    <Link
+                      href="/blog/best-weight-loss-treatment-in-manchester"
+                      className="font-medium text-emerald-600 underline-offset-2 hover:underline"
+                    >
+                      Manchester
+                    </Link>
+                    .
+                  </p>
                   <p>
                     If you want the house rules in plain English:{" "}
                     <Link
@@ -298,35 +443,41 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     →{" "}
-                    <Link
-                      href="/compare/best-weight-loss-injections-uk"
-                      className="font-medium text-emerald-600 underline-offset-2 hover:underline"
-                    >
+                    <Link href="/compare/best-weight-loss-injections-uk" className={linkCls}>
                       Best weight loss treatments in the UK
                     </Link>
                   </li>
                   <li>
                     →{" "}
-                    <Link
-                      href="/wegovy-price-comparison"
-                      className="font-medium text-emerald-600 underline-offset-2 hover:underline"
-                    >
-                      Wegovy price comparison
-                    </Link>{" "}
-                    <span className={muted}>or</span>{" "}
-                    <Link
-                      href="/mounjaro-price-comparison"
-                      className="font-medium text-emerald-600 underline-offset-2 hover:underline"
-                    >
+                    <Link href="/mounjaro-price-comparison" className={linkCls}>
                       Mounjaro price comparison
+                    </Link>
+                    <span className={muted}> · </span>
+                    <Link href="/wegovy-price-comparison" className={linkCls}>
+                      Wegovy price comparison
+                    </Link>
+                    <span className={muted}> · </span>
+                    <Link href="/saxenda-price-comparison" className={linkCls}>
+                      Saxenda price comparison
                     </Link>
                   </li>
                   <li>
                     →{" "}
-                    <Link
-                      href="/tools/bmi-calculator"
-                      className="font-medium text-emerald-600 underline-offset-2 hover:underline"
-                    >
+                    <Link href="/what-is-mounjaro" className={linkCls}>
+                      What is Mounjaro?
+                    </Link>
+                    <span className={muted}> · </span>
+                    <Link href="/what-is-wegovy" className={linkCls}>
+                      What is Wegovy?
+                    </Link>
+                    <span className={muted}> · </span>
+                    <Link href="/what-is-saxenda" className={linkCls}>
+                      What is Saxenda?
+                    </Link>
+                  </li>
+                  <li>
+                    →{" "}
+                    <Link href="/tools/bmi-calculator" className={linkCls}>
                       BMI calculator
                     </Link>
                   </li>
@@ -365,7 +516,11 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                       >
                         {capitalizeHeadingWords(item.q)}
                       </h3>
-                      <p className="mt-2 leading-relaxed">{item.a}</p>
+                      <div className={`mt-2 leading-relaxed ${p}`}>
+                        <ReactMarkdown components={faqMarkdownComponents}>
+                          {item.a}
+                        </ReactMarkdown>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -385,7 +540,29 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                     All UK location articles
                   </Link>
                   .
-                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
+                </p>
+                <p className={`mt-2 leading-relaxed ${muted}`}>
+                  Definitions:{" "}
+                  <Link href="/what-is-mounjaro" className={linkCls}>
+                    Mounjaro
+                  </Link>
+                  ,{" "}
+                  <Link href="/what-is-wegovy" className={linkCls}>
+                    Wegovy
+                  </Link>
+                  ,{" "}
+                  <Link href="/what-is-saxenda" className={linkCls}>
+                    Saxenda
+                  </Link>
+                  . Longer read:{" "}
+                  <Link
+                    href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                    className={linkCls}
+                  >
+                    Mounjaro weight loss (UK guide)
+                  </Link>
+                  .
+                </p>
               </div>
             </article>
 

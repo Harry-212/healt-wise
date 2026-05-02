@@ -1,6 +1,30 @@
 import type { UkNation, UkWeightLossLocation } from "@/lib/data/uk-weight-loss-locations";
 
+/** `a` may include markdown links `[label](/path)` for on-page rendering; JSON-LD uses plain text. */
 export type FaqItem = { q: string; a: string };
+
+export function faqAnswerPlain(markdown: string): string {
+  return markdown
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** First sentence of place snapshot — hook for SERP without recycling the shared health paragraph opening. */
+export function placeSnapshotLeadingSentence(snapshot: string): string {
+  const trimmed = snapshot.replace(/\s+/g, " ").trim();
+  const match = trimmed.match(/^.{1,350}?[.!?](?=\s|$)/);
+  if (match) return match[0].trim();
+  return trimmed.length > 120 ? `${trimmed.slice(0, 117)}…` : trimmed;
+}
+
+/** SERP snippet: lead with place-specific hook, then standard disclaimer tail. */
+export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): string {
+  const hook = placeSnapshotLeadingSentence(loc.placeSnapshot);
+  const suffix = ` ${loc.name} (${loc.nation}): NHS, private & online GLP-1 access—not medical advice.`;
+  const out = `${hook}${suffix}`;
+  return out.length > 158 ? `${out.slice(0, 155)}…` : out;
+}
 
 export function nationCareContext(nation: UkNation): {
   nhsFrame: string;
@@ -50,11 +74,11 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
   return [
     {
       q: `What counts as the “best” weight loss treatment if you live in ${name}?`,
-      a: `There isn’t a single winner on a chart. For some people in ${name}, the strongest option will still be an NHS dietitian-led programme with no injection at all. For others—after assessment—GLP-1 medicines such as semaglutide (Wegovy) or tirzepatide (Mounjaro) may become appropriate, but only where monitoring exists. “Best” should probably mean “safest fit for you this year,” not “trendiest molecule.”`,
+      a: `There isn’t a single winner on a chart. For some people in ${name}, the strongest option will still be an NHS dietitian-led programme with no injection at all. For others—after assessment—GLP-1-class medicines may become appropriate: tirzepatide ([Mounjaro](/what-is-mounjaro)), semaglutide ([Wegovy](/what-is-wegovy)), or liraglutide ([Saxenda](/what-is-saxenda)), but only where monitoring exists. Compare indicative monthly totals on our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison). “Best” should probably mean “safest fit for you this year,” not “trendiest molecule.”`,
     },
     {
-      q: `Could I get Wegovy or Mounjaro without going through my GP in ${name}?`,
-      a: `You might, through a private prescriber or a GPhC-registered online clinic, if you meet their clinical criteria. That route can be faster on paper; it can also leave your GP surgery out of the loop unless you explicitly ask for shared care, which many practices will not agree to. On the NHS side, access often stays narrower than social media suggests, and ${icbOrBoard} may apply its own criteria on top of national guidance.`,
+      q: `Could I get Mounjaro, Wegovy, or Saxenda without going through my GP in ${name}?`,
+      a: `You might, through a private prescriber or a GPhC-registered online clinic, if you meet their clinical criteria—that can apply to [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), or [Saxenda](/what-is-saxenda) where appropriate. That route can be faster on paper; it can also leave your GP surgery out of the loop unless you explicitly ask for shared care, which many practices will not agree to. On the NHS side, access often stays narrower than social media suggests, and ${icbOrBoard} may apply its own criteria on top of national guidance. If you are weighing costs, start with our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
     },
     {
       q: `Is NHS weight management in ${nation} actually realistic for ${name} residents?`,
@@ -66,7 +90,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     },
     {
       q: `Why do search results around ${name} mention “cheap” GLP-1s?`,
-      a: `Price is visible; clinical risk is harder to google. A low headline fee might exclude follow-up, or it might bundle blood tests you do not need. We tend to treat “cheap” as a signal to read the small print, not as proof of value. Comparing monthly totals—including repeats and delivery—usually paints a fairer picture for households in ${name}.`,
+      a: `Price is visible; clinical risk is harder to google. A low headline fee might exclude follow-up, or it might bundle blood tests you do not need. We tend to treat “cheap” as a signal to read the small print, not as proof of value. Comparing monthly totals—including repeats and delivery—usually paints a fairer picture for households in ${name}; try our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
     },
     {
       q: `Where should scepticism go—not cynicism, just healthy doubt?`,
@@ -105,7 +129,7 @@ export function locationFaqJsonLd(items: FaqItem[]) {
     mainEntity: items.map(({ q, a }) => ({
       "@type": "Question",
       name: q,
-      acceptedAnswer: { "@type": "Answer", text: a },
+      acceptedAnswer: { "@type": "Answer", text: faqAnswerPlain(a) },
     })),
   };
 }

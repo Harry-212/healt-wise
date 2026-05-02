@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import type { BlogFeedTag } from '@/lib/blog-feed';
 import { blogMetaToFeedArticle, inferMarkdownFeedTags, POSTS_PER_PAGE, type FeedArticle } from '@/lib/blog-feed';
+import { buildUkLocationMetaDescription } from '@/lib/content/uk-location-article-data';
 import { UK_WEIGHT_LOSS_LOCATIONS } from '@/lib/data/uk-weight-loss-locations';
 import { capitalizeHeadingWords } from '@/lib/text/heading-case';
 
@@ -52,7 +53,7 @@ function ukLocationTitle(name: string): string {
 }
 
 function ukLocationDescription(loc: (typeof UK_WEIGHT_LOSS_LOCATIONS)[number]): string {
-  return `${loc.name} (${loc.nation}): NHS, private & online weight loss options, GLP-1 context, GPhC checks—what postcode may change. Not medical advice.`;
+  return buildUkLocationMetaDescription(loc);
 }
 
 function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
@@ -170,10 +171,11 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: 'how-licensed-weight-loss-injections-uk-can-boost-your-journey',
-    title: 'How Licensed Weight Loss Treatments UK Can Boost Your Journey',
+    title: 'How Licensed Weight Loss Injections UK Can Boost Your Journey',
     date: '2026-05-21',
     category: 'Guides',
-    description: 'Learn how licensed weight loss treatments in the UK can support appetite control, clinical oversight, and longer-term progress with regulated treatment pathways.',
+    description:
+      'How licensed MHRA-authorised weight loss injections in the UK can support appetite control, NHS vs private access, and realistic expectations with medical oversight.',
     heroImage: '/blog/How%20Licensed%20Weight%20Loss%20Injections%20UK%20Can%20Boost%20Your%20Journey.webp',
     feedTags: ['mounjaro', 'wegovy', 'guides', 'safety'],
   },
@@ -322,12 +324,16 @@ export function getPostBySlug(slug: string): BlogPost | null {
   const { data, content } = matter(raw);
   const rawCat = String(data.category ?? 'Guides');
   const category = (['Prices', 'Comparisons', 'Guides', 'Safety', 'Locations in UK'] as const).includes(rawCat as BlogCategory) ? (rawCat as BlogCategory) : 'Guides';
+  const heroRaw = data.heroImage ?? data.hero_image;
   return {
     slug,
     title: String(data.title ?? slug),
     date: String(data.date ?? ''),
     category,
     description: String(data.description ?? ''),
+    ...(heroRaw != null && String(heroRaw).trim() !== ''
+      ? { heroImage: String(heroRaw).trim() }
+      : {}),
     content,
   };
 }

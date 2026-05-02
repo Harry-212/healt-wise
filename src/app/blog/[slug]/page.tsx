@@ -13,10 +13,13 @@ import {
 } from "@/lib/blog";
 import {
   buildLocationFaq,
+  buildUkLocationMetaDescription,
   locationFaqJsonLd,
 } from "@/lib/content/uk-location-article-data";
 import { getUkWeightLossLocationBySlug } from "@/lib/data/uk-weight-loss-locations";
+import { markdownBlogPostingJsonLd } from "@/lib/seo/blog-markdown-json-ld";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { SITE_LOGO_SRC } from "@/lib/site-assets";
 import { capitalizeHeadingWords } from "@/lib/text/heading-case";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -57,9 +60,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (post) {
+    const url = `${siteOrigin()}/blog/${slug}`;
+    const ogImages = post.heroImage
+      ? [{ url: post.heroImage, alt: post.title }]
+      : [{ url: SITE_LOGO_SRC, alt: post.title }];
     return {
       title: post.title,
       description: post.description,
+      alternates: { canonical: url },
+      openGraph: {
+        title: post.title,
+        description: post.description,
+        url,
+        type: "article",
+        locale: "en_GB",
+        images: ogImages,
+      },
+      twitter: {
+        card: post.heroImage ? "summary_large_image" : "summary",
+        title: post.title,
+        description: post.description,
+        images: post.heroImage ? [post.heroImage] : [SITE_LOGO_SRC],
+      },
     };
   }
   const citySlug = parseCitySlugFromUkArticleSlug(slug);
@@ -67,7 +89,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const loc = getUkWeightLossLocationBySlug(citySlug);
   if (!loc) return {};
   const title = capitalizeHeadingWords(`Best weight loss treatment in ${loc.name}`);
-  const description = `Weight loss treatment in ${loc.name}, ${loc.nation}: NHS vs private vs online GLP-1 access, GPhC checks, FAQs—not medical advice.`;
+  const description = buildUkLocationMetaDescription(loc);
   const url = `${siteOrigin()}/blog/${slug}`;
   return {
     title,
@@ -95,8 +117,20 @@ export default async function BlogPostPage({ params }: Props) {
 
   const mdPost = getPostBySlug(slug);
   if (mdPost) {
+    const jsonLd = markdownBlogPostingJsonLd({
+      slug,
+      title: mdPost.title,
+      description: mdPost.description,
+      datePublishedRaw: mdPost.date,
+      heroImage: mdPost.heroImage,
+    });
     return (
-      <article className="mx-auto min-w-0 max-w-3xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <article className="mx-auto min-w-0 max-w-3xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
         <Link
           href="/blog"
           className="text-sm font-medium text-brand-primary hover:underline"
@@ -119,6 +153,7 @@ export default async function BlogPostPage({ params }: Props) {
           </ReactMarkdown>
         </div>
       </article>
+      </>
     );
   }
 

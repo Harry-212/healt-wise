@@ -1,0 +1,28 @@
+# Healthwise360
+
+> Independent UK comparison site for weight loss treatment prices, pharmacy safety context, and editorial guides. Not medical advice — always consult a registered clinician.
+
+## Entry points
+
+- https://www.healthwise360.co.uk/
+- https://www.healthwise360.co.uk/blog
+- https://www.healthwise360.co.uk/compare
+- https://www.healthwise360.co.uk/prices
+- https://www.healthwise360.co.uk/helpful-guides
+- https://www.healthwise360.co.uk/editorial-policy
+- https://www.healthwise360.co.uk/methodology
+
+## Compare hubs
+
+- https://www.healthwise360.co.uk/wegovy-price-comparison
+- https://www.healthwise360.co.uk/mounjaro-price-comparison
+- https://www.healthwise360.co.uk/saxenda-price-comparison
+
+## Policies
+
+- https://www.healthwise360.co.uk/privacy-policy
+- https://www.healthwise360.co.uk/terms-of-service
+
+## Optional
+
+- Sitemap: https://www.healthwise360.co.uk/sitemap.xml

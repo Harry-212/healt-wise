@@ -2,8 +2,13 @@ import {
   getUkLocationCityImageUrl,
   getUkLocationHeroAlt,
 } from "@/lib/data/uk-location-city-image";
+import type {
+  UkLocationHealthLandscape,
+  UkNation,
+} from "@/lib/data/uk-location-health-landscape";
+import { buildUkLocationInsights } from "@/lib/data/uk-location-local-insights";
 
-export type UkNation = "England" | "Scotland" | "Wales" | "Northern Ireland";
+export type { UkNation };
 
 export type UkLocationHero = {
   url: string;
@@ -14,6 +19,12 @@ export type UkWeightLossLocation = {
   slug: string;
   name: string;
   nation: UkNation;
+  /** Neutral place history / geography (unique per slug). */
+  placeSnapshot: string;
+  /** Regional health statistics framing with official source link metadata. */
+  healthLandscape: UkLocationHealthLandscape;
+  /** Place snapshot + health body — retained for combined text consumers. */
+  localInsight: string;
   /** Synthetic long-tail phrases woven into copy (unique per row). */
   longtails: string[];
   hero: UkLocationHero;
@@ -139,8 +150,9 @@ function buildLongtails(
   const variants = [
     `best weight loss treatment ${name}`,
     `GLP-1 injections ${name} UK`,
-    `Wegovy ${name} private prescription`,
     `Mounjaro ${name} weight loss`,
+    `Wegovy ${name} private prescription`,
+    `Saxenda ${name} UK`,
     `online weight loss clinic ${name}`,
     `${nhs} weight management programme ${name}`,
     `obesity specialist ${name} UK`,
@@ -157,10 +169,18 @@ function rowToLocation([slug, name, nation]: readonly [
   string,
   UkNation,
 ]): UkWeightLossLocation {
+  const { placeSnapshot, healthLandscape, localInsight } = buildUkLocationInsights(
+    slug,
+    name,
+    nation,
+  );
   return {
     slug,
     name,
     nation,
+    placeSnapshot,
+    healthLandscape,
+    localInsight,
     longtails: buildLongtails(name, nation, slug),
     hero: {
       url: getUkLocationCityImageUrl(slug),
