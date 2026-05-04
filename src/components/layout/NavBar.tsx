@@ -105,7 +105,11 @@ export default function NavBar() {
 
   return (
     <>
-      <header className="sticky top-0 z-[90] w-full max-w-full overflow-x-clip overflow-y-visible border-b border-brand-border bg-brand-card/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-brand-card/90">
+      {/*
+        Fixed (not sticky): `overflow-x: hidden` on html/body breaks sticky positioning
+        in common browsers. Spacer below matches bar height + safe-area for notched devices.
+      */}
+      <header className="fixed inset-x-0 top-0 z-[90] w-full max-w-full overflow-x-clip overflow-y-visible border-b border-brand-border bg-brand-card/95 pt-[env(safe-area-inset-top,0px)] shadow-sm backdrop-blur supports-[backdrop-filter]:bg-brand-card/90">
         <div className="relative mx-auto flex h-16 max-w-[1400px] min-h-0 min-w-0 items-center gap-2 px-3 sm:h-24 md:h-28 sm:gap-3 sm:px-4 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-4 lg:px-6 xl:gap-6">
           <div className="flex min-w-0 shrink-0 justify-start lg:justify-self-start">
             <Link
@@ -153,6 +157,10 @@ export default function NavBar() {
           </div>
         </div>
       </header>
+      <div
+        aria-hidden
+        className="shrink-0 w-full [height:calc(4rem+env(safe-area-inset-top,0px))] sm:[height:calc(6rem+env(safe-area-inset-top,0px))] md:[height:calc(7rem+env(safe-area-inset-top,0px))]"
+      />
       {searchOpen ? (
         <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
       ) : null}

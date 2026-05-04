@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { ArrowUp, ChevronRight, ShieldCheck, Mail } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
@@ -61,38 +60,6 @@ const itemVariants = {
   },
 };
 
-/**
- * Render the email field only after mount so password-manager / form-filler
- * browser extensions cannot mutate SSR HTML before hydration (which causes
- * React “Hydration failed” when they inject data-* attrs and sibling nodes).
- */
-function FooterNewsletterEmailInput() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <div
-        className="min-h-[48px] w-full bg-transparent px-5 py-3 text-base"
-        aria-hidden
-      />
-    );
-  }
-
-  return (
-    <input
-      type="email"
-      name="footer-email"
-      autoComplete="email"
-      placeholder="Enter your email address"
-      className="w-full bg-transparent px-5 py-3 text-base outline-none text-slate-200 placeholder:text-slate-500"
-    />
-  );
-}
-
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -126,7 +93,7 @@ export default function Footer() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {/* Top Section: Email Subscribe & Socials */}
+          {/* Top Section: Contact CTA & Socials */}
           <motion.div variants={itemVariants} className="flex flex-col lg:flex-row justify-between mb-20 gap-12 lg:gap-0 border-b border-slate-800/80 pb-16">
             <div className="flex flex-col gap-4 max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-semibold w-fit mb-2">
@@ -140,11 +107,13 @@ export default function Footer() {
                 Discover the latest updates, expert guides, and essential articles on weight loss treatments across the UK, delivered straight to your inbox.
               </p>
               
-              <div className="mt-6 flex flex-col sm:flex-row w-full max-w-lg items-center rounded-full bg-slate-900/80 border border-slate-700/80 p-1.5 shadow-inner backdrop-blur-md focus-within:border-emerald-500/60 focus-within:ring-1 focus-within:ring-emerald-500/60 transition-all duration-300">
-                <FooterNewsletterEmailInput />
-                <button type="button" className="w-full sm:w-auto mt-2 sm:mt-0 h-12 shrink-0 rounded-full bg-emerald-600 px-8 text-base font-bold text-white shadow-[0_0_15px_rgba(5,150,105,0.2)] hover:bg-emerald-500 hover:shadow-[0_0_25px_rgba(5,150,105,0.4)] transition-all duration-300">
-                  Subscribe
-                </button>
+              <div className="mt-6 w-full max-w-lg">
+                <Link
+                  href="/contact"
+                  className="inline-flex h-12 w-full sm:w-auto min-w-[200px] touch-manipulation items-center justify-center rounded-full bg-emerald-600 px-10 text-base font-bold text-white shadow-[0_0_15px_rgba(5,150,105,0.2)] transition-all duration-300 hover:bg-emerald-500 hover:shadow-[0_0_25px_rgba(5,150,105,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                >
+                  Contact Us
+                </Link>
               </div>
             </div>
             
