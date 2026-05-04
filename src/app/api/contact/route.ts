@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { SITE_BRAND_NAME } from "@/lib/site-brand";
 
 const DEFAULT_CONTACT_INBOX = "contact@healthwise360.co.uk";
 
@@ -27,16 +26,6 @@ function trimStr(v: unknown, max: number): string | null {
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-/** Resend only allows Gmail as `from` via SMTP, not the Resend API — use env or onboarding sender. */
-function resendFromAddress(): string {
-  return process.env.RESEND_FROM_EMAIL?.trim() || "onboarding@resend.dev";
-}
-
-function contactEmailSubject(firstName: string, lastName: string): string {
-  const tag = process.env.CONTACT_MAIL_SUBJECT_TAG?.trim() || "Website contact";
-  return `[${tag}] ${firstName} ${lastName}`;
 }
 
 function escapeHtml(s: string): string {
@@ -106,11 +95,14 @@ export async function POST(request: Request) {
     );
   }
 
-  const from = resendFromAddress();
+  // Resend: use a verified domain address in production (RESEND_FROM_EMAIL).
+  // onboarding@resend.dev matches Resend’s quickstart for testing only.
+  const from =
+    process.env.RESEND_FROM_EMAIL?.trim() || "arya.wirya12@gmail.com";
 
   const resend = new Resend(apiKey);
   const text = [
-    `${SITE_BRAND_NAME} — website contact form`,
+    `Website contact form`,
     ``,
     `Name: ${firstName} ${lastName}`,
     `Email: ${email}`,
@@ -122,7 +114,7 @@ export async function POST(request: Request) {
 
   const safeName = `${escapeHtml(firstName)} ${escapeHtml(lastName)}`;
   const html = `
-    <p><strong>${escapeHtml(SITE_BRAND_NAME)} — website contact form</strong></p>
+    <p><strong>Website contact form</strong></p>
     <p><strong>Name:</strong> ${safeName}<br/>
     <strong>Email:</strong> ${escapeHtml(email)}<br/>
     <strong>Profile:</strong> ${escapeHtml(profile)}</p>
@@ -136,7 +128,7 @@ export async function POST(request: Request) {
     from,
     to: [to],
     replyTo: email,
-    subject: contactEmailSubject(firstName, lastName),
+    subject: `[Website contact] ${firstName} ${lastName}`,
     text,
     html,
   });
