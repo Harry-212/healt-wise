@@ -1,7 +1,14 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const CONTACT_INBOX = "contact@healthwise360.co.uk";
+const DEFAULT_CONTACT_INBOX = "contact@healthwise360.co.uk";
+
+/** `to` address for contact submissions. Override with CONTACT_INBOX when using Resend’s onboarding sender (sandbox only sends to your account email). */
+function contactRecipientEmail(): string {
+  const override = process.env.CONTACT_INBOX?.trim();
+  if (override && isValidEmail(override)) return override;
+  return DEFAULT_CONTACT_INBOX;
+}
 
 const MAX_LEN = {
   name: 120,
@@ -19,6 +26,14 @@ function trimStr(v: unknown, max: number): string | null {
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
 export async function POST(request: Request) {
@@ -77,9 +92,10 @@ export async function POST(request: Request) {
     );
   }
 
+  // Resend: use a verified domain address in production (RESEND_FROM_EMAIL).
+  // onboarding@resend.dev matches Resend’s quickstart for testing only.
   const from =
-    process.env.RESEND_FROM_EMAIL?.trim() ||
-    "Healthwise360 <onboarding@resend.dev>";
+    process.env.RESEND_FROM_EMAIL?.trim() || "onboarding@resend.dev";
 
   const resend = new Resend(apiKey);
   const text = [
@@ -93,12 +109,25 @@ export async function POST(request: Request) {
     message,
   ].join("\n");
 
+  const safeName = `${escapeHtml(firstName)} ${escapeHtml(lastName)}`;
+  const html = `
+    <p><strong>Website contact form</strong></p>
+    <p><strong>Name:</strong> ${safeName}<br/>
+    <strong>Email:</strong> ${escapeHtml(email)}<br/>
+    <strong>Profile:</strong> ${escapeHtml(profile)}</p>
+    <p><strong>Message</strong></p>
+    <p style="white-space:pre-wrap">${escapeHtml(message)}</p>
+  `.trim();
+
+  const to = contactRecipientEmail();
+
   const { error } = await resend.emails.send({
     from,
-    to: [CONTACT_INBOX],
+    to: [to],
     replyTo: email,
     subject: `[Website contact] ${firstName} ${lastName}`,
     text,
+    html,
   });
 
   if (error) {
