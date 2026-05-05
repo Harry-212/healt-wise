@@ -182,8 +182,8 @@ export default function WhyChooseHealthWise() {
             <div className="relative w-full overflow-hidden lg:rounded-tr-2xl">
               <div className="relative aspect-3/4 w-full">
                 <Image
-                  src="/uk-weight-loss-medical-expert-health-wise.jpg.webp"
-                  alt="Professional context for regulated weight loss treatment information in the UK."
+                  src="/why%20choose%20healthwise360.webp"
+                  alt="Why choose Healthwise360 — comparison and treatment information context."
                   fill
                   sizes="(max-width: 1024px) 100vw, 44vw"
                   className="object-cover object-[center_25%]"
