@@ -120,7 +120,7 @@ const SCHEMA = {
   author: { "@type": "Organization", name: "Health Wise" },
   publisher: { "@type": "Organization", name: "Health Wise" },
   dateModified: "2026-04-09",
-  about: [{ "@type": "Drug", name: "Mounjaro" }],
+  about: [{ "@type": "Thing", name: "Mounjaro (tirzepatide)" }],
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-delivery-storage-uk")}`,

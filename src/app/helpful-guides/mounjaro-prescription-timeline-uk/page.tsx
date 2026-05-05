@@ -114,31 +114,38 @@ const RELATED_GUIDES = [
   },
 ];
 
-const SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline:
-    "How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline",
-  description:
-    "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process and how to avoid common delays.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
-  dateModified: "2026-04-09",
-  about: [{ "@type": "Drug", name: "Mounjaro" }],
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-prescription-timeline-uk")}`,
-  },
-};
+const GUIDE_URL = `${siteOrigin()}${helpfulGuidePath("mounjaro-prescription-timeline-uk")}`;
 
-const FAQ_SCHEMA = {
+const SCHEMA_JSON = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQ_ITEMS.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: { "@type": "Answer", text: item.a },
-  })),
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": `${GUIDE_URL}#blogPosting`,
+      headline:
+        "How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline",
+      description:
+        "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process and how to avoid common delays.",
+      author: { "@type": "Organization", name: "Health Wise" },
+      publisher: { "@type": "Organization", name: "Health Wise" },
+      dateModified: "2026-04-09",
+      keywords:
+        "Mounjaro, tirzepatide, UK prescription, online pharmacy, cold chain delivery, GLP-1",
+      mainEntityOfPage: { "@type": "WebPage", "@id": GUIDE_URL },
+      url: GUIDE_URL,
+      isAccessibleForFree: true,
+      inLanguage: "en-GB",
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${GUIDE_URL}#faq`,
+      mainEntity: FAQ_ITEMS.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    },
+  ],
 };
 
 export default function GuideMounjaroTimeline() {
@@ -152,7 +159,7 @@ export default function GuideMounjaroTimeline() {
       readTime="3 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={SCHEMA_JSON}
     >
       {/* ── Section 1 ── */}
       <GuideSection id="timeline" heading="Typical Timeline">

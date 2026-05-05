@@ -145,7 +145,10 @@ const SCHEMA = {
   author: { "@type": "Organization", name: "Health Wise" },
   publisher: { "@type": "Organization", name: "Health Wise" },
   dateModified: "2026-04-09",
-  about: [{ "@type": "Drug", name: "Mounjaro" }, { "@type": "Drug", name: "tirzepatide" }],
+  about: [
+    { "@type": "Thing", name: "Mounjaro" },
+    { "@type": "Thing", name: "tirzepatide" },
+  ],
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-weight-loss-treatment-uk")}`,
