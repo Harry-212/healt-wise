@@ -47,6 +47,7 @@ export default function NulifePharmacyContent() {
       heroProviderLogoAlt="NuLife Pharmacy"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> NuLife Pharmacy is presented as a UK online pathway for prescription-supported weight management. Rather than judging a provider by brand alone, it helps to understand the full process — consultation and eligibility checks, clinical decision-making, follow-up support, and how medication is packaged and delivered. This dossier offers independent context about NuLife Pharmacy to help you make a better-informed comparison.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Choosing a safe, medically supported weight loss route matters when unregulated products and
           quick fix marketing flood search results.{" "}

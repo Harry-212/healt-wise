@@ -40,6 +40,10 @@ export async function generateMetadata({
       "Stay informed with the latest news, views, product releases, prices, comparisons, guides, safety articles, and UK city weight loss guides.",
     alternates: { canonical },
     openGraph: { url: canonical },
+    robots: {
+      index: false,
+      follow: true,
+    },
   };
 }
 

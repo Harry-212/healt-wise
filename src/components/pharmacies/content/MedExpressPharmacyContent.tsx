@@ -47,6 +47,7 @@ export default function MedExpressPharmacyContent() {
       heroProviderLogoAlt="MedExpress"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> MedExpress operates within the UK’s regulated online pharmacy sector, providing access to clinically approved weight loss medications. Because no two weight loss journeys are exactly alike, understanding the specific clinical protocols, shipping methods, and pricing tiers of MedExpress is a crucial step in finding the right healthcare partner.</p></div>
         <p className="text-slate-800 leading-relaxed">
           MedExpress positions its weight loss clinic inside a fully regulated UK online pharmacy:
           prescription medicines are UK licensed and prescribing sits with qualified clinicians, so

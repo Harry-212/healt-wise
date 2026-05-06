@@ -36,6 +36,7 @@ export default function CuvaHealthContent() {
       heroProviderLogoAlt="Cuva Health"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Cuva Health is described as a UK digital pathway into prescription-supported weight management. To compare services properly, it’s worth understanding the end-to-end experience — how the consultation is gathered, how clinicians review eligibility, what ongoing support looks like, and how delivery is handled. This dossier summarises publicly available context about Cuva Health so you can make a clearer, more informed choice.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Losing weight is often framed as a discipline problem. Eat less. Move more. Try harder.
           That explanation can feel too simplistic.

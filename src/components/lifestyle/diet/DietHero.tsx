@@ -25,7 +25,7 @@ export function DietHero() {
               Start your plan
             </Link>
             <Link
-              href="/compare/best-weight-loss-injections-uk"
+              href="/compare/best-weight-loss-treatments-uk"
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-200 bg-white px-8 text-sm font-medium text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
             >
               Explore treatments

@@ -44,6 +44,7 @@ export default function LotusWeightLossPharmacyContent() {
       heroProviderLogoAlt="Lotus Weight Loss"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Lotus Weight Loss is positioned as a UK clinic-style pathway for medically supervised weight management. A useful comparison looks at how the service operates day to day: the consultation and eligibility checks, clinician oversight, what support is included, and how delivery is managed for prescription treatments. This dossier provides independent context about Lotus Weight Loss so you can evaluate the provider more clearly.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Lotus Weight Loss describes itself as a UK specialist clinic rather than a quick fix diet
           brand. The model pairs medically prescribed weight loss medicines with structured

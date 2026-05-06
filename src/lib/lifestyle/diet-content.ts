@@ -130,7 +130,7 @@ export const DIET_INTERNAL_LINKS = [
   { href: "/what-is-wegovy", label: "What is Wegovy?" },
   { href: "/what-is-saxenda", label: "What is Saxenda?" },
   { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
-  { href: "/compare/best-weight-loss-injections-uk", label: "Best weight loss injections UK" },
+  { href: "/compare/best-weight-loss-treatments-uk", label: "Best weight loss treatments UK" },
   { href: "/helpful-guides/mounjaro-nutrition-guide-uk", label: "Mounjaro nutrition guide UK" },
   { href: "/helpful-guides/mounjaro-side-effects-uk", label: "Mounjaro side effects UK" },
   { href: "/helpful-guides/mounjaro-calorie-cycling-weight-loss", label: "Calorie cycling & Mounjaro" },

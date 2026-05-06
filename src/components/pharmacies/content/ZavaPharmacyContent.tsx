@@ -47,6 +47,7 @@ export default function ZavaPharmacyContent() {
       heroProviderLogoAlt="Zava"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-amber-100 bg-amber-50/30 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-amber-900">Independent Context:</strong> As part of your research into medically supported weight management, evaluating providers like Zava is highly recommended. This page is designed to give you a transparent overview of Zava's service model, from their online doctor assessments to how they securely dispatch temperature-sensitive treatments directly to your home.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Demand for GLP‑1 weight therapies strains GP capacity, pushing patients toward audited digital clinics.{" "}
           <a

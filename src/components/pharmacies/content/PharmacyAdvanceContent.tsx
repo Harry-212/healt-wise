@@ -47,6 +47,7 @@ export default function PharmacyAdvanceContent() {
       heroProviderLogoAlt="Pharmacy Advance"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Pharmacy Advance:</strong> Navigating online weight loss treatments can be complex. Pharmacy Advance is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Pharmacy Advance provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Marketing summaries for Pharmacy Advance typically position the brand as a{" "}
           <strong>regulated UK online pharmacy</strong> for prescription weight-loss treatment,

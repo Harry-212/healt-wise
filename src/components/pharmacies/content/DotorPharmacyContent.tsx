@@ -35,6 +35,7 @@ export default function DotorPharmacyContent() {
       heroProviderLogoAlt="Dotor"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Dotor operates within the UK’s regulated online pharmacy sector, providing access to clinically approved weight loss medications. Because no two weight loss journeys are exactly alike, understanding the specific clinical protocols, shipping methods, and pricing tiers of Dotor is a crucial step in finding the right healthcare partner.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Weight loss can look straightforward on paper. Eat less. Move more. Stay consistent.
         </p>

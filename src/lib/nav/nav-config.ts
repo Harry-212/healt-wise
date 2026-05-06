@@ -53,8 +53,8 @@ export const NAV_PANELS: NavPanel[] = [
             icon: "compare",
           },
           {
-            label: "Best Weight Loss Injections UK",
-            href: "/compare/best-weight-loss-injections-uk",
+            label: "Best Weight Loss Treatments UK",
+            href: "/compare/best-weight-loss-treatments-uk",
             icon: "sparkles",
           },
         ],

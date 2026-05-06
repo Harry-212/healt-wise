@@ -47,6 +47,7 @@ export default function OnlinemedsPharmacyContent() {
       heroProviderLogoAlt="OnlineMeds"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-amber-100 bg-amber-50/30 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-amber-900">Independent Context:</strong> As part of your research into medically supported weight management, evaluating providers like OnlineMeds is highly recommended. This page is designed to give you a transparent overview of OnlineMeds's service model, from their online doctor assessments to how they securely dispatch temperature-sensitive treatments directly to your home.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Weight loss decisions online are noisy: conflicting advice, NHS capacity limits, and
           sellers with uneven safety standards.{" "}

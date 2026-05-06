@@ -36,6 +36,7 @@ export default function Click2PharmacyMounjaroContent() {
       heroProviderLogoAlt="Click2Pharmacy"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-slate-900">Why research Click2Pharmacy?</strong> Every online pharmacy has a distinct approach to patient care, pricing, and medication delivery. This independent dossier breaks down how Click2Pharmacy handles weight management consultations, offering you a clear look at their service structure so you can compare it against your personal health needs and preferences.</p></div>
         <p className="text-slate-800 leading-relaxed">
           For some people, losing weight is not really about knowing what to do. They already know.
           Eat less. Move more. Avoid snacking late. Stay consistent.

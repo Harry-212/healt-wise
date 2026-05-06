@@ -47,6 +47,7 @@ export default function Pills2uPharmacyContent() {
       heroProviderLogoAlt="Pills2U"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Pills2U is presented as a UK online pathway for eligible patients seeking prescription weight management. Comparing services is easier when you understand the full workflow — consultation questions, prescriber review, ongoing suitability checks, and how dispensing and delivery are handled. This guide provides independent context about Pills2U to help you make a more informed choice.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Pills2U operates as a <strong>UK-based online pharmacy</strong> where people
           searching for weight-loss medication can access clinically approved treatments with
@@ -100,8 +101,9 @@ export default function Pills2uPharmacyContent() {
           />
         </HazardBox>
         <p className="mt-3 text-slate-800 leading-relaxed">
-          The pathway is described as often completable in minutes versus traditional healthcare
-          friction — real timelines still depend on clinician queues and cut-off times.
+          Their process is marketed as something you can complete in minutes compared with many
+          traditional routes — but real-world turnaround still depends on clinician capacity, review
+          queues, and daily cut-off times.
         </p>
       </section>
 

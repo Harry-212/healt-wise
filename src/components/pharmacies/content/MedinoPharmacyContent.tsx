@@ -48,6 +48,7 @@ export default function MedinoPharmacyContent() {
       heroProviderLogoAlt="Medino"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-slate-900">Why research Medino?</strong> Every online pharmacy has a distinct approach to patient care, pricing, and medication delivery. This independent dossier breaks down how Medino handles weight management consultations, offering you a clear look at their service structure so you can compare it against your personal health needs and preferences.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Accessing evidence based weight treatments through traditional routes can mean long waits,
           repeated appointments, and diary friction.{" "}

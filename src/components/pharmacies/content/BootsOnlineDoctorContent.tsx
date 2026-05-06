@@ -32,6 +32,7 @@ export default function BootsOnlineDoctorContent() {
       heroProviderLogoAlt="Boots Online Doctor"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Boots Online Doctor is presented as a UK digital route into prescription-led weight management for eligible adults. A sensible comparison is less about marketing claims and more about operational detail: how consultations are collected, how clinicians review suitability, what ongoing support exists, and how medicines are dispensed or delivered. This page provides independent context on Boots Online Doctor so you can evaluate the pathway more clearly.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Losing weight can sound straightforward until you actually try doing it for months.
           Calories, cravings, work stress, emotional eating, plateaus — real life tends to

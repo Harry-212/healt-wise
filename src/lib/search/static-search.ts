@@ -52,8 +52,8 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
   },
   {
     type: "Compare",
-    title: "Best weight loss injections UK",
-    href: "/compare/best-weight-loss-injections-uk",
+    title: "Best weight loss treatments UK",
+    href: "/compare/best-weight-loss-treatments-uk",
   },
   {
     type: "Price",

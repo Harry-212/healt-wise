@@ -47,6 +47,7 @@ export default function MshWeightLossPharmacyContent() {
       heroProviderLogoAlt="MSH Weight Loss"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> MSH Weight Loss is positioned as a UK digital clinic-style pathway for prescription weight management. A good comparison looks at how the provider operates in detail: the assessment flow, clinician eligibility checks, ongoing monitoring, and how delivery is managed for temperature-sensitive medicines. This dossier summarises publicly available context about MSH Weight Loss so you can judge the pathway more clearly.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Choosing a UK online weight loss clinic means weighing trust, clinical depth, and whether
           logistics match injectable cold chain rules.{" "}

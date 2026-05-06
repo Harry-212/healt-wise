@@ -632,7 +632,7 @@ export default function WhatIsWegovyPage() {
               <div className="flex flex-wrap gap-3">
                 <CompareHereLink href="/wegovy-price-comparison" />
                 <Link
-                  href="/compare/best-weight-loss-injections-uk"
+                  href="/compare/best-weight-loss-treatments-uk"
                   className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:border-emerald-300"
                 >
                   Best injections overview

@@ -443,7 +443,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     →{" "}
-                    <Link href="/compare/best-weight-loss-injections-uk" className={linkCls}>
+                    <Link href="/compare/best-weight-loss-treatments-uk" className={linkCls}>
                       Best weight loss treatments in the UK
                     </Link>
                   </li>

@@ -160,6 +160,6 @@ export const SLEEP_INTERNAL_LINKS = [
   { href: "/tools/bmi-calculator", label: "BMI & calorie calculator" },
   { href: "/tools/weight-loss-tracker", label: "Weight loss tracker" },
   { href: "/blog", label: "Blog" },
-  { href: "/compare/best-weight-loss-injections-uk", label: "Best weight loss injections UK" },
+  { href: "/compare/best-weight-loss-treatments-uk", label: "Best weight loss treatments UK" },
   { href: "/helpful-guides/mounjaro-menopause-weight-loss-uk", label: "Menopause & weight (UK guide)" },
 ] as const;

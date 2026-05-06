@@ -34,6 +34,7 @@ export default function FarmeciPharmacyContent() {
       heroProviderLogoAlt="Farmeci"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Farmeci is positioned as a UK online route for eligible patients seeking clinician-reviewed weight loss treatment. The most useful way to compare providers is to understand the practical pathway: how the consultation works, how suitability is reviewed, what support is offered over time, and how dispensing and delivery are managed. This page provides independent context about Farmeci to help you assess the service more objectively.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Weight loss can be framed as a matter of discipline, but real life tends to be less tidy
           than that. Appetite signals, long workdays, stress eating, hormones, medication side effects

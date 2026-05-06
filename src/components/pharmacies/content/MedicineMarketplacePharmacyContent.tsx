@@ -47,6 +47,7 @@ export default function MedicineMarketplacePharmacyContent() {
       heroProviderLogoAlt="Medicine Market Place"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Medicine Market Place:</strong> Navigating online weight loss treatments can be complex. Medicine Market Place is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Medicine Market Place provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Medicine Market Place describes itself as an online pharmacy and medication marketplace
           based in <strong>Preston, United Kingdom</strong>, operating as a digital pharmacy and drug

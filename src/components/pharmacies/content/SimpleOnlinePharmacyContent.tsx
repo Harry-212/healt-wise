@@ -47,6 +47,7 @@ export default function SimpleOnlinePharmacyContent() {
       heroProviderLogoAlt="Simple Online Pharmacy"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-slate-900">Why research Simple Online Pharmacy?</strong> Every online pharmacy has a distinct approach to patient care, pricing, and medication delivery. This independent dossier breaks down how Simple Online Pharmacy handles weight management consultations, offering you a clear look at their service structure so you can compare it against your personal health needs and preferences.</p></div>
         <p className="text-slate-800 leading-relaxed">
           When people search for safe, convenient weight loss support online they meet many sellers of
           medicines, injections and programmes. Not every route meets the same standards.{" "}

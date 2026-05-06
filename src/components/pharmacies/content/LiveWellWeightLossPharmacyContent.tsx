@@ -44,6 +44,7 @@ export default function LiveWellWeightLossPharmacyContent() {
       heroProviderLogoAlt="Live Well Weight Loss"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Live Well Weight Loss is presented as a UK digital pathway for medically supervised weight management, with consultation, clinical review, dispensing, and delivery described as one joined-up process. Comparing providers is easier when you look at how each step is handled — assessment, eligibility decisions, follow-up support, and logistics. This dossier provides independent context about Live Well Weight Loss to help you make a more informed choice.</p></div>
         <p className="text-slate-800 leading-relaxed">
           When you buy weight loss injections online in the UK, the provider matters as much as the
           price. Live Well Weight Loss presents itself as a licensed, GPhC registered pharmacy

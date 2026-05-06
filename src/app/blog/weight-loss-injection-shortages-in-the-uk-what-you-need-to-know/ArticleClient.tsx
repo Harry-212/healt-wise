@@ -164,7 +164,7 @@ export default function ArticleClient() {
                   It is no wonder then that the demand has soared. If you are curious about how weight loss treatments rose
                   to prominence, you might enjoy our{" "}
                   <Link
-                    href="/compare/best-weight-loss-injections-uk"
+                    href="/compare/best-weight-loss-treatments-uk"
                     className="font-medium text-brand-primary underline"
                   >
                     UK weight loss treatments comparison hub

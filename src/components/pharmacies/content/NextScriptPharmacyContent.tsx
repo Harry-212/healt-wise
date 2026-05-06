@@ -47,6 +47,7 @@ export default function NextScriptPharmacyContent() {
       heroProviderLogoAlt="Next Script"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Next Script:</strong> Navigating online weight loss treatments can be complex. Next Script is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Next Script provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           More UK patients now look for regulated online clinics instead of only NHS GP routes for
           obesity pharmacotherapy.{" "}

@@ -37,6 +37,7 @@ export default function CloudPharmacyContent() {
       heroProviderLogoAlt="Cloud Pharmacy"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Cloud Pharmacy:</strong> Navigating online weight loss treatments can be complex. Cloud Pharmacy is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Cloud Pharmacy provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Weight loss advice can sometimes sound overly neat. Eat less. Move more. Stay consistent.
           If it were that simple, fewer people would struggle.

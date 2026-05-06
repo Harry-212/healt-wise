@@ -159,7 +159,7 @@ export const EXERCISE_INTERNAL_LINKS = [
   { href: PILLAR_TIPS, label: "Weight loss tips hub" },
   { href: "/what-is-mounjaro", label: "What is Mounjaro?" },
   { href: "/what-is-wegovy", label: "What is Wegovy?" },
-  { href: "/compare/best-weight-loss-injections-uk", label: "Best weight loss injections UK" },
+  { href: "/compare/best-weight-loss-treatments-uk", label: "Best weight loss treatments UK" },
   { href: "/helpful-guides/mounjaro-nutrition-guide-uk", label: "Mounjaro nutrition guide UK" },
   { href: "/helpful-guides/mounjaro-weight-loss-plateau", label: "Weight loss plateaus" },
   { href: "/helpful-guides/mounjaro-calorie-cycling-weight-loss", label: "Calorie cycling & Mounjaro" },

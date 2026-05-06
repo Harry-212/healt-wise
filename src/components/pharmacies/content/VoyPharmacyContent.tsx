@@ -47,6 +47,7 @@ export default function VoyPharmacyContent() {
       heroProviderLogoAlt="Voy"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-slate-900">Why research Voy?</strong> Every online pharmacy has a distinct approach to patient care, pricing, and medication delivery. This independent dossier breaks down how Voy handles weight management consultations, offering you a clear look at their service structure so you can compare it against your personal health needs and preferences.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Choosing a weight loss service today means weighing effectiveness, credibility and how the programme
           fits your routine, not only the brand on the pen.{" "}

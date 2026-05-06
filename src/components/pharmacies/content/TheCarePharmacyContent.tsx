@@ -47,6 +47,7 @@ export default function TheCarePharmacyContent() {
       heroProviderLogoAlt="The Care Pharmacy"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-slate-900">Why research The Care Pharmacy?</strong> Every online pharmacy has a distinct approach to patient care, pricing, and medication delivery. This independent dossier breaks down how The Care Pharmacy handles weight management consultations, offering you a clear look at their service structure so you can compare it against your personal health needs and preferences.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Lasting weight change rarely comes from fad diets alone; many adults need clinician approved
           medicines plus structured follow up.{" "}

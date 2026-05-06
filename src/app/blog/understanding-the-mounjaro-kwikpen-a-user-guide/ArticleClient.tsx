@@ -160,7 +160,7 @@ export default function ArticleClient() {
                 <p>
                   If you are curious about new trends in injectable treatments, you might find it helpful to check out our{" "}
                   <Link
-                    href="/compare/best-weight-loss-injections-uk"
+                    href="/compare/best-weight-loss-treatments-uk"
                     className="font-medium text-brand-primary underline"
                   >
                     UK weight loss treatments comparison hub

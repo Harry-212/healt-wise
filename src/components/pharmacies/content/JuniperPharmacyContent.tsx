@@ -44,6 +44,7 @@ export default function JuniperPharmacyContent() {
       heroProviderLogoAlt="Juniper"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Juniper operates within the UK’s regulated online pharmacy sector, providing access to clinically approved weight loss medications. Because no two weight loss journeys are exactly alike, understanding the specific clinical protocols, shipping methods, and pricing tiers of Juniper is a crucial step in finding the right healthcare partner.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Losing a large amount of weight and keeping it off is hard. Many people find that classic
           diet plans and exercise work for a while, then stall, which is frustrating when life is

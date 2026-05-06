@@ -174,13 +174,13 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     bestChoiceBody:
       "There is no universal “winner”: eligibility, tolerability, injection rhythm, and total cost of care (assessment + medicine + follow-up) steer choice. Compare illustrative totals in each tab, cross-check GPhC registration, and confirm live checkout prices before you pay.",
   },
-  "best-weight-loss-injections-uk": {
+  "best-weight-loss-treatments-uk": {
     medications: ["wegovy", "mounjaro", "saxenda"],
     hero: {
       variant: "blue",
       eyebrow: "UK GLP-1 Comparison Hub",
       titleItalic: "Compare",
-      titleBold: "Weight Loss Injections UK",
+      titleBold: "Weight Loss Treatments UK",
       subtitle:
         "Wegovy, Mounjaro, and Saxenda — three full price datasets with the same tools as our standalone compare pages.",
       snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
@@ -193,26 +193,26 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       ],
     },
     share: {
-      canonicalPath: "/compare/best-weight-loss-injections-uk",
+      canonicalPath: "/compare/best-weight-loss-treatments-uk",
       title:
-        "Best weight loss injections UK (2026) — compare Wegovy, Mounjaro & Saxenda prices",
+        "Best weight loss treatments UK (2026) — compare Wegovy, Mounjaro & Saxenda prices",
       metaDescription:
         "One hub for UK Wegovy, Mounjaro, and Saxenda pharmacy comparisons: advanced tables, charts, filters, and GPhC context. Independent snapshot — updated 2026.",
       openGraphTitle:
-        "Best weight loss injections UK (2026) — three live-style tables | Health Wise",
+        "Best weight loss treatments UK (2026) — three live-style tables | Health Wise",
       openGraphDescription:
         "Tab between Wegovy, Mounjaro, and Saxenda with full comparison tables and chart sections.",
       imagePath: OG,
-      imageAlt: "Health Wise — UK weight loss injection comparison",
+      imageAlt: "Health Wise — UK weight loss treatment comparison",
     },
     intro: {
       heading: "One Hub, Three Medicines",
       body: [
-        "If you are evaluating UK private weight-management injections, headline brand names are only the start — monthly spend changes with dose, pack size, and whether consultations are bundled.",
+        "If you are evaluating UK private weight-management treatments, headline brand names are only the start — monthly spend changes with dose, pack size, and whether consultations are bundled.",
         "The tabs at the top of this page load our full comparison experience for each medicine. Each tab mirrors the dedicated price comparison page so pharmacists, patients, and carers can explore consistently.",
       ],
     },
-    effectivenessTitle: "Which Injection Is “Best”?",
+    effectivenessTitle: "Which Treatment Is “Best”?",
     effectivenessBody:
       "There is no universal winner: NICE-aligned eligibility, tolerability, and prescriber experience steer choice. Trial data and SmPCs differ between once-weekly semaglutide or tirzepatide and daily liraglutide. This page helps you compare pricing mechanics; clinical suitability belongs in consultation.",
     sideEffectsTitle: "Side Effects & Commitments",

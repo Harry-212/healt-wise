@@ -32,6 +32,7 @@ export default function FyldeClinicPharmacyContent() {
       hasDiscount={hasDiscount}
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Fylde Clinic is presented as a UK online route into clinician-led weight management. A fair assessment depends on how the pathway works in practice — the initial consultation, suitability checks, ongoing support, and the realities of dispatch and delivery for prescription treatments. This dossier provides independent context about Fylde Clinic to help you compare providers on more than headlines.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Weight loss tends to get framed as a discipline problem. Eat less. Move more. Try harder.
           But for many people, that advice barely scratches the surface. Appetite regulation, long-term

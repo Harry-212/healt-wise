@@ -132,7 +132,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
   ],
 
-  "best-weight-loss-injections-uk": [
+  "best-weight-loss-treatments-uk": [
     {
       q: "What does this hub cover that individual brand pages do not?",
       a: "It places three full comparison workspaces behind one navigation flow so you can switch medicines without losing table behaviour. Content is otherwise aligned to our standalone hubs.",

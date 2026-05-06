@@ -34,6 +34,7 @@ export default function GenmedsPharmacyContent() {
       heroProviderLogoAlt="Genmeds"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-slate-900">Why research Genmeds?</strong> Every online pharmacy has a distinct approach to patient care, pricing, and medication delivery. This independent dossier breaks down how Genmeds handles weight management consultations, offering you a clear look at their service structure so you can compare it against your personal health needs and preferences.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Trying to choose an online provider for weight loss medication can be harder than choosing
           the medication itself. There are dozens of online clinics now offering access to treatments

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import type { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
-import UkLocationArticleClient from "@/components/blog/UkLocationArticleClient";
+import LocationContentRenderer from "@/components/locations/LocationContentRenderer";
 import {
   getAllSlugs,
   getAllUkLocationArticleSlugs,
@@ -14,6 +14,7 @@ import {
 import {
   buildLocationFaq,
   buildUkLocationMetaDescription,
+  buildUkLocationTitle,
   locationFaqJsonLd,
 } from "@/lib/content/uk-location-article-data";
 import { getUkWeightLossLocationBySlug } from "@/lib/data/uk-weight-loss-locations";
@@ -88,7 +89,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!citySlug) return {};
   const loc = getUkWeightLossLocationBySlug(citySlug);
   if (!loc) return {};
-  const title = capitalizeHeadingWords(`Best weight loss treatment in ${loc.name}`);
+  const title = buildUkLocationTitle(loc);
   const description = buildUkLocationMetaDescription(loc);
   const url = `${siteOrigin()}/blog/${slug}`;
   return {
@@ -171,7 +172,7 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
-      <UkLocationArticleClient loc={loc} shareUrl={canonical} />
+      <LocationContentRenderer slug={citySlug} loc={loc} shareUrl={canonical} />
     </>
   );
 }

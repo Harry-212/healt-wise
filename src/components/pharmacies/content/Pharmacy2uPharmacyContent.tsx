@@ -47,6 +47,7 @@ export default function Pharmacy2uPharmacyContent() {
       heroProviderLogoAlt="Pharmacy2U"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Pharmacy2U is positioned as a UK digital-first pathway for prescription-led weight management, combining online assessment with clinician review and pharmacy fulfilment. If you’re comparing providers, the key is understanding how the pathway works end to end — the consultation steps, clinical oversight, ongoing support, and delivery logistics. This dossier summarises independent context about Pharmacy2U to help you make an informed choice.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Pharmacy2U publicly positions itself among the <strong>UK’s largest and most established</strong>{" "}
           online pharmacies, serving regulated healthcare to a very large patient base. The

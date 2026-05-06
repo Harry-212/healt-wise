@@ -47,6 +47,7 @@ export default function SuperdrugOnlineDoctorContent() {
       heroProviderLogoAlt="Superdrug"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Superdrug Online Doctor is positioned as a UK digital route into clinician-reviewed weight management, with options for delivery or collection depending on the pathway. Comparing providers is easier when you understand how each step works — the assessment questions, clinician review, ongoing support, and fulfilment logistics. This page summarises independent context about Superdrug Online Doctor to help you make a more informed choice.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Demand for medically supervised GLP-1 weight loss continues to grow; picking a familiar retail
           brand can feel reassuring.{" "}

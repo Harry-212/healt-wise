@@ -272,7 +272,7 @@ export default function ArticleClient() {
                   </Link>{" "}
                   can help you plan ahead. If you are new to this approach, you may also appreciate our{" "}
                   <Link
-                    href="/compare/best-weight-loss-injections-uk"
+                    href="/compare/best-weight-loss-treatments-uk"
                     className="font-medium text-brand-primary underline"
                   >
                     UK weight loss treatments comparison hub

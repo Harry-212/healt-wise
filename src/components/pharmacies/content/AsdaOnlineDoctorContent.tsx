@@ -37,6 +37,7 @@ export default function AsdaOnlineDoctorContent() {
       heroProviderLogoAlt="Asda Online Doctor"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Asda Online Doctor provides a UK-facing digital care pathway for people researching medically supported weight management. When comparing providers, it helps to look beyond headlines and understand how the service actually works — the initial assessment, clinical review, follow-up support, and delivery handling. This dossier summarises public information about Asda Online Doctor to support a more informed decision.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Losing weight is not always easy, especially when diet and exercise alone do not produce
           the results you need. For many people in the UK, prescription treatments such as weight

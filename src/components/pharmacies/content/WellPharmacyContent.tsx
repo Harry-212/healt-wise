@@ -47,6 +47,7 @@ export default function WellPharmacyContent() {
       heroProviderLogoAlt="Well Pharmacy"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Well Pharmacy is presented as a UK pharmacy-led route into medically supported weight management, combining assessment, prescribing where appropriate, and fulfilment through a large national network. To compare providers fairly, it helps to understand the operational details — consultation steps, review criteria, follow-ups, and delivery or collection options. This dossier provides independent context about Well Pharmacy to support a more informed choice.</p></div>
         <p className="text-slate-800 leading-relaxed">
           <a
             href={providerUrl}

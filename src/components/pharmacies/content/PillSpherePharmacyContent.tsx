@@ -47,6 +47,7 @@ export default function PillSpherePharmacyContent() {
       heroProviderLogoAlt="PillSphere"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> PillSphere is framed as a UK digital service for people exploring prescription-supported weight management. To compare providers responsibly, it’s useful to understand the full service pattern — how assessment questions are handled, what clinical review looks like, what follow-up support is offered, and how delivery is managed. This guide summarises public context about PillSphere so you can make a more informed choice.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Choosing a sustainable weight loss route online means picking providers that combine{" "}
           <strong>regulated prescribing</strong>, clear logistics, and honest pricing.{" "}

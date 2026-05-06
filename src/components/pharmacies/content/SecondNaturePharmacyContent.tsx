@@ -47,6 +47,7 @@ export default function SecondNaturePharmacyContent() {
       heroProviderLogoAlt="Second Nature"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Second Nature:</strong> Navigating online weight loss treatments can be complex. Second Nature is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Second Nature provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Many digital obesity offers stop at posting pens.{" "}
           <a

@@ -160,7 +160,7 @@ export const STRESS_INTERNAL_LINKS = [
   { href: "/tools/bmi-calculator", label: "BMI & calorie calculator" },
   { href: "/tools/weight-loss-tracker", label: "Weight loss tracker" },
   { href: "/blog", label: "Blog" },
-  { href: "/compare/best-weight-loss-injections-uk", label: "Best weight loss injections UK" },
+  { href: "/compare/best-weight-loss-treatments-uk", label: "Best weight loss treatments UK" },
   { href: "/pharmacy-safety-gphc-verification", label: "Pharmacy safety (GPhC)" },
   { href: "/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe", label: "Spotting fake online pharmacies" },
 ] as const;

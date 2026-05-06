@@ -37,6 +37,7 @@ export default function AshcroftPharmacyContent() {
       heroProviderLogoAlt="Ashcroft Pharmacy"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-slate-900">Why research Ashcroft Pharmacy?</strong> Every online pharmacy has a distinct approach to patient care, pricing, and medication delivery. This independent dossier breaks down how Ashcroft Pharmacy handles weight management consultations, offering you a clear look at their service structure so you can compare it against your personal health needs and preferences.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Trying to lose weight can feel frustratingly slow. Many people cut calories, try meal
           plans, walk more, maybe even pay for a gym they barely use — and still hit a wall. That’s

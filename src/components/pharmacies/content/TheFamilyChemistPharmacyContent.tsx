@@ -47,6 +47,7 @@ export default function TheFamilyChemistPharmacyContent() {
       heroProviderLogoAlt="The Family Chemist"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About The Family Chemist:</strong> Navigating online weight loss treatments can be complex. The Family Chemist is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that The Family Chemist provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           <a
             href={providerUrl}
