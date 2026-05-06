@@ -1,39 +1,26 @@
-import Image from "next/image";
-
-const HERO_IMAGE = "/cheapest%20treatment.webp";
-
 export default function CheapestOptionsHero() {
   return (
-    <header className="relative w-full overflow-hidden border-b border-slate-800/20 shadow-lg">
-      <div className="relative aspect-5/4 min-h-[220px] w-full sm:aspect-[2.2/1] md:min-h-[280px] lg:aspect-[2.8/1] lg:min-h-[320px]">
-        <Image
-          src={HERO_IMAGE}
-          alt="Cheapest treatment options — decorative hero for UK GLP-1 price guide"
-          fill
-          priority
-          className="object-cover object-[center_35%]"
-          sizes="100vw"
-        />
-        <div
-          className="absolute inset-0 bg-linear-to-t from-slate-950/92 via-slate-900/55 to-slate-800/25"
-          aria-hidden
-        />
-        <div className="absolute inset-0 flex flex-col justify-end px-5 pb-8 pt-10 sm:px-8 md:pb-12 md:pl-10 md:pr-10 lg:mx-auto lg:max-w-6xl lg:px-8">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-200/95 sm:text-xs">
+    <header className="w-full">
+      <section className="bg-slate-900 px-4 pb-12 pt-10 sm:px-6 sm:pb-14 sm:pt-12 md:px-8 md:pb-16 md:pt-14">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400">
+            Health Wise
+          </p>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
             UK private · Wegovy · Mounjaro · Saxenda
           </p>
-          <h1 className="mt-3 max-w-4xl text-[1.65rem] font-bold leading-tight tracking-tight text-white sm:text-3xl md:text-4xl lg:text-[2.35rem]">
+          <h1 className="mt-3 max-w-4xl text-balance text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl">
             Cheapest GLP-1 weight loss injections in the UK — price snapshot &
             comparisons
           </h1>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/88 sm:text-base">
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-400 sm:text-lg">
             Answers to common cost questions using our latest multi-pharmacy
             tables: illustrative listings only — confirm every figure at checkout
             and with your prescriber.
           </p>
         </div>
-      </div>
-      <p className="w-full bg-slate-900 px-4 py-2.5 text-center text-[11px] leading-snug text-slate-400">
+      </section>
+      <p className="w-full border-b border-slate-200 bg-slate-50 px-4 py-2.5 text-center text-[11px] leading-snug text-slate-500">
         Numbers on this page are research snapshots, not live quotes.
       </p>
     </header>

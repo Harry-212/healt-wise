@@ -9,9 +9,26 @@ import { CheapestOptionsEntryPricesChart } from "./CheapestOptionsEntryPricesCha
 import CheapestOptionsHero from "./CheapestOptionsHero";
 import NotMedicalAdviceBanner from "./NotMedicalAdviceBanner";
 
-function SectionInner({ children }: { children: ReactNode }) {
+function SectionInner({
+  children,
+  compact,
+  tightTop,
+}: {
+  children: ReactNode;
+  /** Tighter vertical padding (e.g. single banner under hero) */
+  compact?: boolean;
+  /** Less padding-top when stacked right after the compact disclaimer strip */
+  tightTop?: boolean;
+}) {
+  const y = compact
+    ? "py-4 sm:py-5 md:py-6"
+    : tightTop
+      ? "pt-5 pb-10 sm:pt-6 sm:pb-12 md:pt-8 md:pb-16 lg:pt-10 lg:pb-20"
+      : "py-10 sm:py-12 md:py-16 lg:py-20";
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-5 sm:py-12 md:px-8 md:py-16 lg:py-20">
+    <div
+      className={`mx-auto w-full max-w-6xl px-4 sm:px-5 md:px-8 ${y}`}
+    >
       {children}
     </div>
   );
@@ -40,7 +57,7 @@ export default function CheapestOptionsUkPage() {
       <CheapestOptionsHero />
 
       <div className="w-full border-b border-amber-200/60 bg-amber-50/35">
-        <SectionInner>
+        <SectionInner compact>
           <NotMedicalAdviceBanner />
         </SectionInner>
       </div>
@@ -50,7 +67,7 @@ export default function CheapestOptionsUkPage() {
         className="w-full border-b border-slate-200/80 bg-linear-to-b from-slate-50/90 to-white"
         aria-labelledby="overview-heading"
       >
-        <SectionInner>
+        <SectionInner tightTop>
           <SectionLabel icon={Sparkles}>Price intelligence</SectionLabel>
           <h2
             id="overview-heading"
