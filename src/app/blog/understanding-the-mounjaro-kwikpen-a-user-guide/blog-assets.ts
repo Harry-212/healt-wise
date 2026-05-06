@@ -1,5 +1,5 @@
 /** Filenames in `public/blog/` — `encodeURIComponent` for URL-safe paths (spaces, parentheses). */
-export const KWIKPEN_HERO_WEBP = "Woman (1).webp";
+export const KWIKPEN_HERO_WEBP = "feel.webp";
 
 export const KWIKPEN_INLINE_HEALTHY_WEBP = "Healthy.webp";
 

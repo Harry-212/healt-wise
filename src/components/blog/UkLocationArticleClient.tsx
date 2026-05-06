@@ -8,8 +8,8 @@ import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
+import { useUkLocationFaq } from "@/components/locations/UkLocationFaqProvider";
 import {
-  buildLocationFaq,
   nationCareContext,
   placeSnapshotLeadingSentence,
   UK_LOCATION_SOURCES,
@@ -49,7 +49,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
   const [darkMode, setDarkMode] = useState(false);
   const { name, nation, longtails, hero, placeSnapshot, healthLandscape } = loc;
   const care = nationCareContext(nation);
-  const faqItems = useMemo(() => buildLocationFaq(loc), [loc]);
+  const faqItems = useUkLocationFaq();
   const titles = useMemo(() => ukLocationSectionTitles(name), [name]);
   const toc = useMemo(
     () => [

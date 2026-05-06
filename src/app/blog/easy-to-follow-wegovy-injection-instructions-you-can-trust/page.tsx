@@ -1,6 +1,9 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE } from "@/lib/site-assets";
+
+const HERO_IMAGE_ABSOLUTE = `${siteOrigin()}${BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE}`;
 
 export const metadata: Metadata = {
   title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
@@ -17,6 +20,19 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`,
     type: "article",
     publishedTime: "2026-04-14T00:00:00.000Z",
+    images: [
+      {
+        url: HERO_IMAGE_ABSOLUTE,
+        alt: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
+    description:
+      "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
+    images: [HERO_IMAGE_ABSOLUTE],
   },
 };
 
@@ -30,6 +46,7 @@ export default function WegovyInjectionInstructionsArticlePage() {
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
     datePublished: "2026-04-14",
+    image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${siteOrigin()}/blog/easy-to-follow-wegovy-treatment-instructions-you-can-trust`,

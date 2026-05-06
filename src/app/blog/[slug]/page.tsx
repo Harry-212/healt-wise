@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import type { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import LocationContentRenderer from "@/components/locations/LocationContentRenderer";
+import { UkLocationFaqProvider } from "@/components/locations/UkLocationFaqProvider";
 import {
   getAllSlugs,
   getAllUkLocationArticleSlugs,
@@ -164,7 +165,8 @@ export default async function BlogPostPage({ params }: Props) {
   if (!loc) notFound();
 
   const canonical = `${siteOrigin()}/blog/${slug}`;
-  const faqLd = locationFaqJsonLd(buildLocationFaq(loc));
+  const faqItems = buildLocationFaq(loc);
+  const faqLd = locationFaqJsonLd(faqItems);
 
   return (
     <>
@@ -172,7 +174,9 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
-      <LocationContentRenderer slug={citySlug} loc={loc} shareUrl={canonical} />
+      <UkLocationFaqProvider faqItems={faqItems}>
+        <LocationContentRenderer slug={citySlug} loc={loc} shareUrl={canonical} />
+      </UkLocationFaqProvider>
     </>
   );
 }

@@ -1,6 +1,9 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE } from "@/lib/site-assets";
+
+const HERO_IMAGE_ABSOLUTE = `${siteOrigin()}${BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE}`;
 
 export const metadata: Metadata = {
   title: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
@@ -17,6 +20,19 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}/blog/does-mounjaro-really-work-for-weight-loss-find-out-here`,
     type: "article",
     publishedTime: "2026-04-14T00:00:00.000Z",
+    images: [
+      {
+        url: HERO_IMAGE_ABSOLUTE,
+        alt: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
+    description:
+      "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
+    images: [HERO_IMAGE_ABSOLUTE],
   },
 };
 
@@ -30,6 +46,7 @@ export default function MounjaroEffectivenessArticlePage() {
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
     datePublished: "2026-04-14",
+    image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${siteOrigin()}/blog/does-mounjaro-really-work-for-weight-loss-find-out-here`,

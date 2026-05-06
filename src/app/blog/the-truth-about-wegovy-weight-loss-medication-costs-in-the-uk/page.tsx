@@ -1,6 +1,9 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE } from "@/lib/site-assets";
+
+const HERO_IMAGE_ABSOLUTE = `${siteOrigin()}${BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE}`;
 
 export const metadata: Metadata = {
   title: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
@@ -17,6 +20,19 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk`,
     type: "article",
     publishedTime: "2026-04-14T00:00:00.000Z",
+    images: [
+      {
+        url: HERO_IMAGE_ABSOLUTE,
+        alt: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
+    description:
+      "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
+    images: [HERO_IMAGE_ABSOLUTE],
   },
 };
 
@@ -30,6 +46,7 @@ export default function WegovyCostsArticlePage() {
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
     datePublished: "2026-04-14",
+    image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${siteOrigin()}/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk`,

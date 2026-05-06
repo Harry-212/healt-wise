@@ -1,6 +1,5 @@
-/** Long hashed filenames in `public/blog/` — encode for URL-safe paths. */
-export const MOUWEG_HERO_WEBP =
-  "A-fiTXpbVkmhwjsp3cuYQM2huWvK0viH-ZUgmbJc-LsNznNX-q1CkBk57RiUxF1pPsvAFSANlu82zJ-kBO5FIHP81uSUbMLq_I3_X1zAx6Sc-314jsebYaRMu83aYB-kbliiLmKiLKHXAkYHodC7hi4SBN6LviIgIYE8LTNy9mmGvicH6LlFNjgRq1utPdBf.webp";
+/** Hero + listing thumbnail (`public/blog/How Mounjaro vs Wegovy.webp`). */
+export const MOUWEG_HERO_WEBP = "How Mounjaro vs Wegovy.webp";
 
 export const MOUWEG_INLINE_1_WEBP =
   "fYuxuAbspOApnS1LHBazacgUnpR35FJK3cqsON-ll25LLVgDRjxxDAbgtLRuHke8LvRz-30m9Kpd8v3GtI1Ao-12_QsL_K_w6u2LQ2ra7D3fIBE-sR3sT2IBfgyo0GKjwiTIp2rlDvq1Gy4CmivPohfWTL-0GEbCjjH1iTZhKM58D3T5AfGLSc1nhdiKjNTU.webp";

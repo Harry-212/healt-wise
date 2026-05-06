@@ -8,6 +8,7 @@ import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { BLOG_SURPRISING_MOUNJARO_SIDE_EFFECTS_HERO_IMAGE } from "@/lib/site-assets";
 
 const TOC = [
   { id: "understanding", label: "Understanding Mounjaro" },
@@ -21,7 +22,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const HERO_IMAGE = "/blog/mounjaro side effects.webp";
 const CONTENT_IMAGE = "/blog/mounjaro effect.webp";
 
 function SideEffectsTable({ darkMode }: { darkMode: boolean }) {
@@ -144,7 +144,7 @@ export default function ArticleClient() {
           </div>
 
           <BlogArticleHeroImage
-            src={HERO_IMAGE}
+            src={BLOG_SURPRISING_MOUNJARO_SIDE_EFFECTS_HERO_IMAGE}
             alt="Mounjaro side effects and how to manage them"
           />
           <div

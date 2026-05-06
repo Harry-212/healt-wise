@@ -8,6 +8,7 @@ import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE } from "@/lib/site-assets";
 
 const INLINE_WEGOVY_INJECT_IMG_1 =
   "/blog/Easy-to-Follow%20Wegovy%20Injection%20Instructions%20You%20Can%20Trust%201.webp";
@@ -75,7 +76,7 @@ export default function ArticleClient() {
           </div>
 
           <BlogArticleHeroImage
-            src="https://i.ibb.co.com/TjdVknY/image.png"
+            src={BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE}
             alt="Wegovy Injection Instructions Guide"
           />
           <div

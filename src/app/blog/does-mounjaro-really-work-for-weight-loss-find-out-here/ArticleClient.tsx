@@ -8,6 +8,7 @@ import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE } from "@/lib/site-assets";
 
 const INLINE_MOUNT_WORK_IMG_JOGGING = "/blog/jogging.webp";
 const INLINE_MOUNT_WORK_IMG_CONSULTATION = "/blog/consultaion.webp";
@@ -69,7 +70,7 @@ export default function ArticleClient() {
           </div>
 
           <BlogArticleHeroImage
-            src="https://i.ibb.co.com/k2NjLMfp/image.png"
+            src={BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE}
             alt="Mounjaro effectiveness and mechanisms"
           />
           <div

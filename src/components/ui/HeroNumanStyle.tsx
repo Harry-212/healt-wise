@@ -2,6 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Zap, Calculator, Activity, Syringe, Scale } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import {
+  HOMEPAGE_HERO_LIFESTYLE_ALT,
+  HOMEPAGE_HERO_LIFESTYLE_SRC,
+} from "@/lib/site-assets";
 import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 
 const TOOL_CARDS = [
@@ -59,8 +63,8 @@ export default function HeroNumanStyle() {
         }}
       >
         <Image
-          src="/comparing_weight_loss.jpeg"
-          alt="Couple discussing weight loss treatments"
+          src={HOMEPAGE_HERO_LIFESTYLE_SRC}
+          alt={HOMEPAGE_HERO_LIFESTYLE_ALT}
           fill
           priority
           quality={70}

@@ -42,7 +42,7 @@ export default function ArticleClient() {
     '@type': 'Article',
     headline: 'Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You',
     description: 'A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda.',
-    image: [HERO_SRC],
+    image: [`${siteOrigin()}${HERO_SRC}`],
     author: { '@type': 'Organization', name: 'Health Wise' },
     publisher: { '@type': 'Organization', name: 'Health Wise' },
     datePublished: '2026-05-19',
@@ -129,7 +129,10 @@ export default function ArticleClient() {
             </span>
           </div>
 
-          <BlogArticleHeroImage src={HERO_SRC} alt="Doctor prescribed weight loss treatment treatment in the UK, clinical support for obesity management" />
+          <BlogArticleHeroImage
+            src={HERO_SRC}
+            alt="Doctor prescribed weight loss injections in the UK — clinical support for obesity management"
+          />
           <div id="guide-article-hero-end" aria-hidden className="pointer-events-none h-0 w-full overflow-hidden" />
         </header>
 

@@ -10,7 +10,6 @@ import {
   WegovyDeferredWeightLossChart,
   WegovyDeferredWeightProgressionChart,
 } from "@/components/wegovy/wegovy-what-is-deferred";
-import WegovyPenTilt from "@/components/wegovy/WegovyPenTilt";
 import WegovyPageToc from "@/components/wegovy/WegovyPageToc";
 import {
   wegovyArticleJsonLd,
@@ -18,6 +17,10 @@ import {
   WEGOVY_FAQ_ITEMS,
 } from "@/lib/seo/wegovy-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
+import {
+  WHY_CHOOSE_HEALTHWISE360_ALT,
+  WHY_CHOOSE_HEALTHWISE360_SRC,
+} from "@/lib/site-assets";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/what-is-wegovy",
@@ -29,8 +32,8 @@ export const metadata: Metadata = buildPageShareMetadata({
     "What is Wegovy? UK guide (2026): how it works, side effects & prices | Health Wise",
   openGraphDescription:
     "Independent guide to Wegovy: mechanism, results, dosage, UK prices, safety, and how to compare providers.",
-  imagePath: "/wegovy healt wise.png",
-  imageAlt: "Wegovy (semaglutide) pen — UK guide on Health Wise",
+  imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,
+  imageAlt: WHY_CHOOSE_HEALTHWISE360_ALT,
 });
 
 export default function WhatIsWegovyPage() {
@@ -54,11 +57,10 @@ export default function WhatIsWegovyPage() {
         >
           <div className="mx-auto max-w-6xl px-4 pb-16 pt-8 sm:px-5 sm:py-12 md:px-8 md:py-16 lg:py-20">
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-              <div className="flex flex-col items-start gap-8">
+              <div className="flex flex-col items-start">
                 <h1 className="max-w-[15ch] text-left text-3xl font-bold uppercase leading-[1.05] tracking-tight text-slate-900 sm:text-4xl lg:text-[2.65rem] lg:leading-[1.02]">
                   What is Wegovy?
                 </h1>
-                <WegovyPenTilt className="w-full max-w-[280px] shrink-0" />
               </div>
               <div className="space-y-5 text-base leading-[1.65] text-slate-800">
                 <p>
@@ -708,10 +710,10 @@ export default function WhatIsWegovyPage() {
                   </div>
                   <div className="relative mx-auto aspect-3/4 w-full max-w-[200px] overflow-hidden rounded-xl border border-slate-200 md:mx-0 md:max-w-none">
                     <Image
-                      src="/uk-weight-loss-medical-expert-health-wise.jpg.webp"
-                      alt="Reviewed against UK clinical references by Health Wise editorial standards."
+                      src={WHY_CHOOSE_HEALTHWISE360_SRC}
+                      alt={WHY_CHOOSE_HEALTHWISE360_ALT}
                       fill
-                      className="object-cover object-[center_15%]"
+                      className="object-contain object-center"
                       sizes="200px"
                     />
                   </div>

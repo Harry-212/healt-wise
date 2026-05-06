@@ -8,6 +8,7 @@ import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE } from "@/lib/site-assets";
 
 const INLINE_WEGOVY_COST_IMG_1 =
   "/blog/The%20Truth%20About%20Wegovy%20Weight%20Loss%20Medication%20Costs%20in%20the%20UK%202.webp";
@@ -72,7 +73,7 @@ export default function ArticleClient() {
           </div>
 
           <BlogArticleHeroImage
-            src="https://i.ibb.co.com/Ndr2MsY9/image.png"
+            src={BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE}
             alt="The Truth About Wegovy Weight Loss Medication Costs in the UK"
           />
           <div

@@ -9,20 +9,14 @@ const U = "https://images.unsplash.com/photo-";
 
 // Named image tokens — every token is used exactly once across GUIDE_IMAGES
 const IMG = {
-  /** Semaglutide / GLP-1 auto-injector pen */
-  injectionPen:      `${U}1745939921744-ba8ef27940bf${Q}`,
   /** Feet on a white digital bathroom scale */
   weightScale:       `${U}1522844990619-4951c40f7eda${Q}`,
-  /** Pharmacy medicine shelf (medications + bottles) */
-  pharmacyShelf:     `${U}1696861286643-341a8d7a79e9${Q}`,
   /** Person holding their stomach in pain */
   stomachPain:       `${U}1769029174021-b305fa92f0ae${Q}`,
   /** Healthy chicken & rice bowl with vegetables */
   riceBowl:          `${U}1762631383628-77f92d18b184${Q}`,
   /** Colourful poke bowl — salmon, avocado, veg */
   pokeBowl:          `${U}1661257711676-79a0fc533569${Q}`,
-  /** Hand holding a vitamin B12 supplement bottle */
-  vitaminBottle:     `${U}1690959794962-d8b3a18aa784${Q}`,
   /** Open refrigerator filled with bottles — cold chain */
   refrigerator:      `${U}1542331325-bebfc9b990d7${Q}`,
   /** Plain grey cardboard delivery / dispatch box */
@@ -35,8 +29,6 @@ const IMG = {
   coldBlanket:       `${U}1673977905153-1f422a2888c3${Q}`,
   /** Man with head in toilet bowl — nausea / vomiting */
   toiletNausea:      `${U}1766315745904-5cdae512f0f1${Q}`,
-  /** Senior hand holding white medication pills */
-  seniorPills:       `${U}1624031000106-79254a8faa19${Q}`,
   /** Woman running on a forest trail — fitness & active health */
   running:           `${U}1590646299178-1b26ab821e34${Q}`,
   /** Colourful social media feed on a phone screen */
@@ -74,8 +66,8 @@ const IMG = {
 export const GUIDE_IMAGES: Record<string, string> = {
 
   // ── Medications ───────────────────────────────────────────────────────────
-  /** GLP-1 pen — the injection itself */
-  "mounjaro-weight-loss-injection-uk":               IMG.injectionPen,
+  /** Custom hero — Mounjaro UK pillar (2026) */
+  "mounjaro-weight-loss-injection-uk":               "/blog/mounjaro%20weight%20loss%202026.webp",
   /** Bathroom scale — tracking plateau weight */
   "mounjaro-weight-loss-plateau":                    IMG.weightScale,
   /** Doctor filling in a chart — prescription process */
@@ -84,12 +76,13 @@ export const GUIDE_IMAGES: Record<string, string> = {
   "mounjaro-pregnancy-risk-fertility-contraception": IMG.pregnantDoctor,
   /** Delivery box — switching from one pen to another */
   "switching-wegovy-to-mounjaro-uk":                 IMG.deliveryBox,
-  /** Supplement bottle — multivitamin discussion */
-  "mounjaro-multivitamins-uk":                       IMG.vitaminBottle,
+  /** Custom hero — multivitamins + Mounjaro UK */
+  "mounjaro-multivitamins-uk":                       "/blog/multivitamin.webp",
   /** Woman running — early rapid weight loss = active momentum */
   "mounjaro-early-weight-loss-why-it-slows":         IMG.running,
-  /** Senior with medication — menopause + Mounjaro */
-  "mounjaro-menopause-weight-loss-uk":               IMG.seniorPills,
+  /** Custom hero — Mounjaro + menopause UK */
+  "mounjaro-menopause-weight-loss-uk":
+    "/blog/Mounjaro%20and%20Menopause.webp",
   /** Oatmeal & berries bowl — broad health benefits of GLP-1 */
   "mounjaro-wegovy-health-benefits-uk":              IMG.fruitsBerries,
   /** Tape measure around waist — BMI cutoff / stopping decision */
@@ -102,8 +95,9 @@ export const GUIDE_IMAGES: Record<string, string> = {
   // ── Pharmacy Safety ───────────────────────────────────────────────────────
   /** Fridge — cold-chain storage requirements */
   "mounjaro-delivery-storage-uk":                    IMG.refrigerator,
-  /** Pharmacy shelf — verifying registered dispensaries */
-  "how-we-verify-uk-pharmacies-gphc-safety-standards": IMG.pharmacyShelf,
+  /** Custom hero — GPhC verification guide */
+  "how-we-verify-uk-pharmacies-gphc-safety-standards":
+    "/blog/GPhC%20Checks%20%26%20Safety%20Standards%20Explained.webp",
   /** Phone with social feed — "online" vs local pharmacy concept */
   "local-vs-online-pharmacies-mounjaro-uk":          IMG.socialMediaPhone,
   /** Blister packs side-by-side — comparing / switching medication packs */

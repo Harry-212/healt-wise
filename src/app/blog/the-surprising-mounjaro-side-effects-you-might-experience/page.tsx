@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { BLOG_SURPRISING_MOUNJARO_SIDE_EFFECTS_HERO_IMAGE } from "@/lib/site-assets";
 
 const PATH = "/blog/the-surprising-mounjaro-side-effects-you-might-experience";
 const TITLE = "The Surprising Mounjaro Side Effects You Might Experience";
 const DESCRIPTION =
   "Discover surprising mounjaro side effects you might experience and how you can manage them with confidence.";
+
+const HERO_IMAGE_ABSOLUTE = `${siteOrigin()}${BLOG_SURPRISING_MOUNJARO_SIDE_EFFECTS_HERO_IMAGE}`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -20,6 +23,18 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-04-24T00:00:00.000Z",
+    images: [
+      {
+        url: HERO_IMAGE_ABSOLUTE,
+        alt: "The Surprising Mounjaro Side Effects You Might Experience",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [HERO_IMAGE_ABSOLUTE],
   },
 };
 
@@ -33,6 +48,7 @@ export default function MounjaroSideEffectsArticlePage() {
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
     datePublished: "2026-04-24",
+    image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${origin}${PATH}`,
