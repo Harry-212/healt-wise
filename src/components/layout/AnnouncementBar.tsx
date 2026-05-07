@@ -12,7 +12,20 @@ const ITEMS = Array.from({ length: 8 }, (_, i) => ({ id: i }));
 
 export default function AnnouncementBar() {
   const pathname = usePathname();
-  if (pathname?.startsWith("/pharmacies")) {
+  const isBlogArticle =
+    typeof pathname === "string" &&
+    pathname.startsWith("/blog/") &&
+    pathname.split("/").filter(Boolean).length >= 2;
+  const isHelpfulGuideArticle =
+    typeof pathname === "string" &&
+    pathname.startsWith("/helpful-guides/") &&
+    pathname.split("/").filter(Boolean).length >= 2;
+
+  if (
+    pathname?.startsWith("/pharmacies") ||
+    isBlogArticle ||
+    isHelpfulGuideArticle
+  ) {
     return null;
   }
 

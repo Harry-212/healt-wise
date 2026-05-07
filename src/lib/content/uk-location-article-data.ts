@@ -50,6 +50,54 @@ export function buildUkLocationTitle(loc: UkWeightLossLocation): string {
   if (loc.slug === "cambridge") {
     return "Best Weight Loss Treatment Cambridge: Cambs Strategies for Real Results";
   }
+  if (loc.slug === "canterbury") {
+    return "Best Weight Loss Treatment Canterbury: Kent's Top Evidence Based Strategies";
+  }
+  if (loc.slug === "cardiff") {
+    return "Best Weight Loss Treatment Cardiff: Top Options Including Mounjaro and Wegovy in 2026";
+  }
+  if (loc.slug === "carlisle") {
+    return "Best Weight Loss Treatment Carlisle: Cumbria's Path to Proven Slimming";
+  }
+  if (loc.slug === "chelmsford") {
+    return "Best Weight Loss Treatment Chelmsford: Essex Guide to Proven Slimming";
+  }
+  if (loc.slug === "chester") {
+    return "Best Weight Loss Treatment Chester: Walls Walks and Evidence Based Options";
+  }
+  if (loc.slug === "chichester") {
+    return "Best Weight Loss Treatment Chichester: West Sussex Guide to Effective Slimming";
+  }
+  if (loc.slug === "colchester") {
+    return "Best Weight Loss Treatment Colchester: Essex's Top Evidence Backed Options";
+  }
+  if (loc.slug === "coventry") {
+    return "Best Weight Loss Treatment Coventry: West Midlands Guide to Effective Slimming";
+  }
+  if (loc.slug === "craigavon") {
+    return "Best Weight Loss Treatment Craigavon: Northern Ireland Options Explained";
+  }
+  if (loc.slug === "crawley") {
+    return "Best Weight Loss Treatment Crawley: Sussex Strategies and Insights";
+  }
+  if (loc.slug === "cumbernauld") {
+    return "Best Weight Loss Treatment Cumbernauld: Top Scotland Strategies for North Lanarkshire";
+  }
+  if (loc.slug === "derby") {
+    return "Best Weight Loss Treatment Derby: Non Surgical Insights for Derbyshire";
+  }
+  if (loc.slug === "doncaster") {
+    return "Best Weight Loss Treatment Doncaster: Yorkshire Strategies for Real Results";
+  }
+  if (loc.slug === "dundee") {
+    return "Best Weight Loss Treatment Dundee: Top Options Including Mounjaro, Wegovy & Local Strategies";
+  }
+  if (loc.slug === "dunfermline") {
+    return "Best Weight Loss Treatment Dunfermline: Fife's Top Evidence Based Options";
+  }
+  if (loc.slug === "durham") {
+    return "Best Weight Loss Treatment Durham: North East UK Guide to Real Results";
+  }
   if (loc.slug === "bangor-northern-ireland") {
     return "Best Weight Loss Treatment Bangor: Coastal Strategies for Northern Ireland Slimming";
   }
@@ -108,6 +156,54 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
   }
   if (loc.slug === "cambridge") {
     return "Best weight loss treatment Cambridge: GLP 1 insights, clinic overviews, Cambridge Diet tips, and evidence for Cambs fat loss success.";
+  }
+  if (loc.slug === "canterbury") {
+    return "Best weight loss treatment Canterbury: Kent insights on GLP 1 medicines like Mounjaro and Wegovy, cryolipolysis, plus local tips for sustainable fat reduction in the UK.";
+  }
+  if (loc.slug === "cardiff") {
+    return "Best weight loss treatment Cardiff 2026: Mounjaro and Wegovy options, evidence, and local tips for fast, safe fat loss in Wales.";
+  }
+  if (loc.slug === "carlisle") {
+    return "Best weight loss treatment Carlisle: Lake District tips, non surgical insights, and proven fat loss for North West UK.";
+  }
+  if (loc.slug === "chelmsford") {
+    return "Best weight loss treatment Chelmsford: Essex options like injections (Wegovy, Mounjaro), laser lipo, surgery, pros, cons, costs, success rates revealed.";
+  }
+  if (loc.slug === "chester") {
+    return "Best weight loss treatment Chester: evidence on Mounjaro and Wegovy, Cheshire walking routines, and safe UK tips for sustainable fat loss.";
+  }
+  if (loc.slug === "chichester") {
+    return "Best weight loss treatment Chichester: West Sussex options like Wegovy and Mounjaro, clinic context, and local tips for safe, sustainable fat loss.";
+  }
+  if (loc.slug === "colchester") {
+    return "Best weight loss treatment Colchester: top options like Mounjaro, Wegovy, fat freezing, Essex clinic context, costs, and results explained.";
+  }
+  if (loc.slug === "coventry") {
+    return "Best weight loss treatment Coventry: top UK medications, NHS options, surgical insights, and local West Midlands strategies for real results.";
+  }
+  if (loc.slug === "craigavon") {
+    return "Best weight loss treatment Craigavon: doctor led options, Mounjaro and Wegovy insights, NHS facts, and Northern Ireland tips for safe fat loss.";
+  }
+  if (loc.slug === "crawley") {
+    return "Best weight loss treatments Crawley: injections like Wegovy and Mounjaro via private clinics, cryolipolysis options, plus evidence based tips for sustainable Sussex slimming.";
+  }
+  if (loc.slug === "cumbernauld") {
+    return "Best weight loss treatment Cumbernauld: Scotland options like Saxenda and CoolSculpting, NHS programs, costs, eligibility, and local tips for North Lanarkshire.";
+  }
+  if (loc.slug === "derby") {
+    return "Best weight loss treatment Derby: non surgical options like Mounjaro and Wegovy, Derby clinic insights, and safe fat loss strategies for lasting results.";
+  }
+  if (loc.slug === "doncaster") {
+    return "Top weight loss treatments Doncaster: injections like Mounjaro and Wegovy, clinic insights, Yorkshire tips for fast, sustainable fat loss UK.";
+  }
+  if (loc.slug === "dundee") {
+    return "Best weight loss treatment Dundee: explore Mounjaro, Wegovy options, clinic insights, and Tay side tips for sustainable slimming in Scotland.";
+  }
+  if (loc.slug === "dunfermline") {
+    return "Best weight loss treatment Dunfermline: Fife insights on injections like Mounjaro, programs, and evidence based tips for sustainable slimming Scotland.";
+  }
+  if (loc.slug === "durham") {
+    return "Best weight loss treatment Durham UK: evidence based tips, local hacks, timelines for 5kg and 20kg loss, and UK insights for County Durham slimming.";
   }
   if (loc.slug === "bangor-northern-ireland") {
     return "Uncover the best weight loss treatment in Bangor, Northern Ireland: Local strategies, science-backed tips, and coastal-inspired plans for lasting fat reduction.";
@@ -507,6 +603,486 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       {
         q: "NHS vs private in Cambs?",
         a: `NHS routes can be free for eligible people but waiting times and criteria vary. Private routes can be faster but cost more. Use [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) to compare safety, follow up, and total cost.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "canterbury") {
+    return [
+      {
+        q: "What is the most successful weight loss treatment?",
+        a: `GLP 1 medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive strong average loss for eligible people, but supervised use with habits helps sustainability. See [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) to compare options.`,
+      },
+      {
+        q: "What is the alternative to Ozempic in New Zealand?",
+        a: `Similar semaglutide options may be available via local routes, and some people compare alternatives such as liraglutide or oral semaglutide depending on approvals. Always check official New Zealand regulations on [Medsafe](https://www.medsafe.govt.nz).`,
+      },
+      {
+        q: "How did Kelly Clarkson lose weight so quickly?",
+        a: `Reports often mention GLP 1 medicines, plus diet and exercise, and she has referenced medical guidance. Rapid change can be monitored and individual results vary. A media summary is available at [People](https://people.com).`,
+      },
+      {
+        q: "What is the 3 3 3 rule for weight loss?",
+        a: `Eat three meals per day, three hours apart, under three handfuls per meal. It may help portion control, but it is not a substitute for a repeatable calorie deficit and regular movement. Background reading is available at [Intuitive Eating](https://www.intuitiveeating.org).`,
+      },
+      {
+        q: "Are Canterbury GLP 1 medicines safe long term?",
+        a: `They can be promising, but monitor gastrointestinal side effects and follow up closely. Ongoing outcomes studies exist, including large cardiovascular outcome studies such as SELECT. If you compare providers, use [our methodology](/methodology).`,
+      },
+      {
+        q: "Best free local exercise for fat loss?",
+        a: `Cathedral loops and riverside walks can help you hit around 150 minutes per week. Add strength work for better long term maintenance.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "cardiff") {
+    return [
+      {
+        q: "Most successful weight loss treatment?",
+        a: `Many 2026 discussions highlight tirzepatide and semaglutide based injections for eligible people, but the best results usually come with medical supervision plus repeatable food and movement habits. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+      },
+      {
+        q: "Where can I get Mounjaro in Cardiff?",
+        a: `People often look at private clinics and pharmacies for quicker access than NHS waiting times. If you use a private route, prioritise registration, cold chain delivery, and follow up. Use [how we verify UK pharmacies](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and [our methodology](/methodology) before you pay.`,
+      },
+      {
+        q: "Can I lose 10kg in 2 months with Ozempic?",
+        a: `It can be possible for some people early on, but results vary widely by dose, adherence, and side effects. It is not guaranteed and medical oversight matters. Focus on a safe deficit, steps, and strength alongside medication when eligible.`,
+      },
+      {
+        q: "Best UK weight loss medication?",
+        a: `There is no single best for everyone, but efficacy rankings often put tirzepatide and semaglutide near the top for eligible people. Compare options and ongoing costs on [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
+      },
+      {
+        q: "NHS vs private in Cardiff?",
+        a: `NHS routes can be lower cost but criteria and waiting times vary. Private routes can be quicker but pricier. Use the [UK comparator](/compare/best-weight-loss-treatments-uk) to compare safety and follow up, not just speed.`,
+      },
+      {
+        q: "Side effects of Wegovy?",
+        a: `Nausea is common for some people, especially early. Other gastrointestinal effects can occur, so monitoring matters. Read [what Wegovy is](/what-is-wegovy) and compare providers using [our methodology](/methodology).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "carlisle") {
+    return [
+      {
+        q: "What is the most successful weight loss treatment?",
+        a: `Sustainable lifestyle shifts often lead long term outcomes, and medicines can add extra loss for eligible people when supervised. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+      },
+      {
+        q: "How did Kelly Clarkson lose weight so quickly?",
+        a: `Media reports often mention GLP 1 medicines plus lifestyle changes, and she has referenced medical guidance. Treat celebrity stories as motivation, not a protocol. Focus on eligibility, side effects, and follow up.`,
+      },
+      {
+        q: "How to lose 20 kg in 5 months?",
+        a: `Some people can do it with an aggressive deficit and consistent training, but rebound risk can rise. Aim for a safe, repeatable plan and clinician oversight if you use medication. Use our [BMI calculator](/tools/bmi-calculator) as a screening tool, not a diagnosis.`,
+      },
+      {
+        q: "What is the 3 3 3 rule for losing weight?",
+        a: `People describe it as a simple routine combining hydration, walking, and vegetables. It can help as structure, but it is not a substitute for a repeatable calorie deficit plus strength and walking. Use it to build routine, not guilt.`,
+      },
+      {
+        q: "Non surgical options for Carlisle fat loss?",
+        a: `Some clinics discuss cryolipolysis, ultrasound, and radiofrequency for local fat thickness and skin firmness. Results vary and these tools do not replace energy balance. Treat them as add ons to food and movement.`,
+      },
+      {
+        q: "Winter motivation in Cumbria?",
+        a: `Use indoor sessions when weather is harsh, keep walks short and consistent, and plan meals earlier in the day. Group accountability can help when daylight is low.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "chelmsford") {
+    return [
+      {
+        q: "Most successful weight loss treatment?",
+        a: `For many people, lifestyle changes sustain long term results, while medicines can add extra loss for eligible people when supervised. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+      },
+      {
+        q: "Weight loss injections cost UK?",
+        a: `Costs vary by provider and follow up. Many people compare ongoing totals using [Wegovy prices](/wegovy-price-comparison) and [Mounjaro prices](/mounjaro-price-comparison), rather than a single monthly headline.`,
+      },
+      {
+        q: "How did Kelly Clarkson lose weight?",
+        a: `Reports often mention medication plus diet and exercise changes. Treat celebrity stories as motivation, not a protocol. Focus on eligibility, side effects, and follow up.`,
+      },
+      {
+        q: "What is the 3 3 3 rule for weight loss?",
+        a: `People describe it as a simple routine around meals, water, and daily walking. It can help as structure, but it is not a substitute for a repeatable calorie deficit plus strength and walking.`,
+      },
+      {
+        q: "Are Chelmsford fat injections safe?",
+        a: `Some clinics offer fat dissolving injections for small areas, but suitability and side effects vary. Treat it as a medical procedure and prioritise assessment and aftercare.`,
+      },
+      {
+        q: "Laser lipo vs surgery in Essex?",
+        a: `Non surgical options can target local fat thickness and recovery is usually easier, while surgery can produce much larger total loss but with higher risk and lifelong commitments. If you are comparing routes, use [our methodology](/methodology) and consider NHS guidance for eligibility.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "chester") {
+    return [
+      {
+        q: "What’s the most successful weight loss treatment?",
+        a: `For eligible people, injection medicines can drive large average loss in trials, but long term sustainability usually improves when you pair treatment with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+      },
+      {
+        q: "How to lose 20kg in 5 months realistically?",
+        a: `It can be possible for some people with a steep deficit and consistent training, but it is hard and plateaus are common. For safety, focus on a repeatable plan and consider clinician oversight. Use our [BMI calculator](/tools/bmi-calculator) as a screening tool, not a diagnosis.`,
+      },
+      {
+        q: "How did Kelly Clarkson really lose her weight?",
+        a: `Reports often mention semaglutide plus diet and walking changes. Treat celebrity stories as motivation, not a protocol. Focus on eligibility and follow up.`,
+      },
+      {
+        q: "What’s the 3 3 3 rule for losing weight?",
+        a: `People describe it as three higher protein meals, a daily water target, and a daily walk. It can help as structure, but it is not a substitute for a calorie deficit plus strength and walking.`,
+      },
+      {
+        q: "Can Chester walls walks alone suffice?",
+        a: `They are a great start and can add steps consistently. Most evidence still favours a combined plan that includes nutrition changes and some strength training for best results.`,
+      },
+      {
+        q: "Injections side effects worth it?",
+        a: `Nausea and other gastrointestinal issues are common early for some people, while average loss can be meaningful for eligible people. The decision should include eligibility, side effects, and follow up quality. Use [our methodology](/methodology) to compare providers.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "chichester") {
+    return [
+      {
+        q: "Most successful weight loss treatment overall?",
+        a: `For eligible people, medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive strong average loss in trials, but outcomes are usually best when paired with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "How did Kelly Clarkson achieve rapid weight loss?",
+        a: `Reports often mention semaglutide plus diet and walking changes. Treat celebrity stories as motivation, not a protocol. Focus on eligibility, side effects, and follow up.`,
+      },
+      {
+        q: "Explain the 3 3 3 rule for weight loss?",
+        a: `People describe it as three balanced meals, a daily water target, and a daily walk. It can help as a simple rhythm, but it is not a substitute for a calorie deficit plus strength and walking.`,
+      },
+      {
+        q: "Cheaper alternative to Mounjaro?",
+        a: `Always be careful with claims about compounded or unlicensed versions. In the UK, prescriptions should come from appropriately regulated routes with monitoring. Use [our methodology](/methodology) and [how we verify UK pharmacies](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) before paying.`,
+      },
+      {
+        q: "Do harbour walks suffice for fat loss?",
+        a: `They help and they are a great base for consistency, but adding strength work often improves results and maintenance.`,
+      },
+      {
+        q: "Meds safe long term in West Sussex?",
+        a: `They can be safe for eligible people under supervision, but nausea and other gastrointestinal side effects are common. Follow up matters. Compare providers using [our methodology](/methodology).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "colchester") {
+    return [
+      {
+        q: "Which treatment yields fastest Colchester results?",
+        a: `Some trials show strong average loss for eligible people on medicines like [Mounjaro](/what-is-mounjaro), but sustainability still depends on habits. Start at [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and compare options safely.`,
+      },
+      {
+        q: "Typical UK injection costs near Colchester?",
+        a: `Costs vary by provider, dosing, and follow up. Compare ongoing totals on [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison) rather than a single headline figure.`,
+      },
+      {
+        q: "Kelly Clarkson rapid loss secrets?",
+        a: `Reports often mention medicines plus diet and activity changes, but celebrity stories do not translate safely to everyone. Focus on eligibility, side effects, and follow up.`,
+      },
+      {
+        q: "Mounjaro 6 month Colchester expectations?",
+        a: `Average losses vary widely. If you use medicines, monitoring matters and side effects are possible. Pair medication with food structure, steps, and strength for better maintenance.`,
+      },
+      {
+        q: "Non injection alternatives in Essex?",
+        a: `Some clinics offer cryolipolysis and laser based body sculpting for local fat thickness. Results vary and these tools do not replace energy balance. Treat them as add ons to food and movement.`,
+      },
+      {
+        q: "Combining treatments for max effect?",
+        a: `Some people combine medicines with non surgical contouring, but evidence quality varies and claims can be marketing led. Prioritise safety and keep expectations realistic.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "coventry") {
+    return [
+      {
+        q: "Most successful weight loss treatment overall?",
+        a: `For eligible people, medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive strong average loss in trials, but long term outcomes are usually best when paired with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Top UK weight loss medication right now?",
+        a: `Many comparisons highlight tirzepatide and semaglutide based injections for eligible people, but there is no single best for everyone. Compare options and ongoing costs on [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
+      },
+      {
+        q: "NHS Ozempic eligibility criteria?",
+        a: `Eligibility depends on clinical criteria and local service pathways. It often involves a BMI threshold plus health conditions and clinician oversight. Start with NHS guidance and discuss with your GP.`,
+      },
+      {
+        q: "How did Kelly Clarkson achieve rapid weight loss?",
+        a: `Reports often mention medicines plus diet and walking changes, and she has referenced medical guidance. Treat celebrity stories as motivation, not a protocol.`,
+      },
+      {
+        q: "Local Coventry walking routes for fat burn?",
+        a: `Canal paths and park routes can add consistent steps. Aim near 150 minutes of moderate activity weekly plus strength work for better maintenance.`,
+      },
+      {
+        q: "Meds vs surgery long term?",
+        a: `Medicines can be less invasive, while surgery can be more transformative for severe obesity. Both require long term habit changes and follow up.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "craigavon") {
+    return [
+      {
+        q: "NHS coverage for injections like Wegovy in NI?",
+        a: `Coverage can be limited and pathways vary. Many people use private or pharmacy routes after clinician assessment. Check local pathways on [HSCNI](https://online.hscni.net) and use [our methodology](/methodology) to compare providers.`,
+      },
+      {
+        q: "Monthly Mounjaro costs around Craigavon?",
+        a: `Costs vary by dose, supply, and follow up. Many people compare totals on [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison) rather than relying on one headline number.`,
+      },
+      {
+        q: "Ozempic eligibility criteria in Northern Ireland?",
+        a: `Eligibility depends on clinical criteria and commissioning, and it is often prioritised for diabetes pathways. Discuss eligibility with your clinician and follow local guidance.`,
+      },
+      {
+        q: "Realistic 10kg loss timeline with semaglutide?",
+        a: `Some people can lose weight quickly early on, but results vary widely. A safer approach is supervised medication plus a repeatable calorie deficit, steps, and strength.`,
+      },
+      {
+        q: "20kg in 5 months feasible near Lough Neagh?",
+        a: `It may be feasible for some people, especially with supervised medication plus lifestyle change, but it is aggressive and rebound risk can rise. Focus on safety and monitoring.`,
+      },
+      {
+        q: "Private vs pharmacy for Craigavon access?",
+        a: `Both routes can be viable when appropriately regulated. Prioritise assessment, follow up, and safe delivery. Use [how we verify UK pharmacies](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) before you pay.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "crawley") {
+    return [
+      {
+        q: "NHS weight loss injections in West Sussex?",
+        a: `Availability can be limited and pathways vary. If you are considering private or pharmacy routes, prioritise regulation and follow up. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and use [our methodology](/methodology) to compare providers safely.`,
+      },
+      {
+        q: "Top fruit slashing pounds?",
+        a: `Berries are often suggested because they are fibre rich and lower energy density, but no single fruit drives fat loss alone. The bigger driver is a repeatable calorie deficit with protein and fibre.`,
+      },
+      {
+        q: "That viral Japanese slimming hack?",
+        a: `Breathing and stress management techniques may help some people reduce stress eating, but they do not replace nutrition and movement. Treat viral hacks as add ons, not the plan.`,
+      },
+      {
+        q: "Realistic 5kg in a week?",
+        a: `Usually not sustainable. Rapid drops are often water and glycogen and can increase rebound risk. A safer target is about 0.5 to 1 kg per week.`,
+      },
+      {
+        q: "Belly fat carb villain?",
+        a: `Highly refined carbohydrates can be easy to overeat. The bigger issue is overall calories and low fibre meals. Prioritise protein and fibre and reduce ultra processed snack cycles.`,
+      },
+      {
+        q: "Ozempic toughest organ hit?",
+        a: `Rare pancreatitis risk is discussed in warnings, and gastrointestinal side effects are common for some people. Monitoring and follow up matter.`,
+      },
+      {
+        q: "Ozempic prime downside?",
+        a: `Gastrointestinal side effects such as nausea can occur, often early. Many people improve over time, but tolerability varies.`,
+      },
+      {
+        q: "Why Amy Schumer stopped Ozempic?",
+        a: `She has publicly discussed side effects. Individual tolerance varies and your plan should be clinician led, not celebrity led.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "cumbernauld") {
+    return [
+      {
+        q: "Typical private Mounjaro pricing in Scotland?",
+        a: `Pricing varies by dose, supply, and follow up. Many people compare totals on [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison) rather than relying on a single number.`,
+      },
+      {
+        q: "NHS Scotland weight loss prescriptions available?",
+        a: `Some prescriptions may be available for eligible people depending on local pathways and supply. Your GP or local service can explain current criteria and waiting times.`,
+      },
+      {
+        q: "Scotland Mounjaro eligibility basics?",
+        a: `Eligibility depends on BMI, health risks, and local commissioning. Discuss criteria with your clinician, and compare private providers using [our methodology](/methodology) if you go outside NHS routes.`,
+      },
+      {
+        q: "Private bariatric surgery expenses in Scotland?",
+        a: `Private surgery costs can be high and vary by provider and procedure. NHS routes can be free for eligible people but involve criteria and waiting times. Always consider long term follow up requirements.`,
+      },
+      {
+        q: "CoolSculpting sessions near Cumbernauld?",
+        a: `Many people need multiple sessions and results take weeks. Ask clinics for realistic outcomes and aftercare plans. Treat it as a body contouring add on, not a replacement for overall fat loss habits.`,
+      },
+      {
+        q: "Combining meds with local walks effective?",
+        a: `Often yes. Movement and strength work help maintain results and support health markers. Aim near 150 minutes of moderate activity weekly plus strength, and keep nutrition repeatable.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "derby") {
+    return [
+      {
+        q: "Which Derby area treatment yields fastest results?",
+        a: `Many clinic pathways emphasise supervised injection medicines for eligible people, but sustainability still depends on habits. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+      },
+      {
+        q: "Realistic plan to drop 14kg in 3 months safely?",
+        a: `That pace is aggressive. Some people do it with an energy deficit and structured training, but muscle loss risk rises without protein and strength. Aim for clinician oversight if using medicines, and make the plan repeatable.`,
+      },
+      {
+        q: "Quick 7 day weight dip without harm?",
+        a: `Most rapid drops are water and glycogen, not fat. Hydration, lower sodium, and routine sleep can reduce water weight, but it is not a long term strategy.`,
+      },
+      {
+        q: "Top over the counter pill for Derby users?",
+        a: `Orlistat is commonly discussed as an oral option with modest average loss for some people and known gastrointestinal side effects. It is not a substitute for diet changes.`,
+      },
+      {
+        q: "How do Derby clinics ensure safe injections?",
+        a: `Safety usually depends on eligibility screening, dose titration, side effect monitoring, and follow up. Compare provider standards using [our methodology](/methodology) before you pay.`,
+      },
+      {
+        q: "Lifestyle tweaks to boost medicine effects locally?",
+        a: `Daily walking plus two or three strength sessions per week can improve maintenance. Derbyshire trails and market shopping can make the plan easier to keep.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "doncaster") {
+    return [
+      {
+        q: "Realistic for 10kg in 2 months on Ozempic?",
+        a: `Some people can lose weight quickly early on, but results vary widely and side effects are possible. If you are comparing options, read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro), then use [our methodology](/methodology) to compare provider follow up.`,
+      },
+      {
+        q: "Safe path to 20kg in 5 months?",
+        a: `That pace is aggressive for many people. If you attempt it, clinician oversight matters. Build a repeatable deficit, add strength, and track health markers. Use our [BMI calculator](/tools/bmi-calculator) as a screening tool, not a diagnosis.`,
+      },
+      {
+        q: "Healthy 5kg drop in 7 days?",
+        a: `Usually not sustainable. Rapid drops are often water and glycogen, not fat. A safer target is about 0.5 to 1 kg per week.`,
+      },
+      {
+        q: "Japanese weight loss ritual explained?",
+        a: `Hydration and morning routines can reduce mindless snacking for some people, but evidence is thin for large losses. Treat rituals as add ons to food and movement.`,
+      },
+      {
+        q: "Kelly Clarkson actual method?",
+        a: `Reports often mention GLP 1 medicines plus lifestyle changes. Treat celebrity stories as motivation, not a protocol.`,
+      },
+      {
+        q: "Strongest OTC weight loss pill UK?",
+        a: `Orlistat is commonly discussed as an over the counter option with modest average loss for some people and known gastrointestinal side effects. It is not a substitute for diet changes.`,
+      },
+      {
+        q: "Fat burning foods for quicker results?",
+        a: `Foods like chilli and green tea may have a small effect, but the main driver is a repeatable calorie deficit with protein and fibre. Avoid overpromises.`,
+      },
+      {
+        q: "Cheapest weight loss prescription UK?",
+        a: `Prices vary by provider and supply. Compare totals on [Wegovy prices](/wegovy-price-comparison) and [Mounjaro prices](/mounjaro-price-comparison) rather than relying on a single headline.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "dundee") {
+    return [
+      {
+        q: "Who might avoid Mounjaro in Dundee?",
+        a: `People with certain thyroid histories or gastrointestinal conditions may not be suitable for some medicines. Eligibility and contraindications are clinician decisions. Use [our methodology](/methodology) to compare follow up standards if you go private.`,
+      },
+      {
+        q: "Strongest OTC weight loss aid available?",
+        a: `Orlistat is commonly discussed as an oral option with modest average loss for some people and known gastrointestinal side effects. Treat it as an add on to diet changes, not a substitute.`,
+      },
+      {
+        q: "When does Mounjaro typically kick in?",
+        a: `Some people notice appetite changes early, but timelines vary and dose titration matters. A safer approach is supervised medication plus a repeatable calorie deficit and movement.`,
+      },
+      {
+        q: "Pairing injections with Tay walks?",
+        a: `Often helpful. Regular walking and strength work can improve maintenance and health markers. Aim near 150 minutes of moderate activity weekly plus strength.`,
+      },
+      {
+        q: "Fat freezing downtime in Tayside?",
+        a: `Many people can return to routine quickly, but redness and soreness can happen. Ask for realistic outcomes and aftercare and treat fat freezing as a contouring add on, not overall fat loss on its own.`,
+      },
+      {
+        q: "Clinic programs vs solo in Dundee?",
+        a: `Supervision can help with adherence, side effect monitoring, and realistic targets. A plan that includes follow up often beats a plan that relies on willpower alone.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "dunfermline") {
+    return [
+      {
+        q: "What's a realistic 6 month Mounjaro budget in Fife?",
+        a: `Many private plans cluster around £1,000 to £1,600 across 6 months depending on dose and follow up. If you are comparing providers, use [our methodology](/methodology) to check safety and monitoring, not only price.`,
+      },
+      {
+        q: "Which NHS Scotland injections can Dunfermline residents access?",
+        a: `Access is usually reserved for specific eligibility criteria and severe cases, with clinician assessment and waiting lists. If you are exploring options, compare NHS pathways with private programs using our [best weight loss treatments in the UK guide](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "How do Scotland Mounjaro prices compare UK wide?",
+        a: `Private pricing is often similar across the UK for comparable doses and support. To get a clearer picture, see our [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison).`,
+      },
+      {
+        q: "UK's most potent prescription weight aid?",
+        a: `Trial data frequently highlights tirzepatide and semaglutide as leading options, but the best choice depends on your risks, side effects, and follow up. Start with [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+      },
+      {
+        q: "Do Fife clinics combine injections with coaching?",
+        a: `Many private programs pair medication with coaching and habit support. Combined approaches often help with adherence compared with medication alone, especially once the novelty fades.`,
+      },
+      {
+        q: "Injection side effects common locally?",
+        a: `Gastrointestinal effects like nausea are commonly reported, especially during dose increases. A slow titration plan and clinician monitoring can reduce risk. If side effects stall progress, see our [weight loss plateau guide](/weight-loss-plateau) for next steps that do not involve unsafe changes.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "durham") {
+    return [
+      {
+        q: "Fastest safe 5kg loss?",
+        a: `A safer pace is often around 0.5 to 1 kg per week through a consistent calorie deficit and activity. A 7 day target is typically unsafe for fat loss and can reflect water and muscle loss. If you want a structured comparison of options, start at [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "20kg in 5 months plan?",
+        a: `It can be possible for some people with consistent deficits and training, but it usually requires medical oversight and careful monitoring. Pair strength training with steady movement and realistic intake targets.`,
+      },
+      {
+        q: "Kelly Clarkson method in the UK?",
+        a: `Public interviews often mention medication plus lifestyle changes. In the UK, access depends on eligibility and clinician assessment. If you are comparing medicines, read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+      },
+      {
+        q: "Top local activity in Durham?",
+        a: `Long walks on local routes can be a strong baseline. Consistency usually matters more than the perfect workout. Aim for WHO style targets and build from there.`,
+      },
+      {
+        q: "Are medicines necessary?",
+        a: `Not always. Lifestyle changes are the foundation. Medicines can help for some people, particularly when BMI and health risks meet criteria and a clinician can monitor side effects.`,
+      },
+      {
+        q: "Winter motivation tips?",
+        a: `Short indoor circuits, step targets, and tracking apps can help maintain consistency. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
       },
     ];
   }
