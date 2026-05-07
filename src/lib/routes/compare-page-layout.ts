@@ -53,20 +53,20 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     share: {
       canonicalPath: "/compare/wegovy-vs-mounjaro",
       title:
-        "Wegovy vs Mounjaro UK (2026): prices, differences & safest options",
+        "Wegovy vs Mounjaro UK (2026): semaglutide vs tirzepatide price comparison",
       metaDescription:
-        "Compare Wegovy and Mounjaro with real UK pharmacy price tables, charts, and GPhC context. Independent snapshot — same data as our price comparison tools.",
+        "Side-by-side UK pharmacy-style tables for Wegovy (once-weekly semaglutide) and Mounjaro (once-weekly tirzepatide): sort by dose, spot starter vs maintenance spend, and cross-check regulated providers. Research snapshot—not prescribing advice.",
       openGraphTitle:
-        "Wegovy vs Mounjaro UK (2026) — live-style price tables | Health Wise",
+        "Semaglutide vs tirzepatide UK tables — Wegovy & Mounjaro | Health Wise",
       openGraphDescription:
-        "Wegovy and Mounjaro UK tables: filter, sort, discount mode, and charts in one comparison hub.",
+        "One page to tab between full Wegovy and Mounjaro datasets: filters, charts, and illustrative monthly patterns before you confirm live checkout prices.",
       imagePath: OG,
       imageAlt: "Health Wise — Wegovy vs Mounjaro UK comparison",
     },
     intro: {
       heading: "Why Compare On Price Data?",
       body: [
-        "Wegovy (semaglutide) and Mounjaro (tirzepatide) are both injectable weight-management medicines used in eligible UK adults, but dosing schedules, titration, and monthly spend patterns differ.",
+        "Wegovy (semaglutide) and Mounjaro (tirzepatide) are both pen-based weight-management treatments used in eligible UK adults, but dosing schedules, titration, and monthly spend patterns differ.",
         "Use the comparison tabs at the top of this page to open the full advanced table and charts for each brand — identical datasets to our standalone price comparison pages so you can switch context without losing fidelity.",
       ],
     },
@@ -99,20 +99,20 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     share: {
       canonicalPath: "/compare/mounjaro-vs-saxenda",
       title:
-        "Mounjaro vs Saxenda UK (2026): prices, dosing context & providers",
+        "Mounjaro vs Saxenda UK (2026): weekly pen vs daily liraglutide packs",
       metaDescription:
-        "Compare Mounjaro pen pricing with Saxenda multi-pack prices across UK pharmacies. Full tables, charts, and GPhC safety context — same engine as our price pages.",
+        "Compare once-weekly Mounjaro (tirzepatide) with daily Saxenda (liraglutide): different pack maths, pen counts, and titration paths—shown with full UK listing tables and charts. Illustrative figures; verify with your pharmacy.",
       openGraphTitle:
-        "Mounjaro vs Saxenda UK (2026) — pharmacy comparison tables | Health Wise",
+        "Weekly Mounjaro vs daily Saxenda — UK price tables | Health Wise",
       openGraphDescription:
-        "Switch between Mounjaro and Saxenda datasets: sort, filter, discount mode, and pack-size columns for Saxenda.",
+        "Tab between advanced tables: Mounjaro strengths vs Saxenda multi-pen packs, with sortable columns and discount preview modes.",
       imagePath: OG,
       imageAlt: "Health Wise — Mounjaro vs Saxenda UK comparison",
     },
     intro: {
       heading: "Different Medicines, Different Pack Maths",
       body: [
-        "Mounjaro is typically a once-weekly injection with strengths from 2.5 mg upward; Saxenda (liraglutide) is usually daily, with pricing often shown per pack of pens.",
+        "Mounjaro is typically a once-weekly treatment with strengths from 2.5 mg upward; Saxenda (liraglutide) is usually daily, with pricing often shown per pack of pens.",
         "At the top of this page you can switch between the same advanced Mounjaro and Saxenda comparison tables we maintain on our dedicated price pages — ideal if you are weighing upfront cost, titration path, and prescriber availability.",
       ],
     },
@@ -121,9 +121,9 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       "Headline trial results and licensing indications are not interchangeable. Mounjaro and Saxenda have different posology and titration rules. Your prescriber will assess BMI, comorbidities, and prior GLP-1 experience — use this page for pricing structure, not treatment decisions.",
     sideEffectsTitle: "Safety & Monitoring",
     sideEffectsBody:
-      "Nausea, reflux, and injection-site issues are frequent discussion points for both classes. Saxenda and Mounjaro have distinct risk sections in their summaries of product characteristics — always read the PIL supplied with your medicine.",
+      "Nausea, reflux, and local site reactions from treatment are frequent discussion points for both classes. Saxenda and Mounjaro have distinct risk sections in their summaries of product characteristics — always read the PIL supplied with your medicine.",
     bestChoiceBody:
-      "Cost is only one variable: injection frequency, titration burden, stock availability, and personal tolerance often matter as much as the headline pen or pack price. Compare totals in each tab, then validate eligibility and live quotes with a regulated UK prescriber or pharmacy.",
+      "Cost is only one variable: treatment frequency, titration burden, stock availability, and personal tolerance often matter as much as the headline pen or pack price. Compare totals in each tab, then validate eligibility and live quotes with a regulated UK prescriber or pharmacy.",
   },
   "mounjaro-vs-wegovy-vs-saxenda": {
     medications: ["mounjaro", "wegovy", "saxenda"],
@@ -147,13 +147,13 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     share: {
       canonicalPath: "/compare/mounjaro-vs-wegovy-vs-saxenda",
       title:
-        "Mounjaro vs Wegovy vs Saxenda UK (2026): prices, differences & tables",
+        "Mounjaro vs Wegovy vs Saxenda UK (2026): three-medicine price navigator",
       metaDescription:
-        "Compare Mounjaro, Wegovy, and Saxenda side by side: structured overview plus full UK pharmacy price tables, charts, and regulatory context — same engine as our dedicated compare pages.",
+        "Navigate UK private listings across tirzepatide (Mounjaro), semaglutide (Wegovy), and liraglutide (Saxenda): three full tabbed tables plus an on-page overview of treatment schedule and pack differences. Comparator only—not treatment guidance.",
       openGraphTitle:
-        "Mounjaro vs Wegovy vs Saxenda UK (2026) — three-way comparison hub | Health Wise",
+        "Three GLP-1 options UK — Mounjaro, Wegovy, Saxenda tables | Health Wise",
       openGraphDescription:
-        "Three Medicines, One Workspace: expand cards for context, then tab between full Wegovy, Mounjaro, and Saxenda datasets.",
+        "Switch tabs for each medicine’s full comparison workspace, then use filters and charts to compare like-for-like doses and packs.",
       imagePath: OG,
       imageAlt:
         "Health Wise — Mounjaro vs Wegovy vs Saxenda UK comparison",
@@ -161,7 +161,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     intro: {
       heading: "Why Read A Three-Way Comparison?",
       body: [
-        "Mounjaro (tirzepatide), Wegovy (semaglutide), and Saxenda (liraglutide) are all prescription weight-management options used in eligible UK adults, but they differ in receptor profile, injection frequency, titration, and how pharmacies quote pens or packs.",
+        "Mounjaro (tirzepatide), Wegovy (semaglutide), and Saxenda (liraglutide) are all prescription weight-management options used in eligible UK adults, but they differ in receptor profile, treatment frequency, titration, and how pharmacies quote pens or packs.",
         "The live comparison tables at the top of this page use the same advanced datasets as our standalone price pages — switch tabs to explore each brand in full detail. Further down, a structured overview highlights structural differences without replacing medical judgement.",
       ],
     },
@@ -172,7 +172,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     sideEffectsBody:
       "Gastrointestinal symptoms are common early on across GLP-1 therapies; pancreatitis, gallbladder disease, and other risks are described in each summary of product characteristics. Saxenda’s daily schedule and Mounjaro’s dual agonism carry different counselling points — always read the PIL for the medicine you are actually prescribed.",
     bestChoiceBody:
-      "There is no universal “winner”: eligibility, tolerability, injection rhythm, and total cost of care (assessment + medicine + follow-up) steer choice. Compare illustrative totals in each tab, cross-check GPhC registration, and confirm live checkout prices before you pay.",
+      "There is no universal “winner”: eligibility, tolerability, treatment schedule, and total cost of care (assessment + medicine + follow-up) steer choice. Compare illustrative totals in each tab, cross-check GPhC registration, and confirm live checkout prices before you pay.",
   },
   "best-weight-loss-treatments-uk": {
     medications: ["wegovy", "mounjaro", "saxenda"],
@@ -195,13 +195,13 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     share: {
       canonicalPath: "/compare/best-weight-loss-treatments-uk",
       title:
-        "Best weight loss treatments UK (2026) — compare Wegovy, Mounjaro & Saxenda prices",
+        "UK weight loss treatments hub (2026): Wegovy, Mounjaro & Saxenda compared",
       metaDescription:
-        "One hub for UK Wegovy, Mounjaro, and Saxenda pharmacy comparisons: advanced tables, charts, filters, and GPhC context. Independent snapshot — updated 2026.",
+        "Start here for private UK GLP-1 listings: open dedicated tabs for Wegovy, Mounjaro, and Saxenda with advanced filters, chart views, and safety context. Helps you compare total cost patterns before you shortlist a GPhC-registered provider.",
       openGraphTitle:
-        "Best weight loss treatments UK (2026) — three live-style tables | Health Wise",
+        "UK GLP-1 hub — Wegovy, Mounjaro & Saxenda price tabs | Health Wise",
       openGraphDescription:
-        "Tab between Wegovy, Mounjaro, and Saxenda with full comparison tables and chart sections.",
+        "One landing page, three deep-dive tables: compare illustrative pen and pack pricing without mixing datasets.",
       imagePath: OG,
       imageAlt: "Health Wise — UK weight loss treatment comparison",
     },

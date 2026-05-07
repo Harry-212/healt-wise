@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/prices/cheapest-options-uk";
@@ -6,7 +5,7 @@ const PATH = "/prices/cheapest-options-uk";
 export const CHEAPEST_OPTIONS_FAQS: { question: string; answer: string }[] = [
   {
     question:
-      "What are the cheapest GLP-1 weight loss injections in the UK privately?",
+      "What are the cheapest GLP-1 weight loss treatments in the UK privately?",
     answer:
       "There is no single “cheapest” GLP-1 for everyone. Private UK listings vary by medicine (Wegovy, Mounjaro, Saxenda), dose, pack size, and whether consultation and delivery are bundled. Our Wegovy, Mounjaro, and Saxenda comparison tables list illustrative pen or pack prices across pharmacies so you can compare the same strength — you must still confirm live checkout prices and suitability with a prescriber.",
   },
@@ -32,45 +31,6 @@ export const CHEAPEST_OPTIONS_FAQS: { question: string; answer: string }[] = [
   },
 ];
 
-export function cheapestOptionsUkMetadata(): Metadata {
-  const title =
-    "Cheapest Wegovy, Mounjaro & Saxenda UK Prices (2026) | GLP-1 Cost Guide";
-  const description =
-    "Compare cheapest private UK listings for Wegovy (semaglutide), Mounjaro (tirzepatide), and Saxenda (liraglutide). See illustrative price spreads, starter vs maintenance patterns, and links to full pharmacy tables — not medical advice.";
-
-  const url = `${siteOrigin()}${PATH}`;
-
-  return {
-    title,
-    description,
-    keywords: [
-      "cheapest GLP-1 UK",
-      "cheapest wegovy UK",
-      "mounjaro price UK cheapest",
-      "saxenda cost UK private",
-      "weight loss injections UK prices",
-      "semaglutide price UK",
-      "tirzepatide price UK",
-      "liraglutide saxenda UK",
-      "private prescription weight loss UK",
-    ],
-    alternates: { canonical: url },
-    openGraph: {
-      type: "article",
-      url,
-      title,
-      description,
-      siteName: "Health Wise",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-    },
-    robots: { index: true, follow: true },
-  };
-}
-
 export function cheapestOptionsUkJsonLd(): Record<string, unknown> {
   const url = `${siteOrigin()}${PATH}`;
   const faqEntities = CHEAPEST_OPTIONS_FAQS.map((item) => ({
@@ -89,9 +49,9 @@ export function cheapestOptionsUkJsonLd(): Record<string, unknown> {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
         url,
-        name: "Cheapest GLP-1 options UK — Wegovy, Mounjaro & Saxenda price guide",
+        name: "Private GLP-1 UK costs — Wegovy, Mounjaro & Saxenda illustrative guide",
         description:
-          "Illustrative UK private price comparison for GLP-1 weight loss medicines with methodology and FAQs.",
+          "Independent snapshot of private UK listing patterns for GLP-1 weight-loss medicines, with methodology links and FAQs—not live quotes or medical advice.",
       },
       {
         "@type": "FAQPage",

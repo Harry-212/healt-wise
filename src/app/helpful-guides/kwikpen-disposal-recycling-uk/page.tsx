@@ -109,7 +109,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Feel confident on your journey - A Simple Guide",
+    "Safe Disposal and Recycling in the UK - Sharps Disposal Safety Guide",
   description:
     "How to dispose of used Mounjaro KwikPens and needles safely in the UK—sharps bins, general waste rules, and returning unused medicine.",
   author: { "@type": "Organization", name: "Health Wise" },
@@ -137,7 +137,7 @@ export default function GuideKwikpenDisposal() {
       slug="kwikpen-disposal-recycling-uk"
       category="Safety Checks"
       categorySlug="safety-checks"
-      title="Feel confident on your journey - A Simple Guide"
+      title="Safe Disposal and Recycling in the UK - Sharps Disposal Safety Guide"
       description="Proper disposal of used KwikPens protects others from needle injuries, reduces environmental harm from medicines in the wrong waste stream, and aligns with UK clinical waste practice. Here's what to do step by step."
       readTime="3 min read"
       lastUpdated="April 2026"

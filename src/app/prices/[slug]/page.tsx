@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CheapestOptionsUkPage from "@/components/prices/CheapestOptionsUkPage";
-import {
-  cheapestOptionsUkJsonLd,
-  cheapestOptionsUkMetadata,
-} from "@/lib/seo/cheapest-options-page-seo";
-import { buildSeoMetadata } from "@/lib/seo/metadata";
+import { cheapestOptionsUkJsonLd } from "@/lib/seo/cheapest-options-page-seo";
+import { metadataForPriceSlug } from "@/lib/seo/price-slug-metadata";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import ComparisonTable from "@/components/comparison/ComparisonTable";
 import { HOME_PREVIEW_PROVIDERS } from "@/lib/data/home-preview-providers";
@@ -20,10 +17,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const cfg = PRICE_SLUGS[slug];
-  if (!cfg) return {};
-  if (slug === "cheapest-options-uk") return cheapestOptionsUkMetadata();
-  return buildSeoMetadata(cfg.keyword, `/prices/${slug}`);
+  return metadataForPriceSlug(slug) ?? {};
 }
 
 export default async function PricePage({ params }: Props) {

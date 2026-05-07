@@ -51,8 +51,6 @@ const IMG = {
   deliveryTruck:     `${U}1763561843671-195c87e2f685${Q}`,
   /** Laptop with lock / security concept — spotting fake pharmacies online */
   laptopSecurity:    `${U}1563986768609-322da13575f3${Q}`,
-  /** Medical syringe on blue — sharps / injection pen disposal */
-  syringeDisposal:   `${U}1587854692152-cbe660dbde88${Q}`,
   /** Van on desert road — travel & insurance abroad (verified Unsplash 200) */
   travelFlatlay:     `${U}1469854523086-cc02fe5d8800${Q}`,
   /** Aerial beach / summer — heat, sun & hydration (verified Unsplash 200) */
@@ -108,7 +106,7 @@ export const GUIDE_IMAGES: Record<string, string> = {
   // ── Safety Checks ─────────────────────────────────────────────────────────
   /** Laptop security — fake / rogue online pharmacy awareness */
   "fake-online-pharmacy-uk-how-to-spot-stay-safe":   IMG.laptopSecurity,
-  /** Syringe — KwikPen needle & sharps disposal */
+  /** Custom hero — KwikPen / sharps disposal guide */
   "kwikpen-disposal-recycling-uk":
     "/blog/Feel%20confident%20on%20your%20journey%20-%20A%20Simple%20Guide.webp",
   /** Travel flat lay — insurance for medication abroad */

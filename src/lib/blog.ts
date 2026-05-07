@@ -180,8 +180,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "understanding-the-mounjaro-kwikpen-a-user-guide",
-    title:
-      "Feel Confident with Understanding the Mounjaro Kwikpen: A User Guide",
+    title: "Feel confident on your journey - A Simple Guide",
     date: "2026-04-21",
     category: "Guides",
     description:

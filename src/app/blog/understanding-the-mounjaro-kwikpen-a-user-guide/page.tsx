@@ -7,8 +7,7 @@ const PATH = "/blog/understanding-the-mounjaro-kwikpen-a-user-guide";
 const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(KWIKPEN_HERO_WEBP)}`;
 
 export const metadata: Metadata = {
-  title:
-    "Feel Confident with Understanding the Mounjaro Kwikpen: A User Guide",
+  title: "Feel confident on your journey - A Simple Guide",
   description:
     "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss treatment journey.",
   keywords: "understanding the mounjaro kwikpen: a user guide",
@@ -16,8 +15,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title:
-      "Feel Confident with Understanding the Mounjaro Kwikpen: A User Guide",
+    title: "Feel confident on your journey - A Simple Guide",
     description:
       "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss treatment journey.",
     url: `${siteOrigin()}${PATH}`,
@@ -32,8 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Feel Confident with Understanding the Mounjaro Kwikpen: A User Guide",
+    title: "Feel confident on your journey - A Simple Guide",
     description:
       "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss treatment journey.",
     images: [HERO_IMAGE],
@@ -44,8 +41,7 @@ export default function MounjaroKwikpenUserGuidePage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline:
-      "Feel Confident with Understanding the Mounjaro Kwikpen: A User Guide",
+    headline: "Feel confident on your journey - A Simple Guide",
     description:
       "How the Mounjaro KwikPen works, safe use, storage, comparison with other UK treatments, and planning your journey — informational only, not medical advice.",
     image: [HERO_IMAGE],

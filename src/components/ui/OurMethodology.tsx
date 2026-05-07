@@ -27,7 +27,7 @@ const METHOD_STEPS: {
   {
     id: "gphc",
     icon: ShieldCheck,
-    label: "GPhC and pharmacy regulation",
+    label: "GPhC Registration and Compliance - Checked",
     desc: "We check pharmacies against the General Pharmaceutical Council (GPhC) register so listed supply routes meet UK regulatory expectations.",
   },
   {

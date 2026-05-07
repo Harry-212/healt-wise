@@ -331,7 +331,7 @@ const ALL_GUIDES = [
   {
     slug: "kwikpen-disposal-recycling-uk",
     title:
-      "Feel confident on your journey - A Simple Guide",
+      "Safe Disposal and Recycling in the UK - Sharps Disposal Safety Guide",
     description:
       "Used Mounjaro KwikPens must be disposed of safely. Here's how to handle needles, where to put the pen body, and what UK rules say about sharps and unused medication.",
     category: "Safety Checks" as Category,
