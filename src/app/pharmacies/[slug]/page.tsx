@@ -15,8 +15,10 @@ import CurelyPharmacyContent from "@/components/pharmacies/content/CurelyPharmac
 import CuvaHealthContent from "@/components/pharmacies/content/CuvaHealthContent";
 import DotorPharmacyContent from "@/components/pharmacies/content/DotorPharmacyContent";
 import DrWeightmansContent from "@/components/pharmacies/content/DrWeightmansContent";
+import ESurgeryPharmacyContent from "@/components/pharmacies/content/ESurgeryPharmacyContent";
 import EnvigorePharmacyContent from "@/components/pharmacies/content/EnvigorePharmacyContent";
 import FarmeciPharmacyContent from "@/components/pharmacies/content/FarmeciPharmacyContent";
+import FellaHealthPharmacyContent from "@/components/pharmacies/content/FellaHealthPharmacyContent";
 import FyldeClinicPharmacyContent from "@/components/pharmacies/content/FyldeClinicPharmacyContent";
 import GenmedsPharmacyContent from "@/components/pharmacies/content/GenmedsPharmacyContent";
 import GetADripPharmacyContent from "@/components/pharmacies/content/GetADripPharmacyContent";
@@ -29,7 +31,9 @@ import JuniperPharmacyContent from "@/components/pharmacies/content/JuniperPharm
 import LiveWellWeightLossPharmacyContent from "@/components/pharmacies/content/LiveWellWeightLossPharmacyContent";
 import LloydsPharmacyOnlineDoctorContent from "@/components/pharmacies/content/LloydsPharmacyOnlineDoctorContent";
 import LotusWeightLossPharmacyContent from "@/components/pharmacies/content/LotusWeightLossPharmacyContent";
+import ManchesterChemistPharmacyContent from "@/components/pharmacies/content/ManchesterChemistPharmacyContent";
 import MedExpressPharmacyContent from "@/components/pharmacies/content/MedExpressPharmacyContent";
+import MedHutPharmacyContent from "@/components/pharmacies/content/MedHutPharmacyContent";
 import MedicineMarketplacePharmacyContent from "@/components/pharmacies/content/MedicineMarketplacePharmacyContent";
 import MedicspotPharmacyContent from "@/components/pharmacies/content/MedicspotPharmacyContent";
 import MedinoPharmacyContent from "@/components/pharmacies/content/MedinoPharmacyContent";
@@ -42,16 +46,20 @@ import OnlinemedsPharmacyContent from "@/components/pharmacies/content/Onlinemed
 import OushkPharmacyContent from "@/components/pharmacies/content/OushkPharmacyContent";
 import PharmacyAdvanceContent from "@/components/pharmacies/content/PharmacyAdvanceContent";
 import Pharmacy2uPharmacyContent from "@/components/pharmacies/content/Pharmacy2uPharmacyContent";
+import PharmacyXpressPharmacyContent from "@/components/pharmacies/content/PharmacyXpressPharmacyContent";
 import PharmicaPharmacyContent from "@/components/pharmacies/content/PharmicaPharmacyContent";
+import PharmulousPharmacyContent from "@/components/pharmacies/content/PharmulousPharmacyContent";
 import PillSortedPharmacyContent from "@/components/pharmacies/content/PillSortedPharmacyContent";
 import PillSpherePharmacyContent from "@/components/pharmacies/content/PillSpherePharmacyContent";
 import Pills2uPharmacyContent from "@/components/pharmacies/content/Pills2uPharmacyContent";
 import QuickmedsPharmacyContent from "@/components/pharmacies/content/QuickmedsPharmacyContent";
 import SecondNaturePharmacyContent from "@/components/pharmacies/content/SecondNaturePharmacyContent";
+import Shape8PharmacyContent from "@/components/pharmacies/content/Shape8PharmacyContent";
 import SimpleOnlinePharmacyContent from "@/components/pharmacies/content/SimpleOnlinePharmacyContent";
 import SlimmingDirectPharmacyContent from "@/components/pharmacies/content/SlimmingDirectPharmacyContent";
 import SuperdrugOnlineDoctorContent from "@/components/pharmacies/content/SuperdrugOnlineDoctorContent";
 import SwiftDoctorPharmacyContent from "@/components/pharmacies/content/SwiftDoctorPharmacyContent";
+import SwiftMediPharmacyContent from "@/components/pharmacies/content/SwiftMediPharmacyContent";
 import TheCarePharmacyContent from "@/components/pharmacies/content/TheCarePharmacyContent";
 import TheFamilyChemistPharmacyContent from "@/components/pharmacies/content/TheFamilyChemistPharmacyContent";
 import TheIndependentPharmacyContent from "@/components/pharmacies/content/TheIndependentPharmacyContent";
@@ -59,6 +67,7 @@ import TribellePharmacyContent from "@/components/pharmacies/content/TribellePha
 import VoyPharmacyContent from "@/components/pharmacies/content/VoyPharmacyContent";
 import WePrescribePharmacyContent from "@/components/pharmacies/content/WePrescribePharmacyContent";
 import WellPharmacyContent from "@/components/pharmacies/content/WellPharmacyContent";
+import YourPharmacyPharmacyContent from "@/components/pharmacies/content/YourPharmacyPharmacyContent";
 import ZavaPharmacyContent from "@/components/pharmacies/content/ZavaPharmacyContent";
 import {
   getWegovyCompareProviderById,
@@ -98,8 +107,10 @@ import {
   cuvaHealthPharmacyLandingJsonGraph,
   dotorPharmacyLandingJsonGraph,
   drWeightmansPharmacyLandingJsonGraph,
+  eSurgeryPharmacyLandingJsonGraph,
   envigorePharmacyLandingJsonGraph,
   farmeciPharmacyLandingJsonGraph,
+  fellaHealthPharmacyLandingJsonGraph,
   fyldeClinicPharmacyLandingJsonGraph,
   genmedsPharmacyLandingJsonGraph,
   getADripPharmacyLandingJsonGraph,
@@ -112,7 +123,9 @@ import {
   liveWellWeightLossPharmacyLandingJsonGraph,
   lloydsPharmacyOnlineDoctorLandingJsonGraph,
   lotusWeightLossPharmacyLandingJsonGraph,
+  manchesterChemistPharmacyLandingJsonGraph,
   medExpressPharmacyLandingJsonGraph,
+  medhutPharmacyLandingJsonGraph,
   medicineMarketplacePharmacyLandingJsonGraph,
   medicspotPharmacyLandingJsonGraph,
   medinoPharmacyLandingJsonGraph,
@@ -124,18 +137,22 @@ import {
   onlinemedsPharmacyLandingJsonGraph,
   oushkPharmacyLandingJsonGraph,
   pharmicaPharmacyLandingJsonGraph,
+  pharmulousPharmacyLandingJsonGraph,
   pharmacy2uPharmacyLandingJsonGraph,
   pharmacyAdvancePharmacyLandingJsonGraph,
+  pharmacyXpressPharmacyLandingJsonGraph,
   pharmacyProfileJsonGraph,
   pillSortedPharmacyLandingJsonGraph,
   pillSpherePharmacyLandingJsonGraph,
   pills2uPharmacyLandingJsonGraph,
   quickmedsPharmacyLandingJsonGraph,
   secondNaturePharmacyLandingJsonGraph,
+  shape8PharmacyLandingJsonGraph,
   simpleOnlinePharmacyLandingJsonGraph,
   slimmingDirectPharmacyLandingJsonGraph,
   superdrugOnlineDoctorLandingJsonGraph,
   swiftDoctorPharmacyLandingJsonGraph,
+  swiftMediPharmacyLandingJsonGraph,
   theCarePharmacyLandingJsonGraph,
   theFamilyChemistPharmacyLandingJsonGraph,
   theIndependentPharmacyLandingJsonGraph,
@@ -143,6 +160,7 @@ import {
   voyPharmacyLandingJsonGraph,
   wePrescribePharmacyLandingJsonGraph,
   wellPharmacyLandingJsonGraph,
+  yourpharmacyPharmacyLandingJsonGraph,
   zavaPharmacyLandingJsonGraph,
 } from "@/lib/seo/pharmacy-landing-json-ld";
 
@@ -337,9 +355,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "e-surgery") {
     const title =
-      "e-Surgery Weight Loss Treatment Review (UK) — online prescriber checks, GPhC pharmacy";
+      "e-Surgery Weight Loss Review — sustainable pharmacy, Mounjaro & Wegovy (UK)";
     const description =
-      "e-Surgery: digital consultation, prescriber review, Mounjaro dose tiers from about £109.95 (2.5 mg illustrative), tracked delivery context and FAQs. Information from Health Wise — not medical advice.";
+      "e-Surgery (Norwich, GPhC 9012167): pharmacist prescribers, recyclable discreet packs, Royal Mail Tracked tiers, £30+ Tracked 24 upgrade, cold-chain pens, pricing ladder and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -391,9 +409,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "fella-health") {
     const title =
-      "Fella Health Weight Loss Treatment Review (UK) — clinician-led weight management pathway";
+      "Fella Health Review (UK) — men’s metabolic programme, Mounjaro & Wegovy, coaching";
     const description =
-      "Fella Health: structured assessment, prescriber oversight, Mounjaro pricing from about £169 (2.5 mg illustrative), delivery and monitoring themes and FAQs. Information from Health Wise — not medical advice.";
+      "Fella Health: men-focused GLP-1 programme with 1-to-1 coaching, labs when needed, cold-chain delivery, subscription-style pricing from about £199/month and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -445,9 +463,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "get-a-drip") {
     const title =
-      "Get A Drip Weight Loss Treatment Review (UK) — clinic programme, UK delivery";
+      "Get A Drip Review (UK) — doctor-led GLP-1, nurse blood tests, clinics & delivery";
     const description =
-      "Get A Drip: consultation-led Mounjaro supply, dose steps from about £129 (2.5 mg illustrative), cold-chain delivery context, how to compare costs safely and FAQs. Information from Health Wise — not medical advice.";
+      "Get A Drip: CQC/GPhC positioning, mandatory blood panels from about £150, GMC doctor review, monthly nurse follow-ups, clinic collection or pharmacy cold-chain dispatch, medication bands often £150–£300+ by dose and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -463,9 +481,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "get-weight-loss") {
     const title =
-      "Get Weight Loss Review — Wegovy, medically supervised, UK delivery";
+      "GetWeightLoss Review (UK) — Mounjaro & Wegovy, transparent pricing, pharmacist-led";
     const description =
-      "Get Weight Loss: digital clinical pathway, tracked delivery, ~£179.99/pen Wegovy example, no mandatory subscription, optional blood tests and FAQs. Information from Health Wise — not medical advice.";
+      "GetWeightLoss: “No Teaser” pricing, no tie-in subscriptions, cold-chain tracked delivery, plans from about £88.75/month, typical GLP-1 bundles from ~£148, optional labs and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -481,9 +499,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "getadrip") {
     const title =
-      "GetADrip Weight Loss Review — Mounjaro, Wegovy, UK programme";
+      "Get A Drip Review (UK) — Mounjaro & Wegovy, clinics, blood tests, pharmacy dispatch";
     const description =
-      "GetADrip: programme-style GLP-1 access, app support, DPD cold-chain delivery, ~£109 / ~£159 monthly-style pricing and FAQs. Information from Health Wise — not medical advice.";
+      "Get A Drip: nurse-led blood tests, GMC doctors, CQC/GPhC framing, in-clinic reviews or cold-chain post from their pharmacy, indicative diagnostics from ~£150 and medication £150–£300+ by dose and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -499,9 +517,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "getweightloss") {
     const title =
-      "Get Weightloss Weight Management Review (UK) — online pharmacy pricing & eligibility";
+      "GetWeightLoss Review (UK) — Mounjaro & Wegovy, no teaser pricing, UK pharmacy";
     const description =
-      "Get Weightloss: prescriber-reviewed Mounjaro access, illustrative pens from about £133.99 (2.5 mg), delivery expectations, dose-step cost context and FAQs. Information from Health Wise — not medical advice.";
+      "GetWeightLoss: pharmacist-founded service, human clinician sign-off, predictable monthly costs, optional UKAS-partner blood tests and nutritionist add-ons, Royal Mail–style tracking and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -661,9 +679,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "manchester-chemist") {
     const title =
-      "Manchester Chemist Weight Loss Treatment Review (UK) — GPhC online pharmacy snapshot";
+      "Manchester Chemist Review (UK) — Mounjaro & Wegovy, pharmacist-led Manchester pharmacy";
     const description =
-      "Manchester Chemist: remote consultation flow, Mounjaro dose pricing from about £150 (2.5 mg illustrative), discreet tracked delivery notes and FAQs. Information from Health Wise — not medical advice.";
+      "Manchester Chemist: superintendent pharmacist oversight, pay-as-you-go model, free delivery positioning, cold-chain GLP-1 dispatch, illustrative Mounjaro ~£150/£170 and Wegovy starter ~£130–£140 and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -697,9 +715,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "medhut") {
     const title =
-      "Medhut Weight Loss Treatment Review (UK) — online prescriber checks, pricing context";
+      "MedHut Review (UK) — Mounjaro & Wegovy, York family pharmacy, GPhC 9012752";
     const description =
-      "Medhut: questionnaire-led assessment, Mounjaro tiers from about £135.99 (2.5 mg illustrative), cold-chain dispatch themes, Trustpilot context and FAQs. Information from Health Wise — not medical advice.";
+      "MedHut: Jamal and Amina Hussain, pharmacist manual review, NHS-aware copy, Royal Mail Tracked 24 style cold chain, Mounjaro ~£140 to £155 and Wegovy ~£130 to £145 starter bands (marketing) and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -913,9 +931,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "pharmacy-express") {
     const title =
-      "Pharmacy Express Weight Loss Treatment Review (UK) — GPhC supply, tiered pricing";
+      "Pharmacy-Xpress Review (UK) — Mounjaro & Wegovy from £149.99, human review, fast dispatch";
     const description =
-      "Pharmacy Express: regulated online pathway, Mounjaro from about £144.99 (2.5 mg illustrative), higher-dose cost ladder, delivery bands and FAQs. Information from Health Wise — not medical advice.";
+      "Pharmacy-Xpress (pharmacy-xpress.co.uk): health-first UK pharmacy, 3pm cut-off, 24 to 48h delivery narrative, free delivery over £40, Xenical/Alli options, 4.9/5 satisfaction claim and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "pharmacy-xpress") {
+    const title =
+      "Pharmacy-Xpress Review (UK) — GLP-1 from £149.99, aftercare, no lock-in";
+    const description =
+      "Pharmacy-Xpress: clinician-led assessment, Mounjaro and Wegovy starting prices in marketing, MHRA/NICE aligned eligibility themes, discreet cold-chain packs and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -967,9 +1003,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "pharmulous") {
     const title =
-      "Pharmulous Weight Loss Treatment Review (UK) — online clinic, illustrative costs";
+      "Pharmulous Review (UK) — GP-led Mounjaro & Wegovy, needles bundled";
     const description =
-      "Pharmulous: prescriber-reviewed Mounjaro access, pricing from about £134.98 (2.5 mg illustrative), cold-chain delivery notes, how to verify GPhC supply and FAQs. Information from Health Wise — not medical advice.";
+      "Pharmulous: UK GP-steered reviews, GPhC pharmacy, integrated consultation/prescription/needles/cold-chain bundles, Trustpilot Excellent +1000 reviews (marketing), Mounjaro ~£149 to £170 and Wegovy ~£124 to £140 starters and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -1075,9 +1111,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "shape8") {
     const title =
-      "Shape8 Weight Loss Treatment Review (UK) — programme pricing, pharmacy supply context";
+      "Shape8 Review (UK) — metabolic programme, Mounjaro & Wegovy, partner pharmacy";
     const description =
-      "Shape8: clinician-led weight management framing, Mounjaro from about £168.99 (2.5 mg illustrative), delivery and monitoring themes, budgeting with Health Wise tables and FAQs. Information from Health Wise — not medical advice.";
+      "Shape8: Shape8 screening, titration plans, tech tracking, partner GPhC dispensing, cold-chain Tracked 24, Mounjaro ~£140 to £160 and Wegovy ~£130 to £150 illustrative bands, BMI safeguards and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -1183,9 +1219,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "swift-medi") {
     const title =
-      "Swift Medi Weight Loss Treatment Review (UK) — online assessment, tiered costs";
+      "SwiftMedi Weight Loss Review — ID checks, cold chain, GLP‑1 pricing (UK)";
     const description =
-      "Swift Medi: digital consultation flow, Mounjaro from about £142.75 (2.5 mg illustrative), refrigerated dispatch claims, delivery tracking context and FAQs. Information from Health Wise — not medical advice.";
+      "SwiftMedi: GPhC pharmacy partners, UK prescribers, ID and live photo verification, ~24h review, insulated Tracked 24 delivery, Mounjaro/Wegovy price bands and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -1309,9 +1345,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "yourpharmacy") {
     const title =
-      "YourPharmacy Weight Loss Treatment Review (UK) — GPhC supply, pricing ladder";
+      "YourPharmacy Weight Loss Review — NICE‑aligned triage, thermal GLP‑1 (UK)";
     const description =
-      "YourPharmacy: prescriber-reviewed Mounjaro access, illustrative pens from about £147.95 (2.5 mg), cold-chain delivery expectations, cost comparison tips and FAQs. Information from Health Wise — not medical advice.";
+      "YourPharmacy: GPhC online pharmacy, UK prescriber review, 2–8°C 48h packaging, Royal Mail/DPD tracking, Mounjaro & Wegovy price anchors, free delivery themes and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -1574,6 +1610,20 @@ export default async function PharmacyProfilePage({ params }: Props) {
     );
   }
 
+  if (slug === "fella-health") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(fellaHealthPharmacyLandingJsonGraph()),
+          }}
+        />
+        <FellaHealthPharmacyContent />
+      </>
+    );
+  }
+
   if (slug === "fylde-clinic") {
     return (
       <>
@@ -1608,10 +1658,42 @@ export default async function PharmacyProfilePage({ params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getWeightLossPharmacyLandingJsonGraph()),
+            __html: JSON.stringify(
+              getWeightLossPharmacyLandingJsonGraph("get-weight-loss"),
+            ),
           }}
         />
         <GetWeightLossPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "getweightloss") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              getWeightLossPharmacyLandingJsonGraph("getweightloss"),
+            ),
+          }}
+        />
+        <GetWeightLossPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "get-a-drip") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getADripPharmacyLandingJsonGraph("get-a-drip")),
+          }}
+        />
+        <GetADripPharmacyContent />
       </>
     );
   }
@@ -1622,7 +1704,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getADripPharmacyLandingJsonGraph()),
+            __html: JSON.stringify(getADripPharmacyLandingJsonGraph("getadrip")),
           }}
         />
         <GetADripPharmacyContent />
@@ -1742,6 +1824,20 @@ export default async function PharmacyProfilePage({ params }: Props) {
     );
   }
 
+  if (slug === "manchester-chemist") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(manchesterChemistPharmacyLandingJsonGraph()),
+          }}
+        />
+        <ManchesterChemistPharmacyContent />
+      </>
+    );
+  }
+
   if (slug === "medexpress") {
     return (
       <>
@@ -1752,6 +1848,20 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <MedExpressPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "medhut") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(medhutPharmacyLandingJsonGraph()),
+          }}
+        />
+        <MedHutPharmacyContent />
       </>
     );
   }
@@ -1910,6 +2020,38 @@ export default async function PharmacyProfilePage({ params }: Props) {
     );
   }
 
+  if (slug === "pharmacy-express") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyXpressPharmacyLandingJsonGraph("pharmacy-express"),
+            ),
+          }}
+        />
+        <PharmacyXpressPharmacyContent routeSlug="pharmacy-express" />
+      </>
+    );
+  }
+
+  if (slug === "pharmacy-xpress") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyXpressPharmacyLandingJsonGraph("pharmacy-xpress"),
+            ),
+          }}
+        />
+        <PharmacyXpressPharmacyContent routeSlug="pharmacy-xpress" />
+      </>
+    );
+  }
+
   if (slug === "pharmacy2u") {
     return (
       <>
@@ -1934,6 +2076,20 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <PharmicaPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "pharmulous") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(pharmulousPharmacyLandingJsonGraph()),
+          }}
+        />
+        <PharmulousPharmacyContent />
       </>
     );
   }
@@ -2004,6 +2160,20 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <SecondNaturePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "shape8") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(shape8PharmacyLandingJsonGraph()),
+          }}
+        />
+        <Shape8PharmacyContent />
       </>
     );
   }
@@ -2158,6 +2328,48 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <WellPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "e-surgery") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(eSurgeryPharmacyLandingJsonGraph()),
+          }}
+        />
+        <ESurgeryPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "swift-medi") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(swiftMediPharmacyLandingJsonGraph()),
+          }}
+        />
+        <SwiftMediPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "yourpharmacy") {
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(yourpharmacyPharmacyLandingJsonGraph()),
+          }}
+        />
+        <YourPharmacyPharmacyContent />
       </>
     );
   }

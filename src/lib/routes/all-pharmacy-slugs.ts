@@ -15,6 +15,7 @@ export const EXTRA_PHARMACY_LANDING_SLUGS: readonly string[] = [
   "happy-pharmacy",
   "hey-slim",
   "medicspot",
+  "pharmacy-xpress",
 ];
 
 /** Every `/pharmacies/:slug` that `generateStaticParams` builds (sitemap + llms must match). */

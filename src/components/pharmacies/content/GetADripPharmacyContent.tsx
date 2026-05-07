@@ -2,12 +2,16 @@
 
 import {
   HazardBox,
+  PHARMACY_PROVIDER_CTA_CLASSNAME,
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
 } from "./_dossier";
 
-const providerUrl = "https://getadrip.shop/";
+const providerUrl = "https://getadrip.com/";
+
+const sectionLabel =
+  "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
 
 export default function GetADripPharmacyContent() {
   const discountCode = "";
@@ -15,264 +19,138 @@ export default function GetADripPharmacyContent() {
 
   return (
     <PharmacyDossierPage
-      slugLabel="GetADrip"
+      slugLabel="Get A Drip"
       fileRef="HW-GETADRIP-2026"
-      title="GetADrip Weight Loss Review: Online Access to Mounjaro, Wegovy and Clinically Supervised Weight Management"
-      subtitle="Official dossier: programme-style GLP-1 access, app and coaching, DPD delivery, subscription pricing and FAQs (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · UK telehealth"
+      title="Get A Drip (UK): Clinic Led Weight Loss, Blood Tests and GLP‑1 Prescribing"
+      subtitle="Wellness and IV clinic network expanded into a doctor led weight programme: CQC and GPhC framing (Get A Drip Pharma), mandatory nurse blood diagnostics, GMC doctor triage, private clinic reviews, monthly nurse monitoring, optional home dispatch with medical grade cold chain, plus longevity add ons. Information only, not medical advice."
+      scopeLabel="Scope: Tirzepatide · Semaglutide · In clinic and pharmacy fulfilment"
       providerName="Get A Drip"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
-        { k: "Model", v: "UK telehealth · weight management programme" },
-        { k: "Pricing guide", v: "~£159/mo Mounjaro · ~£109/mo Wegovy (typical)" },
-        { k: "Delivery", v: "DPD · cold-chain · tracking" },
+        {
+          k: "Provider",
+          v: "Get A Drip (CQC registered service; dispensing via GPhC pharmacy e.g. Get A Drip Pharma — GPhC 9012347 verify)",
+        },
+        {
+          k: "Model",
+          v: "Nurse blood draw · GMC doctor consultation · prescription if eligible · monthly nurse follow up · clinic collect or courier",
+        },
+        {
+          k: "Fulfilment",
+          v: "Medical grade 2–8°C shipping from GPhC pharmacy · premium clinic collection option",
+        },
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
       heroProviderLogoSrc="/logo pharmacy/get a drip.webp"
-      heroProviderLogoAlt="GetADrip"
+      heroProviderLogoAlt="Get A Drip"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Get A Drip:</strong> Navigating online weight loss treatments can be complex. Get A Drip is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Get A Drip provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
-          Weight loss often gets framed as a discipline problem. Eat less. Move more. Stay committed.
-          That advice isn&apos;t wrong exactly — it&apos;s just incomplete. For many people, appetite
-          regulation, metabolic factors, emotional eating, and day-to-day routines make weight
-          management more complicated than simple calorie math.
+          <a
+            href={providerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
+          >
+            Get A Drip
+          </a>{" "}
+          built its brand on UK IV vitamin lounges before extending in 2026 into a{" "}
+          <strong>specialised weight loss treatment programme</strong>. Unlike online only pharmacies, marketing
+          stresses <strong>physical clinics</strong>, <strong>doctor led triage</strong> and hands on monitoring
+          for medicines such as <strong>Mounjaro</strong> and <strong>Wegovy</strong>.
         </p>
         <p className="text-slate-800 leading-relaxed">
-          That may help explain why medically supported programmes using treatments like Mounjaro and
-          Wegovy have gained so much attention in the UK. GetADrip weight loss treatment takes a
-          slightly broader approach than many online providers: rather than positioning itself only as
-          a prescription service, GetADrip combines GLP-1 medication access, clinician oversight,
-          behaviour change support, nutrition guidance and app-based tracking within a digital
-          programme.
-        </p>
-        <p className="text-slate-800 leading-relaxed">
-          This guide looks at how GetADrip works, how delivery is handled, pricing, support, and why
-          some patients may consider it for long-term weight management.
+          Health Wise distils their diagnostic first protocol, fulfilment choices and premium pricing bands so you
+          can weigh clinic intensity against purely digital providers.
         </p>
       </section>
 
       <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          What is GetADrip weight loss treatment?
-        </p>
+        <p className={sectionLabel}>Regulation and clinical leadership</p>
         <HazardBox className="mt-3 ring-1 ring-emerald-900/5">
-          <p className="text-slate-800 leading-relaxed">
-            GetADrip is a UK-based telehealth provider offering medically supervised weight management
-            programmes. Unlike some providers focused primarily on prescriptions, GetADrip appears to
-            position treatment as a broader programme. Patients may typically receive:
-          </p>
           <Points
             items={[
-              "Online consultation",
-              "Clinical review",
-              "Prescription treatment if appropriate",
-              "Lifestyle and nutrition guidance",
-              "Ongoing support via app and clinician follow-up",
+              "Care Quality Commission registration cited alongside medicines dispensed from an in house GPhC registered pharmacy (branded Get A Drip Pharma in public copy).",
+              "GMC registered doctors rather than algorithm only triage for personalised screening.",
+              "Longevity positioning: nutrition and hydration expertise framing weight change as part of wider metabolic health.",
             ]}
           />
-          <p className="mt-4 text-slate-800 leading-relaxed">
-            Medication is part of the model — not the entire model. That wider structure may be one of
-            its more distinctive features.
-          </p>
         </HazardBox>
       </section>
 
       <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why choose GetADrip for weight loss treatment?
-        </p>
-        <div className="mt-3 space-y-4">
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              1. A more holistic approach than prescription-only providers
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              Some online providers mainly focus on issuing prescriptions and dispatching medication.
-              GetADrip appears to go further by combining GLP-1 treatment, behaviour change support,
-              nutrition guidance, and progress monitoring — because for many patients, long-term weight
-              loss problems are rarely solved by medication alone.
-            </p>
-          </div>
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              2. Access to clinically proven GLP-1 medications
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              Available treatments include Mounjaro and Wegovy. They may help support weight management
-              by influencing biological pathways linked to appetite and satiety — reducing hunger,
-              increasing fullness, supporting lower calorie intake. That does not guarantee results;
-              evidence suggests they may support weight reduction when paired with lifestyle changes.
-            </p>
-          </div>
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              3. Programmes that may focus on sustainability
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              GetADrip&apos;s programmes appear to range from shorter interventions to longer-term
-              plans, sometimes up to 12 months — supporting habit formation, dose progression, and
-              long-term maintenance. Maintenance is where many plans fail.
-            </p>
-          </div>
-        </div>
+        <p className={sectionLabel}>Four step medical protocol</p>
+        <Points
+          items={[
+            "Diagnostic blood test: mandatory venous sampling by qualified nurses reviewing liver, kidney and glucose markers before GLP‑1 therapy.",
+            "Specialist consultation: doctors interpret labs and history, often at private clinics such as London Harley Street or other UK sites.",
+            "Clinical prescription: UK licensed prescriptions for eligible patients (Mounjaro and similar lines where approved).",
+            "Monthly in clinic assessments: nurse led reviews for progress, dose changes and side effect management face to face.",
+          ]}
+        />
       </section>
 
       <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          How GetADrip works
-        </p>
-        <div className="mt-4 grid gap-3 md:grid-cols-2">
-          {[
-            {
-              t: "Step 1: Online assessment",
-              d: "Questionnaire covering BMI, medical history, risk factors, and current medication use — to determine whether treatment may be appropriate. Screening matters.",
-            },
-            {
-              t: "Step 2: Clinical review",
-              d: "A UK-registered clinician reviews the assessment and may recommend Mounjaro, Wegovy, behaviour support, or nutrition guidance. Not everyone will qualify.",
-            },
-            {
-              t: "Step 3: Ongoing support and programme access",
-              d: "Once enrolled: 1-to-1 consultations, app-based reminders, progress tracking, behaviour coaching — more ongoing engagement than simpler pharmacy models.",
-            },
-          ].map((s) => (
-            <div key={s.t} className="border border-slate-200/90 bg-white/80 p-4 shadow-sm">
-              <p className="font-bold text-slate-900">{s.t}</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-700">{s.d}</p>
-            </div>
-          ))}
-        </div>
+        <p className={sectionLabel}>Key benefits (marketing)</p>
+        <Points
+          items={[
+            "Face to face reassurance for injection anxiety or complex histories.",
+            "Holistic tracking via repeat blood work beyond scale weight.",
+            "Optional longevity services such as hyperbaric oxygen or ozone IV therapy in the wider ecosystem.",
+            "Premium clinic environments pitched as private medical centres rather than retail counters.",
+          ]}
+        />
       </section>
 
       <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          GetADrip medication delivery and shipping
+        <p className={sectionLabel}>Receiving medication</p>
+        <p className="mt-3 text-slate-800 leading-relaxed">
+          Patients may <strong>collect pens during monthly visits</strong> or request{" "}
+          <strong>pharmacy dispatch</strong> from the GPhC registered pharmacy when clinic pickup is impractical.{" "}
+          <strong>Medical grade temperature controlled shipping</strong> targets roughly <strong>2°C to 8°C</strong>{" "}
+          stability for GLP‑1 pens in transit.
         </p>
-        <div className="mt-3 space-y-4">
-          <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-            <p className="font-bold text-slate-900">How delivery works</p>
-            <p className="mt-2 text-slate-800 leading-relaxed">
-              Once approved: medication is dispensed, packaged securely, and shipped directly to your
-              address. Deliveries are commonly handled through <strong>DPD</strong>; tracking is
-              generally included.
-            </p>
-          </div>
-          <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-            <p className="font-bold text-slate-900">Delivery timeframes</p>
-            <p className="mt-2 text-slate-800 leading-relaxed">
-              Most orders may arrive within <strong>1–3 business days</strong> in many UK locations;
-              remote areas may take longer.
-            </p>
-          </div>
-          <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-            <p className="font-bold text-slate-900">Cold-chain delivery for GLP-1 injections</p>
-            <p className="mt-2 text-slate-800 leading-relaxed">
-              Injectable medications like Mounjaro may require temperature control. GetADrip appears to
-              use cold-chain packaging and temperature-sensitive shipping methods to help preserve
-              product efficacy during transit.
-            </p>
-          </div>
-          <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-            <p className="font-bold text-slate-900">Address verification and delivery security</p>
-            <p className="mt-2 text-slate-800 leading-relaxed">
-              Patients provide a verified address when signing up. Some deliveries may require
-              signature on arrival — reducing the risk of medicines reaching the wrong recipient.
-            </p>
-          </div>
-        </div>
       </section>
 
       <div className="grid gap-4 md:grid-cols-2">
         <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
-          <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-            How much does GetADrip weight loss treatment cost?
-          </p>
+          <p className={sectionLabel}>Premium cost structure</p>
           <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
-            Pricing appears to use a <strong>subscription model</strong> — slightly different from
-            one-off pharmacy purchasing. Typical examples: <strong>Mounjaro around £159 per month</strong>
-            , <strong>Wegovy around £109 per month</strong>. Costs may vary by dosage and programme
-            structure.
-          </p>
-          <p className="mt-3 text-slate-800 leading-relaxed">
-            Pricing may include medication, clinical support, and standard programme access; additional
-            services such as nutritional consultations may involve separate costs — check before
-            enrolling.
+            Diagnostics and professional reviews carry separate fees: <strong>initial blood panels and assessments
+            often from about £150 upward</strong> depending on package.{" "}
+            <strong>Monthly medication spend commonly lands around £150 to £300+</strong> by dose for{" "}
+            <strong>Mounjaro</strong> or <strong>Wegovy</strong> style plans, with ongoing nursing check ins bundled
+            into the positioning.
           </p>
         </section>
         <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
-          <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-            App-based support and patient experience
-          </p>
-          <p className="mt-3 text-slate-800 leading-relaxed">
-            GetADrip appears to include app-based tracking — progress, weight changes, reminders,
-            programme milestones. Some people will value that; others may find apps unnecessary.
-          </p>
+          <p className={sectionLabel}>Safety narrative</p>
+          <Points
+            items={[
+              "Diagnostic first workflow to mitigate renal, hepatic or glycaemic risks.",
+              "Physical assessment access if adverse effects emerge.",
+              "Inspection transparency via CQC and GPhC public reports.",
+            ]}
+          />
         </section>
       </div>
 
       <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Patient reviews and experience
-        </p>
-        <p className="mt-3 text-slate-800 leading-relaxed">
-          Public reviews appear broadly positive around convenience, support, and professional
-          oversight. Some challenges reportedly include occasional delivery delays and uncertainty
-          around programme milestones — nuance matters; no provider is flawless.
-        </p>
-      </section>
-
-      <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          How effective is GetADrip for weight loss?
-        </p>
-        <p className="mt-3 text-slate-800 leading-relaxed">
-          Expected outcomes vary. Some programme materials suggest weight reduction of up to around{" "}
-          <strong>22%</strong> over several months in certain cases — results depend on medication
-          response, adherence, lifestyle, and baseline health. Guarantees should be viewed cautiously; a
-          combined medication plus behaviour approach may offer advantages over medication alone.
-        </p>
-      </section>
-
-      <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why medical supervision matters
-        </p>
-        <p className="mt-3 text-slate-800 leading-relaxed">
-          These medications are not appropriate for everyone. They may be considered for people with{" "}
-          <strong>BMI over 30</strong>, or <strong>BMI over 27</strong> with related conditions. GetADrip
-          appears to build screening and ongoing oversight into the model.
-        </p>
-      </section>
-
-      <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Who might consider GetADrip?
-        </p>
-        <p className="mt-3 text-slate-800 leading-relaxed">
-          This service may suit people who want more than prescription-only treatment, prefer online
-          healthcare, value ongoing support, need home delivery, and want structured long-term weight
-          management. It may be less ideal for those looking only for low-cost medication access.
-        </p>
-      </section>
-
-      <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why some patients choose GetADrip
-        </p>
+        <p className={sectionLabel}>Who the programme suits (summary)</p>
         <Points
           items={[
-            "Holistic model — medication plus behaviour support",
-            "Clinician oversight — ongoing supervision",
-            "Cold-chain delivery — secure medication shipping",
-            "Subscription access — structured continuity",
-            "App-based tracking — extra support for adherence",
+            "Patients wanting doctors to review real blood data before prescribing.",
+            "People preferring in person support over app only journeys.",
+            "Readers already interested in broader wellness or longevity services.",
           ]}
         />
+        <p className="mt-4 text-slate-800 leading-relaxed">
+          Get A Drip elevates obesity care toward <strong>medical procedure rigour</strong>: labs, clinics and
+          follow up nursing woven around GLP‑1 prescribing rather than a quick retail purchase.
+        </p>
       </section>
 
       <section className="border border-slate-200/90 bg-[#fbf9f4] p-6">
@@ -280,28 +158,28 @@ export default function GetADripPharmacyContent() {
         <div className="mt-4 space-y-4">
           {[
             {
-              q: "Can I get Wegovy from GetADrip?",
-              a: "Yes, Wegovy may be available through GetADrip after clinical assessment and approval.",
+              q: "Is blood testing mandatory?",
+              a: "Yes — marketing describes nurse led blood diagnostics as a fixed prerequisite before prescribing.",
             },
             {
-              q: "Does GetADrip offer Mounjaro for weight loss?",
-              a: "Yes, Mounjaro appears to be one of the prescription options available, subject to suitability checks.",
+              q: "Who prescribes?",
+              a: "GMC registered doctors review labs and history before issuing UK licensed prescriptions.",
             },
             {
-              q: "How much does GetADrip weight loss treatment cost?",
-              a: "Pricing may start around £159 per month for Mounjaro and £109 per month for Wegovy, depending on programme structure.",
+              q: "Can I collect in clinic?",
+              a: "Many patients collect pens during monthly assessments; courier dispatch is an alternative.",
             },
             {
-              q: "Does GetADrip deliver medication to your home?",
-              a: "Yes. Approved prescriptions are shipped directly to patients, often through DPD using cold-chain delivery where required.",
+              q: "How is cold chain managed?",
+              a: "Medical grade refrigerated shipping is cited for 2–8°C pen stability.",
             },
             {
-              q: "Is GetADrip a regulated provider?",
-              a: "GetADrip provides treatment through UK-registered clinicians with medically reviewed prescribing.",
+              q: "What budget should I expect?",
+              a: "Initial professional and lab fees often start around £150+; monthly GLP‑1 spend may fall roughly £150–£300+ by strength.",
             },
             {
-              q: "Is GetADrip different from a normal online pharmacy?",
-              a: "Potentially, yes. It appears to combine medication access with coaching, app tracking and longer-term support, rather than functioning purely as a dispensing service.",
+              q: "Are Get A Drip clinics CQC registered?",
+              a: "Their narrative highlights CQC oversight alongside GPhC pharmacy dispensing — verify live registrations.",
             },
           ].map((f) => (
             <div key={f.q} className="border-t border-slate-200/70 pt-4 first:border-t-0 first:pt-0">
@@ -312,23 +190,24 @@ export default function GetADripPharmacyContent() {
         </div>
       </section>
 
-      <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Conclusion
-        </p>
+      <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
+        <p className={sectionLabel}>Closing view</p>
         <p className="mt-3 text-slate-800 leading-relaxed">
-          If you&apos;re looking for a more structured route into prescription weight management, GetADrip
-          weight loss treatment appears to offer something slightly broader than many online pharmacy
-          providers. Access to treatments such as Mounjaro and Wegovy, combined with clinician oversight,
-          behavioural support, app-based tracking and cold-chain delivery, gives the model more depth
-          than medication alone.
+          Get A Drip is built for patients who will pay more for gold standard monitoring: labs on file, doctors in
+          clinic, nurses watching titration month to month, and optional longevity upsells. If that matches your risk
+          tolerance and schedule, compare their all in costs with Health Wise dose listings; if you only need
+          economical postage, lighter digital pharmacies may suffice.
         </p>
-        <p className="mt-3 text-slate-800 leading-relaxed">
-          Will that suit everyone? Probably not — some patients may prefer a simpler pharmacy-only
-          route; others may value the added structure. For people looking for a medically supervised,
-          more holistic and digitally managed approach to sustainable weight loss, GetADrip may be worth
-          considering.
-        </p>
+        <div className="mt-6">
+          <a
+            href={providerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
+          >
+            Visit Get A Drip
+          </a>
+        </div>
       </section>
     </PharmacyDossierPage>
   );

@@ -532,67 +532,67 @@ const GENMEDS_FAQ: FaqItem[] = [
 
 const GET_WEIGHT_LOSS_FAQ: FaqItem[] = [
   {
-    question: "Can I get Wegovy through Get Weight Loss?",
+    question: "Does GetWeightLoss offer Mounjaro and Wegovy?",
     answer:
-      "Yes, Wegovy may be available through Get Weight Loss after clinical assessment and approval.",
+      "Marketing describes clinician-reviewed plans that can include Mounjaro or Wegovy where appropriate after assessment.",
   },
   {
-    question: "How much does Get Weight Loss charge for Wegovy?",
+    question: "What is the “No Teaser” pricing policy?",
     answer:
-      "Listed pricing has included around £179.99 per pen (4 doses), though costs may vary.",
+      "They promote transparent pricing without introductory discounts that jump sharply after month one, so headline costs stay more predictable.",
   },
   {
-    question: "Does Get Weight Loss use subscriptions?",
+    question: "Are there mandatory subscriptions?",
     answer:
-      "No, the service appears to offer month-to-month ordering rather than mandatory subscription billing.",
+      "They state you can pause or stop without cancellation fees, with no tie-in contracts.",
   },
   {
-    question: "Does Get Weight Loss deliver medication to your home?",
+    question: "How are medications delivered?",
     answer:
-      "Yes. Approved prescriptions are typically shipped via tracked UK delivery, often arriving within a few working days.",
+      "Injectable lines are described as cold-chain insulated packs (about 2–8°C), discreet outer packaging and Royal Mail style tracked updates.",
   },
   {
-    question: "Is Get Weight Loss regulated?",
+    question: "What do treatments cost?",
     answer:
-      "Get Weight Loss operates through a clinically supervised prescribing model with medicines dispensed through regulated pharmacy channels.",
+      "Illustrative copy cites plans from about £88.75/month, with typical all-in GLP-1 monthly costs from around £148 depending on drug and dose.",
   },
   {
-    question: "Are there support services beyond medication?",
+    question: "Is GetWeightLoss a GPhC pharmacy?",
     answer:
-      "Yes. Optional services may include nutrition consultations, blood testing and follow-up support.",
+      "They present as a pharmacist-founded UK pharmacy; marketing cites GPhC 9012464 while some comparison tables use a different register line (verify on the GPhC site).",
   },
 ];
 
 const GETADRIP_FAQ: FaqItem[] = [
   {
-    question: "Can I get Wegovy from GetADrip?",
+    question: "Is Get A Drip CQC and GPhC regulated?",
     answer:
-      "Yes, Wegovy may be available through GetADrip after clinical assessment and approval.",
+      "They describe CQC registration and dispensing from their GPhC-registered arm (Get A Drip Pharma).",
   },
   {
-    question: "Does GetADrip offer Mounjaro for weight loss?",
+    question: "Do I need a blood test before GLP-1 treatment?",
     answer:
-      "Yes, Mounjaro appears to be one of the prescription options available, subject to suitability checks.",
+      "Their pathway highlights mandatory nurse-led blood tests to check liver, kidney and glucose markers before prescribing.",
   },
   {
-    question: "How much does GetADrip weight loss treatment cost?",
+    question: "Who prescribes?",
     answer:
-      "Pricing may start around £159 per month for Mounjaro and £109 per month for Wegovy, depending on programme structure.",
+      "Marketing emphasises GMC-registered doctors reviewing results and history, not algorithm-only triage.",
   },
   {
-    question: "Does GetADrip deliver medication to your home?",
+    question: "Can I collect medication or have it posted?",
     answer:
-      "Yes. Approved prescriptions are shipped directly to patients, often through DPD using cold-chain delivery where required.",
+      "Patients may collect at clinics during follow-ups or receive cold-chain courier dispatch from the pharmacy.",
   },
   {
-    question: "Is GetADrip a regulated provider?",
+    question: "What does it cost?",
     answer:
-      "GetADrip provides treatment through UK-registered clinicians with medically reviewed prescribing.",
+      "Initial consultation and blood panels are often quoted from about £150; monthly Mounjaro or Wegovy style medication is commonly described from roughly £150–£300+ by dose.",
   },
   {
-    question: "Is GetADrip different from a normal online pharmacy?",
+    question: "How is follow-up different from online-only pharmacies?",
     answer:
-      "Potentially, yes. It appears to combine medication access with coaching, app tracking and longer-term support, rather than functioning purely as a dispensing service.",
+      "They promote monthly in-clinic nurse reviews alongside optional longevity services such as HBOT or ozone IV add-ons.",
   },
 ];
 
@@ -890,6 +890,39 @@ const MEDEXPRESS_FAQ: FaqItem[] = [
     question: "Are delivery fees separate from medication?",
     answer:
       "Delivery bands are usually shown at checkout — factor them into total monthly cost alongside consultation and medication.",
+  },
+];
+
+const MEDHUT_FAQ: FaqItem[] = [
+  {
+    question: "Is MedHut a GPhC pharmacy?",
+    answer:
+      "Marketing cites GPhC registration 9012752 for their York-based family-run online pharmacy — verify the active premises on the official register.",
+  },
+  {
+    question: "Who runs MedHut?",
+    answer:
+      "Public copy names experienced pharmacists Jamal and Amina Hussain as founders and managers.",
+  },
+  {
+    question: "How are orders approved?",
+    answer:
+      "They emphasise manual pharmacist review and personal phone or email follow-up when history needs clarification, not instant automated approval.",
+  },
+  {
+    question: "How are Mounjaro and Wegovy shipped?",
+    answer:
+      "Injectable pens are described in insulated cold packaging toward about 2°C to 8°C with premium tracked delivery (e.g. Royal Mail Tracked 24) and discreet outer boxes.",
+  },
+  {
+    question: "What price bands are quoted?",
+    answer:
+      "Illustrative materials cite Mounjaro starter doses around £140 to £155 and Wegovy starters around £130 to £145, often bundling consultation and private prescription.",
+  },
+  {
+    question: "Does NHS experience matter on the site?",
+    answer:
+      "They highlight also handling NHS prescriptions as deepening UK safety awareness and integration.",
   },
 ];
 
@@ -1322,6 +1355,72 @@ const PHARMICA_FAQ: FaqItem[] = [
   },
 ];
 
+const PHARMACY_XPRESS_FAQ: FaqItem[] = [
+  {
+    question: "Does Pharmacy-Xpress use human prescribers?",
+    answer:
+      "Yes — a qualified prescriber manually reviews the weight-management questionnaire before approval rather than relying on automation alone.",
+  },
+  {
+    question: "What GLP-1 starting prices are advertised?",
+    answer:
+      "Marketing lists Mounjaro and Wegovy from £149.99, with starter-tier Mounjaro also described per dose.",
+  },
+  {
+    question: "How fast is delivery after the 3pm cut-off story?",
+    answer:
+      "Orders placed by 3pm are pitched for the fastest dispatch, often arriving within about 24 to 48 hours depending on courier and location.",
+  },
+  {
+    question: "Is delivery free?",
+    answer:
+      "Many weight-loss lines qualify for free delivery on orders over £40 — confirm live basket rules.",
+  },
+  {
+    question: "Are subscriptions mandatory?",
+    answer:
+      "They promote flexibility without long-term lock-in contracts.",
+  },
+  {
+    question: "What oral weight-loss options are named?",
+    answer:
+      "Xenical (Orlistat) and Alli appear as non-injectable alternatives where suitable.",
+  },
+];
+
+const PHARMULOUS_FAQ: FaqItem[] = [
+  {
+    question: "Is Pharmulous GP-led?",
+    answer:
+      "Marketing describes UK-registered doctors and clinicians reviewing consultations in a GP-steered model.",
+  },
+  {
+    question: "Which injectables are featured?",
+    answer:
+      "Mounjaro and Wegovy are the headline GLP-1 lines.",
+  },
+  {
+    question: "What does integrated pricing cover?",
+    answer:
+      "Bundles are described as including consultation, private prescription, injection needles and cold-chain delivery.",
+  },
+  {
+    question: "How is Trustpilot described?",
+    answer:
+      "Excellent rating with 1,000+ reviews is cited in briefing-style summaries.",
+  },
+  {
+    question: "How is cold chain described?",
+    answer:
+      "Medical-grade insulated packaging is used; patients often report packs arriving sealed and cold to the touch.",
+  },
+  {
+    question: "What starter price bands appear?",
+    answer:
+      "Illustrative copy cites Mounjaro 2.5mg about £149 to £170 and Wegovy starters about £124 to £140.",
+  },
+];
+
 const PILLS2U_FAQ: FaqItem[] = [
   {
     question: "What is Pills2U’s high-level process?",
@@ -1484,6 +1583,39 @@ const SECOND_NATURE_FAQ: FaqItem[] = [
     question: "Who is Second Nature best for?",
     answer:
       "Patients wanting structured behavioural support alongside injectable therapy rather than the lowest medication-only price.",
+  },
+];
+
+const SHAPE8_FAQ: FaqItem[] = [
+  {
+    question: "How does Shape8 dispense medication?",
+    answer:
+      "They describe sending prescriptions to partner GPhC-registered pharmacies for dispensing and dispatch, not selling pens without a licensed dispenser.",
+  },
+  {
+    question: "What is the Shape8 screening?",
+    answer:
+      "An online tool beyond basic BMI covering weight history, lifestyle habits and metabolic goals.",
+  },
+  {
+    question: "Is approval instant?",
+    answer:
+      "No — clinician verification focuses on suitability and contraindications rather than instant approval.",
+  },
+  {
+    question: "How are doses managed?",
+    answer:
+      "A titration schedule from starter toward maintenance is described once approved.",
+  },
+  {
+    question: "How is medication shipped?",
+    answer:
+      "Cold-chain insulated packaging toward about 2°C to 8°C, plain outer boxes, and premium tracked services such as Royal Mail Tracked 24 are common themes.",
+  },
+  {
+    question: "What price bands are quoted?",
+    answer:
+      "Marketing cites Mounjaro 2.5mg around £140 to £160 and Wegovy monthly-style plans around £130 to £150, often all-inclusive for review, prescription and delivery.",
   },
 ];
 
@@ -1880,6 +2012,171 @@ const ZAVA_FAQ: FaqItem[] = [
     question: "Are tablet deliveries sometimes free?",
     answer:
       "Standard 48-hour UK postage is often advertised as free with optional paid express upgrades.",
+  },
+];
+
+const SWIFT_MEDI_FAQ: FaqItem[] = [
+  {
+    question: "Does SwiftMedi work with GPhC pharmacies?",
+    answer:
+      "Their materials state partner pharmacies are GPhC registered — verify the dispensing premises on the official register.",
+  },
+  {
+    question: "Why upload ID and a live photo?",
+    answer:
+      "Marketing ties this to UK safety standards (CQC/GPhC-style expectations) to confirm identity and eligibility before prescribing.",
+  },
+  {
+    question: "How fast is clinical review?",
+    answer:
+      "Summaries commonly cite about 24 hours, with secure portal messaging if more information is needed.",
+  },
+  {
+    question: "How does SwiftMedi ship cold injections?",
+    answer:
+      "Insulated packaging (e.g. WoolCool-style) with ice packs is described to maintain cold chain in transit.",
+  },
+  {
+    question: "What illustrative Mounjaro and Wegovy prices are quoted?",
+    answer:
+      "Examples mention Mounjaro starter tiers around £140–£150 and high doses ~£250–£290+, Wegovy from ~£130 up to £290+ at 2.4mg.",
+  },
+  {
+    question: "Are pens batch traceable?",
+    answer:
+      "Yes — marketing states batch tracking back to manufacturers as part of their safety approach.",
+  },
+];
+
+const YOURPHARMACY_FAQ: FaqItem[] = [
+  {
+    question: "Is YourPharmacy GPhC regulated?",
+    answer:
+      "Their narrative presents a fully licensed UK online pharmacy — confirm the active registration on the GPhC website.",
+  },
+  {
+    question: "How quickly does YourPharmacy dispatch?",
+    answer:
+      "Many orders approved before a cutoff are described as dispatched within about 24 hours.",
+  },
+  {
+    question: "How is cold chain maintained for pens?",
+    answer:
+      "Thermal packaging is described to keep medicines between about 2°C and 8°C for up to roughly 48 hours in transit.",
+  },
+  {
+    question: "What starting prices are cited for Mounjaro and Wegovy?",
+    answer:
+      "Illustrative bands mention Mounjaro ~£139–£149 at 2.5mg and Wegovy ~£135–£145 at low starter doses.",
+  },
+  {
+    question: "Is tracked delivery sometimes free?",
+    answer:
+      "Marketing states many plans include free tracked shipping.",
+  },
+  {
+    question: "Does YourPharmacy reference NICE guidance?",
+    answer:
+      "Yes — eligibility checks are described as aligned with NICE-oriented criteria for GLP-1 treatment.",
+  },
+];
+
+const E_SURGERY_FAQ: FaqItem[] = [
+  {
+    question: "What is e-Surgery’s GPhC registration number?",
+    answer:
+      "Public copy cites GPhC 9012167 (Norwich) — verify on the official register.",
+  },
+  {
+    question: "Who approves consultations?",
+    answer:
+      "UK-registered independent pharmacist prescribers review questionnaires in their described model.",
+  },
+  {
+    question: "Is there a free Tracked 24 upgrade?",
+    answer:
+      "Orders over about £30 are described as automatically upgrading to Royal Mail Tracked 24 at no extra cost.",
+  },
+  {
+    question: "What Wegovy and Mounjaro price examples appear?",
+    answer:
+      "Marketing cites Wegovy from about £99.99 and Mounjaro starter/mid/maintenance bands up to around £299 at high strengths.",
+  },
+  {
+    question: "Does e-Surgery use recyclable packaging?",
+    answer:
+      "Yes — discreet outer packaging is described as recyclable alongside cold-chain injectable packs.",
+  },
+  {
+    question: "What BMI thresholds are mentioned?",
+    answer:
+      "Eligibility is commonly described as BMI 30+ or BMI 27+ with weight-related comorbidities, subject to prescriber judgement.",
+  },
+];
+
+const FELLA_HEALTH_FAQ: FaqItem[] = [
+  {
+    question: "Is Fella Health only for men?",
+    answer:
+      "Their marketing focuses on male-specific weight management and coaching — confirm current eligibility rules on Fella Health.",
+  },
+  {
+    question: "Does Fella include coaching with GLP-1 treatment?",
+    answer:
+      "Yes — they describe fortnightly 1-to-1 video coaching alongside prescribed medication within a metabolic programme.",
+  },
+  {
+    question: "Are blood tests required?",
+    answer:
+      "Sometimes — materials describe labs when needed for metabolic safety (e.g. HbA1c, kidney and liver markers).",
+  },
+  {
+    question: "What does the monthly subscription cover?",
+    answer:
+      "Marketing typically bundles medication (e.g. Mounjaro or Wegovy), coaching, clinician reviews, monitoring and cold-chain delivery from around £199/month before promos.",
+  },
+  {
+    question: "Is there a money-back guarantee?",
+    answer:
+      "They advertise a medical outcome guarantee if milestone criteria are met while following the programme — always read live terms.",
+  },
+  {
+    question: "How is medication shipped?",
+    answer:
+      "Injectable lines are described as shipped in insulated cold packaging with plain outer boxes and premium tracked couriers (often 1–2 business days).",
+  },
+];
+
+const MANCHESTER_CHEMIST_FAQ: FaqItem[] = [
+  {
+    question: "Where is Manchester Chemist located?",
+    answer:
+      "Public materials list Unit 11, 20–22 Mary Street, Manchester M3 1DZ under GPhC registration.",
+  },
+  {
+    question: "Who is the superintendent pharmacist?",
+    answer:
+      "Marketing names Mr Abdul Khalique (GPhC 2077647).",
+  },
+  {
+    question: "Does Manchester Chemist offer free delivery?",
+    answer:
+      "Promotional copy often highlights free prescription delivery for qualifying orders.",
+  },
+  {
+    question: "How are Mounjaro and Wegovy shipped?",
+    answer:
+      "They describe medical-grade cold-chain packaging for GLP-1 pens plus tracked, discreet outer packaging.",
+  },
+  {
+    question: "Is a subscription required?",
+    answer:
+      "They emphasise a pay-as-you-go model rather than rigid subscription lock-in.",
+  },
+  {
+    question: "What price examples are quoted?",
+    answer:
+      "Illustrative figures cite Mounjaro 2.5mg around £150 and 5mg around £170, with Wegovy starter doses around £130–£140.",
   },
 ];
 
@@ -2516,16 +2813,20 @@ export function genmedsPharmacyLandingJsonGraph(): Record<string, unknown> {
 }
 
 /**
- * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Get Weight Loss.
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — GetWeightLoss.
+ * Pass slug so `/pharmacies/getweightloss` and `/pharmacies/get-weight-loss` match canonical URLs.
  */
-export function getWeightLossPharmacyLandingJsonGraph(): Record<string, unknown> {
+export function getWeightLossPharmacyLandingJsonGraph(
+  slug: "get-weight-loss" | "getweightloss" = "get-weight-loss",
+): Record<string, unknown> {
   const origin = siteOrigin();
-  const path = "/pharmacies/get-weight-loss";
+  const path = `/pharmacies/${slug}`;
   const url = `${origin}${path}`;
+  const crumbName = slug === "getweightloss" ? "GetWeightLoss" : "Get Weight Loss";
   const name =
-    "Get Weight Loss review (UK) — Wegovy, medically supervised, no subscription";
+    "GetWeightLoss review (UK) — Mounjaro, Wegovy, transparent pricing, pharmacist-led";
   const description =
-    "Get Weight Loss: digital clinical pathway, tracked delivery, optional extras, month-to-month ordering and FAQs. Information from Health Wise — not medical advice.";
+    "GetWeightLoss: GPhC pharmacy positioning, “No Teaser” pricing, no mandatory subscriptions, cold-chain tracked delivery, optional labs and FAQs. Information from Health Wise — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2543,7 +2844,7 @@ export function getWeightLossPharmacyLandingJsonGraph(): Record<string, unknown>
       breadcrumbList(path, [
         { name: "Home", item: origin },
         { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
-        { name: "Get Weight Loss", item: url },
+        { name: crumbName, item: url },
       ]),
       {
         ...faqPageEntity(GET_WEIGHT_LOSS_FAQ),
@@ -2555,16 +2856,19 @@ export function getWeightLossPharmacyLandingJsonGraph(): Record<string, unknown>
 }
 
 /**
- * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — GetADrip.
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Get A Drip.
+ * Pass slug so `/pharmacies/get-a-drip` and `/pharmacies/getadrip` match canonical URLs.
  */
-export function getADripPharmacyLandingJsonGraph(): Record<string, unknown> {
+export function getADripPharmacyLandingJsonGraph(
+  slug: "getadrip" | "get-a-drip" = "getadrip",
+): Record<string, unknown> {
   const origin = siteOrigin();
-  const path = "/pharmacies/getadrip";
+  const path = `/pharmacies/${slug}`;
   const url = `${origin}${path}`;
   const name =
-    "GetADrip weight loss review (UK) — Mounjaro, Wegovy, programme support";
+    "Get A Drip weight loss review (UK) — Mounjaro, Wegovy, clinic blood tests, doctor-led";
   const description =
-    "GetADrip: GLP-1 programmes, app and coaching, DPD delivery, subscription-style pricing and FAQs. Information from Health Wise — not medical advice.";
+    "Get A Drip: CQC and GPhC positioning, mandatory nurse blood tests, GMC doctor review, clinic collection or cold-chain pharmacy dispatch, indicative fees and FAQs. Information from Health Wise — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2582,10 +2886,91 @@ export function getADripPharmacyLandingJsonGraph(): Record<string, unknown> {
       breadcrumbList(path, [
         { name: "Home", item: origin },
         { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
-        { name: "GetADrip", item: url },
+        { name: "Get A Drip", item: url },
       ]),
       {
         ...faqPageEntity(GETADRIP_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Fella Health.
+ */
+export function fellaHealthPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/fella-health";
+  const url = `${origin}${path}`;
+  const name =
+    "Fella Health review (UK) — men’s metabolic programme, Mounjaro, Wegovy, coaching";
+  const description =
+    "Fella Health: men-focused metabolic programme, GPhC pharmacy line, GLP-1 prescribing with coaching, labs when needed, cold-chain delivery and outcome-guarantee themes and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Fella Health", item: url },
+      ]),
+      {
+        ...faqPageEntity(FELLA_HEALTH_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Manchester Chemist.
+ */
+export function manchesterChemistPharmacyLandingJsonGraph(): Record<
+  string,
+  unknown
+> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/manchester-chemist";
+  const url = `${origin}${path}`;
+  const name =
+    "Manchester Chemist review (UK) — Mounjaro, Wegovy, pharmacist-led, Manchester pharmacy";
+  const description =
+    "Manchester Chemist: GPhC-registered Manchester pharmacy, superintendent-led review, pay-as-you-go positioning, cold-chain tracked delivery and illustrative dose pricing and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Manchester Chemist", item: url },
+      ]),
+      {
+        ...faqPageEntity(MANCHESTER_CHEMIST_FAQ),
         "@id": `${url}#faq`,
         url,
       },
@@ -2937,6 +3322,45 @@ export function medExpressPharmacyLandingJsonGraph(): Record<string, unknown> {
       ]),
       {
         ...faqPageEntity(MEDEXPRESS_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — MedHut.
+ */
+export function medhutPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/medhut";
+  const url = `${origin}${path}`;
+  const name =
+    "MedHut review (UK) — Mounjaro, Wegovy, York family pharmacy, pharmacist review";
+  const description =
+    "MedHut: GPhC 9012752 positioning, Jamal and Amina Hussain, manual clinical verification, NHS-aware narratives, cold-chain tracked delivery, illustrative £140 to £155 / £130 to £145 starter bands and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Medhut", item: url },
+      ]),
+      {
+        ...faqPageEntity(MEDHUT_FAQ),
         "@id": `${url}#faq`,
         url,
       },
@@ -3374,6 +3798,48 @@ export function pharmacyAdvancePharmacyLandingJsonGraph(): Record<string, unknow
 }
 
 /**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Pharmacy-Xpress / Pharmacy Express.
+ */
+export function pharmacyXpressPharmacyLandingJsonGraph(
+  slug: "pharmacy-xpress" | "pharmacy-express" = "pharmacy-xpress",
+): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = `/pharmacies/${slug}`;
+  const url = `${origin}${path}`;
+  const crumbName = slug === "pharmacy-express" ? "Pharmacy Express" : "Pharmacy-Xpress";
+  const name =
+    "Pharmacy-Xpress review (UK) — Mounjaro, Wegovy, human review, fast dispatch";
+  const description =
+    "Pharmacy-Xpress: health-first UK pharmacy narrative, clinician-led decisions, 3pm cut-off for rapid delivery, free delivery over £40, £149.99 GLP-1 starting prices in marketing, Xenical/Alli options and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: crumbName, item: url },
+      ]),
+      {
+        ...faqPageEntity(PHARMACY_XPRESS_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
  * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Pharmacy2U.
  */
 export function pharmacy2uPharmacyLandingJsonGraph(): Record<string, unknown> {
@@ -3444,6 +3910,45 @@ export function pharmicaPharmacyLandingJsonGraph(): Record<string, unknown> {
       ]),
       {
         ...faqPageEntity(PHARMICA_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Pharmulous.
+ */
+export function pharmulousPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/pharmulous";
+  const url = `${origin}${path}`;
+  const name =
+    "Pharmulous review (UK) — GP-led, Mounjaro, Wegovy, needles bundled";
+  const description =
+    "Pharmulous: GP-steered reviews, GPhC pharmacy positioning, verified UK wholesalers, integrated consultation/prescription/needles/cold-chain bundles, Trustpilot Excellent narrative and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Pharmulous", item: url },
+      ]),
+      {
+        ...faqPageEntity(PHARMULOUS_FAQ),
         "@id": `${url}#faq`,
         url,
       },
@@ -3678,6 +4183,45 @@ export function secondNaturePharmacyLandingJsonGraph(): Record<string, unknown> 
       ]),
       {
         ...faqPageEntity(SECOND_NATURE_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Shape8.
+ */
+export function shape8PharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/shape8";
+  const url = `${origin}${path}`;
+  const name =
+    "Shape8 review (UK) — Mounjaro, Wegovy, metabolic programme, partner pharmacy";
+  const description =
+    "Shape8: advanced screening, clinician verification, titration plans, tech tracking, partner GPhC dispensing, cold-chain Tracked 24 themes, £140 to £160 / £130 to £150 illustrative bands and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Shape8", item: url },
+      ]),
+      {
+        ...faqPageEntity(SHAPE8_FAQ),
         "@id": `${url}#faq`,
         url,
       },
@@ -4146,6 +4690,123 @@ export function zavaPharmacyLandingJsonGraph(): Record<string, unknown> {
       ]),
       {
         ...faqPageEntity(ZAVA_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Swift Medi (SwiftMedi).
+ */
+export function swiftMediPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/swift-medi";
+  const url = `${origin}${path}`;
+  const name =
+    "SwiftMedi / Swift Medi weight loss review (UK) — verification, cold chain, pricing";
+  const description =
+    "SwiftMedi: GPhC partner pharmacy narrative, ID/live photo checks, ~24h review, insulated GLP-1 delivery, bundled pricing themes and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Swift Medi", item: url },
+      ]),
+      {
+        ...faqPageEntity(SWIFT_MEDI_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — YourPharmacy.
+ */
+export function yourpharmacyPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/yourpharmacy";
+  const url = `${origin}${path}`;
+  const name =
+    "YourPharmacy weight loss review (UK) — fast dispatch, thermal GLP-1 delivery";
+  const description =
+    "YourPharmacy: GPhC-regulated narrative, NICE-aligned review themes, cold-chain packaging, DPD/Royal Mail tracking, pricing bands and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "YourPharmacy", item: url },
+      ]),
+      {
+        ...faqPageEntity(YOURPHARMACY_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — e-Surgery.
+ */
+export function eSurgeryPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/e-surgery";
+  const url = `${origin}${path}`;
+  const name =
+    "e-Surgery weight loss review (UK) — Norwich GPhC pharmacy, sustainable delivery";
+  const description =
+    "e-Surgery: pharmacist prescribers, recyclable discreet packaging, Royal Mail tiers with £30+ Tracked 24 upgrade, Mounjaro/Wegovy price ladder and FAQs. Information from Health Wise — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      websiteNode(),
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "e-Surgery", item: url },
+      ]),
+      {
+        ...faqPageEntity(E_SURGERY_FAQ),
         "@id": `${url}#faq`,
         url,
       },
