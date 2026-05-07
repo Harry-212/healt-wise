@@ -335,6 +335,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  if (slug === "e-surgery") {
+    const title =
+      "e-Surgery Weight Loss Treatment Review (UK) — online prescriber checks, GPhC pharmacy";
+    const description =
+      "e-Surgery: digital consultation, prescriber review, Mounjaro dose tiers from about £109.95 (2.5 mg illustrative), tracked delivery context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   if (slug === "envigore") {
     const title =
       "Envigore weight loss (UK) — Mounjaro, Wegovy, clinician-led support";
@@ -358,6 +376,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Farmeci Weight Loss Treatment Review — Mounjaro, Wegovy, UK clinician support";
     const description =
       "Farmeci: My Health Stop Ltd platform, partner pharmacies, consultations, cold-chain delivery, pricing from ~£92/dose and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "fella-health") {
+    const title =
+      "Fella Health Weight Loss Treatment Review (UK) — clinician-led weight management pathway";
+    const description =
+      "Fella Health: structured assessment, prescriber oversight, Mounjaro pricing from about £169 (2.5 mg illustrative), delivery and monitoring themes and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -407,6 +443,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  if (slug === "get-a-drip") {
+    const title =
+      "Get A Drip Weight Loss Treatment Review (UK) — clinic programme, UK delivery";
+    const description =
+      "Get A Drip: consultation-led Mounjaro supply, dose steps from about £129 (2.5 mg illustrative), cold-chain delivery context, how to compare costs safely and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   if (slug === "get-weight-loss") {
     const title =
       "Get Weight Loss Review — Wegovy, medically supervised, UK delivery";
@@ -430,6 +484,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "GetADrip Weight Loss Review — Mounjaro, Wegovy, UK programme";
     const description =
       "GetADrip: programme-style GLP-1 access, app support, DPD cold-chain delivery, ~£109 / ~£159 monthly-style pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "getweightloss") {
+    const title =
+      "Get Weightloss Weight Management Review (UK) — online pharmacy pricing & eligibility";
+    const description =
+      "Get Weightloss: prescriber-reviewed Mounjaro access, illustrative pens from about £133.99 (2.5 mg), delivery expectations, dose-step cost context and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -587,11 +659,47 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  if (slug === "manchester-chemist") {
+    const title =
+      "Manchester Chemist Weight Loss Treatment Review (UK) — GPhC online pharmacy snapshot";
+    const description =
+      "Manchester Chemist: remote consultation flow, Mounjaro dose pricing from about £150 (2.5 mg illustrative), discreet tracked delivery notes and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   if (slug === "medexpress") {
     const title =
       "MedExpress Weight Loss Review — Mounjaro, Wegovy, UK online pharmacy";
     const description =
       "MedExpress: regulated consultation, GLP-1 and oral weight loss medicines, refrigerated dispatch, delivery tiers, fees and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "medhut") {
+    const title =
+      "Medhut Weight Loss Treatment Review (UK) — online prescriber checks, pricing context";
+    const description =
+      "Medhut: questionnaire-led assessment, Mounjaro tiers from about £135.99 (2.5 mg illustrative), cold-chain dispatch themes, Trustpilot context and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -803,6 +911,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  if (slug === "pharmacy-express") {
+    const title =
+      "Pharmacy Express Weight Loss Treatment Review (UK) — GPhC supply, tiered pricing";
+    const description =
+      "Pharmacy Express: regulated online pathway, Mounjaro from about £144.99 (2.5 mg illustrative), higher-dose cost ladder, delivery bands and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   if (slug === "pharmacy2u") {
     const title =
       "Pharmacy2U Weight Loss Review — Mounjaro, Wegovy, online doctor, UK delivery";
@@ -826,6 +952,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Pharmica Weight Loss Review — Mounjaro, Wegovy, delivery tiers & pricing (UK)";
     const description =
       "Pharmica: pharmacist-led checks, injectable and capsule ranges, discreet delivery, premium and same-day options where offered, FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "pharmulous") {
+    const title =
+      "Pharmulous Weight Loss Treatment Review (UK) — online clinic, illustrative costs";
+    const description =
+      "Pharmulous: prescriber-reviewed Mounjaro access, pricing from about £134.98 (2.5 mg illustrative), cold-chain delivery notes, how to verify GPhC supply and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -929,6 +1073,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  if (slug === "shape8") {
+    const title =
+      "Shape8 Weight Loss Treatment Review (UK) — programme pricing, pharmacy supply context";
+    const description =
+      "Shape8: clinician-led weight management framing, Mounjaro from about £168.99 (2.5 mg illustrative), delivery and monitoring themes, budgeting with Health Wise tables and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   if (slug === "care-pharmacy") {
     const title =
       "The Care Pharmacy Weight Loss Review — Mounjaro, Wegovy, UK delivery (UK)";
@@ -1006,6 +1168,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Swift Doctor Weight Loss Review — fast GLP-1 access, tracked delivery (UK)";
     const description =
       "Swift Doctor: rapid online assessments, clinician oversight, courier delivery, cold-chain options, pricing themes and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "swift-medi") {
+    const title =
+      "Swift Medi Weight Loss Treatment Review (UK) — online assessment, tiered costs";
+    const description =
+      "Swift Medi: digital consultation flow, Mounjaro from about £142.75 (2.5 mg illustrative), refrigerated dispatch claims, delivery tracking context and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -1114,6 +1294,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Well Pharmacy Weight Loss Review — Mounjaro, Wegovy, pharmacist follow-ups (UK)";
     const description =
       "Well Pharmacy: online/in-store consultations, monthly monitoring themes, delivery fees, illustrative pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "yourpharmacy") {
+    const title =
+      "YourPharmacy Weight Loss Treatment Review (UK) — GPhC supply, pricing ladder";
+    const description =
+      "YourPharmacy: prescriber-reviewed Mounjaro access, illustrative pens from about £147.95 (2.5 mg), cold-chain delivery expectations, cost comparison tips and FAQs. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
