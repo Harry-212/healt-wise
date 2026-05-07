@@ -109,7 +109,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Safe Disposal & Recycling of Eli Lilly KwikPens in the UK (Mounjaro)",
+    "Feel confident on your journey - A Simple Guide",
   description:
     "How to dispose of used Mounjaro KwikPens and needles safely in the UK—sharps bins, general waste rules, and returning unused medicine.",
   author: { "@type": "Organization", name: "Health Wise" },
@@ -137,7 +137,7 @@ export default function GuideKwikpenDisposal() {
       slug="kwikpen-disposal-recycling-uk"
       category="Safety Checks"
       categorySlug="safety-checks"
-      title="Safe Disposal & Recycling of Eli Lilly KwikPens in the UK (Mounjaro)"
+      title="Feel confident on your journey - A Simple Guide"
       description="Proper disposal of used KwikPens protects others from needle injuries, reduces environmental harm from medicines in the wrong waste stream, and aligns with UK clinical waste practice. Here's what to do step by step."
       readTime="3 min read"
       lastUpdated="April 2026"
@@ -151,6 +151,8 @@ export default function GuideKwikpenDisposal() {
           currently be recycled through standard UK household recycling. They
           combine plastic, metal, and other components, and may retain traces
           of medication after use.
+          Most councils are happy to arrange the collection of medical sharps
+          free of charge by a special collection.
          For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
         <GuideBulletList
           items={[

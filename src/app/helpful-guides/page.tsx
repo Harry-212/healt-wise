@@ -331,7 +331,7 @@ const ALL_GUIDES = [
   {
     slug: "kwikpen-disposal-recycling-uk",
     title:
-      "Safe Disposal & Recycling of Eli Lilly KwikPens in the UK (Mounjaro)",
+      "Feel confident on your journey - A Simple Guide",
     description:
       "Used Mounjaro KwikPens must be disposed of safely. Here's how to handle needles, where to put the pen body, and what UK rules say about sharps and unused medication.",
     category: "Safety Checks" as Category,

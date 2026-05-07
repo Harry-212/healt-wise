@@ -109,7 +109,8 @@ export const GUIDE_IMAGES: Record<string, string> = {
   /** Laptop security — fake / rogue online pharmacy awareness */
   "fake-online-pharmacy-uk-how-to-spot-stay-safe":   IMG.laptopSecurity,
   /** Syringe — KwikPen needle & sharps disposal */
-  "kwikpen-disposal-recycling-uk":                   IMG.syringeDisposal,
+  "kwikpen-disposal-recycling-uk":
+    "/blog/Feel%20confident%20on%20your%20journey%20-%20A%20Simple%20Guide.webp",
   /** Travel flat lay — insurance for medication abroad */
   "travel-insurance-mounjaro-users-uk":              IMG.travelFlatlay,
   /** Drinking water in sun — hot weather & dehydration risk */
