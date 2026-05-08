@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -14,15 +15,15 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="relative isolate flex min-h-[70vh] flex-col overflow-hidden bg-linear-to-br from-[#e6f4ea] via-[#d8efe0] to-[#c5e6d4] px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
+    <div className="relative isolate flex min-h-[70vh] flex-col overflow-hidden bg-linear-to-br from-[#e6f4ea] via-[#d8efe0] to-[#c5e6d4] px-4 pb-12 pt-0 sm:px-6 sm:pb-16 lg:pb-20">
       <DecorativeCurves />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-2xl flex-1 flex-col">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col px-0 sm:px-2">
         <nav
-          className="mb-10 flex justify-center text-sm font-medium text-emerald-900/70"
+          className="mb-4 flex justify-center text-sm font-medium text-emerald-900/70 sm:mb-5 lg:justify-start"
           aria-label="Breadcrumb"
         >
-          <ol className="flex flex-wrap items-center justify-center gap-2">
+          <ol className="flex flex-wrap items-center gap-2">
             <li>
               <Link href="/" className="transition-colors hover:text-emerald-950">
                 Home
@@ -35,24 +36,30 @@ export default function ContactPage() {
           </ol>
         </nav>
 
-        <main className="flex flex-1 flex-col items-center justify-center text-center">
-          <h1 className="text-balance text-4xl font-bold leading-[1.12] tracking-tight text-emerald-950 sm:text-5xl lg:text-6xl">
-            Questions about {SITE_BRAND_NAME}?
-          </h1>
-          <p className="mt-8 text-lg leading-relaxed text-emerald-900/85 sm:text-xl">
-            We read every message and usually reply within 1–2 business days. Our business email is{" "}
-            <a
-              href="mailto:contact@healthwise360.co.uk"
-              className="font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
-            >
-              contact@healthwise360.co.uk
-            </a>
-            .
-          </p>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-emerald-900/75 sm:text-lg">
-            Please do not include sensitive medical information in your email; use a secure channel
-            with your clinician for clinical matters.
-          </p>
+        <main className="grid flex-1 grid-cols-1 gap-8 pb-4 pt-0 lg:grid-cols-2 lg:gap-14 lg:pb-8 xl:gap-16">
+          <div className="flex flex-col justify-start text-center lg:pr-4 lg:text-left">
+            <h1 className="text-balance text-4xl font-bold leading-[1.12] tracking-tight text-emerald-950 sm:text-5xl lg:text-6xl">
+              Questions about {SITE_BRAND_NAME}?
+            </h1>
+            <p className="mt-8 text-lg leading-relaxed text-emerald-900/85 sm:text-xl">
+              We read every message and usually reply within 1–2 business days. Our business email is{" "}
+              <a
+                href="mailto:contact@healthwise360.co.uk"
+                className="font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
+              >
+                contact@healthwise360.co.uk
+              </a>
+              .
+            </p>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-emerald-900/75 sm:mx-auto sm:text-lg lg:mx-0">
+              Please do not include sensitive medical information in your message; use a secure channel
+              with your clinician for clinical matters.
+            </p>
+          </div>
+
+          <div className="relative flex flex-col justify-start lg:pl-2">
+            <ContactForm />
+          </div>
         </main>
       </div>
     </div>
