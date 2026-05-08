@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
-import { BELLY_FAT_AFTER_40_HERO_WEBP, blogWebpPath } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/why-does-belly-fat-increase-after-40";
-const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(BELLY_FAT_AFTER_40_HERO_WEBP)}`;
+/** JPEG 1200×630 for Open Graph / WhatsApp (WebP previews are unreliable on WhatsApp). */
+const SOCIAL_PREVIEW_IMAGE = `${siteOrigin()}/blog/1.1-fatloss-og.jpg`;
 
 export const metadata: Metadata = {
   title: "Why Does Belly Fat Increase After 40? Causes & Solutions",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     publishedTime: "2026-05-08T00:00:00.000Z",
     images: [
       {
-        url: HERO_IMAGE,
+        url: SOCIAL_PREVIEW_IMAGE,
         alt: "Belly fat after 40 — causes and evidence-based solutions",
       },
     ],
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Why Does Belly Fat Increase After 40? Causes & Solutions",
     description:
       "Discover the real reasons belly fat increases after 40 — from hormonal shifts to metabolic changes. Evidence-based explanations and what you can actually do about it.",
-    images: [HERO_IMAGE],
+    images: [SOCIAL_PREVIEW_IMAGE],
   },
 };
 
@@ -43,7 +43,7 @@ export default function WhyDoesBellyFatIncreaseAfter40Page() {
     headline: "Why Does Belly Fat Increase After 40? Causes & Solutions",
     description:
       "Evidence-based reasons belly fat increases after 40 — hormonal shifts, muscle loss, insulin sensitivity changes and stress — plus practical steps to reduce visceral fat safely.",
-    image: [HERO_IMAGE],
+    image: [SOCIAL_PREVIEW_IMAGE],
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
     datePublished: "2026-05-08",

@@ -1,13 +1,10 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
-import {
-  HORMONES_BELLY_FAT_AFTER_40_HERO_WEBP,
-  blogWebpPath,
-} from "./blog-assets";
 
 const PATH = "/blog/can-hormones-cause-belly-fat-after-40";
-const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(HORMONES_BELLY_FAT_AFTER_40_HERO_WEBP)}`;
+/** JPEG 1200×630 for Open Graph / WhatsApp (WebP previews are unreliable on WhatsApp). */
+const SOCIAL_PREVIEW_IMAGE = `${siteOrigin()}/blog/2.1-fatloss-og.jpg`;
 
 export const metadata: Metadata = {
   title: "Can Hormones Cause Belly Fat After 40",
@@ -25,7 +22,7 @@ export const metadata: Metadata = {
     publishedTime: "2026-05-08T00:00:00.000Z",
     images: [
       {
-        url: HERO_IMAGE,
+        url: SOCIAL_PREVIEW_IMAGE,
         alt: "Hormones and belly fat after 40 — oestrogen, testosterone, cortisol and insulin explained",
       },
     ],
@@ -35,7 +32,7 @@ export const metadata: Metadata = {
     title: "Can Hormones Cause Belly Fat After 40",
     description:
       "Yes — hormones directly drive belly fat after 40. Learn how oestrogen, testosterone, cortisol, and insulin interact to cause abdominal weight gain, and what to do about it.",
-    images: [HERO_IMAGE],
+    images: [SOCIAL_PREVIEW_IMAGE],
   },
 };
 
@@ -46,7 +43,7 @@ export default function CanHormonesCauseBellyFatAfter40Page() {
     headline: "Can Hormones Cause Belly Fat After 40",
     description:
       "Hormones can directly drive belly fat after 40. Learn how oestrogen, testosterone, cortisol and insulin interact, common signs, and evidence-based steps that support hormonal balance.",
-    image: [HERO_IMAGE],
+    image: [SOCIAL_PREVIEW_IMAGE],
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
     datePublished: "2026-05-08",

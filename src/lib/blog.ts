@@ -93,13 +93,23 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "does-stress-cause-belly-fat",
+    title: "Does Stress Cause Belly Fat?",
+    date: "2026-05-09",
+    category: "Guides",
+    description:
+      "Chronic stress raises cortisol, and cortisol directly fuels belly fat storage. Understand the stress-belly fat link and evidence-based strategies to break the cycle.",
+    heroImage: "/blog/3.1-fatloss-og.jpg",
+    feedTags: ["guides"],
+  },
+  {
     slug: "why-does-belly-fat-increase-after-40",
     title: "Why Does Belly Fat Increase After 40? Causes & Solutions",
     date: "2026-05-08",
     category: "Guides",
     description:
       "Discover the real reasons belly fat increases after 40 — from hormonal shifts to metabolic changes. Evidence-based explanations and what you can actually do about it.",
-    heroImage: "/blog/1.1%20fatloss.webp",
+    heroImage: "/blog/1.1-fatloss-og.jpg",
     feedTags: ["guides"],
   },
   {
@@ -109,7 +119,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     category: "Guides",
     description:
       "Yes — hormones directly drive belly fat after 40. Learn how oestrogen, testosterone, cortisol, and insulin interact to cause abdominal weight gain, and what to do about it.",
-    heroImage: "/blog/2.1%20fatloss.webp",
+    heroImage: "/blog/2.1-fatloss-og.jpg",
     feedTags: ["guides"],
   },
   {
