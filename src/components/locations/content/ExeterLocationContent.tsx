@@ -8,7 +8,7 @@ import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
-import { buildLocationFaq, UK_LOCATION_SOURCES } from "@/lib/content/uk-location-article-data";
+import { buildLocationFaq } from "@/lib/content/uk-location-article-data";
 import {
   UK_WEIGHT_LOSS_FLAT_INDEX_PATH,
   type UkWeightLossLocation,
@@ -406,11 +406,11 @@ export default function ExeterLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     <a
                       className={linkCls}
-                      href={UK_LOCATION_SOURCES.OBESITY_STATS}
+                      href="https://www.nhs.uk/live-well/healthy-weight/"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      UK obesity statistics overview
+                      NHS healthy weight overview
                     </a>
                   </li>
                 </ul>
