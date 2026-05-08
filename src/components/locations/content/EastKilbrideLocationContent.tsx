@@ -281,7 +281,7 @@ export default function EastKilbrideLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   If you want a practical playbook, see our{" "}
-                  <Link className={linkCls} href="/weight-loss-plateau">
+                  <Link className={linkCls} href="/helpful-guides/mounjaro-weight-loss-plateau">
                     weight loss plateau guide
                   </Link>
                   .
@@ -406,7 +406,7 @@ export default function EastKilbrideLocationContent({ loc, shareUrl }: Props) {
                   </li>
                   <li>
                     Use the{" "}
-                    <Link className={linkCls} href="/bmi-calculator">
+                    <Link className={linkCls} href="/tools/bmi-calculator">
                       BMI calculator
                     </Link>{" "}
                     and bring your medical history to your GP or clinician.

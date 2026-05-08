@@ -356,7 +356,7 @@ export default function InvernessLocationContent({ loc, shareUrl }: Props) {
                   </li>
                   <li>
                     Use the{" "}
-                    <Link className={linkCls} href="/bmi-calculator">
+                    <Link className={linkCls} href="/tools/bmi-calculator">
                       BMI calculator
                     </Link>{" "}
                     and bring your medical history to your GP.

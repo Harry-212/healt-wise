@@ -250,7 +250,7 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
                     our UK comparison guide
                   </Link>{" "}
                   and use the{" "}
-                  <Link className={linkCls} href="/bmi-calculator">
+                  <Link className={linkCls} href="/tools/bmi-calculator">
                     BMI calculator
                   </Link>{" "}
                   to sanity check eligibility discussions before you book anything.
@@ -363,7 +363,7 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   If progress stalls, read{" "}
-                  <Link className={linkCls} href="/weight-loss-plateau">
+                  <Link className={linkCls} href="/helpful-guides/mounjaro-weight-loss-plateau">
                     our weight loss plateau guide
                   </Link>{" "}
                   before changing doses or jumping between plans.
@@ -489,7 +489,7 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
                   </li>
                   <li>
                     Use the{" "}
-                    <Link className={linkCls} href="/bmi-calculator">
+                    <Link className={linkCls} href="/tools/bmi-calculator">
                       BMI calculator
                     </Link>{" "}
                     and bring your history and current medicines to your appointment.

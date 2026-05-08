@@ -168,7 +168,7 @@ export default function DurhamLocationContent({ loc, shareUrl }: Props) {
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and check eligibility using the{" "}
-                  <Link className={linkCls} href="/bmi-calculator">
+                  <Link className={linkCls} href="/tools/bmi-calculator">
                     BMI calculator
                   </Link>
                   . Then read{" "}
@@ -488,7 +488,7 @@ export default function DurhamLocationContent({ loc, shareUrl }: Props) {
                   </li>
                   <li>
                     Use the{" "}
-                    <Link className={linkCls} href="/bmi-calculator">
+                    <Link className={linkCls} href="/tools/bmi-calculator">
                       BMI calculator
                     </Link>{" "}
                     and bring your medical history to your appointment.

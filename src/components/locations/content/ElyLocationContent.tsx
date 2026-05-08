@@ -321,7 +321,7 @@ export default function ElyLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   If progress stalls, see our{" "}
-                  <Link className={linkCls} href="/weight-loss-plateau">
+                  <Link className={linkCls} href="/helpful-guides/mounjaro-weight-loss-plateau">
                     weight loss plateau guide
                   </Link>
                   .
@@ -342,7 +342,7 @@ export default function ElyLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>
                     Use the{" "}
-                    <Link className={linkCls} href="/bmi-calculator">
+                    <Link className={linkCls} href="/tools/bmi-calculator">
                       BMI calculator
                     </Link>{" "}
                     to prepare, including ethnicity adjustments where relevant

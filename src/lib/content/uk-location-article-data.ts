@@ -1113,7 +1113,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Injection side effects common locally?",
-        a: `Gastrointestinal effects like nausea are commonly reported, especially during dose increases. A slow titration plan and clinician monitoring can reduce risk. If side effects stall progress, see our [weight loss plateau guide](/weight-loss-plateau) for next steps that do not involve unsafe changes.`,
+        a: `Gastrointestinal effects like nausea are commonly reported, especially during dose increases. A slow titration plan and clinician monitoring can reduce risk. If side effects stall progress, see our [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau) for next steps that do not involve unsafe changes.`,
       },
     ];
   }
@@ -1142,7 +1142,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Winter motivation tips?",
-        a: `Short indoor circuits, step targets, and tracking apps can help maintain consistency. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+        a: `Short indoor circuits, step targets, and tracking apps can help maintain consistency. If progress stalls, see our [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
       },
     ];
   }
@@ -1171,7 +1171,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Long term success?",
-        a: `Habits drive maintenance after medication stops. Focus on repeatable food structure, steps, and strength work, and use our [weight loss plateau guide](/weight-loss-plateau) if progress stalls.`,
+        a: `Habits drive maintenance after medication stops. Focus on repeatable food structure, steps, and strength work, and use our [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau) if progress stalls.`,
       },
     ];
   }
@@ -1200,7 +1200,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Side effects management?",
-        a: `A slow dose increase, hydration, and smaller meals can help nausea. Monitoring matters, especially if symptoms persist. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+        a: `A slow dose increase, hydration, and smaller meals can help nausea. Monitoring matters, especially if symptoms persist. If progress stalls, see our [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
       },
     ];
   }
@@ -1213,7 +1213,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Chinese fast weight loss?",
-        a: `Green tea, fibre such as glucomannan, and calorie cycling can support adherence for some people, but they are not magic. A safer pace is often around 0.5 kg per week. If you get stuck, see our [weight loss plateau guide](/weight-loss-plateau).`,
+        a: `Green tea, fibre such as glucomannan, and calorie cycling can support adherence for some people, but they are not magic. A safer pace is often around 0.5 kg per week. If you get stuck, see our [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
       },
       {
         q: "Kelly Clarkson method?",
@@ -1229,7 +1229,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Tier 3 wait in Cambridgeshire?",
-        a: `Waiting times can be long for specialist services, so it can help to start Tier 2 style habit work in parallel. Use [the BMI calculator](/bmi-calculator) to prepare for eligibility discussions.`,
+        a: `Waiting times can be long for specialist services, so it can help to start Tier 2 style habit work in parallel. Use [the BMI calculator](/tools/bmi-calculator) to prepare for eligibility discussions.`,
       },
     ];
   }
@@ -1246,7 +1246,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Do people regain weight after Ozempic?",
-        a: `Regain is common when medication stops if habits and food structure do not stick. Use the medication window to build routines you can maintain. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+        a: `Regain is common when medication stops if habits and food structure do not stick. Use the medication window to build routines you can maintain. If progress stalls, see our [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
       },
       {
         q: "What is a cheaper alternative to Mounjaro?",
@@ -1283,7 +1283,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How do I access NHS weight loss support in Glasgow?",
-        a: `Many people start with community programs and self referral routes where available, and GP referral for specialist pathways. Use [the BMI calculator](/bmi-calculator) to prepare for eligibility discussions.`,
+        a: `Many people start with community programs and self referral routes where available, and GP referral for specialist pathways. Use [the BMI calculator](/tools/bmi-calculator) to prepare for eligibility discussions.`,
       },
       {
         q: "Are private clinics safe for Glasgow residents?",
@@ -1354,7 +1354,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Free weight loss programs available locally?",
-        a: `Yes. Kirklees Wellness style services often offer free coaching for eligible adults. Start by comparing your options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and prepare for eligibility chats with the [BMI calculator](/bmi-calculator).`,
+        a: `Yes. Kirklees Wellness style services often offer free coaching for eligible adults. Start by comparing your options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and prepare for eligibility chats with the [BMI calculator](/tools/bmi-calculator).`,
       },
       {
         q: "When does NHS bariatric surgery become realistic here?",
@@ -1370,7 +1370,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How to avoid common GLP 1 side effects?",
-        a: `Slow dose increases, hydration, and protein forward meals can help. Monitoring matters, especially early on. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+        a: `Slow dose increases, hydration, and protein forward meals can help. Monitoring matters, especially early on. If progress stalls, see our [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
       },
       {
         q: "Best timeline for 10kg loss in Huddersfield?",
@@ -1403,7 +1403,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Winter motivation in Inverness?",
-        a: `Short indoor circuits, step targets, and a simple plan you can repeat can help. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+        a: `Short indoor circuits, step targets, and a simple plan you can repeat can help. If progress stalls, see our [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
       },
     ];
   }
@@ -1412,7 +1412,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "How do I access NHS specialist care in Hull?",
-        a: `Some Hull services allow self referral for specialist weight management at higher BMI thresholds, while other routes need GP referral. Use the [BMI calculator](/bmi-calculator) to prepare for eligibility discussions and compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Some Hull services allow self referral for specialist weight management at higher BMI thresholds, while other routes need GP referral. Use the [BMI calculator](/tools/bmi-calculator) to prepare for eligibility discussions and compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
       },
       {
         q: "Where to get Wegovy and Mounjaro prescriptions locally?",
@@ -1432,7 +1432,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How to manage GLP 1 side effects effectively?",
-        a: `Slow dose increases, hydration, and protein forward meals can help. A weekend start can be easier for some shift patterns. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+        a: `Slow dose increases, hydration, and protein forward meals can help. A weekend start can be easier for some shift patterns. If progress stalls, see our [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
       },
     ];
   }

@@ -274,7 +274,7 @@ export default function EdinburghLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   Plateaus can happen around week 6. Sleep and protein can help, and you can use our{" "}
-                  <Link className={linkCls} href="/weight-loss-plateau">
+                  <Link className={linkCls} href="/helpful-guides/mounjaro-weight-loss-plateau">
                     weight loss plateau guide
                   </Link>{" "}
                   for practical next steps.
@@ -408,7 +408,7 @@ export default function EdinburghLocationContent({ loc, shareUrl }: Props) {
                   </li>
                   <li>
                     Use the{" "}
-                    <Link className={linkCls} href="/bmi-calculator">
+                    <Link className={linkCls} href="/tools/bmi-calculator">
                       BMI calculator
                     </Link>{" "}
                     and bring your medical history to your GP.

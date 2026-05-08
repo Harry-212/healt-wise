@@ -166,7 +166,7 @@ export default function KingstonUponHullLocationContent({ loc, shareUrl }: Props
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and check eligibility with the{" "}
-                  <Link className={linkCls} href="/bmi-calculator">
+                  <Link className={linkCls} href="/tools/bmi-calculator">
                     BMI calculator
                   </Link>
                   .
@@ -237,7 +237,7 @@ export default function KingstonUponHullLocationContent({ loc, shareUrl }: Props
 
                 <p className={p}>
                   Plateaus happen. If you feel stuck, use our{" "}
-                  <Link className={linkCls} href="/weight-loss-plateau">
+                  <Link className={linkCls} href="/helpful-guides/mounjaro-weight-loss-plateau">
                     weight loss plateau guide
                   </Link>
                   .
@@ -297,7 +297,7 @@ export default function KingstonUponHullLocationContent({ loc, shareUrl }: Props
                     methodology
                   </Link>{" "}
                   to compare provider standards and the{" "}
-                  <Link className={linkCls} href="/bmi-calculator">
+                  <Link className={linkCls} href="/tools/bmi-calculator">
                     BMI calculator
                   </Link>{" "}
                   to prepare for eligibility discussions.

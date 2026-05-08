@@ -174,7 +174,7 @@ export default function HerefordLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="nhs" heading="NHS and community routes in Hereford">
                 <p className={p}>
                   NHS first steps often focus on structured coaching and repeatable habits. If you want a fast way to assess eligibility before a GP chat, use the{" "}
-                  <Link className={linkCls} href="/bmi-calculator">
+                  <Link className={linkCls} href="/tools/bmi-calculator">
                     BMI calculator
                   </Link>
                   .
@@ -299,7 +299,7 @@ export default function HerefordLocationContent({ loc, shareUrl }: Props) {
                   </li>
                   <li>
                     Use the{" "}
-                    <Link className={linkCls} href="/bmi-calculator">
+                    <Link className={linkCls} href="/tools/bmi-calculator">
                       BMI calculator
                     </Link>{" "}
                     and bring your medical history to your GP.

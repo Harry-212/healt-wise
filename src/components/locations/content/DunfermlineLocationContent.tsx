@@ -168,7 +168,7 @@ export default function DunfermlineLocationContent({ loc, shareUrl }: Props) {
                     our best weight loss treatments in the UK comparison
                   </Link>{" "}
                   and the{" "}
-                  <Link className={linkCls} href="/bmi-calculator">
+                  <Link className={linkCls} href="/tools/bmi-calculator">
                     BMI calculator
                   </Link>
                   . Then read{" "}
@@ -347,7 +347,7 @@ export default function DunfermlineLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   If you are stuck, use our{" "}
-                  <Link className={linkCls} href="/weight-loss-plateau">
+                  <Link className={linkCls} href="/helpful-guides/mounjaro-weight-loss-plateau">
                     weight loss plateau guide
                   </Link>{" "}
                   before changing plans abruptly.
