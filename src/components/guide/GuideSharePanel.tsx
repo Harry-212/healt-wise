@@ -4,14 +4,19 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Copy, MoreHorizontal } from "lucide-react";
 
 type Props = {
-  url: string;
+  /**
+   * Canonical URL to share.
+   * `shareUrl` is kept for backward compatibility with older location templates.
+   */
+  url?: string;
+  shareUrl?: string;
   title: string;
   /** Meta / lead text — used in share payloads so apps can show context */
-  description: string;
+  description?: string;
 };
 
-function snippet(text: string, max = 220) {
-  const t = text.replace(/\s+/g, " ").trim();
+function snippet(text: string | undefined, max = 220) {
+  const t = (text ?? "").replace(/\s+/g, " ").trim();
   if (t.length <= max) return t;
   return `${t.slice(0, max - 1).trim()}…`;
 }
@@ -95,7 +100,9 @@ const circleBtnBrand = `${circleBtnBase} hover:-translate-y-0.5 hover:shadow-lg 
 
 const circleBtnGhost = `${circleBtnBase} border border-slate-300/80 bg-white/55 text-slate-700 shadow-sm backdrop-blur-sm hover:-translate-y-0.5 hover:border-slate-400/90 hover:bg-white/90 hover:shadow-md active:translate-y-0 active:shadow-sm`;
 
-export function GuideSharePanel({ url, title, description }: Props) {
+export function GuideSharePanel({ url, shareUrl, title, description }: Props) {
+  const resolvedUrl = url ?? shareUrl ?? "";
+  const resolvedDescription = description ?? "";
   const [copied, setCopied] = useState(false);
   const [shareError, setShareError] = useState<string | null>(null);
   const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -109,7 +116,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
 
   const copyLink = useCallback(async () => {
     try {
-      await navigator.clipboard.writeText(url);
+      await navigator.clipboard.writeText(resolvedUrl);
       setCopied(true);
       setShareError(null);
       clearCopyTimer();
@@ -117,7 +124,7 @@ export function GuideSharePanel({ url, title, description }: Props) {
     } catch {
       setCopied(false);
     }
-  }, [url, clearCopyTimer]);
+  }, [resolvedUrl, clearCopyTimer]);
 
   const nativeShare = useCallback(async () => {
     setShareError(null);
@@ -128,31 +135,31 @@ export function GuideSharePanel({ url, title, description }: Props) {
     try {
       await navigator.share({
         title,
-        text: snippet(description, 400),
-        url,
+        text: snippet(resolvedDescription, 400),
+        url: resolvedUrl,
       });
     } catch (e) {
       if (e instanceof DOMException && e.name === "AbortError") return;
       setShareError("Could not open the system share sheet.");
     }
-  }, [title, description, url]);
+  }, [title, resolvedDescription, resolvedUrl]);
 
   useEffect(() => () => clearCopyTimer(), [clearCopyTimer]);
 
-  const descShort = snippet(description, 200);
+  const descShort = snippet(resolvedDescription, 200);
   let shareSource = "Health Wise";
   try {
-    shareSource = new URL(url).hostname;
+    shareSource = new URL(resolvedUrl).hostname;
   } catch {
     /* keep default */
   }
-  const wa = `https://api.whatsapp.com/send?text=${encodeURIComponent(whatsAppBody(title, url, description))}`;
-  const fb = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+  const wa = `https://api.whatsapp.com/send?text=${encodeURIComponent(whatsAppBody(title, resolvedUrl, resolvedDescription))}`;
+  const fb = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(resolvedUrl)}`;
   /** LinkedIn `share-offsite` often fails in-app; `shareArticle` is more reliable. */
-  const li = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(descShort)}&source=${encodeURIComponent(shareSource)}`;
-  const x = `https://x.com/intent/post?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
-  const tg = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(`${title}\n\n${descShort}`)}`;
-  const pin = `https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(title)}`;
+  const li = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(resolvedUrl)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(descShort)}&source=${encodeURIComponent(shareSource)}`;
+  const x = `https://x.com/intent/post?url=${encodeURIComponent(resolvedUrl)}&text=${encodeURIComponent(title)}`;
+  const tg = `https://t.me/share/url?url=${encodeURIComponent(resolvedUrl)}&text=${encodeURIComponent(`${title}\n\n${descShort}`)}`;
+  const pin = `https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(resolvedUrl)}&description=${encodeURIComponent(title)}`;
 
   return (
     <section

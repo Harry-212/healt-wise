@@ -44,7 +44,7 @@ export default function ArticleClient() {
             <div className={`w-10 h-10 rounded-full flex items-center justify-center ${darkMode ? "bg-slate-800" : "bg-slate-100"}`}>
               <ArrowLeft className="w-4 h-4" />
             </div>
-            Back to News
+            Back to Blog
           </Link>
           
           <div className="flex items-center gap-3">

@@ -93,6 +93,26 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "why-does-belly-fat-increase-after-40",
+    title: "Why Does Belly Fat Increase After 40? Causes & Solutions",
+    date: "2026-05-08",
+    category: "Guides",
+    description:
+      "Discover the real reasons belly fat increases after 40 — from hormonal shifts to metabolic changes. Evidence-based explanations and what you can actually do about it.",
+    heroImage: "/blog/1.1%20fatloss.webp",
+    feedTags: ["guides"],
+  },
+  {
+    slug: "can-hormones-cause-belly-fat-after-40",
+    title: "Can Hormones Cause Belly Fat After 40",
+    date: "2026-05-08",
+    category: "Guides",
+    description:
+      "Yes — hormones directly drive belly fat after 40. Learn how oestrogen, testosterone, cortisol, and insulin interact to cause abdominal weight gain, and what to do about it.",
+    heroImage: "/blog/2.1%20fatloss.webp",
+    feedTags: ["guides"],
+  },
+  {
     slug: "weekly-weight-loss-injections-uk-what-they-may-actually-do",
     title: "Weekly Weight Loss Treatments in the UK: What They May Actually Do",
     date: "2026-04-25",
@@ -118,7 +138,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     slug: "top-benefits-of-doctor-prescribed-weight-loss-injections-uk-for-you",
     title:
       "Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You",
-    date: "2026-05-19",
+    date: "2026-05-07",
     category: "Guides",
     description:
       "Discover the top benefits of doctor prescribed weight loss treatments in the UK, including appetite control, medical support, and what to ask your clinician before choosing Wegovy, Mounjaro or Saxenda.",
@@ -129,7 +149,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "injectable-obesity-treatments-uk-what-works-and-what-doesnt",
     title: "Injectable Obesity Treatments UK: What Works and What Doesn't",
-    date: "2026-05-20",
+    date: "2026-05-06",
     category: "Guides",
     description:
       "Injectable obesity treatments in the UK: understand how Wegovy, Mounjaro and Saxenda work, NHS vs private access, costs, side effects and realistic expectations.",
@@ -213,7 +233,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "how-licensed-weight-loss-injections-uk-can-boost-your-journey",
     title: "How Licensed Weight Loss Injections UK Can Boost Your Journey",
-    date: "2026-05-21",
+    date: "2026-05-05",
     category: "Guides",
     description:
       "How licensed MHRA-authorised weight loss injections in the UK can support appetite control, NHS vs private access, and realistic expectations with medical oversight.",
@@ -225,7 +245,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     slug: "discover-the-powerful-benefits-of-prescription-slimming-injections-uk",
     title:
       "Discover the Powerful Benefits of Prescription Slimming Treatments UK",
-    date: "2026-05-22",
+    date: "2026-05-04",
     category: "Guides",
     description:
       "Discover the powerful benefits of prescription slimming treatments in the UK, including how Wegovy, Mounjaro and Saxenda support appetite, blood sugar and long-term progress.",
@@ -236,7 +256,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "how-to-compare-uk-weight-loss-pens-and-find-the-best",
     title: "How to Compare UK Weight Loss Pens and Find the Best",
-    date: "2026-05-23",
+    date: "2026-05-03",
     category: "Comparisons",
     description:
       "Learn how to compare UK weight loss pens, including Saxenda, Wegovy and Mounjaro, to find the best option for your goals, tolerance and budget.",
@@ -269,7 +289,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "how-does-wegovy-work-to-transform-your-weight-journey",
     title: "How Does Wegovy Work to Transform Your Weight Journey",
-    date: "2026-05-18",
+    date: "2026-05-02",
     category: "Guides",
     description:
       "Discover exactly how the Wegovy weight loss treatment works in your body, from mimicking the GLP-1 hormone to reducing appetite and slowing gastric emptying.",
@@ -279,7 +299,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "mounjaro-dosage-for-weight-loss-facts-you-can-trust",
     title: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
-    date: "2026-05-17",
+    date: "2026-05-01",
     category: "Guides",
     description:
       "Learn how Mounjaro dosage works, the stages from 2.5 mg to higher doses, potential side effects, and long-term success strategies.",
@@ -289,7 +309,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk",
     title: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
-    date: "2026-05-16",
+    date: "2026-04-30",
     category: "Safety",
     description:
       "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
@@ -299,7 +319,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "easy-to-follow-wegovy-injection-instructions-you-can-trust",
     title: "Easy-to-Follow Wegovy Treatment Instructions You Can Trust",
-    date: "2026-05-15",
+    date: "2026-04-29",
     category: "Guides",
     description:
       "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
@@ -309,7 +329,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you",
     title: "Discover If Mounjaro Is Safe for Weight Loss and Right for You",
-    date: "2026-05-14",
+    date: "2026-04-28",
     category: "Safety",
     description:
       "Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding.",
@@ -320,7 +340,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "does-mounjaro-really-work-for-weight-loss-find-out-here",
     title: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
-    date: "2026-05-13",
+    date: "2026-04-27",
     category: "Guides",
     description:
       "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
@@ -330,7 +350,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "mounjaro-weight-loss-benefits-backed-by-science",
     title: "Mounjaro Weight Loss Benefits Backed by Science",
-    date: "2026-05-12",
+    date: "2026-04-26",
     category: "Guides",
     description:
       "Unlock mounjaro weight loss benefits backed by science to help you shed stubborn pounds with confidence.",
@@ -341,7 +361,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "the-truth-about-mounjaro-dosage-for-weight-loss-effectiveness",
     title: "The Truth About Mounjaro Dosage for Weight Loss Effectiveness",
-    date: "2026-05-11",
+    date: "2026-04-16",
     category: "Guides",
     description:
       "Find the ideal mounjaro dosage for weight loss to maximise your results with clear, expert-backed guidance.",

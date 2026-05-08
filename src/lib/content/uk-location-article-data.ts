@@ -98,6 +98,36 @@ export function buildUkLocationTitle(loc: UkWeightLossLocation): string {
   if (loc.slug === "durham") {
     return "Best Weight Loss Treatment Durham: North East UK Guide to Real Results";
   }
+  if (loc.slug === "east-kilbride") {
+    return "Best Weight Loss Treatment East Kilbride: Practical Scotland Access Guide";
+  }
+  if (loc.slug === "edinburgh") {
+    return "Best Weight Loss Treatment Edinburgh: NHS and Practical Pathways";
+  }
+  if (loc.slug === "ely") {
+    return "Best Weight Loss Treatment Ely: Cambridgeshire's Complete Weight Loss Roadmap";
+  }
+  if (loc.slug === "exeter") {
+    return "Best Weight Loss Treatment Exeter: Devon Access Roadmap";
+  }
+  if (loc.slug === "glasgow") {
+    return "Best Weight Loss Treatment Glasgow: NHS and Private Pathways Explained";
+  }
+  if (loc.slug === "gloucester") {
+    return "Best Weight Loss Treatment Gloucester: Gloucestershire Access Guide";
+  }
+  if (loc.slug === "hereford") {
+    return "Best Weight Loss Treatment Hereford: NHS and Local Access Guide";
+  }
+  if (loc.slug === "huddersfield") {
+    return "Best Weight Loss Treatment Huddersfield: Yorkshire Access & Strategies Guide";
+  }
+  if (loc.slug === "inverness") {
+    return "Best Weight Loss Treatment Inverness: Highland Scotland Weight Loss Reality";
+  }
+  if (loc.slug === "kingston-upon-hull") {
+    return "Best Weight Loss Treatment Hull: Humber Side Access and Strategies";
+  }
   if (loc.slug === "bangor-northern-ireland") {
     return "Best Weight Loss Treatment Bangor: Coastal Strategies for Northern Ireland Slimming";
   }
@@ -204,6 +234,36 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
   }
   if (loc.slug === "durham") {
     return "Best weight loss treatment Durham UK: evidence based tips, local hacks, timelines for 5kg and 20kg loss, and UK insights for County Durham slimming.";
+  }
+  if (loc.slug === "east-kilbride") {
+    return "Best weight loss treatment East Kilbride: NHS and private access guide, GLP 1 tips (Mounjaro, Wegovy, Saxenda), timelines, and local Scotland hacks for safe slimming.";
+  }
+  if (loc.slug === "edinburgh") {
+    return "Best weight loss treatment Edinburgh: NHS Lothian programs, Mounjaro and Wegovy access, 10kg timelines, Ozempic reality, complete Scotland guide.";
+  }
+  if (loc.slug === "ely") {
+    return "Best weight loss treatment Ely: NHS Healthy You guide, Wegovy and Mounjaro access, timelines, Chinese methods, Kelly Clarkson tips, Cambridgeshire slimming made simple.";
+  }
+  if (loc.slug === "exeter") {
+    return "Best weight loss treatment Exeter: NHS Devon tiers, private clinic guide, Mounjaro and Wegovy access, Adele methods, and Devon slimming timelines.";
+  }
+  if (loc.slug === "glasgow") {
+    return "Best weight loss treatment Glasgow: NHSGGC programs, Mounjaro and Wegovy costs, Kelly Clarkson method, cheaper alternatives, plus a local Scotland slimming guide.";
+  }
+  if (loc.slug === "gloucester") {
+    return "Best weight loss treatment Gloucester: NHS Healthy Lifestyles (free), GLP 1 access, Mounjaro and Wegovy timelines, Kelly Clarkson insights, and Gloucestershire slimming hacks.";
+  }
+  if (loc.slug === "hereford") {
+    return "Best weight loss treatment Hereford: NHS lifestyle programs, referral options, and private injection access explained for Herefordshire.";
+  }
+  if (loc.slug === "huddersfield") {
+    return "Best weight loss treatment Huddersfield: NHS Kirklees programs, bariatric options, GLP 1 access, timelines and local Yorkshire hacks for safe, sustainable slimming.";
+  }
+  if (loc.slug === "inverness") {
+    return "Best weight loss treatment Inverness: NHS Highland programs, private GLP 1 access, local trails, and proven timelines for Highland slimming success.";
+  }
+  if (loc.slug === "kingston-upon-hull") {
+    return "Best weight loss treatment Hull: Humber access, CHCP specialist routes, GLP 1 options, and practical timelines for safe, sustainable slimming.";
   }
   if (loc.slug === "bangor-northern-ireland") {
     return "Uncover the best weight loss treatment in Bangor, Northern Ireland: Local strategies, science-backed tips, and coastal-inspired plans for lasting fat reduction.";
@@ -1083,6 +1143,296 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       {
         q: "Winter motivation tips?",
         a: `Short indoor circuits, step targets, and tracking apps can help maintain consistency. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "east-kilbride") {
+    return [
+      {
+        q: "NHS realistic here?",
+        a: `Yes. Many people start with NHS dietitian or group programs via GP referral. Medicines may be considered after assessment and eligibility checks. Compare routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Private GLP 1 without GP?",
+        a: `It can be possible via regulated services, but you should verify prescriber and pharmacy registration and ensure cold chain delivery for injections. Use [our methodology](/methodology) to compare provider standards.`,
+      },
+      {
+        q: "Wegovy vs Mounjaro?",
+        a: `Some trial summaries suggest similar broad averages for semaglutide and tirzepatide, with tirzepatide sometimes showing higher average loss in study settings. A clinician should match the option to your history and side effects.`,
+      },
+      {
+        q: "Cost monthly?",
+        a: `NHS access is free at point of care. Private pricing often ranges roughly £150 to £350 per month depending on dose and support. See [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
+      },
+      {
+        q: "Side effects management?",
+        a: `A slow titration plan, hydration, and meal adjustments can help. GP follow up is ideal, especially if symptoms are significant.`,
+      },
+      {
+        q: "Long term success?",
+        a: `Habits drive maintenance after medication stops. Focus on repeatable food structure, steps, and strength work, and use our [weight loss plateau guide](/weight-loss-plateau) if progress stalls.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "edinburgh") {
+    return [
+      {
+        q: "What is the most successful weight loss treatment?",
+        a: `Many people do best with structured, supervised programs plus habits they can maintain. In Edinburgh, NHS Lothian specialist pathways may be the most evidence aligned starting point, and medicines can be an add on for eligible people. Compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "How to get Mounjaro in Edinburgh?",
+        a: `One route is GP referral into NHS Lothian pathways if you meet BMI and risk criteria. Another route is a regulated private clinic. If you go private, verify prescriber and pharmacy registration and look for a clear titration and monitoring plan. Start with [what Mounjaro is](/what-is-mounjaro).`,
+      },
+      {
+        q: "Can I lose 10kg in 2 months with Ozempic?",
+        a: `It is an aggressive pace and can increase the risk of muscle loss and side effects. Some people can lose quickly early on, but it needs clinician oversight, strength training, and adequate protein. A safer baseline is often 0.5 to 1 kg per week.`,
+      },
+      {
+        q: "How did Kelly Clarkson lose weight so quickly?",
+        a: `Public interviews often mention medication plus lifestyle changes such as portion control and training. In the UK, any similar approach depends on eligibility and clinician monitoring. Read [what Wegovy is](/what-is-wegovy) for background.`,
+      },
+      {
+        q: "NHS vs private speed?",
+        a: `NHS pathways can involve waiting lists but provide structured monitoring. Private clinics can start faster but are self funded. Use [our methodology](/methodology) to compare safety checks and follow up quality.`,
+      },
+      {
+        q: "Side effects management?",
+        a: `A slow dose increase, hydration, and smaller meals can help nausea. Monitoring matters, especially if symptoms persist. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "ely") {
+    return [
+      {
+        q: "Most successful treatment?",
+        a: `Many people do best with a structured behavioural program plus habits they can maintain. In Ely, Healthy You style support is often a strong first step, with GLP 1 medicines considered for eligible people. Compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Chinese fast weight loss?",
+        a: `Green tea, fibre such as glucomannan, and calorie cycling can support adherence for some people, but they are not magic. A safer pace is often around 0.5 kg per week. If you get stuck, see our [weight loss plateau guide](/weight-loss-plateau).`,
+      },
+      {
+        q: "Kelly Clarkson method?",
+        a: `Public interviews often describe medication plus lifestyle changes such as portion control and training. In the UK, any similar approach depends on eligibility and clinician monitoring. Read [what Wegovy is](/what-is-wegovy) for background.`,
+      },
+      {
+        q: "Top weight loss drug?",
+        a: `Trial summaries often highlight tirzepatide and semaglutide as leading options, but the best choice depends on side effects, risks, and follow up. Start with [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+      },
+      {
+        q: "Healthy You vs private?",
+        a: `NHS foundations can build long term skills. Private medication routes can start faster for some people, but self funded care still needs proper screening and cold chain delivery. Use [our methodology](/methodology) to compare standards.`,
+      },
+      {
+        q: "Tier 3 wait in Cambridgeshire?",
+        a: `Waiting times can be long for specialist services, so it can help to start Tier 2 style habit work in parallel. Use [the BMI calculator](/bmi-calculator) to prepare for eligibility discussions.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "exeter") {
+    return [
+      {
+        q: "How did Adele really lose all that weight?",
+        a: `Public interviews commonly describe training and gradual calorie changes over time, without confirmed use of GLP 1 medicines. Treat celebrity stories as inspiration, not a prescription, and focus on repeatable habits.`,
+      },
+      {
+        q: "What is the number one fruit for weight loss?",
+        a: `Many people choose berries because they are lower calorie, high fibre, and can support satiety. The best choice is the one you can keep eating while staying in a consistent deficit.`,
+      },
+      {
+        q: "Do people regain weight after Ozempic?",
+        a: `Regain is common when medication stops if habits and food structure do not stick. Use the medication window to build routines you can maintain. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+      },
+      {
+        q: "What is a cheaper alternative to Mounjaro?",
+        a: `Some people compare daily liraglutide options with weekly pens, but the cheapest route can be an NHS lifestyle program if you qualify. Compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "NHS Tier 3 realistic in Exeter?",
+        a: `It can be for higher BMI thresholds and complex needs, typically with GP referral and waiting lists. Starting Tier 2 style lifestyle support while you wait can still move the needle.`,
+      },
+      {
+        q: "Private vs NHS long term cost?",
+        a: `NHS care is free at point of access when you qualify, while private care can add up monthly. If you go private, use [our methodology](/methodology) to check safety, follow up, and refund terms, not only price.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "glasgow") {
+    return [
+      {
+        q: "What delivers top long term weight loss results?",
+        a: `Structured support plus habits you can maintain often wins long term. In Glasgow, NHSGGC pathways can provide a free foundation, and GLP 1 medicines may be an add on for eligible people. Compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "What is the typical monthly cost for Mounjaro in Scotland?",
+        a: `Private costs vary by dose and follow up, but many people see monthly pricing in the low hundreds. If you are comparing providers, check what is included in monitoring and support, not only the sticker price.`,
+      },
+      {
+        q: "How did Kelly Clarkson achieve such rapid weight loss?",
+        a: `Public interviews often describe medication plus lifestyle changes such as portion control and training. In the UK, any similar approach depends on eligibility and clinician monitoring. Read [what Wegovy is](/what-is-wegovy) for background.`,
+      },
+      {
+        q: "What are cost effective alternatives to Mounjaro?",
+        a: `Some people compare daily liraglutide options with weekly pens, and NHS lifestyle pathways can be the lowest cost route if you qualify. For pricing context, see [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
+      },
+      {
+        q: "How do I access NHS weight loss support in Glasgow?",
+        a: `Many people start with community programs and self referral routes where available, and GP referral for specialist pathways. Use [the BMI calculator](/bmi-calculator) to prepare for eligibility discussions.`,
+      },
+      {
+        q: "Are private clinics safe for Glasgow residents?",
+        a: `They can be, if the provider is regulated and has clear screening, titration, and follow up. Use [our methodology](/methodology) to compare safety standards and support quality.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "gloucester") {
+    return [
+      {
+        q: "What delivers top Gloucester weight loss results?",
+        a: `For many people, a structured NHS lifestyle program plus repeatable habits is the most reliable base. If you are comparing options, start at [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and check follow up quality using [our methodology](/methodology).`,
+      },
+      {
+        q: "Kelly Clarkson rapid loss: Gloucester equivalent?",
+        a: `Public interviews often mention medication plus lifestyle changes such as portion control and training. In the UK, any similar approach depends on eligibility and clinician monitoring. For background, read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+      },
+      {
+        q: "Mounjaro weight loss in 6 months?",
+        a: `Some people can lose significant weight with medication plus a consistent deficit and activity, but results vary. A safer pace is often around 0.5 to 1 kg per week with monitoring.`,
+      },
+      {
+        q: "Budget friendly Mounjaro alternative?",
+        a: `Many people start with NHS lifestyle support first. Some compare daily liraglutide options with weekly pens. For pricing context, see [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
+      },
+      {
+        q: "NHS program wait times?",
+        a: `Waits vary by service and capacity. Starting the lifestyle phase early can still deliver progress while you wait for specialist options.`,
+      },
+      {
+        q: "Private clinic red flags?",
+        a: `No named prescriber, no written titration plan, and unclear refrigeration or cold chain handling are warning signs. Verify registration at [pharmacyregulation.org](https://www.pharmacyregulation.org/registers) before paying.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "hereford") {
+    return [
+      {
+        q: "What is the best weight loss treatment in Hereford to start with?",
+        a: `For many people, the best starting point is an NHS lifestyle program with coaching and accountability. Use [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) to compare options and [our methodology](/methodology) to check follow up quality.`,
+      },
+      {
+        q: "How can I access free support in Hereford?",
+        a: `Look for the Healthy Lifestyle Service and local community programs. Many services allow self referral or GP referral depending on eligibility and capacity.`,
+      },
+      {
+        q: "When would a GP referral make sense?",
+        a: `If you have medical complexity, higher BMI, or obesity related conditions, a GP can refer you into structured NHS pathways or specialist teams.`,
+      },
+      {
+        q: "What about specialist surgery pathways?",
+        a: `For severe obesity and when criteria are met, referrals may involve specialist bariatric teams. Treat surgery as a pathway with assessments and follow up, not a quick fix.`,
+      },
+      {
+        q: "Are private injections like Mounjaro and Wegovy available?",
+        a: `Private pharmacies and clinics may offer injections for eligible people, usually with ongoing monitoring and monthly costs. Start with [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy), then compare prices via [Mounjaro](/mounjaro-price-comparison) and [Wegovy](/wegovy-price-comparison).`,
+      },
+      {
+        q: "How do I check if an online pharmacy is legitimate?",
+        a: `Verify registration and look for a named prescriber and cold storage guidance. You can use the register tool at [pharmacyregulation.org](https://www.pharmacyregulation.org/registers).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "huddersfield") {
+    return [
+      {
+        q: "Free weight loss programs available locally?",
+        a: `Yes. Kirklees Wellness style services often offer free coaching for eligible adults. Start by comparing your options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and prepare for eligibility chats with the [BMI calculator](/bmi-calculator).`,
+      },
+      {
+        q: "When does NHS bariatric surgery become realistic here?",
+        a: `Surgery pathways are usually reserved for higher BMI thresholds and obesity related conditions, and often require evidence that lifestyle support has been tried. Treat surgery as a monitored pathway with long term follow up, not a quick fix.`,
+      },
+      {
+        q: "Wegovy vs Mounjaro: which works faster in Kirklees?",
+        a: `Both can be effective when paired with diet and movement. Some trial comparisons suggest tirzepatide can produce higher average loss than semaglutide for selected people, but the best choice depends on side effects and monitoring. Read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+      },
+      {
+        q: "Cost range for private GLP 1 treatments?",
+        a: `Pricing varies by dose and support. Many plans cluster in the low hundreds per month. For budgeting, see [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
+      },
+      {
+        q: "How to avoid common GLP 1 side effects?",
+        a: `Slow dose increases, hydration, and protein forward meals can help. Monitoring matters, especially early on. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+      },
+      {
+        q: "Best timeline for 10kg loss in Huddersfield?",
+        a: `A realistic target for many people is 2 to 3 months with consistent deficit, daily steps, and structured support. Faster paces can raise rebound risk.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "inverness") {
+    return [
+      {
+        q: "Quickest NHS weight loss access here?",
+        a: `Many people start with local dietetic or community weight management routes. Availability changes over time, but an NHS pathway with coaching can be a strong first step. Compare approaches using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Private Mounjaro and Wegovy without referral?",
+        a: `Some regulated private clinics can prescribe for eligible people with screening and monitoring. If you go private, verify prescriber and pharmacy registration and insist on a written titration plan. Read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+      },
+      {
+        q: "Most effective GLP 1 for Highland life?",
+        a: `Trial summaries often show higher average loss for tirzepatide compared with semaglutide in selected settings, but the best choice depends on side effects and follow up. A clinician should match the option to your health profile.`,
+      },
+      {
+        q: "Safe 10kg loss timeline?",
+        a: `A realistic target for many people is about 2 to 3 months with a consistent deficit, adequate protein, and movement, especially if medication is used under supervision. Faster paces raise muscle loss risk.`,
+      },
+      {
+        q: "Complement treatments with local activity?",
+        a: `Walking routes such as Ness Islands and steady strength work can support maintenance. Consistency usually matters more than a perfect plan.`,
+      },
+      {
+        q: "Winter motivation in Inverness?",
+        a: `Short indoor circuits, step targets, and a simple plan you can repeat can help. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "kingston-upon-hull") {
+    return [
+      {
+        q: "How do I access NHS specialist care in Hull?",
+        a: `Some Hull services allow self referral for specialist weight management at higher BMI thresholds, while other routes need GP referral. Use the [BMI calculator](/bmi-calculator) to prepare for eligibility discussions and compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Where to get Wegovy and Mounjaro prescriptions locally?",
+        a: `Private hospitals, pharmacies, and regulated online clinics may offer prescriptions for eligible people. If you go private, verify registration and insist on a written titration plan. Read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+      },
+      {
+        q: "What is the fastest safe weight loss pace here?",
+        a: `A safer baseline is often around 0.5 to 1 kg per week through a consistent deficit, steps, and strength work. Faster paces can increase rebound risk and muscle loss.`,
+      },
+      {
+        q: "Does Hull offer gastric surgery options?",
+        a: `Surgery pathways exist for severe obesity when criteria are met, usually after lifestyle support has been tried. Treat surgery as a monitored pathway with long term follow up, not a quick fix.`,
+      },
+      {
+        q: "Can I combine NHS and private treatments?",
+        a: `Often yes, but shared care varies by GP and provider. If you use private prescriptions, confirm who monitors side effects and blood tests and what happens if you stop.`,
+      },
+      {
+        q: "How to manage GLP 1 side effects effectively?",
+        a: `Slow dose increases, hydration, and protein forward meals can help. A weekend start can be easier for some shift patterns. If progress stalls, see our [weight loss plateau guide](/weight-loss-plateau).`,
       },
     ];
   }

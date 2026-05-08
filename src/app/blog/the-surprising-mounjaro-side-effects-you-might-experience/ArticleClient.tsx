@@ -104,7 +104,7 @@ export default function ArticleClient() {
             >
               <ArrowLeft className="h-4 w-4" />
             </div>
-            Back to News
+            Back to Blog
           </Link>
 
           <div className="flex items-center gap-3">

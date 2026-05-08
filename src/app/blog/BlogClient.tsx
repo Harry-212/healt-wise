@@ -109,6 +109,15 @@ export default function BlogClient({
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [sortMethod, setSortMethod] = useState("Date Desc");
 
+  const newestArticles = useMemo(() => {
+    const base = [...articles];
+    const byDateDesc = (a: FeedArticle, b: FeedArticle) => {
+      const d = b.date.localeCompare(a.date);
+      return d !== 0 ? d : a.title.localeCompare(b.title);
+    };
+    return base.sort(byDateDesc);
+  }, [articles]);
+
   const sortedArticles = useMemo(() => {
     const base = [...articles];
     const byTitle = (a: FeedArticle, b: FeedArticle) => a.title.localeCompare(b.title);
@@ -128,9 +137,10 @@ export default function BlogClient({
     return base.sort(byDateDesc);
   }, [articles, sortMethod]);
 
-  const featured = sortedArticles[0];
+  /** Featured section is always based on newest uploads. */
+  const featured = newestArticles[0];
   /** Hero right column — three posts after the featured slot (1 large + 3 list). */
-  const heroSideList = sortedArticles.slice(1, 4);
+  const heroSideList = newestArticles.slice(1, 4);
   /** Every post on this page still appears as a card in the grid below the hero. */
   const gridArticles = sortedArticles;
 
@@ -186,13 +196,13 @@ export default function BlogClient({
     >
       <section
         ref={heroRef}
-        className="mx-auto max-w-screen-xl px-4 pb-16 pt-10 text-white sm:px-8 md:px-12"
+        className="mx-auto max-w-7xl px-4 pb-16 pt-10 text-white sm:px-8 md:px-12"
       >
         {featured ? (
           <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
             <div className="flex flex-col gap-6 lg:w-7/12 hero-stagger">
               <Link href={featured.href} className="group relative block cursor-pointer">
-                <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[24px] bg-slate-800 md:aspect-[2/1] lg:aspect-video">
+                <div className="relative aspect-video w-full overflow-hidden rounded-[24px] bg-slate-800 md:aspect-2/1 lg:aspect-video">
                   <Image
                     src={imgbbDisplaySrc(featured.image)}
                     alt={featured.title}
@@ -340,7 +350,7 @@ export default function BlogClient({
                   key={`${article.href}-${index}`}
                   className="article-card group flex h-full cursor-pointer flex-col"
                 >
-                  <div className="relative mb-4 aspect-[3/2] w-full shrink-0 overflow-hidden rounded-[20px] bg-slate-100 sm:aspect-[16/9]">
+                  <div className="relative mb-4 aspect-3/2 w-full shrink-0 overflow-hidden rounded-[20px] bg-slate-100 sm:aspect-video">
                     <Image
                       src={cardSrc}
                       alt={article.title}

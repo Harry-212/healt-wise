@@ -8,7 +8,7 @@ export type BlogFeedTag =
   | "locations";
 
 /** Matches `getBlogPageFeed` page size (safe to import from client components). */
-export const POSTS_PER_PAGE = 20;
+export const POSTS_PER_PAGE = 21;
 
 export type FeedArticle = {
   title: string;
