@@ -6,7 +6,15 @@ import {
   PILLAR_TIPS,
 } from "@/lib/lifestyle/pillar-routes";
 
-export type NavLink = { label: string; href: string; icon?: string };
+export type NavAccent = "violet" | "emerald" | "sky";
+
+export type NavLink = {
+  label: string;
+  href: string;
+  icon?: string;
+  /** Optional color accent applied to the link's icon badge. */
+  accent?: NavAccent;
+};
 
 export type NavColumn = { title: string; links: NavLink[] };
 
@@ -66,16 +74,19 @@ export const NAV_PANELS: NavPanel[] = [
             label: "Compare Mounjaro prices UK",
             href: "/mounjaro-price-comparison",
             icon: "pound",
+            accent: "violet",
           },
           {
             label: "Compare Wegovy prices UK",
             href: "/wegovy-price-comparison",
             icon: "pound",
+            accent: "emerald",
           },
           {
             label: "Compare Saxenda prices UK",
             href: "/saxenda-price-comparison",
             icon: "pound",
+            accent: "sky",
           },
           { label: "Cheapest Options UK", href: "/prices/cheapest-options-uk", icon: "pound" },
         ],

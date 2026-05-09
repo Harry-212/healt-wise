@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import type { NavPanel } from '@/lib/nav/nav-config';
-import { NavLinkIcon } from '@/lib/nav/nav-icons';
+import { NavLinkIcon, NAV_LINK_ACCENT_CLASSES } from '@/lib/nav/nav-icons';
 
 /* Match NavBar row exactly: h-16 sm:h-24 md:h-28 */
 const PANEL_TOP = 'top-16 sm:top-24 md:top-28';
@@ -165,20 +165,33 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
                           <div key={col.title || col.links[0]?.href} className="min-w-0">
                             {col.title ? <h3 className="mb-2 border-b border-brand-border pb-1.5 text-[11px] font-bold uppercase tracking-wide text-brand-secondary">{col.title}</h3> : null}
                             <ul className="space-y-0.5">
-                              {col.links.map((link) => (
-                                <li key={link.href + link.label}>
-                                  <Link
-                                    href={link.href}
-                                    onClick={closeNow}
-                                    className="group flex items-center gap-3 rounded-lg px-2 py-2 text-[13px] font-medium leading-snug text-brand-primary transition-all duration-200 hover:translate-x-0.5 hover:bg-brand-surface hover:text-brand-cta hover:shadow-sm"
-                                  >
-                                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-surface/80 transition-colors group-hover:bg-brand-cta/15">
-                                      <NavLinkIcon name={link.icon} />
-                                    </span>
-                                    <span className="min-w-0">{link.label}</span>
-                                  </Link>
-                                </li>
-                              ))}
+                              {col.links.map((link) => {
+                                const accent = link.accent
+                                  ? NAV_LINK_ACCENT_CLASSES[link.accent]
+                                  : null;
+                                const containerClass = accent
+                                  ? `${accent.container} hover:shadow-sm`
+                                  : 'text-brand-primary hover:bg-brand-surface hover:text-brand-cta hover:shadow-sm';
+                                const badgeClass = accent
+                                  ? 'bg-white/70 group-hover:bg-white'
+                                  : 'bg-brand-surface/80 group-hover:bg-brand-cta/15';
+                                return (
+                                  <li key={link.href + link.label}>
+                                    <Link
+                                      href={link.href}
+                                      onClick={closeNow}
+                                      className={`group flex items-center gap-3 rounded-lg px-2 py-2 text-[13px] font-medium leading-snug transition-all duration-200 hover:translate-x-0.5 ${containerClass}`}
+                                    >
+                                      <span
+                                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors ${badgeClass}`}
+                                      >
+                                        <NavLinkIcon name={link.icon} accent={link.accent} />
+                                      </span>
+                                      <span className="min-w-0">{link.label}</span>
+                                    </Link>
+                                  </li>
+                                );
+                              })}
                             </ul>
                           </div>
                         ))}

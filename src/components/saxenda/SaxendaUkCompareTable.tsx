@@ -2,13 +2,21 @@
 
 import Link from "next/link";
 import { startTransition, useMemo, useState } from "react";
-import type { ReactNode } from "react";
-import { ArrowDown, ArrowUp, ArrowUpDown, Snowflake } from "lucide-react";
+import {
+  Building2,
+  CalendarClock,
+  ChevronDown,
+  ChevronUp,
+  Snowflake,
+} from "lucide-react";
 import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import {
   TrustpilotColumnHeaderContent,
   TrustpilotStarIcon,
 } from "@/components/compare/TrustpilotRatingPresentation";
+import CompareFilterBar, {
+  type CompareSortPreset,
+} from "@/components/compare/CompareFilterBar";
 import {
   minPackPriceForSize,
   SAXENDA_PACK_KEYS,
@@ -17,8 +25,9 @@ import {
 } from "@/lib/data/saxenda-uk-compare-providers";
 import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
 import { formatUkGroupedInteger } from "@/lib/provider-helpers";
+import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
 
-type SortKey = "provider" | "rating" | SaxendaPackKey;
+type PackFilter = "all" | SaxendaPackKey;
 
 const PACK_HEADER: Record<SaxendaPackKey, string> = {
   "1": "1 pen",
@@ -33,58 +42,6 @@ function formatGBP(n: number) {
 function providerInitial(name: string): string {
   const t = name.trim();
   return t ? t[0]!.toUpperCase() : "?";
-}
-
-function SortableTh({
-  label,
-  columnKey,
-  sortKey,
-  sortDir,
-  onSort,
-  title,
-}: {
-  label: ReactNode;
-  columnKey: SortKey;
-  sortKey: SortKey;
-  sortDir: "asc" | "desc";
-  onSort: (k: SortKey) => void;
-  title?: string;
-}) {
-  const active = sortKey === columnKey;
-  const thTitle =
-    title !== undefined
-      ? title
-      : typeof label === "string"
-        ? label
-        : undefined;
-  return (
-    <th
-      scope="col"
-      title={thTitle}
-      className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-left text-xs font-semibold text-slate-700"
-    >
-      <button
-        type="button"
-        onClick={() => onSort(columnKey)}
-        className="inline-flex w-full items-center gap-1 rounded-lg px-1 py-1 uppercase tracking-wide transition hover:bg-slate-200/60 hover:text-slate-900 data-[active=true]:text-sky-800"
-        data-active={active}
-      >
-        <span className="min-w-0 leading-tight">{label}</span>
-        <span className="inline-flex shrink-0" aria-hidden>
-          {active ? (
-            sortDir === "asc" ? (
-              <ArrowUp className="h-3.5 w-3.5 text-sky-700" />
-            ) : (
-              <ArrowDown className="h-3.5 w-3.5 text-sky-700" />
-            )
-          ) : (
-            <ArrowUpDown className="h-3.5 w-3.5 text-slate-400" />
-          )}
-        </span>
-        <span className="sr-only">Sort column</span>
-      </button>
-    </th>
-  );
 }
 
 function PackPriceCell({
@@ -122,8 +79,17 @@ export default function SaxendaUkCompareTable({
 }) {
   const [providerQuery, setProviderQuery] = useState("");
   const [minRating, setMinRating] = useState("");
-  const [sortKey, setSortKey] = useState<SortKey>("1");
-  const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
+  const [packFilter, setPackFilter] = useState<PackFilter>("all");
+  const [sortPreset, setSortPreset] = useState<CompareSortPreset>("provider-asc");
+  const [moreFiltersOpen, setMoreFiltersOpen] = useState(false);
+
+  const todayLabel = useTodayLabel();
+
+  const visiblePackKeys = useMemo<SaxendaPackKey[]>(
+    () =>
+      packFilter === "all" ? [...SAXENDA_PACK_KEYS] : [packFilter],
+    [packFilter],
+  );
 
   const processed = useMemo(() => {
     const minR = minRating.trim() === "" ? null : Number.parseFloat(minRating);
@@ -135,130 +101,141 @@ export default function SaxendaUkCompareTable({
       return true;
     });
 
-    const dir = sortDir === "asc" ? 1 : -1;
+    const dir = sortPreset === "price-desc" ? -1 : 1;
+    const priceFor = (p: SaxendaUkProviderCompare) =>
+      packFilter === "all"
+        ? p.packs["1"].packPrice
+        : p.packs[packFilter].packPrice;
+
     rows = [...rows].sort((a, b) => {
-      let cmp = 0;
-      switch (sortKey) {
-        case "provider":
-          cmp = a.name.localeCompare(b.name);
-          break;
-        case "rating":
-          cmp = a.rating - b.rating;
-          break;
-        case "1":
-        case "3":
-        case "5":
-          cmp = a.packs[sortKey].packPrice - b.packs[sortKey].packPrice;
-          break;
-        default:
-          cmp = 0;
+      switch (sortPreset) {
+        case "price-asc":
+        case "price-desc":
+          return (priceFor(a) - priceFor(b)) * dir;
+        case "rating-desc":
+          return b.rating - a.rating;
+        case "provider-asc":
+          return a.name.localeCompare(b.name);
       }
-      return cmp * dir;
     });
 
     const packMins: Partial<Record<SaxendaPackKey, number>> = {};
-    for (const k of SAXENDA_PACK_KEYS) {
+    for (const k of visiblePackKeys) {
       if (rows.length > 0) {
         packMins[k] = minPackPriceForSize(rows, k);
       }
     }
 
-    const minOnePen =
-      rows.length > 0 ? minPackPriceForSize(rows, "1") : null;
+    const minRowPrice =
+      rows.length > 0 ? Math.min(...rows.map((r) => priceFor(r))) : null;
 
-    return { rows, packMins, minOnePen };
-  }, [providers, providerQuery, minRating, sortKey, sortDir]);
-
-  function toggleSort(key: SortKey) {
-    if (sortKey === key) setSortDir((d) => (d === "asc" ? "desc" : "asc"));
-    else {
-      setSortKey(key);
-      setSortDir("asc");
-    }
-  }
+    return { rows, packMins, minRowPrice };
+  }, [providers, providerQuery, minRating, packFilter, sortPreset, visiblePackKeys]);
 
   const insights = useMemo(() => {
     const { rows } = processed;
-    if (rows.length === 0) {
-      return {
-        min1: null as number | null,
-        min3: null as number | null,
-        min5: null as number | null,
-        count: 0,
-      };
-    }
-    return {
-      min1: minPackPriceForSize(rows, "1"),
-      min3: minPackPriceForSize(rows, "3"),
-      min5: minPackPriceForSize(rows, "5"),
-      count: rows.length,
-    };
+    return { count: rows.length };
   }, [processed]);
+
+  const packPills = useMemo(
+    () => [
+      { value: "all" as PackFilter, label: "All packs" },
+      ...SAXENDA_PACK_KEYS.map((k) => ({
+        value: k as PackFilter,
+        label: PACK_HEADER[k],
+      })),
+    ],
+    [],
+  );
 
   const providerThClass =
     "sticky left-0 z-50 min-w-[13rem] max-w-[15rem] border-b border-r border-slate-200/90 bg-slate-50 px-3 py-3 pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
 
-  const colCount = 8;
+  // Provider + Rating + visible pack columns + Delivery + Trust&safety + Action + Updated
+  const colCount = 1 + 1 + visiblePackKeys.length + 3 + 1;
 
   const basePack = (p: SaxendaUkProviderCompare) => p.packs["1"];
 
   return (
     <div className="space-y-4">
-      <div className="grid gap-3 sm:grid-cols-3">
-        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 text-center shadow-sm sm:text-left">
-          <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-            Cheapest 1 pen
-          </p>
-          <p className="mt-1 text-2xl font-bold tabular-nums text-sky-700">
-            {insights.min1 != null ? formatGBP(insights.min1) : "—"}
-          </p>
-        </div>
-        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 text-center shadow-sm">
-          <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-            Cheapest 3 pens
-          </p>
-          <p className="mt-1 text-2xl font-bold tabular-nums text-sky-700">
-            {insights.min3 != null ? formatGBP(insights.min3) : "—"}
-          </p>
-        </div>
-        <div className="rounded-2xl border border-slate-200/90 bg-white px-4 py-3 text-center shadow-sm sm:text-left">
-          <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-            Cheapest 5 pens
-          </p>
-          <p className="mt-1 text-2xl font-bold tabular-nums text-sky-700">
-            {insights.min5 != null ? formatGBP(insights.min5) : "—"}
-          </p>
-        </div>
+      <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-sky-200/70 bg-linear-to-r from-sky-100/80 via-sky-50/70 to-white px-4 py-3 shadow-sm">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sky-600 text-white shadow-[0_6px_18px_-6px_rgba(2,132,199,0.5)]">
+          <Building2 className="h-5 w-5" aria-hidden />
+        </span>
+        <span className="flex min-w-0 flex-col leading-tight">
+          <span className="text-2xl font-bold tabular-nums text-sky-900 sm:text-[28px]">
+            {insights.count}
+          </span>
+          <span className="text-[11px] font-bold uppercase tracking-wide text-sky-700/80">
+            UK pharmacies matching your filters
+          </span>
+        </span>
+        <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3 py-1.5 text-xs font-semibold text-sky-800 shadow-sm ring-1 ring-sky-200/70">
+          <CalendarClock className="h-3.5 w-3.5" aria-hidden />
+          Last updated today{todayLabel ? `: ${todayLabel}` : ""}
+        </span>
       </div>
 
-      <div className="flex flex-col gap-4 rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:flex-row md:flex-wrap md:items-end">
-        <label className="flex min-w-[160px] flex-1 flex-col gap-1 text-xs font-semibold text-slate-600">
-          Provider name
-          <input
-            type="search"
-            placeholder="Search…"
-            value={providerQuery}
-            onChange={(e) =>
-              startTransition(() => setProviderQuery(e.target.value))
-            }
-            className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
-          />
-        </label>
-        <label className="flex min-w-[120px] flex-col gap-1 text-xs font-semibold text-slate-600">
-          Min Trustpilot
-          <select
-            value={minRating}
-            onChange={(e) =>
-              startTransition(() => setMinRating(e.target.value))
-            }
-            className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
-          >
-            <option value="">Any</option>
-            <option value="4.6">4.6+</option>
-            <option value="4.5">4.5+</option>
-            <option value="4.4">4.4+</option>
-          </select>
-        </label>
+      <CompareFilterBar
+        accent="sky"
+        pillsLabel="Pack size"
+        pills={packPills}
+        selectedPill={packFilter}
+        onSelectPill={(v) => setPackFilter(v)}
+        sort={sortPreset}
+        onSortChange={setSortPreset}
+      />
+
+      <div className="rounded-2xl border border-slate-200/90 bg-white shadow-sm">
+        <button
+          type="button"
+          onClick={() => setMoreFiltersOpen((v) => !v)}
+          aria-expanded={moreFiltersOpen}
+          className="flex w-full items-center justify-between gap-2 rounded-2xl px-4 py-3 text-left text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+        >
+          <span className="inline-flex items-center gap-2">
+            More filters
+            <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-slate-600">
+              search · rating
+            </span>
+          </span>
+          {moreFiltersOpen ? (
+            <ChevronUp className="h-4 w-4 text-slate-500" aria-hidden />
+          ) : (
+            <ChevronDown className="h-4 w-4 text-slate-500" aria-hidden />
+          )}
+        </button>
+        {moreFiltersOpen ? (
+          <div className="grid gap-3 border-t border-slate-200/80 px-4 py-4 sm:grid-cols-2">
+            <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
+              Provider name
+              <input
+                type="search"
+                placeholder="Search…"
+                value={providerQuery}
+                onChange={(e) =>
+                  startTransition(() => setProviderQuery(e.target.value))
+                }
+                className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
+              />
+            </label>
+            <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
+              Min Trustpilot
+              <select
+                value={minRating}
+                onChange={(e) =>
+                  startTransition(() => setMinRating(e.target.value))
+                }
+                className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
+              >
+                <option value="">Any</option>
+                <option value="4.6">4.6+</option>
+                <option value="4.5">4.5+</option>
+                <option value="4.4">4.4+</option>
+              </select>
+            </label>
+          </div>
+        ) : null}
       </div>
 
       <p className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-slate-200/80 bg-slate-50/90 px-4 py-3 text-xs text-slate-600">
@@ -295,60 +272,48 @@ export default function SaxendaUkCompareTable({
                   scope="col"
                   className={`${providerThClass} z-40 align-bottom`}
                 >
-                  <button
-                    type="button"
-                    onClick={() => toggleSort("provider")}
-                    className="inline-flex w-full items-center gap-1 rounded-lg py-1 pr-1 text-left text-xs font-semibold uppercase tracking-wide text-slate-700 transition hover:bg-slate-200/60"
-                  >
+                  <span className="text-xs font-semibold uppercase tracking-wide text-slate-700">
                     Provider
-                    <span className="inline-flex shrink-0" aria-hidden>
-                      {sortKey === "provider" ? (
-                        sortDir === "asc" ? (
-                          <ArrowUp className="h-3.5 w-3.5 text-sky-700" />
-                        ) : (
-                          <ArrowDown className="h-3.5 w-3.5 text-sky-700" />
-                        )
-                      ) : (
-                        <ArrowUpDown className="h-3.5 w-3.5 text-slate-400" />
-                      )}
-                    </span>
-                  </button>
+                  </span>
                 </th>
-                <SortableTh
-                  label={<TrustpilotColumnHeaderContent />}
-                  columnKey="rating"
-                  sortKey={sortKey}
-                  sortDir={sortDir}
-                  onSort={toggleSort}
-                  title="Trustpilot rating"
-                />
-                {SAXENDA_PACK_KEYS.map((k) => (
-                  <SortableTh
+                <th
+                  scope="col"
+                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                >
+                  <TrustpilotColumnHeaderContent />
+                </th>
+                {visiblePackKeys.map((k) => (
+                  <th
                     key={k}
-                    label={PACK_HEADER[k]}
-                    columnKey={k}
-                    sortKey={sortKey}
-                    sortDir={sortDir}
-                    onSort={toggleSort}
-                  />
+                    scope="col"
+                    className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  >
+                    {PACK_HEADER[k]}
+                  </th>
                 ))}
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold text-slate-700"
+                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   Delivery
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold text-slate-700"
+                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   Trust &amp; safety
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold text-slate-700"
+                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   Action
+                </th>
+                <th
+                  scope="col"
+                  className="border-b border-slate-200/90 bg-slate-50 px-3 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                >
+                  Updated
                 </th>
               </tr>
             </thead>
@@ -366,20 +331,24 @@ export default function SaxendaUkCompareTable({
                 processed.rows.map((p) => {
                   const href = pharmacyProfileHref(p.id);
                   const init = providerInitial(p.name);
-                  const isLowestOnePen =
-                    processed.minOnePen != null &&
-                    p.packs["1"].packPrice === processed.minOnePen;
+                  const rowPrice =
+                    packFilter === "all"
+                      ? p.packs["1"].packPrice
+                      : p.packs[packFilter].packPrice;
+                  const isLowestRow =
+                    processed.minRowPrice != null &&
+                    rowPrice === processed.minRowPrice;
 
                   return (
                     <tr
                       key={p.id}
                       className={`group border-b border-slate-100/90 last:border-0 ${
-                        isLowestOnePen ? "bg-sky-50/40" : ""
+                        isLowestRow ? "bg-sky-50/40" : ""
                       }`}
                     >
                       <td
                         className={`sticky left-0 z-10 border-r border-slate-200/80 px-3 py-2.5 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] ${
-                          isLowestOnePen
+                          isLowestRow
                             ? "bg-sky-50/90 group-hover:bg-sky-50"
                             : "bg-white group-hover:bg-slate-50/90"
                         }`}
@@ -404,9 +373,12 @@ export default function SaxendaUkCompareTable({
                                 {p.promoNote}
                               </span>
                             )}
-                            {isLowestOnePen && (
+                            {isLowestRow && (
                               <span className="inline-flex w-fit items-center rounded-full bg-sky-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
-                                Lowest 1 pen
+                                Lowest{" "}
+                                {packFilter === "all"
+                                  ? "1 pen"
+                                  : PACK_HEADER[packFilter]}
                               </span>
                             )}
                           </div>
@@ -423,7 +395,7 @@ export default function SaxendaUkCompareTable({
                           </span>
                         </span>
                       </td>
-                      {SAXENDA_PACK_KEYS.map((k) => (
+                      {visiblePackKeys.map((k) => (
                         <PackPriceCell
                           key={k}
                           packKey={k}
@@ -445,7 +417,10 @@ export default function SaxendaUkCompareTable({
                         <div className="flex flex-col gap-1.5">
                           {basePack(p).coldChain && (
                             <span className="inline-flex items-center gap-1 font-medium text-sky-900">
-                              <Snowflake className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                              <Snowflake
+                                className="h-3.5 w-3.5 shrink-0"
+                                aria-hidden
+                              />
                               Cold chain
                             </span>
                           )}
@@ -462,6 +437,9 @@ export default function SaxendaUkCompareTable({
                           See offer
                         </Link>
                       </td>
+                      <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
+                        {todayLabel ?? p.updatedLabel}
+                      </td>
                     </tr>
                   );
                 })
@@ -473,7 +451,8 @@ export default function SaxendaUkCompareTable({
 
       <p className="text-center text-xs text-slate-500">
         Each pack column shows price and £/mg for that size. Shaded cells =
-        lowest in that column (filtered). Row tint = lowest 1 pen price.
+        lowest in that column (filtered). Row tint = lowest{" "}
+        {packFilter === "all" ? "1 pen" : PACK_HEADER[packFilter]} price.
         Confirm live rates on each site.
       </p>
     </div>

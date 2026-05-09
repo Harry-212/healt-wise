@@ -12,23 +12,9 @@ import SaxendaUkCompareTable from "@/components/saxenda/SaxendaUkCompareTable";
 import WegovyCompareChartsSection from "@/components/compare/WegovyCompareChartsSection";
 import MounjaroCompareChartsSection from "@/components/compare/MounjaroCompareChartsSection";
 import SaxendaCompareChartsSection from "@/components/compare/SaxendaCompareChartsSection";
-import {
-  WEGOVY_UK_COMPARE_LAST_UPDATED,
-  WEGOVY_UK_COMPARE_PROVIDERS,
-  estimatedMonthlyCost as wegovyMonthly,
-  startingPrice as wegovyStarting,
-} from "@/lib/data/wegovy-uk-compare-providers";
-import {
-  MOUNJARO_UK_COMPARE_LAST_UPDATED,
-  MOUNJARO_UK_COMPARE_PROVIDERS,
-  estimatedMonthlyCost as mounjaroMonthly,
-  startingPrice as mounjaroStarting,
-} from "@/lib/data/mounjaro-uk-compare-providers";
-import {
-  SAXENDA_UK_COMPARE_LAST_UPDATED,
-  SAXENDA_UK_COMPARE_PROVIDERS,
-  headlinePackPrice,
-} from "@/lib/data/saxenda-uk-compare-providers";
+import { WEGOVY_UK_COMPARE_PROVIDERS } from "@/lib/data/wegovy-uk-compare-providers";
+import { MOUNJARO_UK_COMPARE_PROVIDERS } from "@/lib/data/mounjaro-uk-compare-providers";
+import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-providers";
 
 /** UK brand names — used in triple-compare tab UI */
 const TAB_LABEL: Record<CompareMedicationTab, string> = {
@@ -84,106 +70,7 @@ const WHAT_IS: Record<CompareMedicationTab, string> = {
   saxenda: "/what-is-saxenda",
 };
 
-function SnapshotStrip({ med }: { med: CompareMedicationTab }) {
-  if (med === "wegovy") {
-    const cheapest = WEGOVY_UK_COMPARE_PROVIDERS.reduce((a, b) =>
-      wegovyStarting(a) <= wegovyStarting(b) ? a : b,
-    );
-    const bestValue =
-      WEGOVY_UK_COMPARE_PROVIDERS.find((p) => p.badges?.includes("bestValue")) ??
-      WEGOVY_UK_COMPARE_PROVIDERS[0];
-    return (
-      <div className="mb-8 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-2xl border border-teal-200/80 bg-linear-to-br from-teal-50/90 to-white p-5 shadow-sm">
-          <p className="text-xs font-semibold tracking-wide text-teal-800">
-            Lowest Starting Pen
-          </p>
-          <p className="mt-1 text-lg font-bold text-slate-900">{cheapest.name}</p>
-          <p className="mt-2 tabular-nums text-sm text-slate-600">
-            From £{wegovyStarting(cheapest)} · est. £{wegovyMonthly(cheapest)}/mo
-          </p>
-        </div>
-        <div className="rounded-2xl border border-teal-200/60 bg-white p-5 shadow-sm">
-          <p className="text-xs font-semibold tracking-wide text-teal-800">
-            Balance Pick
-          </p>
-          <p className="mt-1 text-lg font-bold text-slate-900">{bestValue.name}</p>
-          <p className="mt-2 tabular-nums text-sm text-slate-600">
-            From £{wegovyStarting(bestValue)} · est. £{wegovyMonthly(bestValue)}/mo
-          </p>
-        </div>
-      </div>
-    );
-  }
-  if (med === "mounjaro") {
-    const cheapest = MOUNJARO_UK_COMPARE_PROVIDERS.reduce((a, b) =>
-      mounjaroStarting(a) <= mounjaroStarting(b) ? a : b,
-    );
-    const bestValue =
-      MOUNJARO_UK_COMPARE_PROVIDERS.find((p) => p.badges?.includes("bestValue")) ??
-      MOUNJARO_UK_COMPARE_PROVIDERS[0];
-    return (
-      <div className="mb-8 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-2xl border border-violet-200/80 bg-linear-to-br from-violet-50/90 to-white p-5 shadow-sm">
-          <p className="text-xs font-semibold tracking-wide text-violet-800">
-            Lowest Starting Pen
-          </p>
-          <p className="mt-1 text-lg font-bold text-slate-900">{cheapest.name}</p>
-          <p className="mt-2 tabular-nums text-sm text-slate-600">
-            From £{mounjaroStarting(cheapest)} · est. £{mounjaroMonthly(cheapest)}/mo
-          </p>
-        </div>
-        <div className="rounded-2xl border border-violet-200/60 bg-white p-5 shadow-sm">
-          <p className="text-xs font-semibold tracking-wide text-violet-800">
-            Balance Pick
-          </p>
-          <p className="mt-1 text-lg font-bold text-slate-900">{bestValue.name}</p>
-          <p className="mt-2 tabular-nums text-sm text-slate-600">
-            From £{mounjaroStarting(bestValue)} · est. £
-            {mounjaroMonthly(bestValue)}/mo
-          </p>
-        </div>
-      </div>
-    );
-  }
-  const cheapest = SAXENDA_UK_COMPARE_PROVIDERS.reduce((a, b) =>
-    headlinePackPrice(a, "1") <= headlinePackPrice(b, "1") ? a : b,
-  );
-  const bestValue =
-    SAXENDA_UK_COMPARE_PROVIDERS.find((p) => p.promoNote) ??
-    SAXENDA_UK_COMPARE_PROVIDERS.reduce((a, b) => (a.rating >= b.rating ? a : b));
-  return (
-    <div className="mb-8 grid gap-4 sm:grid-cols-2">
-      <div className="rounded-2xl border border-sky-200/80 bg-linear-to-br from-sky-50/90 to-white p-5 shadow-sm">
-        <p className="text-xs font-semibold tracking-wide text-sky-900">
-          Lowest 1 Pen Pack
-        </p>
-        <p className="mt-1 text-lg font-bold text-slate-900">{cheapest.name}</p>
-        <p className="mt-2 tabular-nums text-sm text-slate-600">
-          £{headlinePackPrice(cheapest, "1")} (1 pen headline)
-        </p>
-      </div>
-      <div className="rounded-2xl border border-sky-200/60 bg-white p-5 shadow-sm">
-        <p className="text-xs font-semibold tracking-wide text-sky-900">
-          Balance Pick
-        </p>
-        <p className="mt-1 text-lg font-bold text-slate-900">{bestValue.name}</p>
-        <p className="mt-2 tabular-nums text-sm text-slate-600">
-          From £{headlinePackPrice(bestValue, "1")} (1 pen)
-        </p>
-      </div>
-    </div>
-  );
-}
-
 function MedPanel({ med }: { med: CompareMedicationTab }) {
-  const last =
-    med === "wegovy"
-      ? WEGOVY_UK_COMPARE_LAST_UPDATED
-      : med === "mounjaro"
-        ? MOUNJARO_UK_COMPARE_LAST_UPDATED
-        : SAXENDA_UK_COMPARE_LAST_UPDATED;
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -199,15 +86,12 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
             <span className="text-slate-900"> Advanced UK Pharmacy Table</span>
           </h2>
           <p className="mt-2 max-w-3xl text-sm text-slate-600 md:text-base">
-            The same sortable table as our dedicated price page for this medicine:
-            column sort, filters, discount preview, and GPhC context. Data label:{" "}
-            <span className="font-semibold text-slate-800">{last}</span>.
+            The same sortable table as our dedicated price page for this
+            medicine: column sort, filters, discount preview, and GPhC context.
           </p>
         </div>
         <CompareHereLink href={FULL_PAGE[med]} size="sm" className="shrink-0" />
       </div>
-
-      <SnapshotStrip med={med} />
 
       <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm">
         {med === "wegovy" && (

@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronRight, Zap } from "lucide-react";
 import type { NavPanel } from "@/lib/nav/nav-config";
-import { NavLinkIcon } from "@/lib/nav/nav-icons";
+import { NavLinkIcon, NAV_LINK_ACCENT_CLASSES } from "@/lib/nav/nav-icons";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
 import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
@@ -170,21 +170,32 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
                             </p>
                           ) : null}
                           <ul>
-                            {col.links.map((l) => (
-                              <li key={l.href + l.label}>
-                                <Link
-                                  href={l.href}
-                                  onClick={close}
-                                  className="flex min-h-11 items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] font-medium text-slate-800 active:bg-slate-50"
-                                >
-                                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-100">
-                                    <NavLinkIcon name={l.icon} />
-                                  </span>
-                                  <span className="min-w-0 flex-1 leading-snug">{l.label}</span>
-                                  <ChevronRight className="h-4 w-4 shrink-0 text-slate-300" aria-hidden />
-                                </Link>
-                              </li>
-                            ))}
+                            {col.links.map((l) => {
+                              const accent = l.accent
+                                ? NAV_LINK_ACCENT_CLASSES[l.accent]
+                                : null;
+                              const containerClass = accent
+                                ? accent.containerMobile
+                                : "text-slate-800 active:bg-slate-50";
+                              const badgeClass = accent ? "bg-white/70" : "bg-slate-100";
+                              return (
+                                <li key={l.href + l.label}>
+                                  <Link
+                                    href={l.href}
+                                    onClick={close}
+                                    className={`group flex min-h-11 items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] font-medium ${containerClass}`}
+                                  >
+                                    <span
+                                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${badgeClass}`}
+                                    >
+                                      <NavLinkIcon name={l.icon} accent={l.accent} />
+                                    </span>
+                                    <span className="min-w-0 flex-1 leading-snug">{l.label}</span>
+                                    <ChevronRight className="h-4 w-4 shrink-0 text-slate-300" aria-hidden />
+                                  </Link>
+                                </li>
+                              );
+                            })}
                           </ul>
                         </div>
                       ))}

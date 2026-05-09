@@ -90,7 +90,7 @@ export function ContactForm() {
             href="mailto:contact@healthwise360.co.uk"
             className="font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
           >
-            contact@healthwise360.co.uk
+            <br>The Contact Team</br>
           </a>
           .
         </p>
