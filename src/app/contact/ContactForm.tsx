@@ -85,14 +85,10 @@ export function ContactForm() {
           Thank You! your message was sent.
         </p>
         <p className="mt-3 text-base leading-relaxed text-emerald-900/80">
-          We will typically reply to your message within 2 business days
-          <a
-            href="mailto:contact@healthwise360.co.uk"
-            className="font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
-          >
-            <br>The Contact Team</br>
-          </a>
-          .
+          We will typically reply to your message within 2 business day.
+        </p>
+        <p className="mt-3 text-base leading-relaxed text-emerald-900/80">
+          The Contact Team
         </p>
         <button
           type="button"

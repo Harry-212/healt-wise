@@ -12,8 +12,8 @@ export const WHY_CHOOSE_HEALTHWISE360_SRC =
 export const WHY_CHOOSE_HEALTHWISE360_ALT =
   "Why choose Health Wise — independent UK weight loss treatment comparison";
 
-/** Favicon (`public/new logo health wise.png` — encoded for URLs). */
-export const SITE_FAVICON_SRC = "/new%20logo%20health%20wise.png";
+/** Favicon (`public/newiconhealthwise360.png`). */
+export const SITE_FAVICON_SRC = "/newiconhealthwise360.png";
 
 /** Blog hero + listing: Top Benefits of Doctor Prescribed… (`public/blog/Ttop Benefits… - Copy.webp`). */
 export const BLOG_TOP_BENEFITS_DOCTOR_PRESCRIBED_IMAGE =
