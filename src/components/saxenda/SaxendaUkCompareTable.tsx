@@ -149,7 +149,7 @@ export default function SaxendaUkCompareTable({
   );
 
   const providerThClass =
-    "sticky left-0 z-50 min-w-[13rem] max-w-[15rem] border-b border-r border-slate-200/90 bg-slate-50 px-3 py-3 pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
+    "sticky left-0 z-50 w-[10rem] sm:w-[14rem] border-b border-r border-slate-200/90 bg-slate-50 px-2 py-3 pl-3 sm:px-3 sm:pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
 
   // Provider + Rating + visible pack columns + Delivery + Trust&safety + Action + Updated
   const colCount = 1 + 1 + visiblePackKeys.length + 3 + 1;
@@ -265,7 +265,7 @@ export default function SaxendaUkCompareTable({
           Scroll sideways on small screens.
         </p>
         <div className="max-h-[min(78vh,640px)] min-h-0 overflow-auto overscroll-contain [overflow-anchor:none]">
-          <table className="w-full min-w-[52rem] border-collapse text-left text-sm">
+          <table className="table-fixed border-collapse text-left text-sm">
             <thead className="sticky top-0 z-20">
               <tr>
                 <th
@@ -278,7 +278,7 @@ export default function SaxendaUkCompareTable({
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  className="w-[5rem] sm:w-[6rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   <TrustpilotColumnHeaderContent />
                 </th>
@@ -286,32 +286,32 @@ export default function SaxendaUkCompareTable({
                   <th
                     key={k}
                     scope="col"
-                    className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                    className="w-[5.5rem] sm:w-[6.5rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                   >
                     {PACK_HEADER[k]}
                   </th>
                 ))}
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  className="w-[7rem] sm:w-[9rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   Delivery
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  className="w-[6rem] sm:w-[8rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   Trust &amp; safety
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  className="w-[5rem] sm:w-[5.5rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   Action
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50 px-3 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  className="w-[5rem] sm:w-[6.5rem] border-b border-slate-200/90 bg-slate-50 px-3 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   Updated
                 </th>
@@ -347,7 +347,7 @@ export default function SaxendaUkCompareTable({
                       }`}
                     >
                       <td
-                        className={`sticky left-0 z-10 border-r border-slate-200/80 px-3 py-2.5 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] ${
+                        className={`sticky left-0 z-10 border-r border-slate-200/80 px-2 py-2.5 pl-3 sm:px-3 sm:pl-4 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] ${
                           isLowestRow
                             ? "bg-sky-50/90 group-hover:bg-sky-50"
                             : "bg-white group-hover:bg-slate-50/90"

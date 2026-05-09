@@ -134,7 +134,7 @@ export default function MounjaroUkCompareTable({
   const colCount = 1 + visibleDoseKeys.length + 2;
 
   const providerThClass =
-    "sticky left-0 z-50 min-w-[13rem] max-w-[14rem] border-b border-r border-slate-200/90 bg-slate-50 px-3 py-3 pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
+    "sticky left-0 z-50 w-[9rem] sm:w-[14rem] border-b border-r border-slate-200/90 bg-slate-50 px-2 py-3 pl-3 sm:px-3 sm:pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
 
   return (
     <div className="space-y-4">
@@ -295,7 +295,7 @@ export default function MounjaroUkCompareTable({
           Scroll sideways — provider column stays fixed.
         </p>
         <div className="max-h-[min(78vh,800px)] min-h-0 overflow-auto overscroll-contain [overflow-anchor:none]">
-          <table className="w-full min-w-[44rem] border-collapse text-left text-sm">
+          <table className="table-fixed border-collapse text-left text-sm">
             <thead className="sticky top-0 z-20">
               <tr className="text-slate-600">
                 <th
@@ -311,20 +311,20 @@ export default function MounjaroUkCompareTable({
                     key={k}
                     scope="col"
                     title={`Mounjaro ${doseHeaderLabel(k)} pen (illustrative)`}
-                    className="w-[4.25rem] min-w-[4.25rem] max-w-[4.25rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-center text-xs font-semibold uppercase tracking-wide text-slate-700"
+                    className="w-[4.25rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-center text-xs font-semibold uppercase tracking-wide text-slate-700"
                   >
                     {doseHeaderLabel(k)}
                   </th>
                 ))}
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  className="w-[4.5rem] sm:w-[5.5rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   <TrustpilotColumnHeaderContent />
                 </th>
                 <th
                   scope="col"
-                  className="border-b border-slate-200/90 bg-slate-50 px-3 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  className="w-[5rem] sm:w-[6.5rem] border-b border-slate-200/90 bg-slate-50 px-3 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   Updated
                 </th>
@@ -368,7 +368,7 @@ export default function MounjaroUkCompareTable({
                       }`}
                     >
                       <td
-                        className={`sticky left-0 z-10 border-r border-slate-200/80 px-3 py-2.5 pl-4 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] ${stickyProviderBg}`}
+                        className={`sticky left-0 z-10 border-r border-slate-200/80 px-2 py-2.5 pl-3 sm:px-3 sm:pl-4 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] ${stickyProviderBg}`}
                       >
                         <div className="flex flex-col gap-1.5">
                           {linkProfile ? (
