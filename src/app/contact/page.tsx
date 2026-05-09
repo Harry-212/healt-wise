@@ -25,7 +25,10 @@ export default function ContactPage() {
         >
           <ol className="flex flex-wrap items-center gap-2">
             <li>
-              <Link href="/" className="transition-colors hover:text-emerald-950">
+              <Link
+                href="/"
+                className="transition-colors hover:text-emerald-950"
+              >
                 Home
               </Link>
             </li>
@@ -39,10 +42,11 @@ export default function ContactPage() {
         <main className="grid flex-1 grid-cols-1 gap-8 pb-4 pt-0 lg:grid-cols-2 lg:gap-14 lg:pb-8 xl:gap-16">
           <div className="flex flex-col justify-start text-center lg:pr-4 lg:text-left">
             <h1 className="text-balance text-4xl font-bold leading-[1.12] tracking-tight text-emerald-950 sm:text-5xl lg:text-6xl">
-              Questions about {SITE_BRAND_NAME}?
+              Message - {SITE_BRAND_NAME}
             </h1>
             <p className="mt-8 text-lg leading-relaxed text-emerald-900/85 sm:text-xl">
-              We read every message and usually reply within 1–2 business days. Our business email is{" "}
+              We will typically reply to your message within 2 business days.
+              Our business email is{" "}
               <a
                 href="mailto:contact@healthwise360.co.uk"
                 className="font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
@@ -52,8 +56,9 @@ export default function ContactPage() {
               .
             </p>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-emerald-900/75 sm:mx-auto sm:text-lg lg:mx-0">
-              Please do not include sensitive medical information in your message; use a secure channel
-              with your clinician for clinical matters.
+              Please do not include sensitive medical information in your
+              message; use a secure channel with your clinician for clinical
+              matters.
             </p>
           </div>
 
@@ -77,9 +82,27 @@ function DecorativeCurves() {
         viewBox="0 0 400 400"
         fill="none"
       >
-        <circle cx="200" cy="200" r="180" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="200" cy="200" r="140" stroke="currentColor" strokeWidth="1" />
-        <circle cx="200" cy="200" r="100" stroke="currentColor" strokeWidth="0.75" />
+        <circle
+          cx="200"
+          cy="200"
+          r="180"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+        <circle
+          cx="200"
+          cy="200"
+          r="140"
+          stroke="currentColor"
+          strokeWidth="1"
+        />
+        <circle
+          cx="200"
+          cy="200"
+          r="100"
+          stroke="currentColor"
+          strokeWidth="0.75"
+        />
       </svg>
       <svg
         className="absolute -left-32 bottom-0 h-[min(70vw,400px)] w-[min(70vw,400px)] text-teal-600/10"

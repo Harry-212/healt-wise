@@ -19,7 +19,9 @@ export function ContactForm() {
   const [message, setMessage] = useState("");
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [honeypot, setHoneypot] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
@@ -42,7 +44,10 @@ export function ContactForm() {
         }),
       });
 
-      const data = (await res.json().catch(() => ({}))) as { error?: string; ok?: boolean };
+      const data = (await res.json().catch(() => ({}))) as {
+        error?: string;
+        ok?: boolean;
+      };
 
       if (!res.ok) {
         setStatus("error");
@@ -63,7 +68,9 @@ export function ContactForm() {
       setAcceptedTerms(false);
     } catch {
       setStatus("error");
-      setErrorMessage("Network error. Please check your connection and try again.");
+      setErrorMessage(
+        "Network error. Please check your connection and try again.",
+      );
     }
   }
 
@@ -74,9 +81,11 @@ export function ContactForm() {
         role="status"
         aria-live="polite"
       >
-        <p className="text-lg font-semibold text-emerald-950">Thank you — your message was sent.</p>
+        <p className="text-lg font-semibold text-emerald-950">
+          Thank You! your message was sent.
+        </p>
         <p className="mt-3 text-base leading-relaxed text-emerald-900/80">
-          We usually reply within 1–2 business days. If it is urgent, you can also reach us at{" "}
+          We will typically reply to your message within 2 business days
           <a
             href="mailto:contact@healthwise360.co.uk"
             className="font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
@@ -102,13 +111,18 @@ export function ContactForm() {
       className="relative rounded-2xl border border-emerald-800/10 bg-white/80 p-6 shadow-lg shadow-emerald-950/5 ring-1 ring-emerald-950/5 backdrop-blur-md sm:p-8"
       noValidate
     >
-      <h2 className="text-xl font-bold tracking-tight text-emerald-950 sm:text-2xl">Send a message</h2>
+      <h2 className="text-xl font-bold tracking-tight text-emerald-950 sm:text-2xl">
+        Send a message
+      </h2>
       <p className="mt-2 text-sm leading-relaxed text-emerald-900/75">
         Fields marked <span className="text-red-700">*</span> are required.
       </p>
 
       {/* Honeypot — hidden from users */}
-      <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden>
+      <div
+        className="absolute -left-[9999px] h-0 w-0 overflow-hidden"
+        aria-hidden
+      >
         <label htmlFor="contact-website">Website</label>
         <input
           id="contact-website"
@@ -123,7 +137,10 @@ export function ContactForm() {
 
       <div className="mt-6 grid gap-5 sm:grid-cols-2">
         <div className="sm:col-span-1">
-          <label htmlFor="contact-first" className="block text-sm font-medium text-emerald-950">
+          <label
+            htmlFor="contact-first"
+            className="block text-sm font-medium text-emerald-950"
+          >
             First name <span className="text-red-700">*</span>
           </label>
           <input
@@ -139,7 +156,10 @@ export function ContactForm() {
           />
         </div>
         <div className="sm:col-span-1">
-          <label htmlFor="contact-last" className="block text-sm font-medium text-emerald-950">
+          <label
+            htmlFor="contact-last"
+            className="block text-sm font-medium text-emerald-950"
+          >
             Last name <span className="text-red-700">*</span>
           </label>
           <input
@@ -157,7 +177,10 @@ export function ContactForm() {
       </div>
 
       <div className="mt-5">
-        <label htmlFor="contact-email" className="block text-sm font-medium text-emerald-950">
+        <label
+          htmlFor="contact-email"
+          className="block text-sm font-medium text-emerald-950"
+        >
           Email <span className="text-red-700">*</span>
         </label>
         <input
@@ -174,7 +197,10 @@ export function ContactForm() {
       </div>
 
       <div className="mt-5">
-        <label htmlFor="contact-profile" className="block text-sm font-medium text-emerald-950">
+        <label
+          htmlFor="contact-profile"
+          className="block text-sm font-medium text-emerald-950"
+        >
           Topic <span className="text-red-700">*</span>
         </label>
         <select
@@ -195,7 +221,10 @@ export function ContactForm() {
       </div>
 
       <div className="mt-5">
-        <label htmlFor="contact-message" className="block text-sm font-medium text-emerald-950">
+        <label
+          htmlFor="contact-message"
+          className="block text-sm font-medium text-emerald-950"
+        >
           Message <span className="text-red-700">*</span>
         </label>
         <textarea
@@ -219,7 +248,10 @@ export function ContactForm() {
           onChange={(e) => setAcceptedTerms(e.target.checked)}
           className="mt-1 h-4 w-4 shrink-0 rounded border-emerald-800/30 text-emerald-800 focus:ring-emerald-600"
         />
-        <label htmlFor="contact-terms" className="text-sm leading-relaxed text-emerald-900/90">
+        <label
+          htmlFor="contact-terms"
+          className="text-sm leading-relaxed text-emerald-900/90"
+        >
           I have read and agree to the{" "}
           <Link
             href="/terms-of-service"
