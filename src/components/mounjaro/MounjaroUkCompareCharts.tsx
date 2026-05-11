@@ -16,7 +16,10 @@ import {
   dosePriceRangeByStrengthMounjaro,
   type MounjaroUkProviderCompare,
 } from "@/lib/data/mounjaro-uk-compare-providers";
-import { RechartsShell } from "@/components/charts/recharts-shell";
+import {
+  RechartsShell,
+  rechartsOuterMargins,
+} from "@/components/charts/recharts-shell";
 
 const accent = "#7c3aed";
 const grey = "#94a3b8";
@@ -31,7 +34,7 @@ export function MounjaroUkPriceRangeByDoseChart({ providers }: Props) {
   }));
 
   return (
-    <figure className="rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:p-6">
+    <figure className="min-w-0 max-w-full overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:p-6">
       <figcaption className="mb-4">
         <h3 className="text-lg font-semibold text-slate-900">
           Illustrative price spread by pen strength
@@ -41,10 +44,10 @@ export function MounjaroUkPriceRangeByDoseChart({ providers }: Props) {
           = highest listed; grey = lowest listed for that strength.
         </p>
       </figcaption>
-      <RechartsShell heightPx={288}>
+      <RechartsShell heightPx={288} className="max-w-full">
         {(dims) => (
           <div
-            className="h-full w-full"
+            className="h-full w-full min-w-0"
             role="img"
             aria-label="Bar chart of minimum and maximum Mounjaro pen prices by dose"
           >
@@ -52,11 +55,19 @@ export function MounjaroUkPriceRangeByDoseChart({ providers }: Props) {
               width={dims.width}
               height={dims.height}
               data={data}
-              margin={{ top: 8, right: 8, left: 4, bottom: 4 }}
+              margin={rechartsOuterMargins(dims.width)}
               barGap={4}
             >
               <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis dataKey="dose" tick={{ fontSize: 11 }} stroke="#64748b" />
+              <XAxis
+                dataKey="dose"
+                tick={{ fontSize: dims.width < 380 ? 9 : 11 }}
+                stroke="#64748b"
+                interval={0}
+                angle={dims.width < 380 ? -20 : 0}
+                textAnchor={dims.width < 380 ? "end" : "middle"}
+                height={dims.width < 380 ? 48 : undefined}
+              />
               <YAxis
                 tick={{ fontSize: 11 }}
                 stroke="#64748b"
@@ -103,7 +114,7 @@ export function MounjaroUkDosageCostLineChart({ providers }: Props) {
   }));
 
   return (
-    <figure className="rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:p-6">
+    <figure className="min-w-0 max-w-full overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:p-6">
       <figcaption className="mb-4">
         <h3 className="text-lg font-semibold text-slate-900">
           Average listed pen price by strength
@@ -113,10 +124,10 @@ export function MounjaroUkDosageCostLineChart({ providers }: Props) {
           dose increases.
         </p>
       </figcaption>
-      <RechartsShell heightPx={288}>
+      <RechartsShell heightPx={288} className="max-w-full">
         {(dims) => (
           <div
-            className="h-full w-full"
+            className="h-full w-full min-w-0"
             role="img"
             aria-label="Line chart of average Mounjaro price by dose"
           >
@@ -124,10 +135,18 @@ export function MounjaroUkDosageCostLineChart({ providers }: Props) {
               width={dims.width}
               height={dims.height}
               data={data}
-              margin={{ top: 8, right: 12, left: 4, bottom: 4 }}
+              margin={rechartsOuterMargins(dims.width)}
             >
               <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis dataKey="dose" tick={{ fontSize: 11 }} stroke="#64748b" />
+              <XAxis
+                dataKey="dose"
+                tick={{ fontSize: dims.width < 380 ? 9 : 11 }}
+                stroke="#64748b"
+                interval={0}
+                angle={dims.width < 380 ? -20 : 0}
+                textAnchor={dims.width < 380 ? "end" : "middle"}
+                height={dims.width < 380 ? 48 : undefined}
+              />
               <YAxis
                 tick={{ fontSize: 11 }}
                 stroke="#64748b"

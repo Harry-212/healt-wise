@@ -9,6 +9,22 @@ import {
 
 export type RechartsDims = { width: number; height: number };
 
+/** Extra left/bottom space on narrow widths so £ ticks and legend do not clip. */
+export function rechartsOuterMargins(width: number): {
+  top: number;
+  right: number;
+  left: number;
+  bottom: number;
+} {
+  const narrow = width < 420;
+  return {
+    top: 8,
+    right: narrow ? 4 : 12,
+    left: narrow ? 40 : 4,
+    bottom: narrow ? 36 : 4,
+  };
+}
+
 /**
  * Measures a fixed-height box and passes pixel width/height into children.
  * Use explicit `width`/`height` on BarChart/LineChart — do not use ResponsiveContainer

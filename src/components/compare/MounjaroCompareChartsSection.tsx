@@ -29,13 +29,13 @@ export default function MounjaroCompareChartsSection({
   return (
     <DeferNearViewport
       fallback={
-        <div className="grid gap-8">
+        <div className="grid min-w-0 gap-8">
           <ChartSectionPlaceholder />
           <ChartSectionPlaceholder />
         </div>
       }
     >
-      <div className="grid gap-8">
+      <div className="grid min-w-0 gap-8">
         <MounjaroUkPriceRangeByDoseChart providers={providers} />
         <MounjaroUkDosageCostLineChart providers={providers} />
       </div>

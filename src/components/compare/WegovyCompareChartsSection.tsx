@@ -29,13 +29,13 @@ export default function WegovyCompareChartsSection({
   return (
     <DeferNearViewport
       fallback={
-        <div className="grid gap-8">
+        <div className="grid min-w-0 gap-8">
           <ChartSectionPlaceholder />
           <ChartSectionPlaceholder />
         </div>
       }
     >
-      <div className="grid gap-8">
+      <div className="grid min-w-0 gap-8">
         <WegovyUkPriceRangeByDoseChart providers={providers} />
         <WegovyUkDosageCostLineChart providers={providers} />
       </div>

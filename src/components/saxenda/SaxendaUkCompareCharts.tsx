@@ -16,7 +16,10 @@ import {
   saxendaPackPriceRangeByPack,
   type SaxendaUkProviderCompare,
 } from "@/lib/data/saxenda-uk-compare-providers";
-import { RechartsShell } from "@/components/charts/recharts-shell";
+import {
+  RechartsShell,
+  rechartsOuterMargins,
+} from "@/components/charts/recharts-shell";
 
 const sky = "#0284c7";
 const grey = "#94a3b8";
@@ -27,7 +30,7 @@ export function SaxendaUkPackPriceRangeChart({ providers }: Props) {
   const data = saxendaPackPriceRangeByPack(providers);
 
   return (
-    <figure className="rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:p-6">
+    <figure className="min-w-0 max-w-full overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:p-6">
       <figcaption className="mb-4">
         <h3 className="text-lg font-semibold text-slate-900">
           Illustrative price spread by pack size
@@ -37,10 +40,10 @@ export function SaxendaUkPackPriceRangeChart({ providers }: Props) {
           Blue = highest listed; grey = lowest listed for that pack count.
         </p>
       </figcaption>
-      <RechartsShell heightPx={288}>
+      <RechartsShell heightPx={288} className="max-w-full">
         {(dims) => (
           <div
-            className="h-full w-full"
+            className="h-full w-full min-w-0"
             role="img"
             aria-label="Bar chart of minimum and maximum Saxenda pack prices by number of pens"
           >
@@ -48,11 +51,16 @@ export function SaxendaUkPackPriceRangeChart({ providers }: Props) {
               width={dims.width}
               height={dims.height}
               data={data}
-              margin={{ top: 8, right: 8, left: 4, bottom: 4 }}
+              margin={rechartsOuterMargins(dims.width)}
               barGap={4}
             >
               <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis dataKey="pack" tick={{ fontSize: 11 }} stroke="#64748b" />
+              <XAxis
+                dataKey="pack"
+                tick={{ fontSize: dims.width < 380 ? 9 : 11 }}
+                stroke="#64748b"
+                interval={0}
+              />
               <YAxis
                 tick={{ fontSize: 11 }}
                 stroke="#64748b"
@@ -96,7 +104,7 @@ export function SaxendaUkAveragePackLineChart({ providers }: Props) {
   const data = saxendaAveragePackPriceByPack(providers);
 
   return (
-    <figure className="rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:p-6">
+    <figure className="min-w-0 max-w-full overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:p-6">
       <figcaption className="mb-4">
         <h3 className="text-lg font-semibold text-slate-900">
           Average listed pack price by size
@@ -106,10 +114,10 @@ export function SaxendaUkAveragePackLineChart({ providers }: Props) {
           reduce £/mg but not always the headline repeat cadence.
         </p>
       </figcaption>
-      <RechartsShell heightPx={288}>
+      <RechartsShell heightPx={288} className="max-w-full">
         {(dims) => (
           <div
-            className="h-full w-full"
+            className="h-full w-full min-w-0"
             role="img"
             aria-label="Line chart of average Saxenda pack price by pack size"
           >
@@ -117,10 +125,15 @@ export function SaxendaUkAveragePackLineChart({ providers }: Props) {
               width={dims.width}
               height={dims.height}
               data={data}
-              margin={{ top: 8, right: 12, left: 4, bottom: 4 }}
+              margin={rechartsOuterMargins(dims.width)}
             >
               <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis dataKey="pack" tick={{ fontSize: 11 }} stroke="#64748b" />
+              <XAxis
+                dataKey="pack"
+                tick={{ fontSize: dims.width < 380 ? 9 : 11 }}
+                stroke="#64748b"
+                interval={0}
+              />
               <YAxis
                 tick={{ fontSize: 11 }}
                 stroke="#64748b"

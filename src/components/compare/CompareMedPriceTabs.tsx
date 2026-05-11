@@ -78,7 +78,7 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -6 }}
       transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-      className="space-y-0"
+      className="min-w-0 space-y-0"
     >
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -106,10 +106,10 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
         )}
       </div>
 
-      <section className="mt-12 rounded-2xl border border-slate-200/80 bg-slate-50/50 px-4 py-10 md:px-8 md:py-12">
-        <div className="mb-8 flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-amber-500" aria-hidden />
-          <h3 className="text-xl font-bold text-slate-900 md:text-2xl">
+      <section className="mt-12 min-w-0 rounded-2xl border border-slate-200/80 bg-slate-50/50 px-3 py-8 sm:px-4 md:px-8 md:py-12">
+        <div className="mb-6 flex min-w-0 flex-col gap-2 sm:mb-8 sm:flex-row sm:items-center sm:gap-3">
+          <Sparkles className="h-5 w-5 shrink-0 text-amber-500" aria-hidden />
+          <h3 className="min-w-0 text-lg font-bold leading-snug text-slate-900 sm:text-xl md:text-2xl">
             Price Distribution Charts
           </h3>
         </div>
@@ -148,9 +148,9 @@ export default function CompareMedPriceTabs({
   return (
     <section
       id="compare-med-tabs"
-      className="scroll-mt-28 border-b border-slate-200/80 bg-linear-to-b from-slate-50/50 to-background py-12 md:py-16"
+      className="scroll-mt-28 min-w-0 border-b border-slate-200/80 bg-linear-to-b from-slate-50/50 to-background py-12 md:py-16"
     >
-      <div className="mx-auto max-w-7xl px-4 md:px-8">
+      <div className="mx-auto min-w-0 max-w-7xl px-4 md:px-8">
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-xs font-bold tracking-wide text-brand-primary">
@@ -179,14 +179,14 @@ export default function CompareMedPriceTabs({
         </div>
 
         <div
-          className="mb-10 rounded-2xl border-2 border-slate-200/90 bg-linear-to-br from-white via-slate-50/80 to-slate-100/60 p-3 shadow-[0_12px_40px_-12px_rgba(15,23,42,0.15)] ring-1 ring-slate-900/5 md:p-4"
+          className="mb-10 min-w-0 rounded-2xl border-2 border-slate-200/90 bg-linear-to-br from-white via-slate-50/80 to-slate-100/60 p-3 shadow-[0_12px_40px_-12px_rgba(15,23,42,0.15)] ring-1 ring-slate-900/5 md:p-4"
           role="tablist"
           aria-label="Choose medicine price matrix"
         >
           <p className="mb-3 px-1 text-sm font-semibold text-slate-800">
             Select A Medicine To View Live Matrix
           </p>
-          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+          <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:flex-wrap">
             {medications.map((m) => {
               const on = active === m;
               const acc = TAB_ACCENTS[m];
@@ -203,17 +203,17 @@ export default function CompareMedPriceTabs({
                   whileHover={{ scale: on ? 1 : 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: "spring", stiffness: 420, damping: 28 }}
-                  className={`group relative flex min-h-[52px] min-w-0 flex-1 items-center justify-center gap-3 rounded-2xl px-4 py-3 text-left font-bold tracking-tight transition sm:min-w-[160px] ${
+                  className={`group relative flex min-h-[48px] w-full items-center justify-start gap-2.5 rounded-2xl px-3 py-2.5 text-left text-[15px] font-bold tracking-tight transition sm:min-h-[52px] sm:w-auto sm:min-w-[160px] sm:flex-1 sm:max-w-none sm:justify-center sm:gap-3 sm:px-4 sm:py-3 sm:text-base ${
                     on ? acc.active : acc.idle
                   } `}
                 >
                   <span
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${on ? acc.iconActive : acc.iconIdle}`}
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl sm:h-10 sm:w-10 ${on ? acc.iconActive : acc.iconIdle}`}
                   >
-                    <Syringe className="h-5 w-5" aria-hidden />
+                    <Syringe className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden />
                   </span>
                   <span className="flex min-w-0 flex-1 flex-col gap-0.5">
-                    <span className="text-base leading-tight">{TAB_LABEL[m]}</span>
+                    <span className="leading-tight">{TAB_LABEL[m]}</span>
                     {!on ? (
                       <span className="text-[11px] font-semibold opacity-80">
                         Tap To Open
@@ -237,6 +237,7 @@ export default function CompareMedPriceTabs({
             id={`compare-panel-${active}`}
             role="tabpanel"
             aria-labelledby={`compare-tab-${active}`}
+            className="min-w-0"
           >
             <MedPanel med={active} />
           </div>

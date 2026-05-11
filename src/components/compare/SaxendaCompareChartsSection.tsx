@@ -29,13 +29,13 @@ export default function SaxendaCompareChartsSection({
   return (
     <DeferNearViewport
       fallback={
-        <div className="grid gap-8">
+        <div className="grid min-w-0 gap-8">
           <ChartSectionPlaceholder />
           <ChartSectionPlaceholder />
         </div>
       }
     >
-      <div className="grid gap-8">
+      <div className="grid min-w-0 gap-8">
         <SaxendaUkPackPriceRangeChart providers={providers} />
         <SaxendaUkAveragePackLineChart providers={providers} />
       </div>
