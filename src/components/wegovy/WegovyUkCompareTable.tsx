@@ -2,9 +2,16 @@
 
 import Link from "next/link";
 import { startTransition, useMemo, useState } from "react";
-import { Building2, CalendarClock, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  Building2,
+  CalendarClock,
+  ChevronDown,
+  ChevronUp,
+  ChevronsUpDown,
+} from "lucide-react";
 import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import {
+  GphcColumnHeaderContent,
   TrustpilotColumnHeaderContent,
   TrustpilotStarIcon,
 } from "@/components/compare/TrustpilotRatingPresentation";
@@ -23,6 +30,41 @@ import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
 
 type DoseFilter = "all" | WegovyDoseColumnKey;
 
+type WegovyTableSort =
+  | { key: "composite"; dir: "asc" | "desc" }
+  | { key: "dose"; dose: WegovyDoseColumnKey; dir: "asc" | "desc" }
+  | { key: "rating"; dir: "asc" | "desc" }
+  | { key: "provider"; dir: "asc" | "desc" };
+
+function wegovySortToPreset(s: WegovyTableSort): CompareSortPreset {
+  switch (s.key) {
+    case "composite":
+    case "dose":
+      return s.dir === "asc" ? "price-asc" : "price-desc";
+    case "rating":
+      return s.dir === "desc" ? "rating-desc" : "rating-asc";
+    case "provider":
+      return s.dir === "asc" ? "provider-asc" : "provider-desc";
+  }
+}
+
+function presetToWegovySort(v: CompareSortPreset): WegovyTableSort {
+  switch (v) {
+    case "price-asc":
+      return { key: "composite", dir: "asc" };
+    case "price-desc":
+      return { key: "composite", dir: "desc" };
+    case "rating-desc":
+      return { key: "rating", dir: "desc" };
+    case "rating-asc":
+      return { key: "rating", dir: "asc" };
+    case "provider-asc":
+      return { key: "provider", dir: "asc" };
+    case "provider-desc":
+      return { key: "provider", dir: "desc" };
+  }
+}
+
 function doseHeaderLabel(key: WegovyDoseColumnKey): string {
   return key.replace("mg", " mg");
 }
@@ -40,12 +82,11 @@ export default function WegovyUkCompareTable({
   const [priceMin, setPriceMin] = useState("");
   const [priceMax, setPriceMax] = useState("");
   const [minRating, setMinRating] = useState("");
-  const [deliveryFilter, setDeliveryFilter] = useState<
-    "all" | "free" | "paid" | "collect"
-  >("all");
   const [doseFilter, setDoseFilter] = useState<DoseFilter>("all");
-  const [sortPreset, setSortPreset] = useState<CompareSortPreset>("provider-asc");
-  const [moreFiltersOpen, setMoreFiltersOpen] = useState(false);
+  const [tableSort, setTableSort] = useState<WegovyTableSort>({
+    key: "provider",
+    dir: "asc",
+  });
 
   const todayLabel = useTodayLabel();
 
@@ -62,36 +103,53 @@ export default function WegovyUkCompareTable({
     const q = providerQuery.trim().toLowerCase();
 
     let rows = providers.filter((p) => {
-      const start = startingPrice(p);
+      const priceForFilter =
+        doseFilter === "all" ? startingPrice(p) : p.prices[doseFilter];
+      if (
+        doseFilter !== "all" &&
+        (!Number.isFinite(priceForFilter) || priceForFilter <= 0)
+      ) {
+        return false;
+      }
       if (q && !p.name.toLowerCase().includes(q)) return false;
-      if (minP !== null && !Number.isNaN(minP) && start < minP) return false;
-      if (maxP !== null && !Number.isNaN(maxP) && start > maxP) return false;
+      if (minP !== null && !Number.isNaN(minP) && priceForFilter < minP)
+        return false;
+      if (maxP !== null && !Number.isNaN(maxP) && priceForFilter > maxP)
+        return false;
       if (minR !== null && !Number.isNaN(minR) && p.rating < minR) return false;
-      const d = p.deliveryNote.toLowerCase();
-      if (deliveryFilter === "free" && !d.includes("free")) return false;
-      if (deliveryFilter === "paid" && !d.includes("inc £")) return false;
-      if (deliveryFilter === "collect" && !d.includes("collect")) return false;
       return true;
     });
 
-    const dir = sortPreset === "price-desc" ? -1 : 1;
-    const priceFor = (p: WegovyUkProviderCompare) =>
+    const priceForComposite = (p: WegovyUkProviderCompare) =>
       doseFilter === "all" ? startingPrice(p) : p.prices[doseFilter];
 
     rows = [...rows].sort((a, b) => {
-      switch (sortPreset) {
-        case "price-asc":
-        case "price-desc":
-          return (priceFor(a) - priceFor(b)) * dir;
-        case "rating-desc":
-          return b.rating - a.rating;
-        case "provider-asc":
-          return a.name.localeCompare(b.name);
+      switch (tableSort.key) {
+        case "provider":
+          return tableSort.dir === "asc"
+            ? a.name.localeCompare(b.name)
+            : b.name.localeCompare(a.name);
+        case "rating":
+          return tableSort.dir === "desc"
+            ? b.rating - a.rating
+            : a.rating - b.rating;
+        case "dose":
+          return (
+            (a.prices[tableSort.dose] - b.prices[tableSort.dose]) *
+            (tableSort.dir === "asc" ? 1 : -1)
+          );
+        case "composite":
+          return (
+            (priceForComposite(a) - priceForComposite(b)) *
+            (tableSort.dir === "asc" ? 1 : -1)
+          );
       }
     });
 
     const minStart =
-      rows.length > 0 ? Math.min(...rows.map((r) => priceFor(r))) : null;
+      rows.length > 0
+        ? Math.min(...rows.map((r) => priceForComposite(r)))
+        : null;
 
     const doseMins: Partial<Record<WegovyDoseColumnKey, number>> = {};
     for (const k of visibleDoseKeys) {
@@ -107,9 +165,8 @@ export default function WegovyUkCompareTable({
     priceMin,
     priceMax,
     minRating,
-    deliveryFilter,
     doseFilter,
-    sortPreset,
+    tableSort,
     visibleDoseKeys,
   ]);
 
@@ -129,7 +186,12 @@ export default function WegovyUkCompareTable({
     [],
   );
 
-  const colCount = 1 + visibleDoseKeys.length + 2;
+  const priceFilterScope =
+    doseFilter === "all"
+      ? "from lowest pen"
+      : `for ${doseHeaderLabel(doseFilter)}`;
+
+  const colCount = 1 + visibleDoseKeys.length + 3;
 
   const providerThClass =
     "sticky left-0 z-50 w-[9rem] sm:w-[14rem] border-b border-r border-slate-200/90 bg-slate-50 px-2 py-3 pl-3 sm:px-3 sm:pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
@@ -160,36 +222,15 @@ export default function WegovyUkCompareTable({
         pills={dosePills}
         selectedPill={doseFilter}
         onSelectPill={(v) => setDoseFilter(v)}
-        sort={sortPreset}
-        onSortChange={setSortPreset}
-      />
-
-      <div className="rounded-2xl border border-slate-200/90 bg-white shadow-sm">
-        <button
-          type="button"
-          onClick={() => setMoreFiltersOpen((v) => !v)}
-          aria-expanded={moreFiltersOpen}
-          className="flex w-full items-center justify-between gap-2 rounded-2xl px-4 py-3 text-left text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
-        >
-          <span className="inline-flex items-center gap-2">
-            More filters
-            <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-slate-600">
-              search · price · rating · delivery
-            </span>
-          </span>
-          {moreFiltersOpen ? (
-            <ChevronUp className="h-4 w-4 text-slate-500" aria-hidden />
-          ) : (
-            <ChevronDown className="h-4 w-4 text-slate-500" aria-hidden />
-          )}
-        </button>
-        {moreFiltersOpen ? (
-          <div className="grid gap-3 border-t border-slate-200/80 px-4 py-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        sort={wegovySortToPreset(tableSort)}
+        onSortChange={(v) => setTableSort(presetToWegovySort(v))}
+        pillRegionTop={
+          <>
             <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
-              Provider name
+              Provider
               <input
                 type="search"
-                placeholder="Search…"
+                placeholder="Search by name…"
                 value={providerQuery}
                 onChange={(e) =>
                   startTransition(() => setProviderQuery(e.target.value))
@@ -198,35 +239,7 @@ export default function WegovyUkCompareTable({
               />
             </label>
             <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
-              Min £ (from)
-              <input
-                type="number"
-                min={0}
-                step={1}
-                placeholder="Any"
-                value={priceMin}
-                onChange={(e) =>
-                  startTransition(() => setPriceMin(e.target.value))
-                }
-                className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
-              />
-            </label>
-            <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
-              Max £ (from)
-              <input
-                type="number"
-                min={0}
-                step={1}
-                placeholder="Any"
-                value={priceMax}
-                onChange={(e) =>
-                  startTransition(() => setPriceMax(e.target.value))
-                }
-                className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
-              />
-            </label>
-            <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
-              Min Trustpilot
+              Trustpilot review (min.)
               <select
                 value={minRating}
                 onChange={(e) =>
@@ -244,26 +257,56 @@ export default function WegovyUkCompareTable({
                 <option value="4.3">4.3+</option>
               </select>
             </label>
-            <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
-              Delivery
-              <select
-                value={deliveryFilter}
-                onChange={(e) =>
-                  startTransition(() =>
-                    setDeliveryFilter(e.target.value as typeof deliveryFilter),
-                  )
-                }
-                className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
-              >
-                <option value="all">All</option>
-                <option value="free">Free delivery</option>
-                <option value="paid">Inc. delivery fee</option>
-                <option value="collect">Collect / in-store</option>
-              </select>
-            </label>
-          </div>
-        ) : null}
-      </div>
+          </>
+        }
+        filterExtras={
+          <>
+            <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-emerald-900">
+              Price band
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
+                <span className="inline-flex flex-col gap-0.5">
+                  <span>Min £</span>
+                  <span className="text-[10px] font-normal text-slate-500">
+                    {priceFilterScope}
+                  </span>
+                </span>
+                <input
+                  type="number"
+                  min={0}
+                  step={1}
+                  placeholder="Any"
+                  value={priceMin}
+                  onChange={(e) =>
+                    startTransition(() => setPriceMin(e.target.value))
+                  }
+                  className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
+                />
+              </label>
+              <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
+                <span className="inline-flex flex-col gap-0.5">
+                  <span>Max £</span>
+                  <span className="text-[10px] font-normal text-slate-500">
+                    {priceFilterScope}
+                  </span>
+                </span>
+                <input
+                  type="number"
+                  min={0}
+                  step={1}
+                  placeholder="Any"
+                  value={priceMax}
+                  onChange={(e) =>
+                    startTransition(() => setPriceMax(e.target.value))
+                  }
+                  className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
+                />
+              </label>
+            </div>
+          </>
+        }
+      />
 
       <p className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-slate-200/80 bg-slate-50/90 px-4 py-3 text-xs text-slate-600">
         <span className="font-semibold text-slate-800">Safety</span>
@@ -292,33 +335,141 @@ export default function WegovyUkCompareTable({
         <p className="border-b border-slate-100 px-4 py-2 text-xs text-slate-500 md:hidden">
           Scroll sideways — provider column stays fixed.
         </p>
-        <div className="max-h-[min(78vh,800px)] min-h-0 overflow-auto overscroll-contain [overflow-anchor:none]">
-          <table className="table-fixed border-collapse text-left text-sm">
+        <div className="max-h-[min(78vh,800px)] min-h-0 w-full min-w-0 overflow-auto overscroll-contain [overflow-anchor:none]">
+          <table className="w-full min-w-max table-auto border-collapse text-left text-sm">
             <thead className="sticky top-0 z-20">
               <tr className="text-slate-600">
                 <th
                   scope="col"
                   className={`${providerThClass} z-40 align-bottom`}
                 >
-                  <span className="text-xs font-semibold uppercase tracking-wide text-slate-700">
-                    Provider
-                  </span>
-                </th>
-                {visibleDoseKeys.map((k) => (
-                  <th
-                    key={k}
-                    scope="col"
-                    title={`Wegovy ${doseHeaderLabel(k)} pen (illustrative)`}
-                    className="w-[4.25rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-center text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setTableSort((prev) =>
+                        prev.key === "provider"
+                          ? {
+                              key: "provider",
+                              dir: prev.dir === "asc" ? "desc" : "asc",
+                            }
+                          : { key: "provider", dir: "asc" },
+                      )
+                    }
+                    className="flex w-full items-center justify-between gap-1 rounded-lg px-0.5 py-1 text-left text-xs font-semibold uppercase tracking-wide text-slate-700 transition hover:bg-slate-100/90"
                   >
-                    {doseHeaderLabel(k)}
-                  </th>
-                ))}
+                    Provider
+                    {tableSort.key === "provider" ? (
+                      tableSort.dir === "asc" ? (
+                        <ChevronUp
+                          className="h-3.5 w-3.5 shrink-0 text-emerald-700"
+                          aria-hidden
+                        />
+                      ) : (
+                        <ChevronDown
+                          className="h-3.5 w-3.5 shrink-0 text-emerald-700"
+                          aria-hidden
+                        />
+                      )
+                    ) : (
+                      <ChevronsUpDown
+                        className="h-3.5 w-3.5 shrink-0 text-slate-400"
+                        aria-hidden
+                      />
+                    )}
+                  </button>
+                </th>
+                {visibleDoseKeys.map((k) => {
+                  const active =
+                    tableSort.key === "dose" && tableSort.dose === k;
+                  return (
+                    <th
+                      key={k}
+                      scope="col"
+                      className="w-[4.5rem] border-b border-slate-200/90 bg-slate-50 px-1 py-2 text-center sm:w-[4.75rem] sm:px-2 sm:py-3 lg:w-[6.75rem] xl:w-32"
+                    >
+                      <button
+                        type="button"
+                        title={`Sort by ${doseHeaderLabel(k)} price — tap to switch lowest / highest`}
+                        onClick={() =>
+                          setTableSort((prev) =>
+                            prev.key === "dose" && prev.dose === k
+                              ? {
+                                  key: "dose",
+                                  dose: k,
+                                  dir: prev.dir === "asc" ? "desc" : "asc",
+                                }
+                              : { key: "dose", dose: k, dir: "asc" },
+                          )
+                        }
+                        className="inline-flex w-full flex-col items-center justify-center gap-0.5 rounded-lg px-0.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700 transition hover:bg-slate-100/90 sm:flex-row sm:gap-1"
+                      >
+                        <span>{doseHeaderLabel(k)}</span>
+                        {active ? (
+                          tableSort.dir === "asc" ? (
+                            <ChevronUp
+                              className="h-3.5 w-3.5 shrink-0 text-emerald-700"
+                              aria-hidden
+                            />
+                          ) : (
+                            <ChevronDown
+                              className="h-3.5 w-3.5 shrink-0 text-emerald-700"
+                              aria-hidden
+                            />
+                          )
+                        ) : (
+                          <ChevronsUpDown
+                            className="h-3.5 w-3.5 shrink-0 text-slate-400"
+                            aria-hidden
+                          />
+                        )}
+                      </button>
+                    </th>
+                  );
+                })}
                 <th
                   scope="col"
-                  className="w-[4.5rem] sm:w-[5.5rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  className="min-w-[4.5rem] w-[5rem] border-b border-slate-200/90 bg-slate-50 px-1 py-2 align-bottom text-slate-700 sm:w-[5.5rem] sm:px-2 sm:py-3"
                 >
-                  <TrustpilotColumnHeaderContent />
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setTableSort((prev) =>
+                        prev.key === "rating"
+                          ? {
+                              key: "rating",
+                              dir: prev.dir === "desc" ? "asc" : "desc",
+                            }
+                          : { key: "rating", dir: "desc" },
+                      )
+                    }
+                    className="flex w-full flex-col items-center justify-center gap-0.5 rounded-lg px-0.5 py-1 transition hover:bg-slate-100/90 sm:flex-row sm:gap-1"
+                  >
+                    <TrustpilotColumnHeaderContent />
+                    {tableSort.key === "rating" ? (
+                      tableSort.dir === "desc" ? (
+                        <ChevronDown
+                          className="h-3.5 w-3.5 shrink-0 text-emerald-700"
+                          aria-hidden
+                        />
+                      ) : (
+                        <ChevronUp
+                          className="h-3.5 w-3.5 shrink-0 text-emerald-700"
+                          aria-hidden
+                        />
+                      )
+                    ) : (
+                      <ChevronsUpDown
+                        className="h-3.5 w-3.5 shrink-0 text-slate-400"
+                        aria-hidden
+                      />
+                    )}
+                  </button>
+                </th>
+                <th
+                  scope="col"
+                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-2.5 align-bottom whitespace-nowrap text-slate-700"
+                >
+                  <GphcColumnHeaderContent />
                 </th>
                 <th
                   scope="col"
@@ -381,15 +532,6 @@ export default function WegovyUkCompareTable({
                               {p.name}
                             </span>
                           )}
-                          <ProviderGphcLine
-                            providerId={p.id}
-                            gphcRegNo={p.gphcRegNo}
-                          />
-                          {p.headlineFrom !== start && (
-                            <span className="text-[11px] leading-snug text-slate-500">
-                              Headline ~{formatGBP(p.headlineFrom)}
-                            </span>
-                          )}
                           <div className="flex flex-wrap gap-1">
                             {isLowestRow && (
                               <span className="inline-flex items-center rounded-full bg-emerald-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
@@ -417,7 +559,7 @@ export default function WegovyUkCompareTable({
                         return (
                           <td
                             key={k}
-                            className={`border-b border-slate-100/90 px-1 py-2.5 text-center align-middle text-xs tabular-nums sm:text-sm ${
+                            className={`border-b border-slate-100/90 px-1.5 py-2.5 text-center align-middle text-xs tabular-nums sm:px-2 sm:text-sm lg:px-3 xl:px-4 ${
                               isColMin
                                 ? "bg-emerald-100/50 font-semibold text-emerald-950"
                                 : ""
@@ -440,6 +582,12 @@ export default function WegovyUkCompareTable({
                             Trustpilot (opens in a new tab)
                           </span>
                         </a>
+                      </td>
+                      <td className="border-b border-slate-100/90 px-2 py-2.5 align-top whitespace-nowrap text-xs text-slate-600">
+                        <ProviderGphcLine
+                          providerId={p.id}
+                          gphcRegNo={p.gphcRegNo}
+                        />
                       </td>
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
                         {todayLabel ?? p.updatedLabel}

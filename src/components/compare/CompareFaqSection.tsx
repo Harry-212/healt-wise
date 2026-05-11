@@ -30,7 +30,7 @@ export default function CompareFaqSection({ items }: { items: CompareFaqItem[] }
               Frequently Asked Questions
             </h2>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-600 md:text-base">
-              Quick answers about how these comparison tables work. This is not
+              Quick answers about how this comparison matrix works. This is not
               medical advice; always follow your prescriber and official patient
               information.
             </p>

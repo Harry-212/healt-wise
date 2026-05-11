@@ -10,7 +10,6 @@ import {
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
 import CompareMedPriceTabs from "@/components/compare/CompareMedPriceTabs";
-import CompareTripleShowcase from "@/components/compare/CompareTripleShowcase";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
 import {
   compareFaqPageJsonLd,
@@ -62,9 +61,13 @@ export default async function ComparePage({ params }: Props) {
   const layout = layoutForSlug(slug);
   if (!cfg || !layout) notFound();
 
+  const webLdName = [layout.hero.titleItalic, layout.hero.titleBold]
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .join(" ");
   const webLd = compareWebPageJsonLd(
     slug,
-    layout.hero.titleBold,
+    webLdName || layout.hero.titleBold,
     layout.share.metaDescription,
   );
   const faqItems = getCompareFaqsForSlug(slug);
@@ -94,6 +97,8 @@ export default async function ComparePage({ params }: Props) {
           snapshotLabel={layout.hero.snapshotLabel}
           navLinks={layout.hero.navLinks}
           wideDesktopHero={slug === "mounjaro-vs-wegovy-vs-saxenda"}
+          showSnapshotPill={slug !== "mounjaro-vs-wegovy-vs-saxenda"}
+          showLiveCalendar={slug === "mounjaro-vs-wegovy-vs-saxenda"}
         />
 
         <CompareMedPriceTabs medications={layout.medications} />
@@ -102,45 +107,43 @@ export default async function ComparePage({ params }: Props) {
           <TrustBarMarquee />
         </section>
 
-        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
-          <div className="mx-auto max-w-5xl px-4 md:px-8">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-              {layout.intro.heading}
-            </h2>
-            <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-              {layout.intro.body.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
+        {slug !== "mounjaro-vs-wegovy-vs-saxenda" ? (
+          <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+            <div className="mx-auto max-w-5xl px-4 md:px-8">
+              <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+                {layout.intro.heading}
+              </h2>
+              <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
+                {layout.intro.body.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+              <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                  <Scale className="h-8 w-8 text-brand-primary" aria-hidden />
+                  <p className="mt-3 font-semibold text-slate-900">Transparent Pricing</p>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Sort every column, filter by band, and preview where discounts will
+                    surface.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                  <Shield className="h-8 w-8 text-emerald-600" aria-hidden />
+                  <p className="mt-3 font-semibold text-slate-900">UK Regulatory Lens</p>
+                  <p className="mt-1 text-sm text-slate-600">
+                    GPhC lines and cold-chain cues match our standalone compare tools.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                  <BadgeCheck className="h-8 w-8 text-violet-600" aria-hidden />
+                  <p className="mt-3 font-semibold text-slate-900">Editorial Balance</p>
+                  <p className="mt-1 text-sm text-slate-600">
+                    “Cheapest” vs “balance pick” callouts mirror the price hub pages.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
-                <Scale className="h-8 w-8 text-brand-primary" aria-hidden />
-                <p className="mt-3 font-semibold text-slate-900">Transparent Pricing</p>
-                <p className="mt-1 text-sm text-slate-600">
-                  Sort every column, filter by band, and preview where discounts will
-                  surface.
-                </p>
-              </div>
-              <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
-                <Shield className="h-8 w-8 text-emerald-600" aria-hidden />
-                <p className="mt-3 font-semibold text-slate-900">UK Regulatory Lens</p>
-                <p className="mt-1 text-sm text-slate-600">
-                  GPhC lines and cold-chain cues match our standalone compare tools.
-                </p>
-              </div>
-              <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
-                <BadgeCheck className="h-8 w-8 text-violet-600" aria-hidden />
-                <p className="mt-3 font-semibold text-slate-900">Editorial Balance</p>
-                <p className="mt-1 text-sm text-slate-600">
-                  “Cheapest” vs “balance pick” callouts mirror the price hub pages.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {slug === "mounjaro-vs-wegovy-vs-saxenda" ? (
-          <CompareTripleShowcase />
+          </section>
         ) : null}
 
         <section className="border-b border-slate-200/80 bg-slate-50/70 py-12 md:py-16">

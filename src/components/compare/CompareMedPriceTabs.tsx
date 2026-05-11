@@ -3,8 +3,9 @@
 import Link from "next/link";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronRight, Pill, Sparkles, Syringe } from "lucide-react";
+import { Calendar, ChevronRight, Pill, Sparkles, Syringe } from "lucide-react";
 import { useState } from "react";
+import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
 import type { CompareMedicationTab } from "@/lib/routes/compare-page-layout";
 import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
 import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable";
@@ -83,10 +84,10 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
         <div>
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
             <span className="text-brand-primary">{TAB_LABEL[med]}</span>
-            <span className="text-slate-900"> Advanced UK Pharmacy Table</span>
+            <span className="text-slate-900"> Advanced UK Pharmacy Matrix</span>
           </h2>
           <p className="mt-2 max-w-3xl text-sm text-slate-600 md:text-base">
-            The same sortable table as our dedicated price page for this
+            The same sortable matrix as our dedicated price page for this
             medicine: column sort, filters, discount preview, and GPhC context.
           </p>
         </div>
@@ -142,6 +143,7 @@ export default function CompareMedPriceTabs({
   medications: CompareMedicationTab[];
 }) {
   const [active, setActive] = useState<CompareMedicationTab>(medications[0]!);
+  const liveDateLabel = useTodayLabel();
 
   return (
     <section
@@ -152,15 +154,26 @@ export default function CompareMedPriceTabs({
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-xs font-bold tracking-wide text-brand-primary">
-              Live Style Data
+              Live Information
             </p>
-            <h2 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+            <p className="mt-2 inline-flex flex-wrap items-center gap-2 text-sm font-semibold text-slate-800">
+              <Calendar
+                className="h-4 w-4 shrink-0 text-amber-600"
+                aria-hidden
+              />
+              <span className="text-amber-700 tabular-nums">
+                {liveDateLabel ?? "…"}
+              </span>
+              <span className="font-normal text-slate-500">
+                — live UK calendar date
+              </span>
+            </p>
+            <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
               Pharmacy Price Comparison
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-slate-600 md:text-base">
-              Tap a medicine below to switch datasets. Tables support sort,
-              filters, and discount preview, with the same behaviour as our
-              standalone compare pages.
+              Select your chosen medication and use filters, to navigate to your
+              chosen supplier
             </p>
           </div>
         </div>
@@ -168,10 +181,10 @@ export default function CompareMedPriceTabs({
         <div
           className="mb-10 rounded-2xl border-2 border-slate-200/90 bg-linear-to-br from-white via-slate-50/80 to-slate-100/60 p-3 shadow-[0_12px_40px_-12px_rgba(15,23,42,0.15)] ring-1 ring-slate-900/5 md:p-4"
           role="tablist"
-          aria-label="Choose Medicine Price Table"
+          aria-label="Choose medicine price matrix"
         >
           <p className="mb-3 px-1 text-sm font-semibold text-slate-800">
-            Select A Medicine To View Live Tables
+            Select A Medicine To View Live Matrix
           </p>
           <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
             {medications.map((m) => {

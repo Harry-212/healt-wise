@@ -10,10 +10,10 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "Why do Wegovy and Mounjaro monthly costs look so different?",
-      a: "Monthly spend depends on dose step, pen pricing, whether consultations and delivery are bundled, and how often you move up in titration. The tables let you sort and filter so you can compare like-for-like strengths where possible, but your prescriber decides the appropriate dose and schedule.",
+      a: "Monthly spend depends on dose step, pen pricing, whether consultations and delivery are bundled, and how often you move up in titration. The matrix lets you sort and filter so you can compare like-for-like strengths where possible, but your prescriber decides the appropriate dose and schedule.",
     },
     {
-      q: "Does a higher table price always mean worse value?",
+      q: "Does a higher matrix price always mean worse value?",
       a: "Not necessarily. Some listings include follow-up messaging, app support, or bundled reviews that others price separately. Use the columns for consultation fees, delivery, and trust signals alongside the headline pen price.",
     },
     {
@@ -22,18 +22,18 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "How often is the comparison data refreshed?",
-      a: "Each table shows a visible data label near the heading. We update illustrative batches periodically, but private pharmacies can move faster than our labels. Treat numbers as a planning guide, not a quote.",
+      a: "Each matrix shows a visible data label near the heading. We update illustrative batches periodically, but private pharmacies can move faster than our labels. Treat numbers as a planning guide, not a quote.",
     },
     {
-      q: "What do the charts add beyond the table?",
-      a: "Distribution views help you see spreads and clustering across providers for the same dose band. They complement sorting in the table but do not replace reading provider-specific terms.",
+      q: "What do the charts add beyond the matrix?",
+      a: "Distribution views help you see spreads and clustering across providers for the same dose band. They complement sorting in the matrix but do not replace reading provider-specific terms.",
     },
     {
       q: "Why is GPhC verification mentioned everywhere?",
       a: "Prescription-only medicines from UK routes should involve a regulated prescriber and a pharmacy accountable to UK standards. We surface GPhC registration lines to make it easier to cross-check who is supplying your medicine.",
     },
     {
-      q: "If stock is short, will the table show it?",
+      q: "If stock is short, will the matrix show it?",
       a: "Where our dataset includes stock or maintenance flags, you will see them in line with our standalone pages. Availability still changes quickly, so confirm directly with the pharmacy when you are ready to order.",
     },
     {
@@ -49,18 +49,18 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
   "mounjaro-vs-saxenda": [
     {
       q: "Why are Saxenda prices often shown per pack while Mounjaro is per pen?",
-      a: "Pharmacies display Saxenda in multi-pen packs more often, while Mounjaro weekly pens are commonly listed by strength and pen price. Our Saxenda table includes pack-size columns so you can normalise what you are comparing.",
+      a: "Pharmacies display Saxenda in multi-pen packs more often, while Mounjaro weekly pens are commonly listed by strength and pen price. Our Saxenda matrix includes pack-size columns so you can normalise what you are comparing.",
     },
     {
       q: "Does daily Saxenda mean higher monthly cost than weekly Mounjaro?",
       a: "Not automatically. Total monthly cost depends on pack maths, dose progression, bundled fees, and how many pens you use per month. Compare totals in each tab rather than assuming from injection frequency alone.",
     },
     {
-      q: "Are these tables suitable for NHS pricing?",
+      q: "Are these matrices suitable for NHS pricing?",
       a: "This hub focuses on illustrative private pharmacy listings in our dataset. NHS pathways and charges differ by region and eligibility. Use NHS services for entitlement questions.",
     },
     {
-      q: "Can I compare side-effect risk from the price table?",
+      q: "Can I compare side-effect risk from the price matrix?",
       a: "No. Safety information belongs in the summary of product characteristics and patient information leaflet for your prescribed medicine. This page is intentionally pricing-focused.",
     },
     {
@@ -80,8 +80,8 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
       a: "Discount previews show how a listed promotion might affect totals when our dataset captures it. Promotions expire and eligibility rules apply at checkout.",
     },
     {
-      q: "What if my prescriber recommends a dose not listed in the table?",
-      a: "Dose availability varies by pharmacy and current stock. Use the table to understand typical pricing bands, then confirm the exact strength and price on the provider your clinician recommends.",
+      q: "What if my prescriber recommends a dose not listed in the matrix?",
+      a: "Dose availability varies by pharmacy and current stock. Use the matrix to understand typical pricing bands, then confirm the exact strength and price on the provider your clinician recommends.",
     },
     {
       q: "Where do I verify a pharmacy is legitimate?",
@@ -92,7 +92,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
   "mounjaro-vs-wegovy-vs-saxenda": [
     {
       q: "What is the fastest way to compare all three medicines here?",
-      a: "Use the medicine tabs at the top to load each full dataset, then compare totals for the dose band you are discussing with your prescriber. The three-way overview further down summarises structural differences only.",
+      a: "Use the medicine tabs at the top to load each full dataset, then compare totals for the dose band you are discussing with your prescriber.",
     },
     {
       q: "Does this page rank which medicine is “best”?",
@@ -104,11 +104,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "Are the three datasets identical to your standalone price pages?",
-      a: "Yes. Each tab mirrors the advanced table and chart stack from the dedicated comparison page for that brand so you can move between hubs without learning new controls.",
-    },
-    {
-      q: "What is the “At A Glance” section for?",
-      a: "It gives a high-level comparison of receptor profile, rhythm, and pricing lens. It does not replace reading official materials or prescriber advice.",
+      a: "Yes. Each tab mirrors the advanced matrix and chart stack from the dedicated comparison page for that brand so you can move between hubs without learning new controls.",
     },
     {
       q: "Can I use pairwise pages instead of this three-way hub?",
@@ -120,7 +116,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "Is consultation pricing included in every row?",
-      a: "Where our dataset captures consultation or subscription lines, they appear in the columns described on each table. If a fee is missing, assume you must confirm it on the provider site.",
+      a: "Where our dataset captures consultation or subscription lines, they appear in the columns described on each matrix. If a fee is missing, assume you must confirm it on the provider site.",
     },
     {
       q: "What should I do if prices moved since the data label date?",
@@ -135,7 +131,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
   "best-weight-loss-treatments-uk": [
     {
       q: "What does this hub cover that individual brand pages do not?",
-      a: "It places three full comparison workspaces behind one navigation flow so you can switch medicines without losing table behaviour. Content is otherwise aligned to our standalone hubs.",
+      a: "It places three full comparison workspaces behind one navigation flow so you can switch medicines without losing matrix behaviour. Content is otherwise aligned to our standalone hubs.",
     },
     {
       q: "Is there a single “cheapest injection” for the UK?",
@@ -146,7 +142,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
       a: "They are commonly searched private weight-management options in the UK. Licensing, eligibility, and posology differ. This page helps you compare pricing tools; suitability is clinical.",
     },
     {
-      q: "Can I sort all three medicines in one combined table?",
+      q: "Can I sort all three medicines in one combined matrix?",
       a: "No. Each medicine uses different pack and dose columns. Keep comparisons within each tab, then step back to total monthly estimates for your situation.",
     },
     {
@@ -171,7 +167,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "Where can I read next steps after comparing prices?",
-      a: "Explore our helpful guides for lifestyle and treatment context, the methodology page for how we build tables, and pharmacy verification steps before you pay.",
+      a: "Explore our helpful guides for lifestyle and treatment context, the methodology page for how we build matrices, and pharmacy verification steps before you pay.",
     },
   ],
 };

@@ -7,10 +7,12 @@ import {
   CalendarClock,
   ChevronDown,
   ChevronUp,
+  ChevronsUpDown,
   Snowflake,
 } from "lucide-react";
 import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import {
+  GphcColumnHeaderContent,
   TrustpilotColumnHeaderContent,
   TrustpilotStarIcon,
 } from "@/components/compare/TrustpilotRatingPresentation";
@@ -28,6 +30,41 @@ import { formatUkGroupedInteger } from "@/lib/provider-helpers";
 import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
 
 type PackFilter = "all" | SaxendaPackKey;
+
+type SaxendaTableSort =
+  | { key: "composite"; dir: "asc" | "desc" }
+  | { key: "pack"; pack: SaxendaPackKey; dir: "asc" | "desc" }
+  | { key: "rating"; dir: "asc" | "desc" }
+  | { key: "provider"; dir: "asc" | "desc" };
+
+function saxendaSortToPreset(s: SaxendaTableSort): CompareSortPreset {
+  switch (s.key) {
+    case "composite":
+    case "pack":
+      return s.dir === "asc" ? "price-asc" : "price-desc";
+    case "rating":
+      return s.dir === "desc" ? "rating-desc" : "rating-asc";
+    case "provider":
+      return s.dir === "asc" ? "provider-asc" : "provider-desc";
+  }
+}
+
+function presetToSaxendaSort(v: CompareSortPreset): SaxendaTableSort {
+  switch (v) {
+    case "price-asc":
+      return { key: "composite", dir: "asc" };
+    case "price-desc":
+      return { key: "composite", dir: "desc" };
+    case "rating-desc":
+      return { key: "rating", dir: "desc" };
+    case "rating-asc":
+      return { key: "rating", dir: "asc" };
+    case "provider-asc":
+      return { key: "provider", dir: "asc" };
+    case "provider-desc":
+      return { key: "provider", dir: "desc" };
+  }
+}
 
 const PACK_HEADER: Record<SaxendaPackKey, string> = {
   "1": "1 pen",
@@ -56,7 +93,7 @@ function PackPriceCell({
   const row = p.packs[packKey];
   return (
     <td
-      className={`border-b border-slate-100/90 px-2 py-2.5 align-middle tabular-nums ${
+      className={`border-b border-slate-100/90 px-2 py-2.5 align-middle tabular-nums sm:px-2.5 lg:px-3 xl:px-4 ${
         isColMin
           ? "bg-sky-100/60 font-semibold text-sky-950"
           : "text-slate-900"
@@ -80,8 +117,10 @@ export default function SaxendaUkCompareTable({
   const [providerQuery, setProviderQuery] = useState("");
   const [minRating, setMinRating] = useState("");
   const [packFilter, setPackFilter] = useState<PackFilter>("all");
-  const [sortPreset, setSortPreset] = useState<CompareSortPreset>("provider-asc");
-  const [moreFiltersOpen, setMoreFiltersOpen] = useState(false);
+  const [tableSort, setTableSort] = useState<SaxendaTableSort>({
+    key: "provider",
+    dir: "asc",
+  });
 
   const todayLabel = useTodayLabel();
 
@@ -101,21 +140,32 @@ export default function SaxendaUkCompareTable({
       return true;
     });
 
-    const dir = sortPreset === "price-desc" ? -1 : 1;
-    const priceFor = (p: SaxendaUkProviderCompare) =>
+    const priceForComposite = (p: SaxendaUkProviderCompare) =>
       packFilter === "all"
         ? p.packs["1"].packPrice
         : p.packs[packFilter].packPrice;
 
     rows = [...rows].sort((a, b) => {
-      switch (sortPreset) {
-        case "price-asc":
-        case "price-desc":
-          return (priceFor(a) - priceFor(b)) * dir;
-        case "rating-desc":
-          return b.rating - a.rating;
-        case "provider-asc":
-          return a.name.localeCompare(b.name);
+      switch (tableSort.key) {
+        case "provider":
+          return tableSort.dir === "asc"
+            ? a.name.localeCompare(b.name)
+            : b.name.localeCompare(a.name);
+        case "rating":
+          return tableSort.dir === "desc"
+            ? b.rating - a.rating
+            : a.rating - b.rating;
+        case "pack":
+          return (
+            (a.packs[tableSort.pack].packPrice -
+              b.packs[tableSort.pack].packPrice) *
+            (tableSort.dir === "asc" ? 1 : -1)
+          );
+        case "composite":
+          return (
+            (priceForComposite(a) - priceForComposite(b)) *
+            (tableSort.dir === "asc" ? 1 : -1)
+          );
       }
     });
 
@@ -127,10 +177,12 @@ export default function SaxendaUkCompareTable({
     }
 
     const minRowPrice =
-      rows.length > 0 ? Math.min(...rows.map((r) => priceFor(r))) : null;
+      rows.length > 0
+        ? Math.min(...rows.map((r) => priceForComposite(r)))
+        : null;
 
     return { rows, packMins, minRowPrice };
-  }, [providers, providerQuery, minRating, packFilter, sortPreset, visiblePackKeys]);
+  }, [providers, providerQuery, minRating, packFilter, tableSort, visiblePackKeys]);
 
   const insights = useMemo(() => {
     const { rows } = processed;
@@ -151,8 +203,8 @@ export default function SaxendaUkCompareTable({
   const providerThClass =
     "sticky left-0 z-50 w-[10rem] sm:w-[14rem] border-b border-r border-slate-200/90 bg-slate-50 px-2 py-3 pl-3 sm:px-3 sm:pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
 
-  // Provider + Rating + visible pack columns + Delivery + Trust&safety + Action + Updated
-  const colCount = 1 + 1 + visiblePackKeys.length + 3 + 1;
+  // Provider + Trustpilot + GPhC + packs + Delivery + Trust&safety + Action + Updated
+  const colCount = 1 + 1 + 1 + visiblePackKeys.length + 3 + 1;
 
   const basePack = (p: SaxendaUkProviderCompare) => p.packs["1"];
 
@@ -182,36 +234,15 @@ export default function SaxendaUkCompareTable({
         pills={packPills}
         selectedPill={packFilter}
         onSelectPill={(v) => setPackFilter(v)}
-        sort={sortPreset}
-        onSortChange={setSortPreset}
-      />
-
-      <div className="rounded-2xl border border-slate-200/90 bg-white shadow-sm">
-        <button
-          type="button"
-          onClick={() => setMoreFiltersOpen((v) => !v)}
-          aria-expanded={moreFiltersOpen}
-          className="flex w-full items-center justify-between gap-2 rounded-2xl px-4 py-3 text-left text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
-        >
-          <span className="inline-flex items-center gap-2">
-            More filters
-            <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-slate-600">
-              search · rating
-            </span>
-          </span>
-          {moreFiltersOpen ? (
-            <ChevronUp className="h-4 w-4 text-slate-500" aria-hidden />
-          ) : (
-            <ChevronDown className="h-4 w-4 text-slate-500" aria-hidden />
-          )}
-        </button>
-        {moreFiltersOpen ? (
-          <div className="grid gap-3 border-t border-slate-200/80 px-4 py-4 sm:grid-cols-2">
+        sort={saxendaSortToPreset(tableSort)}
+        onSortChange={(v) => setTableSort(presetToSaxendaSort(v))}
+        pillRegionTop={
+          <>
             <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
-              Provider name
+              Provider
               <input
                 type="search"
-                placeholder="Search…"
+                placeholder="Search by name…"
                 value={providerQuery}
                 onChange={(e) =>
                   startTransition(() => setProviderQuery(e.target.value))
@@ -220,7 +251,7 @@ export default function SaxendaUkCompareTable({
               />
             </label>
             <label className="flex flex-col gap-1 text-xs font-semibold text-slate-600">
-              Min Trustpilot
+              Trustpilot review (min.)
               <select
                 value={minRating}
                 onChange={(e) =>
@@ -229,14 +260,18 @@ export default function SaxendaUkCompareTable({
                 className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
               >
                 <option value="">Any</option>
+                <option value="4.9">4.9+</option>
+                <option value="4.8">4.8+</option>
+                <option value="4.7">4.7+</option>
                 <option value="4.6">4.6+</option>
                 <option value="4.5">4.5+</option>
                 <option value="4.4">4.4+</option>
+                <option value="4.3">4.3+</option>
               </select>
             </label>
-          </div>
-        ) : null}
-      </div>
+          </>
+        }
+      />
 
       <p className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-slate-200/80 bg-slate-50/90 px-4 py-3 text-xs text-slate-600">
         <span className="font-semibold text-slate-800">Safety</span>
@@ -264,33 +299,142 @@ export default function SaxendaUkCompareTable({
         <p className="border-b border-slate-100 px-4 py-2 text-xs text-slate-500 md:hidden">
           Scroll sideways on small screens.
         </p>
-        <div className="max-h-[min(78vh,640px)] min-h-0 overflow-auto overscroll-contain [overflow-anchor:none]">
-          <table className="table-fixed border-collapse text-left text-sm">
+        <div className="max-h-[min(78vh,640px)] min-h-0 w-full min-w-0 overflow-auto overscroll-contain [overflow-anchor:none]">
+          <table className="w-full min-w-max table-auto border-collapse text-left text-sm">
             <thead className="sticky top-0 z-20">
-              <tr>
+              <tr className="text-slate-600">
                 <th
                   scope="col"
                   className={`${providerThClass} z-40 align-bottom`}
                 >
-                  <span className="text-xs font-semibold uppercase tracking-wide text-slate-700">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setTableSort((prev) =>
+                        prev.key === "provider"
+                          ? {
+                              key: "provider",
+                              dir: prev.dir === "asc" ? "desc" : "asc",
+                            }
+                          : { key: "provider", dir: "asc" },
+                      )
+                    }
+                    className="flex w-full items-center justify-between gap-1 rounded-lg px-0.5 py-1 text-left text-xs font-semibold uppercase tracking-wide text-slate-700 transition hover:bg-slate-100/90"
+                  >
                     Provider
-                  </span>
+                    {tableSort.key === "provider" ? (
+                      tableSort.dir === "asc" ? (
+                        <ChevronUp
+                          className="h-3.5 w-3.5 shrink-0 text-sky-700"
+                          aria-hidden
+                        />
+                      ) : (
+                        <ChevronDown
+                          className="h-3.5 w-3.5 shrink-0 text-sky-700"
+                          aria-hidden
+                        />
+                      )
+                    ) : (
+                      <ChevronsUpDown
+                        className="h-3.5 w-3.5 shrink-0 text-slate-400"
+                        aria-hidden
+                      />
+                    )}
+                  </button>
                 </th>
                 <th
                   scope="col"
-                  className="w-[5rem] sm:w-[6rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  className="min-w-[4.5rem] w-[5rem] border-b border-slate-200/90 bg-slate-50 px-1 py-2 align-bottom text-slate-700 sm:w-[6rem] sm:px-2 sm:py-3"
                 >
-                  <TrustpilotColumnHeaderContent />
-                </th>
-                {visiblePackKeys.map((k) => (
-                  <th
-                    key={k}
-                    scope="col"
-                    className="w-[5.5rem] sm:w-[6.5rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setTableSort((prev) =>
+                        prev.key === "rating"
+                          ? {
+                              key: "rating",
+                              dir: prev.dir === "desc" ? "asc" : "desc",
+                            }
+                          : { key: "rating", dir: "desc" },
+                      )
+                    }
+                    className="flex w-full flex-col items-center justify-center gap-0.5 rounded-lg px-0.5 py-1 transition hover:bg-slate-100/90 sm:flex-row sm:gap-1"
                   >
-                    {PACK_HEADER[k]}
-                  </th>
-                ))}
+                    <TrustpilotColumnHeaderContent />
+                    {tableSort.key === "rating" ? (
+                      tableSort.dir === "desc" ? (
+                        <ChevronDown
+                          className="h-3.5 w-3.5 shrink-0 text-sky-700"
+                          aria-hidden
+                        />
+                      ) : (
+                        <ChevronUp
+                          className="h-3.5 w-3.5 shrink-0 text-sky-700"
+                          aria-hidden
+                        />
+                      )
+                    ) : (
+                      <ChevronsUpDown
+                        className="h-3.5 w-3.5 shrink-0 text-slate-400"
+                        aria-hidden
+                      />
+                    )}
+                  </button>
+                </th>
+                <th
+                  scope="col"
+                  className="border-b border-slate-200/90 bg-slate-50 px-2 py-2.5 align-bottom whitespace-nowrap text-slate-700"
+                >
+                  <GphcColumnHeaderContent />
+                </th>
+                {visiblePackKeys.map((k) => {
+                  const active =
+                    tableSort.key === "pack" && tableSort.pack === k;
+                  return (
+                    <th
+                      key={k}
+                      scope="col"
+                      className="w-[5.5rem] border-b border-slate-200/90 bg-slate-50 px-1 py-2 text-center sm:w-[6.5rem] sm:px-2 sm:py-3 lg:w-32 xl:w-36"
+                    >
+                      <button
+                        type="button"
+                        title={`Sort by ${PACK_HEADER[k]} price — tap to switch lowest / highest`}
+                        onClick={() =>
+                          setTableSort((prev) =>
+                            prev.key === "pack" && prev.pack === k
+                              ? {
+                                  key: "pack",
+                                  pack: k,
+                                  dir: prev.dir === "asc" ? "desc" : "asc",
+                                }
+                              : { key: "pack", pack: k, dir: "asc" },
+                          )
+                        }
+                        className="inline-flex w-full flex-col items-center justify-center gap-0.5 rounded-lg px-0.5 py-1 text-xs font-semibold uppercase tracking-wide text-slate-700 transition hover:bg-slate-100/90 sm:flex-row sm:gap-1"
+                      >
+                        <span>{PACK_HEADER[k]}</span>
+                        {active ? (
+                          tableSort.dir === "asc" ? (
+                            <ChevronUp
+                              className="h-3.5 w-3.5 shrink-0 text-sky-700"
+                              aria-hidden
+                            />
+                          ) : (
+                            <ChevronDown
+                              className="h-3.5 w-3.5 shrink-0 text-sky-700"
+                              aria-hidden
+                            />
+                          )
+                        ) : (
+                          <ChevronsUpDown
+                            className="h-3.5 w-3.5 shrink-0 text-slate-400"
+                            aria-hidden
+                          />
+                        )}
+                      </button>
+                    </th>
+                  );
+                })}
                 <th
                   scope="col"
                   className="w-[7rem] sm:w-[9rem] border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
@@ -367,7 +511,6 @@ export default function SaxendaUkCompareTable({
                             >
                               {p.name}
                             </Link>
-                            <ProviderGphcLine providerId={p.id} />
                             {p.promoNote && (
                               <span className="text-[11px] font-medium text-amber-800">
                                 {p.promoNote}
@@ -394,6 +537,9 @@ export default function SaxendaUkCompareTable({
                             ({formatUkGroupedInteger(p.reviewCount)})
                           </span>
                         </span>
+                      </td>
+                      <td className="border-b border-slate-100/90 px-2 py-2.5 align-top whitespace-nowrap text-xs text-slate-600">
+                        <ProviderGphcLine providerId={p.id} />
                       </td>
                       {visiblePackKeys.map((k) => (
                         <PackPriceCell

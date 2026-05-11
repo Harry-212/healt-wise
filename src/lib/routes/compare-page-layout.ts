@@ -130,13 +130,12 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     hero: {
       variant: "violet",
       eyebrow: "Three-Way UK Comparison",
-      titleItalic: "Compare",
-      titleBold: "Mounjaro vs Wegovy vs Saxenda",
+      titleItalic: "",
+      titleBold: "Compare Mounjaro, Wegovy & Saxenda.",
       subtitle:
-        "Live pharmacy tables first — same advanced tools for each brand — plus a structured overview further down the page.",
+        "Live Verified Pharmacy Prices and put a live calendar as below",
       snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
       navLinks: [
-        { href: "#triple-comparison-overview", label: "At A Glance" },
         { href: "/what-is-mounjaro", label: "Mounjaro" },
         { href: "/what-is-wegovy", label: "Wegovy" },
         { href: "/what-is-saxenda", label: "Saxenda" },
@@ -149,9 +148,9 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       title:
         "Mounjaro vs Wegovy vs Saxenda UK (2026): three-medicine price navigator",
       metaDescription:
-        "Navigate UK private listings across tirzepatide (Mounjaro), semaglutide (Wegovy), and liraglutide (Saxenda): three full tabbed tables plus an on-page overview of treatment schedule and pack differences. Comparator only—not treatment guidance.",
+        "Navigate UK private listings across tirzepatide (Mounjaro), semaglutide (Wegovy), and liraglutide (Saxenda): three full tabbed price matrices with filters and charts. Comparator only—not treatment guidance.",
       openGraphTitle:
-        "Three GLP-1 options UK — Mounjaro, Wegovy, Saxenda tables | Health Wise",
+        "Three GLP-1 options UK — Mounjaro, Wegovy, Saxenda matrices | Health Wise",
       openGraphDescription:
         "Switch tabs for each medicine’s full comparison workspace, then use filters and charts to compare like-for-like doses and packs.",
       imagePath: OG,
@@ -162,7 +161,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       heading: "Why Read A Three-Way Comparison?",
       body: [
         "Mounjaro (tirzepatide), Wegovy (semaglutide), and Saxenda (liraglutide) are all prescription weight-management options used in eligible UK adults, but they differ in receptor profile, treatment frequency, titration, and how pharmacies quote pens or packs.",
-        "The live comparison tables at the top of this page use the same advanced datasets as our standalone price pages — switch tabs to explore each brand in full detail. Further down, a structured overview highlights structural differences without replacing medical judgement.",
+        "The live comparison matrices at the top of this page use the same advanced datasets as our standalone price pages — switch tabs to explore each brand in full detail.",
       ],
     },
     effectivenessTitle: "Effectiveness In Context",
