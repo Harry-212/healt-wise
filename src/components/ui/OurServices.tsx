@@ -60,7 +60,7 @@ const SERVICES = [
   {
     icon: LayoutDashboard,
     label: "Progress Tracker",
-    desc: "Log weight and milestones privately on your comparison journey.",
+    desc: "Log weight and milestones privately on your weight loss journey.",
     accent: "bg-violet-50 text-violet-700",
     iconBg: "bg-violet-100",
   },
@@ -168,7 +168,7 @@ export default function OurServices() {
                     </p>
                     {svc.label === "Progress Tracker" ? (
                       <Link href={TRACKER_HREF} className={trackerCardCtaClass}>
-                        Tracking Now
+                        Track Now
                       </Link>
                     ) : null}
                   </div>

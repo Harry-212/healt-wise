@@ -98,7 +98,17 @@ export default async function ComparePage({ params }: Props) {
           navLinks={layout.hero.navLinks}
           wideDesktopHero={slug === "mounjaro-vs-wegovy-vs-saxenda"}
           showSnapshotPill={slug !== "mounjaro-vs-wegovy-vs-saxenda"}
-          showLiveCalendar={slug === "mounjaro-vs-wegovy-vs-saxenda"}
+          heroPhotoSrc={
+            slug === "mounjaro-vs-wegovy-vs-saxenda"
+              ? "/hero%20section%20compare%20mounjaro%20wegovy%20saxenda.webp"
+              : undefined
+          }
+          heroPhotoAlt={
+            slug === "mounjaro-vs-wegovy-vs-saxenda"
+              ? "Mounjaro, Wegovy, and Saxenda injection pens for UK price comparison"
+              : undefined
+          }
+          showSubtitleLiveDate={slug === "mounjaro-vs-wegovy-vs-saxenda"}
         />
 
         <CompareMedPriceTabs medications={layout.medications} />

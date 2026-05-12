@@ -91,10 +91,7 @@ export default function MounjaroUkCompareTable({
   const todayLabel = useTodayLabel();
 
   const visibleDoseKeys = useMemo<MounjaroDoseColumnKey[]>(
-    () =>
-      doseFilter === "all"
-        ? [...MOUNJARO_DOSE_KEYS]
-        : [doseFilter],
+    () => (doseFilter === "all" ? [...MOUNJARO_DOSE_KEYS] : [doseFilter]),
     [doseFilter],
   );
 

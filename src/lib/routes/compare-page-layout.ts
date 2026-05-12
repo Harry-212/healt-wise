@@ -132,8 +132,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       eyebrow: "Three-Way UK Comparison",
       titleItalic: "",
       titleBold: "Compare Mounjaro, Wegovy & Saxenda.",
-      subtitle:
-        "Live Verified Pharmacy Prices and put a live calendar as below",
+      subtitle: "Live Verified Pharmacy Prices",
       snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
       navLinks: [
         { href: "/what-is-mounjaro", label: "Mounjaro" },
