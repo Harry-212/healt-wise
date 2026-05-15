@@ -82,11 +82,11 @@ export default function HeroNumanStyle() {
           <div className="w-full min-w-0 lg:w-[58%] lg:max-w-none lg:pb-3">
             <div className="relative w-full max-w-[min(100%,44rem)] rounded-2xl bg-linear-to-br from-white/92 via-white/72 to-white/25 px-4 py-5 shadow-sm ring-1 ring-white/60 backdrop-blur-[2px] sm:px-6 sm:py-6 lg:max-w-[min(100%,52rem)] xl:max-w-4xl">
               <h1 className="text-[1.65rem] font-black leading-[1.08] tracking-tight text-slate-950 sm:text-3xl md:text-4xl md:leading-[1.1] lg:text-[3.1rem] lg:leading-[1.06] xl:text-[3.4rem]">
-                Compare Weight Loss Treatment
-                <br />
-                Prices UK
+                Compare Weight Loss Treatment Prices UK
               </h1>
               <p className="mt-4 max-w-2xl text-base font-medium text-slate-800 md:text-lg">
+                <br />
+                <br />
                 Weight Loss Treatment UK: Independent UK Comparison for Prices,
                 Safety, and Support.
               </p>
@@ -97,7 +97,7 @@ export default function HeroNumanStyle() {
                 href={HOME_COMPARE_HUB_HREF}
                 className={`${homepageYellowCtaSolid} group relative w-full min-h-[80px] max-w-full overflow-hidden rounded-full px-8 py-6 text-2xl leading-tight tracking-tight ring-[3px] ring-amber-300/50 hover:ring-amber-400/80 hover:shadow-amber-500/30 sm:min-h-[92px] sm:w-auto sm:px-16 sm:py-6 sm:text-3xl md:min-h-[100px] md:px-20 md:py-7 md:text-[2.125rem]`}
               >
-                <span>Compare The Price</span>
+                <span>Compare Now</span>
                 <Zap
                   className="h-7 w-7 shrink-0 fill-slate-900 transition-transform duration-300 group-hover:scale-110 sm:h-8 sm:w-8 md:h-9 md:w-9"
                   aria-hidden

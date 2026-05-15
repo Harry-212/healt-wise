@@ -334,7 +334,7 @@ export default function MounjaroUkCompareTable({
         <p className="border-b border-slate-100 px-4 py-2 text-xs text-slate-500 md:hidden">
           Scroll sideways — provider column stays fixed.
         </p>
-        <div className="max-h-[min(78vh,800px)] min-h-0 w-full min-w-0 overflow-auto overscroll-contain [overflow-anchor:none]">
+        <div className="max-lg:max-h-none max-lg:min-h-0 max-lg:w-full max-lg:min-w-0 max-lg:overflow-x-auto max-lg:overflow-y-visible max-lg:overscroll-x-contain max-lg:touch-pan-x lg:max-h-[min(78vh,800px)] lg:overflow-auto lg:overscroll-contain min-h-0 w-full min-w-0 [overflow-anchor:none]">
           <table className="w-full min-w-max table-auto border-collapse text-left text-sm">
             <thead className="sticky top-0 z-20">
               <tr className="text-slate-600">

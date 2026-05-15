@@ -93,7 +93,12 @@ export const NAV_PANELS: NavPanel[] = [
             accent: "sky",
             emphasize: true,
           },
-          { label: "Cheapest Options UK", href: "/prices/cheapest-options-uk", icon: "pound" },
+          {
+            label: "Compare Option UK",
+            href: "/prices/cheapest-options-uk",
+            icon: "pound",
+            emphasize: true,
+          },
         ],
       },
       {

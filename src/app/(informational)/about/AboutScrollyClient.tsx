@@ -186,13 +186,13 @@ export default function AboutScrollyClient() {
             src={ABOUT_IMAGES.hero}
             alt=""
             fill
-            className="object-cover opacity-45"
+            className="object-cover opacity-65"
             sizes="100vw"
             priority
             aria-hidden
           />
         </motion.div>
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.55)_0%,rgba(15,23,42,0.92)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.42)_0%,rgba(15,23,42,0.78)_100%)]" />
         <motion.div
           className="relative z-[1] mx-auto w-full max-w-5xl"
           style={{ opacity: heroCopyOpacity }}

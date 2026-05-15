@@ -33,6 +33,7 @@ export default function CheapestOptionsHero() {
                 href="/mounjaro-price-comparison"
                 label="Compare Mounjaro costs here"
                 size="footer"
+                navAccent="violet"
                 className="w-full sm:min-w-[260px]"
               />
             </li>
@@ -41,6 +42,7 @@ export default function CheapestOptionsHero() {
                 href="/wegovy-price-comparison"
                 label="Compare Wegovy costs here"
                 size="footer"
+                navAccent="emerald"
                 className="w-full sm:min-w-[260px]"
               />
             </li>
@@ -49,6 +51,7 @@ export default function CheapestOptionsHero() {
                 href="/saxenda-price-comparison"
                 label="Compare Saxenda costs here"
                 size="footer"
+                navAccent="sky"
                 className="w-full sm:min-w-[260px]"
               />
             </li>
