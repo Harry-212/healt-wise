@@ -12,6 +12,10 @@ import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
 import CompareMedPriceTabs from "@/components/compare/CompareMedPriceTabs";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
 import {
+  COMPARE_GLP1_PRICE_HERO_IMAGE_ALT,
+  COMPARE_GLP1_PRICE_HERO_IMAGE_SRC,
+} from "@/lib/site-assets";
+import {
   compareFaqPageJsonLd,
   getCompareFaqsForSlug,
 } from "@/lib/routes/compare-faqs";
@@ -100,12 +104,12 @@ export default async function ComparePage({ params }: Props) {
           showSnapshotPill={slug !== "mounjaro-vs-wegovy-vs-saxenda"}
           heroPhotoSrc={
             slug === "mounjaro-vs-wegovy-vs-saxenda"
-              ? "/hero%20section%20compare%20mounjaro%20wegovy%20saxenda.webp"
+              ? COMPARE_GLP1_PRICE_HERO_IMAGE_SRC
               : undefined
           }
           heroPhotoAlt={
             slug === "mounjaro-vs-wegovy-vs-saxenda"
-              ? "Mounjaro, Wegovy, and Saxenda injection pens for UK price comparison"
+              ? COMPARE_GLP1_PRICE_HERO_IMAGE_ALT
               : undefined
           }
           showSubtitleLiveDate={slug === "mounjaro-vs-wegovy-vs-saxenda"}

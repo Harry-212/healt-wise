@@ -146,6 +146,21 @@ export function buildUkLocationTitle(loc: UkWeightLossLocation): string {
   if (loc.slug === "liverpool") {
     return "Best Weight Loss Treatment Liverpool: Complete Merseyside Weight Management Guide";
   }
+  if (loc.slug === "manchester") {
+    return "Best Weight Loss Treatment Manchester: Evidence-Based Options, Local Access, and What Actually Works";
+  }
+  if (loc.slug === "livingston") {
+    return "Best Weight Loss Treatment Livingston: West Lothian's Guide to Real, Safe Slimming";
+  }
+  if (loc.slug === "london") {
+    return "Best Weight Loss Treatment London: What Actually Works, Who It Suits, and How to Choose Safely";
+  }
+  if (loc.slug === "londonderry") {
+    return "Best Weight Loss Treatment Londonderry: What Actually Works for Safe, Lasting Results";
+  }
+  if (loc.slug === "luton") {
+    return "Best Weight Loss Treatment Luton: A Practical Guide to Injections, Surgery, and NHS Support";
+  }
   if (loc.slug === "lancaster") {
     return "Best Weight Loss Treatment Lancaster: North West UK Complete Weight Loss Roadmap";
   }
@@ -303,6 +318,21 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
   }
   if (loc.slug === "liverpool") {
     return "Best weight loss treatment Liverpool: GLP 1 (Wegovy, Mounjaro), NHS tier 2 and 3, CoolSculpting, 3-3-3 rule, Merseyside costs and realistic weight loss timelines.";
+  }
+  if (loc.slug === "manchester") {
+    return "Best weight loss treatment Manchester: supervised GLP 1 injections, bariatric surgery, NHS pathways, private clinics, body contouring facts, Greater Manchester access, and realistic choices.";
+  }
+  if (loc.slug === "livingston") {
+    return "Best weight loss treatment Livingston Scotland: NHS and private access, GLP 1 (Wegovy and Mounjaro) guide, 20 kg in 5 months plan, doctor talk tips, West Lothian hacks for safe slimming.";
+  }
+  if (loc.slug === "london") {
+    return "Best weight loss treatment London explained with medical injections, clinics, programmes, timelines, FAQs, and safe fat-loss strategies.";
+  }
+  if (loc.slug === "londonderry") {
+    return "Best weight loss treatment Londonderry NI: medically supervised plans, NHS and private GLP 1 access, Wegovy and Mounjaro context, realistic weight loss timelines, trustworthy clinic checks.";
+  }
+  if (loc.slug === "luton") {
+    return "Best weight loss treatment Luton guide: compare injections, surgery, NHS options, costs, safety, and what actually fits your situation.";
   }
   if (loc.slug === "lancaster") {
     return "Best weight loss treatment Lancaster UK: GLP 1 access, NHS and private guide, Japanese tricks, 10 kg timelines, and local Lancashire strategies for sustainable fat loss.";
@@ -1636,6 +1666,151 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       {
         q: "NHS versus private Liverpool: which delivers faster results?",
         a: `NHS tier 2 and tier 3 are free at point of use but waits often reach about 6 to 12 months for specialist GLP 1 review. Private can start pens within days when eligible and paid. Hybrid wins when your GP agrees shared care for blood tests. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and read [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "manchester") {
+    return [
+      {
+        q: "Which weight loss medicine works best in the UK?",
+        a: `The best medicine depends on the person, but GLP 1 treatments such as Mounjaro, Wegovy, and Saxenda are among the most effective prescription options for eligible patients. Read [what Mounjaro is](/what-is-mounjaro), [what Wegovy is](/what-is-wegovy), and [Mounjaro versus Wegovy versus Saxenda](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
+      },
+      {
+        q: "What is the strongest weight loss injection available in the UK?",
+        a: `Mounjaro is often seen as the most powerful injectable option for weight loss, although suitability, tolerance, and access are still important. Compare mechanisms on [Wegovy versus Mounjaro](/compare/wegovy-vs-mounjaro) and read [what Mounjaro is](/what-is-mounjaro).`,
+      },
+      {
+        q: "Can people in Greater Manchester get Mounjaro?",
+        a: `Yes, Mounjaro may be available in Greater Manchester through private clinics and in some NHS pathways for eligible patients. Ask about titration, follow up, and GP communication. Read [Mounjaro prescription timeline UK](/helpful-guides/mounjaro-prescription-timeline-uk) and compare bundles on [Mounjaro price comparison](/mounjaro-price-comparison).`,
+      },
+      {
+        q: "How much weight might someone lose on Mounjaro in six months?",
+        a: `Some people may lose around 10% to 15% of their body weight in six months, but results vary widely and depend on medical supervision and lifestyle support. Use the [BMI calculator](/tools/bmi-calculator) as a screening aid and read [Mounjaro nutrition guide UK](/helpful-guides/mounjaro-nutrition-guide-uk) for habit structure.`,
+      },
+      {
+        q: "Is surgery better than injections for weight loss?",
+        a: `For severe obesity, surgery can be more effective and more durable. For many people, however, GLP 1 medication is a less invasive first step. Compare overall pathways using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Are fat-reduction lasers a real weight loss treatment?",
+        a: `They can help with body contouring, but they are not usually the main treatment for obesity or significant weight loss. If you also need appetite support, read [what Wegovy is](/what-is-wegovy) and [what Saxenda is](/what-is-saxenda).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "livingston") {
+    return [
+      {
+        q: "What is the most proven weight loss program overall?",
+        a: `NHS dietitian led tier 2 and tier 3 programmes often win on cost and follow up, with about 10% loss bands in NICE aligned summaries plus group support. Trials still show about 70% maintenance narratives post year one only when habits stick. Compare pathways using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and read [methodology](/methodology).`,
+      },
+      {
+        q: "How do you effectively talk to your doctor about weight loss?",
+        a: `Prepare BMI and logs, then ask plainly whether you meet prescription criteria and what the tier 3 wait looks like. Request shared care in writing if you start private pens so your GP surgery stays in the loop. Use the [BMI calculator](/tools/bmi-calculator) before the appointment.`,
+      },
+      {
+        q: "Is it realistic to lose 20 kg in 5 months safely?",
+        a: `Sometimes yes when a clinician agrees about 1 kg weekly pacing with about 600 calorie deficit, strength about two times weekly, and GLP 1 medicines when eligible. Fortnightly weighs catch drift early. Avoid seven day rush promises. Read [Mounjaro prescription timeline UK](/helpful-guides/mounjaro-prescription-timeline-uk) for titration realism.`,
+      },
+      {
+        q: "What prescriptions can my doctor provide for weight loss in Scotland?",
+        a: `GLP 1 options include Wegovy (semaglutide weekly, about 12 to 15% trial loss bands), Mounjaro (tirzepatide dual hormone, about 20% trial bands), and Saxenda (liraglutide daily, milder averages). NHS usually prioritises lifestyle first per NICE, then tier 3 review. Read [what Wegovy is](/what-is-wegovy), [what Mounjaro is](/what-is-mounjaro), and [what Saxenda is](/what-is-saxenda).`,
+      },
+      {
+        q: "How safe are private online clinics for Livingston residents?",
+        a: `GPhC registered services can be safe when cold chain, titration plans, and repeat blood tests are explicit. Risks spike when history checks are skipped. Always loop your GP for monitoring. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
+      },
+      {
+        q: "What local Livingston resources boost success?",
+        a: `Almond Valley Heritage Centre trails add free movement, NHS Lothian groups add accountability, and West Lothian markets help vegetable volume. Rainy weeks still suit home HIIT. If injections stall, read [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "london") {
+    return [
+      {
+        q: "What is the most effective weight loss treatment in London?",
+        a: `The most effective option is usually the one that combines medical assessment, lifestyle change, and, when appropriate, medication or a procedure. For many people, a multidisciplinary programme is more sustainable than any single intervention. Compare pathways on [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and read [methodology](/methodology).`,
+      },
+      {
+        q: "Are weight loss injections a good option for London patients?",
+        a: `They can be, especially for people with obesity or weight related conditions who need appetite support. They work best when paired with diet, movement, and regular clinical follow up. Read [what Wegovy is](/what-is-wegovy), [what Mounjaro is](/what-is-mounjaro), and [Wegovy versus Mounjaro](/compare/wegovy-vs-mounjaro).`,
+      },
+      {
+        q: "Can you lose 40 kg in 5 months?",
+        a: `It may be possible in rare, medically supervised cases, but it is not a typical or recommended goal for most people. Safer weight loss is usually slower and more sustainable. Use the [BMI calculator](/tools/bmi-calculator) as a discussion aid with your clinician.`,
+      },
+      {
+        q: "Is there a morning trick that makes weight loss automatic?",
+        a: `No single morning habit can cause major fat loss by itself. A routine can help with consistency, but real results still depend on food intake, activity, sleep, and follow up. If you use injections, read [Mounjaro nutrition guide UK](/helpful-guides/mounjaro-nutrition-guide-uk).`,
+      },
+      {
+        q: "What foods help with belly fat loss?",
+        a: `No food directly burns belly fat. However, protein rich and high fibre foods such as eggs, yogurt, beans, oats, vegetables, and berries may help people stay full and control calories more easily. If progress stalls, see [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
+      },
+      {
+        q: "How do I choose between a clinic and a programme?",
+        a: `Choose based on medical suitability, regulation, support, safety, and realism. A good provider should explain why the treatment fits your health profile and what happens next. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "londonderry") {
+    return [
+      {
+        q: "What type of weight loss treatment tends to work best overall?",
+        a: `The most successful approach is usually a medically supervised plan that combines nutrition, physical activity, behaviour change, and, when appropriate, prescription medication. Structured plans tend to beat willpower alone. Compare pathways using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and read [methodology](/methodology).`,
+      },
+      {
+        q: "How much does Mounjaro usually cost each month in Ireland or nearby UK markets?",
+        a: `Monthly pricing varies by dose, supplier, monitoring, and whether follow up is bundled. Compare the full monthly package, not headline pen prices alone. Use [Mounjaro price comparison](/mounjaro-price-comparison) and verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+      },
+      {
+        q: "Can I get weight loss injections on the NHS in Northern Ireland?",
+        a: `Sometimes yes, but access is usually limited by eligibility criteria and local service pathways. Many people receive lifestyle support or a weight management referral before medication is considered. Read [Mounjaro prescription timeline UK](/helpful-guides/mounjaro-prescription-timeline-uk) for realistic pacing.`,
+      },
+      {
+        q: "Will my GP prescribe Ozempic if I live in Ireland or Northern Ireland?",
+        a: `Not automatically. A GP prescribes only when local guidance, clinical need, and eligibility match, sometimes with referral onward instead of direct prescribing. For weight management licensing context, read [what Wegovy is](/what-is-wegovy) and [Mounjaro versus Ozempic](/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results).`,
+      },
+      {
+        q: "Is a private clinic better than NHS support for weight loss?",
+        a: `Not always. Private care can be faster and more flexible, while NHS care can be more integrated and affordable at point of use. The better choice depends on medical suitability, budget, and urgency. Verify any private route with our [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
+      },
+      {
+        q: "Are weight loss injections enough on their own?",
+        a: `Usually not. They often work best with nutrition changes, activity, and maintenance support. Without habits, regain can still happen. Read [Mounjaro nutrition guide UK](/helpful-guides/mounjaro-nutrition-guide-uk) and [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "luton") {
+    return [
+      {
+        q: "What is the most effective prescription weight loss medicine in the UK?",
+        a: `The most effective option for many people is a GLP 1 based medicine, especially newer treatments, but the best choice depends on medical history, side effect tolerance, and cost. Read [what Mounjaro is](/what-is-mounjaro), [what Wegovy is](/what-is-wegovy), and [Wegovy versus Mounjaro](/compare/wegovy-vs-mounjaro).`,
+      },
+      {
+        q: "How much do weight loss injections usually cost in the UK?",
+        a: `The cost varies by medicine, dose, and provider, and the total monthly spend can rise as treatment continues and doses increase. Compare full packages on [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison).`,
+      },
+      {
+        q: "What can I use if Mounjaro is too expensive?",
+        a: `Cheaper alternatives may include Wegovy, Saxenda, or an NHS weight management programme, depending on eligibility and access. Read [what Saxenda is](/what-is-saxenda) and compare triplets on [Mounjaro versus Wegovy versus Saxenda](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
+      },
+      {
+        q: "Can Ozempic be bought from a normal pharmacy like Boots?",
+        a: `Ozempic is a prescription medicine, so access depends on proper prescribing and pharmacy supply rules rather than walking in and buying it casually. For semaglutide weight licensing context, read [what Wegovy is](/what-is-wegovy) and [Mounjaro versus Ozempic](/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results).`,
+      },
+      {
+        q: "Why does Mounjaro cost so much in the UK?",
+        a: `The price reflects branded medicine pricing, ongoing treatment, dose escalation, and the need for supervised prescribing and follow up. Demand and supply pressure can also move quoted totals. Use [Mounjaro price comparison](/mounjaro-price-comparison) to compare like for like bundles.`,
+      },
+      {
+        q: "Is Ozempic better than Mounjaro?",
+        a: `For many people, Mounjaro may produce greater weight loss in trial averages, but better depends on tolerance, availability, cost, and whether the medicine fits your health needs. Compare head to head using [Wegovy versus Mounjaro](/compare/wegovy-vs-mounjaro) and diabetes versus obesity framing with your clinician.`,
       },
     ];
   }

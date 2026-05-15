@@ -1,10 +1,10 @@
 "use client";
 
 import type { ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Instrument_Serif } from "next/font/google";
 import { Sparkles, Zap } from "lucide-react";
+import ComparePricePhotoHeroShell from "@/components/compare/ComparePricePhotoHeroShell";
 import {
   ShaderBackground,
   type HeroShaderVariant,
@@ -112,7 +112,7 @@ export default function CompareTreatmentsHero({
   showSubtitleLiveDate?: boolean;
 }) {
   const shaderMinH = wideDesktopHero
-    ? "min-h-[min(72svh,440px)] sm:min-h-[min(70svh,480px)] lg:min-h-[min(72svh,600px)]"
+    ? "min-h-[min(82svh,580px)] sm:min-h-[min(80svh,640px)] md:min-h-[min(82svh,700px)] lg:min-h-[min(88svh,780px)] xl:min-h-[min(90svh,860px)]"
     : "min-h-[min(72svh,420px)] sm:min-h-[min(68svh,460px)] lg:min-h-[min(62svh,480px)]";
 
   const headerClass = wideDesktopHero
@@ -206,28 +206,13 @@ export default function CompareTreatmentsHero({
 
   if (heroPhotoSrc) {
     return (
-      <section className="border-b border-slate-200/80">
-        <div
-          className={`relative flex flex-col overflow-hidden ${shaderMinH}`}
-        >
-          <Image
-            src={heroPhotoSrc}
-            alt={heroPhotoAlt}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          {/* Slight darken + stronger tone toward bottom so title and CTAs stay readable */}
-          <div
-            className="pointer-events-none absolute inset-0 bg-linear-to-b from-slate-950/32 via-slate-950/46 to-slate-950/72"
-            aria-hidden
-          />
-          <div className="relative z-10 flex h-full min-h-[inherit] flex-col">
-            {heroBody}
-          </div>
-        </div>
-      </section>
+      <ComparePricePhotoHeroShell
+        imageSrc={heroPhotoSrc}
+        imageAlt={heroPhotoAlt}
+        minHeightClass={shaderMinH}
+      >
+        {heroBody}
+      </ComparePricePhotoHeroShell>
     );
   }
 

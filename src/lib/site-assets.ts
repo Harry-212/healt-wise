@@ -6,6 +6,14 @@ export const HOMEPAGE_HERO_LIFESTYLE_SRC = "/comparing_weight_loss.jpeg";
 export const HOMEPAGE_HERO_LIFESTYLE_ALT =
   "Couple discussing weight loss treatments";
 
+/**
+ * Shared hero photo for UK GLP-1 compare routes (price pages + triple compare hub).
+ * `public/new hero compare.webp`
+ */
+export const COMPARE_GLP1_PRICE_HERO_IMAGE_SRC = "/new hero compare.webp";
+export const COMPARE_GLP1_PRICE_HERO_IMAGE_ALT =
+  "UK pharmacy comparison — Mounjaro, Wegovy, and Saxenda";
+
 /** Why choose Health Wise graphic (`public/why choose healthwise360.webp`). */
 export const WHY_CHOOSE_HEALTHWISE360_SRC =
   "/why choose healthwise360.webp";

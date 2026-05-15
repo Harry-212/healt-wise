@@ -6,6 +6,10 @@ import CompareHereLink from "@/components/ui/CompareHereLink";
 import { Instrument_Serif } from "next/font/google";
 import { ArrowRight, BadgeCheck, Scale, Sparkles } from "lucide-react";
 import ComparePricePhotoHeroShell from "@/components/compare/ComparePricePhotoHeroShell";
+import {
+  COMPARE_GLP1_PRICE_HERO_IMAGE_ALT,
+  COMPARE_GLP1_PRICE_HERO_IMAGE_SRC,
+} from "@/lib/site-assets";
 
 const instrumentSerif = Instrument_Serif({
   weight: "400",
@@ -31,8 +35,8 @@ export default function MounjaroCompareShaderHero({
 }) {
   return (
     <ComparePricePhotoHeroShell
-      imageSrc="/hero section compare monjaro.webp"
-      imageAlt="UK context for comparing Mounjaro prices across pharmacies"
+      imageSrc={COMPARE_GLP1_PRICE_HERO_IMAGE_SRC}
+      imageAlt={COMPARE_GLP1_PRICE_HERO_IMAGE_ALT}
     >
         <header className="relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-6 pb-2 md:px-10 lg:px-14">
           <Link
