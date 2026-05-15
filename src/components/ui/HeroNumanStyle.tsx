@@ -85,12 +85,10 @@ export default function HeroNumanStyle() {
                 Compare Weight Loss Treatment
                 <br />
                 Prices UK
-                <br />
-                Safely
               </h1>
               <p className="mt-4 max-w-2xl text-base font-medium text-slate-800 md:text-lg">
-                Weight Loss Treatment UK: Independent UK Comparison for
-                Prices, Safety, and Support.
+                Weight Loss Treatment UK: Independent UK Comparison for Prices,
+                Safety, and Support.
               </p>
             </div>
 
@@ -132,13 +130,20 @@ export default function HeroNumanStyle() {
                   </div>
                   <div className="relative mt-2 h-10 w-full transition-transform duration-500 group-hover:scale-105 sm:h-12">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className={`flex h-5 w-4/5 items-center justify-start rounded bg-linear-to-br ${tool.iconBg} border ${tool.iconBorder} px-1.5 shadow-sm sm:h-7 sm:px-2`}>
-                        <div className={`h-1 w-4 rounded-full ${tool.iconDot} sm:h-1.5 sm:w-6`} />
+                      <div
+                        className={`flex h-5 w-4/5 items-center justify-start rounded bg-linear-to-br ${tool.iconBg} border ${tool.iconBorder} px-1.5 shadow-sm sm:h-7 sm:px-2`}
+                      >
+                        <div
+                          className={`h-1 w-4 rounded-full ${tool.iconDot} sm:h-1.5 sm:w-6`}
+                        />
                       </div>
                     </div>
                   </div>
                   <div className="mt-1.5 flex items-center text-slate-900">
-                    <Zap className="h-3.5 w-3.5 fill-slate-900 transition-transform duration-300 group-hover:scale-110 sm:h-4 sm:w-4" aria-hidden />
+                    <Zap
+                      className="h-3.5 w-3.5 fill-slate-900 transition-transform duration-300 group-hover:scale-110 sm:h-4 sm:w-4"
+                      aria-hidden
+                    />
                   </div>
                 </Link>
               ))}
