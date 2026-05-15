@@ -27,6 +27,7 @@ import {
 import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
 import { trustpilotHrefForProvider } from "@/lib/seo/trustpilot-link";
 import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
+import { COMPARE_TABLE_MOBILE_OUTDENT_CLASS } from "@/lib/ui/compare-table-mobile-bleed";
 
 type DoseFilter = "all" | MounjaroDoseColumnKey;
 
@@ -330,11 +331,12 @@ export default function MounjaroUkCompareTable({
         </Link>
       </p>
 
-      <div className="relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm">
-        <p className="border-b border-slate-100 px-4 py-2 text-xs text-slate-500 md:hidden">
-          Scroll sideways — provider column stays fixed.
-        </p>
-        <div className="max-lg:max-h-none max-lg:min-h-0 max-lg:w-full max-lg:min-w-0 max-lg:overflow-x-auto max-lg:overflow-y-visible max-lg:overscroll-x-contain max-lg:touch-pan-x lg:max-h-[min(78vh,800px)] lg:overflow-auto lg:overscroll-contain min-h-0 w-full min-w-0 [overflow-anchor:none]">
+      <div className={COMPARE_TABLE_MOBILE_OUTDENT_CLASS}>
+        <div className="relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm max-lg:rounded-none max-lg:border-x-0">
+          <p className="border-b border-slate-100 px-4 py-2 text-xs text-slate-500 md:hidden">
+            Scroll sideways — provider column stays fixed.
+          </p>
+          <div className="max-lg:max-h-none max-lg:min-h-0 max-lg:w-full max-lg:min-w-0 max-lg:overflow-x-auto max-lg:overflow-y-visible max-lg:overscroll-x-none max-lg:touch-pan-x lg:max-h-[min(78vh,800px)] lg:overflow-auto lg:overscroll-contain min-h-0 w-full min-w-0 [overflow-anchor:none]">
           <table className="w-full min-w-max table-auto border-collapse text-left text-sm">
             <thead className="sticky top-0 z-20">
               <tr className="text-slate-600">
@@ -598,6 +600,7 @@ export default function MounjaroUkCompareTable({
             </tbody>
           </table>
         </div>
+      </div>
       </div>
 
       <p className="text-center text-xs text-slate-500">

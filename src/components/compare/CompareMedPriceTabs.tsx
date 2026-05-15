@@ -94,17 +94,15 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
         <CompareHereLink href={FULL_PAGE[med]} size="sm" className="shrink-0" />
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm">
-        {med === "wegovy" && (
-          <WegovyUkCompareTable providers={WEGOVY_UK_COMPARE_PROVIDERS} />
-        )}
-        {med === "mounjaro" && (
-          <MounjaroUkCompareTable providers={MOUNJARO_UK_COMPARE_PROVIDERS} />
-        )}
-        {med === "saxenda" && (
-          <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} />
-        )}
-      </div>
+      {med === "wegovy" && (
+        <WegovyUkCompareTable providers={WEGOVY_UK_COMPARE_PROVIDERS} />
+      )}
+      {med === "mounjaro" && (
+        <MounjaroUkCompareTable providers={MOUNJARO_UK_COMPARE_PROVIDERS} />
+      )}
+      {med === "saxenda" && (
+        <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} />
+      )}
 
       <section className="mt-12 min-w-0 rounded-2xl border border-slate-200/80 bg-slate-50/50 px-3 py-8 sm:px-4 md:px-8 md:py-12">
         <div className="mb-6 flex min-w-0 flex-col gap-2 sm:mb-8 sm:flex-row sm:items-center sm:gap-3">
