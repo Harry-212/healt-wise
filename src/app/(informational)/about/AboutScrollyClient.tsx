@@ -90,8 +90,16 @@ function ParallaxLayer({
   scrollYProgress: MotionValue<number>;
   reduce: boolean | null;
 }) {
-  const y = useTransform(scrollYProgress, [0, 1], reduce ? ["0%", "0%"] : ["-18%", "18%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.35, 0.7, 1], [0.25, 0.55, 0.45, 0.2]);
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    reduce ? ["0%", "0%"] : ["-18%", "18%"],
+  );
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.35, 0.7, 1],
+    [0.25, 0.55, 0.45, 0.2],
+  );
   return (
     <motion.div
       aria-hidden
@@ -158,7 +166,10 @@ export default function AboutScrollyClient() {
   const staggerContainer = {
     hidden: {},
     show: {
-      transition: { staggerChildren: reduce ? 0 : 0.1, delayChildren: reduce ? 0 : 0.05 },
+      transition: {
+        staggerChildren: reduce ? 0 : 0.1,
+        delayChildren: reduce ? 0 : 0.05,
+      },
     },
   };
   const staggerItem = {
@@ -186,13 +197,13 @@ export default function AboutScrollyClient() {
             src={ABOUT_IMAGES.hero}
             alt=""
             fill
-            className="object-cover opacity-65"
+            className="object-cover opacity-100"
             sizes="100vw"
             priority
             aria-hidden
           />
         </motion.div>
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.42)_0%,rgba(15,23,42,0.78)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.28)_0%,rgba(15,23,42,0.58)_100%)]" />
         <motion.div
           className="relative z-[1] mx-auto w-full max-w-5xl"
           style={{ opacity: heroCopyOpacity }}
@@ -204,8 +215,9 @@ export default function AboutScrollyClient() {
             Independent clarity for UK GLP‑1 care.
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-slate-300 sm:mt-6 sm:text-lg">
-            We guide you through pricing, safety signals, and provider quality—one calm scroll at a
-            time—so decisions feel considered, not rushed.
+            We guide you through pricing, safety signals, and provider
+            quality—one calm scroll at a time—so decisions feel considered, not
+            rushed.
           </p>
         </motion.div>
         <motion.div
@@ -228,9 +240,10 @@ export default function AboutScrollyClient() {
                   Comparison should feel like care—not a funnel.
                 </h2>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-slate-600 sm:text-lg">
-                  Pricing, stock, and aftercare policies for treatments like Wegovy and Mounjaro
-                  are often fragmented. We surface what matters in plain language, from regulated
-                  providers you can verify yourself.
+                  Pricing, stock, and aftercare policies for treatments like
+                  Wegovy and Mounjaro are often fragmented. We surface what
+                  matters in plain language, from regulated providers you can
+                  verify yourself.
                 </p>
               </div>
               <ChapterImage
@@ -257,9 +270,10 @@ export default function AboutScrollyClient() {
                   Evidence-minded, commercially independent.
                 </h2>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-slate-600 sm:text-lg">
-                  We are not a pharmacy and we are not owned by manufacturers. Rankings and tables
-                  lean on transparent criteria—cost, availability, and safety posture—so you can
-                  align price with peace of mind.
+                  We are not a pharmacy and we are not owned by manufacturers.
+                  Rankings and tables lean on transparent criteria—cost,
+                  availability, and safety posture—so you can align price with
+                  peace of mind.
                 </p>
               </div>
             </div>
@@ -275,8 +289,9 @@ export default function AboutScrollyClient() {
                   Built for long-term decisions, not one-off clicks.
                 </h2>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-slate-600 sm:text-lg">
-                  Whether you are exploring options or maintaining treatment, we keep the narrative
-                  steady: verify, compare, then discuss anything clinical with your prescriber.
+                  Whether you are exploring options or maintaining treatment, we
+                  keep the narrative steady: verify, compare, then discuss
+                  anything clinical with your prescriber.
                 </p>
               </div>
               <ChapterImage
@@ -310,7 +325,10 @@ export default function AboutScrollyClient() {
       </section>
 
       {/* Parallax depth strip */}
-      <section ref={journeyRef} className="relative min-h-[56vh] overflow-hidden bg-slate-950">
+      <section
+        ref={journeyRef}
+        className="relative min-h-[56vh] overflow-hidden bg-slate-950"
+      >
         <div className="absolute inset-0">
           <Image
             src={ABOUT_IMAGES.depthBg}
@@ -324,13 +342,17 @@ export default function AboutScrollyClient() {
         <ParallaxLayer scrollYProgress={journeyProgress} reduce={reduce} />
         <div className="relative z-[1] mx-auto flex min-h-[56vh] max-w-4xl flex-col justify-center px-4 py-16 text-center sm:px-6 md:px-10 md:py-20">
           <RevealBlock>
-            <Telescope className="mx-auto mb-5 h-9 w-9 text-emerald-400/90" aria-hidden />
+            <Telescope
+              className="mx-auto mb-5 h-9 w-9 text-emerald-400/90"
+              aria-hidden
+            />
             <h2 className="text-balance text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
               Depth without noise.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed text-slate-300 sm:text-lg">
-              Motion here is purpose-driven: backgrounds drift slower than foreground copy so the
-              page feels spatial—without distracting from the facts you came for.
+              Motion here is purpose-driven: backgrounds drift slower than
+              foreground copy so the page feels spatial—without distracting from
+              the facts you came for.
             </p>
           </RevealBlock>
         </div>
@@ -386,12 +408,21 @@ export default function AboutScrollyClient() {
                 cta: "Contact us",
               },
             ].map((item, i) => (
-              <RevealBlock key={item.title} delay={i * 0.06} className="max-w-xl">
-                <item.icon className="mb-5 h-9 w-9 text-emerald-400/90" aria-hidden />
+              <RevealBlock
+                key={item.title}
+                delay={i * 0.06}
+                className="max-w-xl"
+              >
+                <item.icon
+                  className="mb-5 h-9 w-9 text-emerald-400/90"
+                  aria-hidden
+                />
                 <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-pretty leading-relaxed text-slate-300">{item.body}</p>
+                <p className="mt-4 text-pretty leading-relaxed text-slate-300">
+                  {item.body}
+                </p>
                 <Link
                   href={item.href}
                   className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 transition hover:text-emerald-300"
@@ -430,10 +461,13 @@ export default function AboutScrollyClient() {
             variants={staggerItem}
             className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed text-slate-600 sm:text-lg"
           >
-            Founded in 2026, Health Wise exists to make UK GLP‑1 markets easier to navigate—with
-            restraint in motion and generosity in detail.
+            Founded in 2026, Health Wise exists to make UK GLP‑1 markets easier
+            to navigate—with restraint in motion and generosity in detail.
           </motion.p>
-          <motion.div variants={staggerItem} className="mt-8 flex flex-wrap justify-center gap-3">
+          <motion.div
+            variants={staggerItem}
+            className="mt-8 flex flex-wrap justify-center gap-3"
+          >
             <Link
               href="/tools/weight-loss-tracker"
               className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:border-slate-400"
