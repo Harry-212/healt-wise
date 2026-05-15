@@ -99,7 +99,7 @@ export function TipsPageClient() {
             eyebrow="Consistency"
             title="Build habits you can stick to"
             imageSrc={TIPS_ZIGZAG_IMAGES.consistency}
-            imageAlt="Outdoor activity — sustainable movement as part of daily life"
+            imageAlt="Building consistent habits for sustainable weight loss"
             ctaHref="/diet"
             ctaLabel="Explore sustainable habits"
           >

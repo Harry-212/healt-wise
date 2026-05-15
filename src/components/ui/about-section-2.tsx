@@ -88,8 +88,7 @@ export default function AboutSection2() {
               >
                 independent UK comparison
               </TimelineContent>{" "}
-              site that helps you review pricing and delivery for
-              prescription only{" "}
+              site that helps you compare{" "}
               <TimelineContent
                 as="span"
                 animationNum={2}
@@ -97,10 +96,11 @@ export default function AboutSection2() {
                 customVariants={textVariants}
                 className={hlAccent}
               >
-                weight loss treatments
+                UK weight loss providers
               </TimelineContent>{" "}
-              from GPhC registered online pharmacies, so you see the full cost
-              picture before you start a consultation.
+              and review pricing and delivery for prescription-only weight loss
+              treatments from GPhC-registered online pharmacies, so you see the
+              full cost picture before you start a consultation.
             </TimelineContent>
 
             <div className="mt-10 flex flex-col gap-6 sm:mt-12 sm:flex-row sm:items-end sm:justify-between sm:gap-2">

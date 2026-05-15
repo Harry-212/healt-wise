@@ -82,14 +82,14 @@ export default function HeroNumanStyle() {
           <div className="w-full min-w-0 lg:w-[58%] lg:max-w-none lg:pb-3">
             <div className="relative w-full max-w-[min(100%,44rem)] rounded-2xl bg-linear-to-br from-white/92 via-white/72 to-white/25 px-4 py-5 shadow-sm ring-1 ring-white/60 backdrop-blur-[2px] sm:px-6 sm:py-6 lg:max-w-[min(100%,52rem)] xl:max-w-4xl">
               <h1 className="text-[1.65rem] font-black leading-[1.08] tracking-tight text-slate-950 sm:text-3xl md:text-4xl md:leading-[1.1] lg:text-[3.1rem] lg:leading-[1.06] xl:text-[3.4rem]">
-                Compare Weight Loss Treatments
+                Compare Weight Loss Treatment
                 <br />
                 Prices UK
                 <br />
                 Safely
               </h1>
               <p className="mt-4 max-w-2xl text-base font-medium text-slate-800 md:text-lg">
-                The Weight Loss Treatment UK: Independent UK Comparison for
+                Weight Loss Treatment UK: Independent UK Comparison for
                 Prices, Safety, and Support.
               </p>
             </div>

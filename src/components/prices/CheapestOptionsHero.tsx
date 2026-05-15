@@ -1,3 +1,5 @@
+import CompareHereLink from "@/components/ui/CompareHereLink";
+
 export default function CheapestOptionsHero() {
   return (
     <header className="w-full">
@@ -18,6 +20,39 @@ export default function CheapestOptionsHero() {
             tables: illustrative listings only — confirm every figure at checkout
             and with your prescriber.
           </p>
+          <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-300 md:text-base">
+            Every dose step, pack size, filter, and provider row — the canonical
+            place to compare{" "}
+            <strong className="text-white">Wegovy</strong>,{" "}
+            <strong className="text-white">Mounjaro</strong>, and{" "}
+            <strong className="text-white">Saxenda</strong> side by side.
+          </p>
+          <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <li className="flex-1 sm:flex-none">
+              <CompareHereLink
+                href="/mounjaro-price-comparison"
+                label="Compare Mounjaro costs here"
+                size="footer"
+                className="w-full sm:min-w-[260px]"
+              />
+            </li>
+            <li className="flex-1 sm:flex-none">
+              <CompareHereLink
+                href="/wegovy-price-comparison"
+                label="Compare Wegovy costs here"
+                size="footer"
+                className="w-full sm:min-w-[260px]"
+              />
+            </li>
+            <li className="flex-1 sm:flex-none">
+              <CompareHereLink
+                href="/saxenda-price-comparison"
+                label="Compare Saxenda costs here"
+                size="footer"
+                className="w-full sm:min-w-[260px]"
+              />
+            </li>
+          </ul>
         </div>
       </section>
       <p className="w-full border-b border-slate-200 bg-slate-50 px-4 py-2.5 text-center text-[11px] leading-snug text-slate-500">

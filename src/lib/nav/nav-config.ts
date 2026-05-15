@@ -14,6 +14,8 @@ export type NavLink = {
   icon?: string;
   /** Optional color accent applied to the link's icon badge. */
   accent?: NavAccent;
+  /** Stronger label weight in mega menu (e.g. UK price compare hubs). */
+  emphasize?: boolean;
 };
 
 export type NavColumn = { title: string; links: NavLink[] };
@@ -75,18 +77,21 @@ export const NAV_PANELS: NavPanel[] = [
             href: "/mounjaro-price-comparison",
             icon: "pound",
             accent: "violet",
+            emphasize: true,
           },
           {
             label: "Compare Wegovy prices UK",
             href: "/wegovy-price-comparison",
             icon: "pound",
             accent: "emerald",
+            emphasize: true,
           },
           {
             label: "Compare Saxenda prices UK",
             href: "/saxenda-price-comparison",
             icon: "pound",
             accent: "sky",
+            emphasize: true,
           },
           { label: "Cheapest Options UK", href: "/prices/cheapest-options-uk", icon: "pound" },
         ],

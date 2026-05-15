@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { BarChart3, BookOpen, HelpCircle, Link2, Sparkles } from "lucide-react";
-import CompareHereLink from "@/components/ui/CompareHereLink";
+import { BarChart3, BookOpen, HelpCircle, Sparkles } from "lucide-react";
 import TrustSignals from "@/components/trust/TrustSignals";
 import { CHEAPEST_OPTIONS_FAQS } from "@/lib/seo/cheapest-options-page-seo";
 import { getCheapestOptionsMarketSummary } from "@/lib/data/cheapest-options-market-summary";
@@ -340,57 +339,6 @@ export default function CheapestOptionsUkPage() {
             </Link>
             .
           </p>
-        </SectionInner>
-      </section>
-
-      <section
-        id="compare"
-        className="w-full bg-slate-900 text-white"
-        aria-labelledby="compare-heading"
-      >
-        <SectionInner>
-          <SectionLabel icon={Link2}>
-            <span className="text-teal-300">Compare Here</span>
-          </SectionLabel>
-          <h2
-            id="compare-heading"
-            className="text-2xl font-bold tracking-tight md:text-[1.65rem]"
-          >
-            Open the dedicated UK comparison pages
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-300 md:text-base">
-            Every dose step, pack size, filter, and provider row — the canonical
-            place to compare{" "}
-            <strong className="text-white">Wegovy</strong>,{" "}
-            <strong className="text-white">Mounjaro</strong>, and{" "}
-            <strong className="text-white">Saxenda</strong> side by side.
-          </p>
-          <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <li className="flex-1 sm:flex-none">
-              <CompareHereLink
-                href="/mounjaro-price-comparison"
-                label="Compare Mounjaro costs here"
-                size="footer"
-                className="w-full sm:min-w-[260px]"
-              />
-            </li>
-            <li className="flex-1 sm:flex-none">
-              <CompareHereLink
-                href="/wegovy-price-comparison"
-                label="Compare Wegovy costs here"
-                size="footer"
-                className="w-full sm:min-w-[260px]"
-              />
-            </li>
-            <li className="flex-1 sm:flex-none">
-              <CompareHereLink
-                href="/saxenda-price-comparison"
-                label="Compare Saxenda costs here"
-                size="footer"
-                className="w-full sm:min-w-[260px]"
-              />
-            </li>
-          </ul>
         </SectionInner>
       </section>
     </article>

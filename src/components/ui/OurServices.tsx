@@ -19,7 +19,7 @@ const TRACKER_HREF = "/tools/weight-loss-tracker";
 
 /** Link label aligned with homepage Experience section bullet. */
 const TRACKER_LINK_LABEL =
-  "Use the Free Tracking and Monitor Your Progress on the HealthWise360";
+  "Use the Free Tracking and Monitor Your Progress on the HealthWise360 tracker";
 
 const SERVICES = [
   {

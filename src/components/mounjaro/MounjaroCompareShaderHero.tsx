@@ -5,7 +5,7 @@ import Link from "next/link";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import { Instrument_Serif } from "next/font/google";
 import { ArrowRight, BadgeCheck, Scale, Sparkles } from "lucide-react";
-import { ShaderBackground } from "@/components/ui/hero-shader";
+import ComparePricePhotoHeroShell from "@/components/compare/ComparePricePhotoHeroShell";
 
 const instrumentSerif = Instrument_Serif({
   weight: "400",
@@ -30,8 +30,10 @@ export default function MounjaroCompareShaderHero({
   lastUpdated: string;
 }) {
   return (
-    <section className="border-b border-slate-200/80">
-      <ShaderBackground variant="violet" staticOnly>
+    <ComparePricePhotoHeroShell
+      imageSrc="/hero section compare monjaro.webp"
+      imageAlt="UK context for comparing Mounjaro prices across pharmacies"
+    >
         <header className="relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-6 pb-2 md:px-10 lg:px-14">
           <Link
             href="/"
@@ -136,7 +138,6 @@ export default function MounjaroCompareShaderHero({
             </div>
           </div>
         </main>
-      </ShaderBackground>
-    </section>
+    </ComparePricePhotoHeroShell>
   );
 }

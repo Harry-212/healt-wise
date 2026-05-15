@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { STRESS_HERO_IMAGE } from "@/lib/lifestyle/stress-content";
+
+const STRESS_HERO_DESK_IMAGE = "/weight person begind desk.webp";
 
 export function StressHero() {
   return (
@@ -34,8 +35,8 @@ export function StressHero() {
         </div>
         <div className="relative mx-auto aspect-[4/3] w-full max-w-lg overflow-hidden rounded-[2rem] bg-slate-100 shadow-lg shadow-slate-900/[0.06] sm:aspect-[5/4] lg:mx-0 lg:max-w-none">
           <Image
-            src={STRESS_HERO_IMAGE}
-            alt="Person resting at home in natural light — stress and wellbeing"
+            src={STRESS_HERO_DESK_IMAGE}
+            alt="Person at a desk — work stress, screen time, and daily demands"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

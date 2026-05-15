@@ -180,7 +180,9 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
                                     <Link
                                       href={link.href}
                                       onClick={closeNow}
-                                      className={`group flex items-center gap-3 rounded-lg px-2 py-2 text-[13px] font-medium leading-snug transition-all duration-200 hover:translate-x-0.5 ${containerClass}`}
+                                      className={`group flex items-center gap-3 rounded-lg px-2 py-2 text-[13px] leading-snug transition-all duration-200 hover:translate-x-0.5 ${
+                                        link.emphasize ? "font-extrabold" : "font-medium"
+                                      } ${containerClass}`}
                                     >
                                       <span
                                         className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors ${badgeClass}`}

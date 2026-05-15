@@ -183,7 +183,9 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
                                   <Link
                                     href={l.href}
                                     onClick={close}
-                                    className={`group flex min-h-11 items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] font-medium ${containerClass}`}
+                                    className={`group flex min-h-11 items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] ${
+                                      l.emphasize ? "font-extrabold" : "font-medium"
+                                    } ${containerClass}`}
                                   >
                                     <span
                                       className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${badgeClass}`}

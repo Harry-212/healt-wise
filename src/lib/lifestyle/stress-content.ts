@@ -10,8 +10,6 @@ import {
 const px = (id: number, w: number) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
 
-export const STRESS_HERO_IMAGE = px(3771089, 1400);
-
 export const STRESS_ZIGZAG_IMAGES = {
   connection: "https://images.pexels.com/photos/34395933/pexels-photo-34395933.jpeg",
   calm: px(4056723, 1200),

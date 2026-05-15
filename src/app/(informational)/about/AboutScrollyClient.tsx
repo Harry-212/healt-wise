@@ -17,7 +17,7 @@ const easeOut: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 /** Editorial imagery — remotePatterns allow images.unsplash.com & images.pexels.com */
 const ABOUT_IMAGES = {
-  hero: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=2000&q=82",
+  hero: "/hero section about us.webp",
   why: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
   what: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
   journey:
@@ -351,8 +351,8 @@ export default function AboutScrollyClient() {
               }}
             >
               <Image
-                src="/uk-weight-loss-medical-expert-health-wise.jpg.webp"
-                alt="UK weight loss medical expert context for Health Wise editorial standards"
+                src="/why choose healthwise360.webp"
+                alt="Why choose Health Wise — independent UK comparison for weight loss care"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 42vw, 100vw"

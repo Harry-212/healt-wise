@@ -16,8 +16,8 @@ export const TIPS_ZIGZAG_IMAGES = {
   nutrition: "https://images.pexels.com/photos/5714348/pexels-photo-5714348.jpeg",
   /** Appetite — food & dining context */
   appetite: px(1640774, 1200),
-  /** Consistency — training / sustainable movement */
-  consistency: px(1552242, 1200),
+  /** Consistency — habits and routines (site asset) */
+  consistency: "/for consistency in tips.webp",
 } as const;
 
 /** Support — stretching / calm movement */

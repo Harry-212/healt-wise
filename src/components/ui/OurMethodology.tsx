@@ -106,10 +106,10 @@ export default function OurMethodology() {
                   How we evaluate providers
                 </h2>
                 <p className="max-w-3xl text-[15px] leading-relaxed text-slate-600 md:text-base">
-                  {SITE_BRAND_NAME} compares UK weight loss treatment options
-                  fairly, with no preferred pharmacy. We balance pricing, safety, and
-                  patient experience so you can choose with confidence. Every
-                  listing is scored on the same five pillars:{" "}
+                  {SITE_BRAND_NAME} is an independent UK comparison: we rank
+                  weight loss providers fairly—with no preferred pharmacy. Each
+                  listing is judged the same way, weighing clinical safety with
+                  real-world service and value. Scores rest on five pillars:{" "}
                   <span className="font-semibold text-slate-800">
                     regulation
                   </span>
