@@ -7,12 +7,29 @@ export const HOMEPAGE_HERO_LIFESTYLE_ALT =
   "Couple discussing weight loss treatments";
 
 /**
- * Shared hero photo for UK GLP-1 compare routes (price pages + triple compare hub).
+ * Shared hero photo for UK GLP-1 triple compare hub.
  * `public/new hero compare.webp`
  */
 export const COMPARE_GLP1_PRICE_HERO_IMAGE_SRC = "/new hero compare.webp";
 export const COMPARE_GLP1_PRICE_HERO_IMAGE_ALT =
   "UK pharmacy comparison — Mounjaro, Wegovy, and Saxenda";
+
+/** Wegovy price comparison hero (`public/hero_compare_wegovy.webp`). */
+export const COMPARE_WEGOVY_PRICE_HERO_IMAGE_SRC = "/hero_compare_wegovy.webp";
+export const COMPARE_WEGOVY_PRICE_HERO_IMAGE_ALT =
+  "Wegovy UK price comparison — private pharmacy listings";
+
+/** Mounjaro price comparison hero (`public/hero section compare mounjaro.webp`). */
+export const COMPARE_MOUNJARO_PRICE_HERO_IMAGE_SRC =
+  "/hero section compare mounjaro.webp";
+export const COMPARE_MOUNJARO_PRICE_HERO_IMAGE_ALT =
+  "Mounjaro UK price comparison — private pharmacy listings";
+
+/** Saxenda price comparison hero (`public/hero_compare _saxenda.webp`). */
+export const COMPARE_SAXENDA_PRICE_HERO_IMAGE_SRC =
+  "/hero_compare _saxenda.webp";
+export const COMPARE_SAXENDA_PRICE_HERO_IMAGE_ALT =
+  "Saxenda UK price comparison — private pharmacy listings";
 
 /** Why choose Health Wise graphic (`public/why choose healthwise360.webp`). */
 export const WHY_CHOOSE_HEALTHWISE360_SRC =

@@ -7,8 +7,8 @@ import { Instrument_Serif } from "next/font/google";
 import { ArrowRight, BadgeCheck, Scale, Sparkles } from "lucide-react";
 import ComparePricePhotoHeroShell from "@/components/compare/ComparePricePhotoHeroShell";
 import {
-  COMPARE_GLP1_PRICE_HERO_IMAGE_ALT,
-  COMPARE_GLP1_PRICE_HERO_IMAGE_SRC,
+  COMPARE_SAXENDA_PRICE_HERO_IMAGE_ALT,
+  COMPARE_SAXENDA_PRICE_HERO_IMAGE_SRC,
 } from "@/lib/site-assets";
 
 const instrumentSerif = Instrument_Serif({
@@ -35,8 +35,8 @@ export default function SaxendaCompareShaderHero({
 }) {
   return (
     <ComparePricePhotoHeroShell
-      imageSrc={COMPARE_GLP1_PRICE_HERO_IMAGE_SRC}
-      imageAlt={COMPARE_GLP1_PRICE_HERO_IMAGE_ALT}
+      imageSrc={COMPARE_SAXENDA_PRICE_HERO_IMAGE_SRC}
+      imageAlt={COMPARE_SAXENDA_PRICE_HERO_IMAGE_ALT}
     >
         <header className="relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-6 pb-2 md:px-10 lg:px-14">
           <Link
