@@ -77,11 +77,11 @@ export default function CheapestOptionsUkPage() {
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 md:text-[1.05rem]">
             People searching{" "}
             <strong className="font-semibold text-slate-800">
-              cheapest Wegovy UK
+              Mounjaro price UK
             </strong>
             ,{" "}
             <strong className="font-semibold text-slate-800">
-              Mounjaro price UK
+              cheapest Wegovy UK
             </strong>
             , or{" "}
             <strong className="font-semibold text-slate-800">
@@ -99,15 +99,6 @@ export default function CheapestOptionsUkPage() {
             {(
               [
                 {
-                  title: "Wegovy UK listings",
-                  count: s.providerCounts.wegovy,
-                  hint: "Lowest 0.25 mg pen in table",
-                  amount: s.wegovy.min025,
-                  who: s.wegovy.providerAtLowest025,
-                  accent: "ring-teal-200/80 shadow-teal-900/5",
-                  bar: "bg-teal-500",
-                },
-                {
                   title: "Mounjaro UK listings",
                   count: s.providerCounts.mounjaro,
                   hint: "Lowest 2.5 mg pen in table",
@@ -115,6 +106,15 @@ export default function CheapestOptionsUkPage() {
                   who: s.mounjaro.providerAtLowest25,
                   accent: "ring-violet-200/80 shadow-violet-900/5",
                   bar: "bg-violet-500",
+                },
+                {
+                  title: "Wegovy UK listings",
+                  count: s.providerCounts.wegovy,
+                  hint: "Lowest 0.25 mg pen in table",
+                  amount: s.wegovy.min025,
+                  who: s.wegovy.providerAtLowest025,
+                  accent: "ring-teal-200/80 shadow-teal-900/5",
+                  bar: "bg-teal-500",
                 },
                 {
                   title: "Saxenda UK sample",

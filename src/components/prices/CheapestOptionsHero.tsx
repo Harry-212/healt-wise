@@ -9,10 +9,10 @@ export default function CheapestOptionsHero() {
             Health Wise
           </p>
           <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
-            UK private · Wegovy · Mounjaro · Saxenda
+            UK private · Mounjaro · Wegovy · Saxenda
           </p>
           <h1 className="mt-3 max-w-4xl text-balance text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl">
-            Cheapest GLP-1 weight loss injections in the UK — price snapshot &
+            Cheapest GLP-1 weight loss treatment in the UK — price snapshot &
             comparisons
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-400 sm:text-lg">
@@ -23,8 +23,8 @@ export default function CheapestOptionsHero() {
           <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-300 md:text-base">
             Every dose step, pack size, filter, and provider row — the canonical
             place to compare{" "}
-            <strong className="text-white">Wegovy</strong>,{" "}
-            <strong className="text-white">Mounjaro</strong>, and{" "}
+            <strong className="text-white">Mounjaro</strong>,{" "}
+            <strong className="text-white">Wegovy</strong>, and{" "}
             <strong className="text-white">Saxenda</strong> side by side.
           </p>
           <ul className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
