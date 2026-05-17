@@ -31,6 +31,29 @@ export const COMPARE_SAXENDA_PRICE_HERO_IMAGE_SRC =
 export const COMPARE_SAXENDA_PRICE_HERO_IMAGE_ALT =
   "Saxenda UK price comparison — private pharmacy listings";
 
+/** Cheapest GLP-1 options UK hub hero (`public/cheapest_hero.webp`). */
+export const CHEAPEST_OPTIONS_UK_HERO_IMAGE_SRC = "/cheapest_hero.webp";
+export const CHEAPEST_OPTIONS_UK_HERO_IMAGE_ALT =
+  "Cheapest GLP-1 weight loss treatment prices UK — Mounjaro, Wegovy, and Saxenda";
+
+/** Compare hub: Mounjaro vs Wegovy (`public/hero wegovy vs mounjaro.webp`). */
+export const COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_SRC =
+  "/hero wegovy vs mounjaro.webp";
+export const COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT =
+  "Mounjaro vs Wegovy UK — treatment and price comparison";
+
+/** Compare hub: Mounjaro vs Saxenda (`public/hero mounjaro vs saxenda.webp`). */
+export const COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_SRC =
+  "/hero mounjaro vs saxenda.webp";
+export const COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_ALT =
+  "Mounjaro vs Saxenda UK — treatment and price comparison";
+
+/** Compare hub: best weight loss treatments (`public/beast weight hero.webp`). */
+export const COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_SRC =
+  "/beast weight hero.webp";
+export const COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_ALT =
+  "Best weight loss treatments UK — Wegovy, Mounjaro, and Saxenda compared";
+
 /** Why choose Health Wise graphic (`public/why choose healthwise360.webp`). */
 export const WHY_CHOOSE_HEALTHWISE360_SRC =
   "/why choose healthwise360.webp";

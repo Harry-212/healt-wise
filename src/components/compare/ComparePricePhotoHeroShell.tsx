@@ -2,7 +2,10 @@
 
 import type { ReactNode } from "react";
 import Image from "next/image";
-import { CompareHeroPhotoOverlays } from "@/components/compare/CompareHeroPhotoOverlays";
+import {
+  CompareHeroPhotoOverlays,
+  type CompareHeroOverlayVariant,
+} from "@/components/compare/CompareHeroPhotoOverlays";
 
 const DEFAULT_MIN_H =
   "min-h-[560px] sm:min-h-[620px] lg:min-h-[650px]";
@@ -15,11 +18,13 @@ export default function ComparePricePhotoHeroShell({
   imageAlt,
   children,
   minHeightClass = DEFAULT_MIN_H,
+  overlayVariant = "default",
 }: {
   imageSrc: string;
   imageAlt: string;
   children: ReactNode;
   minHeightClass?: string;
+  overlayVariant?: CompareHeroOverlayVariant;
 }) {
   return (
     <section className="relative border-b border-slate-200/80">
@@ -33,7 +38,7 @@ export default function ComparePricePhotoHeroShell({
           sizes="100vw"
           className="object-cover object-[70%_center] sm:object-[65%_center] lg:object-center"
         />
-        <CompareHeroPhotoOverlays />
+        <CompareHeroPhotoOverlays variant={overlayVariant} />
         <div className="relative z-20 flex min-h-0 flex-1 flex-col">
           {children}
         </div>

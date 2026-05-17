@@ -74,7 +74,7 @@ export default function CompareWegovyPricesUkPage() {
       />
 
       <article className="w-full">
-        <WegovyCompareShaderHero lastUpdated={WEGOVY_UK_COMPARE_LAST_UPDATED} />
+        <WegovyCompareShaderHero />
 
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />

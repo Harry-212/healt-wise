@@ -74,7 +74,7 @@ export default function CompareMounjaroPricesUkPage() {
       />
 
       <article className="w-full">
-        <MounjaroCompareShaderHero lastUpdated={MOUNJARO_UK_COMPARE_LAST_UPDATED} />
+        <MounjaroCompareShaderHero />
 
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />

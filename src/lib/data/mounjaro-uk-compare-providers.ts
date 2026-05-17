@@ -1,6 +1,6 @@
 /** Illustrative UK Mounjaro pen prices — confirm live rates on each pharmacy. */
 
-export const MOUNJARO_UK_COMPARE_LAST_UPDATED = "April 2026";
+export const MOUNJARO_UK_COMPARE_LAST_UPDATED = "May 2026";
 
 export type MounjaroUkCompareBadge = "mostPopular" | "bestValue";
 

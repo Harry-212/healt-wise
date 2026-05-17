@@ -6,6 +6,11 @@ import { Instrument_Serif } from "next/font/google";
 import { Sparkles, Zap } from "lucide-react";
 import ComparePricePhotoHeroShell from "@/components/compare/ComparePricePhotoHeroShell";
 import {
+  COMPARE_HERO_NAV_GRID_CLASS,
+  COMPARE_HERO_NAV_LINK_CLASS,
+  CompareHeroLivePill,
+} from "@/components/compare/compare-hero-ui";
+import {
   ShaderBackground,
   type HeroShaderVariant,
 } from "@/components/ui/hero-shader";
@@ -94,6 +99,8 @@ export default function CompareTreatmentsHero({
   heroPhotoSrc,
   heroPhotoAlt = "",
   showSubtitleLiveDate = false,
+  showLivePill = false,
+  highlightNavLinks = false,
 }: {
   variant: HeroShaderVariant;
   eyebrow: string;
@@ -110,14 +117,20 @@ export default function CompareTreatmentsHero({
   heroPhotoSrc?: string;
   heroPhotoAlt?: string;
   showSubtitleLiveDate?: boolean;
+  /** Live · today pill above the title (photo heroes). */
+  showLivePill?: boolean;
+  /** Larger bordered nav pills (photo heroes). */
+  highlightNavLinks?: boolean;
 }) {
   const shaderMinH = wideDesktopHero
     ? "min-h-[min(82svh,580px)] sm:min-h-[min(80svh,640px)] md:min-h-[min(82svh,700px)] lg:min-h-[min(88svh,780px)] xl:min-h-[min(90svh,860px)]"
     : "min-h-[min(72svh,420px)] sm:min-h-[min(68svh,460px)] lg:min-h-[min(62svh,480px)]";
 
+  const useGridNav = highlightNavLinks || navLinks.length >= 3;
+
   const headerClass = wideDesktopHero
-    ? "relative z-20 flex shrink-0 items-center justify-end gap-4 px-4 pt-5 pb-3 md:px-10 md:pt-6 lg:px-16 lg:pt-10 lg:pb-5 xl:px-20"
-    : "relative z-20 flex shrink-0 items-center justify-end gap-4 px-4 pt-4 pb-2 md:px-10 lg:px-14";
+    ? `relative z-20 flex shrink-0 items-center justify-end gap-4 px-4 pt-5 pb-3 md:px-10 md:pt-6 lg:px-16 lg:pt-10 lg:pb-5 xl:px-20${useGridNav ? " max-sm:w-full" : ""}`
+    : `relative z-20 flex shrink-0 items-center justify-end gap-4 px-4 pt-4 pb-2 md:px-10 lg:px-14${useGridNav ? " max-sm:w-full" : ""}`;
 
   const mainClass = wideDesktopHero
     ? "relative z-20 flex flex-1 flex-col justify-start px-4 pt-4 pb-12 md:px-10 md:pt-6 md:pb-16 lg:px-16 lg:pt-8 lg:pb-24 xl:px-20"
@@ -127,9 +140,16 @@ export default function CompareTreatmentsHero({
     ? "mx-auto w-full max-w-4xl text-center lg:mx-0 lg:max-w-5xl xl:max-w-6xl lg:text-left"
     : "mx-auto w-full max-w-4xl text-center lg:mx-0 lg:max-w-3xl lg:text-left";
 
-  const navClass = wideDesktopHero
-    ? "flex max-w-[min(100%,520px)] flex-wrap items-center justify-end gap-1 sm:gap-2 lg:max-w-[min(100%,44rem)]"
-    : "flex max-w-[min(100%,520px)] flex-wrap items-center justify-end gap-1 sm:gap-2";
+  const navClass = useGridNav
+    ? COMPARE_HERO_NAV_GRID_CLASS
+    : wideDesktopHero
+      ? "flex max-w-[min(100%,520px)] flex-wrap items-center justify-end gap-1.5 sm:gap-2 lg:max-w-[min(100%,44rem)]"
+      : "flex max-w-[min(100%,520px)] flex-wrap items-center justify-end gap-1.5 sm:gap-2";
+
+  const navLinkClass =
+    highlightNavLinks || useGridNav
+      ? COMPARE_HERO_NAV_LINK_CLASS
+      : "rounded-full px-2.5 py-1.5 text-[10px] font-light text-white/80 transition hover:bg-white/10 hover:text-white sm:px-3 sm:py-2 sm:text-xs";
 
   const heroBody = (
     <>
@@ -139,7 +159,7 @@ export default function CompareTreatmentsHero({
             <Link
               key={l.href + l.label}
               href={l.href}
-              className="rounded-full px-3 py-2 text-xs font-light text-white/80 transition hover:bg-white/10 hover:text-white"
+              className={navLinkClass}
             >
               {l.label}
             </Link>
@@ -149,7 +169,9 @@ export default function CompareTreatmentsHero({
 
       <main className={mainClass}>
         <div className={contentMaxClass}>
-          {showSnapshotPill ? (
+          {showLivePill ? (
+            <CompareHeroLivePill sparkleClassName={sparkClass[variant]} />
+          ) : showSnapshotPill ? (
             <GlassPill>
               <span className="inline-flex items-center gap-1.5">
                 <Sparkles

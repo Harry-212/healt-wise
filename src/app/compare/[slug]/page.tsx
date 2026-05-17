@@ -12,8 +12,14 @@ import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
 import CompareMedPriceTabs from "@/components/compare/CompareMedPriceTabs";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
 import {
+  COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_ALT,
+  COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_SRC,
   COMPARE_GLP1_PRICE_HERO_IMAGE_ALT,
   COMPARE_GLP1_PRICE_HERO_IMAGE_SRC,
+  COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_ALT,
+  COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_SRC,
+  COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT,
+  COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_SRC,
 } from "@/lib/site-assets";
 import {
   compareFaqPageJsonLd,
@@ -23,6 +29,21 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 
 type Props = { params: Promise<{ slug: string }> };
+
+const COMPARE_SLUG_PHOTO_HERO: Record<string, { src: string; alt: string }> = {
+  "wegovy-vs-mounjaro": {
+    src: COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_SRC,
+    alt: COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT,
+  },
+  "mounjaro-vs-saxenda": {
+    src: COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_SRC,
+    alt: COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_ALT,
+  },
+  "best-weight-loss-treatments-uk": {
+    src: COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_SRC,
+    alt: COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_ALT,
+  },
+};
 
 export function generateStaticParams() {
   return Object.keys(COMPARE_SLUGS).map((slug) => ({ slug }));
@@ -75,6 +96,8 @@ export default async function ComparePage({ params }: Props) {
     layout.share.metaDescription,
   );
   const faqItems = getCompareFaqsForSlug(slug);
+  const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
+  const isTripleHub = slug === "mounjaro-vs-wegovy-vs-saxenda";
 
   return (
     <>
@@ -100,19 +123,21 @@ export default async function ComparePage({ params }: Props) {
           subtitle={layout.hero.subtitle}
           snapshotLabel={layout.hero.snapshotLabel}
           navLinks={layout.hero.navLinks}
-          wideDesktopHero={slug === "mounjaro-vs-wegovy-vs-saxenda"}
-          showSnapshotPill={slug !== "mounjaro-vs-wegovy-vs-saxenda"}
+          wideDesktopHero={isTripleHub}
+          showSnapshotPill={!isTripleHub && !photoHero}
+          showLivePill={Boolean(photoHero)}
+          highlightNavLinks={Boolean(photoHero)}
           heroPhotoSrc={
-            slug === "mounjaro-vs-wegovy-vs-saxenda"
+            isTripleHub
               ? COMPARE_GLP1_PRICE_HERO_IMAGE_SRC
-              : undefined
+              : photoHero?.src
           }
           heroPhotoAlt={
-            slug === "mounjaro-vs-wegovy-vs-saxenda"
+            isTripleHub
               ? COMPARE_GLP1_PRICE_HERO_IMAGE_ALT
-              : undefined
+              : photoHero?.alt
           }
-          showSubtitleLiveDate={slug === "mounjaro-vs-wegovy-vs-saxenda"}
+          showSubtitleLiveDate={isTripleHub}
         />
 
         <CompareMedPriceTabs medications={layout.medications} />

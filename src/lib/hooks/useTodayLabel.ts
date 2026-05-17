@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
  * style used across the compare tables and avoids Intl narrow-space
  * differences between Node and Chromium.
  */
-function formatTodayUK(date: Date): string {
+export function formatTodayUK(date: Date): string {
   const day = date.getDate();
   const months = [
     "Jan",

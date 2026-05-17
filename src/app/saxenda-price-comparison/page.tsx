@@ -75,7 +75,7 @@ export default function CompareSaxendaPricesUkPage() {
       />
 
       <article className="w-full">
-        <SaxendaCompareShaderHero lastUpdated={SAXENDA_UK_COMPARE_LAST_UPDATED} />
+        <SaxendaCompareShaderHero />
 
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />
