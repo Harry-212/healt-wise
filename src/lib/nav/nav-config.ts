@@ -40,8 +40,8 @@ export const NAV_PANELS: NavPanel[] = [
         title: "By Medication",
         links: [
           { label: "Mounjaro", href: "/what-is-mounjaro", icon: "syringe" },
-          { label: "Wegovy", href: "/what-is-wegovy", icon: "pill" },
-          { label: "Saxenda", href: "/what-is-saxenda", icon: "pill" },
+          { label: "Wegovy", href: "/what-is-wegovy", icon: "syringe" },
+          { label: "Saxenda", href: "/what-is-saxenda", icon: "syringe" },
         ],
       },
       {
@@ -55,12 +55,12 @@ export const NAV_PANELS: NavPanel[] = [
           {
             label: "Mounjaro vs Saxenda",
             href: "/compare/mounjaro-vs-saxenda",
-            icon: "compare",
+            icon: "swap",
           },
           {
             label: "Mounjaro vs Wegovy vs Saxenda",
             href: "/compare/mounjaro-vs-wegovy-vs-saxenda",
-            icon: "compare",
+            icon: "layers",
           },
           {
             label: "Best Weight Loss Treatments UK",
