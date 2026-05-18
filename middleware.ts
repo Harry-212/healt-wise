@@ -1,8 +1,11 @@
 import type { NextRequest } from "next/server";
 import { canonicalHostRedirect } from "@/lib/seo/canonical-redirect";
+import { junkPathRedirect } from "@/lib/seo/junk-path-redirect";
 import { updateSession } from "@/lib/supabase/middleware";
 
 export async function middleware(request: NextRequest) {
+  const junk = junkPathRedirect(request);
+  if (junk) return junk;
   const canonical = canonicalHostRedirect(request);
   if (canonical) return canonical;
   return updateSession(request);
