@@ -161,7 +161,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: The best weight loss treatment in London is usually not one single option, but a structured plan that may combine medical weight loss injections such as Wegovy or Mounjaro, clinician led nutrition support, behaviour change, and, for some people, procedures like gastric balloons or surgery. The right choice depends on BMI, health conditions, previous weight loss attempts, access to a qualified prescriber, and how much supervision you need for safe, sustainable results.
+                  The best weight loss treatment in London is usually not one single option, but a structured plan that may combine medical weight loss injections such as Wegovy or Mounjaro, clinician led nutrition support, behaviour change, and, for some people, procedures like gastric balloons or surgery. The right choice depends on BMI, health conditions, previous weight loss attempts, access to a qualified prescriber, and how much supervision you need for safe, sustainable results.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>

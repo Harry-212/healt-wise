@@ -161,7 +161,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: The best weight loss treatment in Manchester usually depends on medical need, body mass index, lifestyle, and access to supervised care. In the UK, the strongest evidence tends to support medically guided GLP-1 treatments such as Mounjaro, Wegovy, or Saxenda for eligible patients, while bariatric surgery remains the most effective option for people with severe obesity and related health conditions. Some clinics in Manchester also offer non-surgical fat reduction technologies, but these are usually better understood as body-contouring tools rather than core weight loss solutions.
+                  The best weight loss treatment in Manchester usually depends on medical need, body mass index, lifestyle, and access to supervised care. In the UK, the strongest evidence tends to support medically guided GLP-1 treatments such as Mounjaro, Wegovy, or Saxenda for eligible patients, while bariatric surgery remains the most effective option for people with severe obesity and related health conditions. Some clinics in Manchester also offer non-surgical fat reduction technologies, but these are usually better understood as body-contouring tools rather than core weight loss solutions.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -235,7 +235,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="glp1" heading="GLP-1 injections in Manchester">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: In Manchester, the most searched medical weight loss treatments are GLP-1 injections such as Mounjaro, Wegovy, and Saxenda. These medicines work by reducing appetite, increasing fullness, and helping some people eat less without constant hunger. They are not cosmetic products, and they usually work best when paired with dietary changes and follow-up care.
+                  In Manchester, the most searched medical weight loss treatments are GLP-1 injections such as Mounjaro, Wegovy, and Saxenda. These medicines work by reducing appetite, increasing fullness, and helping some people eat less without constant hunger. They are not cosmetic products, and they usually work best when paired with dietary changes and follow-up care.
                 </p>
 
                 <p className={p}>
@@ -278,7 +278,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="mounjaro-gm" heading="Is Mounjaro available in Greater Manchester?">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: Mounjaro may be available in Greater Manchester through private clinics and, in some cases, through NHS pathways for eligible patients. Availability depends on clinical criteria, local commissioning, and whether the provider is properly registered and supervised.
+                  Mounjaro may be available in Greater Manchester through private clinics and, in some cases, through NHS pathways for eligible patients. Availability depends on clinical criteria, local commissioning, and whether the provider is properly registered and supervised.
                 </p>
 
                 <p className={p}>
@@ -313,7 +313,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="six-months" heading="How much weight can you lose on Mounjaro in 6 months?">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: Weight loss on Mounjaro in six months varies, but some people may lose around 10% to 15% of their body weight with good adherence and medical supervision. Results are not guaranteed, and the first few months are often slower because doses are increased gradually.
+                  Weight loss on Mounjaro in six months varies, but some people may lose around 10% to 15% of their body weight with good adherence and medical supervision. Results are not guaranteed, and the first few months are often slower because doses are increased gradually.
                 </p>
 
                 <p className={p}>
@@ -367,7 +367,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="surgery" heading="Bariatric surgery in Manchester">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: Bariatric surgery is usually the most effective weight loss treatment for severe obesity, especially when there are related health conditions such as type 2 diabetes or sleep apnea. In Manchester, it is typically considered after structured medical assessment and when other approaches have not worked well enough.
+                  Bariatric surgery is usually the most effective weight loss treatment for severe obesity, especially when there are related health conditions such as type 2 diabetes or sleep apnea. In Manchester, it is typically considered after structured medical assessment and when other approaches have not worked well enough.
                 </p>
 
                 <p className={p}>

@@ -98,9 +98,9 @@ export default function AboutSection2() {
               >
                 UK weight loss providers
               </TimelineContent>{" "}
-              and review pricing and delivery for prescription-only weight loss
-              treatments from GPhC-registered online pharmacies, so you see the
-              full cost picture before you start a consultation.
+              and review pricing and delivery for weight loss treatments from
+              GPhC-registered online pharmacies, so you see the full cost
+              picture before you start a consultation.
             </TimelineContent>
 
             <div className="mt-10 flex flex-col gap-6 sm:mt-12 sm:flex-row sm:items-end sm:justify-between sm:gap-2">
@@ -112,8 +112,9 @@ export default function AboutSection2() {
                 className="mb-0 text-xs sm:text-xl"
               >
                 <div className="mb-2 font-medium capitalize text-brand-primary">
-                  {SITE_BRAND_NAME}: <span className="font-bold">we compare</span>,
-                  {" "}we don&apos;t prescribe
+                  {SITE_BRAND_NAME}:{" "}
+                  <span className="font-bold">we compare</span>, we don&apos;t
+                  prescribe
                 </div>
                 <div className="font-semibold tracking-wide text-emerald-700 uppercase">
                   Weight Loss Treatment in the UK
@@ -127,11 +128,11 @@ export default function AboutSection2() {
                 customVariants={textVariants}
                 className="shrink-0"
               >
-                <Link
-                  href={HOME_COMPARE_HUB_HREF}
-                  className={ctaClass}
-                >
-                  <Zap className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6" aria-hidden />
+                <Link href={HOME_COMPARE_HUB_HREF} className={ctaClass}>
+                  <Zap
+                    className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6"
+                    aria-hidden
+                  />
                   Compare here
                 </Link>
               </TimelineContent>

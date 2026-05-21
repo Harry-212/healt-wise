@@ -37,39 +37,6 @@ export const NAV_PANELS: NavPanel[] = [
     menuWidth: "wide",
     columns: [
       {
-        title: "By Medication",
-        links: [
-          { label: "Mounjaro", href: "/what-is-mounjaro", icon: "syringe" },
-          { label: "Wegovy", href: "/what-is-wegovy", icon: "syringe" },
-          { label: "Saxenda", href: "/what-is-saxenda", icon: "syringe" },
-        ],
-      },
-      {
-        title: "Compare Treatments",
-        links: [
-          {
-            label: "Mounjaro vs Wegovy",
-            href: "/compare/wegovy-vs-mounjaro",
-            icon: "compare",
-          },
-          {
-            label: "Mounjaro vs Saxenda",
-            href: "/compare/mounjaro-vs-saxenda",
-            icon: "swap",
-          },
-          {
-            label: "Mounjaro vs Wegovy vs Saxenda",
-            href: "/compare/mounjaro-vs-wegovy-vs-saxenda",
-            icon: "layers",
-          },
-          {
-            label: "Best Weight Loss Treatments UK",
-            href: "/compare/best-weight-loss-treatments-uk",
-            icon: "sparkles",
-          },
-        ],
-      },
-      {
         title: "Pricing",
         links: [
           {
@@ -99,6 +66,39 @@ export const NAV_PANELS: NavPanel[] = [
             icon: "pound",
             emphasize: true,
           },
+        ],
+      },
+      {
+        title: "Compare Treatments",
+        links: [
+          {
+            label: "Mounjaro vs Wegovy",
+            href: "/compare/wegovy-vs-mounjaro",
+            icon: "compare",
+          },
+          {
+            label: "Mounjaro vs Saxenda",
+            href: "/compare/mounjaro-vs-saxenda",
+            icon: "swap",
+          },
+          {
+            label: "Mounjaro vs Wegovy vs Saxenda",
+            href: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+            icon: "layers",
+          },
+          {
+            label: "Best Weight Loss Treatments UK",
+            href: "/compare/best-weight-loss-treatments-uk",
+            icon: "sparkles",
+          },
+        ],
+      },
+      {
+        title: "By Medication",
+        links: [
+          { label: "Mounjaro", href: "/what-is-mounjaro", icon: "syringe" },
+          { label: "Wegovy", href: "/what-is-wegovy", icon: "syringe" },
+          { label: "Saxenda", href: "/what-is-saxenda", icon: "syringe" },
         ],
       },
       {

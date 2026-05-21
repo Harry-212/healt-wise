@@ -161,7 +161,7 @@ export default function LondonderryLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: The most successful weight loss treatment in Londonderry is usually a medically supervised plan that combines nutrition, behaviour change, physical activity, and, for eligible patients, prescription medications such as semaglutide or tirzepatide. The best option depends on your BMI, medical history, access to NHS or private care, and whether you need appetite control, structured coaching, or long term weight maintenance. In Northern Ireland, GP access, health board pathways, and eligibility rules can affect whether weight loss injections are available on the NHS, while private clinics may offer faster access with paid monitoring.
+                  The most successful weight loss treatment in Londonderry is usually a medically supervised plan that combines nutrition, behaviour change, physical activity, and, for eligible patients, prescription medications such as semaglutide or tirzepatide. The best option depends on your BMI, medical history, access to NHS or private care, and whether you need appetite control, structured coaching, or long term weight maintenance. In Northern Ireland, GP access, health board pathways, and eligibility rules can affect whether weight loss injections are available on the NHS, while private clinics may offer faster access with paid monitoring.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>

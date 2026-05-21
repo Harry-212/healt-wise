@@ -163,7 +163,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: The best weight loss treatment in Luton depends on your BMI, health conditions, budget, and how quickly you need support. For many people, the most effective options are medically supervised weight loss injections such as Mounjaro, Wegovy, or Saxenda, while bariatric surgery may suit those with severe obesity or related conditions. NHS weight management programmes can also be the right starting point, especially if you want structured support without paying privately.
+                  The best weight loss treatment in Luton depends on your BMI, health conditions, budget, and how quickly you need support. For many people, the most effective options are medically supervised weight loss injections such as Mounjaro, Wegovy, or Saxenda, while bariatric surgery may suit those with severe obesity or related conditions. NHS weight management programmes can also be the right starting point, especially if you want structured support without paying privately.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -181,7 +181,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="options" heading="Weight loss options in Luton">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: In Luton, the main evidence based weight loss options are GLP 1 injections, bariatric surgery, and NHS lifestyle or specialist weight management services. Each works differently, and none is automatically best for everyone.
+                  In Luton, the main evidence based weight loss options are GLP 1 injections, bariatric surgery, and NHS lifestyle or specialist weight management services. Each works differently, and none is automatically best for everyone.
                 </p>
 
                 <p className={p}>
@@ -195,7 +195,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="injections-how" heading="How weight loss injections work">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: Weight loss injections such as Mounjaro, Wegovy, and Saxenda reduce appetite, help people feel full sooner, and can support significant weight loss when combined with diet and lifestyle changes.
+                  Weight loss injections such as Mounjaro, Wegovy, and Saxenda reduce appetite, help people feel full sooner, and can support significant weight loss when combined with diet and lifestyle changes.
                 </p>
 
                 <p className={p}>
@@ -225,7 +225,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="brands" heading="Mounjaro, Wegovy, and Saxenda">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: Mounjaro is often considered the most effective of the three for average weight loss, Wegovy is widely used and well studied, and Saxenda may suit some people who prefer a daily option.
+                  Mounjaro is often considered the most effective of the three for average weight loss, Wegovy is widely used and well studied, and Saxenda may suit some people who prefer a daily option.
                 </p>
 
                 <p className={p}>
@@ -251,7 +251,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="pill-vs-injection" heading="Which pill or injection works best">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: There is no single best pill or injection for everyone, but GLP 1 based medicines are currently among the most effective medical treatments for obesity in the UK.
+                  There is no single best pill or injection for everyone, but GLP 1 based medicines are currently among the most effective medical treatments for obesity in the UK.
                 </p>
 
                 <p className={p}>
@@ -269,7 +269,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="surgery" heading="Bariatric surgery in Luton">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: Bariatric surgery can be the most effective long term option for severe obesity, especially when weight loss injections or lifestyle programmes are unlikely to be enough on their own.
+                  Bariatric surgery can be the most effective long term option for severe obesity, especially when weight loss injections or lifestyle programmes are unlikely to be enough on their own.
                 </p>
 
                 <p className={p}>
@@ -287,7 +287,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="nhs" heading="NHS weight management support">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: NHS weight management services may include dietitian support, exercise advice, behavioural programmes, and referral to specialist obesity care when needed.
+                  NHS weight management services may include dietitian support, exercise advice, behavioural programmes, and referral to specialist obesity care when needed.
                 </p>
 
                 <p className={p}>
@@ -309,7 +309,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="choose" heading="How to choose the right option">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: The right weight loss treatment depends on your BMI, medical history, budget, side effect tolerance, and whether you need a short term boost or long term support.
+                  The right weight loss treatment depends on your BMI, medical history, budget, side effect tolerance, and whether you need a short term boost or long term support.
                 </p>
 
                 <p className={p}>
@@ -336,7 +336,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="costs" heading="Costs in the UK">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: Weight loss injection costs in the UK vary widely depending on the medicine, dose, provider, and whether reviews or follow up are included.
+                  Weight loss injection costs in the UK vary widely depending on the medicine, dose, provider, and whether reviews or follow up are included.
                 </p>
 
                 <p className={p}>
@@ -362,7 +362,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="cheaper" heading="Cheaper alternatives to Mounjaro">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: Cheaper alternatives to Mounjaro may include Wegovy, Saxenda, structured NHS weight management, or lifestyle programmes, depending on your eligibility and goals.
+                  Cheaper alternatives to Mounjaro may include Wegovy, Saxenda, structured NHS weight management, or lifestyle programmes, depending on your eligibility and goals.
                 </p>
 
                 <p className={p}>
@@ -384,7 +384,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="ozempic-boots" heading="Ozempic and Boots">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: Ozempic is a prescription medicine and cannot be treated like a casual retail item; whether it is available through a pharmacy depends on prescription rules and stock.
+                  Ozempic is a prescription medicine and cannot be treated like a casual retail item; whether it is available through a pharmacy depends on prescription rules and stock.
                 </p>
 
                 <p className={p}>
@@ -406,7 +406,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="expensive" heading="Why some treatments are expensive">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: Mounjaro and similar medicines can be expensive in the UK because of brand pricing, ongoing supply, dose escalation, and the need for clinical supervision.
+                  Mounjaro and similar medicines can be expensive in the UK because of brand pricing, ongoing supply, dose escalation, and the need for clinical supervision.
                 </p>
 
                 <p className={p}>
@@ -424,7 +424,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="safety" heading="Safety and side effects">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: The main safety issues with weight loss injections include nausea, vomiting, constipation, dehydration, and possible gallbladder problems, so medical supervision matters.
+                  The main safety issues with weight loss injections include nausea, vomiting, constipation, dehydration, and possible gallbladder problems, so medical supervision matters.
                 </p>
 
                 <p className={p}>
@@ -450,7 +450,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="success" heading="What actually leads to success">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: The most successful weight loss results usually come from combining the right medical treatment with food structure, activity, follow up, and consistency over time.
+                  The most successful weight loss results usually come from combining the right medical treatment with food structure, activity, follow up, and consistency over time.
                 </p>
 
                 <p className={p}>
@@ -468,7 +468,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="local" heading="Luton specific context">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  AI Overview: In Luton, the best approach is usually a treatment that fits local access, budget, and follow up needs, not just a national headline about a medicine.
+                  In Luton, the best approach is usually a treatment that fits local access, budget, and follow up needs, not just a national headline about a medicine.
                 </p>
 
                 <p className={p}>

@@ -122,6 +122,9 @@ export function buildUkLocationTitle(loc: UkWeightLossLocation): string {
   if (loc.slug === "huddersfield") {
     return "Best Weight Loss Treatment Huddersfield: Yorkshire Access & Strategies Guide";
   }
+  if (loc.slug === "middlesbrough") {
+    return "Best Weight Loss Treatment Middlesbrough: Medical, NHS, and Lifestyle Options Explained";
+  }
   if (loc.slug === "inverness") {
     return "Best Weight Loss Treatment Inverness: Highland Scotland Weight Loss Reality";
   }
@@ -149,6 +152,21 @@ export function buildUkLocationTitle(loc: UkWeightLossLocation): string {
   if (loc.slug === "manchester") {
     return "Best Weight Loss Treatment Manchester: Evidence-Based Options, Local Access, and What Actually Works";
   }
+  if (loc.slug === "milton-keynes") {
+    return "Best Weight Loss Treatment Milton Keynes: What Actually Works, What It Costs, and How to Choose Wisely";
+  }
+  if (loc.slug === "newcastle-upon-tyne") {
+    return "Best Weight Loss Treatment Newcastle: A Practical Guide for 2026";
+  }
+  if (loc.slug === "newport") {
+    return "Best Weight Loss Treatment Newport: Gwent's Guide to Medically-Supervised Slimming Excellence";
+  }
+  if (loc.slug === "merthyr-tydfil") {
+    return "Best Weight Loss Treatment Merthyr Tydfil: South Wales Guide to Real Results";
+  }
+  if (loc.slug === "neath-port-talbot") {
+    return "Best Weight Loss Treatment Neath Port Talbot: What Actually Works and Who It Suits";
+  }
   if (loc.slug === "livingston") {
     return "Best Weight Loss Treatment Livingston: West Lothian's Guide to Real, Safe Slimming";
   }
@@ -157,6 +175,18 @@ export function buildUkLocationTitle(loc: UkWeightLossLocation): string {
   }
   if (loc.slug === "londonderry") {
     return "Best Weight Loss Treatment Londonderry: What Actually Works for Safe, Lasting Results";
+  }
+  if (loc.slug === "newry") {
+    return "Best Weight Loss Treatment in Newry: What Actually Works, Who It Suits, and How Access Usually Works";
+  }
+  if (loc.slug === "northampton") {
+    return "Best Weight Loss Treatment Northampton: Medically Supervised, Localised, and Realistic Paths";
+  }
+  if (loc.slug === "norwich") {
+    return "Best Weight Loss Treatment Norwich: A Practical Guide to Clinical, Private, and Non-Invasive Options";
+  }
+  if (loc.slug === "nottingham") {
+    return "Best Weight Loss Treatment Nottingham: East Midlands Guide to Medically Supported Slimming";
   }
   if (loc.slug === "luton") {
     return "Best Weight Loss Treatment Luton: A Practical Guide to Injections, Surgery, and NHS Support";
@@ -295,6 +325,9 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
   if (loc.slug === "huddersfield") {
     return "Best weight loss treatment Huddersfield: NHS Kirklees programs, bariatric options, GLP 1 access, timelines and local Yorkshire hacks for safe, sustainable slimming.";
   }
+  if (loc.slug === "middlesbrough") {
+    return "Best weight loss treatment Middlesbrough: medical options, NHS weight services, GLP-1 injections, and realistic slimming advice for North East UK residents.";
+  }
   if (loc.slug === "inverness") {
     return "Best weight loss treatment Inverness: NHS Highland programs, private GLP 1 access, local trails, and proven timelines for Highland slimming success.";
   }
@@ -322,6 +355,21 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
   if (loc.slug === "manchester") {
     return "Best weight loss treatment Manchester: supervised GLP 1 injections, bariatric surgery, NHS pathways, private clinics, body contouring facts, Greater Manchester access, and realistic choices.";
   }
+  if (loc.slug === "milton-keynes") {
+    return "Best weight loss treatment Milton Keynes: injections, NHS or private support, surgery, cosmetic fat reduction, costs, and realistic local choices.";
+  }
+  if (loc.slug === "newcastle-upon-tyne") {
+    return "Discover the best weight loss treatment in Newcastle – medical programs, GLP-1 options, surgery and non-invasive fat reduction, plus safe timelines and local tips.";
+  }
+  if (loc.slug === "newport") {
+    return "Best weight loss treatment Newport: GLP-1 injections, nutrition coaching, NHS/private access, 14kg timelines, 3-3-3 rule, and Gwent tips.";
+  }
+  if (loc.slug === "merthyr-tydfil") {
+    return "Best weight loss treatment Merthyr Tydfil: NHS/private guide, Mounjaro/Wegovy costs, non-surgical options, timelines for 5-20kg loss in South Wales.";
+  }
+  if (loc.slug === "neath-port-talbot") {
+    return "Best weight loss treatment in Neath Port Talbot explained with NHS support, GLP-1 options, BMI rules, timelines, and safe next steps.";
+  }
   if (loc.slug === "livingston") {
     return "Best weight loss treatment Livingston Scotland: NHS and private access, GLP 1 (Wegovy and Mounjaro) guide, 20 kg in 5 months plan, doctor talk tips, West Lothian hacks for safe slimming.";
   }
@@ -330,6 +378,18 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
   }
   if (loc.slug === "londonderry") {
     return "Best weight loss treatment Londonderry NI: medically supervised plans, NHS and private GLP 1 access, Wegovy and Mounjaro context, realistic weight loss timelines, trustworthy clinic checks.";
+  }
+  if (loc.slug === "newry") {
+    return "Best weight loss treatment in Newry: compare GLP-1 injections, NHS pathways, private care, costs, FAQs, and safe next steps.";
+  }
+  if (loc.slug === "northampton") {
+    return "Best weight loss treatment Northampton: medically supervised programs, GLP-1 injections, bariatric options, and NHS pathways for sustainable fat loss in Northampton UK.";
+  }
+  if (loc.slug === "norwich") {
+    return "Best weight loss treatment Norwich: compare NHS Tier 3 support, private GLP-1 medicines, bariatric surgery, body contouring, timelines, and safe next steps.";
+  }
+  if (loc.slug === "nottingham") {
+    return "Best weight loss treatment Nottingham: Medically supervised programs, Mounjaro/Wegovy injections, NHS access guide, timelines, and local Nottingham tips for safe, sustainable fat loss.";
   }
   if (loc.slug === "luton") {
     return "Best weight loss treatment Luton guide: compare injections, surgery, NHS options, costs, safety, and what actually fits your situation.";
@@ -1451,6 +1511,27 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     ];
   }
 
+  if (loc.slug === "middlesbrough") {
+    return [
+      {
+        q: "What is the most effective weight loss treatment for adults in Middlesbrough?",
+        a: `The most effective treatment for weight loss in adults in Middlesbrough is usually a combination of medically supervised lifestyle change, support groups, and, where appropriate, prescription weight-loss medications like GLP 1 injections. Simply relying on pills or injections without changing diet, activity, and sleep habits rarely leads to long-term success. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Which prescription weight-loss injection tends to produce the greatest average weight loss in UK trials?",
+        a: `In UK and international trials, GLP 1 based injections such as semaglutide (Wegovy) and tirzepatide type drugs show some of the highest average weight-loss results, often around 12-20% of body weight after about a year when combined with lifestyle changes. Real-world outcomes can differ. Read [what Wegovy is](/what-is-wegovy), [what Mounjaro is](/what-is-mounjaro), and [Wegovy versus Mounjaro](/compare/wegovy-vs-mounjaro).`,
+      },
+      {
+        q: "What can UK doctors legally prescribe for weight loss, and under what conditions?",
+        a: `In the UK, doctors can prescribe weight-loss medicines only when criteria are met, often after attempts at lifestyle change. The main options include GLP 1 receptor agonists such as semaglutide for Wegovy or liraglutide for Saxenda, plus older options like orlistat. Proper monitoring, blood tests, and titration matter. Use the [BMI calculator](/tools/bmi-calculator) as a preparation tool before speaking with a clinician.`,
+      },
+      {
+        q: "What is the NHS-funded weight loss programme, and how can someone in Middlesbrough access it?",
+        a: `NHS-funded weight loss programmes are structured lifestyle services that help adults lose 5-10% of body weight over 6-12 months through diet, activity, and behaviour change support. In Middlesbrough, access is usually via GP referral based on BMI and health needs. For treatment pacing, see [Mounjaro prescription timeline UK](/helpful-guides/mounjaro-prescription-timeline-uk).`,
+      },
+    ];
+  }
+
   if (loc.slug === "inverness") {
     return [
       {
@@ -1695,6 +1776,267 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       {
         q: "Are fat-reduction lasers a real weight loss treatment?",
         a: `They can help with body contouring, but they are not usually the main treatment for obesity or significant weight loss. If you also need appetite support, read [what Wegovy is](/what-is-wegovy) and [what Saxenda is](/what-is-saxenda).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "milton-keynes") {
+    return [
+      {
+        q: "Which treatment usually works best for meaningful weight loss?",
+        a: `For many people, the strongest non-surgical option is a medically supervised GLP 1 programme combined with lifestyle change. For more severe obesity, surgery can be the most powerful option. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Are weight loss injections worth it?",
+        a: `They can be, especially if appetite is the main barrier and you are suitable for treatment. They work best with proper monitoring and food changes. Read [what Mounjaro is](/what-is-mounjaro), [what Wegovy is](/what-is-wegovy), and [Wegovy versus Mounjaro](/compare/wegovy-vs-mounjaro).`,
+      },
+      {
+        q: "Is there a safe cheaper option than Mounjaro?",
+        a: `Yes. Depending on your situation, a different prescription treatment, NHS support, or a structured lifestyle programme may be more affordable and still effective. Compare current bundles on [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
+      },
+      {
+        q: "Can cosmetic fat reduction replace diet treatment?",
+        a: `No. It can improve shape in specific areas, but it does not replace medical or lifestyle weight loss. Cosmetic fat reduction is usually a finishing tool rather than a core obesity treatment.`,
+      },
+      {
+        q: "Do I need a clinic for weight loss?",
+        a: `Not always. Some people do well with self-managed lifestyle change. Others need medical assessment, especially if weight is affecting health. Use the [BMI calculator](/tools/bmi-calculator) as a preparation aid and verify private sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+      },
+      {
+        q: "What should I ask before starting treatment?",
+        a: `Ask about suitability, side effects, follow-up, total monthly cost, and what happens if the treatment is not tolerated. If private medicine is involved, ask who reviews you, how often, and whether your GP should be informed.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "newcastle-upon-tyne") {
+    return [
+      {
+        q: "What Is the Most Successful Weight Loss Treatment?",
+        a: `The most successful weight loss treatment is usually a combination of lifestyle changes plus, where appropriate, medical support. For many people, this includes a calorie-controlled balanced diet, regular activity, behaviour support, and medical weight-loss programmes or medicines when clinically appropriate. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "What Is the Newcastle Weight Loss Plan That People Actually Follow?",
+        a: `There is no one official Newcastle weight loss plan, but many successful people in Newcastle follow regular balanced meals, fewer sugary drinks, local walking or gym routines, enough sleep, and NHS-led or local group support. Use simple rules only if they fit real life.`,
+      },
+      {
+        q: "How Did Kelly Clarkson Really Lose Weight, and Could I Do Something Similar in Newcastle?",
+        a: `Kelly Clarkson has described diet and lifestyle changes, professional medical support, and prescription weight-loss medication under supervision. For someone in Newcastle, the takeaway is to involve a GP or local weight-management service, avoid overnight claims, and expect progress over months rather than days. Read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro) for GLP 1 context.`,
+      },
+      {
+        q: "What Is the 3-3-3 Rule for Losing Weight in a Practical Sense?",
+        a: `The 3-3-3 rule is a simple idea, not a strict medical rule. It usually means 3 meals per day, high hydration, and 30 minutes of exercise. It can work as a checklist, but it should be adjusted to health needs and medical advice.`,
+      },
+      {
+        q: "Is the Best Weight Loss Treatment in Newcastle Safe and Sustainable?",
+        a: `A treatment is only best if it is effective, safe, and sustainable. Safer approaches usually involve gradual weight loss, balanced diet, regular exercise, and medical supervision when using medication or considering surgery. Verify private sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+      },
+      {
+        q: "Where Should I Start If I Live in Newcastle?",
+        a: `Start with a GP consultation to discuss weight, health conditions, and options. Ask whether an NHS-led weight-loss programme or local group is available, begin simple lifestyle changes, and verify any private prescriber or pharmacy before paying. The [BMI calculator](/tools/bmi-calculator) can help prepare for the conversation.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "newport") {
+    return [
+      {
+        q: "What counts as the most successful weight loss treatment overall?",
+        a: `Medically supervised GLP 1 agonists (Semaglutide/Tirzepatide) plus personalized nutrition and lifestyle coaching can produce strong results, with trials often showing 15-22% body weight loss in selected patients. They are more sustainable than fads alone when monitored properly. Compare pathways using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Is losing 14kg in 3 months safe and achievable?",
+        a: `Possible at 1.1kg/week but aggressive. It requires medical oversight, a 700-cal deficit, strength training, and GLP 1 treatment if eligible (often BMI 30+ privately). Without supervision, risks increase; 10kg may be safer for many people. Use the [BMI calculator](/tools/bmi-calculator) before a clinical conversation.`,
+      },
+      {
+        q: "What medication or method did Kelly Clarkson use for her rapid weight loss?",
+        a: `Per interviews, she used GLP 1 style medication alongside portion control and cardio. A Newport version should start with GP approval and safe monitoring, not celebrity imitation. Read [what Wegovy is](/what-is-wegovy), [what Mounjaro is](/what-is-mounjaro), and [Mounjaro versus Ozempic](/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results).`,
+      },
+      {
+        q: "What exactly is the 3-3-3 rule for weight loss and does it work?",
+        a: `Simple framework: 3 balanced meals (protein/veggie/carb), 3 max snacks daily, and 30min activity. It supports consistency through habit-stacking, but it is not a medical treatment and should be adapted to shifts, allergies, and clinical advice.`,
+      },
+      {
+        q: "How do I access GLP-1 injections like Semaglutide in Newport safely?",
+        a: `NHS access usually starts through GP referral and can involve waits of 3-6 months. Private access may be faster via GPhC-registered clinics, often around £200-350/month. Verify prescriber/pharmacy, titration plan, side-effect policy, and cold-chain delivery with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+      },
+      {
+        q: "What local Newport resources support weight loss journeys?",
+        a: `Usk trails for walks, Gwent markets for produce, NHS tier 2/3 programmes, and Newport Leisure Centre can all support consistency. Community support and coaching can improve adherence when paired with a realistic food plan.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "newry") {
+    return [
+      {
+        q: "What is the most effective weight loss treatment for adults in Newry?",
+        a: `For many eligible adults, clinically approved GLP 1 medicines combined with lifestyle support are among the most effective options. That said, the best choice depends on medical history, tolerance, access, and whether the treatment can be properly monitored. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "How much is Saxenda usually in Newry?",
+        a: `The price varies by provider, consultation fees, and whether delivery and follow-up are included. A monthly comparison is more useful than a single headline price because the real cost depends on the full prescribing package. Use [Saxenda price comparison](/saxenda-price-comparison) for UK pricing context.`,
+      },
+      {
+        q: "Can my GP prescribe Ozempic in Northern Ireland for weight loss?",
+        a: `Sometimes, but not automatically. Ozempic is primarily a diabetes medicine, and weight-loss prescribing depends on clinical need, local policy, and eligibility. A GP will usually assess you first rather than prescribe by request alone. Read [Mounjaro versus Ozempic](/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results) for medicine context.`,
+      },
+      {
+        q: "Why do some people lose weight so fast, like Kelly Clarkson?",
+        a: `Rapid weight loss is often the result of several things working together, such as medication, diet change, and lifestyle support. Celebrity cases are rarely explained in full, so it is safer not to assume one simple cause.`,
+      },
+      {
+        q: "Is Wegovy better than Mounjaro?",
+        a: `Not always. Mounjaro and Wegovy are both effective for many people, but one may suit you better depending on side effects, expected response, medical history, and availability. "Better" usually means "better for you," not "better on paper." Read [Wegovy versus Mounjaro](/compare/wegovy-vs-mounjaro).`,
+      },
+      {
+        q: "Do I need the NHS, or can I go private?",
+        a: `Either may work, depending on your situation. NHS care is often lower cost and more structured, while private care may be faster and more convenient. The right option depends on urgency, budget, and the level of monitoring you need. Verify private sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "northampton") {
+    return [
+      {
+        q: "What kind of weight loss treatment is most effective in Northampton?",
+        a: `The most effective long-term approach is usually a medically supervised plan that combines a calorie-controlled, balanced diet tailored to your life in Northampton, regular physical activity you can realistically keep up, behaviour change support, and in some cases GLP 1 injections or bariatric surgery when medically appropriate. Compare routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Where in Northampton can I access GLP-1 injections like Mounjaro?",
+        a: `Access to GLP 1 injections in Northampton usually starts with your GP, who can assess eligibility and refer you to local obesity or diabetes services if appropriate. Some people use regulated private or online clinics, but you should check that they are GPhC registered and offer clear monitoring and written plans. Read [what Mounjaro is](/what-is-mounjaro) and the [Mounjaro prescription timeline UK](/helpful-guides/mounjaro-prescription-timeline-uk).`,
+      },
+      {
+        q: "What medical criteria are usually required for Ozempic on the NHS?",
+        a: `NHS use of Ozempic in Northampton tends to follow national and local guidance, usually around type 2 diabetes need, blood sugar targets, BMI and comorbidities in relevant obesity pathways, previous lifestyle attempts, and no contraindications. Your GP or local obesity team is the best source for current criteria. Read [Mounjaro versus Ozempic](/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results) for context.`,
+      },
+      {
+        q: "How do celebrity weight-loss journeys like Kelly Clarkson's apply to people in Northampton?",
+        a: `Celebrity stories can be inspiring but rarely provide a full picture. Medication may help some people reduce appetite and lose weight, but lifestyle changes and professional support are usually needed to maintain results. People in Northampton should explore similar options through a GP or local obesity service rather than copying a celebrity timeline.`,
+      },
+      {
+        q: "How realistic is it to lose weight quickly and safely in Northampton?",
+        a: `Quick, safe weight loss usually means 0.5-1kg per week for most adults, which adds up to 5-10% of body weight over several months. Very rapid loss, such as 5kg in 7 days, is often water loss and can increase fatigue, nutritional issues, and muscle loss if not monitored. Use the [BMI calculator](/tools/bmi-calculator) before a clinical discussion.`,
+      },
+      {
+        q: "How can I tell if a weight loss option in Northampton is safe and trustworthy?",
+        a: `Look for clear links to NHS or recognised hospitals and obesity clinics, named clinicians with verifiable qualifications, transparent criteria and side-effect information, guideline references, and no pressure to pay large sums without proper assessment. Verify private sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+      },
+    ];
+  }
+
+  if (loc.slug === "norwich") {
+    return [
+      {
+        q: "What is the most effective weight loss treatment for people in Norwich?",
+        a: `The most effective option depends on the person. For severe obesity, bariatric surgery often produces the biggest weight loss. For many others, GLP 1 medicines combined with lifestyle support are highly effective. For some, structured NHS weight management is enough. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Who qualifies for semaglutide or Ozempic on the NHS?",
+        a: `Eligibility is based on clinical criteria, BMI, health conditions, and local pathways. Ozempic itself is mainly a diabetes medicine, while obesity treatment usually follows specific semaglutide pathways. A GP or specialist team decides whether you qualify. Read [what Wegovy is](/what-is-wegovy) and [Mounjaro versus Ozempic](/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results) for context.`,
+      },
+      {
+        q: "Is the 3-3-3 rule a real medical weight-loss method?",
+        a: `Not really. It is more of a social-media-style habit framework than a clinical rule. It may help some people stay structured, but it should not replace an evidence-based plan.`,
+      },
+      {
+        q: "What is a more affordable option than Mounjaro?",
+        a: `A cheaper alternative may be Wegovy, Saxenda, or a non-medication route through NHS support, depending on your situation. The cheapest option is often lifestyle support, but that is not always the most effective for every patient. Compare [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
+      },
+      {
+        q: "Are fat-freezing treatments the same as weight loss treatments?",
+        a: `No. Cryolipolysis is for targeted fat reduction and body contouring. It is not designed to treat obesity or replace medical weight management.`,
+      },
+      {
+        q: "How long does it usually take to see results?",
+        a: `Some people notice appetite changes quickly with medication, but visible body-weight changes usually take weeks, not days. A safe pace is often around 0.5 to 1 kg per week, though this varies. Use the [BMI calculator](/tools/bmi-calculator) before a clinical discussion.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "nottingham") {
+    return [
+      {
+        q: "What is the most successful weight loss treatment overall?",
+        a: `Combination programs with NICE-backed diet, exercise, and GLP 1 medicines such as Wegovy or Mounjaro can yield 10-20% loss long-term for eligible patients, while fads often fail long run. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "How did Kelly Clarkson really lose her weight?",
+        a: `She has discussed GLP 1 agonist support, likely Wegovy or Ozempic class, plus lifestyle: portion control, 30min daily cardio, and no sugar. It was not just a shot. Read [what Wegovy is](/what-is-wegovy) and [Mounjaro versus Ozempic](/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results) for UK context.`,
+      },
+      {
+        q: "What qualifies you for Ozempic on the NHS?",
+        a: `Criteria depend on clinical use, local pathways, and medical need. In obesity pathways, thresholds often focus on BMI and comorbidities plus failed lifestyle attempts, but Ozempic itself is mainly a diabetes medicine. A GP or specialist decides. Use the [BMI calculator](/tools/bmi-calculator) before a consultation.`,
+      },
+      {
+        q: "What is the 3-3-3 rule for losing weight?",
+        a: `It is a heuristic: 3 meals under 500cals, 3 veggie/fruit servings, and 30min activity daily. It can support 0.5-1kg/week as a simple tracking aid, but it is not a standalone medical treatment.`,
+      },
+      {
+        q: "Best Nottingham clinics for injections?",
+        a: `Look for specialist or pharmacy-managed services that are GPhC registered, with proper screening, titration, and follow-up. There is no single best centre. Verify private sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+      },
+      {
+        q: "Safe 20kg loss timeline?",
+        a: `A 20kg loss may be possible over about 5 months at roughly 1kg/week with medication and lifestyle support, but it should be monitored through a GP or clinician. Timelines vary by starting weight, side effects, adherence, and health status.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "merthyr-tydfil") {
+    return [
+      {
+        q: "How much does Mounjaro cost in Wales (similar to Scotland)?",
+        a: `Private: £150-250/month (pens + delivery). NHS: Free for BMI 40+ comorbidities, waits 6-12 months. Prices vary by GPhC-registered clinic. Compare current bundles on [Mounjaro price comparison](/mounjaro-price-comparison) and read [what Mounjaro is](/what-is-mounjaro).`,
+      },
+      {
+        q: "What's the best non-surgical fat reduction for Merthyr residents?",
+        a: `Cryolipolysis (fat freezing, 21% per zone, 35-min sessions). Ultrasound close second. Combine with diet for 30% better results. If appetite control is also part of the problem, compare broader pathways on [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "Will T3 thyroid hormone help weight loss?",
+        a: `Only if hypothyroid (prescribed GP). Otherwise risky/ineffective—MHRA warns cardiac issues. Not for normal thyroid. Use the [BMI calculator](/tools/bmi-calculator) as a screening aid and speak to your GP before considering thyroid medication.`,
+      },
+      {
+        q: "What weight loss program works best long-term in South Wales?",
+        a: `Combination: 500-cal deficit + 150min exercise/week + mindfulness. NHS tier 3 or private apps yield 10-15% loss, 70% maintain. Pair medication, if eligible, with [Mounjaro nutrition guide UK](/helpful-guides/mounjaro-nutrition-guide-uk) style habits.`,
+      },
+      {
+        q: "Can I get GLP-1 without GP in Merthyr Tydfil?",
+        a: `Yes, via GPhC online clinics (BMI 30+). But GP shared care ensures monitoring; private may skip. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
+      },
+      {
+        q: "How realistic is NHS weight management here?",
+        a: `Realistic but waits 3-6 months. Starts with lifestyle; meds if eligible. Ask for written milestones. Read [Mounjaro prescription timeline UK](/helpful-guides/mounjaro-prescription-timeline-uk) for how referral and titration pacing can feel in practice.`,
+      },
+    ];
+  }
+
+  if (loc.slug === "neath-port-talbot") {
+    return [
+      {
+        q: "What is the most effective weight loss treatment in Neath Port Talbot?",
+        a: `The most effective option is usually a clinically supervised plan that combines NHS lifestyle support with prescription GLP 1 medicine where appropriate. The best option depends on BMI, medical history, and eligibility. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+      },
+      {
+        q: "How can someone get Mounjaro on NHS in Wales?",
+        a: `A person usually needs assessment through a GP or relevant NHS pathway, and eligibility depends on local criteria, BMI, and related health conditions. It is not available to everyone who asks for it. Read [what Mounjaro is](/what-is-mounjaro) and [Mounjaro prescription timeline UK](/helpful-guides/mounjaro-prescription-timeline-uk) for practical context.`,
+      },
+      {
+        q: "What is the 3-3-3 rule for losing weight?",
+        a: `It is usually an informal habit-based method that encourages a few repeated daily actions. It may help with consistency, but it is not a medical treatment. Pair simple routines with nutrition structure and clinical advice where needed.`,
+      },
+      {
+        q: "Is the NHS 12-week weight loss plan free?",
+        a: `In many cases, NHS support is free at the point of use, but availability and referral routes can differ. The exact pathway depends on local services and eligibility. Use the [BMI calculator](/tools/bmi-calculator) as a preparation aid before a GP conversation.`,
+      },
+      {
+        q: "Are Wegovy and Mounjaro the only good options?",
+        a: `No. Some people do better with lifestyle support alone, while others may be better suited to different treatment routes. The right choice depends on clinical assessment. Read [what Wegovy is](/what-is-wegovy), [what Mounjaro is](/what-is-mounjaro), and [Wegovy versus Mounjaro](/compare/wegovy-vs-mounjaro).`,
+      },
+      {
+        q: "How do I know if private treatment is safe?",
+        a: `Check that the prescriber and pharmacy are properly registered, the follow-up is clear, and the treatment plan includes side-effect monitoring. If anything feels vague, pause before paying. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
       },
     ];
   }
