@@ -10,6 +10,7 @@ const TRUSTPILOT_URL_BY_PROVIDER_ID: Record<string, string> = {
   "ayp-healthcare": "https://uk.trustpilot.com/review/ayp.healthcare",
   "bolt-pharmacy": "https://uk.trustpilot.com/review/boltpharmacy.co.uk",
   "boots-online-doctor": "https://www.trustpilot.com/review/onlinedoctor.boots.com",
+  chequp: "https://uk.trustpilot.com/review/chequp.com",
   click2pharmacy: "https://uk.trustpilot.com/review/click2pharmacy.co.uk",
   "cloud-pharmacy": "https://uk.trustpilot.com/review/www.cloudpharmacy.co.uk",
   curate: "https://uk.trustpilot.com/review/curatehealth.co.uk",
@@ -61,6 +62,7 @@ const TRUSTPILOT_URL_BY_PROVIDER_ID: Record<string, string> = {
   "simple-online-pharmacy":
     "https://uk.trustpilot.com/review/simpleonlinepharmacy.co.uk",
   "slimming-direct": "https://uk.trustpilot.com/review/slimmingdirect.co.uk",
+  "skin-and-shape": "https://uk.trustpilot.com/review/skinandshape.co.uk",
   "superdrug-online-doctor":
     "https://uk.trustpilot.com/review/onlinedoctor.superdrug.com",
   "swift-doctor": "https://www.trustpilot.com/review/swift-doctor.com",
@@ -76,6 +78,12 @@ const TRUSTPILOT_URL_BY_PROVIDER_ID: Record<string, string> = {
   yourpharmacy: "https://uk.trustpilot.com/review/yourpharmacy.uk",
   zava: "https://uk.trustpilot.com/review/zavamed.com/uk",
 };
+
+const HIDDEN_MOUNJARO_COMPARE_PROVIDER_IDS = new Set([
+  "cloud-pharmacy",
+  "fella-health",
+  "quickmeds",
+]);
 
 export type MounjaroUkProviderCompare = {
   id: string;
@@ -223,6 +231,25 @@ const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
       "15mg": 273.98,
     },
     updatedLabel: "27 Apr 2026",
+    consultationIncluded: true,
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
+  },
+  {
+    id: "chequp",
+    name: "Chequp",
+    deliveryNote: "Confirm on site",
+    rating: 4.4,
+    headlineFrom: 162.99,
+    gphcRegNo: "9011284",
+    prices: {
+      "2.5mg": 162.99,
+      "5mg": 202.99,
+      "7.5mg": 262.99,
+      "10mg": 292.99,
+      "12.5mg": 302.99,
+      "15mg": 332.99,
+    },
+    updatedLabel: "May 2026",
     consultationIncluded: true,
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
@@ -838,18 +865,18 @@ const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
     id: "oushk",
     name: "Oushk Pharmacy",
     deliveryNote: "Confirm on site",
-    rating: 4.7,
-    headlineFrom: 155,
+    rating: 4.6,
+    headlineFrom: 173.99,
     gphcRegNo: "9012610",
     prices: {
-      "2.5mg": 155,
-      "5mg": 175,
-      "7.5mg": 225,
-      "10mg": 255,
-      "12.5mg": 275,
-      "15mg": 295,
+      "2.5mg": 173.99,
+      "5mg": 179.98,
+      "7.5mg": 232.98,
+      "10mg": 283.99,
+      "12.5mg": 276.99,
+      "15mg": 314.99,
     },
-    updatedLabel: "29 Apr 2026",
+    updatedLabel: "May 2026",
     consultationIncluded: true,
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
@@ -1101,6 +1128,25 @@ const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
   {
+    id: "skin-and-shape",
+    name: "Skin & Shape",
+    deliveryNote: "Confirm on site",
+    rating: 4.8,
+    headlineFrom: 174.99,
+    gphcRegNo: "9012790",
+    prices: {
+      "2.5mg": 174.99,
+      "5mg": 199.99,
+      "7.5mg": 249.99,
+      "10mg": 279.99,
+      "12.5mg": 299.99,
+      "15mg": 309.99,
+    },
+    updatedLabel: "May 2026",
+    consultationIncluded: true,
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
+  },
+  {
     id: "superdrug-online-doctor",
     name: "Superdrug",
     deliveryNote: "Confirm on site",
@@ -1331,7 +1377,9 @@ const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
 ];
 
 export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] =
-  MOUNJARO_UK_COMPARE_PROVIDERS_BASE.map((p) => ({
+  MOUNJARO_UK_COMPARE_PROVIDERS_BASE.filter(
+    (p) => !HIDDEN_MOUNJARO_COMPARE_PROVIDER_IDS.has(p.id),
+  ).map((p) => ({
     ...p,
     trustpilotUrl: TRUSTPILOT_URL_BY_PROVIDER_ID[p.id] ?? p.trustpilotUrl,
   }));

@@ -6,6 +6,8 @@ import { WEGOVY_UK_COMPARE_PROVIDERS } from "@/lib/data/wegovy-uk-compare-provid
 export const EXTRA_PHARMACY_LANDING_SLUGS: readonly string[] = [
   "ayp-healthcare",
   "bolt-pharmacy",
+  "cloud-pharmacy",
+  "fella-health",
   "farmeci",
   "fylde-clinic",
   "genmeds",
@@ -16,6 +18,7 @@ export const EXTRA_PHARMACY_LANDING_SLUGS: readonly string[] = [
   "hey-slim",
   "medicspot",
   "pharmacy-xpress",
+  "quickmeds",
 ];
 
 /** Every `/pharmacies/:slug` that `generateStaticParams` builds (sitemap + llms must match). */

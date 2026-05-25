@@ -49,6 +49,14 @@ const rows = [
     "1033781",
   ],
   [
+    "chequp",
+    "Chequp",
+    [162.99, 202.99, 262.99, 292.99, 302.99, 332.99],
+    4.4,
+    "9011284",
+    "May 2026",
+  ],
+  [
     "cloud-pharmacy",
     "Cloud Pharmacy",
     [169.28, 179.28, 239.28, 264.28, 279.28, 299.28],
@@ -269,9 +277,10 @@ const rows = [
   [
     "oushk",
     "Oushk Pharmacy",
-    [155, 175, 225, 255, 275, 295],
-    4.7,
+    [173.99, 179.98, 232.98, 283.99, 276.99, 314.99],
+    4.6,
     "9012610",
+    "May 2026",
   ],
   [
     "pharmacy-advance",
@@ -365,6 +374,14 @@ const rows = [
     "1031513",
   ],
   [
+    "skin-and-shape",
+    "Skin & Shape",
+    [174.99, 199.99, 249.99, 279.99, 299.99, 309.99],
+    4.8,
+    "9012790",
+    "May 2026",
+  ],
+  [
     "superdrug-online-doctor",
     "Superdrug",
     [180.5, 193.5, 271.5, 306.5, 318.5, 338.5],
@@ -444,10 +461,8 @@ const rows = [
   ],
 ];
 
-const keys = ["2.5mg", "5mg", "7.5mg", "10mg", "12.5mg", "15mg"];
-
 let out = "";
-for (const [id, name, six, rating, gphc] of rows) {
+for (const [id, name, six, rating, gphc, updatedLabel = U] of rows) {
   const [a, b, c, d, e, f] = six;
   const min = Math.min(a, b, c, d, e, f);
   const hf = Math.round(min * 100) / 100;
@@ -466,7 +481,7 @@ for (const [id, name, six, rating, gphc] of rows) {
       "12.5mg": ${e},
       "15mg": ${f},
     },
-    updatedLabel: ${JSON.stringify(U)},
+    updatedLabel: ${JSON.stringify(updatedLabel)},
     consultationIncluded: true,
     ctaHref: ${JSON.stringify(CTA)},
   },

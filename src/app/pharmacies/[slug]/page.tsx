@@ -8,6 +8,7 @@ import AshcroftPharmacyContent from "@/components/pharmacies/content/AshcroftPha
 import AypHealthcareContent from "@/components/pharmacies/content/AypHealthcareContent";
 import BoltPharmacyContent from "@/components/pharmacies/content/BoltPharmacyContent";
 import BootsOnlineDoctorContent from "@/components/pharmacies/content/BootsOnlineDoctorContent";
+import ChequpPharmacyContent from "@/components/pharmacies/content/ChequpPharmacyContent";
 import Click2PharmacyMounjaroContent from "@/components/pharmacies/content/Click2PharmacyMounjaroContent";
 import CloudPharmacyContent from "@/components/pharmacies/content/CloudPharmacyContent";
 import CuratePharmacyContent from "@/components/pharmacies/content/CuratePharmacyContent";
@@ -55,6 +56,7 @@ import Pills2uPharmacyContent from "@/components/pharmacies/content/Pills2uPharm
 import QuickmedsPharmacyContent from "@/components/pharmacies/content/QuickmedsPharmacyContent";
 import SecondNaturePharmacyContent from "@/components/pharmacies/content/SecondNaturePharmacyContent";
 import Shape8PharmacyContent from "@/components/pharmacies/content/Shape8PharmacyContent";
+import SkinAndShapePharmacyContent from "@/components/pharmacies/content/SkinAndShapePharmacyContent";
 import SimpleOnlinePharmacyContent from "@/components/pharmacies/content/SimpleOnlinePharmacyContent";
 import SlimmingDirectPharmacyContent from "@/components/pharmacies/content/SlimmingDirectPharmacyContent";
 import SuperdrugOnlineDoctorContent from "@/components/pharmacies/content/SuperdrugOnlineDoctorContent";
@@ -233,6 +235,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Click2Pharmacy Mounjaro review (UK) — buying Mounjaro injections online";
     const description =
       "Click2Pharmacy: Mounjaro-focused online consultation, prescription approval, delivery notes, pricing context and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "chequp") {
+    const title =
+      "CheqUp Pharmacy weight loss review (UK) — clinician-led support";
+    const description =
+      "CheqUp Pharmacy: clinician-led online weight management, Wegovy, Mounjaro and Alli context, health coaching, clinical support and delivery notes. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -1127,6 +1147,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  if (slug === "skin-and-shape") {
+    const title =
+      "Skin & Shape Pharmacy weight management review (UK) — pharmacist-led care";
+    const description =
+      "Skin & Shape Pharmacy: pharmacist-led online weight management, consultation process, regulated treatment access, discreet delivery, pricing context and support notes. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
   if (slug === "care-pharmacy") {
     const title =
       "The Care Pharmacy Weight Loss Review — Mounjaro, Wegovy, UK delivery (UK)";
@@ -1494,6 +1532,32 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <Click2PharmacyMounjaroContent />
+      </>
+    );
+  }
+
+  if (slug === "chequp") {
+    const title =
+      "CheqUp Pharmacy weight loss review (UK) — clinician-led support";
+    const description =
+      "CheqUp Pharmacy: clinician-led online weight management, Wegovy, Mounjaro and Alli context, health coaching, clinical support and delivery notes. Information from Health Wise — not medical advice.";
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyProfileJsonGraph({
+                slug,
+                name: "CheqUp Pharmacy",
+                title,
+                description,
+              }),
+            ),
+          }}
+        />
+        <ChequpPharmacyContent />
       </>
     );
   }
@@ -2174,6 +2238,32 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <Shape8PharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "skin-and-shape") {
+    const title =
+      "Skin & Shape Pharmacy weight management review (UK) — pharmacist-led care";
+    const description =
+      "Skin & Shape Pharmacy: pharmacist-led online weight management, consultation process, regulated treatment access, discreet delivery, pricing context and support notes. Information from Health Wise — not medical advice.";
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyProfileJsonGraph({
+                slug,
+                name: "Skin & Shape Pharmacy",
+                title,
+                description,
+              }),
+            ),
+          }}
+        />
+        <SkinAndShapePharmacyContent />
       </>
     );
   }
