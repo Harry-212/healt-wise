@@ -19,9 +19,11 @@ const pharmacyCompareLinkClass =
 export function PharmacyHeroProviderLogo({
   src,
   alt,
+  className = "h-16 w-auto max-w-[min(100%,18rem)] object-contain object-center sm:h-18 md:h-20 md:max-w-[min(100%,22rem)]",
 }: {
   src: string;
   alt: string;
+  className?: string;
 }) {
   return (
     <div className="mb-5 flex justify-center sm:mb-6">
@@ -31,7 +33,7 @@ export function PharmacyHeroProviderLogo({
         width={400}
         height={150}
         sizes="(max-width: 640px) 240px, 300px"
-        className="h-16 w-auto max-w-[min(100%,18rem)] object-contain object-center sm:h-18 md:h-20 md:max-w-[min(100%,22rem)]"
+        className={className}
       />
     </div>
   );
@@ -253,6 +255,7 @@ export function PharmacyDossierPage({
   /** Centered above the title card, outside the hero container (e.g. retailer mark). */
   heroProviderLogoSrc,
   heroProviderLogoAlt = "",
+  heroProviderLogoClassName,
   children,
 }: {
   slugLabel: string;
@@ -269,6 +272,7 @@ export function PharmacyDossierPage({
   brandDisclaimerVariant?: "text" | "logo";
   heroProviderLogoSrc?: string;
   heroProviderLogoAlt?: string;
+  heroProviderLogoClassName?: string;
   children: ReactNode;
 }) {
   const [copied, setCopied] = useState(false);
@@ -324,6 +328,7 @@ export function PharmacyDossierPage({
           <PharmacyHeroProviderLogo
             src={heroProviderLogoSrc}
             alt={heroProviderLogoAlt || `${slugLabel} logo`}
+            className={heroProviderLogoClassName}
           />
         ) : null}
 
