@@ -28,6 +28,7 @@ import GoodBodyClinicPharmacyContent from "@/components/pharmacies/content/GoodB
 import HappyPharmacyContent from "@/components/pharmacies/content/HappyPharmacyContent";
 import HeySlimPharmacyContent from "@/components/pharmacies/content/HeySlimPharmacyContent";
 import IqDoctorPharmacyContent from "@/components/pharmacies/content/IqDoctorPharmacyContent";
+import JoodLifePharmacyContent from "@/components/pharmacies/content/JoodLifePharmacyContent";
 import JuniperPharmacyContent from "@/components/pharmacies/content/JuniperPharmacyContent";
 import LiveWellWeightLossPharmacyContent from "@/components/pharmacies/content/LiveWellWeightLossPharmacyContent";
 import LloydsPharmacyOnlineDoctorContent from "@/components/pharmacies/content/LloydsPharmacyOnlineDoctorContent";
@@ -612,6 +613,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "IQ Doctor Weight Loss Review: Mounjaro, Wegovy, Saxenda, tablets (UK)";
     const description =
       "IQ Doctor: online questionnaire, UK prescriber review, Royal Mail/DPD delivery, cold chain for injectables, indicative pricing and FAQs. Information from Health Wise — not medical advice.";
+    return {
+      title,
+      description,
+      alternates: { canonical },
+      openGraph: {
+        type: "website",
+        url: canonical,
+        title,
+        description,
+      },
+    };
+  }
+
+  if (slug === "jood-life") {
+    const title =
+      "Jood Life Pharmacy weight loss review (UK) — online prescriber support";
+    const description =
+      "Jood Life Pharmacy: online consultation, licensed UK prescriber review, transparent pricing from £89/month, delivery context and ongoing support. Information from Health Wise — not medical advice.";
     return {
       title,
       description,
@@ -1828,6 +1847,32 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <IqDoctorPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "jood-life") {
+    const title =
+      "Jood Life Pharmacy weight loss review (UK) — online prescriber support";
+    const description =
+      "Jood Life Pharmacy: online consultation, licensed UK prescriber review, transparent pricing from £89/month, delivery context and ongoing support. Information from Health Wise — not medical advice.";
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyProfileJsonGraph({
+                slug,
+                name: "Jood Life Pharmacy",
+                title,
+                description,
+              }),
+            ),
+          }}
+        />
+        <JoodLifePharmacyContent />
       </>
     );
   }
