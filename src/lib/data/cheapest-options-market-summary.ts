@@ -7,6 +7,7 @@ import {
   SAXENDA_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/saxenda-uk-compare-providers";
 import {
+  wegovyPriceAmount,
   WEGOVY_UK_COMPARE_LAST_UPDATED,
   WEGOVY_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/wegovy-uk-compare-providers";
@@ -66,8 +67,14 @@ export function getCheapestOptionsMarketSummary(): CheapestOptionsMarketSummary 
   const mounjaro = MOUNJARO_UK_COMPARE_PROVIDERS;
   const saxenda = SAXENDA_UK_COMPARE_PROVIDERS;
 
-  const wegovy025 = wegovy.map((p) => p.prices["0.25mg"]);
-  const wegovy024 = wegovy.map((p) => p.prices["2.4mg"]);
+  const wegovy025 = wegovy.flatMap((p) => {
+    const amount = wegovyPriceAmount(p.prices["0.25mg"]);
+    return amount == null ? [] : [amount];
+  });
+  const wegovy024 = wegovy.flatMap((p) => {
+    const amount = wegovyPriceAmount(p.prices["2.4mg"]);
+    return amount == null ? [] : [amount];
+  });
   const mounj25 = mounjaro.map((p) => p.prices["2.5mg"]);
   const mounj15 = mounjaro.map((p) => p.prices["15mg"]);
   const sax1 = saxenda.map((p) => p.packs["1"].packPrice);
@@ -79,7 +86,10 @@ export function getCheapestOptionsMarketSummary(): CheapestOptionsMarketSummary 
   const minPack1 = Math.min(...sax1);
   const maxPack1 = Math.max(...sax1);
 
-  const pW = argMinBy(wegovy, (p) => p.prices["0.25mg"]);
+  const pW = argMinBy(
+    wegovy,
+    (p) => wegovyPriceAmount(p.prices["0.25mg"]) ?? Number.POSITIVE_INFINITY,
+  );
   const pM = argMinBy(mounjaro, (p) => p.prices["2.5mg"]);
   const pS = argMinBy(saxenda, (p) => p.packs["1"].packPrice);
 
