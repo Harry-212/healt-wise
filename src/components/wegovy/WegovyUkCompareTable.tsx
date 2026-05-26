@@ -19,8 +19,10 @@ import CompareFilterBar, {
   type CompareSortPreset,
 } from "@/components/compare/CompareFilterBar";
 import {
+  formatWegovyPriceCell,
   pharmacyProfileHref,
   startingPrice,
+  wegovyPriceAmount,
   WEGOVY_DOSE_KEYS,
   type WegovyDoseColumnKey,
   type WegovyUkProviderCompare,
@@ -70,12 +72,19 @@ function presetToWegovySort(v: CompareSortPreset): WegovyTableSort {
   }
 }
 
-function doseHeaderLabel(key: WegovyDoseColumnKey): string {
-  return key.replace("mg", " mg");
+function compareNullablePrices(
+  a: number | null,
+  b: number | null,
+  dir: "asc" | "desc",
+) {
+  if (a == null && b == null) return 0;
+  if (a == null) return 1;
+  if (b == null) return -1;
+  return (a - b) * (dir === "asc" ? 1 : -1);
 }
 
-function formatGBP(n: number) {
-  return `£${Number.isInteger(n) ? n : n.toFixed(2)}`;
+function doseHeaderLabel(key: WegovyDoseColumnKey): string {
+  return key.replace("mg", " mg");
 }
 
 export default function WegovyUkCompareTable({
@@ -109,11 +118,11 @@ export default function WegovyUkCompareTable({
 
     let rows = providers.filter((p) => {
       const priceForFilter =
-        doseFilter === "all" ? startingPrice(p) : p.prices[doseFilter];
-      if (
-        doseFilter !== "all" &&
-        (!Number.isFinite(priceForFilter) || priceForFilter <= 0)
-      ) {
+        doseFilter === "all"
+          ? startingPrice(p)
+          : wegovyPriceAmount(p.prices[doseFilter]);
+      if (priceForFilter == null) return false;
+      if (doseFilter !== "all" && (!Number.isFinite(priceForFilter) || priceForFilter <= 0)) {
         return false;
       }
       if (q && !p.name.toLowerCase().includes(q)) return false;
@@ -126,7 +135,9 @@ export default function WegovyUkCompareTable({
     });
 
     const priceForComposite = (p: WegovyUkProviderCompare) =>
-      doseFilter === "all" ? startingPrice(p) : p.prices[doseFilter];
+      doseFilter === "all"
+        ? startingPrice(p)
+        : (wegovyPriceAmount(p.prices[doseFilter]) ?? Number.POSITIVE_INFINITY);
 
     rows = [...rows].sort((a, b) => {
       switch (tableSort.key) {
@@ -139,10 +150,11 @@ export default function WegovyUkCompareTable({
             ? b.rating - a.rating
             : a.rating - b.rating;
         case "dose":
-          return (
-            (a.prices[tableSort.dose] - b.prices[tableSort.dose]) *
-            (tableSort.dir === "asc" ? 1 : -1)
-          );
+          {
+            const aPrice = wegovyPriceAmount(a.prices[tableSort.dose]);
+            const bPrice = wegovyPriceAmount(b.prices[tableSort.dose]);
+            return compareNullablePrices(aPrice, bPrice, tableSort.dir);
+          }
         case "composite":
           return (
             (priceForComposite(a) - priceForComposite(b)) *
@@ -158,8 +170,12 @@ export default function WegovyUkCompareTable({
 
     const doseMins: Partial<Record<WegovyDoseColumnKey, number>> = {};
     for (const k of visibleDoseKeys) {
-      if (rows.length > 0) {
-        doseMins[k] = Math.min(...rows.map((r) => r.prices[k]));
+      const vals = rows.flatMap((r) => {
+        const amount = wegovyPriceAmount(r.prices[k]);
+        return amount == null ? [] : [amount];
+      });
+      if (vals.length > 0) {
+        doseMins[k] = Math.min(...vals);
       }
     }
 
@@ -501,7 +517,8 @@ export default function WegovyUkCompareTable({
                   const start =
                     doseFilter === "all"
                       ? startingPrice(p)
-                      : p.prices[doseFilter];
+                      : (wegovyPriceAmount(p.prices[doseFilter]) ??
+                        Number.POSITIVE_INFINITY);
                   const isLowestRow =
                     processed.minStart != null && start === processed.minStart;
                   const profile = pharmacyProfileHref(p.id);
@@ -559,9 +576,10 @@ export default function WegovyUkCompareTable({
                       </td>
                       {visibleDoseKeys.map((k) => {
                         const v = p.prices[k];
+                        const amount = wegovyPriceAmount(v);
                         const isColMin =
                           processed.doseMins[k] != null &&
-                          v === processed.doseMins[k];
+                          amount === processed.doseMins[k];
                         return (
                           <td
                             key={k}
@@ -571,7 +589,7 @@ export default function WegovyUkCompareTable({
                                 : ""
                             }`}
                           >
-                            {formatGBP(v)}
+                            {formatWegovyPriceCell(v)}
                           </td>
                         );
                       })}

@@ -8,6 +8,7 @@ import {
   ReviewsCell,
 } from "@/components/content/previews/medication-compare-price-preview-ui";
 import {
+  formatWegovyPriceCell,
   pharmacyProfileHref,
   startingPrice as wegovyStartingPrice,
   WEGOVY_DOSE_KEYS,
@@ -99,7 +100,7 @@ export default function MedicationComparePricePreviewWegovy() {
                     key={k}
                     className="px-2 py-2.5 text-center tabular-nums text-slate-700"
                   >
-                    {formatPrice(p.prices[k])}
+                    {formatWegovyPriceCell(p.prices[k])}
                   </td>
                 ))}
               </tr>
