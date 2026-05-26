@@ -73,6 +73,7 @@ import WellPharmacyContent from "@/components/pharmacies/content/WellPharmacyCon
 import YourPharmacyPharmacyContent from "@/components/pharmacies/content/YourPharmacyPharmacyContent";
 import ZavaPharmacyContent from "@/components/pharmacies/content/ZavaPharmacyContent";
 import {
+  formatWegovyPriceCell,
   getWegovyCompareProviderById,
   pharmacyProfileHref,
   startingPrice as wegovyStartingPrice,
@@ -2669,7 +2670,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
                   <tr key={k} className="border-b border-slate-100 last:border-0">
                     <td className="px-4 py-3 text-slate-800">{k}</td>
                     <td className="px-4 py-3 tabular-nums font-medium text-slate-900">
-                      £{w.prices[k]}
+                      {formatWegovyPriceCell(w.prices[k])}
                     </td>
                   </tr>
                 ))}
