@@ -1,9 +1,8 @@
-import fs from "fs";
-import path from "path";
 import type { MetadataRoute } from "next";
 import {
-  getAllBlogSitemapSlugs,
-  getAllPostsMeta,
+  CURATED_APP_ROUTER_POSTS,
+  CURATED_BLOG_ARTICLE_SLUGS,
+  getAllUkLocationArticleSlugs,
   totalPages,
 } from "@/lib/blog";
 import { POSTS_PER_PAGE } from "@/lib/blog-feed";
@@ -12,20 +11,12 @@ import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
+  HELPFUL_GUIDE_SLUGS,
   HELPFUL_GUIDES_HUB_PATH,
   helpfulGuidePath,
 } from "@/lib/helpful-guide-slugs";
-/** Guide URLs under /helpful-guides/: only folders on disk with a page.tsx file. */
-function helpfulGuideSlugsOnDisk(): string[] {
-  const base = path.join(process.cwd(), "src", "app", "helpful-guides");
-  if (!fs.existsSync(base)) return [];
-  return fs
-    .readdirSync(base, { withFileTypes: true })
-    .filter((e) => e.isDirectory())
-    .map((e) => e.name)
-    .filter((slug) => fs.existsSync(path.join(base, slug, "page.tsx")))
-    .sort();
-}
+
+const STATIC_BLOG_SLUGS = ["uk-weight-loss"] as const;
 
 /** Fixed App Router paths without dynamic segments. */
 const STATIC_PATHS = [
@@ -89,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push(path, priority);
   }
 
-  for (const slug of helpfulGuideSlugsOnDisk()) {
+  for (const slug of HELPFUL_GUIDE_SLUGS) {
     push(helpfulGuidePath(slug), 0.72);
   }
 
@@ -104,11 +95,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push(`/pharmacies/${id}`, 0.72);
   }
 
-  for (const slug of getAllBlogSitemapSlugs()) {
+  const ukLocationBlogSlugs = getAllUkLocationArticleSlugs();
+  const blogSlugs = new Set<string>([
+    ...CURATED_BLOG_ARTICLE_SLUGS,
+    ...STATIC_BLOG_SLUGS,
+    ...ukLocationBlogSlugs,
+  ]);
+  for (const slug of [...blogSlugs].sort()) {
     push(`/blog/${slug}`, 0.65);
   }
 
-  const blogCount = getAllPostsMeta().length;
+  const blogCount =
+    CURATED_APP_ROUTER_POSTS.length +
+    STATIC_BLOG_SLUGS.length +
+    ukLocationBlogSlugs.length;
   const pages = totalPages(blogCount, POSTS_PER_PAGE);
   for (let p = 2; p <= pages; p++) {
     push(`/blog/page/${p}`, 0.5);
