@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "weight-loss-treatment-price-comparison-uk",
+    title: "Weight Loss Treatment Price Comparison UK 2026: Mounjaro and Wegovy",
+    date: "2026-05-27",
+    category: "Prices",
+    description:
+      "Compare weight loss treatment prices in the UK 2026 covering Mounjaro, Wegovy and Saxenda. Cost per dose, monthly estimates and what to check before you start.",
+    heroImage: "/blog/weight-loss-treatment-price-comparison-uk.png",
+    feedTags: ["wegovy", "mounjaro", "safety"],
+  },
+  {
     slug: "does-stress-cause-belly-fat",
     title: "Does Stress Cause Belly Fat?",
     date: "2026-05-09",
