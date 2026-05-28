@@ -12,11 +12,7 @@ export type WegovyUkCompareBadge = "mostPopular" | "bestValue";
 export type WegovyPriceCell =
   | number
   | "TBC"
-  | "OOS"
-  | {
-      amount: number;
-      suffix: "*";
-    };
+  | "OOS";
 
 export type WegovyUkProviderCompare = {
   id: string;
@@ -52,18 +48,12 @@ type WegovyPriceRow = WegovyUkProviderCompare["prices"];
 
 export function wegovyPriceAmount(cell: WegovyPriceCell): number | null {
   if (typeof cell === "number") return cell;
-  if (typeof cell === "object") return cell.amount;
   return null;
 }
 
 export function formatWegovyPriceCell(cell: WegovyPriceCell): string {
   if (typeof cell === "number") {
     return `£${Number.isInteger(cell) ? cell : cell.toFixed(2)}`;
-  }
-  if (typeof cell === "object") {
-    return `£${
-      Number.isInteger(cell.amount) ? cell.amount : cell.amount.toFixed(2)
-    }${cell.suffix}`;
   }
   return cell;
 }
@@ -149,12 +139,12 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "7.2mg": "TBC",
   },
   "dr-weightmans": {
-    "0.25mg": { amount: 94.99, suffix: "*" },
-    "0.5mg": { amount: 104.99, suffix: "*" },
-    "1mg": { amount: 114.99, suffix: "*" },
-    "1.7mg": { amount: 129.99, suffix: "*" },
-    "2.4mg": { amount: 154.99, suffix: "*" },
-    "7.2mg": { amount: 224.99, suffix: "*" },
+    "0.25mg": 94.99,
+    "0.5mg": 104.99,
+    "1mg": 114.99,
+    "1.7mg": 129.99,
+    "2.4mg": 154.99,
+    "7.2mg": 224.99,
   },
   envigore: {
     "0.25mg": 135,
@@ -506,7 +496,7 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "1mg": 119.99,
     "1.7mg": 163.99,
     "2.4mg": 217.99,
-    "7.2mg": { amount: 573.99, suffix: "*" },
+    "7.2mg": 573.99,
   },
   voy: {
     "0.25mg": 144,
