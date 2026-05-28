@@ -9,10 +9,7 @@ export const WEGOVY_UK_COMPARE_LAST_UPDATED = "May 2026";
 
 export type WegovyUkCompareBadge = "mostPopular" | "bestValue";
 
-export type WegovyPriceCell =
-  | number
-  | "TBC"
-  | "OOS";
+export type WegovyPriceCell = number | "TBC" | "OOS";
 
 export type WegovyUkProviderCompare = {
   id: string;
@@ -296,7 +293,7 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "1mg": 119.99,
     "1.7mg": 179.99,
     "2.4mg": 229.99,
-    "7.2mg": 649,
+    "7.2mg": "TBC",
   },
   "my-london-pharmacy": {
     "0.25mg": 91,
@@ -360,7 +357,7 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "1mg": 114.99,
     "1.7mg": 159.99,
     "2.4mg": 209.99,
-    "7.2mg": 599.99,
+    "7.2mg": "TBC",
   },
   pharmacy2u: {
     "0.25mg": 101.24,
@@ -496,7 +493,7 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "1mg": 119.99,
     "1.7mg": 163.99,
     "2.4mg": 217.99,
-    "7.2mg": 573.99,
+    "7.2mg": "TBC",
   },
   voy: {
     "0.25mg": 144,
