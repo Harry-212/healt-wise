@@ -93,6 +93,27 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "wegovy-price-uk",
+    title: "Wegovy Price UK 2026: How Much Does Each Dose Cost and Is It Worth It?",
+    date: "2026-05-28",
+    category: "Prices",
+    description:
+      "How much does Wegovy cost in the UK in 2026? Full price breakdown by dose, monthly estimates, NHS vs private, and how it compares to Mounjaro.",
+    heroImage: "/blog/wegovy%20price%20uk.webp",
+    feedTags: ["wegovy", "guides", "safety"],
+  },
+  {
+    slug: "mounjaro-price-uk",
+    title:
+      "Mounjaro Price UK 2026: How Much Does Each Dose Cost and Where to Find It",
+    date: "2026-05-28",
+    category: "Prices",
+    description:
+      "How much does Mounjaro cost in the UK in 2026? Full price breakdown by dose, monthly estimates, and what to check before buying from any pharmacy.",
+    heroImage: "/blog/price%20mounjaro%202026.webp",
+    feedTags: ["mounjaro", "guides", "safety"],
+  },
+  {
     slug: "weight-loss-treatment-price-comparison-uk",
     title: "Weight Loss Treatment Price Comparison UK 2026: Mounjaro and Wegovy",
     date: "2026-05-27",
