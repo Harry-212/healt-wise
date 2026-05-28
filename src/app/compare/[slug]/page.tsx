@@ -30,6 +30,9 @@ import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const COMPARE_SLUG_PHOTO_HERO: Record<string, { src: string; alt: string }> = {
   "wegovy-vs-mounjaro": {
     src: COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_SRC,
