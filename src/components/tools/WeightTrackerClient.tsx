@@ -96,6 +96,10 @@ const BENEFITS = [
   },
 ];
 
+function unitLabel(unit: WeightUnit): string {
+  return unit === "stone" ? "st" : unit;
+}
+
 /* ──────────────────────────────────────────────────────── animated count-up */
 function CountUp({ to, decimals = 1, suffix = "" }: { to: number; decimals?: number; suffix?: string }) {
   const motionVal = useMotionValue(0);
@@ -495,6 +499,7 @@ export default function WeightTrackerClient() {
 
   const sorted = useMemo(() => sortEntriesByDate(entries), [entries]);
   const unit = goals.preferredUnit;
+  const displayUnit = unitLabel(unit);
   const metrics = useMemo(() => computeMetrics(sorted, goals.goalWeightKg), [sorted, goals.goalWeightKg]);
 
   const chartData = useMemo(
@@ -823,10 +828,10 @@ export default function WeightTrackerClient() {
                 value={goalInput}
                 onChange={(e) => setGoalInput(e.target.value)}
                 onBlur={handleGoalSave}
-                placeholder={`e.g. 70 ${unit}`}
+                placeholder={`e.g. 70 ${displayUnit}`}
                 className="w-24 rounded-lg border border-white/20 bg-white/10 px-2 py-1 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-emerald-400"
               />
-              <span className="text-xs text-slate-400">{unit}</span>
+              <span className="text-xs text-slate-400">{displayUnit}</span>
               {metrics.estimatedGoalDate && (
                 <span className="ml-auto text-xs text-slate-400">
                   Est. goal date:{" "}
@@ -854,7 +859,7 @@ export default function WeightTrackerClient() {
                     label="Total weight lost"
                     value={
                       metrics.totalLossKg != null
-                        ? <><CountUp to={parseFloat(fromKg(metrics.totalLossKg, unit).toFixed(1))} /> {unit}</>
+                        ? <><CountUp to={parseFloat(fromKg(metrics.totalLossKg, unit).toFixed(1))} /> {displayUnit}</>
                         : "—"
                     }
                     sub="Since first entry"
@@ -877,7 +882,7 @@ export default function WeightTrackerClient() {
                     label="Weekly avg loss"
                     value={
                       metrics.weeklyAvgLossKg != null
-                        ? <><CountUp to={parseFloat(fromKg(metrics.weeklyAvgLossKg, unit).toFixed(2))} decimals={2} />{" "}{unit}/wk</>
+                        ? <><CountUp to={parseFloat(fromKg(metrics.weeklyAvgLossKg, unit).toFixed(2))} decimals={2} />{" "}{displayUnit}/wk</>
                         : "—"
                     }
                     sub="Based on all entries"
@@ -915,7 +920,7 @@ export default function WeightTrackerClient() {
                 <div className="rounded-2xl border border-slate-200/80 bg-slate-50/60 p-4 sm:p-6">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
                     <p className="text-sm font-semibold text-slate-800">Weight over time</p>
-                    <p className="text-xs text-slate-500">Values in {unit}</p>
+                    <p className="text-xs text-slate-500">Values in {displayUnit}</p>
                   </div>
                   {chartData.length > 0 ? (
                     <RechartsShell heightPx={260}>
@@ -940,7 +945,7 @@ export default function WeightTrackerClient() {
                               fontSize: 12,
                               padding: "8px 12px",
                             }}
-                            formatter={(v) => [`${v} ${unit}`, "Weight"]}
+                            formatter={(v) => [`${v} ${displayUnit}`, "Weight"]}
                           />
                           {goalLineVal != null && (
                             <ReferenceLine
@@ -1052,7 +1057,7 @@ export default function WeightTrackerClient() {
                                   ) : (
                                     <span className={changeDisplay < 0 ? "font-semibold text-emerald-600" : "text-rose-500"}>
                                       {changeDisplay > 0 ? "+" : ""}
-                                      {changeDisplay.toFixed(1)} {unit}
+                                      {changeDisplay.toFixed(1)} {displayUnit}
                                     </span>
                                   )}
                                 </td>
@@ -1063,7 +1068,7 @@ export default function WeightTrackerClient() {
                                   {row.notes || "—"}
                                 </td>
                                 <td className="px-4 py-3">
-                                  <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                  <div className="flex items-center gap-1">
                                     <button
                                       type="button"
                                       onClick={() => setModal({ mode: "edit", entry: row })}

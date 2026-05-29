@@ -118,11 +118,13 @@ export function fromKg(kg: number, unit: WeightUnit): number {
 export function formatWeight(kg: number, unit: WeightUnit): string {
   const v = fromKg(kg, unit);
   if (unit === "stone") {
-    const st = Math.floor(v);
-    const lb = Math.round((v - st) * 14 * 10) / 10;
-    return `${st} st ${lb} lb`;
+    return `${formatNumber(v)} st`;
   }
   return `${v.toFixed(1)} ${unit}`;
+}
+
+function formatNumber(value: number): string {
+  return Number.isInteger(value) ? value.toFixed(0) : value.toFixed(1);
 }
 
 export function sortEntriesByDate(entries: TrackerEntry[]): TrackerEntry[] {
