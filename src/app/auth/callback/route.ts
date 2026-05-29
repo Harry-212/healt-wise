@@ -1,9 +1,11 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
+import { siteOrigin } from "@/lib/seo/site-origin";
 
 export async function GET(request: Request) {
-  const { searchParams, origin } = new URL(request.url);
+  const { searchParams } = new URL(request.url);
+  const origin = siteOrigin();
   const code = searchParams.get("code");
   let next = searchParams.get("next") ?? "/tools/weight-loss-tracker";
   if (!next.startsWith("/")) {

@@ -2,6 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
+import { siteOrigin } from "@/lib/seo/site-origin";
 
 /**
  * PKCE / SSR email links (signup, recovery, etc.): verify token on the server
@@ -12,6 +13,7 @@ import { NextResponse } from "next/server";
  */
 export async function GET(request: Request) {
   const requestUrl = new URL(request.url);
+  const origin = siteOrigin();
   const token_hash = requestUrl.searchParams.get("token_hash");
   const type = requestUrl.searchParams.get("type") as EmailOtpType | null;
   let next = requestUrl.searchParams.get("next") ?? "/tools/weight-loss-tracker";
@@ -22,7 +24,7 @@ export async function GET(request: Request) {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  const toError = () => NextResponse.redirect(new URL("/auth/auth-code-error", requestUrl.origin));
+  const toError = () => NextResponse.redirect(new URL("/auth/auth-code-error", origin));
 
   if (!token_hash || !type || !url || !key) {
     return toError();
@@ -51,5 +53,5 @@ export async function GET(request: Request) {
     return toError();
   }
 
-  return NextResponse.redirect(new URL(next, requestUrl.origin));
+  return NextResponse.redirect(new URL(next, origin));
 }
