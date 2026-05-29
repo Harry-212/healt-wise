@@ -10,6 +10,8 @@ import { createBrowserSupabaseClient } from "@/lib/supabase/client";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 
+const CANONICAL_SITE_URL = "https://www.healthwise360.co.uk";
+
 function getAuthRedirectUrl(): string {
   const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "");
   if (configuredSiteUrl) {
@@ -18,8 +20,7 @@ function getAuthRedirectUrl(): string {
 
   const origin = new URL(window.location.origin);
   if (origin.hostname === "0.0.0.0") {
-    origin.protocol = "http:";
-    origin.hostname = "localhost";
+    return `${CANONICAL_SITE_URL}/auth/confirm`;
   }
 
   return `${origin.origin}/auth/confirm`;
