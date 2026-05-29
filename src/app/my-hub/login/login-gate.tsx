@@ -10,6 +10,21 @@ import { createBrowserSupabaseClient } from "@/lib/supabase/client";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 
+function getAuthRedirectUrl(): string {
+  const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "");
+  if (configuredSiteUrl) {
+    return `${configuredSiteUrl}/auth/confirm`;
+  }
+
+  const origin = new URL(window.location.origin);
+  if (origin.hostname === "0.0.0.0") {
+    origin.protocol = "http:";
+    origin.hostname = "localhost";
+  }
+
+  return `${origin.origin}/auth/confirm`;
+}
+
 export default function LoginGate({
   initialSignup,
   initialForgot,
@@ -64,7 +79,7 @@ export default function LoginGate({
     try {
       if (forgot) {
         // Use a single-path redirectTo (allowed in Supabase) + token_hash link in email → /auth/confirm (PKCE/SSR).
-        const redirectUrl = `${window.location.origin}/auth/confirm`;
+        const redirectUrl = getAuthRedirectUrl();
         const { error: resetError } = await supabase.auth.resetPasswordForEmail(email, {
           redirectTo: redirectUrl,
         });
@@ -79,7 +94,7 @@ export default function LoginGate({
       }
 
       if (signup) {
-        const redirectUrl = `${window.location.origin}/auth/confirm`;
+        const redirectUrl = getAuthRedirectUrl();
         const { data, error: signUpError } = await supabase.auth.signUp({
           email,
           password,

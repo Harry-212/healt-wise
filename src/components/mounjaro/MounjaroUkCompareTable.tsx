@@ -195,10 +195,10 @@ export default function MounjaroUkCompareTable({
       ? "from lowest pen"
       : `for ${doseHeaderLabel(doseFilter)}`;
 
-  const colCount = 1 + visibleDoseKeys.length + 3;
+  const colCount = 1 + visibleDoseKeys.length + 4;
 
   const providerThClass =
-    "sticky left-0 z-50 w-[9rem] sm:w-[14rem] border-b border-r border-slate-200/90 bg-slate-50 px-2 py-3 pl-3 sm:px-3 sm:pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
+    "sticky left-0 z-50 w-24 sm:w-32 border-b border-r border-slate-200/90 bg-slate-50 px-2 py-3 pl-3 sm:px-3 sm:pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
 
   return (
     <div className="space-y-4">
@@ -478,6 +478,12 @@ export default function MounjaroUkCompareTable({
                 </th>
                 <th
                   scope="col"
+                  className="w-22 sm:w-28 border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                >
+                  Notes
+                </th>
+                <th
+                  scope="col"
                   className="w-[5rem] sm:w-[6.5rem] border-b border-slate-200/90 bg-slate-50 px-3 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   Updated
@@ -522,18 +528,18 @@ export default function MounjaroUkCompareTable({
                       }`}
                     >
                       <td
-                        className={`sticky left-0 z-10 border-r border-slate-200/80 px-2 py-2.5 pl-3 sm:px-3 sm:pl-4 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] ${stickyProviderBg}`}
+                        className={`sticky left-0 z-10 w-24 border-r border-slate-200/80 px-2 py-2.5 pl-3 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] sm:w-32 sm:px-3 sm:pl-4 ${stickyProviderBg}`}
                       >
                         <div className="flex flex-col gap-1.5">
                           {linkProfile ? (
                             <Link
                               href={profile}
-                              className="font-semibold text-violet-800 underline decoration-violet-300/70 underline-offset-2 transition hover:text-violet-950 hover:decoration-violet-600"
+                              className="block max-w-20 whitespace-normal wrap-break-word font-semibold leading-snug text-violet-800 underline decoration-violet-300/70 underline-offset-2 transition hover:text-violet-950 hover:decoration-violet-600 sm:max-w-26"
                             >
                               {p.name}
                             </Link>
                           ) : (
-                            <span className="font-semibold text-slate-900">
+                            <span className="block max-w-20 whitespace-normal wrap-break-word font-semibold leading-snug text-slate-900 sm:max-w-26">
                               {p.name}
                             </span>
                           )}
@@ -594,6 +600,7 @@ export default function MounjaroUkCompareTable({
                           gphcRegNo={p.gphcRegNo}
                         />
                       </td>
+                      <td className="border-b border-slate-100/90 px-2 py-2.5 align-top text-xs text-slate-600" />
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
                         {todayLabel ?? p.updatedLabel}
                       </td>
@@ -606,12 +613,6 @@ export default function MounjaroUkCompareTable({
         </div>
       </div>
       </div>
-
-      <p className="text-center text-xs text-slate-500">
-        Highlighted cells = lowest listed price for that strength in your
-        current filter. Row tint = lowest starting pen (min across visible
-        strengths).
-      </p>
     </div>
   );
 }

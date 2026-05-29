@@ -99,7 +99,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     category: "Prices",
     description:
       "How much does Wegovy cost in the UK in 2026? Full price breakdown by dose, monthly estimates, NHS vs private, and how it compares to Mounjaro.",
-    heroImage: "/blog/wegovy%20price%20uk.webp",
+    heroImage: "/blog/new%20wegovy%20price.webp",
     feedTags: ["wegovy", "guides", "safety"],
   },
   {
@@ -110,7 +110,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     category: "Prices",
     description:
       "How much does Mounjaro cost in the UK in 2026? Full price breakdown by dose, monthly estimates, and what to check before buying from any pharmacy.",
-    heroImage: "/blog/price%20mounjaro%202026.webp",
+    heroImage: "/blog/new%20mounjaro%20price.webp",
     feedTags: ["mounjaro", "guides", "safety"],
   },
   {

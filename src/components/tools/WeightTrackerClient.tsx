@@ -119,15 +119,13 @@ interface EntryModalProps {
   initial?: TrackerEntry;
   preferredUnit: WeightUnit;
   onClose: () => void;
-  onSaved: () => void;
+  onSaved: (savedUnit: WeightUnit) => void;
 }
 
 function EntryModal({ mode, initial, preferredUnit, onClose, onSaved }: EntryModalProps) {
-  const [date, setDate] = useState(initial?.date ?? "");
-  useEffect(() => {
-    if (initial?.date) return;
-    setDate((d) => d || new Date().toISOString().slice(0, 10));
-  }, [initial?.date]);
+  const [date, setDate] = useState(
+    initial?.date ?? new Date().toISOString().slice(0, 10),
+  );
   const [weightStr, setWeightStr] = useState(
     initial ? fromKg(initial.weightKg, preferredUnit).toFixed(1) : "",
   );
@@ -165,7 +163,7 @@ function EntryModal({ mode, initial, preferredUnit, onClose, onSaved }: EntryMod
     } else {
       addEntry(payload);
     }
-    onSaved();
+    onSaved(unit);
     onClose();
   }
 
@@ -478,6 +476,23 @@ export default function WeightTrackerClient() {
     setEntries(getEntries());
   }, []);
 
+  const handleEntrySaved = useCallback((savedUnit: WeightUnit) => {
+    const refreshedEntries = getEntries();
+    setEntries(refreshedEntries);
+    setGoals((currentGoals) => {
+      if (currentGoals.preferredUnit === savedUnit) return currentGoals;
+
+      const nextGoals = { ...currentGoals, preferredUnit: savedUnit };
+      saveGoals(nextGoals);
+      setGoalInput(
+        nextGoals.goalWeightKg != null
+          ? fromKg(nextGoals.goalWeightKg, savedUnit).toFixed(1)
+          : "",
+      );
+      return nextGoals;
+    });
+  }, []);
+
   const sorted = useMemo(() => sortEntriesByDate(entries), [entries]);
   const unit = goals.preferredUnit;
   const metrics = useMemo(() => computeMetrics(sorted, goals.goalWeightKg), [sorted, goals.goalWeightKg]);
@@ -610,7 +625,7 @@ export default function WeightTrackerClient() {
                   Built for UK weight loss treatment users
                 </h2>
                 <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-slate-600 sm:text-base">
-                  Whether you're on Wegovy, Mounjaro, or Saxenda — track every check-in with zero friction.
+                  Whether you are on Wegovy, Mounjaro, or Saxenda — track every check-in with zero friction.
                 </p>
 
                 <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -709,7 +724,7 @@ export default function WeightTrackerClient() {
             initial={modal.entry}
             preferredUnit={unit}
             onClose={() => setModal(null)}
-            onSaved={refresh}
+            onSaved={handleEntrySaved}
           />
         )}
       </AnimatePresence>
@@ -960,11 +975,24 @@ export default function WeightTrackerClient() {
                 {/* Internal links */}
                 <div className="flex flex-wrap gap-3 rounded-2xl border border-amber-200/80 bg-amber-50/60 p-4">
                   <p className="w-full text-sm font-semibold text-amber-900">Find best prices for your next refill:</p>
-                  <Link href="/prices/cheapest-options-uk" className="inline-flex items-center gap-1 rounded-xl bg-amber-500 px-4 py-2 text-sm font-bold text-white shadow hover:bg-amber-400">
-                    Cheapest options UK
-                  </Link>
-                  <CompareHereLink href="/wegovy-price-comparison" size="sm" />
-                  <CompareHereLink href="/mounjaro-price-comparison" size="sm" />
+                  <CompareHereLink
+                    href="/mounjaro-price-comparison"
+                    label="Compare Mounjaro costs here"
+                    navAccent="violet"
+                    size="sm"
+                  />
+                  <CompareHereLink
+                    href="/wegovy-price-comparison"
+                    label="Compare Wegovy costs here"
+                    navAccent="emerald"
+                    size="sm"
+                  />
+                  <CompareHereLink
+                    href="/saxenda-price-comparison"
+                    label="Compare Saxenda costs here"
+                    navAccent="sky"
+                    size="sm"
+                  />
                 </div>
 
                 {/* Table */}
@@ -982,10 +1010,10 @@ export default function WeightTrackerClient() {
                   </div>
 
                   <div className="overflow-x-auto rounded-2xl border border-slate-200/90 bg-white">
-                    <table className="w-full min-w-[640px] text-left text-sm">
+                    <table className="w-full min-w-[760px] text-left text-sm">
                       <thead>
                         <tr className="border-b border-slate-100 bg-slate-50/80">
-                          {["Date", "Weight", "Change", "Medication", "Dose", "Supplier", ""].map((h) => (
+                          {["Date", "Weight", "Change", "Medication", "Dose", "Supplier", "Notes", ""].map((h) => (
                             <th key={h} className="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
                               {h}
                             </th>
@@ -995,7 +1023,7 @@ export default function WeightTrackerClient() {
                       <tbody className="divide-y divide-slate-100">
                         {sorted.length === 0 ? (
                           <tr>
-                            <td colSpan={7} className="px-4 py-12 text-center text-slate-500">
+                            <td colSpan={8} className="px-4 py-12 text-center text-slate-500">
                               <TrendingDown className="mx-auto mb-2 h-7 w-7 text-slate-300" />
                               No entries yet. Add your first entry to start tracking.
                             </td>
@@ -1031,6 +1059,9 @@ export default function WeightTrackerClient() {
                                 <td className="px-4 py-3 text-slate-700">{row.medication || "—"}</td>
                                 <td className="px-4 py-3 text-slate-700">{row.dose || "—"}</td>
                                 <td className="px-4 py-3 text-slate-500">{row.supplier || "—"}</td>
+                                <td className="max-w-48 px-4 py-3 text-slate-500">
+                                  {row.notes || "—"}
+                                </td>
                                 <td className="px-4 py-3">
                                   <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                                     <button

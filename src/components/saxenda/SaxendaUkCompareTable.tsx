@@ -206,10 +206,10 @@ export default function SaxendaUkCompareTable({
   );
 
   const providerThClass =
-    "sticky left-0 z-50 w-[10rem] sm:w-[14rem] border-b border-r border-slate-200/90 bg-slate-50 px-2 py-3 pl-3 sm:px-3 sm:pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
+    "sticky left-0 z-50 w-26 sm:w-34 border-b border-r border-slate-200/90 bg-slate-50 px-2 py-3 pl-3 sm:px-3 sm:pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
 
-  // Provider + Trustpilot + GPhC + packs + Delivery + Trust&safety + Action + Updated
-  const colCount = 1 + 1 + 1 + visiblePackKeys.length + 3 + 1;
+  // Provider + Trustpilot + GPhC + packs + Delivery + Trust&safety + Action + Notes + Updated
+  const colCount = 1 + 1 + 1 + visiblePackKeys.length + 3 + 2;
 
   const basePack = (p: SaxendaUkProviderCompare) => p.packs["1"];
 
@@ -461,6 +461,12 @@ export default function SaxendaUkCompareTable({
                 </th>
                 <th
                   scope="col"
+                  className="w-22 sm:w-28 border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                >
+                  Notes
+                </th>
+                <th
+                  scope="col"
                   className="w-[5rem] sm:w-[6.5rem] border-b border-slate-200/90 bg-slate-50 px-3 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
                 >
                   Updated
@@ -497,15 +503,15 @@ export default function SaxendaUkCompareTable({
                       }`}
                     >
                       <td
-                        className={`sticky left-0 z-10 border-r border-slate-200/80 px-2 py-2.5 pl-3 sm:px-3 sm:pl-4 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] ${
+                        className={`sticky left-0 z-10 w-26 border-r border-slate-200/80 px-2 py-2.5 pl-3 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] sm:w-34 sm:px-3 sm:pl-4 ${
                           isLowestRow
                             ? "bg-sky-50/90 group-hover:bg-sky-50"
                             : "bg-white group-hover:bg-slate-50/90"
                         }`}
                       >
-                        <div className="flex gap-3">
+                        <div className="flex gap-1.5">
                           <span
-                            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-200/90 text-sm font-bold text-slate-700"
+                            className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-200/90 text-[11px] font-bold text-slate-700"
                             aria-hidden
                           >
                             {init}
@@ -513,7 +519,7 @@ export default function SaxendaUkCompareTable({
                           <div className="flex min-w-0 flex-col gap-1">
                             <Link
                               href={href}
-                              className="font-semibold text-sky-900 underline decoration-sky-300/70 underline-offset-2 hover:decoration-sky-600"
+                              className="block max-w-14 whitespace-normal wrap-break-word font-semibold leading-snug text-sky-900 underline decoration-sky-300/70 underline-offset-2 hover:decoration-sky-600 sm:max-w-22"
                             >
                               {p.name}
                             </Link>
@@ -589,6 +595,7 @@ export default function SaxendaUkCompareTable({
                           See offer
                         </Link>
                       </td>
+                      <td className="border-b border-slate-100/90 px-2 py-2.5 align-top text-xs text-slate-600" />
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
                         {todayLabel ?? p.updatedLabel}
                       </td>
@@ -601,13 +608,6 @@ export default function SaxendaUkCompareTable({
         </div>
       </div>
       </div>
-
-      <p className="text-center text-xs text-slate-500">
-        Each pack column shows price and £/mg for that size. Shaded cells =
-        lowest in that column (filtered). Row tint = lowest{" "}
-        {packFilter === "all" ? "1 pen" : PACK_HEADER[packFilter]} price.
-        Confirm live rates on each site.
-      </p>
     </div>
   );
 }
