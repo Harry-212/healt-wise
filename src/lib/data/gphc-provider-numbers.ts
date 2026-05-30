@@ -22,7 +22,6 @@ export const GPHC_NUMBER_BY_PROVIDER_ID: Record<string, string> = {
   "cloud-pharmacy": "9012073",
   pharmacy2u: "9011310",
   "iq-doctor": "9011130",
-  "click-pharmacy": "9011460",
   getweightloss: "9011333",
   "asda-online-doctor": "9011364 (dispensing pharmacy)",
   "superdrug-online-doctor": "9010471 (dispensing pharmacy)",
