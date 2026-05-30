@@ -1,11 +1,8 @@
 import type { MetadataRoute } from "next";
 import {
-  CURATED_APP_ROUTER_POSTS,
   CURATED_BLOG_ARTICLE_SLUGS,
   getAllUkLocationArticleSlugs,
-  totalPages,
 } from "@/lib/blog";
-import { POSTS_PER_PAGE } from "@/lib/blog-feed";
 import { COMPARE_SLUGS } from "@/lib/routes/compare-slugs";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
@@ -105,14 +102,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push(`/blog/${slug}`, 0.65);
   }
 
-  const blogCount =
-    CURATED_APP_ROUTER_POSTS.length +
-    STATIC_BLOG_SLUGS.length +
-    ukLocationBlogSlugs.length;
-  const pages = totalPages(blogCount, POSTS_PER_PAGE);
-  for (let p = 2; p <= pages; p++) {
-    push(`/blog/page/${p}`, 0.5);
-  }
 
   return entries;
 }
