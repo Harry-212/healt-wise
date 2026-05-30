@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "what-is-bmi-calculator",
+    title: "BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next",
+    date: "2026-05-30",
+    category: "Guides",
+    description:
+      "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds, limitations, weight loss treatment eligibility, and what to do with your result.",
+    heroImage: "/blog/bmi-calculator-hero.png",
+    feedTags: ["guides", "wegovy", "mounjaro", "how-it-works"],
+  },
+  {
     slug: "wegovy-price-uk",
     title: "Wegovy Price UK 2026: How Much Does Each Dose Cost and Is It Worth It?",
     date: "2026-05-28",
