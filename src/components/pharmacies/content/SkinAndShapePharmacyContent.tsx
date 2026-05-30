@@ -48,6 +48,8 @@ export default function SkinAndShapePharmacyContent() {
       hasDiscount={hasDiscount}
       heroProviderLogoSrc="/logo pharmacy/skin&shape.png"
       heroProviderLogoAlt="Skin & Shape Pharmacy"
+      heroProviderLogoClassName="h-24 w-auto max-w-[min(100%,24rem)] object-contain object-center sm:h-32 md:h-40 md:max-w-[min(100%,34rem)]"
+      heroProviderLogoUnoptimized
     >
       <section className="space-y-4">
         <p className={paragraphClass}>

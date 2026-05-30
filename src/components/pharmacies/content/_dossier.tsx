@@ -20,10 +20,12 @@ export function PharmacyHeroProviderLogo({
   src,
   alt,
   className = "h-16 w-auto max-w-[min(100%,18rem)] object-contain object-center sm:h-18 md:h-20 md:max-w-[min(100%,22rem)]",
+  unoptimized = false,
 }: {
   src: string;
   alt: string;
   className?: string;
+  unoptimized?: boolean;
 }) {
   return (
     <div className="mb-5 flex justify-center sm:mb-6">
@@ -34,6 +36,7 @@ export function PharmacyHeroProviderLogo({
         height={150}
         sizes="(max-width: 640px) 240px, 300px"
         className={className}
+        unoptimized={unoptimized}
       />
     </div>
   );
@@ -256,6 +259,7 @@ export function PharmacyDossierPage({
   heroProviderLogoSrc,
   heroProviderLogoAlt = "",
   heroProviderLogoClassName,
+  heroProviderLogoUnoptimized = false,
   children,
 }: {
   slugLabel: string;
@@ -273,6 +277,7 @@ export function PharmacyDossierPage({
   heroProviderLogoSrc?: string;
   heroProviderLogoAlt?: string;
   heroProviderLogoClassName?: string;
+  heroProviderLogoUnoptimized?: boolean;
   children: ReactNode;
 }) {
   const [copied, setCopied] = useState(false);
@@ -329,6 +334,7 @@ export function PharmacyDossierPage({
             src={heroProviderLogoSrc}
             alt={heroProviderLogoAlt || `${slugLabel} logo`}
             className={heroProviderLogoClassName}
+            unoptimized={heroProviderLogoUnoptimized}
           />
         ) : null}
 
