@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
   keywords: "wegovy treatment instructions",
   alternates: {
-    canonical: `${siteOrigin()}/blog/easy-to-follow-wegovy-treatment-instructions-you-can-trust`,
+    canonical: `${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`,
   },
   openGraph: {
     title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
@@ -49,7 +49,7 @@ export default function WegovyInjectionInstructionsArticlePage() {
     image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${siteOrigin()}/blog/easy-to-follow-wegovy-treatment-instructions-you-can-trust`,
+      "@id": `${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`,
     },
   };
 

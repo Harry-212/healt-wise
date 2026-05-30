@@ -330,7 +330,7 @@ export default function ArticleClient() {
             {/* Share Panel (Using the GuideSharePanel UI from the 'Guides' article context) */}
             <div className="mt-10">
               <GuideSharePanel 
-                url={`${siteOrigin()}/blog/easy-to-follow-wegovy-treatment-instructions-you-can-trust`} 
+                url={`${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`} 
                 title="Easy-to-Follow Wegovy Injection Instructions You Can Trust"
                 description="Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today."
               />
