@@ -15,6 +15,16 @@ import {
 
 const STATIC_BLOG_SLUGS = ["uk-weight-loss"] as const;
 
+const EXCLUDED_SITEMAP_PATHS = new Set<string>([
+  "/$",
+  "/blog/locations-in-uk",
+  "/compare/best-weight-loss-injections-uk",
+  "/pharmacies/chemist4u",
+  "/pharmacies/click-pharmacy",
+  "/pharmacies/phlo-clinic",
+  "/pharmacies/simply-meds-online",
+]);
+
 /** Fixed App Router paths without dynamic segments. */
 const STATIC_PATHS = [
   "/",
@@ -55,6 +65,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   const push = (path: string, priority: number) => {
+    if (EXCLUDED_SITEMAP_PATHS.has(path)) return;
+
     entries.push({
       url: `${origin}${path}`,
       changeFrequency: "weekly",

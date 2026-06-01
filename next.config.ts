@@ -35,6 +35,19 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: "/_next/static/media/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow, noarchive",
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       // Legacy / mistaken URLs (e.g. ads) — avoid 403/404 noise in Search Console.
