@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "mounjaro-click-calculator-uk",
+    title: "Mounjaro Click Calculator UK: How Many Clicks Is Your Dose? (KwikPen Guide 2026)",
+    date: "2026-06-02",
+    category: "Guides",
+    description:
+      "Mounjaro KwikPen click calculator for UK patients. Learn how many clicks equal each dose, the full click chart for all 6 pen strengths, units, mL conversions & FAQs.",
+    heroImage: "/blog/mounjaro-click-calculator-uk-hero-v2.png",
+    feedTags: ["mounjaro", "guides"],
+  },
+  {
     slug: "what-is-bmi-calculator",
     title: "BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next",
     date: "2026-05-30",
