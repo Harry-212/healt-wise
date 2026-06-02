@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "How Does Wegovy Work to Transform Your Weight Journey",
@@ -85,7 +86,14 @@ export default function WegovyArticlePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="How Does Wegovy Work to Transform Your Weight Journey"
+        pagePath="/blog/how-does-wegovy-work-to-transform-your-weight-journey"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }) }}
       />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/how-licensed-weight-loss-injections-uk-can-boost-your-journey";
 const HERO_IMAGE = `${siteOrigin()}/blog/How%20Licensed%20Weight%20Loss%20Injections%20UK%20Can%20Boost%20Your%20Journey.webp`;
@@ -111,7 +112,14 @@ export default function LicensedWeightLossInjectionsUkPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="How Licensed Weight Loss Injections UK Can Boost Your Journey"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/can-hormones-cause-belly-fat-after-40";
 /** JPEG 1200×630 for Open Graph / WhatsApp (WebP previews are unreliable on WhatsApp). */
@@ -102,7 +103,14 @@ export default function CanHormonesCauseBellyFatAfter40Page() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Can Hormones Cause Belly Fat After 40"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

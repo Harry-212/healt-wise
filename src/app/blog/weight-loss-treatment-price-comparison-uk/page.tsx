@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogImgPath, PRICE_COMPARISON_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/weight-loss-treatment-price-comparison-uk";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(PRICE_COMPARISON_HERO_PNG)}`;
@@ -120,7 +121,14 @@ export default function WeightLossTreatmentPriceComparisonPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Weight Loss Treatment Price Comparison UK 2026: Mounjaro and Wegovy"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

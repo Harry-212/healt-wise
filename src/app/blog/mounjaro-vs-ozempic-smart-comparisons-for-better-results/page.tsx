@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results";
 const TITLE = "Mounjaro vs Ozempic: Smart Comparisons for Better Results";
@@ -96,7 +97,14 @@ export default function MounjaroVsOzempicArticlePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Mounjaro vs Ozempic: Smart Comparisons for Better Results"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }),

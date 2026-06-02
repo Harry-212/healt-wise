@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/mounjaro-weight-loss-benefits-backed-by-science";
 const TITLE = "Mounjaro Weight Loss Benefits Backed by Science";
@@ -88,7 +89,14 @@ export default function MounjaroWeightLossBenefitsArticlePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Mounjaro Weight Loss Benefits Backed by Science"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }),

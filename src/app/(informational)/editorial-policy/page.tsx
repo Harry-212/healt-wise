@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LegalScrollyClient from "@/components/legal/LegalScrollyClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Editorial Policy",
@@ -15,6 +16,13 @@ const LAST = "12 April 2026";
 
 export default function EditorialPolicyPage() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Information"
+        sectionPath="/helpful-guides"
+        pageName="Editorial Policy"
+        pagePath="/editorial-policy"
+      />
     <LegalScrollyClient
       eyebrow="Health Wise"
       title="Editorial policy"
@@ -66,5 +74,6 @@ export default function EditorialPolicyPage() {
         },
       ]}
     />
+    </>
   );
 }

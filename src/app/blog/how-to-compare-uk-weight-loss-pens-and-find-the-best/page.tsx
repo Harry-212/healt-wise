@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/how-to-compare-uk-weight-loss-pens-and-find-the-best";
 const HERO_IMAGE = `${siteOrigin()}/blog/How%20to%20Compare%20UK%20Weight%20Loss%20Pens%20and%20Find%20the%20Best.webp`;
@@ -111,7 +112,14 @@ export default function CompareUKWeightLossPensPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="How to Compare UK Weight Loss Pens and Find the Best"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

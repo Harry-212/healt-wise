@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { ContactForm } from "./ContactForm";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -15,6 +16,13 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Information"
+        sectionPath="/helpful-guides"
+        pageName="Contact"
+        pagePath="/contact"
+      />
     <div className="relative isolate flex min-h-[70vh] flex-col overflow-hidden bg-linear-to-br from-[#e6f4ea] via-[#d8efe0] to-[#c5e6d4] px-4 pb-12 pt-0 sm:px-6 sm:pb-16 lg:pb-20">
       <DecorativeCurves />
 
@@ -68,6 +76,7 @@ export default function ContactPage() {
         </main>
       </div>
     </div>
+    </>
   );
 }
 

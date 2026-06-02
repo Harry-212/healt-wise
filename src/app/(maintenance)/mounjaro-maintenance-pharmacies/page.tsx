@@ -4,6 +4,7 @@ import CompareHereLink from "@/components/ui/CompareHereLink";
 import ProviderCard from "@/components/ui/ProviderCard";
 import { PharmacyProvider } from "@/lib/types/provider";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Mounjaro maintenance pharmacies",
@@ -23,6 +24,13 @@ const MOCK_PROVIDERS: PharmacyProvider[] = [
 
 export default function MounjaroMaintenanceList() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Prices"
+        sectionPath="/prices"
+        pageName="Mounjaro maintenance pharmacies"
+        pagePath="/mounjaro-maintenance-pharmacies"
+      />
     <div className="container mx-auto px-4 max-w-5xl py-12">
       <div className="mb-8">
         <CompareHereLink href="/mounjaro-price-comparison" />
@@ -47,5 +55,6 @@ export default function MounjaroMaintenanceList() {
         {MOCK_PROVIDERS.map(p => <ProviderCard key={p.id} provider={p} />)}
       </div>
     </div>
+    </>
   );
 }

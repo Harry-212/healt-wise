@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogWebpPath, SHORTAGES_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/weight-loss-injection-shortages-in-the-uk-what-you-need-to-know";
 const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(SHORTAGES_HERO_WEBP)}`;
@@ -111,7 +112,14 @@ export default function WeightLossInjectionShortagesUkPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="What You Should Know About Weight Loss Treatment Shortages in the UK"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

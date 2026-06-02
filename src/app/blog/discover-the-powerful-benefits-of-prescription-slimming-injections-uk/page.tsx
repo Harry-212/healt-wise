@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/discover-the-powerful-benefits-of-prescription-slimming-injections-uk";
 const HERO_IMAGE = `${siteOrigin()}/blog/Discover%20the%20Powerful%20Benefits%20of%20Prescription%20Slimming%20Injections%20UK.webp`;
@@ -111,7 +112,14 @@ export default function PrescriptionSlimmingInjectionsUkPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Discover the Powerful Benefits of Prescription Slimming Treatments UK"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

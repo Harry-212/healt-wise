@@ -4,6 +4,7 @@ import CompareHereLink from "@/components/ui/CompareHereLink";
 import ProviderCard from "@/components/ui/ProviderCard";
 import { PharmacyProvider } from "@/lib/types/provider";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Wegovy maintenance pharmacies",
@@ -18,6 +19,13 @@ const MOCK_PROVIDERS: PharmacyProvider[] = [];
 
 export default function WegovyMaintenanceList() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Prices"
+        sectionPath="/prices"
+        pageName="Wegovy maintenance pharmacies"
+        pagePath="/wegovy-maintenance-pharmacies"
+      />
     <div className="container mx-auto px-4 max-w-5xl py-12">
       <div className="mb-8">
         <CompareHereLink href="/wegovy-price-comparison" />
@@ -46,5 +54,6 @@ export default function WegovyMaintenanceList() {
         )}
       </div>
     </div>
+    </>
   );
 }

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogImgPath, WEGOVY_PRICE_UK_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/wegovy-price-uk";
 const TITLE =
@@ -120,7 +121,14 @@ export default function WegovyPriceUkPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Wegovy Price UK 2026: How Much Does Each Dose Cost and Is It Worth It?"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogImgPath, BMI_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/what-is-bmi-calculator";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BMI_HERO_PNG)}`;
@@ -128,7 +129,14 @@ export default function BmiCalculatorBlogPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

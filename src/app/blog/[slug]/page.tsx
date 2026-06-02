@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import type { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import LocationContentRenderer from "@/components/locations/LocationContentRenderer";
 import { UkLocationFaqProvider } from "@/components/locations/UkLocationFaqProvider";
 import {
@@ -22,7 +23,6 @@ import { getUkWeightLossLocationBySlug } from "@/lib/data/uk-weight-loss-locatio
 import { markdownBlogPostingJsonLd } from "@/lib/seo/blog-markdown-json-ld";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
-import { capitalizeHeadingWords } from "@/lib/text/heading-case";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -165,11 +165,18 @@ export default async function BlogPostPage({ params }: Props) {
   if (!loc) notFound();
 
   const canonical = `${siteOrigin()}/blog/${slug}`;
+  const title = buildUkLocationTitle(loc);
   const faqItems = buildLocationFaq(loc);
   const faqLd = locationFaqJsonLd(faqItems);
 
   return (
     <>
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName={title}
+        pagePath={`/blog/${slug}`}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}

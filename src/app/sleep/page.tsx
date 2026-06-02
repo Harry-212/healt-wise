@@ -3,6 +3,7 @@ import { SleepPageClient } from "@/components/lifestyle/sleep/SleepPageClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { SLEEP_FAQ } from "@/lib/lifestyle/sleep-content";
 import { PILLAR_SLEEP } from "@/lib/lifestyle/pillar-routes";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Sleep and weight loss",
@@ -63,7 +64,14 @@ export default function SleepPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Lifestyle"
+        sectionPath="/tips"
+        pageName="Sleep for weight loss"
+        pagePath="/sleep"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />

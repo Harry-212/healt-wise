@@ -18,6 +18,7 @@ import {
   SAXENDA_FAQ_ITEMS,
 } from "@/lib/seo/saxenda-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import {
   WHY_CHOOSE_HEALTHWISE360_ALT,
   WHY_CHOOSE_HEALTHWISE360_SRC,
@@ -43,7 +44,14 @@ export default function WhatIsSaxendaPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Information"
+        sectionPath="/helpful-guides"
+        pageName="What is Saxenda?"
+        pagePath="/what-is-saxenda"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
       />

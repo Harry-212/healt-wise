@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ArticleClient from './ArticleClient';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { TOP_BENEFITS_WEIGHT_LOSS_INJECTIONS_HERO } from './blog-assets';
 import { siteOrigin } from '@/lib/seo/site-origin';
 
@@ -35,5 +36,15 @@ export const metadata: Metadata = {
 };
 
 export default function TopBenefitsDoctorPrescribedWeightLossInjectionsPage() {
-  return <ArticleClient />;
+  return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You"
+        pagePath={PATH}
+      />
+      <ArticleClient />
+    </>
+  );
 }

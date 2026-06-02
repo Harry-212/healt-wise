@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { BLOG_SURPRISING_MOUNJARO_SIDE_EFFECTS_HERO_IMAGE } from "@/lib/site-assets";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/the-surprising-mounjaro-side-effects-you-might-experience";
 const TITLE = "The Surprising Mounjaro Side Effects You Might Experience";
@@ -112,7 +113,14 @@ export default function MounjaroSideEffectsArticlePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="The Surprising Mounjaro Side Effects You Might Experience"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }),

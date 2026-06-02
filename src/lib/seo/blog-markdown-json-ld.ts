@@ -1,5 +1,6 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { pageBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 
 function isoDateForSchema(raw: string): string | undefined {
   const t = raw.trim();
@@ -30,6 +31,14 @@ export function markdownBlogPostingJsonLd(opts: {
   const base = siteOrigin().replace(/\/$/, "");
   const url = `${base}/blog/${opts.slug}`;
   const datePublished = isoDateForSchema(opts.datePublishedRaw);
+  const breadcrumb = pageBreadcrumbJsonLd({
+    sectionName: "Blog",
+    sectionPath: "/blog",
+    pageName: opts.title,
+    pagePath: `/blog/${opts.slug}`,
+    id: `${url}#breadcrumb`,
+    includeContext: false,
+  });
 
   const graph: Record<string, unknown> = {
     "@type": "BlogPosting",
@@ -61,26 +70,6 @@ export function markdownBlogPostingJsonLd(opts: {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [
-      graph,
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${url}#breadcrumb`,
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Blog",
-            item: `${base}/blog`,
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: opts.title,
-            item: url,
-          },
-        ],
-      },
-    ],
+    "@graph": [graph, breadcrumb],
   };
 }

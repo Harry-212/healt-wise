@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { WEEKLY_INJECTIONS_HERO_URL } from "./blog-assets";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/weekly-weight-loss-injections-uk-what-they-may-actually-do";
 const HERO_IMAGE = WEEKLY_INJECTIONS_HERO_URL;
@@ -111,7 +112,14 @@ export default function WeeklyWeightLossInjectionsUkPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Weekly Weight Loss Treatments in the UK: What They May Actually Do"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

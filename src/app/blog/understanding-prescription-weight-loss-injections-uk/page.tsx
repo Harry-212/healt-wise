@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogWebpPath, UK_RX_INJECTIONS_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/understanding-prescription-weight-loss-injections-uk";
 const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(UK_RX_INJECTIONS_HERO_WEBP)}`;
@@ -115,7 +116,14 @@ export default function UnderstandingPrescriptionWeightLossInjectionsUkPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Understanding Prescription Weight Loss Treatments in the UK: What They May Actually Offer"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

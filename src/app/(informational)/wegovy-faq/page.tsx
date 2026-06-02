@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HelpCircle } from "lucide-react";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Wegovy FAQs",
@@ -13,6 +14,13 @@ export const metadata: Metadata = {
 
 export default function WegovyFaq() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Information"
+        sectionPath="/helpful-guides"
+        pageName="Wegovy FAQ"
+        pagePath="/wegovy-faq"
+      />
     <div className="container mx-auto max-w-4xl px-4 pb-24 pt-8 sm:px-5 sm:py-12 md:px-6">
       <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 sm:mb-6">
         <HelpCircle className="h-8 w-8 text-emerald-600" />
@@ -32,5 +40,6 @@ export default function WegovyFaq() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Discover If Mounjaro Is Safe for Weight Loss and Right for You",
@@ -93,7 +94,14 @@ export default function MounjaroSafetyArticlePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Discover If Mounjaro Is Safe for Weight Loss and Right for You"
+        pagePath="/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }) }}
       />

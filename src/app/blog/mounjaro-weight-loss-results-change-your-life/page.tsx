@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import ArticleClient from './ArticleClient';
 import { siteOrigin } from '@/lib/seo/site-origin';
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = '/blog/mounjaro-weight-loss-results-change-your-life';
 const HERO_IMAGE = `${siteOrigin()}/blog/Mounjaro%20Weight%20Loss%20Results%20That%20May%20Finally%20Change%20Your%20Life.webp`;
@@ -106,7 +107,14 @@ export default function MounjaroWeightLossResultsPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Mounjaro Weight Loss Results That May Finally Change Your Life"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

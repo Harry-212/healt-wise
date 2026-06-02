@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ShieldCheck, Cross, Building2, SearchCheck } from "lucide-react";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Pharmacy Safety & GPhC Verification",
@@ -13,6 +14,13 @@ export const metadata: Metadata = {
 
 export default function PharmacySafetyGphc() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Pharmacy Safety"
+        sectionPath="/helpful-guides"
+        pageName="Pharmacy Safety GPhC Verification"
+        pagePath="/pharmacy-safety-gphc-verification"
+      />
     <div className="container mx-auto max-w-4xl px-4 pb-24 pt-8 sm:px-5 sm:py-12 md:px-6">
       <div className="mb-10 text-center sm:mb-16">
         <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 sm:mb-6">
@@ -56,5 +64,6 @@ export default function PharmacySafetyGphc() {
         </ol>
       </div>
     </div>
+    </>
   );
 }

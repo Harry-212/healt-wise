@@ -3,6 +3,7 @@ import { StressPageClient } from "@/components/lifestyle/stress/StressPageClient
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { STRESS_FAQ } from "@/lib/lifestyle/stress-content";
 import { PILLAR_STRESS } from "@/lib/lifestyle/pillar-routes";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Stress and weight loss",
@@ -63,7 +64,14 @@ export default function StressPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Lifestyle"
+        sectionPath="/tips"
+        pageName="Stress and weight loss"
+        pagePath="/stress"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />

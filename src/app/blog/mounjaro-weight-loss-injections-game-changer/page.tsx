@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import ArticleClient from './ArticleClient';
 import { siteOrigin } from '@/lib/seo/site-origin';
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = '/blog/mounjaro-weight-loss-injections-game-changer';
 const HERO_IMAGE = `${siteOrigin()}/blog/Could%20Mounjaro%20Weight%20Loss%20Injections%20Be%20Your%20Game-Changer.webp`;
@@ -106,7 +107,14 @@ export default function MounjaroInjectionsGameChangerPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Could Mounjaro Weight Loss Treatments Be Your Game-Changer?"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

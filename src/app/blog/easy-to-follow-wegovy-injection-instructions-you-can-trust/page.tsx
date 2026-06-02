@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE } from "@/lib/site-assets";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const HERO_IMAGE_ABSOLUTE = `${siteOrigin()}${BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE}`;
 
@@ -102,7 +103,14 @@ export default function WegovyInjectionInstructionsArticlePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Easy-to-Follow Wegovy Treatment Instructions You Can Trust"
+        pagePath="/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }) }}
       />

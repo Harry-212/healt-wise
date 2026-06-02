@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogWebpPath, MOUWEG_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/mounjaro-vs-wegovy-key-differences-explained";
 const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(MOUWEG_HERO_WEBP)}`;
@@ -116,7 +117,14 @@ export default function MounjaroVsWegovyPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="How Mounjaro vs Wegovy: The Key Differences Explained Help You Choose"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const HERO_IMAGE = `${siteOrigin()}/blog/Healthy.webp`;
 
@@ -101,7 +102,14 @@ export default function MounjaroArticlePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Mounjaro Dosage for Weight Loss: Facts You Can Trust"
+        pagePath="/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }) }}
       />

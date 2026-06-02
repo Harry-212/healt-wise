@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/mounjaro-weight-loss-before-and-after";
 const HERO_IMAGE = `${siteOrigin()}/blog/mounjaro%20weight%20loss%20before%20and%20after.webp`;
@@ -110,7 +111,14 @@ export default function MounjaroBeforeAfterArticlePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Your Ultimate Guide to Mounjaro Weight Loss Before and After"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

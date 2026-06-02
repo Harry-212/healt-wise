@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, BadgeCheck, Scale, Shield } from "lucide-react";
 import { COMPARE_SLUGS } from "@/lib/routes/compare-slugs";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import {
   COMPARE_PAGE_LAYOUT,
   type ComparePageLayoutConfig,
@@ -104,6 +105,12 @@ export default async function ComparePage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        sectionName="Compare"
+        sectionPath="/compare"
+        pageName={webLdName || layout.hero.titleBold}
+        pagePath={`/compare/${slug}`}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webLd) }}

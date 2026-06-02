@@ -3,6 +3,7 @@ import { ExercisePageClient } from "@/components/lifestyle/exercise/ExercisePage
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { EXERCISE_FAQ } from "@/lib/lifestyle/exercise-content";
 import { PILLAR_EXERCISE } from "@/lib/lifestyle/pillar-routes";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Weight loss exercise guide",
@@ -63,7 +64,14 @@ export default function ExercisePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Lifestyle"
+        sectionPath="/tips"
+        pageName="Exercise for sustainable weight loss"
+        pagePath="/exercise"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />

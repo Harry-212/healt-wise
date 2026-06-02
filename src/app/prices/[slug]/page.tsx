@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import CheapestOptionsUkPage from "@/components/prices/CheapestOptionsUkPage";
 import { cheapestOptionsUkJsonLd } from "@/lib/seo/cheapest-options-page-seo";
 import { metadataForPriceSlug } from "@/lib/seo/price-slug-metadata";
@@ -29,6 +30,12 @@ export default async function PricePage({ params }: Props) {
     const jsonLd = cheapestOptionsUkJsonLd();
     return (
       <>
+        <BreadcrumbJsonLd
+          sectionName="Prices"
+          sectionPath="/prices"
+          pageName={cfg.keyword}
+          pagePath={`/prices/${slug}`}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -39,50 +46,58 @@ export default async function PricePage({ params }: Props) {
   }
 
   return (
-    <article className="mx-auto min-w-0 max-w-4xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
-      <p className="text-sm font-medium text-brand-primary">Prices</p>
-      <h1 className="mt-2 text-balance text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
-        {cfg.keyword}
-      </h1>
-      <p className="mt-4 text-sm text-slate-600 sm:text-base">
-        Compare {cfg.keyword.toLowerCase()} figures in the UK. Figures are
-        illustrative snapshots—always confirm with the pharmacy before you pay.
-      </p>
-
-      <TrustSignals className="mt-8" />
-
-      <section className="mt-10 space-y-3">
-        <h2 className="text-xl font-semibold text-slate-900">Price overview</h2>
-        <p className="text-slate-600">
-          Starting-pack and maintenance pricing diverge by dose and provider. Use{" "}
-          <Link href="/methodology" className="text-brand-primary underline">
-            our methodology
-          </Link>{" "}
-          to understand what we include in each line.
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Prices"
+        sectionPath="/prices"
+        pageName={cfg.keyword}
+        pagePath={`/prices/${slug}`}
+      />
+      <article className="mx-auto min-w-0 max-w-4xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
+        <p className="text-sm font-medium text-brand-primary">Prices</p>
+        <h1 className="mt-2 text-balance text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
+          {cfg.keyword}
+        </h1>
+        <p className="mt-4 text-sm text-slate-600 sm:text-base">
+          Compare {cfg.keyword.toLowerCase()} figures in the UK. Figures are
+          illustrative snapshots—always confirm with the pharmacy before you pay.
         </p>
-      </section>
 
-      <section className="mt-10 space-y-3">
-        <h2 className="text-xl font-semibold text-slate-900">
-          Price by dosage &amp; monthly cost
-        </h2>
-        <p className="text-slate-600">
-          Monthly estimates depend on titration schedules. When we show a monthly
-          column, it is an illustrative 4-week equivalent unless otherwise
-          stated on the provider page.
-        </p>
-      </section>
+        <TrustSignals className="mt-8" />
 
-      <section className="mt-10 space-y-4">
-        <h2 className="text-xl font-semibold text-slate-900">
-          Cheapest providers &amp; comparison table
-        </h2>
-        <p className="text-sm text-slate-600">
-          Filter by medication and sort by price to shortlist options, then
-          verify GPhC registration and prescribing routes.
-        </p>
-        <ComparisonTable providers={HOME_PREVIEW_PROVIDERS} />
-      </section>
-    </article>
+        <section className="mt-10 space-y-3">
+          <h2 className="text-xl font-semibold text-slate-900">Price overview</h2>
+          <p className="text-slate-600">
+            Starting-pack and maintenance pricing diverge by dose and provider. Use{" "}
+            <Link href="/methodology" className="text-brand-primary underline">
+              our methodology
+            </Link>{" "}
+            to understand what we include in each line.
+          </p>
+        </section>
+
+        <section className="mt-10 space-y-3">
+          <h2 className="text-xl font-semibold text-slate-900">
+            Price by dosage &amp; monthly cost
+          </h2>
+          <p className="text-slate-600">
+            Monthly estimates depend on titration schedules. When we show a monthly
+            column, it is an illustrative 4-week equivalent unless otherwise
+            stated on the provider page.
+          </p>
+        </section>
+
+        <section className="mt-10 space-y-4">
+          <h2 className="text-xl font-semibold text-slate-900">
+            Cheapest providers &amp; comparison table
+          </h2>
+          <p className="text-sm text-slate-600">
+            Filter by medication and sort by price to shortlist options, then
+            verify GPhC registration and prescribing routes.
+          </p>
+          <ComparisonTable providers={HOME_PREVIEW_PROVIDERS} />
+        </section>
+      </article>
+    </>
   );
 }

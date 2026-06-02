@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import { GUIDE_IMAGES } from "@/lib/guide-images";
 import {
   HELPFUL_GUIDES_HUB_PATH,
@@ -60,6 +61,14 @@ export function GuideLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }}
         />
       )}
+      {slug ? (
+        <BreadcrumbJsonLd
+          sectionName="Helpful Guides"
+          sectionPath={HELPFUL_GUIDES_HUB_PATH}
+          pageName={title}
+          pagePath={helpfulGuidePath(slug)}
+        />
+      ) : null}
 
       {/* ── Page shell ── */}
       <div className="mx-auto max-w-7xl px-4 pb-24 pt-8 sm:px-6 sm:pt-10 md:pt-14 lg:px-8">

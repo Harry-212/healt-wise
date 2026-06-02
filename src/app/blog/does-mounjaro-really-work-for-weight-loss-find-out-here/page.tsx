@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE } from "@/lib/site-assets";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const HERO_IMAGE_ABSOLUTE = `${siteOrigin()}${BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE}`;
 
@@ -110,7 +111,14 @@ export default function MounjaroEffectivenessArticlePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Does Mounjaro Really Work for Weight Loss? Find Out Here"
+        pagePath="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }) }}
       />

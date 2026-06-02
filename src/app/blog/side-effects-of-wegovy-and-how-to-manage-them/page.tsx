@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogWebpPath, WEGOVY_SIDE_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/side-effects-of-wegovy-and-how-to-manage-them";
 const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(WEGOVY_SIDE_HERO_WEBP)}`;
@@ -111,7 +112,14 @@ export default function WegovySideEffectsPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Effective Tips for Handling Side Effects of Wegovy Yourself"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

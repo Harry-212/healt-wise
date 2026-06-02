@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE } from "@/lib/site-assets";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const HERO_IMAGE_ABSOLUTE = `${siteOrigin()}${BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE}`;
 
@@ -102,7 +103,14 @@ export default function WegovyCostsArticlePage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="The Truth About Wegovy Weight Loss Medication Costs in the UK"
+        pagePath="/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }) }}
       />

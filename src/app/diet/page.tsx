@@ -3,6 +3,7 @@ import { DietPageClient } from "@/components/lifestyle/diet/DietPageClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { DIET_FAQ } from "@/lib/lifestyle/diet-content";
 import { PILLAR_DIET } from "@/lib/lifestyle/pillar-routes";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Diet for sustainable weight loss",
@@ -63,7 +64,14 @@ export default function DietPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Lifestyle"
+        sectionPath="/tips"
+        pageName="Diet for sustainable weight loss"
+        pagePath="/diet"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />

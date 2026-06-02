@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import AboutScrollyClient from "./AboutScrollyClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -12,5 +13,15 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  return <AboutScrollyClient />;
+  return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Information"
+        sectionPath="/helpful-guides"
+        pageName="About Healthwise360"
+        pagePath="/about"
+      />
+      <AboutScrollyClient />
+    </>
+  );
 }

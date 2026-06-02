@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import MounjaroClickCalculatorClient from '@/components/tools/MounjaroClickCalculatorClient';
 import { buildPageShareMetadata } from '@/lib/seo/share-metadata';
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: '/tools/mounjaro-click-calculator',
@@ -17,7 +18,14 @@ export const metadata: Metadata = buildPageShareMetadata({
 export default function MounjaroClickCalculatorPage() {
   return (
     <>
-      <MounjaroClickCalculatorClient />
+      
+      <BreadcrumbJsonLd
+        sectionName="Tools"
+        sectionPath="/tools"
+        pageName="Mounjaro Click Calculator"
+        pagePath="/tools/mounjaro-click-calculator"
+      />
+<MounjaroClickCalculatorClient />
       <article className="relative z-20 border-t border-slate-200/80 bg-background">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-5 md:px-8 md:py-20">
           <p id="mounjaro-calculator-guide" className="scroll-mt-28 text-xs font-semibold uppercase tracking-wide text-emerald-800">

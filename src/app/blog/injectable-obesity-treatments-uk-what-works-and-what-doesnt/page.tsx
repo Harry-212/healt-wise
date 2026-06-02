@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { INJECTABLE_OBESITY_TREATMENTS_HERO } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/injectable-obesity-treatments-uk-what-works-and-what-doesnt";
 const HERO_IMAGE = `${siteOrigin()}${INJECTABLE_OBESITY_TREATMENTS_HERO}`;
@@ -128,7 +129,14 @@ export default function InjectableObesityTreatmentsPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Blog"
+        sectionPath="/blog"
+        pageName="Injectable Obesity Treatments UK: What Works and What Doesn"
+        pagePath={PATH}
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({

@@ -18,6 +18,7 @@ import {
   wegovyCompareUkFaqJsonLd,
 } from "@/lib/seo/wegovy-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -67,7 +68,14 @@ export default function CompareWegovyPricesUkPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Prices"
+        sectionPath="/prices"
+        pageName="Compare Wegovy Prices UK (2026)"
+        pagePath="/wegovy-price-comparison"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webLd) }}
       />

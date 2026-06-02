@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LegalScrollyClient from "@/components/legal/LegalScrollyClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -15,6 +16,13 @@ const LAST = "12 April 2026";
 
 export default function PrivacyPolicyPage() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Information"
+        sectionPath="/helpful-guides"
+        pageName="Privacy Policy"
+        pagePath="/privacy-policy"
+      />
     <LegalScrollyClient
       eyebrow="Health Wise"
       title="Privacy policy"
@@ -82,5 +90,6 @@ export default function PrivacyPolicyPage() {
         },
       ]}
     />
+    </>
   );
 }

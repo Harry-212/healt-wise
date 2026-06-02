@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bell } from "lucide-react";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Price drop alerts",
@@ -13,6 +14,13 @@ export const metadata: Metadata = {
 
 export default function PriceAlerts() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Prices"
+        sectionPath="/prices"
+        pageName="Price alerts"
+        pagePath="/price-alerts"
+      />
     <div className="container mx-auto max-w-3xl px-4 py-10 sm:px-5 sm:py-16 md:py-20">
       <div className="rounded-3xl border bg-card p-5 text-center shadow-sm sm:p-8 md:p-12">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-100 mb-6">
@@ -48,5 +56,6 @@ export default function PriceAlerts() {
         <p className="text-xs text-slate-400 mt-6">We respect your privacy. No spam, just pure data. Unsubscribe anytime.</p>
       </div>
     </div>
+    </>
   );
 }

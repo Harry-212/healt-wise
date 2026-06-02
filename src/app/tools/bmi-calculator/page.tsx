@@ -9,6 +9,7 @@ import {
   bmiCalculatorWebPageJsonLd,
 } from "@/lib/seo/bmi-calculator-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/tools/bmi-calculator",
@@ -30,7 +31,14 @@ export default function BmiCalculatorPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Tools"
+        sectionPath="/tools"
+        pageName="BMI Calculator UK"
+        pagePath="/tools/bmi-calculator"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />

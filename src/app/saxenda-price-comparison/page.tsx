@@ -17,6 +17,7 @@ import {
   saxendaCompareUkFaqJsonLd,
 } from "@/lib/seo/saxenda-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/saxenda-price-comparison",
@@ -65,7 +66,14 @@ export default function CompareSaxendaPricesUkPage() {
 
   return (
     <>
-      <script
+      
+      <BreadcrumbJsonLd
+        sectionName="Prices"
+        sectionPath="/prices"
+        pageName="Compare Saxenda Prices UK (2026)"
+        pagePath="/saxenda-price-comparison"
+      />
+<script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webLd) }}
       />

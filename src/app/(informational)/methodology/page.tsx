@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Activity, Clock, Scale } from "lucide-react";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Our Methodology",
@@ -13,6 +14,13 @@ export const metadata: Metadata = {
 
 export default function Methodology() {
   return (
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Information"
+        sectionPath="/helpful-guides"
+        pageName="Methodology"
+        pagePath="/methodology"
+      />
     <div className="container mx-auto max-w-4xl px-4 pb-24 pt-8 sm:px-5 sm:py-12 md:px-6">
       <h1 className="mb-4 text-balance text-2xl font-extrabold text-slate-900 sm:mb-6 sm:text-3xl md:text-4xl">
         Our Methodology
@@ -71,5 +79,6 @@ export default function Methodology() {
         </div>
       </div>
     </div>
+    </>
   );
 }
