@@ -93,6 +93,17 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "saxenda-vs-mounjaro-vs-wegovy-price-uk",
+    title:
+      "Saxenda vs Mounjaro vs Wegovy: Which Is the Cheapest Weight Loss Treatment in the UK?",
+    date: "2026-06-05",
+    category: "Prices",
+    description:
+      "Saxenda vs Mounjaro vs Wegovy price comparison UK 2026. Full cost breakdown by dose, annual estimates, what each treatment actually costs long term and how to compare properly.",
+    heroImage: "/blog/saxenda-vs-mounjaro-vs-wegovy-price-uk-hero.png",
+    feedTags: ["guides", "wegovy", "mounjaro", "safety"],
+  },
+  {
     slug: "best-weight-loss-comparison-sites-uk",
     title: "We Tested 5 UK Weight Loss Comparison Websites So You Don't Have To: Here is the Honest Verdict",
     date: "2026-06-03",
