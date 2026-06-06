@@ -37,6 +37,24 @@ export const metadata: Metadata = buildPageShareMetadata({
   imageAlt: "Compare Mounjaro prices UK — Health Wise",
 });
 
+const MOUNJARO_RESOURCE_LINKS = [
+  {
+    href: "/mounjaro-price-list",
+    title: "Mounjaro price list",
+    description: "See the dose-by-dose Mounjaro price index.",
+  },
+  {
+    href: "/mounjaro-maintenance-pharmacies",
+    title: "Maintenance pharmacies",
+    description: "Check pharmacies with Mounjaro maintenance policy notes.",
+  },
+  {
+    href: "/mounjaro-faq",
+    title: "Mounjaro FAQ",
+    description: "Read common UK questions about fees, doses, and policies.",
+  },
+] as const;
+
 function compareWebPageJsonLd() {
   const base = siteOrigin();
   return {
@@ -111,6 +129,38 @@ export default function CompareMounjaroPricesUkPage() {
             </p>
             <div className="mt-10">
               <MounjaroUkCompareTable providers={MOUNJARO_UK_COMPARE_PROVIDERS} />
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-6xl px-4 md:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+                More Mounjaro pricing resources
+              </h2>
+              <p className="mt-3 text-slate-600">
+                Use these supporting guides to understand list prices, maintenance
+                policies, and common provider questions before comparing pharmacies.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {MOUNJARO_RESOURCE_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group rounded-2xl border border-violet-100 bg-violet-50/40 p-5 transition hover:-translate-y-0.5 hover:border-violet-200 hover:bg-violet-50 hover:shadow-sm"
+                >
+                  <h3 className="font-bold text-violet-950">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    {item.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-violet-800 underline-offset-2 group-hover:underline">
+                    Read more
+                    <ArrowRight className="h-4 w-4" aria-hidden />
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

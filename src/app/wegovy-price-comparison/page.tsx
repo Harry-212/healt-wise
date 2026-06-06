@@ -37,6 +37,24 @@ export const metadata: Metadata = buildPageShareMetadata({
   imageAlt: "Compare Wegovy prices UK — Health Wise",
 });
 
+const WEGOVY_RESOURCE_LINKS = [
+  {
+    href: "/wegovy-price-list",
+    title: "Wegovy price list",
+    description: "See the dose-by-dose Wegovy price index.",
+  },
+  {
+    href: "/wegovy-maintenance-pharmacies",
+    title: "Maintenance pharmacies",
+    description: "Check pharmacies with Wegovy maintenance policy notes.",
+  },
+  {
+    href: "/wegovy-faq",
+    title: "Wegovy FAQ",
+    description: "Read common UK questions about fees, doses, and policies.",
+  },
+] as const;
+
 function compareWebPageJsonLd() {
   const base = siteOrigin();
   return {
@@ -113,6 +131,38 @@ export default function CompareWegovyPricesUkPage() {
             </p>
             <div className="mt-10">
               <WegovyUkCompareTable providers={WEGOVY_UK_COMPARE_PROVIDERS} />
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-6xl px-4 md:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+                More Wegovy pricing resources
+              </h2>
+              <p className="mt-3 text-slate-600">
+                Use these supporting guides to understand list prices, maintenance
+                policies, and common provider questions before comparing pharmacies.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {WEGOVY_RESOURCE_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group rounded-2xl border border-emerald-100 bg-emerald-50/40 p-5 transition hover:-translate-y-0.5 hover:border-emerald-200 hover:bg-emerald-50 hover:shadow-sm"
+                >
+                  <h3 className="font-bold text-emerald-950">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    {item.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-teal-800 underline-offset-2 group-hover:underline">
+                    Read more
+                    <ArrowRight className="h-4 w-4" aria-hidden />
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

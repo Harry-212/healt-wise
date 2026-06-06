@@ -20,6 +20,31 @@ const FOOTER_UK_LOCATION_CITIES = [
   { slug: "leeds", name: "Leeds" },
 ] as const;
 
+const FOOTER_PRICE_RESOURCE_LINKS = [
+  { href: "/mounjaro-price-list", label: "Mounjaro price list" },
+  { href: "/wegovy-price-list", label: "Wegovy price list" },
+  {
+    href: "/mounjaro-maintenance-pharmacies",
+    label: "Mounjaro maintenance pharmacies",
+  },
+  {
+    href: "/wegovy-maintenance-pharmacies",
+    label: "Wegovy maintenance pharmacies",
+  },
+] as const;
+
+const FOOTER_SUPPORT_RESOURCE_LINKS = [
+  { href: "/mounjaro-faq", label: "Mounjaro FAQ" },
+  { href: "/wegovy-faq", label: "Wegovy FAQ" },
+  { href: "/price-alerts", label: "Price alerts" },
+] as const;
+
+const FOOTER_PROVIDER_PROFILE_LINKS = [
+  { href: "/pharmacies/fella-health", label: "Fella Health review" },
+  { href: "/pharmacies/fylde-clinic", label: "Fylde Clinic review" },
+  { href: "/pharmacies/get-weight-loss", label: "Get Weight Loss review" },
+] as const;
+
 /** Title case with lowercase “in” (e.g. Best Weight Loss Treatment in London). */
 function ukLocationFooterLabel(cityDisplayName: string): string {
   return `Best Weight Loss Treatment in ${cityDisplayName}`;
@@ -145,6 +170,14 @@ export default function Footer() {
                     <ChevronRight className={FOOTER_NAV_LINK_CHEVRON} aria-hidden />
                   </Link>
                 </li>
+                {FOOTER_PRICE_RESOURCE_LINKS.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className={FOOTER_NAV_LINK}>
+                      <span>{label}</span>
+                      <ChevronRight className={FOOTER_NAV_LINK_CHEVRON} aria-hidden />
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </motion.div>
 
@@ -209,6 +242,14 @@ export default function Footer() {
                     <ChevronRight className={FOOTER_NAV_LINK_CHEVRON} aria-hidden />
                   </Link>
                 </li>
+                {FOOTER_SUPPORT_RESOURCE_LINKS.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className={FOOTER_NAV_LINK}>
+                      <span>{label}</span>
+                      <ChevronRight className={FOOTER_NAV_LINK_CHEVRON} aria-hidden />
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </motion.div>
             
@@ -257,6 +298,16 @@ export default function Footer() {
                     </span>
                   </div>
                 </div>
+                <ul className="space-y-2">
+                  {FOOTER_PROVIDER_PROFILE_LINKS.map(({ href, label }) => (
+                    <li key={href}>
+                      <Link href={href} className={FOOTER_NAV_LINK}>
+                        <span>{label}</span>
+                        <ChevronRight className={FOOTER_NAV_LINK_CHEVRON} aria-hidden />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           </div>
