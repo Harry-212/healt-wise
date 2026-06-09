@@ -117,6 +117,36 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/locations-in-uk",
+        destination: "/blog?topic=locations",
+        permanent: true,
+      },
+      {
+        source: "/compare/best-weight-loss-injections-uk",
+        destination: "/compare/best-weight-loss-treatments-uk",
+        permanent: true,
+      },
+      {
+        source: "/pharmacies/chemist4u",
+        destination: "/mounjaro-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/pharmacies/click-pharmacy",
+        destination: "/mounjaro-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/pharmacies/phlo-clinic",
+        destination: "/mounjaro-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/pharmacies/simply-meds-online",
+        destination: "/mounjaro-price-comparison",
+        permanent: true,
+      },
+      {
         source: "/prices/wegovy-price-uk",
         destination: "/wegovy-price-comparison",
         permanent: true,
