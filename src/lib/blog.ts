@@ -93,6 +93,17 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "weight-loss-treatment-uk-complete-guide",
+    title:
+      "The Complete Guide to Weight Loss Treatment in the UK (2026): GLP-1, How It Works, Costs & What to Expect",
+    date: "2026-06-09",
+    category: "Guides",
+    description:
+      "The complete UK guide to weight loss treatment 2026 covering GLP-1 treatments, how they work, NHS vs private costs, eligibility, Mounjaro, Wegovy and Saxenda explained.",
+    heroImage: "/blog/weight-loss-treatment-uk-complete-guide-hero.png",
+    feedTags: ["guides", "wegovy", "mounjaro", "safety"],
+  },
+  {
     slug: "saxenda-vs-mounjaro-vs-wegovy-price-uk",
     title:
       "Saxenda vs Mounjaro vs Wegovy: Which Is the Cheapest Weight Loss Treatment in the UK?",
