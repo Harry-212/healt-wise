@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "buy-weight-loss-injections-uk",
+    title: "Buy Weight Loss Injections UK: Compare Weight Loss Treatment Prices Safely",
+    date: "2026-06-12",
+    category: "Prices",
+    description:
+      "If you want to buy weight loss injections UK safely, compare weight loss treatment prices, check UK pharmacy registration, and understand the full cost pathway.",
+    heroImage: "/blog/buy-weight-loss-injections-confused.png",
+    feedTags: ["safety", "wegovy", "mounjaro", "how-it-works"],
+  },
+  {
     slug: "weight-loss-treatment-uk-complete-guide",
     title:
       "The Complete Guide to Weight Loss Treatment in the UK (2026): GLP-1, How It Works, Costs & What to Expect",
