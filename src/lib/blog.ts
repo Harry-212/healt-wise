@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "buy-weight-loss-tablets",
+    title: "Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You",
+    date: "2026-06-13",
+    category: "Prices",
+    description:
+      "Buy weight loss tablets in the UK. Compare prices, safety, and prescription options before you choose.",
+    heroImage: "/blog/buy-weight-loss-tablets-confused.png",
+    feedTags: ["safety", "guides", "how-it-works", "wegovy"],
+  },
+  {
     slug: "buy-weight-loss-injections-uk",
     title: "Buy Weight Loss Injections UK: Compare Weight Loss Treatment Prices Safely",
     date: "2026-06-12",
