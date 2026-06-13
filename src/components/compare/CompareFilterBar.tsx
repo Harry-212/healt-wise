@@ -150,6 +150,7 @@ export default function CompareFilterBar<T extends string>({
             <span className="whitespace-nowrap">Sort by:</span>
             <span className="relative inline-flex">
               <select
+                suppressHydrationWarning
                 value={sort}
                 onChange={(e) =>
                   onSortChange(e.target.value as CompareSortPreset)

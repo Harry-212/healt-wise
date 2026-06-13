@@ -15,6 +15,7 @@ export type WegovyUkProviderCompare = {
   id: string;
   name: string;
   deliveryNote: string;
+  notes?: string;
   rating: number;
   /** Advertised “from” / headline figure where supplied (for reference). */
   headlineFrom: number;
@@ -583,13 +584,19 @@ function providerSeedToWegovy(
   };
 }
 
-export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] = [
-  ...MOUNJARO_UK_COMPARE_PROVIDERS,
-  ...WEGOVY_EXTRA_PROVIDER_SEEDS,
-].flatMap((provider) => {
-  const row = providerSeedToWegovy(provider);
-  return row ? [row] : [];
-});
+/** Build initial Wegovy provider list from Mounjaro base + price rows (seed only). */
+export function buildWegovyProvidersFromSeed(): WegovyUkProviderCompare[] {
+  return [...MOUNJARO_UK_COMPARE_PROVIDERS, ...WEGOVY_EXTRA_PROVIDER_SEEDS].flatMap(
+    (provider) => {
+      const row = providerSeedToWegovy(provider);
+      return row ? [row] : [];
+    },
+  );
+}
+
+/** Static snapshot for build-time consumers (homepage previews, sitemap, etc.). */
+export const WEGOVY_UK_COMPARE_PROVIDERS: WegovyUkProviderCompare[] =
+  buildWegovyProvidersFromSeed();
 
 export function pharmacyProfileHref(providerId: string): string {
   return `/pharmacies/${providerId}`;

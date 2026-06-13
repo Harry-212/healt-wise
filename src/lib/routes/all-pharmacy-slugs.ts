@@ -30,3 +30,18 @@ export function allPharmacySlugs(): string[] {
   for (const s of EXTRA_PHARMACY_LANDING_SLUGS) ids.add(s);
   return [...ids].sort();
 }
+
+let cachedPharmacyPageSlugs: Set<string> | null = null;
+
+/** Memoised set of slugs that have a real `/pharmacies/:slug` page. */
+export function pharmacyPageSlugSet(): Set<string> {
+  if (!cachedPharmacyPageSlugs) {
+    cachedPharmacyPageSlugs = new Set(allPharmacySlugs());
+  }
+  return cachedPharmacyPageSlugs;
+}
+
+/** True when a `/pharmacies/:slug` page exists (so linking won't 404). */
+export function hasPharmacyPage(slug: string): boolean {
+  return pharmacyPageSlugSet().has(slug.trim());
+}

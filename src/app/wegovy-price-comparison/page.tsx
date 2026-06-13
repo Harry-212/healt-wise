@@ -10,8 +10,8 @@ import {
   estimatedMonthlyCost,
   startingPrice,
   WEGOVY_UK_COMPARE_LAST_UPDATED,
-  WEGOVY_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/wegovy-uk-compare-providers";
+import { getWegovyCompareProviders } from "@/lib/data/compare-live";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
   WEGOVY_COMPARE_UK_FAQ_ITEMS,
@@ -74,6 +74,7 @@ function compareWebPageJsonLd() {
 }
 
 export default function CompareWegovyPricesUkPage() {
+  const WEGOVY_UK_COMPARE_PROVIDERS = getWegovyCompareProviders();
   const faqLd = wegovyCompareUkFaqJsonLd();
   const webLd = compareWebPageJsonLd();
 

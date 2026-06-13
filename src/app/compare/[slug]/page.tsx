@@ -11,6 +11,10 @@ import {
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
 import CompareMedPriceTabs from "@/components/compare/CompareMedPriceTabs";
+import {
+  getMounjaroCompareProviders,
+  getWegovyCompareProviders,
+} from "@/lib/data/compare-live";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
 import {
   COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_ALT,
@@ -150,7 +154,11 @@ export default async function ComparePage({ params }: Props) {
           showSubtitleLiveDate={isTripleHub}
         />
 
-        <CompareMedPriceTabs medications={layout.medications} />
+        <CompareMedPriceTabs
+          medications={layout.medications}
+          mounjaroProviders={getMounjaroCompareProviders()}
+          wegovyProviders={getWegovyCompareProviders()}
+        />
 
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />

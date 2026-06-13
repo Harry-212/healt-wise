@@ -28,6 +28,7 @@ import {
   type WegovyUkProviderCompare,
 } from "@/lib/data/wegovy-uk-compare-providers";
 import { trustpilotHrefForProvider } from "@/lib/seo/trustpilot-link";
+import { hasPharmacyPage } from "@/lib/routes/all-pharmacy-slugs";
 import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
 import {
   COMPARE_TABLE_CARD_CLASS,
@@ -528,7 +529,8 @@ export default function WegovyUkCompareTable({
                   const isLowestRow =
                     processed.minStart != null && start === processed.minStart;
                   const profile = pharmacyProfileHref(p.id);
-                  const linkProfile = p.linkProfilePage !== false;
+                  const linkProfile =
+                    p.linkProfilePage !== false && hasPharmacyPage(p.id);
                   const tpHref = trustpilotHrefForProvider(
                     p.name,
                     p.trustpilotUrl,
@@ -546,7 +548,7 @@ export default function WegovyUkCompareTable({
                       }`}
                     >
                       <td
-                        className={`sticky left-0 z-10 w-24 border-r border-slate-200/80 px-2 py-2.5 pl-3 align-top shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] sm:w-32 sm:px-3 sm:pl-4 ${stickyProviderBg}`}
+                        className={`sticky left-0 z-10 w-24 border-r border-slate-200/80 px-2 py-2.5 pl-3 align-middle shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] sm:w-32 sm:px-3 sm:pl-4 ${stickyProviderBg}`}
                       >
                         <div className="flex flex-col gap-1.5">
                           {linkProfile ? (
@@ -613,15 +615,21 @@ export default function WegovyUkCompareTable({
                           </span>
                         </a>
                       </td>
-                      <td className="border-b border-slate-100/90 px-2 py-2.5 align-top whitespace-nowrap text-xs text-slate-600">
+                      <td className="border-b border-slate-100/90 px-2 py-2.5 align-middle whitespace-nowrap text-xs text-slate-600">
                         <ProviderGphcLine
                           providerId={p.id}
                           gphcRegNo={p.gphcRegNo}
                         />
                       </td>
-                      <td className="border-b border-slate-100/90 px-2 py-2.5 align-top text-xs text-slate-600" />
+                      <td className="max-w-40 border-b border-slate-100/90 px-2 py-2.5 align-top text-xs leading-snug text-slate-600">
+                        {p.notes?.trim() ? (
+                          <span className="whitespace-pre-line">{p.notes}</span>
+                        ) : (
+                          <span className="text-slate-400">—</span>
+                        )}
+                      </td>
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
-                        {todayLabel ?? p.updatedLabel}
+                        {p.updatedLabel?.trim() || todayLabel || "—"}
                       </td>
                     </tr>
                   );

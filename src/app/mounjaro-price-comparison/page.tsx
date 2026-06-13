@@ -10,8 +10,8 @@ import {
   estimatedMonthlyCost,
   startingPrice,
   MOUNJARO_UK_COMPARE_LAST_UPDATED,
-  MOUNJARO_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/mounjaro-uk-compare-providers";
+import { getMounjaroCompareProviders } from "@/lib/data/compare-live";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
   MOUNJARO_COMPARE_UK_FAQ_ITEMS,
@@ -74,6 +74,7 @@ function compareWebPageJsonLd() {
 }
 
 export default function CompareMounjaroPricesUkPage() {
+  const MOUNJARO_UK_COMPARE_PROVIDERS = getMounjaroCompareProviders();
   const faqLd = mounjaroCompareUkFaqJsonLd();
   const webLd = compareWebPageJsonLd();
 

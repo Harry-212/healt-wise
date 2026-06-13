@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Admin-editable compare data (seeded on first run; survives Hostinger deploys)
+/data/mounjaro-compare.json
+/data/wegovy-compare.json

@@ -90,6 +90,7 @@ export type MounjaroUkProviderCompare = {
   id: string;
   name: string;
   deliveryNote: string;
+  notes?: string;
   rating: number;
   headlineFrom: number;
   /** GPhC pharmacy premises number (link uses the first 6–7 digit token). */
@@ -120,7 +121,7 @@ export const MOUNJARO_DOSE_KEYS: readonly (keyof MounjaroUkProviderCompare["pric
 
 export type MounjaroDoseColumnKey = (typeof MOUNJARO_DOSE_KEYS)[number];
 
-const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
+export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
   {
     id: "asda-online-doctor",
     name: "Asda",

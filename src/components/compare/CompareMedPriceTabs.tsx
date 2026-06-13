@@ -13,8 +13,14 @@ import SaxendaUkCompareTable from "@/components/saxenda/SaxendaUkCompareTable";
 import WegovyCompareChartsSection from "@/components/compare/WegovyCompareChartsSection";
 import MounjaroCompareChartsSection from "@/components/compare/MounjaroCompareChartsSection";
 import SaxendaCompareChartsSection from "@/components/compare/SaxendaCompareChartsSection";
-import { WEGOVY_UK_COMPARE_PROVIDERS } from "@/lib/data/wegovy-uk-compare-providers";
-import { MOUNJARO_UK_COMPARE_PROVIDERS } from "@/lib/data/mounjaro-uk-compare-providers";
+import {
+  WEGOVY_UK_COMPARE_PROVIDERS,
+  type WegovyUkProviderCompare,
+} from "@/lib/data/wegovy-uk-compare-providers";
+import {
+  MOUNJARO_UK_COMPARE_PROVIDERS,
+  type MounjaroUkProviderCompare,
+} from "@/lib/data/mounjaro-uk-compare-providers";
 import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-providers";
 
 /** UK brand names — used in triple-compare tab UI */
@@ -71,7 +77,15 @@ const WHAT_IS: Record<CompareMedicationTab, string> = {
   saxenda: "/what-is-saxenda",
 };
 
-function MedPanel({ med }: { med: CompareMedicationTab }) {
+function MedPanel({
+  med,
+  mounjaroProviders,
+  wegovyProviders,
+}: {
+  med: CompareMedicationTab;
+  mounjaroProviders: MounjaroUkProviderCompare[];
+  wegovyProviders: WegovyUkProviderCompare[];
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -95,10 +109,10 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
       </div>
 
       {med === "wegovy" && (
-        <WegovyUkCompareTable providers={WEGOVY_UK_COMPARE_PROVIDERS} />
+        <WegovyUkCompareTable providers={wegovyProviders} />
       )}
       {med === "mounjaro" && (
-        <MounjaroUkCompareTable providers={MOUNJARO_UK_COMPARE_PROVIDERS} />
+        <MounjaroUkCompareTable providers={mounjaroProviders} />
       )}
       {med === "saxenda" && (
         <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} />
@@ -112,10 +126,10 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
           </h3>
         </div>
         {med === "wegovy" && (
-          <WegovyCompareChartsSection providers={WEGOVY_UK_COMPARE_PROVIDERS} />
+          <WegovyCompareChartsSection providers={wegovyProviders} />
         )}
         {med === "mounjaro" && (
-          <MounjaroCompareChartsSection providers={MOUNJARO_UK_COMPARE_PROVIDERS} />
+          <MounjaroCompareChartsSection providers={mounjaroProviders} />
         )}
         {med === "saxenda" && (
           <SaxendaCompareChartsSection providers={SAXENDA_UK_COMPARE_PROVIDERS} />
@@ -137,8 +151,12 @@ function MedPanel({ med }: { med: CompareMedicationTab }) {
 
 export default function CompareMedPriceTabs({
   medications,
+  mounjaroProviders = MOUNJARO_UK_COMPARE_PROVIDERS,
+  wegovyProviders = WEGOVY_UK_COMPARE_PROVIDERS,
 }: {
   medications: CompareMedicationTab[];
+  mounjaroProviders?: MounjaroUkProviderCompare[];
+  wegovyProviders?: WegovyUkProviderCompare[];
 }) {
   const [active, setActive] = useState<CompareMedicationTab>(medications[0]!);
   const liveDateLabel = useTodayLabel();
@@ -237,7 +255,11 @@ export default function CompareMedPriceTabs({
             aria-labelledby={`compare-tab-${active}`}
             className="min-w-0"
           >
-            <MedPanel med={active} />
+            <MedPanel
+              med={active}
+              mounjaroProviders={mounjaroProviders}
+              wegovyProviders={wegovyProviders}
+            />
           </div>
         </AnimatePresence>
       </div>
