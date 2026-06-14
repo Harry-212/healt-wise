@@ -93,6 +93,17 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "can-i-buy-weight-loss-injections-online-uk",
+    title:
+      "Can I Buy Weight Loss Injections Online in the UK? Safe Prices, Providers, and What to Check",
+    date: "2026-06-15",
+    category: "Guides",
+    description:
+      "Yes, you can buy weight loss injections online in the UK, but only safely through a regulated pharmacy after a clinical assessment. Compare prices, providers and what to check first.",
+    heroImage: "/blog/can-i-buy-weight-loss-1.webp",
+    feedTags: ["guides", "wegovy", "mounjaro", "safety"],
+  },
+  {
     slug: "buy-weight-loss-tablets",
     title: "Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You",
     date: "2026-06-13",
