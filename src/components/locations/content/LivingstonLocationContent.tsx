@@ -303,7 +303,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
                         <td className={`border px-3 py-2 ${tableBorder}`}>Mounjaro (tirzepatide)</td>
                         <td className={`border px-3 py-2 ${tableBorder}`}>GLP 1 plus GIP</td>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Weekly</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About 18 to 22% (NEJM, DOI 10.1056/NEJMoa2403468; 2024)</td>
+                        <td className={`border px-3 py-2 ${tableBorder}`}>About 18 to 22%</td>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Private mostly while NHS pilots vary</td>
                       </tr>
                       <tr>

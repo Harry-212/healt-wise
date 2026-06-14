@@ -212,18 +212,7 @@ export default function EdinburghLocationContent({ loc, shareUrl }: Props) {
                   NHS route: semaglutide (Wegovy) and tirzepatide (Mounjaro) are generally framed around BMI 35 plus, or BMI 30 plus with comorbidities, under specialist pathways. Titration often starts at 0.25 mg weekly. Evidence summaries discuss 15 to 20% loss at 68 weeks in some trials.
                 </p>
 
-                <p className={`text-sm ${muted}`}>
-                  DOI{" "}
-                  <a
-                    href="https://doi.org/10.1056/NEJMoa2403468"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1056/NEJMoa2403468
-                  </a>
-                  .
-                </p>
+
 
                 <p className={p}>
                   Private: GPhC registered online clinics can deliver refrigerated pens to EH postcodes. Verify prescriber registration and confirm cold chain storage, typically 2 to 8°C. Costs can range £179 to £299 per month depending on dose and support.
@@ -255,18 +244,7 @@ export default function EdinburghLocationContent({ loc, shareUrl }: Props) {
                   With GLP 1: trials often show a faster early drop then a steadier pace. Lancet critiques discuss regain after stopping medication. The key is habit building while appetite is easier to manage.
                 </p>
 
-                <p className={`text-sm ${muted}`}>
-                  DOI{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1016/S0140-6736(24)00234-5
-                  </a>
-                  .
-                </p>
+
 
                 <p className={p}>
                   Without medicines: pure lifestyle may average around 0.75 kg per week for many people, making 12 to 16 weeks a more realistic target for 10 kg.

@@ -306,15 +306,6 @@ export default function DurhamLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-sm ${muted}`}>
                   Links:{" "}
                   <a
-                    href="https://doi.org/10.1111/dth.16234"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1111/dth.16234
-                  </a>
-                  ,{" "}
-                  <a
                     href="https://www.dukehealth.org/locations/duke-lifestyle-and-weight-management-center"
                     className={linkCls}
                     rel="noopener noreferrer"

@@ -208,18 +208,7 @@ export default function ExeterLocationContent({ loc, shareUrl }: Props) {
                   NHS route: GP referral into Tier 2 and Tier 3. Waits can be 2 to 6 months and lifestyle is usually required first. Evidence favours this sequence because medicines alone can falter without habits.
                 </p>
 
-                <p className={`text-sm ${muted}`}>
-                  The Lancet DOI{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1016/S0140-6736(24)00234-5
-                  </a>
-                  .
-                </p>
+
 
                 <p className={p}>
                   If you go private, use{" "}

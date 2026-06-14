@@ -227,18 +227,7 @@ export default function GloucesterLocationContent({ loc, shareUrl }: Props) {
                   Mounjaro (tirzepatide) is dual hormone and mimics GLP 1 plus GIP. Trials report large average losses in selected populations at around a year. A 6 month plan can be meaningful when paired with a 500 calorie deficit.
                 </p>
 
-                <p className={`text-sm ${muted}`}>
-                  NEJM DOI{" "}
-                  <a
-                    href="https://doi.org/10.1056/NEJMoa2403468"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1056/NEJMoa2403468
-                  </a>
-                  .
-                </p>
+
 
                 <p className={p}>
                   Wegovy (semaglutide) is single action with trial summaries often around 15% at about a year. NHS eligibility is commonly framed around BMI 35 plus, or BMI 30 plus with issues. Saxenda is a daily alternative with smaller average losses for many people.

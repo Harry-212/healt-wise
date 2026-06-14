@@ -220,18 +220,6 @@ export default function BirminghamLocationContent({ loc, shareUrl }: Props) {
                   </a>
                   . Commuter food vans and shift work can erode routine.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  Context{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Lancet (2024) diet trials and regain
-                  </a>
-                  .
-                </p>
               </GuideSection>
 
               <GuideSection
@@ -276,18 +264,6 @@ export default function BirminghamLocationContent({ loc, shareUrl }: Props) {
                   <Link href="/saxenda-price-comparison" className={linkCls}>
                     Saxenda prices
                   </Link>
-                  .
-                </p>
-                <p className={`text-sm ${muted}`}>
-                  Pulse context{" "}
-                  <a
-                    href="https://doi.org/10.3390/nu17030145"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Nutrients (2025)
-                  </a>
                   .
                 </p>
 
@@ -349,27 +325,6 @@ export default function BirminghamLocationContent({ loc, shareUrl }: Props) {
                     our UK comparator
                   </Link>{" "}
                   to compare safety, follow up, and total cost.
-                </p>
-                <p className={`text-sm ${muted}`}>
-                  Examples{" "}
-                  <a
-                    href="https://doi.org/10.1111/dth.16234"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Dermatologic Therapy (2024)
-                  </a>
-                  ;{" "}
-                  <a
-                    href="https://doi.org/10.1056/NEJMra2405134"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    NEJM review (2025)
-                  </a>
-                  .
                 </p>
               </GuideSection>
 

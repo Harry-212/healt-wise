@@ -180,7 +180,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  NHS data pegs East Midlands obesity near 31% (NHS Digital, 2025). Leicester&apos;s diverse communities face hurdles such as South Asian carb heavy diets, factory shifts, and student takeaways. Crash diets fail because The Lancet (2024) shows about 80% regain within a year in many unsupported programmes. Citation DOI 10.1016/S0140-6736(24)00234-5.
+                  NHS data pegs East Midlands obesity near 31% (NHS Digital, 2025). Leicester&apos;s diverse communities face hurdles such as South Asian carb heavy diets, factory shifts, and student takeaways. Crash diets fail because The Lancet (2024) shows about 80% regain within a year in many unsupported programmes.
                 </p>
 
                 <p className={p}>
@@ -291,7 +291,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Dual hormone action yields strong results in trials: about 21% loss versus about 15% for semaglutide in selected head to head discussions (NEJM 2024, DOI 10.1056/NEJMoa2403468). Leicester advantage framing: South Asian patients may see better glycaemic control in some subgroup analyses when clinicians match treatment to cardiometabolic risk.
+                  Dual hormone action yields strong results in trials: about 21% loss versus about 15% for semaglutide in selected head to head discussions. Leicester advantage framing: South Asian patients may see better glycaemic control in some subgroup analyses when clinicians match treatment to cardiometabolic risk.
                 </p>
 
                 <p className={p}>

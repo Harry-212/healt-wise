@@ -222,7 +222,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  GLP-1s mimic gut hormones, slowing emptying. Wegovy: Weekly pen, NHS eligible BMI 35+ (30+ comorbidities). Mounjaro: Adds GIP for extra satiety—trials show 20% loss [NEJM, 2024; DOI: 10.1056/NEJMoa2403468]. Saxenda: Daily, starter-friendly.
+                  GLP-1s mimic gut hormones, slowing emptying. Wegovy: Weekly pen, NHS eligible BMI 35+ (30+ comorbidities). Mounjaro: Adds GIP for extra satiety—trials show 20% loss. Saxenda: Daily, starter-friendly.
                 </p>
 
                 <p className={p}>
@@ -326,7 +326,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Programs: NHS tier 3 (dietitian + group) 12% loss; private apps 9%. The Lancet (2024) ranks combos 40% better than diet alone [DOI: 10.1016/S0140-6736(24)00234-5].
+                  Programs: NHS tier 3 (dietitian + group) 12% loss; private apps 9%. The Lancet (2024) ranks combos 40% better than diet alone.
                 </p>
 
                 <p className={p}>

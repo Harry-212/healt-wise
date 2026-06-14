@@ -179,7 +179,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  NHS data pegs West Midlands overweight near 64%, with Lichfield&apos;s historic centre hiding sedentary traps (NHS Digital, 2025). Could market fresh produce help? Likely, but factory leaning diets still demand structure. The Lancet warns about 80% fad regain. Citation DOI 10.1016/S0140-6736(24)00234-5. Nuance: cathedral green circuits burn calories when you repeat them weekly, not once a season.
+                  NHS data pegs West Midlands overweight near 64%, with Lichfield&apos;s historic centre hiding sedentary traps (NHS Digital, 2025). Could market fresh produce help? Likely, but factory leaning diets still demand structure. The Lancet warns about 80% fad regain. Nuance: cathedral green circuits burn calories when you repeat them weekly, not once a season.
                 </p>
 
                 <p className={p}>

@@ -188,7 +188,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  County Antrim obesity framing hits about 62% overweight or obese in NHS Digital, 2025 summaries. Lisburn&apos;s market culture favours hearty eats. Crash diets? The Lancet (2024) shows about 83% regain in many fad cohorts. Citation DOI 10.1016/S0140-6736(24)00234-5. Semantic nuance: sustainable slimming Lisburn demands appetite suppression plus behavioural rewiring, not solo calorie cuts that rebound.
+                  County Antrim obesity framing hits about 62% overweight or obese in NHS Digital, 2025 summaries. Lisburn&apos;s market culture favours hearty eats. Crash diets? The Lancet (2024) shows about 83% regain in many fad cohorts. Semantic nuance: sustainable slimming Lisburn demands appetite suppression plus behavioural rewiring, not solo calorie cuts that rebound.
                 </p>
 
                 <p className={p}>
@@ -222,7 +222,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  GLP 1 receptor agonists mimic gut hormones. Wegovy (semaglutide): weekly injection reduces hunger and slows gastric emptying, with trials showing about 15% body weight loss over 68 weeks (NEJM, 2023; DOI 10.1056/NEJMoa2307563). Mounjaro (tirzepatide): dual action GLP 1 plus GIP, potentially stronger satiety, with about 20% loss in SURMOUNT 1 style summaries (NEJM, 2024; DOI 10.1056/NEJMoa2403468).
+                  GLP 1 receptor agonists mimic gut hormones. Wegovy (semaglutide): weekly injection reduces hunger and slows gastric emptying, with trials showing about 15% body weight loss over 68 weeks (NEJM, 2023; DOI 10.1056/NEJMoa2307563). Mounjaro (tirzepatide): dual action GLP 1 plus GIP, potentially stronger satiety, with about 20% loss in SURMOUNT 1 style summaries.
                 </p>
 
                 <p className={p}>

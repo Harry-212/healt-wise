@@ -666,15 +666,8 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
                     className={linkCls}
                   >
                     Oxford
-                  </Link>
-                  ,{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-basingstoke"
-                    className={linkCls}
-                  >
-                    Basingstoke
-                  </Link>
-                  , and{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link
                     href="/blog/best-weight-loss-treatment-in-london"
                     className={linkCls}

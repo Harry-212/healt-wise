@@ -247,18 +247,7 @@ export default function BasildonLocationContent({ loc, shareUrl }: Props) {
                   calls, earlier station exits, and strength work you can finish
                   in twenty minutes.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  Context:{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Lancet (2024) diet trials and regain
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection

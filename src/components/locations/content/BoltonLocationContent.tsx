@@ -203,18 +203,7 @@ export default function BoltonLocationContent({ loc, shareUrl }: Props) {
                   </a>
                   .
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  Context{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Lancet (2024)
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="core-elements" heading="Blueprint for Bolton weight wins">

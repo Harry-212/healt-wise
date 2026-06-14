@@ -203,18 +203,7 @@ export default function EastKilbrideLocationContent({ loc, shareUrl }: Props) {
                   GLP 1s mimic gut hormones and slow stomach emptying. Wegovy is a weekly pen, and NHS eligibility is often framed around higher BMI thresholds and risk factors. Mounjaro adds GIP for extra satiety, with trials reporting around 20% average loss.
                 </p>
 
-                <p className={`text-sm ${muted}`}>
-                  DOI{" "}
-                  <a
-                    href="https://doi.org/10.1056/NEJMoa2403468"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1056/NEJMoa2403468
-                  </a>
-                  .
-                </p>
+
 
                 <p className={p}>
                   Side effects can include nausea and gallbladder risk. GP blood tests can be essential. These are not forever fixes, pair them with a 500 calorie deficit for about 1 kg per week. Kelly Clarkson style? Medicines plus habits, but UK access needs monitoring.

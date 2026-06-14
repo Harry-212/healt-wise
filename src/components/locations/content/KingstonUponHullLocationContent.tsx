@@ -182,18 +182,7 @@ export default function KingstonUponHullLocationContent({ loc, shareUrl }: Props
                   Waiting times can be about 2 to 4 months depending on capacity. A structured foundation can help because quick fixes often fail. Local boost: Humber Bridge walks can burn about 350 calories per hour depending on pace and body size.
                 </p>
 
-                <p className={`text-sm ${muted}`}>
-                  The Lancet DOI{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1016/S0140-6736(24)00234-5
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="private" heading="Private pathways: GLP 1 and surgical access">
@@ -205,18 +194,7 @@ export default function KingstonUponHullLocationContent({ loc, shareUrl }: Props
                   Surgery options such as gastric sleeve or bypass can be considered at severe obesity thresholds, usually after lifestyle support has been tried. Cold storage and regulated delivery matter for injectable pens.
                 </p>
 
-                <p className={`text-sm ${muted}`}>
-                  NEJM DOI{" "}
-                  <a
-                    href="https://doi.org/10.1056/NEJMoa2403468"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1056/NEJMoa2403468
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="timelines" heading="Practical timelines for Hull residents">

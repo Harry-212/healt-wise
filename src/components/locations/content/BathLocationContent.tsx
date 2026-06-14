@@ -256,18 +256,7 @@ export default function BathLocationContent({ loc, shareUrl }: Props) {
                   volume, protein first lunches. Hilly streets help unevenly;
                   consistency still wins Wednesday through Sunday.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  Context:{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Lancet (2024) diet trials and regain
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection

@@ -237,18 +237,7 @@ export default function InvernessLocationContent({ loc, shareUrl }: Props) {
                   Crash diets fail. Public summaries often cite high regain rates. A safer pace is 0.5 to 1 kg per week.
                 </p>
 
-                <p className={`text-sm ${muted}`}>
-                  The Lancet DOI{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1016/S0140-6736(24)00234-5
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="checklists" heading="Safety checklists for Highland residents">

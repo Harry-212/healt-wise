@@ -225,18 +225,7 @@ export default function ColchesterLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Fads flop fast. The Lancet warns 70% regain. Nuance: oyster feasts need tweaks.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  DOI{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1016/S0140-6736(24)00234-5
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="core" heading="Core strategies beyond medicines">

@@ -139,7 +139,7 @@ export default function NewportLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  South Wales valleys like Newport face 30% overweight rates Public Health Wales Obesity Report 2025 - river walks help, but urban sprawl encourages sedentary commutes. Fads fail: The Lancet (2024) shows 80% regain with crash diets [DOI: 10.1016/S0140-6736(24)00234-5]. Metadata nuance: Postcode influences clinic waits, not drug efficacy. Local hack: Usk trails torch 300 cals/hour - pair with market veg swaps.
+                  South Wales valleys like Newport face 30% overweight rates Public Health Wales Obesity Report 2025 - river walks help, but urban sprawl encourages sedentary commutes. Fads fail: The Lancet (2024) shows 80% regain with crash diets. Metadata nuance: Postcode influences clinic waits, not drug efficacy. Local hack: Usk trails torch 300 cals/hour - pair with market veg swaps.
                 </p>
 
                 <p className={p}>
@@ -153,7 +153,7 @@ export default function NewportLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Medically supervised GLP-1 receptor agonist injections dominate Newport&apos;s landscape. These mimic gut hormones slowing gastric emptying, curbing appetite. Semaglutide (Wegovy): Weekly pen, 12-15% loss in 68 weeks trials [NEJM STEP 1, 2023; DOI: 10.1056/NEJMoa2107519]. Tirzepatide (Mounjaro): Dual GIP/GLP-1 - 22% in SURMOUNT trials [NEJM 2024; DOI: 10.1056/NEJMoa2403468]. Personalized nutrition: Dietitian plans targeting 500-700 deficits for 1kg/week. Metabolic health evaluations: Bloods (insulin, lipids) identify root causes like insulin resistance. Lifestyle coaching: Accountability boosts 20% adherence [BMJ Lifestyle, 2025].
+                  Medically supervised GLP-1 receptor agonist injections dominate Newport&apos;s landscape. These mimic gut hormones slowing gastric emptying, curbing appetite. Semaglutide (Wegovy): Weekly pen, 12-15% loss in 68 weeks trials [NEJM STEP 1, 2023; DOI: 10.1056/NEJMoa2107519]. Tirzepatide (Mounjaro): Dual GIP/GLP-1 - 22% in SURMOUNT trials. Personalized nutrition: Dietitian plans targeting 500-700 deficits for 1kg/week. Metabolic health evaluations: Bloods (insulin, lipids) identify root causes like insulin resistance. Lifestyle coaching: Accountability boosts 20% adherence [BMJ Lifestyle, 2025].
                 </p>
 
                 <p className={p}>

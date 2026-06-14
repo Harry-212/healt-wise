@@ -242,19 +242,6 @@ export default function GlasgowLocationContent({ loc, shareUrl }: Props) {
                   Wegovy (semaglutide) is a weekly pen and trials often cite around 12 to 15% loss at about 68 weeks. Mounjaro (tirzepatide) is dual hormone, and some studies show higher average loss. Saxenda is a daily injection with more modest outcomes for many people and can be cheaper.
                 </p>
 
-                <p className={`text-sm ${muted}`}>
-                  NEJM DOI{" "}
-                  <a
-                    href="https://doi.org/10.1056/NEJMoa2403468"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1056/NEJMoa2403468
-                  </a>
-                  .
-                </p>
-
                 <p className={p}>
                   Hedging: medicines amplify, they do not replace habits. Pair medication with walking, protein, and strength training so you can maintain results later.
                 </p>
@@ -372,16 +359,6 @@ export default function GlasgowLocationContent({ loc, shareUrl }: Props) {
                       target="_blank"
                     >
                       NHS healthy weight overview
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className={linkCls}
-                      href="https://www.nhsinform.scot/healthy-living/food-and-nutrition/healthy-eating-and-weight-loss/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      NHS inform weight loss overview
                     </a>
                   </li>
                 </ul>

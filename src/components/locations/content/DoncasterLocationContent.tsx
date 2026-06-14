@@ -207,18 +207,7 @@ export default function DoncasterLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Fad shakes can look flashy and still fail. The Lancet (2024) predicts 70% regain. Parkin spices need portion smarts. Active jobs vary needs.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  DOI{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1016/S0140-6736(24)00234-5
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="core-tactics" heading="Core weight tactics for Doncaster">
@@ -291,16 +280,7 @@ export default function DoncasterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="advanced" heading="Advanced aids explored in Doncaster context">
                 <p className={p}>
-                  Wegovy and Mounjaro shine in Doncaster discussions. Holden&apos;s Chemist Express explains tirzepatide&apos;s dual hormone action on their page. Weightlossdoncaster.co.uk describes bariatric surgery recovery. Cryo can reduce local fat thickness for selected candidates. Dermatologic Therapy DOI{" "}
-                  <a
-                    href="https://doi.org/10.1111/dth.16234"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1111/dth.16234
-                  </a>
-                  .
+                  Wegovy and Mounjaro shine in Doncaster discussions. Holden&apos;s Chemist Express explains tirzepatide&apos;s dual hormone action on their page. Weightlossdoncaster.co.uk describes bariatric surgery recovery. Cryo can reduce local fat thickness for selected candidates.
                 </p>
                 <p className={p}>
                   Balloons are described as temporary fill on pages like{" "}

@@ -181,18 +181,7 @@ export default function CambridgeLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Pill fads can be hyped. Rebound risk is real when routines are not sustainable, so cycling culture helps only when it is consistent.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  Evidence link{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Lancet (2024)
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="core-tactics" heading="Core tactics for Cambridge weight wins">
@@ -344,18 +333,7 @@ export default function CambridgeLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Cryolipolysis and similar devices can reduce local fat thickness for selected candidates, but they do not replace energy balance.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  Evidence link{" "}
-                  <a
-                    href="https://doi.org/10.1111/dth.16234"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Dermatologic Therapy (2025)
-                  </a>
-                  .
-                </p>
+
                 <p className={p}>
                   Side effects can happen and monitoring matters. When comparing clinics, use{" "}
                   <Link href="/methodology" className={linkCls}>

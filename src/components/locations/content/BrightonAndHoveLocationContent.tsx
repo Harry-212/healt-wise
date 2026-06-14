@@ -200,18 +200,7 @@ export default function BrightonAndHoveLocationContent({ loc, shareUrl }: Props)
                 <p className={p}>
                   Pill fads can look flashy. Many people regain weight when plans are not sustainable, so flexible routines matter.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  Evidence link{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Lancet (2024)
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="essentials" heading="Essentials of elite weight loss here">

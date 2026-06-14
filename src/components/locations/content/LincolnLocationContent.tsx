@@ -492,7 +492,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
                 </div>
 
                 <p className={`mt-4 ${p}`}>
-                  Lincoln hack: resistance bands at Hartsholme Park plus bone broth from local farms when dietitian aligned. Dermatologic Therapy confirms progressive overload prevents a large share of sagging complaints in some cohort summaries (DOI 10.1111/dth.16234).
+                  Lincoln hack: resistance bands at Hartsholme Park plus bone broth from local farms when dietitian aligned. Dermatologic Therapy confirms progressive overload prevents a large share of sagging complaints in some cohort summaries.
                 </p>
               </GuideSection>
 

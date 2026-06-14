@@ -227,18 +227,7 @@ export default function BlackpoolLocationContent({ loc, shareUrl }: Props) {
                   matter. Fun towns need flexible routines that survive weekends
                   without a reset on Monday.\n{" "}
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  Example trial context{" "}
-                  <a
-                    href="https://doi.org/10.1056/NEJMoa2403468"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    NEJM (2024)
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection
@@ -342,15 +331,6 @@ export default function BlackpoolLocationContent({ loc, shareUrl }: Props) {
                 </p>
                 <p className={`text-sm ${muted}`}>
                   Examples{" "}
-                  <a
-                    href="https://doi.org/10.1111/dth.16234"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Dermatologic Therapy (2024)
-                  </a>
-                  ;{" "}
                   <a
                     href="https://doi.org/10.1007/s00266-024-04256-7"
                     className={linkCls}

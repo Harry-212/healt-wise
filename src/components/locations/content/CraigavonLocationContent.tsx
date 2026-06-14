@@ -178,18 +178,7 @@ export default function CraigavonLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Fads flop fast. The Lancet (2024) shows 70% regain. Ulster fry tweaks matter. Medicines shine with support, not solo.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  DOI{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1016/S0140-6736(24)00234-5
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="prescriptions" heading="Prescription paths in Craigavon area">

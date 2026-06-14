@@ -195,18 +195,7 @@ export default function BradfordLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Fads flicker. The rebound risk is a real theme in long term outcomes. Keep changes moderate, repeatable, and tracked.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  Evidence link{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Lancet (2024)
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="medical-aids" heading="Standout medical aids in Bradford context">

@@ -237,18 +237,7 @@ export default function ElyLocationContent({ loc, shareUrl }: Props) {
                   Wegovy (semaglutide) is a weekly pen and trials often describe about 15% loss. Mounjaro (tirzepatide) is dual hormone and some trials report around 20% average loss. Ely private options often mean online GPhC registered services delivering refrigerated pens, and you should check cold chain handling.
                 </p>
 
-                <p className={`text-sm ${muted}`}>
-                  NEJM DOI{" "}
-                  <a
-                    href="https://doi.org/10.1056/NEJMoa2403468"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1056/NEJMoa2403468
-                  </a>
-                  .
-                </p>
+
 
                 <p className={p}>
                   Most successful drug? Tirzepatide leads many trial summaries, but lifestyle amplifies. Kelly Clarkson interviews often describe GLP 1 class medicines plus workouts. UK mimic needs GP oversight.

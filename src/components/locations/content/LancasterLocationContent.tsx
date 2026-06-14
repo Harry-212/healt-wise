@@ -196,16 +196,7 @@ export default function LancasterLocationContent({ loc, shareUrl }: Props) {
                 </ul>
 
                 <p className={p}>
-                  Nuance: hills help, but consistency trumps terrain. Crash diets fail about 80% long term (
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    The Lancet, 2024 DOI 10.1016/S0140-6736(24)00234-5
-                  </a>
-                  ). Nearby guides:{" "}
+                  Nuance: hills help, but consistency trumps terrain. Crash diets fail about 80% long term. Nearby guides:{" "}
                   <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-preston">
                     best weight loss treatment Preston
                   </Link>{" "}
@@ -224,16 +215,7 @@ export default function LancasterLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-base font-semibold ${strong}`}>Understanding the science</p>
                 <p className={p}>
-                  GLP 1 receptor agonists mimic gut hormones. Semaglutide (Wegovy or Ozempic) slows gastric emptying so you feel full longer. Tirzepatide (Mounjaro) adds GIP action, which can deepen metabolic impact in trials (
-                  <a
-                    href="https://doi.org/10.1056/NEJMoa2403468"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    NEJM 2024 DOI 10.1056/NEJMoa2403468
-                  </a>
-                  ). Read{" "}
+                  GLP 1 receptor agonists mimic gut hormones. Semaglutide (Wegovy or Ozempic) slows gastric emptying so you feel full longer. Tirzepatide (Mounjaro) adds GIP action, which can deepen metabolic impact in trials. Read{" "}
                   <Link className={linkCls} href="/what-is-wegovy">
                     what Wegovy is
                   </Link>{" "}

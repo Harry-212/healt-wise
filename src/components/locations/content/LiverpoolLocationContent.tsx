@@ -186,7 +186,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Crash diets fail about 80% long term (The Lancet, 2024; DOI 10.1016/S0140-6736(24)00234-5). Sustainable slimming Liverpool means about 500 to 1000 calorie deficits when clinician agreed, yielding about 0.5 to 1 kg weekly in NICE CG189, 2025 style messaging.
+                  Crash diets fail about 80% long term. Sustainable slimming Liverpool means about 500 to 1000 calorie deficits when clinician agreed, yielding about 0.5 to 1 kg weekly in NICE CG189, 2025 style messaging.
                 </p>
 
                 <p className={p}>

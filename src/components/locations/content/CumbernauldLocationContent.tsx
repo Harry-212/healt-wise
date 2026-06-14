@@ -199,18 +199,7 @@ export default function CumbernauldLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Pills alone can be risky. The Lancet (2024) notes many people need support. Haggis cravings call for hybrids.
                 </p>
-                <p className={`text-sm ${muted}`}>
-                  DOI{" "}
-                  <a
-                    href="https://doi.org/10.1016/S0140-6736(24)00234-5"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1016/S0140-6736(24)00234-5
-                  </a>
-                  .
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="medical" heading="Medical weight management options in Scotland">
@@ -260,16 +249,7 @@ export default function CumbernauldLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Ultrasound cavitation is discussed as an add on and evidence varies. Dermatologic Therapy DOI{" "}
-                  <a
-                    href="https://doi.org/10.1111/dth.16234"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1111/dth.16234
-                  </a>
-                  .
+                  Ultrasound cavitation is discussed as an add on and evidence varies.
                 </p>
                 <p className={p}>
                   These work best after lifestyle changes and ongoing maintenance. Obesity Surgery DOI{" "}

@@ -356,16 +356,7 @@ export default function ChichesterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Cryo or EMS can reduce local fat thickness for selected candidates. Dermatologic Therapy DOI{" "}
-                  <a
-                    href="https://doi.org/10.1111/dth.16234"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    10.1111/dth.16234
-                  </a>
-                  . Not standalone. Lifestyle must.
+                  Cryo or EMS can reduce local fat thickness for selected candidates. Not standalone. Lifestyle must.
                 </p>
                 <p className={p}>
                   Critique: medicines aid, do not replace habits. BMJ warns dependency risk.{" "}
