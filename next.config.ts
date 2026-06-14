@@ -167,6 +167,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/can-i-buy-weight-loss-injections-online-uk",
+        destination: "/blog/can-i-buy-weight-loss-injections-online",
+        permanent: true,
+      },
+      {
         source: "/blog/wegovy-uk-prices-overview",
         destination: "/helpful-guides",
         permanent: true,

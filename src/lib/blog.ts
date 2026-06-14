@@ -93,7 +93,7 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
-    slug: "can-i-buy-weight-loss-injections-online-uk",
+    slug: "can-i-buy-weight-loss-injections-online",
     title:
       "Can I Buy Weight Loss Injections Online in the UK? Safe Prices, Providers, and What to Check",
     date: "2026-06-15",

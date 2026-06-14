@@ -14,7 +14,7 @@ import {
   CAN_I_BUY_INJECTIONS_INLINE_WEBP,
 } from "./blog-assets";
 
-const SHARE_PATH = "/blog/can-i-buy-weight-loss-injections-online-uk";
+const SHARE_PATH = "/blog/can-i-buy-weight-loss-injections-online";
 const TITLE =
   "Can I Buy Weight Loss Injections Online in the UK? Safe Prices, Providers, and What to Check";
 const DESCRIPTION =
