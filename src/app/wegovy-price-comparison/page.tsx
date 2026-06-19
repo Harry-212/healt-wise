@@ -9,7 +9,6 @@ import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
 import {
   estimatedMonthlyCost,
   startingPrice,
-  WEGOVY_UK_COMPARE_LAST_UPDATED,
 } from "@/lib/data/wegovy-uk-compare-providers";
 import { getWegovyCompareProviders } from "@/lib/data/compare-live";
 import { siteOrigin } from "@/lib/seo/site-origin";

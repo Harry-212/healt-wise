@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ShieldCheck, Cross, Building2, SearchCheck } from "lucide-react";
+import { ShieldCheck, Building2, SearchCheck } from "lucide-react";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 

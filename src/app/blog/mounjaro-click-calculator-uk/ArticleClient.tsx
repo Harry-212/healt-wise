@@ -6,14 +6,12 @@ import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSection, GuideTable } from "@/components/guide/GuideLayout";
-import { siteOrigin } from "@/lib/seo/site-origin";
 import {
   blogImgPath,
   MOUNJARO_CLICK_CALCULATOR_UK_HERO_WEBP,
   MOUNJARO_CLICK_CALCULATOR_UK_INLINE_WEBP,
 } from "./blog-assets";
 
-const SHARE_PATH = "/blog/mounjaro-click-calculator-uk";
 const HERO_SRC = blogImgPath(MOUNJARO_CLICK_CALCULATOR_UK_HERO_WEBP);
 const INLINE_SRC = blogImgPath(MOUNJARO_CLICK_CALCULATOR_UK_INLINE_WEBP);
 

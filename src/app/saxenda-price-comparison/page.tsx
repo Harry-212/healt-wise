@@ -7,7 +7,6 @@ import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import SaxendaCompareShaderHero from "@/components/saxenda/SaxendaCompareShaderHero";
 import SaxendaUkCompareTable from "@/components/saxenda/SaxendaUkCompareTable";
 import {
-  SAXENDA_UK_COMPARE_LAST_UPDATED,
   SAXENDA_UK_COMPARE_PROVIDERS,
   headlinePackPrice,
 } from "@/lib/data/saxenda-uk-compare-providers";

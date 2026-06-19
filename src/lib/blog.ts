@@ -593,7 +593,8 @@ export function getAllPostsMeta(): BlogPostMeta[] {
     .map((slug) => {
       const p = getPostBySlug(slug);
       if (!p) return null;
-      const { content: _, ...meta } = p;
+      const { content, ...meta } = p;
+      void content;
       const feedTags = inferMarkdownFeedTags({
         slug: meta.slug,
         title: meta.title,

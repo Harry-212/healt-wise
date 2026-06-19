@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Zap, Calculator, Activity, Syringe, Scale } from "lucide-react";
+import { Zap, Calculator, Activity, Scale } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import {
   HOMEPAGE_HERO_LIFESTYLE_ALT,

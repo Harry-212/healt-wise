@@ -28,7 +28,7 @@ const PLACE = "Bangor";
 
 export default function BangorWalesLocationContent({ loc, shareUrl }: Props) {
   const [darkMode, setDarkMode] = useState(false);
-  const { name, nation, hero } = loc;
+  const { nation, hero } = loc;
 
   const toc = useMemo(
     () => [

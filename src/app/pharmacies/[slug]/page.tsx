@@ -79,21 +79,18 @@ import {
   startingPrice as wegovyStartingPrice,
   WEGOVY_DOSE_KEYS,
   WEGOVY_UK_COMPARE_LAST_UPDATED,
-  WEGOVY_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/wegovy-uk-compare-providers";
 import {
   getMounjaroCompareProviderById,
   startingPrice as mounjaroStartingPrice,
   MOUNJARO_DOSE_KEYS,
   MOUNJARO_UK_COMPARE_LAST_UPDATED,
-  MOUNJARO_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import {
   getSaxendaCompareProviderById,
   SAXENDA_COMPARE_DOSE_KEYS,
   SAXENDA_PACK_KEYS,
   SAXENDA_UK_COMPARE_LAST_UPDATED,
-  SAXENDA_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/saxenda-uk-compare-providers";
 import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
 import { TrustpilotStarIcon } from "@/components/compare/TrustpilotRatingPresentation";

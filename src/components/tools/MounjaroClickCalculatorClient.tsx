@@ -63,7 +63,6 @@ function ClickChart() {
               {PEN_STRENGTHS.map((pen) => {
                 const clicks = calculateClicks(pen, dose);
                 const isExact = pen === dose;
-                const isImpossible = clicks > 60 && !isExact; // Technically possible but requires multiple injections, usually not advised to go over pen strength in clicks if not necessary, but math still works. Let's just color it differently if clicks > 60.
 
                 return (
                   <td key={pen} className="px-4 py-3 text-center">
@@ -106,7 +105,7 @@ export default function MounjaroClickCalculatorClient() {
   useLayoutEffect(() => {
     if (!hasResult || !resultRef.current || tab !== 'calculator') return;
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let ids: number[] = [];
+    const ids: number[] = [];
     let cancelled = false;
     const scroll = () => {
       if (!cancelled && resultRef.current) {

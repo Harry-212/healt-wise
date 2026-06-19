@@ -343,7 +343,7 @@ export default function BmiCalculatorClient() {
   useLayoutEffect(() => {
     if (!hasResult || !resultRef.current) return;
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let ids: number[] = [];
+    const ids: number[] = [];
     let cancelled = false;
     const scroll = () => {
       if (!cancelled && resultRef.current) {

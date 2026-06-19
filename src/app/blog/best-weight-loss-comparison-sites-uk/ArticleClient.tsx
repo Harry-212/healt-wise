@@ -12,7 +12,6 @@ import {
   BEST_WEIGHT_LOSS_COMPARISON_SITES_UK_INLINE_WEBP,
 } from "./blog-assets";
 
-const SHARE_PATH = "/blog/best-weight-loss-comparison-sites-uk";
 const HERO_SRC = blogImgPath(BEST_WEIGHT_LOSS_COMPARISON_SITES_UK_HERO_WEBP);
 const INLINE_SRC = blogImgPath(BEST_WEIGHT_LOSS_COMPARISON_SITES_UK_INLINE_WEBP);
 

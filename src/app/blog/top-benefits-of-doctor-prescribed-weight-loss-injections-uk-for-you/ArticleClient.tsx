@@ -29,10 +29,6 @@ const TOC = [
 
 const SOCIAL_HASHTAGS = '#UKWeightLossInjections #DoctorPrescribedWeightLoss #GLP1UK #Wegovy #Mounjaro #Saxenda';
 
-function SubHeading({ children, darkMode }: { children: React.ReactNode; darkMode: boolean }) {
-  return <p className={`mt-6 font-semibold ${darkMode ? 'text-white' : 'text-slate-900'}`}>{children}</p>;
-}
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;

@@ -1,0 +1,354 @@
+﻿
+> healt-wise@0.1.0 lint
+> eslint
+
+
+C:\Users\Arya\healt-wise\src\app\(informational)\methodology\page.tsx
+  29:56   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  60:175  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  60:187  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  76:175  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\(informational)\mounjaro-faq\page.tsx
+  35:152  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  35:165  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\blog\best-weight-loss-comparison-sites-uk\ArticleClient.tsx
+  15:7  warning  'SHARE_PATH' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\app\blog\buy-weight-loss-tablets\ArticleClient.tsx
+  329:122  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\blog\mounjaro-click-calculator-uk\ArticleClient.tsx
+    9:10   warning  'siteOrigin' is defined but never used                           @typescript-eslint/no-unused-vars
+   16:7    warning  'SHARE_PATH' is assigned a value but never used                  @typescript-eslint/no-unused-vars
+  474:201  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  501:114  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  559:119  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\blog\top-benefits-of-doctor-prescribed-weight-loss-injections-uk-for-you\ArticleClient.tsx
+  32:10  warning  'SubHeading' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\app\blog\weight-loss-treatment-price-comparison-uk\ArticleClient.tsx
+  210:131  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  240:46   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  264:66   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  330:278  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  330:287  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\blog\what-is-bmi-calculator\ArticleClient.tsx
+  153:28   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  153:40   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  242:111  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  495:301  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  495:318  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\fake-online-pharmacy-uk-how-to-spot-stay-safe\page.tsx
+  294:17  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\how-we-verify-uk-pharmacies-gphc-safety-standards\page.tsx
+  256:69  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  375:58  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-bmi-cutoff-stopping-uk\page.tsx
+  328:56  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  328:63  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-calorie-cycling-weight-loss\page.tsx
+  164:36  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  189:44  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  190:25  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-constipation-relief-uk\page.tsx
+  266:64  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  275:24  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-delivery-times-uk\page.tsx
+  162:11  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  162:29  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  162:34  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  162:54  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  184:24  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  264:45  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-early-weight-loss-why-it-slows\page.tsx
+  172:23  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-feeling-cold-why-fixes\page.tsx
+  162:55  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  176:64  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  203:19  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  245:53  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-gp-notification-uk\page.tsx
+  277:60  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-hot-weather-safety-uk\page.tsx
+  273:18  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-menopause-weight-loss-uk\page.tsx
+  396:19  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-multivitamins-uk\page.tsx
+  162:31  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  162:43  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  294:41  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  294:53  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-nutrition-guide-uk\page.tsx
+    9:3   warning  'GuideBulletListRich' is defined but never used                  @typescript-eslint/no-unused-vars
+  258:54  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  370:20  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  406:39  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-pregnancy-risk-fertility-contraception\page.tsx
+  196:41  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  241:61  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  313:38  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  313:59  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-skin-pain-causes-treatment\page.tsx
+  192:64  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  222:20  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-wegovy-health-benefits-uk\page.tsx
+  168:49  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  336:70  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  336:76  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  338:15  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  338:27  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\mounjaro-weight-loss-injection-uk\page.tsx
+  267:22  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\norovirus-mounjaro-wegovy-uk\page.tsx
+  331:57  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\switching-pharmacies-mounjaro-wegovy-uk\page.tsx
+  214:39  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  299:74  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\helpful-guides\travel-insurance-mounjaro-users-uk\page.tsx
+  235:22  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  265:27  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\app\mounjaro-price-comparison\page.tsx
+  12:3  warning  'MOUNJARO_UK_COMPARE_LAST_UPDATED' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\app\pharmacies\[slug]\page.tsx
+  82:3  warning  'WEGOVY_UK_COMPARE_PROVIDERS' is defined but never used    @typescript-eslint/no-unused-vars
+  89:3  warning  'MOUNJARO_UK_COMPARE_PROVIDERS' is defined but never used  @typescript-eslint/no-unused-vars
+  96:3  warning  'SAXENDA_UK_COMPARE_PROVIDERS' is defined but never used   @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\app\pharmacy-safety-gphc-verification\page.tsx
+  2:23  warning  'Cross' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\app\saxenda-price-comparison\page.tsx
+  10:3  warning  'SAXENDA_UK_COMPARE_LAST_UPDATED' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\app\wegovy-price-comparison\page.tsx
+  12:3  warning  'WEGOVY_UK_COMPARE_LAST_UPDATED' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\components\compare\DeferNearViewport.tsx
+  25:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\Arya\healt-wise\src\components\compare\DeferNearViewport.tsx:25:7
+  23 |     const el = ref.current;
+  24 |     if (!el || typeof IntersectionObserver === "undefined") {
+> 25 |       setActive(true);
+     |       ^^^^^^^^^ Avoid calling setState() directly within an effect
+  26 |       return;
+  27 |     }
+  28 |  react-hooks/set-state-in-effect
+
+C:\Users\Arya\healt-wise\src\components\layout\Footer.tsx
+  129:32  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\layout\MobileNavDrawer.tsx
+  23:25  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\Arya\healt-wise\src\components\layout\MobileNavDrawer.tsx:23:25
+  21 |   const [mounted, setMounted] = useState(false);
+  22 |
+> 23 |   useLayoutEffect(() => setMounted(true), []);
+     |                         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  24 |
+  25 |   const close = () => {
+  26 |     setOpen(false);  react-hooks/set-state-in-effect
+
+C:\Users\Arya\healt-wise\src\components\locations\content\AberdeenLocationContent.tsx
+   54:25  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+   54:49  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  246:71  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  247:67  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\locations\content\BangorWalesLocationContent.tsx
+   31:11  warning  'name' is assigned a value but never used                        @typescript-eslint/no-unused-vars
+  201:57  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  202:23  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\locations\content\CarlisleLocationContent.tsx
+  162:204  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\locations\content\HuddersfieldLocationContent.tsx
+  11:28  warning  'UK_LOCATION_SOURCES' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\components\locations\content\RochdaleLocationContent.tsx
+  14:224  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\locations\content\SouthamptonLocationContent.tsx
+  14:227  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\locations\content\StAsaphLocationContent.tsx
+  14:222  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\locations\content\TruroLocationContent.tsx
+  14:221  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\locations\content\WolverhamptonLocationContent.tsx
+  14:229  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\mounjaro\MounjaroBodyJourneyFlow.tsx
+  6:3  warning  'Droplets' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\components\my-hub\HubDashboard.tsx
+  2:38  warning  '_props' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\components\pharmacies\content\AypHealthcareContent.tsx
+  40:413  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\pharmacies\content\CuratePharmacyContent.tsx
+  39:397  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\pharmacies\content\EnvigorePharmacyContent.tsx
+  37:401  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\pharmacies\content\GoodBodyClinicPharmacyContent.tsx
+  37:415  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\pharmacies\content\IqDoctorPharmacyContent.tsx
+  47:403  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\pharmacies\content\OnlinemedsPharmacyContent.tsx
+  50:405  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\pharmacies\content\WePrescribePharmacyContent.tsx
+  50:407  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\pharmacies\content\ZavaPharmacyContent.tsx
+  50:393  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Arya\healt-wise\src\components\providers\SupabaseAuthProvider.tsx
+  31:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\Arya\healt-wise\src\components\providers\SupabaseAuthProvider.tsx:31:7
+  29 |   useEffect(() => {
+  30 |     if (!isSupabaseConfigured()) {
+> 31 |       setReady(true);
+     |       ^^^^^^^^ Avoid calling setState() directly within an effect
+  32 |       return;
+  33 |     }
+  34 |  react-hooks/set-state-in-effect
+
+C:\Users\Arya\healt-wise\src\components\search\SearchModal.tsx
+  39:16  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\Arya\healt-wise\src\components\search\SearchModal.tsx:39:16
+  37 |
+  38 |   useEffect(() => {
+> 39 |     if (!open) setQ("");
+     |                ^^^^ Avoid calling setState() directly within an effect
+  40 |   }, [open]);
+  41 |
+  42 |   const filtered = useMemo(() => {  react-hooks/set-state-in-effect
+
+C:\Users\Arya\healt-wise\src\components\tools\MounjaroClickCalculatorClient.tsx
+  66:23  warning  'isImpossible' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\components\ui\HeroNumanStyle.tsx
+  3:37  warning  'Syringe' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\components\ui\hero-shader.tsx
+  129:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\Arya\healt-wise\src\components\ui\hero-shader.tsx:129:5
+  127 |   useEffect(() => {
+  128 |     if (staticOnly) return;
+> 129 |     setWebglOk(detectWebGL());
+      |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  130 |     setGpuChecked(true);
+  131 |   }, [staticOnly]);
+  132 |  react-hooks/set-state-in-effect
+
+C:\Users\Arya\healt-wise\src\components\ui\timeline-animation.tsx
+  70:16  warning  '_timelineRef' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\lib\blog.ts
+  596:24  warning  '_' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Arya\healt-wise\src\lib\hooks\useTodayLabel.ts
+  43:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\Arya\healt-wise\src\lib\hooks\useTodayLabel.ts:43:5
+  41 |
+  42 |   useEffect(() => {
+> 43 |     setLabel(formatTodayUK(new Date()));
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  44 |   }, []);
+  45 |
+  46 |   return label;                                                                                                                      react-hooks/set-state-in-effect
+  70:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\Arya\healt-wise\src\lib\hooks\useTodayLabel.ts:70:5
+  68 |     const m = String(d.getMonth() + 1).padStart(2, "0");
+  69 |     const day = String(d.getDate()).padStart(2, "0");
+> 70 |     setParts({
+     |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  71 |       display: formatTodayUK(d),
+  72 |       dateTime: `${y}-${m}-${day}`,
+  73 |     });  react-hooks/set-state-in-effect
+
+Γ£û 116 problems (96 errors, 20 warnings)
+

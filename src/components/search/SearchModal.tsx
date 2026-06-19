@@ -35,9 +35,10 @@ export default function SearchModal({ open, onClose }: Props) {
       .catch(() => setLoaded(true));
   }, [open, loaded]);
 
-  useEffect(() => {
-    if (!open) setQ("");
-  }, [open]);
+  const handleClose = useCallback(() => {
+    setQ("");
+    onClose();
+  }, [onClose]);
 
   const filtered = useMemo(() => {
     const t = q.trim().toLowerCase();
@@ -60,9 +61,9 @@ export default function SearchModal({ open, onClose }: Props) {
 
   const onKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") handleClose();
     },
-    [onClose],
+    [handleClose],
   );
 
   if (!open) return null;
@@ -79,7 +80,7 @@ export default function SearchModal({ open, onClose }: Props) {
         type="button"
         className="absolute inset-0 bg-black/50"
         aria-label="Close search"
-        onClick={onClose}
+        onClick={handleClose}
       />
       <div className="relative z-10 w-full max-w-lg overflow-hidden rounded-xl border border-brand-border bg-brand-card shadow-2xl">
         <input
@@ -105,7 +106,7 @@ export default function SearchModal({ open, onClose }: Props) {
                       <Link
                         href={i.href}
                         className="block rounded-lg px-3 py-2 text-sm text-brand-primary hover:bg-brand-surface"
-                        onClick={onClose}
+                        onClick={handleClose}
                       >
                         {i.title}
                       </Link>

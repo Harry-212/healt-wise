@@ -6,7 +6,6 @@ import {
   GuideSection,
   GuideParagraph,
   GuideBulletList,
-  GuideBulletListRich,
   GuideKeyTakeaways,
   GuideDisclaimer,
   GuideFaq,

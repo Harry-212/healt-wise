@@ -67,7 +67,6 @@ export function TimelineContent({
   className,
   children,
   id,
-  timelineRef: _timelineRef,
 }: TimelineContentProps) {
   const ctx = useContext(TimelineContext);
   if (!ctx) {

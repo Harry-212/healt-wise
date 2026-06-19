@@ -3,7 +3,6 @@
 import { useState } from "react";
 import {
   Syringe,
-  Droplets,
   Layers,
   Brain,
   Hourglass,

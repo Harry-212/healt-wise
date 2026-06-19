@@ -38,11 +38,11 @@ export default function FoodToFuel() {
                   className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent"
                   aria-hidden
                 />
-                <h3 className="absolute left-2.5 top-2.5 text-xs font-bold text-white drop-shadow-sm sm:text-sm">
+                <h3 className="absolute left-2.5 top-2.5 z-10 max-w-[88%] rounded-md bg-black/35 px-2 py-1 text-xs font-bold leading-tight text-white backdrop-blur-[2px] sm:text-sm">
                   {card.title}
                 </h3>
                 <span
-                  className="absolute bottom-2.5 left-2.5 flex h-7 w-7 items-center justify-center rounded-full bg-white text-slate-900 shadow-md transition-transform duration-300 group-hover:translate-x-1"
+                  className="absolute bottom-2.5 left-2.5 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-white text-slate-900 shadow-md transition-transform duration-300 group-hover:translate-x-1"
                   aria-hidden
                 >
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} />

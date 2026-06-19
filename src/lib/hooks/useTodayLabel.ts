@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 /**
  * Stable, deterministic UK date format (e.g. `9 May 2026`) — matches the
@@ -28,6 +28,18 @@ export function formatTodayUK(date: Date): string {
   return `${day} ${month} ${year}`;
 }
 
+function todayUkPartsFromDate(d: Date): TodayUkParts {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return {
+    display: formatTodayUK(d),
+    dateTime: `${y}-${m}-${day}`,
+  };
+}
+
+const noopSubscribe = () => () => {};
+
 /**
  * Returns today's date as a UK-formatted label (e.g. `9 May 2026`).
  *
@@ -37,13 +49,11 @@ export function formatTodayUK(date: Date): string {
  * actual current date so the table always shows "today".
  */
 export function useTodayLabel(fallback: string | null = null): string | null {
-  const [label, setLabel] = useState<string | null>(fallback);
-
-  useEffect(() => {
-    setLabel(formatTodayUK(new Date()));
-  }, []);
-
-  return label;
+  return useSyncExternalStore(
+    noopSubscribe,
+    () => formatTodayUK(new Date()),
+    () => fallback,
+  );
 }
 
 export type TodayUkParts = {
@@ -60,18 +70,9 @@ export type TodayUkParts = {
 export function useTodayUkParts(
   fallback: TodayUkParts | null = null,
 ): TodayUkParts | null {
-  const [parts, setParts] = useState<TodayUkParts | null>(fallback);
-
-  useEffect(() => {
-    const d = new Date();
-    const y = d.getFullYear();
-    const m = String(d.getMonth() + 1).padStart(2, "0");
-    const day = String(d.getDate()).padStart(2, "0");
-    setParts({
-      display: formatTodayUK(d),
-      dateTime: `${y}-${m}-${day}`,
-    });
-  }, []);
-
-  return parts;
+  return useSyncExternalStore(
+    noopSubscribe,
+    () => todayUkPartsFromDate(new Date()),
+    () => fallback,
+  );
 }

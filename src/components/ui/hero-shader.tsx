@@ -116,19 +116,21 @@ export function ShaderBackground({
 }: ShaderBackgroundProps) {
   const reducedMotion = usePrefersReducedMotion();
   const minLg = useMinLgViewport();
-  const [webglOk, setWebglOk] = useState(false);
-  const [gpuChecked, setGpuChecked] = useState(false);
+  const webglOk = useSyncExternalStore(
+    () => () => {},
+    () => (staticOnly ? false : detectWebGL()),
+    () => false,
+  );
+  const gpuChecked = useSyncExternalStore(
+    () => () => {},
+    () => !staticOnly,
+    () => staticOnly,
+  );
   const [heroInView, setHeroInView] = useState(true);
   const [tabVisible, setTabVisible] = useState(true);
   const [meshIdleReady, setMeshIdleReady] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const inViewRaf = useRef<number | null>(null);
-
-  useEffect(() => {
-    if (staticOnly) return;
-    setWebglOk(detectWebGL());
-    setGpuChecked(true);
-  }, [staticOnly]);
 
   useEffect(() => {
     if (staticOnly) return;

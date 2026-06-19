@@ -21,9 +21,11 @@ export default function DeferNearViewport({
   useEffect(() => {
     if (active) return;
     const el = ref.current;
-    if (!el || typeof IntersectionObserver === "undefined") {
-      setActive(true);
-      return;
+    if (!el) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      const id = requestAnimationFrame(() => setActive(true));
+      return () => cancelAnimationFrame(id);
     }
 
     const obs = new IntersectionObserver(

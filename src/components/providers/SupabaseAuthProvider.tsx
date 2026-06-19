@@ -24,11 +24,10 @@ const SupabaseAuthContext = createContext<SupabaseAuthContextValue | null>(null)
 export function SupabaseAuthProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = useState(() => !isSupabaseConfigured());
 
   useEffect(() => {
     if (!isSupabaseConfigured()) {
-      setReady(true);
       return;
     }
 

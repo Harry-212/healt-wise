@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,9 +18,11 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
   const { user, ready, signOut } = useSupabaseAuth();
   const [open, setOpen] = useState(false);
   const [acc, setAcc] = useState<string | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  useLayoutEffect(() => setMounted(true), []);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   const close = () => {
     setOpen(false);
