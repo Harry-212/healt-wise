@@ -5,7 +5,7 @@ import React, { useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
-import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
+import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { useUkLocationFaq } from "@/components/locations/UkLocationFaqProvider";
@@ -153,13 +153,7 @@ export default function BoltonLocationContent({ loc, shareUrl }: Props) {
             className="pointer-events-none h-0 w-full overflow-hidden"
           />
         </header>
-
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          {toc.length > 0 ? (
-            <GuideTocSidebar key="uk-loc-toc-bolton" toc={toc} />
-          ) : null}
-
-          <div className="min-w-0 flex-1 max-w-3xl">
+        <BlogArticleColumn toc={toc} darkMode={darkMode}>
             <article className="space-y-8 leading-relaxed">
               <GuideSection
                 darkMode={darkMode}
@@ -480,8 +474,7 @@ export default function BoltonLocationContent({ loc, shareUrl }: Props) {
                 description="Bolton Greater Manchester: ABL Health context, NHS support, and safe UK comparisons for weight loss treatments."
               />
             </div>
-          </div>
-        </div>
+        </BlogArticleColumn>
       </div>
     </div>
   );

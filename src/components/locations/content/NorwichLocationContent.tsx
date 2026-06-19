@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useMemo, useState } from "react";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
-import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
+import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import {
@@ -115,11 +115,7 @@ export default function NorwichLocationContent({ loc, shareUrl }: Props) {
           <BlogArticleHeroImage src={hero.url} alt={hero.alt} />
           <div id="guide-article-hero-end" aria-hidden className="pointer-events-none h-0 w-full overflow-hidden" />
         </header>
-
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          {toc.length > 0 ? <GuideTocSidebar key="uk-loc-toc-norwich" toc={toc} /> : null}
-
-          <div className="min-w-0 flex-1 max-w-3xl">
+        <BlogArticleColumn toc={toc} darkMode={darkMode}>
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading="Best Weight Loss Treatment Norwich: A Practical Guide to Clinical, Private, and Non-Invasive Options">
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -599,8 +595,7 @@ export default function NorwichLocationContent({ loc, shareUrl }: Props) {
             <div className="mt-12">
               <GuideSharePanel shareUrl={shareUrl} title={PAGE_TITLE} />
             </div>
-          </div>
-        </div>
+        </BlogArticleColumn>
       </div>
     </div>
   );

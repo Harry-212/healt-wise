@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useMemo, useState } from "react";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
-import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
+import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import {
@@ -155,11 +155,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
             className="pointer-events-none h-0 w-full overflow-hidden"
           />
         </header>
-
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          <GuideTocSidebar key="uk-loc-toc-reading" toc={toc} />
-
-          <div className="min-w-0 flex-1 max-w-3xl">
+        <BlogArticleColumn toc={toc} darkMode={darkMode}>
             <article className="space-y-8 leading-relaxed">
               <GuideSection
                 darkMode={darkMode}
@@ -686,8 +682,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
                 description="Best weight loss treatment Reading UK: NHS and private GLP 1 access, local tips, timelines, and Thames Valley safety guidance."
               />
             </div>
-          </div>
-        </div>
+        </BlogArticleColumn>
       </div>
     </div>
   );
