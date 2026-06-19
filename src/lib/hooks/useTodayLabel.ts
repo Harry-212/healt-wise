@@ -40,6 +40,37 @@ function todayUkPartsFromDate(d: Date): TodayUkParts {
 
 const noopSubscribe = () => () => {};
 
+/** Calendar-day key for snapshot caching (`useSyncExternalStore` needs stable refs). */
+function localCalendarDayKey(d: Date): string {
+  return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+}
+
+let cachedTodayLabel = "";
+let cachedTodayLabelDay = "";
+
+function getTodayLabelSnapshot(): string {
+  const d = new Date();
+  const day = localCalendarDayKey(d);
+  if (day !== cachedTodayLabelDay) {
+    cachedTodayLabelDay = day;
+    cachedTodayLabel = formatTodayUK(d);
+  }
+  return cachedTodayLabel;
+}
+
+let cachedTodayUkParts: TodayUkParts | null = null;
+let cachedTodayUkPartsDay = "";
+
+function getTodayUkPartsSnapshot(): TodayUkParts {
+  const d = new Date();
+  const day = localCalendarDayKey(d);
+  if (day !== cachedTodayUkPartsDay) {
+    cachedTodayUkPartsDay = day;
+    cachedTodayUkParts = todayUkPartsFromDate(d);
+  }
+  return cachedTodayUkParts!;
+}
+
 /**
  * Returns today's date as a UK-formatted label (e.g. `9 May 2026`).
  *
@@ -51,7 +82,7 @@ const noopSubscribe = () => () => {};
 export function useTodayLabel(fallback: string | null = null): string | null {
   return useSyncExternalStore(
     noopSubscribe,
-    () => formatTodayUK(new Date()),
+    getTodayLabelSnapshot,
     () => fallback,
   );
 }
@@ -72,7 +103,7 @@ export function useTodayUkParts(
 ): TodayUkParts | null {
   return useSyncExternalStore(
     noopSubscribe,
-    () => todayUkPartsFromDate(new Date()),
+    getTodayUkPartsSnapshot,
     () => fallback,
   );
 }

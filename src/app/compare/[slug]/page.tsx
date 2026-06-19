@@ -139,7 +139,7 @@ export default async function ComparePage({ params }: Props) {
           navLinks={layout.hero.navLinks}
           wideDesktopHero={isTripleHub}
           showSnapshotPill={!isTripleHub && !photoHero}
-          showLivePill={Boolean(photoHero)}
+          showLivePill={Boolean(photoHero) || isTripleHub}
           highlightNavLinks={Boolean(photoHero)}
           heroPhotoSrc={
             isTripleHub
