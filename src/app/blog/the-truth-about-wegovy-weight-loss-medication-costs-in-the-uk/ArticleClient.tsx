@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
-import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
+import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -57,7 +57,8 @@ export default function ArticleClient() {
         </div>
 
         {/* HERO HEADER */}
-        <header className="mb-12">
+        <BlogArticleColumn toc={TOC} darkMode={darkMode}>
+          <header className={`mb-8 border-b pb-8 ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
           <h1 className={`text-4xl md:text-5xl lg:text-[54px] font-medium leading-[1.1] tracking-tight mb-6 ${darkMode ? "text-white" : "text-slate-900"}`}>
             The Truth About Wegovy Weight Loss Medication Costs in the UK
           </h1>
@@ -83,17 +84,7 @@ export default function ArticleClient() {
           />
         </header>
 
-        {/* CONTENT SPLIT LAYOUT */}
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          
-          {/* LEFT: TOC */}
-          {TOC.length > 0 && (
-            <GuideTocSidebar key={TOC.map((t) => t.id).join("-")} toc={TOC} />
-          )}
-
-          {/* RIGHT: ARTICLE BODY */}
-          <div className="min-w-0 flex-1 max-w-3xl">
-            <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
+        {/* CONTENT SPLIT LAYOUT */}{/* LEFT: TOC */}{/* RIGHT: ARTICLE BODY */}<article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <p className="text-lg md:text-xl">
                 A new weight loss medication like Wegovy® can sound promising, but the costs, eligibility rules, and UK availability are often confusing. If you are comparing Wegovy weight loss medication with other options and trying to work out what you might really pay, it helps to break things down step by step.
                For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
@@ -354,9 +345,7 @@ export default function ArticleClient() {
                 description="Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today."
               />
             </div>
-            
-          </div>
-        </div>
+        </BlogArticleColumn>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import React, { useMemo, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
-import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
+import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { useUkLocationFaq } from "@/components/locations/UkLocationFaqProvider";
@@ -142,7 +142,9 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
           </div>
         </div>
 
-        <header className="mb-12">
+        <BlogArticleColumn toc={toc} darkMode={darkMode}>
+
+          <header className={`mb-8 border-b pb-8 ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
           <p className="mb-2 text-xs font-semibold tracking-wide text-emerald-600">
             {capitalizeHeadingWords("Locations in UK")}
           </p>
@@ -172,15 +174,6 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
           />
         </header>
 
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          {toc.length > 0 ? (
-            <GuideTocSidebar
-              key={`uk-loc-toc-${loc.slug}`}
-              toc={toc}
-            />
-          ) : null}
-
-          <div className="min-w-0 flex-1 max-w-3xl">
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={titles.intro}>
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -573,8 +566,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 description={`${name} (${nation}): NHS, private & online weight loss options — not medical advice.`}
               />
             </div>
-          </div>
-        </div>
+        </BlogArticleColumn>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import BlogArticleHeroImage from '@/components/blog/BlogArticleHeroImage';
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from 'lucide-react';
-import GuideTocSidebar from '@/components/guide/GuideTocSidebar';
+import BlogArticleColumn from '@/components/blog/BlogArticleColumn';
 import { GuideSharePanel } from '@/components/guide/GuideSharePanel';
 import { GuideSection } from '@/components/guide/GuideLayout';
 import { siteOrigin } from '@/lib/seo/site-origin';
@@ -116,31 +116,28 @@ export default function ArticleClient() {
           </div>
         </div>
 
-        <header className="mb-12">
-          <h1 className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? 'text-white' : 'text-slate-900'}`}>Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You</h1>
-          <div className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-            <span className="flex items-center gap-2">
-              <Calendar className="h-4 w-4" />
-              19 May 2026
-            </span>
-            <span className="flex items-center gap-2">
-              <Clock className="h-4 w-4" />
-              12 min read
-            </span>
-          </div>
+        <BlogArticleColumn toc={TOC} darkMode={darkMode}>
+          <header className={`mb-8 border-b pb-8 ${darkMode ? 'border-slate-800' : 'border-slate-200'}`}>
+            <h1 className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? 'text-white' : 'text-slate-900'}`}>Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You</h1>
+            <div className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+              <span className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                19 May 2026
+              </span>
+              <span className="flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                12 min read
+              </span>
+            </div>
 
-          <BlogArticleHeroImage
-            src={HERO_SRC}
-            alt="Doctor prescribed weight loss injections in the UK — clinical support for obesity management"
-          />
-          <div id="guide-article-hero-end" aria-hidden className="pointer-events-none h-0 w-full overflow-hidden" />
-        </header>
+            <BlogArticleHeroImage
+              src={HERO_SRC}
+              alt="Doctor prescribed weight loss injections in the UK — clinical support for obesity management"
+            />
+            <div id="guide-article-hero-end" aria-hidden className="pointer-events-none h-0 w-full overflow-hidden" />
+          </header>
 
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          {TOC.length > 0 && <GuideTocSidebar key={TOC.map((t) => t.id).join('-')} toc={TOC} />}
-
-          <div className="min-w-0 max-w-3xl flex-1">
-            <article className={`space-y-8 leading-relaxed ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+          <article className={`space-y-8 leading-relaxed ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               <GuideSection darkMode={darkMode} id="introduction" heading="Introduction">
                 <p>Trying to lose weight can feel frustrating, especially when you have already done what people keep recommending: eat less, move more, track calories. For some people, those basics help. For others, progress stalls.</p>
                 <p>
@@ -305,15 +302,14 @@ export default function ArticleClient() {
               </GuideSection>
             </article>
 
-            <div className="mt-10">
-              <GuideSharePanel
-                url={shareUrl}
-                title="Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You"
-                description="A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda."
-              />
-            </div>
+          <div className="mt-10">
+            <GuideSharePanel
+              url={shareUrl}
+              title="Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You"
+              description="A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda."
+            />
           </div>
-        </div>
+        </BlogArticleColumn>
       </div>
       <script
         type="application/ld+json"

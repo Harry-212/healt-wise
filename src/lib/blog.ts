@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "buy-weight-loss-pills-uk",
+    title: "Buy Weight Loss Pills UK: Safe Options, Prices and Treatment Comparison",
+    date: "2026-06-19",
+    category: "Guides",
+    description:
+      "Buy weight loss pills UK safely. Compare orlistat, Mysimba, GLP-1 tablets, prices, risks and pharmacy checks.",
+    heroImage: "/blog/buy-weight-loss-piils-1.webp",
+    feedTags: ["guides", "safety", "how-it-works", "wegovy"],
+  },
+  {
     slug: "can-i-buy-weight-loss-injections-online",
     title:
       "Can I Buy Weight Loss Injections Online in the UK? Safe Prices, Providers, and What to Check",

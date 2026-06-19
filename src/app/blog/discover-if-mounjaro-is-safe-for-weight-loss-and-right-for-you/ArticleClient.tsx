@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
-import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
+import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -56,7 +56,8 @@ export default function ArticleClient() {
         </div>
 
         {/* HERO HEADER */}
-        <header className="mb-12">
+        <BlogArticleColumn toc={TOC} darkMode={darkMode}>
+          <header className={`mb-8 border-b pb-8 ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
           <h1 className={`text-4xl md:text-5xl lg:text-[54px] font-medium leading-[1.1] tracking-tight mb-6 ${darkMode ? "text-white" : "text-slate-900"}`}>
             Discover If Mounjaro Is Safe for Weight Loss and Right for You
           </h1>
@@ -82,17 +83,7 @@ export default function ArticleClient() {
           />
         </header>
 
-        {/* CONTENT SPLIT LAYOUT */}
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          
-          {/* LEFT: TOC */}
-          {TOC.length > 0 && (
-            <GuideTocSidebar key={TOC.map((t) => t.id).join("-")} toc={TOC} />
-          )}
-
-          {/* RIGHT: ARTICLE BODY */}
-          <div className="min-w-0 flex-1 max-w-3xl">
-            <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
+        {/* CONTENT SPLIT LAYOUT */}{/* LEFT: TOC */}{/* RIGHT: ARTICLE BODY */}<article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               
               <GuideSection darkMode={darkMode} id="purpose" heading="Understand Mounjaro’s Purpose">
                 <p>
@@ -250,9 +241,7 @@ export default function ArticleClient() {
                 description="Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding."
               />
             </div>
-            
-          </div>
-        </div>
+        </BlogArticleColumn>
       </div>
     </div>
   );

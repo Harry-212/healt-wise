@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import BlogArticleHeroImage from '@/components/blog/BlogArticleHeroImage';
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from 'lucide-react';
-import GuideTocSidebar from '@/components/guide/GuideTocSidebar';
+import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSharePanel } from '@/components/guide/GuideSharePanel';
 import { GuideSection } from '@/components/guide/GuideLayout';
 import { siteOrigin } from '@/lib/seo/site-origin';
@@ -95,7 +95,8 @@ export default function ArticleClient() {
         </div>
 
         {/* HERO HEADER */}
-        <header className="mb-12">
+        <BlogArticleColumn toc={TOC} darkMode={darkMode}>
+          <header className={`mb-8 border-b pb-8 ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
           <h1 className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? 'text-white' : 'text-slate-900'}`}>The Truth About Mounjaro Dosage for Weight Loss Effectiveness</h1>
           <div className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
             <span className="flex items-center gap-2">
@@ -112,14 +113,7 @@ export default function ArticleClient() {
           <div id="guide-article-hero-end" aria-hidden className="pointer-events-none h-0 w-full overflow-hidden" />
         </header>
 
-        {/* CONTENT SPLIT LAYOUT */}
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          {/* LEFT: TOC */}
-          {TOC.length > 0 && <GuideTocSidebar key={TOC.map((t) => t.id).join('-')} toc={TOC} />}
-
-          {/* RIGHT: ARTICLE BODY */}
-          <div className="min-w-0 flex-1 max-w-3xl">
-            <article className={`space-y-8 leading-relaxed ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+        {/* CONTENT SPLIT LAYOUT */}{/* LEFT: TOC */}{/* RIGHT: ARTICLE BODY */}<article className={`space-y-8 leading-relaxed ${darkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               <p className="text-lg md:text-xl">
                 Whether you have struggled with multiple diets or you are just beginning your weight loss journey, you may be curious about Mounjaro dosage for weight loss. Mounjaro (tirzepatide), originally approved for type 2 diabetes,
                 has garnered significant attention for its off label use in shedding pounds. Researchers have found that it can help reduce calorie intake, support your metabolism, and make it easier to lose weight. This guide unpacks what
@@ -312,8 +306,7 @@ export default function ArticleClient() {
             <div className="mt-10">
               <GuideSharePanel url={shareUrl} title="The Truth About Mounjaro Dosage for Weight Loss Effectiveness" description="Find the ideal mounjaro dosage for weight loss to maximise your results with clear, expert-backed guidance." />
             </div>
-          </div>
-        </div>
+        </BlogArticleColumn>
       </div>
     </div>
   );

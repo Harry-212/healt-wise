@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
-import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
+import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -55,7 +55,8 @@ export default function ArticleClient() {
         </div>
 
         {/* HERO HEADER */}
-        <header className="mb-12">
+        <BlogArticleColumn toc={TOC} darkMode={darkMode}>
+          <header className={`mb-8 border-b pb-8 ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
           <h1 className={`text-4xl md:text-5xl lg:text-[54px] font-medium leading-[1.1] tracking-tight mb-6 ${darkMode ? "text-white" : "text-slate-900"}`}>
             How Does Wegovy Work to Transform Your Weight Journey
           </h1>
@@ -81,17 +82,7 @@ export default function ArticleClient() {
           />
         </header>
 
-        {/* CONTENT SPLIT LAYOUT */}
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          
-          {/* LEFT: TOC */}
-          {TOC.length > 0 && (
-            <GuideTocSidebar key={TOC.map((t) => t.id).join("-")} toc={TOC} />
-          )}
-
-          {/* RIGHT: ARTICLE BODY */}
-          <div className="min-w-0 flex-1 max-w-3xl">
-            <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
+        {/* CONTENT SPLIT LAYOUT */}{/* LEFT: TOC */}{/* RIGHT: ARTICLE BODY */}<article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <p className="text-lg md:text-xl">
                 A medication like Wegovy can feel like a big step. Understanding exactly how Wegovy works helps you decide if it fits into your long term weight management plan, especially if you are also comparing it with options such as Mounjaro or other GLP 1 medications.
                For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</Link>.</p>
@@ -337,9 +328,7 @@ export default function ArticleClient() {
                 description="Find out how does Wegovy work to kickstart your weight loss, with guides on eligibility, cost and UK providers."
               />
             </div>
-            
-          </div>
-        </div>
+        </BlogArticleColumn>
       </div>
     </div>
   );

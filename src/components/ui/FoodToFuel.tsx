@@ -8,10 +8,10 @@ import manageWeight from "../../../public/manage-weight-huel.avif";
 import saveTime from "../../../public/save-time-huel.avif";
 
 const CARDS = [
-  { title: "More protein", image: moreProtein, href: "/protein-and-fitness" },
-  { title: "Eat healthy", image: eatHealthy, href: undefined },
-  { title: "Manage weight", image: manageWeight, href: undefined },
-  { title: "Save time", image: saveTime, href: undefined },
+  { title: "Extra Protein", image: moreProtein, href: "/protein-and-fitness" },
+  { title: "Eat Healthier", image: eatHealthy, href: undefined },
+  { title: "Support Weight Management", image: manageWeight, href: undefined },
+  { title: "Time Saver", image: saveTime, href: undefined },
 ] as const;
 
 export default function FoodToFuel() {

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
-import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
+import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -54,7 +54,8 @@ export default function ArticleClient() {
         </div>
 
         {/* HERO HEADER */}
-        <header className="mb-12">
+        <BlogArticleColumn toc={TOC} darkMode={darkMode}>
+          <header className={`mb-8 border-b pb-8 ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
           <h1 className={`text-4xl md:text-5xl lg:text-[54px] font-medium leading-[1.1] tracking-tight mb-6 ${darkMode ? "text-white" : "text-slate-900"}`}>
             Does Mounjaro Really Work for Weight Loss? Find Out Here
           </h1>
@@ -80,17 +81,7 @@ export default function ArticleClient() {
           />
         </header>
 
-        {/* CONTENT SPLIT LAYOUT */}
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          
-          {/* LEFT: TOC */}
-          {TOC.length > 0 && (
-            <GuideTocSidebar key={TOC.map((t) => t.id).join("-")} toc={TOC} />
-          )}
-
-          {/* RIGHT: ARTICLE BODY */}
-          <div className="min-w-0 flex-1 max-w-3xl">
-            <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
+        {/* CONTENT SPLIT LAYOUT */}{/* LEFT: TOC */}{/* RIGHT: ARTICLE BODY */}<article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               
               <p className="text-lg md:text-xl">
                 You may have seen tirzepatide, sold under the brand name Mounjaro, generating buzz lately as a promising diabetes medication that some people also use off label for significant weight reduction. But how does Mounjaro work for weight loss, and is it right for you? Before jumping in, it is helpful to understand its effects on your body, potential side effects, and the importance of pairing any medical treatment with healthy lifestyle choices.
@@ -241,9 +232,7 @@ export default function ArticleClient() {
                 description="How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide."
               />
             </div>
-            
-          </div>
-        </div>
+        </BlogArticleColumn>
       </div>
     </div>
   );

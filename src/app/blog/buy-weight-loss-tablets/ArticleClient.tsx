@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
-import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
+import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -67,7 +67,9 @@ export default function ArticleClient() {
           </div>
         </div>
 
-        <header className="mb-12">
+        <BlogArticleColumn toc={TOC} darkMode={darkMode}>
+
+          <header className={`mb-8 border-b pb-8 ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
           <h1
             className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? "text-white" : "text-slate-900"}`}
           >
@@ -97,12 +99,6 @@ export default function ArticleClient() {
           />
         </header>
 
-        <div className="flex flex-col gap-10 xl:flex-row xl:items-start xl:gap-16">
-          {TOC.length > 0 && (
-            <GuideTocSidebar key={TOC.map((t) => t.id).join("-")} toc={TOC} />
-          )}
-
-          <div className="min-w-0 max-w-3xl flex-1">
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <GuideSection darkMode={darkMode} id="intro" heading="Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You">
                 <p className="text-lg md:text-xl">
@@ -346,8 +342,7 @@ export default function ArticleClient() {
                 description="Buy weight loss tablets in the UK. Compare prices, safety, and prescription options before you choose."
               />
             </div>
-          </div>
-        </div>
+        </BlogArticleColumn>
       </div>
     </div>
   );

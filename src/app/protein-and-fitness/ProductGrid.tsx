@@ -248,7 +248,7 @@ export default function ProductGrid() {
                     ) : null}
                   </p>
 
-                  <div className="mt-auto flex items-stretch gap-2 pt-4">
+                  <div className="mt-auto flex items-end gap-2 pt-4">
                     <a
                       href={product.buyHref}
                       target="_blank"
@@ -258,40 +258,45 @@ export default function ProductGrid() {
                       Buy now
                     </a>
 
-                    <button
-                      type="button"
-                      onClick={() => handleCopy(product.id, product.discountCode)}
-                      aria-label={`Copy discount code ${product.discountCode}`}
-                      title={`Discount code: ${product.discountCode}`}
-                      className="group/code relative inline-flex min-w-0 flex-1 cursor-pointer items-center justify-center gap-1 rounded-full border-2 border-dashed border-amber-400 bg-amber-50 px-1.5 py-2 text-amber-900 shadow-sm ring-1 ring-amber-200/70 transition hover:border-amber-500 hover:bg-amber-100 active:scale-[0.99] sm:px-2.5"
-                    >
-                      <span
-                        className={`pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-emerald-600 px-2 py-1 text-[11px] font-semibold text-white shadow-md transition-opacity duration-200 ${
-                          copied ? "opacity-100" : "opacity-0"
-                        }`}
-                        aria-hidden
+                    <div className="flex min-w-0 flex-1 flex-col gap-0.5">
+                      <span className="text-[9px] font-semibold uppercase tracking-wide text-amber-700 sm:text-[10px]">
+                        Discount code
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => handleCopy(product.id, product.discountCode)}
+                        aria-label={`Copy discount code ${product.discountCode}`}
+                        title={`Discount code: ${product.discountCode}`}
+                        className="group/code relative inline-flex w-full min-w-0 cursor-pointer items-center justify-center gap-1 rounded-full border-2 border-dashed border-amber-400 bg-amber-50 px-1.5 py-2 text-amber-900 shadow-sm ring-1 ring-amber-200/70 transition hover:border-amber-500 hover:bg-amber-100 active:scale-[0.99] sm:px-2.5"
                       >
-                        Code copied!
-                      </span>
-                      <Ticket
-                        className="h-3 w-3 shrink-0 text-amber-600 sm:h-3.5 sm:w-3.5"
-                        aria-hidden
-                      />
-                      <span className="whitespace-nowrap text-[9px] font-extrabold leading-none tracking-tight sm:text-xs sm:tracking-wide">
-                        {product.discountCode}
-                      </span>
-                      {copied ? (
-                        <Check
-                          className="hidden h-3.5 w-3.5 shrink-0 text-emerald-600 sm:block"
+                        <span
+                          className={`pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-emerald-600 px-2 py-1 text-[11px] font-semibold text-white shadow-md transition-opacity duration-200 ${
+                            copied ? "opacity-100" : "opacity-0"
+                          }`}
+                          aria-hidden
+                        >
+                          Code copied!
+                        </span>
+                        <Ticket
+                          className="h-3 w-3 shrink-0 text-amber-600 sm:h-3.5 sm:w-3.5"
                           aria-hidden
                         />
-                      ) : (
-                        <Copy
-                          className="hidden h-3.5 w-3.5 shrink-0 text-amber-700 sm:block"
-                          aria-hidden
-                        />
-                      )}
-                    </button>
+                        <span className="whitespace-nowrap text-[9px] font-extrabold leading-none tracking-tight sm:text-xs sm:tracking-wide">
+                          {product.discountCode}
+                        </span>
+                        {copied ? (
+                          <Check
+                            className="hidden h-3.5 w-3.5 shrink-0 text-emerald-600 sm:block"
+                            aria-hidden
+                          />
+                        ) : (
+                          <Copy
+                            className="hidden h-3.5 w-3.5 shrink-0 text-amber-700 sm:block"
+                            aria-hidden
+                          />
+                        )}
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

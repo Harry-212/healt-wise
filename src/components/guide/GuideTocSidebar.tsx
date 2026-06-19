@@ -79,11 +79,13 @@ export default function GuideTocSidebar({
     const computeVisibility = () => {
       const heroEnd = document.getElementById(heroEndId);
       const passedHero =
-        !heroEnd || heroEnd.getBoundingClientRect().top <= ACTIVE_SECTION_TOP_PX;
+        !heroEnd ||
+        heroEnd.getBoundingClientRect().top <= ACTIVE_SECTION_TOP_PX;
 
       const endEl = resolveStickyEndEl(stickyEndId);
       const pastEnd =
-        !!endEl && endEl.getBoundingClientRect().top <= ACTIVE_SECTION_TOP_PX + 4;
+        !!endEl &&
+        endEl.getBoundingClientRect().top <= ACTIVE_SECTION_TOP_PX + 4;
 
       setSidebarVisible(passedHero && !pastEnd);
     };
@@ -141,14 +143,13 @@ export default function GuideTocSidebar({
     setActive(id);
   };
 
-  const progressPct =
-    displayToc.length
-      ? Math.round(
-          ((displayToc.findIndex((t) => t.id === active) + 1) /
-            displayToc.length) *
-            100,
-        )
-      : 0;
+  const progressPct = displayToc.length
+    ? Math.round(
+        ((displayToc.findIndex((t) => t.id === active) + 1) /
+          displayToc.length) *
+          100,
+      )
+    : 0;
 
   return (
     <div
@@ -201,9 +202,7 @@ export default function GuideTocSidebar({
             />
           </div>
 
-          <nav
-            className="max-h-[calc(100dvh-16rem)] overflow-y-auto overscroll-contain px-2 py-3 [scrollbar-width:thin] [scrollbar-color:rgb(203_213_225)_transparent]"
-          >
+          <nav className="max-h-[calc(100dvh-16rem)] overflow-y-auto overscroll-contain px-2 py-3 [scrollbar-width:thin] [scrollbar-color:rgb(203_213_225)_transparent]">
             <ol className="space-y-px">
               {displayToc.map((entry, i) => {
                 const isActive = active === entry.id;
@@ -213,9 +212,7 @@ export default function GuideTocSidebar({
                       type="button"
                       onClick={() => scrollTo(entry.id)}
                       className={`group relative flex w-full items-start gap-3 rounded-xl px-3 py-2.5 text-left transition-all duration-200 ${
-                        isActive
-                          ? "bg-emerald-50"
-                          : "hover:bg-slate-50"
+                        isActive ? "bg-emerald-50" : "hover:bg-slate-50"
                       }`}
                     >
                       <span
