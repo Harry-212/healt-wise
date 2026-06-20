@@ -597,7 +597,7 @@ export default function SaxendaUkCompareTable({
                       </td>
                       <td className="border-b border-slate-100/90 px-2 py-2.5 align-top text-xs text-slate-600" />
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
-                        {todayLabel ?? p.updatedLabel}
+                        {todayLabel ?? p.updatedLabel ?? "—"}
                       </td>
                     </tr>
                   );

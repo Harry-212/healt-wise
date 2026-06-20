@@ -173,7 +173,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       "There is no universal “winner”: eligibility, tolerability, treatment schedule, and total cost of care (assessment + medicine + follow-up) steer choice. Compare illustrative totals in each tab, cross-check GPhC registration, and confirm live checkout prices before you pay.",
   },
   "best-weight-loss-treatments-uk": {
-    medications: ["wegovy", "mounjaro", "saxenda"],
+    medications: ["mounjaro", "wegovy", "saxenda"],
     hero: {
       variant: "blue",
       eyebrow: "UK GLP-1 Comparison Hub",
@@ -183,8 +183,8 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
         "Wegovy, Mounjaro, and Saxenda — three full price datasets with the same tools as our standalone compare pages.",
       snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
       navLinks: [
-        { href: "/what-is-wegovy", label: "Wegovy" },
         { href: "/what-is-mounjaro", label: "Mounjaro" },
+        { href: "/what-is-wegovy", label: "Wegovy" },
         { href: "/what-is-saxenda", label: "Saxenda" },
         { href: "#compare-med-tabs", label: "Matrix" },
         { href: "#compare-faq", label: "FAQ" },

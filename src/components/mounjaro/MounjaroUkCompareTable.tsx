@@ -614,7 +614,7 @@ export default function MounjaroUkCompareTable({
                         )}
                       </td>
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
-                        {p.updatedLabel?.trim() || todayLabel || "—"}
+                        {todayLabel ?? p.updatedLabel ?? "—"}
                       </td>
                     </tr>
                   );
