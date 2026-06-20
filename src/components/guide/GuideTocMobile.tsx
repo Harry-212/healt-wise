@@ -13,10 +13,10 @@ export default function GuideTocMobile({ toc, darkMode = false }: Props) {
 
   return (
     <details
-      className={`group mb-8 rounded-2xl border xl:hidden ${
+      className={`group mt-6 rounded-2xl border xl:hidden ${
         darkMode
           ? "border-slate-700 bg-slate-900"
-          : "border-slate-200 bg-slate-50"
+          : "border-slate-200 bg-white shadow-sm"
       }`}
     >
       <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden">

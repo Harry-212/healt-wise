@@ -1,6 +1,12 @@
 "use client";
 
-import type { ReactNode } from "react";
+import {
+  cloneElement,
+  Fragment,
+  isValidElement,
+  type ReactElement,
+  type ReactNode,
+} from "react";
 import type { TocEntry } from "@/components/guide/GuideLayout";
 import GuideTocSidebar from "@/components/guide/GuideTocSidebar";
 import GuideTocMobile from "@/components/guide/GuideTocMobile";
@@ -11,6 +17,58 @@ type Props = {
   children: ReactNode;
 };
 
+const HERO_END_ID = "guide-article-hero-end";
+
+/** Inserts mobile TOC immediately after the hero thumbnail marker in article children. */
+function injectMobileTocAfterHero(
+  children: ReactNode,
+  mobileToc: ReactNode,
+): ReactNode {
+  let injected = false;
+
+  function walk(node: ReactNode): ReactNode {
+    if (node == null || typeof node === "boolean") return null;
+    if (typeof node === "string" || typeof node === "number") return node;
+
+    if (Array.isArray(node)) {
+      return node.flatMap((child) => {
+        const walked = walk(child);
+        return walked == null ? [] : [walked];
+      });
+    }
+
+    if (!isValidElement(node)) return node;
+
+    const props = node.props as { id?: string; children?: ReactNode };
+
+    if (props.id === HERO_END_ID && !injected) {
+      injected = true;
+      return (
+        <Fragment key={`${HERO_END_ID}-toc-slot`}>
+          {node}
+          {mobileToc}
+        </Fragment>
+      );
+    }
+
+    if (props.children != null) {
+      const newChildren = walk(props.children);
+      if (newChildren === props.children) return node;
+      return cloneElement(node as ReactElement<{ children?: ReactNode }>, {}, newChildren);
+    }
+
+    return node;
+  }
+
+  const result = walk(children);
+  return injected ? result : (
+    <>
+      {children}
+      {mobileToc}
+    </>
+  );
+}
+
 /** Centered article column with desktop TOC in the left margin (does not shift content). */
 export default function BlogArticleColumn({
   toc,
@@ -18,6 +76,12 @@ export default function BlogArticleColumn({
   children,
 }: Props) {
   const sidebarKey = toc.map((t) => t.id).join("-");
+  const mobileToc =
+    toc.length > 0 ? <GuideTocMobile toc={toc} darkMode={darkMode} /> : null;
+
+  const content = mobileToc
+    ? injectMobileTocAfterHero(children, mobileToc)
+    : children;
 
   return (
     <div className="relative mx-auto w-full max-w-3xl">
@@ -26,8 +90,7 @@ export default function BlogArticleColumn({
           <GuideTocSidebar key={sidebarKey} toc={toc} />
         </div>
       )}
-      <GuideTocMobile toc={toc} darkMode={darkMode} />
-      {children}
+      {content}
     </div>
   );
 }

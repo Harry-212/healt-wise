@@ -9,7 +9,7 @@ import saveTime from "../../../public/save-time-huel.avif";
 
 const CARDS = [
   { title: "Extra Protein", image: moreProtein, href: "/protein-and-fitness" },
-  { title: "Eat Healthier", image: eatHealthy, href: undefined },
+  { title: "Eat Healthier", image: eatHealthy, href: "/eat-healthier" },
   { title: "Support Weight Management", image: manageWeight, href: undefined },
   { title: "Time Saver", image: saveTime, href: undefined },
 ] as const;

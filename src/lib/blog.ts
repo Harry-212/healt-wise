@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "glp-1-supplements-uk",
+    title: "GLP-1 Supplements UK: What Helps, What's Hype and What to Avoid",
+    date: "2026-06-19",
+    category: "Guides",
+    description:
+      "GLP-1 supplements UK guide: protein, fibre, vitamins, safety checks and what not to confuse with medicine.",
+    heroImage: "/blog/glp-1-supplement.webp",
+    feedTags: ["guides", "safety", "how-it-works", "mounjaro", "wegovy"],
+  },
+  {
     slug: "buy-weight-loss-pills-uk",
     title: "Buy Weight Loss Pills UK: Safe Options, Prices and Treatment Comparison",
     date: "2026-06-19",
