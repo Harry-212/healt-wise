@@ -20,19 +20,6 @@ const FOOTER_UK_LOCATION_CITIES = [
   { slug: "leeds", name: "Leeds" },
 ] as const;
 
-const FOOTER_PRICE_RESOURCE_LINKS = [
-  { href: "/mounjaro-price-list", label: "Mounjaro price list" },
-  { href: "/wegovy-price-list", label: "Wegovy price list" },
-  {
-    href: "/mounjaro-maintenance-pharmacies",
-    label: "Mounjaro maintenance pharmacies",
-  },
-  {
-    href: "/wegovy-maintenance-pharmacies",
-    label: "Wegovy maintenance pharmacies",
-  },
-] as const;
-
 const FOOTER_SUPPORT_RESOURCE_LINKS = [
   { href: "/mounjaro-faq", label: "Mounjaro FAQ" },
   { href: "/wegovy-faq", label: "Wegovy FAQ" },
@@ -170,14 +157,6 @@ export default function Footer() {
                     <ChevronRight className={FOOTER_NAV_LINK_CHEVRON} aria-hidden />
                   </Link>
                 </li>
-                {FOOTER_PRICE_RESOURCE_LINKS.map(({ href, label }) => (
-                  <li key={href}>
-                    <Link href={href} className={FOOTER_NAV_LINK}>
-                      <span>{label}</span>
-                      <ChevronRight className={FOOTER_NAV_LINK_CHEVRON} aria-hidden />
-                    </Link>
-                  </li>
-                ))}
               </ul>
             </motion.div>
 

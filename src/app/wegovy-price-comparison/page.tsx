@@ -38,16 +38,6 @@ export const metadata: Metadata = buildPageShareMetadata({
 
 const WEGOVY_RESOURCE_LINKS = [
   {
-    href: "/wegovy-price-list",
-    title: "Wegovy price list",
-    description: "See the dose-by-dose Wegovy price index.",
-  },
-  {
-    href: "/wegovy-maintenance-pharmacies",
-    title: "Maintenance pharmacies",
-    description: "Check pharmacies with Wegovy maintenance policy notes.",
-  },
-  {
     href: "/wegovy-faq",
     title: "Wegovy FAQ",
     description: "Read common UK questions about fees, doses, and policies.",

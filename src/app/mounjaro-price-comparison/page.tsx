@@ -38,16 +38,6 @@ export const metadata: Metadata = buildPageShareMetadata({
 
 const MOUNJARO_RESOURCE_LINKS = [
   {
-    href: "/mounjaro-price-list",
-    title: "Mounjaro price list",
-    description: "See the dose-by-dose Mounjaro price index.",
-  },
-  {
-    href: "/mounjaro-maintenance-pharmacies",
-    title: "Maintenance pharmacies",
-    description: "Check pharmacies with Mounjaro maintenance policy notes.",
-  },
-  {
     href: "/mounjaro-faq",
     title: "Mounjaro FAQ",
     description: "Read common UK questions about fees, doses, and policies.",

@@ -150,7 +150,7 @@ export default function ArticleClient() {
                 </p>
                 <ul className="list-disc space-y-3 pl-5">
                   <li>
-                    Our live-updated <Link href="/mounjaro-price-list" className="font-medium text-emerald-600 hover:underline">Mounjaro price list UK</Link> shows Mounjaro starting from £130 for the 2.5 mg strength in its latest snapshot, while our <Link href="/wegovy-price-list" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> has listed Wegovy 0.25 mg starting from £79.99.
+                    Our live-updated <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price list UK</Link> shows Mounjaro starting from £130 for the 2.5 mg strength in its latest snapshot, while our <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> has listed Wegovy 0.25 mg starting from £79.99.
                   </li>
                   <li>
                     Boots listed Wegovy 0.25 mg at £79.97 and Mounjaro 2.5 mg at £176.97 on its weight loss service page.

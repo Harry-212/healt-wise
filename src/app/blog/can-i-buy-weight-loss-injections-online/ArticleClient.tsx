@@ -166,7 +166,7 @@ export default function ArticleClient() {
                   However, the safest approach is not to self-select based on hype. The NHS explains that tirzepatide and semaglutide help by reducing appetite and helping you feel fuller for longer, and both are intended to be used alongside diet and lifestyle changes. So, although weight loss injections can support fat loss, they are not meant to replace the rest of your routine. Keeping a simple record in our <Link href="/tools/weight-loss-tracker" className="font-medium text-emerald-600 hover:underline">weight loss tracker</Link> can help you see whether the medication and your habits are working together.
                 </p>
                 <p>
-                  Before you start comparing providers, it helps to <Link href="/tools/bmi-calculator" className="font-medium text-emerald-600 hover:underline">calculate your BMI for weight loss treatment</Link> and then <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">compare Mounjaro, Wegovy and Saxenda prices</Link> side by side. If you already know the drug you are considering, move next to the <Link href="/mounjaro-price-list" className="font-medium text-emerald-600 hover:underline">Mounjaro price list UK</Link> or <Link href="/wegovy-price-list" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> so you can compare by dose, not by headline alone.
+                  Before you start comparing providers, it helps to <Link href="/tools/bmi-calculator" className="font-medium text-emerald-600 hover:underline">calculate your BMI for weight loss treatment</Link> and then <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">compare Mounjaro, Wegovy and Saxenda prices</Link> side by side. If you already know the drug you are considering, move next to the <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price list UK</Link> or <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> so you can compare by dose, not by headline alone.
                 </p>
               </GuideSection>
 
@@ -256,10 +256,7 @@ export default function ArticleClient() {
                     <Link href="/pharmacy-safety-gphc-verification" className="font-medium text-emerald-600 hover:underline">Check pharmacy safety and GPhC verification</Link> before paying.
                   </li>
                   <li>
-                    Review the <Link href="/mounjaro-price-list" className="font-medium text-emerald-600 hover:underline">Mounjaro price list UK</Link> or <Link href="/wegovy-price-list" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> if you already know your likely option.
-                  </li>
-                  <li>
-                    If long-term treatment may matter, review <Link href="/mounjaro-maintenance-pharmacies" className="font-medium text-emerald-600 hover:underline">Mounjaro maintenance pharmacies</Link> or <Link href="/wegovy-maintenance-pharmacies" className="font-medium text-emerald-600 hover:underline">Wegovy maintenance pharmacies</Link> before you start.
+                    Review the <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison UK</Link> or <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison UK</Link> if you already know your likely option.
                   </li>
                 </ol>
                 <p>

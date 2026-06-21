@@ -152,7 +152,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="wegovy-tablet-cat" heading="The new Wegovy tablet category">
                 <p>
-                  A new factor has entered the market. The MHRA announced on June 11, 2026 that the first GLP-1 tablet for weight loss was approved in the UK. At the same time, Pharmacy Online already shows a Wegovy pill pre-order entry, while Oxford lists a Wegovy pill page as out of stock. So, if you search buy weight loss tablets now, you will increasingly see both traditional tablets and newer oral GLP-1 options. If you are comparing oral and injectable routes, checking our <Link href="/wegovy-price-list" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> can help you see what the traditional weekly pen costs across different dose strengths.
+                  A new factor has entered the market. The MHRA announced on June 11, 2026 that the first GLP-1 tablet for weight loss was approved in the UK. At the same time, Pharmacy Online already shows a Wegovy pill pre-order entry, while Oxford lists a Wegovy pill page as out of stock. So, if you search buy weight loss tablets now, you will increasingly see both traditional tablets and newer oral GLP-1 options. If you are comparing oral and injectable routes, checking our <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> can help you see what the traditional weekly pen costs across different dose strengths.
                 </p>
               </GuideSection>
 

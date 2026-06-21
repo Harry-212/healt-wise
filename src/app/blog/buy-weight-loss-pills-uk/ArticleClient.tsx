@@ -259,7 +259,7 @@ export default function ArticleClient() {
                   The MHRA explains that the semaglutide tablet should be taken on an empty stomach after fasting, with no food or drink for at least 30 minutes after taking it. It is also not currently available through the NHS at the time of the MHRA announcement.
                 </p>
                 <p>
-                  Therefore, Healthwise360 should treat this as a major new content opportunity. A dedicated page for Wegovy pill UK or semaglutide tablet weight loss UK could support the main &ldquo;buy weight loss pills&rdquo; page and help build topical authority. If you want to see how the injectable version is priced while oral supply develops, check the <Link href="/wegovy-price-list" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> for dose-by-dose comparison.
+                  Therefore, Healthwise360 should treat this as a major new content opportunity. A dedicated page for Wegovy pill UK or semaglutide tablet weight loss UK could support the main &ldquo;buy weight loss pills&rdquo; page and help build topical authority. If you want to see how the injectable version is priced while oral supply develops, check the <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> for dose-by-dose comparison.
                 </p>
               </GuideSection>
 
@@ -291,7 +291,7 @@ export default function ArticleClient() {
                   However, convenience is personal. A weekly injection may be easier for one person, while a daily tablet may feel simpler for someone else.
                 </p>
                 <p>
-                  Therefore, the smarter question is not &ldquo;Which is best?&rdquo; but &ldquo;Which weight loss treatment fits my health profile, budget, and lifestyle?&rdquo; If injections are still on your shortlist, the <Link href="/mounjaro-price-list" className="font-medium text-emerald-600 hover:underline">Mounjaro price list UK</Link> is a practical next step alongside this pill comparison.
+                  Therefore, the smarter question is not &ldquo;Which is best?&rdquo; but &ldquo;Which weight loss treatment fits my health profile, budget, and lifestyle?&rdquo; If injections are still on your shortlist, the <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price list UK</Link> is a practical next step alongside this pill comparison.
                 </p>
               </GuideSection>
 

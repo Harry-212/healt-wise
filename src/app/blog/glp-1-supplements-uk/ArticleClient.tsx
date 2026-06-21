@@ -379,11 +379,11 @@ export default function ArticleClient() {
               </p>
               <p>
                 If a reader is looking for weight loss treatment price comparison, it helps to review current private pricing on the{" "}
-                <Link href="/mounjaro-price-list" className="font-medium text-emerald-600 hover:underline">
+                <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">
                   Mounjaro price list UK
                 </Link>{" "}
                 and{" "}
-                <Link href="/wegovy-price-list" className="font-medium text-emerald-600 hover:underline">
+                <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">
                   Wegovy price list UK
                 </Link>{" "}
                 pages, alongside provider safety and delivery checks. Health Wise already positions itself as an independent UK comparison site that reviews price, safety, delivery, support, and GPhC-related checks.
