@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -7,12 +7,22 @@ import eatHealthy from "../../../public/eat-healthy-huel.avif";
 import manageWeight from "../../../public/manage-weight-huel.avif";
 import saveTime from "../../../public/save-time-huel.avif";
 
-const CARDS = [
+type FoodCard = {
+  title: string;
+  image: StaticImageData;
+  href?: string;
+};
+
+const CARDS: FoodCard[] = [
   { title: "Extra Protein", image: moreProtein, href: "/protein-and-fitness" },
   { title: "Eat Healthier", image: eatHealthy, href: "/eat-healthier" },
-  { title: "Support Weight Management", image: manageWeight, href: "/support-weight-management" },
+  {
+    title: "Support Weight Management",
+    image: manageWeight,
+    href: "/support-weight-management",
+  },
   { title: "Time Saver", image: saveTime, href: "/time-saver" },
-] as const;
+];
 
 export default function FoodToFuel() {
   return (
