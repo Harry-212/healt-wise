@@ -93,9 +93,19 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "are-glp-1-supplements-real",
+    title: "Are GLP-1 Supplements Real or Just Marketing? UK Safety Guide",
+    date: "2026-06-22",
+    category: "Safety",
+    description:
+      "Are GLP-1 supplements real? Learn what may help, what is hype, and how they differ from prescription GLP-1 medicines.",
+    heroImage: "/blog/are-glp-1-real.webp",
+    feedTags: ["safety", "guides", "how-it-works", "mounjaro", "wegovy"],
+  },
+  {
     slug: "glp-1-supplements-uk",
     title: "GLP-1 Supplements UK: What Helps, What's Hype and What to Avoid",
-    date: "2026-06-19",
+    date: "2026-06-20",
     category: "Guides",
     description:
       "GLP-1 supplements UK guide: protein, fibre, vitamins, safety checks and what not to confuse with medicine.",
@@ -104,7 +114,8 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "buy-weight-loss-pills-uk",
-    title: "Buy Weight Loss Pills UK: Safe Options, Prices and Treatment Comparison",
+    title:
+      "Buy Weight Loss Pills UK: Safe Options, Prices and Treatment Comparison",
     date: "2026-06-19",
     category: "Guides",
     description:
@@ -125,7 +136,8 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "buy-weight-loss-tablets",
-    title: "Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You",
+    title:
+      "Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You",
     date: "2026-06-13",
     category: "Prices",
     description:
@@ -135,7 +147,8 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "buy-weight-loss-injections-uk",
-    title: "Buy Weight Loss Injections UK: Compare Weight Loss Treatment Prices Safely",
+    title:
+      "Buy Weight Loss Injections UK: Compare Weight Loss Treatment Prices Safely",
     date: "2026-06-12",
     category: "Prices",
     description:
@@ -167,7 +180,8 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "best-weight-loss-comparison-sites-uk",
-    title: "We Tested 5 UK Weight Loss Comparison Websites So You Don't Have To: Here is the Honest Verdict",
+    title:
+      "We Tested 5 UK Weight Loss Comparison Websites So You Don't Have To: Here is the Honest Verdict",
     date: "2026-06-03",
     category: "Comparisons",
     description:
@@ -177,7 +191,8 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "mounjaro-click-calculator-uk",
-    title: "Mounjaro Click Calculator UK: How Many Clicks Is Your Dose? (KwikPen Guide 2026)",
+    title:
+      "Mounjaro Click Calculator UK: How Many Clicks Is Your Dose? (KwikPen Guide 2026)",
     date: "2026-06-02",
     category: "Guides",
     description:
@@ -187,7 +202,8 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "what-is-bmi-calculator",
-    title: "BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next",
+    title:
+      "BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next",
     date: "2026-05-30",
     category: "Guides",
     description:
@@ -197,7 +213,8 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "wegovy-price-uk",
-    title: "Wegovy Price UK 2026: How Much Does Each Dose Cost and Is It Worth It?",
+    title:
+      "Wegovy Price UK 2026: How Much Does Each Dose Cost and Is It Worth It?",
     date: "2026-05-28",
     category: "Prices",
     description:
@@ -218,7 +235,8 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "weight-loss-treatment-price-comparison-uk",
-    title: "Weight Loss Treatment Price Comparison UK 2026: Mounjaro and Wegovy",
+    title:
+      "Weight Loss Treatment Price Comparison UK 2026: Mounjaro and Wegovy",
     date: "2026-05-27",
     category: "Prices",
     description:

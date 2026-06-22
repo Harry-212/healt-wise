@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Children,
   cloneElement,
   Fragment,
   isValidElement,
@@ -30,11 +31,8 @@ function injectMobileTocAfterHero(
     if (node == null || typeof node === "boolean") return null;
     if (typeof node === "string" || typeof node === "number") return node;
 
-    if (Array.isArray(node)) {
-      return node.flatMap((child) => {
-        const walked = walk(child);
-        return walked == null ? [] : [walked];
-      });
+    if (Children.count(node) > 1) {
+      return Children.map(node, (child) => walk(child));
     }
 
     if (!isValidElement(node)) return node;
@@ -43,8 +41,9 @@ function injectMobileTocAfterHero(
 
     if (props.id === HERO_END_ID && !injected) {
       injected = true;
+      const groupKey = node.key != null ? String(node.key) : HERO_END_ID;
       return (
-        <Fragment key={`${HERO_END_ID}-toc-slot`}>
+        <Fragment key={`${groupKey}-with-toc`}>
           {node}
           {mobileToc}
         </Fragment>
@@ -54,7 +53,11 @@ function injectMobileTocAfterHero(
     if (props.children != null) {
       const newChildren = walk(props.children);
       if (newChildren === props.children) return node;
-      return cloneElement(node as ReactElement<{ children?: ReactNode }>, {}, newChildren);
+      return cloneElement(
+        node as ReactElement<{ children?: ReactNode }>,
+        {},
+        newChildren,
+      );
     }
 
     return node;

@@ -309,7 +309,11 @@ export default function ArticleClient() {
                 so you know what a legitimate UK supply route looks like.
               </p>
               <p>
-                Although that warning focuses on medicines, the safety lesson also applies to aggressive supplement marketing. If a product sounds too close to a prescription medicine, users should be careful.
+                Although that warning focuses on medicines, the safety lesson also applies to aggressive supplement marketing. If a product sounds too close to a prescription medicine, users should be careful. For a deeper look at which claims are real and which are hype, read our guide on{" "}
+                <Link href="/blog/are-glp-1-supplements-real" className="font-medium text-emerald-600 hover:underline">
+                  whether GLP-1 supplements are real or just marketing
+                </Link>
+                .
               </p>
             </GuideSection>
 
