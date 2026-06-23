@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "best-place-to-start-weight-loss-treatment-online-uk",
+    title: "Best Place to Start Weight Loss Treatment Online UK: Safety, Prices and Provider Checks",
+    date: "2026-06-23",
+    category: "Guides",
+    description:
+      "Compare safe UK weight loss treatment providers, prices, pharmacy checks and support before starting treatment.",
+    heroImage: "/blog/best-place-to-start-weight-loss-hero.png",
+    feedTags: ["guides", "safety", "mounjaro", "wegovy"],
+  },
+  {
     slug: "are-glp-1-supplements-real",
     title: "Are GLP-1 Supplements Real or Just Marketing? UK Safety Guide",
     date: "2026-06-22",
