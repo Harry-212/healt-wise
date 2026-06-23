@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
+import { load as parseYaml } from "js-yaml";
 import type { BlogFeedTag } from "@/lib/blog-feed";
 import {
   blogMetaToFeedArticle,
@@ -601,11 +601,33 @@ export function getAllBlogSitemapSlugs(): string[] {
   return [...slugs].sort();
 }
 
+/**
+ * Minimal YAML front matter parser. Replaces `gray-matter` so we can depend on a
+ * maintained `js-yaml` (>= 4.2.0). `load` uses the default safe schema, matching
+ * the previous `safeLoad` behaviour.
+ */
+function parseFrontMatter(raw: string): {
+  data: Record<string, unknown>;
+  content: string;
+} {
+  const match = /^\uFEFF?---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/.exec(raw);
+  if (!match) return { data: {}, content: raw };
+  const [, yamlBlock, content] = match;
+  let data: Record<string, unknown> = {};
+  if (yamlBlock.trim() !== "") {
+    const parsed = parseYaml(yamlBlock);
+    if (parsed && typeof parsed === "object") {
+      data = parsed as Record<string, unknown>;
+    }
+  }
+  return { data, content };
+}
+
 export function getPostBySlug(slug: string): BlogPost | null {
   const file = path.join(postsDir(), `${slug}.md`);
   if (!fs.existsSync(file)) return null;
   const raw = fs.readFileSync(file, "utf8");
-  const { data, content } = matter(raw);
+  const { data, content } = parseFrontMatter(raw);
   const rawCat = String(data.category ?? "Guides");
   const category = (
     ["Prices", "Comparisons", "Guides", "Safety", "Locations in UK"] as const
