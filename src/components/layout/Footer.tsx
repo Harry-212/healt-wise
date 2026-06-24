@@ -2,10 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUp, ChevronRight, ShieldCheck, Mail } from "lucide-react";
+import { ArrowUp, ChevronRight, ShieldCheck, Mail, Phone, MapPin } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import {
+  SITE_BUSINESS_ADDRESS,
+  SITE_BUSINESS_PHONE_DISPLAY,
+  SITE_BUSINESS_PHONE_TEL,
+} from "@/lib/site-contact";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
+import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 import { motion } from "framer-motion";
 
 /** Matches `UK_LOCATION_ARTICLE_PREFIX` in `@/lib/blog` — avoid importing `blog` in a client component. */
@@ -24,12 +30,6 @@ const FOOTER_SUPPORT_RESOURCE_LINKS = [
   { href: "/mounjaro-faq", label: "Mounjaro FAQ" },
   { href: "/wegovy-faq", label: "Wegovy FAQ" },
   { href: "/price-alerts", label: "Price alerts" },
-] as const;
-
-const FOOTER_PROVIDER_PROFILE_LINKS = [
-  { href: "/pharmacies/fella-health", label: "Fella Health review" },
-  { href: "/pharmacies/fylde-clinic", label: "Fylde Clinic review" },
-  { href: "/pharmacies/get-weight-loss", label: "Get Weight Loss review" },
 ] as const;
 
 /** Title case with lowercase “in” (e.g. Best Weight Loss Treatment in London). */
@@ -265,28 +265,40 @@ export default function Footer() {
             <motion.div variants={itemVariants}>
               <h3 className="mb-6 text-lg font-bold tracking-tight text-white">Commitment</h3>
               <div className="flex flex-col gap-5">
-                <div className="max-w-[220px] text-base leading-relaxed text-slate-400">
-                  <strong className="font-bold text-white">Headquarters:</strong>
-                  <br />
-                  London, United Kingdom
-                  <br />
+                <div className="max-w-[240px] text-base leading-relaxed text-slate-400">
+                  <strong className="font-bold text-white">{SITE_BRAND_NAME}</strong>
+                  <address className="mt-2 not-italic text-slate-400">
+                    <span className="flex items-start gap-2">
+                      <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" aria-hidden />
+                      <span>
+                        {SITE_BUSINESS_ADDRESS.suite}
+                        <br />
+                        {SITE_BUSINESS_ADDRESS.street}
+                        <br />
+                        {SITE_BUSINESS_ADDRESS.city}, {SITE_BUSINESS_ADDRESS.postcode}
+                      </span>
+                    </span>
+                    <span className="mt-3 flex items-center gap-2">
+                      <Phone className="h-4 w-4 shrink-0 text-emerald-400" aria-hidden />
+                      <a
+                        href={`tel:${SITE_BUSINESS_PHONE_TEL}`}
+                        className="font-medium text-slate-300 transition-colors hover:text-emerald-300"
+                      >
+                        {SITE_BUSINESS_PHONE_DISPLAY}
+                      </a>
+                    </span>
+                  </address>
                   <div className="mt-4 flex items-start gap-3 rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4 backdrop-blur-sm">
                     <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" />
                     <span className="text-sm font-medium leading-snug text-slate-300">
                       Independent and unbiased. Not affiliated with manufacturers.
                     </span>
                   </div>
+                  <BusinessLocationMap
+                    className="mt-4"
+                    heightClassName="h-40 sm:h-44"
+                  />
                 </div>
-                <ul className="space-y-2">
-                  {FOOTER_PROVIDER_PROFILE_LINKS.map(({ href, label }) => (
-                    <li key={href}>
-                      <Link href={href} className={FOOTER_NAV_LINK}>
-                        <span>{label}</span>
-                        <ChevronRight className={FOOTER_NAV_LINK_CHEVRON} aria-hidden />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </motion.div>
           </div>

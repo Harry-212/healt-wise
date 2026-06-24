@@ -1,14 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import {
+  SITE_BUSINESS_ADDRESS,
+  SITE_BUSINESS_EMAIL,
+  SITE_BUSINESS_PHONE_DISPLAY,
+  SITE_BUSINESS_PHONE_TEL,
+  siteBusinessAddressLine,
+} from "@/lib/site-contact";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { ContactForm } from "./ContactForm";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Healthwise360 for general questions, data corrections, or editorial enquiries. Business email: contact@healthwise360.co.uk",
+    `Contact ${SITE_BRAND_NAME} for general questions, data corrections, or editorial enquiries. ${siteBusinessAddressLine()}. Telephone: ${SITE_BUSINESS_PHONE_DISPLAY}.`,
   alternates: {
     canonical: `${siteOrigin()}/contact`,
   },
@@ -56,18 +65,63 @@ export default function ContactPage() {
               We will typically reply to your message within 2 business days.
               Our business email is{" "}
               <a
-                href="mailto:contact@healthwise360.co.uk"
+                href={`mailto:${SITE_BUSINESS_EMAIL}`}
                 className="font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
               >
-                contact@healthwise360.co.uk
+                {SITE_BUSINESS_EMAIL}
               </a>
               .
             </p>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-emerald-900/75 sm:mx-auto sm:text-lg lg:mx-0">
-              Please do not include sensitive medical information in your
-              message; use a secure channel with your clinician for clinical
-              matters.
-            </p>
+
+            <div className="mt-8 max-w-md rounded-2xl border border-emerald-800/10 bg-white/60 p-6 text-left shadow-sm ring-1 ring-emerald-950/5 backdrop-blur-sm sm:mx-auto lg:mx-0">
+              <p className="text-sm font-semibold uppercase tracking-wide text-emerald-800/70">
+                Business details
+              </p>
+              <p className="mt-3 text-lg font-bold text-emerald-950">{SITE_BRAND_NAME}</p>
+              <address className="mt-3 not-italic text-base leading-relaxed text-emerald-900/85">
+                <span className="flex items-start gap-3">
+                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" aria-hidden />
+                  <span>
+                    {SITE_BUSINESS_ADDRESS.suite}
+                    <br />
+                    {SITE_BUSINESS_ADDRESS.street}
+                    <br />
+                    {SITE_BUSINESS_ADDRESS.city}, {SITE_BUSINESS_ADDRESS.postcode}
+                  </span>
+                </span>
+                <span className="mt-4 flex items-center gap-3">
+                  <Phone className="h-5 w-5 shrink-0 text-emerald-700" aria-hidden />
+                  <span>
+                    Telephone:{" "}
+                    <a
+                      href={`tel:${SITE_BUSINESS_PHONE_TEL}`}
+                      className="font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
+                    >
+                      {SITE_BUSINESS_PHONE_DISPLAY}
+                    </a>
+                  </span>
+                </span>
+                <span className="mt-4 flex items-center gap-3">
+                  <Mail className="h-5 w-5 shrink-0 text-emerald-700" aria-hidden />
+                  <span>
+                    Email:{" "}
+                    <a
+                      href={`mailto:${SITE_BUSINESS_EMAIL}`}
+                      className="font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
+                    >
+                      {SITE_BUSINESS_EMAIL}
+                    </a>
+                  </span>
+                </span>
+              </address>
+            </div>
+
+            <BusinessLocationMap
+              className="mt-6 max-w-md sm:mx-auto lg:mx-0"
+              heightClassName="h-56 sm:h-64"
+              variant="light"
+              linkClassName="text-sm font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
+            />
           </div>
 
           <div className="relative flex flex-col justify-start lg:pl-2">

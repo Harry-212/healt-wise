@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "semaglutide-weight-loss-where-to-start-uk",
+    title: "Semaglutide Weight Loss: Where to Start Safely in the UK",
+    date: "2026-06-24",
+    category: "Guides",
+    description:
+      "Semaglutide weight loss UK guide: learn safe routes, prescription checks, price factors and pharmacy red flags.",
+    heroImage: "/blog/semaglutide-weight-loss-where-to-start-uk-hero.png",
+    feedTags: ["guides", "safety", "wegovy"],
+  },
+  {
     slug: "best-place-to-start-weight-loss-treatment-online-uk",
     title: "Best Place to Start Weight Loss Treatment Online UK: Safety, Prices and Provider Checks",
     date: "2026-06-23",
