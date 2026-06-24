@@ -26,10 +26,11 @@ const FOOTER_UK_LOCATION_CITIES = [
   { slug: "leeds", name: "Leeds" },
 ] as const;
 
-const FOOTER_SUPPORT_RESOURCE_LINKS = [
-  { href: "/mounjaro-faq", label: "Mounjaro FAQ" },
-  { href: "/wegovy-faq", label: "Wegovy FAQ" },
-  { href: "/price-alerts", label: "Price alerts" },
+const FOOTER_SUPPORT_LINKS = [
+  { href: "/what-is-mounjaro", label: "Mounjaro" },
+  { href: "/what-is-wegovy", label: "Wegovy" },
+  { href: "/what-is-saxenda", label: "Saxenda" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 /** Title case with lowercase “in” (e.g. Best Weight Loss Treatment in London). */
@@ -209,19 +210,7 @@ export default function Footer() {
             <motion.div variants={itemVariants}>
               <h3 className="mb-6 text-lg font-bold tracking-tight text-white">Support</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link href="/helpful-guides" className={FOOTER_NAV_LINK}>
-                    <span>Weight Loss FAQs</span>
-                    <ChevronRight className={FOOTER_NAV_LINK_CHEVRON} aria-hidden />
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className={FOOTER_NAV_LINK}>
-                    <span>Contact</span>
-                    <ChevronRight className={FOOTER_NAV_LINK_CHEVRON} aria-hidden />
-                  </Link>
-                </li>
-                {FOOTER_SUPPORT_RESOURCE_LINKS.map(({ href, label }) => (
+                {FOOTER_SUPPORT_LINKS.map(({ href, label }) => (
                   <li key={href}>
                     <Link href={href} className={FOOTER_NAV_LINK}>
                       <span>{label}</span>
