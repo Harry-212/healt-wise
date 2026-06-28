@@ -13,6 +13,61 @@ export const SITE_BUSINESS_PHONE_TEL = "+447469549154";
 
 export const SITE_BUSINESS_EMAIL = "contact@healthwise360.co.uk";
 
+export type SiteSocialKind =
+  | "facebook"
+  | "instagram"
+  | "pinterest"
+  | "x"
+  | "tiktok"
+  | "youtube"
+  | "google-maps";
+
+/** Official profiles — shared by footer links and JSON-LD `sameAs`. */
+export const SITE_SOCIAL_LINKS = [
+  {
+    href: "https://www.facebook.com/profile.php?id=61590411342163",
+    label: "Facebook",
+    kind: "facebook",
+  },
+  {
+    href: "https://www.instagram.com/ali.greenwood1975/",
+    label: "Instagram",
+    kind: "instagram",
+  },
+  {
+    href: "https://uk.pinterest.com/aligreenwood1975/",
+    label: "Pinterest",
+    kind: "pinterest",
+  },
+  {
+    href: "https://x.com/AliG75AG",
+    label: "X (Twitter)",
+    kind: "x",
+  },
+  {
+    href: "https://www.tiktok.com/@alig5819",
+    label: "TikTok",
+    kind: "tiktok",
+  },
+  {
+    href: "https://www.youtube.com/@HealthWise360-j9i",
+    label: "YouTube",
+    kind: "youtube",
+  },
+  {
+    href: "https://maps.app.goo.gl/oZxhR4xEbjMY7ttS8",
+    label: "Google Maps",
+    kind: "google-maps",
+  },
+] as const satisfies ReadonlyArray<{
+  href: string;
+  label: string;
+  kind: SiteSocialKind;
+}>;
+
+/** Profile URLs for structured data (`sameAs`). */
+export const SITE_SOCIAL_PROFILES = SITE_SOCIAL_LINKS.map((link) => link.href);
+
 /** Single-line address for compact UI (e.g. schema). */
 export function siteBusinessAddressLine(): string {
   const { suite, street, city, postcode } = SITE_BUSINESS_ADDRESS;

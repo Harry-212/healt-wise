@@ -1,11 +1,89 @@
 import { HELPFUL_GUIDES_HUB_PATH } from "@/lib/helpful-guide-slugs";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { SITE_LOGO_SRC } from "@/lib/site-assets";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import {
+  SITE_BUSINESS_ADDRESS,
+  SITE_BUSINESS_EMAIL,
+  SITE_BUSINESS_PHONE_TEL,
+  SITE_SOCIAL_PROFILES,
+} from "@/lib/site-contact";
 
-/** Homepage-only structured data: reinforces main entry points (not a sitelink guarantee). */
+const SCHEMA_LANGUAGE = "en-GB";
+
+const SITE_DESCRIPTION =
+  "Independent UK comparison for weight loss treatment prices, safety, and pharmacy context. Compare Mounjaro, Wegovy, and Saxenda providers, monthly costs, and verified GPhC options.";
+
+function homeSchemaLogoUrl(base: string): string {
+  return `${base}${SITE_LOGO_SRC}`;
+}
+
+function homeSchemaLogoImage(base: string): Record<string, unknown> {
+  const logoUrl = homeSchemaLogoUrl(base);
+
+  return {
+    "@type": "ImageObject",
+    "@id": `${base}/#/schema/logo/image/`,
+    url: logoUrl,
+    contentUrl: logoUrl,
+    caption: SITE_BRAND_NAME,
+    inLanguage: SCHEMA_LANGUAGE,
+  };
+}
+
+function homeSchemaOrganization(base: string): Record<string, unknown> {
+  const logoId = `${base}/#/schema/logo/image/`;
+
+  return {
+    "@type": "Organization",
+    "@id": `${base}/#organization`,
+    name: SITE_BRAND_NAME,
+    url: `${base}/`,
+    email: SITE_BUSINESS_EMAIL,
+    foundingDate: "2026",
+    description: SITE_DESCRIPTION,
+    logo: { "@id": logoId },
+    image: { "@id": logoId },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: `${SITE_BUSINESS_ADDRESS.suite}, ${SITE_BUSINESS_ADDRESS.street}`,
+      addressLocality: SITE_BUSINESS_ADDRESS.city,
+      postalCode: SITE_BUSINESS_ADDRESS.postcode,
+      addressCountry: "GB",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: SITE_BUSINESS_EMAIL,
+        telephone: SITE_BUSINESS_PHONE_TEL,
+        availableLanguage: ["English"],
+      },
+    ],
+    sameAs: [...SITE_SOCIAL_PROFILES],
+    termsOfService: `${base}/terms-of-service`,
+    publishingPrinciples: `${base}/privacy-policy`,
+  };
+}
+
+function homeSchemaWebsite(base: string): Record<string, unknown> {
+  return {
+    "@type": "WebSite",
+    "@id": `${base}/#website`,
+    url: `${base}/`,
+    name: SITE_BRAND_NAME,
+    description: SITE_DESCRIPTION,
+    publisher: { "@id": `${base}/#organization` },
+    inLanguage: SCHEMA_LANGUAGE,
+  };
+}
+
+/** Homepage-only structured data: organization, website, webpage, and featured entry points. */
 export function homePageJsonLdGraph(): Record<string, unknown> {
   const base = siteOrigin().replace(/\/$/, "");
+  const pageUrl = `${base}/`;
+  const logoId = `${base}/#/schema/logo/image/`;
 
   const featured = [
     { name: "Compare weight loss treatments (UK)", path: HOME_COMPARE_HUB_HREF },
@@ -13,18 +91,39 @@ export function homePageJsonLdGraph(): Record<string, unknown> {
     { name: "Helpful guides", path: HELPFUL_GUIDES_HUB_PATH },
   ] as const;
 
-  const website: Record<string, unknown> = {
-    "@type": "WebSite",
-    "@id": `${base}/#website`,
-    url: `${base}/`,
-    name: SITE_BRAND_NAME,
-    description:
-      "Independent UK comparison for weight loss treatment prices, safety, and pharmacy context.",
-    publisher: {
-      "@type": "Organization",
-      name: SITE_BRAND_NAME,
-      url: base,
-    },
+  const webpage: Record<string, unknown> = {
+    "@type": ["WebPage", "CollectionPage"],
+    "@id": `${base}/#webpage`,
+    url: pageUrl,
+    name: `${SITE_BRAND_NAME} | Weight Loss Treatment Price Comparison UK 2026`,
+    description: SITE_DESCRIPTION,
+    isPartOf: { "@id": `${base}/#website` },
+    about: { "@id": `${base}/#organization` },
+    primaryImageOfPage: { "@id": logoId },
+    image: { "@id": logoId },
+    thumbnailUrl: homeSchemaLogoUrl(base),
+    breadcrumb: { "@id": `${base}/#breadcrumb` },
+    mainEntity: { "@id": `${base}/#organization` },
+    inLanguage: SCHEMA_LANGUAGE,
+    potentialAction: [
+      {
+        "@type": "ReadAction",
+        target: [pageUrl],
+      },
+    ],
+  };
+
+  const breadcrumb: Record<string, unknown> = {
+    "@type": "BreadcrumbList",
+    "@id": `${base}/#breadcrumb`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: pageUrl,
+      },
+    ],
   };
 
   const itemList: Record<string, unknown> = {
@@ -42,6 +141,13 @@ export function homePageJsonLdGraph(): Record<string, unknown> {
 
   return {
     "@context": "https://schema.org",
-    "@graph": [website, itemList],
+    "@graph": [
+      webpage,
+      homeSchemaLogoImage(base),
+      breadcrumb,
+      homeSchemaWebsite(base),
+      homeSchemaOrganization(base),
+      itemList,
+    ],
   };
 }

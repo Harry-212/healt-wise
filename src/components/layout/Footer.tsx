@@ -16,6 +16,7 @@ import {
 } from "@/lib/site-contact";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
+import SiteSocialLinks from "@/components/layout/SiteSocialLinks";
 import { motion } from "framer-motion";
 
 /** Matches `UK_LOCATION_ARTICLE_PREFIX` in `@/lib/blog` — avoid importing `blog` in a client component. */
@@ -141,6 +142,7 @@ export default function Footer() {
                 >
                   Contact Us
                 </Link>
+                <SiteSocialLinks className="mt-5" />
               </div>
             </div>
 

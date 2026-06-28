@@ -27,6 +27,7 @@ export default function Homepage() {
     <div className="flex flex-col pb-6">
       <script
         type="application/ld+json"
+        className="hw-homepage-schema"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeLd) }}
       />
       <HeroNumanStyle />
