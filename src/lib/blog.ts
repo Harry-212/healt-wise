@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "can-i-buy-weight-loss-injections-uk",
+    title: "Can I Buy Weight Loss Injections in the UK? Safe Provider and Price Guide",
+    date: "2026-06-29",
+    category: "Guides",
+    description:
+      "Can I buy weight loss injections in the UK? Learn safe routes, provider checks, prices and red flags before treatment.",
+    heroImage: "/blog/can-i-buy-weight-loss-injections-uk-hero.png",
+    feedTags: ["guides", "safety", "mounjaro", "wegovy"],
+  },
+  {
     slug: "semaglutide-weight-loss-where-to-start-uk",
     title: "Semaglutide Weight Loss: Where to Start Safely in the UK",
     date: "2026-06-24",
