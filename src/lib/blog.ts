@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "what-is-wegovy-pill",
+    title: "What Is Wegovy Pill? Semaglutide Tablet Explained for UK Users",
+    date: "2026-07-02",
+    category: "Guides",
+    description:
+      "Learn what Wegovy Pill is, how semaglutide tablets work, who they may suit, and how they compare with injections.",
+    heroImage: "/blog/what-is-wegovy-1.png",
+    feedTags: ["guides", "wegovy", "how-it-works", "safety"],
+  },
+  {
     slug: "wegovy-pill-uk",
     title: "Wegovy Pill UK: Price, Availability, Results and Safety Guide",
     date: "2026-07-01",
