@@ -93,6 +93,16 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "wegovy-pill-uk",
+    title: "Wegovy Pill UK: Price, Availability, Results and Safety Guide",
+    date: "2026-07-01",
+    category: "Guides",
+    description:
+      "Wegovy Pill UK guide: compare price, availability, results, dosage, side effects and tablet vs injection options.",
+    heroImage: "/blog/wegovy-pills.png",
+    feedTags: ["guides", "wegovy", "safety", "how-it-works"],
+  },
+  {
     slug: "can-i-buy-weight-loss-injections-uk",
     title: "Can I Buy Weight Loss Injections in the UK? Safe Provider and Price Guide",
     date: "2026-06-29",
