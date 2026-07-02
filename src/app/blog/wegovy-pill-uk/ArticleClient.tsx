@@ -600,10 +600,6 @@ export default function ArticleClient() {
                 However, these studies are not head-to-head comparisons, and
                 individual results vary.
               </blockquote>
-              <p>
-                This wording is safer, more trustworthy, and more suitable for
-                YMYL SEO.
-              </p>
             </GuideSection>
 
             <GuideSection
@@ -731,7 +727,6 @@ export default function ArticleClient() {
               id="vs-rybelsus"
               heading="Wegovy Pill vs Rybelsus"
             >
-              <p>This is a very important SEO and safety point.</p>
               <p>
                 Wegovy Pill and Rybelsus are both connected to semaglutide
                 tablets. However, they are not the same treatment route.
@@ -905,11 +900,7 @@ export default function ArticleClient() {
                 stomach with plain water. Users are normally advised to wait
                 before having coffee, tea, food, or other oral medicines.
               </p>
-              <p>
-                This is a strong long-tail SEO opportunity. Healthwise360 should
-                create a separate support article called Can You Take Wegovy
-                Pill With Coffee?
-              </p>
+
               <p>That article can answer related questions such as:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Can you take Wegovy Pill with tea?</li>
@@ -1351,14 +1342,7 @@ export default function ArticleClient() {
                 medicine, and users should compare providers carefully before
                 paying.
               </p>
-              <p>
-                For Healthwise360, this topic is a strong SEO, AEO, and GEO
-                opportunity. Most provider pages focus on pre-order, price, and
-                conversion. Healthwise360 can win by offering something more
-                helpful: independent comparison, trial context, price
-                transparency, pharmacy safety, GLP-1 supplement clarity, and
-                long-term support.
-              </p>
+
               <p
                 className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}
               >

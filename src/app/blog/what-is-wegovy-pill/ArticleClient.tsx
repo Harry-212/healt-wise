@@ -210,8 +210,7 @@ export default function ArticleClient() {
               className={`mb-8 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}
             >
               <span className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                2 Jul 2026
+                <Calendar className="h-4 w-4" />2 Jul 2026
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
@@ -241,8 +240,8 @@ export default function ArticleClient() {
               <p className="text-lg md:text-xl">
                 Wegovy Pill is a prescription-only semaglutide tablet for
                 medically supervised weight loss and weight management. It is
-                designed for eligible adults who may benefit from GLP-1 treatment
-                but prefer a tablet instead of a weekly injection.
+                designed for eligible adults who may benefit from GLP-1
+                treatment but prefer a tablet instead of a weekly injection.
               </p>
               <p>
                 However, Wegovy Pill is not a normal diet pill, fat burner, or
@@ -382,8 +381,8 @@ export default function ArticleClient() {
               </p>
               <p>
                 However, Wegovy Pill does not remove the need for lifestyle
-                changes. It is intended to work alongside a reduced-calorie diet,
-                regular movement, and long-term habit support.
+                changes. It is intended to work alongside a reduced-calorie
+                diet, regular movement, and long-term habit support.
               </p>
               <p>In practical terms, some people may notice:</p>
               <ul className="list-disc space-y-3 pl-5">
@@ -394,8 +393,9 @@ export default function ArticleClient() {
                 <li>More control around portions</li>
               </ul>
               <p>
-                However, results vary. Some people respond strongly, while others
-                may experience side effects or need a different treatment option.
+                However, results vary. Some people respond strongly, while
+                others may experience side effects or need a different treatment
+                option.
               </p>
             </GuideSection>
 
@@ -465,14 +465,14 @@ export default function ArticleClient() {
                 </li>
               </ul>
               <p>
-                This is important because food, coffee, tea, and other drinks may
-                reduce absorption if taken too soon.
+                This is important because food, coffee, tea, and other drinks
+                may reduce absorption if taken too soon.
               </p>
               <p>
                 Therefore, users should think about whether a daily morning
-                routine fits their lifestyle. If someone finds mornings difficult
-                or regularly eats early, a weekly injection may be easier to
-                manage.
+                routine fits their lifestyle. If someone finds mornings
+                difficult or regularly eats early, a weekly injection may be
+                easier to manage.
               </p>
             </GuideSection>
 
@@ -528,8 +528,8 @@ export default function ArticleClient() {
                 It is also important not to compare studies too aggressively.
                 OASIS 4, STEP UP, and SURMOUNT-1 are separate studies with
                 different designs and populations. Therefore, they should not be
-                treated as direct head-to-head proof that one treatment is better
-                than another.
+                treated as direct head-to-head proof that one treatment is
+                better than another.
               </p>
               <p>A safer message is:</p>
               <blockquote
@@ -601,18 +601,14 @@ export default function ArticleClient() {
                 tablets. However, they are not the same treatment route.
               </p>
               <p>
-                Wegovy is used for weight loss and weight management. Rybelsus is
-                used for type 2 diabetes.
+                Wegovy is used for weight loss and weight management. Rybelsus
+                is used for type 2 diabetes.
               </p>
               <p>
-                Therefore, users should not treat Rybelsus as a casual substitute
-                for Wegovy Pill. They should also avoid using diabetes medicines
-                for weight loss without proper clinical advice.
-              </p>
-              <p>
-                This distinction is important for SEO, user safety, and trust.
-                Healthwise360 should create a dedicated support article called
-                Wegovy Pill vs Rybelsus: Weight Loss vs Diabetes Use.
+                Therefore, users should not treat Rybelsus as a casual
+                substitute for Wegovy Pill. They should also avoid using
+                diabetes medicines for weight loss without proper clinical
+                advice.
               </p>
             </GuideSection>
 
@@ -684,8 +680,8 @@ export default function ArticleClient() {
               </ul>
               <p>
                 However, it may not suit everyone. For example, someone who
-                struggles to take tablets on an empty stomach may find the routine
-                difficult.
+                struggles to take tablets on an empty stomach may find the
+                routine difficult.
               </p>
               <p>
                 Besides that, Wegovy Pill may not be suitable for people with
@@ -722,12 +718,12 @@ export default function ArticleClient() {
               </p>
               <p>
                 They should seek urgent help if they experience difficulty
-                breathing, swelling of the face or throat, severe stomach pain, or
-                signs of a serious allergic reaction.
+                breathing, swelling of the face or throat, severe stomach pain,
+                or signs of a serious allergic reaction.
               </p>
               <p>
-                Healthwise360 should create a full support page called Wegovy Pill
-                Side Effects: What UK Users Should Know.
+                Healthwise360 should create a full support page called Wegovy
+                Pill Side Effects: What UK Users Should Know.
               </p>
             </GuideSection>
 
@@ -743,7 +739,8 @@ export default function ArticleClient() {
               </p>
               <p>
                 Taking more than one GLP-1-style medicine may increase side
-                effect risk. It can also make treatment harder to monitor safely.
+                effect risk. It can also make treatment harder to monitor
+                safely.
               </p>
               <p>Therefore, users should tell their prescriber about:</p>
               <ul className="list-disc space-y-3 pl-5">
@@ -766,9 +763,7 @@ export default function ArticleClient() {
               id="diet-lifestyle"
               heading="Do You Need Diet and Lifestyle Changes?"
             >
-              <p>
-                Yes. Wegovy Pill is not a standalone treatment.
-              </p>
+              <p>Yes. Wegovy Pill is not a standalone treatment.</p>
               <p>
                 It is designed to support weight management alongside lifestyle
                 changes. This may include reduced-calorie eating, higher protein
@@ -787,7 +782,8 @@ export default function ArticleClient() {
                 <li>Speaking to a clinician about side effects</li>
               </ul>
               <p>
-                This is why Healthwise360 should connect Wegovy Pill content with{" "}
+                This is why Healthwise360 should connect Wegovy Pill content
+                with{" "}
                 <Link
                   href="/tools/weight-loss-tracker"
                   className="font-medium text-emerald-600 hover:underline"
@@ -820,13 +816,13 @@ export default function ArticleClient() {
                 maintenance plan.
               </p>
               <p>
-                Before stopping treatment, users should speak to their prescriber.
-                They should also ask about dose changes, maintenance options, and
-                what to do if appetite increases again.
+                Before stopping treatment, users should speak to their
+                prescriber. They should also ask about dose changes, maintenance
+                options, and what to do if appetite increases again.
               </p>
               <p>
-                This creates another strong support topic for the cluster: Wegovy
-                Pill Maintenance: What Happens After Weight Loss?
+                This creates another strong support topic for the cluster:
+                Wegovy Pill Maintenance: What Happens After Weight Loss?
               </p>
             </GuideSection>
 
@@ -971,9 +967,9 @@ export default function ArticleClient() {
                   </h3>
                   <p>
                     Wegovy Pill is a prescription-only semaglutide tablet for
-                    medically supervised weight loss and weight management. It is
-                    taken once daily and is designed for eligible adults who may
-                    benefit from GLP-1 treatment.
+                    medically supervised weight loss and weight management. It
+                    is taken once daily and is designed for eligible adults who
+                    may benefit from GLP-1 treatment.
                   </p>
                 </div>
                 <div>
@@ -998,8 +994,8 @@ export default function ArticleClient() {
                   <p>
                     Wegovy Pill mimics GLP-1, a natural hormone involved in
                     appetite and fullness. It may help reduce hunger, lower
-                    cravings, and support weight loss when combined with diet and
-                    lifestyle changes.
+                    cravings, and support weight loss when combined with diet
+                    and lifestyle changes.
                   </p>
                 </div>
                 <div>
@@ -1010,8 +1006,8 @@ export default function ArticleClient() {
                   </h3>
                   <p>
                     No. Rybelsus is a semaglutide tablet used for type 2
-                    diabetes. Wegovy Pill is a semaglutide tablet for weight loss
-                    and weight management.
+                    diabetes. Wegovy Pill is a semaglutide tablet for weight
+                    loss and weight management.
                   </p>
                 </div>
                 <div>
@@ -1021,10 +1017,10 @@ export default function ArticleClient() {
                     Is Wegovy Pill a GLP-1 supplement?
                   </h3>
                   <p>
-                    No. Wegovy Pill is a prescription medicine, not a supplement.
-                    GLP-1 supplements may support general nutrition, but they
-                    should not be treated as replacements for regulated GLP-1
-                    medicines.
+                    No. Wegovy Pill is a prescription medicine, not a
+                    supplement. GLP-1 supplements may support general nutrition,
+                    but they should not be treated as replacements for regulated
+                    GLP-1 medicines.
                   </p>
                 </div>
                 <div>
@@ -1036,8 +1032,8 @@ export default function ArticleClient() {
                   <p>
                     No. You should not take oral Wegovy with injectable Wegovy,
                     Mounjaro, Ozempic, Saxenda, or another GLP-1 treatment
-                    unless a qualified healthcare professional specifically advises
-                    it.
+                    unless a qualified healthcare professional specifically
+                    advises it.
                   </p>
                 </div>
               </div>
