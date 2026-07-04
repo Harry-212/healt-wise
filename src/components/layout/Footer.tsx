@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUp, ChevronRight, Mail, Phone, MapPin } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
@@ -14,7 +13,7 @@ import {
   SITE_BUSINESS_PHONE_DISPLAY,
   SITE_BUSINESS_PHONE_TEL,
 } from "@/lib/site-contact";
-import { SITE_LOGO_SRC } from "@/lib/site-assets";
+import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 import SiteSocialLinks from "@/components/layout/SiteSocialLinks";
 import { motion } from "framer-motion";
@@ -387,15 +386,12 @@ export default function Footer() {
           {/* Bottom Bar: Dark Pill */}
           <div className="flex flex-col md:flex-row items-center justify-between rounded-full bg-slate-950 px-6 py-4 md:px-10 md:py-6 shadow-xl gap-4 md:gap-0 mt-8">
             <div className="flex flex-col md:flex-row items-center gap-6 text-white w-full md:w-auto">
-              <Link href="/" className="hover:opacity-80 transition-opacity">
-                <Image
-                  src={SITE_LOGO_SRC}
-                  alt={`${SITE_BRAND_NAME} logo`}
-                  width={200}
-                  height={54}
-                  className="h-10 w-auto object-contain brightness-0 invert"
-                />
-              </Link>
+              <SiteLogoLink
+                className="hover:opacity-80"
+                imageClassName="h-10 w-auto object-contain brightness-0 invert"
+                width={200}
+                height={54}
+              />
               <div className="hidden items-center gap-4 text-sm font-semibold text-slate-400 md:flex">
                 <Link
                   href="/privacy-policy"

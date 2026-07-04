@@ -38,6 +38,15 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/_next/image",
+        headers: [
+          {
+            key: "Content-Disposition",
+            value: "inline",
+          },
+        ],
+      },
+      {
         source: "/_next/static/media/:path*",
         headers: [
           {

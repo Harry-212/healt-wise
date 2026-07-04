@@ -2,13 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Lock, ShieldCheck } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { createBrowserSupabaseClient } from "@/lib/supabase/client";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
-import { SITE_LOGO_SRC } from "@/lib/site-assets";
+import SiteLogoLink from "@/components/layout/SiteLogoLink";
 
 const CANONICAL_SITE_URL = "https://www.healthwise360.co.uk";
 
@@ -134,16 +133,13 @@ export default function LoginGate({
   return (
     <div className="min-h-svh bg-linear-to-b from-slate-50 to-slate-100 px-4 py-10">
       <div className="mx-auto flex w-full max-w-md flex-col gap-8">
-        <Link href="/" className="flex justify-center">
-          <Image
-            src={SITE_LOGO_SRC}
-            alt="Health Wise"
-            width={320}
-            height={100}
-            className="h-14 w-auto object-contain object-center sm:h-16"
-            priority
-          />
-        </Link>
+        <SiteLogoLink
+          className="justify-center"
+          imageClassName="h-14 w-auto object-contain object-center sm:h-16"
+          width={320}
+          height={100}
+          priority
+        />
 
         <motion.div
           initial={{ opacity: 0, y: 12 }}

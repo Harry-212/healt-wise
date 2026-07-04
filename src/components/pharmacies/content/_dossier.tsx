@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { CheckCircle2, ChevronRight, Copy, Home, Tag } from "lucide-react";
-import { SITE_LOGO_SRC } from "@/lib/site-assets";
+import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 
 /** Same classes as the primary “Visit {provider}” CTA in Document details (use in conclusion links). */
@@ -46,16 +46,9 @@ export function PharmacyHeroProviderLogo({
 export function PharmacyBrandLogoFooter() {
   return (
     <div className="flex justify-center py-4 sm:py-6">
-      <Link href="/" className="inline-flex shrink-0 transition hover:opacity-90">
-        <Image
-          src={SITE_LOGO_SRC}
-          alt={`${SITE_BRAND_NAME} logo`}
-          width={800}
-          height={250}
-          sizes="(max-width: 640px) 85vw, 420px"
-          className="h-16 w-auto max-w-[min(100%,22rem)] object-contain object-center sm:h-24 md:h-28 md:max-w-[min(100%,28rem)]"
-        />
-      </Link>
+      <SiteLogoLink
+        imageClassName="h-16 w-auto max-w-[min(100%,22rem)] object-contain object-center sm:h-24 md:h-28 md:max-w-[min(100%,28rem)]"
+      />
     </div>
   );
 }

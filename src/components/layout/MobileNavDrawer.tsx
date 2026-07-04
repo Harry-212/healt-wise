@@ -3,15 +3,13 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X, ChevronRight, Zap } from "lucide-react";
 import type { NavPanel } from "@/lib/nav/nav-config";
 import { NavLinkIcon, NAV_LINK_ACCENT_CLASSES } from "@/lib/nav/nav-icons";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
 import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
-import { SITE_BRAND_NAME } from "@/lib/site-brand";
-import { SITE_LOGO_SRC } from "@/lib/site-assets";
+import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 
 export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
@@ -94,15 +92,12 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
         }}
       >
         <div className="flex h-14 shrink-0 items-center justify-between border-b border-slate-200 px-4">
-          <Link href="/" onClick={close} className="min-w-0">
-            <Image
-              src={SITE_LOGO_SRC}
-              alt={SITE_BRAND_NAME}
-              width={160}
-              height={48}
-              className="h-10 w-auto max-w-[11rem] object-contain object-left"
-            />
-          </Link>
+          <SiteLogoLink
+            onClick={close}
+            imageClassName="h-10 w-auto max-w-[11rem] object-contain object-left"
+            width={160}
+            height={48}
+          />
           <button
             type="button"
             className="flex h-11 w-11 items-center justify-center rounded-full bg-slate-100 text-slate-800 active:bg-slate-200"

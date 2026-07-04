@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Search, Zap } from "lucide-react";
 import { useState } from "react";
@@ -11,8 +10,7 @@ import MobileNavDrawer from "@/components/layout/MobileNavDrawer";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
 import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
-import { SITE_BRAND_NAME } from "@/lib/site-brand";
-import { SITE_LOGO_SRC } from "@/lib/site-assets";
+import SiteLogoLink from "@/components/layout/SiteLogoLink";
 
 const MegaMenuDesktop = dynamic(
   () => import("@/components/layout/MegaMenuDesktop"),
@@ -112,21 +110,7 @@ export default function NavBar() {
       <header className="fixed inset-x-0 top-0 z-[90] w-full max-w-full overflow-x-clip overflow-y-visible border-b border-brand-border bg-brand-card/95 pt-[env(safe-area-inset-top,0px)] shadow-sm backdrop-blur supports-[backdrop-filter]:bg-brand-card/90">
         <div className="relative mx-auto flex h-16 max-w-[1400px] min-h-0 min-w-0 items-center gap-2 px-3 sm:h-24 md:h-28 sm:gap-3 sm:px-4 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-4 lg:px-6 xl:gap-6">
           <div className="flex min-w-0 shrink-0 justify-start lg:justify-self-start">
-            <Link
-              href="/"
-              className="group flex min-w-0 items-center gap-2 py-1"
-            >
-              <div className="relative flex items-center transition-opacity hover:opacity-90">
-                <Image
-                  src={SITE_LOGO_SRC}
-                  alt={`${SITE_BRAND_NAME} logo`}
-                  width={800}
-                  height={250}
-                  className="h-9 w-auto max-w-[118px] object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.08)] sm:h-14 sm:max-w-none md:h-[4.5rem]"
-                  fetchPriority="low"
-                />
-              </div>
-            </Link>
+            <SiteLogoLink />
           </div>
 
           <nav

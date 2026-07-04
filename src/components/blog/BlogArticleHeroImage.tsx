@@ -2,11 +2,16 @@
 
 import Image from "next/image";
 import { imgbbDisplaySrc } from "@/lib/imgbb-display-src";
+import { shouldServeImageDirect } from "@/lib/image-display";
 
 /**
  * Hero image via Next `Image` so `/_next/image` can serve **WebP/AVIF**
  * (smaller than raw PNG from ImgBB). ImgBB *page* URLs still work via
  * `imgbbDisplaySrc` → `/api/imgbb` (those stay `unoptimized` = no WebP).
+ *
+ * Local `/public` assets skip the optimizer so "Open image in new tab"
+ * serves the file inline (Hostinger adds `Content-Disposition: attachment`
+ * on `/_next/image`, which forces a download).
  */
 export default function BlogArticleHeroImage({
   src,
@@ -22,7 +27,7 @@ export default function BlogArticleHeroImage({
   showFullImage?: boolean;
 }) {
   const resolved = imgbbDisplaySrc(src);
-  const viaApi = resolved.startsWith("/api/");
+  const unoptimized = shouldServeImageDirect(resolved);
 
   const frame =
     "rounded-2xl border border-slate-200/80 bg-slate-50/60 shadow-sm ring-1 ring-slate-900/5";
@@ -40,7 +45,7 @@ export default function BlogArticleHeroImage({
             className="h-auto w-full object-contain object-center"
             quality={75}
             priority={priority}
-            unoptimized={viaApi}
+            unoptimized={unoptimized}
           />
         </div>
       </div>
@@ -58,7 +63,7 @@ export default function BlogArticleHeroImage({
           className="object-cover object-center"
           quality={70}
           priority={priority}
-          unoptimized={viaApi}
+          unoptimized={unoptimized}
         />
       </div>
     </div>

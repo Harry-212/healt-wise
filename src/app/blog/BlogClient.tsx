@@ -19,6 +19,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { BlogFeedTag } from "@/lib/blog-feed";
 import type { FeedArticle } from "@/lib/blog-feed";
 import { imgbbDisplaySrc } from "@/lib/imgbb-display-src";
+import { shouldServeImageDirect } from "@/lib/image-display";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -343,7 +344,7 @@ export default function BlogClient({
             ) : null}
             {gridArticles.map((article, index) => {
               const cardSrc = imgbbDisplaySrc(article.image);
-              const cardUnopt = cardSrc.startsWith("/api/");
+              const cardUnopt = shouldServeImageDirect(cardSrc);
               return (
                 <Link
                   href={article.href}

@@ -1,11 +1,9 @@
 "use client";
 
 import { Lock } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { SITE_LOGO_SRC } from "@/lib/site-assets";
+import SiteLogoLink from "@/components/layout/SiteLogoLink";
 
 export default function AdminLoginForm() {
   const router = useRouter();
@@ -37,16 +35,13 @@ export default function AdminLoginForm() {
   return (
     <div className="min-h-svh bg-linear-to-b from-slate-50 to-slate-100 px-4 py-10">
       <div className="mx-auto flex w-full max-w-md flex-col gap-8">
-        <Link href="/" className="flex justify-center">
-          <Image
-            src={SITE_LOGO_SRC}
-            alt="Health Wise"
-            width={320}
-            height={100}
-            className="h-14 w-auto object-contain object-center sm:h-16"
-            priority
-          />
-        </Link>
+        <SiteLogoLink
+          className="justify-center"
+          imageClassName="h-14 w-auto object-contain object-center sm:h-16"
+          width={320}
+          height={100}
+          priority
+        />
 
         <div className="rounded-3xl border border-slate-200/90 bg-white p-6 shadow-xl shadow-slate-900/5 sm:p-8">
           <div className="mb-6 flex items-start gap-3">
