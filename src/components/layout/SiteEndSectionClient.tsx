@@ -69,7 +69,10 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
   };
 
   return (
-    <section className="border-t border-slate-200/90 bg-linear-to-b from-white to-slate-50/90">
+    <section
+      id="keep-exploring"
+      className="border-t border-slate-200/90 bg-linear-to-b from-white to-slate-50/90"
+    >
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>

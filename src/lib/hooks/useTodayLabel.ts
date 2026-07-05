@@ -107,3 +107,44 @@ export function useTodayUkParts(
     () => fallback,
   );
 }
+
+const UK_MONTHS_LONG = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+] as const;
+
+function monthYearFromDate(d: Date): string {
+  return `${UK_MONTHS_LONG[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+let cachedMonthYearLabel = "";
+let cachedMonthYearKey = "";
+
+function getMonthYearLabelSnapshot(): string {
+  const d = new Date();
+  const key = `${d.getFullYear()}-${d.getMonth()}`;
+  if (key !== cachedMonthYearKey) {
+    cachedMonthYearKey = key;
+    cachedMonthYearLabel = monthYearFromDate(d);
+  }
+  return cachedMonthYearLabel;
+}
+
+/** e.g. `July 2026` — updates when the calendar month changes. */
+export function useMonthYearLabel(fallback: string | null = null): string | null {
+  return useSyncExternalStore(
+    noopSubscribe,
+    getMonthYearLabelSnapshot,
+    () => fallback,
+  );
+}
