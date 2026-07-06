@@ -11,7 +11,7 @@ import {
   Trash2,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import {
   MOUNJARO_DOSE_KEYS,
   type MounjaroUkProviderCompare,
@@ -24,7 +24,22 @@ import {
 import { hasPharmacyPage } from "@/lib/routes/all-pharmacy-slugs";
 import { slugify } from "@/lib/utils/slugify";
 
-type MedicationTab = "mounjaro" | "wegovy";
+function LockedCell({
+  children,
+  className = "",
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <span
+      className={`block rounded border border-slate-100 bg-slate-50 px-2 py-1 text-slate-700 ${className}`}
+    >
+      {children}
+    </span>
+  );
+}
+
 
 /**
  * Shows the auto-generated profile slug for a provider and whether its
@@ -452,9 +467,8 @@ export default function AdminDashboard() {
                 after save
               </p>
               <p className="mt-1 text-xs text-slate-500">
-                Note: the per-row &ldquo;Updated&rdquo; value is shown on the
-                public table. &ldquo;Reset prices&rdquo; restores this table to
-                the original prices from before any admin edits.
+                Provider, rating, GPhC, notes and updated date are locked — only
+                dose prices can be edited here.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
@@ -555,38 +569,20 @@ export default function AdminDashboard() {
                         }`}
                       >
                         <td className="sticky left-0 z-10 bg-white px-2 py-2">
-                          <input
-                            value={row.name}
-                            onChange={(e) =>
-                              updateMounjaroRow(index, { name: e.target.value })
-                            }
-                            className="w-36 rounded border border-slate-200 px-2 py-1"
-                          />
+                          <LockedCell className="w-36 font-medium">
+                            {row.name}
+                          </LockedCell>
                           <ProviderSlugHint id={row.id} name={row.name} />
                         </td>
                         <td className="px-2 py-2">
-                          <input
-                            type="number"
-                            step="0.1"
-                            value={row.rating}
-                            onChange={(e) =>
-                              updateMounjaroRow(index, {
-                                rating: Number.parseFloat(e.target.value) || 0,
-                              })
-                            }
-                            className="w-16 rounded border border-slate-200 px-2 py-1"
-                          />
+                          <LockedCell className="w-16 tabular-nums">
+                            {row.rating.toFixed(1)}
+                          </LockedCell>
                         </td>
                         <td className="px-2 py-2">
-                          <input
-                            value={row.gphcRegNo}
-                            onChange={(e) =>
-                              updateMounjaroRow(index, {
-                                gphcRegNo: e.target.value,
-                              })
-                            }
-                            className="w-24 rounded border border-slate-200 px-2 py-1"
-                          />
+                          <LockedCell className="w-24 tabular-nums">
+                            {row.gphcRegNo || "—"}
+                          </LockedCell>
                         </td>
                         {MOUNJARO_DOSE_KEYS.map((dose) => (
                           <td key={dose} className="px-2 py-2">
@@ -606,28 +602,12 @@ export default function AdminDashboard() {
                           </td>
                         ))}
                         <td className="px-2 py-2 align-top">
-                          <textarea
-                            value={row.notes ?? ""}
-                            onChange={(e) =>
-                              updateMounjaroRow(index, {
-                                notes: e.target.value,
-                              })
-                            }
-                            rows={2}
-                            placeholder="e.g. Free next-day delivery"
-                            className="w-48 resize-y rounded border border-slate-200 px-2 py-1 leading-snug"
-                          />
+                          <LockedCell className="w-48 min-h-8 whitespace-pre-line leading-snug">
+                            {row.notes?.trim() ? row.notes : "—"}
+                          </LockedCell>
                         </td>
                         <td className="px-2 py-2 align-top">
-                          <input
-                            value={row.updatedLabel}
-                            onChange={(e) =>
-                              updateMounjaroRow(index, {
-                                updatedLabel: e.target.value,
-                              })
-                            }
-                            className="w-28 rounded border border-slate-200 px-2 py-1"
-                          />
+                          <LockedCell className="w-28">{row.updatedLabel}</LockedCell>
                         </td>
                         <td className="px-2 py-2">
                           <button
@@ -680,38 +660,20 @@ export default function AdminDashboard() {
                         }`}
                       >
                         <td className="sticky left-0 z-10 bg-white px-2 py-2">
-                          <input
-                            value={row.name}
-                            onChange={(e) =>
-                              updateWegovyRow(index, { name: e.target.value })
-                            }
-                            className="w-36 rounded border border-slate-200 px-2 py-1"
-                          />
+                          <LockedCell className="w-36 font-medium">
+                            {row.name}
+                          </LockedCell>
                           <ProviderSlugHint id={row.id} name={row.name} />
                         </td>
                         <td className="px-2 py-2">
-                          <input
-                            type="number"
-                            step="0.1"
-                            value={row.rating}
-                            onChange={(e) =>
-                              updateWegovyRow(index, {
-                                rating: Number.parseFloat(e.target.value) || 0,
-                              })
-                            }
-                            className="w-16 rounded border border-slate-200 px-2 py-1"
-                          />
+                          <LockedCell className="w-16 tabular-nums">
+                            {row.rating.toFixed(1)}
+                          </LockedCell>
                         </td>
                         <td className="px-2 py-2">
-                          <input
-                            value={row.gphcRegNo}
-                            onChange={(e) =>
-                              updateWegovyRow(index, {
-                                gphcRegNo: e.target.value,
-                              })
-                            }
-                            className="w-24 rounded border border-slate-200 px-2 py-1"
-                          />
+                          <LockedCell className="w-24 tabular-nums">
+                            {row.gphcRegNo || "—"}
+                          </LockedCell>
                         </td>
                         {WEGOVY_DOSE_KEYS.map((dose) => (
                           <td key={dose} className="px-2 py-2">
@@ -726,28 +688,12 @@ export default function AdminDashboard() {
                           </td>
                         ))}
                         <td className="px-2 py-2 align-top">
-                          <textarea
-                            value={row.notes ?? ""}
-                            onChange={(e) =>
-                              updateWegovyRow(index, {
-                                notes: e.target.value,
-                              })
-                            }
-                            rows={2}
-                            placeholder="e.g. Free — Click & Collect"
-                            className="w-48 resize-y rounded border border-slate-200 px-2 py-1 leading-snug"
-                          />
+                          <LockedCell className="w-48 min-h-8 whitespace-pre-line leading-snug">
+                            {row.notes?.trim() ? row.notes : "—"}
+                          </LockedCell>
                         </td>
                         <td className="px-2 py-2 align-top">
-                          <input
-                            value={row.updatedLabel}
-                            onChange={(e) =>
-                              updateWegovyRow(index, {
-                                updatedLabel: e.target.value,
-                              })
-                            }
-                            className="w-28 rounded border border-slate-200 px-2 py-1"
-                          />
+                          <LockedCell className="w-28">{row.updatedLabel}</LockedCell>
                         </td>
                         <td className="px-2 py-2">
                           <button
