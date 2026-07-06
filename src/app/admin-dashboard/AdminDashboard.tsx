@@ -78,6 +78,19 @@ function todayUpdatedLabel(): string {
   });
 }
 
+/** Public table header label, e.g. "July 2026". */
+function currentMonthYearLabel(): string {
+  const d = new Date();
+  const month = d.toLocaleDateString("en-GB", { month: "long" });
+  return `${month} ${d.getFullYear()}`;
+}
+
+function rowsSnapshot(
+  rows: AdminMounjaroProvider[] | AdminWegovyProvider[],
+): string {
+  return JSON.stringify(rows);
+}
+
 function emptyMounjaroProvider(): AdminMounjaroProvider {
   return {
     id: `provider-${Date.now()}`,
@@ -160,11 +173,14 @@ function normaliseWegovyRows(
 export default function AdminDashboard() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<MedicationTab>("mounjaro");
-  const [lastUpdated, setLastUpdated] = useState("");
   const [mounjaroRows, setMounjaroRows] = useState<AdminMounjaroProvider[]>(
     [],
   );
   const [wegovyRows, setWegovyRows] = useState<AdminWegovyProvider[]>([]);
+  const [savedSnapshot, setSavedSnapshot] = useState({
+    mounjaro: "[]",
+    wegovy: "[]",
+  });
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -185,15 +201,24 @@ export default function AdminDashboard() {
         throw new Error("Failed to load data");
       }
       const data = (await res.json()) as ApiResponse;
-      setLastUpdated(data.lastUpdated);
       if (med === "mounjaro") {
-        setMounjaroRows(
-          normaliseMounjaroRows(data.providers as AdminMounjaroProvider[]),
+        const rows = normaliseMounjaroRows(
+          data.providers as AdminMounjaroProvider[],
         );
+        setMounjaroRows(rows);
+        setSavedSnapshot((prev) => ({
+          ...prev,
+          mounjaro: rowsSnapshot(rows),
+        }));
       } else {
-        setWegovyRows(
-          normaliseWegovyRows(data.providers as AdminWegovyProvider[]),
+        const rows = normaliseWegovyRows(
+          data.providers as AdminWegovyProvider[],
         );
+        setWegovyRows(rows);
+        setSavedSnapshot((prev) => ({
+          ...prev,
+          wegovy: rowsSnapshot(rows),
+        }));
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Load failed");
@@ -224,6 +249,20 @@ export default function AdminDashboard() {
     );
   }, [wegovyRows, search]);
 
+  const hasUnsavedChanges = useMemo(() => {
+    const current =
+      activeTab === "mounjaro"
+        ? rowsSnapshot(mounjaroRows)
+        : rowsSnapshot(wegovyRows);
+    const saved =
+      activeTab === "mounjaro"
+        ? savedSnapshot.mounjaro
+        : savedSnapshot.wegovy;
+    return current !== saved;
+  }, [activeTab, mounjaroRows, wegovyRows, savedSnapshot]);
+
+  const lastUpdatedLabel = currentMonthYearLabel();
+
   async function handleSave() {
     setSaving(true);
     setMessage(null);
@@ -233,12 +272,19 @@ export default function AdminDashboard() {
       const res = await fetch(`/api/admin/${activeTab}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ lastUpdated, providers }),
+        body: JSON.stringify({
+          lastUpdated: lastUpdatedLabel,
+          providers,
+        }),
       });
       if (!res.ok) {
         const data = (await res.json().catch(() => ({}))) as { error?: string };
         throw new Error(data.error ?? "Save failed");
       }
+      setSavedSnapshot((prev) => ({
+        ...prev,
+        [activeTab]: rowsSnapshot(providers),
+      }));
       setMessage(
         `Saved ${activeTab === "mounjaro" ? "Mounjaro" : "Wegovy"} table (${providers.length} providers).`,
       );
@@ -263,7 +309,10 @@ export default function AdminDashboard() {
       const res = await fetch(`/api/admin/${activeTab}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ lastUpdated, providers: nextProviders }),
+        body: JSON.stringify({
+          lastUpdated: lastUpdatedLabel,
+          providers: nextProviders,
+        }),
       });
       if (!res.ok) {
         const data = (await res.json().catch(() => ({}))) as { error?: string };
@@ -271,8 +320,16 @@ export default function AdminDashboard() {
       }
       if (activeTab === "mounjaro") {
         setMounjaroRows(nextProviders as AdminMounjaroProvider[]);
+        setSavedSnapshot((prev) => ({
+          ...prev,
+          mounjaro: rowsSnapshot(nextProviders),
+        }));
       } else {
         setWegovyRows(nextProviders as AdminWegovyProvider[]);
+        setSavedSnapshot((prev) => ({
+          ...prev,
+          wegovy: rowsSnapshot(nextProviders),
+        }));
       }
       setMessage("Provider deleted.");
     } catch (err) {
@@ -457,7 +514,9 @@ export default function AdminDashboard() {
           </div>
         </aside>
 
-        <main className="min-w-0 flex-1 px-4 py-6 md:px-8">
+        <main
+          className={`min-w-0 flex-1 px-4 py-6 md:px-8 ${hasUnsavedChanges ? "pb-24" : ""}`}
+        >
           <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <h1 className="text-2xl font-bold text-slate-900">
@@ -468,20 +527,17 @@ export default function AdminDashboard() {
                 after save
               </p>
               <p className="mt-1 text-xs text-slate-500">
-                Provider, rating, GPhC, notes and updated date are locked — only
-                dose prices can be edited here.
+                Provider, rating, GPhC and updated date are locked. Edit dose
+                prices and notes, then save.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              <label className="text-sm text-slate-600">
-                Last updated
-                <input
-                  type="text"
-                  value={lastUpdated}
-                  onChange={(e) => setLastUpdated(e.target.value)}
-                  className="ml-2 rounded-lg border border-slate-200 px-2 py-1.5 text-sm text-slate-900"
-                />
-              </label>
+              <p className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-600">
+                <span className="font-medium text-slate-800">Last updated</span>
+                <span className="ml-2 tabular-nums text-slate-900">
+                  {lastUpdatedLabel}
+                </span>
+              </p>
               <button
                 type="button"
                 onClick={handleAddProvider}
@@ -499,15 +555,17 @@ export default function AdminDashboard() {
                 <RotateCcw className="h-4 w-4" aria-hidden />
                 Reset prices
               </button>
-              <button
-                type="button"
-                onClick={() => void handleSave()}
-                disabled={saving || loading}
-                className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-60"
-              >
-                <Save className="h-4 w-4" aria-hidden />
-                {saving ? "Saving…" : "Save all"}
-              </button>
+              {!hasUnsavedChanges && (
+                <button
+                  type="button"
+                  onClick={() => void handleSave()}
+                  disabled={saving || loading}
+                  className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800 disabled:opacity-60"
+                >
+                  <Save className="h-4 w-4" aria-hidden />
+                  {saving ? "Saving…" : "Save all"}
+                </button>
+              )}
             </div>
           </div>
 
@@ -603,9 +661,17 @@ export default function AdminDashboard() {
                           </td>
                         ))}
                         <td className="px-2 py-2 align-top">
-                          <LockedCell className="w-48 min-h-8 whitespace-pre-line leading-snug">
-                            {row.notes?.trim() ? row.notes : "—"}
-                          </LockedCell>
+                          <textarea
+                            value={row.notes ?? ""}
+                            onChange={(e) =>
+                              updateMounjaroRow(index, {
+                                notes: e.target.value,
+                              })
+                            }
+                            rows={2}
+                            placeholder="e.g. Free next-day delivery"
+                            className="w-48 resize-y rounded border border-slate-200 px-2 py-1 leading-snug"
+                          />
                         </td>
                         <td className="px-2 py-2 align-top">
                           <LockedCell className="w-28">{row.updatedLabel}</LockedCell>
@@ -689,9 +755,17 @@ export default function AdminDashboard() {
                           </td>
                         ))}
                         <td className="px-2 py-2 align-top">
-                          <LockedCell className="w-48 min-h-8 whitespace-pre-line leading-snug">
-                            {row.notes?.trim() ? row.notes : "—"}
-                          </LockedCell>
+                          <textarea
+                            value={row.notes ?? ""}
+                            onChange={(e) =>
+                              updateWegovyRow(index, {
+                                notes: e.target.value,
+                              })
+                            }
+                            rows={2}
+                            placeholder="e.g. Free — Click & Collect"
+                            className="w-48 resize-y rounded border border-slate-200 px-2 py-1 leading-snug"
+                          />
                         </td>
                         <td className="px-2 py-2 align-top">
                           <LockedCell className="w-28">{row.updatedLabel}</LockedCell>
@@ -722,6 +796,25 @@ export default function AdminDashboard() {
           </p>
         </main>
       </div>
+
+      {hasUnsavedChanges && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-amber-300 bg-amber-50/95 px-4 py-3 shadow-[0_-4px_24px_-4px_rgba(0,0,0,0.12)] backdrop-blur-sm lg:left-56">
+          <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3">
+            <p className="text-sm font-semibold text-amber-950">
+              You have unsaved changes on this table
+            </p>
+            <button
+              type="button"
+              onClick={() => void handleSave()}
+              disabled={saving || loading}
+              className="inline-flex items-center gap-2 rounded-xl bg-amber-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-amber-700 disabled:opacity-60"
+            >
+              <Save className="h-4 w-4" aria-hidden />
+              {saving ? "Saving…" : "Save all changes"}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
