@@ -60,6 +60,7 @@ function ProviderSlugHint({ id, name }: { id: string; name: string }) {
     </span>
   );
 }
+type MedicationTab = "mounjaro" | "wegovy";
 type AdminMounjaroProvider = MounjaroUkProviderCompare & { notes?: string };
 type AdminWegovyProvider = WegovyUkProviderCompare & { notes?: string };
 
