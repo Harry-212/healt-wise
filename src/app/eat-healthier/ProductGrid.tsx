@@ -264,7 +264,7 @@ export default function ProductGrid() {
                   {product.hoverImage ? (
                     <Image
                       src={product.hoverImage}
-                      alt=""
+                      alt={`${product.name} — alternate product packaging`}
                       fill
                       placeholder="blur"
                       sizes="(min-width: 1080px) 340px, (min-width: 768px) 33vw, 50vw"

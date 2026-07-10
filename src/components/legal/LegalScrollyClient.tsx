@@ -87,7 +87,7 @@ export default function LegalScrollyClient({
         <motion.div className="absolute inset-0" style={{ scale: heroScale }}>
           <Image
             src={HERO_BG}
-            alt=""
+            alt={`${title} — decorative header background`}
             fill
             className="object-cover object-[center_30%] opacity-35"
             sizes="100vw"
