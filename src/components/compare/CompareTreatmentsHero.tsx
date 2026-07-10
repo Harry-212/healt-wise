@@ -151,6 +151,14 @@ export default function CompareTreatmentsHero({
       ? COMPARE_HERO_NAV_LINK_CLASS
       : "rounded-full px-2.5 py-1.5 text-[10px] font-light text-white/80 transition hover:bg-white/10 hover:text-white sm:px-3 sm:py-2 sm:text-xs";
 
+  const titleClass = wideDesktopHero
+    ? "mb-4 text-balance text-3xl leading-[1.12] font-bold tracking-tight text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] sm:text-4xl md:text-[2.35rem] lg:text-[2.65rem] xl:text-[2.85rem]"
+    : "mb-4 text-balance text-4xl leading-[1.08] font-bold tracking-tight text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:text-5xl lg:text-6xl";
+
+  const subtitleClass = wideDesktopHero
+    ? "mt-2 block max-w-3xl text-balance text-lg font-semibold tracking-tight text-white/95 sm:text-xl md:text-2xl lg:text-[1.45rem] xl:max-w-4xl"
+    : "mt-2 block max-w-3xl text-balance text-xl font-semibold tracking-tight text-white/95 sm:text-2xl md:text-3xl lg:text-[1.65rem] xl:max-w-4xl";
+
   const heroBody = (
     <>
       <header className={headerClass}>
@@ -183,7 +191,7 @@ export default function CompareTreatmentsHero({
             </GlassPill>
           ) : null}
 
-          <h1 className="mb-4 text-balance text-4xl leading-[1.08] font-bold tracking-tight text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] md:text-5xl lg:text-6xl">
+          <h1 className={titleClass}>
             {titleItalic.trim() ? (
               <>
                 <span
@@ -195,7 +203,7 @@ export default function CompareTreatmentsHero({
             ) : null}
             <span className="font-bold text-white">{titleBold}</span>
             {subtitle.trim() ? (
-              <span className="mt-2 block max-w-3xl text-balance text-xl font-semibold tracking-tight text-white/95 sm:text-2xl md:text-3xl lg:text-[1.65rem] xl:max-w-4xl">
+              <span className={subtitleClass}>
                 {subtitle}
               </span>
             ) : null}

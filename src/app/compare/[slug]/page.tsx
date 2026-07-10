@@ -142,14 +142,10 @@ export default async function ComparePage({ params }: Props) {
           showLivePill={Boolean(photoHero) || isTripleHub}
           highlightNavLinks={Boolean(photoHero)}
           heroPhotoSrc={
-            isTripleHub
-              ? COMPARE_GLP1_PRICE_HERO_IMAGE_SRC
-              : photoHero?.src
+            isTripleHub ? COMPARE_GLP1_PRICE_HERO_IMAGE_SRC : photoHero?.src
           }
           heroPhotoAlt={
-            isTripleHub
-              ? COMPARE_GLP1_PRICE_HERO_IMAGE_ALT
-              : photoHero?.alt
+            isTripleHub ? COMPARE_GLP1_PRICE_HERO_IMAGE_ALT : photoHero?.alt
           }
           showSubtitleLiveDate={isTripleHub}
         />
@@ -178,24 +174,32 @@ export default async function ComparePage({ params }: Props) {
               <div className="mt-10 grid gap-4 sm:grid-cols-3">
                 <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
                   <Scale className="h-8 w-8 text-brand-primary" aria-hidden />
-                  <p className="mt-3 font-semibold text-slate-900">Transparent Pricing</p>
+                  <p className="mt-3 font-semibold text-slate-900">
+                    Transparent Pricing
+                  </p>
                   <p className="mt-1 text-sm text-slate-600">
-                    Sort every column, filter by band, and preview where discounts will
-                    surface.
+                    Sort every column, filter by band, and preview where
+                    discounts will surface.
                   </p>
                 </div>
                 <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
                   <Shield className="h-8 w-8 text-emerald-600" aria-hidden />
-                  <p className="mt-3 font-semibold text-slate-900">UK Regulatory Lens</p>
+                  <p className="mt-3 font-semibold text-slate-900">
+                    UK Regulatory Lens
+                  </p>
                   <p className="mt-1 text-sm text-slate-600">
-                    GPhC lines and cold-chain cues match our standalone compare tools.
+                    GPhC lines and cold-chain cues match our standalone compare
+                    tools.
                   </p>
                 </div>
                 <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
                   <BadgeCheck className="h-8 w-8 text-violet-600" aria-hidden />
-                  <p className="mt-3 font-semibold text-slate-900">Editorial Balance</p>
+                  <p className="mt-3 font-semibold text-slate-900">
+                    Editorial Balance
+                  </p>
                   <p className="mt-1 text-sm text-slate-600">
-                    “Cheapest” vs “balance pick” callouts mirror the price hub pages.
+                    “Cheapest” vs “balance pick” callouts mirror the price hub
+                    pages.
                   </p>
                 </div>
               </div>
@@ -265,7 +269,6 @@ export default async function ComparePage({ params }: Props) {
         </section>
 
         <CompareFaqSection items={faqItems} />
-
       </article>
     </>
   );

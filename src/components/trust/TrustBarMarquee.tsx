@@ -1,4 +1,4 @@
-import { ShieldCheck, Package, Stethoscope, Asterisk } from "lucide-react";
+import { ShieldCheck, Stethoscope, Asterisk } from "lucide-react";
 
 const ITEMS = [
   {
@@ -10,11 +10,6 @@ const ITEMS = [
     icon: Asterisk,
     title: "UK licensed",
     desc: "UK pharmacy regulated context",
-  },
-  {
-    icon: Package,
-    title: "Capable",
-    desc: "Doctor reviewed guides",
   },
   {
     icon: Stethoscope,
