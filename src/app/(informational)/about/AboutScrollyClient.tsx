@@ -195,7 +195,7 @@ export default function AboutScrollyClient() {
         <motion.div className="absolute inset-0" style={{ scale: heroScale }}>
           <Image
             src={ABOUT_IMAGES.hero}
-            alt=""
+            alt="About Health Wise — UK GLP-1 care comparison and guidance (decorative header background)"
             fill
             className="object-cover opacity-100"
             sizes="100vw"
@@ -332,7 +332,7 @@ export default function AboutScrollyClient() {
         <div className="absolute inset-0">
           <Image
             src={ABOUT_IMAGES.depthBg}
-            alt=""
+            alt="Laboratory research scene — decorative parallax background on the about page"
             fill
             className="object-cover opacity-25"
             sizes="100vw"

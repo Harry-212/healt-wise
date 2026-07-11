@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import BlogClient from "../../BlogClient";
+import { blogHubPath, resolveBlogTopicFilter } from "@/lib/blog-feed";
 import { getBlogPageFeed } from "@/lib/blog";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
@@ -17,17 +18,20 @@ export async function generateMetadata({
   const { topic } = await searchParams;
   const page = Number.parseInt(pageStr, 10);
   if (Number.isNaN(page) || page < 1) return {};
+  const activeTopic = resolveBlogTopicFilter(topic);
   const topicQs =
-    topic && topic.trim() !== ""
-      ? `?topic=${encodeURIComponent(topic.trim())}`
-      : "";
+    activeTopic !== "all" ? `?topic=${activeTopic}` : "";
   if (page === 1) {
+    const canonicalPath = blogHubPath(activeTopic);
     return {
       title: "News & Blog",
       description:
         "Stay informed with the latest news, views, product releases, prices, comparisons, guides, safety articles, and UK city weight loss guides.",
       alternates: {
-        canonical: `${siteOrigin()}/blog${topicQs}`,
+        canonical: `${siteOrigin()}${canonicalPath}`,
+      },
+      openGraph: {
+        url: `${siteOrigin()}${canonicalPath}`,
       },
     };
   }
@@ -40,10 +44,6 @@ export async function generateMetadata({
       "Stay informed with the latest news, views, product releases, prices, comparisons, guides, safety articles, and UK city weight loss guides.",
     alternates: { canonical },
     openGraph: { url: canonical },
-    robots: {
-      index: false,
-      follow: true,
-    },
   };
 }
 
@@ -53,8 +53,7 @@ export default async function BlogPaginatedPage({ params, searchParams }: Props)
   const page = Number.parseInt(pageStr, 10);
   if (Number.isNaN(page) || page < 1) notFound();
   if (page === 1) {
-    const qs = topic ? `?topic=${encodeURIComponent(topic)}` : "";
-    redirect(`/blog${qs}`);
+    redirect(blogHubPath(resolveBlogTopicFilter(topic)));
   }
 
   const { articles, totalPages, activeTopic } = getBlogPageFeed(page, { topic });

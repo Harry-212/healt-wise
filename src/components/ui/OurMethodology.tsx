@@ -175,13 +175,13 @@ export default function OurMethodology() {
                     )}
                   </div>
 
-                  <h4
+                  <h3
                     className={`text-[13px] font-bold leading-snug transition-colors duration-300 lg:text-[15px] ${
                       isActive ? "text-slate-900" : "text-slate-600 group-hover:text-slate-800"
                     }`}
                   >
                     {step.label}
-                  </h4>
+                  </h3>
 
                   <div
                     className={`mt-2 grid overflow-hidden transition-all duration-500 ease-in-out ${
@@ -243,13 +243,13 @@ export default function OurMethodology() {
                         Step {String(idx + 1).padStart(2, "0")}
                       </span>
                     </div>
-                    <h4
+                    <h3
                       className={`text-[15px] font-bold transition-colors duration-300 ${
                         isActive ? "text-slate-900" : "text-slate-600"
                       }`}
                     >
                       {step.label}
-                    </h4>
+                    </h3>
                     <div
                       className={`mt-1.5 grid overflow-hidden transition-all duration-500 ease-in-out ${
                         isActive

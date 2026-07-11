@@ -5,6 +5,8 @@ import { GUIDE_IMAGES } from "@/lib/guide-images";
 import {
   HELPFUL_GUIDES_HUB_PATH,
   helpfulGuidePath,
+  helpfulGuidesCategoryHubPath,
+  isHelpfulGuideCategorySlug,
 } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import GuideTocSidebar from "./GuideTocSidebar";
@@ -41,6 +43,7 @@ type Props = {
 export function GuideLayout({
   slug,
   category,
+  categorySlug,
   title,
   description,
   readTime,
@@ -51,6 +54,9 @@ export function GuideLayout({
 }: Props) {
   const thumbnail = slug ? GUIDE_IMAGES[slug] : undefined;
   const shareUrl = slug ? `${siteOrigin()}${helpfulGuidePath(slug)}` : "";
+  const categoryHubHref = isHelpfulGuideCategorySlug(categorySlug)
+    ? helpfulGuidesCategoryHubPath(categorySlug)
+    : HELPFUL_GUIDES_HUB_PATH;
   const faqIdx = toc.findIndex((e) => e.id === "faq");
   const tocMobile = faqIdx > 0 ? toc.slice(0, faqIdx) : toc;
   return (
@@ -89,7 +95,7 @@ export function GuideLayout({
           </Link>
           <span aria-hidden>/</span>
           <Link
-            href={`${HELPFUL_GUIDES_HUB_PATH}?category=${encodeURIComponent(category)}`}
+            href={categoryHubHref}
             className="transition-colors hover:text-slate-700"
           >
             {category}
@@ -109,7 +115,7 @@ export function GuideLayout({
             {/* Article header */}
             <header className="border-b border-slate-200 pb-8">
               <Link
-                href={`${HELPFUL_GUIDES_HUB_PATH}?category=${encodeURIComponent(category)}`}
+                href={categoryHubHref}
                 className="inline-block rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white transition-opacity hover:opacity-80"
               >
                 {category}

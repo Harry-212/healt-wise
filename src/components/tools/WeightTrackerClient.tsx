@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import CompareHereLink from "@/components/ui/CompareHereLink";
-import { useRouter, useSearchParams } from "next/navigation";
 import {
   AnimatePresence,
   motion,
@@ -31,6 +30,7 @@ import {
   useMemo,
   useRef,
   useState,
+  Suspense,
 } from "react";
 import {
   CartesianGrid,
@@ -62,6 +62,7 @@ import {
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import { exportWeightTrackerPdf } from "@/lib/tracker-pdf-export";
+import WeightTrackerStartQuery from "@/components/tools/WeightTrackerStartQuery";
 
 /* ──────────────────────────────────────────────────────── constants */
 const MEDS = ["Wegovy", "Mounjaro", "Saxenda", "Orlistat", "Other"] as const;
@@ -427,8 +428,6 @@ function AuthGateModal({ onClose }: { onClose: () => void }) {
 
 /* ──────────────────────────────────────────────────────── main component */
 export default function WeightTrackerClient() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
   const { user, ready: authChecked, signOut } = useSupabaseAuth();
   const [entries, setEntries] = useState<TrackerEntry[]>([]);
   const [goals, setGoals] = useState<GoalSettings>({ goalWeightKg: null, preferredUnit: "kg" });
@@ -464,17 +463,10 @@ export default function WeightTrackerClient() {
     }
   }, [authChecked, user]);
 
-  useEffect(() => {
-    if (searchParams.get("start") !== "1") return;
-    if (!authChecked) return;
-    if (!user) {
-      router.replace("/tools/weight-loss-tracker", { scroll: false });
-      return;
-    }
+  const handleStartFromQuery = useCallback(() => {
     setStarted(true);
     setModal({ mode: "add" });
-    router.replace("/tools/weight-loss-tracker", { scroll: false });
-  }, [searchParams, router, authChecked, user]);
+  }, []);
 
   const refresh = useCallback(() => {
     setEntries(getEntries());
@@ -550,6 +542,9 @@ export default function WeightTrackerClient() {
   if (!started) {
     return (
       <>
+        <Suspense fallback={null}>
+          <WeightTrackerStartQuery onStartTracking={handleStartFromQuery} />
+        </Suspense>
         <AnimatePresence>
           {authGateOpen && (
             <AuthGateModal key="auth-gate" onClose={() => setAuthGateOpen(false)} />
@@ -583,9 +578,9 @@ export default function WeightTrackerClient() {
                 </div>
 
                 <h1 className="mx-auto max-w-3xl text-balance text-3xl font-bold leading-[1.08] tracking-tight text-white sm:text-4xl md:text-5xl">
-                  Track Your Weight Loss{" "}
+                  Weight loss tracker UK —{" "}
                   <span className="bg-gradient-to-r from-emerald-300 to-teal-300 bg-clip-text text-transparent">
-                    Privately
+                    private Wegovy &amp; Mounjaro progress log
                   </span>
                 </h1>
 
@@ -721,6 +716,9 @@ export default function WeightTrackerClient() {
   /* ── Dashboard ─────────────────────────────────────────────── */
   return (
     <>
+      <Suspense fallback={null}>
+        <WeightTrackerStartQuery onStartTracking={handleStartFromQuery} />
+      </Suspense>
       <AnimatePresence>
         {modal && (
           <EntryModal

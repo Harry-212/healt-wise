@@ -7,6 +7,44 @@ export type BlogFeedTag =
   | "safety"
   | "locations";
 
+export const BLOG_HUB_PATH = "/blog";
+
+const BLOG_FEED_TAGS: BlogFeedTag[] = [
+  "wegovy",
+  "mounjaro",
+  "how-it-works",
+  "guides",
+  "safety",
+  "locations",
+];
+
+const BLOG_FEED_TAG_SET = new Set<string>(BLOG_FEED_TAGS);
+
+export function isBlogFeedTag(s: string): s is BlogFeedTag {
+  return BLOG_FEED_TAG_SET.has(s);
+}
+
+export function resolveBlogTopicFilter(raw?: string): BlogFeedTag | "all" {
+  if (!raw?.trim()) return "all";
+  let decoded = raw.trim();
+  try {
+    decoded = decodeURIComponent(decoded);
+  } catch {
+    /* keep raw */
+  }
+  return isBlogFeedTag(decoded) ? decoded : "all";
+}
+
+export function blogTopicHubPath(topic: BlogFeedTag): string {
+  return `${BLOG_HUB_PATH}?topic=${topic}`;
+}
+
+/** Canonical blog hub path for page 1 (all topics or a single topic filter). */
+export function blogHubPath(topic?: BlogFeedTag | "all" | null): string {
+  if (!topic || topic === "all") return BLOG_HUB_PATH;
+  return blogTopicHubPath(topic);
+}
+
 /** Matches `getBlogPageFeed` page size (safe to import from client components). */
 export const POSTS_PER_PAGE = 21;
 

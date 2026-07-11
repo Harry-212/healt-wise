@@ -1,5 +1,8 @@
 import type { NextConfig } from "next";
-import { HELPFUL_GUIDE_SLUGS } from "./src/lib/helpful-guide-slugs";
+import {
+  HELPFUL_GUIDE_CATEGORIES,
+  HELPFUL_GUIDE_SLUGS,
+} from "./src/lib/helpful-guide-slugs";
 
 const nextConfig: NextConfig = {
   images: {
@@ -115,6 +118,14 @@ const nextConfig: NextConfig = {
         destination: "/helpful-guides",
         permanent: true,
       },
+      ...HELPFUL_GUIDE_CATEGORIES.filter(({ slug, label }) => slug !== label).map(
+        ({ slug, label }) => ({
+          source: "/helpful-guides",
+          has: [{ type: "query" as const, key: "category", value: label }],
+          destination: `/helpful-guides?category=${slug}`,
+          permanent: true,
+        }),
+      ),
       {
         source: "/weight-loss-treatment-price-comparison-uk",
         destination: "/",

@@ -107,6 +107,7 @@ export default function HeroNumanStyle() {
           </div>
 
           <div className="w-full lg:w-[42%]">
+            <h2 className="sr-only">Free tools and calculators</h2>
             <div className="grid grid-cols-3 gap-2 sm:gap-3 lg:gap-4">
               {TOOL_CARDS.map((tool) => (
                 <Link

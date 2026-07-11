@@ -126,7 +126,7 @@ export default function WhyChooseHealthWise() {
                       >
                         <Icon className="h-4 w-4" strokeWidth={2} />
                       </span>
-                      <span className="min-w-0 flex-1">
+                      <div className="min-w-0 flex-1">
                         <span className="flex items-center justify-between gap-2">
                           <span className="text-sm font-bold text-slate-900 md:text-[15px]">
                             {feat.title}
@@ -150,7 +150,7 @@ export default function WhyChooseHealthWise() {
                             </p>
                           </div>
                         </div>
-                      </span>
+                      </div>
                     </button>
                   </li>
                 );

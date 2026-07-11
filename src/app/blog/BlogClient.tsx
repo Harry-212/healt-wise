@@ -17,6 +17,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { BlogFeedTag } from "@/lib/blog-feed";
+import { blogHubPath } from "@/lib/blog-feed";
 import type { FeedArticle } from "@/lib/blog-feed";
 import { imgbbDisplaySrc } from "@/lib/imgbb-display-src";
 import { shouldServeImageDirect } from "@/lib/image-display";
@@ -48,13 +49,12 @@ const FILTER_OPTIONS: FilterOption[] = [
 ];
 
 function topicHref(topic: FilterId): string {
-  if (topic === "all") return "/blog";
-  return `/blog?topic=${topic}`;
+  return blogHubPath(topic);
 }
 
 function pageHref(page: number, topic: BlogFeedTag | "all"): string {
   const q = topic !== "all" ? `?topic=${topic}` : "";
-  if (page <= 1) return `/blog${q}`;
+  if (page <= 1) return blogHubPath(topic);
   return `/blog/page/${page}${q}`;
 }
 

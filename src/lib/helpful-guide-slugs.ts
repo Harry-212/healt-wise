@@ -1,6 +1,83 @@
 /** Listing page URL (same first segment as individual guides). */
 export const HELPFUL_GUIDES_HUB_PATH = "/helpful-guides";
 
+/** URL-safe category slugs for `/helpful-guides?category=…` filters. */
+export const HELPFUL_GUIDE_CATEGORY_SLUGS = [
+  "medications",
+  "pharmacy-safety",
+  "safety-checks",
+  "nutrition",
+  "side-effects",
+  "regulation",
+] as const;
+
+export type HelpfulGuideCategorySlug =
+  (typeof HELPFUL_GUIDE_CATEGORY_SLUGS)[number];
+
+export const HELPFUL_GUIDE_CATEGORIES: ReadonlyArray<{
+  slug: HelpfulGuideCategorySlug;
+  label: string;
+}> = [
+  { slug: "medications", label: "Medications" },
+  { slug: "pharmacy-safety", label: "Pharmacy Safety" },
+  { slug: "safety-checks", label: "Safety Checks" },
+  { slug: "nutrition", label: "Nutrition" },
+  { slug: "side-effects", label: "Side Effects" },
+  { slug: "regulation", label: "Regulation" },
+];
+
+const CATEGORY_SLUG_SET = new Set<string>(HELPFUL_GUIDE_CATEGORY_SLUGS);
+
+const CATEGORY_LABEL_TO_SLUG = Object.fromEntries(
+  HELPFUL_GUIDE_CATEGORIES.map(({ slug, label }) => [label, slug]),
+) as Record<string, HelpfulGuideCategorySlug>;
+
+const CATEGORY_SLUG_TO_LABEL = Object.fromEntries(
+  HELPFUL_GUIDE_CATEGORIES.map(({ slug, label }) => [slug, label]),
+) as Record<HelpfulGuideCategorySlug, string>;
+
+export function isHelpfulGuideCategorySlug(
+  s: string,
+): s is HelpfulGuideCategorySlug {
+  return CATEGORY_SLUG_SET.has(s);
+}
+
+export function helpfulGuideCategoryLabel(
+  slug: HelpfulGuideCategorySlug,
+): string {
+  return CATEGORY_SLUG_TO_LABEL[slug];
+}
+
+export function helpfulGuidesCategoryHubPath(
+  slug: HelpfulGuideCategorySlug,
+): string {
+  return `${HELPFUL_GUIDES_HUB_PATH}?category=${slug}`;
+}
+
+/** Resolves a raw `category` query value to slug + label, or null if unknown. */
+export function resolveHelpfulGuideCategoryFilter(raw: string): {
+  slug: HelpfulGuideCategorySlug;
+  label: string;
+} | null {
+  let decoded = raw;
+  try {
+    decoded = decodeURIComponent(raw);
+  } catch {
+    /* keep raw */
+  }
+
+  if (isHelpfulGuideCategorySlug(decoded)) {
+    return { slug: decoded, label: CATEGORY_SLUG_TO_LABEL[decoded] };
+  }
+
+  const slug = CATEGORY_LABEL_TO_SLUG[decoded];
+  if (slug) {
+    return { slug, label: decoded };
+  }
+
+  return null;
+}
+
 /** Slugs for long-form guides; live under `/helpful-guides/[slug]`. */
 export const HELPFUL_GUIDE_SLUGS = [
   "mounjaro-weight-loss-injection-uk",

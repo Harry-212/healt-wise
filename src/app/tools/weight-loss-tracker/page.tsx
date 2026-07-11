@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import WeightTrackerClient from "@/components/tools/WeightTrackerClient";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/tools/weight-loss-tracker",
@@ -17,8 +17,14 @@ export const metadata: Metadata = buildPageShareMetadata({
 
 export default function WeightLossTrackerPage() {
   return (
-    <Suspense fallback={<div className="min-h-[40vh] w-full animate-pulse rounded-2xl bg-slate-100" aria-hidden />}>
+    <>
+      <BreadcrumbJsonLd
+        sectionName="Tools"
+        sectionPath="/tools"
+        pageName="Weight loss tracker UK"
+        pagePath="/tools/weight-loss-tracker"
+      />
       <WeightTrackerClient />
-    </Suspense>
+    </>
   );
 }

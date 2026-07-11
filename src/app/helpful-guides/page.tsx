@@ -1,36 +1,53 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { permanentRedirect } from "next/navigation";
 import { GUIDE_IMAGES } from "@/lib/guide-images";
 import {
-  helpfulGuidePath,
+  HELPFUL_GUIDE_CATEGORIES,
   HELPFUL_GUIDES_HUB_PATH,
+  helpfulGuidePath,
+  helpfulGuidesCategoryHubPath,
+  resolveHelpfulGuideCategoryFilter,
+  type HelpfulGuideCategorySlug,
 } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
-export const metadata: Metadata = {
-  title: "Helpful Health Guides",
-  description:
-    "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation. Written to help you make safer, more informed decisions.",
-  openGraph: {
-    title: "Helpful Health Guides",
-    description:
-      "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
-    type: "website",
-  },
-  alternates: {
-    canonical: HELPFUL_GUIDES_HUB_PATH,
-  },
-};
+const HELPFUL_GUIDES_DESCRIPTION =
+  "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation. Written to help you make safer, more informed decisions.";
 
-const CATEGORIES = [
-  "Medications",
-  "Pharmacy Safety",
-  "Safety Checks",
-  "Nutrition",
-  "Side Effects",
-  "Regulation",
-] as const;
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>;
+}): Promise<Metadata> {
+  const { category: rawCategory } = await searchParams;
+  let canonicalPath = HELPFUL_GUIDES_HUB_PATH;
+
+  if (rawCategory) {
+    const resolved = resolveHelpfulGuideCategoryFilter(rawCategory);
+    if (resolved) {
+      canonicalPath = helpfulGuidesCategoryHubPath(resolved.slug);
+    }
+  }
+
+  return {
+    title: "Helpful Health Guides",
+    description: HELPFUL_GUIDES_DESCRIPTION,
+    openGraph: {
+      title: "Helpful Health Guides",
+      description:
+        "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
+      type: "website",
+      url: `${siteOrigin()}${canonicalPath}`,
+    },
+    alternates: {
+      canonical: `${siteOrigin()}${canonicalPath}`,
+    },
+  };
+}
+
+const CATEGORIES = HELPFUL_GUIDE_CATEGORIES.map(({ label }) => label);
 
 type Category = (typeof CATEGORIES)[number];
 
@@ -369,10 +386,29 @@ type Props = {
 };
 
 export default async function HelpfulGuidePage({ searchParams }: Props) {
-  const { category } = await searchParams;
-  const filtered = category
-    ? ALL_GUIDES.filter((g) => g.category === category)
+  const { category: rawCategory } = await searchParams;
+
+  let activeCategorySlug: HelpfulGuideCategorySlug | undefined;
+  let activeCategoryLabel: Category | undefined;
+
+  if (rawCategory) {
+    const resolved = resolveHelpfulGuideCategoryFilter(rawCategory);
+    if (resolved) {
+      if (rawCategory !== resolved.slug) {
+        permanentRedirect(helpfulGuidesCategoryHubPath(resolved.slug));
+      }
+      activeCategorySlug = resolved.slug;
+      activeCategoryLabel = resolved.label as Category;
+    }
+  }
+
+  const filtered = activeCategoryLabel
+    ? ALL_GUIDES.filter((g) => g.category === activeCategoryLabel)
     : ALL_GUIDES;
+
+  const collectionUrl = activeCategorySlug
+    ? `${siteOrigin()}${helpfulGuidesCategoryHubPath(activeCategorySlug)}`
+    : `${siteOrigin()}${HELPFUL_GUIDES_HUB_PATH}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -380,7 +416,7 @@ export default async function HelpfulGuidePage({ searchParams }: Props) {
     name: "Helpful Health Guides | Health Wise",
     description:
       "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
-    url: `${siteOrigin()}${HELPFUL_GUIDES_HUB_PATH}`,
+    url: collectionUrl,
     hasPart: ALL_GUIDES.map((g) => ({
       "@type": "Article",
       name: g.title,
@@ -416,7 +452,7 @@ export default async function HelpfulGuidePage({ searchParams }: Props) {
             <Link
               href={HELPFUL_GUIDES_HUB_PATH}
               className={`group relative overflow-hidden rounded-full border px-4 py-1.5 text-sm font-medium transition-all duration-300 ${
-                !category
+                !activeCategorySlug
                   ? "border-white bg-white text-slate-900"
                   : "border-slate-600 text-slate-300 hover:border-white hover:bg-white hover:text-slate-900"
               }`}
@@ -425,20 +461,20 @@ export default async function HelpfulGuidePage({ searchParams }: Props) {
                   <span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-[-20deg] bg-linear-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             </Link>
 
-            {CATEGORIES.map((cat) => {
-              const colors = CATEGORY_COLORS[cat];
-              const isActive = category === cat;
+            {HELPFUL_GUIDE_CATEGORIES.map(({ slug, label }) => {
+              const colors = CATEGORY_COLORS[label as Category];
+              const isActive = activeCategorySlug === slug;
               return (
                 <Link
-                  key={cat}
-                  href={`${HELPFUL_GUIDES_HUB_PATH}?category=${encodeURIComponent(cat)}`}
+                  key={slug}
+                  href={helpfulGuidesCategoryHubPath(slug)}
                   className={`group relative overflow-hidden rounded-full border px-4 py-1.5 text-sm font-medium transition-all duration-300 ${
                     isActive
                       ? colors.pillActive
                       : `${colors.pillInactive} ${colors.pillHover}`
                   }`}
                 >
-                  <span className="relative z-10">{cat.toUpperCase()}</span>
+                  <span className="relative z-10">{label.toUpperCase()}</span>
                   <span className="pointer-events-none absolute inset-0 -translate-x-full skew-x-[-20deg] bg-linear-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                 </Link>
               );
