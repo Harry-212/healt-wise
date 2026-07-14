@@ -93,6 +93,37 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "fibre-for-glp-1-users",
+    title: "Fibre for GLP-1 Users: Constipation and Fullness Support",
+    date: "2026-07-14",
+    category: "Guides",
+    description:
+      "Fibre for GLP-1 users guide: constipation support, fullness, foods, fluids and safe supplement checks.",
+    heroImage: "/blog/fibre-glp.webp",
+    feedTags: ["guides", "wegovy", "mounjaro", "how-it-works"],
+  },
+  {
+    slug: "protein-for-glp-1-users-uk",
+    title: "Protein for GLP-1 Users UK: Food First, Supplements Second",
+    date: "2026-07-14",
+    category: "Guides",
+    description:
+      "Protein for GLP-1 users UK guide: food-first support for Wegovy, Mounjaro and weight loss treatment users.",
+    heroImage: "/blog/protein-glp.webp",
+    feedTags: ["guides", "wegovy", "mounjaro", "how-it-works"],
+  },
+  {
+    slug: "buy-weight-loss-injections-online-uk",
+    title:
+      "Buy Weight Loss Injections Online in the UK? Safe Price and Provider Guide",
+    date: "2026-07-14",
+    category: "Safety",
+    description:
+      "Learn how to buy weight loss injections online in the UK safely, compare prices, check providers, and avoid unsafe sellers.",
+    heroImage: "/blog/buy-weight-loss-injections-online.png",
+    feedTags: ["guides", "safety", "mounjaro", "wegovy"],
+  },
+  {
     slug: "what-is-wegovy-pill",
     title: "What Is Wegovy Pill? Semaglutide Tablet Explained for UK Users",
     date: "2026-07-02",
