@@ -26,14 +26,13 @@ const TOC = [
   { id: "what-is", label: "What is semaglutide for weight loss?" },
   { id: "buy-online", label: "Can you buy online in the UK?" },
   { id: "wrong-question", label: "Why 'where to buy' is the wrong first question" },
-  { id: "competitor-gap", label: "Competitor gap: what other pages do" },
   { id: "differences", label: "Wegovy, Ozempic and Rybelsus differences" },
   { id: "cost-factors", label: "How much does semaglutide treatment cost?" },
   { id: "compare-safely", label: "How to compare providers safely" },
   { id: "red-flags", label: "Red flags before seeking online" },
   { id: "injection-vs-tablet", label: "Semaglutide injection vs semaglutide tablet" },
   { id: "vs-mounjaro", label: "Is semaglutide better than Mounjaro?" },
-  { id: "how-healthwise360-wins", label: "Where Healthwise360 can win this topic" },
+  { id: "how-healthwise360-wins", label: "How Health Wise helps you decide" },
   { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
 ];
@@ -201,10 +200,13 @@ export default function ArticleClient() {
 
             <GuideSection darkMode={darkMode} id="wrong-question" heading="Why &ldquo;Where to Buy&rdquo; Is the Wrong First Question">
               <p>
-                The phrase &ldquo;where to buy semaglutide weight loss&rdquo; has high buying intent. However, this keyword can lead users toward unsafe choices if the page only focuses on access and price.
+                Searching &ldquo;where to buy semaglutide weight loss&rdquo; can
+                lead toward unsafe choices if the focus is only access and
+                price.
               </p>
               <p>
-                A safer SEO page should answer the intent while guiding users toward proper checks.
+                A safer guide answers that intent while still pointing you
+                toward proper checks.
               </p>
               <p>Instead of asking only &ldquo;where can I buy it?&rdquo;, users should ask:</p>
               <ol className="list-decimal space-y-3 pl-5">
@@ -217,7 +219,8 @@ export default function ArticleClient() {
                 <li>What happens if treatment is not suitable?</li>
               </ol>
               <p>
-                This approach builds trust, especially for YMYL content. It also gives Healthwise360 a stronger position than provider pages that focus mainly on conversion.
+                This approach builds trust. It also gives readers a clearer
+                position than provider pages that focus mainly on conversion.
               </p>
             </GuideSection>
 
@@ -229,26 +232,6 @@ export default function ArticleClient() {
                 showFullImage
               />
             </div>
-
-            <GuideSection darkMode={darkMode} id="competitor-gap" heading="Competitor Gap: What Other Pages Usually Do">
-              <p>
-                Many competitor pages target this keyword with a simple structure. They explain semaglutide, show a price, explain their online doctor process, and then move users into a consultation funnel.
-              </p>
-              <p>That can work for provider-owned pages. However, it often leaves gaps.</p>
-              <p>Common gaps include:</p>
-              <ul className="list-disc space-y-3 pl-5">
-                <li>Limited comparison across multiple providers</li>
-                <li>Heavy focus on one provider&apos;s offer</li>
-                <li>Headline prices without full long-term cost explanation</li>
-                <li>Less detail on pharmacy verification</li>
-                <li>Less clarity on Wegovy vs Ozempic vs Rybelsus</li>
-                <li>Limited explanation of how oral semaglutide changes the landscape</li>
-                <li>Not enough warning about fake or unregulated sellers</li>
-              </ul>
-              <p>
-                Healthwise360 can fill these gaps by being the comparison layer. The article should not copy a pharmacy sales page. Instead, it should help users compare safe semaglutide treatment routes before choosing where to complete a consultation.
-              </p>
-            </GuideSection>
 
             <GuideSection darkMode={darkMode} id="differences" heading="Wegovy, Ozempic and Rybelsus: What Is the Difference?">
               <p>This is one of the biggest areas of confusion.</p>
@@ -372,16 +355,12 @@ export default function ArticleClient() {
               <p>
                 The UK semaglutide landscape is changing. For a long time, Wegovy for weight loss was associated mainly with weekly injections. However, the approval of a semaglutide tablet for weight loss means more users are now asking whether they can choose tablets instead.
               </p>
-              <p>This creates a major SEO opportunity for Healthwise360.</p>
-              <p>Users may now search:</p>
-              <ul className="list-disc space-y-3 pl-5">
-                <li>semaglutide weight loss tablet UK</li>
-                <li>Wegovy pill UK price</li>
-                <li>semaglutide injection vs tablet</li>
-                <li>GLP-1 tablet vs injection</li>
-                <li>Wegovy tablets where to buy</li>
-                <li>semaglutide tablet weight loss cost</li>
-              </ul>
+              <p>
+                That means more people are now asking whether they can choose
+                tablets instead of weekly injections. Common questions include
+                tablet vs injection differences, Wegovy pill pricing, and what
+                oral semaglutide costs in the UK.
+              </p>
               <p>
                 However, the same safety principle applies. Whether injection or tablet, semaglutide for weight loss remains a prescription-only treatment. Therefore, users still need clinical assessment and regulated supply.
               </p>
@@ -420,19 +399,22 @@ export default function ArticleClient() {
               </p>
             </GuideSection>
 
-            <GuideSection darkMode={darkMode} id="how-healthwise360-wins" heading="Where Healthwise360 Can Win This Topic">
+            <GuideSection darkMode={darkMode} id="how-healthwise360-wins" heading="How Health Wise Helps You Decide">
               <p>
-                Healthwise360 can win this search by not trying to act like a pharmacy. Instead, it should act like an independent decision guide.
-              </p>
-              <p>The winning angle is:</p>
-              <p>
-                &ldquo;Before you choose where to seek semaglutide weight loss treatment, compare safety, pharmacy checks, prices, support, and long-term cost.&rdquo;
+                Health Wise does not act like a pharmacy. We work as an
+                independent decision guide.
               </p>
               <p>
-                This angle is stronger than a standard provider article because it fills the user&apos;s real gap. Most users do not only want a purchase route. They want confidence that they are choosing safely and not overpaying.
+                Before you choose where to seek semaglutide weight loss
+                treatment, compare safety, pharmacy checks, prices, support, and
+                long-term cost.
               </p>
               <p>
-                Healthwise360 already has useful assets for this:
+                Most readers do not only want a purchase route. They want
+                confidence that they are choosing safely and not overpaying.
+              </p>
+              <p>
+                Useful Health Wise tools for that decision include:
               </p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Weight loss treatment price comparison</li>
@@ -444,15 +426,16 @@ export default function ArticleClient() {
                 <li>Weight loss tracker</li>
               </ul>
               <p>
-                Together, these pages can build topical authority around weight loss treatment, fat loss support, and price comparison. To see exactly how we pull together and evaluate these details, readers can read our guide on{" "}
+                To see exactly how we pull together and evaluate these details,
+                read our guide on{" "}
                 <Link href="/methodology" className="font-medium text-emerald-600 hover:underline">
-                  how Healthwise360 compares prices
-                </Link>{" "}
-                to review our editorial standards. Once on a verified treatment path, we also suggest you{" "}
+                  how Health Wise compares prices
+                </Link>
+                . Once on a verified treatment path, you can also{" "}
                 <Link href="/tools/weight-loss-tracker" className="font-medium text-emerald-600 hover:underline">
                   track your weight loss progress
                 </Link>{" "}
-                using our free clinical progress utility.
+                using our free progress tool.
               </p>
             </GuideSection>
 
@@ -555,10 +538,10 @@ export default function ArticleClient() {
                 The safest route starts with clinical assessment, not checkout. A proper provider should check eligibility, review medical history, explain side effects, use a registered pharmacy route, and make prices clear.
               </p>
               <p>
-                For Healthwise360, this keyword is a strong SEO opportunity because most competitor pages focus on one provider. Healthwise360 can win by becoming the independent comparison layer that helps users understand semaglutide, compare weight loss treatment prices, check pharmacy safety, and make a more informed decision before starting a consultation.
-              </p>
-              <p>
-                That trust-first approach supports SEO, AEO, and GEO while protecting the site from looking like a hard-selling medicine page.
+                Health Wise works as an independent comparison layer so you can
+                understand semaglutide, compare weight loss treatment prices,
+                check pharmacy safety, and make a more informed decision before
+                starting a consultation.
               </p>
               <p className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
                 Healthwise360 does not prescribe or supply medicines. This page is general information and is not medical advice.

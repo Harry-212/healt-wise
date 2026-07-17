@@ -246,7 +246,7 @@ export default function CrawleyLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Private spots like Kamsons Pharmacy are referenced in your brief as general health prescribing pages. NHS waits can be long. Critique: not forever fixes and some regain can happen off drug.
+                  Private spots like Kamsons Pharmacy are referenced as general health prescribing pages. NHS waits can be long. Critique: not forever fixes and some regain can happen off drug.
                 </p>
                 <p className={p}>
                   For a safe overview, start with{" "}
@@ -279,7 +279,7 @@ export default function CrawleyLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Intermittent fasting might fit shifts and some summaries cite about 5% loss. Cell Metabolism is referenced in your brief.
+                  Intermittent fasting might fit shifts and some summaries cite about 5% loss. Cell Metabolism is referenced in published sources.
                 </p>
               </GuideSection>
 
@@ -297,13 +297,13 @@ export default function CrawleyLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Ultrasound is discussed as a similar vibe and efficacy varies. Dermatologic Therapy is referenced in your brief for 2025.
+                  Ultrasound is discussed as a similar vibe and efficacy varies. Dermatologic Therapy is referenced in published sources for 2025.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="behavioral" heading="Behavioral boosts near Gatwick">
                 <p className={p}>
-                  Stress eating can be helped by mindfulness for some people. Health Psychology (2024) is referenced in your brief. Trackers can shine when they make patterns obvious.
+                  Stress eating can be helped by mindfulness for some people. Health Psychology (2024) is referenced in published sources. Trackers can shine when they make patterns obvious.
                 </p>
               </GuideSection>
 

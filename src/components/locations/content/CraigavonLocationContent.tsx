@@ -294,7 +294,7 @@ export default function CraigavonLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Park circuits can raise fitness and support maintenance. Your brief references Harvard Health.{" "}
+                  Park circuits can raise fitness and support maintenance. See Harvard Health.{" "}
                   <a
                     href="https://www.health.harvard.edu"
                     className={linkCls}
@@ -321,7 +321,7 @@ export default function CraigavonLocationContent({ loc, shareUrl }: Props) {
                   . It pairs best with habits.
                 </p>
                 <p className={p}>
-                  Behavioral groups can improve retention. BMJ is referenced in your brief for 2025.
+                  Behavioral groups can improve retention. BMJ is referenced for 2025.
                 </p>
               </GuideSection>
 

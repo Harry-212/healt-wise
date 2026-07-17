@@ -403,15 +403,14 @@ export default function PrestonLocationContent({ loc, shareUrl }: Props) {
               <GuideSection
                 darkMode={darkMode}
                 id="gap"
-                heading="Competitor gap fill: why this Preston guide wins"
+                heading="How this Preston guide differs from thin local pages"
               >
                 <p className={p}>
-                  Many competitor pages, such as thin Preston skin, laser, or
-                  booking style pages, can be light on safety warnings, titration
-                  details, realistic timelines, and local practical tips. This
-                  guide adds checklists, real paces, NHS and NICE style framing,
-                  MHRA safety awareness, and semantic depth around Preston
-                  clinics, markets, and parks.
+                  Many Preston pages about skin, laser, or booking services stay
+                  light on safety warnings, titration details, realistic timelines,
+                  and local practical tips. This guide adds checklists, real paces,
+                  NHS and NICE style framing, MHRA safety awareness, and practical
+                  depth around Preston clinics, markets, and parks.
                 </p>
               </GuideSection>
 

@@ -33,7 +33,6 @@ function ukLocationSectionTitles(name: string) {
   return {
     intro: `How weight loss access works when you live in ${name}`,
     localContext: `${name} in brief: place and public-health backdrop`,
-    popularSearches: `What people near ${name} actually type into Google`,
     pathways: `Pathways that tend to show up around ${name}`,
     terminology: `Terms that keep appearing in serious discussions (not ads)`,
     sources: `Sources you can open in a second tab`,
@@ -47,7 +46,7 @@ function ukLocationSectionTitles(name: string) {
 
 export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
   const [darkMode, setDarkMode] = useState(false);
-  const { name, nation, longtails, hero, placeSnapshot, healthLandscape } = loc;
+  const { name, nation, hero, placeSnapshot, healthLandscape } = loc;
   const care = nationCareContext(nation);
   const faqItems = useUkLocationFaq();
   const titles = useMemo(() => ukLocationSectionTitles(name), [name]);
@@ -55,7 +54,6 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
     () => [
       { id: "intro", label: titles.intro },
       { id: "local-context", label: titles.localContext },
-      { id: "popular-searches", label: titles.popularSearches },
       { id: "pathways", label: titles.pathways },
       { id: "terminology", label: titles.terminology },
       { id: "sources", label: titles.sources },
@@ -234,28 +232,6 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                   level (for example ONS and NHS Digital summaries), not as a single evergreen
                   percentage for every postcode—local nuance here is context for access and services,
                   not a substitute for your clinician’s assessment.
-                </p>
-              </GuideSection>
-
-              <GuideSection
-                darkMode={darkMode}
-                id="popular-searches"
-                heading={titles.popularSearches}
-              >
-                <p className={muted}>
-                  These strings are not magic keywords on our side; they are a map of worry. A few
-                  might be irrelevant to you. One or two could match your situation closely enough
-                  that they are worth taking to a clinician almost verbatim.
-                </p>
-                <ul className={`list-disc space-y-2.5 pl-5 text-sm ${p}`}>
-                  {longtails.map((t) => (
-                    <li key={t}>{t}</li>
-                  ))}
-                </ul>
-                <p className={muted}>
-                  If nothing on that list fits, you need not force it. Sometimes the useful question
-                  is smaller: whether your surgery will accept shared care, or whether you can get a
-                  repeat blood test without a three week delay.
                 </p>
               </GuideSection>
 

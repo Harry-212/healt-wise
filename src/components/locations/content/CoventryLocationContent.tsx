@@ -241,7 +241,7 @@ export default function CoventryLocationContent({ loc, shareUrl }: Props) {
                   >
                     10.1056/NEJMoa2307563
                   </a>
-                  . Earlsdon Pharmacy page from your brief:{" "}
+                  . See Earlsdon Pharmacy:{" "}
                   <a
                     href="https://earlsdonpharmacy.co.uk/our-services/weight-loss-injections/"
                     className={linkCls}
@@ -325,7 +325,7 @@ export default function CoventryLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="surgery" heading="Surgical horizons explored">
                 <p className={p}>
-                  NHS bariatric surgery can be considered for severe obesity. Your brief references UHCW WISDEM as a specialist multidisciplinary service. See{" "}
+                  NHS bariatric surgery can be considered for severe obesity. UHCW WISDEM is a specialist multidisciplinary service. See{" "}
                   <a
                     href="https://www.uhcw.nhs.uk/wisdem/clinical-expertise/obesity/"
                     className={linkCls}
@@ -361,13 +361,13 @@ export default function CoventryLocationContent({ loc, shareUrl }: Props) {
                   >
                     10.1097/PSY.0000000000001345
                   </a>
-                  . Apps are cited in your brief as helping adherence.
+                  . Apps are cited in published research as helping adherence.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="resources" heading="Coventry resources rundown">
                 <p className={p}>
-                  FarGo Village markets and War Memorial Park can support movement and food routines. Groups and accountability are referenced in your brief. If you buy online, use{" "}
+                  FarGo Village markets and War Memorial Park can support movement and food routines. Groups and accountability are referenced in published sources. If you buy online, use{" "}
                   <Link href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards" className={linkCls}>
                     how we verify UK pharmacies
                   </Link>{" "}

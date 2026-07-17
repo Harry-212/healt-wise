@@ -243,7 +243,7 @@ export default function ChelmsfordLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Local angle: clinics like SkinSense GP are referenced in your brief, offering post assessment pathways and sometimes structured diet programs. Costs can sit around 170 to 250 pounds per month UK wide, and side effects such as nausea are possible. Critique: dependency risks and muscle loss without exercise have been discussed in journals like BMJ.
+                  Local angle: clinics like SkinSense GP are referenced in published sources, offering post assessment pathways and sometimes structured diet programs. Costs can sit around 170 to 250 pounds per month UK wide, and side effects such as nausea are possible. Critique: dependency risks and muscle loss without exercise have been discussed in journals like BMJ.
                 </p>
                 <p className={p}>
                   If you are budgeting, compare totals on{" "}
@@ -284,7 +284,7 @@ export default function ChelmsfordLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Links from your brief include{" "}
+                  Related local links include{" "}
                   <a
                     href="https://bodyaesthetics.co.uk/chelmsford"
                     className={linkCls}
@@ -308,7 +308,7 @@ export default function ChelmsfordLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="surgery" heading="Surgical routes">
                 <p className={p}>
-                  Gastric sleeves and bypass can lead to large total losses in eligible people, but lifelong changes are required. Your brief references Springfield Hospital, see{" "}
+                  Gastric sleeves and bypass can lead to large total losses in eligible people, but lifelong changes are required. See Springfield Hospital at{" "}
                   <a
                     href="https://www.ramsayhealth.co.uk/hospitals/springfield-hospital"
                     className={linkCls}

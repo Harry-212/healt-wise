@@ -387,7 +387,7 @@ export default function ArticleClient() {
                 medicines. Protein products are nutrition products.
               </p>
               <p>
-                Therefore, Healthwise360 should always separate three ideas:
+                We separate three ideas that are often confused:
               </p>
               <ol className="list-decimal space-y-3 pl-5">
                 <li>Prescription GLP-1 treatment</li>
@@ -559,11 +559,11 @@ export default function ArticleClient() {
                 conditions, and weight loss goals.
               </p>
               <p>
-                Because of this, Healthwise360 should avoid giving a universal
-                protein prescription.
+                Because of this, there is no single protein target that fits
+                everyone.
               </p>
               <p>
-                Instead, the article should guide users to ask better questions:
+                Instead, ask yourself:
               </p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Am I eating protein at most meals?</li>
@@ -623,10 +623,9 @@ export default function ArticleClient() {
                 <li>Regular progress review</li>
               </ul>
               <p>
-                For this reason, Healthwise360 should connect this article with
-                future content on <strong>GLP-1 and muscle loss</strong>,{" "}
-                <strong>strength training during weight loss treatment</strong>,
-                and <strong>protein and Mounjaro support</strong>.
+                Muscle maintenance also depends on strength training, hydration,
+                sleep, and not under-eating too aggressively — not protein
+                alone.
               </p>
               <p>
                 While tracking progress, it can help to{" "}
@@ -700,8 +699,14 @@ export default function ArticleClient() {
                 work better than chicken alone.
               </p>
               <p>
-                This is why Healthwise360 should link this article to a future{" "}
-                <strong>Fibre for GLP-1 Users</strong> page.
+                Fibre matters too on GLP-1 treatment. You can read our{" "}
+                <Link
+                  href="/blog/fibre-for-glp-1-users"
+                  className="font-medium text-emerald-600 hover:underline"
+                >
+                  fibre for GLP-1 users guide
+                </Link>{" "}
+                for practical food ideas alongside protein.
               </p>
             </GuideSection>
 
@@ -1134,10 +1139,9 @@ export default function ArticleClient() {
                 can support nutrition without pretending to be a medicine.
               </p>
               <p>
-                Healthwise360 can win this topic by giving users a safer,
-                clearer comparison-led guide: understand treatment, check
-                provider safety, compare price, and build nutrition habits that
-                support long-term weight management.
+                Health Wise aims to give a safer, clearer comparison-led guide:
+                understand treatment, check provider safety, compare price, and
+                build nutrition habits that support long-term weight management.
               </p>
               <p
                 className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}

@@ -181,7 +181,7 @@ export default function CumbernauldLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="landscape" heading="Cumbernauld local weight loss landscape">
                 <p className={p}>
-                  Town trails tempt walks, yet obesity in North Lanarkshire is high in many dashboards and commutes to Glasgow can add snacks. NHS Scotland reports are referenced in your brief for 2025. For UK wide obesity statistics tables, see{" "}
+                  Town trails tempt walks, yet obesity in North Lanarkshire is high in many dashboards and commutes to Glasgow can add snacks. NHS Scotland reports are referenced for 2025. For UK wide obesity statistics tables, see{" "}
                   <a
                     href="https://digital.nhs.uk/data-and-information/publications/statistical/statistics-on-obesity-physical-activity-and-diet"
                     className={linkCls}
@@ -200,7 +200,7 @@ export default function CumbernauldLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="medical" heading="Medical weight management options in Scotland">
                 <p className={p}>
-                  GLP 1 medicines lead many comparisons. Saxenda can curb appetite and Wegovy is similar. NICE approvals are referenced in your brief with TA664.
+                  GLP 1 medicines lead many comparisons. Saxenda can curb appetite and Wegovy is similar. NICE approvals are referenced with TA664.
                 </p>
                 <p className={p}>
                   Mounjaro is a dual action option. Trials describe about 15 to 20% loss in a year for eligible people. NEJM DOI{" "}
@@ -266,7 +266,7 @@ export default function CumbernauldLocationContent({ loc, shareUrl }: Props) {
                   Free tier services may exist for higher BMI and health risk profiles. Tiered support can include counselling and very low calorie diets, with surgery as a last resort.
                 </p>
                 <p className={p}>
-                  Your brief notes supply shortages and Scottish Government context in 2025. Who qualifies for Mounjaro can depend on BMI plus health risks and GP referral.
+                  Published reports note supply shortages and Scottish Government context in 2025. Who qualifies for Mounjaro can depend on BMI plus health risks and GP referral.
                 </p>
                 <p className={p}>
                   NHS Scotland options can include apps, group sessions, and medicines for eligible people. Waiting times vary.

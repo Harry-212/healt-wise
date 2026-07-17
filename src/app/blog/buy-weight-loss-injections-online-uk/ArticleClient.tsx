@@ -154,11 +154,11 @@ export default function ArticleClient() {
                 it.
               </p>
               <p>
-                That means the best page for this keyword should not push people
-                straight to checkout. Instead, it should help readers understand
-                how to compare online weight loss treatment safely, how to spot
+                That means a helpful guide should not push people straight to
+                checkout. Instead, it should help readers understand how to
+                compare online weight loss treatment safely, how to spot
                 misleading prices, and how to check whether a provider is using
-                a real UK pharmacy route. That is where Healthwise360 can offer
+                a real UK pharmacy route. That is where Health Wise can offer
                 more value than a single-provider landing page.
               </p>
             </GuideSection>
@@ -169,8 +169,8 @@ export default function ArticleClient() {
               heading="Can You Buy Weight Loss Injections Online?"
             >
               <p>
-                Yes, but not in the same way you buy a normal health product.
-                In the UK, weight loss injections such as Wegovy, Mounjaro, and
+                Yes, but not in the same way you buy a normal health product. In
+                the UK, weight loss injections such as Wegovy, Mounjaro, and
                 liraglutide-based options are prescription medicines. MHRA says
                 GLP-1 medicines should only be supplied after a proper
                 assessment by a qualified healthcare professional, and the NHS
@@ -180,9 +180,9 @@ export default function ArticleClient() {
               </p>
               <p>
                 Therefore, the real question is not simply whether you can buy
-                weight loss injections online. The better question is whether you
-                can access them through a regulated online doctor or pharmacy
-                pathway that checks your BMI, medical history, current
+                weight loss injections online. The better question is whether
+                you can access them through a regulated online doctor or
+                pharmacy pathway that checks your BMI, medical history, current
                 medication, side-effect risk, and overall suitability first.
               </p>
               <p>
@@ -213,7 +213,10 @@ export default function ArticleClient() {
                 lot in how clearly they explain pricing, support, and long-term
                 care.
               </p>
-              <p>Before paying, the user should be able to answer these questions clearly:</p>
+              <p>
+                Before paying, the user should be able to answer these questions
+                clearly:
+              </p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Who reviews the consultation?</li>
                 <li>Is the supplying pharmacy registered in Great Britain?</li>
@@ -221,7 +224,8 @@ export default function ArticleClient() {
                 <li>Are side effects explained before payment?</li>
                 <li>Is the medicine supplied only after assessment?</li>
                 <li>
-                  Are delivery rules and cold-chain handling stated where needed?
+                  Are delivery rules and cold-chain handling stated where
+                  needed?
                 </li>
                 <li>
                   Is there a plan for follow-up, dose changes, and maintenance?
@@ -258,13 +262,13 @@ export default function ArticleClient() {
               <p>
                 However, the lowest visible price is rarely the full story.
                 Weight loss treatment is usually titrated over time, which means
-                higher doses often cost more. Delivery fees, cold-chain shipping,
-                consultation charges, repeat prescription reviews, subscriptions,
-                and support add-ons can also change the real monthly cost.
-                Healthwise360&apos;s methodology is a better fit for this
-                because it explicitly compares treatment price, consultation,
-                delivery, recurring fees, and discount versus standard pricing
-                instead of headline numbers alone.
+                higher doses often cost more. Delivery fees, cold-chain
+                shipping, consultation charges, repeat prescription reviews,
+                subscriptions, and support add-ons can also change the real
+                monthly cost. Healthwise360&apos;s methodology is a better fit
+                for this because it explicitly compares treatment price,
+                consultation, delivery, recurring fees, and discount versus
+                standard pricing instead of headline numbers alone.
               </p>
               <p>
                 When people compare weight loss price or weight loss treatment
@@ -473,8 +477,8 @@ export default function ArticleClient() {
                 Healthwise360&apos;s methodology specifically reviews
                 maintenance and continuation policies, including the fact that
                 some providers may change prescribing rules once BMI falls below
-                certain levels. Most provider category pages talk much less about
-                this.
+                certain levels. Most provider category pages talk much less
+                about this.
               </p>
               <p>
                 After starting, it can also help to{" "}
@@ -514,8 +518,8 @@ export default function ArticleClient() {
               </ul>
               <p>
                 This matters because fake and falsified products are not
-                theoretical. The MHRA has warned about illegal online weight loss
-                medicines, reported major seizures, and issued alerts about
+                theoretical. The MHRA has warned about illegal online weight
+                loss medicines, reported major seizures, and issued alerts about
                 falsified Mounjaro. The NHS also explicitly warns private buyers
                 to use registered pharmacies.
               </p>
@@ -529,20 +533,19 @@ export default function ArticleClient() {
               <p>
                 Some people searching to buy weight loss injections online are
                 really asking a different question: &ldquo;Can I get this
-                through the NHS instead?&rdquo; NHS England says semaglutide
-                for obesity is prescribed through specialist weight management
+                through the NHS instead?&rdquo; NHS England says semaglutide for
+                obesity is prescribed through specialist weight management
                 services, while tirzepatide access has expanded through phased
                 NHS pathways for specific groups in England. Access is still
                 criteria-based and tied to wraparound care.
               </p>
               <p>
                 Private access may be faster, but it also means you need to
-                understand ongoing cost and safety checks. That is why
-                Healthwise360 should route this page to its internal comparison
-                tools instead of acting like a direct seller. The best next
-                click is usually a price comparison page, a pharmacy safety page,
-                a BMI page, or a treatment comparison page, depending on where
-                the reader is in the journey.
+                understand ongoing cost and safety checks. Health Wise is a
+                comparison site, not a seller — so the most useful next steps are
+                usually a price comparison page, a pharmacy safety page, a BMI
+                page, or a treatment comparison page, depending on where you are
+                in the journey.
               </p>
             </GuideSection>
 
@@ -620,8 +623,8 @@ export default function ArticleClient() {
                     Use the official GPhC register to check the pharmacy
                     premises and registration status, and confirm that the
                     provider clearly explains the clinical pathway and pharmacy
-                    identity. Healthwise360&apos;s pharmacy safety content should
-                    reinforce that process.
+                    identity. Healthwise360&apos;s pharmacy safety content
+                    should reinforce that process.
                   </p>
                 </div>
                 <div>
@@ -645,9 +648,9 @@ export default function ArticleClient() {
                   </h3>
                   <p>
                     No. They can be helpful for some eligible adults, but they
-                    are not suitable for everyone and can cause side effects. NHS
-                    and MHRA both emphasise assessment, counselling, and ongoing
-                    clinical supervision.
+                    are not suitable for everyone and can cause side effects.
+                    NHS and MHRA both emphasise assessment, counselling, and
+                    ongoing clinical supervision.
                   </p>
                 </div>
               </div>
@@ -667,14 +670,10 @@ export default function ArticleClient() {
                 pharmacy verification, and long-term support.
               </p>
               <p>
-                That is exactly why this keyword is a strong opportunity for
-                Healthwise360. Most competing pages are built to convert for one
-                provider. Healthwise360 can win by doing something more useful:
-                helping people compare weight loss treatment, weight loss price,
-                weight loss treatment price, and provider safety before they
-                choose where to start. That makes the page more trustworthy,
-                more defensible in search, and more aligned with the site&apos;s
-                existing comparison-first identity.
+                Most provider pages are built to convert for one service. Health
+                Wise focuses on something more useful: helping people compare
+                weight loss treatment, price, and provider safety before they
+                choose where to start.
               </p>
               <p
                 className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}

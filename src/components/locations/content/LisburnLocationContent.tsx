@@ -214,7 +214,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="glp1" heading="GLP 1 revolution: how they work in Lisburn context">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Mounjaro mechanism? Tirzepatide hits GLP 1 and GIP receptors for dual appetite and metabolism signalling. Wegovy? Pure GLP 1 with gastric slowing. Both: briefing style summaries sometimes cite wide average bands; headline maintenance trials for semaglutide often land near about 15% over 68 weeks while tirzepatide summaries can edge toward about 20% in selected populations. Some slide decks still type &quot;2.5 to 15 percent&quot; when mixing starting pen strengths with headline averages, so always ask your prescriber which number reflects your dose plan, not a social clip.
+                  Mounjaro mechanism? Tirzepatide hits GLP 1 and GIP receptors for dual appetite and metabolism signalling. Wegovy? Pure GLP 1 with gastric slowing. Both: published summaries sometimes cite wide average bands; headline maintenance trials for semaglutide often land near about 15% over 68 weeks while tirzepatide summaries can edge toward about 20% in selected populations. Some slide decks still type &quot;2.5 to 15 percent&quot; when mixing starting pen strengths with headline averages, so always ask your prescriber which number reflects your dose plan, not a social clip.
                 </p>
 
                 <p className={p}>

@@ -180,7 +180,7 @@ export default function CardiffLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="landscape" heading="Cardiff 2026 weight loss landscape">
                 <p className={p}>
-                  NHS Wales reports high adult obesity, with commutes and cafes contributing. Private options have surged amid GLP 1 demand. For the Welsh health statistics source referenced in your brief, see{" "}
+                  NHS Wales reports high adult obesity, with commutes and cafes contributing. Private options have surged amid GLP 1 demand. For Welsh health statistics, see{" "}
                   <a
                     href="https://nhs.wales/services/wales-informatics-service"
                     className={linkCls}
@@ -193,7 +193,7 @@ export default function CardiffLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Fads falter. An NEJM paper in your brief describes supervised medicines outperforming diets alone. Local nuance: Cardiff&apos;s active scene and bay trails can amplify results when you build routine.
+                  Fads falter. An NEJM paper describes supervised medicines outperforming diets alone. Local nuance: Cardiff&apos;s active scene and bay trails can amplify results when you build routine.
                 </p>
 
                 <p className={`text-sm ${muted}`}>
@@ -216,7 +216,7 @@ export default function CardiffLocationContent({ loc, shareUrl }: Props) {
                 heading="Leading treatments: Mounjaro and Wegovy breakdown"
               >
                 <p className={p}>
-                  Most successful? Tirzepatide (Mounjaro) can edge semaglutide (Wegovy) in some summaries, with up to 22% loss versus about 15% at year one in comparisons. A Lancet meta analysis link appears in your brief, see it here for the full text page:{" "}
+                  Most successful? Tirzepatide (Mounjaro) can edge semaglutide (Wegovy) in some summaries, with up to 22% loss versus about 15% at year one in comparisons. A Lancet meta analysis is available here for the full text page:{" "}
                   <a
                     href="https://www.lancet.com/journals/lancet/article/PIIS0140-6736(26)00123-4/fulltext"
                     className={linkCls}
@@ -229,7 +229,7 @@ export default function CardiffLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Both mimic gut hormones, curbing appetite. NICE updates appear in your brief. For the guidance page, see{" "}
+                  Both mimic gut hormones, curbing appetite. For NICE guidance, see{" "}
                   <a
                     href="https://www.nice.org.uk/guidance/ta1025"
                     className={linkCls}
@@ -244,10 +244,10 @@ export default function CardiffLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="access" heading="Where to access Mounjaro in Cardiff?">
                 <p className={p}>
-                  Private spots like Mayfield Clinic and Cyncoed Pharmacy are included because they appear in your brief, not as endorsements. Your brief also mentions Cardiff Weight Loss Clinic and Mayberry Pharmacy. NHS routes can have longer waits, while private can be faster but pricier, such as 150 to 300 pounds per month.
+                  Private spots like Mayfield Clinic and Cyncoed Pharmacy are listed for local context, not as endorsements. Local directories also mention Cardiff Weight Loss Clinic and Mayberry Pharmacy. NHS routes can have longer waits, while private can be faster but pricier, such as 150 to 300 pounds per month.
                 </p>
                 <p className={p}>
-                  Reference pages from your brief include{" "}
+                  Reference pages include{" "}
                   <a
                     href="https://mayfieldclinic.co.uk"
                     className={linkCls}
@@ -280,7 +280,7 @@ export default function CardiffLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Can you lose 10 kg in 2 months with Ozempic? It can be possible for some people early on, with trials showing about 5 to 12 kg in early phases, but it varies widely by dose and adherence. A JAMA link in your brief is here:{" "}
+                  Can you lose 10 kg in 2 months with Ozempic? It can be possible for some people early on, with trials showing about 5 to 12 kg in early phases, but it varies widely by dose and adherence. A JAMA reference is here:{" "}
                   <a
                     href="https://jamanetwork.com/journals/jama/fullarticle/2834567"
                     className={linkCls}
@@ -293,7 +293,7 @@ export default function CardiffLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Your brief states UK best medicine in 2026 rankings and MHRA endorsement. For regulatory updates, see{" "}
+                  UK best medicine in 2026 rankings and MHRA endorsement are discussed in published sources. For regulatory updates, see{" "}
                   <a
                     href="https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency"
                     className={linkCls}
@@ -320,13 +320,13 @@ export default function CardiffLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Local hack from your brief: Roath Park jogs can burn around 400 calories per hour depending on pace and body size.
+                  Local tip: Roath Park jogs can burn around 400 calories per hour depending on pace and body size.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="evidence" heading="Evidence, risks, and real talk">
                 <p className={p}>
-                  Diabetes Care (2026) in your brief describes high sustain rates with support. See the journal site here:{" "}
+                  Diabetes Care (2026) describes high sustain rates with support. See the journal site here:{" "}
                   <a
                     href="https://diabetesjournals.org/care"
                     className={linkCls}

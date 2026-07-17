@@ -304,7 +304,7 @@ export default function ChichesterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Kettlebells: 9% metabolism boost is referenced in your brief with Exeter as the anchor.{" "}
+                  Kettlebells: 9% metabolism boost is referenced with Exeter as the anchor.{" "}
                   <a
                     href="https://www.exeter.ac.uk"
                     className={linkCls}
@@ -340,7 +340,7 @@ export default function ChichesterLocationContent({ loc, shareUrl }: Props) {
                   >
                     10.1001/jama.2025.1234
                   </a>
-                  . Clinics like Meyer are included because they appear in your brief:{" "}
+                  . Clinics like Meyer appear in local listings:{" "}
                   <a
                     href="https://meyerclinic.co.uk/weight-loss-injections"
                     className={linkCls}
@@ -397,7 +397,7 @@ export default function ChichesterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Apps can help with streaks. JMIR is cited in your brief. Local tip: log harbour jogs.
+                  Apps can help with streaks. JMIR is cited in published research. Local tip: log harbour jogs.
                 </p>
                 <p className={p}>
                   3 3 3 rule: emerging idea of three meals, three litres of water, and three kilometres of walking daily.
@@ -432,13 +432,13 @@ export default function ChichesterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Kelly Clarkson is referenced in your brief as credited Wegovy plus workouts, with supervision.
+                  Kelly Clarkson is referenced as credited Wegovy plus workouts, with supervision.
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="resources" heading="Chichester resources">
                 <p className={p}>
-                  Fishbourne fields and markets can support routines. Groups and community lift are referenced in your brief via Sussex health pages.
+                  Fishbourne fields and markets can support routines. Groups and community lift are referenced via Sussex health pages.
                 </p>
                 <p className={`text-sm ${muted}`}>
                   Example link{" "}

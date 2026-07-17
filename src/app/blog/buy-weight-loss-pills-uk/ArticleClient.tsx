@@ -259,7 +259,11 @@ export default function ArticleClient() {
                   The MHRA explains that the semaglutide tablet should be taken on an empty stomach after fasting, with no food or drink for at least 30 minutes after taking it. It is also not currently available through the NHS at the time of the MHRA announcement.
                 </p>
                 <p>
-                  Therefore, Healthwise360 should treat this as a major new content opportunity. A dedicated page for Wegovy pill UK or semaglutide tablet weight loss UK could support the main &ldquo;buy weight loss pills&rdquo; page and help build topical authority. If you want to see how the injectable version is priced while oral supply develops, check the <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> for dose-by-dose comparison.
+                  Oral semaglutide is a major new option for people who prefer
+                  tablets over injections. For more on how it works and how it
+                  compares with injectable Wegovy, read our{" "}
+                  <Link href="/blog/wegovy-pill-uk" className="font-medium text-emerald-600 hover:underline">Wegovy Pill UK guide</Link>.
+                  If you want to see how the injectable version is priced while oral supply develops, check the <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price list UK</Link> for dose-by-dose comparison.
                 </p>
               </GuideSection>
 
@@ -327,7 +331,15 @@ export default function ArticleClient() {
                   For example, a provider may advertise a low starting price, but the total monthly cost may be higher once consultation, delivery, or follow-up is included. Besides that, some treatments may require review after a set period, which affects long-term cost planning.
                 </p>
                 <p>
-                  This is where Healthwise360 can win against competitors. Instead of only showing &ldquo;from&rdquo; prices, Healthwise360 can help users compare weight loss treatment cost in a more practical way. For GLP-1 routes specifically, our guide to the <Link href="/prices/cheapest-options-uk" className="font-medium text-emerald-600 hover:underline">cheapest GLP-1 weight loss treatment options</Link> shows how injection pricing compares when you are weighing pills against pens.
+                  This is where Health Wise helps. Instead of only showing
+                  &ldquo;from&rdquo; prices, we help users compare weight loss
+                  treatment cost in a more practical way. For GLP-1 routes
+                  specifically, our guide to the{" "}
+                  <Link href="/prices/cheapest-options-uk" className="font-medium text-emerald-600 hover:underline">
+                    cheapest GLP-1 weight loss treatment options
+                  </Link>{" "}
+                  shows how injection pricing compares when you are weighing
+                  pills against pens.
                 </p>
               </GuideSection>
 
@@ -423,7 +435,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="pills-vs-fat-burners" heading="Are Weight Loss Pills Better Than Fat Burners?">
                 <p>
-                  This is a major gap in competitor content. Many people searching for &ldquo;buy weight loss pills&rdquo; may also see supplement-style fat burners, carb blockers, binders, teas, or appetite gummies.
+                  Many people searching for weight loss pills also see supplement-style fat burners, carb blockers, binders, teas, or appetite gummies.
                 </p>
                 <p>
                   However, these are not the same as regulated weight loss medicines.
@@ -432,7 +444,7 @@ export default function ArticleClient() {
                   A prescription weight loss pill has a defined active ingredient, clinical suitability rules, and regulated supply. A supplement-style fat burner may be sold as a wellness product, but that does not mean it offers the same evidence, clinical oversight, or medical suitability checks.
                 </p>
                 <p>
-                  Therefore, Healthwise360 should separate the two clearly:
+                  We separate the two clearly:
                 </p>
                 <ul className="list-disc space-y-3 pl-5">
                   <li>Weight loss medicines are regulated treatments used for obesity or weight management.</li>
@@ -440,7 +452,8 @@ export default function ArticleClient() {
                   <li>Fat loss results usually depend on a calorie deficit, long-term behaviour change, and medical support where appropriate.</li>
                 </ul>
                 <p>
-                  This distinction helps Healthwise360 build trust and avoid looking like a generic diet-pill website.
+                  This distinction helps you compare regulated medicines with
+                  wellness products more safely.
                 </p>
               </GuideSection>
 

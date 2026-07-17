@@ -252,7 +252,7 @@ export default function DoncasterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Kettlebells: Sheffield University is cited as an anchor in your brief.{" "}
+                  Kettlebells: Sheffield University is cited as a local anchor.{" "}
                   <a
                     href="https://www.sheffield.ac.uk"
                     className={linkCls}
@@ -306,7 +306,7 @@ export default function DoncasterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="mind" heading="Mind and sustenance shifts">
                 <p className={p}>
-                  5 kg in 7 days is mostly water and glycogen and crash diets risk rebound. Stress from mines is referenced in your brief via Brain Behavior Immunity.{" "}
+                  5 kg in 7 days is mostly water and glycogen and crash diets risk rebound. Stress from mines is referenced via Brain Behavior Immunity.{" "}
                   <a
                     href="https://doi.org/10.1016/j.bbi.2024.05.012"
                     className={linkCls}
@@ -318,7 +318,7 @@ export default function DoncasterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Apps can improve adherence in some summaries. Local tip: track market hauls. Green tea catechins are referenced in your brief via a Phytotherapy DOI:{" "}
+                  Apps can improve adherence in some summaries. Local tip: track market hauls. Green tea catechins are referenced via a Phytotherapy DOI:{" "}
                   <a
                     href="https://doi.org/10.1155/2025/1234567"
                     className={linkCls}

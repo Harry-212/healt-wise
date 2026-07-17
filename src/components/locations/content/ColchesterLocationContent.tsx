@@ -198,7 +198,7 @@ export default function ColchesterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Local access links from your brief include{" "}
+                  Local access links include{" "}
                   <a
                     href="https://www.dedhampharmacy.co.uk/weight-loss-service-colchester/"
                     className={linkCls}
@@ -314,7 +314,7 @@ export default function ColchesterLocationContent({ loc, shareUrl }: Props) {
                   >
                     LuxMaster page
                   </a>
-                  . Gastric bypass info appears in your brief via{" "}
+                  . Gastric bypass info is available via{" "}
                   <a
                     href="https://www.weightlosscolchester.co.uk/bariatric-surgery/gastric-bypass"
                     className={linkCls}

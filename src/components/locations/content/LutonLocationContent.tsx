@@ -44,7 +44,6 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
       { id: "safety", label: "Safety and side effects" },
       { id: "success", label: "What actually leads to success" },
       { id: "local", label: "Luton specific context" },
-      { id: "semantics", label: "Semantics and related keywords" },
       { id: "sources", label: "Key guidance" },
       { id: "trust", label: "Why Health Wise is a comparator, not a prescriber" },
       { id: "next-steps", label: "Practical next steps (UK wide, including Luton)" },
@@ -473,36 +472,6 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   It also helps to be realistic about motivation. Many people start with good intentions and then lose momentum once the first enthusiasm fades. That is normal. A treatment that fits your daily routine is more likely to survive that drop in motivation. Luton residents, like everyone else, need a plan that is workable on a normal Tuesday, not just on the first day.
-                </p>
-              </GuideSection>
-
-              <GuideSection darkMode={darkMode} id="semantics" heading="Semantics and related keywords">
-                <p className={p}>
-                  For SEO, the page should naturally include related terms such as:
-                </p>
-                <ul className={`list-disc space-y-2 pl-6 ${p}`}>
-                  <li>medical weight loss Luton</li>
-                  <li>obesity treatment Luton</li>
-                  <li>weight loss injections UK</li>
-                  <li>GLP 1 treatment</li>
-                  <li>Mounjaro Luton</li>
-                  <li>Wegovy Luton</li>
-                  <li>Saxenda UK</li>
-                  <li>bariatric surgery Luton</li>
-                  <li>NHS weight management</li>
-                  <li>prescription weight loss</li>
-                  <li>obesity medicine</li>
-                  <li>supervised weight loss</li>
-                  <li>sustainable fat loss</li>
-                  <li>appetite suppression treatment</li>
-                </ul>
-
-                <p className={`mt-4 ${p}`}>
-                  These phrases help search engines understand the topic without forcing awkward repetition. The goal is clarity, not keyword stuffing. A good article sounds human first and optimised second. Read{" "}
-                  <Link className={linkCls} href="/methodology">
-                    methodology
-                  </Link>{" "}
-                  for how we weigh evidence.
                 </p>
               </GuideSection>
 

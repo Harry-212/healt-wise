@@ -514,7 +514,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Groups build accountability similar to about 18% adherence bumps cited for NHS cohorts in briefing style numbers. Pair community steps with{" "}
+                  Groups build accountability similar to about 18% adherence bumps cited for NHS cohorts in published estimates. Pair community steps with{" "}
                   <Link className={linkCls} href="/methodology">
                     methodology
                   </Link>{" "}

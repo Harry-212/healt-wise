@@ -424,15 +424,14 @@ export default function ArticleClient() {
                 suitability, side effects, and prescriber advice.
               </p>
               <p>
-                For a deeper comparison, Healthwise360 should link this article
-                to the{" "}
+                For a deeper comparison, read the{" "}
                 <Link
                   href="/blog/wegovy-pill-uk"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Wegovy Pill UK guide
                 </Link>{" "}
-                and future page Wegovy Pill vs Wegovy Pen.
+                and compare tablet versus pen formats in the section above.
               </p>
             </GuideSection>
 
@@ -572,14 +571,14 @@ export default function ArticleClient() {
                 <li>Prescriber advice</li>
               </ul>
               <p>
-                Healthwise360 should connect this topic with{" "}
+                You can also{" "}
                 <Link
                   href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro vs Wegovy vs Saxenda
                 </Link>{" "}
-                and{" "}
+                and review the{" "}
                 <Link
                   href="/mounjaro-price-comparison"
                   className="font-medium text-emerald-600 hover:underline"
@@ -635,7 +634,7 @@ export default function ArticleClient() {
                 hydration, or general nutrition. However, they should not be
                 presented as replacements for prescribed GLP-1 medicines.
               </p>
-              <p>For more detail, Healthwise360 should internally link to:</p>
+              <p>For more detail, see:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>
                   <Link
@@ -655,8 +654,8 @@ export default function ArticleClient() {
                 </li>
               </ul>
               <p>
-                These links help build topical authority around GLP-1 medicines,
-                supplements, and weight loss treatment safety.
+                These guides help you explore related topics around GLP-1
+                medicines, supplements, and weight loss treatment safety.
               </p>
             </GuideSection>
 
@@ -721,10 +720,6 @@ export default function ArticleClient() {
                 breathing, swelling of the face or throat, severe stomach pain,
                 or signs of a serious allergic reaction.
               </p>
-              <p>
-                Healthwise360 should create a full support page called Wegovy
-                Pill Side Effects: What UK Users Should Know.
-              </p>
             </GuideSection>
 
             <GuideSection
@@ -782,22 +777,21 @@ export default function ArticleClient() {
                 <li>Speaking to a clinician about side effects</li>
               </ul>
               <p>
-                This is why Healthwise360 should connect Wegovy Pill content
-                with{" "}
+                You can also use our{" "}
                 <Link
                   href="/tools/weight-loss-tracker"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  track your weight loss progress
+                  weight loss tracker
                 </Link>{" "}
                 and{" "}
                 <Link
                   href="/tools/bmi-calculator"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  check your BMI for weight loss treatment
-                </Link>
-                .
+                  BMI calculator
+                </Link>{" "}
+                to monitor progress alongside lifestyle changes.
               </p>
             </GuideSection>
 
@@ -816,13 +810,9 @@ export default function ArticleClient() {
                 maintenance plan.
               </p>
               <p>
-                Before stopping treatment, users should speak to their
-                prescriber. They should also ask about dose changes, maintenance
-                options, and what to do if appetite increases again.
-              </p>
-              <p>
-                This creates another strong support topic for the cluster:
-                Wegovy Pill Maintenance: What Happens After Weight Loss?
+                Before stopping treatment, speak to your prescriber. Ask about
+                dose changes, maintenance options, and what to do if appetite
+                increases again.
               </p>
             </GuideSection>
 
@@ -849,12 +839,12 @@ export default function ArticleClient() {
                 <li>Does the provider avoid miracle claims?</li>
               </ul>
               <p>
-                Healthwise360 should link readers to{" "}
+                Before paying, learn how to{" "}
                 <Link
                   href="/pharmacy-safety-gphc-verification"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  pharmacy safety and GPhC verification
+                  check pharmacy safety and GPhC verification
                 </Link>
                 .
               </p>
@@ -866,16 +856,15 @@ export default function ArticleClient() {
               heading="Where Healthwise360 Fits"
             >
               <p>
-                Healthwise360 can win this topic by becoming the comparison and
-                safety layer for UK users.
+                Health Wise works as the comparison and safety layer for UK
+                users.
               </p>
               <p>
                 Provider-owned pages will naturally focus on their own
-                consultation funnel, price, and availability. However,
-                Healthwise360 can help readers compare options before choosing a
-                provider.
+                consultation funnel, price, and availability. Health Wise helps
+                readers compare options before choosing a provider.
               </p>
-              <p>Recommended internal links for this article:</p>
+              <p>Useful related pages:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>
                   <Link

@@ -23,7 +23,7 @@ const TOC = [
   { id: "intro", label: "Can I buy weight loss injections in the UK?" },
   { id: "can-i-buy-online", label: "Can I buy weight loss injections online?" },
   { id: "what-are-they", label: "What are weight loss injections?" },
-  { id: "why-search", label: "Why people search this keyword" },
+  { id: "why-search", label: "Why people ask this question" },
   { id: "private-vs-nhs", label: "Private access vs NHS access" },
   { id: "cost", label: "How much do they cost?" },
   { id: "safe-provider", label: "What makes a safe provider?" },
@@ -31,7 +31,7 @@ const TOC = [
   { id: "not-a-quick-fix", label: "Weight loss injections are not a quick fix" },
   { id: "which-is-best", label: "Which weight loss injection is best?" },
   { id: "how-to-compare", label: "How to compare providers properly" },
-  { id: "why-healthwise360", label: "Why Health Wise can win this search" },
+  { id: "why-healthwise360", label: "Why independent comparison helps" },
   { id: "faq", label: "Frequently asked questions" },
   { id: "conclusion", label: "Conclusion" },
 ];
@@ -223,26 +223,35 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="why-search"
-              heading="Why People Search “Can I Buy Weight Loss Injections”"
+              heading="Why People Ask “Can I Buy Weight Loss Injections”"
             >
               <p>
-                This keyword usually has strong commercial intent. People searching it are often close to taking action, but they may still be unsure about legality, safety, price, or provider choice.
+                People asking this are often close to taking action, but they may
+                still be unsure about legality, safety, price, or provider
+                choice.
               </p>
               <p>
-                Some users want to know whether they can buy privately. Others want to know whether they can get injections on the NHS. Meanwhile, many people want to compare Mounjaro, Wegovy, price, delivery, and reviews before deciding.
+                Some users want to know whether they can buy privately. Others
+                want to know whether they can get injections on the NHS.
+                Meanwhile, many people want to compare Mounjaro, Wegovy, price,
+                delivery, and reviews before deciding.
               </p>
               <p>
-                Competitor pages often answer this intent with quick eligibility quizzes, product cards, reviews, delivery promises, and headline prices. However, many pages focus mainly on their own service.
+                Provider pages often answer with quick eligibility quizzes,
+                product cards, reviews, delivery promises, and headline prices.
+                However, many pages focus mainly on their own service.
               </p>
               <p>
-                Healthwise360 can take a stronger comparison-led angle. Instead of pushing one provider, it can help users compare the whole market more carefully. Having tools to{" "}
+                Health Wise takes a comparison-led approach. Instead of pushing
+                one provider, we help users compare the wider market more
+                carefully. Having tools to{" "}
                 <Link
                   href="/tools/weight-loss-tracker"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   track your weight loss progress
                 </Link>{" "}
-                also gives patients the complete support ecosystem they need once they begin their therapy.
+                also gives patients support once they begin therapy.
               </p>
             </GuideSection>
 
@@ -543,22 +552,24 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="why-healthwise360"
-              heading="Why Health Wise Can Win This Search"
+              heading="Why Independent Comparison Helps"
             >
               <p>
-                Many competitor pages are provider-owned. They naturally focus on their own pricing, own consultation funnel, own testimonials, and own service benefits.
+                Many provider pages naturally focus on their own pricing,
+                consultation funnel, testimonials, and service benefits.
               </p>
               <p>
-                Healthwise360 can win by being the independent comparison layer.
+                Health Wise works as an independent comparison layer so you can
+                weigh options before you start.
               </p>
-              <p>
-                The winning angle is:
-              </p>
+              <p>The practical approach is:</p>
               <blockquote className={`border-l-4 p-4 my-4 italic ${darkMode ? "border-emerald-500 bg-slate-900 text-slate-300" : "border-emerald-600 bg-slate-50 text-slate-700"}`}>
                 Before you buy weight loss injections, compare safe providers, pharmacy checks, dose-level prices, and support options.
               </blockquote>
               <p>
-                This angle matches the user&apos;s real need. They want confidence before they start. They want to avoid unsafe sellers. They also want to understand why one provider may be cheaper or more expensive than another.
+                This matches what most readers need: confidence before they
+                start, ways to avoid unsafe sellers, and a clearer sense of why
+                one provider may cost more or less than another.
               </p>
               <p>
                 To see how we operate, you can read about{" "}
@@ -606,7 +617,8 @@ export default function ArticleClient() {
                 <li>Maintenance pharmacy pages</li>
               </ul>
               <p>
-                This creates topical authority around weight loss, fat loss, price comparison, and safe treatment access.
+                These tools help you compare prices, check provider safety, and
+                plan long-term treatment access in one place.
               </p>
             </GuideSection>
 
@@ -735,7 +747,9 @@ export default function ArticleClient() {
                 A proper provider should check eligibility, review your medical history, explain side effects, use a regulated pharmacy route, and make the full treatment price clear. Besides that, users should avoid social media sellers, miracle claims, and websites that skip medical assessment.
               </p>
               <p>
-                For Healthwise360, this keyword is a strong opportunity because most competitors focus on their own treatment funnel. Healthwise360 can win by offering something more useful: independent comparison, safety checks, price transparency, and clear guidance before the user starts a consultation.
+                Health Wise focuses on independent comparison, safety checks,
+                price transparency, and clear guidance before you start a
+                consultation — rather than pushing a single treatment funnel.
               </p>
               <p
                 className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}

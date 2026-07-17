@@ -477,7 +477,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  That is why a strong page for this keyword should cover medical weight loss injections, multidisciplinary support, gastric balloons and procedural options, realistic timelines, clinic choice, and safety. It should also sound like it knows the difference between marketing language and clinical reality. That balance is what helps content feel useful to both users and search engines. Read how we judge evidence in{" "}
+                  A useful Preston-style comparison should cover medical weight loss injections, multidisciplinary support, gastric balloons and procedural options, realistic timelines, clinic choice, and safety. It should also distinguish marketing language from clinical reality. Read how we judge evidence in{" "}
                   <Link className={linkCls} href="/methodology">
                     methodology
                   </Link>

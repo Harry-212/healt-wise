@@ -25,7 +25,6 @@ const INLINE_SRC = blogImgPath(BEST_PLACE_INLINE_PNG);
 const TOC = [
   { id: "intro", label: "Where is the best place to start?" },
   { id: "short-answer", label: "The short answer" },
-  { id: "safer-angle", label: "Why this keyword needs a safer angle" },
   { id: "safe-provider", label: "What makes a safe UK provider?" },
   { id: "clinical-assessment", label: "Clinical assessment checks" },
   { id: "registered-pharmacy", label: "Registered pharmacy checks" },
@@ -38,7 +37,6 @@ const TOC = [
   { id: "why-not-cheapest", label: "Why cheapest is not always best" },
   { id: "what-to-avoid", label: "What to avoid when comparing" },
   { id: "comparison-journey", label: "The Health Wise comparison journey" },
-  { id: "gap-analysis", label: "Competitor gap analysis" },
   { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
 ];
@@ -227,56 +225,6 @@ export default function ArticleClient() {
                 rushed. It should also explain who treatment may suit, who
                 should avoid it, what the monthly cost includes, and what
                 happens after the starting dose.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="safer-angle"
-              heading="Why This Keyword Needs a Safer Angle"
-            >
-              <p>
-                Many people search for phrases like &ldquo;best place to buy
-                weight loss injections&rdquo; because they are comparing private
-                providers. However, that phrase can lead users toward risky
-                decisions if the article only focuses on buying.
-              </p>
-              <p>
-                Health Wise takes a safer and stronger approach by explaining
-                how to compare weight loss treatment providers properly. This
-                fills a gap that many competitor pages miss.
-              </p>
-              <p>
-                Most provider pages focus on their own offer. They often
-                highlight a starter price, a quick consultation, discreet
-                delivery, app support, or a discount. However, they usually do
-                not help users compare the wider market. Before making any
-                decisions, it is wise to{" "}
-                <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  compare Mounjaro vs Wegovy vs Saxenda
-                </Link>{" "}
-                to see how different therapies match your personal preferences
-                and budget.
-              </p>
-              <p>
-                Health Wise can win by becoming the independent guide that
-                answers:
-              </p>
-              <ul className="list-disc space-y-3 pl-5">
-                <li>What makes a provider safe?</li>
-                <li>How should users compare weight loss treatment price?</li>
-                <li>What does &ldquo;from price&rdquo; really mean?</li>
-                <li>What checks should happen before treatment?</li>
-                <li>How do Mounjaro, Wegovy and Saxenda compare?</li>
-                <li>How can users avoid fake or unsafe sellers?</li>
-                <li>What support matters after treatment starts?</li>
-              </ul>
-              <p>
-                This is a non-commodity angle because it does not just list
-                providers. Instead, it teaches the reader how to choose safely.
               </p>
             </GuideSection>
 
@@ -669,45 +617,6 @@ export default function ArticleClient() {
               </p>
             </GuideSection>
 
-            <GuideSection
-              darkMode={darkMode}
-              id="gap-analysis"
-              heading="Competitor Gap Analysis"
-            >
-              <p>
-                Competitor pages commonly win because they answer buying intent
-                quickly. They often use simple headlines, fast consultation
-                flows, visible starting prices, trust badges, delivery language,
-                and short questionnaires.
-              </p>
-              <p>
-                However, many competitor pages have the same weakness: they are
-                provider-owned. That means they naturally focus on their own
-                offer rather than helping users compare the whole market.
-              </p>
-              <p>Health Wise fills this gap by adding:</p>
-              <ul className="list-disc space-y-3 pl-5">
-                <li>A provider safety checklist</li>
-                <li>Dose-level price comparison</li>
-                <li>&ldquo;From price&rdquo; explanation</li>
-                <li>Pharmacy registration checks</li>
-                <li>Consultation quality checklist</li>
-                <li>Maintenance price guidance</li>
-                <li>FAQs written for AI Overviews</li>
-                <li>
-                  Internal links to Mounjaro, Wegovy and pharmacy safety pages
-                </li>
-                <li>
-                  Clear explanation that Health Wise does not prescribe directly
-                </li>
-              </ul>
-              <p>
-                This makes the article more useful than a normal landing page.
-                It also helps Health Wise compete for both SEO and answer-engine
-                visibility.
-              </p>
-            </GuideSection>
-
             <section
               id="faq"
               className={`mt-16 border-t pt-10 ${darkMode ? "border-slate-800" : "border-slate-200"}`}
@@ -850,14 +759,13 @@ export default function ArticleClient() {
                 matters more than the lowest advertised number.
               </p>
               <p>
-                Health Wise can win this keyword by taking a trust-first
-                position. Instead of simply telling users where to buy, the site
-                explains how to choose safely, compare providers properly, avoid
-                unsafe sellers, and understand the real cost of treatment.
+                Instead of simply telling you where to buy, Health Wise explains
+                how to choose safely, compare providers properly, avoid unsafe
+                sellers, and understand the real cost of treatment.
               </p>
               <p>
-                If you want to know exactly how we gather, verify, and verify
-                online provider fees, read about{" "}
+                If you want to know exactly how we gather and verify online
+                provider fees, read about{" "}
                 <Link
                   href="/methodology"
                   className="font-medium text-emerald-600 hover:underline"
@@ -866,12 +774,6 @@ export default function ArticleClient() {
                 </Link>{" "}
                 so you can understand our editorial and research checks before
                 starting your own consultation journey.
-              </p>
-              <p>
-                This creates a stronger article than a normal provider landing
-                page. It serves the user, protects trust, supports YMYL quality,
-                and naturally links to our comparison, price, BMI, and pharmacy
-                safety pages.
               </p>
               <p
                 className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}

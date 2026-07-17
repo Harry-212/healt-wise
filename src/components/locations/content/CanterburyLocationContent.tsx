@@ -259,7 +259,7 @@ export default function CanterburyLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Safety tip: names such as GilesLane are in your brief, but do not treat any name as an endorsement. Verify registration and monitoring. Use{" "}
+                  Safety tip: names such as GilesLane appear in local listings, but do not treat any name as an endorsement. Verify registration and monitoring. Use{" "}
                   <Link
                     href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards"
                     className={linkCls}
@@ -280,7 +280,7 @@ export default function CanterburyLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Cryolipolysis chills cells. A plastic surgery meta analysis reports local fat thickness reductions around 20%. Spire Aesthetics is included because it appears in your brief. Check clinic protocols yourself and do not treat this as a recommendation. If you want a general UK hospital network page describing the technology, see{" "}
+                  Cryolipolysis chills cells. A plastic surgery meta analysis reports local fat thickness reductions around 20%. Spire Aesthetics appears in local listings. Check clinic protocols yourself and do not treat this as a recommendation. If you want a general UK hospital network page describing the technology, see{" "}
                   <a
                     href="https://www.spirehealthcare.com"
                     className={linkCls}

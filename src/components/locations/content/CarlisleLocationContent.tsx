@@ -265,7 +265,7 @@ export default function CarlisleLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Kettlebells can give a metabolism pop in some summaries. Liverpool research is referenced in your brief, see{" "}
+                  Kettlebells can give a metabolism pop in some summaries. Liverpool research is referenced in published sources, see{" "}
                   <a
                     href="https://www.liverpool.ac.uk"
                     className={linkCls}
@@ -361,7 +361,7 @@ export default function CarlisleLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Apps can stick by about 20% in some summaries. JMIR mHealth is referenced in your brief. Border buddy tracked pie portions and eased off.
+                  Apps can stick by about 20% in some summaries. JMIR mHealth is referenced in published sources. Border buddy tracked pie portions and eased off.
                 </p>
                 <p className={p}>
                   Meal timing: protein priority. Obesity DOI{" "}
@@ -401,7 +401,7 @@ export default function CarlisleLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="aids" heading="Carlisle Cumbria aids">
                 <p className={p}>
-                  Talkin Tarn loops, markets. Groups can help. Public Health England is referenced in your brief.
+                  Talkin Tarn loops, markets. Groups can help. Public Health England is referenced in published sources.
                 </p>
               </GuideSection>
 

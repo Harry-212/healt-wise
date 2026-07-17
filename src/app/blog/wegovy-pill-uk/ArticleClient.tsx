@@ -396,8 +396,9 @@ export default function ArticleClient() {
                 cost, and pharmacy registration before paying.
               </p>
               <p>
-                Healthwise360 should also build a support page called Is Wegovy
-                Pill Available on the NHS? and link it back to this main guide.
+                NHS access can change over time, so speak to your GP for the
+                latest guidance in your area if you are hoping for NHS-funded
+                treatment.
               </p>
             </GuideSection>
 
@@ -424,10 +425,10 @@ export default function ArticleClient() {
                 becomes smaller.
               </p>
               <p>
-                For this reason, Healthwise360 should connect Wegovy Pill
-                content with lifestyle support pages, BMI tools, weight tracking
-                tools, and supplement education. Before starting any treatment
-                pathway, you can{" "}
+                Lifestyle habits still matter alongside treatment. Health Wise
+                links to BMI tools, weight tracking tools, and supplement
+                education to help you plan food, movement, and long-term
+                support. Before starting any treatment pathway, you can{" "}
                 <Link
                   href="/tools/bmi-calculator"
                   className="font-medium text-emerald-600 hover:underline"
@@ -468,16 +469,15 @@ export default function ArticleClient() {
                 <li>Cancellation or refund terms</li>
               </ul>
               <p>
-                For a better price-led journey, Healthwise360 should link users
-                to the{" "}
+                For a clearer price-led journey, compare the{" "}
                 <Link
                   href="/wegovy-price-comparison"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Wegovy price comparison
                 </Link>{" "}
-                page rather than a simple price list. This is more useful
-                because users need to compare the total cost, not just one dose.
+                page rather than a single headline price. This is more useful
+                because you need to compare the total cost, not just one dose.
               </p>
             </GuideSection>
 
@@ -497,8 +497,8 @@ export default function ArticleClient() {
                 lower price but less aftercare.
               </p>
               <p>
-                This is why Healthwise360 should frame its price content around
-                value, not only cheapness.
+                When you compare providers, focus on value — not only the
+                cheapest headline price.
               </p>
               <p>A strong comparison should answer:</p>
               <ul className="list-disc space-y-3 pl-5">
@@ -542,8 +542,8 @@ export default function ArticleClient() {
                 populations, and different treatment formats.
               </p>
               <p>
-                Therefore, Healthwise360 should include the evidence but explain
-                it more responsibly.
+                The evidence below is useful, but it should be read with that
+                context in mind — not as a direct head-to-head ranking.
               </p>
 
               <h3
@@ -588,10 +588,10 @@ export default function ArticleClient() {
                 follows the timing instructions consistently.
               </p>
               <p>
-                Therefore, Healthwise360 should use trial data as education, not
-                as a promise.
+                Trial data is best used as education, not as a promise of your
+                personal results.
               </p>
-              <p>Suggested wording:</p>
+              <p>In summary:</p>
               <blockquote
                 className={`border-l-4 p-4 my-4 italic ${darkMode ? "border-emerald-500 bg-slate-900 text-slate-300" : "border-emerald-600 bg-slate-50 text-slate-700"}`}
               >
@@ -703,22 +703,22 @@ export default function ArticleClient() {
                 <li>Prescriber advice</li>
               </ul>
               <p>
-                Healthwise360 should link this section to{" "}
+                You can also{" "}
                 <Link
                   href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro vs Wegovy vs Saxenda
                 </Link>{" "}
-                and the{" "}
+                and review the{" "}
                 <Link
                   href="/mounjaro-price-comparison"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Mounjaro price list UK
                 </Link>{" "}
-                so readers can weigh tablet versus injection options alongside
-                full dose-level pricing.
+                to weigh tablet versus injection options alongside full
+                dose-level pricing.
               </p>
             </GuideSection>
 
@@ -742,9 +742,9 @@ export default function ArticleClient() {
                 advice.
               </p>
               <p>
-                Healthwise360 should create a support article called Wegovy Pill
-                vs Rybelsus: Weight Loss vs Diabetes Use because this is likely
-                to become a strong AEO query.
+                If you are comparing options, read our support article on Wegovy
+                Pill vs Rybelsus for weight loss versus diabetes use — this is a
+                common point of confusion.
               </p>
             </GuideSection>
 
@@ -767,10 +767,7 @@ export default function ArticleClient() {
                 However, a supplement does not become a GLP-1 medicine just
                 because the label uses GLP-1 language.
               </p>
-              <p>
-                If users want more context, Healthwise360 should internally link
-                to:
-              </p>
+              <p>For more detail, see:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>
                   <Link
@@ -943,8 +940,8 @@ export default function ArticleClient() {
                 severe stomach pain, or signs of a serious allergic reaction.
               </p>
               <p>
-                Healthwise360 should also link this section to a full page
-                called Wegovy Pill Side Effects: What UK Users Should Know.
+                If side effects are affecting daily life, contact your prescriber
+                rather than stopping treatment on your own.
               </p>
             </GuideSection>
 
@@ -965,9 +962,9 @@ export default function ArticleClient() {
                 problems.
               </p>
               <p>
-                This is another good FAQ-style support section because it
-                answers a practical user concern that many provider pages only
-                cover briefly.
+                This is a practical question many provider pages only cover
+                briefly, so it helps to know the safer approach before it
+                happens.
               </p>
             </GuideSection>
 
@@ -988,8 +985,8 @@ export default function ArticleClient() {
                 clinician for advice.
               </p>
               <p>
-                Healthwise360 should avoid giving a blanket yes or no. The
-                better answer is: alcohol depends on medical history, side
+                There is no single yes-or-no answer for everyone. Whether
+                alcohol is sensible depends on your medical history, side
                 effects, and prescriber guidance.
               </p>
             </GuideSection>
@@ -1105,14 +1102,14 @@ export default function ArticleClient() {
                 <li>Is the seller using social media messages only?</li>
               </ul>
               <p>
-                For safety, Healthwise360 should link to{" "}
+                For safety, learn how to{" "}
                 <Link
                   href="/pharmacy-safety-gphc-verification"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  pharmacy safety and GPhC verification
-                </Link>
-                .
+                  check pharmacy safety and GPhC verification
+                </Link>{" "}
+                before you pay.
               </p>
             </GuideSection>
 
@@ -1123,17 +1120,14 @@ export default function ArticleClient() {
             >
               <p>
                 Provider-owned pages naturally focus on their own service,
-                pricing, and sign-up funnel. Healthwise360 can win by becoming
-                the independent comparison layer.
+                pricing, and sign-up funnel. Health Wise works as an independent
+                comparison layer.
               </p>
-              <p>The winning angle is:</p>
-              <blockquote
-                className={`border-l-4 p-4 my-4 italic ${darkMode ? "border-emerald-500 bg-slate-900 text-slate-300" : "border-emerald-600 bg-slate-50 text-slate-700"}`}
-              >
+              <p>
                 Before choosing Wegovy Pill, compare price, provider safety,
                 pharmacy checks, tablet vs injection options, and long-term
                 support.
-              </blockquote>
+              </p>
               <p>
                 Healthwise360 already has strong internal pages for this
                 journey:
@@ -1205,10 +1199,9 @@ export default function ArticleClient() {
                 </li>
               </ul>
               <p>
-                This internal linking structure helps build topical authority
-                around Wegovy Pill, oral semaglutide, GLP-1 treatment, weight
-                loss price comparison, provider safety, and long-term fat loss
-                support.
+                These links help you explore related topics — from price
+                comparison and provider safety to long-term fat loss support —
+                without treating Wegovy Pill as a stand-alone decision.
               </p>
             </GuideSection>
 

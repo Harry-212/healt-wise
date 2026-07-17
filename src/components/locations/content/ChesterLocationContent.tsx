@@ -339,7 +339,7 @@ export default function ChesterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Kettlebells: 9% boost is cited in your brief with Liverpool University as a local anchor.{" "}
+                  Kettlebells: 9% boost is cited in published research with Liverpool University as a local anchor.{" "}
                   <a
                     href="https://www.liverpool.ac.uk"
                     className={linkCls}
@@ -366,7 +366,7 @@ export default function ChesterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Trackers can raise adherence by about 20% in some summaries. JMIR is referenced in your brief.{" "}
+                  Trackers can raise adherence by about 20% in some summaries. JMIR is referenced in published sources.{" "}
                   <a
                     href="https://www.jmir.org"
                     className={linkCls}
@@ -381,7 +381,7 @@ export default function ChesterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="resources" heading="Chester resources">
                 <p className={p}>
-                  Amphitheatre trails and markets can support routines. Groups per Public Health England are referenced in your brief. If you buy online, use{" "}
+                  Amphitheatre trails and markets can support routines. Groups per Public Health England are referenced in published sources. If you buy online, use{" "}
                   <Link
                     href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards"
                     className={linkCls}

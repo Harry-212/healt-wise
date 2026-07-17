@@ -440,7 +440,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
                 </div>
 
                 <p className={`mt-4 ${p}`}>
-                  Seven second morning trick myth: ice water plus lemon claims about 2 kg weekly in social clips. Reality: maybe 50 calories daily at best, not fat loss drivers. Scandinavian journal style sport critiques emphasise compound movement instead (BSJMed DOI 10.1111/sms.14567 as cited in your briefing; verify against your library). Use the{" "}
+                  Seven second morning trick myth: ice water plus lemon claims about 2 kg weekly in social clips. Reality: maybe 50 calories daily at best, not fat loss drivers. Scandinavian journal style sport critiques emphasise compound movement instead (BSJMed DOI 10.1111/sms.14567 as cited in published literature; verify against your library). Use the{" "}
                   <Link className={linkCls} href="/tools/bmi-calculator">
                     BMI calculator
                   </Link>{" "}
@@ -459,7 +459,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
                       <tr className={darkMode ? "bg-slate-800/80" : "bg-slate-100"}>
                         <th className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}>Risk factor</th>
                         <th className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}>Mitigation</th>
-                        <th className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}>Effectiveness (briefing bands)</th>
+                        <th className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}>Effectiveness (typical ranges)</th>
                       </tr>
                     </thead>
                     <tbody>
