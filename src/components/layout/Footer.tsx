@@ -3,7 +3,10 @@
 import Link from "next/link";
 import { ArrowUp, ChevronRight, Mail, Phone, MapPin } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
-import { FOOTER_ALL_PHARMACY_COLUMNS } from "@/lib/routes/footer-pharmacies";
+import {
+  FOOTER_EXPLORE_ALL_PHARMACIES_HREF,
+  FOOTER_PHARMACY_LINKS,
+} from "@/lib/routes/footer-pharmacies";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import {
   SITE_BUSINESS_ADDRESS,
@@ -48,14 +51,8 @@ const FOOTER_NAV_LINK_CHEVRON =
 const FOOTER_NAV_LINK_PRIMARY =
   "group flex w-full items-center justify-between gap-2 rounded-xl border border-transparent px-3 py-2 -mx-3 text-left text-lg font-bold text-slate-200 transition-all duration-300 hover:bg-emerald-500/10 hover:text-emerald-300 hover:shadow-lg hover:shadow-emerald-900/20 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50";
 
-const FOOTER_PHARMACY_LINK =
-  "block rounded-lg px-2 py-1.5 -mx-2 text-sm font-medium text-slate-400 transition-colors duration-200 hover:bg-white/5 hover:text-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50";
-
-const FOOTER_PHARMACY_CTA_CARD =
-  "flex w-full min-w-0 max-w-md flex-col gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-3 sm:gap-3 sm:rounded-2xl sm:p-4 backdrop-blur-sm sm:ml-auto sm:max-w-sm sm:shrink-0";
-
-const FOOTER_PHARMACY_CTA_BTN =
-  "inline-flex w-full touch-manipulation items-center justify-center self-start rounded-full bg-emerald-600 px-6 py-3 text-sm font-bold text-white whitespace-nowrap shadow-[0_0_15px_rgba(5,150,105,0.2)] transition-all duration-300 hover:bg-emerald-500 hover:shadow-[0_0_25px_rgba(5,150,105,0.35)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 sm:w-auto";
+const FOOTER_EXPLORE_PHARMACIES_BTN =
+  "inline-flex w-full touch-manipulation items-center justify-center rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2.5 text-sm font-bold text-emerald-300 transition-all duration-300 hover:border-emerald-400/60 hover:bg-emerald-500/20 hover:text-emerald-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -187,215 +184,208 @@ export default function Footer() {
             </div>
           </motion.div>
 
-          {/* Middle Section: Links Grid + Pharmacies (two stacks) */}
-          <motion.div variants={itemVariants} className="mb-20">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-8 gap-y-12">
-              <motion.div variants={itemVariants}>
-                <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
-                  Treatments
-                </h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link
-                      href={HOME_COMPARE_HUB_HREF}
-                      className={FOOTER_NAV_LINK_PRIMARY}
-                    >
-                      <span>Compare Treatments</span>
-                      <ChevronRight
-                        className={FOOTER_NAV_LINK_CHEVRON}
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/helpful-guides" className={FOOTER_NAV_LINK}>
-                      <span>Helpful Guides</span>
-                      <ChevronRight
-                        className={FOOTER_NAV_LINK_CHEVRON}
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                </ul>
-              </motion.div>
+          {/* Middle Section: Links Grid */}
+          <div className="mb-20 grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-3 lg:grid-cols-6">
+            <motion.div variants={itemVariants}>
+              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+                Treatments
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href={HOME_COMPARE_HUB_HREF}
+                    className={FOOTER_NAV_LINK_PRIMARY}
+                  >
+                    <span>Compare Treatments</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/helpful-guides" className={FOOTER_NAV_LINK}>
+                    <span>Helpful Guides</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
 
-              <motion.div
-                variants={itemVariants}
-                className="col-span-2 md:col-span-1 lg:col-span-1"
-              >
-                <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
-                  Locations
-                </h3>
-                <ul className="space-y-2">
-                  {FOOTER_UK_LOCATION_CITIES.map(({ slug, name }) => (
-                    <li key={slug}>
-                      <Link
-                        href={UK_LOCATION_BLOG_HREF(slug)}
-                        className={FOOTER_NAV_LINK}
-                      >
-                        <span className="leading-snug">
-                          {ukLocationFooterLabel(name)}
-                        </span>
-                        <ChevronRight
-                          className={FOOTER_NAV_LINK_CHEVRON}
-                          aria-hidden
-                        />
-                      </Link>
-                    </li>
-                  ))}
-                  <li className="pt-3 mt-3 border-t border-slate-800/80">
+            <motion.div
+              variants={itemVariants}
+              className="col-span-2 md:col-span-1 lg:col-span-1"
+            >
+              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+                Locations
+              </h3>
+              <ul className="space-y-2">
+                {FOOTER_UK_LOCATION_CITIES.map(({ slug, name }) => (
+                  <li key={slug}>
                     <Link
-                      href="/blog?topic=locations"
-                      className={FOOTER_NAV_LINK_PRIMARY}
-                    >
-                      <span>All UK Locations</span>
-                      <ChevronRight
-                        className={FOOTER_NAV_LINK_CHEVRON}
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                </ul>
-              </motion.div>
-
-              <motion.div variants={itemVariants}>
-                <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
-                  Trust &amp; Safety
-                </h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link
-                      href="/pharmacy-safety-gphc-verification"
+                      href={UK_LOCATION_BLOG_HREF(slug)}
                       className={FOOTER_NAV_LINK}
                     >
-                      <span>GPhC Verification</span>
+                      <span className="leading-snug">
+                        {ukLocationFooterLabel(name)}
+                      </span>
                       <ChevronRight
                         className={FOOTER_NAV_LINK_CHEVRON}
                         aria-hidden
                       />
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/methodology" className={FOOTER_NAV_LINK}>
-                      <span>{SITE_BRAND_NAME} Methodology</span>
-                      <ChevronRight
-                        className={FOOTER_NAV_LINK_CHEVRON}
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/helpful-guides" className={FOOTER_NAV_LINK}>
-                      <span>Helpful Health Guides</span>
-                      <ChevronRight
-                        className={FOOTER_NAV_LINK_CHEVRON}
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                </ul>
-              </motion.div>
-
-              <motion.div variants={itemVariants}>
-                <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
-                  Support
-                </h3>
-                <ul className="space-y-2">
-                  {FOOTER_SUPPORT_LINKS.map(({ href, label }) => (
-                    <li key={href}>
-                      <Link href={href} className={FOOTER_NAV_LINK}>
-                        <span>{label}</span>
-                        <ChevronRight
-                          className={FOOTER_NAV_LINK_CHEVRON}
-                          aria-hidden
-                        />
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-
-              <motion.div variants={itemVariants}>
-                <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
-                  Company
-                </h3>
-                <ul className="space-y-2">
-                  <li>
-                    <Link href="/about" className={FOOTER_NAV_LINK}>
-                      <span>About Us</span>
-                      <ChevronRight
-                        className={FOOTER_NAV_LINK_CHEVRON}
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/editorial-policy" className={FOOTER_NAV_LINK}>
-                      <span>Editorial Policy</span>
-                      <ChevronRight
-                        className={FOOTER_NAV_LINK_CHEVRON}
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/privacy-policy" className={FOOTER_NAV_LINK}>
-                      <span>Privacy Policy</span>
-                      <ChevronRight
-                        className={FOOTER_NAV_LINK_CHEVRON}
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/terms-of-service" className={FOOTER_NAV_LINK}>
-                      <span>Terms of Service</span>
-                      <ChevronRight
-                        className={FOOTER_NAV_LINK_CHEVRON}
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                </ul>
-              </motion.div>
-            </div>
-
-            <div className="mt-6 flex flex-col gap-4 border-t border-slate-800/80 pt-6 sm:mt-8 sm:pt-8">
-              <div className="grid grid-cols-1 items-start gap-3 sm:grid-cols-[auto_minmax(0,18rem)] sm:justify-between sm:gap-6 lg:grid-cols-[auto_minmax(0,20rem)]">
-                <h3 className="text-lg font-bold leading-tight tracking-tight text-white">
-                  Pharmacies
-                </h3>
-
-                <aside className={FOOTER_PHARMACY_CTA_CARD}>
-                  <p className="text-sm font-semibold leading-snug text-white sm:text-base">
-                    Is your pharmacy not on the list yet? Let us know and grow
-                    together!
-                  </p>
-                  <Link href="/contact" className={FOOTER_PHARMACY_CTA_BTN}>
-                    Let&apos;s Contact Us
-                  </Link>
-                </aside>
-              </div>
-
-              <div className="grid grid-cols-2 gap-x-6 gap-y-1 sm:grid-cols-3 lg:grid-cols-6">
-                {FOOTER_ALL_PHARMACY_COLUMNS.map((column, columnIndex) => (
-                  <ul key={columnIndex} className="space-y-0.5">
-                    {column.map(({ href, label }) => (
-                      <li key={href}>
-                        <Link href={href} className={FOOTER_PHARMACY_LINK}>
-                          {label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
                 ))}
-              </div>
-            </div>
-          </motion.div>
+                <li className="mt-3 border-t border-slate-800/80 pt-3">
+                  <Link
+                    href="/blog?topic=locations"
+                    className={FOOTER_NAV_LINK_PRIMARY}
+                  >
+                    <span>All UK Locations</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+                Trust &amp; Safety
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/pharmacy-safety-gphc-verification"
+                    className={FOOTER_NAV_LINK}
+                  >
+                    <span>GPhC Verification</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/methodology" className={FOOTER_NAV_LINK}>
+                    <span>{SITE_BRAND_NAME} Methodology</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/helpful-guides" className={FOOTER_NAV_LINK}>
+                    <span>Helpful Health Guides</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+                Support
+              </h3>
+              <ul className="space-y-2">
+                {FOOTER_SUPPORT_LINKS.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className={FOOTER_NAV_LINK}>
+                      <span>{label}</span>
+                      <ChevronRight
+                        className={FOOTER_NAV_LINK_CHEVRON}
+                        aria-hidden
+                      />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+                Company
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/about" className={FOOTER_NAV_LINK}>
+                    <span>About Us</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/editorial-policy" className={FOOTER_NAV_LINK}>
+                    <span>Editorial Policy</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy-policy" className={FOOTER_NAV_LINK}>
+                    <span>Privacy Policy</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms-of-service" className={FOOTER_NAV_LINK}>
+                    <span>Terms of Service</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
+
+            <motion.div variants={itemVariants}>
+              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+                Pharmacies
+              </h3>
+              <ul className="space-y-2">
+                {FOOTER_PHARMACY_LINKS.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className={FOOTER_NAV_LINK}>
+                      <span>{label}</span>
+                      <ChevronRight
+                        className={FOOTER_NAV_LINK_CHEVRON}
+                        aria-hidden
+                      />
+                    </Link>
+                  </li>
+                ))}
+                <li className="pt-3">
+                  <Link
+                    href={FOOTER_EXPLORE_ALL_PHARMACIES_HREF}
+                    className={FOOTER_EXPLORE_PHARMACIES_BTN}
+                  >
+                    See all pharmacies
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
 
           {/* Bottom Bar: Dark Pill */}
-          <div className="flex flex-col md:flex-row items-center justify-between rounded-full bg-slate-950 px-6 py-4 md:px-10 md:py-6 shadow-xl gap-4 md:gap-0 mt-8">
-            <div className="flex flex-col md:flex-row items-center gap-6 text-white w-full md:w-auto">
+          <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-full bg-slate-950 px-6 py-4 shadow-xl md:flex-row md:gap-0 md:px-10 md:py-6">
+            <div className="flex w-full flex-col items-center gap-6 text-white md:w-auto md:flex-row">
               <SiteLogoLink
                 className="hover:opacity-80"
                 imageClassName="h-10 w-auto object-contain brightness-0 invert"
@@ -405,32 +395,32 @@ export default function Footer() {
               <div className="hidden items-center gap-4 text-sm font-semibold text-slate-400 md:flex">
                 <Link
                   href="/privacy-policy"
-                  className="rounded-md px-1.5 py-0.5 transition-all duration-200 hover:bg-white/10 hover:text-white hover:underline-offset-4 hover:underline"
+                  className="rounded-md px-1.5 py-0.5 transition-all duration-200 hover:bg-white/10 hover:text-white hover:underline hover:underline-offset-4"
                 >
                   Privacy Policy
                 </Link>
                 <span className="text-slate-600">|</span>
                 <Link
                   href="/terms-of-service"
-                  className="rounded-md px-1.5 py-0.5 transition-all duration-200 hover:bg-white/10 hover:text-white hover:underline-offset-4 hover:underline"
+                  className="rounded-md px-1.5 py-0.5 transition-all duration-200 hover:bg-white/10 hover:text-white hover:underline hover:underline-offset-4"
                 >
                   Terms of Use
                 </Link>
               </div>
             </div>
 
-            <div className="flex flex-col items-center md:items-end gap-3 w-full md:w-auto mt-2 md:mt-0">
+            <div className="mt-2 flex w-full flex-col items-center gap-3 md:mt-0 md:w-auto md:items-end">
               <div className="mb-2 flex items-center gap-4 text-sm font-semibold text-slate-400 md:hidden">
                 <Link
                   href="/privacy-policy"
-                  className="rounded-md px-1.5 py-0.5 transition-all duration-200 hover:bg-white/10 hover:text-white hover:underline-offset-4 hover:underline"
+                  className="rounded-md px-1.5 py-0.5 transition-all duration-200 hover:bg-white/10 hover:text-white hover:underline hover:underline-offset-4"
                 >
                   Privacy Policy
                 </Link>
                 <span className="text-slate-600">|</span>
                 <Link
                   href="/terms-of-service"
-                  className="rounded-md px-1.5 py-0.5 transition-all duration-200 hover:bg-white/10 hover:text-white hover:underline-offset-4 hover:underline"
+                  className="rounded-md px-1.5 py-0.5 transition-all duration-200 hover:bg-white/10 hover:text-white hover:underline hover:underline-offset-4"
                 >
                   Terms of Use
                 </Link>
