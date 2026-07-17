@@ -61,16 +61,13 @@ function HeroSubtitleLiveDateLine({
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300/70 opacity-75" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-300" />
         </span>
-        Live update
+        Last Updated
       </span>
       <span className="text-white/55" aria-hidden>
         ·
       </span>
       {parts ? (
-        <time
-          dateTime={parts.dateTime}
-          className="text-white/95 tabular-nums"
-        >
+        <time dateTime={parts.dateTime} className="text-white/95 tabular-nums">
           {parts.display}
         </time>
       ) : (
@@ -164,11 +161,7 @@ export default function CompareTreatmentsHero({
       <header className={headerClass}>
         <nav className={navClass}>
           {navLinks.map((l) => (
-            <Link
-              key={l.href + l.label}
-              href={l.href}
-              className={navLinkClass}
-            >
+            <Link key={l.href + l.label} href={l.href} className={navLinkClass}>
               {l.label}
             </Link>
           ))}
@@ -203,9 +196,7 @@ export default function CompareTreatmentsHero({
             ) : null}
             <span className="font-bold text-white">{titleBold}</span>
             {subtitle.trim() ? (
-              <span className={subtitleClass}>
-                {subtitle}
-              </span>
+              <span className={subtitleClass}>{subtitle}</span>
             ) : null}
           </h1>
 
