@@ -76,7 +76,7 @@ function doseHeaderLabel(key: MounjaroDoseColumnKey): string {
 }
 
 function formatGBP(n: number) {
-  return `£${Number.isInteger(n) ? n : n.toFixed(2)}`;
+  return `£${n.toFixed(2)}`;
 }
 
 export default function MounjaroUkCompareTable({

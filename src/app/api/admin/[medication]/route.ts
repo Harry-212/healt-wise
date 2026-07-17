@@ -77,12 +77,16 @@ function isFiniteNumber(v: unknown): v is number {
   return typeof v === "number" && Number.isFinite(v);
 }
 
+function roundMoney(n: number): number {
+  return Math.round(n * 100) / 100;
+}
+
 function parseWegovyCell(v: unknown): WegovyPriceCell | null {
   if (v === "TBC" || v === "OOS") return v;
-  if (isFiniteNumber(v)) return v;
+  if (isFiniteNumber(v)) return roundMoney(v);
   if (typeof v === "string" && v.trim() !== "") {
     const n = Number.parseFloat(v);
-    if (Number.isFinite(n)) return n;
+    if (Number.isFinite(n)) return roundMoney(n);
   }
   return null;
 }
@@ -106,7 +110,7 @@ function validateMounjaroProvider(raw: unknown): MounjaroProviderInput | null {
   for (const key of MOUNJARO_DOSE_KEYS) {
     const val = prices[key];
     if (!isFiniteNumber(val)) return null;
-    parsedPrices[key] = val;
+    parsedPrices[key] = roundMoney(val);
   }
 
   const positivePrices = MOUNJARO_DOSE_KEYS.map((k) => parsedPrices[k]).filter(

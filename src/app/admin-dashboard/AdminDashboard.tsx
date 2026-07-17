@@ -18,7 +18,6 @@ import {
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import {
   WEGOVY_DOSE_KEYS,
-  type WegovyPriceCell,
   type WegovyUkProviderCompare,
 } from "@/lib/data/wegovy-uk-compare-providers";
 import { hasPharmacyPage } from "@/lib/routes/all-pharmacy-slugs";
@@ -36,6 +35,107 @@ function LockedCell({
       className={`block rounded border border-slate-100 bg-slate-50 px-2 py-1 text-slate-700 ${className}`}
     >
       {children}
+    </span>
+  );
+}
+
+/** Round to 2 decimal places (pence) for stable price editing. */
+function roundMoney(n: number): number {
+  return Math.round(n * 100) / 100;
+}
+
+/**
+ * Price field that always shows two decimals when idle (e.g. 149.00).
+ * Text input keeps trailing zeros (native number inputs strip them).
+ * ↑↓ keys or the stepper buttons adjust by 0.01.
+ */
+function AdminPriceInput({
+  value,
+  onCommit,
+}: {
+  /** `null` = empty / non-numeric (e.g. TBC before edit). */
+  value: number | null;
+  onCommit: (n: number) => void;
+}) {
+  const [focused, setFocused] = useState(false);
+  const [draft, setDraft] = useState("");
+
+  const display = focused
+    ? draft
+    : value == null
+      ? ""
+      : roundMoney(value).toFixed(2);
+
+  function commitFromRaw(raw: string) {
+    const n = Number.parseFloat(raw.replace(",", "."));
+    onCommit(Number.isFinite(n) ? roundMoney(n) : 0);
+  }
+
+  function stepBy(delta: number) {
+    const base =
+      Number.parseFloat((focused ? draft : display).replace(",", ".")) || 0;
+    const next = Math.max(0, roundMoney(base + delta));
+    setDraft(next.toFixed(2));
+    onCommit(next);
+  }
+
+  return (
+    <span className="inline-flex items-stretch overflow-hidden rounded border border-slate-200 bg-white">
+      <input
+        type="text"
+        inputMode="decimal"
+        autoComplete="off"
+        value={display}
+        onFocus={() => {
+          setFocused(true);
+          setDraft(value == null ? "" : roundMoney(value).toFixed(2));
+        }}
+        onChange={(e) => {
+          const raw = e.target.value;
+          if (raw !== "" && !/^\d*[.,]?\d*$/.test(raw)) return;
+          setDraft(raw);
+          const n = Number.parseFloat(raw.replace(",", "."));
+          if (Number.isFinite(n)) onCommit(roundMoney(n));
+        }}
+        onBlur={() => {
+          setFocused(false);
+          commitFromRaw(draft);
+          setDraft("");
+        }}
+        onKeyDown={(e) => {
+          if (e.key === "ArrowUp") {
+            e.preventDefault();
+            stepBy(0.01);
+          } else if (e.key === "ArrowDown") {
+            e.preventDefault();
+            stepBy(-0.01);
+          }
+        }}
+        className="w-20 border-0 bg-transparent px-2 py-1 tabular-nums outline-none"
+        placeholder="0.00"
+      />
+      <span className="flex w-5 shrink-0 flex-col border-l border-slate-200">
+        <button
+          type="button"
+          tabIndex={-1}
+          aria-label="Increase by 0.01"
+          onMouseDown={(e) => e.preventDefault()}
+          onClick={() => stepBy(0.01)}
+          className="flex h-1/2 items-center justify-center text-[9px] leading-none text-slate-500 hover:bg-slate-50"
+        >
+          ▴
+        </button>
+        <button
+          type="button"
+          tabIndex={-1}
+          aria-label="Decrease by 0.01"
+          onMouseDown={(e) => e.preventDefault()}
+          onClick={() => stepBy(-0.01)}
+          className="flex h-1/2 items-center justify-center border-t border-slate-200 text-[9px] leading-none text-slate-500 hover:bg-slate-50"
+        >
+          ▾
+        </button>
+      </span>
     </span>
   );
 }
@@ -135,17 +235,6 @@ function emptyWegovyProvider(): AdminWegovyProvider {
     consultationIncluded: true,
     ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",
   };
-}
-
-function parseWegovyInput(raw: string): WegovyPriceCell {
-  const trimmed = raw.trim();
-  if (trimmed === "TBC" || trimmed === "OOS") return trimmed;
-  const n = Number.parseFloat(trimmed);
-  return Number.isFinite(n) ? n : 0;
-}
-
-function formatWegovyInput(cell: WegovyPriceCell): string {
-  return String(cell);
 }
 
 function normaliseMounjaroRows(
@@ -418,7 +507,7 @@ export default function AdminDashboard() {
     setMounjaroRows((rows) =>
       rows.map((row, i) =>
         i === index
-          ? { ...row, prices: { ...row.prices, [dose]: value } }
+          ? { ...row, prices: { ...row.prices, [dose]: roundMoney(value) } }
           : row,
       ),
     );
@@ -436,14 +525,14 @@ export default function AdminDashboard() {
   function updateWegovyPrice(
     index: number,
     dose: (typeof WEGOVY_DOSE_KEYS)[number],
-    raw: string,
+    value: number,
   ) {
     setWegovyRows((rows) =>
       rows.map((row, i) =>
         i === index
           ? {
               ...row,
-              prices: { ...row.prices, [dose]: parseWegovyInput(raw) },
+              prices: { ...row.prices, [dose]: roundMoney(value) },
             }
           : row,
       ),
@@ -645,18 +734,11 @@ export default function AdminDashboard() {
                         </td>
                         {MOUNJARO_DOSE_KEYS.map((dose) => (
                           <td key={dose} className="px-2 py-2">
-                            <input
-                              type="number"
-                              step="0.01"
+                            <AdminPriceInput
                               value={row.prices[dose]}
-                              onChange={(e) =>
-                                updateMounjaroPrice(
-                                  index,
-                                  dose,
-                                  Number.parseFloat(e.target.value) || 0,
-                                )
+                              onCommit={(n) =>
+                                updateMounjaroPrice(index, dose, n)
                               }
-                              className="w-20 rounded border border-slate-200 px-2 py-1 tabular-nums"
                             />
                           </td>
                         ))}
@@ -742,18 +824,21 @@ export default function AdminDashboard() {
                             {row.gphcRegNo || "—"}
                           </LockedCell>
                         </td>
-                        {WEGOVY_DOSE_KEYS.map((dose) => (
-                          <td key={dose} className="px-2 py-2">
-                            <input
-                              value={formatWegovyInput(row.prices[dose])}
-                              onChange={(e) =>
-                                updateWegovyPrice(index, dose, e.target.value)
-                              }
-                              className="w-20 rounded border border-slate-200 px-2 py-1 tabular-nums"
-                              placeholder="£ / TBC / OOS"
-                            />
-                          </td>
-                        ))}
+                        {WEGOVY_DOSE_KEYS.map((dose) => {
+                          const cell = row.prices[dose];
+                          return (
+                            <td key={dose} className="px-2 py-2">
+                              <AdminPriceInput
+                                value={
+                                  typeof cell === "number" ? cell : null
+                                }
+                                onCommit={(n) =>
+                                  updateWegovyPrice(index, dose, n)
+                                }
+                              />
+                            </td>
+                          );
+                        })}
                         <td className="px-2 py-2 align-top">
                           <textarea
                             value={row.notes ?? ""}
@@ -789,10 +874,9 @@ export default function AdminDashboard() {
           )}
 
           <p className="mt-4 text-xs text-slate-500">
-            Wegovy price cells accept numbers, <code>TBC</code>, or{" "}
-            <code>OOS</code>. Hidden Mounjaro providers (Cloud Pharmacy, Fella
-            Health, Quickmeds) remain editable here but are filtered on the
-            public Mounjaro page.
+            Price cells use a numeric stepper (0.01 steps) and always show two
+            decimal places on the public compare pages (e.g. £149.00). Existing
+            Wegovy TBC/OOS cells stay until you enter a number.
           </p>
         </main>
       </div>

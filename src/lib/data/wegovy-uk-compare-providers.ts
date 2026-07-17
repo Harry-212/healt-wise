@@ -51,7 +51,7 @@ export function wegovyPriceAmount(cell: WegovyPriceCell): number | null {
 
 export function formatWegovyPriceCell(cell: WegovyPriceCell): string {
   if (typeof cell === "number") {
-    return `£${Number.isInteger(cell) ? cell : cell.toFixed(2)}`;
+    return `£${cell.toFixed(2)}`;
   }
   return cell;
 }
