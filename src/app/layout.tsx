@@ -10,6 +10,7 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { SITE_FAVICON_SRC, SITE_LOGO_SRC } from "@/lib/site-assets";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,6 +71,7 @@ export default function RootLayout({
           <Footer />
         </SupabaseAuthProvider>
         <GoogleAnalytics />
+        <MicrosoftClarity />
       </body>
     </html>
   );
