@@ -122,8 +122,8 @@ const SCHEMA = {
   headline: "Mounjaro Skin Pain Explained: Causes, Symptoms & How to Treat It",
   description:
     "Some Mounjaro users report skin sensitivity, burning, or pain from light touch. Here's what may be causing it and how to manage symptoms effectively.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -161,11 +161,10 @@ export default function GuideMounjaroSkinPain() {
           unusual skin symptoms ranging from mild surface sensitivity to more
           uncomfortable burning or tingling sensations. A subset describe
           pain or discomfort from light touch, a phenomenon clinically known
-          as allodynia.
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          as allodynia.</GuideParagraph>
         <GuideParagraph>
           Reported symptoms include:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Burning or tingling sensations on the skin surface",
@@ -192,7 +191,7 @@ export default function GuideMounjaroSkinPain() {
           not definitively established. Based on the medication's known effects
           and the pattern of reported symptoms, three plausible contributing
           factors have been identified:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Changes in peripheral nerve sensitivity — altered how signals are processed between the skin and brain",
@@ -208,13 +207,12 @@ export default function GuideMounjaroSkinPain() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> activates these
           receptors systemically, there may be transient changes in how
           peripheral nerves process and transmit sensory signals.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Additionally, rapid weight loss which Mounjaro can produce is
           associated with changes in nerve behaviour in some patients. As
           adipose tissue decreases, the mechanical and metabolic environment
-          around peripheral nerves changes, which may alter sensory thresholds.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          around peripheral nerves changes, which may alter sensory thresholds.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -238,7 +236,7 @@ export default function GuideMounjaroSkinPain() {
           </EL>{" "}
           provides a useful clinical framework for understanding when symptoms
           warrant investigation.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="nutrition" heading="Nutritional Factors">
@@ -246,7 +244,7 @@ export default function GuideMounjaroSkinPain() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> significantly reduces
           overall food intake. This can lower the availability of key nutrients
           that are essential for healthy nerve function:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -288,10 +286,9 @@ export default function GuideMounjaroSkinPain() {
           blood sugar regulation through its GLP 1 and GIP mechanisms. During
           the initial weeks of treatment particularly at higher doses some
           patients experience blood sugar fluctuations as the body adapts.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
-          Unstable blood sugar can affect peripheral nerve function:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          Unstable blood sugar can affect peripheral nerve function:</GuideParagraph>
         <GuideBulletList
           items={[
             "High blood sugar (hyperglycaemia) — can damage small nerve fibres over time, causing burning, tingling, and sensitivity",
@@ -304,7 +301,7 @@ export default function GuideMounjaroSkinPain() {
           discuss any new neurological symptoms with your clinician, as these
           may warrant monitoring of glucose levels alongside your{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> treatment.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="how-to-relieve" heading="How to Relieve Symptoms">
@@ -354,7 +351,7 @@ export default function GuideMounjaroSkinPain() {
         <GuideParagraph>
           Mild skin sensitivity is manageable with lifestyle and nutritional
           adjustments. However, seek medical help promptly if you experience:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Severe or worsening pain that significantly affects daily life or sleep",
@@ -373,8 +370,7 @@ export default function GuideMounjaroSkinPain() {
             MHRA Yellow Card Scheme
           </EL>
           , which monitors real world drug safety and helps identify emerging
-          adverse effects.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          adverse effects.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

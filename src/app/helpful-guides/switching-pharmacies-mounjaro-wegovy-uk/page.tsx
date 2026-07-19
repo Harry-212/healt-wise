@@ -128,8 +128,8 @@ const SCHEMA = {
     "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide",
   description:
     "Want to switch pharmacy for your Mounjaro or Wegovy prescription? Here's how to compare regulated providers, what documents you need, and how to switch safely.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -166,11 +166,10 @@ export default function GuideSwitchingPharmacy() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> is increasingly common in the
           UK. Patients may find a better suited provider as the market matures
-          and more regulated options become available.
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          and more regulated options become available.</GuideParagraph>
         <GuideParagraph>
           Typical reasons people switch include:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Lower treatment costs — prices vary significantly between providers. See our Mounjaro price comparison for current UK rates.",
@@ -187,14 +186,13 @@ export default function GuideSwitchingPharmacy() {
           Before moving to a new provider, confirm you still meet UK prescribing
           criteria. Even if you are already established on treatment, a new
           pharmacy will conduct its own medical review.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Standard{" "}
           <EL href="https://www.nice.org.uk/guidance/ta1026">
             NICE eligibility criteria
           </EL>{" "}
-          for Mounjaro include:
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          for Mounjaro include:</GuideParagraph>
         <GuideBulletList
           items={[
             "BMI ≥ 30 (obesity), or",
@@ -203,7 +201,7 @@ export default function GuideSwitchingPharmacy() {
         />
         <GuideParagraph>
           Some pharmacies may accept:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Lower BMI thresholds adjusted for ethnicity-based risk factors (consistent with NICE guidance)",
@@ -223,7 +221,7 @@ export default function GuideSwitchingPharmacy() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> are equal. When comparing
           providers, consider:
-        </GuideParagraph>
+</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           1. Regulation
@@ -285,7 +283,7 @@ export default function GuideSwitchingPharmacy() {
           Most UK pharmacies require documentation to confirm your existing
           treatment before issuing a new prescription. Preparing these in
           advance significantly speeds up the process:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Photos of your current injection pen box — showing the medication name (e.g. Mounjaro or Wegovy) and dose strength",
@@ -297,8 +295,7 @@ export default function GuideSwitchingPharmacy() {
         />
         <GuideParagraph>
           These documents are typically uploaded through the new pharmacy's
-          secure patient portal during your consultation.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          secure patient portal during your consultation.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="consultation" heading="Consultation Process Explained">
@@ -308,10 +305,10 @@ export default function GuideSwitchingPharmacy() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL>. This applies even if you
           are switching not starting fresh.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           You will typically need to:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Provide your current BMI and health details via a questionnaire or portal",
@@ -331,8 +328,7 @@ export default function GuideSwitchingPharmacy() {
       <GuideSection id="after-switch" heading="After You Switch">
         <GuideParagraph>
           Once your new prescription is approved and your first order has been
-          dispatched, keep the following in mind:
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          dispatched, keep the following in mind:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

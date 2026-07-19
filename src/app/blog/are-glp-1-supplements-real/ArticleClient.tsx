@@ -42,9 +42,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#GLP1Supplements #GLP1UK #NaturalOzempic #Mounjaro #Wegovy #SupplementSafety #UKWeightLoss #PharmacySafetyUK";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -379,21 +376,15 @@ export default function ArticleClient() {
               <p>
                 Therefore, if a supplement website makes its product sound like
                 an easy replacement for Mounjaro or Wegovy, that is a red flag.
-                Before you compare regulated treatment costs, review the{" "}
+                To see what regulated prescription pricing actually looks like,
+                review our{" "}
                 <Link
-                  href="/mounjaro-price-comparison"
+                  href="/prices/cheapest-options-uk"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Mounjaro price list UK
-                </Link>{" "}
-                and{" "}
-                <Link
-                  href="/wegovy-price-comparison"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  Wegovy price list UK
-                </Link>{" "}
-                so you understand what prescription pricing actually looks like.
+                  cheapest weight loss treatment options UK
+                </Link>
+                .
               </p>
             </GuideSection>
 
@@ -845,15 +836,7 @@ export default function ArticleClient() {
                 Health Wise does not sell medicines or supplements. This page is
                 general information and is not medical advice.
               </p>
-              <p
-                className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-              >
-                <span className="font-semibold text-slate-600 dark:text-slate-300">
-                  Suggested hashtags:
-                </span>{" "}
-                {SOCIAL_HASHTAGS}
-              </p>
-            </GuideSection>
+</GuideSection>
           </article>
 
           <div className="mt-10">

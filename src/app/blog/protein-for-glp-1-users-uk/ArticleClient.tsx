@@ -44,9 +44,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#ProteinForGLP1 #WegovyUK #MounjaroUK #WeightLossUK #GLP1Nutrition #HealthWise #FoodFirst #ComparePrices";
-
 function ProteinPowderVsFoodTable({ darkMode }: { darkMode: boolean }) {
   const cell = darkMode
     ? "border-slate-700 text-slate-300"
@@ -395,7 +392,8 @@ export default function ArticleClient() {
                 <li>Supplement marketing</li>
               </ol>
               <p>
-                For more context, users should read the{" "}
+                If you are weighing food support against supplement marketing,
+                read our{" "}
                 <Link
                   href="/blog/glp-1-supplements-uk"
                   className="font-medium text-emerald-600 hover:underline"
@@ -408,8 +406,8 @@ export default function ArticleClient() {
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Are GLP-1 supplements real?
-                </Link>{" "}
-                articles on Healthwise360.
+                </Link>
+                .
               </p>
             </GuideSection>
 
@@ -1149,15 +1147,7 @@ export default function ArticleClient() {
                 Health Wise does not prescribe or supply medicines. This page is
                 general information and is not medical advice.
               </p>
-              <p
-                className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-              >
-                <span className="font-semibold text-slate-600 dark:text-slate-300">
-                  Suggested hashtags:
-                </span>{" "}
-                {SOCIAL_HASHTAGS}
-              </p>
-            </GuideSection>
+</GuideSection>
           </article>
 
           <div className="mt-10">

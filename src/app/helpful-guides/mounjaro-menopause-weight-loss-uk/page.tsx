@@ -128,8 +128,8 @@ const SCHEMA = {
   headline: "Mounjaro and Menopause: A Complete UK Guide to Weight Loss Support",
   description:
     "Menopause-related weight gain has distinct hormonal causes. Here's how Mounjaro's dual GLP-1/GIP mechanism can help menopausal women, who is eligible, and how to maximise results.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -165,13 +165,12 @@ export default function GuideMounjaroMenopause() {
           Menopause can bring a wave of unexpected changes weight gain being
           one of the most frustrating. Many women notice fat accumulating
           around the abdomen, even when diet and lifestyle habits have not
-          changed. This is not a matter of willpower it is physiology.
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          changed. This is not a matter of willpower it is physiology.</GuideParagraph>
         <GuideParagraph>
           The driving force is hormonal. Declining oestrogen during
           perimenopause and menopause profoundly affects how the body stores
           fat and burns energy. Key changes include:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -214,10 +213,10 @@ export default function GuideMounjaroMenopause() {
           restricting intake through willpower, it targets the hormonal
           regulation of appetite and metabolism directly making it particularly
           relevant for menopausal weight gain.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Its dual hormone mechanism acts on two pathways:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -236,7 +235,7 @@ export default function GuideMounjaroMenopause() {
         />
         <GuideParagraph>
           For menopausal women, this combination of effects offers:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Reduced cravings and emotional eating triggered by hormonal fluctuation",
@@ -253,8 +252,7 @@ export default function GuideMounjaroMenopause() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> is compelling, though it
           is important to note that most major trials did not isolate
           menopausal women as a specific subgroup. The overall results provide
-          a strong indication of what is achievable:
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          a strong indication of what is achievable:</GuideParagraph>
         <GuideStatCards
           stats={[
             {
@@ -272,7 +270,7 @@ export default function GuideMounjaroMenopause() {
         <GuideParagraph>
           For menopausal women specifically, the metabolic benefits may
           translate to:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Meaningful reduction in visceral (abdominal) fat—the type most closely linked to cardiovascular and metabolic risk",
@@ -291,7 +289,7 @@ export default function GuideMounjaroMenopause() {
             NICE guidance (TA1026)
           </EL>{" "}
           and typically requires:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "BMI ≥ 30 (obesity), or",
@@ -300,7 +298,7 @@ export default function GuideMounjaroMenopause() {
         />
         <GuideParagraph>
           Mounjaro is generally not suitable if you:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Are pregnant or breastfeeding",
@@ -324,7 +322,7 @@ export default function GuideMounjaroMenopause() {
           <IL href="/what-is-mounjaro">Mounjaro</IL>. In most cases, the
           answer is yes HRT and Mounjaro address different aspects of
           menopause and can be used together.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -347,7 +345,7 @@ export default function GuideMounjaroMenopause() {
           medical history and current prescriptions. Some forms of HRT may
           affect appetite and weight independently, which is worth discussing
           with your prescriber.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideCallout variant="tip">
           The{" "}
           <EL href="https://thebms.org.uk/">
@@ -363,8 +361,7 @@ export default function GuideMounjaroMenopause() {
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> works best when paired
           with a structured lifestyle approach. During menopause, specific
-          strategies are particularly effective:
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          strategies are particularly effective:</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           1. Strength Training
@@ -373,7 +370,7 @@ export default function GuideMounjaroMenopause() {
           Resistance training is the single most effective lifestyle
           intervention for menopausal women on a weight loss programme.
           Strength training:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Prevents and reverses muscle loss (sarcopenia) accelerated by menopause",
@@ -386,7 +383,7 @@ export default function GuideMounjaroMenopause() {
           clinically meaningful difference. This does not require a gym 
           bodyweight exercises, resistance bands, or free weights at home are
           all effective.
-        </GuideParagraph>
+</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           2. Protein-Rich Diet
@@ -399,7 +396,7 @@ export default function GuideMounjaroMenopause() {
           </IL>{" "}
           for detailed dietary recommendations, including protein targets and
           food sources.
-        </GuideParagraph>
+</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           3. Stress Management
@@ -410,7 +407,7 @@ export default function GuideMounjaroMenopause() {
           Strategies such as mindfulness, adequate sleep, and moderate aerobic
           exercise all help manage cortisol levels and support weight loss
           outcomes.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Menopause does not have to mean inevitable weight gain. With a
           treatment like{" "}
@@ -418,8 +415,7 @@ export default function GuideMounjaroMenopause() {
           approach strength training, adequate protein, and stress management 
           sustainable weight loss is achievable. The key is combining clinical
           support with consistent lifestyle habits, rather than relying on
-          either alone.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          either alone.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

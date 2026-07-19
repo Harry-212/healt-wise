@@ -25,11 +25,11 @@ export const metadata: Metadata = buildPageShareMetadata({
   metaDescription:
     "Compare illustrative Saxenda (liraglutide) pack prices across UK pharmacies: 1, 3, and 5 pens, £/mg, total and repeat pricing, delivery, trust, and discount mode. Independent snapshot — updated 2026.",
   openGraphTitle:
-    "Compare Saxenda Prices UK (2026) — Cheapest & safest providers | Health Wise",
+    "Compare Saxenda Prices UK (2026) — Cheapest & safest providers | Healthwise360",
   openGraphDescription:
     "Interactive UK Saxenda table: switch 1/3/5 pens, sort and filter, GPhC and cold-chain context. Pack charts and FAQs.",
   imagePath: "/saxenda health wise.png",
-  imageAlt: "Compare Saxenda prices UK — Health Wise",
+  imageAlt: "Compare Saxenda prices UK — Healthwise360",
 });
 
 function compareWebPageJsonLd() {
@@ -44,7 +44,7 @@ function compareWebPageJsonLd() {
     dateModified: "2026-04-07",
     isPartOf: {
       "@type": "WebSite",
-      name: "Health Wise",
+      name: "Healthwise360",
       url: base,
     },
   };

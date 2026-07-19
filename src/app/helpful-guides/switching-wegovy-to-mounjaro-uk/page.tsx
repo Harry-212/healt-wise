@@ -122,8 +122,8 @@ const SCHEMA = {
   headline: "Switching from Wegovy to Mounjaro in the UK: Safe Transition Guide",
   description:
     "Thinking of switching from Wegovy to Mounjaro? This guide covers why patients switch, the clinical differences, how to transition safely, and what to expect.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -160,11 +160,10 @@ export default function GuideSwitchingWegovy() {
           <IL href="/what-is-wegovy">Wegovy (semaglutide)</IL> and{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> are
           effective GLP 1 receptor agonists used for weight management. But
-          they work differently and for some patients, that difference matters.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          they work differently and for some patients, that difference matters.</GuideParagraph>
         <GuideParagraph>
           Common reasons patients switch from Wegovy to Mounjaro include:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Weight loss plateau on Wegovy—progress has stalled at a lower-than-expected level",
@@ -178,7 +177,7 @@ export default function GuideSwitchingWegovy() {
       <GuideSection id="how-they-differ" heading="How Wegovy and Mounjaro Differ">
         <GuideParagraph>
           The key clinical distinction lies in receptor targets:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -209,15 +208,14 @@ export default function GuideSwitchingWegovy() {
         <GuideParagraph>
           See our detailed{" "}
           <IL href="/compare/wegovy-vs-mounjaro">Wegovy vs Mounjaro comparison</IL>{" "}
-          for a full side by side breakdown.
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          for a full side by side breakdown.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="expected-results" heading="Expected Results Comparison">
         <GuideParagraph>
           Head to head clinical trial data and published research consistently
           shows greater average weight loss with Mounjaro:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideStatCards
           stats={[
             {
@@ -247,10 +245,9 @@ export default function GuideSwitchingWegovy() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> requires a structured
           approach. Never overlap both medications they both act on the GLP 1
           receptor and combining them significantly increases side effect risk.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
-          The standard transition protocol is:
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          The standard transition protocol is:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -289,7 +286,7 @@ export default function GuideSwitchingWegovy() {
         <GuideParagraph>
           The washout period between Wegovy and Mounjaro can feel challenging.
           As semaglutide clears your system, you may temporarily experience:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Increased hunger — appetite suppression reduces as Wegovy clears",
@@ -308,15 +305,14 @@ export default function GuideSwitchingWegovy() {
             understanding Mounjaro plateaus
           </IL>{" "}
           for context on what to expect long term.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="safety" heading="Key Safety Considerations">
         <GuideParagraph>
           Always consult a healthcare provider before switching medications.
           This is especially important when transitioning between two
-          prescription only treatments that act on overlapping pathways.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          prescription only treatments that act on overlapping pathways.</GuideParagraph>
         <GuideBulletList
           items={[
             "Your prescribing clinician can confirm the right washout period for your specific dose of Wegovy",

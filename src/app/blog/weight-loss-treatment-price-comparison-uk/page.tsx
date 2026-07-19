@@ -47,8 +47,8 @@ export default function WeightLossTreatmentPriceComparisonPage() {
     description:
       "Compare weight loss treatment prices in the UK 2026 covering Mounjaro, Wegovy and Saxenda. Cost per dose, monthly estimates and what to check before you start.",
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-05-27",
     mainEntityOfPage: {
       "@type": "WebPage",

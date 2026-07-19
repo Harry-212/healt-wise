@@ -179,7 +179,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "AYP Healthcare Weight Management Review — Mounjaro & Wegovy (UK)";
     const description =
-      "AYP Healthcare weight management: online consultation, clinical assessment, home delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "AYP Healthcare weight management: online consultation, clinical assessment, home delivery, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -197,7 +197,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Bolt Pharmacy weight loss (UK) — Mounjaro, Wegovy, online review";
     const description =
-      "Bolt Pharmacy: online weight loss, Mounjaro, Wegovy and Saxenda context, delivery, costs and FAQs. Information from Health Wise — not medical advice.";
+      "Bolt Pharmacy: online weight loss, Mounjaro, Wegovy and Saxenda context, delivery, costs and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -215,7 +215,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Boots Online Doctor Weight Loss Review — Wegovy support (UK)";
     const description =
-      "Boots Online Doctor: online consultation, clinical review, delivery or pharmacy collection, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "Boots Online Doctor: online consultation, clinical review, delivery or pharmacy collection, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -233,7 +233,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Click2Pharmacy Mounjaro review (UK) — buying Mounjaro injections online";
     const description =
-      "Click2Pharmacy: Mounjaro-focused online consultation, prescription approval, delivery notes, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "Click2Pharmacy: Mounjaro-focused online consultation, prescription approval, delivery notes, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -251,7 +251,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "CheqUp Pharmacy weight loss review (UK) — clinician-led support";
     const description =
-      "CheqUp Pharmacy: clinician-led online weight management, Wegovy, Mounjaro and Alli context, health coaching, clinical support and delivery notes. Information from Health Wise — not medical advice.";
+      "CheqUp Pharmacy: clinician-led online weight management, Wegovy, Mounjaro and Alli context, health coaching, clinical support and delivery notes. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -269,7 +269,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Cloud Pharmacy weight loss (UK) — Mounjaro, Wegovy, online review";
     const description =
-      "Cloud Pharmacy: online consultation, Mounjaro and Wegovy context, delivery and temperature handling, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "Cloud Pharmacy: online consultation, Mounjaro and Wegovy context, delivery and temperature handling, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -286,7 +286,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (slug === "curate") {
     const title = "Curate weight loss (UK) — Wegovy, Saxenda, online review";
     const description =
-      "Curate: online consultation, Wegovy and Saxenda context, delivery or collection, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "Curate: online consultation, Wegovy and Saxenda context, delivery or collection, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -304,7 +304,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Curely weight loss (UK) — Mounjaro, Wegovy, online review";
     const description =
-      "Curely: pharmacist-led consultation, regulated supply, tracked delivery options, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "Curely: pharmacist-led consultation, regulated supply, tracked delivery options, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -322,7 +322,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Cuva Health weight loss (UK) — Mounjaro, Wegovy, clinician-led support";
     const description =
-      "Cuva Health: clinician-led review, cold-chain delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "Cuva Health: clinician-led review, cold-chain delivery, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -340,7 +340,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Dotor weight loss (UK) — Mounjaro, Wegovy, online review";
     const description =
-      "Dotor: online assessment, prescriber review, in-house dispensing, DPD tracked delivery options, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "Dotor: online assessment, prescriber review, in-house dispensing, DPD tracked delivery options, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -358,7 +358,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Dr Weightmans weight loss (UK) — clinically supported products, delivery & review";
     const description =
-      "Dr Weightmans: clinically guided weight management overview, ordering flow, delivery expectations, cost components and FAQs. Information from Health Wise — not medical advice.";
+      "Dr Weightmans: clinically guided weight management overview, ordering flow, delivery expectations, cost components and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -376,7 +376,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "e-Surgery Weight Loss Review — sustainable pharmacy, Mounjaro & Wegovy (UK)";
     const description =
-      "e-Surgery (Norwich, GPhC 9012167): pharmacist prescribers, recyclable discreet packs, Royal Mail Tracked tiers, £30+ Tracked 24 upgrade, cold-chain pens, pricing ladder and FAQs. Information from Health Wise — not medical advice.";
+      "e-Surgery (Norwich, GPhC 9012167): pharmacist prescribers, recyclable discreet packs, Royal Mail Tracked tiers, £30+ Tracked 24 upgrade, cold-chain pens, pricing ladder and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -394,7 +394,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Envigore weight loss (UK) — Mounjaro, Wegovy, clinician-led support";
     const description =
-      "Envigore: online assessment, pharmacist and prescriber review, programme-style support, cold-chain delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "Envigore: online assessment, pharmacist and prescriber review, programme-style support, cold-chain delivery, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -412,7 +412,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Farmeci Weight Loss Treatment Review — Mounjaro, Wegovy, UK clinician support";
     const description =
-      "Farmeci: My Health Stop Ltd platform, partner pharmacies, consultations, cold-chain delivery, pricing from ~£92/dose and FAQs. Information from Health Wise — not medical advice.";
+      "Farmeci: My Health Stop Ltd platform, partner pharmacies, consultations, cold-chain delivery, pricing from ~£92/dose and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -430,7 +430,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Fella Health Review (UK) — men’s metabolic programme, Mounjaro & Wegovy, coaching";
     const description =
-      "Fella Health: men-focused GLP-1 programme with 1-to-1 coaching, labs when needed, cold-chain delivery, subscription-style pricing from about £199/month and FAQs. Information from Health Wise — not medical advice.";
+      "Fella Health: men-focused GLP-1 programme with 1-to-1 coaching, labs when needed, cold-chain delivery, subscription-style pricing from about £199/month and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -448,7 +448,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Fylde Clinic Weight Loss Treatment Review — Mounjaro, Wegovy (UK)";
     const description =
-      "Fylde Clinic: clinician-led online pharmacy, Royal Mail Tracked 24, 2–8°C packaging, Mounjaro from ~£134, Wegovy from ~£99 and FAQs. Information from Health Wise — not medical advice.";
+      "Fylde Clinic: clinician-led online pharmacy, Royal Mail Tracked 24, 2–8°C packaging, Mounjaro from ~£134, Wegovy from ~£99 and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -466,7 +466,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Genmeds Weight Loss Review — Mounjaro & Wegovy, UK registered pharmacy";
     const description =
-      "Genmeds: pharmacy-led Mounjaro and Wegovy access, listed from ~£179.99 / ~£129.99, accessories, discreet delivery and FAQs. Information from Health Wise — not medical advice.";
+      "Genmeds: pharmacy-led Mounjaro and Wegovy access, listed from ~£179.99 / ~£129.99, accessories, discreet delivery and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -484,7 +484,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Get A Drip Review (UK) — doctor-led GLP-1, nurse blood tests, clinics & delivery";
     const description =
-      "Get A Drip: CQC/GPhC positioning, mandatory blood panels from about £150, GMC doctor review, monthly nurse follow-ups, clinic collection or pharmacy cold-chain dispatch, medication bands often £150–£300+ by dose and FAQs. Information from Health Wise — not medical advice.";
+      "Get A Drip: CQC/GPhC positioning, mandatory blood panels from about £150, GMC doctor review, monthly nurse follow-ups, clinic collection or pharmacy cold-chain dispatch, medication bands often £150–£300+ by dose and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -502,7 +502,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "GetWeightLoss Review (UK) — Mounjaro & Wegovy, transparent pricing, pharmacist-led";
     const description =
-      "GetWeightLoss: “No Teaser” pricing, no tie-in subscriptions, cold-chain tracked delivery, plans from about £88.75/month, typical GLP-1 bundles from ~£148, optional labs and FAQs. Information from Health Wise — not medical advice.";
+      "GetWeightLoss: “No Teaser” pricing, no tie-in subscriptions, cold-chain tracked delivery, plans from about £88.75/month, typical GLP-1 bundles from ~£148, optional labs and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -520,7 +520,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Get A Drip Review (UK) — Mounjaro & Wegovy, clinics, blood tests, pharmacy dispatch";
     const description =
-      "Get A Drip: nurse-led blood tests, GMC doctors, CQC/GPhC framing, in-clinic reviews or cold-chain post from their pharmacy, indicative diagnostics from ~£150 and medication £150–£300+ by dose and FAQs. Information from Health Wise — not medical advice.";
+      "Get A Drip: nurse-led blood tests, GMC doctors, CQC/GPhC framing, in-clinic reviews or cold-chain post from their pharmacy, indicative diagnostics from ~£150 and medication £150–£300+ by dose and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -538,7 +538,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "GetWeightLoss Review (UK) — Mounjaro & Wegovy, no teaser pricing, UK pharmacy";
     const description =
-      "GetWeightLoss: pharmacist-founded service, human clinician sign-off, predictable monthly costs, optional UKAS-partner blood tests and nutritionist add-ons, Royal Mail–style tracking and FAQs. Information from Health Wise — not medical advice.";
+      "GetWeightLoss: pharmacist-founded service, human clinician sign-off, predictable monthly costs, optional UKAS-partner blood tests and nutritionist add-ons, Royal Mail–style tracking and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -556,7 +556,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "GoodBody Clinic Weight Loss Review — Wegovy, UK medical support";
     const description =
-      "GoodBody Clinic: programme-style Wegovy access, nurse and doctor oversight, subscriptions, delivery often included, ~£129/mo examples and FAQs. Information from Health Wise — not medical advice.";
+      "GoodBody Clinic: programme-style Wegovy access, nurse and doctor oversight, subscriptions, delivery often included, ~£129/mo examples and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -574,7 +574,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Happy Pharmacy Weight Loss Review — Mounjaro, Wegovy, GPhC (UK)";
     const description =
-      "Happy Pharmacy: GPhC-regulated Mounjaro and Wegovy from ~£139.99 / ~£89.99, Orlistat/Alli, discreet tracked delivery and FAQs. Information from Health Wise — not medical advice.";
+      "Happy Pharmacy: GPhC-regulated Mounjaro and Wegovy from ~£139.99 / ~£89.99, Orlistat/Alli, discreet tracked delivery and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -592,7 +592,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Hey Slim Weight Loss Review — Mounjaro, Wegovy, clinician-led (UK)";
     const description =
-      "Hey Slim: doctor-led programme, GLP-1 access, delivery often 1–2 days and included (stated), dose-dependent pricing and FAQs. Information from Health Wise — not medical advice.";
+      "Hey Slim: doctor-led programme, GLP-1 access, delivery often 1–2 days and included (stated), dose-dependent pricing and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -610,7 +610,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "IQ Doctor Weight Loss Review: Mounjaro, Wegovy, Saxenda, tablets (UK)";
     const description =
-      "IQ Doctor: online questionnaire, UK prescriber review, Royal Mail/DPD delivery, cold chain for injectables, indicative pricing and FAQs. Information from Health Wise — not medical advice.";
+      "IQ Doctor: online questionnaire, UK prescriber review, Royal Mail/DPD delivery, cold chain for injectables, indicative pricing and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -628,7 +628,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Jood Life Pharmacy weight loss review (UK) — online prescriber support";
     const description =
-      "Jood Life Pharmacy: online consultation, licensed UK prescriber review, transparent pricing from £89/month, delivery context and ongoing support. Information from Health Wise — not medical advice.";
+      "Jood Life Pharmacy: online consultation, licensed UK prescriber review, transparent pricing from £89/month, delivery context and ongoing support. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -646,7 +646,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Juniper Weight Loss Review: Mounjaro, Wegovy, UK programme & app";
     const description =
-      "Juniper: eligibility check, remote clinician consultation, monthly programme with app and coaching, UK delivery and FAQs. Information from Health Wise — not medical advice.";
+      "Juniper: eligibility check, remote clinician consultation, monthly programme with app and coaching, UK delivery and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -664,7 +664,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Live Well Weight Loss Review: Mounjaro, Wegovy, GPhC pharmacy (UK)";
     const description =
-      "Live Well Weight Loss: pharmacist prescriber assessment, transparent pen pricing, discreet delivery, ongoing support and FAQs. Information from Health Wise — not medical advice.";
+      "Live Well Weight Loss: pharmacist prescriber assessment, transparent pen pricing, discreet delivery, ongoing support and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -682,7 +682,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Lloyds Pharmacy Online Doctor Weight Loss — Mounjaro, Wegovy, tablets (UK)";
     const description =
-      "Lloyds Online Doctor: online consultation, injections and tablets, next-day and standard delivery, ParcelShop, store collection, pricing guide and FAQs. Information from Health Wise — not medical advice.";
+      "Lloyds Online Doctor: online consultation, injections and tablets, next-day and standard delivery, ParcelShop, store collection, pricing guide and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -700,7 +700,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Lotus Weight Loss Review — Mounjaro, Wegovy, CQC clinic (UK)";
     const description =
-      "Lotus Weight Loss: CQC-registered clinic, GLP-1 injectables, Orlistat, Lotus Programme, discreet delivery, subscriptions and FAQs. Information from Health Wise — not medical advice.";
+      "Lotus Weight Loss: CQC-registered clinic, GLP-1 injectables, Orlistat, Lotus Programme, discreet delivery, subscriptions and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -718,7 +718,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Manchester Chemist Review (UK) — Mounjaro & Wegovy, pharmacist-led Manchester pharmacy";
     const description =
-      "Manchester Chemist: superintendent pharmacist oversight, pay-as-you-go model, free delivery positioning, cold-chain GLP-1 dispatch, illustrative Mounjaro ~£150/£170 and Wegovy starter ~£130–£140 and FAQs. Information from Health Wise — not medical advice.";
+      "Manchester Chemist: superintendent pharmacist oversight, pay-as-you-go model, free delivery positioning, cold-chain GLP-1 dispatch, illustrative Mounjaro ~£150/£170 and Wegovy starter ~£130–£140 and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -736,7 +736,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "MedExpress Weight Loss Review — Mounjaro, Wegovy, UK online pharmacy";
     const description =
-      "MedExpress: regulated consultation, GLP-1 and oral weight loss medicines, refrigerated dispatch, delivery tiers, fees and FAQs. Information from Health Wise — not medical advice.";
+      "MedExpress: regulated consultation, GLP-1 and oral weight loss medicines, refrigerated dispatch, delivery tiers, fees and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -754,7 +754,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "MedHut Review (UK) — Mounjaro & Wegovy, York family pharmacy, GPhC 9012752";
     const description =
-      "MedHut: Jamal and Amina Hussain, pharmacist manual review, NHS-aware copy, Royal Mail Tracked 24 style cold chain, Mounjaro ~£140 to £155 and Wegovy ~£130 to £145 starter bands (marketing) and FAQs. Information from Health Wise — not medical advice.";
+      "MedHut: Jamal and Amina Hussain, pharmacist manual review, NHS-aware copy, Royal Mail Tracked 24 style cold chain, Mounjaro ~£140 to £155 and Wegovy ~£130 to £145 starter bands (marketing) and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -772,7 +772,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Medicine Market Place Review — UK online pharmacy, weight loss products";
     const description =
-      "Medicine Market Place: Preston-based pharmacy, weight loss range, tracked delivery, free delivery thresholds, prescription checks and FAQs. Information from Health Wise — not medical advice.";
+      "Medicine Market Place: Preston-based pharmacy, weight loss range, tracked delivery, free delivery thresholds, prescription checks and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -790,7 +790,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Medicspot Weight Loss Review — Mounjaro, coaching, UK subscription programme";
     const description =
-      "Medicspot: clinician-led assessment, NHS record checks, health coaching, 28-day medication cycles, discreet tracked delivery and FAQs. Information from Health Wise — not medical advice.";
+      "Medicspot: clinician-led assessment, NHS record checks, health coaching, 28-day medication cycles, discreet tracked delivery and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -808,7 +808,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Medino Weight Loss Review — pharmacist-led, PGD supply, UK delivery";
     const description =
-      "Medino: online consultation, pharmacist review, PGD pathways where applicable, inclusive pricing, next-day delivery on many lines and FAQs. Information from Health Wise — not medical advice.";
+      "Medino: online consultation, pharmacist review, PGD pathways where applicable, inclusive pricing, next-day delivery on many lines and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -826,7 +826,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "MSH Weight Loss Review — Mounjaro, Wegovy, nurse support (UK)";
     const description =
-      "MSH Weight Loss: 28-day subscription, DPD signed next-day delivery, cold chain, wellbeing surveys, bundled pricing and FAQs. Information from Health Wise — not medical advice.";
+      "MSH Weight Loss: 28-day subscription, DPD signed next-day delivery, cold chain, wellbeing surveys, bundled pricing and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -844,7 +844,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "My London Pharmacy Weight Loss Review — GLP-1, UK next-day delivery";
     const description =
-      "My London Pharmacy: quick online assessment, GLP-1 pathways, discreet packaging, patient portal, nationwide delivery and FAQs. Information from Health Wise — not medical advice.";
+      "My London Pharmacy: quick online assessment, GLP-1 pathways, discreet packaging, patient portal, nationwide delivery and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -862,7 +862,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Next Script Weight Loss Review — Wegovy, Mounjaro, Saxenda (UK)";
     const description =
-      "Next Script: online questionnaire, document checks, first-order video consult, GPhC pharmacy, discreet delivery, indicative pricing and FAQs. Information from Health Wise — not medical advice.";
+      "Next Script: online questionnaire, document checks, first-order video consult, GPhC pharmacy, discreet delivery, indicative pricing and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -880,7 +880,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "NuLife Pharmacy Weight Loss Review — UK programme, GLP-1, signed delivery";
     const description =
-      "NuLife Pharmacy: GPhC-regulated management programme, pharmacist review, nutrition support, discreet signed delivery, timelines and FAQs. Information from Health Wise — not medical advice.";
+      "NuLife Pharmacy: GPhC-regulated management programme, pharmacist review, nutrition support, discreet signed delivery, timelines and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -898,7 +898,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Numan Weight Loss Review — Wegovy, Mounjaro, UK subscription & coaching";
     const description =
-      "Numan: digital assessment, GLP-1 plans, coaching and app support, 28-day deliveries, discreet Royal Mail-style shipping, subscription costs and FAQs. Information from Health Wise — not medical advice.";
+      "Numan: digital assessment, GLP-1 plans, coaching and app support, 28-day deliveries, discreet Royal Mail-style shipping, subscription costs and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -916,7 +916,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "OnlineMeds Weight Loss Review — Wegovy, Mounjaro, UK pharmacist prescribers";
     const description =
-      "OnlineMeds: specialist weight-loss pharmacy, pharmacist prescriber pathway, free tracked delivery, Orlistat and GLP-1 context, support and FAQs. Information from Health Wise — not medical advice.";
+      "OnlineMeds: specialist weight-loss pharmacy, pharmacist prescriber pathway, free tracked delivery, Orlistat and GLP-1 context, support and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -934,7 +934,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Oushk Pharmacy Weight Loss Review — online doctor, GLP-1, UK delivery";
     const description =
-      "Oushk Pharmacy: video-verified consultation, UK prescribers, injectable and oral options, DPD/Royal Mail choices, next-day claims and FAQs. Information from Health Wise — not medical advice.";
+      "Oushk Pharmacy: video-verified consultation, UK prescribers, injectable and oral options, DPD/Royal Mail choices, next-day claims and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -952,7 +952,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Pharmacy Advance Weight Loss Review — Mounjaro, Wegovy, UK consultation & delivery";
     const description =
-      "Pharmacy Advance: online questionnaire, prescriber review, GLP-1 injectables, tracked discreet delivery, cold-chain claims and cost context. Information from Health Wise — not medical advice.";
+      "Pharmacy Advance: online questionnaire, prescriber review, GLP-1 injectables, tracked discreet delivery, cold-chain claims and cost context. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -970,7 +970,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Pharmacy-Xpress Review (UK) — Mounjaro & Wegovy from £149.99, human review, fast dispatch";
     const description =
-      "Pharmacy-Xpress (pharmacy-xpress.co.uk): health-first UK pharmacy, 3pm cut-off, 24 to 48h delivery narrative, free delivery over £40, Xenical/Alli options, 4.9/5 satisfaction claim and FAQs. Information from Health Wise — not medical advice.";
+      "Pharmacy-Xpress (pharmacy-xpress.co.uk): health-first UK pharmacy, 3pm cut-off, 24 to 48h delivery narrative, free delivery over £40, Xenical/Alli options, 4.9/5 satisfaction claim and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -988,7 +988,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Pharmacy-Xpress Review (UK) — GLP-1 from £149.99, aftercare, no lock-in";
     const description =
-      "Pharmacy-Xpress: clinician-led assessment, Mounjaro and Wegovy starting prices in marketing, MHRA/NICE aligned eligibility themes, discreet cold-chain packs and FAQs. Information from Health Wise — not medical advice.";
+      "Pharmacy-Xpress: clinician-led assessment, Mounjaro and Wegovy starting prices in marketing, MHRA/NICE aligned eligibility themes, discreet cold-chain packs and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1006,7 +1006,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Pharmacy2U Weight Loss Review — Mounjaro, Wegovy, online doctor, UK delivery";
     const description =
-      "Pharmacy2U: online doctor assessment, GLP-1 and Orlistat options, express delivery, two-month supply notes and FAQs. Information from Health Wise — not medical advice.";
+      "Pharmacy2U: online doctor assessment, GLP-1 and Orlistat options, express delivery, two-month supply notes and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1024,7 +1024,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Pharmica Weight Loss Review — Mounjaro, Wegovy, delivery tiers & pricing (UK)";
     const description =
-      "Pharmica: pharmacist-led checks, injectable and capsule ranges, discreet delivery, premium and same-day options where offered, FAQs. Information from Health Wise — not medical advice.";
+      "Pharmica: pharmacist-led checks, injectable and capsule ranges, discreet delivery, premium and same-day options where offered, FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1042,7 +1042,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Pharmulous Review (UK) — GP-led Mounjaro & Wegovy, needles bundled";
     const description =
-      "Pharmulous: UK GP-steered reviews, GPhC pharmacy, integrated consultation/prescription/needles/cold-chain bundles, Trustpilot Excellent +1000 reviews (marketing), Mounjaro ~£149 to £170 and Wegovy ~£124 to £140 starters and FAQs. Information from Health Wise — not medical advice.";
+      "Pharmulous: UK GP-steered reviews, GPhC pharmacy, integrated consultation/prescription/needles/cold-chain bundles, Trustpilot Excellent +1000 reviews (marketing), Mounjaro ~£149 to £170 and Wegovy ~£124 to £140 starters and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1060,7 +1060,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Pills2U Weight Loss Review — Mounjaro, Wegovy, prescriber pathway (UK)";
     const description =
-      "Pills2U: medical questionnaire, licensed prescriber review, GLP-1 injectables, fast tracked delivery claims, bundled pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "Pills2U: medical questionnaire, licensed prescriber review, GLP-1 injectables, fast tracked delivery claims, bundled pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1078,7 +1078,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "PillSorted Weight Loss Review — telehealth, GLP-1, NHS integration (UK)";
     const description =
-      "PillSorted: personalised consultation, licensed injectable and oral options, Royal Mail delivery, subscription repeats, NHS/private themes and FAQs. Information from Health Wise — not medical advice.";
+      "PillSorted: personalised consultation, licensed injectable and oral options, Royal Mail delivery, subscription repeats, NHS/private themes and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1096,7 +1096,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "PillSphere Weight Loss Review — online clinic, prescribing, UK delivery";
     const description =
-      "PillSphere: consultation pathway, prescriber review, discreet tracked delivery, pricing context and FAQs. Information from Health Wise — not medical advice.";
+      "PillSphere: consultation pathway, prescriber review, discreet tracked delivery, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1114,7 +1114,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Quickmeds Weight Loss Review — GPhC clinic, Mounjaro, Wegovy, fast delivery (UK)";
     const description =
-      "Quickmeds: online consultation, personalised plans, GLP-1 and oral options, same-day dispatch claims, Royal Mail tracking and FAQs. Information from Health Wise — not medical advice.";
+      "Quickmeds: online consultation, personalised plans, GLP-1 and oral options, same-day dispatch claims, Royal Mail tracking and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1132,7 +1132,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Second Nature Weight Loss Review — programme, GLP-1, coaching app (UK)";
     const description =
-      "Second Nature: assessment, pharmacy partner supply, app coaching, peer support, scheduled kit delivery, bundled pricing and FAQs. Information from Health Wise — not medical advice.";
+      "Second Nature: assessment, pharmacy partner supply, app coaching, peer support, scheduled kit delivery, bundled pricing and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1150,7 +1150,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Shape8 Review (UK) — metabolic programme, Mounjaro & Wegovy, partner pharmacy";
     const description =
-      "Shape8: Shape8 screening, titration plans, tech tracking, partner GPhC dispensing, cold-chain Tracked 24, Mounjaro ~£140 to £160 and Wegovy ~£130 to £150 illustrative bands, BMI safeguards and FAQs. Information from Health Wise — not medical advice.";
+      "Shape8: Shape8 screening, titration plans, tech tracking, partner GPhC dispensing, cold-chain Tracked 24, Mounjaro ~£140 to £160 and Wegovy ~£130 to £150 illustrative bands, BMI safeguards and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1168,7 +1168,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Skin & Shape Pharmacy weight management review (UK) — pharmacist-led care";
     const description =
-      "Skin & Shape Pharmacy: pharmacist-led online weight management, consultation process, regulated treatment access, discreet delivery, pricing context and support notes. Information from Health Wise — not medical advice.";
+      "Skin & Shape Pharmacy: pharmacist-led online weight management, consultation process, regulated treatment access, discreet delivery, pricing context and support notes. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1186,7 +1186,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "The Care Pharmacy Weight Loss Review — Mounjaro, Wegovy, UK delivery (UK)";
     const description =
-      "The Care Pharmacy: GPhC-regulated online clinic, injectable and oral options, cold-chain delivery tiers, illustrative pricing and FAQs. Information from Health Wise — not medical advice.";
+      "The Care Pharmacy: GPhC-regulated online clinic, injectable and oral options, cold-chain delivery tiers, illustrative pricing and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1204,7 +1204,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Simple Online Pharmacy Weight Loss Review — clinician-led, UK delivery (UK)";
     const description =
-      "Simple Online Pharmacy: regulated pathway, online assessment, GLP-1 options where suitable, discreet delivery, pricing themes and FAQs. Information from Health Wise — not medical advice.";
+      "Simple Online Pharmacy: regulated pathway, online assessment, GLP-1 options where suitable, discreet delivery, pricing themes and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1222,7 +1222,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Slimming Direct Weight Loss Review — GLP-1 programme, UK pharmacy (UK)";
     const description =
-      "Slimming Direct: clinically supervised plans, Mounjaro and Wegovy context, delivery timelines, costs, Trustpilot themes and FAQs. Information from Health Wise — not medical advice.";
+      "Slimming Direct: clinically supervised plans, Mounjaro and Wegovy context, delivery timelines, costs, Trustpilot themes and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1240,7 +1240,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Superdrug Online Doctor Weight Loss Review — Wegovy, Mounjaro, collect or deliver (UK)";
     const description =
-      "Superdrug Online Doctor: doctor-reviewed consultations, home delivery or pharmacy collection, cold-chain injectables, bundled pricing and FAQs. Information from Health Wise — not medical advice.";
+      "Superdrug Online Doctor: doctor-reviewed consultations, home delivery or pharmacy collection, cold-chain injectables, bundled pricing and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1258,7 +1258,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Swift Doctor Weight Loss Review — fast GLP-1 access, tracked delivery (UK)";
     const description =
-      "Swift Doctor: rapid online assessments, clinician oversight, courier delivery, cold-chain options, pricing themes and FAQs. Information from Health Wise — not medical advice.";
+      "Swift Doctor: rapid online assessments, clinician oversight, courier delivery, cold-chain options, pricing themes and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1276,7 +1276,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "SwiftMedi Weight Loss Review — ID checks, cold chain, GLP‑1 pricing (UK)";
     const description =
-      "SwiftMedi: GPhC pharmacy partners, UK prescribers, ID and live photo verification, ~24h review, insulated Tracked 24 delivery, Mounjaro/Wegovy price bands and FAQs. Information from Health Wise — not medical advice.";
+      "SwiftMedi: GPhC pharmacy partners, UK prescribers, ID and live photo verification, ~24h review, insulated Tracked 24 delivery, Mounjaro/Wegovy price bands and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1294,7 +1294,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "The Family Chemist Weight Loss Review — delivery tiers, fridge post, pricing (UK)";
     const description =
-      "The Family Chemist: regulated online pharmacy narrative, consultation steps, Royal Mail delivery bands, fridge medicines, product price anchors and FAQs. Information from Health Wise — not medical advice.";
+      "The Family Chemist: regulated online pharmacy narrative, consultation steps, Royal Mail delivery bands, fridge medicines, product price anchors and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1312,7 +1312,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "The Independent Pharmacy Weight Loss Review — GPhC, CQC, tracked post (UK)";
     const description =
-      "The Independent Pharmacy: regulated assessments, discreet packaging, delivery tiers, free postage threshold and FAQs. Information from Health Wise — not medical advice.";
+      "The Independent Pharmacy: regulated assessments, discreet packaging, delivery tiers, free postage threshold and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1330,7 +1330,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Tribelle Weight Loss Review — Mounjaro, Wegovy, clinician-led (UK)";
     const description =
-      "Tribelle: GLP-1 injectables, ~24h review claims, tracked discreet delivery, pricing themes, Trustpilot context and FAQs. Information from Health Wise — not medical advice.";
+      "Tribelle: GLP-1 injectables, ~24h review claims, tracked discreet delivery, pricing themes, Trustpilot context and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1348,7 +1348,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Voy Weight Loss Review — digital programme context & UK comparisons";
     const description =
-      "Voy: how to evaluate regulated digital weight-loss routes, budgeting with Health Wise tables, safety checklist and FAQs. Information from Health Wise — not medical advice.";
+      "Voy: how to evaluate regulated digital weight-loss routes, budgeting with Healthwise360 tables, safety checklist and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1366,7 +1366,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "WePrescribe Weight Loss Review — pharmacist prescribers, GLP-1 delivery (UK)";
     const description =
-      "WePrescribe: structured questionnaires, cold-chain injectables, Royal Mail tiers, illustrative Wegovy pricing and FAQs. Information from Health Wise — not medical advice.";
+      "WePrescribe: structured questionnaires, cold-chain injectables, Royal Mail tiers, illustrative Wegovy pricing and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1384,7 +1384,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Well Pharmacy Weight Loss Review — Mounjaro, Wegovy, pharmacist follow-ups (UK)";
     const description =
-      "Well Pharmacy: online/in-store consultations, monthly monitoring themes, delivery fees, illustrative pricing and FAQs. Information from Health Wise — not medical advice.";
+      "Well Pharmacy: online/in-store consultations, monthly monitoring themes, delivery fees, illustrative pricing and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1402,7 +1402,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "YourPharmacy Weight Loss Review — NICE‑aligned triage, thermal GLP‑1 (UK)";
     const description =
-      "YourPharmacy: GPhC online pharmacy, UK prescriber review, 2–8°C 48h packaging, Royal Mail/DPD tracking, Mounjaro & Wegovy price anchors, free delivery themes and FAQs. Information from Health Wise — not medical advice.";
+      "YourPharmacy: GPhC online pharmacy, UK prescriber review, 2–8°C 48h packaging, Royal Mail/DPD tracking, Mounjaro & Wegovy price anchors, free delivery themes and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1420,7 +1420,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Zava Weight Loss Review — doctor review, BMI photos, cold delivery (UK)";
     const description =
-      "Zava (ZavaMed): questionnaire plus photo verification, injectable cold courier lanes, tablet postage, pricing anchors and FAQs. Information from Health Wise — not medical advice.";
+      "Zava (ZavaMed): questionnaire plus photo verification, injectable cold courier lanes, tablet postage, pricing anchors and FAQs. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1449,7 +1449,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Asda Online Doctor Weight Loss Treatment Review — Mounjaro & Wegovy (UK)";
     const description =
-      "Asda Online Doctor: how online consultation and prescribing works, treatment options (Mounjaro, Wegovy, Saxenda, Orlistat), delivery and pricing context. Information from Health Wise — not medical advice.";
+      "Asda Online Doctor: how online consultation and prescribing works, treatment options (Mounjaro, Wegovy, Saxenda, Orlistat), delivery and pricing context. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1467,7 +1467,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title =
       "Ashcroft Pharmacy Weight Loss Treatment Review — Mounjaro & Wegovy (UK)";
     const description =
-      "Ashcroft Pharmacy: online consultation, treatment range, delivery expectations, safety notes and cost context. Information from Health Wise — not medical advice.";
+      "Ashcroft Pharmacy: online consultation, treatment range, delivery expectations, safety notes and cost context. Information from Healthwise360 — not medical advice.";
     return {
       title,
       description,
@@ -1483,7 +1483,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${name} — ${meds.join(" & ")} UK prices (2026)`,
-    description: `Independent snapshot: ${name} — illustrative ${meds.join(" and ")} pen prices and delivery notes on Health Wise.`,
+    description: `Independent snapshot: ${name} — illustrative ${meds.join(" and ")} pen prices and delivery notes on Healthwise360.`,
     alternates: { canonical },
     openGraph: {
       type: "website",
@@ -1557,7 +1557,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
     const title =
       "CheqUp Pharmacy weight loss review (UK) — clinician-led support";
     const description =
-      "CheqUp Pharmacy: clinician-led online weight management, Wegovy, Mounjaro and Alli context, health coaching, clinical support and delivery notes. Information from Health Wise — not medical advice.";
+      "CheqUp Pharmacy: clinician-led online weight management, Wegovy, Mounjaro and Alli context, health coaching, clinical support and delivery notes. Information from Healthwise360 — not medical advice.";
 
     return (
       <>
@@ -1853,7 +1853,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
     const title =
       "Jood Life Pharmacy weight loss review (UK) — online prescriber support";
     const description =
-      "Jood Life Pharmacy: online consultation, licensed UK prescriber review, transparent pricing from £89/month, delivery context and ongoing support. Information from Health Wise — not medical advice.";
+      "Jood Life Pharmacy: online consultation, licensed UK prescriber review, transparent pricing from £89/month, delivery context and ongoing support. Information from Healthwise360 — not medical advice.";
 
     return (
       <>
@@ -2289,7 +2289,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
     const title =
       "Skin & Shape Pharmacy weight management review (UK) — pharmacist-led care";
     const description =
-      "Skin & Shape Pharmacy: pharmacist-led online weight management, consultation process, regulated treatment access, discreet delivery, pricing context and support notes. Information from Health Wise — not medical advice.";
+      "Skin & Shape Pharmacy: pharmacist-led online weight management, consultation process, regulated treatment access, discreet delivery, pricing context and support notes. Information from Healthwise360 — not medical advice.";
 
     return (
       <>
@@ -2561,7 +2561,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
   if (w) meds.push("Wegovy");
   if (s) meds.push("Saxenda");
   const profileTitle = `${displayName} — ${meds.join(" & ")} UK prices (2026)`;
-  const profileDescription = `Independent snapshot: ${displayName} — illustrative ${meds.join(" and ")} pen prices and delivery notes on Health Wise.`;
+  const profileDescription = `Independent snapshot: ${displayName} — illustrative ${meds.join(" and ")} pen prices and delivery notes on Healthwise360.`;
 
   return (
     <>

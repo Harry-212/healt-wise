@@ -46,8 +46,8 @@ export default function MounjaroSideEffectsArticlePage() {
     "@type": "Article",
     headline: TITLE,
     description: DESCRIPTION,
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-24",
     image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {

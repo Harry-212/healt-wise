@@ -124,8 +124,8 @@ const SCHEMA = {
     "Mounjaro UK Eligibility Guide (2026): BMI Rules, Requirements & Exceptions",
   description:
     "Who qualifies for Mounjaro in the UK? A clear breakdown of BMI thresholds, accepted health conditions, ethnicity adjustments, and what happens when your BMI drops.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -165,8 +165,7 @@ export default function GuideMounjaroEligibility() {
             NICE technology appraisal TA1026
           </EL>
           . While Mounjaro is available as a private prescription, most
-          responsible providers follow these evidence based clinical guidelines.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
+          responsible providers follow these evidence based clinical guidelines.</GuideParagraph>
         <GuideTable
           headers={["BMI", "Eligibility"]}
           rows={[
@@ -193,7 +192,7 @@ export default function GuideMounjaroEligibility() {
           If your BMI is between 27 and 29.9, you need at least one
           weight related health condition to qualify. The following are
           commonly accepted:
-        </GuideParagraph>
+</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           Commonly accepted conditions
@@ -223,7 +222,7 @@ export default function GuideMounjaroEligibility() {
           Eligibility policies vary between providers. Always confirm the
           specific criteria with your chosen pharmacy or clinic before booking
           a consultation.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="ethnicity" heading="Ethnicity & Lower BMI Thresholds">
@@ -233,7 +232,7 @@ export default function GuideMounjaroEligibility() {
           that people from certain ethnic backgrounds face higher metabolic
           risk at lower BMI levels meaning the standard thresholds
           underestimate health risk for these groups.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           The{" "}
           <EL href="https://www.nhs.uk/live-well/healthy-weight/bmi-calculator/">
@@ -241,8 +240,7 @@ export default function GuideMounjaroEligibility() {
           </EL>{" "}
           and{" "}
           <EL href="https://www.nice.org.uk/guidance/ph53">NICE guidance</EL>{" "}
-          both recognise lower BMI thresholds for the following groups:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          both recognise lower BMI thresholds for the following groups:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -275,11 +273,11 @@ export default function GuideMounjaroEligibility() {
           A common concern for patients making progress on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is what happens when
           their BMI falls below the standard eligibility threshold of 27 or 30.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           The approach varies between providers, but progressive clinical
           practice allows:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Continued treatment below the BMI threshold — recognising obesity as a chronic condition requiring ongoing management",
@@ -294,7 +292,7 @@ export default function GuideMounjaroEligibility() {
             Mounjaro BMI Cutoffs: Why Stopping Too Early Can Backfire
           </IL>
           .
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="how-long" heading="How Long Can You Stay on Mounjaro?">
@@ -306,8 +304,7 @@ export default function GuideMounjaroEligibility() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> for up to two years
           initially, subject to clinical review at regular intervals. This is
           not a fixed endpoint it is a review point where continued
-          prescription is assessed based on ongoing clinical benefit.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          prescription is assessed based on ongoing clinical benefit.</GuideParagraph>
         <GuideBulletList
           items={[
             "Standard providers: up to 2 years with periodic clinical reviews",
@@ -329,7 +326,7 @@ export default function GuideMounjaroEligibility() {
           Yes restarting{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> after a break is
           possible. Most providers require:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "A new medical consultation — to reassess eligibility and health status",
@@ -342,15 +339,14 @@ export default function GuideMounjaroEligibility() {
           dose (2.5mg) and re titrate gradually regardless of the dose you
           were previously taking. This reduces the risk of side effects and
           allows your body to readapt.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           If you are considering switching providers to restart or continue
           treatment, see our guide on{" "}
           <IL href="/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk">
             switching pharmacies for Mounjaro or Wegovy
           </IL>
-          .
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          .</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

@@ -42,7 +42,10 @@ export default function AnnouncementBar() {
               <span>{TEXT}</span>
               <span className="h-1 w-1 shrink-0 rounded-full bg-slate-900/40" />
               <span className="font-black">{CTA}</span>
-              <Zap className="h-3.5 w-3.5 shrink-0 fill-slate-900" aria-hidden />
+              <Zap
+                className="h-3.5 w-3.5 shrink-0 fill-slate-900"
+                aria-hidden
+              />
             </Link>
           ))}
         </div>
@@ -58,7 +61,10 @@ export default function AnnouncementBar() {
               <span>{TEXT}</span>
               <span className="h-1 w-1 shrink-0 rounded-full bg-slate-900/40" />
               <span className="font-black">{CTA}</span>
-              <Zap className="h-3.5 w-3.5 shrink-0 fill-slate-900" aria-hidden />
+              <Zap
+                className="h-3.5 w-3.5 shrink-0 fill-slate-900"
+                aria-hidden
+              />
             </div>
           ))}
         </div>

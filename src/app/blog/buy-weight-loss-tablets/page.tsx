@@ -46,8 +46,8 @@ export default function BuyWeightLossTabletsPage() {
     description:
       "Buy weight loss tablets in the UK. Compare prices, safety, and prescription options before you choose.",
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-06-13",
     mainEntityOfPage: {
       "@type": "WebPage",

@@ -119,8 +119,8 @@ const SCHEMA = {
   headline: "How to Identify a Fake Online Pharmacy and Stay Safe (UK Guide)",
   description:
     "Fake online pharmacies sell counterfeit or unsafe medicines. Learn the warning signs, who regulates UK pharmacies, and how to verify a provider before you buy.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -158,22 +158,20 @@ export default function GuideFakePharmacy() {
           conditions, and the ability to complete consultations without an
           in person visit benefits that matter for treatments such as{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
-          <IL href="/what-is-wegovy">Wegovy</IL>.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          <IL href="/what-is-wegovy">Wegovy</IL>.</GuideParagraph>
         <GuideParagraph>
           However, convenience also creates risk. Not every website that looks
           like a pharmacy is registered, regulated, or selling genuine
           medicines. Understanding both sides is essential before you hand over
           payment or personal health data.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="dangers" heading="Dangers of Buying Medication Online">
         <GuideParagraph>
           Rising demand for weight loss and other sensitive treatments has
           attracted fraudulent operators. These sites may look professional but
-          expose you to serious harm:
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          expose you to serious harm:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -218,7 +216,7 @@ export default function GuideFakePharmacy() {
       <GuideSection id="warning-signs" heading="Warning Signs of an Unsafe Online Pharmacy">
         <GuideParagraph>
           Be cautious if a website shows any of the following:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "No prescription required for prescription-only medicines (POMs) such as Mounjaro or Wegovy",
@@ -245,7 +243,7 @@ export default function GuideFakePharmacy() {
         <GuideParagraph>
           If a pharmacy fails these checks, it is best to avoid it entirely 
           even if the site looks polished.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="simple-rule" heading="A Simple Rule">
@@ -259,8 +257,7 @@ export default function GuideFakePharmacy() {
       <GuideSection id="who-regulates" heading="Who Regulates Online Pharmacies in the UK?">
         <GuideParagraph>
           Trusted UK pharmacies and prescribers operate under overlapping
-          oversight:
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          oversight:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -294,7 +291,7 @@ export default function GuideFakePharmacy() {
             MHRA's online medicines guidance
           </EL>{" "}
           explains what legitimate distance selling pharmacies must display.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="how-to-stay-safe" heading="How to Stay Safe">
@@ -331,8 +328,7 @@ export default function GuideFakePharmacy() {
         />
         <GuideParagraph>
           By staying cautious, you can benefit from legitimate online pharmacies
-          while protecting your health and your personal data.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          while protecting your health and your personal data.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

@@ -45,9 +45,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#WegovyPill #WegovyUK #OralSemaglutide #WeightLossUK #GLP1UK #PharmacySafety #HealthWise #ComparePrices";
-
 function PillVsInjectionTable({ darkMode }: { darkMode: boolean }) {
   const cell = darkMode
     ? "border-slate-700 text-slate-300"
@@ -305,17 +302,12 @@ export default function ArticleClient() {
                 GLP-1 medicines, but some are hesitant about injections.
               </p>
               <p>
-                Therefore, a tablet option creates new search demand around:
+                A tablet option opens the treatment up to people who have been
+                curious about GLP-1 medicines but have put off starting because
+                of needles. Readers typically want straight answers on how an
+                oral Wegovy compares with the pen, what it might cost in the UK,
+                and whether a daily tablet fits their routine.
               </p>
-              <ul className="list-disc space-y-3 pl-5">
-                <li>Wegovy Pill UK</li>
-                <li>oral Wegovy UK</li>
-                <li>semaglutide tablet weight loss UK</li>
-                <li>Wegovy tablet UK</li>
-                <li>GLP-1 tablet UK</li>
-                <li>Wegovy Pill vs injection</li>
-                <li>Wegovy Pill price UK</li>
-              </ul>
               <p>
                 Besides that, many users are comparing Wegovy Pill with Wegovy
                 Pen, Mounjaro, Rybelsus, Ozempic, and GLP-1 supplements.
@@ -932,9 +924,10 @@ export default function ArticleClient() {
                 </li>
               </ul>
               <p>
-                This creates a strong semantic relationship between oral Wegovy,
-                semaglutide tablets, GLP-1 medicines, supplement safety, price
-                comparison, and provider checks.
+                Together, these guides cover the full picture: how oral Wegovy
+                works, how it compares with injections and other GLP-1 options,
+                what to look for in a safe pharmacy, and where to compare prices
+                without marketing spin.
               </p>
             </GuideSection>
 
@@ -1061,14 +1054,6 @@ export default function ArticleClient() {
               >
                 Health Wise does not prescribe or supply medicines. This page is
                 general information and is not medical advice.
-              </p>
-              <p
-                className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-              >
-                <span className="font-semibold text-slate-600 dark:text-slate-300">
-                  Suggested hashtags:
-                </span>{" "}
-                {SOCIAL_HASHTAGS}
               </p>
             </GuideSection>
           </article>

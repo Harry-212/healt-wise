@@ -57,12 +57,12 @@ function DosageScheduleTable({ darkMode }: { darkMode: boolean }) {
         </tbody>
       </table>
       <p className={`px-3 py-2 text-xs ${darkMode ? 'border-t border-slate-700 text-slate-500' : 'border-t border-slate-200 text-slate-500'}`}>
-        Illustrative schedule only your prescriber will personalise titration and intervals. For more context, explore our resources on{' '}
-        <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">
-          treatment in London
-        </Link>
-        .
-      </p>
+        Illustrative schedule only your prescriber will personalise titration and intervals. See our{' '}
+        <Link href="/what-is-mounjaro" className="font-medium text-emerald-600 hover:underline">
+          Mounjaro overview
+        </Link>{' '}
+        for background on how the medicine works.
+</p>
     </div>
   );
 }
@@ -118,18 +118,18 @@ export default function ArticleClient() {
                 Whether you have struggled with multiple diets or you are just beginning your weight loss journey, you may be curious about Mounjaro dosage for weight loss. Mounjaro (tirzepatide), originally approved for type 2 diabetes,
                 has garnered significant attention for its off label use in shedding pounds. Researchers have found that it can help reduce calorie intake, support your metabolism, and make it easier to lose weight. This guide unpacks what
                 Mounjaro is, how it works, and how you can navigate its dosing schedule effectively.
-              </p>
+</p>
               <p>By the end, you will have the information you need to discuss potential options with your healthcare provider, use Mounjaro safely, and maximise the chance of real, lasting results.</p>
 
               <GuideSection darkMode={darkMode} id="basics" heading="Discover Mounjaro basics">
                 <p>
                   Mounjaro is a weekly prescription treatment that primarily addresses type 2 diabetes by improving insulin sensitivity and regulating blood sugar. It contains tirzepatide, which acts on two key incretin pathways. While
                   officially licensed for diabetes, it is also commonly prescribed off label for weight loss because it targets appetite and food intake (Healthline).
-                </p>
+</p>
                 <p>
                   Its dual action mimics both GIP and GLP 1, influencing appetite and digestion more strongly than many single hormone options so you may feel full sooner and satisfied with smaller meals. Use for weight management remains
                   off label; always speak with a medical professional to see if Mounjaro fits your plan.
-                </p>
+</p>
                 <p>
                   For broader context on outcomes and safety, see{' '}
                   <Link href="/what-is-mounjaro" className="font-semibold text-brand-primary underline-offset-2 hover:underline">
@@ -144,42 +144,38 @@ export default function ArticleClient() {
                     whether Mounjaro is safe and right for you
                   </Link>
                   . Dosing and outcomes vary by person the more you understand, the better you can partner with your care team.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="effect" heading="Uncover Mounjaro’s weight loss effect">
                 <p>
                   Effectiveness is tied to dual hormonal action on GIP and GLP 1 receptors, regulating blood sugar and fullness. GLP 1 slows gastric emptying and signals satiety; GIP supports insulin release in a glucose dependent way
                   (Healthline). Together they can lower calorie intake and make portions easier to manage.
-                </p>
+</p>
                 <p>
                   Many patients notice early changes within roughly weeks two to four helpful if past progress felt slow. For a deeper dive, read{' '}
                   <Link href="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here" className="font-semibold text-brand-primary underline-offset-2 hover:underline">
                     how Mounjaro works for weight loss
                   </Link>
                   .
-                </p>
+</p>
                 <p>
                   Mounjaro is not a miracle fix. It works best with balanced eating and regular movement walks, gym sessions, or whatever you can sustain. If you plateau, your clinician can review dose, nutrition, and activity rather than
                   you pushing changes alone.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="progression" heading="Navigate the dosage progression">
                 <p>Dosing for weight loss usually follows a stepped titration: start low, then increase in small steps about every four weeks so your digestive system can adapt and side effects stay manageable (ZAVA).</p>
                 <p>
                   A common pattern starts at 2.5 mg weekly for four weeks, then 5 mg, then 7.5 mg, and so on, up to a maximum of 15 mg. Higher tolerated doses are associated with greater average weight loss in trials but titration should
-                  never be rushed without medical oversight. For more context, explore our resources on{' '}
-                  <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">
-                    treatment in Manchester
-                  </Link>
-                  .
-                </p>
+                  never be rushed without medical oversight.
+</p>
                 <DosageScheduleTable darkMode={darkMode} />
                 <p>
                   Some people reach goals at 10 mg or 12.5 mg and stay there; others need the top dose. You might also stay longer on a step if nausea or GI symptoms flare. Discuss every change with your prescriber, especially if you have
                   comorbidities or take other medicines.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="factors" heading="Examine dosage factors">
@@ -188,7 +184,7 @@ export default function ArticleClient() {
                   In a 72 week study, roughly <strong className={darkMode ? 'text-white' : 'text-slate-900'}>15%</strong> body weight reduction was reported at 5 mg weekly, about{' '}
                   <strong className={darkMode ? 'text-white' : 'text-slate-900'}>19.5%</strong> at 10 mg, and about <strong className={darkMode ? 'text-white' : 'text-slate-900'}>20.9%</strong> at 15 mg (Forbes Health, summarising trial
                   data). Higher dose can mean more loss on average but skipping steps can sharply increase side effects.
-                </p>
+</p>
                 <p>Consider daily life: intense nausea can disrupt work or caring for family. Sometimes a moderate dose (e.g. 7.5–10 mg) delivers steady loss without wiping you out even if you have a deadline like a wedding.</p>
                 <p>
                   Plateaus are normal. Your doctor might adjust the dose, or you might tweak protein, training, or sleep. For another angle on strengths and titration, see{' '}
@@ -196,7 +192,7 @@ export default function ArticleClient() {
                     Mounjaro dosage for weight loss: facts you can trust
                   </Link>
                   .
-                </p>
+</p>
               </GuideSection>
 
               <div className="my-10">
@@ -207,7 +203,7 @@ export default function ArticleClient() {
                 <p>
                   GI symptoms nausea, vomiting, diarrhoea are common, especially after starting or stepping up (ZAVA). Fullness can feel strong because emptying slows. Many effects ease after a few weeks on a stable dose, which is why
                   gradual titration matters.
-                </p>
+</p>
                 <p>If symptoms stay intense, your clinician may pause escalation or step back to a better tolerated dose. Rotate injection sites (abdomen, thigh, arm) weekly to reduce local reactions.</p>
                 <p>Hydration, balanced meals, and gentle activity support tolerance. Track how you feel and report anything persistent.</p>
               </GuideSection>
@@ -224,28 +220,28 @@ export default function ArticleClient() {
                     Mounjaro weight loss treatments (UK)
                   </Link>
                   .
-                </p>
+</p>
                 <p>
-                  Stack medication with meal planning, activity, and stress care hormonal support multiplies when lifestyle levers move too. Revisit nutrition and training as your weight changes. For more context, explore our resources on{' '}
+                  Stack medication with meal planning, activity, and stress care hormonal support multiplies when lifestyle levers move too. Revisit nutrition and training as your weight changes. For{' '}
                   <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">
                     Wegovy price comparison
                   </Link>
                   .
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="lasting" heading="Take steps for lasting results">
                 <p>
                   After strong initial loss, evidence suggests many people regain weight if tirzepatide is stopped without maintenance habits (Healthline). Long term or maintenance dosing may be part of the picture for some not everyone
                   needs 15 mg forever; some settle at a moderate dose while monitoring appetite and weight.
-                </p>
+</p>
                 <p>
                   In the UK, use only regulated supply routes. For comparing licensed providers and prices, use our{' '}
                   <Link href="/mounjaro-price-comparison" className="font-semibold text-brand-primary underline-offset-2 hover:underline">
                     Mounjaro price comparison
                   </Link>{' '}
                   Health Wise does not sell medicines.
-                </p>
+</p>
                 <p>Friends, family, or structured support can help you stay consistent. Watch for creeping cravings or weight small signals may mean a dose review or habit refresh, not “failure.”</p>
               </GuideSection>
 
@@ -283,15 +279,15 @@ export default function ArticleClient() {
                 <p>
                   Your Mounjaro dosage for weight loss should evolve with tolerance, side effects, and goals. The path usually starts low and rises in careful steps while you track symptoms and progress. Staying in sync with your clinician
                   and combining medicine with sustainable habits gives you the best chance to achieve and keep meaningful loss.
-                </p>
+</p>
                 <p>
                   The schedules and study figures here are educational they do not replace personalised advice. By understanding titration, realistic dose–response patterns, and strategies to limit setbacks, you are better placed to act
-                  with confidence. The next step is a conversation with your healthcare team and a plan you can follow for the long term. For more context, explore our resources on{' '}
-                  <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">
-                    clinics in Birmingham
-                  </Link>
-                  .
-                </p>
+                  with confidence. The next step is a conversation with your healthcare team and a plan you can follow for the long term. Browse our{' '}
+                  <Link href="/helpful-guides" className="font-medium text-emerald-600 hover:underline">
+                    helpful guides
+                  </Link>{' '}
+                  for more on safe prescribing and pharmacy checks.
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="references" heading="References">

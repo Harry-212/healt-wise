@@ -553,6 +553,16 @@ export function GuideRelatedGuides({ guides }: { guides: RelatedGuide[] }) {
           </Link>
         ))}
       </div>
+      <p className="mt-4 text-sm text-slate-600">
+        Browse more topics in our{" "}
+        <Link
+          href="/helpful-guides"
+          className="font-medium text-emerald-700 underline-offset-2 hover:underline"
+        >
+          helpful guides hub
+        </Link>
+        .
+      </p>
     </section>
   );
 }

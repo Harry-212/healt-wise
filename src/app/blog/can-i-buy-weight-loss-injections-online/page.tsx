@@ -46,8 +46,8 @@ export default function CanIBuyWeightLossInjectionsOnlineUkPage() {
     headline: TITLE,
     description: DESCRIPTION,
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-06-15",
     mainEntityOfPage: {
       "@type": "WebPage",

@@ -33,9 +33,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#WeightLossInjections #BuyOnlineUK #MounjaroUK #WegovyUK #GLP1 #OnlinePharmacyUK #GPhC #SafeWeightLoss";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -348,14 +345,6 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <section id="limitations" className="scroll-mt-28">
-                <h2 className={`text-xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                  Suggested hashtags
-                </h2>
-                <p className={`text-sm leading-relaxed mt-4 ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </section>
             </article>
 
             <div className="mt-10">

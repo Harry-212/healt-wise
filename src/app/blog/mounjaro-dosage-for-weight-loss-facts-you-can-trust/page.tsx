@@ -44,8 +44,8 @@ export default function MounjaroArticlePage() {
     description:
       "Learn how Mounjaro dosage for weight loss works, from starting at 2.5 mg to potential long-term success. Discover exactly how this GLP-1 & GIP medication helps curb appetite.",
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-14",
     mainEntityOfPage: {
       "@type": "WebPage",

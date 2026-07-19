@@ -293,7 +293,8 @@ export default function ArticleClient() {
                 weight loss treatment.
               </p>
               <p>
-                For more context, Healthwise360 users should read the{" "}
+                For a clearer split between food support and medicine-like
+                claims, see our{" "}
                 <Link
                   href="/blog/glp-1-supplements-uk"
                   className={linkClass}
@@ -306,8 +307,8 @@ export default function ArticleClient() {
                   className={linkClass}
                 >
                   Are GLP-1 supplements real?
-                </Link>{" "}
-                articles.
+                </Link>
+                .
               </p>
             </GuideSection>
 

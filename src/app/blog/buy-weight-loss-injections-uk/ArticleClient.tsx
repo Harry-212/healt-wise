@@ -25,9 +25,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#BuyWeightLossInjections #WeightLossUK #MounjaroPrice #WegovyPrice #SaxendaCost #UKOnlinePharmacy #WeightLossTreatmentPrice";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -321,11 +318,7 @@ export default function ArticleClient() {
                   direct answers, visible price comparisons, regulation checks,
                   and honest guidance.
                 </p>
-                <p className={`text-sm leading-relaxed mt-8 ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </GuideSection>
+</GuideSection>
             </article>
 
             <div className="mt-10">

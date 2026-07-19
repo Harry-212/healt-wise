@@ -45,8 +45,8 @@ export default function MounjaroBeforeAfterArticlePage() {
     description:
       "Explore Mounjaro weight loss before and after: how tirzepatide works, typical results, dosing context, and what shapes outcomes—informational only, not medical advice.",
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-17",
     mainEntityOfPage: {
       "@type": "WebPage",

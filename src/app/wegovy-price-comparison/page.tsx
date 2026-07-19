@@ -29,11 +29,11 @@ export const metadata: Metadata = buildPageShareMetadata({
   metaDescription:
     "Compare real Wegovy prices across UK pharmacies: starting pen costs, estimated monthly spend, delivery, and GPhC checks. Filter, sort, and switch discount mode. Independent snapshot — updated 2026.",
   openGraphTitle:
-    "Compare Wegovy Prices UK (2026) — Cheapest & safest providers | Health Wise",
+    "Compare Wegovy Prices UK (2026) — Cheapest & safest providers | Healthwise360",
   openGraphDescription:
     "Interactive UK Wegovy price table: filter by provider, price band, rating, and delivery. Illustrative charts and FAQs.",
   imagePath: "/wegovy healt wise.png",
-  imageAlt: "Compare Wegovy prices UK — Health Wise",
+  imageAlt: "Compare Wegovy prices UK — Healthwise360",
 });
 
 const WEGOVY_RESOURCE_LINKS = [
@@ -56,7 +56,7 @@ function compareWebPageJsonLd() {
     dateModified: "2026-04-07",
     isPartOf: {
       "@type": "WebSite",
-      name: "Health Wise",
+      name: "Healthwise360",
       url: base,
     },
   };

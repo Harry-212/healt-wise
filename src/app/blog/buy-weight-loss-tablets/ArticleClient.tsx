@@ -26,9 +26,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#BuyWeightLossTablets #OrlistatUK #MysimbaPrice #WegovyTablets #GLP1Pills #OnlinePharmacyUK #FatLossTablets";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -321,18 +318,6 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <section id="limitations" className="scroll-mt-28">
-                <h2 className={`text-xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                  Open questions and limitations
-                </h2>
-                <p className="mt-4">
-                  This review covers the highest-confidence pages and patterns I could verify directly, but Healthwise360's locations archive and provider dossier library clearly extend beyond the sample reviewed here, so this is not a fully exhaustive URL inventory. Also, some GPhC pages returned access errors when opened directly in the browser tool, so I relied on their search-result snippets for the most current statements about the register and the discontinued online pharmacy logo scheme.
-                </p>
-                <p className={`text-sm leading-relaxed mt-8 ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </section>
             </article>
 
             <div className="mt-10">

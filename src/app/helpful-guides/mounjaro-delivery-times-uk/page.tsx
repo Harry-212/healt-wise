@@ -122,8 +122,8 @@ const SCHEMA = {
   headline: "Mounjaro Delivery Times UK: Why Safety Matters More Than Speed",
   description:
     "Online pharmacies advertise fast Mounjaro delivery—but responsible prescribing takes time. Here's what the dispensing process involves and how to choose a provider you can trust.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -160,18 +160,17 @@ export default function GuideMounjaroDeliveryTimes() {
           pharmacies offering{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. Claims like
           "same day dispatch" or "approved in minutes" are designed to appeal
-          to patients who want treatment quickly.
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          to patients who want treatment quickly.</GuideParagraph>
         <GuideParagraph>
           But responsible prescribing takes time. Before{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is legally and safely
           dispensed, a series of clinical checks must be completed. A provider
           that skips or compresses these steps to enable faster delivery is
           not offering a better service it is offering an unsafe one.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Be cautious of:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Unrealistically fast delivery promises — clinical review cannot responsibly be done in minutes",
@@ -206,10 +205,9 @@ export default function GuideMounjaroDeliveryTimes() {
           by the MHRA. This designation applies to newer medicines under
           additional post market safety monitoring, and signals that extra
           care is required when prescribing, dispensing, and reporting.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
-          For patients, Black Triangle status means:
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          For patients, Black Triangle status means:</GuideParagraph>
         <GuideBulletList
           items={[
             "The medication is subject to closer regulatory scrutiny than standard medicines",
@@ -220,7 +218,7 @@ export default function GuideMounjaroDeliveryTimes() {
         <GuideParagraph>
           This classification further underscores why responsible prescribing
           cannot be reduced to a rapid transactional process.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="dispensing-process" heading="How Mounjaro Is Dispensed: Step by Step">
@@ -236,7 +234,7 @@ export default function GuideMounjaroDeliveryTimes() {
             MHRA guidance
           </EL>
           :
-        </GuideParagraph>
+</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           1. Prescription review
@@ -245,7 +243,7 @@ export default function GuideMounjaroDeliveryTimes() {
           A qualified pharmacist or prescriber reviews the prescription details
           for clinical accuracy, potential drug interactions, and
           appropriateness for the patient.
-        </GuideParagraph>
+</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           2. Identity verification
@@ -255,7 +253,7 @@ export default function GuideMounjaroDeliveryTimes() {
           ID document upload, selfie verification, or a brief video
           consultation. This step prevents prescription fraud and ensures the
           medication goes to the right person.
-        </GuideParagraph>
+</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           3. Clinical assessment
@@ -268,8 +266,7 @@ export default function GuideMounjaroDeliveryTimes() {
           <EL href="https://www.nice.org.uk/guidance/ta1026">
             NICE eligibility criteria (TA1026)
           </EL>
-          .
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          .</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           4. Dispensing
@@ -278,7 +275,7 @@ export default function GuideMounjaroDeliveryTimes() {
           The medication is labelled, accuracy checked, and packaged including
           temperature controlled cold chain packaging to maintain the 2°C–8°C
           storage requirement during transit.
-        </GuideParagraph>
+</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           5. Dispatch and delivery
@@ -293,7 +290,7 @@ export default function GuideMounjaroDeliveryTimes() {
             Mounjaro Delivery & Storage UK
           </IL>
           .
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="why-delays" heading="Why Delays Happen (And Why That's Normal)">
@@ -301,7 +298,7 @@ export default function GuideMounjaroDeliveryTimes() {
           Delays in receiving{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> are almost always due
           to one of the following and most are safety related:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -349,8 +346,7 @@ export default function GuideMounjaroDeliveryTimes() {
         <GuideParagraph>
           When selecting a pharmacy for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, look beyond delivery
-          claims. Evaluate providers on:
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          claims. Evaluate providers on:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

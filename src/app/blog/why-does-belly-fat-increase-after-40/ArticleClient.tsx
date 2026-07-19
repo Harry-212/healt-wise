@@ -18,9 +18,6 @@ const SHARE_PATH = "/blog/why-does-belly-fat-increase-after-40";
 const HERO_SRC = blogWebpPath(BELLY_FAT_AFTER_40_HERO_WEBP);
 const INLINE_SRC = blogWebpPath(BELLY_FAT_AFTER_40_INLINE_WEBP);
 
-const SOCIAL_HASHTAGS =
-  "#BellyFatAfter40 #VisceralFat #HormoneHealth #StrengthTraining #MetabolicHealth #HealthyAgeing";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -544,15 +541,7 @@ export default function ArticleClient() {
                   Health Wise does not sell medicines; this article is general
                   information and does not replace advice from your clinician.
                 </p>
-                <p
-                  className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-                >
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">
-                    Suggested hashtags:
-                  </span>{" "}
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </GuideSection>
+</GuideSection>
             </article>
 
             <div className="mt-10">

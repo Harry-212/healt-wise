@@ -28,8 +28,8 @@ export default function WegovyArticlePage() {
     headline: "How Does Wegovy Work to Transform Your Weight Journey",
     description:
       "Find out how does Wegovy work to kickstart your weight loss, with guides on eligibility, cost and UK providers.",
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-14",
     mainEntityOfPage: {
       "@type": "WebPage",

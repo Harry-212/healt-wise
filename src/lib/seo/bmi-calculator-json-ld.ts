@@ -25,7 +25,7 @@ export const BMI_CALCULATOR_FAQ_BMR_TDEE_ITEMS = [
     a: "BMR is an estimate of how many calories your body burns at complete rest—before daily activity, digestion, or exercise. It reflects energy needed for breathing, circulation, cell repair, and other basic functions. It is not the same as how much you should eat in a day; that is closer to TDEE (total daily energy expenditure).",
   },
   {
-    q: "How does Health Wise calculate BMR?",
+    q: "How does Healthwise360 calculate BMR?",
     a: "We use the Mifflin–St Jeor equation, a widely used formula that takes your weight, height, age, and sex. Like all estimates, it can differ from lab-measured metabolic rate—muscle mass, genetics, thyroid health, and medications can shift real energy needs. Use the number as a planning guide, not a prescription.",
   },
   {
@@ -82,7 +82,7 @@ export function bmiCalculatorWebPageJsonLd() {
     url,
     isPartOf: {
       "@type": "WebSite",
-      name: "Health Wise",
+      name: "Healthwise360",
       url: origin,
     },
   };

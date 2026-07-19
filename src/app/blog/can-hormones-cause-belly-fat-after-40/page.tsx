@@ -45,8 +45,8 @@ export default function CanHormonesCauseBellyFatAfter40Page() {
     description:
       "Hormones can directly drive belly fat after 40. Learn how oestrogen, testosterone, cortisol and insulin interact, common signs, and evidence-based steps that support hormonal balance.",
     image: [SOCIAL_PREVIEW_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-05-08",
     mainEntityOfPage: {
       "@type": "WebPage",

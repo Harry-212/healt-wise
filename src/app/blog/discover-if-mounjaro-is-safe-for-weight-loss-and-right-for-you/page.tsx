@@ -28,8 +28,8 @@ export default function MounjaroSafetyArticlePage() {
     headline: "Discover If Mounjaro Is Safe for Weight Loss and Right for You",
     description:
       "Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding.",
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-14",
     mainEntityOfPage: {
       "@type": "WebPage",

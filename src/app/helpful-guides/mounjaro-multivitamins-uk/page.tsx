@@ -115,8 +115,8 @@ const SCHEMA = {
   headline: "Multivitamins and Mounjaro in the UK: Do You Really Need Them?",
   description:
     "Mounjaro reduces appetite, which can lower nutrient intake. We cut through the influencer noise and explain what the evidence says about multivitamins while using Mounjaro.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -151,13 +151,12 @@ export default function GuideMounjaroVitamins() {
         <GuideParagraph>
           Not all supplement advice online is trustworthy. On platforms like
           TikTok, Instagram, and Facebook, many influencers promote
-          multivitamins through paid partnerships.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          multivitamins through paid partnerships.</GuideParagraph>
         <GuideParagraph>
           This means recommendations are often driven by commission rather than
           clinical effectiveness. A product that trends today may simply reflect
           marketing not quality or scientific backing.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideCallout variant="warning">
           The same applies to "fat-burning" supplements frequently marketed
           alongside <IL href="/what-is-mounjaro">GLP-1 treatments</IL>. Most
@@ -173,10 +172,9 @@ export default function GuideMounjaroVitamins() {
           how it supports weight loss, it may also reduce overall nutrient
           intake particularly if meals become very small or food variety
           decreases.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
-          A daily multivitamin can help:
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          A daily multivitamin can help:</GuideParagraph>
         <GuideBulletList
           items={[
             "Fill minor nutritional gaps caused by reduced portion sizes",
@@ -203,10 +201,10 @@ export default function GuideMounjaroVitamins() {
             Mounjaro SmPC
           </EL>{" "}
           does not list standard multivitamins as an interaction concern.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           However, excessive intake can cause harm. Pay particular attention to:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Vitamin A — can accumulate to toxic levels with prolonged high-dose supplementation",
@@ -230,8 +228,7 @@ export default function GuideMounjaroVitamins() {
           <EL href="https://www.gov.uk/government/publications/food-supplements-guidance-and-faqs">
             MHRA under the Food Supplements Regulations
           </EL>
-          . This means all compliant products must meet standards for:
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          . This means all compliant products must meet standards for:</GuideParagraph>
         <GuideBulletList
           items={[
             "Safety — ingredients must be safe at the stated doses",
@@ -241,7 +238,7 @@ export default function GuideMounjaroVitamins() {
         />
         <GuideParagraph>
           This means:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             "Budget multivitamins are often just as effective as premium brands—the active ingredients are the same.",
@@ -261,7 +258,7 @@ export default function GuideMounjaroVitamins() {
         <GuideParagraph>
           A well balanced multivitamin for someone using{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> should include:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -304,8 +301,7 @@ export default function GuideMounjaroVitamins() {
           appetite is significantly reduced. However, most UK approved
           supplements offer similar benefits regardless of price. Focus on
           consistency, not branding and always check with your pharmacist if
-          you are unsure about a specific product.
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          you are unsure about a specific product.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

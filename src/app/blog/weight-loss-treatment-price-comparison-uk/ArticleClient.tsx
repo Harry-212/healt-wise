@@ -25,9 +25,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#WeightLossUK #MounjaroPrice #WegovyPrice #SaxendaCost #GLP1Costs #PrivateHealthcareUK #WeightLossTreatmentPrice";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -405,11 +402,7 @@ export default function ArticleClient() {
                 <p>
                   For a complete, live price comparison across all three treatments and more than 60 GPhC-registered UK pharmacies, you can explore the <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">mounjaro vs wegovy vs saxenda comparison</Link> hub to find the best rates.
                 </p>
-                <p className={`text-sm leading-relaxed mt-8 ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </GuideSection>
+</GuideSection>
             </article>
 
             <div className="mt-10">

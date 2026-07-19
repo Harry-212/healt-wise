@@ -18,9 +18,6 @@ const SHARE_PATH = "/blog/does-stress-cause-belly-fat";
 const HERO_SRC = blogWebpPath(STRESS_BELLY_FAT_HERO_WEBP);
 const INLINE_SRC = blogWebpPath(STRESS_BELLY_FAT_INLINE_WEBP);
 
-const SOCIAL_HASHTAGS =
-  "#StressAndWeight #Cortisol #BellyFat #VisceralFat #SleepHealth #MentalHealth";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -579,15 +576,7 @@ export default function ArticleClient() {
                   Health Wise does not sell medicines; this article is general
                   information and does not replace advice from your clinician.
                 </p>
-                <p
-                  className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-                >
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">
-                    Suggested hashtags:
-                  </span>{" "}
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </GuideSection>
+</GuideSection>
             </article>
 
             <div className="mt-10">

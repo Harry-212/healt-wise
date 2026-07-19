@@ -36,9 +36,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#BuyWeightLossPills #OrlistatUK #MysimbaUK #WegovyPill #GLP1Tablets #OnlinePharmacyUK #WeightLossPillsUK";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -295,7 +292,11 @@ export default function ArticleClient() {
                   However, convenience is personal. A weekly injection may be easier for one person, while a daily tablet may feel simpler for someone else.
                 </p>
                 <p>
-                  Therefore, the smarter question is not &ldquo;Which is best?&rdquo; but &ldquo;Which weight loss treatment fits my health profile, budget, and lifestyle?&rdquo; If injections are still on your shortlist, the <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price list UK</Link> is a practical next step alongside this pill comparison.
+                  Therefore, the smarter question is not &ldquo;Which is best?&rdquo; but &ldquo;Which weight loss treatment fits my health profile, budget, and lifestyle?&rdquo; If injections are still on your shortlist, our{" "}
+                  <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">
+                    Mounjaro vs Wegovy vs Saxenda comparison
+                  </Link>{" "}
+                  is a practical next step alongside this pill guide.
                 </p>
               </GuideSection>
 
@@ -334,12 +335,12 @@ export default function ArticleClient() {
                   This is where Health Wise helps. Instead of only showing
                   &ldquo;from&rdquo; prices, we help users compare weight loss
                   treatment cost in a more practical way. For GLP-1 routes
-                  specifically, our guide to the{" "}
-                  <Link href="/prices/cheapest-options-uk" className="font-medium text-emerald-600 hover:underline">
-                    cheapest GLP-1 weight loss treatment options
+                  specifically, our{" "}
+                  <Link href="/methodology" className="font-medium text-emerald-600 hover:underline">
+                    price comparison methodology
                   </Link>{" "}
-                  shows how injection pricing compares when you are weighing
-                  pills against pens.
+                  explains how we weigh dose, fees, and provider transparency
+                  when you are comparing pills against pens.
                 </p>
               </GuideSection>
 
@@ -608,14 +609,6 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <section id="limitations" className="scroll-mt-28">
-                <h2 className={`text-xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                  Suggested hashtags
-                </h2>
-                <p className={`mt-4 text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </section>
             </article>
 
             <div className="mt-10">

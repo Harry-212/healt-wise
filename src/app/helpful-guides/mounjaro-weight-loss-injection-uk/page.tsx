@@ -36,7 +36,7 @@ const TOC = [
   { id: "side-effects", label: "Side Effects of Mounjaro" },
   { id: "cost", label: "Cost of Mounjaro in the UK" },
   { id: "worth-it", label: "Is Mounjaro Worth It?" },
-  { id: "local-options", label: "Finding Providers in UK Cities" },
+  { id: "finding-provider", label: "Finding a Verified Provider" },
   { id: "references", label: "Sources & Further Reading" },
   { id: "faq", label: "Frequently Asked Questions" },
 ];
@@ -142,8 +142,8 @@ const SCHEMA = {
     "Mounjaro Weight Loss Treatment UK (2026): How It Works, Results, Eligibility & Cost",
   description:
     "Complete UK guide to Mounjaro (tirzepatide) for weight loss. Covers how the dual GLP-1/GIP mechanism works, clinical trial results, eligibility criteria, side effects, and 2026 costs.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   about: [
     { "@type": "Thing", name: "Mounjaro" },
@@ -186,11 +186,11 @@ export default function GuideMounjaroPillar() {
           adults. Originally developed to treat type 2 diabetes, it is now
           approved in the UK as a medical treatment for obesity and overweight
           conditions.
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+        </GuideParagraph>
         <GuideParagraph>
           It works differently from older medications by targeting two key
           appetite and metabolic hormones:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "GLP-1 (glucagon-like peptide-1)",
@@ -203,7 +203,7 @@ export default function GuideMounjaroPillar() {
           loss treatments such as{" "}
           <IL href="/what-is-wegovy">Wegovy (semaglutide)</IL>, which targets
           only GLP 1.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 2 ── */}
@@ -211,7 +211,7 @@ export default function GuideMounjaroPillar() {
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> helps regulate appetite
           and energy intake through multiple pathways:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Slows stomach emptying — you feel full for longer",
@@ -229,7 +229,7 @@ export default function GuideMounjaroPillar() {
             SURMOUNT 1 clinical trial
           </EL>
           .
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 3 ── */}
@@ -241,7 +241,7 @@ export default function GuideMounjaroPillar() {
             SURMOUNT 1 trial
           </EL>{" "}
           published in the New England Journal of Medicine:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideStatCards
           stats={[
             { value: "~10–15%", label: "Body weight loss", sub: "Within 6 months" },
@@ -256,7 +256,7 @@ export default function GuideMounjaroPillar() {
           dosage, and lifestyle adherence. Use our{" "}
           <IL href="/tools/bmi-calculator">BMI calculator</IL> to understand
           what these percentages mean in absolute terms for your weight.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
+        </GuideParagraph>
       </GuideSection>
 
       {/* ── Section 4 ── */}
@@ -265,7 +265,7 @@ export default function GuideMounjaroPillar() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> is often compared with
           other GLP 1 based treatments available in the UK. The key difference
           is Mounjaro's dual hormone mechanism:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideTable
           headers={["Treatment", "Frequency", "Average Weight Loss"]}
           rows={[
@@ -285,7 +285,7 @@ export default function GuideMounjaroPillar() {
           and{" "}
           <IL href="/compare/mounjaro-vs-saxenda">Mounjaro vs Saxenda comparison</IL>{" "}
           for a detailed breakdown.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 5 ── */}
@@ -297,7 +297,7 @@ export default function GuideMounjaroPillar() {
             National Institute for Health and Care Excellence (NICE)
           </EL>
           . You may qualify if:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "BMI ≥ 30",
@@ -306,7 +306,7 @@ export default function GuideMounjaroPillar() {
         />
         <GuideParagraph>
           Not suitable for:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "History of pancreatitis",
@@ -323,7 +323,7 @@ export default function GuideMounjaroPillar() {
             how long it takes to get Mounjaro
           </IL>{" "}
           for what to expect after eligibility is confirmed.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 6 ── */}
@@ -339,7 +339,7 @@ export default function GuideMounjaroPillar() {
             official SmPC
           </EL>{" "}
           provide full side effect information.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Common: nausea, digestive discomfort, fatigue",
@@ -349,7 +349,7 @@ export default function GuideMounjaroPillar() {
         <GuideParagraph>
           Always follow guidance from your clinician. If you experience severe
           or persistent abdominal pain, seek medical advice promptly.
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+        </GuideParagraph>
       </GuideSection>
 
       {/* ── Section 7 ── */}
@@ -357,7 +357,7 @@ export default function GuideMounjaroPillar() {
         <GuideParagraph>
           Prices vary depending on provider and dosage. Typical factors
           affecting cost:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             "Clinic or pharmacy — verified providers vary in their pricing structure.",
@@ -375,9 +375,7 @@ export default function GuideMounjaroPillar() {
           <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
             GPhC registered pharmacies
           </IL>
-          . You can also{" "}
-          <IL href="/prices/cheapest-options-uk">compare cheapest GLP 1 options</IL>{" "}
-          across all treatments.
+          .
         </GuideParagraph>
       </GuideSection>
 
@@ -404,32 +402,29 @@ export default function GuideMounjaroPillar() {
           the most effective options currently available. Whether it is right
           for you depends on your individual health profile, eligibility, and
           access to a prescribing clinician.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 9 ── */}
-      <GuideSection id="local-options" heading="Finding Providers in UK Cities">
+      <GuideSection id="finding-provider" heading="Finding a Verified Provider">
         <GuideParagraph>
-          Accessing Mounjaro is becoming more straightforward across the UK, but finding a trusted local provider or pharmacy is essential for ongoing support. Depending on your location, you might have access to specialised weight management clinics that offer face to face consultations.
+          Mounjaro must be prescribed by a registered UK clinician and
+          dispensed by a GPhC-registered pharmacy. Before choosing a provider,
+          read our{" "}
+          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+            pharmacy verification guide
+          </IL>{" "}
+          or use our{" "}
+          <IL href="/pharmacy-safety-gphc-verification">
+            GPhC verification checks
+          </IL>{" "}
+          to confirm a pharmacy is legitimate.
         </GuideParagraph>
         <GuideParagraph>
-          For instance, if you reside in the capital, you might want to explore our guide on the <IL href="/blog/best-weight-loss-treatment-in-london">best weight loss treatment in London</IL>. Similarly, we have dedicated resources for finding <IL href="/blog/best-weight-loss-treatment-in-manchester">treatment in Manchester</IL> or evaluating <IL href="/blog/best-weight-loss-treatment-in-liverpool">options in Liverpool</IL> and other major cities.
+          Browse more patient guides—side effects, storage, nutrition, and
+          eligibility—in our{" "}
+          <IL href="/helpful-guides">helpful guides hub</IL>.
         </GuideParagraph>
-        <GuideParagraph>
-          You can also dive deeper into the clinical data in our article on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science">Mounjaro weight loss benefits backed by science</IL>.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
-        
-        <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-6">
-          <h3 className="mb-2 text-lg font-semibold text-slate-900">
-            Explore treatments in your area
-          </h3>
-          <p className="mb-4 text-slate-600">
-            Review registered pharmacies and specialist weight loss clinics across various UK cities to find the right fit for your needs.
-          </p>
-          <IL href="/blog/topic/locations" className="inline-flex items-center justify-center rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-700 hover:text-white">
-            Discover UK locations
-          </IL>
-        </div>
       </GuideSection>
 
       {/* ── Key Takeaways ── */}

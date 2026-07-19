@@ -129,8 +129,8 @@ const SCHEMA = {
   headline: "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss",
   description:
     "Mounjaro and Wegovy do more than reduce weight. From improved blood sugar control to cardiovascular and liver health, here's what the clinical evidence shows.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -169,8 +169,7 @@ export default function GuideMounjaroHealthBenefits() {
           quality and sustainability of the weight loss they produce. Unlike
           short term calorie restriction, GLP 1 medications work by directly
           modifying the hormonal signals that regulate hunger and satiety 
-          making lower intake feel natural rather than forced.
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          making lower intake feel natural rather than forced.</GuideParagraph>
         <GuideStatCards
           stats={[
             {
@@ -201,7 +200,7 @@ export default function GuideMounjaroHealthBenefits() {
           <IL href="/what-is-wegovy">Wegovy</IL> were originally developed in
           the context of type 2 diabetes management and their glucose lowering
           effects are among their most clinically significant benefits.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Increase insulin sensitivity — cells become more responsive to insulin",
@@ -215,7 +214,7 @@ export default function GuideMounjaroHealthBenefits() {
           GLP 1 receptor agonists as an important class of treatment for type
           2 diabetes management, noting both the glucose lowering and weight
           loss effects that benefit patients.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideCallout variant="info">
           If you have type 2 diabetes, discuss{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> with your GP or diabetes
@@ -234,8 +233,7 @@ export default function GuideMounjaroHealthBenefits() {
           </EL>{" "}
           showed that semaglutide (Wegovy) reduced the risk of major adverse
           cardiovascular events (heart attack, stroke, cardiovascular death) by
-          20% in people with obesity and established cardiovascular disease.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
+          20% in people with obesity and established cardiovascular disease.</GuideParagraph>
         <GuideBulletList
           items={[
             "Reduced blood pressure — particularly systolic blood pressure, a key cardiovascular risk factor",
@@ -258,13 +256,13 @@ export default function GuideMounjaroHealthBenefits() {
           dysfunction associated steatotic liver disease (MASLD) affects an
           estimated 25–30% of UK adults and is closely linked to obesity and
           insulin resistance.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Both{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> and{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> have shown meaningful
           reductions in liver fat and inflammation in clinical studies:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Reduced hepatic fat content — measured by MRI in clinical studies",
@@ -281,8 +279,7 @@ export default function GuideMounjaroHealthBenefits() {
           airway. Weight loss through{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> can produce significant
-          improvements in sleep apnoea severity.
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          improvements in sleep apnoea severity.</GuideParagraph>
         <GuideBulletList
           items={[
             "Reduced airway obstruction — less fat tissue pressing on the airway during sleep",
@@ -302,7 +299,7 @@ export default function GuideMounjaroHealthBenefits() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> and{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> can therefore have a
           substantial impact on musculoskeletal health.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Lower joint stress — reduced mechanical load on knees, hips, and lumbar spine",
@@ -317,7 +314,7 @@ export default function GuideMounjaroHealthBenefits() {
           The psychological benefits of sustained weight loss with GLP 1
           medications are increasingly documented in patient reported outcome
           data from clinical trials and real world evidence.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -353,8 +350,7 @@ export default function GuideMounjaroHealthBenefits() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> and{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> have a well characterised
           safety profile from extensive clinical trials. Understanding common
-          and rare side effects helps patients manage treatment effectively.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          and rare side effects helps patients manage treatment effectively.</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           Common side effects

@@ -1,4 +1,4 @@
-﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -84,18 +84,32 @@ const REFERENCES = [
 
 const RELATED_GUIDES = [
   {
-    href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
+    href: "/helpful-guides/mounjaro-nutrition-guide-uk",
     category: "Medications",
-    title: "Mounjaro Weight Loss Treatment UK: Full Guide",
+    title: "Mounjaro Nutrition Guide UK",
     description:
-      "How Mounjaro works, clinical results, eligibility, and costs—everything you need to know before starting treatment.",
+      "How to eat well on Mounjaro—protein, fibre, and meal planning to support sustained weight loss.",
   },
   {
-    href: "/helpful-guides/mounjaro-prescription-timeline-uk",
+    href: "/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust",
     category: "Medications",
-    title: "How Long Does It Take to Get Mounjaro in the UK?",
+    title: "Mounjaro Dosage Guide for Weight Loss",
     description:
-      "From consultation to first delivery—the Mounjaro prescription and delivery timeline explained.",
+      "Starting doses, titration steps, and practical dosing facts that support safer progress.",
+  },
+  {
+    href: "/helpful-guides/mounjaro-early-weight-loss-why-it-slows",
+    category: "Medications",
+    title: "Why Early Weight Loss Slows on Mounjaro",
+    description:
+      "The biology behind rapid initial results, why progress slows, and what that means for your dose.",
+  },
+  {
+    href: "/tools/weight-loss-tracker",
+    category: "Tools",
+    title: "Weight-Loss Tracker",
+    description:
+      "Track weekly trends so plateaus are easier to spot and discuss with your clinician.",
   },
 ];
 
@@ -106,8 +120,8 @@ const SCHEMA = {
     "Why Weight Loss Slows on Mounjaro: Understanding Plateaus & Long-Term Progress",
   description:
     "Weight loss naturally slows after the first weeks on Mounjaro. Learn why plateaus happen, what they mean for long-term progress, and how to stay on track.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   about: [{ "@type": "Thing", name: "Mounjaro (tirzepatide)" }],
   mainEntityOfPage: {
@@ -145,7 +159,7 @@ export default function GuideMounjaroPlateau() {
           Early results on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> can feel rapid. This is
           mainly due to:
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+        </GuideParagraph>
         <GuideBulletList
           items={[
             "Reduced appetite — leading to a sharp initial reduction in calorie intake",
@@ -172,7 +186,7 @@ export default function GuideMounjaroPlateau() {
           </EL>{" "}
           data clearly shows this pattern across all dose groups. Reasons
           include:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Metabolic adaptation — the body conserves energy more efficiently at a lower weight",
@@ -194,7 +208,7 @@ export default function GuideMounjaroPlateau() {
           <EL href="https://www.nice.org.uk/guidance/cg189">NICE guidelines</EL>{" "}
           for obesity management recognise multiple markers of meaningful
           progress. Focus on:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
+        </GuideParagraph>
         <GuideBulletListRich
           items={[
             "Energy levels — improved stamina and reduced fatigue are common early benefits of weight loss.",
@@ -209,7 +223,7 @@ export default function GuideMounjaroPlateau() {
           <IL href="/tools/weight-loss-tracker">weight loss tracker</IL> to
           visualise your progress over weeks and months not just day to day.
           Trends matter far more than daily fluctuations.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 4 ── */}
@@ -217,11 +231,17 @@ export default function GuideMounjaroPlateau() {
         <GuideParagraph>
           To move through a plateau and sustain long term results on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>:
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
-        <GuideBulletList
+        </GuideParagraph>
+        <GuideBulletListRich
           items={[
             "Adjust calorie intake over time — as weight falls, total daily energy needs reduce",
-            "Increase protein and fibre — both support satiety and preserve muscle mass during weight loss",
+            <>
+              Increase protein and fibre — see our{" "}
+              <IL href="/helpful-guides/mounjaro-nutrition-guide-uk">
+                Mounjaro nutrition guide
+              </IL>{" "}
+              for practical meal planning tips.
+            </>,
             "Add strength training — resistance exercise helps maintain muscle and sustain metabolic rate",
             "Stay consistent — missing doses or reverting to old eating patterns will slow progress",
           ]}
@@ -234,8 +254,16 @@ export default function GuideMounjaroPlateau() {
             compare weight loss treatments
           </IL>{" "}
           to understand how other options compare if Mounjaro is not producing
-          expected results.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          expected results. If cost is part of deciding whether to continue,
+          check our{" "}
+          <IL href="/mounjaro-price-comparison">Mounjaro price comparison</IL>.
+        </GuideParagraph>
+        <GuideParagraph>
+          Track trends with our{" "}
+          <IL href="/tools/weight-loss-tracker">weight loss tracker</IL> and
+          browse more Mounjaro guides in our{" "}
+          <IL href="/helpful-guides">helpful guides hub</IL>.
+        </GuideParagraph>
       </GuideSection>
 
       {/* ── Key Takeaways ── */}

@@ -86,81 +86,79 @@ export default function ArticleClient() {
 
         {/* CONTENT SPLIT LAYOUT */}{/* LEFT: TOC */}{/* RIGHT: ARTICLE BODY */}<article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <p className="text-lg md:text-xl">
-                A new weight loss medication like Wegovy® can sound promising, but the costs, eligibility rules, and UK availability are often confusing. If you are comparing Wegovy weight loss medication with other options and trying to work out what you might really pay, it helps to break things down step by step.
-               For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
+                A new weight loss medication like Wegovy® can sound promising, but the costs, eligibility rules, and UK availability are often confusing. If you are comparing Wegovy weight loss medication with other options and trying to work out what you might really pay, it helps to break things down step by step.</p>
               <p>
                 This guide walks you through how Wegovy works, what affects the price you pay in the UK, and how to decide if it is a good fit for you financially as well as medically.
-              </p>
+</p>
 
               <GuideSection darkMode={darkMode} id="what-is-wegovy" heading="What Wegovy Weight Loss Medication Is">
                 <p>
                   Wegovy® (semaglutide) is a prescription weight loss medicine used alongside a reduced calorie diet and increased physical activity. It is licensed for adults with obesity, or who are overweight with at least one weight related medical problem.
-                </p>
+</p>
                 <p>
                   Semaglutide is a GLP 1 receptor agonist. It mimics a hormone that helps regulate appetite and calorie intake, so you tend to feel full sooner and less interested in snacking. Wegovy is available as a once weekly self injected pen, and in some studies as a once daily pill, although the approved formats and availability can differ by country.
-                </p>
+</p>
                 <p>
                   In major clinical trials, adults taking Wegovy along with lifestyle changes lost significantly more weight than those on placebo. For example, in the STEP 5 trial, adults on Wegovy injection 2.4 mg lost an average of 15.2% of their body weight at 104 weeks, compared with 2.6% for placebo. Around 36.1% of people taking Wegovy maintained at least 20% weight loss at 2 years, compared with 2.3% of those on placebo.
-                </p>
+</p>
                 <p>
                   Other trials of Wegovy tablets have shown similar patterns. In the OASIS 4 trial of once daily Wegovy tablets 25 mg plus diet and exercise, adults with obesity or overweight and weight related medical problems lost 13.6% of their starting weight at 64 weeks, compared with 2.4% in the placebo group. In a 64 week US study, adults taking the Wegovy pill lost on average 14% of their starting weight, compared with 2.4% on placebo.
-                </p>
+</p>
                 <p>
                   Wegovy also has evidence for cardiometabolic benefits, for example reduced waist circumference, lower systolic blood pressure, and improvements in triglycerides and A1c in STEP 5. It is the only weight loss medication proven to help reduce the risk of major heart events, such as heart attack, stroke, or death in adults with heart disease and obesity or overweight, when used with diet and increased physical activity. However, it is not licensed specifically to treat high blood pressure, type 2 diabetes, or high cholesterol, so those conditions still need their own management.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="how-prescribed" heading="How Wegovy Is Prescribed And Taken">
                 <p>
                   The way you take Wegovy affects cost, because the dose is increased gradually. You start lower and build up to a maintenance dose that controls appetite effectively, which means your prescription strength and therefore price change over time.
-                </p>
+</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Typical Wegovy injection schedule</h3>
                 <p>
                   Wegovy injection is given once a week using a prefilled pen. The dose usually starts at 0.25 mg once weekly and increases every 4 weeks as your body adapts, until you reach a maintenance dose of 1.7 mg or 2.4 mg, if tolerated. Common injection sites include the upper legs, lower stomach, or upper arms. You are advised to rotate injection sites to reduce irritation, and the injection itself usually takes around 5 to 10 seconds.
-                </p>
+</p>
                 <p>
                   Because the pens contain different fixed doses, the cost during the first few months can be lower. Once you move onto the higher maintenance dose, the monthly cost typically rises.
-                </p>
+</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Wegovy pill dosing</h3>
                 <p>
                   In trials, Wegovy pill is a once daily tablet that you take with a reduced calorie diet and increased physical activity. The dose starts at 1.5 mg once daily, then increases about every 30 days until reaching 25 mg, again to help your body adjust and reduce side effects.
-                </p>
+</p>
                 <p>
                   The tablet uses SNAC technology, salcaprozate sodium, which protects semaglutide from stomach acid and enzymes so it can be absorbed into the bloodstream when taken by mouth.
-                </p>
+</p>
                 <p>
                   As of now, Wegovy tablets are not as widely available as the treatment in all markets, so you will usually find more pricing information for the weekly pen.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="factors-costs" heading="Factors That Affect Wegovy Costs In The UK">
                 <p>
                   The truth is that there is no single “Wegovy price” in the UK. What you pay depends on several moving parts that include your eligibility, where you get your prescription, and your dose.
-                </p>
+</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>1. NHS eligibility versus private treatment</h3>
                 <p>The biggest cost difference is whether you are eligible on the NHS or paying privately.</p>
                 <p>
-                  On the NHS, patients do not typically see the full list price. Instead, you pay standard prescription charges in England, or no charge in Scotland, Wales, and Northern Ireland, if Wegovy is prescribed for you. However, Wegovy access on the NHS is limited and prioritised for people with obesity and specific health risks, according to local criteria and NICE guidance. Not everyone who wants Wegovy for weight loss will meet those thresholds, even if they are struggling with their weight.
-                 For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
+                  On the NHS, patients do not typically see the full list price. Instead, you pay standard prescription charges in England, or no charge in Scotland, Wales, and Northern Ireland, if Wegovy is prescribed for you. However, Wegovy access on the NHS is limited and prioritised for people with obesity and specific health risks, according to local criteria and NICE guidance. Not everyone who wants Wegovy for weight loss will meet those thresholds, even if they are struggling with their weight.</p>
                 <p>
                   If you do not qualify, you are likely to look at private weight management clinics or online prescribing services, which set their own pricing structures.
-                </p>
+</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>2. Starting dose versus maintenance dose</h3>
                 <p>
                   You will usually spend less during the titration phase when you are on lower doses such as 0.25 mg or 0.5 mg once a week. Costs usually rise once you reach a higher weekly dose such as 1.7 mg or 2.4 mg, because you are using more medicine each month.
-                </p>
+</p>
                 <p>
                   This is why some people are surprised when their first 1 or 2 months feel relatively affordable, but then the monthly cost increases as soon as they reach maintenance dosing. When you budget, it helps to base your figures on the price of the likely long term dose, not the starting one.
-                </p>
+</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>3. Provider and package type</h3>
                 <p>
                   Private providers sometimes offer Wegovy as part of a structured programme rather than a medicine only subscription. You might see:
-                </p>
+</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li>Medication only packages</li>
                   <li>Medication plus online check ins</li>
@@ -168,12 +166,12 @@ export default function ArticleClient() {
                 </ul>
                 <p>
                   The more hands on support you receive, the higher the overall monthly price is likely to be, even if the medicine itself costs the same. On the other hand, extra support may help you use Wegovy more effectively and safely, so it is worth weighing value, not just headline price.
-                </p>
+</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>4. Monitoring and additional tests</h3>
                 <p>
                   Although not always mandatory, some clinicians will recommend blood tests or health checks before and during treatment, especially if you have conditions such as type 2 diabetes, sleep apnoea, or cardiovascular disease. These checks can add to overall costs, especially if they are not covered by the NHS or private insurance.
-                </p>
+</p>
               </GuideSection>
 
               <div className="my-10">
@@ -188,7 +186,7 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="benefits-risks" heading="Benefits, Risks, And What You Are Really Paying For">
                 <p>
                   When you look at monthly costs in isolation, Wegovy weight loss medication can seem expensive. To get a clearer picture, it helps to understand what you are actually buying and the potential trade offs.
-                </p>
+</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Evidence for weight loss and health improvements</h3>
                 <p>Compared with lifestyle changes alone, Wegovy has shown:</p>
@@ -205,13 +203,13 @@ export default function ArticleClient() {
                 </ul>
                 <p>
                   Similar patterns are seen with the treatment, and real world observational data from the WeGoTogether® study suggests that people in clinical practice can also lose a significant amount of weight, although that study relies on self reported data and has no control group.
-                </p>
+</p>
                 <p>
                   Some of the STEP 5 participants also saw improvements in waist circumference, blood pressure, triglycerides, and A1c, although Wegovy is not indicated to treat hypertension, diabetes, or dyslipidaemia. Wegovy is unique as the only weight loss medication proven to reduce the risk of major cardiovascular events, such as heart attack, stroke, or death in adults who already have heart disease with obesity or overweight.
-                </p>
+</p>
                 <p>
                   In practice, this means that while you are paying for the medicine, you may also be gaining better control of appetite, improved mobility, and a lower risk profile for serious heart related events, especially if you are in a higher risk group.
-                </p>
+</p>
 
                 <h3 className={`text-xl font-semibold mt-8 mb-4 ${darkMode ? "text-slate-200" : "text-slate-800"}`}>Side effects and safety considerations</h3>
                 <p>Cost is not just financial. You also need to factor in how Wegovy may affect how you feel day to day. Common side effects include:</p>
@@ -226,32 +224,31 @@ export default function ArticleClient() {
                 </ul>
                 <p>
                   Most side effects are gastrointestinal and tend to improve over time as your dose increases gradually. However, serious side effects can occur such as pancreatitis, gallbladder problems, and possible thyroid tumours. In animal studies, semaglutide and similar medicines caused thyroid tumours, including cancer. It is not known if this happens in humans, but Wegovy is contraindicated if you or a family member has medullary thyroid carcinoma or Multiple Endocrine Neoplasia syndrome type 2.
-                </p>
+</p>
                 <p>
-                  Wegovy slows stomach emptying, which can affect the absorption and effectiveness of some medicines, particularly diabetes drugs like sulfonylureas or insulin, and this may increase the risk of low blood sugar. If you are on these medicines, you will need close medical supervision and education on recognising and managing hypoglycaemia.
-                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</Link>.</p>
+                  Wegovy slows stomach emptying, which can affect the absorption and effectiveness of some medicines, particularly diabetes drugs like sulfonylureas or insulin, and this may increase the risk of low blood sugar. If you are on these medicines, you will need close medical supervision and education on recognising and managing hypoglycaemia.</p>
                 <p>
                   Wegovy should not be used with any other semaglutide containing products or GLP 1 receptor agonists, and it is not known to be safe or effective in people under 18 years for weight management.
-                </p>
+</p>
                 <p>
                   Considering all of this, part of what you pay for with a reputable UK provider is careful assessment of your medical history, regular monitoring, and guidance on side effects, not just the box of pens.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="comparing-options" heading="Comparing Wegovy With Other Options">
                 <p>
                   You may be weighing up Wegovy against other medications such as tirzepatide (for example Mounjaro) or older weight loss drugs, or even against lifestyle change alone.
-                </p>
+</p>
                 <p>A simple way to think about it is:</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li>You are not just comparing monthly prices, you are comparing likely results, side effect profiles, medical oversight, and how sustainable each approach feels for you.</li>
                 </ul>
                 <p>
                   Some people will achieve similar weight loss through structured lifestyle programmes without medication, especially if they are able to commit time and support to those changes. Others find that a GLP 1 medicine helps them control appetite enough to make long term changes stick.
-                </p>
+</p>
                 <p>
                   If you have known heart disease as well as obesity or overweight, the additional evidence that Wegovy can reduce major cardiovascular events might be highly relevant to you, and may justify a higher price than a drug that does not carry that benefit.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="how-to-decide" heading="How To Decide If Wegovy Is Worth The Cost For You">
@@ -326,13 +323,12 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p>
                   Wegovy weight loss medication offers strong evidence for significant and sustained weight loss, along with unique data on reducing major heart events in people with heart disease and excess weight. For many adults in the UK, especially those who have tried for years to lose weight, that can be life changing.
-                </p>
+</p>
                 <p>
                   However, the full truth about Wegovy’s cost is that you are paying for more than a pen or pill. You are investing in a long term medical treatment, ongoing monitoring, and support to change your lifestyle. Your final monthly spend depends on whether you access it via the NHS or privately, which dose you are on, and how comprehensive the programme around it is.
-                </p>
+</p>
                 <p>
-                  If you are considering Wegovy, a practical next step is to speak to a healthcare professional about your eligibility, medical history, and budget. With clear information and realistic expectations, you can decide whether this particular medication fits your health goals and your finances, or whether another weight management route might serve you better.
-                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
+                  If you are considering Wegovy, a practical next step is to speak to a healthcare professional about your eligibility, medical history, and budget. With clear information and realistic expectations, you can decide whether this particular medication fits your health goals and your finances, or whether another weight management route might serve you better.</p>
               </GuideSection>
 
             </article>

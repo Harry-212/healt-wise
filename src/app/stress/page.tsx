@@ -30,8 +30,8 @@ function stressJsonLd() {
     headline: "How stress affects your weight — and what you can do about it",
     description:
       "Science-aligned guide to stress and weight: cortisol, cravings, sleep, emotional eating, acute vs chronic stress, coping strategies, and how this fits with nutrition, exercise, and medical weight loss.",
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-14",
     dateModified: "2026-04-14",
     mainEntityOfPage: {

@@ -1,4 +1,4 @@
-﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -89,10 +89,10 @@ const REFERENCES = [
     href: "https://www.gov.uk/drug-safety-update",
   },
   {
-    label: "Compare Mounjaro prices UK — Health Wise",
+    label: "Mounjaro side effects UK — Health Wise",
     description:
-      "Find the lowest verified prices for Mounjaro across UK pharmacies, with GPhC compliance confirmation.",
-    href: "/mounjaro-price-comparison",
+      "Common and serious side effects of Mounjaro, when to seek help, and what to discuss with your clinician.",
+    href: "/helpful-guides/mounjaro-side-effects-uk",
     external: false,
   },
   {
@@ -105,6 +105,13 @@ const REFERENCES = [
 ];
 
 const RELATED_GUIDES = [
+  {
+    href: "/helpful-guides/mounjaro-side-effects-uk",
+    category: "Medications",
+    title: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
+    description:
+      "Common and serious side effects, when to seek help, and how to manage early treatment symptoms.",
+  },
   {
     href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
     category: "Pharmacy Safety",
@@ -128,8 +135,8 @@ const SCHEMA = {
     "Mounjaro and Pregnancy Risk: What You Need to Know About Fertility & Contraception",
   description:
     "Mounjaro may increase fertility indirectly as metabolic health improves. Understand the clinical facts about tirzepatide, contraception, and pregnancy risk in the UK.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   about: [
     { "@type": "Thing", name: "Mounjaro" },
@@ -171,7 +178,7 @@ export default function GuideMounjaroPregnancy() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> have caused
           confusion and in some cases, alarm. However, this is not new or
           previously hidden information.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+        </GuideParagraph>
         <GuideParagraph>
           The potential impact of{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> on fertility
@@ -182,7 +189,7 @@ export default function GuideMounjaroPregnancy() {
            and is routinely discussed during medical consultations. This guide
           explains what the evidence actually shows and what you should do if
           you are taking Mounjaro.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 2 ── */}
@@ -197,7 +204,7 @@ export default function GuideMounjaroPregnancy() {
           <IL href="/compare/wegovy-vs-mounjaro">greater average weight loss</IL>
            and with greater weight loss comes a more pronounced effect on
           hormonal health. These changes can indirectly increase fertility:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Improved hormone balance, including a reduction in insulin resistance.",
@@ -215,7 +222,7 @@ export default function GuideMounjaroPregnancy() {
             Mounjaro SmPC
           </EL>
           .
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 3 ── */}
@@ -225,7 +232,7 @@ export default function GuideMounjaroPregnancy() {
           of treatment with{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> a chain of hormonal
           changes takes place:
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+        </GuideParagraph>
         <GuideBulletList
           items={[
             "Insulin sensitivity improves, which reduces circulating insulin levels.",
@@ -245,7 +252,7 @@ export default function GuideMounjaroPregnancy() {
             NICE obesity guidelines
           </EL>
           .
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 4 ── */}
@@ -254,7 +261,7 @@ export default function GuideMounjaroPregnancy() {
           The fertility related effects and contraceptive interaction of
           tirzepatide are documented across multiple regulatory and clinical
           sources:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -279,7 +286,7 @@ export default function GuideMounjaroPregnancy() {
           If a patient was not informed about this before starting treatment, it
           represents a gap in the consultation process not a failure of the
           medication to disclose a hidden risk.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 5 ── */}
@@ -288,7 +295,7 @@ export default function GuideMounjaroPregnancy() {
           If pregnancy is not planned, effective contraception is essential
           while using <IL href="/what-is-mounjaro">Mounjaro</IL>. Healthcare
           professionals may recommend:
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+        </GuideParagraph>
         <GuideBulletList
           items={[
             "Reviewing your current contraception method to confirm it remains appropriate.",
@@ -304,7 +311,7 @@ export default function GuideMounjaroPregnancy() {
             NHS Mounjaro page
           </EL>{" "}
           provides additional guidance on this.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 6 ── */}
@@ -312,7 +319,7 @@ export default function GuideMounjaroPregnancy() {
         <GuideParagraph>
           Many news reports focus on "unexpected pregnancy" without providing
           the clinical context. Specifically, they often fail to explain:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -332,7 +339,7 @@ export default function GuideMounjaroPregnancy() {
           <IL href="/what-is-saxenda">Saxenda</IL>. Framing this as an
           alarming or hidden risk specific to Mounjaro misrepresents the
           evidence.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 7 ── */}
@@ -341,7 +348,7 @@ export default function GuideMounjaroPregnancy() {
           If you are currently taking{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> or are considering
           starting treatment, take the following steps:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+        </GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -355,12 +362,12 @@ export default function GuideMounjaroPregnancy() {
             "Ensure you have a contraception plan that accounts for both the fertility changes and the potential reduction in oral contraceptive effectiveness.",
             "If you think you may be pregnant, stop treatment and seek medical advice promptly.",
             <>
-              Use our{" "}
-              <IL href="/mounjaro-price-comparison">
-                Mounjaro price comparison
+              Review our guide on{" "}
+              <IL href="/helpful-guides/mounjaro-side-effects-uk">
+                Mounjaro side effects
               </IL>{" "}
-              to find a verified UK clinic to speak to about your treatment
-              plan.
+              and speak to your prescribing clinician about your contraception
+              and treatment plan.
             </>,
           ]}
         />

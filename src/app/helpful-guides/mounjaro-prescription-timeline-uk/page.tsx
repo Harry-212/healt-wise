@@ -126,8 +126,8 @@ const SCHEMA_JSON = {
         "How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline",
       description:
         "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process and how to avoid common delays.",
-      author: { "@type": "Organization", name: "Health Wise" },
-      publisher: { "@type": "Organization", name: "Health Wise" },
+      author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+      publisher: { "@type": "Organization", name: "Healthwise360" },
       dateModified: "2026-04-09",
       keywords:
         "Mounjaro, tirzepatide, UK prescription, online pharmacy, cold chain delivery, GLP-1",
@@ -165,8 +165,7 @@ export default function GuideMounjaroTimeline() {
       <GuideSection id="timeline" heading="Typical Timeline">
         <GuideParagraph>
           Most patients receive{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL> within:
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          <IL href="/what-is-mounjaro">Mounjaro</IL> within:</GuideParagraph>
         <GuideStatCards
           stats={[
             { value: "1–3", label: "Days for approval", sub: "After consultation" },
@@ -184,7 +183,7 @@ export default function GuideMounjaroTimeline() {
           . You can use our{" "}
           <IL href="/mounjaro-price-comparison">Mounjaro price comparison</IL>{" "}
           to find providers that include delivery speed information.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 2 ── */}
@@ -196,8 +195,7 @@ export default function GuideMounjaroTimeline() {
             MHRA
           </EL>
           . This means it cannot simply be ordered like an over the counter
-          product each prescription must go through a proper clinical process:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          product each prescription must go through a proper clinical process:</GuideParagraph>
         <GuideBulletList
           items={[
             "Medical review — a registered clinician reviews your consultation questionnaire and health history",
@@ -211,7 +209,7 @@ export default function GuideMounjaroTimeline() {
           those for whom it is clinically appropriate. Any provider offering
           immediate supply without a proper clinical review should be treated
           with caution.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 3 ── */}
@@ -224,8 +222,7 @@ export default function GuideMounjaroTimeline() {
             official SmPC
           </EL>{" "}
           and means that pharmacies must use specialist cold chain packaging
-          for delivery.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          for delivery.</GuideParagraph>
         <GuideBulletList
           items={[
             "Medication is dispatched in insulated packaging with cooling elements (ice packs or gel packs)",
@@ -249,7 +246,7 @@ export default function GuideMounjaroTimeline() {
             Mounjaro delivery and storage in the UK
           </IL>
           .
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 4 ── */}
@@ -257,8 +254,7 @@ export default function GuideMounjaroTimeline() {
         <GuideParagraph>
           Most delays in receiving{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> are preventable. Follow
-          these steps:
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          these steps:</GuideParagraph>
         <GuideBulletListRich
           items={[
             "Complete your consultation questionnaire accurately and thoroughly — incomplete answers are the most common cause of delays.",
@@ -274,11 +270,12 @@ export default function GuideMounjaroTimeline() {
               for what to do if you miss a delivery.
             </>,
             <>
-              Choose a pharmacy from our{" "}
-              <IL href="/mounjaro-price-comparison">
-                verified Mounjaro comparison
+              Prefer pharmacies that document cold-chain handling and delivery
+              windows—see our{" "}
+              <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                pharmacy verification standards
               </IL>{" "}
-              — all listed providers have passed our delivery compliance checks.
+              before you order.
             </>,
           ]}
         />

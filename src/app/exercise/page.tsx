@@ -30,8 +30,8 @@ function exerciseJsonLd() {
     headline: "Exercise that actually helps you lose weight — and keep it off",
     description:
       "Weight loss exercise guide: role of movement, benefits, intensity targets, cardio vs resistance training, simple exercises, and how exercise fits with nutrition and medical weight loss options.",
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-14",
     dateModified: "2026-04-14",
     mainEntityOfPage: {

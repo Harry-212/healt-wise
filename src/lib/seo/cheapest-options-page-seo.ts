@@ -22,12 +22,12 @@ export const CHEAPEST_OPTIONS_FAQS: { question: string; answer: string }[] = [
   {
     question: "Why don’t the prices on this page match my pharmacy checkout?",
     answer:
-      "Promotions, delivery bands, consultation fees, and stock bundles change frequently. Health Wise publishes research snapshots, not live quotes. Always verify the figure on the provider’s site before you pay.",
+      "Promotions, delivery bands, consultation fees, and stock bundles change frequently. Healthwise360 publishes research snapshots, not live quotes. Always verify the figure on the provider’s site before you pay.",
   },
   {
     question: "Can I use this guide to choose Wegovy, Mounjaro, or Saxenda?",
     answer:
-      "No. This page compares illustrative prices only. GLP-1 medicines are prescription-only in the UK; a qualified clinician must assess eligibility, risks, drug interactions, and monitoring. Health Wise does not diagnose conditions or prescribe treatment.",
+      "No. This page compares illustrative prices only. GLP-1 medicines are prescription-only in the UK; a qualified clinician must assess eligibility, risks, drug interactions, and monitoring. Healthwise360 does not diagnose conditions or prescribe treatment.",
   },
 ];
 

@@ -41,8 +41,8 @@ export default function MounjaroWeightLossResultsPage() {
     headline: 'Mounjaro Weight Loss Results That May Finally Change Your Life',
     description: 'What to expect from Mounjaro (tirzepatide) weight loss results: mechanisms, real-world stories, side effects, maintenance after treatment, and professional oversight—informational only, not medical advice.',
     image: [HERO_IMAGE],
-    author: { '@type': 'Organization', name: 'Health Wise' },
-    publisher: { '@type': 'Organization', name: 'Health Wise' },
+    author: { '@type': 'Organization', name: 'Healthwise360 Research Team' },
+    publisher: { '@type': 'Organization', name: 'Healthwise360' },
     datePublished: '2026-04-19',
     mainEntityOfPage: {
       '@type': 'WebPage',

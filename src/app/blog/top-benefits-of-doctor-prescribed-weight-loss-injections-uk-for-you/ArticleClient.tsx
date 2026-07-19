@@ -27,8 +27,6 @@ const TOC = [
   { id: 'final-thoughts', label: 'Final thoughts' },
 ];
 
-const SOCIAL_HASHTAGS = '#UKWeightLossInjections #DoctorPrescribedWeightLoss #GLP1UK #Wegovy #Mounjaro #Saxenda';
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -39,8 +37,8 @@ export default function ArticleClient() {
     headline: 'Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You',
     description: 'A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda.',
     image: [`${siteOrigin()}${HERO_SRC}`],
-    author: { '@type': 'Organization', name: 'Health Wise' },
-    publisher: { '@type': 'Organization', name: 'Health Wise' },
+    author: { '@type': 'Organization', name: 'Healthwise360 Research Team' },
+    publisher: { '@type': 'Organization', name: 'Healthwise360' },
     datePublished: '2026-05-19',
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -292,10 +290,7 @@ export default function ArticleClient() {
                 </ul>
                 <p>Those questions may tell you more than comparing percentage losses alone.</p>
                 <p className={`text-sm ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>Health Wise does not sell medicines. This page is general information and is not medical advice.</p>
-                <p className={`text-sm leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span> {SOCIAL_HASHTAGS}
-                </p>
-              </GuideSection>
+</GuideSection>
             </article>
 
           <div className="mt-10">

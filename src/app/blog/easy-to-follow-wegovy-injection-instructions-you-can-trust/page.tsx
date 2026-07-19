@@ -44,8 +44,8 @@ export default function WegovyInjectionInstructionsArticlePage() {
     headline: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
     description:
       "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-14",
     image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {

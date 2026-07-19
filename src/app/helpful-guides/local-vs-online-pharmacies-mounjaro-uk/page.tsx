@@ -119,8 +119,8 @@ const SCHEMA = {
     "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice?",
   description:
     "Online pharmacies are cheaper, but local pharmacies offer face-to-face clinical support. Here's an honest breakdown of both options for Mounjaro patients in the UK.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -156,8 +156,7 @@ export default function GuideLocalVsOnline() {
           Online pharmacies frequently advertise lower prices for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. But local, community
           pharmacies offer something that online services cannot always
-          replicate: direct, face to face clinical support.
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          replicate: direct, face to face clinical support.</GuideParagraph>
         <GuideParagraph>
           You can use the{" "}
           <EL href="https://www.nhs.uk/service-search/pharmacy/find-a-pharmacy">
@@ -170,7 +169,7 @@ export default function GuideLocalVsOnline() {
           </EL>
           . You can verify any provider on the GPhC register before using their
           services.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideCallout variant="info">
           Health Wise checks every pharmacy we list against the GPhC register.
           See{" "}
@@ -185,7 +184,7 @@ export default function GuideLocalVsOnline() {
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> is a
           prescription only medication used for:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Weight management in adults with obesity or overweight with at least one weight-related health condition",
@@ -197,8 +196,7 @@ export default function GuideLocalVsOnline() {
           appetite, insulin response, and blood sugar levels. Because it is a
           prescription only medicine (POM), it must be prescribed by a
           qualified clinician regardless of whether you obtain it from a local
-          or online pharmacy.
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          or online pharmacy.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="pricing" heading="Local vs Online Pricing">
@@ -207,7 +205,7 @@ export default function GuideLocalVsOnline() {
           price often includes services that online providers charge separately
           for, or do not offer at all. When comparing costs, consider what is
           included:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideTable
           headers={["Factor", "Local Pharmacy", "Online Pharmacy"]}
           rows={[
@@ -222,14 +220,13 @@ export default function GuideLocalVsOnline() {
         <GuideParagraph>
           For a current price comparison across verified UK providers, see our{" "}
           <IL href="/mounjaro-price-comparison">Mounjaro price comparison</IL>.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="benefits-local" heading="Benefits of Local Pharmacies">
         <GuideParagraph>
           Local pharmacies provide a level of personalised clinical support that
-          is difficult to replicate online:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          is difficult to replicate online:</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           1. Personalised Advice
@@ -273,7 +270,7 @@ export default function GuideLocalVsOnline() {
           </EL>{" "}
           are required to source medicines from licensed suppliers. This
           significantly reduces the risk of counterfeit or substandard products.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="benefits-online" heading="Benefits of Online Pharmacies">
@@ -282,16 +279,13 @@ export default function GuideLocalVsOnline() {
           healthcare ecosystem particularly for repeat prescriptions and
           treatments like{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
               <strong>Lower prices</strong> — reduced overheads allow online
-              providers to pass savings on. See our{" "}
-              <IL href="/mounjaro-price-comparison">
-                Mounjaro price comparison
-              </IL>{" "}
-              for current UK pricing.
+              providers to pass savings on to patients more often than
+              high-street list prices.
             </>,
             <>
               <strong>Convenience</strong> — consultations, prescriptions, and
@@ -321,8 +315,7 @@ export default function GuideLocalVsOnline() {
 
       <GuideSection id="how-to-choose" heading="How to Choose the Right Option for You">
         <GuideParagraph>
-          The right choice depends on your individual circumstances:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
+          The right choice depends on your individual circumstances:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

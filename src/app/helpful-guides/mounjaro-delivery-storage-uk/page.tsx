@@ -1,4 +1,4 @@
-﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -102,11 +102,25 @@ const RELATED_GUIDES = [
       "From consultation to cold-chain delivery—the full Mounjaro prescription timeline explained.",
   },
   {
+    href: "/helpful-guides/mounjaro-delivery-times-uk",
+    category: "Medications",
+    title: "Mounjaro Delivery Times UK",
+    description:
+      "Typical UK delivery windows, what affects speed, and how to plan around your next dose.",
+  },
+  {
     href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
     category: "Pharmacy Safety",
     title: "How We Verify UK Pharmacies: GPhC Checks Explained",
     description:
       "Our multi-layer pharmacy verification process, including storage and cold-chain compliance checks.",
+  },
+  {
+    href: "/helpful-guides/mounjaro-hot-weather-safety-uk",
+    category: "Medications",
+    title: "Mounjaro Hot Weather Safety UK",
+    description:
+      "How heat affects pens in transit and at home—and what to do if temperatures rise.",
   },
 ];
 
@@ -117,8 +131,8 @@ const SCHEMA = {
     "Mounjaro Delivery & Storage UK: Temperature Rules, Safety Checks & What to Do",
   description:
     "Mounjaro must be refrigerated between 2°C and 8°C. Learn how to check your delivery and what to do if your medication arrives warm.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   about: [{ "@type": "Thing", name: "Mounjaro (tirzepatide)" }],
   mainEntityOfPage: {
@@ -154,8 +168,7 @@ export default function GuideMounjaroStorage() {
       <GuideSection id="storage" heading="Storage Requirements">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> must be kept
-          refrigerated at:
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          refrigerated at:</GuideParagraph>
         <GuideCallout variant="info">
           <strong>2°C to 8°C</strong> — refrigerated storage is required at
           all times until use. This is a mandatory requirement set out in the{" "}
@@ -180,7 +193,7 @@ export default function GuideMounjaroStorage() {
           </IL>
           , through delivery, and into your home. Failure at any point can
           compromise medication safety and effectiveness.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 2 ── */}
@@ -190,8 +203,7 @@ export default function GuideMounjaroStorage() {
           <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
             GPhC registered pharmacy
           </IL>{" "}
-          should include:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
+          should include:</GuideParagraph>
         <GuideBulletList
           items={[
             "Insulated packaging — typically a polystyrene box or specialist insulated bag",
@@ -204,7 +216,7 @@ export default function GuideMounjaroStorage() {
           your prescription details and patient information leaflet. If any of
           these elements are absent, contact the pharmacy before using the
           medication.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideCallout variant="tip">
           For full details on how we verify pharmacy delivery and storage
           compliance, see our{" "}
@@ -225,7 +237,7 @@ export default function GuideMounjaroStorage() {
             Mounjaro SmPC
           </EL>{" "}
           provides clear guidance on what to do:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideTempZones
           zones={[
             {
@@ -249,8 +261,7 @@ export default function GuideMounjaroStorage() {
           If the medication has been exposed to temperatures above 30°C, do
           not use it. Contact your pharmacy to report the issue and request a
           replacement. Keep the packaging as evidence of the temperature
-          breach.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          breach.</GuideParagraph>
       </GuideSection>
 
       {/* ── Section 4 ── */}
@@ -258,7 +269,7 @@ export default function GuideMounjaroStorage() {
         <GuideParagraph>
           Be cautious if your delivery shows any of the following signs of
           inadequate cold chain handling:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             "No insulation — the package is a standard cardboard box or envelope with no thermal lining.",
@@ -288,8 +299,7 @@ export default function GuideMounjaroStorage() {
           explains the checks that distinguish compliant providers from
           unsafe ones. All pharmacies listed on{" "}
           <IL href="/">Health Wise</IL> are verified against these standards
-          before listing.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          before listing.</GuideParagraph>
       </GuideSection>
 
       {/* ── Key Takeaways ── */}

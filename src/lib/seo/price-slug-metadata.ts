@@ -23,7 +23,7 @@ export function metadataForPriceSlug(slug: string): Metadata | null {
         url,
         title: ogTitle,
         description: ogDesc,
-        siteName: "Health Wise",
+        siteName: "Healthwise360",
       },
       twitter: {
         card: "summary_large_image",

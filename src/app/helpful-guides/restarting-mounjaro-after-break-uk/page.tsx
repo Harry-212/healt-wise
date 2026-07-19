@@ -123,8 +123,8 @@ const SCHEMA = {
   headline: "Restarting Mounjaro After a Break: UK Guide (2026)",
   description:
     "Restarting Mounjaro after a gap is often possible—even if your BMI has dropped. Here's how break length affects restart dose, what providers need, and how to do it safely.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -165,11 +165,10 @@ export default function GuideRestartingMounjaro() {
             SURMOUNT 4 trial
           </EL>{" "}
            supports the clinical case for restarting when long term weight
-          management is the goal.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
+          management is the goal.</GuideParagraph>
         <GuideParagraph>
           Standard eligibility applies:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "BMI ≥ 30 (obesity), or",
@@ -184,7 +183,7 @@ export default function GuideRestartingMounjaro() {
             Mounjaro eligibility guide
           </IL>
           .
-        </GuideParagraph>
+</GuideParagraph>
         <GuideCallout variant="info">
           A new prescription and clinical consultation are always required.
           Existing prescriptions cannot simply be reactivated—your provider
@@ -200,7 +199,7 @@ export default function GuideRestartingMounjaro() {
             Mounjaro SmPC
           </EL>{" "}
           guidance on missed doses and with standard clinical practice:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideTable
           headers={["Break Length", "Restart Approach"]}
           rows={[
@@ -213,8 +212,7 @@ export default function GuideRestartingMounjaro() {
           Starting at a lower dose after a break or returning to the lowest
           dose significantly reduces the risk of gastrointestinal side effects
           during readaptation. Do not attempt to skip ahead to your previous
-          dose without clinical guidance.
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          dose without clinical guidance.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="lower-bmi" heading="Restarting with a Lower BMI">
@@ -224,7 +222,7 @@ export default function GuideRestartingMounjaro() {
           still consider restarting you on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, provided you can
           demonstrate:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Evidence of previous prescriptions — confirmation you were legitimately treated before",
@@ -242,7 +240,7 @@ export default function GuideRestartingMounjaro() {
             why BMI cutoffs alone are a flawed basis for stopping treatment
           </IL>
           .
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="steps" heading="Steps to Restart Safely">
@@ -285,7 +283,7 @@ export default function GuideRestartingMounjaro() {
         <GuideParagraph>
           Different providers have different requirements for restarting
           patients. Common requests include:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Updated BMI and current weight — some providers require a recent weight measurement",
@@ -297,8 +295,7 @@ export default function GuideRestartingMounjaro() {
         <GuideParagraph>
           Always confirm the specific requirements with your chosen provider
           before booking a consultation requirements vary and being prepared
-          speeds up the process significantly.
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          speeds up the process significantly.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="switching-provider" heading="Switching Provider to Restart">
@@ -307,10 +304,10 @@ export default function GuideRestartingMounjaro() {
           because their BMI eligibility criteria do not accommodate patients
           below threshold switching to a different registered provider is a
           practical option.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           When evaluating a new provider, look specifically for:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Explicit policies on restarting patients — do they accept treatment history documentation?",
@@ -325,8 +322,7 @@ export default function GuideRestartingMounjaro() {
           <IL href="/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk">
             Switching Pharmacies for Mounjaro or Wegovy in the UK
           </IL>
-          .
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          .</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

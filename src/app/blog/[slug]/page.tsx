@@ -17,6 +17,7 @@ import {
   buildLocationFaq,
   buildUkLocationMetaDescription,
   buildUkLocationTitle,
+  locationArticleJsonLd,
   locationFaqJsonLd,
 } from "@/lib/content/uk-location-article-data";
 import { getUkWeightLossLocationBySlug } from "@/lib/data/uk-weight-loss-locations";
@@ -166,8 +167,15 @@ export default async function BlogPostPage({ params }: Props) {
 
   const canonical = `${siteOrigin()}/blog/${slug}`;
   const title = buildUkLocationTitle(loc);
+  const description = buildUkLocationMetaDescription(loc);
   const faqItems = buildLocationFaq(loc);
   const faqLd = locationFaqJsonLd(faqItems);
+  const articleLd = locationArticleJsonLd({
+    url: canonical,
+    title,
+    description,
+    imageUrl: loc.hero.url,
+  });
 
   return (
     <>
@@ -176,6 +184,10 @@ export default async function BlogPostPage({ params }: Props) {
         sectionPath="/blog"
         pageName={title}
         pagePath={`/blog/${slug}`}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
       />
       <script
         type="application/ld+json"

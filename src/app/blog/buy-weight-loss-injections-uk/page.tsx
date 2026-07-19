@@ -46,8 +46,8 @@ export default function BuyWeightLossInjectionsPage() {
     description:
       "If you want to buy weight loss injections UK safely, compare weight loss treatment prices, check UK pharmacy registration, and understand the full cost pathway.",
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-06-12",
     mainEntityOfPage: {
       "@type": "WebPage",

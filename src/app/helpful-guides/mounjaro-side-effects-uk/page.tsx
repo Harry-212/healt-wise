@@ -124,8 +124,8 @@ const SCHEMA = {
   headline: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
   description:
     "A complete, honest overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—with evidence-based management strategies for each.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -165,8 +165,7 @@ export default function GuideMounjaroSideEffects() {
           <EL href="https://www.medicines.org.uk/emc/product/15481">
             Mounjaro SmPC
           </EL>
-          , the following occur in more than 1 in 10 patients:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          , the following occur in more than 1 in 10 patients:</GuideParagraph>
         <GuideBulletList
           items={[
             "Nausea — the most commonly reported symptom, particularly at treatment initiation and after dose increases",
@@ -190,7 +189,7 @@ export default function GuideMounjaroSideEffects() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> is administered as a
           weekly subcutaneous injection, and localised reactions at the
           treatment site are common reported in approximately 1 in 7 patients.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Redness (erythema) — mild flushing or redness around the injection site",
@@ -201,7 +200,7 @@ export default function GuideMounjaroSideEffects() {
         <GuideParagraph>
           Most injection site reactions are mild and resolve within a few days.
           To minimise them:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Rotate injection sites — use the abdomen, thigh, or upper arm, and change location each week",
@@ -214,8 +213,7 @@ export default function GuideMounjaroSideEffects() {
       <GuideSection id="other-effects" heading="Other Possible Effects">
         <GuideParagraph>
           Beyond gastrointestinal symptoms, other side effects reported in
-          clinical trials and real world use include:
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          clinical trials and real world use include:</GuideParagraph>
         <GuideBulletList
           items={[
             "Fatigue — particularly in the first few weeks as the body adapts to reduced calorie intake",
@@ -231,13 +229,13 @@ export default function GuideMounjaroSideEffects() {
             MHRA Yellow Card Scheme
           </EL>
           . This system helps regulators monitor real world drug safety.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="how-long" heading="How Long Do Side Effects Last?">
         <GuideParagraph>
           The duration of side effects varies by symptom type:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideTable
           headers={["Side Effect", "Typical Duration", "Pattern"]}
           rows={[
@@ -264,7 +262,7 @@ export default function GuideMounjaroSideEffects() {
           from 2.5mg to a maximum of 15mg over several months. Each dose
           increase typically brings a temporary return of gastrointestinal
           symptoms particularly nausea, fatigue, and stomach discomfort.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Temporary nausea — often resolves within 1–2 weeks of the new dose",
@@ -277,8 +275,7 @@ export default function GuideMounjaroSideEffects() {
           medication. Apply the same management strategies (small meals,
           hydration, rest) and allow 2–4 weeks for adaptation. If side effects
           at a new dose are severe or unmanageable, discuss a slower titration
-          schedule with your clinician.
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          schedule with your clinician.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="managing" heading="Managing Symptoms">
@@ -341,7 +338,7 @@ export default function GuideMounjaroSideEffects() {
         <GuideParagraph>
           Serious side effects are rare but require immediate medical
           attention. Seek urgent care if you experience:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Severe abdominal pain — may indicate pancreatitis, a rare but serious complication",
@@ -364,7 +361,7 @@ export default function GuideMounjaroSideEffects() {
       <GuideSection id="when-to-seek" heading="When to Seek Medical Advice">
         <GuideParagraph>
           Contact your GP, pharmacist, or prescribing clinician if:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Side effects persist beyond 6 weeks without improvement",
@@ -379,8 +376,7 @@ export default function GuideMounjaroSideEffects() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> without discussing it
           with your clinician first. Abrupt cessation causes appetite to
           return rapidly, and most side effects are manageable with clinical
-          support rather than stopping treatment.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          support rather than stopping treatment.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

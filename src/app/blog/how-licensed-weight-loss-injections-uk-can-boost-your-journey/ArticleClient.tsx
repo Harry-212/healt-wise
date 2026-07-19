@@ -26,9 +26,6 @@ const TOC = [
   { id: "conclusion", label: "Final thoughts" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#LicensedWeightLossInjections #UKWeightLoss #Mounjaro #Wegovy #MHRA #GLP1";
-
 function SubHeading({
   children,
   darkMode,
@@ -384,11 +381,7 @@ export default function ArticleClient() {
                 <p className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
                   Health Wise does not sell medicines. This page is general information and is not medical advice.
                 </p>
-                <p className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </GuideSection>
+</GuideSection>
             </article>
 
             <div className="mt-10">

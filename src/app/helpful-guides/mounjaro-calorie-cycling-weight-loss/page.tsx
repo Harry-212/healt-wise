@@ -118,8 +118,8 @@ const SCHEMA = {
   headline: "Mounjaro Calorie Cycling: A Smarter Approach to Sustainable Weight Loss",
   description:
     "Calorie cycling is a flexible nutrition strategy that can complement Mounjaro's appetite regulation—helping to prevent plateaus and improve long-term adherence.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -156,13 +156,12 @@ export default function GuideCalorieCycling() {
           nutrition strategy where your daily calorie intake varies throughout
           the week rather than staying constant. Instead of targeting the same
           deficit every day, you eat more on active or training days and less
-          on rest or recovery days.
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          on rest or recovery days.</GuideParagraph>
         <GuideParagraph>
           When combined with{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, calorie cycling can
           complement the medication's appetite regulating effects and help:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Prevent weight loss plateaus caused by metabolic adaptation",
@@ -183,12 +182,11 @@ export default function GuideCalorieCycling() {
           appetite through its dual GLP 1/GIP mechanism reducing hunger signals
           and slowing gastric emptying. This makes it easier to eat less, but
           does not automatically determine the quality or structure of what you
-          eat.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          eat.</GuideParagraph>
         <GuideParagraph>
           Calorie cycling enhances Mounjaro's effect by aligning calorie intake
           with your body's actual energy needs on a given day:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -208,7 +206,7 @@ export default function GuideCalorieCycling() {
           that often occurs with prolonged, fixed calorie restriction a common
           cause of{" "}
           <IL href="/helpful-guides/mounjaro-weight-loss-plateau">weight loss plateaus</IL>.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="benefits" heading="Benefits of Calorie Cycling">
@@ -248,8 +246,7 @@ export default function GuideCalorieCycling() {
           There is no single correct calorie cycling framework the right
           structure depends on your activity level, goals, and how{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is affecting your
-          appetite. A commonly used structure is:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
+          appetite. A commonly used structure is:</GuideParagraph>
         <GuideTable
           headers={["Day Type", "Calorie Target", "Activity Focus"]}
           rows={[
@@ -263,7 +260,7 @@ export default function GuideCalorieCycling() {
         />
         <GuideParagraph>
           On both higher and lower calorie days, prioritise:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Protein-rich meals — to preserve muscle mass and support satiety (Mounjaro already reduces hunger, but protein remains essential)",
@@ -285,8 +282,7 @@ export default function GuideCalorieCycling() {
         <GuideParagraph>
           Calorie cycling is not suitable for everyone, and requires careful
           implementation alongside a medication like{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL>:
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          <IL href="/what-is-mounjaro">Mounjaro</IL>:</GuideParagraph>
         <GuideBulletList
           items={[
             "Always consult a healthcare professional before implementing calorie cycling—particularly if you have type 2 diabetes, as blood sugar management needs careful monitoring",

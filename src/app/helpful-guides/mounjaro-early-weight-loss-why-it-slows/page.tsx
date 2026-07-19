@@ -123,8 +123,8 @@ const SCHEMA = {
     "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down)",
   description:
     "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology, what plateaus mean, and how to keep progressing sustainably.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -160,11 +160,10 @@ export default function GuideEarlyWeightLoss() {
           Many users of{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> notice significant weight
           loss in the first few weeks of treatment. This can be encouraging but
-          it is important to understand what is actually driving it.
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          it is important to understand what is actually driving it.</GuideParagraph>
         <GuideParagraph>
           Early rapid weight loss is typically a combination of:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -214,10 +213,9 @@ export default function GuideEarlyWeightLoss() {
           <IL href="/what-is-mounjaro">Mounjaro</IL>, the rate of weight loss
           typically stabilises. This is not a sign the medication has stopped
           working it is a predictable physiological response.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
-          Progress slows for three main reasons:
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          Progress slows for three main reasons:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -249,7 +247,7 @@ export default function GuideEarlyWeightLoss() {
           data shows this pattern clearly: the steepest weight loss curve
           occurs in the first 16–20 weeks, with gradual deceleration
           thereafter even as total weight loss continues to accumulate.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="plateaus-normal" heading="Plateaus Are Normal">
@@ -257,10 +255,10 @@ export default function GuideEarlyWeightLoss() {
           A weight loss plateau where the scale does not move for a period of
           weeks despite consistent treatment is a normal part of the process,
           not a clinical failure.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Plateaus often indicate:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Improved metabolic efficiency — your body has adapted to its new lower weight and is functioning more economically",
@@ -284,11 +282,10 @@ export default function GuideEarlyWeightLoss() {
           people taking the same dose of{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. Comparing your results
           to others on social media, in forums, or against clinical trial
-          averages is rarely helpful and often misleading.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          averages is rarely helpful and often misleading.</GuideParagraph>
         <GuideParagraph>
           Individual outcomes depend on:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Starting weight — people with higher starting BMI often lose more weight in absolute terms",
@@ -300,7 +297,7 @@ export default function GuideEarlyWeightLoss() {
         <GuideParagraph>
           Rather than focusing exclusively on the scale, monitor broader
           markers of progress:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Energy levels and daily function",
@@ -316,8 +313,7 @@ export default function GuideEarlyWeightLoss() {
         <GuideParagraph>
           If your rate of weight loss has genuinely slowed and you want to
           support continued progress, the following evidence based strategies
-          can help:
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          can help:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>

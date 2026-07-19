@@ -28,9 +28,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#BMICalculatorUK #BodyMassIndex #HealthMetrics #WegovyEligibility #MounjaroEligibility #CalorieTrackerUK #Healthwise360";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -523,13 +520,17 @@ export default function ArticleClient() {
                   Use our free [BMI calculator UK](/tools/bmi-calculator) to calculate your number in any UK measurement format, understand your category in NHS-aligned context, and explore what your result might mean for weight management options.
                 </p>
                 <p>
-                  For those whose BMI falls in the overweight or obese range and who are exploring what treatment options exist, our interactive <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">weight loss treatment comparison</Link> tool and our page highlighting the <Link href="/prices/cheapest-options-uk" className="font-medium text-emerald-600 hover:underline">cheapest weight loss treatment UK</Link> options provide independent, verified price data across more than 60 GPhC-registered pharmacies, with no provider affiliation influencing the results.
+                  For those whose BMI falls in the overweight or obese range and who are exploring treatment options, our interactive{" "}
+                  <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">
+                    weight loss treatment comparison
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="/helpful-guides/mounjaro-eligibility-bmi-requirements-uk" className="font-medium text-emerald-600 hover:underline">
+                    Mounjaro BMI eligibility guide
+                  </Link>{" "}
+                  explain how thresholds are used in UK prescribing decisions.
                 </p>
-                <p className={`text-sm leading-relaxed mt-8 ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </GuideSection>
+</GuideSection>
             </article>
 
             <div className="mt-10">

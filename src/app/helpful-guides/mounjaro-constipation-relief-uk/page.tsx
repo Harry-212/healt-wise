@@ -123,8 +123,8 @@ const SCHEMA = {
   headline: "Mounjaro Constipation: Easy Ways to Find Relief",
   description:
     "Constipation is a common early side effect of Mounjaro. Here's why it happens and how to manage it with hydration, fibre, movement, and OTC options.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -162,11 +162,10 @@ export default function GuideMounjaroConstipation() {
           slowly. This is central to how the medication reduces appetite and
           improves blood sugar control. But it also reduces gut motility
           throughout the intestines, which can result in less frequent or
-          harder to pass bowel movements.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          harder to pass bowel movements.</GuideParagraph>
         <GuideParagraph>
           Constipation is most common:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "In the first 2–4 weeks of treatment as the body adapts to the medication",
@@ -194,7 +193,7 @@ export default function GuideMounjaroConstipation() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> reduces appetite and
           thirst cues alongside hunger, fluid intake often drops making
           deliberate hydration especially important.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Aim for 6–8 glasses (approximately 1.5–2 litres) of water daily",
@@ -218,16 +217,15 @@ export default function GuideMounjaroConstipation() {
             NHS recommends 30g of fibre per day
           </EL>
            most UK adults consume significantly less.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           The key is to increase intake gradually. Adding too much fibre too
           quickly particularly on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, where digestion is
-          already slowed can cause bloating and gas before providing relief.
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          already slowed can cause bloating and gas before providing relief.</GuideParagraph>
         <GuideParagraph>
           Good fibre rich foods to incorporate progressively:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Whole grains — oats, wholemeal bread, high-fibre cereals, brown rice",
@@ -241,7 +239,7 @@ export default function GuideMounjaroConstipation() {
           see our{" "}
           <IL href="/helpful-guides/mounjaro-nutrition-guide-uk">Mounjaro nutrition guide</IL>
           .
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="activity" heading="Stay Active">
@@ -250,7 +248,7 @@ export default function GuideMounjaroConstipation() {
           movement can make a meaningful difference to constipation and
           exercise has additional benefits for metabolic health and overall
           Mounjaro outcomes.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Walk after meals — a 10–15 minute walk after eating can significantly stimulate digestion",
@@ -265,8 +263,7 @@ export default function GuideMounjaroConstipation() {
         <GuideParagraph>
           Establishing consistent habits can encourage the body's natural
           bowel rhythm which is regulated by internal circadian cues that
-          respond well to routine.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          respond well to routine.</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -296,7 +293,7 @@ export default function GuideMounjaroConstipation() {
           over the counter options are generally safe alongside{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. Ask your pharmacist
           before starting any new product:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -329,7 +326,7 @@ export default function GuideMounjaroConstipation() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> resolves with the
           strategies above. However, contact a healthcare professional if you
           experience:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "No bowel movement for 5 or more days despite trying self-care measures",
@@ -345,8 +342,7 @@ export default function GuideMounjaroConstipation() {
             NHS constipation guidance
           </EL>{" "}
           sets out clear criteria for when to seek medical help. In the UK,
-          you can also call NHS 111 for triage advice.
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          you can also call NHS 111 for triage advice.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

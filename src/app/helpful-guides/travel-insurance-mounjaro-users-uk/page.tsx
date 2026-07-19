@@ -111,8 +111,8 @@ const SCHEMA = {
   headline: "Travel Insurance for Mounjaro Users: UK Guide",
   description:
     "Travelling on Mounjaro is usually straightforward. What insurers ask, why disclosure matters, and what your policy should include.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -150,19 +150,17 @@ export default function GuideTravelInsuranceMounjaro() {
           usually straightforward for people whose health is stable. The key
           to insurance is transparency: declare your prescription and any
           conditions the insurer asks about, so your cover matches your actual
-          risk profile.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          risk profile.</GuideParagraph>
         <GuideParagraph>
           This guide is not a substitute for reading your policy wording or
-          speaking to an insurer it explains what to expect and how to prepare.
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          speaking to an insurer it explains what to expect and how to prepare.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="insurers-ask" heading="What Insurers Typically Ask">
         <GuideParagraph>
           Medical screening questions vary by insurer and product, but you may
           be asked about:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Height, weight, and BMI",
@@ -222,8 +220,7 @@ export default function GuideTravelInsuranceMounjaro() {
           <EL href="https://www.fca.org.uk/news/news-stories/fca-urges-consumers-carefully-consider-what-cover-they-require-when-buying-travel-insurance">
             FCA consumer pages on travel insurance
           </EL>{" "}
-          explain what to look for when buying cover in the UK.
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          explain what to look for when buying cover in the UK.</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           Step 3: Consider specialist insurers if needed
@@ -232,8 +229,7 @@ export default function GuideTravelInsuranceMounjaro() {
           If mainstream screening declines cover or applies high loadings,
           specialist providers that focus on pre existing conditions may offer
           alternatives. Always confirm that emergency medical limits meet your
-          destination's typical treatment costs.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          destination's typical treatment costs.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="policy-include" heading="What Your Policy Should Include">

@@ -127,8 +127,8 @@ const SCHEMA = {
   headline: "Mounjaro BMI Cutoffs in the UK: Why Stopping Too Early Can Backfire",
   description:
     "Many UK patients are stopped on Mounjaro once they reach a 'normal' BMI. Here's why that approach is flawed and what the evidence says about long-term maintenance.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -166,11 +166,10 @@ export default function GuideMounjaroBMICutoff() {
           criteria for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> and other weight
           management treatments. But BMI has well documented limitations as a
-          standalone measure of health.
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          standalone measure of health.</GuideParagraph>
         <GuideParagraph>
           BMI does not measure:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Muscle mass — a highly muscular person may have a 'high' BMI without excess fat",
@@ -184,7 +183,7 @@ export default function GuideMounjaroBMICutoff() {
           <EL href="https://www.nhs.uk/conditions/obesity/">NHS acknowledges</EL>{" "}
           that BMI should be used alongside broader clinical assessment not as
           a standalone determinant of health or treatment decisions.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideCallout variant="info">
           Stopping{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> purely because a patient
@@ -198,7 +197,7 @@ export default function GuideMounjaroBMICutoff() {
           A foundational shift in how the medical community understands obesity
           is recognising it as a chronic, relapsing condition not a temporary
           problem solved by a course of medication.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           This is increasingly supported by clinical evidence. The{" "}
           <EL href="https://www.nejm.org/doi/full/10.1056/NEJMoa2311017">
@@ -209,13 +208,12 @@ export default function GuideMounjaroBMICutoff() {
           discontinued tirzepatide regained approximately two thirds of their
           lost weight within 12 months, while those who continued lost an
           additional 6%.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           This is not a personal failing it is the pharmacological reality of
           how GLP 1 medications work. They suppress appetite and regulate
           metabolism while active. When stopped, hunger returns to its previous
-          biological set point.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          biological set point.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="maintenance-matters" heading="Why Maintenance Therapy Matters">
@@ -225,11 +223,11 @@ export default function GuideMounjaroBMICutoff() {
           support insulin sensitivity, and help maintain metabolic rate during
           weight loss. Stopping them abruptly reverses all of these effects
           simultaneously.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           A structured maintenance approach rather than abrupt cessation is
           aligned with how other chronic conditions are managed:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -255,7 +253,7 @@ export default function GuideMounjaroBMICutoff() {
           biological drivers of obesity appetite regulation, insulin
           sensitivity, metabolic rate do not permanently resolve because a
           treatment target has been reached.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="risks-stopping" heading="Risks of Stopping Mounjaro Too Early">
@@ -263,7 +261,7 @@ export default function GuideMounjaroBMICutoff() {
           Discontinuing{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> prematurely particularly
           based solely on a BMI threshold carries real clinical risks:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Return of hunger and cravings — appetite suppression reverses within weeks of stopping",
@@ -285,8 +283,7 @@ export default function GuideMounjaroBMICutoff() {
         <GuideParagraph>
           Rather than applying rigid BMI cutoffs, a more clinically appropriate
           approach to long term{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL> management includes:
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          <IL href="/what-is-mounjaro">Mounjaro</IL> management includes:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -317,7 +314,7 @@ export default function GuideMounjaroBMICutoff() {
           review, and with pharmaceutical guidance from Eli Lilly, which
           supports ongoing treatment where clinically appropriate rather than
           abrupt discontinuation.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="finding-provider" heading="Finding the Right Provider">
@@ -327,10 +324,10 @@ export default function GuideMounjaroBMICutoff() {
           Some apply rigid BMI eligibility criteria that result in patients
           losing access to treatment once they reach a 'normal' BMI even when
           clinical need continues.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           When evaluating providers, ask specifically about:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Continuation policies — what happens to your prescription if your BMI falls below the standard eligibility threshold?",
@@ -352,8 +349,7 @@ export default function GuideMounjaroBMICutoff() {
           <IL href="/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk">
             how to switch pharmacies
           </IL>{" "}
-          if you need a provider better suited to long term management.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          if you need a provider better suited to long term management.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

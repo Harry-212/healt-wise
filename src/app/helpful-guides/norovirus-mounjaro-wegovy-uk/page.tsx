@@ -120,8 +120,8 @@ const SCHEMA = {
     "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery",
   description:
     "Norovirus can feel more intense on GLP-1 medications like Mounjaro or Wegovy. Here's why, what symptoms to watch for, when to delay your injection, and how to recover safely.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -160,11 +160,10 @@ export default function GuideNorovirus() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
           <IL href="/what-is-wegovy">Wegovy</IL>, the experience may feel
           more intense not because the virus is worse, but because GLP 1
-          medications alter how your body processes food and fluids.
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          medications alter how your body processes food and fluids.</GuideParagraph>
         <GuideParagraph>
           Key interactions to understand:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -208,7 +207,7 @@ export default function GuideNorovirus() {
           and{" "}
           <EL href="https://www.nhs.uk/conditions/norovirus/">NHS</EL>{" "}
           both emphasise the following steps:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Wash hands thoroughly with soap and water for at least 20 seconds — particularly after using the toilet and before preparing or eating food",
@@ -237,8 +236,7 @@ export default function GuideNorovirus() {
           Hydration is the most critical priority particularly for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> and{" "}
           <IL href="/what-is-wegovy">Wegovy</IL> users, who already have
-          reduced fluid intake due to appetite suppression.
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          reduced fluid intake due to appetite suppression.</GuideParagraph>
         <GuideBulletList
           items={[
             "Sip fluids slowly and frequently — large amounts at once may trigger vomiting",
@@ -263,7 +261,7 @@ export default function GuideNorovirus() {
         </h3>
         <GuideParagraph>
           Follow the BRAT approach once you can tolerate food:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Bananas — easy to digest, high in potassium",
@@ -279,7 +277,7 @@ export default function GuideNorovirus() {
           <IL href="/what-is-wegovy">Wegovy</IL> means hunger cues may be
           very weak during recovery focus on nutritional completeness rather
           than volume.
-        </GuideParagraph>
+</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           4. Rest and Monitor
@@ -301,8 +299,7 @@ export default function GuideNorovirus() {
             Mounjaro SmPC
           </EL>{" "}
           provides guidance on missed doses, but does not specifically address
-          norovirus. General clinical guidance suggests:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          norovirus. General clinical guidance suggests:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -337,7 +334,7 @@ export default function GuideNorovirus() {
         <GuideParagraph>
           Most norovirus cases in GLP 1 medication users resolve safely with
           home management. However, seek medical help promptly if you experience:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Signs of significant dehydration — extreme dizziness, confusion, no urination for 8+ hours, or very dark urine",
@@ -354,8 +351,7 @@ export default function GuideNorovirus() {
             NHS dehydration guidance
           </EL>{" "}
           provides clear criteria for when to attend A&E or call 999. When in
-          doubt, call 111 for clinical triage advice.
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          doubt, call 111 for clinical triage advice.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

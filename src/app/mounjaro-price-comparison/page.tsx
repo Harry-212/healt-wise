@@ -29,11 +29,11 @@ export const metadata: Metadata = buildPageShareMetadata({
   metaDescription:
     "Compare real Mounjaro prices across UK pharmacies: pen costs by strength (2.5–15 mg), estimated monthly spend, filters, sort, and discount mode. Independent snapshot — updated 2026.",
   openGraphTitle:
-    "Compare Mounjaro Prices UK (2026) — Cheapest & safest providers | Health Wise",
+    "Compare Mounjaro Prices UK (2026) — Cheapest & safest providers | Healthwise360",
   openGraphDescription:
     "Interactive UK Mounjaro price table: filter by provider, price band, rating, and delivery. Illustrative charts and FAQs.",
   imagePath: "/mounjaro healt wise.png",
-  imageAlt: "Compare Mounjaro prices UK — Health Wise",
+  imageAlt: "Compare Mounjaro prices UK — Healthwise360",
 });
 
 const MOUNJARO_RESOURCE_LINKS = [
@@ -56,7 +56,7 @@ function compareWebPageJsonLd() {
     dateModified: "2026-04-07",
     isPartOf: {
       "@type": "WebSite",
-      name: "Health Wise",
+      name: "Healthwise360",
       url: base,
     },
   };

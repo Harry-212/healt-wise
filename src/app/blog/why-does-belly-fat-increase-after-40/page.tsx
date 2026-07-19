@@ -45,8 +45,8 @@ export default function WhyDoesBellyFatIncreaseAfter40Page() {
     description:
       "Evidence-based reasons belly fat increases after 40 — hormonal shifts, muscle loss, insulin sensitivity changes and stress — plus practical steps to reduce visceral fat safely.",
     image: [SOCIAL_PREVIEW_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-05-08",
     mainEntityOfPage: {
       "@type": "WebPage",

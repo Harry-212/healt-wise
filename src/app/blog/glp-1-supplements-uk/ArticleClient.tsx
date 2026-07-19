@@ -38,9 +38,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#GLP1Supplements #GLP1UK #Mounjaro #Wegovy #WeightLossNutrition #ProteinSupport #PharmacySafetyUK #UKWeightLoss";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -382,15 +379,14 @@ export default function ArticleClient() {
                 Therefore, GLP-1 supplements should not be positioned as a cheaper replacement. Instead, the content should help readers understand what each option is for.
               </p>
               <p>
-                If a reader is looking for weight loss treatment price comparison, it helps to review current private pricing on the{" "}
-                <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">
-                  Mounjaro price list UK
+                If you are comparing what regulated treatment actually costs
+                privately in the UK, start with our{" "}
+                <Link href="/prices/cheapest-options-uk" className="font-medium text-emerald-600 hover:underline">
+                  cheapest weight loss treatment options UK
                 </Link>{" "}
-                and{" "}
-                <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">
-                  Wegovy price list UK
-                </Link>{" "}
-                pages, alongside provider safety and delivery checks. Health Wise already positions itself as an independent UK comparison site that reviews price, safety, delivery, support, and GPhC-related checks.
+                overview, then check provider safety and delivery standards.
+                Health Wise reviews price, safety, delivery, support, and
+                GPhC-related checks independently.
               </p>
             </GuideSection>
 
@@ -551,11 +547,7 @@ export default function ArticleClient() {
               <p className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
                 Health Wise does not sell medicines or supplements. This page is general information and is not medical advice.
               </p>
-              <p className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
-                <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                {SOCIAL_HASHTAGS}
-              </p>
-            </GuideSection>
+</GuideSection>
           </article>
 
           <div className="mt-10">

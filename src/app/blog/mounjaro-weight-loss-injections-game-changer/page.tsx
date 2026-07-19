@@ -41,8 +41,8 @@ export default function MounjaroInjectionsGameChangerPage() {
     headline: 'Could Mounjaro Weight Loss Treatments Be Your Game-Changer?',
     description: 'An overview of Mounjaro (tirzepatide) treatments for weight management: mechanism, eligibility context, NHS vs private access, side effects, and realistic expectations—informational only, not medical advice.',
     image: [HERO_IMAGE],
-    author: { '@type': 'Organization', name: 'Health Wise' },
-    publisher: { '@type': 'Organization', name: 'Health Wise' },
+    author: { '@type': 'Organization', name: 'Healthwise360 Research Team' },
+    publisher: { '@type': 'Organization', name: 'Healthwise360' },
     datePublished: '2026-04-18',
     mainEntityOfPage: {
       '@type': 'WebPage',

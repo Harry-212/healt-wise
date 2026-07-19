@@ -120,8 +120,8 @@ const SCHEMA = {
   headline: "Do UK Pharmacies Inform Your GP About Mounjaro? (Complete Guide)",
   description:
     "Yes—UK pharmacies are required to notify your GP when dispensing Mounjaro. Here's why it happens, how the process works, and what it means for your medical records.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -157,8 +157,7 @@ export default function GuideMounjaroGP() {
           In the UK, pharmacies both local and registered online providers are
           required to notify your GP when dispensing high risk prescription
           medications like{" "}
-          <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL>.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL>.</GuideParagraph>
         <GuideCallout variant="info">
           This is not about surveillance—it is a patient safety requirement.
           Keeping your GP informed ensures your treatment is properly
@@ -178,10 +177,10 @@ export default function GuideMounjaroGP() {
             NICE guidance on tirzepatide
           </EL>
           , which includes monitoring and follow up requirements.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Key reasons the notification requirement exists:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -207,8 +206,7 @@ export default function GuideMounjaroGP() {
       <GuideSection id="process" heading="How the Process Works">
         <GuideParagraph>
           The GP notification process is straightforward and happens behind the
-          scenes:
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          scenes:</GuideParagraph>
         <GuideBulletList
           items={[
             "You provide your GP's details when registering with the pharmacy or during your consultation",
@@ -225,13 +223,13 @@ export default function GuideMounjaroGP() {
           </EL>
           . Your information is not shared beyond your clinical care team
           without your explicit consent.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="opt-out" heading="Can You Opt Out?">
         <GuideParagraph>
           No.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Because{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is a{" "}
@@ -243,8 +241,7 @@ export default function GuideMounjaroGP() {
             GPhC
           </EL>
           , GP notification is a mandatory clinical safeguard. Patients cannot
-          opt out of this process.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
+          opt out of this process.</GuideParagraph>
         <GuideCallout variant="info">
           This requirement applies equally to regulated online pharmacies. If a
           pharmacy offers to dispense Mounjaro without notifying your GP and
@@ -261,7 +258,7 @@ export default function GuideMounjaroGP() {
           If your GP is unaware that you are taking{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, there are real clinical
           risks:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Dangerous drug interactions — other medications may be prescribed or adjusted without accounting for Mounjaro",
@@ -275,7 +272,7 @@ export default function GuideMounjaroGP() {
       <GuideSection id="timeline" heading="How Long Does It Take?">
         <GuideParagraph>
           The speed of notification depends on the pharmacy's systems:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -294,8 +291,7 @@ export default function GuideMounjaroGP() {
           one week of receiving their{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> prescription. If you
           have a GP appointment shortly after starting treatment, it is worth
-          confirming they have received the notification.
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          confirming they have received the notification.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

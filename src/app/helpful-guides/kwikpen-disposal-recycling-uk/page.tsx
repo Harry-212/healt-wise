@@ -112,8 +112,8 @@ const SCHEMA = {
     "Safe Disposal and Recycling in the UK - Sharps Disposal Safety Guide",
   description:
     "How to dispose of used Mounjaro KwikPens and needles safely in the UK—sharps bins, general waste rules, and returning unused medicine.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -152,8 +152,7 @@ export default function GuideKwikpenDisposal() {
           combine plastic, metal, and other components, and may retain traces
           of medication after use.
           Most councils are happy to arrange the collection of medical sharps
-          free of charge by a special collection.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          free of charge by a special collection.</GuideParagraph>
         <GuideBulletList
           items={[
             "Never reuse or refill a KwikPen — pens are single-patient devices; reuse risks infection and dosing errors",
@@ -178,7 +177,7 @@ export default function GuideKwikpenDisposal() {
           </EL>
           : used needles must not go in household waste loose, and you should
           not try to bend, break, or snap them.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -206,8 +205,7 @@ export default function GuideKwikpenDisposal() {
 
       <GuideSection id="step-pen" heading="Step 2: Dispose of the Pen Body">
         <GuideParagraph>
-          Once the needle has been removed and disposed of safely:
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          Once the needle has been removed and disposed of safely:</GuideParagraph>
         <GuideBulletList
           items={[
             "Place the empty pen body in your general household waste (not recycling)",
@@ -228,7 +226,7 @@ export default function GuideKwikpenDisposal() {
           </EL>{" "}
           returning unused medicines rather than binning or flushing them, to
           protect waterways and prevent accidental ingestion.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="developments" heading="Recycling Developments">
@@ -236,14 +234,12 @@ export default function GuideKwikpenDisposal() {
           Pharmaceutical packaging and device recycling schemes evolve. Industry
           initiatives and NHS pilot programmes occasionally introduce
           take back options for specific devices or regions. There is no
-          guarantee that a scheme available in one country applies in the UK.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          guarantee that a scheme available in one country applies in the UK.</GuideParagraph>
         <GuideParagraph>
           Names such as PenCycle or similar programmes may exist for certain
           product lines in some markets always confirm with your pharmacist,
           prescriber, or the current patient information for your device rather
-          than assuming a scheme accepts Mounjaro KwikPens.
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          than assuming a scheme accepts Mounjaro KwikPens.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="why-matters" heading="Why Proper Disposal Matters">

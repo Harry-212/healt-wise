@@ -393,7 +393,7 @@ export default function HelpfulGuidesListing({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Helpful Health Guides | Health Wise",
+    name: "Helpful Health Guides | Healthwise360",
     description:
       "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
     url: collectionUrl,
@@ -415,7 +415,7 @@ export default function HelpfulGuidesListing({
       <section className="bg-slate-900 px-4 pb-14 pt-12 sm:px-6 sm:pb-16 sm:pt-14 md:px-10 md:pb-20 md:pt-20">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400">
-            Health Wise
+            Healthwise360
           </p>
           <h1 className="mt-3 max-w-2xl text-balance text-3xl font-bold text-white sm:text-4xl md:text-5xl">
             Your Helpful Health Guides

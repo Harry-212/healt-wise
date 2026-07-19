@@ -106,8 +106,8 @@ const SCHEMA = {
   headline: "Mounjaro and Hot Weather: Staying Safe in the Heat (UK Guide)",
   description:
     "On Mounjaro, heat and reduced thirst cues raise dehydration risk. Hydration, sun protection, and when to seek help in UK heatwaves.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -145,8 +145,7 @@ export default function GuideMounjaroHotWeather() {
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL>, two factors
           matter: GLP 1 medications can reduce thirst and food intake, and hot
           weather increases fluid loss. Even if you do not feel uncomfortably
-          hot, you can still become dehydrated.
-         For more context, explore our resources on <IL href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</IL>.</GuideParagraph>
+          hot, you can still become dehydrated.</GuideParagraph>
         <GuideParagraph>
           The{" "}
           <EL href="https://www.gov.uk/government/collections/heat-health-alerts">
@@ -154,7 +153,7 @@ export default function GuideMounjaroHotWeather() {
           </EL>{" "}
           publishes heat health guidance during alerts worth following alongside
           the tips below.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="cold-in-warm" heading="Feeling Cold in Warm Weather">
@@ -166,8 +165,7 @@ export default function GuideMounjaroHotWeather() {
           <IL href="/helpful-guides/mounjaro-feeling-cold-why-fixes">
             why you may feel cold on Mounjaro
           </IL>
-          .
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          .</GuideParagraph>
         <GuideCallout variant="warning">
           Important: feeling cool does not mean you cannot overheat or become
           dehydrated. Continue hydration and sun protection regardless of how
@@ -182,7 +180,7 @@ export default function GuideMounjaroHotWeather() {
           also managing{" "}
           <IL href="/helpful-guides/mounjaro-side-effects-uk">nausea or digestive side effects</IL>
           .
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Drink regularly throughout the day on a schedule—not only when thirsty",
@@ -202,8 +200,7 @@ export default function GuideMounjaroHotWeather() {
         <GuideParagraph>
           Some people notice increased skin sensitivity or burn more easily in
           the sun while losing weight or on new medications. Regardless of
-          cause, standard sun safety applies:
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          cause, standard sun safety applies:</GuideParagraph>
         <GuideBulletList
           items={[
             "Use broad-spectrum sunscreen SPF 30 or higher, reapplied as directed",
@@ -216,8 +213,7 @@ export default function GuideMounjaroHotWeather() {
           <EL href="https://www.nhs.uk/live-well/seasonal-health/sunscreen-and-sun-safety/">
             Sunscreen and sun safety
           </EL>
-          .
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          .</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="heatwave" heading="Heatwave Tips">

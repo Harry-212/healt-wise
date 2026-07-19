@@ -27,9 +27,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#UKPrescription #GLP1 #WeightLossUK #Wegovy #Mounjaro #ObesityCare";
-
 function SubHeading({
   children,
   darkMode,
@@ -410,13 +407,7 @@ export default function ArticleClient() {
                   Health Wise does not sell medicines. This page is for general information and is not a substitute for
                   personalised medical advice, prescribing decisions, or emergency care.
                 </p>
-                <p
-                  className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-                >
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </GuideSection>
+</GuideSection>
             </article>
 
             <div className="mt-10">

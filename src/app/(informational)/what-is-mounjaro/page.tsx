@@ -30,7 +30,7 @@ export const metadata: Metadata = buildPageShareMetadata({
   metaDescription:
     "Mounjaro (tirzepatide) explained for UK readers: dual GIP/GLP-1 mechanism, SURMOUNT trial weight loss, dosing titration, private prices by dose, eligibility, safety, NHS/NICE context, and verified provider comparison.",
   openGraphTitle:
-    "What is Mounjaro? UK guide (2026): how it works, weight loss & prices | Health Wise",
+    "What is Mounjaro? UK guide (2026): how it works, weight loss & prices | Healthwise360",
   openGraphDescription:
     "Independent guide to Mounjaro: mechanism, results, dosage, UK prices, safety, and how to compare providers.",
   imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,

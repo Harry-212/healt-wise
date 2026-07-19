@@ -46,8 +46,8 @@ export default function CompareUKWeightLossPensPage() {
     description:
       "How to compare UK weight loss pens (Saxenda, Wegovy, Mounjaro): mechanisms, practical comparisons, safety, pricing and FAQs — informational only, not medical advice.",
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-05-23",
     mainEntityOfPage: {
       "@type": "WebPage",

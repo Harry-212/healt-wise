@@ -31,7 +31,7 @@ export const metadata: Metadata = buildPageShareMetadata({
   metaDescription:
     "Saxenda (liraglutide) explained for UK readers: once-daily GLP-1 mechanism, SCALE trial results, dose escalation, private prices, eligibility, safety, and how it compares to Wegovy and Mounjaro.",
   openGraphTitle:
-    "What is Saxenda? UK guide (2026): daily GLP-1, weight loss & prices | Health Wise",
+    "What is Saxenda? UK guide (2026): daily GLP-1, weight loss & prices | Healthwise360",
   openGraphDescription:
     "Independent guide to Saxenda: how it works, 56-week trial context, UK prices, and comparison with newer weekly injections.",
   imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,

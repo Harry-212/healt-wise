@@ -122,8 +122,8 @@ const SCHEMA = {
   headline: "Why Do You Feel Cold on Mounjaro? Causes, Science & Simple Fixes",
   description:
     "Unusual cold sensitivity is a commonly reported experience on Mounjaro. Here's the physiological explanation and what you can do about it.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -160,11 +160,10 @@ export default function GuideMounjaroFeelCold() {
           generally is a commonly reported experience among{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> users. It is not listed
           as a formal adverse effect in the medication's prescribing
-          information, but the physiological reasons are well understood.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</IL>.</GuideParagraph>
+          information, but the physiological reasons are well understood.</GuideParagraph>
         <GuideParagraph>
           There are three main mechanisms at work:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Reduced calorie intake — less energy available for heat production (thermogenesis)",
@@ -188,10 +187,9 @@ export default function GuideMounjaroFeelCold() {
           generates heat through a process called diet induced thermogenesis
           (DIT) your body burns calories to digest, absorb, and process
           nutrients, and this generates warmth.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
-          When overall intake decreases substantially:
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          When overall intake decreases substantially:</GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
@@ -226,11 +224,11 @@ export default function GuideMounjaroFeelCold() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> produces meaningful fat
           loss over weeks and months, this insulation effect naturally
           decreases.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           This is particularly noticeable for patients who have experienced
           rapid or significant fat loss:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Cold sensitivity often increases proportionally to the amount of fat lost",
@@ -247,7 +245,7 @@ export default function GuideMounjaroFeelCold() {
           reductions in blood pressure. While these are beneficial for
           long term health, reduced blood pressure can also mean slightly
           reduced peripheral circulation particularly to the extremities.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Lower blood pressure → less blood flow to hands and feet → perceived coldness",
@@ -267,8 +265,7 @@ export default function GuideMounjaroFeelCold() {
         <GuideParagraph>
           Most cold sensitivity on{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> is manageable with
-          simple practical adjustments:
-         For more context, explore our resources on <IL href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</IL>.</GuideParagraph>
+          simple practical adjustments:</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           Clothing and environment
@@ -296,7 +293,7 @@ export default function GuideMounjaroFeelCold() {
           For detailed dietary guidance while on Mounjaro, see our{" "}
           <IL href="/helpful-guides/mounjaro-nutrition-guide-uk">Mounjaro nutrition guide</IL>
           .
-        </GuideParagraph>
+</GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           Activity and circulation
@@ -316,7 +313,7 @@ export default function GuideMounjaroFeelCold() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> is a benign and
           manageable adaptation. However, there are situations where medical
           assessment is appropriate:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Extreme cold sensitivity that significantly affects daily life or sleep",
@@ -333,8 +330,7 @@ export default function GuideMounjaroFeelCold() {
           outlines when investigation is warranted. A simple GP blood test can
           rule out thyroid dysfunction and anaemia two common causes of cold
           intolerance that are unrelated to{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL>.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</IL>.</GuideParagraph>
+          <IL href="/what-is-mounjaro">Mounjaro</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

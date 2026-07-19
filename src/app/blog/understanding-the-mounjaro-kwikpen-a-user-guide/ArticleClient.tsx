@@ -30,9 +30,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#MounjaroKwikPen #TirzepatideUK #GLP1 #WeightLossInjection #UKHealth #InjectableWeightLoss";
-
 function SubHeading({
   children,
   darkMode,
@@ -41,7 +38,7 @@ function SubHeading({
   darkMode: boolean;
 }) {
   return (
-    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children} For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
+    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children}</p>
   );
 }
 
@@ -123,20 +120,20 @@ export default function ArticleClient() {
                   people looking to manage their weight more effectively. If you are interested in understanding the
                   Mounjaro KwikPen, a user guide can help you build confidence before deciding whether this medication is
                   right for you.
-                </p>
+</p>
                 <p>
                   Unlike some other treatments that require complicated mixing or manual dosing, Mounjaro comes in a
                   prefilled injector pen, designed to simplify your experience. Its ease of use appeals to those who find
                   regular needles intimidating or who have hectic schedules that do not accommodate lengthy prep time. By
                   offering a straightforward way to self administer a precise dose, Mounjaro aims to make your weight loss
                   journey less stressful.
-                </p>
+</p>
                 <p>
                   You will want to remember that any kind of injectable treatment should be discussed with a qualified
                   healthcare professional. While the KwikPen design is intended to be user friendly, everyone&apos;s
                   medical needs differ. Getting expert advice on dosage, frequency and potential interactions can make a
                   tremendous difference in the success of your overall programme.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="support" heading="Understand how it supports weight loss">
@@ -145,14 +142,14 @@ export default function ArticleClient() {
                   with obesity or weight related health concerns. The active ingredients in this medication help regulate
                   certain hormonal processes in your body, with the goal of moderating appetite. In some cases, you may
                   feel satisfied after smaller meals, so you are less likely to overeat or snack between them.
-                </p>
+</p>
                 <p>
                   In addition to potentially reduced hunger, you might also experience better blood sugar control. People
                   who have issues maintaining stable glucose levels could see an improvement in their metabolic markers.
                   Regardless of whether you have pre existing conditions or not, it is always important to note that
                   results will vary. Genetics, lifestyle and individual response can all play a part in how effectively
                   Mounjaro works for you.
-                </p>
+</p>
                 <p>
                   If you are curious about new trends in injectable treatments, you might find it helpful to check out our{" "}
                   <Link
@@ -163,7 +160,7 @@ export default function ArticleClient() {
                   </Link>
                   . This can give you more context around the popularity of treatments like Mounjaro, as well as options
                   that aim to support long term weight management.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="safe-use" heading="Use it correctly and safely">
@@ -172,7 +169,7 @@ export default function ArticleClient() {
                   administer them correctly. Fortunately, Mounjaro KwikPen includes features that make preparation as simple
                   as possible, and you will soon feel more at ease with the process. Here are a few basic points you will
                   want to keep in mind:
-                </p>
+</p>
                 <ul className="list-disc space-y-2 pl-6">
                   <li>Consult a healthcare professional about your specific dosing schedule.</li>
                   <li>Store the pen in a refrigerator if recommended, but never freeze it.</li>
@@ -199,8 +196,7 @@ export default function ArticleClient() {
                   >
                     Wegovy injection instructions and side effects
                   </Link>
-                  . Even though these two treatments differ, some side effects can overlap.
-                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</Link>.</p>
+                  . Even though these two treatments differ, some side effects can overlap.</p>
               </GuideSection>
 
               <div className="my-10">
@@ -224,7 +220,7 @@ export default function ArticleClient() {
                     Mounjaro vs Wegovy: the key differences explained
                   </Link>{" "}
                   to see how they might align with your personal health goals.
-                </p>
+</p>
                 <p>
                   Beyond active ingredients, you could also look at potential supply issues. As interest in medical weight
                   loss grows, availability of popular brands has sometimes been limited. You will find practical help in{" "}
@@ -236,13 +232,13 @@ export default function ArticleClient() {
                   </Link>
                   . Checking current inventory before you start any treatment will help you plan ahead, avoiding unexpected
                   gaps in your treatment.
-                </p>
+</p>
                 <SubHeading darkMode={darkMode}>Cost and convenience</SubHeading>
                 <p>
                   Cost may be another deciding factor. Different brands come with varying prices, and the KwikPen&apos;s
                   built in usability might be reflected in its price tag. Always compare not just the upfront cost, but
                   also any hidden fees such as consultation or delivery charges.
-                </p>
+</p>
               </GuideSection>
 
               <div className="my-10">
@@ -259,24 +255,24 @@ export default function ArticleClient() {
                   Taking the step toward treatment based weight management is never trivial, so it is crucial you feel
                   confident about your choice. By learning how Mounjaro KwikPen works, understanding its benefits, and
                   comparing it with other treatments, you give yourself the chance to make a fully informed decision.
-                </p>
+</p>
                 <p>
                   Keep in mind that Mounjaro is designed to aid your weight loss, not completely replace a healthy
                   lifestyle. You will want to combine its benefits with balanced meals, regular physical activity, and any
                   advice your doctor has provided. Everyone&apos;s journey is unique, and treatments can offer extra
                   support when you need it most.
-                </p>
+</p>
                 <p>
                   If you are ready to get started, your next step may involve consulting a medical professional or a
                   specialised weight loss clinic. Talk through your health history, any existing medications, and your
                   overall goals. By carefully pairing Mounjaro KwikPen with a comprehensive plan, you set yourself up for a
                   more confident start on your weight loss journey.
-                </p>
+</p>
                 <p>
                   Above all, remember that weight management is a gradual process. It is natural to have a few questions,
                   and seeking answers helps you feel empowered. By exploring options like Mounjaro, alongside other
                   trusted treatments, you can take practical steps toward a healthier, more comfortable life.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="faq" heading="Frequently Asked Questions">
@@ -288,8 +284,7 @@ export default function ArticleClient() {
                     <p>
                       It is a prefilled pen used to deliver tirzepatide under the skin, so you do not have to mix medicine
                       yourself. Always follow your prescriber&apos;s instructions and the official patient information for
-                      your region.
-                     For more context, explore our resources on <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</Link>.</p>
+                      your region.</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -298,7 +293,7 @@ export default function ArticleClient() {
                     <p>
                       Mounjaro is typically given once per week on a consistent day. Dose changes should only happen when
                       your clinician tells you to do not adjust the strength or timing on your own.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -307,7 +302,7 @@ export default function ArticleClient() {
                     <p>
                       Follow the storage instructions on your pack. If refrigeration is advised, keep the pen in the
                       fridge as directed and never freeze it. When in doubt, ask your pharmacist.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -316,7 +311,7 @@ export default function ArticleClient() {
                     <p>
                       No. KwikPens are single patient devices designed for a set number of doses. Reusing or refilling a
                       pen is unsafe and can lead to wrong doses or contamination.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -325,7 +320,7 @@ export default function ArticleClient() {
                     <p>
                       Common sites include the abdomen, thigh, or upper arm, with rotation to reduce soreness. A trained
                       professional should show you the technique the first time.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -334,7 +329,7 @@ export default function ArticleClient() {
                     <p>
                       Yes. Medication works best as part of a broader plan that includes nutrition, activity, sleep, and
                       follow up with your care team. It is not a substitute for healthy habits.
-                    </p>
+</p>
                   </div>
                 </div>
               </GuideSection>
@@ -345,18 +340,12 @@ export default function ArticleClient() {
                   professional support. The pen is built to simplify treatments, but your dosing, storage, and monitoring
                   still belong in conversation with a qualified prescriber. Compare options, plan for supply and cost,
                   and keep lifestyle change at the centre of your programme.
-                </p>
+</p>
                 <p>
                   Health Wise does not sell medicines; use our guides to compare regulated UK pathways and ask your clinician
                   what is appropriate for you.
-                </p>
-                <p
-                  className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-                >
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                  {SOCIAL_HASHTAGS}
-                 For more context, explore our resources on <Link href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</Link>.</p>
-              </GuideSection>
+</p>
+</GuideSection>
             </article>
 
             <div className="mt-10">

@@ -46,8 +46,8 @@ export default function WeeklyWeightLossInjectionsUkPage() {
     description:
       "A realistic guide to weekly weight loss treatments in the UK (GLP-1 medicines): what Wegovy and Mounjaro may do, access routes, side effects, and long-term expectations — informational only, not medical advice.",
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-25",
     mainEntityOfPage: {
       "@type": "WebPage",

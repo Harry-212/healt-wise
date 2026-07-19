@@ -1,5 +1,5 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
-import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { SITE_ARTICLE_AUTHOR, SITE_BRAND_NAME } from "@/lib/site-brand";
 import { pageBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 
 function isoDateForSchema(raw: string): string | undefined {
@@ -45,7 +45,7 @@ export function markdownBlogPostingJsonLd(opts: {
     "@id": `${url}#blogPosting`,
     headline: opts.title,
     description: opts.description,
-    author: { "@type": "Organization", name: SITE_BRAND_NAME },
+    author: { ...SITE_ARTICLE_AUTHOR },
     publisher: {
       "@type": "Organization",
       name: SITE_BRAND_NAME,

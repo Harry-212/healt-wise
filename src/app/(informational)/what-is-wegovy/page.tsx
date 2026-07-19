@@ -30,7 +30,7 @@ export const metadata: Metadata = buildPageShareMetadata({
   metaDescription:
     "Wegovy (semaglutide) explained for UK readers: GLP-1 mechanism, clinical trial weight loss, dosing titration, private prices by dose, eligibility, safety, NHS context, and verified provider comparison.",
   openGraphTitle:
-    "What is Wegovy? UK guide (2026): how it works, side effects & prices | Health Wise",
+    "What is Wegovy? UK guide (2026): how it works, side effects & prices | Healthwise360",
   openGraphDescription:
     "Independent guide to Wegovy: mechanism, results, dosage, UK prices, safety, and how to compare providers.",
   imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,

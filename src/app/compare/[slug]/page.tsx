@@ -82,7 +82,7 @@ function compareWebPageJsonLd(slug: string, name: string, description: string) {
     dateModified: "2026-04-14",
     isPartOf: {
       "@type": "WebSite",
-      name: "Health Wise",
+      name: "Healthwise360",
       url: base,
     },
   };

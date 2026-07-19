@@ -32,9 +32,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#MounjaroPriceUK #TirzepatidePrice #MounjaroCost #WeightLossTreatmentUK #GLP1UK #PrivatePrescriptionUK";
-
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
   const shareUrl = `${siteOrigin()}${SHARE_PATH}`;
@@ -383,11 +380,7 @@ export default function ArticleClient() {
                 <p className={`mt-8 text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
                   This article is for informational purposes only and does not constitute medical advice. Mounjaro is a prescription only medicine in the UK. All prices are approximate and subject to change. Confirm directly with a GPhC registered pharmacy before purchasing.
                 </p>
-                <p className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                  {SOCIAL_HASHTAGS}
-                </p>
-              </GuideSection>
+</GuideSection>
             </article>
 
             <div className="mt-10">

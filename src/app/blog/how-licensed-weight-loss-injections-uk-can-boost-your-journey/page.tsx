@@ -46,8 +46,8 @@ export default function LicensedWeightLossInjectionsUkPage() {
     description:
       "Licensed UK weight loss injections (Mounjaro, Wegovy): mechanisms, NHS vs private access, benefits, risks and maintenance — informational only, not medical advice.",
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-05-21",
     mainEntityOfPage: {
       "@type": "WebPage",

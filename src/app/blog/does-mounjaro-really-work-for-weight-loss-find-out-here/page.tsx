@@ -44,8 +44,8 @@ export default function MounjaroEffectivenessArticlePage() {
     headline: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
     description:
       "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-14",
     image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {

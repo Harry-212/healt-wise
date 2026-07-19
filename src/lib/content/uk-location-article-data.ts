@@ -1,4 +1,5 @@
 import type { UkNation, UkWeightLossLocation } from "@/lib/data/uk-weight-loss-locations";
+import { SITE_ARTICLE_AUTHOR, SITE_BRAND_NAME } from "@/lib/site-brand";
 
 /** `a` may include markdown links `[label](/path)` for on-page rendering; JSON-LD uses plain text. */
 export type FaqItem = { q: string; a: string };
@@ -2400,4 +2401,33 @@ export function locationFaqJsonLd(items: FaqItem[]) {
       acceptedAnswer: { "@type": "Answer", text: faqAnswerPlain(a) },
     })),
   };
+}
+
+/** Article JSON-LD for UK location blog posts (`/blog/best-weight-loss-treatment-in-{city}`). */
+export function locationArticleJsonLd(opts: {
+  url: string;
+  title: string;
+  description: string;
+  imageUrl?: string;
+}) {
+  const graph: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: opts.title,
+    description: opts.description,
+    author: { ...SITE_ARTICLE_AUTHOR },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_BRAND_NAME,
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": opts.url },
+    url: opts.url,
+    inLanguage: "en-GB",
+  };
+
+  if (opts.imageUrl) {
+    graph.image = opts.imageUrl;
+  }
+
+  return graph;
 }

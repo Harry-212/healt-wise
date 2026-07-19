@@ -31,9 +31,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#GLP1 #WeightLossUK #UKPharmacy #MedicineShortage #Wegovy #Mounjaro";
-
 function SubHeading({
   children,
   darkMode,
@@ -42,7 +39,7 @@ function SubHeading({
   darkMode: boolean;
 }) {
   return (
-    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children} For more context, explore our resources on <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</Link>.</p>
+    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children}</p>
   );
 }
 
@@ -125,12 +122,12 @@ export default function ArticleClient() {
                   diet and exercise, have gained considerable popularity for helping people control their appetite and
                   manage portion sizes. However, a rising shortage is making it trickier to access certain treatments,
                   leaving many of you concerned about what comes next.
-                </p>
+</p>
                 <p>
                   Since your wellbeing is the top priority, it is important to stay informed. Below, you will discover
                   what is causing these shortages, how they might impact you, and some steps you can take to navigate the
                   changing landscape of weight loss treatments.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="recognise" heading="Recognise the current shortage">
@@ -139,13 +136,13 @@ export default function ArticleClient() {
                   loss treatments are lower than usual. This shortage means you might have to visit multiple outlets to find
                   your prescription, or experience delays if you are on a waiting list. Although it can feel frustrating,
                   it is not a permanent situation and many healthcare providers are exploring solutions.
-                </p>
+</p>
                 <p>
                   Pharmaceutical manufacturers occasionally face production gaps, such as difficulty sourcing the raw
                   materials needed to meet soaring demand. Distribution issues can also contribute. You may find that one
                   brand or dosage is easily available while others are impossible to locate. As a result, you might need to
                   explore alternatives or temporary measures while supply chains stabilise.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="demand" heading="Why weight loss treatments are in demand">
@@ -155,7 +152,7 @@ export default function ArticleClient() {
                   fact, these treatments first gained major attention when doctors prescribed them to patients dealing with
                   obesity related health risks. Over time, more and more individuals have turned to them for a helpful
                   nudge toward healthier daily routines.
-                </p>
+</p>
                 <p>
                   It is no wonder then that the demand has soared. If you are curious about how weight loss treatments rose
                   to prominence, you might enjoy our{" "}
@@ -167,7 +164,7 @@ export default function ArticleClient() {
                   </Link>
                   . It delves into where this trend sits in context and offers a broader picture of why surging popularity
                   can affect today&apos;s supply.
-                </p>
+</p>
               </GuideSection>
 
               <div className="my-10">
@@ -185,12 +182,12 @@ export default function ArticleClient() {
                   underestimated just how popular these medications would become once more people understood their potential
                   benefits. Sudden increases in demand can easily lead to a backlog if manufacturing pipelines were not
                   prepared for the rush.
-                </p>
+</p>
                 <p>
                   On top of that, you have the usual logistical obstacles. Global events that disrupt shipping routes,
                   shortages of critical ingredients, and distribution hiccups can all slow down production. When you combine
                   growing public interest with these supply constraints, it creates the perfect storm for product shortfalls.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="affect" heading="How the shortage might affect you">
@@ -199,8 +196,7 @@ export default function ArticleClient() {
                   uncertainty. You may worry about missing doses or discontinuing your progress altogether. If a medication
                   you have been prescribed is momentarily unavailable, your GP or pharmacist might suggest switching to a
                   comparable alternative for a short time. However, it can take a little while to adjust to a new treatment
-                  protocol.
-                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">clinics in Birmingham</Link>.</p>
+                  protocol.</p>
                 <p>
                   In addition, you might notice dosage adjustments if your preferred concentration is not on hand. Some
                   people also experience more frequent side effects when making changes, which is why you will want to keep
@@ -213,7 +209,7 @@ export default function ArticleClient() {
                     side effects of Wegovy and how to manage them
                   </Link>
                   . Staying informed helps you plan for a smoother transition should a switch be necessary.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="alternatives" heading="Exploring potential alternatives">
@@ -223,7 +219,7 @@ export default function ArticleClient() {
                   starts with knowing your options, so you do not feel stuck if your first choice is unavailable. Popular
                   treatments like Mounjaro and Wegovy have garnered significant interest, but you might also come across
                   other treatments you have never considered.
-                </p>
+</p>
                 <p>
                   Wondering how various options stack up against each other? If you are curious, you could look at{" "}
                   <Link
@@ -241,7 +237,7 @@ export default function ArticleClient() {
                     understanding the Mounjaro KwikPen: a user guide
                   </Link>
                   , to ensure you get the best out of your choice.
-                </p>
+</p>
                 <SubHeading darkMode={darkMode}>Snapshot of some treatment options</SubHeading>
                 <div
                   className={`my-6 overflow-hidden rounded-xl border ${darkMode ? "border-slate-800" : "border-slate-200"}`}
@@ -277,7 +273,7 @@ export default function ArticleClient() {
                   While this table only touches on a few well known treatments, there are additional prescription
                   medications or methods besides treatments, such as weight loss pills or medically supervised programmes.
                   If supply chains continue to stabilise, your original choice may become more accessible once again.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="steps" heading="Steps to manage supply constraints">
@@ -293,7 +289,7 @@ export default function ArticleClient() {
                     guide to switching pharmacies for Mounjaro or Wegovy in the UK
                   </Link>
                   .
-                </p>
+</p>
                 <p>If supply issues persist, you might choose to:</p>
                 <ul className="list-disc space-y-2 pl-6">
                   <li>Ask your GP whether lower or higher dosages are in stock.</li>
@@ -306,7 +302,7 @@ export default function ArticleClient() {
                 <p>
                   Engaging multiple strategies allows you to keep making strides toward your goals even if medications are
                   harder to come by.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="momentum" heading="Keep momentum going">
@@ -315,12 +311,12 @@ export default function ArticleClient() {
                   over daily habits, and the key is to look for ways to adapt until supplies improve. If this period leaves
                   you feeling disillusioned, it can help to connect with others in a similar situation social media groups
                   or local health clubs can offer both practical advice and emotional support.
-                </p>
+</p>
                 <p>
                   Take it one day at a time. Stock might improve quicker than you think and, in the meantime, you can
                   refine your broader wellness habits. Persistent issues with supply can be challenging, but they might also
                   open the door to new methods or tips that could serve you well in the long run.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="faq" heading="Frequently Asked Questions">
@@ -332,8 +328,7 @@ export default function ArticleClient() {
                     <p>
                       Global demand for GLP 1 medicines has risen faster than production and distribution can always
                       match. Manufacturing schedules, ingredient supply and batch release all affect what reaches pharmacy
-                      shelves.
-                     For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
+                      shelves.</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -342,7 +337,7 @@ export default function ArticleClient() {
                     <p>
                       You may need to check several regulated pharmacies. Always follow your prescription and prescriber
                       guidance, and avoid unlicensed or informal sellers online.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -351,7 +346,7 @@ export default function ArticleClient() {
                     <p>
                       Speak to your GP or pharmacist as soon as possible. Do not change brands or doses without medical
                       advice.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -360,7 +355,7 @@ export default function ArticleClient() {
                     <p>
                       No shortages can differ by product, strength and region. One option may be easier to obtain than
                       another at any given time.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -369,7 +364,7 @@ export default function ArticleClient() {
                     <p>
                       Sometimes, yes depending on your health profile and what is licensed and in stock. Only a qualified
                       prescriber should authorise a switch.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -378,7 +373,7 @@ export default function ArticleClient() {
                     <p>
                       Use GPhC registered pharmacies, verify sources, and be sceptical of “guaranteed stock” from unknown
                       websites. Counterfeit medicines are a real risk.
-                    </p>
+</p>
                   </div>
                 </div>
               </GuideSection>
@@ -389,25 +384,19 @@ export default function ArticleClient() {
                   caught off guard if you understand why certain brands are running low and what you can do until they
                   restock. By talking to your GP and actively seeking out resources, you can find short term alternatives
                   or strengthen the healthy routines you already have in place.
-                </p>
+</p>
                 <p>
                   Remember, your wellbeing includes far more than just one approach. If your usual treatment is scarce,
                   redefining your strategy may lead you to discover something else that works just as well or even better.
                   Ultimately, the best plan is one that aligns with your lifestyle, your goals, and what is realistically
                   accessible. You have got plenty of options at your fingertips, so keep exploring until you find what fits
                   you best.
-                </p>
+</p>
                 <p className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
                   Health Wise does not sell medicines; this article is general information and does not replace advice from
                   your prescriber or pharmacist.
-                </p>
-                <p
-                  className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-                >
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                  {SOCIAL_HASHTAGS}
-                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-manchester" className="font-medium text-emerald-600 hover:underline">treatment in Manchester</Link>.</p>
-              </GuideSection>
+</p>
+</GuideSection>
             </article>
 
             <div className="mt-10">

@@ -32,16 +32,10 @@ const TOC = [
   { id: 'conclusion', label: 'Conclusion' },
 ];
 
-const SOCIAL_HASHTAGS = '#MounjaroInjections #MounjaroWeightLoss #Tirzepatide #GLP1WeightLoss #WeightLossUK #ObesityCare';
-
 function SubHeading({ children, darkMode }: { children: React.ReactNode; darkMode: boolean }) {
   return (
     <p className={`mt-6 font-semibold ${darkMode ? 'text-white' : 'text-slate-900'}`}>
-      {children} For more context, explore our resources on{' '}
-      <Link href="/blog/best-weight-loss-treatment-in-birmingham" className="font-medium text-emerald-600 hover:underline">
-        clinics in Birmingham
-      </Link>
-      .
+      {children}
     </p>
   );
 }
@@ -95,23 +89,23 @@ export default function ArticleClient() {
                 Mounjaro weight loss treatments have been called a “game changer” for adults struggling to drop pounds they have fought against for years. If you have tried countless diets without the success you hoped for, you might be
                 wondering if this new medication could finally help you reach your goals. You are not alone. Plenty of people feel stuck and are curious about medical options that claim to assist in managing hunger, reducing calorie intake,
                 and ultimately leading to significant weight loss. The information below will guide you through what Mounjaro is, how it works, and whether it might fit into your plan for healthier living.
-              </p>
+</p>
 
               <GuideSection darkMode={darkMode} id="meet-mounjaro" heading="Meet Mounjaro Weight Loss Treatments">
                 <p>
                   Mounjaro is an injectable medication primarily designed to treat Type 2 diabetes, but it has shown remarkable potential for weight loss even among individuals without diabetes. The drug, also known by its generic name
                   tirzepatide, taps into a dual agonist mechanism that targets two hormones related to appetite control. By mimicking the effects of these hormones, Mounjaro can help you feel satiated faster, making it easier to resist
                   overeating.
-                </p>
+</p>
                 <p>
                   Described by one GP as particularly beneficial for patients who have found it hard to manage their weight through traditional dieting alone, Mounjaro entered surgeries in England in early June 2026 (BBC). Many people who
                   decide to try the treatments report fewer hunger pangs and a renewed sense of control, especially when combining medication with healthy habits.
-                </p>
+</p>
                 <p>
                   Still, you may wonder what truly sets this drug apart in a world already populated with other weight loss aids. One big difference is that Mounjaro acts on two hormone pathways (GLP 1 and GIP), which can potentially yield
                   greater weight loss compared to drugs acting on just one pathway. Clinical trials have shown encouraging numbers, with participants experiencing up to 20% of their body weight reduced in some cases (UCHealth). This means
                   if you weigh around 100 kg, you could lose roughly 20 kg with consistent use and proper lifestyle adjustments.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="fresh-option" heading="A Fresh Option For Stubborn Weight">
@@ -119,18 +113,18 @@ export default function ArticleClient() {
                   If you have tried everything from calorie counting to interval training and the results have been underwhelming, the way Mounjaro tackles appetite regulation may offer a fresh approach. For some, adjusting habits around
                   food and exercise remains a hurdle if you can’t control persistent hunger signals. Mounjaro attempts to reduce these signals so you can focus on staying active, choosing healthier foods, and settling into an overall
                   improved routine.
-                </p>
+</p>
                 <p>
                   Remember that a “miracle fix” does not exist. Many experts caution that you should not expect Mounjaro to work in isolation. The drug is designed to help you modify your eating patterns and adopt healthier behaviours over
                   the long run.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="how-works" heading="See How Mounjaro Works">
                 <p>
                   Mounjaro’s unique value lies in its dual agonist properties. It activates GLP 1 and GIP receptors, two hormones responsible for regulating appetite, insulin response, and digestion. Here is how it typically works in your
                   body:
-                </p>
+</p>
                 <ul className="list-disc space-y-3 pl-5">
                   <li>
                     <strong className={darkMode ? 'text-slate-200' : 'text-slate-900'}>Slows gastric emptying</strong> – Food remains in your stomach longer, helping you feel full sooner.
@@ -147,7 +141,7 @@ export default function ArticleClient() {
                   In many clinical trials, participants who take the highest dose of Mounjaro lost up to 21% of their body weight, outpacing other popular treatments like semaglutide (UCHealth). That can translate to significant changes in
                   clothing size, physical energy, and even self confidence. However, the process is not instantaneous. Like most medical treatments, Mounjaro shows its best results when combined with ongoing efforts toward a holistic
                   healthier lifestyle.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="dosage-note" heading="Important Note About Dosage">
@@ -158,7 +152,7 @@ export default function ArticleClient() {
                     Mounjaro dosage for weight loss
                   </Link>{' '}
                   if you are curious about the standard protocols and potential dosage adjustments.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="who-benefits" heading="Consider Who Might Benefit">
@@ -166,29 +160,29 @@ export default function ArticleClient() {
                   Mounjaro is currently licensed for individuals with Type 2 diabetes. However, off label usage for weight management has become a common topic of conversation. If you have a BMI over 30 or are dealing with obesity related
                   conditions like high blood pressure or elevated cholesterol, you might be a candidate. Women and men with long histories of weight struggles often look to Mounjaro when diet and exercise alone have not delivered sufficient
                   results.
-                </p>
+</p>
                 <p>
                   Recent news stories have highlighted that many people who want to access the treatment through the NHS face stringent criteria. According to Dr. Rachel Ward, a GP in Didcot, Oxfordshire, most individuals applying for NHS
                   prescriptions did not meet all the requirements. These requirements include having a BMI of 40 or over (37.5 for certain ethnic backgrounds) plus four out of five weight related health issues (BBC).
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="private-access" heading="Private Access For Broader Eligibility">
                 <p>
                   If you do not meet the NHS criteria, you may consider going the private route. Although this can involve higher costs, it allows you to start treatment even if your BMI and comorbidities do not align perfectly with NHS
                   thresholds (BBC). Many individuals find this option invaluable, especially if they have struggled for most of their adult life to maintain a healthy body weight.
-                </p>
+</p>
                 <p>
                   People like Rebecca from Dorset found that private access to Mounjaro helped reduce her constant food cravings, which she attributed to ADHD, leading to significant weight loss (BBC). In such cases, the medication
                   addresses not only physical but also psychological barriers to better eating patterns.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="results-timelines" heading="Check Typical Results And Timelines">
                 <p>
                   If you are considering Mounjaro, you probably want a sense of how soon you might see results. Clinical trials and real world use suggest that many people start noticing changes within the first few weeks, including smaller
                   portion sizes and a modest drop in weight. As you progress, these shifts can add up.
-                </p>
+</p>
                 <ul className="list-disc space-y-3 pl-5">
                   <li>One study found that, over six months, individuals without diabetes lost an average of 13% of their starting weight using tirzepatide (Medical News Today).</li>
                   <li>Another trial (Surmount 1) showed significant weight loss sustained over three years, with final body weight reductions of 9.2%, 20.2%, or 30.8% depending on the individual’s trajectory (The Guardian).</li>
@@ -198,12 +192,12 @@ export default function ArticleClient() {
                   <Link href="/blog/mounjaro-weight-loss-before-and-after" className="font-medium text-brand-primary underline">
                     Mounjaro weight loss before and after
                   </Link>{' '}
-                  success stories. However, keep in mind that your experience can vary based on your diet, activity level, dosage, and other lifestyle factors. For more context, explore our resources on{' '}
+                  success stories. However, keep in mind that your experience can vary based on your diet, activity level, dosage, and other lifestyle factors. For{' '}
                   <Link href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">
                     Mounjaro weight loss treatment UK
                   </Link>
                   .
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="keep-progress" heading="How To Keep Up The Progress">
@@ -211,7 +205,7 @@ export default function ArticleClient() {
                   Experts note that meaningful weight loss often happens most steadily if you pair Mounjaro with balanced nutrition and regular exercise. You will probably see the most pronounced results over a period of six months to a
                   year, though some individuals continue to lose weight even longer than that. In the Surmount 1 trial, participants reached their lowest weight by around 22 months on average, then maintained most of their progress through
                   the third year (The Guardian).
-                </p>
+</p>
                 <p>Weight loss treatments like Mounjaro do not replace standard weight management strategies. Think of them as a booster or a supportive tool that helps minimise your hunger and keep you on track for the long haul.</p>
               </GuideSection>
 
@@ -247,14 +241,14 @@ export default function ArticleClient() {
                   Your body needs time to adapt. Many users start on a low dose precisely for this reason. If you are prone to motion sickness or already have a sensitive stomach, you might feel these symptoms more keenly in the first few
                   weeks. Keep your healthcare provider updated about any discomfort so they can adjust your treatment plan. Often, small tweaks to dosage schedules, meal composition, or hydration can go a long way toward reducing side
                   effects.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="serious-risks" heading="Addressing Serious Risks">
                 <p>
                   On rare occasions, complications can escalate. Some people worry about pancreatitis, gallbladder issues, or severe allergic reactions to the medication. While these are comparatively rare, you should remain aware of any
                   serious changes in abdominal pain or sudden allergic symptoms. Always contact your healthcare professional right away if you experience something out of the ordinary.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="nhs-private" heading="Review NHS And Private Routes">
@@ -262,11 +256,11 @@ export default function ArticleClient() {
                 <p>
                   You might already be familiar with the difficulties surrounding Mounjaro prescriptions from the NHS. Though Mounjaro garnered strong clinical support, NHS guidelines have narrow eligibility parameters. These restrictions
                   leave many interested candidates to seek private options.
-                </p>
+</p>
                 <p>
                   Current rules require a high BMI threshold plus the presence of multiple obesity related conditions (BBC). If that does not match your health profile, you may struggle to get an NHS prescription. This limited access raises
                   fairness questions for those who do not have severe comorbidities but still need substantial weight loss support.
-                </p>
+</p>
                 <SubHeading darkMode={darkMode}>Finding a private pathway</SubHeading>
                 <p>
                   Due to these constraints, some people choose to get Mounjaro privately, either through specialist clinics or online providers. Private care often includes personalised support, such as an initial consultation to discuss
@@ -275,22 +269,22 @@ export default function ArticleClient() {
                     compare UK Mounjaro providers
                   </Link>{' '}
                   or consult with a private pharmacist, verify that they follow correct standards for prescription medications.
-                </p>
+</p>
                 <p>
                   Keep in mind that going private can place a financial burden on you, as Mounjaro can be expensive. Costs range widely depending on your dose and how long you continue treatment (Medical News Today). Some health insurers do
                   not cover weight loss use of Mounjaro, especially since it is not approved by every regulatory body for the specific purpose of obesity treatment.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="lifestyle" heading="Incorporate Lifestyle Changes">
                 <p>
                   While Mounjaro targets your appetite, the best outcomes often come from a multipronged approach. In other words, keep up (or even initiate) good eating and exercise habits. The medication might help your calorie deficit
                   come more naturally, but you still need to fuel yourself wisely and stay mobile.
-                </p>
+</p>
                 <p>
                   When you reduce your reliance on mindless snacking, you make it easier to add more nutrient rich foods. Look for lean proteins, whole grains, and plenty of vegetables. Paired with consistent physical activities like brisk
                   walks, light weight training, or group fitness classes these simple acts help your body reshape itself faster than when using Mounjaro alone.
-                </p>
+</p>
                 <p>Here is a quick checklist of lifestyle shifts you can work on:</p>
                 <ul className="list-disc space-y-2 pl-5">
                   <li>Practice portion control to avoid overeating.</li>
@@ -302,7 +296,7 @@ export default function ArticleClient() {
                 <p>
                   Even Dr. Ward, the GP who witnessed Mounjaro’s potential, cautions that focusing too heavily on the drug alone is risky. She emphasises that you need to retain a holistic approach for durable results (BBC). If you rely
                   solely on treatments while ignoring daily habits, you could see the pounds return once you stop the medication.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="plan-next" heading="Plan Your Next Steps">
@@ -315,37 +309,33 @@ export default function ArticleClient() {
                   <Link href="/what-is-mounjaro#weight-loss-results" className="font-medium text-brand-primary underline">
                     Mounjaro weight loss results
                   </Link>{' '}
-                  from people with a lifestyle similar to your own. For more context, explore our resources on{' '}
-                  <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">
-                    Mounjaro price comparison
-                  </Link>
-                  .
-                </p>
+                  from people with a lifestyle similar to your own.
+</p>
                 <SubHeading darkMode={darkMode}>Securing ongoing treatment</SubHeading>
                 <p>
                   Studies point out that you must continue taking Mounjaro to sustain results and maintain diabetes symptom control if you have Type 2 diabetes (UCHealth). Discontinuing the treatments typically leads to the weight creeping
                   back if you have not entrenched solid eating and exercise routines. If you choose to pursue this path, plan for how you will finance long term medication and incorporate healthful habits you can keep for life.
-                </p>
+</p>
                 <SubHeading darkMode={darkMode}>Speaking with professionals</SubHeading>
                 <p>
                   Before beginning therapy, talk to your GP or a certified weight management specialist about your complete health history. Discuss any allergies, chronic illnesses, or existing medications. Partnering with professionals
                   means you can design a strategy that pairs Mounjaro with medical oversight, nutritional counsel, and potentially mental health support if anxiety or disordered eating lurks beneath your weight concerns.
-                </p>
+</p>
                 <SubHeading darkMode={darkMode}>Tracking progress</SubHeading>
                 <p>
                   To stay motivated, you can keep a weekly journal of your weight, clothing fit, or even energy levels. Record how your appetite fluctuates and note any days when your side effects feel more pronounced. By reviewing your
                   notes, you can spot trends and pinpoint times when you might need extra support or a dosage adjustment.
-                </p>
+</p>
                 <SubHeading darkMode={darkMode}>Maintain realistic expectations</SubHeading>
                 <p>
                   While the promise of shedding 20% of your body weight can be inspiring, you also want to keep your eyes on the long term. Quick fixes rarely last, and Mounjaro is not an overnight success tool. Aim to lose pounds steadily,
                   paying attention to overall well being, not just the scale. According to one three year study, even after regaining a fraction of the lost weight, participants still maintained a significant reduction in body mass (The
                   Guardian).
-                </p>
+</p>
                 <p>
                   Life happens, and weight management can be an ongoing process. The biggest wins often arrive when you adopt manageable habits, such as a more active lifestyle, mindful eating techniques, and stress management strategies.
                   Mounjaro simply enhances your odds of success by helping you overcome intense hunger triggers. Over time, you will likely depend more on your ingrained habits than on the injection itself.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="key-takeaways" heading="Your Ultimate Guide Takeaway">
@@ -371,7 +361,7 @@ export default function ArticleClient() {
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>2. How do Mounjaro treatments work for weight loss?</h3>
                     <p>
                       Tirzepatide activates GLP 1 and GIP receptors, influencing appetite, digestion, and glucose regulation. That can mean earlier fullness, fewer hunger signals, and steadier progress when paired with lifestyle change.
-                    </p>
+</p>
                   </div>
 
                   <div>
@@ -379,7 +369,7 @@ export default function ArticleClient() {
                     <p>
                       NHS access depends on national and local criteria, often including high BMI thresholds and weight related health conditions. Many people who hope for NHS treatment do not meet every requirement; a clinician can assess
                       your situation.
-                    </p>
+</p>
                   </div>
 
                   <div>
@@ -387,7 +377,7 @@ export default function ArticleClient() {
                     <p>
                       Gastrointestinal symptoms such as nausea, vomiting, diarrhoea, constipation, and abdominal discomfort are frequently reported, especially after dose changes. Most issues are mild to moderate and improve with time or
                       dose titration under supervision.
-                    </p>
+</p>
                   </div>
 
                   <div>
@@ -403,7 +393,7 @@ export default function ArticleClient() {
                         Mounjaro price comparison
                       </Link>{' '}
                       for an overview.
-                    </p>
+</p>
                   </div>
                 </div>
               </section>
@@ -413,19 +403,18 @@ export default function ArticleClient() {
                   When diets alone do not cut it, Mounjaro can give you an advantage. It is not magic, but its dual mechanism helps you break the cycle of reacting to constant hunger. By adding basic nutrition tweaks and active living, you
                   might finally see the results you have dreamed about for ages. Talk to your doctor, look into both NHS and private options, and focus on the big picture your health, happiness, and freedom from the weight related
                   limitations that have held you back.
-                </p>
+</p>
                 <p>
                   Mounjaro weight loss treatments sit at the intersection of metabolic science and behaviour change: they can blunt hunger and make calorie control feel more achievable, but they do not replace professional judgement, safe
                   titration, or sustainable habits. Anchor decisions in your own health profile not someone else’s highlight reel.
-                </p>
+</p>
                 <p className={`text-sm leading-relaxed ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span> {SOCIAL_HASHTAGS}
-                  For more context, explore our resources on{' '}
+                  If you are comparing GLP-1 options, our guide to{' '}
                   <Link href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">
                     managing Wegovy side effects
-                  </Link>
-                  .
-                </p>
+                  </Link>{' '}
+                  may also be useful.
+</p>
                 <div className={`mt-8 border-t pt-6 ${darkMode ? 'border-slate-800' : 'border-slate-200'}`}>
                   <h4 className={`mb-4 text-sm font-bold uppercase tracking-wider ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>References</h4>
                   <ul className="space-y-2 text-sm opacity-80">

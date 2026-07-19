@@ -44,8 +44,8 @@ export default function WegovyCostsArticlePage() {
     headline: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
     description:
       "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-14",
     image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {

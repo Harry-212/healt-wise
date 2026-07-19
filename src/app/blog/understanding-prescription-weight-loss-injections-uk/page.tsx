@@ -50,8 +50,8 @@ export default function UnderstandingPrescriptionWeightLossInjectionsUkPage() {
     description:
       "GLP-1 class weight loss treatments in the UK: realistic expectations, Wegovy and Mounjaro, NHS vs private, risks, and long-term use — informational only, not medical advice.",
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+    publisher: { "@type": "Organization", name: "Healthwise360" },
     datePublished: "2026-04-25",
     mainEntityOfPage: {
       "@type": "WebPage",

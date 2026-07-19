@@ -602,13 +602,11 @@ export default function ArticleClient() {
                   <Link href="/tools/mounjaro-click-calculator" className="font-semibold text-emerald-600 hover:underline">
                     Mounjaro click calculator
                   </Link>{" "}
-                  for any custom dose and pen combination. For broader context on Mounjaro treatment, including how it works, UK eligibility, and pricing, see our comprehensive{" "}
+                  for any custom dose and pen combination. For broader context on
+                  Mounjaro treatment, including how it works and UK eligibility,
+                  see our{" "}
                   <Link href="/what-is-mounjaro" className="font-semibold text-emerald-600 hover:underline">
                     what is Mounjaro guide
-                  </Link>{" "}
-                  and our independent{" "}
-                  <Link href="/mounjaro-price-comparison" className="font-semibold text-emerald-600 hover:underline">
-                    Mounjaro price comparison tool
                   </Link>
                   .
                 </p>

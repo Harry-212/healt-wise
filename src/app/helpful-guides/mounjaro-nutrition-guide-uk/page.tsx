@@ -121,6 +121,20 @@ const RELATED_GUIDES = [
     description:
       "Understand the biology behind rapid early results—and why slowing progress is normal, not failure.",
   },
+  {
+    href: "/helpful-guides/mounjaro-weight-loss-plateau",
+    category: "Medications",
+    title: "Why Weight Loss Slows on Mounjaro: Plateaus Explained",
+    description:
+      "What plateaus mean on tirzepatide, and practical steps to keep progress on track.",
+  },
+  {
+    href: "/helpful-guides/mounjaro-multivitamins-uk",
+    category: "Nutrition",
+    title: "Mounjaro Multivitamins UK: Do You Need Them?",
+    description:
+      "When supplements help on a reduced appetite—and when food-first nutrition is enough.",
+  },
 ];
 
 const SCHEMA = {
@@ -129,8 +143,8 @@ const SCHEMA = {
   headline: "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results",
   description:
     "Mounjaro controls appetite—but what you eat determines the quality of your results. A practical, evidence-based guide to nutrition while using tirzepatide in the UK.",
-  author: { "@type": "Organization", name: "Health Wise" },
-  publisher: { "@type": "Organization", name: "Health Wise" },
+  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  publisher: { "@type": "Organization", name: "Healthwise360" },
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -168,12 +182,11 @@ export default function GuideMounjaroNutrition() {
           significantly easier to eat less. But the medication controls
           quantity, not quality. What you choose to eat within your reduced
           intake determines your energy levels, body composition, and the
-          sustainability of your results.
-         For more context, explore our resources on <IL href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</IL>.</GuideParagraph>
+          sustainability of your results.</GuideParagraph>
         <GuideParagraph>
           A structured nutrition approach alongside{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> improves:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Energy levels throughout the day — nutrient-dense food sustains energy even in a calorie deficit",
@@ -200,10 +213,10 @@ export default function GuideMounjaroNutrition() {
           deficit, the body can break down muscle tissue for energy a process
           that slows metabolism and reduces long term results. Adequate protein
           intake helps prevent this.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Protein supports:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Muscle preservation — critical during weight loss to maintain metabolic rate",
@@ -213,7 +226,7 @@ export default function GuideMounjaroNutrition() {
         />
         <GuideParagraph>
           Best protein sources for Mounjaro patients:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Lean meats — chicken breast, turkey, lean beef",
@@ -238,10 +251,10 @@ export default function GuideMounjaroNutrition() {
           blood sugar levels. This is particularly important alongside{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, which already works in
           part by improving insulin response.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Good low GI carbohydrate choices include:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Oats — slow-releasing energy, high in beta-glucan (soluble fibre)",
@@ -254,8 +267,7 @@ export default function GuideMounjaroNutrition() {
         <GuideParagraph>
           Limit high GI refined carbohydrates (white bread, pastries, sugary
           breakfast cereals)   they cause rapid blood sugar spikes and
-          subsequent hunger, working against Mounjaro's stabilising effect.
-         For more context, explore our resources on <IL href="/helpful-guides/mounjaro-weight-loss-injection-uk" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss treatment UK</IL>.</GuideParagraph>
+          subsequent hunger, working against Mounjaro's stabilising effect.</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="fibre" heading="3. Increase Fibre Intake">
@@ -266,10 +278,10 @@ export default function GuideMounjaroNutrition() {
             NHS recommends 30g of fibre per day
           </EL>{" "}
           for adults most people consume considerably less.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Fibre improves:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Digestion — supports healthy gut motility and reduces constipation (a potential side effect of GLP-1 medications)",
@@ -279,7 +291,7 @@ export default function GuideMounjaroNutrition() {
         />
         <GuideParagraph>
           High fibre foods to include:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Vegetables — especially leafy greens, broccoli, Brussels sprouts",
@@ -297,10 +309,10 @@ export default function GuideMounjaroNutrition() {
           vitamins (A, D, E, K). When appetite is significantly reduced by{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>, ensuring adequate fat
           intake from quality sources becomes especially important.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Good sources of healthy fats:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Avocado — rich in monounsaturated fats and potassium",
@@ -314,7 +326,7 @@ export default function GuideMounjaroNutrition() {
           Limit saturated fats (found in fatty meats, butter, full fat dairy,
           and ultra processed foods) and avoid trans fats (partially
           hydrogenated oils found in some processed baked goods) entirely.
-        </GuideParagraph>
+</GuideParagraph>
       </GuideSection>
 
       <GuideSection id="hydration" heading="5. Stay Hydrated">
@@ -323,8 +335,7 @@ export default function GuideMounjaroNutrition() {
           metabolism all of which interact with how{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> functions. Dehydration
           can also temporarily affect the scale, masking genuine fat loss and
-          causing unnecessary concern.
-         For more context, explore our resources on <IL href="/blog/side-effects-of-wegovy-and-how-to-manage-them" className="font-medium text-emerald-600 hover:underline">managing Wegovy side effects</IL>.</GuideParagraph>
+          causing unnecessary concern.</GuideParagraph>
         <GuideBulletList
           items={[
             "Aim for 6–8 glasses (approximately 1.5–2 litres) of water per day — more if physically active or in warm weather",
@@ -341,10 +352,10 @@ export default function GuideMounjaroNutrition() {
           even at lower calorie levels. They tend to be low in protein, fibre,
           and micronutrients while being high in refined carbohydrates,
           saturated fats, sugar, and sodium.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           Limit or avoid:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Sugary snacks and confectionery — deliver empty calories with no nutritional benefit",
@@ -368,7 +379,7 @@ export default function GuideMounjaroNutrition() {
           eating past fullness. Mindful eating techniques help you tune into
           your body's actual hunger and satiety signals particularly important
           when those signals are being pharmacologically altered.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Eat slowly — it takes approximately 20 minutes for fullness signals to reach the brain; rushing a meal often leads to overeating",
@@ -385,10 +396,10 @@ export default function GuideMounjaroNutrition() {
           combination of protein, complex carbohydrates, and healthy fat. This
           approach naturally improves satiety, blood sugar stability, and
           nutritional completeness without requiring calorie counting.
-        </GuideParagraph>
+</GuideParagraph>
         <GuideParagraph>
           A balanced meal example:
-        </GuideParagraph>
+</GuideParagraph>
         <GuideBulletList
           items={[
             "Grilled salmon (protein + healthy fat) + brown rice or quinoa (complex carb) + roasted vegetables (fibre + micronutrients)",
@@ -406,8 +417,7 @@ export default function GuideMounjaroNutrition() {
           <EL href="https://www.bda.uk.com/resource/weight-loss.html">
             weight management resources
           </EL>{" "}
-          are also valuable for those seeking professional dietary support.
-         For more context, explore our resources on <IL href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</IL>.</GuideParagraph>
+          are also valuable for those seeking professional dietary support.</GuideParagraph>
         <GuideCallout variant="tip">
           Nutrition is the multiplier—not the replacement—for{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL>. The medication manages

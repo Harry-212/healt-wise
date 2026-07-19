@@ -34,9 +34,6 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-const SOCIAL_HASHTAGS =
-  "#WegovySideEffects #SemaglutideUK #GLP1 #WeightLossUK #WegovyTips #UKHealth";
-
 function SubHeading({
   children,
   darkMode,
@@ -45,7 +42,7 @@ function SubHeading({
   darkMode: boolean;
 }) {
   return (
-    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children} For more context, explore our resources on <Link href="/mounjaro-price-comparison" className="font-medium text-emerald-600 hover:underline">Mounjaro price comparison</Link>.</p>
+    <p className={`mt-6 font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>{children}</p>
   );
 }
 
@@ -127,7 +124,7 @@ export default function ArticleClient() {
                   helpful tool if you are looking to control your appetite and reach a healthier size. However, it is
                   important to understand the side effects of Wegovy and how to manage them. With the right knowledge, you
                   can keep discomfort to a minimum while staying on track with your progress.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="typical" heading="Identify typical side effects">
@@ -135,7 +132,7 @@ export default function ArticleClient() {
                   Before you worry about unexpected symptoms, it helps to note that every individual responds differently
                   to medication. Still, there are a few side effects that many people experience when starting Wegovy,
                   especially in the early stages:
-                </p>
+</p>
                 <ul className="list-disc space-y-2 pl-6">
                   <li>Mild digestive distress, such as nausea or diarrhoea</li>
                   <li>Changes in appetite, including taste alterations</li>
@@ -147,7 +144,7 @@ export default function ArticleClient() {
                   Most of these issues tend to improve over time as your body adapts to the medication. If you are
                   concerned about any particular symptom, speak with your healthcare professional so they can help you
                   adjust your dose, diet or approach.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="digestive" heading="Ease digestive discomfort">
@@ -156,14 +153,14 @@ export default function ArticleClient() {
                   constipation or nausea, all of which are fairly normal responses as your system gets used to Wegovy. One
                   way to get relief is to drink plenty of water. Aim for small but frequent sips if you are feeling queasy.
                   Herbal teas containing ingredients like ginger and peppermint can also calm your stomach.
-                </p>
+</p>
                 <p>
                   Another tip is to keep your meals light and balanced. Large, heavy meals might trigger more discomfort,
                   so try to focus on smaller portions of protein sources, vegetables and whole grains. Think of it as giving
                   your stomach a gentler workload. If you notice that certain foods worsen your digestive symptoms, you can
                   note them down and adjust accordingly. Over time, you will learn which meals and snacks keep you feeling
                   your best.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="appetite" heading="Maintain balanced appetite">
@@ -172,13 +169,13 @@ export default function ArticleClient() {
                   reduce your food intake. Still, it is possible to swing between feeling too full and experiencing hunger
                   pangs. Try having a balanced meal routine with appropriate portion sizes rather than skipping meals or
                   waiting until you are ravenous.
-                </p>
+</p>
                 <p>
                   You might find it helpful to eat more slowly, giving your brain and body time to register that you are
                   satisfied. If your appetite fluctuates, opt for nutrient dense foods like fresh produce, lean proteins
                   and moderate amounts of healthy fats. Slow releasing carbohydrates, such as oats or brown rice, can
                   provide steady energy and reduce sudden cravings.
-                </p>
+</p>
               </GuideSection>
 
               <div className="my-10">
@@ -196,14 +193,13 @@ export default function ArticleClient() {
                   to that tired sensation. Finding the right balance of moderate exercise can help boost your overall
                   energy levels. Going for a short walk in the morning or doing gentle stretching in the evening could make
                   a big difference in your stamina.
-                </p>
+</p>
                 <p>
                   In addition, consider checking your sleep schedule. Consistent rest plays a vital role in how
                   energised you feel throughout the day. If you find yourself feeling more fatigued than usual, build
                   regular breaks into your schedule or try brief power naps. Processed foods and sugary snacks might give
                   you quick bursts of energy, but these can lead to crashes. Instead, emphasise whole foods that supply
-                  stable energy and support your health goals.
-                 For more context, explore our resources on <Link href="/blog/mounjaro-weight-loss-benefits-backed-by-science" className="font-medium text-emerald-600 hover:underline">Mounjaro weight loss benefits</Link>.</p>
+                  stable energy and support your health goals.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="wellbeing" heading="Watch your mental wellbeing">
@@ -212,13 +208,13 @@ export default function ArticleClient() {
                   While most users do not experience serious changes in mental health, it is wise to keep an eye on how you
                   are feeling. If you ever notice persistent sadness, irritability or anxiety, it is worth mentioning it to
                   a healthcare professional, friend or family member.
-                </p>
+</p>
                 <p>
                   You can also support your mood by maintaining social connections. Sometimes, a simple chat with a
                   friend or a shared activity can reset your outlook. Additionally, a brief relaxation or mindfulness
                   session each day can calm any stressors. Pausing for five minutes to focus on your breathing, for example,
                   can bring immediate relief from anxious thoughts.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="professional" heading="Seek professional advice">
@@ -227,7 +223,7 @@ export default function ArticleClient() {
                   recommend adjusting your dosage or providing a more personalised plan for you. If you ever feel uncertain
                   about combining Wegovy with other treatments or supplements, simply ask for a professional opinion. That
                   includes exploring other weight loss treatments and how they compare in terms of benefits and drawbacks.
-                </p>
+</p>
                 <p>
                   For a deeper comparison of treatment based options, check out{" "}
                   <Link
@@ -244,7 +240,7 @@ export default function ArticleClient() {
                     understanding the Mounjaro KwikPen: a user guide
                   </Link>
                   . Having a broader picture can empower you to make more informed decisions about your current routine.
-                </p>
+</p>
               </GuideSection>
 
               <div className="my-10">
@@ -274,14 +270,14 @@ export default function ArticleClient() {
                     UK weight loss treatments comparison hub
                   </Link>
                   , which offers insight into options, cost context and availability.
-                </p>
+</p>
                 <SubHeading darkMode={darkMode}>Movement and consistency</SubHeading>
                 <p>
                   Beyond that, staying active is a crucial piece in your success. Light aerobic exercises, strength
                   training and regular walks can all support healthy weight loss. Remember that consistency matters more
                   than intensity. Rather than overdoing it in a single workout session, aim for short, daily activity that
                   fits your lifestyle so you can sustain your progress long term.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="practical" heading="Take practical steps for success">
@@ -293,13 +289,13 @@ export default function ArticleClient() {
                   most energy, schedule a quick workout or walk during that time. If you are prone to late night snacking,
                   plan a satisfying snack that does not derail your goals. Over time, you will discover strategies and
                   routines that align with your body&apos;s shifts on Wegovy.
-                </p>
+</p>
                 <p>
                   Knowing how to respond to mild symptoms helps you stay in control. When your stomach feels unsettled,
                   you have a plan for soothing it. If fatigue creeps in, you are already prepared with restful breaks and
                   better food choices. That kind of flexibility allows your life to stay joyful even as your body adjusts
                   to a new medication.
-                </p>
+</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="faq" heading="Frequently Asked Questions">
@@ -311,8 +307,7 @@ export default function ArticleClient() {
                     <p>
                       Nausea, diarrhoea, constipation and other digestive symptoms are frequently reported, especially
                       after dose increases. Headache, fatigue and dizziness also occur for some people. Tell your prescriber
-                      if symptoms are severe or do not improve.
-                     For more context, explore our resources on <Link href="/wegovy-price-comparison" className="font-medium text-emerald-600 hover:underline">Wegovy price comparison</Link>.</p>
+                      if symptoms are severe or do not improve.</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -321,7 +316,7 @@ export default function ArticleClient() {
                     <p>
                       Try smaller meals, slower eating, hydration, and avoiding very large or high fat meals. Ginger or
                       peppermint tea helps some people. Do not change your prescribed dose without medical advice.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -330,7 +325,7 @@ export default function ArticleClient() {
                     <p>
                       Yes   dose changes should only be directed by a qualified prescriber. Contact your healthcare team
                       rather than adjusting the pen yourself.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -339,7 +334,7 @@ export default function ArticleClient() {
                     <p>
                       Seek urgent care for severe or persistent abdominal pain, continuous vomiting, allergic reactions, or
                       any symptom that frightens you. Always read your patient information leaflet for warning signs.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -348,7 +343,7 @@ export default function ArticleClient() {
                     <p>
                       Many people feel more settled over time. Prioritise sleep, hydration and balanced meals; if fatigue
                       is extreme or prolonged, ask your doctor to review other possible causes.
-                    </p>
+</p>
                   </div>
                   <div>
                     <h3 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}>
@@ -357,7 +352,7 @@ export default function ArticleClient() {
                     <p>
                       Physical changes can coincide with mood shifts. If you notice persistent low mood, anxiety, or thoughts
                       of self harm, seek help immediately and inform your prescriber.
-                    </p>
+</p>
                   </div>
                 </div>
               </GuideSection>
@@ -370,18 +365,12 @@ export default function ArticleClient() {
                   works best for you and celebrate the improvements along the way. With each small victory, you are gaining
                   insight and motivation for the long run. After all, the aim is not just to lose weight but to do it in a
                   way that feels balanced, sustainable and beneficial for your overall wellbeing.
-                </p>
+</p>
                 <p className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}>
                   Health Wise does not sell medicines; this article is for general information and does not replace advice
                   from your prescriber or pharmacist.
-                </p>
-                <p
-                  className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-                >
-                  <span className="font-semibold text-slate-600 dark:text-slate-300">Suggested hashtags:</span>{" "}
-                  {SOCIAL_HASHTAGS}
-                 For more context, explore our resources on <Link href="/blog/best-weight-loss-treatment-in-london" className="font-medium text-emerald-600 hover:underline">treatment in London</Link>.</p>
-              </GuideSection>
+</p>
+</GuideSection>
             </article>
 
             <div className="mt-10">

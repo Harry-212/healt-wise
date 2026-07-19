@@ -12,11 +12,11 @@ export function wegovyArticleJsonLd(): Record<string, unknown> {
     dateModified: "2026-04-06",
     reviewedBy: {
       "@type": "Person",
-      name: "Health Wise editorial team",
+      name: "Healthwise360 Research Team",
     },
     isPartOf: {
       "@type": "WebSite",
-      name: "Health Wise",
+      name: "Healthwise360",
       url: base,
     },
   };
