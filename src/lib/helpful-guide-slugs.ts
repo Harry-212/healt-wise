@@ -1,7 +1,7 @@
 /** Listing page URL (same first segment as individual guides). */
 export const HELPFUL_GUIDES_HUB_PATH = "/helpful-guides";
 
-/** URL-safe category slugs for `/helpful-guides?category=…` filters. */
+/** URL-safe category slugs for `/helpful-guides/category/…` filters. */
 export const HELPFUL_GUIDE_CATEGORY_SLUGS = [
   "medications",
   "pharmacy-safety",
@@ -51,7 +51,7 @@ export function helpfulGuideCategoryLabel(
 export function helpfulGuidesCategoryHubPath(
   slug: HelpfulGuideCategorySlug,
 ): string {
-  return `${HELPFUL_GUIDES_HUB_PATH}?category=${slug}`;
+  return `${HELPFUL_GUIDES_HUB_PATH}/category/${slug}`;
 }
 
 /** Resolves a raw `category` query value to slug + label, or null if unknown. */

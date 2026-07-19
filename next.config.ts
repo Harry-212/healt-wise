@@ -4,9 +4,31 @@ import {
   HELPFUL_GUIDE_SLUGS,
 } from "./src/lib/helpful-guide-slugs";
 
+/**
+ * Site-wide CSP for XSS / injection mitigation.
+ * Static-friendly (no per-request nonce) so ISR/SSG stays intact.
+ * `'unsafe-inline'` is required for Next.js hydration + Tailwind/inline styles.
+ */
+const CONTENT_SECURITY_POLICY = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'self'",
+  "object-src 'none'",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data:",
+  "media-src 'self' https:",
+  "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.clarity.ms https://*.clarity.ms",
+  "frame-src 'self' https://www.google.com https://maps.google.com",
+  "worker-src 'self' blob:",
+  "upgrade-insecure-requests",
+].join("; ");
+
 const nextConfig: NextConfig = {
   images: {
-    /** Allow `quality` on `<Image>` — include 80 so older chunks / defaults never throw at runtime. */
+    /** Allow `quality` on `<Image>` - include 80 so older chunks / defaults never throw at runtime. */
     qualities: [50, 60, 70, 75, 80, 85, 90],
     /** Prefer modern formats from the image optimizer (smaller than JPEG/PNG). */
     formats: ["image/avif", "image/webp"],
@@ -40,6 +62,15 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: CONTENT_SECURITY_POLICY,
+          },
+        ],
+      },
       {
         source: "/_next/image",
         headers: [
@@ -118,11 +149,37 @@ const nextConfig: NextConfig = {
         destination: "/helpful-guides",
         permanent: true,
       },
-      ...HELPFUL_GUIDE_CATEGORIES.filter(({ slug, label }) => slug !== label).map(
-        ({ slug, label }) => ({
-          source: "/helpful-guides",
-          has: [{ type: "query" as const, key: "category", value: label }],
-          destination: `/helpful-guides?category=${slug}`,
+      ...HELPFUL_GUIDE_CATEGORIES.flatMap(({ slug, label }) => {
+        const destination = `/helpful-guides/category/${slug}`;
+        const redirects: Array<{
+          source: string;
+          has: Array<{ type: "query"; key: string; value: string }>;
+          destination: string;
+          permanent: boolean;
+        }> = [
+          {
+            source: "/helpful-guides",
+            has: [{ type: "query", key: "category", value: slug }],
+            destination,
+            permanent: true,
+          },
+        ];
+        if (slug !== label) {
+          redirects.push({
+            source: "/helpful-guides",
+            has: [{ type: "query", key: "category", value: label }],
+            destination,
+            permanent: true,
+          });
+        }
+        return redirects;
+      }),
+      // Legacy blog topic query strings → static topic hubs
+      ...(["wegovy", "mounjaro", "how-it-works", "guides", "safety", "locations"] as const).map(
+        (topic) => ({
+          source: "/blog",
+          has: [{ type: "query" as const, key: "topic", value: topic }],
+          destination: `/blog/topic/${topic}`,
           permanent: true,
         }),
       ),
@@ -138,7 +195,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/locations-in-uk",
-        destination: "/blog?topic=locations",
+        destination: "/blog/topic/locations",
         permanent: true,
       },
       {

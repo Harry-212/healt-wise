@@ -313,7 +313,7 @@ export default function MethodologyClient() {
                     <div className="space-y-5">
                       {CHAPTERS.map((chapter) => (
                         <div key={chapter.id} className="space-y-2">
-                          <h3
+                          <p
                             className={`text-xs font-bold uppercase tracking-wider transition-colors ${
                               activeChapter === chapter.id
                                 ? "text-emerald-700"
@@ -321,7 +321,7 @@ export default function MethodologyClient() {
                             }`}
                           >
                             {chapter.title}
-                          </h3>
+                          </p>
 
                           <ul className="ml-1.5 space-y-1 border-l border-slate-100 pl-3">
                             {chapter.sections.map((section) => {

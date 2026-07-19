@@ -9,14 +9,14 @@ export type BlogFeedTag =
 
 export const BLOG_HUB_PATH = "/blog";
 
-const BLOG_FEED_TAGS: BlogFeedTag[] = [
+export const BLOG_FEED_TAGS = [
   "wegovy",
   "mounjaro",
   "how-it-works",
   "guides",
   "safety",
   "locations",
-];
+] as const satisfies ReadonlyArray<BlogFeedTag>;
 
 const BLOG_FEED_TAG_SET = new Set<string>(BLOG_FEED_TAGS);
 
@@ -36,13 +36,25 @@ export function resolveBlogTopicFilter(raw?: string): BlogFeedTag | "all" {
 }
 
 export function blogTopicHubPath(topic: BlogFeedTag): string {
-  return `${BLOG_HUB_PATH}?topic=${topic}`;
+  return `${BLOG_HUB_PATH}/topic/${topic}`;
 }
 
 /** Canonical blog hub path for page 1 (all topics or a single topic filter). */
 export function blogHubPath(topic?: BlogFeedTag | "all" | null): string {
   if (!topic || topic === "all") return BLOG_HUB_PATH;
   return blogTopicHubPath(topic);
+}
+
+/** Paginated blog listing path (page ≥ 2). */
+export function blogPagePath(
+  page: number,
+  topic?: BlogFeedTag | "all" | null,
+): string {
+  if (page <= 1) return blogHubPath(topic);
+  if (topic && topic !== "all") {
+    return `${blogTopicHubPath(topic)}/page/${page}`;
+  }
+  return `${BLOG_HUB_PATH}/page/${page}`;
 }
 
 /** Matches `getBlogPageFeed` page size (safe to import from client components). */

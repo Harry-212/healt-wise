@@ -64,7 +64,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
       <div className="mx-auto max-w-7xl px-4 pb-24 pt-8 sm:px-6 sm:pt-10 md:pt-12 lg:px-8">
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <Link
-            href="/blog?topic=locations"
+            href="/blog/topic/locations"
             className={`flex items-center gap-3 text-sm font-medium transition-opacity hover:opacity-75 ${
               darkMode ? "text-slate-300" : "text-slate-900"
             }`}
@@ -117,7 +117,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
             Home
           </Link>
           <span>/</span>
-          <Link href="/blog?topic=locations" className={linkCls}>
+          <Link href="/blog/topic/locations" className={linkCls}>
             Locations
           </Link>
           <span>/</span>

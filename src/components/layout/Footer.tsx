@@ -241,7 +241,7 @@ export default function Footer() {
                 ))}
                 <li className="mt-3 border-t border-slate-800/80 pt-3">
                   <Link
-                    href="/blog?topic=locations"
+                    href="/blog/topic/locations"
                     className={FOOTER_NAV_LINK_PRIMARY}
                   >
                     <span>All UK Locations</span>

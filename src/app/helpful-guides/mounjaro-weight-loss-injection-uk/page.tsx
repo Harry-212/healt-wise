@@ -426,7 +426,7 @@ export default function GuideMounjaroPillar() {
           <p className="mb-4 text-slate-600">
             Review registered pharmacies and specialist weight loss clinics across various UK cities to find the right fit for your needs.
           </p>
-          <IL href="/blog?topic=locations" className="inline-flex items-center justify-center rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-700 hover:text-white">
+          <IL href="/blog/topic/locations" className="inline-flex items-center justify-center rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-emerald-700 hover:text-white">
             Discover UK locations
           </IL>
         </div>

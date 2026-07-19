@@ -195,7 +195,7 @@ export const UK_WEIGHT_LOSS_LOCATIONS: UkWeightLossLocation[] =
   ALL_ROWS.map(rowToLocation);
 
 /** Blog grid filtered to UK city articles (20 per page, paginated). */
-export const UK_WEIGHT_LOSS_FLAT_INDEX_PATH = "/blog?topic=locations" as const;
+export const UK_WEIGHT_LOSS_FLAT_INDEX_PATH = "/blog/topic/locations" as const;
 
 export function getUkWeightLossLocationBySlug(
   slug: string,

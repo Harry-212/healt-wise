@@ -340,7 +340,7 @@ export default function ArticleClient() {
                     Discover verified providers in your city and find the right medical weight loss plan tailored to your needs. Visit our comprehensive UK locations guide to see options available in your local area.
                   </p>
                   <Link
-                    href="/blog?topic=locations"
+                    href="/blog/topic/locations"
                     className={`inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium transition-colors ${darkMode ? 'bg-[#3562ff] text-white hover:bg-[#2a4fd6]' : 'bg-[#3562ff] text-white hover:bg-[#2a4fd6]'}`}
                   >
                     Explore local UK providers

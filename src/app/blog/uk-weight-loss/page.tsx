@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
+import { blogTopicHubPath } from "@/lib/blog-feed";
 
-/** Old hub path; city articles now live on `/blog` grid and `/blog/best-weight-loss-treatment-in-…`. */
-export default function UkWeightLossLegacyHubRedirect() {
-  redirect("/blog?topic=locations");
+/** Legacy path — keep for bookmarks; send to the static locations topic hub. */
+export default function UkWeightLossRedirectPage() {
+  redirect(blogTopicHubPath("locations"));
 }

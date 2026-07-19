@@ -227,7 +227,7 @@ export default function MounjaroClickCalculatorClient() {
                         <div className="flex items-start gap-2.5">
                           <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                           <div>
-                            <h4 className="text-sm font-semibold text-amber-900">Medical Warning</h4>
+                            <p className="text-sm font-semibold text-amber-900">Medical Warning</p>
                             <p className="mt-1 text-xs leading-relaxed text-amber-800">Adjusting your Mounjaro dose by counting clicks is considered off-label use. Always consult your prescriber before changing your dosage protocol.</p>
                           </div>
                         </div>
@@ -310,7 +310,7 @@ export default function MounjaroClickCalculatorClient() {
                     <ClickChart />
 
                     <div className="rounded-xl bg-slate-50 border border-slate-200 p-5 mt-4 max-w-3xl">
-                      <h4 className="text-sm font-semibold text-slate-900">How to read this chart:</h4>
+                      <h3 className="text-sm font-semibold text-slate-900">How to read this chart:</h3>
                       <ul className="mt-2 list-disc list-inside text-sm text-slate-700 space-y-1.5">
                         <li>Find your desired dose in the left-hand column.</li>
                         <li>Look across to the column that matches your current Pen Strength.</li>

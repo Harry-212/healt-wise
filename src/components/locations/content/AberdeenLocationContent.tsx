@@ -17,7 +17,7 @@ export default function AberdeenLocationContent({ loc, shareUrl }: Props) {
     <div className="w-full bg-white font-sans text-slate-800">
       <article className="mx-auto min-w-0 max-w-3xl px-4 pb-20 pt-8 sm:px-5 sm:py-10 md:px-6 md:py-12">
         <Link
-          href="/blog?topic=locations"
+          href="/blog/topic/locations"
           className="text-sm font-medium text-brand-primary hover:underline"
         >
           ← Back to News

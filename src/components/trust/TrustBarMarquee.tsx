@@ -37,9 +37,9 @@ export default function TrustBarMarquee() {
                   strokeWidth={1.5}
                   aria-hidden
                 />
-                <h3 className="mt-4 font-bold text-brand-primary">
+                <p className="mt-4 font-bold text-brand-primary">
                   {item.title}
-                </h3>
+                </p>
                 <p className="mt-1 text-sm leading-relaxed text-brand-secondary">
                   {item.desc}
                 </p>
@@ -63,9 +63,9 @@ export default function TrustBarMarquee() {
                   strokeWidth={1.5}
                   aria-hidden
                 />
-                <h3 className="mt-4 font-bold text-brand-primary">
+                <p className="mt-4 font-bold text-brand-primary">
                   {item.title}
-                </h3>
+                </p>
                 <p className="mt-1 text-sm leading-relaxed text-brand-secondary">
                   {item.desc}
                 </p>

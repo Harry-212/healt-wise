@@ -8,10 +8,13 @@ import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
+  HELPFUL_GUIDE_CATEGORY_SLUGS,
   HELPFUL_GUIDE_SLUGS,
   HELPFUL_GUIDES_HUB_PATH,
   helpfulGuidePath,
+  helpfulGuidesCategoryHubPath,
 } from "@/lib/helpful-guide-slugs";
+import { BLOG_FEED_TAGS, blogTopicHubPath } from "@/lib/blog-feed";
 
 const STATIC_BLOG_SLUGS = ["uk-weight-loss"] as const;
 
@@ -83,6 +86,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const priority =
       path === "/" ? 1 : HIGH_PRIORITY_HUBS.has(path) ? 0.9 : 0.75;
     push(path, priority);
+  }
+
+  for (const topic of BLOG_FEED_TAGS) {
+    push(blogTopicHubPath(topic), 0.7);
+  }
+
+  for (const category of HELPFUL_GUIDE_CATEGORY_SLUGS) {
+    push(helpfulGuidesCategoryHubPath(category), 0.7);
   }
 
   for (const slug of HELPFUL_GUIDE_SLUGS) {

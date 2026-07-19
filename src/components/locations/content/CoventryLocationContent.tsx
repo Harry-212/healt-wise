@@ -96,7 +96,7 @@ export default function CoventryLocationContent({ loc, shareUrl }: Props) {
       <div className="mx-auto max-w-7xl px-4 pb-24 pt-8 sm:px-6 sm:pt-10 md:pt-12 lg:px-8">
         <div className="mb-10 flex items-center justify-between">
           <Link
-            href="/blog?topic=locations"
+            href="/blog/topic/locations"
             className={`flex items-center gap-3 text-sm font-medium transition-opacity hover:opacity-75 ${darkMode ? "text-slate-300" : "text-slate-900"}`}
           >
             <div

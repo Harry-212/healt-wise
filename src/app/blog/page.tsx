@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import { permanentRedirect } from "next/navigation";
 import BlogClient from "./BlogClient";
 import { getBlogPageFeed } from "@/lib/blog";
-import { blogHubPath, resolveBlogTopicFilter } from "@/lib/blog-feed";
+import {
+  blogHubPath,
+  blogTopicHubPath,
+  resolveBlogTopicFilter,
+} from "@/lib/blog-feed";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const BLOG_DESCRIPTION =
@@ -14,16 +19,28 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { topic: rawTopic } = await searchParams;
   const activeTopic = resolveBlogTopicFilter(rawTopic);
-  const canonicalPath = blogHubPath(activeTopic);
+  if (activeTopic !== "all") {
+    // Legacy ?topic= URLs redirect; metadata still points at the canonical static path.
+    return {
+      title: "News & Blog",
+      description: BLOG_DESCRIPTION,
+      alternates: {
+        canonical: `${siteOrigin()}${blogTopicHubPath(activeTopic)}`,
+      },
+      openGraph: {
+        url: `${siteOrigin()}${blogTopicHubPath(activeTopic)}`,
+      },
+    };
+  }
 
   return {
     title: "News & Blog",
     description: BLOG_DESCRIPTION,
     alternates: {
-      canonical: `${siteOrigin()}${canonicalPath}`,
+      canonical: `${siteOrigin()}${blogHubPath("all")}`,
     },
     openGraph: {
-      url: `${siteOrigin()}${canonicalPath}`,
+      url: `${siteOrigin()}${blogHubPath("all")}`,
     },
   };
 }
@@ -34,14 +51,19 @@ export default async function BlogIndexPage({
   searchParams: Promise<{ topic?: string }>;
 }) {
   const { topic } = await searchParams;
-  const { articles, totalPages, activeTopic } = getBlogPageFeed(1, { topic });
+  const activeTopic = resolveBlogTopicFilter(topic);
+  if (activeTopic !== "all") {
+    permanentRedirect(blogTopicHubPath(activeTopic));
+  }
+
+  const { articles, totalPages } = getBlogPageFeed(1, { topic: "all" });
 
   return (
     <BlogClient
       articles={articles}
       totalPages={totalPages}
       currentPage={1}
-      activeTopic={activeTopic}
+      activeTopic="all"
     />
   );
 }
