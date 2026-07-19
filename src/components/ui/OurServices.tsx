@@ -129,12 +129,6 @@ export default function OurServices() {
                     aria-hidden
                   />
                 </Link>
-                <Link
-                  href={HOME_COMPARE_HUB_HREF}
-                  className="text-base font-bold text-amber-800 underline decoration-amber-300/80 underline-offset-4 hover:text-amber-950 hover:underline sm:text-lg"
-                >
-                  See comparisons
-                </Link>
               </div>
             </div>
 

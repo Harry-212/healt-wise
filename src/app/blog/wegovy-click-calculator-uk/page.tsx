@@ -6,6 +6,7 @@ import {
 } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { SITE_ARTICLE_AUTHOR, SITE_BRAND_NAME } from "@/lib/site-brand";
 
 const PATH = "/blog/wegovy-click-calculator-uk";
 const TITLE =
@@ -17,6 +18,7 @@ const HERO_IMAGE = `${siteOrigin()}${blogImgPath(WEGOVY_CLICK_CALCULATOR_UK_HERO
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
+  authors: [{ name: SITE_ARTICLE_AUTHOR.name }],
   keywords:
     "wegovy click calculator, wegovy click calculator UK, wegovy clicks per dose, how many clicks wegovy, wegovy flextouch clicks, wegovy flextouch pen UK, semaglutide click calculator UK, wegovy dose chart UK, wegovy 74 clicks, wegovy 0.25mg clicks, wegovy 2.4mg clicks, wegovy 7.2mg pen UK, wegovy dose calculator UK, wegovy pen how many clicks full dose, wegovy flextouch selector clicks, wegovy clicks to mg, how to use wegovy flextouch pen UK, wegovy dose counter UK, semaglutide FlexTouch dose guide",
   alternates: {
@@ -45,13 +47,12 @@ export const metadata: Metadata = {
 
 export default function WegovyClickCalculatorUkPage() {
   const ARTICLE_SCHEMA = {
-    "@context": "https://schema.org",
     "@type": "Article",
     headline: TITLE,
     description: DESCRIPTION,
     image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Health Wise" },
-    publisher: { "@type": "Organization", name: "Health Wise" },
+    author: { ...SITE_ARTICLE_AUTHOR },
+    publisher: { "@type": "Organization", name: SITE_BRAND_NAME },
     datePublished: "2026-07-19",
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -60,7 +61,6 @@ export default function WegovyClickCalculatorUkPage() {
   };
 
   const FAQ_SCHEMA = {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
       {
@@ -158,7 +158,7 @@ export default function WegovyClickCalculatorUkPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            ...ARTICLE_SCHEMA,
+            "@context": "https://schema.org",
             "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA],
           }),
         }}
