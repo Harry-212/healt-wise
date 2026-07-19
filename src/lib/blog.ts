@@ -93,6 +93,17 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
 /** Long-form `/blog/...` routes (App Router folders), merged into the main blog feed. */
 export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
+    slug: "wegovy-click-calculator-uk",
+    title:
+      "Wegovy Click Calculator UK: How Many Clicks Per Dose? FlexTouch Guide 2026",
+    date: "2026-07-19",
+    category: "Guides",
+    description:
+      "Wegovy click calculator UK 2026: FlexTouch pen clicks per dose, 74-click reference, 7.2 mg update, dose chart for all 5 strengths and what the clicks mean.",
+    heroImage: "/blog/wegovy-mounjaro-calculator.webp",
+    feedTags: ["guides", "wegovy", "how-it-works"],
+  },
+  {
     slug: "fibre-for-glp-1-users",
     title: "Fibre for GLP-1 Users: Constipation and Fullness Support",
     date: "2026-07-14",
