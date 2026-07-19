@@ -1,19 +1,24 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
-import { blogImgPath, BEST_WEIGHT_LOSS_COMPARISON_SITES_UK_HERO_WEBP } from "./blog-assets";
+import {
+  blogImgPath,
+  BEST_WEIGHT_LOSS_COMPARISON_SITES_UK_HERO_WEBP,
+} from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/best-weight-loss-comparison-sites-uk";
-const TITLE = "We Tested 5 UK Weight Loss Comparison Websites So You Don't Have To: Here is the Honest Verdict";
-const DESCRIPTION = "We reviewed Click Compare, MedEazy, Monj, WegoCompare and Healthwise360 against 7 real criteria. The results might surprise you.";
+const TITLE =
+  "We Tested 6 UK Weight Loss Treatment Comparison Websites So You Don't Have To: Here's the Honest Verdict";
+const DESCRIPTION =
+  "We reviewed 6 UK weight loss comparison sites: Healthwise360, PenCompare, Click.Compare, MedEazy, Monj, WegoCompare. Which covers price, safety, GPhC & more?";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BEST_WEIGHT_LOSS_COMPARISON_SITES_UK_HERO_WEBP)}`;
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords:
-    "best weight loss comparison site UK, Mounjaro price comparison UK, Wegovy comparison UK, weight loss treatment comparison website UK, GLP-1 comparison site UK, GPhC verified pharmacy comparison, Mounjaro Wegovy Saxenda comparison website, independent weight loss comparison UK, best site compare weight loss treatment UK, private prescription comparison UK, weight loss treatment comparison tool 2026",
+    "best weight loss comparison site UK, Mounjaro price comparison UK, Wegovy comparison UK, weight loss treatment comparison website UK, GLP-1 comparison site UK, compare Mounjaro price UK, GPhC verified pharmacy comparison, Mounjaro Wegovy Saxenda comparison website, best site to compare weight loss treatment UK, weight loss treatment price comparison tool UK, independent weight loss comparison UK, private prescription comparison UK, pencompare uk, compare weight loss injection UK 2026",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
@@ -22,11 +27,11 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: `${siteOrigin()}${PATH}`,
     type: "article",
-    publishedTime: "2026-06-03T00:00:00.000Z",
+    publishedTime: "2026-07-19T00:00:00.000Z",
     images: [
       {
         url: HERO_IMAGE,
-        alt: "Honest comparison and reviews of five major UK weight loss prescription comparison websites",
+        alt: "Honest review of six UK weight loss treatment comparison websites including Healthwise360 and PenCompare",
       },
     ],
   },
@@ -47,7 +52,7 @@ export default function BestWeightLossComparisonSitesPage() {
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Health Wise" },
     publisher: { "@type": "Organization", name: "Health Wise" },
-    datePublished: "2026-06-03",
+    datePublished: "2026-07-19",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${siteOrigin()}${PATH}`,
@@ -63,7 +68,15 @@ export default function BestWeightLossComparisonSitesPage() {
         name: "Is there one website that compares all three, Mounjaro, Wegovy, and Saxenda, equally?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Click.Compare, MedEazy, and Healthwise360 all cover all three treatments. Monj is weighted toward Mounjaro, and WegoCompare toward Wegovy. For a genuinely equal three treatment comparison with filtering by dose, Trustpilot, and provider, the Mounjaro vs Wegovy vs Saxenda hub at Healthwise360 is the most complete option.",
+          text: "Click.Compare, MedEazy, PenCompare, and Healthwise360 all cover all three treatments. Monj is weighted toward Mounjaro, and WegoCompare toward Wegovy. For a genuinely equal three-treatment comparison with filtering by dose, Trustpilot, and provider, the Mounjaro vs Wegovy vs Saxenda hub at Healthwise360 is the most complete option. PenCompare's 48-provider pool also gives broad three-treatment coverage.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is PenCompare and how does it differ from other comparison sites?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "PenCompare is a UK comparison site for prescription weight loss treatments covering Mounjaro (tirzepatide), Wegovy (semaglutide), and Saxenda (liraglutide) across 48 regulated providers. It allows users to sort by price, reviews, or provider name, check GPhC registration status, use an eligibility checker, and read basic educational content. It is positioned as a Compare the Market for weight loss injections: functional and broad rather than deeply editorial.",
         },
       },
       {
@@ -71,7 +84,7 @@ export default function BestWeightLossComparisonSitesPage() {
         name: "How often are prices updated on these platforms?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "MedEazy updates daily. Monj retests daily and removes providers that fail checks. Click.Compare updates weekly. Healthwise360 updates regularly with live data from verified pharmacies. In a market that saw significant Mounjaro price changes in late 2025, update frequency matters considerably more than it would in a stable market.",
+          text: "MedEazy and Monj update daily. Click.Compare updates weekly. Healthwise360 and PenCompare update regularly. In a market that saw significant Mounjaro price changes in late 2025, update frequency matters considerably more than it would in a stable market.",
         },
       },
       {
@@ -84,26 +97,18 @@ export default function BestWeightLossComparisonSitesPage() {
       },
       {
         "@type": "Question",
-        name: "Which platform is best for someone who is completely new to GLP-1 treatment research?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "For a first time researcher who needs to understand what these treatments are, whether they qualify, what the realistic cost is across the full treatment journey, and which pharmacies are safe to use, Healthwise360 provides the broadest and most contextualised starting point. Monj or MedEazy can supplement the price specific research once the broader context is established.",
-        },
-      },
-      {
-        "@type": "Question",
         name: "Which platform is best for finding the absolute cheapest current Mounjaro price?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Monj's checkout simulation methodology and Healthwise360's live price comparison both aim to surface accurate all in pricing. MedEazy's daily updates make it strong for current data. Cross referencing all three for a specific dose will give the most complete picture of current market pricing.",
+          text: "Monj's checkout simulation methodology and Healthwise360's live price comparison both aim to surface accurate all-in pricing. MedEazy's daily updates make it strong for current data. Cross-referencing all three for a specific dose will give the most complete picture of current market pricing.",
         },
       },
       {
         "@type": "Question",
-        name: "Can I use these websites to access NHS weight loss treatment?",
+        name: "Which comparison site is best for someone completely new to GLP-1 research?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. NHS access to Wegovy and Mounjaro requires a GP referral to specialist weight management services. Comparison platforms are relevant to the private prescribing route only. WegoCompare and Healthwise360 both explain the NHS pathway context, which helps users understand whether to pursue that route before turning to private options.",
+          text: "For a first-time researcher who needs to understand what these treatments are, whether they qualify, what the realistic cost is across the full treatment journey, and which pharmacies are safe to use, Healthwise360 provides the broadest and most contextualised starting point. PenCompare's eligibility checker is also a useful first-step tool before engaging with any provider.",
         },
       },
       {
@@ -122,7 +127,7 @@ export default function BestWeightLossComparisonSitesPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="We Tested 5 UK Weight Loss Comparison Websites So You Don't Have To"
+        pageName="We Tested 6 UK Weight Loss Treatment Comparison Websites"
         pagePath={PATH}
       />
       <script

@@ -24,7 +24,7 @@ const INLINE_SRC = blogImgPath(BEST_PLACE_INLINE_PNG);
 
 const TOC = [
   { id: "intro", label: "Where is the best place to start?" },
-  { id: "short-answer", label: "The short answer" },
+  { id: "short-answer", label: "In plain terms" },
   { id: "safe-provider", label: "What makes a safe UK provider?" },
   { id: "clinical-assessment", label: "Clinical assessment checks" },
   { id: "registered-pharmacy", label: "Registered pharmacy checks" },
@@ -36,13 +36,10 @@ const TOC = [
   { id: "provider-types", label: "The main types of providers" },
   { id: "why-not-cheapest", label: "Why cheapest is not always best" },
   { id: "what-to-avoid", label: "What to avoid when comparing" },
-  { id: "comparison-journey", label: "The Health Wise comparison journey" },
+  { id: "comparison-journey", label: "A sensible order to compare providers" },
   { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
 ];
-
-const SOCIAL_HASHTAGS =
-  "#WeightLossUK #MounjaroUK #WegovyUK #OnlinePharmacyUK #WeightLossTreatment #PharmacySafety #HealthWise #ComparePrices";
 
 export default function ArticleClient() {
   const [darkMode, setDarkMode] = useState(false);
@@ -167,8 +164,8 @@ export default function ArticleClient() {
                 </strong>
               </p>
               <p>
-                This is where Health Wise can help. Instead of pushing users
-                toward one provider, Health Wise helps people{" "}
+                This is where Health Wise can help. We do not push you toward
+                one clinic. Instead, we help you{" "}
                 <Link
                   href="/"
                   className="font-medium text-emerald-600 hover:underline"
@@ -176,28 +173,24 @@ export default function ArticleClient() {
                   compare weight loss treatment prices
                 </Link>
                 , pharmacy safety, delivery, support, and provider differences
-                before they make a decision.
+                before you decide.
               </p>
 
               <div
-                className={`mt-8 rounded-2xl p-6 border ${darkMode ? "border-slate-800 bg-slate-900/50" : "border-slate-200 bg-slate-50/50"}`}
+                className={`mt-8 rounded-2xl border p-6 ${darkMode ? "border-slate-800 bg-slate-900/50" : "border-slate-200 bg-slate-50/50"}`}
               >
-                <p className="text-sm font-semibold text-emerald-600 uppercase tracking-wider mb-2">
-                  Featured Answer Overview
-                </p>
                 <h3
-                  className={`text-lg font-bold mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+                  className={`mb-3 text-lg font-bold ${darkMode ? "text-white" : "text-slate-900"}`}
                 >
                   What is the best place to start weight loss treatment online
                   in the UK?
                 </h3>
                 <p className="text-sm leading-relaxed">
-                  The best place to start is a regulated UK provider or
-                  comparison service that checks eligibility, uses a proper
-                  clinical assessment, works with a registered pharmacy,
-                  explains full treatment prices clearly, and provides support
-                  after approval. Users should avoid unregulated sellers, social
-                  media offers, and unusually cheap treatment claims.
+                  Start with a regulated UK provider that checks eligibility,
+                  runs a proper clinical assessment, works with a registered
+                  pharmacy, explains the full cost, and offers support after
+                  approval. Skip unregulated sellers, social media offers, and
+                  deals that look unrealistically cheap.
                 </p>
               </div>
             </GuideSection>
@@ -205,26 +198,25 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="short-answer"
-              heading="The Short Answer"
+              heading="In Plain Terms"
             >
               <p>
-                The best place to start weight loss treatment is a regulated UK
-                provider that uses a proper clinical assessment, verifies
-                suitability, supplies treatment through a registered pharmacy,
-                explains the full cost clearly, and offers support if side
-                effects or treatment questions arise.
+                The safest place to start is a regulated UK service that checks
+                whether treatment suits you, supplies medicine through a
+                registered pharmacy, shows the real monthly cost, and can help
+                if side effects or questions come up later.
               </p>
               <p>
-                This matters because weight loss injections such as Mounjaro and
-                Wegovy are prescription-only medicines. They should not be
-                treated like normal online shopping products. Therefore, the
-                safest provider is not always the cheapest provider.
+                That matters because weight loss injections such as Mounjaro and
+                Wegovy are prescription-only medicines. They are not ordinary
+                online products. The cheapest website is not automatically the
+                safest one.
               </p>
               <p>
-                A good provider should make the process feel professional, not
-                rushed. It should also explain who treatment may suit, who
-                should avoid it, what the monthly cost includes, and what
-                happens after the starting dose.
+                A good provider should feel careful rather than rushed. You
+                should be able to see who treatment may suit, who should avoid
+                it, what the monthly fee includes, and what happens after the
+                starting dose.
               </p>
             </GuideSection>
 
@@ -266,14 +258,14 @@ export default function ArticleClient() {
                 reactions, eating disorder history, and other health conditions.
               </p>
               <p>
-                This step is important because weight loss treatment is not
-                suitable for everyone. Besides, side effects and medicine
-                interactions can vary from person to person.
+                This step matters because weight loss treatment is not suitable
+                for everyone. Side effects and medicine interactions also vary
+                from person to person.
               </p>
               <p>
-                If a website appears to offer treatment without proper
-                assessment, that is a warning sign. A responsible provider
-                should slow the user down enough to check suitability.
+                If a website seems to offer treatment without a proper
+                assessment, treat that as a warning sign. A responsible provider
+                should slow you down enough to check suitability.
               </p>
             </GuideSection>
 
@@ -289,17 +281,15 @@ export default function ArticleClient() {
                 supplies the treatment.
               </p>
               <p>
-                This is where you should confirm credentials using our detailed
-                guide on{" "}
+                This is where you should confirm credentials using our guide on{" "}
                 <Link
                   href="/pharmacy-safety-gphc-verification"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   pharmacy safety and GPhC verification
                 </Link>
-                , which details the GPhC registry checks that every genuine UK
-                supplier must pass. That verification page is a key resource for
-                every high-intent weight loss treatment article.
+                . It walks through the GPhC register checks that a genuine UK
+                supplier should be able to pass.
               </p>
             </GuideSection>
 
@@ -310,15 +300,15 @@ export default function ArticleClient() {
             >
               <p>
                 A good provider should explain the full weight loss treatment
-                price, not just the first-month headline price.
+                price, not just the first-month headline figure.
               </p>
               <p>
-                Many private providers show a &ldquo;from&rdquo; price. However,
-                this may only apply to a starter dose, a first-month promotion,
-                or a lower-strength option. Therefore, readers need to compare
-                total cost across the full treatment journey.
+                Many private clinics show a &ldquo;from&rdquo; price. That may
+                only cover a starter dose, a first-month promotion, or a lower
+                strength. So it pays to look at the total cost across the full
+                course, not just month one.
               </p>
-              <p>A proper price comparison should include:</p>
+              <p>A proper price check should include:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Starter dose price</li>
                 <li>Higher dose price</li>
@@ -330,9 +320,8 @@ export default function ArticleClient() {
                 <li>Repeat prescription rules</li>
               </ul>
               <p>
-                This is one of Health Wise&apos;s strongest opportunities. The
-                site can compete by helping readers compare real monthly cost,
-                not only the lowest advertised number.
+                That is where Health Wise tries to be useful: helping you compare
+                real monthly cost, not only the lowest advertised number.
               </p>
             </GuideSection>
 
@@ -342,22 +331,17 @@ export default function ArticleClient() {
               heading="Weight Loss Treatment Price: What Users Should Compare"
             >
               <p>
-                When users search for weight loss price or weight loss treatment
-                cost, they usually want a practical answer. They want to know
-                what they may pay each month and whether one provider is better
-                value than another.
+                When people search for weight loss price or treatment cost, they
+                usually want a practical answer: what might I pay each month, and
+                is one provider better value than another?
               </p>
               <p>
-                However, weight loss treatment prices vary because providers
-                package their services differently.
+                Prices vary because clinics package services differently. Some
+                focus on low medicine prices. Others include coaching, app
+                support, pharmacist contact, or follow-up reviews. Some look
+                cheap at the starting dose and become more expensive later.
               </p>
-              <p>
-                Some providers focus on low medicine prices. Others include
-                coaching, app support, pharmacist contact, or follow-up reviews.
-                Meanwhile, some show a cheaper starting dose but become more
-                expensive later.
-              </p>
-              <p>Therefore, a fair comparison should ask:</p>
+              <p>A fair comparison usually asks:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>
                   Is the price for Mounjaro, Wegovy, Saxenda, or another
@@ -369,11 +353,10 @@ export default function ArticleClient() {
                 <li>Is clinical support included?</li>
                 <li>What happens if the treatment is not suitable?</li>
                 <li>Is maintenance pricing clear?</li>
-                <li>Can the user compare the provider against alternatives?</li>
+                <li>Can you compare the provider against alternatives?</li>
               </ul>
               <p>
-                This is why users find it highly valuable to cross-reference
-                with the latest{" "}
+                It also helps to cross-check the latest{" "}
                 <Link
                   href="/mounjaro-price-comparison"
                   className="font-medium text-emerald-600 hover:underline"
@@ -387,8 +370,7 @@ export default function ArticleClient() {
                 >
                   Wegovy price list UK
                 </Link>{" "}
-                summaries, which track actual dose-level tiers across major
-                clinics.
+                summaries, which track dose-level tiers across major clinics.
               </p>
             </GuideSection>
 
@@ -398,8 +380,8 @@ export default function ArticleClient() {
               heading="The Main Types of Weight Loss Treatment Providers"
             >
               <p>
-                Not every provider works in the same way. Users should
-                understand the different models before choosing where to start.
+                Not every provider works the same way. It helps to know the
+                different models before you choose where to start.
               </p>
 
               <h3
@@ -414,7 +396,7 @@ export default function ArticleClient() {
                 options and want a regulated online pathway.
               </p>
               <p>
-                However, users should still check the pharmacy registration,
+                However, you should still check the pharmacy registration,
                 clinical process, delivery policy, and support options.
               </p>
 
@@ -479,12 +461,12 @@ export default function ArticleClient() {
                 choice.
               </p>
               <p>
-                A very low price may exclude support, delivery, or follow-up. It
-                may also only apply to the starting dose. Besides, unusually low
-                prices can sometimes be a red flag if the seller is not properly
+                A very low price may leave out support, delivery, or follow-up.
+                It may also only apply to the starting dose. Unusually low prices
+                can also be a warning sign if the seller is not properly
                 regulated.
               </p>
-              <p>A safer value comparison should balance price with:</p>
+              <p>A safer value comparison balances price with:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Pharmacy registration</li>
                 <li>Clinical checks</li>
@@ -497,10 +479,9 @@ export default function ArticleClient() {
                 <li>Clear refund or cancellation information</li>
               </ul>
               <p>
-                Therefore, Health Wise avoids positioning the article as
-                &ldquo;cheap weight loss injections.&rdquo; Instead, the
-                stronger and more useful approach is focusing on safe weight
-                loss treatment price comparison.
+                That is why this guide is not written as a hunt for &ldquo;cheap
+                weight loss injections.&rdquo; The more useful question is how to
+                compare safe treatment prices properly.
               </p>
             </GuideSection>
 
@@ -510,8 +491,8 @@ export default function ArticleClient() {
               heading="What to Avoid When Comparing Providers"
             >
               <p>
-                Users should be careful with any seller that makes weight loss
-                treatment look too easy.
+                Be careful with any seller that makes weight loss treatment look
+                too easy.
               </p>
               <p>Avoid websites or sellers that:</p>
               <ul className="list-disc space-y-3 pl-5">
@@ -525,95 +506,89 @@ export default function ArticleClient() {
                 <li>Make the checkout feel faster than the safety process</li>
               </ul>
               <p>
-                This guidance helps readers avoid scams and protects their
-                health, which is a key part of our focus on clinical safety.
+                Those checks help you avoid scams and reduce the chance of
+                buying from an unsafe route.
               </p>
             </GuideSection>
 
             <GuideSection
               darkMode={darkMode}
               id="comparison-journey"
-              heading="Best Place to Start: The Health Wise Comparison Journey"
+              heading="A Sensible Order to Compare Providers"
             >
               <p>
-                For users who are not sure where to begin, the safest journey is
-                not to choose a provider immediately. Instead, they should
-                compare treatment options first.
+                If you are not sure where to begin, do not pick a provider first.
+                Compare the options, then choose a consultation route.
               </p>
-              <p>A strong Health Wise journey could look like this:</p>
+              <p>A practical order looks like this:</p>
               <ol className="list-decimal space-y-3 pl-5">
                 <li>
                   <strong
                     className={darkMode ? "text-slate-200" : "text-slate-800"}
                   >
-                    Check your BMI for weight loss treatment:
+                    Check your BMI:
                   </strong>{" "}
-                  First, use our tool to{" "}
+                  Use our{" "}
                   <Link
                     href="/tools/bmi-calculator"
                     className="font-medium text-emerald-600 hover:underline"
                   >
-                    check your BMI for weight loss treatment
+                    BMI calculator
                   </Link>{" "}
-                  to understand whether you are likely to meet typical
-                  eligibility criteria before starting a consultation.
+                  to see whether you are likely to meet typical eligibility
+                  criteria before you start a consultation.
                 </li>
                 <li>
                   <strong
                     className={darkMode ? "text-slate-200" : "text-slate-800"}
                   >
-                    Compare Mounjaro vs Wegovy vs Saxenda:
+                    Compare Mounjaro, Wegovy and Saxenda:
                   </strong>{" "}
-                  This helps users understand the main treatment differences and
-                  mechanisms before focusing only on price.
+                  Understand the main treatment differences before you focus
+                  only on price.
                 </li>
                 <li>
                   <strong
                     className={darkMode ? "text-slate-200" : "text-slate-800"}
                   >
-                    Review Mounjaro price list UK:
+                    Check Mounjaro prices:
                   </strong>{" "}
-                  This helps users compare dose-level prices if they are
-                  researching tirzepatide.
+                  Compare dose-level prices if you are looking at tirzepatide.
                 </li>
                 <li>
                   <strong
                     className={darkMode ? "text-slate-200" : "text-slate-800"}
                   >
-                    Review Wegovy price list UK:
+                    Check Wegovy prices:
                   </strong>{" "}
-                  This helps users compare semaglutide prices and provider
-                  options.
+                  Compare semaglutide prices and provider options.
                 </li>
                 <li>
                   <strong
                     className={darkMode ? "text-slate-200" : "text-slate-800"}
                   >
-                    Check pharmacy safety and GPhC verification:
+                    Verify pharmacy registration:
                   </strong>{" "}
-                  This helps users verify regulated online chemists and avoid
-                  fake sellers.
+                  Use the GPhC checks to avoid fake or unclear sellers.
                 </li>
                 <li>
                   <strong
                     className={darkMode ? "text-slate-200" : "text-slate-800"}
                   >
-                    Read how Health Wise compares prices:
+                    Read how we compare prices:
                   </strong>{" "}
-                  Understand the independent methodology and checks behind our
-                  price database.
+                  See the independent checks behind our price tables.
                 </li>
               </ol>
               <p>
-                Once you select a suitable and safe clinical path, you can also
-                easily{" "}
+                Once you have a suitable clinical path, you can also{" "}
                 <Link
                   href="/tools/weight-loss-tracker"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   track your weight loss progress
                 </Link>{" "}
-                over the coming weeks to monitor your clinical goals.
+                over the following weeks.
               </p>
             </GuideSection>
 
@@ -650,9 +625,9 @@ export default function ArticleClient() {
                   </h3>
                   <p>
                     Some people may access private weight loss treatment online
-                    after a clinical assessment and valid prescription. However,
-                    users should only use regulated providers and should avoid
-                    unregulated websites or social media sellers.
+                    after a clinical assessment and valid prescription. Stick to
+                    regulated providers, and avoid unregulated websites or social
+                    media sellers.
                   </p>
                 </div>
                 <div>
@@ -663,10 +638,10 @@ export default function ArticleClient() {
                     option?
                   </h3>
                   <p>
-                    Not always. The cheapest provider may not include delivery,
-                    support, consultation, or clear maintenance pricing.
-                    Therefore, users should compare full monthly cost, safety
-                    checks, and provider support before deciding.
+                    Not always. The cheapest option may leave out delivery,
+                    support, consultation, or clear maintenance pricing. Compare
+                    the full monthly cost, safety checks, and support before you
+                    decide.
                   </p>
                 </div>
                 <div>
@@ -746,48 +721,37 @@ export default function ArticleClient() {
             >
               <p>
                 The best place to start weight loss treatment online in the UK
-                is not necessarily the cheapest website or the fastest checkout.
-                A safer choice is a regulated provider with proper clinical
-                checks, transparent prices, pharmacy verification, and ongoing
+                is not always the cheapest website or the fastest checkout. A
+                safer choice is a regulated provider with proper clinical
+                checks, clear prices, pharmacy verification, and ongoing
                 support.
               </p>
               <p>
-                Users should compare weight loss treatment price carefully
-                because headline prices can be misleading. A low
-                &ldquo;from&rdquo; price may only apply to the first dose or may
-                exclude support and delivery. Therefore, the full monthly cost
-                matters more than the lowest advertised number.
+                Headline prices can be misleading. A low &ldquo;from&rdquo;
+                figure may only cover the first dose, or may leave out support
+                and delivery. The full monthly cost matters more than the lowest
+                advertised number.
               </p>
               <p>
-                Instead of simply telling you where to buy, Health Wise explains
-                how to choose safely, compare providers properly, avoid unsafe
-                sellers, and understand the real cost of treatment.
+                Health Wise will not simply tell you where to buy. We focus on
+                how to choose safely, compare providers, spot unsafe sellers,
+                and understand what treatment really costs.
               </p>
               <p>
-                If you want to know exactly how we gather and verify online
-                provider fees, read about{" "}
+                If you want to see how we gather and check provider fees, read{" "}
                 <Link
                   href="/methodology"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   how Health Wise compares prices
                 </Link>{" "}
-                so you can understand our editorial and research checks before
-                starting your own consultation journey.
+                before you start a consultation.
               </p>
               <p
                 className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}
               >
                 Health Wise does not prescribe or supply medicines. This page is
                 general information and is not medical advice.
-              </p>
-              <p
-                className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-              >
-                <span className="font-semibold text-slate-600 dark:text-slate-300">
-                  Suggested hashtags:
-                </span>{" "}
-                {SOCIAL_HASHTAGS}
               </p>
             </GuideSection>
           </article>
