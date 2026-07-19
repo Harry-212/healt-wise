@@ -141,6 +141,11 @@ export const NAV_PANELS: NavPanel[] = [
             href: "/tools/mounjaro-click-calculator",
             icon: "calculator",
           },
+          {
+            label: "Wegovy Click Calculator & Chart",
+            href: "/tools/wegovy-click-calculator",
+            icon: "calculator",
+          },
         ],
       },
     ],

@@ -51,6 +51,7 @@ const STATIC_PATHS = [
   "/tips",
   "/tools/bmi-calculator",
   "/tools/mounjaro-click-calculator",
+  "/tools/wegovy-click-calculator",
   "/tools/weight-loss-tracker",
   "/wegovy-faq",
   "/wegovy-price-comparison",
