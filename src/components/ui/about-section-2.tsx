@@ -2,10 +2,7 @@
 
 import Link from "next/link";
 import { useRef } from "react";
-import { Zap } from "lucide-react";
-import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
-import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 import {
   TimelineContent,
   TimelineSection,
@@ -52,8 +49,6 @@ const hlGreen = "font-bold text-emerald-700";
 
 /** Secondary emphasis — primary text */
 const hlAccent = "font-bold text-brand-primary";
-
-const ctaClass = `${homepageYellowCtaSolid} min-h-[56px] cursor-pointer px-10 py-3.5 text-base ring-2 ring-amber-300/40 hover:ring-amber-400/60 sm:min-h-[60px] sm:px-12 sm:text-lg`;
 
 export default function AboutSection2() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -103,7 +98,7 @@ export default function AboutSection2() {
               picture before you start a consultation.
             </TimelineContent>
 
-            <div className="mt-10 flex flex-col gap-6 sm:mt-12 sm:flex-row sm:items-end sm:justify-between sm:gap-2">
+            <div className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:items-end sm:justify-between sm:gap-2">
               <TimelineContent
                 as="div"
                 animationNum={3}
@@ -128,21 +123,12 @@ export default function AboutSection2() {
                 customVariants={textVariants}
                 className="shrink-0"
               >
-                <div className="flex flex-col items-stretch gap-3 sm:items-end">
-                  <Link href={HOME_COMPARE_HUB_HREF} className={ctaClass}>
-                    <Zap
-                      className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6"
-                      aria-hidden
-                    />
-                    Compare here
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="text-center text-sm font-semibold text-emerald-800 underline decoration-emerald-300/80 underline-offset-2 transition hover:text-emerald-950 sm:text-right"
-                  >
-                    About {SITE_BRAND_NAME}
-                  </Link>
-                </div>
+                <Link
+                  href="/about"
+                  className="text-sm font-semibold text-emerald-800 underline decoration-emerald-300/80 underline-offset-2 transition hover:text-emerald-950 sm:text-right"
+                >
+                  About {SITE_BRAND_NAME}
+                </Link>
               </TimelineContent>
             </div>
           </div>

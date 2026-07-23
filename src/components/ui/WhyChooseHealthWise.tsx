@@ -14,10 +14,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import type { LucideIcon } from "lucide-react";
-import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
-import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 
 const FEATURES: {
   id: string;
@@ -157,7 +155,7 @@ export default function WhyChooseHealthWise() {
               })}
             </ul>
 
-            <div className="mt-8 flex w-full min-w-0 flex-col gap-4 lg:mt-auto">
+              <div className="mt-8 flex w-full min-w-0 flex-col gap-4 lg:mt-auto">
               <div className="w-full min-w-0 rounded-xl border border-brand-border/60 bg-white/95 px-4 py-4 shadow-sm sm:px-5 sm:py-4">
                 <div className="flex items-start gap-3">
                   <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-brand-cta" aria-hidden />
@@ -168,32 +166,23 @@ export default function WhyChooseHealthWise() {
                   </p>
                 </div>
               </div>
-              <div className="flex w-full min-w-0 flex-col gap-3 sm:w-auto sm:self-start">
+              <p className="text-sm leading-relaxed text-slate-600">
+                Learn{" "}
                 <Link
-                  href={HOME_COMPARE_HUB_HREF}
-                  className={`${homepageYellowCtaSolid} w-full min-h-[56px] px-10 py-4 text-lg sm:min-h-[60px] sm:px-12 sm:text-xl`}
+                  href="/about"
+                  className="font-semibold text-emerald-800 underline decoration-emerald-300/80 underline-offset-2 transition hover:text-emerald-950"
                 >
-                  Compare here
-                  <Zap className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6" aria-hidden />
+                  about {SITE_BRAND_NAME}
+                </Link>{" "}
+                or see{" "}
+                <Link
+                  href="/methodology"
+                  className="font-semibold text-emerald-800 underline decoration-emerald-300/80 underline-offset-2 transition hover:text-emerald-950"
+                >
+                  how we compare pharmacies
                 </Link>
-                <p className="text-sm leading-relaxed text-slate-600">
-                  Learn{" "}
-                  <Link
-                    href="/about"
-                    className="font-semibold text-emerald-800 underline decoration-emerald-300/80 underline-offset-2 transition hover:text-emerald-950"
-                  >
-                    about {SITE_BRAND_NAME}
-                  </Link>{" "}
-                  or see{" "}
-                  <Link
-                    href="/methodology"
-                    className="font-semibold text-emerald-800 underline decoration-emerald-300/80 underline-offset-2 transition hover:text-emerald-950"
-                  >
-                    how we compare pharmacies
-                  </Link>
-                  .
-                </p>
-              </div>
+                .
+              </p>
             </div>
           </div>
 

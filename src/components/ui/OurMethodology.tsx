@@ -14,9 +14,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
-import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
-import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 
 const METHOD_STEPS: {
   id: string;
@@ -301,13 +299,6 @@ export default function OurMethodology() {
             More on how we collect and update data: see the full safety guide.
           </p>
           <div className="flex flex-wrap items-center gap-2 sm:justify-end">
-            <Link
-              href={HOME_COMPARE_HUB_HREF}
-              className={`${homepageYellowCtaSolid} min-h-[52px] shrink-0 px-8 py-3.5 text-base ring-2 ring-amber-300/40 hover:ring-amber-400/60 sm:min-h-[56px] sm:px-10 sm:py-4 sm:text-lg`}
-            >
-              Compare here
-              <Zap className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6" aria-hidden />
-            </Link>
             <Link
               href="/methodology"
               className="group inline-flex min-h-[52px] shrink-0 items-center justify-center gap-2 rounded-full border-2 border-amber-500/50 bg-amber-300 px-8 py-3.5 text-base font-extrabold text-slate-900 shadow-lg transition hover:scale-[1.02] hover:bg-amber-400 active:scale-[0.98] sm:min-h-[56px] sm:px-10 sm:text-lg"

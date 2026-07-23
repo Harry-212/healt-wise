@@ -4,12 +4,9 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import BrandHoverText from "@/components/ui/BrandHoverText";
-import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { HOMEPAGE_PRICE_HUB_LABELS } from "@/lib/text/homepage-brand-labels";
-import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 import {
-  Zap,
   ShieldCheck,
   PoundSterling,
   BarChart2,
@@ -161,18 +158,6 @@ export default function OurServices() {
                     </Link>
                   </p>
                 </div>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link
-                  href={HOME_COMPARE_HUB_HREF}
-                  className={`${homepageYellowCtaSolid} group min-h-[56px] px-10 py-4 text-lg sm:min-h-[60px] sm:px-12 sm:py-4 sm:text-xl`}
-                >
-                  Compare here
-                  <Zap
-                    className="h-5 w-5 shrink-0 fill-slate-900 transition-transform duration-300 group-hover:scale-110 sm:h-6 sm:w-6"
-                    aria-hidden
-                  />
-                </Link>
               </div>
             </div>
 
