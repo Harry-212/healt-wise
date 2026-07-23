@@ -4,11 +4,23 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Editorial Policy",
+  title: {
+    absolute: "Editorial Policy & Medical Content Standards | Healthwise360",
+  },
   description:
-    "How Health Wise produces independent UK GLP-1 comparison content: standards, corrections, conflicts, and medical-information boundaries.",
+    "Read how Healthwise360 researches, reviews, updates and corrects UK weight-loss treatment content while maintaining editorial independence.",
   alternates: {
     canonical: `${siteOrigin()}/editorial-policy`,
+  },
+  openGraph: {
+    title: "Editorial Policy & Medical Content Standards | Healthwise360",
+    description:
+      "Read how Healthwise360 researches, reviews, updates and corrects UK weight-loss treatment content while maintaining editorial independence.",
+  },
+  twitter: {
+    title: "Editorial Policy & Medical Content Standards | Healthwise360",
+    description:
+      "Read how Healthwise360 researches, reviews, updates and corrects UK weight-loss treatment content while maintaining editorial independence.",
   },
 };
 

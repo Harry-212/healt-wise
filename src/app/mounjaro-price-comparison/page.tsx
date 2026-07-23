@@ -22,19 +22,22 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export const metadata: Metadata = buildPageShareMetadata({
-  canonicalPath: "/mounjaro-price-comparison",
-  title:
-    "Compare Mounjaro Prices UK (2026) — Cheapest & safest providers",
-  metaDescription:
-    "Compare real Mounjaro prices across UK pharmacies: pen costs by strength (2.5–15 mg), estimated monthly spend, filters, sort, and discount mode. Independent snapshot — updated 2026.",
-  openGraphTitle:
-    "Compare Mounjaro Prices UK (2026) — Cheapest & safest providers | Healthwise360",
-  openGraphDescription:
-    "Interactive UK Mounjaro price table: filter by provider, price band, rating, and delivery. Illustrative charts and FAQs.",
-  imagePath: "/mounjaro healt wise.png",
-  imageAlt: "Compare Mounjaro prices UK — Healthwise360",
-});
+export const metadata: Metadata = {
+  ...buildPageShareMetadata({
+    canonicalPath: "/mounjaro-price-comparison",
+    title: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
+    metaDescription:
+      "Compare Mounjaro prices by dose across 60+ GPhC-registered UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
+    openGraphTitle: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
+    openGraphDescription:
+      "Compare Mounjaro prices by dose across 60+ GPhC-registered UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
+    imagePath: "/mounjaro healt wise.png",
+    imageAlt: "Compare Mounjaro prices UK — Healthwise360",
+  }),
+  title: {
+    absolute: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
+  },
+};
 
 const MOUNJARO_RESOURCE_LINKS = [
   {
@@ -49,9 +52,9 @@ function compareWebPageJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Compare Mounjaro Prices UK (2026)",
+    name: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
     description:
-      "Independent comparison of illustrative Mounjaro pen prices across UK online pharmacies and clinics.",
+      "Compare Mounjaro prices by dose across 60+ GPhC-registered UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
     url: `${base}/mounjaro-price-comparison`,
     dateModified: "2026-04-07",
     isPartOf: {

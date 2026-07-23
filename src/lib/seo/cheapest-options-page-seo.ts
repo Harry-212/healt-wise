@@ -49,9 +49,9 @@ export function cheapestOptionsUkJsonLd(): Record<string, unknown> {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
         url,
-        name: "Private GLP-1 UK costs — Wegovy, Mounjaro & Saxenda illustrative guide",
+        name: "Cheapest Weight Loss Injections UK | Treatment Price Guide",
         description:
-          "Independent snapshot of private UK listing patterns for GLP-1 weight-loss medicines, with methodology links and FAQs—not live quotes or medical advice.",
+          "Compare private UK costs for Mounjaro, Wegovy and Saxenda. See how dosage, delivery, consultation fees and maintenance costs affect the total.",
       },
       {
         "@type": "FAQPage",

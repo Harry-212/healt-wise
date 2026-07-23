@@ -9,10 +9,11 @@ import {
   isBlogFeedTag,
   type BlogFeedTag,
 } from "@/lib/blog-feed";
+import {
+  BLOG_HUB_DESCRIPTION,
+  blogHubListingTitle,
+} from "@/lib/seo/blog-hub-metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
-
-const BLOG_DESCRIPTION =
-  "Stay informed with the latest news, views, product releases, prices, comparisons, guides, safety articles, and UK city weight loss guides.";
 
 type Props = {
   params: Promise<{ topic: string; page: string }>;
@@ -28,22 +29,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = Number.parseInt(pageStr, 10);
   if (Number.isNaN(page) || page < 1) return {};
   if (page === 1) {
-    const canonicalPath = blogHubPath(raw);
+    const title = blogHubListingTitle(1);
+    const url = `${siteOrigin()}${blogHubPath(raw)}`;
     return {
-      title: "News & Blog",
-      description: BLOG_DESCRIPTION,
-      alternates: { canonical: `${siteOrigin()}${canonicalPath}` },
-      openGraph: { url: `${siteOrigin()}${canonicalPath}` },
+      title: { absolute: title },
+      description: BLOG_HUB_DESCRIPTION,
+      alternates: { canonical: url },
+      openGraph: { title, description: BLOG_HUB_DESCRIPTION, url },
+      twitter: { title, description: BLOG_HUB_DESCRIPTION },
     };
   }
   const { totalPages } = getBlogPageFeed(page, { topic: raw });
   if (page > totalPages) return {};
-  const canonical = `${siteOrigin()}${blogPagePath(page, raw)}`;
+  const title = blogHubListingTitle(page);
+  const url = `${siteOrigin()}${blogPagePath(page, raw)}`;
   return {
-    title: `News & Blog — Page ${page}`,
-    description: BLOG_DESCRIPTION,
-    alternates: { canonical },
-    openGraph: { url: canonical },
+    title: { absolute: title },
+    description: BLOG_HUB_DESCRIPTION,
+    alternates: { canonical: url },
+    openGraph: { title, description: BLOG_HUB_DESCRIPTION, url },
+    twitter: { title, description: BLOG_HUB_DESCRIPTION },
   };
 }
 

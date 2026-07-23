@@ -14,7 +14,9 @@ export function metadataForPriceSlug(slug: string): Metadata | null {
     const ogDesc =
       cfg.seo.openGraphDescription ?? cfg.seo.description;
     return {
-      title: cfg.seo.title,
+      title: {
+        absolute: cfg.seo.title,
+      },
       description: cfg.seo.description,
       keywords: cfg.seo.keywords,
       alternates: { canonical: url },

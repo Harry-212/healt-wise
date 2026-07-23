@@ -16,14 +16,12 @@ export const PRICE_SLUGS: Record<string, PriceSlugConfig> = {
   "cheapest-options-uk": {
     keyword: "Cheapest GLP-1 options UK",
     seo: {
-      title:
-        "Private GLP-1 weight loss costs UK (2026) — Wegovy, Mounjaro & Saxenda landscape",
+      title: "Cheapest Weight Loss Injections UK | Treatment Price Guide",
       description:
-        "Independent UK snapshot: how private listings differ for Wegovy (semaglutide), Mounjaro (tirzepatide), and Saxenda (liraglutide)—starter packs, titration, and why checkout totals beat headline prices. Links to full tables; not medical advice.",
-      openGraphTitle:
-        "UK private GLP-1 prices: Wegovy, Mounjaro & Saxenda (2026 snapshot)",
+        "Compare private UK costs for Mounjaro, Wegovy and Saxenda. See how dosage, delivery, consultation fees and maintenance costs affect the total.",
+      openGraphTitle: "Cheapest Weight Loss Injections UK | Treatment Price Guide",
       openGraphDescription:
-        "Illustrative cheapest listings, dose and pack context, plus FAQs—confirm live prices with a GPhC-registered pharmacy before you pay.",
+        "Compare private UK costs for Mounjaro, Wegovy and Saxenda. See how dosage, delivery, consultation fees and maintenance costs affect the total.",
       keywords: [
         "cheapest GLP-1 UK",
         "cheapest wegovy UK",

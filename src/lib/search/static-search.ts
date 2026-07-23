@@ -46,6 +46,11 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
   },
   {
     type: "Compare",
+    title: "Wegovy vs Saxenda",
+    href: "/compare/wegovy-vs-saxenda",
+  },
+  {
+    type: "Compare",
     title: "Mounjaro vs Wegovy vs Saxenda",
     href: "/compare/mounjaro-vs-wegovy-vs-saxenda",
     keywords: "tirzepatide semaglutide liraglutide three way",
@@ -75,7 +80,7 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
   },
   {
     type: "Price",
-    title: "Cheapest GLP-1 options UK",
+    title: "Cheapest weight loss injections UK",
     href: "/prices/cheapest-options-uk",
   },
   {

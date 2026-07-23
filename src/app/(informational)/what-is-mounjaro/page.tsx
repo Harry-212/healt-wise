@@ -23,19 +23,22 @@ import {
   WHY_CHOOSE_HEALTHWISE360_SRC,
 } from "@/lib/site-assets";
 
-export const metadata: Metadata = buildPageShareMetadata({
-  canonicalPath: "/what-is-mounjaro",
-  title:
-    "What is Mounjaro? UK guide (2026): how it works, weight loss & prices",
-  metaDescription:
-    "Mounjaro (tirzepatide) explained for UK readers: dual GIP/GLP-1 mechanism, SURMOUNT trial weight loss, dosing titration, private prices by dose, eligibility, safety, NHS/NICE context, and verified provider comparison.",
-  openGraphTitle:
-    "What is Mounjaro? UK guide (2026): how it works, weight loss & prices | Healthwise360",
-  openGraphDescription:
-    "Independent guide to Mounjaro: mechanism, results, dosage, UK prices, safety, and how to compare providers.",
-  imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,
-  imageAlt: WHY_CHOOSE_HEALTHWISE360_ALT,
-});
+export const metadata: Metadata = {
+  ...buildPageShareMetadata({
+    canonicalPath: "/what-is-mounjaro",
+    title: "What Is Mounjaro? UK Guide to Results, Doses & Costs",
+    metaDescription:
+      "Learn how Mounjaro works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",
+    openGraphTitle: "What Is Mounjaro? UK Guide to Results, Doses & Costs",
+    openGraphDescription:
+      "Learn how Mounjaro works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",
+    imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,
+    imageAlt: WHY_CHOOSE_HEALTHWISE360_ALT,
+  }),
+  title: {
+    absolute: "What Is Mounjaro? UK Guide to Results, Doses & Costs",
+  },
+};
 
 export default function WhatIsMounjaroPage() {
   const articleLd = mounjaroArticleJsonLd();

@@ -5,9 +5,9 @@ export function saxendaArticleJsonLd(): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
-    name: "What is Saxenda? UK guide: how it works, weight loss & prices",
+    name: "What Is Saxenda? UK Guide to Daily Doses & Costs",
     description:
-      "Independent UK guide to Saxenda (liraglutide): GLP-1 mechanism, SCALE trial context, daily dosing titration, private prices, eligibility, safety, and how it compares to newer weekly injections.",
+      "Learn how Saxenda works, who may qualify in the UK, daily dosing, expected results, side effects and typical private treatment costs.",
     url: `${base}/what-is-saxenda`,
     dateModified: "2026-04-07",
     reviewedBy: {

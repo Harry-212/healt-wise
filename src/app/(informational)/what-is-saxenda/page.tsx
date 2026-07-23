@@ -24,19 +24,22 @@ import {
   WHY_CHOOSE_HEALTHWISE360_SRC,
 } from "@/lib/site-assets";
 
-export const metadata: Metadata = buildPageShareMetadata({
-  canonicalPath: "/what-is-saxenda",
-  title:
-    "What is Saxenda? UK guide (2026): daily GLP-1, weight loss & prices",
-  metaDescription:
-    "Saxenda (liraglutide) explained for UK readers: once-daily GLP-1 mechanism, SCALE trial results, dose escalation, private prices, eligibility, safety, and how it compares to Wegovy and Mounjaro.",
-  openGraphTitle:
-    "What is Saxenda? UK guide (2026): daily GLP-1, weight loss & prices | Healthwise360",
-  openGraphDescription:
-    "Independent guide to Saxenda: how it works, 56-week trial context, UK prices, and comparison with newer weekly injections.",
-  imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,
-  imageAlt: WHY_CHOOSE_HEALTHWISE360_ALT,
-});
+export const metadata: Metadata = {
+  ...buildPageShareMetadata({
+    canonicalPath: "/what-is-saxenda",
+    title: "What Is Saxenda? UK Guide to Daily Doses & Costs",
+    metaDescription:
+      "Learn how Saxenda works, who may qualify in the UK, daily dosing, expected results, side effects and typical private treatment costs.",
+    openGraphTitle: "What Is Saxenda? UK Guide to Daily Doses & Costs",
+    openGraphDescription:
+      "Learn how Saxenda works, who may qualify in the UK, daily dosing, expected results, side effects and typical private treatment costs.",
+    imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,
+    imageAlt: WHY_CHOOSE_HEALTHWISE360_ALT,
+  }),
+  title: {
+    absolute: "What Is Saxenda? UK Guide to Daily Doses & Costs",
+  },
+};
 
 export default function WhatIsSaxendaPage() {
   const articleLd = saxendaArticleJsonLd();

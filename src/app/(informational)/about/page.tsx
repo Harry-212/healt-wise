@@ -4,11 +4,23 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: {
+    absolute: "About Healthwise360 | Independent UK Price Comparison",
+  },
   description:
-    "How Health Wise helps UK patients compare GLP-1 treatments with independent, safety-first editorial and transparent methodology.",
+    "Learn how Healthwise360 researches UK weight-loss treatment prices, checks pharmacy information and publishes independent comparison guides.",
   alternates: {
     canonical: `${siteOrigin()}/about`,
+  },
+  openGraph: {
+    title: "About Healthwise360 | Independent UK Price Comparison",
+    description:
+      "Learn how Healthwise360 researches UK weight-loss treatment prices, checks pharmacy information and publishes independent comparison guides.",
+  },
+  twitter: {
+    title: "About Healthwise360 | Independent UK Price Comparison",
+    description:
+      "Learn how Healthwise360 researches UK weight-loss treatment prices, checks pharmacy information and publishes independent comparison guides.",
   },
 };
 

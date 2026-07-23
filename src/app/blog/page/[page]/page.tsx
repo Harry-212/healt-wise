@@ -7,6 +7,10 @@ import {
   blogPagePath,
   resolveBlogTopicFilter,
 } from "@/lib/blog-feed";
+import {
+  BLOG_HUB_DESCRIPTION,
+  blogHubListingTitle,
+} from "@/lib/seo/blog-hub-metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 type Props = {
@@ -14,8 +18,24 @@ type Props = {
   searchParams: Promise<{ topic?: string }>;
 };
 
-const BLOG_DESCRIPTION =
-  "Stay informed with the latest news, views, product releases, prices, comparisons, guides, safety articles, and UK city weight loss guides.";
+function listingMetadata(canonicalPath: string, page: number): Metadata {
+  const title = blogHubListingTitle(page);
+  const url = `${siteOrigin()}${canonicalPath}`;
+  return {
+    title: { absolute: title },
+    description: BLOG_HUB_DESCRIPTION,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description: BLOG_HUB_DESCRIPTION,
+      url,
+    },
+    twitter: {
+      title,
+      description: BLOG_HUB_DESCRIPTION,
+    },
+  };
+}
 
 export async function generateMetadata({
   params,
@@ -27,36 +47,14 @@ export async function generateMetadata({
   if (Number.isNaN(page) || page < 1) return {};
   const activeTopic = resolveBlogTopicFilter(topic);
   if (page === 1) {
-    const canonicalPath = blogHubPath(activeTopic);
-    return {
-      title: "News & Blog",
-      description: BLOG_DESCRIPTION,
-      alternates: {
-        canonical: `${siteOrigin()}${canonicalPath}`,
-      },
-      openGraph: {
-        url: `${siteOrigin()}${canonicalPath}`,
-      },
-    };
+    return listingMetadata(blogHubPath(activeTopic), 1);
   }
   if (activeTopic !== "all") {
-    const canonical = `${siteOrigin()}${blogPagePath(page, activeTopic)}`;
-    return {
-      title: `News & Blog — Page ${page}`,
-      description: BLOG_DESCRIPTION,
-      alternates: { canonical },
-      openGraph: { url: canonical },
-    };
+    return listingMetadata(blogPagePath(page, activeTopic), page);
   }
   const { totalPages } = getBlogPageFeed(page, { topic });
   if (page > totalPages) return {};
-  const canonical = `${siteOrigin()}${blogPagePath(page, "all")}`;
-  return {
-    title: `News & Blog — Page ${page}`,
-    description: BLOG_DESCRIPTION,
-    alternates: { canonical },
-    openGraph: { url: canonical },
-  };
+  return listingMetadata(blogPagePath(page, "all"), page);
 }
 
 export default async function BlogPaginatedPage({

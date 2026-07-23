@@ -23,19 +23,22 @@ import {
   WHY_CHOOSE_HEALTHWISE360_SRC,
 } from "@/lib/site-assets";
 
-export const metadata: Metadata = buildPageShareMetadata({
-  canonicalPath: "/what-is-wegovy",
-  title:
-    "What is Wegovy? UK guide (2026): how it works, side effects & prices",
-  metaDescription:
-    "Wegovy (semaglutide) explained for UK readers: GLP-1 mechanism, clinical trial weight loss, dosing titration, private prices by dose, eligibility, safety, NHS context, and verified provider comparison.",
-  openGraphTitle:
-    "What is Wegovy? UK guide (2026): how it works, side effects & prices | Healthwise360",
-  openGraphDescription:
-    "Independent guide to Wegovy: mechanism, results, dosage, UK prices, safety, and how to compare providers.",
-  imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,
-  imageAlt: WHY_CHOOSE_HEALTHWISE360_ALT,
-});
+export const metadata: Metadata = {
+  ...buildPageShareMetadata({
+    canonicalPath: "/what-is-wegovy",
+    title: "What Is Wegovy? UK Guide to Results, Doses & Costs",
+    metaDescription:
+      "Learn how Wegovy works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",
+    openGraphTitle: "What Is Wegovy? UK Guide to Results, Doses & Costs",
+    openGraphDescription:
+      "Learn how Wegovy works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",
+    imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,
+    imageAlt: WHY_CHOOSE_HEALTHWISE360_ALT,
+  }),
+  title: {
+    absolute: "What Is Wegovy? UK Guide to Results, Doses & Costs",
+  },
+};
 
 export default function WhatIsWegovyPage() {
   const articleLd = wegovyArticleJsonLd();

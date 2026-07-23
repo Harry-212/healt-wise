@@ -7,10 +7,29 @@ import {
   blogTopicHubPath,
   resolveBlogTopicFilter,
 } from "@/lib/blog-feed";
+import {
+  BLOG_HUB_DESCRIPTION,
+  BLOG_HUB_TITLE,
+} from "@/lib/seo/blog-hub-metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
-const BLOG_DESCRIPTION =
-  "Stay informed with the latest news, views, product releases, prices, comparisons, guides, safety articles, and UK city weight loss guides.";
+function blogHubMetadata(canonicalPath: string): Metadata {
+  const url = `${siteOrigin()}${canonicalPath}`;
+  return {
+    title: { absolute: BLOG_HUB_TITLE },
+    description: BLOG_HUB_DESCRIPTION,
+    alternates: { canonical: url },
+    openGraph: {
+      title: BLOG_HUB_TITLE,
+      description: BLOG_HUB_DESCRIPTION,
+      url,
+    },
+    twitter: {
+      title: BLOG_HUB_TITLE,
+      description: BLOG_HUB_DESCRIPTION,
+    },
+  };
+}
 
 export async function generateMetadata({
   searchParams,
@@ -21,28 +40,10 @@ export async function generateMetadata({
   const activeTopic = resolveBlogTopicFilter(rawTopic);
   if (activeTopic !== "all") {
     // Legacy ?topic= URLs redirect; metadata still points at the canonical static path.
-    return {
-      title: "News & Blog",
-      description: BLOG_DESCRIPTION,
-      alternates: {
-        canonical: `${siteOrigin()}${blogTopicHubPath(activeTopic)}`,
-      },
-      openGraph: {
-        url: `${siteOrigin()}${blogTopicHubPath(activeTopic)}`,
-      },
-    };
+    return blogHubMetadata(blogTopicHubPath(activeTopic));
   }
 
-  return {
-    title: "News & Blog",
-    description: BLOG_DESCRIPTION,
-    alternates: {
-      canonical: `${siteOrigin()}${blogHubPath("all")}`,
-    },
-    openGraph: {
-      url: `${siteOrigin()}${blogHubPath("all")}`,
-    },
-  };
+  return blogHubMetadata(blogHubPath("all"));
 }
 
 export default async function BlogIndexPage({

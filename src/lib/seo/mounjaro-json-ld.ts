@@ -5,9 +5,9 @@ export function mounjaroArticleJsonLd(): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
-    name: "What is Mounjaro? UK guide: how it works, weight loss & prices",
+    name: "What Is Mounjaro? UK Guide to Results, Doses & Costs",
     description:
-      "Independent UK guide to Mounjaro (tirzepatide): dual GIP/GLP-1 mechanism, SURMOUNT trial context, dosing titration, private prices, eligibility, safety, and how to compare providers.",
+      "Learn how Mounjaro works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",
     url: `${base}/what-is-mounjaro`,
     dateModified: "2026-04-07",
     reviewedBy: {

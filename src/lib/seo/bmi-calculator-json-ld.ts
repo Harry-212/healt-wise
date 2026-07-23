@@ -76,9 +76,9 @@ export function bmiCalculatorWebPageJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "BMI, BMR & TDEE calculator UK — weight loss treatment guide",
+    name: "BMI, BMR & Calorie Calculator UK | Free Online Tool",
     description:
-      "Free UK calculator: BMI, basal metabolic rate (BMR), TDEE, and calorie targets. Height in cm or feet, weight in kg, lbs, or stone. FAQs on BMR vs TDEE, treatment context, and links to Wegovy, Mounjaro, and price comparisons.",
+      "Calculate your BMI, BMR and estimated daily calorie needs, then understand how BMI may relate to UK weight-loss treatment eligibility.",
     url,
     isPartOf: {
       "@type": "WebSite",

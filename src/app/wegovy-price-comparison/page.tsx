@@ -22,19 +22,22 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export const metadata: Metadata = buildPageShareMetadata({
-  canonicalPath: "/wegovy-price-comparison",
-  title:
-    "Compare Wegovy Prices UK (2026) — Cheapest & safest providers",
-  metaDescription:
-    "Compare real Wegovy prices across UK pharmacies: starting pen costs, estimated monthly spend, delivery, and GPhC checks. Filter, sort, and switch discount mode. Independent snapshot — updated 2026.",
-  openGraphTitle:
-    "Compare Wegovy Prices UK (2026) — Cheapest & safest providers | Healthwise360",
-  openGraphDescription:
-    "Interactive UK Wegovy price table: filter by provider, price band, rating, and delivery. Illustrative charts and FAQs.",
-  imagePath: "/wegovy healt wise.png",
-  imageAlt: "Compare Wegovy prices UK — Healthwise360",
-});
+export const metadata: Metadata = {
+  ...buildPageShareMetadata({
+    canonicalPath: "/wegovy-price-comparison",
+    title: "Wegovy Price Comparison UK | Compare Pharmacy Prices",
+    metaDescription:
+      "Compare Wegovy prices from 0.25 mg to 2.4 mg across regulated UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
+    openGraphTitle: "Wegovy Price Comparison UK | Compare Pharmacy Prices",
+    openGraphDescription:
+      "Compare Wegovy prices from 0.25 mg to 2.4 mg across regulated UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
+    imagePath: "/wegovy healt wise.png",
+    imageAlt: "Compare Wegovy prices UK — Healthwise360",
+  }),
+  title: {
+    absolute: "Wegovy Price Comparison UK | Compare Pharmacy Prices",
+  },
+};
 
 const WEGOVY_RESOURCE_LINKS = [
   {
@@ -49,9 +52,9 @@ function compareWebPageJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Compare Wegovy Prices UK (2026)",
+    name: "Wegovy Price Comparison UK | Compare Pharmacy Prices",
     description:
-      "Independent comparison of illustrative Wegovy pen prices across UK online pharmacies and clinics.",
+      "Compare Wegovy prices from 0.25 mg to 2.4 mg across regulated UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
     url: `${base}/wegovy-price-comparison`,
     dateModified: "2026-04-07",
     isPartOf: {

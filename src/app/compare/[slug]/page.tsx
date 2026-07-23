@@ -68,7 +68,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const layout = layoutForSlug(slug);
   if (!layout) return {};
-  return buildPageShareMetadata(layout.share);
+  const meta = buildPageShareMetadata(layout.share);
+  if (layout.share.title.includes("|")) {
+    return {
+      ...meta,
+      title: { absolute: layout.share.title },
+    };
+  }
+  return meta;
 }
 
 function compareWebPageJsonLd(slug: string, name: string, description: string) {
@@ -94,10 +101,12 @@ export default async function ComparePage({ params }: Props) {
   const layout = layoutForSlug(slug);
   if (!cfg || !layout) notFound();
 
-  const webLdName = [layout.hero.titleItalic, layout.hero.titleBold]
-    .map((s) => s.trim())
-    .filter(Boolean)
-    .join(" ");
+  const webLdName = layout.share.title.includes("|")
+    ? layout.share.title
+    : [layout.hero.titleItalic, layout.hero.titleBold]
+        .map((s) => s.trim())
+        .filter(Boolean)
+        .join(" ");
   const webLd = compareWebPageJsonLd(
     slug,
     webLdName || layout.hero.titleBold,

@@ -11,19 +11,22 @@ import {
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
-export const metadata: Metadata = buildPageShareMetadata({
-  canonicalPath: "/tools/bmi-calculator",
-  title:
-    "BMI calculator UK (2026) — weight loss treatment & Wegovy eligibility",
-  metaDescription:
-    "Free BMI calculator UK: cm/feet, kg/lbs/stone. See your BMI category, what it means for prescription weight loss treatment, Wegovy/Mounjaro context, FAQs, and links to compare prices.",
-  openGraphTitle:
-    "BMI calculator UK — what is my BMI & am I eligible for Wegovy?",
-  openGraphDescription:
-    "Calculate BMI for UK adults, understand NHS-style categories, and explore treatment context with clear next steps to Wegovy, Mounjaro, and price comparisons.",
-  imagePath: "/window.svg",
-  imageAlt: "Health Wise — BMI calculator UK",
-});
+export const metadata: Metadata = {
+  ...buildPageShareMetadata({
+    canonicalPath: "/tools/bmi-calculator",
+    title: "BMI, BMR & Calorie Calculator UK | Free Online Tool",
+    metaDescription:
+      "Calculate your BMI, BMR and estimated daily calorie needs, then understand how BMI may relate to UK weight-loss treatment eligibility.",
+    openGraphTitle: "BMI, BMR & Calorie Calculator UK | Free Online Tool",
+    openGraphDescription:
+      "Calculate your BMI, BMR and estimated daily calorie needs, then understand how BMI may relate to UK weight-loss treatment eligibility.",
+    imagePath: "/window.svg",
+    imageAlt: "Healthwise360 — BMI calculator UK",
+  }),
+  title: {
+    absolute: "BMI, BMR & Calorie Calculator UK | Free Online Tool",
+  },
+};
 
 export default function BmiCalculatorPage() {
   const faqLd = bmiCalculatorFaqJsonLd();

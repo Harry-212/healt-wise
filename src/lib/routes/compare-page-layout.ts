@@ -52,16 +52,14 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     },
     share: {
       canonicalPath: "/compare/wegovy-vs-mounjaro",
-      title:
-        "Wegovy vs Mounjaro UK (2026): semaglutide vs tirzepatide price comparison",
+      title: "Mounjaro vs Wegovy UK | Cost, Results & Side Effects",
       metaDescription:
-        "Side-by-side UK pharmacy-style tables for Wegovy (once-weekly semaglutide) and Mounjaro (once-weekly tirzepatide): sort by dose, spot starter vs maintenance spend, and cross-check regulated providers. Research snapshot—not prescribing advice.",
-      openGraphTitle:
-        "Semaglutide vs tirzepatide UK tables — Wegovy & Mounjaro | Health Wise",
+        "Compare Mounjaro and Wegovy in the UK by active ingredient, dosing, weight-loss evidence, side effects, eligibility and private costs.",
+      openGraphTitle: "Mounjaro vs Wegovy UK | Cost, Results & Side Effects",
       openGraphDescription:
-        "One page to tab between full Wegovy and Mounjaro datasets: filters, charts, and illustrative monthly patterns before you confirm live checkout prices.",
+        "Compare Mounjaro and Wegovy in the UK by active ingredient, dosing, weight-loss evidence, side effects, eligibility and private costs.",
       imagePath: OG,
-      imageAlt: "Health Wise — Wegovy vs Mounjaro UK comparison",
+      imageAlt: "Healthwise360 — Mounjaro vs Wegovy UK comparison",
     },
     intro: {
       heading: "Why Compare On Price Data?",
@@ -98,16 +96,14 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     },
     share: {
       canonicalPath: "/compare/mounjaro-vs-saxenda",
-      title:
-        "Mounjaro vs Saxenda UK (2026): weekly pen vs daily liraglutide packs",
+      title: "Mounjaro vs Saxenda UK | Cost, Results & Dosing",
       metaDescription:
-        "Compare once-weekly Mounjaro (tirzepatide) with daily Saxenda (liraglutide): different pack maths, pen counts, and titration paths—shown with full UK listing tables and charts. Illustrative figures; verify with your pharmacy.",
-      openGraphTitle:
-        "Weekly Mounjaro vs daily Saxenda — UK price tables | Health Wise",
+        "Compare Mounjaro and Saxenda in the UK by dosing schedule, weight-loss evidence, side effects, eligibility, availability and private cost.",
+      openGraphTitle: "Mounjaro vs Saxenda UK | Cost, Results & Dosing",
       openGraphDescription:
-        "Tab between advanced tables: Mounjaro strengths vs Saxenda multi-pen packs, with sortable columns and discount preview modes.",
+        "Compare Mounjaro and Saxenda in the UK by dosing schedule, weight-loss evidence, side effects, eligibility, availability and private cost.",
       imagePath: OG,
-      imageAlt: "Health Wise — Mounjaro vs Saxenda UK comparison",
+      imageAlt: "Healthwise360 — Mounjaro vs Saxenda UK comparison",
     },
     intro: {
       heading: "Different Medicines, Different Pack Maths",
@@ -122,6 +118,50 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     sideEffectsTitle: "Safety & Monitoring",
     sideEffectsBody:
       "Nausea, reflux, and local site reactions from treatment are frequent discussion points for both classes. Saxenda and Mounjaro have distinct risk sections in their summaries of product characteristics — always read the PIL supplied with your medicine.",
+    bestChoiceBody:
+      "Cost is only one variable: treatment frequency, titration burden, stock availability, and personal tolerance often matter as much as the headline pen or pack price. Compare totals in each tab, then validate eligibility and live quotes with a regulated UK prescriber or pharmacy.",
+  },
+  "wegovy-vs-saxenda": {
+    medications: ["wegovy", "saxenda"],
+    hero: {
+      variant: "blue",
+      eyebrow: "Treatment Comparison",
+      titleItalic: "Compare",
+      titleBold: "Wegovy vs Saxenda",
+      subtitle:
+        "Weekly semaglutide vs daily liraglutide — UK pack prices, filters, and charts in one place.",
+      snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
+      navLinks: [
+        { href: "/what-is-wegovy", label: "What Is Wegovy" },
+        { href: "/what-is-saxenda", label: "What Is Saxenda" },
+        { href: "#compare-med-tabs", label: "Matrix" },
+        { href: "#compare-faq", label: "FAQ" },
+      ],
+    },
+    share: {
+      canonicalPath: "/compare/wegovy-vs-saxenda",
+      title: "Wegovy vs Saxenda UK | Cost, Results & Dosing",
+      metaDescription:
+        "Compare Wegovy and Saxenda in the UK by weekly or daily dosing, clinical evidence, side effects, eligibility and private treatment costs.",
+      openGraphTitle: "Wegovy vs Saxenda UK | Cost, Results & Dosing",
+      openGraphDescription:
+        "Compare Wegovy and Saxenda in the UK by weekly or daily dosing, clinical evidence, side effects, eligibility and private treatment costs.",
+      imagePath: OG,
+      imageAlt: "Healthwise360 — Wegovy vs Saxenda UK comparison",
+    },
+    intro: {
+      heading: "Weekly Vs Daily GLP-1 Options",
+      body: [
+        "Wegovy (semaglutide) is typically a once-weekly pen, while Saxenda (liraglutide) is usually injected daily, with pricing often shown per pack of pens.",
+        "Use the comparison tabs at the top of this page to open the same advanced tables and charts we maintain on our dedicated price pages — useful when weighing dosing schedule, titration path, and private cost.",
+      ],
+    },
+    effectivenessTitle: "Effectiveness & Use Patterns",
+    effectivenessBody:
+      "Headline trial results and licensing indications are not interchangeable. Wegovy and Saxenda have different posology and titration rules. Your prescriber will assess BMI, comorbidities, and prior GLP-1 experience — use this page for pricing structure, not treatment decisions.",
+    sideEffectsTitle: "Safety & Monitoring",
+    sideEffectsBody:
+      "Nausea, reflux, and local site reactions are frequent discussion points for both medicines. Each has distinct risk sections in its summary of product characteristics — always read the PIL supplied with your medicine.",
     bestChoiceBody:
       "Cost is only one variable: treatment frequency, titration burden, stock availability, and personal tolerance often matter as much as the headline pen or pack price. Compare totals in each tab, then validate eligibility and live quotes with a regulated UK prescriber or pharmacy.",
   },
@@ -144,17 +184,15 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     },
     share: {
       canonicalPath: "/compare/mounjaro-vs-wegovy-vs-saxenda",
-      title:
-        "Mounjaro vs Wegovy vs Saxenda UK (2026): three-medicine price navigator",
+      title: "Mounjaro vs Wegovy vs Saxenda UK | Prices & Differences",
       metaDescription:
-        "Navigate UK private listings across tirzepatide (Mounjaro), semaglutide (Wegovy), and liraglutide (Saxenda): three full tabbed price matrices with filters and charts. Comparator only—not treatment guidance.",
-      openGraphTitle:
-        "Three GLP-1 options UK — Mounjaro, Wegovy, Saxenda matrices | Health Wise",
+        "Compare Mounjaro, Wegovy and Saxenda in the UK by price, dosing, clinical evidence, side effects, eligibility and pharmacy availability.",
+      openGraphTitle: "Mounjaro vs Wegovy vs Saxenda UK | Prices & Differences",
       openGraphDescription:
-        "Switch tabs for each medicine’s full comparison workspace, then use filters and charts to compare like-for-like doses and packs.",
+        "Compare Mounjaro, Wegovy and Saxenda in the UK by price, dosing, clinical evidence, side effects, eligibility and pharmacy availability.",
       imagePath: OG,
       imageAlt:
-        "Health Wise — Mounjaro vs Wegovy vs Saxenda UK comparison",
+        "Healthwise360 — Mounjaro vs Wegovy vs Saxenda UK comparison",
     },
     intro: {
       heading: "Why Read A Three-Way Comparison?",

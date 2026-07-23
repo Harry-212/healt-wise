@@ -8,10 +8,11 @@ import {
   isBlogFeedTag,
   type BlogFeedTag,
 } from "@/lib/blog-feed";
+import {
+  BLOG_HUB_DESCRIPTION,
+  BLOG_HUB_TITLE,
+} from "@/lib/seo/blog-hub-metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
-
-const BLOG_DESCRIPTION =
-  "Stay informed with the latest news, views, product releases, prices, comparisons, guides, safety articles, and UK city weight loss guides.";
 
 type Props = {
   params: Promise<{ topic: string }>;
@@ -24,15 +25,19 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { topic: raw } = await params;
   if (!isBlogFeedTag(raw)) return {};
-  const canonicalPath = blogHubPath(raw);
+  const url = `${siteOrigin()}${blogHubPath(raw)}`;
   return {
-    title: "News & Blog",
-    description: BLOG_DESCRIPTION,
-    alternates: {
-      canonical: `${siteOrigin()}${canonicalPath}`,
-    },
+    title: { absolute: BLOG_HUB_TITLE },
+    description: BLOG_HUB_DESCRIPTION,
+    alternates: { canonical: url },
     openGraph: {
-      url: `${siteOrigin()}${canonicalPath}`,
+      title: BLOG_HUB_TITLE,
+      description: BLOG_HUB_DESCRIPTION,
+      url,
+    },
+    twitter: {
+      title: BLOG_HUB_TITLE,
+      description: BLOG_HUB_DESCRIPTION,
     },
   };
 }

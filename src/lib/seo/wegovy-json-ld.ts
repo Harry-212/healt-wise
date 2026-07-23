@@ -5,9 +5,9 @@ export function wegovyArticleJsonLd(): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
-    name: "What is Wegovy? UK guide: how it works, side effects & prices",
+    name: "What Is Wegovy? UK Guide to Results, Doses & Costs",
     description:
-      "Independent UK guide to Wegovy (semaglutide): mechanism, trial results, dosing, private prices, eligibility, safety, and how to compare providers.",
+      "Learn how Wegovy works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",
     url: `${base}/what-is-wegovy`,
     dateModified: "2026-04-06",
     reviewedBy: {

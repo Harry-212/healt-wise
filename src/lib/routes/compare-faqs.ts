@@ -89,6 +89,49 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
   ],
 
+  "wegovy-vs-saxenda": [
+    {
+      q: "Why compare Wegovy and Saxenda on the same page?",
+      a: "Both are GLP-1 prescription options used in eligible UK adults, but Wegovy is typically weekly while Saxenda is usually daily. This hub lets you tab between full UK listing tables without mixing datasets.",
+    },
+    {
+      q: "Does weekly Wegovy always cost less than daily Saxenda?",
+      a: "Not necessarily. Monthly totals depend on dose step, pack size, consultation fees, and delivery. Compare like-for-like totals in each tab rather than assuming from injection frequency alone.",
+    },
+    {
+      q: "Are the prices live checkout quotes?",
+      a: "No. Figures are illustrative snapshots from the same structured datasets as our dedicated price pages. Always confirm the total at checkout before you pay.",
+    },
+    {
+      q: "Can I use this page to choose between Wegovy and Saxenda?",
+      a: "No. Eligibility, contraindications, and monitoring are clinical decisions for a registered prescriber. Use this page for pricing structure and pharmacy context only.",
+    },
+    {
+      q: "How are Saxenda packs shown differently from Wegovy pens?",
+      a: "Saxenda is often listed in multi-pen packs, while Wegovy is commonly listed by weekly strength and pen price. Use pack-size and dose columns to normalise what you are comparing.",
+    },
+    {
+      q: "Will delivery and cold-chain rules differ between the tabs?",
+      a: "Yes. Each medicine has manufacturer storage guidance, and pharmacies describe dispatch and packaging differently. Read those details before you commit.",
+    },
+    {
+      q: "Are these matrices suitable for NHS pricing?",
+      a: "This hub focuses on illustrative private pharmacy listings. NHS pathways and charges differ by region and eligibility.",
+    },
+    {
+      q: "What if my prescribed dose is not listed?",
+      a: "Dose availability varies by pharmacy and stock. Use the matrix for typical pricing bands, then confirm the exact strength and price with your clinician’s recommended provider.",
+    },
+    {
+      q: "Can I trust discount preview modes?",
+      a: "Discount previews show how a listed promotion might affect totals when our dataset captures it. Promotions expire and eligibility rules apply at checkout.",
+    },
+    {
+      q: "Where do I verify a pharmacy is legitimate?",
+      a: "Use the GPhC register for Great Britain pharmacies and follow our pharmacy safety guide for red flags when buying prescription medicines online.",
+    },
+  ],
+
   "mounjaro-vs-wegovy-vs-saxenda": [
     {
       q: "What is the fastest way to compare all three medicines here?",
@@ -108,7 +151,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "Can I use pairwise pages instead of this three-way hub?",
-      a: "Yes. Links to our Wegovy vs Mounjaro and Mounjaro vs Saxenda comparisons are provided for deeper two-way reading. There is no separate Wegovy vs Saxenda hub at present.",
+      a: "Yes. Use our Wegovy vs Mounjaro, Mounjaro vs Saxenda, and Wegovy vs Saxenda comparisons for deeper two-way reading.",
     },
     {
       q: "How do I interpret chart sections for three different brands?",
@@ -123,7 +166,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
       a: "Treat listings as indicative. Re-check live checkout, especially before repeat orders, and ask the pharmacy to confirm the strength and quantity you need.",
     },
     {
-      q: "Does Health Wise endorse a specific pharmacy?",
+      q: "Does Healthwise360 endorse a specific pharmacy?",
       a: "No. We are an independent comparison publisher. Any “cheapest” or “balance” labels are derived from our illustrative rulesets, not paid placement.",
     },
   ],
