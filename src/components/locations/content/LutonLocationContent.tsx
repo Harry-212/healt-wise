@@ -569,7 +569,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
                     St Albans
                   </Link>
                   ,{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-london">
+                  <Link className={linkCls} href="/blog/weight-loss-treatment-london">
                     London
                   </Link>
                   .

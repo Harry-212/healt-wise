@@ -172,7 +172,7 @@ export function buildUkLocationTitle(loc: UkWeightLossLocation): string {
     return "Best Weight Loss Treatment Livingston: West Lothian's Guide to Real, Safe Slimming";
   }
   if (loc.slug === "london") {
-    return "Best Weight Loss Treatment London: What Actually Works, Who It Suits, and How to Choose Safely";
+    return "Weight Loss Treatment in London | Clinics & Online Services";
   }
   if (loc.slug === "londonderry") {
     return "Best Weight Loss Treatment Londonderry: What Actually Works for Safe, Lasting Results";
@@ -375,7 +375,7 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
     return "Best weight loss treatment Livingston Scotland: NHS and private access, GLP 1 (Wegovy and Mounjaro) guide, 20 kg in 5 months plan, doctor talk tips, West Lothian hacks for safe slimming.";
   }
   if (loc.slug === "london") {
-    return "Best weight loss treatment London explained with medical injections, clinics, programmes, timelines, FAQs, and safe fat-loss strategies.";
+    return "Compare NHS support, London-based clinics, online pharmacies and weight-management services available to London residents, including costs and safety checks.";
   }
   if (loc.slug === "londonderry") {
     return "Best weight loss treatment Londonderry NI: medically supervised plans, NHS and private GLP 1 access, Wegovy and Mounjaro context, realistic weight loss timelines, trustworthy clinic checks.";
@@ -2074,28 +2074,40 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
   if (loc.slug === "london") {
     return [
       {
-        q: "What is the most effective weight loss treatment in London?",
-        a: `The most effective option is usually the one that combines medical assessment, lifestyle change, and, when appropriate, medication or a procedure. For many people, a multidisciplinary programme is more sustainable than any single intervention. Compare pathways on [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and read [methodology](/methodology).`,
+        q: "Is Healthwise360 a London pharmacy?",
+        a: `No. Healthwise360 is a London-based provider-comparison and educational website. It does not prescribe, dispense or deliver medicines. Compare providers using the [UK weight loss treatment comparison](/compare/best-weight-loss-treatments-uk) and [methodology](/methodology).`,
       },
       {
-        q: "Are weight loss injections a good option for London patients?",
-        a: `They can be, especially for people with obesity or weight related conditions who need appetite support. They work best when paired with diet, movement, and regular clinical follow up. Read [what Wegovy is](/what-is-wegovy), [what Mounjaro is](/what-is-mounjaro), and [Wegovy versus Mounjaro](/compare/wegovy-vs-mounjaro).`,
+        q: "Why is Healthwise360 listed first?",
+        a: `Healthwise360 is listed first because it is the comparison resource publishing the guide. It is shown separately from clinics, pharmacies and prescribing platforms so users are not misled about its role.`,
       },
       {
-        q: "Can you lose 40 kg in 5 months?",
-        a: `It may be possible in rare, medically supervised cases, but it is not a typical or recommended goal for most people. Safer weight loss is usually slower and more sustainable. Use the [BMI calculator](/tools/bmi-calculator) as a discussion aid with your clinician.`,
+        q: "Are all the services listed physical London clinics?",
+        a: `No. Some have London offices or pharmacy premises, some operate physical London locations, and others are national online providers delivering to London. Examples include [My London Pharmacy](/pharmacies/my-london-pharmacy), [ZAVA](/pharmacies/zava) and [Get A Drip](/pharmacies/get-a-drip).`,
       },
       {
-        q: "Is there a morning trick that makes weight loss automatic?",
-        a: `No single morning habit can cause major fat loss by itself. A routine can help with consistency, but real results still depend on food intake, activity, sleep, and follow up. If you use injections, read [Mounjaro nutrition guide UK](/helpful-guides/mounjaro-nutrition-guide-uk).`,
+        q: "Can I attend My London Pharmacy in person?",
+        a: `Its weight-management service is primarily online. Do not assume that the Greenford premises provides walk-in consultations without confirming directly. See the [My London Pharmacy](/pharmacies/my-london-pharmacy) page for current service details.`,
       },
       {
-        q: "What foods help with belly fat loss?",
-        a: `No food directly burns belly fat. However, protein rich and high fibre foods such as eggs, yogurt, beans, oats, vegetables, and berries may help people stay full and control calories more easily. If progress stalls, see [weight loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau).`,
+        q: "Which services offer face-to-face appointments?",
+        a: `Get A Drip lists several London locations, but service availability differs between locations. Boots and Superdrug have high-street stores, although their online doctor assessments are generally completed remotely.`,
       },
       {
-        q: "How do I choose between a clinic and a programme?",
-        a: `Choose based on medical suitability, regulation, support, safety, and realism. A good provider should explain why the treatment fits your health profile and what happens next. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
+        q: "Does inclusion mean Healthwise360 recommends a provider?",
+        a: `No. Inclusion means the service is relevant to London residents and can be compared. It does not mean that a provider is clinically appropriate for every person.`,
+      },
+      {
+        q: "Can a provider guarantee approval?",
+        a: `No. Prescription treatment requires a clinical assessment. A responsible prescriber may decline an application.`,
+      },
+      {
+        q: "Should I use the provider with the lowest price?",
+        a: `Not necessarily. Compare total cost, registration, clinical assessment, ongoing support, delivery arrangements and later-stage pricing using the [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison) and [Saxenda](/saxenda-price-comparison) comparison pages.`,
+      },
+      {
+        q: "Can I get NHS weight-management support in London?",
+        a: `Possibly. Access depends on your borough, GP practice, integrated care board, BMI, medical history and current local service capacity. Use the [BMI calculator](/tools/bmi-calculator) to prepare for a GP conversation.`,
       },
     ];
   }

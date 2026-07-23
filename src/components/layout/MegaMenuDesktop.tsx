@@ -2,10 +2,16 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import BrandHoverText from '@/components/ui/BrandHoverText';
 import type { NavPanel } from '@/lib/nav/nav-config';
 import { NavLinkIcon, NAV_LINK_ACCENT_CLASSES } from '@/lib/nav/nav-icons';
+import {
+  sanitizeBrandDisplayNames,
+  textContainsBrandName,
+} from '@/lib/text/sanitize-brand-display-names';
 
 /* Match NavBar row exactly: h-16 sm:h-24 md:h-28 */
 const PANEL_TOP = 'top-16 sm:top-24 md:top-28';
@@ -40,6 +46,8 @@ function panelGridClass(panel: NavPanel, colCount: number): string {
 }
 
 export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
+  const pathname = usePathname();
+  const hideBrands = (pathname ?? '/') === '/';
   const [openId, setOpenId] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const navRef = useRef<HTMLUListElement>(null);
@@ -189,7 +197,20 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
                                       >
                                         <NavLinkIcon name={link.icon} accent={link.accent} />
                                       </span>
-                                      <span className="min-w-0">{link.label}</span>
+                                      <span className="min-w-0">
+                                        {hideBrands &&
+                                        textContainsBrandName(link.label) ? (
+                                          <BrandHoverText
+                                            publicLabel={sanitizeBrandDisplayNames(
+                                              link.label,
+                                              true,
+                                            )}
+                                            brandLabel={link.label}
+                                          />
+                                        ) : (
+                                          link.label
+                                        )}
+                                      </span>
                                     </Link>
                                   </li>
                                 );

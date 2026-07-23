@@ -11,6 +11,7 @@ import {
   getAllSlugs,
   getAllUkLocationArticleSlugs,
   getPostBySlug,
+  isIndexedUkLocationCitySlug,
   parseCitySlugFromUkArticleSlug,
 } from "@/lib/blog";
 import {
@@ -94,10 +95,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = buildUkLocationTitle(loc);
   const description = buildUkLocationMetaDescription(loc);
   const url = `${siteOrigin()}/blog/${slug}`;
+  const indexable = isIndexedUkLocationCitySlug(citySlug);
   return {
     title,
     description,
     alternates: { canonical: url },
+    robots: indexable
+      ? { index: true, follow: true }
+      : { index: false, follow: false },
     openGraph: {
       title,
       description,

@@ -8,14 +8,24 @@ import {
  * Site-wide CSP for XSS / injection mitigation.
  * Static-friendly (no per-request nonce) so ISR/SSG stays intact.
  * `'unsafe-inline'` is required for Next.js hydration + Tailwind/inline styles.
+ * `'unsafe-eval'` is only for local `next dev` — React uses eval() for debug
+ * callstacks; production builds never need it.
  */
+const isDev = process.env.NODE_ENV === "development";
+
 const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'self'",
   "object-src 'none'",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms",
+  [
+    "script-src 'self' 'unsafe-inline'",
+    isDev ? "'unsafe-eval'" : null,
+    "https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms",
+  ]
+    .filter(Boolean)
+    .join(" "),
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
@@ -236,6 +246,16 @@ const nextConfig: NextConfig = {
       {
         source: "/prices/saxenda-price-uk",
         destination: "/saxenda-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/blog/best-weight-loss-treatment-in-london",
+        destination: "/blog/weight-loss-treatment-london",
+        permanent: true,
+      },
+      {
+        source: "/blog/uk-weight-loss/london",
+        destination: "/blog/weight-loss-treatment-london",
         permanent: true,
       },
       {

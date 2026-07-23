@@ -3,7 +3,9 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronRight, Zap } from "lucide-react";
+import BrandHoverText from "@/components/ui/BrandHoverText";
 import type { NavPanel } from "@/lib/nav/nav-config";
 import { NavLinkIcon, NAV_LINK_ACCENT_CLASSES } from "@/lib/nav/nav-icons";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
@@ -11,8 +13,14 @@ import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import {
+  sanitizeBrandDisplayNames,
+  textContainsBrandName,
+} from "@/lib/text/sanitize-brand-display-names";
 
 export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
+  const pathname = usePathname();
+  const hideBrands = (pathname ?? "/") === "/";
   const { user, ready, signOut } = useSupabaseAuth();
   const [open, setOpen] = useState(false);
   const [acc, setAcc] = useState<string | null>(null);
@@ -189,7 +197,20 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
                                     >
                                       <NavLinkIcon name={l.icon} accent={l.accent} />
                                     </span>
-                                    <span className="min-w-0 flex-1 leading-snug">{l.label}</span>
+                                    <span className="min-w-0 flex-1 leading-snug">
+                                      {hideBrands &&
+                                      textContainsBrandName(l.label) ? (
+                                        <BrandHoverText
+                                          publicLabel={sanitizeBrandDisplayNames(
+                                            l.label,
+                                            true,
+                                          )}
+                                          brandLabel={l.label}
+                                        />
+                                      ) : (
+                                        l.label
+                                      )}
+                                    </span>
                                     <ChevronRight className="h-4 w-4 shrink-0 text-slate-300" aria-hidden />
                                   </Link>
                                 </li>

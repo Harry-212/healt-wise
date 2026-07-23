@@ -85,10 +85,16 @@ export function homePageJsonLdGraph(): Record<string, unknown> {
   const pageUrl = `${base}/`;
   const logoId = `${base}/#/schema/logo/image/`;
 
+  /** Crawlable site hubs Google may surface as sitelinks under brand queries. */
   const featured = [
     { name: "Compare weight loss treatments (UK)", path: HOME_COMPARE_HUB_HREF },
-    { name: "News and blog", path: "/blog" },
+    { name: "Mounjaro price comparison UK", path: "/mounjaro-price-comparison" },
+    { name: "Wegovy price comparison UK", path: "/wegovy-price-comparison" },
+    { name: "BMI, BMR and calorie calculator", path: "/tools/bmi-calculator" },
+    { name: "Weight loss injection news and guides", path: "/blog" },
     { name: "Helpful guides", path: HELPFUL_GUIDES_HUB_PATH },
+    { name: "About Healthwise360", path: "/about" },
+    { name: "How we compare UK pharmacies", path: "/methodology" },
   ] as const;
 
   const webpage: Record<string, unknown> = {

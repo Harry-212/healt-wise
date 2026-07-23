@@ -168,13 +168,32 @@ export default function WhyChooseHealthWise() {
                   </p>
                 </div>
               </div>
-              <Link
-                href={HOME_COMPARE_HUB_HREF}
-                className={`${homepageYellowCtaSolid} w-full min-h-[56px] px-10 py-4 text-lg sm:w-auto sm:min-h-[60px] sm:self-start sm:px-12 sm:text-xl`}
-              >
-                Compare here
-                <Zap className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6" aria-hidden />
-              </Link>
+              <div className="flex w-full min-w-0 flex-col gap-3 sm:w-auto sm:self-start">
+                <Link
+                  href={HOME_COMPARE_HUB_HREF}
+                  className={`${homepageYellowCtaSolid} w-full min-h-[56px] px-10 py-4 text-lg sm:min-h-[60px] sm:px-12 sm:text-xl`}
+                >
+                  Compare here
+                  <Zap className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6" aria-hidden />
+                </Link>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  Learn{" "}
+                  <Link
+                    href="/about"
+                    className="font-semibold text-emerald-800 underline decoration-emerald-300/80 underline-offset-2 transition hover:text-emerald-950"
+                  >
+                    about {SITE_BRAND_NAME}
+                  </Link>{" "}
+                  or see{" "}
+                  <Link
+                    href="/methodology"
+                    className="font-semibold text-emerald-800 underline decoration-emerald-300/80 underline-offset-2 transition hover:text-emerald-950"
+                  >
+                    how we compare pharmacies
+                  </Link>
+                  .
+                </p>
+              </div>
             </div>
           </div>
 

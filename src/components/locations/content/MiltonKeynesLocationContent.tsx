@@ -677,7 +677,7 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
                     Luton
                   </Link>
                   ,{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-london">
+                  <Link className={linkCls} href="/blog/weight-loss-treatment-london">
                     London
                   </Link>
                   ,{" "}

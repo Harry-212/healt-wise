@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import {
   CURATED_BLOG_ARTICLE_SLUGS,
-  getAllUkLocationArticleSlugs,
+  getIndexedUkLocationArticleSlugs,
 } from "@/lib/blog";
 import { COMPARE_SLUGS } from "@/lib/routes/compare-slugs";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
@@ -112,7 +112,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push(`/pharmacies/${id}`, 0.72);
   }
 
-  const ukLocationBlogSlugs = getAllUkLocationArticleSlugs();
+  const ukLocationBlogSlugs = getIndexedUkLocationArticleSlugs();
   const blogSlugs = new Set<string>([
     ...CURATED_BLOG_ARTICLE_SLUGS,
     ...STATIC_BLOG_SLUGS,

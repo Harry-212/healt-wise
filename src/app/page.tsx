@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { Stethoscope } from "lucide-react";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { homePageJsonLdGraph } from "@/lib/seo/home-json-ld";
@@ -82,7 +83,21 @@ export default function Homepage() {
                 supply. Answer questionnaires honestly, read the patient
                 information for your medicine, and speak to your GP or NHS 111 if
                 you are unsure. This site is informational only and does not
-                replace medical advice.
+                replace medical advice. Read our{" "}
+                <Link
+                  href="/pharmacy-safety-gphc-verification"
+                  className="font-semibold text-emerald-300 underline decoration-emerald-500/60 underline-offset-2 transition hover:text-emerald-200"
+                >
+                  GPhC verification guide
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/methodology"
+                  className="font-semibold text-emerald-300 underline decoration-emerald-500/60 underline-offset-2 transition hover:text-emerald-200"
+                >
+                  comparison methodology
+                </Link>
+                .
               </p>
             </div>
           </div>

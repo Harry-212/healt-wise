@@ -10,7 +10,7 @@ const OVERRIDES: Partial<Record<string, Partial<RecommendedItem>>> = {
   },
   "/blog/mounjaro-weight-loss-injections-game-changer": {
     imageUrl: "/blog/mounjaro%20weight%20loss%20before%20and%20after.webp",
-    title: "Could Mounjaro Weight Loss Treatment Be Your Game-Changer?",
+    title: "Could Weight Loss Treatment Be Your Game-Changer?",
     description:
       "Could prescription weight loss treatment be your breakthrough to finally conquer stubborn diet plateaus? A UK-focused overview.",
   },

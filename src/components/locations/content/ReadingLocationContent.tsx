@@ -665,7 +665,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
                   </Link>{" "}
                   and{" "}
                   <Link
-                    href="/blog/best-weight-loss-treatment-in-london"
+                    href="/blog/weight-loss-treatment-london"
                     className={linkCls}
                   >
                     London

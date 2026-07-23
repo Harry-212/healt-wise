@@ -5,9 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo, useRef } from "react";
 import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import BrandHoverText from "@/components/ui/BrandHoverText";
 import type { RecommendedItem } from "@/lib/recommended-reading";
 import { applyHomeKeepExploringOverrides } from "@/lib/home-keep-exploring-overrides";
-import { sanitizeBrandDisplayNames } from "@/lib/text/sanitize-brand-display-names";
+import { HOMEPAGE_PRICE_HUB_LABELS } from "@/lib/text/homepage-brand-labels";
+import {
+  sanitizeBrandDisplayNames,
+  textContainsBrandName,
+} from "@/lib/text/sanitize-brand-display-names";
 import { shouldServeImageDirect } from "@/lib/image-display";
 
 function hashToSeed(s: string): number {
@@ -36,7 +41,7 @@ function seededShuffle<T>(items: T[], seed: number): T[] {
 function normalizePath(p: string): string {
   if (!p) return "/";
   const x = p.split("?")[0]?.split("#")[0] ?? "/";
-  return x.length > 1 && x.endsWith("/") ? x.slice(0, -1) : "/";
+  return x.length > 1 && x.endsWith("/") ? x.slice(0, -1) : x || "/";
 }
 
 type Props = {
@@ -49,9 +54,31 @@ const CARD_COUNT = 6;
 const KEEP_EXPLORING_INTRO =
   "Most people benefit from reading independent guides alongside a clinician led plan. Prices and eligibility change often: confirm details on a regulated pharmacy site before you pay.";
 
+const HOME_HUB_LINKS = [
+  {
+    href: HOMEPAGE_PRICE_HUB_LABELS.mounjaro.href,
+    publicLabel: HOMEPAGE_PRICE_HUB_LABELS.mounjaro.publicLabel,
+    brandLabel: HOMEPAGE_PRICE_HUB_LABELS.mounjaro.brandLabel,
+  },
+  {
+    href: HOMEPAGE_PRICE_HUB_LABELS.wegovy.href,
+    publicLabel: HOMEPAGE_PRICE_HUB_LABELS.wegovy.publicLabel,
+    brandLabel: HOMEPAGE_PRICE_HUB_LABELS.wegovy.brandLabel,
+  },
+  { href: "/blog", publicLabel: "News & guides", brandLabel: null },
+  {
+    href: "/tools/bmi-calculator",
+    publicLabel: "BMI calculator",
+    brandLabel: null,
+  },
+  { href: "/about", publicLabel: "About us", brandLabel: null },
+  { href: "/methodology", publicLabel: "Methodology", brandLabel: null },
+] as const;
+
 export default function SiteEndSectionClient({ pool, dayKey }: Props) {
   const pathname = usePathname();
   const carouselRef = useRef<HTMLDivElement>(null);
+  const isHome = normalizePath(pathname ?? "") === "/";
 
   const picks = useMemo(() => {
     const path = normalizePath(pathname ?? "");
@@ -86,6 +113,38 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
               {KEEP_EXPLORING_INTRO}
             </p>
+            {isHome ? (
+              <nav
+                aria-label="Popular site pages"
+                className="mt-4 flex flex-wrap gap-x-3 gap-y-2 text-sm"
+              >
+                {HOME_HUB_LINKS.map((link, i) => (
+                  <span
+                    key={link.href}
+                    className="inline-flex items-center gap-3"
+                  >
+                    {i > 0 ? (
+                      <span className="text-slate-300" aria-hidden>
+                        ·
+                      </span>
+                    ) : null}
+                    <Link
+                      href={link.href}
+                      className="font-semibold text-emerald-800 underline decoration-emerald-300/70 underline-offset-2 transition hover:text-emerald-950"
+                    >
+                      {link.brandLabel ? (
+                        <BrandHoverText
+                          publicLabel={link.publicLabel}
+                          brandLabel={link.brandLabel}
+                        />
+                      ) : (
+                        link.publicLabel
+                      )}
+                    </Link>
+                  </span>
+                ))}
+              </nav>
+            ) : null}
           </div>
           <div className="flex gap-2 sm:shrink-0">
             <button
@@ -114,16 +173,21 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
         >
           {picks.map((item, idx) => {
             const path = normalizePath(pathname ?? "");
-            const isHome = path === "/";
+            const onHome = path === "/";
             const shouldSanitize =
-              isHome || path === "/prices/cheapest-options-uk";
-            const display = isHome ? applyHomeKeepExploringOverrides(item) : item;
-            const title = sanitizeBrandDisplayNames(display.title, shouldSanitize);
+              onHome || path === "/prices/cheapest-options-uk";
+            const display = onHome
+              ? applyHomeKeepExploringOverrides(item)
+              : item;
+            const rawTitle = display.title;
+            const title = sanitizeBrandDisplayNames(rawTitle, shouldSanitize);
             const description = sanitizeBrandDisplayNames(
               display.description,
               shouldSanitize,
             );
             const imageUrl = display.imageUrl;
+            const showBrandTooltip =
+              shouldSanitize && textContainsBrandName(rawTitle);
             return (
               <Link
                 key={`${display.href}-${idx}`}
@@ -155,7 +219,14 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
                 </div>
                 <div className="flex flex-1 flex-col p-4">
                   <h3 className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900 group-hover:text-emerald-800">
-                    {title}
+                    {showBrandTooltip ? (
+                      <BrandHoverText
+                        publicLabel={title}
+                        brandLabel={rawTitle}
+                      />
+                    ) : (
+                      title
+                    )}
                   </h3>
                   <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-slate-500">
                     {description}

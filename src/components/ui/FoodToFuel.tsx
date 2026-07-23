@@ -1,27 +1,23 @@
-import Image, { type StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import moreProtein from "../../../public/more-protein-huel.avif";
-import eatHealthy from "../../../public/eat-healthy-huel.avif";
-import manageWeight from "../../../public/manage-weight-huel.avif";
-import saveTime from "../../../public/save-time-huel.avif";
-
 type FoodCard = {
   title: string;
-  image: StaticImageData;
+  image: string;
   href?: string;
 };
 
+/** Use public URL strings — Turbopack hangs / fails on static `.avif` imports. */
 const CARDS: FoodCard[] = [
-  { title: "Extra Protein", image: moreProtein, href: "/protein-and-fitness" },
-  { title: "Eat Healthier", image: eatHealthy, href: "/eat-healthier" },
+  { title: "Extra Protein", image: "/more-protein-huel.avif", href: "/protein-and-fitness" },
+  { title: "Eat Healthier", image: "/eat-healthy-huel.avif", href: "/eat-healthier" },
   {
     title: "Support Weight Management",
-    image: manageWeight,
+    image: "/manage-weight-huel.avif",
     href: "/support-weight-management",
   },
-  { title: "Time Saver", image: saveTime, href: "/time-saver" },
+  { title: "Time Saver", image: "/save-time-huel.avif", href: "/time-saver" },
 ];
 
 export default function FoodToFuel() {
@@ -40,7 +36,6 @@ export default function FoodToFuel() {
                   src={card.image}
                   alt={card.title}
                   fill
-                  placeholder="blur"
                   sizes="(min-width: 640px) 180px, 45vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />

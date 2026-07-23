@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ArrowUp, ChevronRight, Mail, Phone, MapPin } from "lucide-react";
+import BrandHoverText from "@/components/ui/BrandHoverText";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import {
   FOOTER_EXPLORE_ALL_PHARMACIES_HREF,
@@ -13,22 +15,12 @@ import {
   SITE_BUSINESS_PHONE_DISPLAY,
   SITE_BUSINESS_PHONE_TEL,
 } from "@/lib/site-contact";
+import { HOMEPAGE_PRICE_HUB_LABELS } from "@/lib/text/homepage-brand-labels";
+import { sanitizeBrandDisplayNames } from "@/lib/text/sanitize-brand-display-names";
 import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 import SiteSocialLinks from "@/components/layout/SiteSocialLinks";
 import { motion } from "framer-motion";
-
-/** Matches `UK_LOCATION_ARTICLE_PREFIX` in `@/lib/blog` — avoid importing `blog` in a client component. */
-const UK_LOCATION_BLOG_HREF = (citySlug: string) =>
-  `/blog/best-weight-loss-treatment-in-${citySlug}`;
-
-const FOOTER_UK_LOCATION_CITIES = [
-  { slug: "london", name: "London" },
-  { slug: "birmingham", name: "Birmingham" },
-  { slug: "manchester", name: "Manchester" },
-  { slug: "glasgow", name: "Glasgow" },
-  { slug: "leeds", name: "Leeds" },
-] as const;
 
 const FOOTER_SUPPORT_LINKS = [
   { href: "/what-is-mounjaro", label: "Mounjaro" },
@@ -36,11 +28,6 @@ const FOOTER_SUPPORT_LINKS = [
   { href: "/what-is-saxenda", label: "Saxenda" },
   { href: "/contact", label: "Contact" },
 ] as const;
-
-/** Title case with lowercase “in” (e.g. Best Weight Loss Treatment in London). */
-function ukLocationFooterLabel(cityDisplayName: string): string {
-  return `Best Weight Loss Treatment in ${cityDisplayName}`;
-}
 
 const FOOTER_NAV_LINK =
   "group flex w-full items-center justify-between gap-2 rounded-xl border border-transparent px-3 py-2 -mx-3 text-left text-base font-medium text-slate-400 transition-all duration-300 hover:bg-white/5 hover:text-emerald-300 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50";
@@ -74,7 +61,20 @@ const itemVariants = {
   },
 };
 
+function footerBrandLabel(label: string, hideBrands: boolean) {
+  if (!hideBrands) return <span>{label}</span>;
+  return (
+    <BrandHoverText
+      publicLabel={sanitizeBrandDisplayNames(label, true)}
+      brandLabel={label}
+    />
+  );
+}
+
 export default function Footer() {
+  const pathname = usePathname();
+  const hideBrands = (pathname ?? "/") === "/" || (pathname ?? "") === "";
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -185,7 +185,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Middle Section: Links Grid */}
-          <div className="mb-20 grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-3 lg:grid-cols-6">
+          <div className="mb-20 grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-3 lg:grid-cols-5">
             <motion.div variants={itemVariants}>
               <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Treatments
@@ -204,47 +204,70 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/helpful-guides" className={FOOTER_NAV_LINK}>
-                    <span>Helpful Guides</span>
+                  <Link
+                    href={HOMEPAGE_PRICE_HUB_LABELS.mounjaro.href}
+                    className={FOOTER_NAV_LINK}
+                  >
+                    {hideBrands ? (
+                      <BrandHoverText
+                        publicLabel={
+                          HOMEPAGE_PRICE_HUB_LABELS.mounjaro.publicLabel
+                        }
+                        brandLabel={
+                          HOMEPAGE_PRICE_HUB_LABELS.mounjaro.brandLabel
+                        }
+                      />
+                    ) : (
+                      <span>Mounjaro Prices</span>
+                    )}
                     <ChevronRight
                       className={FOOTER_NAV_LINK_CHEVRON}
                       aria-hidden
                     />
                   </Link>
                 </li>
-              </ul>
-            </motion.div>
-
-            <motion.div
-              variants={itemVariants}
-              className="col-span-2 md:col-span-1 lg:col-span-1"
-            >
-              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
-                Locations
-              </h3>
-              <ul className="space-y-2">
-                {FOOTER_UK_LOCATION_CITIES.map(({ slug, name }) => (
-                  <li key={slug}>
-                    <Link
-                      href={UK_LOCATION_BLOG_HREF(slug)}
-                      className={FOOTER_NAV_LINK}
-                    >
-                      <span className="leading-snug">
-                        {ukLocationFooterLabel(name)}
-                      </span>
-                      <ChevronRight
-                        className={FOOTER_NAV_LINK_CHEVRON}
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                ))}
-                <li className="mt-3 border-t border-slate-800/80 pt-3">
+                <li>
                   <Link
-                    href="/blog/topic/locations"
-                    className={FOOTER_NAV_LINK_PRIMARY}
+                    href={HOMEPAGE_PRICE_HUB_LABELS.wegovy.href}
+                    className={FOOTER_NAV_LINK}
                   >
-                    <span>All UK Locations</span>
+                    {hideBrands ? (
+                      <BrandHoverText
+                        publicLabel={
+                          HOMEPAGE_PRICE_HUB_LABELS.wegovy.publicLabel
+                        }
+                        brandLabel={HOMEPAGE_PRICE_HUB_LABELS.wegovy.brandLabel}
+                      />
+                    ) : (
+                      <span>Wegovy Prices</span>
+                    )}
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className={FOOTER_NAV_LINK}>
+                    <span>News &amp; Guides</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/tools/bmi-calculator" className={FOOTER_NAV_LINK}>
+                    <span>BMI Calculator</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/helpful-guides" className={FOOTER_NAV_LINK}>
+                    <span>Helpful Guides</span>
                     <ChevronRight
                       className={FOOTER_NAV_LINK_CHEVRON}
                       aria-hidden
@@ -300,7 +323,7 @@ export default function Footer() {
                 {FOOTER_SUPPORT_LINKS.map(({ href, label }) => (
                   <li key={href}>
                     <Link href={href} className={FOOTER_NAV_LINK}>
-                      <span>{label}</span>
+                      {footerBrandLabel(label, hideBrands)}
                       <ChevronRight
                         className={FOOTER_NAV_LINK_CHEVRON}
                         aria-hidden

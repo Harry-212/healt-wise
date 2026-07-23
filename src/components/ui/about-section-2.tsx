@@ -128,13 +128,21 @@ export default function AboutSection2() {
                 customVariants={textVariants}
                 className="shrink-0"
               >
-                <Link href={HOME_COMPARE_HUB_HREF} className={ctaClass}>
-                  <Zap
-                    className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6"
-                    aria-hidden
-                  />
-                  Compare here
-                </Link>
+                <div className="flex flex-col items-stretch gap-3 sm:items-end">
+                  <Link href={HOME_COMPARE_HUB_HREF} className={ctaClass}>
+                    <Zap
+                      className="h-5 w-5 shrink-0 fill-slate-900 sm:h-6 sm:w-6"
+                      aria-hidden
+                    />
+                    Compare here
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="text-center text-sm font-semibold text-emerald-800 underline decoration-emerald-300/80 underline-offset-2 transition hover:text-emerald-950 sm:text-right"
+                  >
+                    About {SITE_BRAND_NAME}
+                  </Link>
+                </div>
               </TimelineContent>
             </div>
           </div>

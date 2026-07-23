@@ -3,8 +3,10 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
+import BrandHoverText from "@/components/ui/BrandHoverText";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { HOMEPAGE_PRICE_HUB_LABELS } from "@/lib/text/homepage-brand-labels";
 import { homepageYellowCtaSolid } from "@/lib/ui/homepage-yellow-cta";
 import {
   Zap,
@@ -16,6 +18,8 @@ import {
 } from "lucide-react";
 
 const TRACKER_HREF = "/tools/weight-loss-tracker";
+const MOUNJARO_HUB = HOMEPAGE_PRICE_HUB_LABELS.mounjaro;
+const WEGOVY_HUB = HOMEPAGE_PRICE_HUB_LABELS.wegovy;
 
 /** Link label aligned with homepage Experience section bullet. */
 const TRACKER_LINK_LABEL =
@@ -25,6 +29,9 @@ const SERVICES = [
   {
     icon: PoundSterling,
     label: "Price Comparison",
+    href: MOUNJARO_HUB.href,
+    ctaPublicLabel: "Compare weight loss treatment prices",
+    ctaBrandLabel: MOUNJARO_HUB.brandLabel,
     desc: (
       <>
         Compare real-time costs across all UK verified providers, with the
@@ -37,6 +44,16 @@ const SERVICES = [
         >
           Trustpilot
         </a>
+        . Also see{" "}
+        <Link
+          href={WEGOVY_HUB.href}
+          className="font-semibold text-amber-800 underline decoration-amber-300/80 underline-offset-2 transition hover:text-amber-950"
+        >
+          <BrandHoverText
+            publicLabel={WEGOVY_HUB.publicLabel}
+            brandLabel={WEGOVY_HUB.brandLabel}
+          />
+        </Link>
         .
       </>
     ),
@@ -46,6 +63,9 @@ const SERVICES = [
   {
     icon: BarChart2,
     label: "Cost Breakdown",
+    href: "/prices/cheapest-options-uk",
+    ctaPublicLabel: "View cheapest options",
+    ctaBrandLabel: null as string | null,
     desc: "All providers will show you a clear cost and any delivery charge.",
     accent: "bg-blue-50 text-blue-700",
     iconBg: "bg-blue-100",
@@ -53,6 +73,9 @@ const SERVICES = [
   {
     icon: ShieldCheck,
     label: "Verified Providers",
+    href: "/pharmacy-safety-gphc-verification",
+    ctaPublicLabel: "How we verify pharmacies",
+    ctaBrandLabel: null as string | null,
     desc: "We only work with GPhC-regulated pharmacies. We do not accept sponsorship or favour any provider.",
     accent: "bg-emerald-50 text-emerald-700",
     iconBg: "bg-emerald-100",
@@ -60,6 +83,9 @@ const SERVICES = [
   {
     icon: LayoutDashboard,
     label: "Progress Tracker",
+    href: TRACKER_HREF,
+    ctaPublicLabel: "Track Now",
+    ctaBrandLabel: null as string | null,
     desc: "Log weight and milestones privately on your weight loss journey.",
     accent: "bg-violet-50 text-violet-700",
     iconBg: "bg-violet-100",
@@ -67,19 +93,38 @@ const SERVICES = [
   {
     icon: BookOpen,
     label: "Treatment Guides",
-    desc: "All of our guides are clear and unbiased, to help you make decisions based on the options available for your weight loss treatment in the UK.",
+    href: "/helpful-guides",
+    ctaPublicLabel: "Browse helpful guides",
+    ctaBrandLabel: null as string | null,
+    desc: (
+      <>
+        All of our guides are clear and unbiased, to help you make decisions
+        based on the options available for your weight loss treatment in the UK.
+        For news and updates, visit the{" "}
+        <Link
+          href="/blog"
+          className="font-semibold text-teal-800 underline decoration-teal-300/80 underline-offset-2 transition hover:text-teal-950"
+        >
+          blog
+        </Link>
+        .
+      </>
+    ),
     accent: "bg-teal-50 text-teal-700",
     iconBg: "bg-teal-100",
   },
 ] satisfies {
   icon: LucideIcon;
   label: string;
+  href: string;
+  ctaPublicLabel: string;
+  ctaBrandLabel: string | null;
   desc: ReactNode;
   accent: string;
   iconBg: string;
 }[];
 
-const trackerCardCtaClass =
+const serviceCardCtaClass =
   "mt-2 inline-flex w-fit items-center justify-center rounded-lg border-2 border-emerald-600/55 bg-emerald-50/90 px-4 py-2 text-xs font-bold text-emerald-950 shadow-sm transition hover:border-emerald-700/70 hover:bg-emerald-100/90 active:scale-[0.98] sm:text-sm";
 
 export default function OurServices() {
@@ -88,7 +133,6 @@ export default function OurServices() {
       <div className="mx-auto max-w-[1400px] overflow-x-clip rounded-2xl border border-slate-200/90 bg-linear-to-br from-emerald-50/50 via-white to-slate-50/80 shadow-sm ring-1 ring-slate-100">
         <div className="mx-auto max-w-[1200px] p-5 sm:p-6 md:p-8 lg:p-10">
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16">
-            {/* Left: copy */}
             <div>
               <span className="inline-block rounded-sm bg-slate-100 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-slate-500">
                 {SITE_BRAND_NAME}
@@ -132,7 +176,6 @@ export default function OurServices() {
               </div>
             </div>
 
-            {/* Right: modern service cards grid */}
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:gap-4">
               {SERVICES.map((svc, i) => {
                 const Icon = svc.icon;
@@ -160,11 +203,16 @@ export default function OurServices() {
                     <p className="text-[13px] leading-relaxed text-slate-500">
                       {svc.desc}
                     </p>
-                    {svc.label === "Progress Tracker" ? (
-                      <Link href={TRACKER_HREF} className={trackerCardCtaClass}>
-                        Track Now
-                      </Link>
-                    ) : null}
+                    <Link href={svc.href} className={serviceCardCtaClass}>
+                      {svc.ctaBrandLabel ? (
+                        <BrandHoverText
+                          publicLabel={svc.ctaPublicLabel}
+                          brandLabel={svc.ctaBrandLabel}
+                        />
+                      ) : (
+                        svc.ctaPublicLabel
+                      )}
+                    </Link>
                   </div>
                 );
               })}

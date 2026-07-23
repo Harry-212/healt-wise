@@ -8,9 +8,11 @@ import {
   POSTS_PER_PAGE,
   type FeedArticle,
 } from "@/lib/blog-feed";
-import { buildUkLocationMetaDescription } from "@/lib/content/uk-location-article-data";
+import {
+  buildUkLocationMetaDescription,
+  buildUkLocationTitle,
+} from "@/lib/content/uk-location-article-data";
 import { UK_WEIGHT_LOSS_LOCATIONS } from "@/lib/data/uk-weight-loss-locations";
-import { capitalizeHeadingWords } from "@/lib/text/heading-case";
 import {
   BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE,
   BLOG_MOUNT_KWIKPEN_USER_GUIDE_HERO_IMAGE,
@@ -45,7 +47,22 @@ export type BlogPostMeta = {
 export const UK_LOCATION_ARTICLE_PREFIX =
   "best-weight-loss-treatment-in-" as const;
 
+/** Canonical London article path: `/blog/weight-loss-treatment-london`. */
+export const LONDON_ARTICLE_SLUG = "weight-loss-treatment-london" as const;
+
+/** Legacy London path kept for redirects only. */
+export const LEGACY_LONDON_ARTICLE_SLUG =
+  "best-weight-loss-treatment-in-london" as const;
+
+/** Only London is indexed and shown in blog location listings. */
+export const INDEXED_UK_LOCATION_CITY_SLUG = "london" as const;
+
+export function isIndexedUkLocationCitySlug(citySlug: string): boolean {
+  return citySlug === INDEXED_UK_LOCATION_CITY_SLUG;
+}
+
 export function ukLocationArticleSlug(citySlug: string): string {
+  if (citySlug === "london") return LONDON_ARTICLE_SLUG;
   return `${UK_LOCATION_ARTICLE_PREFIX}${citySlug}`;
 }
 
@@ -53,6 +70,12 @@ export function ukLocationArticleSlug(citySlug: string): string {
 export function parseCitySlugFromUkArticleSlug(
   articleSlug: string,
 ): string | null {
+  if (
+    articleSlug === LONDON_ARTICLE_SLUG ||
+    articleSlug === LEGACY_LONDON_ARTICLE_SLUG
+  ) {
+    return "london";
+  }
   if (!articleSlug.startsWith(UK_LOCATION_ARTICLE_PREFIX)) return null;
   const rest = articleSlug.slice(UK_LOCATION_ARTICLE_PREFIX.length);
   return rest.length ? rest : null;
@@ -62,29 +85,26 @@ export function getAllUkLocationArticleSlugs(): string[] {
   return UK_WEIGHT_LOSS_LOCATIONS.map((l) => ukLocationArticleSlug(l.slug));
 }
 
+/** Location articles allowed in sitemap, llms.txt, and blog feeds (London only). */
+export function getIndexedUkLocationArticleSlugs(): string[] {
+  return [ukLocationArticleSlug(INDEXED_UK_LOCATION_CITY_SLUG)];
+}
+
 export function blogPostHref(meta: BlogPostMeta): string {
   return meta.postPath ?? `/blog/${meta.slug}`;
 }
 
-const LOCATION_POST_DATE = "2026-04-15";
-
-function ukLocationTitle(name: string): string {
-  return capitalizeHeadingWords(`Best weight loss treatment in ${name}`);
-}
-
-function ukLocationDescription(
-  loc: (typeof UK_WEIGHT_LOSS_LOCATIONS)[number],
-): string {
-  return buildUkLocationMetaDescription(loc);
-}
+const LOCATION_POST_DATE = "2026-07-23";
 
 function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
-  return UK_WEIGHT_LOSS_LOCATIONS.map((loc) => ({
+  return UK_WEIGHT_LOSS_LOCATIONS.filter((loc) =>
+    isIndexedUkLocationCitySlug(loc.slug),
+  ).map((loc) => ({
     slug: ukLocationArticleSlug(loc.slug),
-    title: ukLocationTitle(loc.name),
+    title: buildUkLocationTitle(loc),
     date: LOCATION_POST_DATE,
     category: "Locations in UK",
-    description: ukLocationDescription(loc),
+    description: buildUkLocationMetaDescription(loc),
     heroImage: loc.hero.url,
     feedTags: ["locations"],
   }));
@@ -634,7 +654,12 @@ const CURATED_SLUG_SET = new Set(CURATED_APP_ROUTER_POSTS.map((p) => p.slug));
 /** Long-form app routes & markdown before programmatic city pages (stable blog index). */
 function feedSortBand(meta: BlogPostMeta): number {
   if (CURATED_SLUG_SET.has(meta.slug)) return 0;
-  if (meta.slug.startsWith(UK_LOCATION_ARTICLE_PREFIX)) return 2;
+  if (
+    meta.slug.startsWith(UK_LOCATION_ARTICLE_PREFIX) ||
+    meta.slug === LONDON_ARTICLE_SLUG
+  ) {
+    return 2;
+  }
   return 1;
 }
 
@@ -673,12 +698,12 @@ function blogArticleSlugsOnDisk(): string[] {
     .sort();
 }
 
-/** Unique `/blog/:slug` targets for sitemap and llms (markdown + disk routes + UK location articles). */
+/** Unique `/blog/:slug` targets for sitemap and llms (markdown + disk routes + indexed UK location articles). */
 export function getAllBlogSitemapSlugs(): string[] {
   const slugs = new Set<string>([
     ...getAllSlugs(),
     ...blogArticleSlugsOnDisk(),
-    ...getAllUkLocationArticleSlugs(),
+    ...getIndexedUkLocationArticleSlugs(),
   ]);
   return [...slugs].sort();
 }
