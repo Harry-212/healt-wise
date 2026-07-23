@@ -13,10 +13,24 @@ const OurMethodology = dynamic(() => import("@/components/ui/OurMethodology"));
 const WhyChooseHealthWise = dynamic(() => import("@/components/ui/WhyChooseHealthWise"));
 
 export const metadata: Metadata = {
+  title: {
+    absolute: "Compare Weight Loss Treatment Prices UK | Healthwise360",
+  },
   description:
-    "Independent UK comparison for weight loss treatment prices, safety, and support. Compare providers, monthly costs, and verified pharmacy options. Updated 2026.",
+    "Compare Mounjaro, Wegovy and Saxenda prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
   alternates: {
     canonical: `${siteOrigin()}/`,
+  },
+  openGraph: {
+    title: "Compare Weight Loss Treatment Prices UK | Healthwise360",
+    description:
+      "Compare Mounjaro, Wegovy and Saxenda prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
+    url: `${siteOrigin()}/`,
+  },
+  twitter: {
+    title: "Compare Weight Loss Treatment Prices UK | Healthwise360",
+    description:
+      "Compare Mounjaro, Wegovy and Saxenda prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
   },
 };
 

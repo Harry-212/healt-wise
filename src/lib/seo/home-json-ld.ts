@@ -13,7 +13,7 @@ import {
 const SCHEMA_LANGUAGE = "en-GB";
 
 const SITE_DESCRIPTION =
-  "Independent UK comparison for weight loss treatment prices, safety, and pharmacy context. Compare Mounjaro, Wegovy, and Saxenda providers, monthly costs, and verified GPhC options.";
+  "Compare Mounjaro, Wegovy and Saxenda prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.";
 
 function homeSchemaLogoUrl(base: string): string {
   return `${base}${SITE_LOGO_SRC}`;
@@ -95,7 +95,7 @@ export function homePageJsonLdGraph(): Record<string, unknown> {
     "@type": ["WebPage", "CollectionPage"],
     "@id": `${base}/#webpage`,
     url: pageUrl,
-    name: `${SITE_BRAND_NAME} | Weight Loss Treatment Price Comparison UK 2026`,
+    name: "Compare Weight Loss Treatment Prices UK | Healthwise360",
     description: SITE_DESCRIPTION,
     isPartOf: { "@id": `${base}/#website` },
     about: { "@id": `${base}/#organization` },
