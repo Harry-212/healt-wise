@@ -162,7 +162,7 @@ export default function PaisleyLocationContent({ loc, shareUrl }: Props) {
                   for safe slimming. If you are still comparing the bigger UK
                   picture, start with our{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     UK weight loss treatment comparison
@@ -658,7 +658,7 @@ export default function PaisleyLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     <Link
-                      href="/compare/best-weight-loss-treatments-uk"
+                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

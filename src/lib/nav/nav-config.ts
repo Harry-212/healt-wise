@@ -86,11 +86,6 @@ export const NAV_PANELS: NavPanel[] = [
             href: "/compare/mounjaro-vs-wegovy-vs-saxenda",
             icon: "layers",
           },
-          {
-            label: "Best Weight Loss Treatments UK",
-            href: "/compare/best-weight-loss-treatments-uk",
-            icon: "sparkles",
-          },
         ],
       },
       {

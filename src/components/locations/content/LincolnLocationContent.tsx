@@ -164,7 +164,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Lincoln&apos;s cathedral spires and Brayford Pool inspire health goals. Chip shop temptations and A46 commutes challenge, though. The best weight loss treatment in Lincoln blends evidence, accessibility, and Lincolnshire practicality, so you do not need US style fads. Start with{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and{" "}
@@ -625,7 +625,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare pathways on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

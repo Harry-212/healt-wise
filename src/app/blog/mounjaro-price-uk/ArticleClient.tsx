@@ -242,7 +242,7 @@ export default function ArticleClient() {
                   <strong>Subscription vs single order pricing.</strong> Some pharmacies offer a lower per pen price for patients who commit to a monthly subscription plan rather than ordering individual pens.
                 </p>
                 <p>
-                  For a transparent wider view of what providers charge, including medication, delivery, assessment and monitoring components, the <Link href="/compare/best-weight-loss-treatments-uk" className="font-medium text-emerald-600 hover:underline">best weight loss treatment options comparison for UK pharmacies</Link> compiles independently checked pricing data across more than 60 GPhC registered pharmacies.
+                  For a transparent wider view of what providers charge, including medication, delivery, assessment and monitoring components, the <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">best weight loss treatment options comparison for UK pharmacies</Link> compiles independently checked pricing data across more than 60 GPhC registered pharmacies.
                 </p>
               </GuideSection>
 
@@ -296,7 +296,7 @@ export default function ArticleClient() {
                   </li>
                 </ol>
                 <p>
-                  For a structured way to evaluate online pharmacy credentials alongside pricing, the <Link href="/compare/best-weight-loss-treatments-uk" className="font-medium text-emerald-600 hover:underline">UK online pharmacy verification and GPhC safety standards guide</Link> gives useful independent context before you compare providers.
+                  For a structured way to evaluate online pharmacy credentials alongside pricing, the <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">UK online pharmacy verification and GPhC safety standards guide</Link> gives useful independent context before you compare providers.
                 </p>
               </GuideSection>
 

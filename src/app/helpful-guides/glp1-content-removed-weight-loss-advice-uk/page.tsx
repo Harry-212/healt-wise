@@ -209,7 +209,7 @@ export default function GuideGlp1ContentRemoval() {
             <><IL href="/what-is-wegovy">Wegovy</IL> and semaglutide.</>,
             <>
               Weight loss treatments and{" "}
-              <IL href="/compare/best-weight-loss-treatments-uk">
+              <IL href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                 GLP-1 receptor agonists
               </IL>{" "}
               more broadly.
@@ -422,7 +422,7 @@ export default function GuideGlp1ContentRemoval() {
           items={[
             <>
               Access to accurate, evidence-based information about{" "}
-              <IL href="/compare/best-weight-loss-treatments-uk">
+              <IL href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                 GLP-1 treatments
               </IL>{" "}
               and their effects.

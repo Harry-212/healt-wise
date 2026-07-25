@@ -175,7 +175,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
                   Thames Valley slimming. If you are still comparing treatment
                   types, start with our{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     UK weight loss treatment comparison
@@ -596,7 +596,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     <Link
-                      href="/compare/best-weight-loss-treatments-uk"
+                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

@@ -159,7 +159,7 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   If you are searching for the best weight loss treatment in Newry, the useful question is not only &quot;what works fastest?&quot; It is also &quot;what is safe, sustainable, and actually available to me here?&quot; For wider context, compare the main routes in our{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   guide.
@@ -562,7 +562,7 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment categories on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

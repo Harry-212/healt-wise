@@ -161,7 +161,7 @@ export default function NeathPortTalbotLocationContent({ loc, shareUrl }: Props)
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Neath Port Talbot has the same basic reality as the rest of Wales: weight loss is not solved by postcode, but access to support can differ depending on local NHS pathways, waiting times, and whether someone is eligible for medication. That is why people searching for the best weight loss treatment Neath Port Talbot are usually trying to understand two things at once: what works, and what is realistically available. Compare the wider treatment routes on{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>
                   .
@@ -386,7 +386,7 @@ export default function NeathPortTalbotLocationContent({ loc, shareUrl }: Props)
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

@@ -22,6 +22,7 @@ const EXCLUDED_SITEMAP_PATHS = new Set<string>([
   "/$",
   "/blog/locations-in-uk",
   "/compare/best-weight-loss-injections-uk",
+  "/compare/best-weight-loss-treatments-uk",
   "/pharmacies/chemist4u",
   "/pharmacies/click-pharmacy",
   "/pharmacies/phlo-clinic",

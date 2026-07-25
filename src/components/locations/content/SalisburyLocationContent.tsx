@@ -202,7 +202,7 @@ export default function SalisburyLocationContent({ loc, shareUrl }: Props) {
                 Salisbury and the surrounding Wiltshire area. For a wider UK view
                 of how treatments compare, see our{" "}
                 <Link
-                  href="/compare/best-weight-loss-treatments-uk"
+                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className={linkCls}
                 >
                   UK weight loss treatment comparison
@@ -1086,7 +1086,7 @@ export default function SalisburyLocationContent({ loc, shareUrl }: Props) {
                 between providers. It cannot diagnose obesity, determine
                 individual eligibility or recommend a specific medicine. Use our{" "}
                 <Link
-                  href="/compare/best-weight-loss-treatments-uk"
+                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className={linkCls}
                 >
                   treatment comparison pages
@@ -1526,7 +1526,7 @@ export default function SalisburyLocationContent({ loc, shareUrl }: Props) {
               <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                 <li>
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     Compare best weight loss treatments in the UK

@@ -250,7 +250,7 @@ export default function GuideMounjaroPlateau() {
           If a plateau persists for more than 4–6 weeks despite lifestyle
           adjustments, speak to your prescribing clinician. A dosage review
           may be appropriate. You can also{" "}
-          <IL href="/compare/best-weight-loss-treatments-uk">
+          <IL href="/compare/mounjaro-vs-wegovy-vs-saxenda">
             compare weight loss treatments
           </IL>{" "}
           to understand how other options compare if Mounjaro is not producing

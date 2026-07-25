@@ -128,7 +128,7 @@ export default function NorwichLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   There is also a practical point that gets lost in a lot of competitor content. Weight loss treatment is not just about the method itself. It is also about access, safety checks, follow-up, eligibility, and whether the support system is strong enough to help you keep the weight off. That matters in Norwich as much as anywhere else. Compare broader routes in our{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   guide.
@@ -485,7 +485,7 @@ export default function NorwichLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment categories on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

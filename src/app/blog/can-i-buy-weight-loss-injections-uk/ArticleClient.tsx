@@ -578,7 +578,7 @@ export default function ArticleClient() {
                 </Link>{" "}
                 using our independent data model. We aim to offer the most comprehensive{" "}
                 <Link
-                  href="/compare/best-weight-loss-treatments-uk"
+                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   weight loss treatment price comparison UK

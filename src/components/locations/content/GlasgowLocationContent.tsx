@@ -160,7 +160,7 @@ export default function GlasgowLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   Compare options using{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>
                   , then read{" "}
@@ -374,7 +374,7 @@ export default function GlasgowLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare providers on safety checks and follow up using{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       our UK comparison page
                     </Link>
                     .

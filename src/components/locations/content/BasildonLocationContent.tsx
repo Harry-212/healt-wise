@@ -190,7 +190,7 @@ export default function BasildonLocationContent({ loc, shareUrl }: Props) {
                   providing a comprehensive approach to health and weight
                   management. Orient first with{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     best weight loss treatments in the UK
@@ -253,7 +253,7 @@ export default function BasildonLocationContent({ loc, shareUrl }: Props) {
                   Synergy beats solo tricks; evidence usually rewards stacks.
                   Use{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     our UK comparator
@@ -711,7 +711,7 @@ export default function BasildonLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     →{" "}
                     <Link
-                      href="/compare/best-weight-loss-treatments-uk"
+                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK
@@ -808,7 +808,7 @@ export default function BasildonLocationContent({ loc, shareUrl }: Props) {
                   resilience. Your fitter commute starts when systems beat
                   slogans. Pair habits with honest medical follow up and{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     UK wide comparisons

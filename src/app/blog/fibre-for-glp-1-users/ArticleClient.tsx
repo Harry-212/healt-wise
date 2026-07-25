@@ -207,7 +207,7 @@ export default function ArticleClient() {
                 Healthwise360 does not prescribe medication or provide personal
                 diet plans. Instead, it helps users{" "}
                 <Link
-                  href="/compare/best-weight-loss-treatments-uk"
+                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className={linkClass}
                 >
                   compare weight loss treatment prices

@@ -163,7 +163,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Luton has a broad mix of weight loss options, but that variety can be confusing fast. Some people search for injections because they want a medical option that feels more manageable than dieting alone. Others are better served by NHS programmes, while a smaller group may need surgery. The point is not to chase the trendiest treatment. It is to match the treatment to the problem. Compare pathways on{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read{" "}
@@ -507,7 +507,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

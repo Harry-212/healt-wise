@@ -192,7 +192,7 @@ export default function BathLocationContent({ loc, shareUrl }: Props) {
                   well-rounded approach that bridges the gap between private
                   cosmetic treatments and public healthcare support. Start with{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     best weight loss treatments in the UK
@@ -261,7 +261,7 @@ export default function BathLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   No single fix: integrated plans prevail in data. Use{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     our UK comparator
@@ -702,7 +702,7 @@ export default function BathLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     →{" "}
                     <Link
-                      href="/compare/best-weight-loss-treatments-uk"
+                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK
@@ -799,7 +799,7 @@ export default function BathLocationContent({ loc, shareUrl }: Props) {
                   calm. Elegant results favour systems over slogans. Pair
                   movement and food planning with honest medical follow up and{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     UK wide comparisons

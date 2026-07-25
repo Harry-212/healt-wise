@@ -175,7 +175,7 @@ export default function PerthLocationContent({ loc, shareUrl }: Props) {
                   local Perth habits for safe slimming. If you are comparing
                   national options before booking locally, start with our{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     UK weight loss treatment comparison
@@ -643,7 +643,7 @@ export default function PerthLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     <Link
-                      href="/compare/best-weight-loss-treatments-uk"
+                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

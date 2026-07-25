@@ -128,7 +128,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
 
                 <p className={`mt-4 ${p}`}>
                   Below, we walk through these questions in a grounded, evidence-based way, avoiding hype and focusing on what is realistic in the North East. You can also compare UK-wide pathways in our{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   guide.
@@ -570,7 +570,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

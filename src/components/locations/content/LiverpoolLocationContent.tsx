@@ -161,7 +161,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Liverpool&apos;s docks, markets, and Scouse energy demand practical weight loss. Anfield matchdays or Bold Street bites tempt. But what is the best weight loss treatment in Liverpool? Science favours combinations: medicines, tech where appropriate, and habits tailored to Merseyside life. Compare foundations on{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>
                   , then read{" "}
@@ -538,7 +538,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
                   </li>
                   <li>
                     Compare licensed pathways on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

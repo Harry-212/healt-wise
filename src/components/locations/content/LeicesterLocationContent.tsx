@@ -159,7 +159,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Leicester&apos;s multicultural markets and Victoria Park trails buzz with potential. Curry houses and shift work challenge waistlines, though. Postcode shapes access across NHS Leicester integrated care board routes versus private clinics more than biology alone. This guide cuts through hype with timelines, checklists, and local hacks. Compare UK options on{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read our{" "}
@@ -492,7 +492,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare providers using{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       our UK comparison page
                     </Link>
                     .

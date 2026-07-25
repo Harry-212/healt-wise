@@ -18,8 +18,6 @@ import {
 } from "@/lib/data/compare-live";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
 import {
-  COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_ALT,
-  COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_SRC,
   COMPARE_GLP1_PRICE_HERO_IMAGE_ALT,
   COMPARE_GLP1_PRICE_HERO_IMAGE_SRC,
   COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_ALT,
@@ -51,10 +49,6 @@ const COMPARE_SLUG_PHOTO_HERO: Record<string, { src: string; alt: string }> = {
   "mounjaro-vs-saxenda": {
     src: COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_SRC,
     alt: COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_ALT,
-  },
-  "best-weight-loss-treatments-uk": {
-    src: COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_SRC,
-    alt: COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_ALT,
   },
 };
 

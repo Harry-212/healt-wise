@@ -233,7 +233,7 @@ export default function ArticleClient() {
                 than a basic &ldquo;request treatment&rdquo; page. It can help
                 users{" "}
                 <Link
-                  href="/compare/best-weight-loss-treatments-uk"
+                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare weight loss treatment providers
@@ -284,7 +284,7 @@ export default function ArticleClient() {
               <p>
                 That is also why fat loss content and{" "}
                 <Link
-                  href="/compare/best-weight-loss-treatments-uk"
+                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   weight loss treatment cost comparison

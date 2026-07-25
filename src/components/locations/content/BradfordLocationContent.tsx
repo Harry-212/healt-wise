@@ -160,7 +160,7 @@ export default function BradfordLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-lg md:text-xl ${p}`}>
                   Bradford&apos;s Curry Mile aromas and moorland hikes blend spice with sweat. Yet kebabs or shift snacks stack pounds.{" "}
                   <strong className={strong}>What stands as the best weight loss treatment in Bradford</strong>? Data favours combos, not isolates. Start with{" "}
-                  <Link href="/compare/best-weight-loss-treatments-uk" className={linkCls}>
+                  <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read{" "}
@@ -458,7 +458,7 @@ export default function BradfordLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     →{" "}
-                    <Link href="/compare/best-weight-loss-treatments-uk" className={linkCls}>
+                    <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
                       Compare best weight loss treatments in the UK
                     </Link>
                   </li>

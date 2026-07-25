@@ -163,7 +163,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Livingston&apos;s The Centre and Designer Outlet style shopping draws footfall, while Almond Valley greens inspire health goals, but fast food and commutes still add pounds. For Livingston residents, the best weight loss treatment is not postcode magic. It is smart access blending NHS Scotland routes with private options when eligible. Here is the full, no fluff breakdown. Start comparisons on{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read{" "}

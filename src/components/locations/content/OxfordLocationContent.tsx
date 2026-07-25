@@ -192,7 +192,7 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
                   who you can see, how fast, and how much you pay. If you are
                   still orienting yourself, start with our{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     UK weight loss treatment comparison
@@ -952,7 +952,7 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     -{" "}
                     <Link
-                      href="/compare/best-weight-loss-treatments-uk"
+                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

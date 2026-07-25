@@ -158,7 +158,7 @@ export default function HuddersfieldLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   Start by comparing providers on{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and check eligibility with the{" "}
@@ -389,7 +389,7 @@ export default function HuddersfieldLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare providers using{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       our UK comparison page
                     </Link>
                     .

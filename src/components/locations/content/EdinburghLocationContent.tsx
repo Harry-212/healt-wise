@@ -158,7 +158,7 @@ export default function EdinburghLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   If you want to compare options across the UK, start with{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>
                   . For a medication primer, read{" "}
@@ -375,7 +375,7 @@ export default function EdinburghLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare providers on follow up and safety checks using{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       the UK comparison page
                     </Link>
                     .

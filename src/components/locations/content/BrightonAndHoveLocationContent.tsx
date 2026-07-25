@@ -165,7 +165,7 @@ export default function BrightonAndHoveLocationContent({ loc, shareUrl }: Props)
                     Pinpointing the best weight loss treatment in Brighton and Hove
                   </strong>{" "}
                   often means mixing pharma aids with lifestyle for Sussex shores. Start with{" "}
-                  <Link href="/compare/best-weight-loss-treatments-uk" className={linkCls}>
+                  <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read{" "}
@@ -477,7 +477,7 @@ export default function BrightonAndHoveLocationContent({ loc, shareUrl }: Props)
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     →{" "}
-                    <Link href="/compare/best-weight-loss-treatments-uk" className={linkCls}>
+                    <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
                       Compare best weight loss treatments in the UK
                     </Link>
                   </li>

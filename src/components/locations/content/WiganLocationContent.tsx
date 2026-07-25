@@ -192,7 +192,7 @@ export default function WiganLocationContent({ loc, shareUrl }: Props) {
                 Manchester area. For a wider view of how treatments compare, see
                 our{" "}
                 <Link
-                  href="/compare/best-weight-loss-treatments-uk"
+                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className={linkCls}
                 >
                   UK weight loss treatment comparison
@@ -633,7 +633,7 @@ export default function WiganLocationContent({ loc, shareUrl }: Props) {
                 cannot decide which treatment is medically suitable for you. Use
                 our{" "}
                 <Link
-                  href="/compare/best-weight-loss-treatments-uk"
+                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className={linkCls}
                 >
                   treatment comparison pages
@@ -1049,7 +1049,7 @@ export default function WiganLocationContent({ loc, shareUrl }: Props) {
               <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                 <li>
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     Compare best weight loss treatments in the UK

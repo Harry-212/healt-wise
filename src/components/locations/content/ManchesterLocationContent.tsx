@@ -162,7 +162,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Manchester has become one of the UK&apos;s most visible cities for weight management, and that is not surprising. It has a large private healthcare market, strong NHS pathways, and a population that is already searching for realistic answers rather than quick-fix promises. If you live in the city or wider Greater Manchester area, the real question is not simply which treatment sounds best. It is which treatment is actually suitable, safe, and sustainable for your situation. Compare pathways on{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read our{" "}
@@ -569,7 +569,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

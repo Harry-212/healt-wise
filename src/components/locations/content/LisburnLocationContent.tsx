@@ -163,7 +163,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Lisburn&apos;s historic streets and Lagan towpath inspire health goals. Pie shops and commutes challenge resolve. The best weight loss treatment in Lisburn? Evidence favours monitored GLP 1 therapies (tirzepatide or Mounjaro, semaglutide or Wegovy) combined with local habits, far beyond fads. Map options using{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>
                   , then read{" "}
@@ -548,7 +548,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                   </li>
                   <li>
                     Compare medicines on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

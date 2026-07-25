@@ -238,7 +238,7 @@ export default function ArticleClient() {
                   <strong>Dose step price increases.</strong> As detailed in the titration table above, each dose step carries a higher pen price. Budgeting only for the starter price will underestimate true costs considerably.
                 </p>
                 <p>
-                  Therefore, the most accurate comparison between providers involves totalling all fee components, not just the pen price. The <Link href="/compare/best-weight-loss-treatments-uk" className="font-medium text-emerald-600 hover:underline">best weight loss treatment options comparison for all in UK pharmacy pricing</Link> aggregates verified data across more than 60 GPhC registered pharmacies, making it easier to conduct a genuine like for like comparison without visiting dozens of individual pharmacy sites.
+                  Therefore, the most accurate comparison between providers involves totalling all fee components, not just the pen price. The <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">best weight loss treatment options comparison for all in UK pharmacy pricing</Link> aggregates verified data across more than 60 GPhC registered pharmacies, making it easier to conduct a genuine like for like comparison without visiting dozens of individual pharmacy sites.
                 </p>
               </GuideSection>
 
@@ -310,7 +310,7 @@ export default function ArticleClient() {
                   </li>
                 </ol>
                 <p>
-                  For a structured guide to evaluating pharmacy credentials alongside pricing, the <Link href="/compare/best-weight-loss-treatments-uk" className="font-medium text-emerald-600 hover:underline">UK online pharmacy verification and GPhC safety standards guide</Link> is a useful independent reference point.
+                  For a structured guide to evaluating pharmacy credentials alongside pricing, the <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">UK online pharmacy verification and GPhC safety standards guide</Link> is a useful independent reference point.
                 </p>
               </GuideSection>
 

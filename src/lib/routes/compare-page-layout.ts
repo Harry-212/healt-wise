@@ -209,55 +209,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     sideEffectsTitle: "Side Effects",
     sideEffectsBody:
       "Gastrointestinal symptoms are common early across these therapies. Pancreatitis, gallbladder disease, and other risks appear in each summary of product characteristics. Daily versus weekly dosing schedules change counselling points — always read the PIL for the medicine you are prescribed.",
-    bestChoiceTitle: "Consultation and Delivery Costs",
     bestChoiceBody:
       "Total treatment cost usually includes assessment or consultation fees, delivery or cold-chain charges, follow-up, and the medicine itself. Compare illustrative pharmacy rows in the tabs above, then confirm live checkout totals, eligibility criteria, and NHS versus private access options with a regulated provider.",
-  },
-  "best-weight-loss-treatments-uk": {
-    medications: ["mounjaro", "wegovy", "saxenda"],
-    hero: {
-      variant: "blue",
-      eyebrow: "UK GLP-1 Comparison Hub",
-      titleItalic: "Compare",
-      titleBold: "Weight Loss Treatments UK",
-      subtitle:
-        "Wegovy, Mounjaro, and Saxenda — three full price datasets with the same tools as our standalone compare pages.",
-      snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
-      navLinks: [
-        { href: "/what-is-mounjaro", label: "Mounjaro" },
-        { href: "/what-is-wegovy", label: "Wegovy" },
-        { href: "/what-is-saxenda", label: "Saxenda" },
-        { href: "#compare-med-tabs", label: "Matrix" },
-        { href: "#compare-faq", label: "FAQ" },
-      ],
-    },
-    share: {
-      canonicalPath: "/compare/best-weight-loss-treatments-uk",
-      title:
-        "UK weight loss treatments hub (2026): Wegovy, Mounjaro & Saxenda compared",
-      metaDescription:
-        "Start here for private UK GLP-1 listings: open dedicated tabs for Wegovy, Mounjaro, and Saxenda with advanced filters, chart views, and safety context. Helps you compare total cost patterns before you shortlist a GPhC-registered provider.",
-      openGraphTitle:
-        "UK GLP-1 hub — Wegovy, Mounjaro & Saxenda price tabs | Health Wise",
-      openGraphDescription:
-        "One landing page, three deep-dive tables: compare illustrative pen and pack pricing without mixing datasets.",
-      imagePath: OG,
-      imageAlt: "Health Wise — UK weight loss treatment comparison",
-    },
-    intro: {
-      heading: "One Hub, Three Medicines",
-      body: [
-        "If you are evaluating UK private weight-management treatments, headline brand names are only the start — monthly spend changes with dose, pack size, and whether consultations are bundled.",
-        "The tabs at the top of this page load our full comparison experience for each medicine. Each tab mirrors the dedicated price comparison page so pharmacists, patients, and carers can explore consistently.",
-      ],
-    },
-    effectivenessTitle: "Which Treatment Is “Best”?",
-    effectivenessBody:
-      "There is no universal winner: NICE-aligned eligibility, tolerability, and prescriber experience steer choice. Trial data and SmPCs differ between once-weekly semaglutide or tirzepatide and daily liraglutide. This page helps you compare pricing mechanics; clinical suitability belongs in consultation.",
-    sideEffectsTitle: "Side Effects & Commitments",
-    sideEffectsBody:
-      "All three medicines require ongoing medical supervision. GI side effects are common early; rare serious risks are described in official materials. Links in the footer connect to our deeper safety and methodology content.",
-    bestChoiceBody:
-      "Start with total cost of care (assessment + medicine + delivery), then narrow by cold-chain confidence and follow-up support. When you are ready, cross-check GPhC registration and confirm live prices on the provider’s site.",
   },
 };

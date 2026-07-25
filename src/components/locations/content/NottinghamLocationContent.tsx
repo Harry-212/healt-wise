@@ -147,7 +147,7 @@ export default function NottinghamLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Whether you&apos;re a commuter on the tram to Nottingham Station, a local in Beeston or Sutton, or someone exploring NHS vs. private options in the East Midlands, this article breaks down the science, access routes, and real-world strategies without fluff. We&apos;ll cover everything from Nottingham weight loss clinics and obesity management to local tricks like using the Wollaton Park trails for fat-burning walks. With expert-level nuance on GLP-1 drugs (tirzepatide/Mounjaro, semaglutide/Wegovy/Saxenda), safety checks, and celebrity insight like Kelly Clarkson&apos;s journey, you&apos;ll get the full picture to make informed decisions. No hype - just grounded, E-E-A-T-backed info to help you thrive. For wider UK context, compare the main routes in our{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   guide.
@@ -352,7 +352,7 @@ export default function NottinghamLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment categories on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

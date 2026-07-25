@@ -210,7 +210,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/compare/best-weight-loss-injections-uk",
-        destination: "/compare/best-weight-loss-treatments-uk",
+        destination: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+        permanent: true,
+      },
+      {
+        source: "/compare/best-weight-loss-treatments-uk",
+        destination: "/compare/mounjaro-vs-wegovy-vs-saxenda",
         permanent: true,
       },
       {

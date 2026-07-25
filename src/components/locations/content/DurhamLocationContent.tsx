@@ -160,7 +160,7 @@ export default function DurhamLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   If you are comparing options, start with{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and check eligibility using the{" "}
@@ -468,7 +468,7 @@ export default function DurhamLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare providers on follow up, safety checks, and monitoring using{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       our UK comparison guide
                     </Link>
                     .

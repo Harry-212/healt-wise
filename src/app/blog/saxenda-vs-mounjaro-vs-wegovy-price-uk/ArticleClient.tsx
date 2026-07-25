@@ -424,7 +424,7 @@ export default function ArticleClient() {
                   </ol>
                 </div>
                 <p>
-                  For a structured guide to pharmacy verification alongside live price comparison, see the <Link href="/compare/best-weight-loss-treatments-uk" className="font-semibold text-emerald-600 hover:underline">best weight loss treatment comparison guide</Link> at Healthwise360.
+                  For a structured guide to pharmacy verification alongside live price comparison, see the <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-semibold text-emerald-600 hover:underline">Mounjaro vs Wegovy vs Saxenda comparison</Link> at Healthwise360.
                 </p>
               </GuideSection>
 

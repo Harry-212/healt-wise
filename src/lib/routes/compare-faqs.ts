@@ -178,49 +178,6 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
       a: "Not reliably. Each medicine was studied in its own trial programme with different populations, durations and dosing, so comparing headline figures across studies rarely gives a fair like-for-like conclusion. Read published outcomes as context for a clinical conversation, not as a ranking.",
     },
   ],
-
-  "best-weight-loss-treatments-uk": [
-    {
-      q: "What does this hub cover that individual brand pages do not?",
-      a: "It places three full comparison workspaces behind one navigation flow so you can switch medicines without losing matrix behaviour. Content is otherwise aligned to our standalone hubs.",
-    },
-    {
-      q: "Is there a single “cheapest injection” for the UK?",
-      a: "There is no universal winner. Cheapest depends on dose, pack, bundled fees, and promotions. Our cheapest options guide explains how to think about total cost of care holistically.",
-    },
-    {
-      q: "Why might Wegovy, Mounjaro, and Saxenda all appear in one menu?",
-      a: "They are commonly searched private weight-management options in the UK. Licensing, eligibility, and posology differ. This page helps you compare pricing tools; suitability is clinical.",
-    },
-    {
-      q: "Can I sort all three medicines in one combined matrix?",
-      a: "No. Each medicine uses different pack and dose columns. Keep comparisons within each tab, then step back to total monthly estimates for your situation.",
-    },
-    {
-      q: "How do I account for titration when comparing monthly spend?",
-      a: "Early months on a lower dose may cost less than maintenance months. Project forward using the dose columns you expect to stay on after review with your prescriber.",
-    },
-    {
-      q: "Are charts comparable across tabs?",
-      a: "Only when you interpret them per medicine. Do not overlay Saxenda pack charts onto weekly pen charts without normalising units.",
-    },
-    {
-      q: "What if I need NHS rather than private supply?",
-      a: "NHS access depends on local policy and eligibility. This hub does not predict NHS availability. Discuss with your GP or specialist NHS weight-management services.",
-    },
-    {
-      q: "Do you include international pharmacies?",
-      a: "Our comparison focus is UK-regulated supply routes consistent with our methodology. Avoid unverified sellers even if they appear cheaper.",
-    },
-    {
-      q: "Why are GPhC lines repeated in each tab?",
-      a: "They are part of the full workspace for each brand. Repeating them keeps the experience identical to visiting each standalone comparison page.",
-    },
-    {
-      q: "Where can I read next steps after comparing prices?",
-      a: "Explore our helpful guides for lifestyle and treatment context, the methodology page for how we build matrices, and pharmacy verification steps before you pay.",
-    },
-  ],
 };
 
 export function getCompareFaqsForSlug(slug: string): CompareFaqItem[] {

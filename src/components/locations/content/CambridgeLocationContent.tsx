@@ -186,7 +186,7 @@ export default function CambridgeLocationContent({ loc, shareUrl }: Props) {
                 </p>
                 <p className={p}>
                   Start with a high level comparison at{" "}
-                  <Link href="/compare/best-weight-loss-treatments-uk" className={linkCls}>
+                  <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
                     best weight loss treatments in the UK
                   </Link>
                   .
@@ -459,7 +459,7 @@ export default function CambridgeLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     →{" "}
-                    <Link href="/compare/best-weight-loss-treatments-uk" className={linkCls}>
+                    <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
                       Compare best weight loss treatments in the UK
                     </Link>
                   </li>

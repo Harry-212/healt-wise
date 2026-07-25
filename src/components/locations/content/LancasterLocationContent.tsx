@@ -160,7 +160,7 @@ export default function LancasterLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Lancaster&apos;s canal paths and castle views inspire fitness. Yet Lancashire&apos;s 33% obesity rate (NHS Digital, 2025) challenges locals. This guide cuts through hype with evidence based strategies tailored to Lancaster life. For a wider UK lens, see{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and our{" "}
@@ -508,7 +508,7 @@ export default function LancasterLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare providers using{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       our UK comparison page
                     </Link>
                     .

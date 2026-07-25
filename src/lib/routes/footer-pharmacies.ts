@@ -1,5 +1,5 @@
 export const FOOTER_EXPLORE_ALL_PHARMACIES_HREF =
-  "/compare/best-weight-loss-treatments-uk";
+  "/compare/mounjaro-vs-wegovy-vs-saxenda";
 
 /** Footer pharmacy list: Bolt only; explore all via `FOOTER_EXPLORE_ALL_PHARMACIES_HREF`. */
 export const FOOTER_PHARMACY_LINKS: ReadonlyArray<{

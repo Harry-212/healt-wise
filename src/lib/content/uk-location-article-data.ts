@@ -466,7 +466,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What’s the most effective diet for Armagh locals?",
-        a: `Balanced calorie deficits that you can keep up usually beat extreme rules. NICE-style weight-management guidance favours sustainable eating patterns over crash diets—see our [comparison of the best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) for how medicines like [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), or [Saxenda](/what-is-saxenda) sit *beside* food habits, not instead of them. If you are budgeting privately, check [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `Balanced calorie deficits that you can keep up usually beat extreme rules. NICE-style weight-management guidance favours sustainable eating patterns over crash diets—see our [comparison of the best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) for how medicines like [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), or [Saxenda](/what-is-saxenda) sit *beside* food habits, not instead of them. If you are budgeting privately, check [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
       },
       {
         q: "How much exercise is needed for weight loss in Armagh?",
@@ -495,7 +495,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most successful weight loss treatment in Belfast?",
-        a: `For many people, success looks like a layered plan: a calorie deficit you can repeat, strength and walking you can sustain, and medical support when appropriate. If a clinician discusses injections, start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda). Compare monthly totals via [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `For many people, success looks like a layered plan: a calorie deficit you can repeat, strength and walking you can sustain, and medical support when appropriate. If a clinician discusses injections, start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda). Compare monthly totals via [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
       },
       {
         q: "Can I get Ozempic in Northern Ireland?",
@@ -503,7 +503,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Can I get weight loss injections on the NHS in Northern Ireland?",
-        a: `HSC Northern Ireland pathways can differ from NHS England, and access may be limited to specialist criteria and capacity. Many people still begin with lifestyle and dietitian supported programmes. If you consider private routes, compare safety and follow up, not just speed, using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `HSC Northern Ireland pathways can differ from NHS England, and access may be limited to specialist criteria and capacity. Many people still begin with lifestyle and dietitian supported programmes. If you consider private routes, compare safety and follow up, not just speed, using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "How did celebrities lose weight quickly, and should I copy it?",
@@ -511,7 +511,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Dietitian programmes versus medicines, which is better?",
-        a: `Dietitians help with food structure, relapse prevention, and sustainability. Medicines can reduce appetite for some people, but pairing them with diet and movement usually improves outcomes. Use the [UK comparator hub](/compare/best-weight-loss-treatments-uk) to understand how options stack, then compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) costs with a follow up plan.`,
+        a: `Dietitians help with food structure, relapse prevention, and sustainability. Medicines can reduce appetite for some people, but pairing them with diet and movement usually improves outcomes. Use the [UK comparator hub](/compare/mounjaro-vs-wegovy-vs-saxenda) to understand how options stack, then compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) costs with a follow up plan.`,
       },
       {
         q: "What are the risks of bariatric surgery in Belfast?",
@@ -540,7 +540,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most successful weight loss treatment in Birmingham?",
-        a: `Many people do best with a layered plan: a repeatable calorie deficit, strength and walking, and medical support when appropriate. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda). Compare costs via [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `Many people do best with a layered plan: a repeatable calorie deficit, strength and walking, and medical support when appropriate. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda). Compare costs via [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
       },
       {
         q: "Are injections safe long term?",
@@ -548,7 +548,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is the best weight loss aid in the UK?",
-        a: `There is no single best for everyone, but evidence supports certain medicines for eligible people alongside lifestyle changes. Our [UK comparator](/compare/best-weight-loss-treatments-uk) maps options and what to check before you pay.`,
+        a: `There is no single best for everyone, but evidence supports certain medicines for eligible people alongside lifestyle changes. Our [UK comparator](/compare/mounjaro-vs-wegovy-vs-saxenda) maps options and what to check before you pay.`,
       },
       {
         q: "What is the 3 3 3 rule for losing weight?",
@@ -556,7 +556,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How long are Birmingham NHS wait times for weight services?",
-        a: `They vary by service and eligibility. Many routes begin with lifestyle and dietitian support, and specialist options may have capacity limits. If you consider private routes, compare follow up and safety using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `They vary by service and eligibility. Many routes begin with lifestyle and dietitian support, and specialist options may have capacity limits. If you consider private routes, compare follow up and safety using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "What should I do if I plateau?",
@@ -569,7 +569,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "How did Kelly Clarkson lose weight so quickly?",
-        a: `Media reports often point to GLP 1 class medicines plus diet and activity changes, but you cannot safely copy celebrity timelines. If you are considering medicines, start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro) so you focus on monitoring and follow up, not hype.`,
+        a: `Media reports often point to GLP 1 class medicines plus diet and activity changes, but you cannot safely copy celebrity timelines. If you are considering medicines, start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro) so you focus on monitoring and follow up, not hype.`,
       },
       {
         q: "What is the 3 3 3 rule for weight loss?",
@@ -598,7 +598,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most successful weight loss treatment in Blackpool?",
-        a: `For many eligible people, prescription injections can drive meaningful average loss when supervised, especially when paired with food and movement habits. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy). Compare ongoing costs using [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
+        a: `For many eligible people, prescription injections can drive meaningful average loss when supervised, especially when paired with food and movement habits. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy). Compare ongoing costs using [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
         q: "How did Kelly Clarkson lose weight so quickly?",
@@ -606,7 +606,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is the weight management service in Blackpool?",
-        a: `NHS routes usually begin via your GP and may include tiered support, assessments, dietitian input, and specialist referral for eligible people. Availability and waiting times vary. If you compare private routes, use [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) to evaluate safety and follow up, not just speed.`,
+        a: `NHS routes usually begin via your GP and may include tiered support, assessments, dietitian input, and specialist referral for eligible people. Availability and waiting times vary. If you compare private routes, use [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) to evaluate safety and follow up, not just speed.`,
       },
       {
         q: "How can I lose 20 kg in 5 months safely?",
@@ -627,7 +627,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Most successful weight loss treatment?",
-        a: `Many people do best with a layered plan: NHS behaviour support plus food structure, walking and strength, and medication for eligible people. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+        a: `Many people do best with a layered plan: NHS behaviour support plus food structure, walking and strength, and medication for eligible people. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "How to lose 5kg in 7 days?",
@@ -639,7 +639,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Best weight loss aid UK?",
-        a: `There is no single best for everyone. Evidence supports certain medicines for eligible people, but NHS behaviour services suit many people first. Use our [UK comparator](/compare/best-weight-loss-treatments-uk) to understand options and what to check before paying.`,
+        a: `There is no single best for everyone. Evidence supports certain medicines for eligible people, but NHS behaviour services suit many people first. Use our [UK comparator](/compare/mounjaro-vs-wegovy-vs-saxenda) to understand options and what to check before paying.`,
       },
       {
         q: "Free options in Bolton?",
@@ -656,7 +656,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Most successful weight loss treatment?",
-        a: `For eligible people, injections can drive strong average loss in trials, but long term results usually improve when you add food structure, steps, and strength. Compare options in [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+        a: `For eligible people, injections can drive strong average loss in trials, but long term results usually improve when you add food structure, steps, and strength. Compare options in [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "How did Kelly Clarkson lose weight so quickly?",
@@ -668,7 +668,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Best weight loss aid in the UK?",
-        a: `There is no single best for everyone, but evidence supports certain prescription medicines for eligible people. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then review [Wegovy](/what-is-wegovy) and costs on [Wegovy prices](/wegovy-price-comparison).`,
+        a: `There is no single best for everyone, but evidence supports certain prescription medicines for eligible people. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then review [Wegovy](/what-is-wegovy) and costs on [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
         q: "Injections safe for Bournemouth beachgoers?",
@@ -701,7 +701,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Most successful treatment?",
-        a: `For eligible people, medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive large average loss in trials, but most people do better when medication is paired with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `For eligible people, medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive large average loss in trials, but most people do better when medication is paired with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Lose 20kg in 5 months?",
@@ -746,7 +746,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Most successful weight loss treatment?",
-        a: `For eligible people, GLP 1 medicines can drive strong average loss, but results are usually best when you pair injections with food structure, steps, and strength. Start at [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+        a: `For eligible people, GLP 1 medicines can drive strong average loss, but results are usually best when you pair injections with food structure, steps, and strength. Start at [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "How to lose 20kg in 5 months?",
@@ -775,7 +775,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most successful weight loss treatment?",
-        a: `For eligible people, injection medicines can drive large average loss, but most people sustain results best when medication is paired with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+        a: `For eligible people, injection medicines can drive large average loss, but most people sustain results best when medication is paired with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "How much does a Cambridge weight plan cost?",
@@ -795,7 +795,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "NHS vs private in Cambs?",
-        a: `NHS routes can be free for eligible people but waiting times and criteria vary. Private routes can be faster but cost more. Use [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) to compare safety, follow up, and total cost.`,
+        a: `NHS routes can be free for eligible people but waiting times and criteria vary. Private routes can be faster but cost more. Use [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) to compare safety, follow up, and total cost.`,
       },
     ];
   }
@@ -804,7 +804,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most successful weight loss treatment?",
-        a: `GLP 1 medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive strong average loss for eligible people, but supervised use with habits helps sustainability. See [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) to compare options.`,
+        a: `GLP 1 medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive strong average loss for eligible people, but supervised use with habits helps sustainability. See [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) to compare options.`,
       },
       {
         q: "What is the alternative to Ozempic in New Zealand?",
@@ -833,7 +833,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Most successful weight loss treatment?",
-        a: `Many 2026 discussions highlight tirzepatide and semaglutide based injections for eligible people, but the best results usually come with medical supervision plus repeatable food and movement habits. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+        a: `Many 2026 discussions highlight tirzepatide and semaglutide based injections for eligible people, but the best results usually come with medical supervision plus repeatable food and movement habits. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
       },
       {
         q: "Where can I get Mounjaro in Cardiff?",
@@ -849,7 +849,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "NHS vs private in Cardiff?",
-        a: `NHS routes can be lower cost but criteria and waiting times vary. Private routes can be quicker but pricier. Use the [UK comparator](/compare/best-weight-loss-treatments-uk) to compare safety and follow up, not just speed.`,
+        a: `NHS routes can be lower cost but criteria and waiting times vary. Private routes can be quicker but pricier. Use the [UK comparator](/compare/mounjaro-vs-wegovy-vs-saxenda) to compare safety and follow up, not just speed.`,
       },
       {
         q: "Side effects of Wegovy?",
@@ -862,7 +862,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most successful weight loss treatment?",
-        a: `Sustainable lifestyle shifts often lead long term outcomes, and medicines can add extra loss for eligible people when supervised. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+        a: `Sustainable lifestyle shifts often lead long term outcomes, and medicines can add extra loss for eligible people when supervised. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
       },
       {
         q: "How did Kelly Clarkson lose weight so quickly?",
@@ -891,7 +891,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Most successful weight loss treatment?",
-        a: `For many people, lifestyle changes sustain long term results, while medicines can add extra loss for eligible people when supervised. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+        a: `For many people, lifestyle changes sustain long term results, while medicines can add extra loss for eligible people when supervised. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "Weight loss injections cost UK?",
@@ -920,7 +920,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What’s the most successful weight loss treatment?",
-        a: `For eligible people, injection medicines can drive large average loss in trials, but long term sustainability usually improves when you pair treatment with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+        a: `For eligible people, injection medicines can drive large average loss in trials, but long term sustainability usually improves when you pair treatment with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
       },
       {
         q: "How to lose 20kg in 5 months realistically?",
@@ -949,7 +949,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Most successful weight loss treatment overall?",
-        a: `For eligible people, medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive strong average loss in trials, but outcomes are usually best when paired with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `For eligible people, medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive strong average loss in trials, but outcomes are usually best when paired with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "How did Kelly Clarkson achieve rapid weight loss?",
@@ -978,7 +978,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Which treatment yields fastest Colchester results?",
-        a: `Some trials show strong average loss for eligible people on medicines like [Mounjaro](/what-is-mounjaro), but sustainability still depends on habits. Start at [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and compare options safely.`,
+        a: `Some trials show strong average loss for eligible people on medicines like [Mounjaro](/what-is-mounjaro), but sustainability still depends on habits. Start at [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) and compare options safely.`,
       },
       {
         q: "Typical UK injection costs near Colchester?",
@@ -1007,7 +1007,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Most successful weight loss treatment overall?",
-        a: `For eligible people, medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive strong average loss in trials, but long term outcomes are usually best when paired with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `For eligible people, medicines like [Wegovy](/what-is-wegovy) and [Mounjaro](/what-is-mounjaro) can drive strong average loss in trials, but long term outcomes are usually best when paired with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Top UK weight loss medication right now?",
@@ -1065,7 +1065,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "NHS weight loss injections in West Sussex?",
-        a: `Availability can be limited and pathways vary. If you are considering private or pharmacy routes, prioritise regulation and follow up. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and use [our methodology](/methodology) to compare providers safely.`,
+        a: `Availability can be limited and pathways vary. If you are considering private or pharmacy routes, prioritise regulation and follow up. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) and use [our methodology](/methodology) to compare providers safely.`,
       },
       {
         q: "Top fruit slashing pounds?",
@@ -1131,7 +1131,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Which Derby area treatment yields fastest results?",
-        a: `Many clinic pathways emphasise supervised injection medicines for eligible people, but sustainability still depends on habits. Start with [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
+        a: `Many clinic pathways emphasise supervised injection medicines for eligible people, but sustainability still depends on habits. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) and read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
       },
       {
         q: "Realistic plan to drop 14kg in 3 months safely?",
@@ -1230,7 +1230,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Which NHS Scotland injections can Dunfermline residents access?",
-        a: `Access is usually reserved for specific eligibility criteria and severe cases, with clinician assessment and waiting lists. If you are exploring options, compare NHS pathways with private programs using our [best weight loss treatments in the UK guide](/compare/best-weight-loss-treatments-uk).`,
+        a: `Access is usually reserved for specific eligibility criteria and severe cases, with clinician assessment and waiting lists. If you are exploring options, compare NHS pathways with private programs using our [best weight loss treatments in the UK guide](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "How do Scotland Mounjaro prices compare UK wide?",
@@ -1255,7 +1255,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Fastest safe 5kg loss?",
-        a: `A safer pace is often around 0.5 to 1 kg per week through a consistent calorie deficit and activity. A 7 day target is typically unsafe for fat loss and can reflect water and muscle loss. If you want a structured comparison of options, start at [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `A safer pace is often around 0.5 to 1 kg per week through a consistent calorie deficit and activity. A 7 day target is typically unsafe for fat loss and can reflect water and muscle loss. If you want a structured comparison of options, start at [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "20kg in 5 months plan?",
@@ -1284,7 +1284,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "NHS realistic here?",
-        a: `Yes. Many people start with NHS dietitian or group programs via GP referral. Medicines may be considered after assessment and eligibility checks. Compare routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Yes. Many people start with NHS dietitian or group programs via GP referral. Medicines may be considered after assessment and eligibility checks. Compare routes using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Private GLP 1 without GP?",
@@ -1313,7 +1313,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most successful weight loss treatment?",
-        a: `Many people do best with structured, supervised programs plus habits they can maintain. In Edinburgh, NHS Lothian specialist pathways may be the most evidence aligned starting point, and medicines can be an add on for eligible people. Compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Many people do best with structured, supervised programs plus habits they can maintain. In Edinburgh, NHS Lothian specialist pathways may be the most evidence aligned starting point, and medicines can be an add on for eligible people. Compare options using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "How to get Mounjaro in Edinburgh?",
@@ -1342,7 +1342,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Most successful treatment?",
-        a: `Many people do best with a structured behavioural program plus habits they can maintain. In Ely, Healthy You style support is often a strong first step, with GLP 1 medicines considered for eligible people. Compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Many people do best with a structured behavioural program plus habits they can maintain. In Ely, Healthy You style support is often a strong first step, with GLP 1 medicines considered for eligible people. Compare options using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Chinese fast weight loss?",
@@ -1383,7 +1383,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is a cheaper alternative to Mounjaro?",
-        a: `Some people compare daily liraglutide options with weekly pens, but the cheapest route can be an NHS lifestyle program if you qualify. Compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Some people compare daily liraglutide options with weekly pens, but the cheapest route can be an NHS lifestyle program if you qualify. Compare options using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "NHS Tier 3 realistic in Exeter?",
@@ -1400,7 +1400,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What delivers top long term weight loss results?",
-        a: `Structured support plus habits you can maintain often wins long term. In Glasgow, NHSGGC pathways can provide a free foundation, and GLP 1 medicines may be an add on for eligible people. Compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Structured support plus habits you can maintain often wins long term. In Glasgow, NHSGGC pathways can provide a free foundation, and GLP 1 medicines may be an add on for eligible people. Compare options using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "What is the typical monthly cost for Mounjaro in Scotland?",
@@ -1429,7 +1429,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What delivers top Gloucester weight loss results?",
-        a: `For many people, a structured NHS lifestyle program plus repeatable habits is the most reliable base. If you are comparing options, start at [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and check follow up quality using [our methodology](/methodology).`,
+        a: `For many people, a structured NHS lifestyle program plus repeatable habits is the most reliable base. If you are comparing options, start at [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) and check follow up quality using [our methodology](/methodology).`,
       },
       {
         q: "Kelly Clarkson rapid loss: Gloucester equivalent?",
@@ -1458,7 +1458,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the best weight loss treatment in Hereford to start with?",
-        a: `For many people, the best starting point is an NHS lifestyle program with coaching and accountability. Use [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) to compare options and [our methodology](/methodology) to check follow up quality.`,
+        a: `For many people, the best starting point is an NHS lifestyle program with coaching and accountability. Use [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) to compare options and [our methodology](/methodology) to check follow up quality.`,
       },
       {
         q: "How can I access free support in Hereford?",
@@ -1487,7 +1487,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Free weight loss programs available locally?",
-        a: `Yes. Kirklees Wellness style services often offer free coaching for eligible adults. Start by comparing your options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and prepare for eligibility chats with the [BMI calculator](/tools/bmi-calculator).`,
+        a: `Yes. Kirklees Wellness style services often offer free coaching for eligible adults. Start by comparing your options using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) and prepare for eligibility chats with the [BMI calculator](/tools/bmi-calculator).`,
       },
       {
         q: "When does NHS bariatric surgery become realistic here?",
@@ -1516,7 +1516,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most effective weight loss treatment for adults in Middlesbrough?",
-        a: `The most effective treatment for weight loss in adults in Middlesbrough is usually a combination of medically supervised lifestyle change, support groups, and, where appropriate, prescription weight-loss medications like GLP 1 injections. Simply relying on pills or injections without changing diet, activity, and sleep habits rarely leads to long-term success. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `The most effective treatment for weight loss in adults in Middlesbrough is usually a combination of medically supervised lifestyle change, support groups, and, where appropriate, prescription weight-loss medications like GLP 1 injections. Simply relying on pills or injections without changing diet, activity, and sleep habits rarely leads to long-term success. Compare the main routes using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Which prescription weight-loss injection tends to produce the greatest average weight loss in UK trials?",
@@ -1537,7 +1537,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Quickest NHS weight loss access here?",
-        a: `Many people start with local dietetic or community weight management routes. Availability changes over time, but an NHS pathway with coaching can be a strong first step. Compare approaches using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Many people start with local dietetic or community weight management routes. Availability changes over time, but an NHS pathway with coaching can be a strong first step. Compare approaches using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Private Mounjaro and Wegovy without referral?",
@@ -1566,7 +1566,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What exactly is Leeds NHS weight management programme?",
-        a: `Tier 2 and tier 3 structured services via GP referral often include about 12 weeks of dietitian led education when you qualify, then specialist review for pharmacotherapy or surgery eligibility. For how we compare providers see [our methodology](/methodology) and compare treatment types using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Tier 2 and tier 3 structured services via GP referral often include about 12 weeks of dietitian led education when you qualify, then specialist review for pharmacotherapy or surgery eligibility. For how we compare providers see [our methodology](/methodology) and compare treatment types using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "How did Kelly Clarkson achieve rapid weight loss and can Leeds replicate?",
@@ -1607,7 +1607,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Is 20 kg weight loss realistic within 6 months?",
-        a: `Yes, for eligible people in trials and clinics when GLP 1 medicines pair with structured exercise and nutrition and monitoring stays tight. Compare safety and follow up using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and [our methodology](/methodology).`,
+        a: `Yes, for eligible people in trials and clinics when GLP 1 medicines pair with structured exercise and nutrition and monitoring stays tight. Compare safety and follow up using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) and [our methodology](/methodology).`,
       },
       {
         q: "Which foods work best to avoid while on tirzepatide?",
@@ -1652,7 +1652,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What non injection alternatives exist locally?",
-        a: `Fat freezing style devices and local lipolysis providers can target small areas, while Slimming World style groups add accountability. Pair any device route with food skills and steps. Compare overall treatment types using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Fat freezing style devices and local lipolysis providers can target small areas, while Slimming World style groups add accountability. Pair any device route with food skills and steps. Compare overall treatment types using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
     ];
   }
@@ -1661,7 +1661,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Is rapid 20 kg loss possible in 90 days around Lincoln?",
-        a: `No. A maximum safe rate is often quoted near 12 kg over 12 weeks at about 1 kg weekly for some monitored people, but individual limits vary. Faster paces risk high muscle loss and rebound. NHS tier 3 style programmes often target sustainable trajectories closer to about 15 kg over 6 months in selected cohorts. Read [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and [methodology](/methodology).`,
+        a: `No. A maximum safe rate is often quoted near 12 kg over 12 weeks at about 1 kg weekly for some monitored people, but individual limits vary. Faster paces risk high muscle loss and rebound. NHS tier 3 style programmes often target sustainable trajectories closer to about 15 kg over 6 months in selected cohorts. Read [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) and [methodology](/methodology).`,
       },
       {
         q: "Can you realistically drop 10 kg through summer in Lincolnshire?",
@@ -1694,7 +1694,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Is rapid 20 kg loss possible in 3 months around Lisburn?",
-        a: `No, that pace is unsafe for most people. A monitored ceiling near 10 kg across 90 days at about 0.8 kg weekly can be realistic for some people on GLP 1 medicines plus walks and protein forward meals. A full 20 kg usually needs about 6 to 9 months with titration and blood monitoring. Crash diets raise gallstone and muscle loss risk. NICE style guidance still anchors near 0.5 to 1 kg weekly when sustainable. Read [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `No, that pace is unsafe for most people. A monitored ceiling near 10 kg across 90 days at about 0.8 kg weekly can be realistic for some people on GLP 1 medicines plus walks and protein forward meals. A full 20 kg usually needs about 6 to 9 months with titration and blood monitoring. Crash diets raise gallstone and muscle loss risk. NICE style guidance still anchors near 0.5 to 1 kg weekly when sustainable. Read [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "What is the typical monthly cost for tirzepatide (Mounjaro) in Northern Ireland?",
@@ -1747,7 +1747,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "NHS versus private Liverpool: which delivers faster results?",
-        a: `NHS tier 2 and tier 3 are free at point of use but waits often reach about 6 to 12 months for specialist GLP 1 review. Private can start pens within days when eligible and paid. Hybrid wins when your GP agrees shared care for blood tests. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and read [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `NHS tier 2 and tier 3 are free at point of use but waits often reach about 6 to 12 months for specialist GLP 1 review. Private can start pens within days when eligible and paid. Hybrid wins when your GP agrees shared care for blood tests. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and read [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
     ];
   }
@@ -1772,7 +1772,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Is surgery better than injections for weight loss?",
-        a: `For severe obesity, surgery can be more effective and more durable. For many people, however, GLP 1 medication is a less invasive first step. Compare overall pathways using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `For severe obesity, surgery can be more effective and more durable. For many people, however, GLP 1 medication is a less invasive first step. Compare overall pathways using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Are fat-reduction lasers a real weight loss treatment?",
@@ -1785,7 +1785,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Which treatment usually works best for meaningful weight loss?",
-        a: `For many people, the strongest non-surgical option is a medically supervised GLP 1 programme combined with lifestyle change. For more severe obesity, surgery can be the most powerful option. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `For many people, the strongest non-surgical option is a medically supervised GLP 1 programme combined with lifestyle change. For more severe obesity, surgery can be the most powerful option. Compare the main routes using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Are weight loss injections worth it?",
@@ -1814,7 +1814,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What Is the Most Successful Weight Loss Treatment?",
-        a: `The most successful weight loss treatment is usually a combination of lifestyle changes plus, where appropriate, medical support. For many people, this includes a calorie-controlled balanced diet, regular activity, behaviour support, and medical weight-loss programmes or medicines when clinically appropriate. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `The most successful weight loss treatment is usually a combination of lifestyle changes plus, where appropriate, medical support. For many people, this includes a calorie-controlled balanced diet, regular activity, behaviour support, and medical weight-loss programmes or medicines when clinically appropriate. Compare the main routes using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "What Is the Newcastle Weight Loss Plan That People Actually Follow?",
@@ -1843,7 +1843,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What counts as the most successful weight loss treatment overall?",
-        a: `Medically supervised GLP 1 agonists (Semaglutide/Tirzepatide) plus personalized nutrition and lifestyle coaching can produce strong results, with trials often showing 15-22% body weight loss in selected patients. They are more sustainable than fads alone when monitored properly. Compare pathways using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Medically supervised GLP 1 agonists (Semaglutide/Tirzepatide) plus personalized nutrition and lifestyle coaching can produce strong results, with trials often showing 15-22% body weight loss in selected patients. They are more sustainable than fads alone when monitored properly. Compare pathways using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Is losing 14kg in 3 months safe and achievable?",
@@ -1872,7 +1872,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most effective weight loss treatment for adults in Newry?",
-        a: `For many eligible adults, clinically approved GLP 1 medicines combined with lifestyle support are among the most effective options. That said, the best choice depends on medical history, tolerance, access, and whether the treatment can be properly monitored. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `For many eligible adults, clinically approved GLP 1 medicines combined with lifestyle support are among the most effective options. That said, the best choice depends on medical history, tolerance, access, and whether the treatment can be properly monitored. Compare the main routes using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "How much is Saxenda usually in Newry?",
@@ -1901,7 +1901,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What kind of weight loss treatment is most effective in Northampton?",
-        a: `The most effective long-term approach is usually a medically supervised plan that combines a calorie-controlled, balanced diet tailored to your life in Northampton, regular physical activity you can realistically keep up, behaviour change support, and in some cases GLP 1 injections or bariatric surgery when medically appropriate. Compare routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `The most effective long-term approach is usually a medically supervised plan that combines a calorie-controlled, balanced diet tailored to your life in Northampton, regular physical activity you can realistically keep up, behaviour change support, and in some cases GLP 1 injections or bariatric surgery when medically appropriate. Compare routes using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Where in Northampton can I access GLP-1 injections like Mounjaro?",
@@ -1930,7 +1930,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most effective weight loss treatment for people in Norwich?",
-        a: `The most effective option depends on the person. For severe obesity, bariatric surgery often produces the biggest weight loss. For many others, GLP 1 medicines combined with lifestyle support are highly effective. For some, structured NHS weight management is enough. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `The most effective option depends on the person. For severe obesity, bariatric surgery often produces the biggest weight loss. For many others, GLP 1 medicines combined with lifestyle support are highly effective. For some, structured NHS weight management is enough. Compare the main routes using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Who qualifies for semaglutide or Ozempic on the NHS?",
@@ -1959,7 +1959,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most successful weight loss treatment overall?",
-        a: `Combination programs with NICE-backed diet, exercise, and GLP 1 medicines such as Wegovy or Mounjaro can yield 10-20% loss long-term for eligible patients, while fads often fail long run. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Combination programs with NICE-backed diet, exercise, and GLP 1 medicines such as Wegovy or Mounjaro can yield 10-20% loss long-term for eligible patients, while fads often fail long run. Compare the main routes using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "How did Kelly Clarkson really lose her weight?",
@@ -1992,7 +1992,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What's the best non-surgical fat reduction for Merthyr residents?",
-        a: `Cryolipolysis (fat freezing, 21% per zone, 35-min sessions). Ultrasound close second. Combine with diet for 30% better results. If appetite control is also part of the problem, compare broader pathways on [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Cryolipolysis (fat freezing, 21% per zone, 35-min sessions). Ultrasound close second. Combine with diet for 30% better results. If appetite control is also part of the problem, compare broader pathways on [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Will T3 thyroid hormone help weight loss?",
@@ -2017,7 +2017,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most effective weight loss treatment in Neath Port Talbot?",
-        a: `The most effective option is usually a clinically supervised plan that combines NHS lifestyle support with prescription GLP 1 medicine where appropriate. The best option depends on BMI, medical history, and eligibility. Compare the main routes using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `The most effective option is usually a clinically supervised plan that combines NHS lifestyle support with prescription GLP 1 medicine where appropriate. The best option depends on BMI, medical history, and eligibility. Compare the main routes using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "How can someone get Mounjaro on NHS in Wales?",
@@ -2046,7 +2046,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most proven weight loss program overall?",
-        a: `NHS dietitian led tier 2 and tier 3 programmes often win on cost and follow up, with about 10% loss bands in NICE aligned summaries plus group support. Trials still show about 70% maintenance narratives post year one only when habits stick. Compare pathways using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and read [methodology](/methodology).`,
+        a: `NHS dietitian led tier 2 and tier 3 programmes often win on cost and follow up, with about 10% loss bands in NICE aligned summaries plus group support. Trials still show about 70% maintenance narratives post year one only when habits stick. Compare pathways using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) and read [methodology](/methodology).`,
       },
       {
         q: "How do you effectively talk to your doctor about weight loss?",
@@ -2075,7 +2075,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Is Healthwise360 a London pharmacy?",
-        a: `No. Healthwise360 is a London-based provider-comparison and educational website. It does not prescribe, dispense or deliver medicines. Compare providers using the [UK weight loss treatment comparison](/compare/best-weight-loss-treatments-uk) and [methodology](/methodology).`,
+        a: `No. Healthwise360 is a London-based provider-comparison and educational website. It does not prescribe, dispense or deliver medicines. Compare providers using the [UK weight loss treatment comparison](/compare/mounjaro-vs-wegovy-vs-saxenda) and [methodology](/methodology).`,
       },
       {
         q: "Why is Healthwise360 listed first?",
@@ -2116,7 +2116,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What type of weight loss treatment tends to work best overall?",
-        a: `The most successful approach is usually a medically supervised plan that combines nutrition, physical activity, behaviour change, and, when appropriate, prescription medication. Structured plans tend to beat willpower alone. Compare pathways using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and read [methodology](/methodology).`,
+        a: `The most successful approach is usually a medically supervised plan that combines nutrition, physical activity, behaviour change, and, when appropriate, prescription medication. Structured plans tend to beat willpower alone. Compare pathways using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) and read [methodology](/methodology).`,
       },
       {
         q: "How much does Mounjaro usually cost each month in Ireland or nearby UK markets?",
@@ -2174,7 +2174,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the fastest safe way to lose 10 kg in Lancaster?",
-        a: `A 600 calorie deficit plus about 250 minutes of exercise weekly can land near 10 to 12 weeks for some people. Canal walks and market protein swaps help. GLP 1 medicines can shorten timelines for eligible people under clinician care. Compare pathways using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) and use the [BMI calculator](/tools/bmi-calculator) before appointments.`,
+        a: `A 600 calorie deficit plus about 250 minutes of exercise weekly can land near 10 to 12 weeks for some people. Canal walks and market protein swaps help. GLP 1 medicines can shorten timelines for eligible people under clinician care. Compare pathways using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) and use the [BMI calculator](/tools/bmi-calculator) before appointments.`,
       },
       {
         q: "Does any drink really burn belly fat in 7 days?",
@@ -2203,7 +2203,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "How do I access NHS specialist care in Hull?",
-        a: `Some Hull services allow self referral for specialist weight management at higher BMI thresholds, while other routes need GP referral. Use the [BMI calculator](/tools/bmi-calculator) to prepare for eligibility discussions and compare options using [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk).`,
+        a: `Some Hull services allow self referral for specialist weight management at higher BMI thresholds, while other routes need GP referral. Use the [BMI calculator](/tools/bmi-calculator) to prepare for eligibility discussions and compare options using [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda).`,
       },
       {
         q: "Where to get Wegovy and Mounjaro prescriptions locally?",
@@ -2232,7 +2232,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What’s the ideal diet for Bangor coastal life?",
-        a: `Seafood-forward, calorie-aware patterns often fit harbour-town routines—grilled oily fish, vegetables, and portions you can repeat midweek without “starting again Monday.” Evidence on omega-rich patterns and adiposity is mixed at population level, but the bigger win is usually a deficit you can sustain. Map how that sits next to prescription options via our [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) hub, then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if a clinician mentions them. Budgeting? Compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) totals.`,
+        a: `Seafood-forward, calorie-aware patterns often fit harbour-town routines—grilled oily fish, vegetables, and portions you can repeat midweek without “starting again Monday.” Evidence on omega-rich patterns and adiposity is mixed at population level, but the bigger win is usually a deficit you can sustain. Map how that sits next to prescription options via our [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) hub, then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if a clinician mentions them. Budgeting? Compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) totals.`,
       },
       {
         q: "What’s the minimum exercise for Bangor weight loss?",
@@ -2252,7 +2252,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Are apps enough on their own?",
-        a: `They can sharpen awareness, but most people still need real-world movement and a food environment that makes the deficit plausible. Pair apps with walking the coast and structured medical support if you qualify—start from [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) when you want the full comparator view.`,
+        a: `They can sharpen awareness, but most people still need real-world movement and a food environment that makes the deficit plausible. Pair apps with walking the coast and structured medical support if you qualify—start from [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) when you want the full comparator view.`,
       },
     ];
   }
@@ -2261,7 +2261,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the top diet for Bangor hikers?",
-        a: `Protein forward meals with Welsh lamb, leeks, and vegetables you can repeat after a trail day usually beat weekend only rules. See how food habits pair with medicines in our [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) overview, then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if a clinician brings them up. Compare costs on [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `Protein forward meals with Welsh lamb, leeks, and vegetables you can repeat after a trail day usually beat weekend only rules. See how food habits pair with medicines in our [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) overview, then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if a clinician brings them up. Compare costs on [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
       },
       {
         q: "What is the exercise minimum in Bangor?",
@@ -2281,7 +2281,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Are tracking tools worth using?",
-        a: `Often yes when they support habits rather than shame. Pair apps with real steps and structured medical follow up if you qualify. Start from [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) when you want the full comparator picture, and read [our methodology](/methodology) for how we review providers.`,
+        a: `Often yes when they support habits rather than shame. Pair apps with real steps and structured medical follow up if you qualify. Start from [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) when you want the full comparator picture, and read [our methodology](/methodology) for how we review providers.`,
       },
     ];
   }
@@ -2290,7 +2290,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What are the best eats for Basildon commuters?",
-        a: `Market vegetables and lean protein, batch cooked grains, and repeat weekday lunches beat station grab bags most weeks. See how habits pair with medicines in [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if your clinician mentions them. Compare costs via [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `Market vegetables and lean protein, batch cooked grains, and repeat weekday lunches beat station grab bags most weeks. See how habits pair with medicines in [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if your clinician mentions them. Compare costs via [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
       },
       {
         q: "What is the exercise baseline in Basildon?",
@@ -2310,7 +2310,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Should I go solo or join a group?",
-        a: `Either works; groups add accountability for many people. Start from [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk) when you want the full comparator view, then add community walks or apps that reward consistency, not shame.`,
+        a: `Either works; groups add accountability for many people. Start from [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) when you want the full comparator view, then add community walks or apps that reward consistency, not shame.`,
       },
     ];
   }
@@ -2319,7 +2319,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the prime plan for Bath foodies?",
-        a: `Veggie forward plates with Somerset dairy or lean protein, sensible portions near the abbey, and repeat weekday breakfasts beat tourist only discipline. Map habits beside medicines via [best weight loss treatments in the UK](/compare/best-weight-loss-treatments-uk), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda). Compare [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `Veggie forward plates with Somerset dairy or lean protein, sensible portions near the abbey, and repeat weekday breakfasts beat tourist only discipline. Map habits beside medicines via [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda). Compare [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
       },
       {
         q: "What are the motion musts in Bath?",

@@ -53,12 +53,7 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
     type: "Compare",
     title: "Mounjaro vs Wegovy vs Saxenda",
     href: "/compare/mounjaro-vs-wegovy-vs-saxenda",
-    keywords: "tirzepatide semaglutide liraglutide three way",
-  },
-  {
-    type: "Compare",
-    title: "Best weight loss treatments UK",
-    href: "/compare/best-weight-loss-treatments-uk",
+    keywords: "tirzepatide semaglutide liraglutide three way best weight loss treatments uk",
   },
   {
     type: "Price",

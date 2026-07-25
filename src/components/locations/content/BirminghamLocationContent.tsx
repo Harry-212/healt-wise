@@ -174,7 +174,7 @@ export default function BirminghamLocationContent({ loc, shareUrl }: Props) {
                   cases, bariatric surgeries such as gastric sleeve or band at
                   hospitals like Spire Parkway. Start with{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     best weight loss treatments in the UK
@@ -313,7 +313,7 @@ export default function BirminghamLocationContent({ loc, shareUrl }: Props) {
                   If you consider medicines or surgery, treat them as amplifiers
                   of habits, not as a replacement for food planning. Use{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     our UK comparator
@@ -479,7 +479,7 @@ export default function BirminghamLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     →{" "}
                     <Link
-                      href="/compare/best-weight-loss-treatments-uk"
+                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

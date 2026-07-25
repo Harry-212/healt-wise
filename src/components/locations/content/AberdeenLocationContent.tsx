@@ -57,7 +57,7 @@ export default function AberdeenLocationContent({ loc, shareUrl }: Props) {
             a holistic approach, often pairing advanced medication with
             nutritional support and health monitoring for sustainable results.
             If you&apos;re hunting for the{" "}
-            <Link href="/compare/best-weight-loss-treatments-uk">
+            <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda">
               best weight loss treatment
             </Link>{" "}
             in Aberdeen, you&apos;re not alone—plenty of us locals juggle oil

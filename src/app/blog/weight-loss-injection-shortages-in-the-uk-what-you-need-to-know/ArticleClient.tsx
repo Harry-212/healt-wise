@@ -157,7 +157,7 @@ export default function ArticleClient() {
                   It is no wonder then that the demand has soared. If you are curious about how weight loss treatments rose
                   to prominence, you might enjoy our{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className="font-medium text-brand-primary underline"
                   >
                     UK weight loss treatments comparison hub

@@ -157,7 +157,7 @@ export default function OldhamLocationContent({ loc, shareUrl }: Props) {
                   want around food, exercise, and your mindset. If you are still
                   comparing options, our{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     UK weight loss treatment comparison
@@ -821,7 +821,7 @@ export default function OldhamLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     -{" "}
                     <Link
-                      href="/compare/best-weight-loss-treatments-uk"
+                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

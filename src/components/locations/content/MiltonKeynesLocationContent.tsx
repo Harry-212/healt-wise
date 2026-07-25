@@ -168,7 +168,7 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   If you are comparing options in Milton Keynes, the useful question is not just &quot;what is available?&quot; It is &quot;what is safe, realistic, and likely to work for me long term?&quot; That is where most people get more value from a well-matched plan than from the newest trending product. Compare broader routes on{" "}
-                  <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read our{" "}
@@ -615,7 +615,7 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/best-weight-loss-treatments-uk">
+                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
                       best weight loss treatments in the UK
                     </Link>
                     .

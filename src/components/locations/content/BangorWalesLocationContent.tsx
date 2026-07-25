@@ -197,7 +197,7 @@ export default function BangorWalesLocationContent({ loc, shareUrl }: Props) {
                   personalized support for those losing weight for health
                   reasons. Map the landscape with{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     best weight loss treatments in the UK
@@ -259,7 +259,7 @@ export default function BangorWalesLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   No magic bullet: blends win in trials. Start with{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     our UK comparator
@@ -700,7 +700,7 @@ export default function BangorWalesLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     →{" "}
                     <Link
-                      href="/compare/best-weight-loss-treatments-uk"
+                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK
@@ -798,7 +798,7 @@ export default function BangorWalesLocationContent({ loc, shareUrl }: Props) {
                   week. Sustainable wins await when you pair habits with honest
                   medical follow up and{" "}
                   <Link
-                    href="/compare/best-weight-loss-treatments-uk"
+                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                     className={linkCls}
                   >
                     UK wide comparisons

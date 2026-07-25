@@ -163,7 +163,7 @@ export default function BoltonLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-lg md:text-xl ${p}`}>
                   The best weight loss treatments in Bolton span free NHS-backed lifestyle programs like ABL Health’s tailored services for locals, alongside options such as medications (e.g., semaglutide like Wegovy or tirzepatide like Mounjaro), though success hinges on individual fit and medical advice—not quick fixes. Bolton&apos;s mill heritage and Leverhulme Park vibes fuel active goals. Chippy teas or market grabs add heft, still.{" "}
                   Start with{" "}
-                  <Link href="/compare/best-weight-loss-treatments-uk" className={linkCls}>
+                  <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read{" "}
@@ -391,7 +391,7 @@ export default function BoltonLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     →{" "}
-                    <Link href="/compare/best-weight-loss-treatments-uk" className={linkCls}>
+                    <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
                       Compare best weight loss treatments in the UK
                     </Link>
                   </li>
