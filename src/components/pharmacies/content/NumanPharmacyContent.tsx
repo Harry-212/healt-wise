@@ -21,8 +21,8 @@ export default function NumanPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Numan"
       fileRef="HW-NUMAN-2026"
-      title="Numan Weight Loss (UK): Mounjaro, Wegovy, Coaching and Subscription Care"
-      subtitle="Digital healthcare programme combining prescription GLP-1 therapy where appropriate, clinician oversight, behavioural coaching, subscription logistics, and discreet home delivery. Information only, not medical advice."
+      title="Numan weight management review"
+      subtitle="Independent provider review of Numan: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · coaching · in-app support"
       providerName="Numan"
       providerUrl={providerUrl}

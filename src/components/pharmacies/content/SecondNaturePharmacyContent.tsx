@@ -21,8 +21,8 @@ export default function SecondNaturePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Second Nature"
       fileRef="HW-SECOND-NATURE-2026"
-      title="Second Nature (UK): Mounjaro, Wegovy, Coaching App and Programme Delivery"
-      subtitle="Science-led weight programme pairing prescription GLP-1 therapy where suitable with behaviour change coaching, app lessons, community support, and pharmacy partner home delivery including starter kits. Information only, not medical advice."
+      title="Second Nature weight management review"
+      subtitle="Independent provider review of Second Nature: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · dietitian messaging · NHS heritage context"
       providerName="Second Nature"
       providerUrl={providerUrl}

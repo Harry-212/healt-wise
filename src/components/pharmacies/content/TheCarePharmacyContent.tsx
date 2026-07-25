@@ -21,8 +21,8 @@ export default function TheCarePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="The Care Pharmacy"
       fileRef="HW-THECAREPHARMACY-2026"
-      title="The Care Pharmacy (UK): Digital Weight Loss Clinic, Multi Product Range and Tracked Delivery"
-      subtitle="GPhC registered pharmacy with Bradford and Lowmoor premises framing online consultations, multiple injectable and oral obesity medicines, temperature controlled dispatch and tiered Royal Mail or DPD options. Information only, not medical advice."
+      title="The Care Pharmacy weight management review"
+      subtitle="Independent provider review of The Care Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Daily injectable alternatives · Orlistat · Saxenda where listed"
       providerName="The Care Pharmacy"
       providerUrl={providerUrl}

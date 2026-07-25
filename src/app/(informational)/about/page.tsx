@@ -3,24 +3,25 @@ import AboutScrollyClient from "./AboutScrollyClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
+const TITLE = "About Healthwise360 | UK Weight Loss Provider Comparison";
+const DESCRIPTION =
+  "About Healthwise360: an independent comparison website for UK weight loss providers — provider pricing, pharmacy verification, editorial independence, affiliate disclosure and comparison methodology.";
+
 export const metadata: Metadata = {
   title: {
-    absolute: "About Healthwise360 | Independent UK Price Comparison",
+    absolute: TITLE,
   },
-  description:
-    "Learn how Healthwise360 researches UK weight-loss treatment prices, checks pharmacy information and publishes independent comparison guides.",
+  description: DESCRIPTION,
   alternates: {
     canonical: `${siteOrigin()}/about`,
   },
   openGraph: {
-    title: "About Healthwise360 | Independent UK Price Comparison",
-    description:
-      "Learn how Healthwise360 researches UK weight-loss treatment prices, checks pharmacy information and publishes independent comparison guides.",
+    title: TITLE,
+    description: DESCRIPTION,
   },
   twitter: {
-    title: "About Healthwise360 | Independent UK Price Comparison",
-    description:
-      "Learn how Healthwise360 researches UK weight-loss treatment prices, checks pharmacy information and publishes independent comparison guides.",
+    title: TITLE,
+    description: DESCRIPTION,
   },
 };
 

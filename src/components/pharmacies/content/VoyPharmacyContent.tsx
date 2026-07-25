@@ -21,8 +21,8 @@ export default function VoyPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Voy"
       fileRef="HW-VOY-2026"
-      title="Voy (UK): Weight Loss Service Overview, Delivery and Budgeting"
-      subtitle="Join Voy’s weight loss vertical sits in a busy market of apps, clinics and pharmacies; Health Wise summarises what to expect from legitimate digital obesity pathways (assessment, prescribing, fulfilment, costs) and points you to Voy’s live pages for specifics. Information only, not medical advice."
+      title="Voy weight management review"
+      subtitle="Independent provider review of Voy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Prescription weight management where clinically offered · Confirm medicines on site"
       providerName="Voy"
       providerUrl={providerUrl}

@@ -21,8 +21,8 @@ export default function JuniperPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Juniper"
       fileRef="HW-JUNIPER-2026"
-      title="Juniper (UK): Mounjaro, Wegovy, Monthly Programme, App and Remote Clinician Care"
-      subtitle="How Juniper combines weekly injectable GLP-1 therapy with remote consultations, habit coaching, and digital tracking. Pricing, delivery, flexibility, and who the model suits. Information only, not medical advice."
+      title="Juniper weight management review"
+      subtitle="Independent provider review of Juniper: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · UK programme"
       providerName="Juniper"
       providerUrl={providerUrl}

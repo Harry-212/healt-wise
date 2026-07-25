@@ -122,8 +122,7 @@ export default function BoltPharmacyContent() {
               File ref · HW-BOLT-2026
             </p>
             <h1 className="text-balance pr-2 font-sans text-lg font-black uppercase leading-tight tracking-tight text-emerald-950 sm:text-xl md:text-2xl">
-              Bolt Pharmacy weight loss treatment review: Mounjaro, Wegovy and prescription
-              support in the UK
+              Bolt Pharmacy weight management review
             </h1>
           </div>
         </div>
@@ -351,7 +350,7 @@ export default function BoltPharmacyContent() {
           </section>
 
           <section>
-            <p className={sectionLabel}>Why choose Bolt Pharmacy?</p>
+            <p className={sectionLabel}>Provider review: Bolt Pharmacy</p>
             <div className="mt-3 space-y-4">
               <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
                 <h2 className={h2}>
@@ -374,7 +373,7 @@ export default function BoltPharmacyContent() {
                 </p>
               </div>
               <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-                <h2 className={h2}>2. Access to clinically backed weight loss injections</h2>
+                <h2 className={h2}>2. Clinical support and treatment options</h2>
                 <p className={`mt-3 ${body}`}>
                   A major reason people look at Bolt Pharmacy is access to prescription injections,
                   including Mounjaro, Wegovy and Saxenda. These treatments may support weight loss
@@ -546,7 +545,7 @@ export default function BoltPharmacyContent() {
             <div className="mt-4 grid gap-5 sm:grid-cols-2">
               {[
                 {
-                  q: "Can I buy Wegovy online from Bolt Pharmacy?",
+                  q: "Is Wegovy available through Bolt Pharmacy?",
                   a: "Yes, Wegovy may be available through Bolt Pharmacy following an online consultation and approval.",
                 },
                 {

@@ -232,11 +232,17 @@ export default function MethodologyClient() {
           </div>
           
           <h1 className="mt-5 text-balance text-3xl font-black tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
-            Our <span className={`${instrumentSerif.className} font-serif text-emerald-600`}>Methodology</span>
+            How We Compare{" "}
+            <span className={`${instrumentSerif.className} font-serif text-emerald-600`}>
+              UK Weight Loss Providers
+            </span>
           </h1>
           
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed text-slate-600 sm:mt-5 sm:text-lg">
-            How Healthwise360 evaluates UK weight loss treatment providers, parses price structures, verifies pharmacy safety, and measures ongoing patient support standards.
+            Our methodology for evaluating UK providers: total treatment cost,
+            consultation fees, delivery charges, GPhC verification, provider
+            scoring, and clinical support — without replacing advice from a
+            registered prescriber.
           </p>
 
           <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-slate-500 sm:mt-7">
@@ -391,10 +397,10 @@ export default function MethodologyClient() {
                 </h2>
                 <div className="space-y-4 text-slate-600 leading-relaxed text-base">
                   <p>
-                    Healthwise360 is an independent UK comparison website built to help adults compare regulated weight loss treatment providers more clearly before starting a consultation.
+                    Healthwise360 is an independent UK comparison website built to help adults evaluate regulated weight loss treatment providers more clearly before starting a consultation.
                   </p>
                   <p>
-                    We compare pricing, provider information, treatment availability, pharmacy checks, delivery details, and support options across UK weight loss treatment pathways. Our goal is to make the private weight loss market easier to understand without replacing advice from a qualified prescriber.
+                    We assess total treatment cost structures, consultation fees, delivery charges, pharmacy registration, provider scoring signals, and clinical support options across UK pathways. Our goal is to explain how providers are compared — without replacing advice from a qualified prescriber.
                   </p>
                   <p className="font-medium text-slate-800">
                     We are not a pharmacy, clinic, manufacturer, or prescription service. We do not decide whether a treatment is suitable for you. That decision must always be made by an appropriately qualified healthcare professional after reviewing your medical history, BMI, current medicines, risk factors, and treatment goals.
@@ -971,20 +977,24 @@ export default function MethodologyClient() {
 
                   <div className="text-center pt-8 border-t border-slate-100">
                     <p className="text-base font-bold text-slate-900 leading-snug">
-                      Ready to compare UK weight loss treatments?
+                      Next: verify pharmacy registration yourself
+                    </p>
+                    <p className="mx-auto mt-2 max-w-md text-sm text-slate-600">
+                      Use our GPhC verification guide before you share payment or
+                      medical details with any online provider.
                     </p>
                     <div className="mt-4 flex flex-wrap justify-center gap-3">
                       <Link
-                        href="/mounjaro-price-comparison"
+                        href="/pharmacy-safety-gphc-verification"
                         className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-emerald-600 px-6 py-2.5 text-sm font-bold text-white shadow-xs hover:bg-emerald-500"
                       >
-                        Compare Mounjaro
+                        GPhC verification guide
                       </Link>
                       <Link
-                        href="/wegovy-price-comparison"
+                        href="/editorial-policy"
                         className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-2.5 text-sm font-bold text-slate-700 hover:bg-slate-50"
                       >
-                        Compare Wegovy
+                        Editorial policy
                       </Link>
                     </div>
                   </div>

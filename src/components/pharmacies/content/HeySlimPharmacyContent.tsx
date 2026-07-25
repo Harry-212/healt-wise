@@ -17,8 +17,8 @@ export default function HeySlimPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Hey Slim"
       fileRef="HW-HEY-SLIM-2026"
-      title="Hey Slim Weight Loss Review: Online Access to Mounjaro, Wegovy and Clinician-Led Support in the UK"
-      subtitle="Official dossier: clinician-led programme, GLP-1 access, delivery often included, pricing ranges and FAQs (information only — not medical advice)."
+      title="Hey Slim weight management review"
+      subtitle="Independent provider review of Hey Slim: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · UK"
       providerName="heySlim"
       providerUrl={providerUrl}
@@ -80,7 +80,7 @@ export default function HeySlimPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why choose Hey Slim for weight loss treatment?
+          Provider review: Hey Slim
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
@@ -230,7 +230,7 @@ export default function HeySlimPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why some patients choose Hey Slim
+          Who might consider Hey Slim
         </p>
         <Points
           items={[

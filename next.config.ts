@@ -243,6 +243,27 @@ const nextConfig: NextConfig = {
         destination: "/mounjaro-price-comparison",
         permanent: true,
       },
+      // Retired price-list URLs (removed to avoid cannibalising comparison hubs)
+      {
+        source: "/mounjaro-price-list",
+        destination: "/mounjaro-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/mounjaro-price-list/",
+        destination: "/mounjaro-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/wegovy-price-list",
+        destination: "/wegovy-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/wegovy-price-list/",
+        destination: "/wegovy-price-comparison",
+        permanent: true,
+      },
       {
         source: "/prices/saxenda-price-uk",
         destination: "/saxenda-price-comparison",

@@ -3,24 +3,25 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import MethodologyClient from "./MethodologyClient";
 
+const TITLE = "How We Compare UK Weight Loss Providers | Methodology";
+const DESCRIPTION =
+  "Weight loss provider comparison methodology: pharmacy price checks, GPhC verification, total treatment cost, consultation fees, delivery charges, provider scoring and clinical support.";
+
 export const metadata: Metadata = {
   title: {
-    absolute: "How We Compare UK Weight Loss Pharmacies | Methodology",
+    absolute: TITLE,
   },
-  description:
-    "See how Healthwise360 checks pharmacy registration, treatment prices, delivery fees, consultation processes, support and provider information.",
+  description: DESCRIPTION,
   alternates: {
     canonical: `${siteOrigin()}/methodology`,
   },
   openGraph: {
-    title: "How We Compare UK Weight Loss Pharmacies | Methodology",
-    description:
-      "See how Healthwise360 checks pharmacy registration, treatment prices, delivery fees, consultation processes, support and provider information.",
+    title: TITLE,
+    description: DESCRIPTION,
   },
   twitter: {
-    title: "How We Compare UK Weight Loss Pharmacies | Methodology",
-    description:
-      "See how Healthwise360 checks pharmacy registration, treatment prices, delivery fees, consultation processes, support and provider information.",
+    title: TITLE,
+    description: DESCRIPTION,
   },
 };
 

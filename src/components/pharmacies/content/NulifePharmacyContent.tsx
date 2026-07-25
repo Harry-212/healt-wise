@@ -21,8 +21,8 @@ export default function NulifePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="NuLife Pharmacy"
       fileRef="HW-NULIFE-2026"
-      title="NuLife Pharmacy Weight Loss Management: UK Programme, GLP-1 Pathways and Ongoing Support"
-      subtitle="GPhC supervised online pharmacy offering clinically supervised weight management, pharmacist-led assessment, holistic education, signed discreet delivery, and transparent pricing themes. Information only, not medical advice."
+      title="NuLife Pharmacy weight management review"
+      subtitle="Independent provider review of NuLife Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · GLP-1 pathways · programme support"
       providerName="NuLife Pharmacy"
       providerUrl={providerUrl}

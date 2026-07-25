@@ -21,8 +21,8 @@ export default function PharmulousPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Pharmulous"
       fileRef="HW-PHARMULOUS-2026"
-      title="Pharmulous (UK): GP Led Online Pharmacy, Mounjaro, Wegovy, Safety First"
-      subtitle="Premier GP steered online pharmacy: UK registered doctors review consultations, GPhC licensed dispensing, verified UK wholesalers, integrated pricing for consultation prescription needles and cold chain delivery, Trustpilot Excellent narrative with large review volume, encrypted data handling and discreet home delivery. Information only, not medical advice."
+      title="Pharmulous weight management review"
+      subtitle="Independent provider review of Pharmulous: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · GP level clinical review"
       providerName="Pharmulous"
       providerUrl={providerUrl}

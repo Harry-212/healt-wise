@@ -7,12 +7,12 @@ type FaqItem = { question: string; answer: string };
 
 const ASDA_FAQ: FaqItem[] = [
   {
-    question: "Can I buy Wegovy online from Asda Online Doctor?",
+    question: "Is Wegovy available through Asda Online Doctor?",
     answer:
       "Yes, Wegovy may be available through Asda Online Doctor after completing a medical assessment and receiving doctor approval.",
   },
   {
-    question: "Does Asda Online Doctor deliver weight loss injections to your home?",
+    question: "Does Asda Online Doctor deliver weight management medication to your home?",
     answer:
       "Yes, approved medications can be delivered directly to your address using discreet and secure delivery, including temperature-controlled packaging for injections.",
   },
@@ -88,7 +88,7 @@ const BOLT_FAQ: FaqItem[] = [
       "Costs may range from around £10–£70 for tablets and £120–£300+ monthly for injections, depending on medication and dosage.",
   },
   {
-    question: "Does Bolt Pharmacy deliver weight loss injections to your home?",
+    question: "Does Bolt Pharmacy deliver weight management medication to your home?",
     answer:
       "Yes. Approved prescriptions are shipped directly to your chosen address, often using tracked delivery.",
   },
@@ -139,12 +139,12 @@ const BOOTS_FAQ: FaqItem[] = [
 
 const ASHCROFT_FAQ: FaqItem[] = [
   {
-    question: "Can I buy Wegovy online from Ashcroft Pharmacy?",
+    question: "Is Wegovy available through Ashcroft Pharmacy?",
     answer:
       "Yes, Wegovy may be available through Ashcroft Pharmacy after completing an online consultation and receiving approval.",
   },
   {
-    question: "Does Ashcroft Pharmacy offer Mounjaro weight loss injections?",
+    question: "Does Ashcroft Pharmacy offer Mounjaro?",
     answer:
       "Yes, Mounjaro is listed among available weight loss treatments, subject to suitability assessment.",
   },
@@ -219,7 +219,7 @@ const CLOUD_FAQ: FaqItem[] = [
       "Costs may range from around £20–£100+ for tablets and £130–£300+ per month for injections, depending on medication and dosage.",
   },
   {
-    question: "Does Cloud Pharmacy deliver weight loss injections to your home?",
+    question: "Does Cloud Pharmacy deliver weight management medication to your home?",
     answer:
       "Yes. Approved prescriptions are shipped directly to your address, often using tracked delivery and temperature-controlled packaging where required.",
   },
@@ -434,34 +434,34 @@ const ENVIGORE_FAQ: FaqItem[] = [
 
 const FARMECI_FAQ: FaqItem[] = [
   {
-    question: "Can I get Wegovy from Farmeci?",
+    question: "Is Wegovy available through Farmeci?",
     answer:
-      "Yes, Wegovy may be available through Farmeci following a consultation and clinician approval.",
+      "Wegovy may be available following a consultation and clinician approval—confirm live on Farmeci.",
   },
   {
-    question: "Does Farmeci offer Mounjaro for weight loss?",
+    question: "Does Farmeci offer Mounjaro?",
     answer:
-      "Yes, Mounjaro appears to be among available treatment options, subject to suitability review.",
+      "Mounjaro appears among available options when clinically suitable after review.",
   },
   {
-    question: "How much does Farmeci weight loss treatment cost?",
+    question: "How much are Farmeci treatment prices?",
     answer:
-      "Some prices appear to start around £92 per dose or pen, though total costs may vary depending on medication, dosage and shipping.",
+      "Some prices appear to start around £92 per dose or pen. Total monthly cost varies with medication, dose, delivery fees and repeat orders.",
   },
   {
-    question: "Does Farmeci deliver medication to your home?",
+    question: "Does Farmeci deliver to your home?",
     answer:
-      "Yes. Approved prescriptions are shipped directly to your chosen address, with tracking and cold-chain handling where required.",
+      "Approved prescriptions are typically shipped to your address, with tracking and cold-chain handling where required.",
   },
   {
-    question: "Is Farmeci regulated?",
+    question: "Is Farmeci linked to a registered pharmacy?",
     answer:
-      "Farmeci works with GPhC-registered partner pharmacies and independent prescribing clinicians.",
+      "Farmeci works with GPhC-registered partner pharmacies and independent prescribing clinicians—verify current registration details when you order.",
   },
   {
     question: "Are there consultation fees?",
     answer:
-      "Farmeci generally appears to offer a free online consultation, though users should confirm any charges during checkout.",
+      "Farmeci generally appears to offer a free online consultation; confirm any charges during checkout.",
   },
 ];
 
@@ -2236,9 +2236,9 @@ export function asdaPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/asda-online-doctor";
   const url = `${origin}${path}`;
   const name =
-    "Asda Online Doctor weight loss (UK) — Mounjaro, Wegovy, Saxenda guide";
+    "Asda Online Doctor weight management review";
   const description =
-    "How Asda Online Doctor works: online consultation, UK prescribers, Mounjaro and Wegovy pricing context, delivery and FAQs. Information from Healthwise360 — not medical advice.";
+    "Asda Online Doctor weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2275,9 +2275,9 @@ export function aypPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/ayp-healthcare";
   const url = `${origin}${path}`;
   const name =
-    "AYP Healthcare weight management (UK) — Mounjaro, Wegovy, online review";
+    "AYP Healthcare weight management review";
   const description =
-    "How AYP Healthcare online weight management works: consultations, Mounjaro and Wegovy context, delivery, monitoring and FAQs. Information from Healthwise360 — not medical advice.";
+    "AYP Healthcare weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2314,9 +2314,9 @@ export function boltPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/bolt-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Bolt Pharmacy weight loss (UK) — Mounjaro, Wegovy, online review";
+    "Bolt Pharmacy weight management review";
   const description =
-    "Bolt Pharmacy: online weight loss, Mounjaro, Wegovy and Saxenda context, delivery, pricing and FAQs. Information from Healthwise360 — not medical advice.";
+    "Bolt Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2353,9 +2353,9 @@ export function bootsPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/boots-online-doctor";
   const url = `${origin}${path}`;
   const name =
-    "Boots Online Doctor weight loss (UK) — Wegovy, Saxenda, online review";
+    "Boots Online Doctor weight management review";
   const description =
-    "Boots Online Doctor: prescription weight loss support, Wegovy and Saxenda context, delivery or pharmacy collection, costs and FAQs. Information from Healthwise360 — not medical advice.";
+    "Boots Online Doctor weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2392,9 +2392,9 @@ export function click2pharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/click2pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Click2Pharmacy Mounjaro review (UK) — buying Mounjaro injections online";
+    "Click2Pharmacy weight management review";
   const description =
-    "Click2Pharmacy: Mounjaro-focused online consultation, prescription approval, delivery notes, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "Click2Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2431,9 +2431,9 @@ export function cloudPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/cloud-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Cloud Pharmacy weight loss review (UK) — Mounjaro, Wegovy, online prescribing";
+    "Cloud Pharmacy weight management review";
   const description =
-    "Cloud Pharmacy: online consultation, Mounjaro and Wegovy context, delivery and temperature handling, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "Cloud Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2470,9 +2470,9 @@ export function curatePharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/curate";
   const url = `${origin}${path}`;
   const name =
-    "Curate weight loss review (UK) — Wegovy, Saxenda, online prescribing";
+    "Curate weight management review";
   const description =
-    "Curate: online consultation, Wegovy and Saxenda context, delivery or collection, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "Curate weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2509,9 +2509,9 @@ export function curelyPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/curely";
   const url = `${origin}${path}`;
   const name =
-    "Curely weight loss review (UK) — Mounjaro, Wegovy, online prescribing";
+    "Curely weight management review";
   const description =
-    "Curely: pharmacist-led consultation, regulated supply, tracked delivery options, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "Curely weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2548,9 +2548,9 @@ export function cuvaHealthPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/cuva-health";
   const url = `${origin}${path}`;
   const name =
-    "Cuva Health weight loss review (UK) — Mounjaro, Wegovy, clinician-led support";
+    "Cuva Health weight management review";
   const description =
-    "Cuva Health: clinician-led review, cold-chain delivery, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "Cuva Health weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2586,9 +2586,10 @@ export function dotorPharmacyLandingJsonGraph(): Record<string, unknown> {
   const origin = siteOrigin();
   const path = "/pharmacies/dotor";
   const url = `${origin}${path}`;
-  const name = "Dotor weight loss review (UK) — Mounjaro, Wegovy, tracked delivery";
+  const name =
+    "Dotor weight management review";
   const description =
-    "Dotor: online assessment, prescriber review, in-house dispensing, DPD tracked delivery, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "Dotor weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2625,9 +2626,9 @@ export function drWeightmansPharmacyLandingJsonGraph(): Record<string, unknown> 
   const path = "/pharmacies/dr-weightmans";
   const url = `${origin}${path}`;
   const name =
-    "Dr Weightmans weight loss review (UK) — clinically supported products, delivery & guidance";
+    "Dr Weightmans weight management review";
   const description =
-    "Dr Weightmans: clinically guided weight management overview, ordering flow, delivery expectations, cost components and FAQs. Information from Healthwise360 — not medical advice.";
+    "Dr Weightmans weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2664,9 +2665,9 @@ export function envigorePharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/envigore";
   const url = `${origin}${path}`;
   const name =
-    "Envigore weight loss review (UK) — Mounjaro, Wegovy, clinician-led support";
+    "Envigore weight management review";
   const description =
-    "Envigore: online assessment, pharmacist and prescriber review, cold-chain delivery, maintenance support and FAQs. Information from Healthwise360 — not medical advice.";
+    "Envigore weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2703,9 +2704,9 @@ export function farmeciPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/farmeci";
   const url = `${origin}${path}`;
   const name =
-    "Farmeci weight loss review (UK) — Mounjaro, Wegovy, clinician-supervised support";
+    "Farmeci weight management review";
   const description =
-    "Farmeci: online assessment, partner-pharmacy dispensing, cold-chain delivery, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "Farmeci weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2742,9 +2743,9 @@ export function fyldeClinicPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/fylde-clinic";
   const url = `${origin}${path}`;
   const name =
-    "Fylde Clinic weight loss review (UK) — Mounjaro, Wegovy, clinician-led support";
+    "Fylde Clinic weight management review";
   const description =
-    "Fylde Clinic: clinician-led assessment, temperature-controlled delivery, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "Fylde Clinic weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2781,9 +2782,9 @@ export function genmedsPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/genmeds";
   const url = `${origin}${path}`;
   const name =
-    "Genmeds weight loss review (UK) — Mounjaro, Wegovy, pharmacy-led access";
+    "Genmeds weight management review";
   const description =
-    "Genmeds: UK-registered online pharmacy, listed Mounjaro and Wegovy prices, accessories, delivery notes and FAQs. Information from Healthwise360 — not medical advice.";
+    "Genmeds weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2905,9 +2906,9 @@ export function fellaHealthPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/fella-health";
   const url = `${origin}${path}`;
   const name =
-    "Fella Health review (UK) — men’s metabolic programme, Mounjaro, Wegovy, coaching";
+    "Fella Health weight management review";
   const description =
-    "Fella Health: men-focused metabolic programme, GPhC pharmacy line, GLP-1 prescribing with coaching, labs when needed, cold-chain delivery and outcome-guarantee themes and FAQs. Information from Healthwise360 — not medical advice.";
+    "Fella Health weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2947,9 +2948,9 @@ export function manchesterChemistPharmacyLandingJsonGraph(): Record<
   const path = "/pharmacies/manchester-chemist";
   const url = `${origin}${path}`;
   const name =
-    "Manchester Chemist review (UK) — Mounjaro, Wegovy, pharmacist-led, Manchester pharmacy";
+    "Manchester Chemist weight management review";
   const description =
-    "Manchester Chemist: GPhC-registered Manchester pharmacy, superintendent-led review, pay-as-you-go positioning, cold-chain tracked delivery and illustrative dose pricing and FAQs. Information from Healthwise360 — not medical advice.";
+    "Manchester Chemist weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -2986,9 +2987,9 @@ export function goodBodyClinicPharmacyLandingJsonGraph(): Record<string, unknown
   const path = "/pharmacies/goodbody-clinic";
   const url = `${origin}${path}`;
   const name =
-    "GoodBody Clinic weight loss review (UK) — Wegovy, medical support, delivery";
+    "GoodBody Clinic weight management review";
   const description =
-    "GoodBody Clinic: programme-style Wegovy access, nurse and doctor oversight, subscriptions, delivery often included and FAQs. Information from Healthwise360 — not medical advice.";
+    "GoodBody Clinic weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3025,9 +3026,9 @@ export function happyPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/happy-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Happy Pharmacy weight loss review (UK) — Mounjaro, Wegovy, GPhC pharmacy";
+    "Happy Pharmacy weight management review";
   const description =
-    "Happy Pharmacy: GPhC-regulated access, injections and tablets, discreet tracked delivery, pricing from guide and FAQs. Information from Healthwise360 — not medical advice.";
+    "Happy Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3064,9 +3065,9 @@ export function heySlimPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/hey-slim";
   const url = `${origin}${path}`;
   const name =
-    "Hey Slim weight loss review (UK) — Mounjaro, Wegovy, clinician-led";
+    "Hey Slim weight management review";
   const description =
-    "Hey Slim: clinician-led programme, GLP-1 access, delivery included (stated), dose-dependent pricing and FAQs. Information from Healthwise360 — not medical advice.";
+    "Hey Slim weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3103,9 +3104,9 @@ export function iqDoctorPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/iq-doctor";
   const url = `${origin}${path}`;
   const name =
-    "IQ Doctor weight loss review (UK) — Mounjaro, Wegovy, tablets, delivery";
+    "IQ Doctor weight management review";
   const description =
-    "IQ Doctor: online consultation, prescriber review, Royal Mail/DPD delivery, cold chain, indicative pricing and FAQs. Information from Healthwise360 — not medical advice.";
+    "IQ Doctor weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3142,9 +3143,9 @@ export function juniperPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/juniper";
   const url = `${origin}${path}`;
   const name =
-    "Juniper weight loss review (UK) — Mounjaro, Wegovy, programme & app";
+    "Juniper weight management review";
   const description =
-    "Juniper: remote clinician consultation, monthly programme, app and coaching, UK delivery and FAQs. Information from Healthwise360 — not medical advice.";
+    "Juniper weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3181,9 +3182,9 @@ export function liveWellWeightLossPharmacyLandingJsonGraph(): Record<string, unk
   const path = "/pharmacies/live-well-weight-loss";
   const url = `${origin}${path}`;
   const name =
-    "Live Well Weight Loss review (UK) — Mounjaro, Wegovy, GPhC pharmacy";
+    "Live Well Weight Loss weight management review";
   const description =
-    "Live Well Weight Loss: pharmacist prescriber assessment, transparent pen pricing, discreet tracked delivery, reviews context and FAQs. Information from Healthwise360 — not medical advice.";
+    "Live Well Weight Loss weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3220,9 +3221,9 @@ export function lloydsPharmacyOnlineDoctorLandingJsonGraph(): Record<string, unk
   const path = "/pharmacies/lloyds-pharmacy-online-doctor";
   const url = `${origin}${path}`;
   const name =
-    "Lloyds Pharmacy Online Doctor weight loss (UK) — Mounjaro, Wegovy, tablets";
+    "Lloyds Online Doctor weight management review";
   const description =
-    "Lloyds Online Doctor: clinician questionnaire, injections and tablets, delivery and collection options, consultation and medication pricing context. Information from Healthwise360 — not medical advice.";
+    "Lloyds Online Doctor weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3259,9 +3260,9 @@ export function lotusWeightLossPharmacyLandingJsonGraph(): Record<string, unknow
   const path = "/pharmacies/lotus-weight-loss";
   const url = `${origin}${path}`;
   const name =
-    "Lotus Weight Loss review (UK) — Mounjaro, Wegovy, CQC clinic, programme";
+    "Lotus Weight Loss weight management review";
   const description =
-    "Lotus Weight Loss: CQC-registered pathway, GLP-1 injectables, Orlistat, Lotus Programme, discreet next-day delivery and FAQs. Information from Healthwise360 — not medical advice.";
+    "Lotus Weight Loss weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3298,9 +3299,9 @@ export function medExpressPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/medexpress";
   const url = `${origin}${path}`;
   const name =
-    "MedExpress weight loss review (UK) — Mounjaro, Wegovy, online pharmacy";
+    "MedExpress weight management review";
   const description =
-    "MedExpress: regulated online consultation, GLP-1 and oral options, discreet delivery tiers, indicative fees and FAQs. Information from Healthwise360 — not medical advice.";
+    "MedExpress weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3337,9 +3338,9 @@ export function medhutPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/medhut";
   const url = `${origin}${path}`;
   const name =
-    "MedHut review (UK) — Mounjaro, Wegovy, York family pharmacy, pharmacist review";
+    "MedHut weight management review";
   const description =
-    "MedHut: GPhC 9012752 positioning, Jamal and Amina Hussain, manual clinical verification, NHS-aware narratives, cold-chain tracked delivery, illustrative £140 to £155 / £130 to £145 starter bands and FAQs. Information from Healthwise360 — not medical advice.";
+    "MedHut weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3376,9 +3377,9 @@ export function medicineMarketplacePharmacyLandingJsonGraph(): Record<string, un
   const path = "/pharmacies/medicine-marketplace";
   const url = `${origin}${path}`;
   const name =
-    "Medicine Market Place review (UK) — online pharmacy, weight loss, delivery";
+    "Medicine Market Place weight management review";
   const description =
-    "Medicine Market Place: Preston-based digital pharmacy, weight loss category, tracked delivery, free delivery thresholds and FAQs. Information from Healthwise360 — not medical advice.";
+    "Medicine Market Place weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3415,9 +3416,9 @@ export function medicspotPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/medicspot";
   const url = `${origin}${path}`;
   const name =
-    "Medicspot weight loss review (UK) — Mounjaro, coaching, subscription";
+    "Medicspot weight management review";
   const description =
-    "Medicspot: clinician assessment, NHS record checks, health coaching, 28-day billing, discreet delivery and FAQs. Information from Healthwise360 — not medical advice.";
+    "Medicspot weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3454,9 +3455,9 @@ export function medinoPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/medino";
   const url = `${origin}${path}`;
   const name =
-    "Medino weight loss review (UK) — pharmacist supply, PGD, fast delivery";
+    "Medino weight management review";
   const description =
-    "Medino: online questionnaire, pharmacist review, PGD pathways where applicable, inclusive pricing bands, next-day delivery and FAQs. Information from Healthwise360 — not medical advice.";
+    "Medino weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3493,9 +3494,9 @@ export function mshWeightLossPharmacyLandingJsonGraph(): Record<string, unknown>
   const path = "/pharmacies/msh-weight-loss";
   const url = `${origin}${path}`;
   const name =
-    "MSH Weight Loss review (UK) — Mounjaro, Wegovy, nurse support, DPD";
+    "MSH Weight Loss weight management review";
   const description =
-    "MSH Weight Loss: 28-day subscription, DPD signed delivery, cold chain, wellbeing surveys, illustrative monthly pricing and FAQs. Information from Healthwise360 — not medical advice.";
+    "MSH Weight Loss weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3532,9 +3533,9 @@ export function myLondonPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/my-london-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "My London Pharmacy weight loss review (UK) — GLP-1, next-day delivery";
+    "My London Pharmacy weight management review";
   const description =
-    "My London Pharmacy: quick online assessment, GLP-1 pathways, discreet tracked delivery, portal support, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "My London Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3571,9 +3572,9 @@ export function nextScriptPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/next-script";
   const url = `${origin}${path}`;
   const name =
-    "Next Script weight loss review (UK) — Wegovy, Mounjaro, Saxenda, video consult";
+    "Next Script weight management review";
   const description =
-    "Next Script: online questionnaire, document upload, first-order video consult, GPhC pharmacy supply, discreet delivery, pricing bands and FAQs. Information from Healthwise360 — not medical advice.";
+    "Next Script weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3610,9 +3611,9 @@ export function nulifePharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/nulife-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "NuLife Pharmacy weight loss review (UK) — programme, GLP-1, signed delivery";
+    "NuLife Pharmacy weight management review";
   const description =
-    "NuLife Pharmacy: regulated pathway, weight management programme, pharmacist review, discreet signed delivery, support layer and FAQs. Information from Healthwise360 — not medical advice.";
+    "NuLife Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3649,9 +3650,9 @@ export function numanPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/numan";
   const url = `${origin}${path}`;
   const name =
-    "Numan weight loss review (UK) — Wegovy, Mounjaro, subscription, coaching";
+    "Numan weight management review";
   const description =
-    "Numan: digital assessment, personalised GLP-1 plans, coaching, 28-day deliveries, Royal Mail discreet shipping, subscription pricing and FAQs. Information from Healthwise360 — not medical advice.";
+    "Numan weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3688,9 +3689,9 @@ export function onlinemedsPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/onlinemeds";
   const url = `${origin}${path}`;
   const name =
-    "OnlineMeds weight loss review (UK) — Wegovy, Mounjaro, pharmacist prescribers";
+    "OnlineMeds weight management review";
   const description =
-    "OnlineMeds: specialist weight-loss pharmacy, pharmacist prescriber review, free tracked delivery, discreet packaging, Orlistat and GLP-1 context and FAQs. Information from Healthwise360 — not medical advice.";
+    "OnlineMeds weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3727,9 +3728,9 @@ export function oushkPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/oushk";
   const url = `${origin}${path}`;
   const name =
-    "Oushk Pharmacy weight loss review (UK) — online doctor, GLP-1, delivery";
+    "Oushk Pharmacy weight management review";
   const description =
-    "Oushk Pharmacy: video-verified pathway, UK prescribers, GLP-1 and oral options, DPD/Royal Mail delivery choices, scheduling and FAQs. Information from Healthwise360 — not medical advice.";
+    "Oushk Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3766,9 +3767,9 @@ export function pharmacyAdvancePharmacyLandingJsonGraph(): Record<string, unknow
   const path = "/pharmacies/pharmacy-advance";
   const url = `${origin}${path}`;
   const name =
-    "Pharmacy Advance weight loss review (UK) — Mounjaro, Wegovy, consultation, delivery";
+    "Pharmacy Advance weight management review";
   const description =
-    "Pharmacy Advance: online questionnaire, prescriber/pharmacist review, GLP-1 injectables, tracked discreet delivery, cold-chain claims and cost context. Information from Healthwise360 — not medical advice.";
+    "Pharmacy Advance weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3847,9 +3848,9 @@ export function pharmacy2uPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/pharmacy2u";
   const url = `${origin}${path}`;
   const name =
-    "Pharmacy2U weight loss review (UK) — Mounjaro, Wegovy, online doctor, delivery";
+    "Pharmacy2U weight management review";
   const description =
-    "Pharmacy2U: GPhC/CQC-regulated presentation, online doctor questionnaire, GLP-1 options, express delivery fees, two-month supply notes and FAQs. Information from Healthwise360 — not medical advice.";
+    "Pharmacy2U weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3886,9 +3887,9 @@ export function pharmicaPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/pharmica";
   const url = `${origin}${path}`;
   const name =
-    "Pharmica weight loss review (UK) — Mounjaro, Wegovy, delivery tiers, pricing";
+    "Pharmica weight management review";
   const description =
-    "Pharmica: pharmacist-led checks, wide delivery tier options, discreet packaging claims, capsule and injectable ranges, and cost context. Information from Healthwise360 — not medical advice.";
+    "Pharmica weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3925,9 +3926,9 @@ export function pharmulousPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/pharmulous";
   const url = `${origin}${path}`;
   const name =
-    "Pharmulous review (UK) — GP-led, Mounjaro, Wegovy, needles bundled";
+    "Pharmulous weight management review";
   const description =
-    "Pharmulous: GP-steered reviews, GPhC pharmacy positioning, verified UK wholesalers, integrated consultation/prescription/needles/cold-chain bundles, Trustpilot Excellent narrative and FAQs. Information from Healthwise360 — not medical advice.";
+    "Pharmulous weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -3964,9 +3965,9 @@ export function pills2uPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/pills2u";
   const url = `${origin}${path}`;
   const name =
-    "Pills2U weight loss review (UK) — Mounjaro, Wegovy, prescriber review, delivery";
+    "Pills2U weight management review";
   const description =
-    "Pills2U: online questionnaire, licensed prescriber review, GLP-1 injectables, fast tracked delivery claims, bundled pricing notes and FAQs. Information from Healthwise360 — not medical advice.";
+    "Pills2U weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4003,9 +4004,9 @@ export function ashcroftPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/ashcroft-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Ashcroft Pharmacy weight loss (UK) — Mounjaro, Wegovy, review & guide";
+    "Ashcroft Pharmacy weight management review";
   const description =
-    "Ashcroft Pharmacy online weight loss: consultation, range of treatments, delivery, safety and cost context. Information from Healthwise360 — not medical advice.";
+    "Ashcroft Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4042,9 +4043,9 @@ export function pillSortedPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/pillsorted";
   const url = `${origin}${path}`;
   const name =
-    "PillSorted weight loss review (UK) — telehealth, GLP-1, NHS integration, delivery";
+    "PillSorted weight management review";
   const description =
-    "PillSorted: personalised consultations, licensed injectable and oral options, Royal Mail delivery tiers, subscription repeats, NHS/private routing themes and FAQs. Information from Healthwise360 — not medical advice.";
+    "PillSorted weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4081,9 +4082,9 @@ export function pillSpherePharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/pillsphere";
   const url = `${origin}${path}`;
   const name =
-    "PillSphere weight loss review (UK) — online clinic, prescribing, delivery";
+    "PillSphere weight management review";
   const description =
-    "PillSphere: consultation pathway, prescriber review, discreet tracked delivery, cold-chain norms, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "PillSphere weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4120,9 +4121,9 @@ export function quickmedsPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/quickmeds";
   const url = `${origin}${path}`;
   const name =
-    "Quickmeds weight loss review (UK) — GPhC clinic, GLP-1, fast delivery";
+    "Quickmeds weight management review";
   const description =
-    "Quickmeds: online consultation, personalised plans, Mounjaro/Wegovy context, same-day dispatch claims, Royal Mail tracking, discreet packaging and FAQs. Information from Healthwise360 — not medical advice.";
+    "Quickmeds weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4159,9 +4160,9 @@ export function secondNaturePharmacyLandingJsonGraph(): Record<string, unknown> 
   const path = "/pharmacies/second-nature";
   const url = `${origin}${path}`;
   const name =
-    "Second Nature weight loss review (UK) — programme, GLP-1, coaching app";
+    "Second Nature weight management review";
   const description =
-    "Second Nature: assessment, pharmacy partner supply, app coaching, peer support, scheduled delivery kits, bundled pricing and FAQs. Information from Healthwise360 — not medical advice.";
+    "Second Nature weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4198,9 +4199,9 @@ export function shape8PharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/shape8";
   const url = `${origin}${path}`;
   const name =
-    "Shape8 review (UK) — Mounjaro, Wegovy, metabolic programme, partner pharmacy";
+    "Shape8 weight management review";
   const description =
-    "Shape8: advanced screening, clinician verification, titration plans, tech tracking, partner GPhC dispensing, cold-chain Tracked 24 themes, £140 to £160 / £130 to £150 illustrative bands and FAQs. Information from Healthwise360 — not medical advice.";
+    "Shape8 weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4237,9 +4238,9 @@ export function theCarePharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/care-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "The Care Pharmacy weight loss review (UK) — online clinic, GLP-1 range, delivery";
+    "The Care Pharmacy weight management review";
   const description =
-    "The Care Pharmacy: GPhC-registered service, multiple injectable and oral weight-loss options, discreet and cold-chain delivery tiers, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "The Care Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4276,9 +4277,9 @@ export function simpleOnlinePharmacyLandingJsonGraph(): Record<string, unknown> 
   const path = "/pharmacies/simple-online-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Simple Online Pharmacy weight loss review (UK) — regulated service, delivery, pricing";
+    "Simple Online Pharmacy weight management review";
   const description =
-    "Simple Online Pharmacy: clinician-led online weight management, four-step pathway, discreet delivery, transparent pricing themes and FAQs. Information from Healthwise360 — not medical advice.";
+    "Simple Online Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4315,9 +4316,9 @@ export function slimmingDirectPharmacyLandingJsonGraph(): Record<string, unknown
   const path = "/pharmacies/slimming-direct";
   const url = `${origin}${path}`;
   const name =
-    "Slimming Direct weight loss review (UK) — clinical programme, GLP-1, delivery";
+    "Slimming Direct weight management review";
   const description =
-    "Slimming Direct: clinically led online weight loss, personalised plans, GLP-1 and capsule options, delivery timelines, pricing and FAQs. Information from Healthwise360 — not medical advice.";
+    "Slimming Direct weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4354,9 +4355,9 @@ export function superdrugOnlineDoctorLandingJsonGraph(): Record<string, unknown>
   const path = "/pharmacies/superdrug-online-doctor";
   const url = `${origin}${path}`;
   const name =
-    "Superdrug Online Doctor weight loss review (UK) — consultation, delivery or collection";
+    "Superdrug Online Doctor weight management review";
   const description =
-    "Superdrug Online Doctor: regulated weight-loss pathway, doctor review, discreet delivery or pharmacy collection, cold-chain injectables, pricing context and FAQs. Information from Healthwise360 — not medical advice.";
+    "Superdrug Online Doctor weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4393,9 +4394,9 @@ export function swiftDoctorPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/swift-doctor";
   const url = `${origin}${path}`;
   const name =
-    "Swift Doctor weight loss review (UK) — fast consultation, GLP-1 delivery";
+    "Swift Doctor weight management review";
   const description =
-    "Swift Doctor: rapid online assessments, clinician-led prescribing where appropriate, tracked courier delivery, cold-chain options, pricing themes and FAQs. Information from Healthwise360 — not medical advice.";
+    "Swift Doctor weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4432,9 +4433,9 @@ export function theFamilyChemistPharmacyLandingJsonGraph(): Record<string, unkno
   const path = "/pharmacies/the-family-chemist";
   const url = `${origin}${path}`;
   const name =
-    "The Family Chemist weight loss review (UK) — regulated pharmacy, delivery tiers, pricing";
+    "The Family Chemist weight management review";
   const description =
-    "The Family Chemist: GPhC-aligned online pharmacy narrative, consultation pathway, tiered delivery including fridge lines, transparent product pricing and FAQs. Information from Healthwise360 — not medical advice.";
+    "The Family Chemist weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4471,9 +4472,9 @@ export function theIndependentPharmacyLandingJsonGraph(): Record<string, unknown
   const path = "/pharmacies/the-independent-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "The Independent Pharmacy weight loss review (UK) — assessment, delivery, pricing";
+    "The Independent Pharmacy weight management review";
   const description =
-    "The Independent Pharmacy: regulated online pathway, clinician-reviewed assessments, discreet delivery options, competitive pricing themes and FAQs. Information from Healthwise360 — not medical advice.";
+    "The Independent Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4510,9 +4511,9 @@ export function tribellePharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/tribelle";
   const url = `${origin}${path}`;
   const name =
-    "Tribelle weight loss review (UK) — injectable GLP-1, clinician-led delivery";
+    "Tribelle weight management review";
   const description =
-    "Tribelle: GPhC-registered service narrative, GLP-1 injectables, consultation and dispatch timelines, pricing themes and FAQs. Information from Healthwise360 — not medical advice.";
+    "Tribelle weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4549,9 +4550,9 @@ export function voyPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/voy";
   const url = `${origin}${path}`;
   const name =
-    "Voy weight loss review (UK) — digital obesity care context & comparisons";
+    "Voy weight management review";
   const description =
-    "Voy: how to evaluate regulated digital weight-loss pathways, budgeting context with Healthwise360 comparisons, and FAQs. Information from Healthwise360 — not medical advice.";
+    "Voy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4588,9 +4589,9 @@ export function wePrescribePharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/weprescribe";
   const url = `${origin}${path}`;
   const name =
-    "WePrescribe weight loss review (UK) — pharmacist prescribers, delivery, pricing";
+    "WePrescribe weight management review";
   const description =
-    "WePrescribe: clinician-led prescribing narrative, GLP-1 and oral options, tracked delivery and cold-chain notes, pricing examples and FAQs. Information from Healthwise360 — not medical advice.";
+    "WePrescribe weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4627,9 +4628,9 @@ export function wellPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/well-pharmacy";
   const url = `${origin}${path}`;
   const name =
-    "Well Pharmacy weight loss review (UK) — medicated programme, delivery";
+    "Well Pharmacy weight management review";
   const description =
-    "Well Pharmacy: pharmacist-led assessments and follow-ups, GLP-1 and oral options, delivery fees/timeframes and FAQs. Information from Healthwise360 — not medical advice.";
+    "Well Pharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4666,9 +4667,9 @@ export function zavaPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/zava";
   const url = `${origin}${path}`;
   const name =
-    "Zava weight loss review (UK) — online doctors, cold delivery, tablets & injections";
+    "Zava weight management review";
   const description =
-    "Zava: doctor-reviewed questionnaires, BMI verification, partner pharmacy dispensing, delivery options and pricing themes — FAQs. Information from Healthwise360 — not medical advice.";
+    "Zava weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4705,9 +4706,9 @@ export function swiftMediPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/swift-medi";
   const url = `${origin}${path}`;
   const name =
-    "SwiftMedi / Swift Medi weight loss review (UK) — verification, cold chain, pricing";
+    "SwiftMedi weight management review";
   const description =
-    "SwiftMedi: GPhC partner pharmacy narrative, ID/live photo checks, ~24h review, insulated GLP-1 delivery, bundled pricing themes and FAQs. Information from Healthwise360 — not medical advice.";
+    "SwiftMedi weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4744,9 +4745,9 @@ export function yourpharmacyPharmacyLandingJsonGraph(): Record<string, unknown> 
   const path = "/pharmacies/yourpharmacy";
   const url = `${origin}${path}`;
   const name =
-    "YourPharmacy weight loss review (UK) — fast dispatch, thermal GLP-1 delivery";
+    "YourPharmacy weight management review";
   const description =
-    "YourPharmacy: GPhC-regulated narrative, NICE-aligned review themes, cold-chain packaging, DPD/Royal Mail tracking, pricing bands and FAQs. Information from Healthwise360 — not medical advice.";
+    "YourPharmacy weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
@@ -4783,9 +4784,9 @@ export function eSurgeryPharmacyLandingJsonGraph(): Record<string, unknown> {
   const path = "/pharmacies/e-surgery";
   const url = `${origin}${path}`;
   const name =
-    "e-Surgery weight loss review (UK) — Norwich GPhC pharmacy, sustainable delivery";
+    "e-Surgery weight management review";
   const description =
-    "e-Surgery: pharmacist prescribers, recyclable discreet packaging, Royal Mail tiers with £30+ Tracked 24 upgrade, Mounjaro/Wegovy price ladder and FAQs. Information from Healthwise360 — not medical advice.";
+    "e-Surgery weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,

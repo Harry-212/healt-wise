@@ -134,36 +134,40 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
 
   "mounjaro-vs-wegovy-vs-saxenda": [
     {
-      q: "What is the fastest way to compare all three medicines here?",
-      a: "Use the medicine tabs at the top to load each full dataset, then compare totals for the dose band you are discussing with your prescriber.",
+      q: "What is the fastest way to compare Mounjaro, Wegovy and Saxenda here?",
+      a: "Use the medicine tabs under Current Pharmacy Prices to load each dataset, then compare totals for the dose band you are discussing with your prescriber.",
     },
     {
       q: "Does this page rank which medicine is “best”?",
-      a: "No. We do not score medicines clinically. We present pricing mechanics, charts, and regulatory context so you can prepare questions for a consultation.",
+      a: "No. We do not score medicines clinically. We present pricing mechanics, treatment differences, and regulatory context so you can prepare questions for a consultation.",
     },
     {
-      q: "Why might weekly injections still cost more than daily ones?",
-      a: "Pack pricing, titration speed, bundled consultations, and promotions all move totals. Weekly versus daily schedules describe posology, not guaranteed monthly cost.",
+      q: "How do dosing schedules differ across the three medicines?",
+      a: "Mounjaro and Wegovy are typically weekly schedules after titration; Saxenda is usually a daily schedule. Pack pricing, titration speed, and bundled consultations all affect total treatment cost — schedule alone does not guarantee a lower monthly total.",
+    },
+    {
+      q: "What are the active ingredients?",
+      a: "Mounjaro contains tirzepatide, Wegovy contains semaglutide, and Saxenda contains liraglutide. Receptor profile and dosing schedules drive many of the practical differences you will discuss with a clinician.",
+    },
+    {
+      q: "Who is typically eligible for private treatment?",
+      a: "Private eligibility usually depends on BMI thresholds, comorbidities, medical history, and clinician judgement. Criteria can differ by medicine and provider — confirm on the pharmacy pathway you choose.",
+    },
+    {
+      q: "How do NHS and private access differ?",
+      a: "NHS access, where available, follows local pathway and capacity rules and can involve waiting lists. Private access is typically faster but self-funded. This hub focuses on private pharmacy price structure; ask your GP or clinic about NHS options.",
+    },
+    {
+      q: "Are consultation and delivery costs included?",
+      a: "Where our dataset captures consultation, subscription, or delivery lines, they appear in the matrix columns. If a fee is missing, assume you must confirm it on the provider site before paying.",
     },
     {
       q: "Are the three datasets identical to your standalone price pages?",
-      a: "Yes. Each tab mirrors the advanced matrix and chart stack from the dedicated comparison page for that brand so you can move between hubs without learning new controls.",
+      a: "Yes. Each tab mirrors the advanced matrix and chart stack from the dedicated comparison page for that brand.",
     },
     {
       q: "Can I use pairwise pages instead of this three-way hub?",
       a: "Yes. Use our Wegovy vs Mounjaro, Mounjaro vs Saxenda, and Wegovy vs Saxenda comparisons for deeper two-way reading.",
-    },
-    {
-      q: "How do I interpret chart sections for three different brands?",
-      a: "Charts are scoped per tab. Compare them only after aligning dose or pack units; otherwise you may mix incompatible units.",
-    },
-    {
-      q: "Is consultation pricing included in every row?",
-      a: "Where our dataset captures consultation or subscription lines, they appear in the columns described on each matrix. If a fee is missing, assume you must confirm it on the provider site.",
-    },
-    {
-      q: "What should I do if prices moved since the data label date?",
-      a: "Treat listings as indicative. Re-check live checkout, especially before repeat orders, and ask the pharmacy to confirm the strength and quantity you need.",
     },
     {
       q: "Does Healthwise360 endorse a specific pharmacy?",

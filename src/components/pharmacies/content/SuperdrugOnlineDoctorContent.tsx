@@ -21,8 +21,8 @@ export default function SuperdrugOnlineDoctorContent() {
     <PharmacyDossierPage
       slugLabel="Superdrug Online Doctor"
       fileRef="HW-SUPERDRUG-OD-2026"
-      title="Superdrug Online Doctor (UK): Weight Loss Consultations, Delivery or Pharmacy Collection"
-      subtitle="Established retailer backed online doctor route for prescription weight management, doctor reviewed questionnaires, discreet logistics or Superdrug pickup, cold chain injectables and bundled pricing themes. Information only, not medical advice."
+      title="Superdrug Online Doctor weight management review"
+      subtitle="Independent provider review of Superdrug Online Doctor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · GLP-1 injections where listed · Collection option"
       providerName="Superdrug Online Doctor"
       providerUrl={providerUrl}

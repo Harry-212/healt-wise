@@ -17,8 +17,8 @@ export default function GoodBodyClinicPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="GoodBody Clinic"
       fileRef="HW-GOODBODY-2026"
-      title="GoodBody Clinic Weight Loss Review: Online Access to Wegovy, Medical Support and Home Delivery in the UK"
-      subtitle="Official dossier: programme-style prescribing, nurse and doctor oversight, subscriptions, delivery often included and FAQs (information only — not medical advice)."
+      title="GoodBody Clinic weight management review"
+      subtitle="Independent provider review of GoodBody Clinic: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Wegovy · medically supervised · UK"
       providerName="GoodBody Clinic"
       providerUrl={providerUrl}
@@ -84,7 +84,7 @@ export default function GoodBodyClinicPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why choose GoodBody Clinic for weight loss treatment?
+          Provider review: GoodBody Clinic
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
@@ -248,7 +248,7 @@ export default function GoodBodyClinicPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why some patients choose GoodBody Clinic
+          Who might consider GoodBody Clinic
         </p>
         <Points
           items={[

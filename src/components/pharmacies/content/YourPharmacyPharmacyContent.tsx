@@ -21,8 +21,8 @@ export default function YourPharmacyPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="YourPharmacy"
       fileRef="HW-YOURPHARMACY-2026"
-      title="YourPharmacy (UK): Fast Dispatch, NICE‑Aligned Review and Cold‑Chain GLP‑1"
-      subtitle="YourPharmacy describes a GPhC licensed UK online pharmacy with doctor or prescriber triage, official wholesaler sourcing (including Novo Nordisk and Eli Lilly framing), thermal packaging for pens, Royal Mail Tracked 24 or DPD options and competitive bundled pricing. Information only, not medical advice."
+      title="YourPharmacy weight management review"
+      subtitle="Independent provider review of YourPharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · GLP‑1 supply where clinically approved"
       providerName="YourPharmacy"
       providerUrl={providerUrl}

@@ -18,8 +18,8 @@ export default function DrWeightmansContent() {
     <PharmacyDossierPage
       slugLabel="Dr Weightmans"
       fileRef="HW-DRWEIGHTMANS-2026"
-      title="Dr Weightmans Weight Loss Review: Clinically Supported Medical Weight-Loss Products, Delivery and What to Expect"
-      subtitle="Official dossier: how clinically guided weight-loss products typically work, fulfilment expectations, cost components and FAQs (information only — not medical advice)."
+      title="Dr Weightmans weight management review"
+      subtitle="Independent provider review of Dr Weightmans: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Weight-loss medications · clinically guided products · delivery fulfilment"
       providerName="Dr Weightmans"
       providerUrl={providerUrl}

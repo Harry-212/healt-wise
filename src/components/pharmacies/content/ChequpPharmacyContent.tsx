@@ -24,8 +24,8 @@ export default function ChequpPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="CheqUp Pharmacy"
       fileRef="HW-CHEQUP-2026"
-      title="Why You Should Choose CheqUp Pharmacy for Clinician-Led Weight Loss Support"
-      subtitle="Clinician-led online weight management support with medical assessment, one-to-one health coaching, digital tracking, and access to recognised treatments where clinically suitable. Information only, not medical advice."
+      title="CheqUp Pharmacy weight management review"
+      subtitle="Independent provider review of CheqUp Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Wegovy · Mounjaro · Alli · clinician support · health coaching"
       providerName="CheqUp Pharmacy"
       providerUrl={providerUrl}

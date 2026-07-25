@@ -21,9 +21,9 @@ export default function Pills2uPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Pills2U"
       fileRef="HW-PILLS2U-2026"
-      title="Pills2U (UK): Mounjaro, Wegovy — Online Weight Loss Prescriber Pathway"
-      subtitle="Official dossier: condition-led UK pharmacy shopfront, licensed prescriber review after questionnaire, GLP-1 injectables, fast tracked delivery claims, bundled pricing narrative, rural access, professional oversight, and long-term weight-management positioning (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · GLP-1 injectables"
+      title="Pills2U weight management review"
+      subtitle="Independent provider review of Pills2U: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
+      scopeLabel="Scope:Mounjaro · Wegovy"
       providerName="Pills2U"
       providerUrl={providerUrl}
       docDetails={[

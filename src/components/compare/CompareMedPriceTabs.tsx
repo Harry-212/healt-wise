@@ -185,7 +185,7 @@ export default function CompareMedPriceTabs({
               </span>
             </p>
             <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-              Pharmacy Price Comparison
+              Current Pharmacy Prices
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-slate-600 md:text-base">
               Select your chosen medication and use filters, to navigate to your

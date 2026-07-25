@@ -6,16 +6,16 @@ export const BMI_CALCULATOR_FAQ_BMI_ITEMS = [
     a: "For most UK adults, a BMI between 18.5 and 24.9 is considered a healthy weight range. Below 18.5 is underweight; 25 to 29.9 is overweight; 30 or above is obese. BMI is a screening tool—not a diagnosis—and doesn't account for muscle mass or where fat is stored.",
   },
   {
-    q: "What BMI qualifies for Wegovy in the UK?",
-    a: "Private prescribing in the UK often follows similar bands to clinical guidance: typically BMI 30 or above, or BMI 27 or above with weight-related health conditions. Only a qualified prescriber can confirm eligibility after reviewing your medical history, medications, and goals.",
+    q: "What are the NHS BMI thresholds for adults?",
+    a: "NHS adult categories commonly use: underweight under 18.5, healthy 18.5–24.9, overweight 25–29.9, and obese 30 or above. Some clinical pathways also discuss BMI 27+ when weight-related conditions are present. Ethnicity and body composition can change how a clinician interprets the number.",
   },
   {
-    q: "Is BMI enough to get weight loss treatment?",
-    a: "No. BMI helps triage who might be suitable, but treatment decisions require a full assessment: conditions like diabetes, thyroid disorders, pregnancy, medicines you take, mental health, and more. You should never start prescription injections without clinician supervision.",
+    q: "What do BMI categories mean for weight management eligibility?",
+    a: "BMI categories help clinicians triage who may benefit from structured weight management support. Eligibility for any programme or clinical pathway depends on a full assessment—history, comorbidities, medications, and goals—not BMI alone. This calculator cannot decide eligibility for you.",
   },
   {
-    q: "What BMI is needed for Mounjaro in the UK?",
-    a: "Like other GLP-1-based weight loss medicines, Mounjaro is generally considered for adults with obesity (often BMI 30+) or overweight (often BMI 27+) when certain health conditions apply. NICE recommendations and individual providers may differ—your prescriber interprets what's appropriate for you.",
+    q: "Is BMI accurate as a body fat measure?",
+    a: "BMI accurately summarises weight-for-height for population screening. It is not an accurate personal body-fat test and can misclassify muscular people or miss risk in people with higher visceral fat at a “healthy” BMI. Waist size, blood tests, and clinical review fill the gaps.",
   },
 ] as const;
 
@@ -38,11 +38,11 @@ export const BMI_CALCULATOR_FAQ_BMR_TDEE_ITEMS = [
   },
   {
     q: "How accurate are BMR and TDEE calculators?",
-    a: "They are reasonable population averages, not personalised medical tests. Error margins of roughly 10–20% are common. Athletes, very lean or very muscular people, older adults, and those on certain drugs (including some GLP-1 medicines) may sit above or below the estimate. Treat outputs as discussion points with a dietitian, GP, or prescriber—not rigid targets.",
+    a: "They are reasonable population averages, not personalised medical tests. Error margins of roughly 10–20% are common. Athletes, very lean or very muscular people, older adults, and those on certain medicines may sit above or below the estimate. Treat outputs as discussion points with a dietitian or GP—not rigid targets.",
   },
   {
-    q: "Should I follow TDEE calorie targets if I am on Wegovy or Mounjaro?",
-    a: "GLP-1 treatments often reduce appetite naturally, so fixed calorie numbers from any online calculator may not match how you feel or what your clinician wants. Some people need structured minimum intakes for health; others need adjustments for muscle or medical conditions. Always follow the eating plan agreed with your healthcare team rather than a generic deficit from a website.",
+    q: "How should I use calorie needs for weight management?",
+    a: "Use maintain, mild-deficit, and moderate-deficit estimates as starting ranges, then adjust for energy, hunger, and clinical advice. Very low intakes are not appropriate for everyone. If you have a medical condition, are pregnant, or take regular medicines, agree calorie targets with a healthcare professional.",
   },
 ] as const;
 
@@ -78,7 +78,7 @@ export function bmiCalculatorWebPageJsonLd() {
     "@type": "WebPage",
     name: "BMI, BMR & Calorie Calculator UK | Free Online Tool",
     description:
-      "Calculate your BMI, BMR and estimated daily calorie needs, then understand how BMI may relate to UK weight-loss treatment eligibility.",
+      "Free BMI calculator UK with body mass index categories, NHS BMI thresholds, BMR calculator and estimated calorie needs for weight management planning.",
     url,
     isPartOf: {
       "@type": "WebSite",

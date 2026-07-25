@@ -21,8 +21,8 @@ export default function WellPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Well Pharmacy"
       fileRef="HW-WELL-2026"
-      title="Well Pharmacy (UK): Medicated Weight Loss, Pharmacist Follow Ups and Delivery"
-      subtitle="National pharmacy brand combining online or in branch consultations, GLP‑1 and oral prescribing where suitable, monthly monitoring themes, discreet home delivery via Royal Mail style services and eligibility screening aligned to UK obesity guidelines. Information only, not medical advice."
+      title="Well Pharmacy weight management review"
+      subtitle="Independent provider review of Well Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Orlistat · Prescription only supply"
       providerName="Well Pharmacy"
       providerUrl={providerUrl}

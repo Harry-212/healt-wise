@@ -3,24 +3,27 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Menu, X, ChevronRight, Zap } from "lucide-react";
-import BrandHoverText from "@/components/ui/BrandHoverText";
 import type { NavPanel } from "@/lib/nav/nav-config";
 import { NavLinkIcon, NAV_LINK_ACCENT_CLASSES } from "@/lib/nav/nav-icons";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
 import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import SiteLogoLink from "@/components/layout/SiteLogoLink";
-import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import {
-  sanitizeBrandDisplayNames,
-  textContainsBrandName,
-} from "@/lib/text/sanitize-brand-display-names";
+  HOME_COMPARE_CTA_LABEL,
+  HOME_COMPARE_HUB_HREF,
+} from "@/lib/routes/home-compare-hub";
+import { usePathname } from "next/navigation";
 
 export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
   const pathname = usePathname();
-  const hideBrands = (pathname ?? "/") === "/";
+  const isHome = pathname === "/" || pathname === "";
+  const hideCompareChrome =
+    isHome ||
+    pathname === "/methodology" ||
+    pathname === "/editorial-policy" ||
+    pathname === "/about";
   const { user, ready, signOut } = useSupabaseAuth();
   const [open, setOpen] = useState(false);
   const [acc, setAcc] = useState<string | null>(null);
@@ -116,16 +119,18 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
           </button>
         </div>
 
-        <div className="shrink-0 border-b border-slate-200 px-3 py-2">
-          <Link
-            href={HOME_COMPARE_HUB_HREF}
-            onClick={close}
-            className="flex min-h-11 items-center justify-center gap-2 rounded-xl border border-emerald-300/70 bg-emerald-100 text-sm font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90"
-          >
-            <Zap className="h-4 w-4 shrink-0 fill-emerald-950" aria-hidden />
-            Compare
-          </Link>
-        </div>
+        {!hideCompareChrome ? (
+          <div className="shrink-0 border-b border-slate-200 px-3 py-2">
+            <Link
+              href={HOME_COMPARE_HUB_HREF}
+              onClick={close}
+              className="flex min-h-11 items-center justify-center gap-2 rounded-xl border border-emerald-300/70 bg-emerald-100 px-3 text-sm font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90"
+            >
+              <Zap className="h-4 w-4 shrink-0 fill-emerald-950" aria-hidden />
+              {HOME_COMPARE_CTA_LABEL}
+            </Link>
+          </div>
+        ) : null}
 
         <nav
           className="min-h-0 flex-1 overflow-y-auto overscroll-y-contain px-3 py-2 [-webkit-overflow-scrolling:touch]"
@@ -198,18 +203,7 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
                                       <NavLinkIcon name={l.icon} accent={l.accent} />
                                     </span>
                                     <span className="min-w-0 flex-1 leading-snug">
-                                      {hideBrands &&
-                                      textContainsBrandName(l.label) ? (
-                                        <BrandHoverText
-                                          publicLabel={sanitizeBrandDisplayNames(
-                                            l.label,
-                                            true,
-                                          )}
-                                          brandLabel={l.label}
-                                        />
-                                      ) : (
-                                        l.label
-                                      )}
+                                      {l.label}
                                     </span>
                                     <ChevronRight className="h-4 w-4 shrink-0 text-slate-300" aria-hidden />
                                   </Link>

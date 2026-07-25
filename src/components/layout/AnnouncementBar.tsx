@@ -3,15 +3,16 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Zap } from "lucide-react";
-import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
-
-const TEXT = "Compare Weight Loss Treatment UK";
-const CTA = "Find the Best Price Today";
+import {
+  HOME_COMPARE_CTA_LABEL,
+  HOME_COMPARE_HUB_HREF,
+} from "@/lib/routes/home-compare-hub";
 
 const ITEMS = Array.from({ length: 8 }, (_, i) => ({ id: i }));
 
 export default function AnnouncementBar() {
   const pathname = usePathname();
+  const isHome = pathname === "/" || pathname === "";
   const isBlogArticle =
     typeof pathname === "string" &&
     pathname.startsWith("/blog/") &&
@@ -21,7 +22,12 @@ export default function AnnouncementBar() {
     pathname.startsWith("/helpful-guides/") &&
     pathname.split("/").filter(Boolean).length >= 2;
 
+  // Trust / methodology pages keep focus on how we compare — skip compare CTA strip.
   if (
+    isHome ||
+    pathname === "/methodology" ||
+    pathname === "/editorial-policy" ||
+    pathname === "/about" ||
     pathname?.startsWith("/pharmacies") ||
     isBlogArticle ||
     isHelpfulGuideArticle
@@ -39,9 +45,7 @@ export default function AnnouncementBar() {
               href={HOME_COMPARE_HUB_HREF}
               className="flex shrink-0 items-center gap-3 px-8 text-sm font-semibold text-slate-900 transition-opacity hover:opacity-80"
             >
-              <span>{TEXT}</span>
-              <span className="h-1 w-1 shrink-0 rounded-full bg-slate-900/40" />
-              <span className="font-black">{CTA}</span>
+              <span>{HOME_COMPARE_CTA_LABEL}</span>
               <Zap
                 className="h-3.5 w-3.5 shrink-0 fill-slate-900"
                 aria-hidden
@@ -58,9 +62,7 @@ export default function AnnouncementBar() {
               key={id}
               className="flex shrink-0 items-center gap-3 px-8 text-sm font-semibold text-slate-900"
             >
-              <span>{TEXT}</span>
-              <span className="h-1 w-1 shrink-0 rounded-full bg-slate-900/40" />
-              <span className="font-black">{CTA}</span>
+              <span>{HOME_COMPARE_CTA_LABEL}</span>
               <Zap
                 className="h-3.5 w-3.5 shrink-0 fill-slate-900"
                 aria-hidden

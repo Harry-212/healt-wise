@@ -19,15 +19,15 @@ export default function Click2PharmacyMounjaroContent() {
     <PharmacyDossierPage
       slugLabel="Click2Pharmacy"
       fileRef="HW-CLICK2-2026"
-      title="Click2Pharmacy Mounjaro Review: Buying Mounjaro Weight Loss Injections Online in the UK"
-      subtitle="Official dossier: how Click2Pharmacy’s Mounjaro pathway works, what makes Mounjaro different, delivery notes, pricing context, and FAQs (information only — not medical advice)."
+      title="Click2Pharmacy weight management review"
+      subtitle="Independent provider review of Click2Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro"
       providerName="Click2Pharmacy"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Click2Pharmacy" },
-        { k: "Focus", v: "Mounjaro weight loss injections" },
+        { k: "Focus", v: "Mounjaro weight management pathway" },
         { k: "Fulfilment", v: "Home delivery" },
       ]}
       discountCode={discountCode}
@@ -47,7 +47,7 @@ export default function Click2PharmacyMounjaroContent() {
           much attention in the UK.
         </p>
         <p className="text-slate-800 leading-relaxed">
-          Click2Pharmacy Mounjaro weight loss injections aim to offer a practical route into that
+          Click2Pharmacy&apos;s Mounjaro pathway aims to offer a practical route into that
           treatment — through online consultation, prescription approval, and home delivery.
         </p>
         <p className="text-slate-800 leading-relaxed">
@@ -83,7 +83,7 @@ export default function Click2PharmacyMounjaroContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Why choose Click2Pharmacy for Mounjaro?
+          Provider review: Click2Pharmacy
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
@@ -273,7 +273,7 @@ export default function Click2PharmacyMounjaroContent() {
       <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
         <h2 className="text-lg font-bold text-slate-900 sm:text-xl">Conclusion</h2>
         <p className="mt-3 text-slate-800 leading-relaxed">
-          If you’re looking for online access to Mounjaro weight loss injections, Click2Pharmacy
+          If you&apos;re looking for online access to a Mounjaro weight management pathway, Click2Pharmacy
           appears to offer a practical and credible option. Access to Mounjaro, combined with
           online consultations, temperature-conscious delivery and ongoing support, gives the
           service substance beyond simply selling medication.

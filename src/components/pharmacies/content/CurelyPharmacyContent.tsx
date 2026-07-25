@@ -19,8 +19,8 @@ export default function CurelyPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Curely"
       fileRef="HW-CURELY-2026"
-      title="Curely Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Prescription Support in the UK"
-      subtitle="Official dossier: how Curely works, treatments that may be available, delivery options, pricing context and FAQs (information only — not medical advice)."
+      title="Curely weight management review"
+      subtitle="Independent provider review of Curely: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat · Xenical · Alli"
       providerName="Curely"
       providerUrl={providerUrl}
@@ -84,7 +84,7 @@ export default function CurelyPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Why choose Curely?
+          Provider review: Curely
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">

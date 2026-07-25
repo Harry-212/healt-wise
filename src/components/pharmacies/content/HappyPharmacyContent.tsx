@@ -17,8 +17,8 @@ export default function HappyPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Happy Pharmacy"
       fileRef="HW-HAPPY-2026"
-      title="Happy Pharmacy Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Regulated Prescription Support"
-      subtitle="Official dossier: GPhC-regulated supply, injections and tablets, pricing context, discreet tracked delivery and FAQs (information only — not medical advice)."
+      title="Happy Pharmacy weight management review"
+      subtitle="Independent provider review of Happy Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Orlistat · Alli · UK"
       providerName="Happy Pharmacy"
       providerUrl={providerUrl}
@@ -80,7 +80,7 @@ export default function HappyPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why choose Happy Pharmacy for weight loss treatment?
+          Provider review: Happy Pharmacy
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
@@ -234,7 +234,7 @@ export default function HappyPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why some patients choose Happy Pharmacy
+          Who might consider Happy Pharmacy
         </p>
         <Points
           items={[

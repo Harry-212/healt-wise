@@ -21,8 +21,8 @@ export default function LiveWellWeightLossPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Live Well Weight Loss"
       fileRef="HW-LIVE-WELL-2026"
-      title="Live Well Weight Loss (UK): Mounjaro, Wegovy, GPhC Pharmacy and Ongoing Clinical Care"
-      subtitle="Licensed UK pharmacy weight loss service with pharmacist prescriber assessment, transparent pen pricing, discreet tracked delivery, follow up care, and how it differs from anonymous checkout sellers. Information only, not medical advice."
+      title="Live Well Weight Loss weight management review"
+      subtitle="Independent provider review of Live Well Weight Loss: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · UK pharmacy"
       providerName="Live Well Weight Loss"
       providerUrl={providerUrl}
@@ -46,7 +46,7 @@ export default function LiveWellWeightLossPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Live Well Weight Loss is presented as a UK digital pathway for medically supervised weight management, with consultation, clinical review, dispensing, and delivery described as one joined-up process. Comparing providers is easier when you look at how each step is handled — assessment, eligibility decisions, follow-up support, and logistics. This dossier provides independent context about Live Well Weight Loss to help you make a more informed choice.</p></div>
         <p className="text-slate-800 leading-relaxed">
-          When you buy weight loss injections online in the UK, the provider matters as much as the
+          When you consider prescription weight management online in the UK, the provider matters as much as the
           price. Live Well Weight Loss presents itself as a licensed, GPhC registered pharmacy
           service built around clinically approved GLP-1 therapy, especially{" "}
           <strong>Mounjaro (tirzepatide)</strong> and <strong>Wegovy (semaglutide)</strong>, with

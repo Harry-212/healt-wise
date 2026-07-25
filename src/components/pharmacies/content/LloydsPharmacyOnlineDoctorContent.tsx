@@ -21,8 +21,8 @@ export default function LloydsPharmacyOnlineDoctorContent() {
     <PharmacyDossierPage
       slugLabel="Lloyds Pharmacy Online Doctor"
       fileRef="HW-LLOYDS-OD-2026"
-      title="Lloyds Pharmacy Online Doctor (UK): Mounjaro, Wegovy, Tablets, Coaching and Delivery"
-      subtitle="Clinician led online weight loss service under the LloydsPharmacy brand: prescription injections and tablets, optional nutrition coaching, consultation and delivery options, indicative costs. Information only, not medical advice."
+      title="Lloyds Online Doctor weight management review"
+      subtitle="Independent provider review of Lloyds Online Doctor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Orlistat · Xenical · nutrition coaching (optional)"
       providerName="Lloyds Online Doctor"
       providerUrl={providerUrl}

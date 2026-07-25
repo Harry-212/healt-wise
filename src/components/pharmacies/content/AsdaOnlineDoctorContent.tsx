@@ -20,8 +20,8 @@ export default function AsdaOnlineDoctorContent() {
     <PharmacyDossierPage
       slugLabel="Asda Online Doctor"
       fileRef="HW-ASDA-2026"
-      title="Asda Online Doctor Weight Loss Treatment: Safe, Convenient and Affordable Weight Loss Medication in the UK"
-      subtitle="Official dossier: how Asda Online Doctor works, what treatments may be available, delivery notes, pricing context, and FAQs (information only — not medical advice)."
+      title="Asda Online Doctor weight management review"
+      subtitle="Independent provider review of Asda Online Doctor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat"
       providerName="Asda Online Doctor"
       providerUrl={providerUrl}
@@ -104,7 +104,7 @@ export default function AsdaOnlineDoctorContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Why choose Asda Online Doctor for weight loss treatment?
+          Provider review: Asda Online Doctor
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
@@ -112,7 +112,7 @@ export default function AsdaOnlineDoctorContent() {
               1. Convenient online access to weight loss medication
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
-              One of the main reasons people choose Asda Online Doctor for weight loss injections
+              One of the main reasons people consider Asda Online Doctor for prescription weight management
               is convenience. The process is fully online:
             </p>
             <Points
@@ -288,7 +288,7 @@ export default function AsdaOnlineDoctorContent() {
         <div className="mt-4 grid gap-5 sm:grid-cols-2">
           {[
             {
-              q: "Can I buy Wegovy online from Asda Online Doctor?",
+              q: "Is Wegovy available through Asda Online Doctor?",
               a: "Yes, Wegovy may be available through Asda Online Doctor after completing a medical assessment and receiving doctor approval.",
             },
             {

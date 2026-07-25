@@ -21,8 +21,8 @@ export default function MedExpressPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="MedExpress"
       fileRef="HW-MEDEXPRESS-2026"
-      title="MedExpress Weight Loss Clinic (UK): Mounjaro, Wegovy, Orals and Regulated Online Pharmacy"
-      subtitle="Clinician led weight loss clinic on a regulated UK online pharmacy: licensed medicines, short remote consultation, patient treatment choice where suitable, refrigerated injectables, tiered delivery and collection rules. Information only, not medical advice."
+      title="MedExpress weight management review"
+      subtitle="Independent provider review of MedExpress: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Xenical · Alli · Orlistat (where listed)"
       providerName="MedExpress"
       providerUrl={providerUrl}

@@ -21,8 +21,8 @@ export default function ESurgeryPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="e-Surgery"
       fileRef="HW-ESURGERY-2026"
-      title="e-Surgery (UK): Sustainable Online Pharmacy, Pharmacist Prescribers and Cold‑Chain Pens"
-      subtitle="Norwich based GPhC pharmacy (9012167) emphasising independent pharmacist prescribers, Trustpilot Excellent positioning, recyclable discreet packs, Royal Mail Tracked tiers with free Tracked 24 upgrades over £30, and competitive Wegovy and Mounjaro pricing. Information only, not medical advice."
+      title="e-Surgery weight management review"
+      subtitle="Independent provider review of e-Surgery: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Injectable weight loss where prescribed · Sharps accessories"
       providerName="e-Surgery"
       providerUrl={providerUrl}

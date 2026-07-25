@@ -21,8 +21,8 @@ export default function MedHutPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="MedHut"
       fileRef="HW-MEDHUT-2026"
-      title="MedHut (UK): Family Run York Pharmacy, GLP‑1 and Clinician Led Review"
-      subtitle="Family run online pharmacy in York combining local chemist style service with national digital fulfilment: GPhC registration, founders Jamal and Amina Hussain, pharmacist review with personal follow up, NHS and private prescription experience, cold chain for Mounjaro and Wegovy, Royal Mail Tracked 24 style delivery and competitive starter pricing. Information only, not medical advice."
+      title="MedHut weight management review"
+      subtitle="Independent provider review of MedHut: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Manual clinical verification"
       providerName="MedHut"
       providerUrl={providerUrl}

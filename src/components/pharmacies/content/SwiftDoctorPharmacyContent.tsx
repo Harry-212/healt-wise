@@ -21,8 +21,8 @@ export default function SwiftDoctorPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Swift Doctor"
       fileRef="HW-SWIFTDOCTOR-2026"
-      title="Swift Doctor (UK): Fast Online Weight Loss Consultations and Tracked Delivery"
-      subtitle="Digital obesity care provider emphasising rapid clinician review, prescription GLP-1 access where suitable, courier logistics with cold chain options, competitive illustrative pricing and responsive support channels. Information only, not medical advice."
+      title="Swift Doctor weight management review"
+      subtitle="Independent provider review of Swift Doctor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Injectable and related prescription lines where offered"
       providerName="Swift Doctor"
       providerUrl={providerUrl}

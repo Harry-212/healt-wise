@@ -1,13 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion";
 import {
   Activity,
   ChevronDown,
   Scale,
-  Stethoscope,
   Utensils,
   Zap,
 } from "lucide-react";
@@ -22,9 +20,9 @@ import {
   computeBmr,
   computeTdee,
   insightCallout,
+  nhsCategoryCopy,
   projectedBmiAfterWeightLossFraction,
   recommendedNextStep,
-  treatmentEligibilityCopy,
   type ActivityLevel,
   type Gender,
 } from "@/lib/bmi-calculator";
@@ -360,7 +358,7 @@ export default function BmiCalculatorClient() {
 
   /* derived display */
   const category = bmi != null ? categoryFromBmi(bmi) : null;
-  const eligibility = bmi != null ? treatmentEligibilityCopy(bmi) : null;
+  const nhsContext = bmi != null ? nhsCategoryCopy(bmi) : null;
   const nextStep = bmi != null ? recommendedNextStep(bmi) : null;
   const callout = bmi != null ? insightCallout(bmi) : null;
   const bmi10 = bmi != null ? projectedBmiAfterWeightLossFraction(bmi, 0.1) : null;
@@ -399,11 +397,12 @@ export default function BmiCalculatorClient() {
               BMI, BMR & Calorie Calculator UK
             </h1>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-300/95 sm:text-base">
-              Calculate your{" "}
-              <strong className="font-semibold text-white">BMI</strong>,{" "}
-              <strong className="font-semibold text-white">Basal Metabolic Rate</strong>, and{" "}
-              <strong className="font-semibold text-white">daily calorie needs</strong>{" "}
-              — plus what your numbers mean for UK weight loss treatment.
+              Free{" "}
+              <strong className="font-semibold text-white">BMI calculator UK</strong>
+              {" "}with body mass index categories, NHS BMI thresholds,{" "}
+              <strong className="font-semibold text-white">BMR</strong>, and{" "}
+              <strong className="font-semibold text-white">calorie needs</strong>
+              {" "}for weight management planning.
             </p>
             {/* Tab pills in hero */}
             <div className="mt-8 inline-flex rounded-full bg-white/10 p-1 shadow-xl ring-1 ring-white/15 backdrop-blur-sm">
@@ -552,29 +551,22 @@ export default function BmiCalculatorClient() {
                         </div>
                       </div>
 
-                      {/* Treatment eligibility */}
-                      {eligibility && (
-                        <div className="rounded-2xl bg-gradient-to-br from-emerald-900 to-emerald-950 p-5 text-white shadow-lg ring-1 ring-emerald-700/50">
-                          <div className="flex items-start gap-3">
-                            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-400">
-                              <Stethoscope className="h-4 w-4 text-emerald-950" />
-                            </div>
-                            <div>
-                              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-200">
-                                UK treatment context
-                              </p>
-                              <p className="mt-1.5 text-sm leading-relaxed text-emerald-50/95">
-                                {eligibility}
-                              </p>
-                            </div>
-                          </div>
+                      {/* NHS BMI category context */}
+                      {nhsContext && (
+                        <div className="rounded-2xl bg-gradient-to-br from-slate-800 to-slate-950 p-5 text-white shadow-lg ring-1 ring-slate-700/50">
+                          <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300/90">
+                            NHS BMI thresholds
+                          </p>
+                          <p className="mt-1.5 text-sm leading-relaxed text-slate-100/95">
+                            {nhsContext}
+                          </p>
                         </div>
                       )}
 
                       {/* Insight + next step */}
                       {callout && (
-                        <div className="rounded-2xl border border-violet-200 bg-violet-50/80 p-5">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-violet-700">Insight</p>
+                        <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-5">
+                          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Insight</p>
                           <p className="mt-2 text-sm leading-relaxed text-slate-800">{callout}</p>
                         </div>
                       )}
@@ -586,15 +578,10 @@ export default function BmiCalculatorClient() {
                         </div>
                       )}
 
-                      {/* CTAs */}
                       <div className="flex flex-wrap gap-2 pt-1">
-                        <Link href="/compare/wegovy-vs-mounjaro" className="inline-flex min-h-10 items-center gap-1.5 rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700">
-                          Compare treatments{" "}
-                          <Zap className="inline h-3.5 w-3.5 fill-current" aria-hidden />
-                        </Link>
-                        <Link href="/prices/cheapest-options-uk" className="inline-flex min-h-10 items-center rounded-full border-2 border-slate-200 bg-white px-5 text-sm font-semibold text-slate-800 transition hover:border-slate-400">
-                          See prices
-                        </Link>
+                        <a href="#bmi-categories" className="inline-flex min-h-10 items-center rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700">
+                          BMI categories
+                        </a>
                         <a href="#faq" className="inline-flex min-h-10 items-center rounded-full bg-slate-100 px-5 text-sm font-semibold text-slate-700 transition hover:bg-slate-200">
                           Show FAQ
                         </a>
@@ -663,19 +650,18 @@ export default function BmiCalculatorClient() {
                         </div>
                       )}
 
-                      {/* Treatment eligibility */}
-                      {eligibility && (
-                        <div className="rounded-2xl bg-gradient-to-br from-emerald-900 to-emerald-950 p-5 text-white shadow-lg">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-emerald-200">UK treatment context</p>
-                          <p className="mt-2 text-sm leading-relaxed text-emerald-50/95">{eligibility}</p>
+                      {/* NHS BMI category context */}
+                      {nhsContext && (
+                        <div className="rounded-2xl bg-gradient-to-br from-slate-800 to-slate-950 p-5 text-white shadow-lg">
+                          <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300/90">NHS BMI thresholds</p>
+                          <p className="mt-2 text-sm leading-relaxed text-slate-100/95">{nhsContext}</p>
                         </div>
                       )}
 
                       <div className="flex flex-wrap gap-2 pt-1">
-                        <Link href="/compare/wegovy-vs-mounjaro" className="inline-flex min-h-10 items-center gap-1.5 rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700">
-                          Compare treatments{" "}
-                          <Zap className="inline h-3.5 w-3.5 fill-current" aria-hidden />
-                        </Link>
+                        <a href="#bmr-calorie-needs" className="inline-flex min-h-10 items-center rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700">
+                          BMR &amp; calories
+                        </a>
                         <a href="#faq" className="inline-flex min-h-10 items-center rounded-full bg-slate-100 px-5 text-sm font-semibold text-slate-700 transition hover:bg-slate-200">
                           Show FAQ
                         </a>
@@ -731,23 +717,19 @@ export default function BmiCalculatorClient() {
                         </div>
                       </div>
 
-                      {/* GLP-1 context */}
-                      {eligibility && (
-                        <div className="rounded-2xl bg-gradient-to-br from-emerald-900 to-emerald-950 p-5 text-white shadow-lg">
-                          <p className="text-xs font-semibold uppercase tracking-wide text-emerald-200">UK treatment context</p>
-                          <p className="mt-2 text-sm leading-relaxed text-emerald-50/95">{eligibility}</p>
-                          <p className="mt-2 text-xs text-emerald-300/80">On GLP-1 treatments like Wegovy or Mounjaro, appetite reduction means calorie targets often adjust naturally — always work with your prescriber.</p>
+                      {/* Category context for calorie planning */}
+                      {nhsContext && (
+                        <div className="rounded-2xl bg-gradient-to-br from-slate-800 to-slate-950 p-5 text-white shadow-lg">
+                          <p className="text-xs font-semibold uppercase tracking-wide text-emerald-300/90">BMI category &amp; calorie planning</p>
+                          <p className="mt-2 text-sm leading-relaxed text-slate-100/95">{nhsContext}</p>
+                          <p className="mt-2 text-xs text-slate-400">Calorie targets are estimates for planning—adjust with a dietitian or GP if you have medical needs.</p>
                         </div>
                       )}
 
                       <div className="flex flex-wrap gap-2 pt-1">
-                        <Link href="/compare/wegovy-vs-mounjaro" className="inline-flex min-h-10 items-center gap-1.5 rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700">
-                          Compare treatments{" "}
-                          <Zap className="inline h-3.5 w-3.5 fill-current" aria-hidden />
-                        </Link>
-                        <Link href="/prices/cheapest-options-uk" className="inline-flex min-h-10 items-center rounded-full border-2 border-slate-200 bg-white px-5 text-sm font-semibold text-slate-800 transition hover:border-slate-400">
-                          See prices
-                        </Link>
+                        <a href="#bmr-calorie-needs" className="inline-flex min-h-10 items-center rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700">
+                          How calorie needs work
+                        </a>
                         <a href="#faq" className="inline-flex min-h-10 items-center rounded-full bg-slate-100 px-5 text-sm font-semibold text-slate-700 transition hover:bg-slate-200">
                           Show FAQ
                         </a>

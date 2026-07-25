@@ -21,8 +21,8 @@ export default function TheIndependentPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="The Independent Pharmacy"
       fileRef="HW-INDEPENDENTPHARMACY-2026"
-      title="The Independent Pharmacy (UK): Regulated Weight Loss, Assessment and Tracked Delivery"
-      subtitle="UK online pharmacy highlighting dual GPhC and CQC oversight, clinician reviewed questionnaires, discreet fulfilment with tiered speeds, free delivery thresholds and pharmacist reachable support. Information only, not medical advice."
+      title="The Independent Pharmacy weight management review"
+      subtitle="Independent provider review of The Independent Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Orlistat · Other approved lines where listed"
       providerName="The Independent Pharmacy"
       providerUrl={providerUrl}

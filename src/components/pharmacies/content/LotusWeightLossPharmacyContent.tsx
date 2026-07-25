@@ -21,8 +21,8 @@ export default function LotusWeightLossPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Lotus Weight Loss"
       fileRef="HW-LOTUS-2026"
-      title="Lotus Weight Loss (UK): Mounjaro, Wegovy, Orlistat, CQC Clinic and The Lotus Programme"
-      subtitle="Specialist UK weight loss clinic combining clinician led prescribing, GPhC pharmacy supply, structured lifestyle programme, discreet tracked delivery, subscriptions and loyalty. Information only, not medical advice."
+      title="Lotus Weight Loss weight management review"
+      subtitle="Independent provider review of Lotus Weight Loss: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Orlistat · UK regulated pathway"
       providerName="Lotus Weight Loss"
       providerUrl={providerUrl}

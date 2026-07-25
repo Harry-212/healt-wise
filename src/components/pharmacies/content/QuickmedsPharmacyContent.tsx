@@ -21,8 +21,8 @@ export default function QuickmedsPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Quickmeds"
       fileRef="HW-QUICKMEDS-2026"
-      title="Quickmeds (UK): GPhC Online Clinic, Mounjaro, Wegovy and Fast Royal Mail Delivery"
-      subtitle="GPhC registered online pharmacy clinic combining short consultations, personalised plans, GLP-1 and oral weight medicines where suitable, same-day dispatch claims, tracked Royal Mail tiers, and discreet packaging. Information only, not medical advice."
+      title="Quickmeds weight management review"
+      subtitle="Independent provider review of Quickmeds: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Orlistat · appetite-regulating therapies where listed"
       providerName="Quickmeds"
       providerUrl={providerUrl}

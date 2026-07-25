@@ -21,8 +21,8 @@ export default function MedicspotPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Medicspot"
       fileRef="HW-MEDICSPOT-2026"
-      title="Medicspot (UK): Clinician-Led Weight Loss, Mounjaro, Coaching and Home Delivery"
-      subtitle="UK clinician led programmes that combine prescription medicines where appropriate, personal coaching, behavioural support, and discreet tracked delivery. Subscription style billing on common plans. Information only, not medical advice."
+      title="Medicspot weight management review"
+      subtitle="Independent provider review of Medicspot: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy (where suitable) · coaching · community"
       providerName="Medicspot"
       providerUrl={providerUrl}

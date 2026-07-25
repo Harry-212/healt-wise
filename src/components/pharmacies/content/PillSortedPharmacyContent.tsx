@@ -21,8 +21,8 @@ export default function PillSortedPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="PillSorted"
       fileRef="HW-PILLSORTED-2026"
-      title="PillSorted (UK): Personalised Weight Loss, Telehealth, NHS Integration and Royal Mail Delivery"
-      subtitle="UK online pharmacy and telehealth pathway with tailored consultations, licensed GLP-1 and oral options where suitable, ongoing clinical support, Royal Mail delivery tiers, and subscription style repeats on many lines. Information only, not medical advice."
+      title="PillSorted weight management review"
+      subtitle="Independent provider review of PillSorted: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Orlistat · NHS or private routing"
       providerName="PillSorted"
       providerUrl={providerUrl}

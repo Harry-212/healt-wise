@@ -11,7 +11,9 @@ const AboutSection2 = dynamic(() => import("@/components/ui/about-section-2"));
 const FoodToFuel = dynamic(() => import("@/components/ui/FoodToFuel"));
 const OurServices = dynamic(() => import("@/components/ui/OurServices"));
 const OurMethodology = dynamic(() => import("@/components/ui/OurMethodology"));
-const WhyChooseHealthWise = dynamic(() => import("@/components/ui/WhyChooseHealthWise"));
+const WhyChooseHealthWise = dynamic(
+  () => import("@/components/ui/WhyChooseHealthWise"),
+);
 
 export const metadata: Metadata = {
   title: {
@@ -76,13 +78,15 @@ export default function Homepage() {
               <Stethoscope className="h-8 w-8 text-emerald-400" />
             </div>
             <div>
-              <h2 className="mb-3 text-2xl font-bold">Safety and prescribing</h2>
+              <h2 className="mb-3 text-2xl font-bold">
+                Safety and prescribing
+              </h2>
               <p className="text-sm leading-relaxed text-slate-300 md:text-base">
                 The weight loss treatment on this site is discussed only in
                 general terms. A registered clinician must assess you before any
                 supply. Answer questionnaires honestly, read the patient
-                information for your medicine, and speak to your GP or NHS 111 if
-                you are unsure. This site is informational only and does not
+                information for your medicine, and speak to your GP or NHS 111
+                if you are unsure. This site is informational only and does not
                 replace medical advice. Read our{" "}
                 <Link
                   href="/pharmacy-safety-gphc-verification"

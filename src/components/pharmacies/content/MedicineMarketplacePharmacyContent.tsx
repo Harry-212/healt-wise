@@ -21,8 +21,8 @@ export default function MedicineMarketplacePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Medicine Market Place"
       fileRef="HW-MEDICINE-MARKETPLACE-2026"
-      title="Medicine Market Place (Preston): Online Pharmacy, Weight Loss Catalogue and UK Delivery"
-      subtitle="Digital pharmacy and health storefront in Preston: weight loss aisle spanning diet aids, slimming pills, and supplements plus prescription routes after review, tracked shipping, modest fees, and free delivery thresholds. Information only, not medical advice."
+      title="Medicine Market Place weight management review"
+      subtitle="Independent provider review of Medicine Market Place: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: OTC weight products · Prescription weight loss where approved"
       providerName="Medicine Market Place"
       providerUrl={providerUrl}

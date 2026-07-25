@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import CompareHereLink from "@/components/ui/CompareHereLink";
 import {
   motion,
   useReducedMotion,
@@ -12,6 +11,8 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import { ArrowRight, ShieldCheck, Sparkles, Telescope } from "lucide-react";
+import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import { SITE_BRAND_NAME } from "@/lib/site-brand";
 
 const easeOut: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -195,7 +196,7 @@ export default function AboutScrollyClient() {
         <motion.div className="absolute inset-0" style={{ scale: heroScale }}>
           <Image
             src={ABOUT_IMAGES.hero}
-            alt="About Health Wise — UK GLP-1 care comparison and guidance (decorative header background)"
+            alt={`About ${SITE_BRAND_NAME} — independent UK weight loss provider comparison`}
             fill
             className="object-cover opacity-100"
             sizes="100vw"
@@ -209,15 +210,15 @@ export default function AboutScrollyClient() {
           style={{ opacity: heroCopyOpacity }}
         >
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400/90">
-            Health Wise
+            About {SITE_BRAND_NAME}
           </p>
-          <h1 className="max-w-[18ch] text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl md:leading-[1.05]">
-            Independent clarity for UK GLP‑1 care.
+          <h1 className="max-w-[22ch] text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl md:leading-[1.05]">
+            Independent UK weight loss provider comparison.
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-slate-300 sm:mt-6 sm:text-lg">
-            We guide you through pricing, safety signals, and provider
-            quality—one calm scroll at a time—so decisions feel considered, not
-            rushed.
+            {SITE_BRAND_NAME} researches provider pricing, pharmacy
+            verification and support signals across UK weight loss providers —
+            with editorial independence and a published comparison methodology.
           </p>
         </motion.div>
         <motion.div
@@ -237,13 +238,13 @@ export default function AboutScrollyClient() {
                   Why we exist
                 </p>
                 <h2 className="text-balance text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
-                  Comparison should feel like care—not a funnel.
+                  Comparison should feel clear—not like a sales funnel.
                 </h2>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-slate-600 sm:text-lg">
-                  Pricing, stock, and aftercare policies for treatments like
-                  Wegovy and Mounjaro are often fragmented. We surface what
-                  matters in plain language, from regulated providers you can
-                  verify yourself.
+                  Provider pricing, stock and aftercare policies for UK weight
+                  loss providers are often fragmented. We surface what matters
+                  in plain language, from regulated pharmacies you can verify
+                  yourself.
                 </p>
               </div>
               <ChapterImage
@@ -267,13 +268,15 @@ export default function AboutScrollyClient() {
                   What we do
                 </p>
                 <h2 className="text-balance text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl md:text-4xl">
-                  Evidence-minded, commercially independent.
+                  An independent comparison website—not a pharmacy.
                 </h2>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-slate-600 sm:text-lg">
-                  We are not a pharmacy and we are not owned by manufacturers.
-                  Rankings and tables lean on transparent criteria—cost,
-                  availability, and safety posture—so you can align price with
-                  peace of mind.
+                  {SITE_BRAND_NAME} is not a pharmacy and is not owned by
+                  manufacturers. Tables lean on transparent criteria—provider
+                  pricing, availability and pharmacy verification—so you can
+                  align cost with safety posture. Where affiliate relationships
+                  apply, we disclose them and keep editorial independence
+                  separate from commercial links.
                 </p>
               </div>
             </div>
@@ -289,8 +292,9 @@ export default function AboutScrollyClient() {
                   Built for long-term decisions, not one-off clicks.
                 </h2>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-slate-600 sm:text-lg">
-                  Whether you are exploring options or maintaining treatment, we
-                  keep the narrative steady: verify, compare, then discuss
+                  Whether you are exploring providers or reviewing ongoing
+                  options, we keep the narrative steady: verify the pharmacy,
+                  compare provider pricing with our methodology, then discuss
                   anything clinical with your prescriber.
                 </p>
               </div>
@@ -374,7 +378,7 @@ export default function AboutScrollyClient() {
             >
               <Image
                 src="/why choose healthwise360.webp"
-                alt="Why choose Health Wise — independent UK comparison for weight loss care"
+                alt={`Why choose ${SITE_BRAND_NAME} — independent UK weight loss provider comparison`}
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 42vw, 100vw"
@@ -388,24 +392,24 @@ export default function AboutScrollyClient() {
             {[
               {
                 icon: ShieldCheck,
-                title: "Safety first",
-                body: "We prioritise GPhC-registered pathways and show how we think about verification—so you can cross-check any provider in minutes.",
-                href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
-                cta: "How we verify pharmacies",
+                title: "Pharmacy verification",
+                body: "We prioritise GPhC-registered pathways and show how we think about verification—so you can cross-check any UK weight loss provider in minutes.",
+                href: "/pharmacy-safety-gphc-verification",
+                cta: "GPhC verification guide",
               },
               {
                 icon: Sparkles,
-                title: "Transparent methodology",
-                body: "Our rankings spell out what moves a row up or down. No hidden weighting behind a glossy landing page.",
+                title: "Comparison methodology",
+                body: "Our methodology spells out how provider pricing, fees and support signals are assessed. No hidden weighting behind a glossy landing page.",
                 href: "/methodology",
                 cta: "Read our methodology",
               },
               {
                 icon: ArrowRight,
-                title: "Human support",
-                body: "Questions about the site or a listing? Reach out—we treat editorial integrity as part of the product.",
-                href: "/contact",
-                cta: "Contact us",
+                title: "Editorial independence",
+                body: "Questions about a listing, affiliate disclosure or a correction? Reach out—we treat editorial integrity as part of the product.",
+                href: "/editorial-policy",
+                cta: "Editorial policy",
               },
             ].map((item, i) => (
               <RevealBlock
@@ -461,20 +465,27 @@ export default function AboutScrollyClient() {
             variants={staggerItem}
             className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-relaxed text-slate-600 sm:text-lg"
           >
-            Founded in 2026, Health Wise exists to make UK GLP‑1 markets easier
-            to navigate—with restraint in motion and generosity in detail.
+            Founded in 2026, {SITE_BRAND_NAME} exists to make UK weight loss
+            provider markets easier to navigate—as an independent comparison
+            website with clear methodology, pharmacy checks and honest
+            affiliate disclosure.
           </motion.p>
           <motion.div
             variants={staggerItem}
             className="mt-8 flex flex-wrap justify-center gap-3"
           >
             <Link
-              href="/tools/weight-loss-tracker"
+              href="/methodology"
               className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm transition hover:border-slate-400"
             >
-              Weight loss tracker
+              Comparison methodology
             </Link>
-            <CompareHereLink href="/wegovy-price-comparison" />
+            <Link
+              href={HOME_COMPARE_HUB_HREF}
+              className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-500"
+            >
+              Compare UK providers
+            </Link>
           </motion.div>
         </motion.div>
       </section>

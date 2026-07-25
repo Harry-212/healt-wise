@@ -17,8 +17,8 @@ export default function GenmedsPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Genmeds"
       fileRef="HW-GENMEDS-2026"
-      title="Genmeds Weight Loss Treatment Review: Buying Mounjaro and Wegovy Online from a UK Registered Pharmacy"
-      subtitle="Official dossier: pharmacy-led access, listed prices, accessories, delivery notes and FAQs (information only — not medical advice)."
+      title="Genmeds weight management review"
+      subtitle="Independent provider review of Genmeds: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · UK online pharmacy"
       providerName="Genmeds"
       providerUrl={providerUrl}
@@ -83,12 +83,12 @@ export default function GenmedsPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why choose Genmeds for weight loss products?
+          Provider review: Genmeds
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
             <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              1. Access to prescription weight loss injections
+              1. Treatment options and clinical support
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
               Genmeds currently lists access to <strong>Mounjaro — from £179.99</strong> and{" "}
@@ -226,7 +226,7 @@ export default function GenmedsPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why some patients choose Genmeds
+          Who might consider Genmeds
         </p>
         <Points
           items={[
@@ -255,7 +255,7 @@ export default function GenmedsPharmacyContent() {
           Who might consider Genmeds?
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">
-          This service may suit people who want access to prescription weight loss injections, prefer
+          This service may suit people who want Treatment options and clinical support, prefer
           online pharmacy convenience, do not want subscription programmes, value privacy, and want
           straightforward medication supply. It may be less suited to those wanting intensive
           coaching support.
@@ -267,7 +267,7 @@ export default function GenmedsPharmacyContent() {
         <div className="mt-4 space-y-4">
           {[
             {
-              q: "Can I buy Wegovy from Genmeds?",
+              q: "Is Wegovy available through Genmeds?",
               a: "Yes, Wegovy appears available through Genmeds following a consultation and approval.",
             },
             {

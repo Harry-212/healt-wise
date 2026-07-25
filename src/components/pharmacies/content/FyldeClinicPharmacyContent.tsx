@@ -17,8 +17,8 @@ export default function FyldeClinicPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Fylde Clinic"
       fileRef="HW-FYLDE-2026"
-      title="Fylde Clinic Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Clinician-Led Support in the UK"
-      subtitle="Official dossier: how Fylde Clinic works, temperature-controlled delivery, pricing context and FAQs (information only — not medical advice)."
+      title="Fylde Clinic weight management review"
+      subtitle="Independent provider review of Fylde Clinic: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · UK online pharmacy"
       providerName="Fylde Clinic"
       providerUrl={providerUrl}
@@ -81,7 +81,7 @@ export default function FyldeClinicPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why choose Fylde Clinic for weight loss products?
+          Provider review: Fylde Clinic
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
@@ -99,7 +99,7 @@ export default function FyldeClinicPharmacyContent() {
 
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
             <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              2. Access to clinically endorsed weight loss injections
+              2. Clinical support and treatment options
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
               Fylde Clinic focuses heavily on injectable treatments including Mounjaro and Wegovy —
@@ -272,7 +272,7 @@ export default function FyldeClinicPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why some patients choose Fylde Clinic
+          Who might consider Fylde Clinic
         </p>
         <Points
           items={[

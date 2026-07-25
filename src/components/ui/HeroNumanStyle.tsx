@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Zap, Calculator, Activity, Scale } from "lucide-react";
-import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import {
+  HOME_COMPARE_HERO_CTA_LABEL,
+  HOME_COMPARE_HUB_HREF,
+} from "@/lib/routes/home-compare-hub";
 import {
   HOMEPAGE_HERO_LIFESTYLE_ALT,
   HOMEPAGE_HERO_LIFESTYLE_SRC,
@@ -85,21 +88,23 @@ export default function HeroNumanStyle() {
                 Compare Weight Loss Treatment Prices UK
               </h1>
               <p className="mt-4 max-w-2xl text-base font-medium text-slate-800 md:text-lg">
+                {" "}
                 <br />
                 <br />
-                Weight Loss Treatment UK: Independent UK Comparison for Prices,
-                Safety, and Support.
+                Independent UK comparison for prices, safety, and support.
               </p>
             </div>
 
-            <div className="mt-4 flex w-full sm:mt-5">
+            <div className="mt-7 flex w-full sm:mt-9 md:mt-10">
               <Link
                 href={HOME_COMPARE_HUB_HREF}
-                className={`${homepageYellowCtaSolid} group relative w-full min-h-[80px] max-w-full overflow-hidden rounded-full px-8 py-6 text-2xl leading-tight tracking-tight ring-[3px] ring-amber-300/50 hover:ring-amber-400/80 hover:shadow-amber-500/30 sm:min-h-[92px] sm:w-auto sm:px-16 sm:py-6 sm:text-3xl md:min-h-[100px] md:px-20 md:py-7 md:text-[2.125rem]`}
+                className={`${homepageYellowCtaSolid} group relative w-full max-w-md overflow-hidden rounded-full px-6 py-3.5 text-base font-bold leading-snug tracking-tight ring-2 ring-amber-300/50 hover:ring-amber-400/80 hover:shadow-amber-500/30 sm:w-auto sm:px-8 sm:py-4 sm:text-lg md:text-xl`}
               >
-                <span>Compare Now</span>
+                <span className="text-center">
+                  {HOME_COMPARE_HERO_CTA_LABEL}
+                </span>
                 <Zap
-                  className="h-7 w-7 shrink-0 fill-slate-900 transition-transform duration-300 group-hover:scale-110 sm:h-8 sm:w-8 md:h-9 md:w-9"
+                  className="h-5 w-5 shrink-0 fill-slate-900 transition-transform duration-300 group-hover:scale-110 sm:h-6 sm:w-6"
                   aria-hidden
                 />
               </Link>

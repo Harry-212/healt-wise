@@ -103,7 +103,8 @@ export default async function ComparePage({ params }: Props) {
 
   const webLdName = layout.share.title.includes("|")
     ? layout.share.title
-    : [layout.hero.titleItalic, layout.hero.titleBold]
+    : layout.share.title ||
+      [layout.hero.titleItalic, layout.hero.titleBold]
         .map((s) => s.trim())
         .filter(Boolean)
         .join(" ");
@@ -166,55 +167,90 @@ export default async function ComparePage({ params }: Props) {
         />
 
         <section className="w-full border-b border-slate-200/80">
-          <TrustBarMarquee />
+          <TrustBarMarquee staticRow />
         </section>
 
-        {slug !== "mounjaro-vs-wegovy-vs-saxenda" ? (
-          <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
-            <div className="mx-auto max-w-5xl px-4 md:px-8">
-              <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-                {layout.intro.heading}
-              </h2>
-              <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-                {layout.intro.body.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-              </div>
-              <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
-                  <Scale className="h-8 w-8 text-brand-primary" aria-hidden />
-                  <p className="mt-3 font-semibold text-slate-900">
-                    Transparent Pricing
-                  </p>
-                  <p className="mt-1 text-sm text-slate-600">
-                    Sort every column, filter by band, and preview where
-                    discounts will surface.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
-                  <Shield className="h-8 w-8 text-emerald-600" aria-hidden />
-                  <p className="mt-3 font-semibold text-slate-900">
-                    UK Regulatory Lens
-                  </p>
-                  <p className="mt-1 text-sm text-slate-600">
-                    GPhC lines and cold-chain cues match our standalone compare
-                    tools.
-                  </p>
-                </div>
-                <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
-                  <BadgeCheck className="h-8 w-8 text-violet-600" aria-hidden />
-                  <p className="mt-3 font-semibold text-slate-900">
-                    Editorial Balance
-                  </p>
-                  <p className="mt-1 text-sm text-slate-600">
-                    “Cheapest” vs “balance pick” callouts mirror the price hub
-                    pages.
-                  </p>
-                </div>
-              </div>
+        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-5xl px-4 md:px-8">
+            <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+              {layout.intro.heading}
+            </h2>
+            <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
+              {layout.intro.body.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
-          </section>
-        ) : null}
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              {isTripleHub ? (
+                <>
+                  <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                    <Scale className="h-8 w-8 text-brand-primary" aria-hidden />
+                    <p className="mt-3 font-semibold text-slate-900">
+                      Dosing Schedules
+                    </p>
+                    <p className="mt-1 text-sm text-slate-600">
+                      Weekly versus daily schedules, titration steps, and how
+                      pack quotes map to a month of treatment.
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                    <Shield className="h-8 w-8 text-emerald-600" aria-hidden />
+                    <p className="mt-3 font-semibold text-slate-900">
+                      Eligibility
+                    </p>
+                    <p className="mt-1 text-sm text-slate-600">
+                      BMI, comorbidities, and clinical review decide access —
+                      confirm criteria with a registered UK prescriber.
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                    <BadgeCheck className="h-8 w-8 text-violet-600" aria-hidden />
+                    <p className="mt-3 font-semibold text-slate-900">
+                      NHS and Private Access
+                    </p>
+                    <p className="mt-1 text-sm text-slate-600">
+                      Private pathways are self-funded and usually faster; NHS
+                      routes follow local capacity and eligibility rules.
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                    <Scale className="h-8 w-8 text-brand-primary" aria-hidden />
+                    <p className="mt-3 font-semibold text-slate-900">
+                      Transparent Pricing
+                    </p>
+                    <p className="mt-1 text-sm text-slate-600">
+                      Sort every column, filter by band, and preview where
+                      discounts will surface.
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                    <Shield className="h-8 w-8 text-emerald-600" aria-hidden />
+                    <p className="mt-3 font-semibold text-slate-900">
+                      UK Regulatory Lens
+                    </p>
+                    <p className="mt-1 text-sm text-slate-600">
+                      GPhC lines and cold-chain cues match our standalone compare
+                      tools.
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm">
+                    <BadgeCheck className="h-8 w-8 text-violet-600" aria-hidden />
+                    <p className="mt-3 font-semibold text-slate-900">
+                      Editorial Balance
+                    </p>
+                    <p className="mt-1 text-sm text-slate-600">
+                      “Cheapest” vs “balance pick” callouts mirror the price hub
+                      pages.
+                    </p>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </section>
 
         <section className="border-b border-slate-200/80 bg-slate-50/70 py-12 md:py-16">
           <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:px-8">
@@ -254,7 +290,7 @@ export default async function ComparePage({ params }: Props) {
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Best Choice For You
+              {layout.bestChoiceTitle ?? "Best Choice For You"}
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
               {layout.bestChoiceBody}

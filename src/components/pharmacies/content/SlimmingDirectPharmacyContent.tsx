@@ -21,8 +21,8 @@ export default function SlimmingDirectPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Slimming Direct"
       fileRef="HW-SLIMMINGDIRECT-2026"
-      title="Slimming Direct (UK): Clinician Led Online Weight Loss, GLP-1 and Delivery"
-      subtitle="UK service framed as clinically supervised online weight loss via a pharmacy pathway, personalised plans, prescription GLP-1 and capsule options, discreet logistics and stated turnaround times. Information only, not medical advice."
+      title="Slimming Direct weight management review"
+      subtitle="Independent provider review of Slimming Direct: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Orlistat · GLP-1 injections where prescribed"
       providerName="Slimming Direct"
       providerUrl={providerUrl}

@@ -21,8 +21,8 @@ export default function ManchesterChemistPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Manchester Chemist"
       fileRef="HW-MANCHESTER-CHEMIST-2026"
-      title="Manchester Chemist (UK): Independent Pharmacy, Pharmacist Review and National GLP‑1 Delivery"
-      subtitle="Community independent pharmacy in Manchester combining digital questionnaires with pharmacist led review, private prescribing, dispensing from a physical site, free prescription delivery narratives, cold chain for Mounjaro and Wegovy, and pay as you go pricing. Information only, not medical advice."
+      title="Manchester Chemist weight management review"
+      subtitle="Independent provider review of Manchester Chemist: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · NICE aligned eligibility themes"
       providerName="Manchester Chemist"
       providerUrl={providerUrl}

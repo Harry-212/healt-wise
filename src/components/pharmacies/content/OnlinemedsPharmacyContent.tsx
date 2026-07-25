@@ -21,8 +21,8 @@ export default function OnlinemedsPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="OnlineMeds"
       fileRef="HW-ONLINEMEDS-2026"
-      title="OnlineMeds (UK): Specialist Weight Loss Pharmacy, Mounjaro, Wegovy and Orlistat"
-      subtitle="UK pharmacy focused on weight management: pharmacist prescriber assessment, personalised plans, free tracked delivery, discreet packaging, bundled pricing, and follow-up care. Information only, not medical advice."
+      title="OnlineMeds weight management review"
+      subtitle="Independent provider review of OnlineMeds: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Orlistat"
       providerName="OnlineMeds"
       providerUrl={providerUrl}

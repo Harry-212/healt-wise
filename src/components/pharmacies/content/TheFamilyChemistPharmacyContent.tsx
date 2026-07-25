@@ -21,8 +21,8 @@ export default function TheFamilyChemistPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="The Family Chemist"
       fileRef="HW-FAMILYCHEMIST-2026"
-      title="The Family Chemist (UK): Regulated Online Weight Loss, Delivery Tiers and Clear Pricing"
-      subtitle="UK online pharmacy presenting GPhC aligned governance, free consultation questionnaires, choice of weekly or daily injectables and tablets, tiered Royal Mail style delivery including fridge lines, and accessory add ons. Information only, not medical advice."
+      title="The Family Chemist weight management review"
+      subtitle="Independent provider review of The Family Chemist: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Nevolat · Orlistat · Xenical · Accessories"
       providerName="The Family Chemist"
       providerUrl={providerUrl}

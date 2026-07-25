@@ -24,8 +24,8 @@ export default function JoodLifePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Jood Life Pharmacy"
       fileRef="HW-JOOD-LIFE-2026"
-      title="Why You Should Choose Jood Life Pharmacy for Weight Loss Support"
-      subtitle="Modern online weight loss support with private consultation, licensed UK prescriber review, transparent pricing, and ongoing guidance. Information only, not medical advice."
+      title="Jood Life Pharmacy weight management review"
+      subtitle="Independent provider review of Jood Life Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · online consultation · prescriber review · delivery"
       providerName="Jood Life Pharmacy"
       providerUrl={providerUrl}

@@ -21,8 +21,8 @@ export default function IqDoctorPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="IQ Doctor"
       fileRef="HW-IQ-DOCTOR-2026"
-      title="IQ Doctor (UK): Mounjaro, Wegovy, Saxenda, Orlistat and Xenical with Online Prescribing"
-      subtitle="How IQ Doctor combines online consultation, UK prescriber review, regulated pharmacy dispensing, and tracked delivery for weight loss medicines. Indicative prices, cold chain, reviews, and what to check before you order. Information only, not medical advice."
+      title="IQ Doctor weight management review"
+      subtitle="Independent provider review of IQ Doctor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat · Xenical · supplies"
       providerName="IQ Doctor"
       providerUrl={providerUrl}

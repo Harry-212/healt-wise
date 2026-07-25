@@ -19,8 +19,8 @@ export default function CuvaHealthContent() {
     <PharmacyDossierPage
       slugLabel="Cuva Health"
       fileRef="HW-CUVA-2026"
-      title="Cuva Health Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Clinician-Led Support in the UK"
-      subtitle="Official dossier: how Cuva Health works, clinician-led review, cold-chain delivery, pricing context and FAQs (information only — not medical advice)."
+      title="Cuva Health weight management review"
+      subtitle="Independent provider review of Cuva Health: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Liraglutide"
       providerName="Cuva Health"
       providerUrl={providerUrl}
@@ -86,7 +86,7 @@ export default function CuvaHealthContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Why choose Cuva Health?
+          Provider review: Cuva Health
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">

@@ -21,8 +21,8 @@ export default function SimpleOnlinePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Simple Online Pharmacy"
       fileRef="HW-SIMPLEONLINE-2026"
-      title="Simple Online Pharmacy (UK): Regulated Weight Loss, Clinician Review and Home Delivery"
-      subtitle="UK registered online pharmacy framing clinician led GLP-1 and related weight management, a four step digital pathway, discreet fulfilment, transparent pricing themes and ongoing support. Information only, not medical advice."
+      title="Simple Online Pharmacy weight management review"
+      subtitle="Independent provider review of Simple Online Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Other prescription options where offered"
       providerName="Simple Online Pharmacy"
       providerUrl={providerUrl}

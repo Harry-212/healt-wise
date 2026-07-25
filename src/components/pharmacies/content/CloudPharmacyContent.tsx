@@ -20,8 +20,8 @@ export default function CloudPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Cloud Pharmacy"
       fileRef="HW-CLOUD-2026"
-      title="Cloud Pharmacy Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Prescription Support in the UK"
-      subtitle="Official dossier: how Cloud Pharmacy works, treatments that may be available, delivery/temperature handling, pricing context and FAQs (information only — not medical advice)."
+      title="Cloud Pharmacy weight management review"
+      subtitle="Independent provider review of Cloud Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat · Mysimba"
       providerName="Cloud Pharmacy"
       providerUrl={providerUrl}
@@ -86,7 +86,7 @@ export default function CloudPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Why choose Cloud Pharmacy?
+          Provider review: Cloud Pharmacy
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
@@ -237,7 +237,7 @@ export default function CloudPharmacyContent() {
               a: "Costs may range from around £20–£100+ for tablets and £130–£300+ per month for injections, depending on medication and dosage.",
             },
             {
-              q: "Does Cloud Pharmacy deliver weight loss injections to your home?",
+              q: "Does Cloud Pharmacy deliver weight management medication to your home?",
               a: "Yes. Approved prescriptions are shipped directly to your address, often with tracked delivery and temperature-controlled packaging where required.",
             },
             {

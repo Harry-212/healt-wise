@@ -27,7 +27,7 @@ const SERVICES = [
     icon: PoundSterling,
     label: "Price Comparison",
     href: MOUNJARO_HUB.href,
-    ctaPublicLabel: "Compare weight loss treatment prices",
+    ctaPublicLabel: "Compare prices",
     ctaBrandLabel: MOUNJARO_HUB.brandLabel,
     desc: (
       <>
@@ -122,7 +122,7 @@ const SERVICES = [
 }[];
 
 const serviceCardCtaClass =
-  "mt-2 inline-flex w-fit items-center justify-center rounded-lg border-2 border-emerald-600/55 bg-emerald-50/90 px-4 py-2 text-xs font-bold text-emerald-950 shadow-sm transition hover:border-emerald-700/70 hover:bg-emerald-100/90 active:scale-[0.98] sm:text-sm";
+  "mt-auto inline-flex h-10 w-full items-center justify-center rounded-lg border-2 border-emerald-600/55 bg-emerald-50/90 px-3 text-center text-xs font-bold leading-tight text-emerald-950 shadow-sm transition hover:border-emerald-700/70 hover:bg-emerald-100/90 active:scale-[0.98] sm:h-11 sm:text-sm";
 
 export default function OurServices() {
   return (
@@ -161,13 +161,13 @@ export default function OurServices() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:gap-4">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:items-stretch lg:gap-4">
               {SERVICES.map((svc, i) => {
                 const Icon = svc.icon;
                 return (
                   <div
                     key={svc.label}
-                    className={`group flex flex-col gap-3 rounded-2xl border border-slate-100 bg-slate-50/80 p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-200 hover:bg-white hover:shadow-md ${
+                    className={`group flex h-full flex-col gap-3 rounded-2xl border border-slate-100 bg-slate-50/80 p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-200 hover:bg-white hover:shadow-md ${
                       i === 4 ? "sm:col-span-2" : ""
                     }`}
                   >

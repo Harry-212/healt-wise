@@ -2,10 +2,14 @@
 
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { usePathname } from "next/navigation";
 import { Search, Zap } from "lucide-react";
 import { useState } from "react";
 import { NAV_PANELS } from "@/lib/nav/nav-config";
-import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import {
+  HOME_COMPARE_CTA_LABEL,
+  HOME_COMPARE_HUB_HREF,
+} from "@/lib/routes/home-compare-hub";
 import MobileNavDrawer from "@/components/layout/MobileNavDrawer";
 import { useSupabaseAuth } from "@/components/providers/SupabaseAuthProvider";
 import { greetingNameFromEmail } from "@/lib/auth/greeting-name";
@@ -100,6 +104,13 @@ function NavBarAuthCluster() {
 
 export default function NavBar() {
   const [searchOpen, setSearchOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/" || pathname === "";
+  const hideCompareChrome =
+    isHome ||
+    pathname === "/methodology" ||
+    pathname === "/editorial-policy" ||
+    pathname === "/about";
 
   return (
     <>
@@ -122,13 +133,18 @@ export default function NavBar() {
 
           <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2 md:gap-3 lg:shrink-0 lg:flex-none lg:justify-self-end">
             <MobileNavDrawer panels={NAV_PANELS} />
-            <Link
-              href={HOME_COMPARE_HUB_HREF}
-              className="hidden shrink-0 items-center gap-1.5 rounded-full border border-emerald-300/70 bg-emerald-100 px-3.5 py-2 text-xs font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90 sm:inline-flex sm:justify-center sm:px-4 sm:text-sm"
-            >
-              <Zap className="h-3.5 w-3.5 shrink-0 fill-emerald-950" aria-hidden />
-              Compare
-            </Link>
+            {!hideCompareChrome ? (
+              <Link
+                href={HOME_COMPARE_HUB_HREF}
+                className="hidden shrink-0 items-center gap-1.5 rounded-full border border-emerald-300/70 bg-emerald-100 px-3.5 py-2 text-xs font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90 sm:inline-flex sm:justify-center sm:px-4 sm:text-sm"
+              >
+                <Zap
+                  className="h-3.5 w-3.5 shrink-0 fill-emerald-950"
+                  aria-hidden
+                />
+                {HOME_COMPARE_CTA_LABEL}
+              </Link>
+            ) : null}
             <button
               type="button"
               onClick={() => setSearchOpen(true)}

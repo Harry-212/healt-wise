@@ -22,8 +22,8 @@ export default function MedinoPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Medino"
       fileRef="HW-MEDINO-2026"
-      title="Medino Weight Loss (UK): Pharmacist Review, PGD Supply and Fast Delivery"
-      subtitle="Online pharmacist assessed pathways to licensed weight loss medicines, including Patient Group Direction supply where legal, plus discreet tracked logistics and bundled headline pricing on many funnels. Information only, not medical advice."
+      title="Medino weight management review"
+      subtitle="Independent provider review of Medino: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro-class · Wegovy-class · daily injectables · oral fat absorption medicines"
       providerName="Medino"
       providerUrl={providerUrl}

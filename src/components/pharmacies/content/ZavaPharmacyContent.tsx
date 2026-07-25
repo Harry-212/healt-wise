@@ -21,8 +21,8 @@ export default function ZavaPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Zava"
       fileRef="HW-ZAVA-2026"
-      title="Zava (UK): Online Doctor Weight Loss, Photo BMI Checks and Cold Delivery"
-      subtitle="ZavaMed weight loss hub pairs UK doctor reviewed questionnaires with BMI photo verification, partner pharmacy dispensing, signature cold courier lanes for injectables, tablet postage options and bundled consultation pricing. Information only, not medical advice."
+      title="Zava weight management review"
+      subtitle="Independent provider review of Zava: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Liraglutide · Orlistat · Xenical · Mysimba · alli-style lines where listed"
       providerName="Zava"
       providerUrl={providerUrl}

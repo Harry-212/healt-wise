@@ -21,8 +21,8 @@ export default function WePrescribePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="WePrescribe"
       fileRef="HW-WEPRESCRIBE-2026"
-      title="WePrescribe (UK): Pharmacist Led Weight Loss Prescribing and Tracked Delivery"
-      subtitle="UK licensed online pharmacy describing pharmacist prescriber review, structured questionnaires, GLP‑1 and oral obesity medicines, discreet tracked Royal Mail options, cold chain injectables and referral style discounts where offered. Information only, not medical advice."
+      title="WePrescribe weight management review"
+      subtitle="Independent provider review of WePrescribe: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Saxenda · Orlistat · Xenical · alli where listed"
       providerName="WePrescribe"
       providerUrl={providerUrl}

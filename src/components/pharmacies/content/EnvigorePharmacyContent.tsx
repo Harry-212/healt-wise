@@ -17,8 +17,8 @@ export default function EnvigorePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Envigore"
       fileRef="HW-ENVIGORE-2026"
-      title="Envigore Weight Loss Treatment Review: Online Access to Mounjaro, Wegovy and Clinician-Led Support in the UK"
-      subtitle="Official dossier: how Envigore works, programme-style support, delivery, pricing context and FAQs (information only — not medical advice)."
+      title="Envigore weight management review"
+      subtitle="Independent provider review of Envigore: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · clinical programme · UK"
       providerName="Envigore"
       providerUrl={providerUrl}
@@ -86,7 +86,7 @@ export default function EnvigorePharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm">
-          Why choose Envigore for weight loss treatment?
+          Provider review: Envigore
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">

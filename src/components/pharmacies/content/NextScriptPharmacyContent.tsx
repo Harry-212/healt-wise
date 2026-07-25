@@ -21,8 +21,8 @@ export default function NextScriptPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Next Script"
       fileRef="HW-NEXT-SCRIPT-2026"
-      title="Next Script Weight Loss (UK): Mounjaro, Wegovy, Saxenda and Video-Verified Prescribing"
-      subtitle="UK online prescribing pharmacy with a short health questionnaire, supporting uploads, first-order video consultation, clinical review, discreet fast dispatch, and bundled pricing on many funnels. Information only, not medical advice."
+      title="Next Script weight management review"
+      subtitle="Independent provider review of Next Script: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Saxenda"
       providerName="Next Script"
       providerUrl={providerUrl}

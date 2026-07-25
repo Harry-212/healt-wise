@@ -1,5 +1,8 @@
 import { HELPFUL_GUIDES_HUB_PATH } from "@/lib/helpful-guide-slugs";
-import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import {
+  HOME_COMPARE_CTA_LABEL,
+  HOME_COMPARE_HUB_HREF,
+} from "@/lib/routes/home-compare-hub";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { SITE_LOGO_SRC } from "@/lib/site-assets";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
@@ -87,8 +90,14 @@ export function homePageJsonLdGraph(): Record<string, unknown> {
 
   /** Crawlable site hubs Google may surface as sitelinks under brand queries. */
   const featured = [
-    { name: "Compare weight loss treatments (UK)", path: HOME_COMPARE_HUB_HREF },
-    { name: "Mounjaro price comparison UK", path: "/mounjaro-price-comparison" },
+    {
+      name: HOME_COMPARE_CTA_LABEL,
+      path: HOME_COMPARE_HUB_HREF,
+    },
+    {
+      name: "Mounjaro price comparison UK",
+      path: "/mounjaro-price-comparison",
+    },
     { name: "Wegovy price comparison UK", path: "/wegovy-price-comparison" },
     { name: "BMI, BMR and calorie calculator", path: "/tools/bmi-calculator" },
     { name: "Weight loss injection news and guides", path: "/blog" },

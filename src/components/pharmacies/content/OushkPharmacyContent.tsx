@@ -21,9 +21,9 @@ export default function OushkPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Oushk Pharmacy"
       fileRef="HW-OUSHK-2026"
-      title="Oushk Pharmacy Weight Loss (UK): Online Doctor, GLP-1 Pathways and Scheduled Delivery"
-      subtitle="Online doctor led obesity care with health questionnaire, video verification, UK prescriber review, injectable and oral options, flexible couriers, next-day claims, and discreet packaging. Information only, not medical advice."
-      scopeLabel="Scope: Mounjaro · Wegovy · GLP-1 injectables · oral options"
+      title="Oushk Pharmacy weight management review"
+      subtitle="Independent provider review of Oushk Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
+      scopeLabel="Scope:Mounjaro · Wegovy · oral options"
       providerName="Oushk Pharmacy"
       providerUrl={providerUrl}
       docDetails={[

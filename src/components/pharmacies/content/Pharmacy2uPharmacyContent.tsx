@@ -21,8 +21,8 @@ export default function Pharmacy2uPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Pharmacy2U"
       fileRef="HW-PHARMACY2U-2026"
-      title="Pharmacy2U (UK): Mounjaro, Wegovy, Saxenda — Online Doctor Weight Loss"
-      subtitle="Official dossier: one of the UK’s largest online pharmacies, GPhC plus CQC-regulated presentation, online doctor assessments, GLP-1 and Orlistat pathways, express delivery economics, two-month supply option for established patients, privacy and indicative private cost bands (information only — not medical advice)."
+      title="Pharmacy2U weight management review"
+      subtitle="Independent provider review of Pharmacy2U: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat"
       providerName="Pharmacy2U"
       providerUrl={providerUrl}

@@ -8,6 +8,10 @@ import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import BrandHoverText from "@/components/ui/BrandHoverText";
 import type { RecommendedItem } from "@/lib/recommended-reading";
 import { applyHomeKeepExploringOverrides } from "@/lib/home-keep-exploring-overrides";
+import {
+  excludesInjectionKeyword,
+  getMethodologyRelatedReading,
+} from "@/lib/methodology-related-reading";
 import { HOMEPAGE_PRICE_HUB_LABELS } from "@/lib/text/homepage-brand-labels";
 import {
   sanitizeBrandDisplayNames,
@@ -79,17 +83,29 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
   const pathname = usePathname();
   const carouselRef = useRef<HTMLDivElement>(null);
   const isHome = normalizePath(pathname ?? "") === "/";
+  const isMethodology = normalizePath(pathname ?? "") === "/methodology";
 
   const picks = useMemo(() => {
     const path = normalizePath(pathname ?? "");
+    if (path === "/methodology") {
+      return getMethodologyRelatedReading().slice(0, CARD_COUNT);
+    }
     const filtered =
       path && path !== "/"
         ? pool.filter((item) => normalizePath(item.href) !== path)
         : [...pool];
+    const withoutInjections = filtered.filter(excludesInjectionKeyword);
     const seed = hashToSeed(`${dayKey}|${path || "home"}|recommendations`);
-    const shuffled = seededShuffle(filtered, seed);
+    const shuffled = seededShuffle(
+      withoutInjections.length >= CARD_COUNT ? withoutInjections : filtered,
+      seed,
+    );
     return shuffled.slice(0, CARD_COUNT);
   }, [pool, dayKey, pathname]);
+
+  const keepExploringIntro = isMethodology
+    ? "Related trust and safety pages that explain how we verify pharmacies, score providers and maintain editorial standards."
+    : KEEP_EXPLORING_INTRO;
 
   const scrollCarousel = (dir: -1 | 1) => {
     carouselRef.current?.scrollBy({ left: dir * 300, behavior: "smooth" });
@@ -111,7 +127,7 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
               Keep exploring
             </h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
-              {KEEP_EXPLORING_INTRO}
+              {keepExploringIntro}
             </p>
             {isHome ? (
               <nav

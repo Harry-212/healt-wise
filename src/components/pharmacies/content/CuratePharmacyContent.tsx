@@ -19,8 +19,8 @@ export default function CuratePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Curate"
       fileRef="HW-CURATE-2026"
-      title="Curate Weight Loss Treatment Review: Online Access to Wegovy, Saxenda and Prescription Support in the UK"
-      subtitle="Official dossier: how Curate works, treatments that may be available, delivery vs collection, pricing context and FAQs (information only — not medical advice)."
+      title="Curate weight management review"
+      subtitle="Independent provider review of Curate: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Wegovy · Saxenda · Orlistat"
       providerName="Curate"
       providerUrl={providerUrl}
@@ -84,7 +84,7 @@ export default function CuratePharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Why choose Curate?
+          Provider review: Curate
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">

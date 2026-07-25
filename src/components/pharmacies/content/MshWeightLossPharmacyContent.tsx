@@ -21,8 +21,8 @@ export default function MshWeightLossPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="MSH Weight Loss"
       fileRef="HW-MSH-2026"
-      title="MSH Weight Loss (UK): Mounjaro, Wegovy, Nurse Support and DPD Delivery"
-      subtitle="UK clinic style programme with online assessment, personalised prescribing, specialist nurse support, 28-day subscription cycles, signed next-day courier delivery, and bundled monthly pricing themes. Information only, not medical advice."
+      title="MSH Weight Loss weight management review"
+      subtitle="Independent provider review of MSH Weight Loss: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Rybelsus (where listed)"
       providerName="MSH Weight Loss"
       providerUrl={providerUrl}
@@ -188,7 +188,7 @@ export default function MshWeightLossPharmacyContent() {
       </div>
 
       <section>
-        <p className={sectionLabel}>Why choose MSH over lighter-touch sellers</p>
+        <p className={sectionLabel}>Provider review: MSH over lighter-touch sellers</p>
         <Points
           items={[
             "Regulated UK healthcare framing with references to oversight bodies such as CQC, GPhC, and MHRA in marketing copy (verify current registrations yourself).",

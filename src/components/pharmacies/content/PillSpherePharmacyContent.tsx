@@ -21,9 +21,9 @@ export default function PillSpherePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="PillSphere"
       fileRef="HW-PILLSPHERE-2026"
-      title="PillSphere (UK): Online Clinic Weight Loss, Clinical Review and Home Delivery"
-      subtitle="Online pharmacy and telehealth clinic offering prescription weight treatments after consultation, pharmacy dispensing, tracked Royal Mail style logistics, discreet packaging, and competitive monthly bands in customer narratives. Information only, not medical advice."
-      scopeLabel="Scope: Mounjaro-class · Wegovy-class · GLP-1 injectables · orals where listed"
+      title="PillSphere weight management review"
+      subtitle="Independent provider review of PillSphere: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
+      scopeLabel="Scope:Mounjaro-class · Wegovy-class · orals where listed"
       providerName="PillSphere"
       providerUrl={providerUrl}
       docDetails={[
@@ -231,7 +231,7 @@ export default function PillSpherePharmacyContent() {
         <p className="mt-3 text-slate-800 leading-relaxed">
           PillSphere presents a familiar UK recipe: clinician gated prescribing, pharmacy fulfilment, and
           discreet tracked delivery with pricing that reviewers often call competitive. Readers comparing{" "}
-          <strong>home-delivered weight loss injections</strong> or searching for a{" "}
+          <strong>home-delivered prescription weight management medicines</strong> or searching for a{" "}
           <strong>regulated online clinic</strong> should still validate dose-specific quotes on PillSphere
           itself and cross-link to Health Wise comparison tables for parity checks.
         </p>

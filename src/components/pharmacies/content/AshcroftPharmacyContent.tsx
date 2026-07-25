@@ -20,8 +20,8 @@ export default function AshcroftPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Ashcroft Pharmacy"
       fileRef="HW-ASHCROFT-2026"
-      title="Ashcroft Pharmacy Weight Loss Treatment Review: Safe Online Access to Mounjaro, Wegovy and More"
-      subtitle="Official dossier: how Ashcroft’s online doctor process works, treatment range, delivery expectations, and safety notes (information only — not medical advice)."
+      title="Ashcroft Pharmacy weight management review"
+      subtitle="Independent provider review of Ashcroft Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · tablets"
       providerName="Ashcroft Pharmacy"
       providerUrl={providerUrl}
@@ -93,7 +93,7 @@ export default function AshcroftPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Why choose Ashcroft Pharmacy for weight loss treatment?
+          Provider review: Ashcroft Pharmacy
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">

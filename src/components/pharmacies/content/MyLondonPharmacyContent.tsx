@@ -21,8 +21,8 @@ export default function MyLondonPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="My London Pharmacy"
       fileRef="HW-MY-LONDON-2026"
-      title="My London Pharmacy: UK Online Weight Loss, Mounjaro-Class Pathways and Next-Day Delivery"
-      subtitle="Registered UK online pharmacy positioning around short digital assessment, licensed prescribers, GLP-1 and dual incretin injectables where suitable, a patient portal, and discreet nationwide delivery. Information only, not medical advice."
+      title="My London Pharmacy weight management review"
+      subtitle="Independent provider review of My London Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy-class GLP-1 · weekly injectables · subscription options"
       providerName="My London Pharmacy"
       providerUrl={providerUrl}

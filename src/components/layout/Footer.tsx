@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ArrowUp, ChevronRight, Mail, Phone, MapPin } from "lucide-react";
-import BrandHoverText from "@/components/ui/BrandHoverText";
-import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
+import {
+  HOME_COMPARE_CTA_LABEL,
+  HOME_COMPARE_HUB_HREF,
+} from "@/lib/routes/home-compare-hub";
 import {
   FOOTER_EXPLORE_ALL_PHARMACIES_HREF,
   FOOTER_PHARMACY_LINKS,
@@ -16,7 +17,6 @@ import {
   SITE_BUSINESS_PHONE_TEL,
 } from "@/lib/site-contact";
 import { HOMEPAGE_PRICE_HUB_LABELS } from "@/lib/text/homepage-brand-labels";
-import { sanitizeBrandDisplayNames } from "@/lib/text/sanitize-brand-display-names";
 import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 import SiteSocialLinks from "@/components/layout/SiteSocialLinks";
@@ -61,20 +61,7 @@ const itemVariants = {
   },
 };
 
-function footerBrandLabel(label: string, hideBrands: boolean) {
-  if (!hideBrands) return <span>{label}</span>;
-  return (
-    <BrandHoverText
-      publicLabel={sanitizeBrandDisplayNames(label, true)}
-      brandLabel={label}
-    />
-  );
-}
-
 export default function Footer() {
-  const pathname = usePathname();
-  const hideBrands = (pathname ?? "/") === "/" || (pathname ?? "") === "";
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -196,7 +183,7 @@ export default function Footer() {
                     href={HOME_COMPARE_HUB_HREF}
                     className={FOOTER_NAV_LINK_PRIMARY}
                   >
-                    <span>Compare Treatments</span>
+                    <span>{HOME_COMPARE_CTA_LABEL}</span>
                     <ChevronRight
                       className={FOOTER_NAV_LINK_CHEVRON}
                       aria-hidden
@@ -208,18 +195,7 @@ export default function Footer() {
                     href={HOMEPAGE_PRICE_HUB_LABELS.mounjaro.href}
                     className={FOOTER_NAV_LINK}
                   >
-                    {hideBrands ? (
-                      <BrandHoverText
-                        publicLabel={
-                          HOMEPAGE_PRICE_HUB_LABELS.mounjaro.publicLabel
-                        }
-                        brandLabel={
-                          HOMEPAGE_PRICE_HUB_LABELS.mounjaro.brandLabel
-                        }
-                      />
-                    ) : (
-                      <span>Mounjaro Prices</span>
-                    )}
+                    <span>Mounjaro Prices</span>
                     <ChevronRight
                       className={FOOTER_NAV_LINK_CHEVRON}
                       aria-hidden
@@ -231,16 +207,7 @@ export default function Footer() {
                     href={HOMEPAGE_PRICE_HUB_LABELS.wegovy.href}
                     className={FOOTER_NAV_LINK}
                   >
-                    {hideBrands ? (
-                      <BrandHoverText
-                        publicLabel={
-                          HOMEPAGE_PRICE_HUB_LABELS.wegovy.publicLabel
-                        }
-                        brandLabel={HOMEPAGE_PRICE_HUB_LABELS.wegovy.brandLabel}
-                      />
-                    ) : (
-                      <span>Wegovy Prices</span>
-                    )}
+                    <span>Wegovy Prices</span>
                     <ChevronRight
                       className={FOOTER_NAV_LINK_CHEVRON}
                       aria-hidden
@@ -257,7 +224,10 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tools/bmi-calculator" className={FOOTER_NAV_LINK}>
+                  <Link
+                    href="/tools/bmi-calculator"
+                    className={FOOTER_NAV_LINK}
+                  >
                     <span>BMI Calculator</span>
                     <ChevronRight
                       className={FOOTER_NAV_LINK_CHEVRON}
@@ -323,7 +293,7 @@ export default function Footer() {
                 {FOOTER_SUPPORT_LINKS.map(({ href, label }) => (
                   <li key={href}>
                     <Link href={href} className={FOOTER_NAV_LINK}>
-                      {footerBrandLabel(label, hideBrands)}
+                      <span>{label}</span>
                       <ChevronRight
                         className={FOOTER_NAV_LINK_CHEVRON}
                         aria-hidden

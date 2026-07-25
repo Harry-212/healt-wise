@@ -15,8 +15,8 @@ export default function BootsOnlineDoctorContent() {
     <PharmacyDossierPage
       slugLabel="Boots Online Doctor"
       fileRef="HW-BOOTS-2026"
-      title="Boots Online Doctor Weight Loss Review: Access Wegovy and Prescription Support Through a Trusted UK Provider"
-      subtitle="How the service works, what treatments may be available, delivery vs pharmacy collection, pricing expectations, and safety notes. Information only — not medical advice."
+      title="Boots Online Doctor weight management review"
+      subtitle="Independent provider review of Boots Online Doctor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Wegovy · Saxenda · Orlistat"
       providerName="Boots Online Doctor"
       providerUrl="https://onlinedoctor.boots.com/weight-loss"
@@ -72,7 +72,7 @@ export default function BootsOnlineDoctorContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Why choose Boots?
+          Provider review: Boots
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">

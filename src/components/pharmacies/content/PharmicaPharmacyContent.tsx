@@ -21,9 +21,9 @@ export default function PharmicaPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Pharmica"
       fileRef="HW-PHARMICA-2026"
-      title="Pharmica (UK): Mounjaro, Wegovy, Saxenda — Weight Loss, Delivery Tiers, and Pricing"
-      subtitle="Official dossier: regulated online pharmacy presentation, pharmacist-led checks, broad injectable and capsule range, same-day dispatch claims, multiple UK delivery speeds (including London same-day), discreet packaging, repeat ordering, customer-volume claims, and indicative delivery fee tiers (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat · GLP-1 injectables"
+      title="Pharmica weight management review"
+      subtitle="Independent provider review of Pharmica: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
+      scopeLabel="Scope:Mounjaro · Wegovy · Saxenda · Orlistat"
       providerName="Pharmica"
       providerUrl={providerUrl}
       docDetails={[

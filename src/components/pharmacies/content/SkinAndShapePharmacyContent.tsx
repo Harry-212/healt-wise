@@ -24,8 +24,8 @@ export default function SkinAndShapePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Skin & Shape Pharmacy"
       fileRef="HW-SKIN-SHAPE-2026"
-      title="Why You Should Choose Skin & Shape Pharmacy for Weight Management Treatment"
-      subtitle="Online pharmacist-led weight management support with consultation, regulated treatment access, discreet delivery, and ongoing guidance. Information only, not medical advice."
+      title="Skin & Shape Pharmacy weight management review"
+      subtitle="Independent provider review of Skin & Shape Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: weight management · pharmacist-led care · online consultation · discreet delivery"
       providerName="Skin & Shape Pharmacy"
       providerUrl={providerUrl}

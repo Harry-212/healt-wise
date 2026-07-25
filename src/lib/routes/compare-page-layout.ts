@@ -27,6 +27,7 @@ export type ComparePageLayoutConfig = {
   effectivenessBody: string;
   sideEffectsTitle: string;
   sideEffectsBody: string;
+  bestChoiceTitle?: string;
   bestChoiceBody: string;
 };
 
@@ -171,7 +172,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       variant: "violet",
       eyebrow: "Three-Way UK Comparison",
       titleItalic: "",
-      titleBold: "Compare Mounjaro, Wegovy & Saxenda.",
+      titleBold: "Mounjaro vs Wegovy vs Saxenda UK",
       subtitle: "Live Verified Pharmacy Prices",
       snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
       navLinks: [
@@ -184,31 +185,32 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     },
     share: {
       canonicalPath: "/compare/mounjaro-vs-wegovy-vs-saxenda",
-      title: "Mounjaro vs Wegovy vs Saxenda UK | Prices & Differences",
+      title: "Mounjaro vs Wegovy vs Saxenda UK",
       metaDescription:
-        "Compare Mounjaro, Wegovy and Saxenda in the UK by price, dosing, clinical evidence, side effects, eligibility and pharmacy availability.",
-      openGraphTitle: "Mounjaro vs Wegovy vs Saxenda UK | Prices & Differences",
+        "Compare Mounjaro, Wegovy and Saxenda: active ingredients, dosing schedules, clinical evidence, side effects, eligibility, NHS and private access, and total treatment cost.",
+      openGraphTitle: "Mounjaro vs Wegovy vs Saxenda UK",
       openGraphDescription:
-        "Compare Mounjaro, Wegovy and Saxenda in the UK by price, dosing, clinical evidence, side effects, eligibility and pharmacy availability.",
+        "Compare Mounjaro, Wegovy and Saxenda: active ingredients, dosing schedules, clinical evidence, side effects, eligibility, NHS and private access, and total treatment cost.",
       imagePath: OG,
       imageAlt:
         "Healthwise360 — Mounjaro vs Wegovy vs Saxenda UK comparison",
     },
     intro: {
-      heading: "Why Read A Three-Way Comparison?",
+      heading: "Active Ingredients and How They Work",
       body: [
-        "Mounjaro (tirzepatide), Wegovy (semaglutide), and Saxenda (liraglutide) are all prescription weight-management options used in eligible UK adults, but they differ in receptor profile, treatment frequency, titration, and how pharmacies quote pens or packs.",
-        "The live comparison matrices at the top of this page use the same advanced datasets as our standalone price pages — switch tabs to explore each brand in full detail.",
+        "Mounjaro uses tirzepatide (dual GIP/GLP-1 receptor agonist). Wegovy uses semaglutide (GLP-1 receptor agonist). Saxenda uses liraglutide (GLP-1 receptor agonist). These treatment differences shape appetite signalling, titration plans, and how pharmacies quote pens or packs.",
+        "Use this hub to compare Mounjaro, Wegovy and Saxenda side by side, then confirm suitability with a UK registered prescriber.",
       ],
     },
-    effectivenessTitle: "Effectiveness In Context",
+    effectivenessTitle: "Clinical Evidence",
     effectivenessBody:
-      "Trial programmes, licensing, and individual response are not interchangeable across these medicines. Headline weight outcomes from studies cannot be mapped directly to your situation. Use this hub to understand pricing and pack mechanics, then discuss goals, contraindications, and monitoring with a prescriber.",
-    sideEffectsTitle: "Side Effects & Commitments",
+      "Published programmes report average outcomes that vary by medicine, dose, trial population, and adherence. Clinical evidence is not a ranking of which option is “best” for you. Pair study context with dosing schedules, tolerability, and total treatment cost before decisions with your clinician.",
+    sideEffectsTitle: "Side Effects",
     sideEffectsBody:
-      "Gastrointestinal symptoms are common early on across GLP-1 therapies; pancreatitis, gallbladder disease, and other risks are described in each summary of product characteristics. Saxenda’s daily schedule and Mounjaro’s dual agonism carry different counselling points — always read the PIL for the medicine you are actually prescribed.",
+      "Gastrointestinal symptoms are common early across these therapies. Pancreatitis, gallbladder disease, and other risks appear in each summary of product characteristics. Daily versus weekly dosing schedules change counselling points — always read the PIL for the medicine you are prescribed.",
+    bestChoiceTitle: "Consultation and Delivery Costs",
     bestChoiceBody:
-      "There is no universal “winner”: eligibility, tolerability, treatment schedule, and total cost of care (assessment + medicine + follow-up) steer choice. Compare illustrative totals in each tab, cross-check GPhC registration, and confirm live checkout prices before you pay.",
+      "Total treatment cost usually includes assessment or consultation fees, delivery or cold-chain charges, follow-up, and the medicine itself. Compare illustrative pharmacy rows in the tabs above, then confirm live checkout totals, eligibility criteria, and NHS versus private access options with a regulated provider.",
   },
   "best-weight-loss-treatments-uk": {
     medications: ["mounjaro", "wegovy", "saxenda"],

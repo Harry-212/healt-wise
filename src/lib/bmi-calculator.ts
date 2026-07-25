@@ -71,67 +71,73 @@ export function projectedBmiAfterWeightLossFraction(
   return Math.round(bmi * (1 - lossFraction) * 10) / 10;
 }
 
-export type TreatmentEligibilityBand = "below27" | "maybe27" | "likely30";
+/** NHS-style adult BMI bands used in UK weight-management conversations. */
+export type NhsBmiBand = "underweight" | "healthy" | "overweight" | "obese";
 
-export function treatmentEligibilityBand(bmi: number): TreatmentEligibilityBand {
-  if (bmi >= 30) return "likely30";
-  if (bmi >= 27) return "maybe27";
-  return "below27";
+export function nhsBmiBand(bmi: number): NhsBmiBand {
+  return categoryFromBmi(bmi).key;
 }
 
-export function treatmentEligibilityCopy(bmi: number): string {
-  const band = treatmentEligibilityBand(bmi);
-  if (band === "likely30") {
-    return "You may be eligible for prescription weight loss treatments in the UK—such as Wegovy (semaglutide) or Mounjaro (tirzepatide)—if a qualified prescriber agrees treatment is appropriate.";
+/** Plain-language NHS BMI category context — not a treatment recommendation. */
+export function nhsCategoryCopy(bmi: number): string {
+  const band = nhsBmiBand(bmi);
+  if (band === "obese") {
+    return "On NHS adult BMI thresholds, a BMI of 30 or above is classed as obese. Clinicians may discuss structured weight management support alongside other health markers—BMI alone does not decide care.";
   }
-  if (band === "maybe27") {
-    return "With a BMI of 27 or above, you may qualify for some prescription weight loss treatments in the UK only if you also have certain weight-related health conditions. A clinician must assess you—BMI alone is not enough.";
+  if (band === "overweight") {
+    return "On NHS adult BMI thresholds, a BMI of 25–29.9 is classed as overweight. Some pathways also look at BMI 27+ when weight-related conditions are present. Your GP interprets the full picture.";
   }
-  return "Most UK prescribing pathways focus on BMI 27+ (with qualifying conditions) or BMI 30+. If you're concerned about your weight, a clinician can advise on safe next steps.";
+  if (band === "healthy") {
+    return "On NHS adult BMI thresholds, a BMI of 18.5–24.9 is usually classed as a healthy weight. Waist size, blood tests, and symptoms still matter if you have health concerns.";
+  }
+  return "On NHS adult BMI thresholds, a BMI below 18.5 is classed as underweight. If this matches how you feel day to day, speak to a GP or dietitian about safe next steps.";
 }
 
 export function recommendedNextStep(bmi: number): {
   title: string;
   body: string;
-  emphasis: "lifestyle" | "balance" | "treatment" | "strong";
+  emphasis: "lifestyle" | "balance" | "support" | "strong";
 } {
+  if (bmi < 18.5) {
+    return {
+      title: "Check in with a clinician",
+      body: "An underweight BMI is a reason to review nutrition, underlying conditions, and safe weight goals with a GP or dietitian—not to chase a calorie deficit.",
+      emphasis: "support",
+    };
+  }
   if (bmi < 25) {
     return {
       title: "Focus on sustainable habits",
-      body: "Your BMI sits in a range where lifestyle measures—nutrition, movement, sleep, and stress care—are usually the first line. Ask your GP if you have symptoms or risk factors to review.",
+      body: "Your BMI sits in the healthy range where nutrition, movement, sleep, and stress care usually matter most. Ask your GP if you have symptoms or risk factors to review.",
       emphasis: "lifestyle",
-    };
-  }
-  if (bmi < 27) {
-    return {
-      title: "Stay proactive about your health",
-      body: "You're in the overweight range. Many people benefit from structured habits and follow-up with a healthcare professional, especially if waist circumference, blood pressure, or blood sugar are elevated.",
-      emphasis: "balance",
     };
   }
   if (bmi < 30) {
     return {
-      title: "Explore whether medical support fits your situation",
-      body: "At BMI 27–29.9, prescription options like Wegovy or Mounjaro may be possible only with qualifying conditions. Compare pathways and private prices when you're ready—but always prioritise clinician-led assessment.",
-      emphasis: "treatment",
+      title: "Use calorie needs as a planning guide",
+      body: "You're in the overweight range on NHS bands. Pair your BMI category with BMR/TDEE estimates, then discuss waist circumference, blood pressure, or blood sugar with a healthcare professional if relevant.",
+      emphasis: "balance",
     };
   }
   return {
-    title: "You may be a candidate to discuss GLP-1 treatment",
-    body: "At BMI 30+, many UK private pathways will consider GLP-1 medicines where appropriate. Your prescriber still needs your full medical history—use our comparisons to prepare questions, not to self-prescribe.",
+    title: "Plan weight management with clinical context",
+    body: "At BMI 30+, NHS pathways often consider structured weight management support. Use this calculator to understand categories and calorie needs—decisions still need a clinician who knows your history.",
     emphasis: "strong",
   };
 }
 
 export function insightCallout(bmi: number): string {
   const cat = categoryFromBmi(bmi);
-  if (cat.key === "obese" || cat.key === "overweight") {
-    return `Based on your BMI, you may qualify for weight loss injections like Wegovy or Mounjaro in the UK if a prescriber confirms you meet the criteria and it's safe for you.`;
+  if (cat.key === "obese") {
+    return `Your BMI is in the obese range on standard UK adult thresholds. That can inform weight management conversations with a clinician, alongside waist size, comorbidities, and how you feel.`;
+  }
+  if (cat.key === "overweight") {
+    return `Your BMI is in the overweight range. NHS guidance treats BMI as a screening tool—ethnicity, muscle mass, and health conditions can change how the number is interpreted.`;
   }
   if (cat.key === "healthy") {
-    return `Your BMI is in the healthy range. If you're still looking for metabolic support, speak to a clinician—treatment eligibility is never based on BMI alone.`;
+    return `Your BMI is in the healthy weight range. Keep using BMR and calorie estimates as planning aids if you want to maintain weight or adjust activity—not as rigid medical targets.`;
   }
-  return `Your BMI is below the usual thresholds for obesity medicines. If weight or appetite is affecting your health, your GP can guide appropriate next steps.`;
+  return `Your BMI is below the usual healthy range. If weight, appetite, or energy is affecting your health, your GP can guide appropriate next steps.`;
 }
 
 /** Bar marker position 0–100 for BMI between min and max. */

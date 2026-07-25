@@ -21,9 +21,9 @@ export default function PharmacyAdvanceContent() {
     <PharmacyDossierPage
       slugLabel="Pharmacy Advance"
       fileRef="HW-PHARMACY-ADVANCE-2026"
-      title="Pharmacy Advance (UK): Mounjaro, Wegovy, Saxenda — Online Consultation and Delivery"
-      subtitle="Official dossier: end-to-end online weight-loss service, secure questionnaire, pharmacist or prescriber review, regulated dispensing, Royal Mail–style tracked delivery, cold-chain claims for injectables, indicative pricing, privacy and GPhC context (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · GLP-1 injectables"
+      title="Pharmacy Advance weight management review"
+      subtitle="Independent provider review of Pharmacy Advance: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
+      scopeLabel="Scope:Mounjaro · Wegovy · Saxenda"
       providerName="Pharmacy Advance"
       providerUrl={providerUrl}
       docDetails={[

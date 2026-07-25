@@ -20,8 +20,8 @@ export default function AypHealthcareContent() {
     <PharmacyDossierPage
       slugLabel="AYP Healthcare"
       fileRef="HW-AYP-2026"
-      title="AYP Healthcare Weight Management Review: Online Access to Mounjaro, Wegovy and Medically Supported Weight Loss"
-      subtitle="Official dossier: how AYP Healthcare works, what treatments may be available, delivery, pricing context, and FAQs (information only — not medical advice)."
+      title="AYP Healthcare weight management review"
+      subtitle="Independent provider review of AYP Healthcare: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy"
       providerName="AYP Healthcare"
       providerUrl={providerUrl}
@@ -94,7 +94,7 @@ export default function AypHealthcareContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Why choose AYP Healthcare for weight management treatment?
+          Provider review: AYP Healthcare
         </p>
         <div className="mt-3 space-y-4">
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
@@ -111,7 +111,7 @@ export default function AypHealthcareContent() {
 
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
             <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              2. Access to clinically proven weight loss injections
+              2. Clinical support and treatment options
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
               AYP Healthcare focuses heavily on injectable treatments, including Mounjaro and
