@@ -11,6 +11,7 @@ import {
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
 import CompareMedPriceTabs from "@/components/compare/CompareMedPriceTabs";
+import TripleCompareContent from "@/components/compare/TripleCompareContent";
 import {
   getMounjaroCompareProviders,
   getWegovyCompareProviders,
@@ -32,6 +33,10 @@ import {
 } from "@/lib/routes/compare-faqs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
+import {
+  formatTodayIsoDate,
+  formatTodayUK,
+} from "@/lib/format-uk-date";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -78,7 +83,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return meta;
 }
 
-function compareWebPageJsonLd(slug: string, name: string, description: string) {
+function compareWebPageJsonLd(
+  slug: string,
+  name: string,
+  description: string,
+  dateModified: string,
+) {
   const base = siteOrigin();
   return {
     "@context": "https://schema.org",
@@ -86,7 +96,7 @@ function compareWebPageJsonLd(slug: string, name: string, description: string) {
     name,
     description,
     url: `${base}/compare/${slug}`,
-    dateModified: "2026-04-14",
+    dateModified,
     isPartOf: {
       "@type": "WebSite",
       name: "Healthwise360",
@@ -108,14 +118,17 @@ export default async function ComparePage({ params }: Props) {
         .map((s) => s.trim())
         .filter(Boolean)
         .join(" ");
+  const faqItems = getCompareFaqsForSlug(slug);
+  const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
+  const isTripleHub = slug === "mounjaro-vs-wegovy-vs-saxenda";
+  const pricesLastCheckedLabel = formatTodayUK();
+  const pricesLastCheckedIso = formatTodayIsoDate();
   const webLd = compareWebPageJsonLd(
     slug,
     webLdName || layout.hero.titleBold,
     layout.share.metaDescription,
+    pricesLastCheckedIso,
   );
-  const faqItems = getCompareFaqsForSlug(slug);
-  const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
-  const isTripleHub = slug === "mounjaro-vs-wegovy-vs-saxenda";
 
   return (
     <>
@@ -149,15 +162,15 @@ export default async function ComparePage({ params }: Props) {
           navLinks={layout.hero.navLinks}
           wideDesktopHero={isTripleHub}
           showSnapshotPill={!isTripleHub && !photoHero}
-          showLivePill={Boolean(photoHero) || isTripleHub}
-          highlightNavLinks={Boolean(photoHero)}
+          showLivePill={Boolean(photoHero) && !isTripleHub}
+          highlightNavLinks={Boolean(photoHero) && !isTripleHub}
           heroPhotoSrc={
             isTripleHub ? COMPARE_GLP1_PRICE_HERO_IMAGE_SRC : photoHero?.src
           }
           heroPhotoAlt={
             isTripleHub ? COMPARE_GLP1_PRICE_HERO_IMAGE_ALT : photoHero?.alt
           }
-          showSubtitleLiveDate={isTripleHub}
+          showSubtitleLiveDate={false}
         />
 
         <CompareMedPriceTabs
@@ -170,6 +183,10 @@ export default async function ComparePage({ params }: Props) {
           <TrustBarMarquee staticRow />
         </section>
 
+        {isTripleHub ? (
+          <TripleCompareContent lastCheckedLabel={pricesLastCheckedLabel} />
+        ) : (
+        <>
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-5xl px-4 md:px-8">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
@@ -312,6 +329,8 @@ export default async function ComparePage({ params }: Props) {
             </div>
           </div>
         </section>
+        </>
+        )}
 
         <CompareFaqSection items={faqItems} />
       </article>

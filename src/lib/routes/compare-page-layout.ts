@@ -172,8 +172,9 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       variant: "violet",
       eyebrow: "Three-Way UK Comparison",
       titleItalic: "",
-      titleBold: "Mounjaro vs Wegovy vs Saxenda UK",
-      subtitle: "Live Verified Pharmacy Prices",
+      titleBold: "Compare Mounjaro, Wegovy and Saxenda in the UK",
+      subtitle:
+        "Compare active ingredients, dosing schedules, clinical evidence, eligibility, side effects and current UK provider prices.",
       snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
       navLinks: [
         { href: "/what-is-mounjaro", label: "Mounjaro" },
@@ -185,12 +186,12 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     },
     share: {
       canonicalPath: "/compare/mounjaro-vs-wegovy-vs-saxenda",
-      title: "Mounjaro vs Wegovy vs Saxenda UK",
+      title: "Mounjaro vs Wegovy vs Saxenda UK | Prices & Differences",
       metaDescription:
-        "Compare Mounjaro, Wegovy and Saxenda: active ingredients, dosing schedules, clinical evidence, side effects, eligibility, NHS and private access, and total treatment cost.",
-      openGraphTitle: "Mounjaro vs Wegovy vs Saxenda UK",
+        "Compare Mounjaro, Wegovy and Saxenda in the UK by active ingredient, dosing, clinical evidence, side effects, eligibility and current provider prices.",
+      openGraphTitle: "Mounjaro vs Wegovy vs Saxenda UK | Prices & Differences",
       openGraphDescription:
-        "Compare Mounjaro, Wegovy and Saxenda: active ingredients, dosing schedules, clinical evidence, side effects, eligibility, NHS and private access, and total treatment cost.",
+        "Compare Mounjaro, Wegovy and Saxenda in the UK by active ingredient, dosing, clinical evidence, side effects, eligibility and current provider prices.",
       imagePath: OG,
       imageAlt:
         "Healthwise360 — Mounjaro vs Wegovy vs Saxenda UK comparison",

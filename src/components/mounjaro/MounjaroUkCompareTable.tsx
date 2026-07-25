@@ -28,6 +28,7 @@ import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
 import { hasPharmacyPage } from "@/lib/routes/all-pharmacy-slugs";
 import { trustpilotHrefForProvider } from "@/lib/seo/trustpilot-link";
 import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
+import { formatTodayUK } from "@/lib/format-uk-date";
 import {
   COMPARE_TABLE_CARD_CLASS,
   COMPARE_TABLE_MOBILE_OUTDENT_CLASS,
@@ -94,7 +95,7 @@ export default function MounjaroUkCompareTable({
     dir: "asc",
   });
 
-  const todayLabel = useTodayLabel();
+  const pricesLastChecked = useTodayLabel(formatTodayUK());
 
   const visibleDoseKeys = useMemo<MounjaroDoseColumnKey[]>(
     () => (doseFilter === "all" ? [...MOUNJARO_DOSE_KEYS] : [doseFilter]),
@@ -212,12 +213,12 @@ export default function MounjaroUkCompareTable({
             {insights.count}
           </span>
           <span className="text-[11px] font-bold uppercase tracking-wide text-violet-700/80">
-            UK pharmacies matching your filters
+            UK weight-management providers matching your filters
           </span>
         </span>
         <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3 py-1.5 text-xs font-semibold text-violet-800 shadow-sm ring-1 ring-violet-200/70">
           <CalendarClock className="h-3.5 w-3.5" aria-hidden />
-          Last updated today{todayLabel ? `: ${todayLabel}` : ""}
+          Prices last checked {pricesLastChecked}
         </span>
       </div>
 
@@ -614,7 +615,7 @@ export default function MounjaroUkCompareTable({
                         )}
                       </td>
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
-                        {todayLabel ?? p.updatedLabel ?? "—"}
+                        {pricesLastChecked ?? "—"}
                       </td>
                     </tr>
                   );

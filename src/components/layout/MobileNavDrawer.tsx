@@ -23,7 +23,8 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
     isHome ||
     pathname === "/methodology" ||
     pathname === "/editorial-policy" ||
-    pathname === "/about";
+    pathname === "/about" ||
+    Boolean(pathname?.startsWith("/compare"));
   const { user, ready, signOut } = useSupabaseAuth();
   const [open, setOpen] = useState(false);
   const [acc, setAcc] = useState<string | null>(null);

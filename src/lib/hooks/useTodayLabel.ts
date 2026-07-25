@@ -1,40 +1,17 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import {
+  formatTodayIsoDate,
+  formatTodayUK,
+} from "@/lib/format-uk-date";
 
-/**
- * Stable, deterministic UK date format (e.g. `9 May 2026`) — matches the
- * style used across the compare tables and avoids Intl narrow-space
- * differences between Node and Chromium.
- */
-export function formatTodayUK(date: Date): string {
-  const day = date.getDate();
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  const month = months[date.getMonth()] ?? "";
-  const year = date.getFullYear();
-  return `${day} ${month} ${year}`;
-}
+export { formatTodayUK } from "@/lib/format-uk-date";
 
 function todayUkPartsFromDate(d: Date): TodayUkParts {
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
   return {
     display: formatTodayUK(d),
-    dateTime: `${y}-${m}-${day}`,
+    dateTime: formatTodayIsoDate(d),
   };
 }
 

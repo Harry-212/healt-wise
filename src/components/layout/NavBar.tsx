@@ -110,7 +110,8 @@ export default function NavBar() {
     isHome ||
     pathname === "/methodology" ||
     pathname === "/editorial-policy" ||
-    pathname === "/about";
+    pathname === "/about" ||
+    Boolean(pathname?.startsWith("/compare"));
 
   return (
     <>

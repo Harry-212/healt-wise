@@ -5,7 +5,6 @@ import CompareHereLink from "@/components/ui/CompareHereLink";
 import { AnimatePresence, motion } from "framer-motion";
 import { Calendar, ChevronRight, Pill, Sparkles, Syringe } from "lucide-react";
 import { useState } from "react";
-import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
 import type { CompareMedicationTab } from "@/lib/routes/compare-page-layout";
 import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
 import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable";
@@ -22,6 +21,8 @@ import {
   type MounjaroUkProviderCompare,
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-providers";
+import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
+import { formatTodayUK } from "@/lib/format-uk-date";
 
 /** UK brand names — used in triple-compare tab UI */
 const TAB_LABEL: Record<CompareMedicationTab, string> = {
@@ -98,7 +99,7 @@ function MedPanel({
         <div>
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
             <span className="text-brand-primary">{TAB_LABEL[med]}</span>
-            <span className="text-slate-900"> Advanced UK Pharmacy Matrix</span>
+            <span className="text-slate-900"> UK provider price matrix</span>
           </h2>
           <p className="mt-2 max-w-3xl text-sm text-slate-600 md:text-base">
             The same sortable matrix as our dedicated price page for this
@@ -159,7 +160,7 @@ export default function CompareMedPriceTabs({
   wegovyProviders?: WegovyUkProviderCompare[];
 }) {
   const [active, setActive] = useState<CompareMedicationTab>(medications[0]!);
-  const liveDateLabel = useTodayLabel();
+  const pricesLastChecked = useTodayLabel(formatTodayUK());
 
   return (
     <section
@@ -170,25 +171,25 @@ export default function CompareMedPriceTabs({
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-xs font-bold tracking-wide text-brand-primary">
-              Live Information
+              Provider prices
             </p>
             <p className="mt-2 inline-flex flex-wrap items-center gap-2 text-sm font-semibold text-slate-800">
               <Calendar
                 className="h-4 w-4 shrink-0 text-amber-600"
                 aria-hidden
               />
-              <span className="text-amber-700 tabular-nums">
-                {liveDateLabel ?? "…"}
+              <span className="font-normal text-slate-600">
+                Prices last checked
               </span>
-              <span className="font-normal text-slate-500">
-                — live UK calendar date
+              <span className="text-amber-700 tabular-nums">
+                {pricesLastChecked}
               </span>
             </p>
             <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-              Current Pharmacy Prices
+              Current provider prices
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-slate-600 md:text-base">
-              Select your chosen medication and use filters, to navigate to your
+              Select your chosen medication and use filters to navigate to your
               chosen supplier
             </p>
           </div>
@@ -200,7 +201,7 @@ export default function CompareMedPriceTabs({
           aria-label="Choose medicine price matrix"
         >
           <p className="mb-3 px-1 text-sm font-semibold text-slate-800">
-            Select A Medicine To View Live Matrix
+            Select a medicine to view the price matrix
           </p>
           <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:flex-wrap">
             {medications.map((m) => {

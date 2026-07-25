@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import type { CompareFaqItem } from "@/lib/routes/compare-faqs";
 
@@ -64,24 +64,24 @@ export default function CompareFaqSection({ items }: { items: CompareFaqItem[] }
                     <ChevronDown className="h-5 w-5" aria-hidden />
                   </motion.span>
                 </button>
-                <AnimatePresence initial={false}>
-                  {isOpen ? (
-                    <motion.div
-                      id={`compare-faq-panel-${i}`}
-                      role="region"
-                      aria-labelledby={`compare-faq-trigger-${i}`}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-                      className="overflow-hidden border-t border-slate-100"
-                    >
-                      <p className="px-4 pb-4 pr-10 text-sm leading-relaxed text-slate-600 md:px-5 md:pb-5">
-                        {item.a}
-                      </p>
-                    </motion.div>
-                  ) : null}
-                </AnimatePresence>
+                {/* Answer stays mounted in the DOM at all times so crawlers
+                    read every response; the accordion only animates height. */}
+                <div
+                  id={`compare-faq-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`compare-faq-trigger-${i}`}
+                  className={`grid overflow-hidden border-t transition-[grid-template-rows,border-color] duration-300 ease-out ${
+                    isOpen
+                      ? "grid-rows-[1fr] border-slate-100"
+                      : "grid-rows-[0fr] border-transparent"
+                  }`}
+                >
+                  <div className="min-h-0 overflow-hidden">
+                    <p className="px-4 pb-4 pr-10 pt-2 text-sm leading-relaxed text-slate-600 md:px-5 md:pb-5">
+                      {item.a}
+                    </p>
+                  </div>
+                </div>
               </div>
             );
           })}

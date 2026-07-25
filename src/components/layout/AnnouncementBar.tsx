@@ -22,12 +22,13 @@ export default function AnnouncementBar() {
     pathname.startsWith("/helpful-guides/") &&
     pathname.split("/").filter(Boolean).length >= 2;
 
-  // Trust / methodology pages keep focus on how we compare — skip compare CTA strip.
+  // Trust / methodology / compare hubs — skip compare CTA strip (avoids self-link marquees).
   if (
     isHome ||
     pathname === "/methodology" ||
     pathname === "/editorial-policy" ||
     pathname === "/about" ||
+    pathname?.startsWith("/compare") ||
     pathname?.startsWith("/pharmacies") ||
     isBlogArticle ||
     isHelpfulGuideArticle

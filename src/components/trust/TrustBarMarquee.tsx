@@ -3,13 +3,13 @@ import { ShieldCheck, Stethoscope, Asterisk } from "lucide-react";
 const ITEMS = [
   {
     icon: ShieldCheck,
-    title: "Trusted",
-    desc: "GPhC verified listings",
+    title: "Pharmacy registration checked",
+    desc: "Provider and dispensing pharmacy details reviewed",
   },
   {
     icon: Asterisk,
-    title: "UK licensed",
-    desc: "UK pharmacy regulated context",
+    title: "UK weight-management providers",
+    desc: "Online doctors, programmes and pharmacies in one matrix",
   },
   {
     icon: Stethoscope,
