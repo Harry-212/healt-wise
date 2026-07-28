@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     openGraphTitle: "Wegovy Price Comparison UK | Compare Pharmacy Prices",
     openGraphDescription:
       "Compare Wegovy prices from 0.25 mg to 2.4 mg across regulated UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
-    imagePath: "/wegovy healt wise.png",
+    imagePath: "/wegovy-health-wise.png",
     imageAlt: "Compare Wegovy prices UK — Healthwise360",
   }),
   title: {

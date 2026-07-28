@@ -49,7 +49,7 @@ export default function WegovyClickCalculatorPage() {
 
           <div className="relative mt-12 aspect-16/10 w-full overflow-hidden rounded-2xl bg-slate-200 shadow-lg ring-1 ring-slate-200/80">
             <Image
-              src="/wegovy healt wise.png"
+              src="/wegovy-health-wise.png"
               alt="Wegovy FlexTouch pens and official packaging UK"
               fill
               className="object-cover"

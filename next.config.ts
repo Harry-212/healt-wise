@@ -1,8 +1,5 @@
 import type { NextConfig } from "next";
-import {
-  HELPFUL_GUIDE_CATEGORIES,
-  HELPFUL_GUIDE_SLUGS,
-} from "./src/lib/helpful-guide-slugs";
+import { HELPFUL_GUIDE_SLUGS } from "./src/lib/helpful-guide-slugs";
 
 /**
  * Site-wide CSP for XSS / injection mitigation.
@@ -104,14 +101,15 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // Legacy / mistaken URLs (e.g. ads) — avoid 403/404 noise in Search Console.
+      // Absolute www home so apex + /lander collapses in one hop (middleware also handles this).
       {
         source: "/lander",
-        destination: "/",
+        destination: "https://www.healthwise360.co.uk/",
         permanent: true,
       },
       {
         source: "/lander/",
-        destination: "/",
+        destination: "https://www.healthwise360.co.uk/",
         permanent: true,
       },
       {
@@ -159,40 +157,8 @@ const nextConfig: NextConfig = {
         destination: "/helpful-guides",
         permanent: true,
       },
-      ...HELPFUL_GUIDE_CATEGORIES.flatMap(({ slug, label }) => {
-        const destination = `/helpful-guides/category/${slug}`;
-        const redirects: Array<{
-          source: string;
-          has: Array<{ type: "query"; key: string; value: string }>;
-          destination: string;
-          permanent: boolean;
-        }> = [
-          {
-            source: "/helpful-guides",
-            has: [{ type: "query", key: "category", value: slug }],
-            destination,
-            permanent: true,
-          },
-        ];
-        if (slug !== label) {
-          redirects.push({
-            source: "/helpful-guides",
-            has: [{ type: "query", key: "category", value: label }],
-            destination,
-            permanent: true,
-          });
-        }
-        return redirects;
-      }),
-      // Legacy blog topic query strings → static topic hubs
-      ...(["wegovy", "mounjaro", "how-it-works", "guides", "safety", "locations"] as const).map(
-        (topic) => ({
-          source: "/blog",
-          has: [{ type: "query" as const, key: "topic", value: topic }],
-          destination: `/blog/topic/${topic}`,
-          permanent: true,
-        }),
-      ),
+      // Legacy ?category= / ?topic= → static hubs are handled in middleware
+      // (next.config redirects preserve query strings by default).
       {
         source: "/weight-loss-treatment-price-comparison-uk",
         destination: "/",

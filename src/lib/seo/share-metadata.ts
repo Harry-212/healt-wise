@@ -21,7 +21,7 @@ export type PageShareMetadataInput = {
   /** Often slightly shorter; shown in WhatsApp, Facebook, X previews */
   openGraphTitle: string;
   openGraphDescription?: string;
-  /** Public file path, e.g. `/wegovy healt wise.png` */
+  /** Public file path, e.g. `/wegovy-health-wise.png` */
   imagePath: string;
   imageAlt: string;
 };

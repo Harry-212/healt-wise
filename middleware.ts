@@ -1,11 +1,19 @@
 import type { NextRequest } from "next/server";
 import { canonicalHostRedirect } from "@/lib/seo/canonical-redirect";
 import { junkPathRedirect } from "@/lib/seo/junk-path-redirect";
+import {
+  landerRedirect,
+  legacyFilterQueryRedirect,
+} from "@/lib/seo/legacy-filter-redirect";
 import { updateSession } from "@/lib/supabase/middleware";
 
 export async function middleware(request: NextRequest) {
   const junk = junkPathRedirect(request);
   if (junk) return junk;
+  const lander = landerRedirect(request);
+  if (lander) return lander;
+  const filter = legacyFilterQueryRedirect(request);
+  if (filter) return filter;
   const canonical = canonicalHostRedirect(request);
   if (canonical) return canonical;
   return updateSession(request);

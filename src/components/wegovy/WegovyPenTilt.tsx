@@ -2,8 +2,8 @@
 
 import { useCallback, useRef } from "react";
 
-/** File: `public/wegovy healt wise.png` — use PNG with alpha; no CSS “frame”. */
-const PEN_IMAGE = "/wegovy healt wise.png";
+/** File: `public/wegovy-health-wise.png` — use PNG with alpha; no CSS “frame”. */
+const PEN_IMAGE = "/wegovy-health-wise.png";
 
 const RESET =
   "perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)";
