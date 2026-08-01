@@ -212,15 +212,13 @@ export default function DoncasterLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Deficits drive: 750 calories under maintenance can support progress. NICE CG189 provides UK framing. Donny: lean gammon over puddings. Nutrition Journal DOI{" "}
+                  NICE recommends an individualised, nutritionally balanced approach to weight management. Practical changes can include choosing lean gammon and vegetables more often than energy-dense puddings. See{" "}
                   <a
-                    href="https://doi.org/10.1186/s12937-025-01023-4"
+                    href="https://www.nice.org.uk/guidance/ng246"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    10.1186/s12937-025-01023-4
-                  </a>
+                  >NICE nutrition and weight-management guidance</a>
                   .
                 </p>
 

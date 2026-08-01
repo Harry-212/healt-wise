@@ -212,25 +212,21 @@ export default function CambridgeLocationContent({ loc, shareUrl }: Props) {
                     <p className={`text-sm ${muted}`}>
                       Nutrition context{" "}
                       <a
-                        href="https://doi.org/10.3390/nu17030123"
+                        href="https://pubmed.ncbi.nlm.nih.gov/39408357/"
                         className={linkCls}
                         rel="noopener noreferrer"
                         target="_blank"
-                      >
-                        Nutrients (2025)
-                      </a>
+                      >Review of time-restricted eating and fat loss</a>
                       .
                     </p>
                     <p>
                       Cambridge Diet style meal replacements can be structured and fast for some people when supervised. If you want to read their research pages, see{" "}
                       <a
-                        href="https://www.one2onediet.com/research"
+                        href="https://www.one2onediet.com/how-it-works/supported-by-research"
                         className={linkCls}
                         rel="noopener noreferrer"
                         target="_blank"
-                      >
-                        One2OneDiet research
-                      </a>
+                      >The 1:1 Diet research evidence</a>
                       .
                     </p>
                     <p>
@@ -361,13 +357,11 @@ export default function CambridgeLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-sm ${muted}`}>
                   Context{" "}
                   <a
-                    href="https://doi.org/10.1136/gutjnl-2025-333456"
+                    href="https://pubmed.ncbi.nlm.nih.gov/37690507/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    Gut (2025)
-                  </a>
+                  >Gut microbiota and obesity systematic review</a>
                   .
                 </p>
               </GuideSection>

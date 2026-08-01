@@ -231,15 +231,13 @@ export default function BradfordLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={`text-sm ${muted}`}>
-                  Lifestyle pairing context{" "}
+                  Medication evidence{" "}
                   <a
-                    href="https://doi.org/10.1001/jama.2024.5678"
+                    href="https://jamanetwork.com/journals/jama/article-abstract/2821290"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    JAMA (2024)
-                  </a>
+                  >Medications for obesity review</a>
                   .
                 </p>
               </GuideSection>
@@ -263,13 +261,11 @@ export default function BradfordLocationContent({ loc, shareUrl }: Props) {
                     <p className={`text-sm ${muted}`}>
                       Research link{" "}
                       <a
-                        href="https://doi.org/10.1186/s12937-024-00987-6"
+                        href="https://www.nhs.uk/conditions/overweight-and-obesity/"
                         className={linkCls}
                         rel="noopener noreferrer"
                         target="_blank"
-                      >
-                        Nutrition Journal
-                      </a>
+                      >NHS overweight and obesity guidance</a>
                       .
                     </p>
                     <p>

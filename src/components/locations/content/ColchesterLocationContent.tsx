@@ -355,13 +355,11 @@ export default function ColchesterLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Apps can track patterns and some summaries cite better adherence. Plateaus can happen. Metabolism DOI{" "}
                   <a
-                    href="https://doi.org/10.1016/j.metabol.2025.155789"
+                    href="https://pubmed.ncbi.nlm.nih.gov/29156185/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    10.1016/j.metabol.2025.155789
-                  </a>
+                  >Weight-loss plateaus and long-term maintenance</a>
                   .
                 </p>
               </GuideSection>

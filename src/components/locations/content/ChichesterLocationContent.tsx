@@ -252,13 +252,11 @@ export default function ChichesterLocationContent({ loc, shareUrl }: Props) {
                   </a>
                   . Nutrients DOI{" "}
                   <a
-                    href="https://doi.org/10.3390/nu17030123"
+                    href="https://pubmed.ncbi.nlm.nih.gov/39408357/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    10.3390/nu17030123
-                  </a>
+                  >Review of time-restricted eating and fat loss</a>
                   .
                 </p>
                 <p className={p}>

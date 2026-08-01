@@ -393,7 +393,7 @@ export default function LancasterLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-base font-semibold ${strong}`}>Phase 2 (weeks 5 to 8): acceleration</p>
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>Add: GLP 1 consideration with a clinician, HIIT 3 times weekly</li>
-                  <li>Diet: 600 calorie deficit, gentle carb cycling if planned</li>
+                  <li>Diet: review the planned energy deficit and nutritional adequacy with a qualified professional</li>
                   <li>Expect: about 4 to 5 kg further for some people</li>
                 </ul>
 

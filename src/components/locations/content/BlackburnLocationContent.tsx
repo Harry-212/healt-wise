@@ -275,13 +275,11 @@ export default function BlackburnLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-sm ${muted}`}>
                   Example nutrition context{" "}
                   <a
-                    href="https://doi.org/10.1186/s12937-025-01023-4"
+                    href="https://www.nice.org.uk/guidance/ng246"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    Nutrition Journal
-                  </a>
+                  >NICE nutrition and weight-management guidance</a>
                   .
                 </p>
                 <p className={p}>
@@ -341,13 +339,11 @@ export default function BlackburnLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-sm ${muted}`}>
                   Examples{" "}
                   <a
-                    href="https://doi.org/10.1002/lsm.23890"
+                    href="https://pubmed.ncbi.nlm.nih.gov/41423522/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    Lasers in Surgery and Medicine (2025)
-                  </a>
+                  >Low-level laser therapy for body circumference reduction</a>
                   .
                 </p>
                 <p className={`text-sm ${muted}`}>
@@ -386,13 +382,11 @@ export default function BlackburnLocationContent({ loc, shareUrl }: Props) {
                   </a>
                   ;{" "}
                   <a
-                    href="https://doi.org/10.1136/gutjnl-2025-333456"
+                    href="https://pubmed.ncbi.nlm.nih.gov/37690507/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    Gut (2025)
-                  </a>
+                  >Gut microbiota and obesity systematic review</a>
                   .
                 </p>
               </GuideSection>
@@ -426,13 +420,11 @@ export default function BlackburnLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-sm ${muted}`}>
                   Plateau example{" "}
                   <a
-                    href="https://doi.org/10.1016/j.metabol.2025.155789"
+                    href="https://pubmed.ncbi.nlm.nih.gov/29156185/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    Metabolism (2025)
-                  </a>
+                  >Weight-loss plateaus and long-term maintenance</a>
                   .
                 </p>
               </GuideSection>

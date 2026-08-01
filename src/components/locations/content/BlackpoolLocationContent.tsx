@@ -258,13 +258,11 @@ export default function BlackpoolLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-sm ${muted}`}>
                   Examples{" "}
                   <a
-                    href="https://doi.org/10.1001/jama.2023.17890"
+                    href="https://jamanetwork.com/journals/jama/article-abstract/2812316"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    JAMA (2023)
-                  </a>
+                  >Obesity management in adults review</a>
                   ;{" "}
                   <a
                     href="https://doi.org/10.1002/oby.24012"
@@ -326,13 +324,11 @@ export default function BlackpoolLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-sm ${muted}`}>
                   Examples{" "}
                   <a
-                    href="https://doi.org/10.1007/s00266-024-04256-7"
+                    href="https://pubmed.ncbi.nlm.nih.gov/40184185/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    Aesthetic Plastic Surgery (2025)
-                  </a>
+                  >Non-invasive body contouring systematic review</a>
                   .\n{" "}
                 </p>
               </GuideSection>
@@ -361,13 +357,11 @@ export default function BlackpoolLocationContent({ loc, shareUrl }: Props) {
                   </a>
                   ;{" "}
                   <a
-                    href="https://doi.org/10.1080/19490976.2025.2301456"
+                    href="https://pubmed.ncbi.nlm.nih.gov/39667924/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    Gut Microbes (2025)
-                  </a>
+                  >Gut microbiome and eating behaviour review</a>
                   .\n{" "}
                 </p>
               </GuideSection>
@@ -401,13 +395,11 @@ export default function BlackpoolLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-sm ${muted}`}>
                   Plateau example{" "}
                   <a
-                    href="https://doi.org/10.1016/j.metabol.2025.155789"
+                    href="https://pubmed.ncbi.nlm.nih.gov/29156185/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    Metabolism (2025)
-                  </a>
+                  >Weight-loss plateaus and long-term maintenance</a>
                   .\n{" "}
                 </p>
               </GuideSection>

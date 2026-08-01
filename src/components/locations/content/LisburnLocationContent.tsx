@@ -308,7 +308,21 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                 </div>
 
                 <p className={`mt-4 ${p}`}>
-                  Ninety day plan example: Wegovy starter dose plus Lagan 10k steps daily plus 500 calorie deficit targets about 8 to 10 kg realistic for some monitored people. Mounjaro edge: about plus 2 kg potential in some head to head summaries via dual hormones. Plateaus? Carb cycling weeks 8 to 10 sometimes restarts progress in coached models (Obesity Reviews, DOI 10.1111/obr.13987; 2025). If you plateau on injections, read{" "}
+                  Weight loss commonly slows over time as energy requirements
+                  change and the body adapts to a lower weight. A plateau does
+                  not necessarily mean that a particular diet or treatment has
+                  stopped working. Review calorie intake, physical activity,
+                  adherence and treatment expectations with an appropriately
+                  qualified healthcare professional. See the{" "}
+                  <a
+                    className={linkCls}
+                    href="https://pubmed.ncbi.nlm.nih.gov/29156185/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Weight-loss plateaus and long-term maintenance
+                  </a>{" "}
+                  review and our{" "}
                   <Link className={linkCls} href="/helpful-guides/mounjaro-weight-loss-plateau">
                     weight loss plateau guide
                   </Link>

@@ -50,7 +50,7 @@ export const SITE_SOCIAL_LINKS = [
     kind: "tiktok",
   },
   {
-    href: "https://www.youtube.com/@HealthWise360-j9i",
+    href: "https://www.youtube.com/@HealthWise360comparison",
     label: "YouTube",
     kind: "youtube",
   },

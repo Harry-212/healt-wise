@@ -332,19 +332,17 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Some writeups claim a modest edge, around 7%, from higher protein patterns for certain outcomes. Higher intensity intervals can help too, with some reports citing large relative fat loss changes in intervention trials, but fit matters. If you are new to training, start with brisk walking and two strength sessions weekly, then build up.
+                  Balanced meals with adequate protein may help some people manage hunger, while regular activity supports health and weight management. If you are new to training, start with brisk walking and two strength sessions weekly, then build up.
                 </p>
 
                 <p className={`text-sm ${muted}`}>
                   Links:{" "}
                   <a
-                    href="https://doi.org/10.1186/s12937-024-00987-6"
+                    href="https://www.nhs.uk/conditions/overweight-and-obesity/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    Nutrition Journal link
-                  </a>
+                  >NHS overweight and obesity guidance</a>
                   ,{" "}
                   <a
                     href="https://doi.org/10.1136/bjsports-2024-108234"

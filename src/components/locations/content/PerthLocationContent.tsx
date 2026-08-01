@@ -412,9 +412,9 @@ export default function PerthLocationContent({ loc, shareUrl }: Props) {
                   A longer target such as 20kg may take about 5 months with BMI
                   eligible medicines, strength training, and close monitoring.
                   Sustainable guidance often frames 10% yearly loss as a strong
-                  result, not a failure. Plateaus are normal. Some people use
-                  post carb cycling or planned refeed days with clinician or
-                  coach guidance, but the basics still matter most.
+                  result, not a failure. Plateaus are normal. Review calorie
+                  intake, activity, adherence and treatment expectations with a
+                  qualified healthcare professional.
                 </p>
                 <p className={p}>
                   Local accountability helps. Tay runs, walk routes, and repeated

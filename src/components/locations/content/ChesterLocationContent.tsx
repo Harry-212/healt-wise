@@ -228,15 +228,13 @@ export default function ChesterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Semaglutide, as in Wegovy, is often discussed around 15 to 20% drops and JAMA summaries exist.{" "}
+                  Evidence-based adult obesity management may combine behavioural support, dietary changes and medicines selected for the individual.{" "}
                   <a
-                    href="https://doi.org/10.1001/jama.2023.22488"
+                    href="https://jamanetwork.com/journals/jama/article-abstract/2812316"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    10.1001/jama.2023.22488
-                  </a>
+                  >Evidence-based adult obesity management</a>
                   .
                 </p>
                 <p className={p}>
@@ -269,13 +267,11 @@ export default function ChesterLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Critique: costly long term. Alternatives like orlistat block fats mildly and can produce modest loss in reviews.{" "}
                   <a
-                    href="https://doi.org/10.1002/14651858.CD003641.pub5"
+                    href="https://www.nhs.uk/medicines/orlistat/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    10.1002/14651858.CD003641.pub5
-                  </a>
+                  >NHS guidance on orlistat</a>
                   .
                 </p>
                 <p className={p}>
@@ -300,15 +296,13 @@ export default function ChesterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="nutrition" heading="Nutrition nuances">
                 <p className={p}>
-                  Chester twist: grilled gammon salads. BMJ Nutrition links vegetables to around 7% fat trim.{" "}
+                  NICE recommends an individualised, nutritionally balanced approach that creates an energy deficit while accounting for health needs and preferences.{" "}
                   <a
-                    href="https://doi.org/10.1136/bmjnph-2024-001234"
+                    href="https://www.nice.org.uk/guidance/ng246"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    10.1136/bmjnph-2024-001234
-                  </a>
+                  >NICE overweight and obesity guidance</a>
                   .
                 </p>
                 <p className={p}>

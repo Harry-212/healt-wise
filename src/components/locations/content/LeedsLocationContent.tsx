@@ -330,7 +330,10 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={`text-sm ${muted}`}>
-                  Plateau buster framing: two week carb cycling (high and low days) is sometimes used to reset perceived metabolism about 15% in small studies (Metabolism Journal, DOI 10.1016/j.metabol.2026.155789). Discuss with a dietitian before you try aggressive cycles.
+                  Weight loss commonly slows as energy requirements change and
+                  the body adapts to a lower weight. Review calorie intake,
+                  physical activity, adherence and treatment expectations with
+                  an appropriately qualified healthcare professional.
                 </p>
               </GuideSection>
 

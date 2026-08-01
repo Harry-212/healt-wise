@@ -213,13 +213,11 @@ export default function CarlisleLocationContent({ loc, shareUrl }: Props) {
                   </a>
                   . Nutrients DOI{" "}
                   <a
-                    href="https://doi.org/10.3390/nu17030123"
+                    href="https://pubmed.ncbi.nlm.nih.gov/39408357/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    10.3390/nu17030123
-                  </a>
+                  >Review of time-restricted eating and fat loss</a>
                   .
                 </p>
                 <p className={p}>
@@ -379,15 +377,13 @@ export default function CarlisleLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="tracking" heading="Tracking and trap avoidance">
                 <p className={p}>
-                  Bioimpedance for fat truth. Plateaus? Zigzag calories. Metabolism DOI{" "}
+                  Bioimpedance can help track trends but is not a precise measure of body fat. Weight loss commonly slows over time as energy requirements change and the body adapts to a lower weight. See{" "}
                   <a
-                    href="https://doi.org/10.1016/j.metabol.2025.155789"
+                    href="https://pubmed.ncbi.nlm.nih.gov/29156185/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    10.1016/j.metabol.2025.155789
-                  </a>
+                  >Weight-loss plateaus and long-term maintenance</a>
                   .
                 </p>
                 <p className={p}>

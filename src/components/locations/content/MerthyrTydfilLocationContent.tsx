@@ -354,7 +354,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Sleep: &lt;7hrs adds 0.5kg/month [Sleep, DOI: 10.1093/sleep/zsae456; 2025]. Hydration: 2L daily curbs overeating [Annals of Nutrition, DOI: 10.3390/nu17010123; 2025].
+                  Shorter sleep duration is associated with obesity risk, although the evidence does not establish a fixed amount of monthly weight gain. Sleep needs and hydration requirements vary between individuals.
                 </p>
 
                 <p className={p}>

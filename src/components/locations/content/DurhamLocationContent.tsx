@@ -343,13 +343,11 @@ export default function DurhamLocationContent({ loc, shareUrl }: Props) {
                     </a>{" "}
                     and{" "}
                     <a
-                      href="https://doi.org/10.1093/sleep/zsae456"
+                      href="https://pubmed.ncbi.nlm.nih.gov/39469806/"
                       className={linkCls}
                       rel="noopener noreferrer"
                       target="_blank"
-                    >
-                      10.1093/sleep/zsae456
-                    </a>
+                    >Sleep duration and obesity meta-analysis</a>
                     .
                   </p>
                 </div>

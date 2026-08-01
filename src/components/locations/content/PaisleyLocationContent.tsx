@@ -396,10 +396,10 @@ export default function PaisleyLocationContent({ loc, shareUrl }: Props) {
                 </p>
                 <p className={p}>
                   For long term maintenance, weigh ins and habits after medicine
-                  matter. Many people regain when structure disappears. Plateaus
-                  can happen, and some clinicians use carbohydrate cycling or
-                  planned refeed days for selected people. If your progress
-                  stalls on injections, our{" "}
+                  matter. Many people regain when structure disappears. If
+                  progress slows, review calorie intake, activity, adherence and
+                  treatment expectations with a qualified healthcare
+                  professional. If your progress stalls on injections, our{" "}
                   <Link
                     href="/helpful-guides/mounjaro-weight-loss-plateau"
                     className={linkCls}

@@ -260,18 +260,16 @@ export default function ChelmsfordLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="tech" heading="Non surgical fat tech">
                 <p className={p}>
-                  Laser lipo uses low level lasers to disrupt fat in local areas. Fat dissolvers like Aqualyx are injections for small regions such as chin and belly. Emsculpt style devices aim to build muscle as well.
+                  Low-level laser therapy is marketed for local body-contouring and may reduce body circumference in some people, but it is not a weight-loss treatment. Evidence and outcomes vary by technology and study.
                 </p>
                 <p className={`text-sm ${muted}`}>
                   Lasers in Surgery DOI{" "}
                   <a
-                    href="https://doi.org/10.1002/lsm.23890"
+                    href="https://pubmed.ncbi.nlm.nih.gov/41423522/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    10.1002/lsm.23890
-                  </a>
+                  >Low-level laser therapy for body circumference reduction</a>
                   . Journal of Cosmetic Dermatology DOI{" "}
                   <a
                     href="https://doi.org/10.1111/jocd.16234"

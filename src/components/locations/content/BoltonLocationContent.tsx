@@ -296,13 +296,11 @@ export default function BoltonLocationContent({ loc, shareUrl }: Props) {
                   </a>
                   ;{" "}
                   <a
-                    href="https://doi.org/10.1093/sleep/zsae456"
+                    href="https://pubmed.ncbi.nlm.nih.gov/39469806/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    Sleep (2025)
-                  </a>
+                  >Sleep duration and obesity meta-analysis</a>
                   .
                 </p>
               </GuideSection>

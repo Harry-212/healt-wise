@@ -63,10 +63,10 @@ const REFERENCES = [
     href: "https://www.nhs.uk/conditions/heat-exhaustion-heatstroke/",
   },
   {
-    label: "UKHSA — Beat the heat: staying safe in hot weather",
+    label: "UKHSA heat-health alerts",
     description:
       "UK Health Security Agency advice for hot weather and heat-health alerts.",
-    href: "https://www.gov.uk/government/collections/heat-health-alerts",
+    href: "https://ukhsa-dashboard.data.gov.uk/weather-health-alerts/heat",
   },
   {
     label: "NHS — Sunscreen and sun safety",
@@ -148,8 +148,8 @@ export default function GuideMounjaroHotWeather() {
           hot, you can still become dehydrated.</GuideParagraph>
         <GuideParagraph>
           The{" "}
-          <EL href="https://www.gov.uk/government/collections/heat-health-alerts">
-            UK Health Security Agency
+          <EL href="https://ukhsa-dashboard.data.gov.uk/weather-health-alerts/heat">
+            UKHSA heat-health alerts
           </EL>{" "}
           publishes heat health guidance during alerts worth following alongside
           the tips below.

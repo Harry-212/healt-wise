@@ -373,7 +373,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>Months 1 to 2: about 600 calorie cut, HIIT about two times weekly with about 26% fat edge in some acute physiology summaries (Journal of Physiology, DOI 10.1113/JP287654; 2025)</li>
                   <li>Months 3 to 5: add GLP 1 when eligible, protein about 1.6 g per kg bodyweight when dietitian aligned</li>
-                  <li>Monitor: fortnightly weighs. Plateaus? Carb cycling when supervised (Obesity Reviews, DOI 10.1111/obr.13945; 2025)</li>
+                  <li>Monitor: review weight trends, calorie intake, activity, adherence and treatment expectations with a qualified healthcare professional</li>
                 </ul>
 
                 <p className={p}>

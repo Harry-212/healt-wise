@@ -258,15 +258,13 @@ export default function CraigavonLocationContent({ loc, shareUrl }: Props) {
                   >
                     NICE CG189
                   </a>
-                  . Lean Bann salmon salads. Nutrition Journal DOI{" "}
+                  . Lean salmon salads can fit a balanced, individualised eating plan. See{" "}
                   <a
-                    href="https://doi.org/10.1186/s12937-025-01023-4"
+                    href="https://www.nice.org.uk/guidance/ng246"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
-                  >
-                    10.1186/s12937-025-01023-4
-                  </a>
+                  >NICE nutrition and weight-management guidance</a>
                   .
                 </p>
                 <p className={p}>

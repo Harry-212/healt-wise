@@ -500,19 +500,11 @@ export default function BasildonLocationContent({ loc, shareUrl }: Props) {
                 heading={`Gauges and gremlins in ${PLACE}`}
               >
                 <p className={p}>
-                  Waist measurements and fit of clothes often track fat change
-                  better than scales alone. Stalls happen; gentle carb cycling
-                  or step targets may help some people, but run changes past a
-                  clinician if you use medicines. See metabolism reviews such as{" "}
-                  <a
-                    href="https://doi.org/10.1016/j.metabol.2025.155678"
-                    className={linkCls}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Metabolism (2025)
-                  </a>{" "}
-                  for nuance. On GLP 1s, read{" "}
+                  Waist measurements and fit of clothes can complement scale
+                  trends. If progress slows, review calorie intake, physical
+                  activity, adherence and treatment expectations with an
+                  appropriately qualified healthcare professional. On GLP 1s,
+                  read{" "}
                   <Link
                     href="/helpful-guides/mounjaro-weight-loss-plateau"
                     className={linkCls}

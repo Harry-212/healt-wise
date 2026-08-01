@@ -272,18 +272,23 @@ export default function HuddersfieldLocationContent({ loc, shareUrl }: Props) {
                 </div>
 
                 <p className={p}>
-                  Plateaus happen. Some people use structured carbohydrate cycling approaches. Obesity Reviews discusses plateau patterns and adherence.
+                  Weight loss commonly slows over time as energy requirements
+                  change and the body adapts to a lower weight. A plateau does
+                  not necessarily mean that a particular diet or treatment has
+                  stopped working. Review calorie intake, physical activity,
+                  adherence and treatment expectations with an appropriately
+                  qualified healthcare professional.
                 </p>
 
                 <p className={`text-sm ${muted}`}>
-                  DOI{" "}
+                  Source:{" "}
                   <a
-                    href="https://doi.org/10.1111/obr.13987"
+                    href="https://pubmed.ncbi.nlm.nih.gov/29156185/"
                     className={linkCls}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    10.1111/obr.13987
+                    Weight-loss plateaus and long-term maintenance
                   </a>
                   .
                 </p>

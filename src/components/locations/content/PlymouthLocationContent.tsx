@@ -427,10 +427,10 @@ export default function PlymouthLocationContent({ loc, shareUrl }: Props) {
                   </li>
                 </ul>
                 <p className={p}>
-                  Plateaus are normal. Some people use refeed strategies or
-                  carbohydrate cycling with professional guidance, but the main
-                  levers remain food structure, activity, sleep, and follow up.
-                  If your progress stalls on injections, our{" "}
+                  Plateaus are normal. Review calorie intake, activity, sleep,
+                  adherence and treatment expectations with a qualified
+                  healthcare professional. If your progress stalls on
+                  injections, our{" "}
                   <Link
                     href="/helpful-guides/mounjaro-weight-loss-plateau"
                     className={linkCls}

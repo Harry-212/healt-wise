@@ -249,13 +249,11 @@ export default function BournemouthLocationContent({ loc, shareUrl }: Props) {
                     <p className={`text-sm ${muted}`}>
                       Nutrition context{" "}
                       <a
-                        href="https://doi.org/10.3390/nu17030123"
+                        href="https://pubmed.ncbi.nlm.nih.gov/39408357/"
                         className={linkCls}
                         rel="noopener noreferrer"
                         target="_blank"
-                      >
-                        Nutrients (2025)
-                      </a>
+                      >Review of time-restricted eating and fat loss</a>
                       .
                     </p>
                     <p>
