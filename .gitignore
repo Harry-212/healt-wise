@@ -40,6 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Admin-editable compare data (seeded on first run; survives Hostinger deploys)
+# Live admin price files — never commit/deploy these or Hostinger deploys
+# will overwrite production Saves. Prefer COMPARE_DATA_DIR outside the app.
 /data/mounjaro-compare.json
 /data/wegovy-compare.json

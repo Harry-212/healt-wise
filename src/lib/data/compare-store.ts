@@ -10,9 +10,24 @@ import { buildMounjaroSeedStore, buildWegovySeedStore } from "./compare-seed";
 import type { MounjaroUkProviderCompare } from "./mounjaro-uk-compare-providers";
 import type { WegovyUkProviderCompare } from "./wegovy-uk-compare-providers";
 
-const DATA_DIR = path.join(process.cwd(), "data");
-const MOUNJARO_JSON = path.join(DATA_DIR, "mounjaro-compare.json");
-const WEGOVY_JSON = path.join(DATA_DIR, "wegovy-compare.json");
+/**
+ * Live price JSON lives outside (or beside) the deploy tree when
+ * COMPARE_DATA_DIR is set — so code deploys never wipe admin Saves.
+ * Default: `<project>/data` (local/dev).
+ */
+function compareDataDir(): string {
+  const fromEnv = process.env.COMPARE_DATA_DIR?.trim();
+  if (fromEnv) return path.resolve(fromEnv);
+  return path.join(process.cwd(), "data");
+}
+
+function mounjaroJsonPath(): string {
+  return path.join(compareDataDir(), "mounjaro-compare.json");
+}
+
+function wegovyJsonPath(): string {
+  return path.join(compareDataDir(), "wegovy-compare.json");
+}
 
 let mounjaroCache: MounjaroCompareStore | null = null;
 let wegovyCache: WegovyCompareStore | null = null;
@@ -28,25 +43,30 @@ function fileMtime(filePath: string): number {
 }
 
 function ensureDataDir() {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+  const dir = compareDataDir();
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
   }
 }
 
+/**
+ * Create JSON only when missing. Never overwrite an existing file — admin
+ * edits on the live site always win over code/seed deploys.
+ */
 function lazySeed(medication: CompareMedication) {
   ensureDataDir();
 
-  if (medication === "mounjaro" && !fs.existsSync(MOUNJARO_JSON)) {
+  if (medication === "mounjaro" && !fs.existsSync(mounjaroJsonPath())) {
     fs.writeFileSync(
-      MOUNJARO_JSON,
+      mounjaroJsonPath(),
       JSON.stringify(buildMounjaroSeedStore(), null, 2),
       "utf8",
     );
   }
 
-  if (medication === "wegovy" && !fs.existsSync(WEGOVY_JSON)) {
+  if (medication === "wegovy" && !fs.existsSync(wegovyJsonPath())) {
     fs.writeFileSync(
-      WEGOVY_JSON,
+      wegovyJsonPath(),
       JSON.stringify(buildWegovySeedStore(), null, 2),
       "utf8",
     );
@@ -77,32 +97,36 @@ export function invalidateCompareCache(medication?: CompareMedication) {
 
 export function getMounjaroStore(): MounjaroCompareStore {
   lazySeed("mounjaro");
-  const mtime = fileMtime(MOUNJARO_JSON);
+  const filePath = mounjaroJsonPath();
+  const mtime = fileMtime(filePath);
   if (mounjaroCache && mounjaroCacheMtime === mtime) return mounjaroCache;
-  mounjaroCache = readJsonFile<MounjaroCompareStore>(MOUNJARO_JSON, "mounjaro");
+  mounjaroCache = readJsonFile<MounjaroCompareStore>(filePath, "mounjaro");
   mounjaroCacheMtime = mtime;
   return mounjaroCache;
 }
 
 export function getWegovyStore(): WegovyCompareStore {
   lazySeed("wegovy");
-  const mtime = fileMtime(WEGOVY_JSON);
+  const filePath = wegovyJsonPath();
+  const mtime = fileMtime(filePath);
   if (wegovyCache && wegovyCacheMtime === mtime) return wegovyCache;
-  wegovyCache = readJsonFile<WegovyCompareStore>(WEGOVY_JSON, "wegovy");
+  wegovyCache = readJsonFile<WegovyCompareStore>(filePath, "wegovy");
   wegovyCacheMtime = mtime;
   return wegovyCache;
 }
 
 export function saveMounjaroStore(store: MounjaroCompareStore): void {
-  writeJsonFile(MOUNJARO_JSON, store);
+  const filePath = mounjaroJsonPath();
+  writeJsonFile(filePath, store);
   mounjaroCache = store;
-  mounjaroCacheMtime = fileMtime(MOUNJARO_JSON);
+  mounjaroCacheMtime = fileMtime(filePath);
 }
 
 export function saveWegovyStore(store: WegovyCompareStore): void {
-  writeJsonFile(WEGOVY_JSON, store);
+  const filePath = wegovyJsonPath();
+  writeJsonFile(filePath, store);
   wegovyCache = store;
-  wegovyCacheMtime = fileMtime(WEGOVY_JSON);
+  wegovyCacheMtime = fileMtime(filePath);
 }
 
 const TRUSTPILOT_URL_BY_PROVIDER_ID: Record<string, string> = {
