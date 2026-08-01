@@ -257,7 +257,22 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/can-i-buy-weight-loss-injections-online-uk",
-        destination: "/blog/can-i-buy-weight-loss-injections-online",
+        destination: "/blog/can-i-buy-weight-loss-injections-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/can-i-buy-weight-loss-injections-online",
+        destination: "/blog/can-i-buy-weight-loss-injections-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/buy-weight-loss-injections-online-uk",
+        destination: "/blog/can-i-buy-weight-loss-injections-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/buy-weight-loss-injections-uk",
+        destination: "/blog/can-i-buy-weight-loss-injections-uk",
         permanent: true,
       },
       {

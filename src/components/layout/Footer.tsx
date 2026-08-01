@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUp, ChevronRight, Mail, Phone, MapPin } from "lucide-react";
+import { ArrowUp, ChevronRight, Phone, MapPin } from "lucide-react";
 import {
   HOME_COMPARE_CTA_LABEL,
   HOME_COMPARE_HUB_HREF,
@@ -105,20 +105,20 @@ export default function Footer() {
             className="mb-20 flex flex-col gap-12 border-b border-slate-800/80 pb-16 lg:flex-row lg:items-start lg:justify-between lg:gap-16"
           >
             <div className="flex max-w-2xl flex-1 flex-col gap-4">
-              <div className="mb-2 inline-flex w-fit items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-sm font-semibold text-emerald-400">
-                <Mail className="h-4 w-4" />
-                <span>Stay connected</span>
-              </div>
               <h2 className="text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
-                Get updates you&apos;ll{" "}
+                Stay{" "}
                 <span className="bg-linear-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                  actually want.
+                  informed.
                 </span>
               </h2>
-              <p className="mt-2 max-w-xl text-lg text-slate-400">
-                Discover the latest updates, expert guides, and essential
-                articles on weight loss treatments across the UK, delivered
-                straight to your inbox.
+              <p className="mt-2 max-w-xl text-base leading-relaxed text-slate-400 md:text-lg">
+                Get useful updates on UK weight-management providers, treatment
+                costs, pharmacy verification and changes to our comparison
+                listings delivered straight to your inbox. If your pharmacy or
+                weight-management service is not currently included in the
+                Healthwise360 comparison, please contact us so our team can
+                review it against our published inclusion and verification
+                criteria.
               </p>
 
               <div className="mt-6 w-full max-w-lg">

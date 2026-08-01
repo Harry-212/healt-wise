@@ -144,17 +144,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["guides", "wegovy", "mounjaro", "how-it-works"],
   },
   {
-    slug: "buy-weight-loss-injections-online-uk",
-    title:
-      "Buy Weight Loss Injections Online in the UK? Safe Price and Provider Guide",
-    date: "2026-07-14",
-    category: "Safety",
-    description:
-      "Learn how to buy weight loss injections online in the UK safely, compare prices, check providers, and avoid unsafe sellers.",
-    heroImage: "/blog/buy-weight-loss-injections-online.png",
-    feedTags: ["guides", "safety", "mounjaro", "wegovy"],
-  },
-  {
     slug: "what-is-wegovy-pill",
     title: "What Is Wegovy Pill? Semaglutide Tablet Explained for UK Users",
     date: "2026-07-02",
@@ -236,17 +225,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["guides", "safety", "how-it-works", "wegovy"],
   },
   {
-    slug: "can-i-buy-weight-loss-injections-online",
-    title:
-      "Can I Buy Weight Loss Injections Online in the UK? Safe Prices, Providers, and What to Check",
-    date: "2026-06-15",
-    category: "Guides",
-    description:
-      "Yes, you can buy weight loss injections online in the UK, but only safely through a regulated pharmacy after a clinical assessment. Compare prices, providers and what to check first.",
-    heroImage: "/blog/can-i-buy-weight-loss-1.webp",
-    feedTags: ["guides", "wegovy", "mounjaro", "safety"],
-  },
-  {
     slug: "buy-weight-loss-tablets",
     title:
       "Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You",
@@ -256,17 +234,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
       "Buy weight loss tablets in the UK. Compare prices, safety, and prescription options before you choose.",
     heroImage: "/blog/buy-weight-loss-tablets-confused.png",
     feedTags: ["safety", "guides", "how-it-works", "wegovy"],
-  },
-  {
-    slug: "buy-weight-loss-injections-uk",
-    title:
-      "Buy Weight Loss Injections UK: Compare Weight Loss Treatment Prices Safely",
-    date: "2026-06-12",
-    category: "Prices",
-    description:
-      "If you want to buy weight loss injections UK safely, compare weight loss treatment prices, check UK pharmacy registration, and understand the full cost pathway.",
-    heroImage: "/blog/buy-weight-loss-injections-confused.png",
-    feedTags: ["safety", "wegovy", "mounjaro", "how-it-works"],
   },
   {
     slug: "weight-loss-treatment-uk-complete-guide",
