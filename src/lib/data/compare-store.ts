@@ -209,14 +209,18 @@ export function readMounjaroCompareProvidersAdmin(): MounjaroUkProviderCompare[]
   return readMounjaroCompareProviders();
 }
 
-/** Live Wegovy list for public pages. */
-export function readWegovyCompareProviders(): WegovyUkProviderCompare[] {
-  return getWegovyStore().providers;
+function sortProvidersByName<T extends { name: string }>(providers: T[]): T[] {
+  return [...providers].sort((a, b) => a.name.localeCompare(b.name, "en-GB"));
 }
 
-/** Full Wegovy list for admin. */
+/** Live Wegovy list for public pages (A–Z by pharmacy name). */
+export function readWegovyCompareProviders(): WegovyUkProviderCompare[] {
+  return sortProvidersByName(getWegovyStore().providers);
+}
+
+/** Full Wegovy list for admin (A–Z by pharmacy name). */
 export function readWegovyCompareProvidersAdmin(): WegovyUkProviderCompare[] {
-  return getWegovyStore().providers;
+  return sortProvidersByName(getWegovyStore().providers);
 }
 
 export function getMounjaroLastUpdatedLabel(): string {

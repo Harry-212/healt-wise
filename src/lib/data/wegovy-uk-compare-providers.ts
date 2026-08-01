@@ -5,7 +5,7 @@ import {
   type MounjaroUkProviderCompare,
 } from "./mounjaro-uk-compare-providers";
 
-export const WEGOVY_UK_COMPARE_LAST_UPDATED = "May 2026";
+export const WEGOVY_UK_COMPARE_LAST_UPDATED = "August 2026";
 
 export type WegovyUkCompareBadge = "mostPopular" | "bestValue";
 
@@ -254,7 +254,7 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "1mg": 120,
     "1.7mg": 141,
     "2.4mg": 161,
-    "7.2mg": "OOS",
+    "7.2mg": "TBC",
   },
   "manchester-chemist": {
     "0.25mg": 130,
@@ -586,12 +586,12 @@ function providerSeedToWegovy(
 
 /** Build initial Wegovy provider list from Mounjaro base + price rows (seed only). */
 export function buildWegovyProvidersFromSeed(): WegovyUkProviderCompare[] {
-  return [...MOUNJARO_UK_COMPARE_PROVIDERS, ...WEGOVY_EXTRA_PROVIDER_SEEDS].flatMap(
-    (provider) => {
+  return [...MOUNJARO_UK_COMPARE_PROVIDERS, ...WEGOVY_EXTRA_PROVIDER_SEEDS]
+    .flatMap((provider) => {
       const row = providerSeedToWegovy(provider);
       return row ? [row] : [];
-    },
-  );
+    })
+    .sort((a, b) => a.name.localeCompare(b.name, "en-GB"));
 }
 
 /** Static snapshot for build-time consumers (homepage previews, sitemap, etc.). */

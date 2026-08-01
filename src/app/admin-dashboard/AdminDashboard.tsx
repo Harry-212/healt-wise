@@ -252,11 +252,13 @@ function normaliseWegovyRows(
   rows: AdminWegovyProvider[],
 ): AdminWegovyProvider[] {
   const today = todayUpdatedLabel();
-  return rows.map((row) => ({
-    ...row,
-    notes: row.notes ?? "",
-    updatedLabel: today,
-  }));
+  return rows
+    .map((row) => ({
+      ...row,
+      notes: row.notes ?? "",
+      updatedLabel: today,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name, "en-GB"));
 }
 
 export default function AdminDashboard() {
@@ -331,11 +333,13 @@ export default function AdminDashboard() {
 
   const filteredWegovy = useMemo(() => {
     const q = search.trim().toLowerCase();
-    if (!q) return wegovyRows;
-    return wegovyRows.filter(
-      (p) =>
-        p.name.toLowerCase().includes(q) || p.id.toLowerCase().includes(q),
-    );
+    const rows = !q
+      ? wegovyRows
+      : wegovyRows.filter(
+          (p) =>
+            p.name.toLowerCase().includes(q) || p.id.toLowerCase().includes(q),
+        );
+    return [...rows].sort((a, b) => a.name.localeCompare(b.name, "en-GB"));
   }, [wegovyRows, search]);
 
   const hasUnsavedChanges = useMemo(() => {

@@ -284,6 +284,7 @@ export async function PUT(request: NextRequest, context: RouteContext) {
     providers.push(parsed);
   }
   ensureUniqueIds(providers);
+  providers.sort((a, b) => a.name.localeCompare(b.name, "en-GB"));
   const store: WegovyCompareStore = {
     lastUpdated: lastUpdated ?? getWegovyStore().lastUpdated,
     providers,
