@@ -29,9 +29,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isBlogFeedTag(raw)) return {};
   const page = Number.parseInt(pageStr, 10);
   if (Number.isNaN(page) || page < 1) return {};
-  const description = blogTopicDescription(raw);
   if (page === 1) {
     const title = blogTopicTitle(raw, 1);
+    const description = blogTopicDescription(raw, 1);
     const url = `${siteOrigin()}${blogHubPath(raw)}`;
     return {
       title: { absolute: title },
@@ -44,6 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { totalPages } = getBlogPageFeed(page, { topic: raw });
   if (page > totalPages) return {};
   const title = blogTopicTitle(raw, page);
+  const description = blogTopicDescription(raw, page);
   const url = `${siteOrigin()}${blogPagePath(page, raw)}`;
   return {
     title: { absolute: title },

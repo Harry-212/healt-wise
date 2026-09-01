@@ -20,7 +20,7 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-hot-weather-safety-uk",
   title: "Mounjaro and Hot Weather UK: Hydration, Sun Safety & Heatwave Tips",
-  description: "On Mounjaro, heat and reduced thirst cues raise dehydration risk—even if you feel cold. UK summer safety: hydration targets, sun protection, GLP-1 digestive symptoms, and when to seek help.",
+  description: "Mounjaro raises dehydration risk in hot weather. UK summer safety: hydration targets, sun protection, GLP-1 digestive symptoms, and when to seek help.",
   openGraphTitle: "Mounjaro and Hot Weather UK: Hydration, Sun Safety & Heatwave Tips",
   openGraphDescription: "On Mounjaro, heat and reduced thirst cues raise dehydration risk. Hydration, sun protection, and when to seek help in UK heatwaves.",
 });

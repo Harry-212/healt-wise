@@ -20,9 +20,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-prescription-timeline-uk",
-  title: "How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline",
-  description: "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process—medical review, eligibility checks, cold-chain delivery—and how to avoid delays.",
-  openGraphTitle: "How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline",
+  title: "Mounjaro Prescription & Delivery Timeline UK",
+  description: "Most patients receive Mounjaro within 1–3 days of approval. Learn the prescription process and how to avoid common delays.",
+  openGraphTitle: "How Long Does Mounjaro Take in the UK? Prescription Timeline",
   openGraphDescription: "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process and how to avoid common delays.",
 });
 
@@ -127,7 +127,14 @@ const SCHEMA_JSON = {
       description:
         "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process and how to avoid common delays.",
       author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-      publisher: { "@type": "Organization", name: "Healthwise360" },
+      publisher: {
+        "@type": "Organization",
+        name: "Healthwise360",
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteOrigin()}/logo-health-wise.webp`,
+        },
+      },
       dateModified: "2026-04-09",
       keywords:
         "Mounjaro, tirzepatide, UK prescription, online pharmacy, cold chain delivery, GLP-1",

@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -20,7 +20,7 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-bmi-cutoff-stopping-uk",
   title: "Mounjaro BMI Cutoffs in the UK: Why Stopping Too Early Can Backfire",
-  description: "Many UK patients are stopped on Mounjaro once they reach a 'normal' BMI. Here's why that approach is flawed, what the evidence says about maintenance, and how to find a provider with a long-term plan.",
+  description: "Many UK patients are stopped on Mounjaro at a 'normal' BMI. Here's why that approach is flawed and how to find a provider with a long-term plan.",
   openGraphTitle: "Mounjaro BMI Cutoffs in the UK: Why Stopping Too Early Can Backfire",
 });
 

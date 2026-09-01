@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -19,7 +19,7 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-pregnancy-risk-fertility-contraception",
   title: "Mounjaro and Pregnancy Risk: Fertility & Contraception Guide",
-  description: "Mounjaro may increase fertility indirectly as metabolic health improves. Understand the clinical facts about tirzepatide, contraception, and pregnancy risk in the UK.",
+  description: "Mounjaro may indirectly increase fertility as metabolic health improves. Clinical facts about tirzepatide, contraception, and pregnancy risk in the UK.",
   openGraphTitle: "Mounjaro and Pregnancy Risk: What You Need to Know About Fertility & Contraception",
 });
 
@@ -134,7 +134,7 @@ const SCHEMA = {
   headline:
     "Mounjaro and Pregnancy Risk: What You Need to Know About Fertility & Contraception",
   description:
-    "Mounjaro may increase fertility indirectly as metabolic health improves. Understand the clinical facts about tirzepatide, contraception, and pregnancy risk in the UK.",
+    "Mounjaro may indirectly increase fertility as metabolic health improves. Clinical facts about tirzepatide, contraception, and pregnancy risk in the UK.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
   publisher: {
     "@type": "Organization",

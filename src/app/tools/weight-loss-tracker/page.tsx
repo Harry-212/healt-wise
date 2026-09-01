@@ -5,9 +5,9 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/tools/weight-loss-tracker",
-  title: "Weight loss tracker UK (2026) — private Wegovy & Mounjaro progress log",
+  title: "Weight Loss Tracker UK (2026) | Wegovy & Mounjaro Log",
   metaDescription:
-    "Free private weight loss tracker for UK GLP-1 users. Sign in to start logging weight, medication, dose, and supplier over time — built for Wegovy, Mounjaro, and Saxenda users.",
+    "Free private weight loss tracker for UK GLP-1 users. Log weight, medication, dose and supplier over time. Built for Wegovy, Mounjaro and Saxenda users.",
   openGraphTitle: "Weight loss tracker UK — track Wegovy & Mounjaro progress privately",
   openGraphDescription:
     "Private weight tracker for UK adults on GLP-1 treatments. Sign in to start — visualise progress and compare weeks.",

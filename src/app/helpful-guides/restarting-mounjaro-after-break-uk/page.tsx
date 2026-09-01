@@ -21,7 +21,7 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "restarting-mounjaro-after-break-uk",
   title: "Restarting Mounjaro After a Break: UK Guide (2026)",
-  description: "Restarting Mounjaro after a gap is often possible—even if your BMI has dropped. Here's how break length affects your restart dose, what providers need, and how to do it safely.",
+  description: "Restarting Mounjaro after a break is often possible even if your BMI has dropped. How break length affects restart dose and what providers need.",
   openGraphTitle: "Restarting Mounjaro After a Break: UK Guide (2026)",
   openGraphDescription: "Restarting Mounjaro after a gap is often possible—even if your BMI has dropped. Here's how break length affects restart dose, what providers need, and how to do it safely.",
 });

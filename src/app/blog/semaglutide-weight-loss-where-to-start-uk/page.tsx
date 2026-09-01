@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogImgPath, SEMAGLUTIDE_WHERE_TO_START_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -46,7 +46,7 @@ export default function SemaglutideWhereToStartPage() {
     description: DESCRIPTION,
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-06-24",
     mainEntityOfPage: {
       "@type": "WebPage",

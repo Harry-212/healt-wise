@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogWebpPath, MOUWEG_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -52,7 +52,7 @@ export default function MounjaroVsWegovyPage() {
       "Tirzepatide (Mounjaro) vs semaglutide (Wegovy): mechanisms, trials, dosing, side effects, cost and UK access — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-04-20",
     mainEntityOfPage: {
       "@type": "WebPage",

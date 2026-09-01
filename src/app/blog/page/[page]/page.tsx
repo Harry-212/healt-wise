@@ -10,6 +10,7 @@ import {
 import {
   BLOG_HUB_DESCRIPTION,
   blogHubListingTitle,
+  blogHubPageDescription,
 } from "@/lib/seo/blog-hub-metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
@@ -20,20 +21,14 @@ type Props = {
 
 function listingMetadata(canonicalPath: string, page: number): Metadata {
   const title = blogHubListingTitle(page);
+  const description = blogHubPageDescription(page);
   const url = `${siteOrigin()}${canonicalPath}`;
   return {
     title: { absolute: title },
-    description: BLOG_HUB_DESCRIPTION,
+    description,
     alternates: { canonical: url },
-    openGraph: {
-      title,
-      description: BLOG_HUB_DESCRIPTION,
-      url,
-    },
-    twitter: {
-      title,
-      description: BLOG_HUB_DESCRIPTION,
-    },
+    openGraph: { title, description, url },
+    twitter: { title, description },
   };
 }
 

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { INJECTABLE_OBESITY_TREATMENTS_HERO } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -48,7 +48,7 @@ export default function InjectableObesityTreatmentsPage() {
       "UK injectable obesity treatments: mechanisms, NHS vs private access, Saxenda / Wegovy / Mounjaro comparison, eligibility, risks and cost context — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-05-20",
     mainEntityOfPage: {
       "@type": "WebPage",

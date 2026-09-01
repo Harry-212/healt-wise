@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -20,7 +20,7 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-multivitamins-uk",
   title: "Multivitamins and Mounjaro in the UK: Do You Really Need Them?",
-  description: "Mounjaro reduces appetite, which can lower nutrient intake. We cut through the influencer noise and explain what the evidence says about multivitamins while using Mounjaro.",
+  description: "Mounjaro reduces appetite and may lower nutrient intake. The evidence on multivitamins while using Mounjaro, cutting through influencer noise.",
   openGraphTitle: "Multivitamins and Mounjaro in the UK: Do You Really Need Them?",
 });
 
@@ -114,7 +114,7 @@ const SCHEMA = {
   "@type": "Article",
   headline: "Multivitamins and Mounjaro in the UK: Do You Really Need Them?",
   description:
-    "Mounjaro reduces appetite, which can lower nutrient intake. We cut through the influencer noise and explain what the evidence says about multivitamins while using Mounjaro.",
+    "Mounjaro reduces appetite and may lower nutrient intake. The evidence on multivitamins while using Mounjaro, cutting through influencer noise.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
   publisher: {
     "@type": "Organization",

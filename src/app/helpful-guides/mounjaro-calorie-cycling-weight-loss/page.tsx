@@ -21,7 +21,7 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-calorie-cycling-weight-loss",
   title: "Mounjaro Calorie Cycling: A Smarter Approach to Sustainable Weight Loss",
-  description: "Calorie cycling is a flexible nutrition strategy that can complement Mounjaro's appetite regulation—helping to prevent plateaus and improve long-term adherence to treatment.",
+  description: "Calorie cycling complements Mounjaro's appetite regulation—helping prevent plateaus and improve long-term adherence to treatment in the UK.",
   openGraphTitle: "Mounjaro Calorie Cycling: A Smarter Approach to Sustainable Weight Loss",
   openGraphDescription: "Calorie cycling is a flexible nutrition strategy that can complement Mounjaro's appetite regulation—helping to prevent plateaus and improve long-term adherence.",
 });

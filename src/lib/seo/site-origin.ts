@@ -1,5 +1,5 @@
 /** Production origin — never use legacy domains here. */
-const CANONICAL_ORIGIN = "https://healthwise360.co.uk";
+const CANONICAL_ORIGIN = "https://www.healthwise360.co.uk";
 
 /** Legacy / wrong deploy host (must not appear in metadata or JSON-LD). */
 const LEGACY_HEALTH_WISE_HOST =

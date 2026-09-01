@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -20,7 +20,7 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "fake-online-pharmacy-uk-how-to-spot-stay-safe",
   title: "How to Identify a Fake Online Pharmacy in the UK & Stay Safe",
-  description: "Fake online pharmacies sell counterfeit or unsafe medicines. Learn the warning signs, who regulates UK pharmacies (GPhC, MHRA), and how to verify a site before you buy.",
+  description: "Fake pharmacies sell unsafe medicines. Learn the warning signs, who regulates UK pharmacies (GPhC, MHRA), and how to verify a site before you buy.",
   openGraphTitle: "How to Identify a Fake Online Pharmacy in the UK & Stay Safe",
   openGraphDescription: "Fake online pharmacies sell counterfeit or unsafe medicines. Learn the warning signs and how to verify a UK pharmacy before you buy.",
 });

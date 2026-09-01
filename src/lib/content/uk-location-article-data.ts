@@ -1,4 +1,4 @@
-import type { UkNation, UkWeightLossLocation } from "@/lib/data/uk-weight-loss-locations";
+﻿import type { UkNation, UkWeightLossLocation } from "@/lib/data/uk-weight-loss-locations";
 import { SITE_ARTICLE_AUTHOR, SITE_BRAND_NAME } from "@/lib/site-brand";
 
 /** `a` may include markdown links `[label](/path)` for on-page rendering; JSON-LD uses plain text. */
@@ -2433,7 +2433,7 @@ export function locationArticleJsonLd(opts: {
       name: SITE_BRAND_NAME,
       logo: {
         "@type": "ImageObject",
-        url: "https://healthwise360.co.uk/logo-health-wise.webp",
+        url: "https://www.healthwise360.co.uk/logo-health-wise.webp",
       },
     },
     datePublished: "2026-04-09",

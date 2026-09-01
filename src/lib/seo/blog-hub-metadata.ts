@@ -27,7 +27,18 @@ export function blogTopicTitle(topic: string, page?: number): string {
   return `${label} Articles & Guides UK | Healthwise360`;
 }
 
-export function blogTopicDescription(topic: string): string {
+export function blogTopicDescription(topic: string, page?: number): string {
   const label = BLOG_TOPIC_LABELS[topic] || topic;
-  return `Read UK news, clinical safety updates and practical guidance focused on ${label.toLowerCase()} from Healthwise360.`;
+  const base = `Read UK news, clinical safety updates and practical guidance focused on ${label.toLowerCase()} from Healthwise360.`;
+  if (page && page > 1) {
+    return `${label} articles, page ${page}. ${base}`;
+  }
+  return base;
+}
+
+export function blogHubPageDescription(page?: number): string {
+  if (page && page > 1) {
+    return `Page ${page} — UK guides and news on Mounjaro, Wegovy, Saxenda, online pharmacies and prescription weight-loss treatment.`;
+  }
+  return BLOG_HUB_DESCRIPTION;
 }

@@ -12,7 +12,7 @@ export function pharmacyReviewTitle(providerName: string): string {
 }
 
 export function pharmacyReviewDescription(providerName: string): string {
-  return `${providerName} weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.`;
+  return `${providerName}: UK GLP-1 prices, consultation, delivery and clinical support. Independent pharmacy review. GPhC-registered. Not medical advice.`;
 }
 
 export function pharmacyReviewH1(providerName: string): string {

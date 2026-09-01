@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+﻿import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE } from "@/lib/site-assets";
@@ -45,7 +45,7 @@ export default function WegovyCostsArticlePage() {
     description:
       "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-04-14",
     image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {

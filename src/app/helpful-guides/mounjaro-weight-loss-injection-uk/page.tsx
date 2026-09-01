@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -22,7 +22,7 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-weight-loss-injection-uk",
   title: "Mounjaro Weight Loss Treatment UK (2026): How It Works, Results, Eligibility & Cost",
-  description: "Complete UK guide to Mounjaro (tirzepatide) for weight loss. Covers how the dual GLP-1/GIP mechanism works, clinical trial results, eligibility criteria, side effects, and 2026 costs.",
+  description: "Complete UK guide to Mounjaro for weight loss. How the dual GLP-1/GIP mechanism works, clinical results, eligibility, side effects, and 2026 costs.",
   openGraphTitle: "Mounjaro Weight Loss Treatment UK (2026): How It Works, Results, Eligibility & Cost",
 });
 
@@ -141,7 +141,7 @@ const SCHEMA = {
   headline:
     "Mounjaro Weight Loss Treatment UK (2026): How It Works, Results, Eligibility & Cost",
   description:
-    "Complete UK guide to Mounjaro (tirzepatide) for weight loss. Covers how the dual GLP-1/GIP mechanism works, clinical trial results, eligibility criteria, side effects, and 2026 costs.",
+    "Complete UK guide to Mounjaro for weight loss. How the dual GLP-1/GIP mechanism works, clinical results, eligibility, side effects, and 2026 costs.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
   publisher: {
     "@type": "Organization",

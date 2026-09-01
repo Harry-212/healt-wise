@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -23,7 +23,7 @@ const GUIDE_PAGE_TITLE =
 export const metadata = buildGuideShareMetadata({
   slug: "glp1-content-removed-weight-loss-advice-uk",
   title: GUIDE_PAGE_TITLE,
-  description: "Social media platforms are restricting content about Mounjaro, Wegovy, and GLP-1 medications. We examine what is being removed, the regulatory context, and what patients are losing.",
+  description: "Social media is restricting Mounjaro and Wegovy content. We examine what is being removed, the regulatory context, and what patients are losing.",
   openGraphTitle: GUIDE_PAGE_TITLE,
 });
 
@@ -138,7 +138,7 @@ const SCHEMA = {
   "@type": "Article",
   headline: GUIDE_PAGE_TITLE,
   description:
-    "Social media platforms are restricting content about Mounjaro, Wegovy, and GLP-1 medications. We examine what is being removed, the regulatory context, and what patients are losing.",
+    "Social media is restricting Mounjaro and Wegovy content. We examine what is being removed, the regulatory context, and what patients are losing.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
   publisher: {
     "@type": "Organization",

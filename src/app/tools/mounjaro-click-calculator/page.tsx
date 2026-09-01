@@ -7,9 +7,9 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/tools/mounjaro-click-calculator",
-  title: "Mounjaro Click Calculator & Dose Chart UK (2026)",
+  title: "Mounjaro Click Calculator UK (2026)",
   metaDescription:
-    "Free Mounjaro KwikPen click calculator and dosage chart for UK patients. Calculate clicks for any dose and view a complete reference chart for all pen strengths.",
+    "Free Mounjaro KwikPen click calculator for UK patients. Calculate clicks for any dose with a complete reference chart for all pen strengths.",
   openGraphTitle: "Mounjaro Click Calculator & Chart UK",
   openGraphDescription:
     "Easily calculate how many clicks are needed for your specific Mounjaro dose using our free tool. Includes a full dosage chart for UK KwikPens.",

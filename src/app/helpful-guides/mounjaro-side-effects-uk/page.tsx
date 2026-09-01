@@ -21,7 +21,7 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-side-effects-uk",
   title: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
-  description: "A complete, honest overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—with evidence-based management strategies for each.",
+  description: "A complete overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—with evidence-based management strategies for each.",
   openGraphTitle: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
 });
 
