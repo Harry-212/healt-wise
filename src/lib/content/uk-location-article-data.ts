@@ -11,12 +11,12 @@ export function faqAnswerPlain(markdown: string): string {
     .trim();
 }
 
-/** First sentence of place snapshot ó hook for SERP without recycling the shared health paragraph opening. */
+/** First sentence of place snapshot ‚Äî hook for SERP without recycling the shared health paragraph opening. */
 export function placeSnapshotLeadingSentence(snapshot: string): string {
   const trimmed = snapshot.replace(/\s+/g, " ").trim();
   const match = trimmed.match(/^.{1,350}?[.!?](?=\s|$)/);
   if (match) return match[0].trim();
-  return trimmed.length > 120 ? `${trimmed.slice(0, 117)}Ö` : trimmed;
+  return trimmed.length > 120 ? `${trimmed.slice(0, 117)}‚Ä¶` : trimmed;
 }
 
 /** Generate unique 5W1H style titles for SERP */
@@ -25,7 +25,7 @@ export function buildUkLocationTitle(loc: UkWeightLossLocation): string {
     return "Best Weight Loss Treatment Armagh: Proven Strategies for the Orchard County";
   }
   if (loc.slug === "belfast") {
-    return "Best Weight Loss Treatment Belfast: Northern Irelandís Top Evidence Based Options";
+    return "Best Weight Loss Treatment Belfast: Northern Ireland‚Äôs Top Evidence Based Options";
   }
   if (loc.slug === "birmingham") {
     return "Best Weight Loss Treatment Birmingham: West Midlands Weight Mastery";
@@ -345,7 +345,7 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
     return "Best weight loss treatment Lichfield UK: Orlistat and GLP 1 context, Mounjaro and Wegovy access, NHS Staffordshire ICS, 10 kg plans, and Staffordshire slimming strategies.";
   }
   if (loc.slug === "lincoln") {
-    return "Best weight loss treatment Lincoln UK: NHS/private options, 20kg/90-day timelines, loose skin prevention, local Lincolnshire hacksócomplete evidence guide.";
+    return "Best weight loss treatment Lincoln UK: NHS/private options, 20kg/90-day timelines, loose skin prevention, local Lincolnshire hacks‚Äîcomplete evidence guide.";
   }
   if (loc.slug === "lisburn") {
     return "Best weight loss treatment Lisburn: GLP 1 guide (Mounjaro and Wegovy), NHS and private access, 20 kg timelines, costs, eligibility for Northern Ireland slimming.";
@@ -360,7 +360,7 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
     return "Best weight loss treatment Milton Keynes: injections, NHS or private support, surgery, cosmetic fat reduction, costs, and realistic local choices.";
   }
   if (loc.slug === "newcastle-upon-tyne") {
-    return "Discover the best weight loss treatment in Newcastle ñ medical programs, GLP-1 options, surgery and non-invasive fat reduction, plus safe timelines and local tips.";
+    return "Discover the best weight loss treatment in Newcastle ‚Äì medical programs, GLP-1 options, surgery and non-invasive fat reduction, plus safe timelines and local tips.";
   }
   if (loc.slug === "newport") {
     return "Best weight loss treatment Newport: GLP-1 injections, nutrition coaching, NHS/private access, 14kg timelines, 3-3-3 rule, and Gwent tips.";
@@ -411,7 +411,7 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
     return "Best weight loss treatment Bath: Somerset strategies, spa town food smarts, and UK tools to compare lasting slimming options in Bath.";
   }
   if (loc.slug === "aberdeen") {
-    return "Discover the best weight loss treatment in Aberdeenónon-surgical fat reduction at top slimming clinics. Tailored plans for Granite City locals. Results-driven, safe.";
+    return "Discover the best weight loss treatment in Aberdeen‚Äînon-surgical fat reduction at top slimming clinics. Tailored plans for Granite City locals. Results-driven, safe.";
   }
   
   // Rotate meta descriptions based on name length to ensure variety (5W1H style)
@@ -447,7 +447,7 @@ export function nationCareContext(nation: UkNation): {
     case "Wales":
       return {
         nhsFrame:
-          "Welsh health boards publish their own obesity service arrangements; what your GP in Wales can offer this month may not mirror a cousinís surgery in Leeds.",
+          "Welsh health boards publish their own obesity service arrangements; what your GP in Wales can offer this month may not mirror a cousin‚Äôs surgery in Leeds.",
         postcodeNote:
           "Coastal and valley postcodes can still be served by national couriers, but cut-off times vary.",
       };
@@ -456,7 +456,7 @@ export function nationCareContext(nation: UkNation): {
         nhsFrame:
           "In England, much of the gatekeeping sits with GP practices and integrated care boards (ICBs), so two people with similar BMIs might still hear different answers depending on postcode.",
         postcodeNote:
-          "Same-day courier maps rarely follow council borders; a practice just outside {name} might still count as ìlocalî for delivery.",
+          "Same-day courier maps rarely follow council borders; a practice just outside {name} might still count as ‚Äúlocal‚Äù for delivery.",
       };
   }
 }
@@ -465,28 +465,28 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
   if (loc.slug === "armagh") {
     return [
       {
-        q: "Whatís the most effective diet for Armagh locals?",
-        a: `Balanced calorie deficits that you can keep up usually beat extreme rules. NICE-style weight-management guidance favours sustainable eating patterns over crash dietsósee our [comparison of the best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) for how medicines like [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), or [Saxenda](/what-is-saxenda) sit *beside* food habits, not instead of them. If you are budgeting privately, check [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        q: "What‚Äôs the most effective diet for Armagh locals?",
+        a: `Balanced calorie deficits that you can keep up usually beat extreme rules. NICE-style weight-management guidance favours sustainable eating patterns over crash diets‚Äîsee our [comparison of the best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) for how medicines like [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), or [Saxenda](/what-is-saxenda) sit *beside* food habits, not instead of them. If you are budgeting privately, check [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
       },
       {
         q: "How much exercise is needed for weight loss in Armagh?",
-        a: `Most adults are pointed toward roughly **150 minutes** of moderate activity weekly (plus strength work) as a public-health baselineówalking the Mall, Palace Demesne, or farm tracks all counts. Use our [BMI calculator](/tools/bmi-calculator) only as a screening tool alongside waist circumference and how you feel day to day.`,
+        a: `Most adults are pointed toward roughly **150 minutes** of moderate activity weekly (plus strength work) as a public-health baseline‚Äîwalking the Mall, Palace Demesne, or farm tracks all counts. Use our [BMI calculator](/tools/bmi-calculator) only as a screening tool alongside waist circumference and how you feel day to day.`,
       },
       {
         q: "Do fat reduction treatments work for Armagh residents?",
-        a: `Non-surgical body contouring can change **local** fat thickness for suitable candidates, but it is not a substitute for overall energy balance. If you are also exploring prescription options, read [what Mounjaro is](/what-is-mounjaro), [what Wegovy is](/what-is-wegovy), and [what Saxenda is](/what-is-saxenda)óthen compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) costs with your clinicianís follow-up plan in mind.`,
+        a: `Non-surgical body contouring can change **local** fat thickness for suitable candidates, but it is not a substitute for overall energy balance. If you are also exploring prescription options, read [what Mounjaro is](/what-is-mounjaro), [what Wegovy is](/what-is-wegovy), and [what Saxenda is](/what-is-saxenda)‚Äîthen compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) costs with your clinician‚Äôs follow-up plan in mind.`,
       },
       {
         q: "Can mindset alone drive weight loss here?",
-        a: `Mindset does not replace physics, but stress, sleep, and planning strongly influence adherenceóespecially around busy seasons. If motivation wobbles, our [Mounjaro weight-loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau) explains why progress stalls and what sensible tweaks look like (whether you use injections or not).`,
+        a: `Mindset does not replace physics, but stress, sleep, and planning strongly influence adherence‚Äîespecially around busy seasons. If motivation wobbles, our [Mounjaro weight-loss plateau guide](/helpful-guides/mounjaro-weight-loss-plateau) explains why progress stalls and what sensible tweaks look like (whether you use injections or not).`,
       },
       {
         q: "How to beat winter weight gain in the Orchard County?",
-        a: `Prioritise sleep, keep protein and vegetables easy to reach on dark evenings, and schedule short indoor workouts when the weather turns. Pair those basics with realistic medical support if you qualifyóneighbours often compare notes with guides for [Belfast](/blog/best-weight-loss-treatment-in-belfast) or [Newry](/blog/best-weight-loss-treatment-in-newry) because HSC pathways and courier access can feel similar across Northern Ireland.`,
+        a: `Prioritise sleep, keep protein and vegetables easy to reach on dark evenings, and schedule short indoor workouts when the weather turns. Pair those basics with realistic medical support if you qualify‚Äîneighbours often compare notes with guides for [Belfast](/blog/best-weight-loss-treatment-in-belfast) or [Newry](/blog/best-weight-loss-treatment-in-newry) because HSC pathways and courier access can feel similar across Northern Ireland.`,
       },
       {
         q: "Are supplements essential for the best results?",
-        a: `Rarely. Most people do better with consistent meals, movement, andówhere appropriateóprescribed medicines overseen by a clinician. Treat ìmiracleî pills with the same scepticism we outline in our [methodology](/methodology); for injection context, start with [Mounjaro in the UK](/helpful-guides/mounjaro-weight-loss-injection-uk).`,
+        a: `Rarely. Most people do better with consistent meals, movement, and‚Äîwhere appropriate‚Äîprescribed medicines overseen by a clinician. Treat ‚Äúmiracle‚Äù pills with the same scepticism we outline in our [methodology](/methodology); for injection context, start with [Mounjaro in the UK](/helpful-guides/mounjaro-weight-loss-injection-uk).`,
       },
     ];
   }
@@ -919,7 +919,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
   if (loc.slug === "chester") {
     return [
       {
-        q: "Whatís the most successful weight loss treatment?",
+        q: "What‚Äôs the most successful weight loss treatment?",
         a: `For eligible people, injection medicines can drive large average loss in trials, but long term sustainability usually improves when you pair treatment with food structure, steps, and strength. Start with [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda), then read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy).`,
       },
       {
@@ -931,7 +931,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
         a: `Reports often mention semaglutide plus diet and walking changes. Treat celebrity stories as motivation, not a protocol. Focus on eligibility and follow up.`,
       },
       {
-        q: "Whatís the 3 3 3 rule for losing weight?",
+        q: "What‚Äôs the 3 3 3 rule for losing weight?",
         a: `People describe it as three higher protein meals, a daily water target, and a daily walk. It can help as structure, but it is not a substitute for a calorie deficit plus strength and walking.`,
       },
       {
@@ -1226,7 +1226,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What's a realistic 6 month Mounjaro budget in Fife?",
-        a: `Many private plans cluster around £1,000 to £1,600 across 6 months depending on dose and follow up. If you are comparing providers, use [our methodology](/methodology) to check safety and monitoring, not only price.`,
+        a: `Many private plans cluster around ¬£1,000 to ¬£1,600 across 6 months depending on dose and follow up. If you are comparing providers, use [our methodology](/methodology) to check safety and monitoring, not only price.`,
       },
       {
         q: "Which NHS Scotland injections can Dunfermline residents access?",
@@ -1296,7 +1296,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Cost monthly?",
-        a: `NHS access is free at point of care. Private pricing often ranges roughly £150 to £350 per month depending on dose and support. See [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
+        a: `NHS access is free at point of care. Private pricing often ranges roughly ¬£150 to ¬£350 per month depending on dose and support. See [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
         q: "Side effects management?",
@@ -1586,7 +1586,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How soon can Leeds residents access private Mounjaro?",
-        a: `Some GPhC registered services offer same week screening when capacity allows, often about £220 to £320 monthly including titration plans. Verify providers using our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and read [what Mounjaro is](/what-is-mounjaro).`,
+        a: `Some GPhC registered services offer same week screening when capacity allows, often about ¬£220 to ¬£320 monthly including titration plans. Verify providers using our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and read [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "NHS versus private: which wins for 20 kg loss?",
@@ -1619,7 +1619,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "NHS versus private speed in Leicester?",
-        a: `NHS tier 2 often starts after about 2 to 4 months when capacity allows and is free at point of use. Private GLP 1 can start in about 1 to 2 weeks in some services at about £200 plus monthly. Verify any private route with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `NHS tier 2 often starts after about 2 to 4 months when capacity allows and is free at point of use. Private GLP 1 can start in about 1 to 2 weeks in some services at about ¬£200 plus monthly. Verify any private route with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
       },
       {
         q: "Can Leicester GPs handle shared care?",
@@ -1640,7 +1640,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is Mounjaro monthly cost from major UK chains?",
-        a: `Boots does not stock Mounjaro as a default chain offer in many areas, so independents often quote about £200 to £300 monthly including titration support. Compare totals on [Mounjaro price comparison](/mounjaro-price-comparison) and verify prescribers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `Boots does not stock Mounjaro as a default chain offer in many areas, so independents often quote about ¬£200 to ¬£300 monthly including titration support. Compare totals on [Mounjaro price comparison](/mounjaro-price-comparison) and verify prescribers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
       },
       {
         q: "How does Mounjaro compare with semaglutide (Wegovy) for effectiveness?",
@@ -1698,7 +1698,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is the typical monthly cost for tirzepatide (Mounjaro) in Northern Ireland?",
-        a: `Private quotes often land about £220 to £320 monthly during titration, with starter pens near £229 at 2.5 mg bands and maintenance quotes near £319 at 15 mg bands in marketing materials. Pharmacy comparison can save about £50 plus monthly versus clinic markups in some quotes. NHS supply is free at point of use when tier 3 criteria match and capacity exists. Compare totals on [Mounjaro price comparison](/mounjaro-price-comparison).`,
+        a: `Private quotes often land about ¬£220 to ¬£320 monthly during titration, with starter pens near ¬£229 at 2.5 mg bands and maintenance quotes near ¬£319 at 15 mg bands in marketing materials. Pharmacy comparison can save about ¬£50 plus monthly versus clinic markups in some quotes. NHS supply is free at point of use when tier 3 criteria match and capacity exists. Compare totals on [Mounjaro price comparison](/mounjaro-price-comparison).`,
       },
       {
         q: "What BMI qualifies for semaglutide diabetes treatment in Northern Ireland?",
@@ -1710,7 +1710,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How much does Ozempic cost monthly for weight loss in Northern Ireland?",
-        a: `Private off label weight loss quotes often sit about £180 to £280 monthly, with starter bands near £179 at 0.25 mg and higher dose quotes near £269 at 1 mg in some clinic marketing. Diabetes NHS prescriptions are separate and can be free at point of use when criteria match. Ozempic is not licensed purely for weight loss, so any off label use needs explicit clinician judgement. Read [Mounjaro versus Ozempic](/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results) and [what Wegovy is](/what-is-wegovy) for semaglutide context.`,
+        a: `Private off label weight loss quotes often sit about ¬£180 to ¬£280 monthly, with starter bands near ¬£179 at 0.25 mg and higher dose quotes near ¬£269 at 1 mg in some clinic marketing. Diabetes NHS prescriptions are separate and can be free at point of use when criteria match. Ozempic is not licensed purely for weight loss, so any off label use needs explicit clinician judgement. Read [Mounjaro versus Ozempic](/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results) and [what Wegovy is](/what-is-wegovy) for semaglutide context.`,
       },
       {
         q: "Who qualifies for Mounjaro weight loss treatment in Northern Ireland?",
@@ -1718,7 +1718,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is Wegovy monthly cost in the Lisburn area?",
-        a: `Private quotes often land about £200 to £300 monthly, with starter pens near £199 at 0.25 mg and maintenance near £289 at 2.4 mg in marketing tables. Pharmacy comparison can save about £30 to £50 versus some clinic bundles. NHS eligibility is narrower and usually needs tier 3 review. Compare [Wegovy price comparison](/wegovy-price-comparison) and read [what Wegovy is](/what-is-wegovy).`,
+        a: `Private quotes often land about ¬£200 to ¬£300 monthly, with starter pens near ¬£199 at 0.25 mg and maintenance near ¬£289 at 2.4 mg in marketing tables. Pharmacy comparison can save about ¬£30 to ¬£50 versus some clinic bundles. NHS eligibility is narrower and usually needs tier 3 review. Compare [Wegovy price comparison](/wegovy-price-comparison) and read [what Wegovy is](/what-is-wegovy).`,
       },
     ];
   }
@@ -1739,11 +1739,11 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is the average Ozempic cost in Liverpool?",
-        a: `Private quotes often sit about £180 to £250 monthly during titration in Merseyside marketing tables. NHS supply is free for type 2 diabetes when criteria match. Compounded semaglutide carries extra MHRA safety warnings, so avoid informal sellers. Compare [Wegovy price comparison](/wegovy-price-comparison) for licensed weight management pricing context.`,
+        a: `Private quotes often sit about ¬£180 to ¬£250 monthly during titration in Merseyside marketing tables. NHS supply is free for type 2 diabetes when criteria match. Compounded semaglutide carries extra MHRA safety warnings, so avoid informal sellers. Compare [Wegovy price comparison](/wegovy-price-comparison) for licensed weight management pricing context.`,
       },
       {
         q: "Is there any Liverpool difference between CoolSculpting and fat freezing?",
-        a: `CoolSculpting is a branded cryolipolysis device family; many clinics market fat freezing generically with similar cold apoptosis physics. Royal Liver Building area packages appear in local search, often quoting about 20 to 25% fat reduction per treated area and about £350 to £600 per area. Best for stubborn pockets after overall weight loss, not as a sole strategy.`,
+        a: `CoolSculpting is a branded cryolipolysis device family; many clinics market fat freezing generically with similar cold apoptosis physics. Royal Liver Building area packages appear in local search, often quoting about 20 to 25% fat reduction per treated area and about ¬£350 to ¬£600 per area. Best for stubborn pockets after overall weight loss, not as a sole strategy.`,
       },
       {
         q: "NHS versus private Liverpool: which delivers faster results?",
@@ -1859,7 +1859,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How do I access GLP-1 injections like Semaglutide in Newport safely?",
-        a: `NHS access usually starts through GP referral and can involve waits of 3-6 months. Private access may be faster via GPhC-registered clinics, often around £200-350/month. Verify prescriber/pharmacy, titration plan, side-effect policy, and cold-chain delivery with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `NHS access usually starts through GP referral and can involve waits of 3-6 months. Private access may be faster via GPhC-registered clinics, often around ¬£200-350/month. Verify prescriber/pharmacy, titration plan, side-effect policy, and cold-chain delivery with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
       },
       {
         q: "What local Newport resources support weight loss journeys?",
@@ -1988,7 +1988,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "How much does Mounjaro cost in Wales (similar to Scotland)?",
-        a: `Private: £150-250/month (pens + delivery). NHS: Free for BMI 40+ comorbidities, waits 6-12 months. Prices vary by GPhC-registered clinic. Compare current bundles on [Mounjaro price comparison](/mounjaro-price-comparison) and read [what Mounjaro is](/what-is-mounjaro).`,
+        a: `Private: ¬£150-250/month (pens + delivery). NHS: Free for BMI 40+ comorbidities, waits 6-12 months. Prices vary by GPhC-registered clinic. Compare current bundles on [Mounjaro price comparison](/mounjaro-price-comparison) and read [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "What's the best non-surgical fat reduction for Merthyr residents?",
@@ -1996,7 +1996,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Will T3 thyroid hormone help weight loss?",
-        a: `Only if hypothyroid (prescribed GP). Otherwise risky/ineffectiveóMHRA warns cardiac issues. Not for normal thyroid. Use the [BMI calculator](/tools/bmi-calculator) as a screening aid and speak to your GP before considering thyroid medication.`,
+        a: `Only if hypothyroid (prescribed GP). Otherwise risky/ineffective‚ÄîMHRA warns cardiac issues. Not for normal thyroid. Use the [BMI calculator](/tools/bmi-calculator) as a screening aid and speak to your GP before considering thyroid medication.`,
       },
       {
         q: "What weight loss program works best long-term in South Wales?",
@@ -2190,7 +2190,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How do I access Wegovy in Lancaster UK?",
-        a: `NHS routes usually move GP to tier 2 style programmes, then tier 3 specialist review where GLP 1 is considered, with waits that can reach 6 to 12 months depending on capacity. Private GPhC registered clinics often quote from about £200 plus monthly with cold chain delivery to LA1 through LA6 postcodes. Read [what Wegovy is](/what-is-wegovy) and compare [Wegovy prices](/wegovy-price-comparison).`,
+        a: `NHS routes usually move GP to tier 2 style programmes, then tier 3 specialist review where GLP 1 is considered, with waits that can reach 6 to 12 months depending on capacity. Private GPhC registered clinics often quote from about ¬£200 plus monthly with cold chain delivery to LA1 through LA6 postcodes. Read [what Wegovy is](/what-is-wegovy) and compare [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
         q: "What is better: semaglutide or tirzepatide?",
@@ -2231,12 +2231,12 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
   if (loc.slug === "bangor-northern-ireland") {
     return [
       {
-        q: "Whatís the ideal diet for Bangor coastal life?",
-        a: `Seafood-forward, calorie-aware patterns often fit harbour-town routinesógrilled oily fish, vegetables, and portions you can repeat midweek without ìstarting again Monday.î Evidence on omega-rich patterns and adiposity is mixed at population level, but the bigger win is usually a deficit you can sustain. Map how that sits next to prescription options via our [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) hub, then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if a clinician mentions them. Budgeting? Compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) totals.`,
+        q: "What‚Äôs the ideal diet for Bangor coastal life?",
+        a: `Seafood-forward, calorie-aware patterns often fit harbour-town routines‚Äîgrilled oily fish, vegetables, and portions you can repeat midweek without ‚Äústarting again Monday.‚Äù Evidence on omega-rich patterns and adiposity is mixed at population level, but the bigger win is usually a deficit you can sustain. Map how that sits next to prescription options via our [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) hub, then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if a clinician mentions them. Budgeting? Compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) totals.`,
       },
       {
-        q: "Whatís the minimum exercise for Bangor weight loss?",
-        a: `Public-health baselines still centre on roughly **150 minutes** of moderate activity weekly, plus strength workówalking the prom, coastal path loops, and marina circuits all count. Use our [BMI calculator](/tools/bmi-calculator) as a screening aid alongside waist circumference and energy levels, not as the only scorecard.`,
+        q: "What‚Äôs the minimum exercise for Bangor weight loss?",
+        a: `Public-health baselines still centre on roughly **150 minutes** of moderate activity weekly, plus strength work‚Äîwalking the prom, coastal path loops, and marina circuits all count. Use our [BMI calculator](/tools/bmi-calculator) as a screening aid alongside waist circumference and energy levels, not as the only scorecard.`,
       },
       {
         q: "How effective is fat freezing in Northern Ireland?",
@@ -2244,15 +2244,15 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What role does sleep play in slimming around Bangor?",
-        a: `Short sleep tends to nudge hunger, impulsivity, and skipped movementóbad news beside pub-heavy weekends or long Belfast commutes. Aim toward **7ñ9 hours** where life allows; if weight stalls on injections, our [plateau guide](/helpful-guides/mounjaro-weight-loss-plateau) explains common non-mystery causes.`,
+        a: `Short sleep tends to nudge hunger, impulsivity, and skipped movement‚Äîbad news beside pub-heavy weekends or long Belfast commutes. Aim toward **7‚Äì9 hours** where life allows; if weight stalls on injections, our [plateau guide](/helpful-guides/mounjaro-weight-loss-plateau) explains common non-mystery causes.`,
       },
       {
         q: "How should I handle pub temptations?",
-        a: `Pre-decide drinks and snacks, eat a protein-rich meal beforehand, and log choices without moralisingóhabit evidence favours systems over willpower theatre. For prescription context, keep [our methodology](/methodology) in mind: compare follow-up, not just headlines.`,
+        a: `Pre-decide drinks and snacks, eat a protein-rich meal beforehand, and log choices without moralising‚Äîhabit evidence favours systems over willpower theatre. For prescription context, keep [our methodology](/methodology) in mind: compare follow-up, not just headlines.`,
       },
       {
         q: "Are apps enough on their own?",
-        a: `They can sharpen awareness, but most people still need real-world movement and a food environment that makes the deficit plausible. Pair apps with walking the coast and structured medical support if you qualifyóstart from [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) when you want the full comparator view.`,
+        a: `They can sharpen awareness, but most people still need real-world movement and a food environment that makes the deficit plausible. Pair apps with walking the coast and structured medical support if you qualify‚Äîstart from [best weight loss treatments in the UK](/compare/mounjaro-vs-wegovy-vs-saxenda) when you want the full comparator view.`,
       },
     ];
   }
@@ -2354,40 +2354,40 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
 
   return [
     {
-      q: `What counts as the ìbestî weight loss treatment if you live in ${name}?`,
-      a: `There isnít a single winner on a chart. For some people in ${name}, the strongest option will still be an NHS dietitian-led programme with no injection at all. For othersóafter assessmentóGLP-1-class medicines may become appropriate: tirzepatide ([Mounjaro](/what-is-mounjaro)), semaglutide ([Wegovy](/what-is-wegovy)), or liraglutide ([Saxenda](/what-is-saxenda)), but only where monitoring exists. Compare indicative monthly totals on our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison). ìBestî should probably mean ìsafest fit for you this year,î not ìtrendiest molecule.î`,
+      q: `What counts as the ‚Äúbest‚Äù weight loss treatment if you live in ${name}?`,
+      a: `There isn‚Äôt a single winner on a chart. For some people in ${name}, the strongest option will still be an NHS dietitian-led programme with no injection at all. For others‚Äîafter assessment‚ÄîGLP-1-class medicines may become appropriate: tirzepatide ([Mounjaro](/what-is-mounjaro)), semaglutide ([Wegovy](/what-is-wegovy)), or liraglutide ([Saxenda](/what-is-saxenda)), but only where monitoring exists. Compare indicative monthly totals on our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison). ‚ÄúBest‚Äù should probably mean ‚Äúsafest fit for you this year,‚Äù not ‚Äútrendiest molecule.‚Äù`,
     },
     {
       q: `Could I get Mounjaro, Wegovy, or Saxenda without going through my GP in ${name}?`,
-      a: `You might, through a private prescriber or a GPhC-registered online clinic, if you meet their clinical criteriaóthat can apply to [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), or [Saxenda](/what-is-saxenda) where appropriate. That route can be faster on paper; it can also leave your GP surgery out of the loop unless you explicitly ask for shared care, which many practices will not agree to. On the NHS side, access often stays narrower than social media suggests, and ${icbOrBoard} may apply its own criteria on top of national guidance. If you are weighing costs, start with our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
+      a: `You might, through a private prescriber or a GPhC-registered online clinic, if you meet their clinical criteria‚Äîthat can apply to [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), or [Saxenda](/what-is-saxenda) where appropriate. That route can be faster on paper; it can also leave your GP surgery out of the loop unless you explicitly ask for shared care, which many practices will not agree to. On the NHS side, access often stays narrower than social media suggests, and ${icbOrBoard} may apply its own criteria on top of national guidance. If you are weighing costs, start with our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
     },
     {
       q: `Is NHS weight management in ${nation} actually realistic for ${name} residents?`,
-      a: `It can be, but it isnít guaranteed. Services might be oversubscribed, or they might insist on documented lifestyle steps first. If you are told to wait, that delay doesnít automatically mean private treatment is ìnecessaryîóit may simply reflect capacity. You should be able to ask what the next milestone is, in writing if you want clarity.`,
+      a: `It can be, but it isn‚Äôt guaranteed. Services might be oversubscribed, or they might insist on documented lifestyle steps first. If you are told to wait, that delay doesn‚Äôt automatically mean private treatment is ‚Äúnecessary‚Äù‚Äîit may simply reflect capacity. You should be able to ask what the next milestone is, in writing if you want clarity.`,
     },
     {
       q: `What would I need to check before paying for an online clinic that ships to ${name}?`,
-      a: `At minimum: the prescriberís professional registration, the pharmacyís GPhC registration, a clear titration plan, and a written policy for nausea, dehydration, or missed doses. You cannot safely infer quality from Instagram ads alone. If a website wonít name its superintendent pharmacist, that alone might be reason to pause.`,
+      a: `At minimum: the prescriber‚Äôs professional registration, the pharmacy‚Äôs GPhC registration, a clear titration plan, and a written policy for nausea, dehydration, or missed doses. You cannot safely infer quality from Instagram ads alone. If a website won‚Äôt name its superintendent pharmacist, that alone might be reason to pause.`,
     },
     {
-      q: `Why do search results around ${name} mention ìcheapî GLP-1s?`,
-      a: `Price is visible; clinical risk is harder to google. A low headline fee might exclude follow-up, or it might bundle blood tests you do not need. We tend to treat ìcheapî as a signal to read the small print, not as proof of value. Comparing monthly totalsóincluding repeats and deliveryóusually paints a fairer picture for households in ${name}; try our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
+      q: `Why do search results around ${name} mention ‚Äúcheap‚Äù GLP-1s?`,
+      a: `Price is visible; clinical risk is harder to google. A low headline fee might exclude follow-up, or it might bundle blood tests you do not need. We tend to treat ‚Äúcheap‚Äù as a signal to read the small print, not as proof of value. Comparing monthly totals‚Äîincluding repeats and delivery‚Äîusually paints a fairer picture for households in ${name}; try our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
     },
     {
-      q: `Where should scepticism goónot cynicism, just healthy doubt?`,
-      a: `Toward any claim that a single injection removes the need for food planning forever, or that BMI thresholds are ìflexibleî without documentation. UK regulators have repeatedly warned consumers about unlicensed products; if a seller cannot show an MHRA-style UK supply chain for a prescription-only medicine, you should probably walk away regardless of how local they claim to be to ${name}.`,
+      q: `Where should scepticism go‚Äînot cynicism, just healthy doubt?`,
+      a: `Toward any claim that a single injection removes the need for food planning forever, or that BMI thresholds are ‚Äúflexible‚Äù without documentation. UK regulators have repeatedly warned consumers about unlicensed products; if a seller cannot show an MHRA-style UK supply chain for a prescription-only medicine, you should probably walk away regardless of how local they claim to be to ${name}.`,
     },
   ];
 }
 
 export const UK_LOCATION_SOURCES: { label: string; href: string; note: string }[] = [
   {
-    label: "NHS ó healthy weight overview",
+    label: "NHS ‚Äî healthy weight overview",
     href: "https://www.nhs.uk/live-well/healthy-weight/",
     note: "Public-facing lifestyle and weight management context.",
   },
   {
-    label: "NICE NG246 ó overweight and obesity management",
+    label: "NICE NG246 ‚Äî overweight and obesity management",
     href: "https://www.nice.org.uk/guidance/ng246",
     note: "National guidance that may influence local formularies; not a substitute for your clinician.",
   },
