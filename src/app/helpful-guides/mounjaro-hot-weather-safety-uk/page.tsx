@@ -107,7 +107,15 @@ const SCHEMA = {
   description:
     "On Mounjaro, heat and reduced thirst cues raise dehydration risk. Hydration, sun protection, and when to seek help in UK heatwaves.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",

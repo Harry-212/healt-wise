@@ -121,7 +121,15 @@ const SCHEMA = {
   description:
     "Yes—UK pharmacies are required to notify your GP when dispensing Mounjaro. Here's why it happens, how the process works, and what it means for your medical records.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",

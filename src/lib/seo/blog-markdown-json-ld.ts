@@ -49,6 +49,10 @@ export function markdownBlogPostingJsonLd(opts: {
     publisher: {
       "@type": "Organization",
       name: SITE_BRAND_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteOrigin().replace(/\/$/, "")}/logo-health-wise.webp`,
+      },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     url,

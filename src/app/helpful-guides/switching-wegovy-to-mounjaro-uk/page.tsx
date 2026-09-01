@@ -123,7 +123,15 @@ const SCHEMA = {
   description:
     "Thinking of switching from Wegovy to Mounjaro? This guide covers why patients switch, the clinical differences, how to transition safely, and what to expect.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",

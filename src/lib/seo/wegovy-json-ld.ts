@@ -4,7 +4,7 @@ export function wegovyArticleJsonLd(): Record<string, unknown> {
   const base = siteOrigin();
   return {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": "WebPage",
     name: "What Is Wegovy? UK Guide to Results, Doses & Costs",
     description:
       "Learn how Wegovy works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",

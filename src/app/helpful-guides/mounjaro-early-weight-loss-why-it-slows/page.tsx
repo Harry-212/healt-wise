@@ -124,7 +124,15 @@ const SCHEMA = {
   description:
     "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology, what plateaus mean, and how to keep progressing sustainably.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",

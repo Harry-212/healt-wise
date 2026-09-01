@@ -46,6 +46,24 @@ export async function generateMetadata({
   return blogHubMetadata(blogHubPath("all"));
 }
 
+function blogHubJsonLd(canonicalUrl: string): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: BLOG_HUB_TITLE,
+    description: BLOG_HUB_DESCRIPTION,
+    inLanguage: "en-GB",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${siteOrigin()}/#website`,
+      name: "Healthwise360",
+      url: siteOrigin(),
+    },
+  };
+}
+
 export default async function BlogIndexPage({
   searchParams,
 }: {
@@ -58,13 +76,20 @@ export default async function BlogIndexPage({
   }
 
   const { articles, totalPages } = getBlogPageFeed(1, { topic: "all" });
+  const canonicalUrl = `${siteOrigin()}/blog`;
 
   return (
-    <BlogClient
-      articles={articles}
-      totalPages={totalPages}
-      currentPage={1}
-      activeTopic="all"
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogHubJsonLd(canonicalUrl)) }}
+      />
+      <BlogClient
+        articles={articles}
+        totalPages={totalPages}
+        currentPage={1}
+        activeTopic="all"
+      />
+    </>
   );
 }

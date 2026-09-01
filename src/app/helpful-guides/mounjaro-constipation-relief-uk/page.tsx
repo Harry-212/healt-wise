@@ -124,7 +124,15 @@ const SCHEMA = {
   description:
     "Constipation is a common early side effect of Mounjaro. Here's why it happens and how to manage it with hydration, fibre, movement, and OTC options.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",

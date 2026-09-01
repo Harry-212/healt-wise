@@ -47,7 +47,7 @@ export default function WegovySideEffectsPage() {
       "UK-focused, non-prescriptive tips for common Wegovy (semaglutide) side effects—digestion, energy, mood—and when to seek medical advice. Informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360" },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-04-22",
     mainEntityOfPage: {
       "@type": "WebPage",

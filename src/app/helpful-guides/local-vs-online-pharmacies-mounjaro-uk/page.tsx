@@ -120,7 +120,15 @@ const SCHEMA = {
   description:
     "Online pharmacies are cheaper, but local pharmacies offer face-to-face clinical support. Here's an honest breakdown of both options for Mounjaro patients in the UK.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",

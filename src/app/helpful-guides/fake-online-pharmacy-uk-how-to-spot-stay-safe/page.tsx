@@ -120,7 +120,15 @@ const SCHEMA = {
   description:
     "Fake online pharmacies sell counterfeit or unsafe medicines. Learn the warning signs, who regulates UK pharmacies, and how to verify a provider before you buy.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",

@@ -121,7 +121,15 @@ const SCHEMA = {
   description:
     "Norovirus can feel more intense on GLP-1 medications like Mounjaro or Wegovy. Here's why, what symptoms to watch for, when to delay your injection, and how to recover safely.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",

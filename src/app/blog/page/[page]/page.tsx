@@ -77,12 +77,35 @@ export default async function BlogPaginatedPage({
   const { articles, totalPages } = getBlogPageFeed(page, { topic: "all" });
   if (page > totalPages) notFound();
 
+  const canonicalUrl = `${siteOrigin()}${blogPagePath(page, "all")}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: blogHubListingTitle(page),
+    description: BLOG_HUB_DESCRIPTION,
+    inLanguage: "en-GB",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${siteOrigin()}/#website`,
+      name: "Healthwise360",
+      url: siteOrigin(),
+    },
+  };
+
   return (
-    <BlogClient
-      articles={articles}
-      totalPages={totalPages}
-      currentPage={page}
-      activeTopic="all"
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BlogClient
+        articles={articles}
+        totalPages={totalPages}
+        currentPage={page}
+        activeTopic="all"
+      />
+    </>
   );
 }

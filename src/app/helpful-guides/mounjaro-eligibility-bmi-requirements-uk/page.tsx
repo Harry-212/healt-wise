@@ -125,7 +125,15 @@ const SCHEMA = {
   description:
     "Who qualifies for Mounjaro in the UK? A clear breakdown of BMI thresholds, accepted health conditions, ethnicity adjustments, and what happens when your BMI drops.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",

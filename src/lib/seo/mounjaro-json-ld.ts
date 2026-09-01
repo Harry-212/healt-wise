@@ -4,7 +4,7 @@ export function mounjaroArticleJsonLd(): Record<string, unknown> {
   const base = siteOrigin();
   return {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": "WebPage",
     name: "What Is Mounjaro? UK Guide to Results, Doses & Costs",
     description:
       "Learn how Mounjaro works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",

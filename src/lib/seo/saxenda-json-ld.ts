@@ -4,7 +4,7 @@ export function saxendaArticleJsonLd(): Record<string, unknown> {
   const base = siteOrigin();
   return {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": "WebPage",
     name: "What Is Saxenda? UK Guide to Daily Doses & Costs",
     description:
       "Learn how Saxenda works, who may qualify in the UK, daily dosing, expected results, side effects and typical private treatment costs.",

@@ -123,7 +123,15 @@ const SCHEMA = {
   description:
     "Online pharmacies advertise fast Mounjaro delivery—but responsible prescribing takes time. Here's what the dispensing process involves and how to choose a provider you can trust.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   mainEntityOfPage: {
     "@type": "WebPage",

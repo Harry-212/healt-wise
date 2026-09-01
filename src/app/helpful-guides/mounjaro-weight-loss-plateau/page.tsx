@@ -121,7 +121,15 @@ const SCHEMA = {
   description:
     "Weight loss naturally slows after the first weeks on Mounjaro. Learn why plateaus happen, what they mean for long-term progress, and how to stay on track.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   about: [{ "@type": "Thing", name: "Mounjaro (tirzepatide)" }],
   mainEntityOfPage: {

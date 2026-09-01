@@ -143,7 +143,15 @@ const SCHEMA = {
   description:
     "Complete UK guide to Mounjaro (tirzepatide) for weight loss. Covers how the dual GLP-1/GIP mechanism works, clinical trial results, eligibility criteria, side effects, and 2026 costs.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   about: [
     { "@type": "Thing", name: "Mounjaro" },

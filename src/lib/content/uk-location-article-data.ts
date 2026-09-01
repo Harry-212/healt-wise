@@ -2431,7 +2431,13 @@ export function locationArticleJsonLd(opts: {
     publisher: {
       "@type": "Organization",
       name: SITE_BRAND_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: "https://healthwise360.co.uk/logo-health-wise.webp",
+      },
     },
+    datePublished: "2026-04-09",
+    dateModified: "2026-04-09",
     mainEntityOfPage: { "@type": "WebPage", "@id": opts.url },
     url: opts.url,
     inLanguage: "en-GB",

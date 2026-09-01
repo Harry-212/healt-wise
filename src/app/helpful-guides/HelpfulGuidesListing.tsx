@@ -16,17 +16,28 @@ export const HELPFUL_GUIDES_DESCRIPTION =
 export function helpfulGuidesListingMetadata(
   categorySlug?: HelpfulGuideCategorySlug,
 ) {
+  const activeCategory = categorySlug
+    ? HELPFUL_GUIDE_CATEGORIES.find((c) => c.slug === categorySlug)
+    : undefined;
+
+  const title = activeCategory
+    ? `${activeCategory.label} Guides | Healthwise360`
+    : "Helpful Health Guides | Healthwise360";
+
+  const description = activeCategory
+    ? `Explore our clear, evidence-based UK guides on ${activeCategory.label.toLowerCase()}, treatment safety, and healthcare regulation.`
+    : HELPFUL_GUIDES_DESCRIPTION;
+
   const canonicalPath = categorySlug
     ? helpfulGuidesCategoryHubPath(categorySlug)
     : HELPFUL_GUIDES_HUB_PATH;
 
   return {
-    title: "Helpful Health Guides",
-    description: HELPFUL_GUIDES_DESCRIPTION,
+    title: { absolute: title },
+    description,
     openGraph: {
-      title: "Helpful Health Guides",
-      description:
-        "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
+      title,
+      description,
       type: "website" as const,
       url: `${siteOrigin()}${canonicalPath}`,
     },
@@ -390,14 +401,16 @@ export default function HelpfulGuidesListing({
     ? `${siteOrigin()}${helpfulGuidesCategoryHubPath(activeCategorySlug)}`
     : `${siteOrigin()}${HELPFUL_GUIDES_HUB_PATH}`;
 
+  const categoryName = activeCategoryLabel ? `${activeCategoryLabel} Guides` : "Helpful Health Guides";
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Helpful Health Guides | Healthwise360",
-    description:
-      "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
+    name: `${categoryName} | Healthwise360`,
+    description: activeCategoryLabel
+      ? `Clear, evidence-based guides on ${activeCategoryLabel.toLowerCase()} and UK healthcare regulation.`
+      : "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
     url: collectionUrl,
-    hasPart: ALL_GUIDES.map((g) => ({
+    hasPart: filtered.map((g) => ({
       "@type": "Article",
       name: g.title,
       url: `${siteOrigin()}${helpfulGuidePath(g.slug)}`,

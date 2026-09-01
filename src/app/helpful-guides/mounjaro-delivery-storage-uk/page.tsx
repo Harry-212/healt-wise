@@ -132,7 +132,15 @@ const SCHEMA = {
   description:
     "Mounjaro must be refrigerated between 2°C and 8°C. Learn how to check your delivery and what to do if your medication arrives warm.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   about: [{ "@type": "Thing", name: "Mounjaro (tirzepatide)" }],
   mainEntityOfPage: {

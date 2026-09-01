@@ -46,7 +46,7 @@ export default function DoesStressCauseBellyFatPage() {
       "How chronic stress raises cortisol and promotes visceral belly fat, why the cycle is hard to break after 40, and evidence-based steps including sleep, movement, and stress reduction.",
     image: [SOCIAL_PREVIEW_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360" },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-05-09",
     mainEntityOfPage: {
       "@type": "WebPage",

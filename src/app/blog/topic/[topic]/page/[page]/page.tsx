@@ -11,7 +11,8 @@ import {
 } from "@/lib/blog-feed";
 import {
   BLOG_HUB_DESCRIPTION,
-  blogHubListingTitle,
+  blogTopicDescription,
+  blogTopicTitle,
 } from "@/lib/seo/blog-hub-metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
@@ -28,27 +29,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isBlogFeedTag(raw)) return {};
   const page = Number.parseInt(pageStr, 10);
   if (Number.isNaN(page) || page < 1) return {};
+  const description = blogTopicDescription(raw);
   if (page === 1) {
-    const title = blogHubListingTitle(1);
+    const title = blogTopicTitle(raw, 1);
     const url = `${siteOrigin()}${blogHubPath(raw)}`;
     return {
       title: { absolute: title },
-      description: BLOG_HUB_DESCRIPTION,
+      description,
       alternates: { canonical: url },
-      openGraph: { title, description: BLOG_HUB_DESCRIPTION, url },
-      twitter: { title, description: BLOG_HUB_DESCRIPTION },
+      openGraph: { title, description, url },
+      twitter: { title, description },
     };
   }
   const { totalPages } = getBlogPageFeed(page, { topic: raw });
   if (page > totalPages) return {};
-  const title = blogHubListingTitle(page);
+  const title = blogTopicTitle(raw, page);
   const url = `${siteOrigin()}${blogPagePath(page, raw)}`;
   return {
     title: { absolute: title },
-    description: BLOG_HUB_DESCRIPTION,
+    description,
     alternates: { canonical: url },
-    openGraph: { title, description: BLOG_HUB_DESCRIPTION, url },
-    twitter: { title, description: BLOG_HUB_DESCRIPTION },
+    openGraph: { title, description, url },
+    twitter: { title, description },
   };
 }
 
@@ -65,12 +67,35 @@ export default async function BlogTopicPaginatedPage({ params }: Props) {
   });
   if (page > totalPages) notFound();
 
+  const canonicalUrl = `${siteOrigin()}${blogPagePath(page, raw)}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: blogTopicTitle(raw, page),
+    description: blogTopicDescription(raw),
+    inLanguage: "en-GB",
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${siteOrigin()}/#website`,
+      name: "Healthwise360",
+      url: siteOrigin(),
+    },
+  };
+
   return (
-    <BlogClient
-      articles={articles}
-      totalPages={totalPages}
-      currentPage={page}
-      activeTopic={activeTopic}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BlogClient
+        articles={articles}
+        totalPages={totalPages}
+        currentPage={page}
+        activeTopic={activeTopic}
+      />
+    </>
   );
 }

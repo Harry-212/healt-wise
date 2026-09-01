@@ -140,7 +140,15 @@ const SCHEMA = {
   description:
     "Social media platforms are restricting content about Mounjaro, Wegovy, and GLP-1 medications. We examine what is being removed, the regulatory context, and what patients are losing.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-  publisher: { "@type": "Organization", name: "Healthwise360" },
+  publisher: {
+    "@type": "Organization",
+    name: "Healthwise360",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteOrigin()}/logo-health-wise.webp`,
+    },
+  },
+  datePublished: "2026-04-09",
   dateModified: "2026-04-09",
   about: [
     { "@type": "Thing", name: "GLP-1 medications" },

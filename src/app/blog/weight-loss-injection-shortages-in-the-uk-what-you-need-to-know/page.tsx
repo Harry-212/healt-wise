@@ -47,7 +47,7 @@ export default function WeightLossInjectionShortagesUkPage() {
       "Why GLP-1 weight loss treatments can be in short supply in the UK, how shortages may affect you, practical steps with your prescriber and pharmacy, and alternatives — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360" },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-04-23",
     mainEntityOfPage: {
       "@type": "WebPage",
