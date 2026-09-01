@@ -52,7 +52,7 @@ export default function WegovyClickCalculatorUkPage() {
     description: DESCRIPTION,
     image: [HERO_IMAGE],
     author: { ...SITE_ARTICLE_AUTHOR },
-    publisher: { "@type": "Organization", name: SITE_BRAND_NAME },
+    publisher: { "@type": "Organization", name: SITE_BRAND_NAME, logo: { "@type": "ImageObject", url: `${siteOrigin()}/logo-health-wise.webp` } },
     datePublished: "2026-07-19",
     mainEntityOfPage: {
       "@type": "WebPage",

@@ -38,7 +38,7 @@ export default function ArticleClient() {
     description: 'A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda.',
     image: [`${siteOrigin()}${HERO_SRC}`],
     author: { '@type': 'Organization', name: 'Healthwise360 Research Team' },
-    publisher: { '@type': 'Organization', name: 'Healthwise360' },
+    publisher: { '@type': 'Organization', name: 'Healthwise360', logo: { '@type': 'ImageObject', url: `${siteOrigin()}/logo-health-wise.webp` } },
     datePublished: '2026-05-19',
     mainEntityOfPage: {
       '@type': 'WebPage',

@@ -47,7 +47,7 @@ export default function PrescriptionSlimmingInjectionsUkPage() {
       "UK prescription slimming injections (Wegovy, Mounjaro, Saxenda): mechanisms, eligibility, benefits, risks, NHS vs private — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-05-22",
     mainEntityOfPage: {
       "@type": "WebPage",

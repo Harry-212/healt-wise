@@ -42,7 +42,7 @@ export default function MounjaroInjectionsGameChangerPage() {
     description: 'An overview of Mounjaro (tirzepatide) treatments for weight management: mechanism, eligibility context, NHS vs private access, side effects, and realistic expectations—informational only, not medical advice.',
     image: [HERO_IMAGE],
     author: { '@type': 'Organization', name: 'Healthwise360 Research Team' },
-    publisher: { '@type': 'Organization', name: 'Healthwise360' },
+    publisher: { '@type': 'Organization', name: 'Healthwise360', logo: { '@type': 'ImageObject', url: `${siteOrigin()}/logo-health-wise.webp` } },
     datePublished: '2026-04-18',
     mainEntityOfPage: {
       '@type': 'WebPage',

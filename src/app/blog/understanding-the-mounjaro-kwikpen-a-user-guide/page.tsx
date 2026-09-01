@@ -47,7 +47,7 @@ export default function MounjaroKwikpenUserGuidePage() {
       "How the Mounjaro KwikPen works, safe use, storage, comparison with other UK treatments, and planning your journey — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-04-21",
     mainEntityOfPage: {
       "@type": "WebPage",

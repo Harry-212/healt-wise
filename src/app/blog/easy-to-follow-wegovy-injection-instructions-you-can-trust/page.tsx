@@ -45,7 +45,7 @@ export default function WegovyInjectionInstructionsArticlePage() {
     description:
       "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-04-14",
     image: [HERO_IMAGE_ABSOLUTE],
     mainEntityOfPage: {
