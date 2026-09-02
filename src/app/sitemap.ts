@@ -45,7 +45,6 @@ const STATIC_PATHS = [
   "/mounjaro-faq",
   "/mounjaro-price-comparison",
   "/pharmacy-safety-gphc-verification",
-  "/price-alerts",
   "/privacy-policy",
   "/protein-and-fitness",
   "/saxenda-price-comparison",

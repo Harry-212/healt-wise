@@ -172,7 +172,7 @@ export function buildUkLocationTitle(loc: UkWeightLossLocation): string {
     return "Best Weight Loss Treatment Livingston: West Lothian's Guide to Real, Safe Slimming";
   }
   if (loc.slug === "london") {
-    return "Weight Loss Treatment in London | Clinics & Online Services";
+    return "Weight Loss Treatment in London | Clinics";
   }
   if (loc.slug === "londonderry") {
     return "Best Weight Loss Treatment Londonderry: What Actually Works for Safe, Lasting Results";
