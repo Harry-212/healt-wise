@@ -7,7 +7,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 const HERO_IMAGE_ABSOLUTE = `${siteOrigin()}${BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE}`;
 
 export const metadata: Metadata = {
-  title: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
+  title: "Does Mounjaro Really Work for Weight Loss?",
   description:
     "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
   keywords: "how does mounjaro work for weight loss",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}/blog/does-mounjaro-really-work-for-weight-loss-find-out-here`,
   },
   openGraph: {
-    title: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
+    title: "Does Mounjaro Really Work for Weight Loss?",
     description:
       "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
     url: `${siteOrigin()}/blog/does-mounjaro-really-work-for-weight-loss-find-out-here`,
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     images: [
       {
         url: HERO_IMAGE_ABSOLUTE,
-        alt: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
+        alt: "Does Mounjaro Really Work for Weight Loss?",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
+    title: "Does Mounjaro Really Work for Weight Loss?",
     description:
       "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
     images: [HERO_IMAGE_ABSOLUTE],
@@ -41,7 +41,7 @@ export default function MounjaroEffectivenessArticlePage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
+    headline: "Does Mounjaro Really Work for Weight Loss?",
     description:
       "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
@@ -115,7 +115,7 @@ export default function MounjaroEffectivenessArticlePage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Does Mounjaro Really Work for Weight Loss? Find Out Here"
+        pageName="Does Mounjaro Really Work for Weight Loss?"
         pagePath="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here"
       />
 <script

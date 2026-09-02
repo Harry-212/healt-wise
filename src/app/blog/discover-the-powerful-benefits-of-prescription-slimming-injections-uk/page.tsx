@@ -7,18 +7,18 @@ const PATH = "/blog/discover-the-powerful-benefits-of-prescription-slimming-inje
 const HERO_IMAGE = `${siteOrigin()}/blog/Discover%20the%20Powerful%20Benefits%20of%20Prescription%20Slimming%20Injections%20UK.webp`;
 
 export const metadata: Metadata = {
-  title: "Discover the Powerful Benefits of Prescription Slimming Treatments UK",
+  title: "Benefits of Prescription Slimming Treatments UK",
   description:
-    "Discover prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility, benefits, side effects, NHS vs private costs and safety.",
+    "Prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility and safety.",
   keywords:
     "prescription slimming injections UK, Wegovy, Mounjaro, Saxenda, GLP-1, weight loss injections UK",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "Discover the Powerful Benefits of Prescription Slimming Treatments UK",
+    title: "Benefits of Prescription Slimming Treatments UK",
     description:
-      "Discover prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility, benefits, side effects, NHS vs private costs and safety.",
+      "Prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility and safety.",
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-05-22T00:00:00.000Z",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Discover the Powerful Benefits of Prescription Slimming Treatments UK",
+    title: "Benefits of Prescription Slimming Treatments UK",
     description:
-      "Discover prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility, benefits, side effects, NHS vs private costs and safety.",
+      "Prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility and safety.",
     images: [HERO_IMAGE],
   },
 };
@@ -42,12 +42,12 @@ export default function PrescriptionSlimmingInjectionsUkPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Discover the Powerful Benefits of Prescription Slimming Treatments UK",
+    headline: "Benefits of Prescription Slimming Treatments UK",
     description:
       "UK prescription slimming injections (Wegovy, Mounjaro, Saxenda): mechanisms, eligibility, benefits, risks, NHS vs private — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: `${siteOrigin()}/logo-health-wise.webp` } },
     datePublished: "2026-05-22",
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -116,14 +116,14 @@ export default function PrescriptionSlimmingInjectionsUkPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Discover the Powerful Benefits of Prescription Slimming Treatments UK"
+        pageName="Benefits of Prescription Slimming Treatments UK"
         pagePath={PATH}
       />
 <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            ...ARTICLE_SCHEMA,
+            "@context": "https://schema.org",
             "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA],
           }),
         }}

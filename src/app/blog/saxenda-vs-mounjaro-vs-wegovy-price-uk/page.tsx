@@ -9,9 +9,9 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/saxenda-vs-mounjaro-vs-wegovy-price-uk";
 const TITLE =
-  "Saxenda vs Mounjaro vs Wegovy: Which Is the Cheapest Weight Loss Treatment in the UK?";
+  "Saxenda vs Mounjaro vs Wegovy: Cheapest UK Option";
 const DESCRIPTION =
-  "Saxenda vs Mounjaro vs Wegovy price comparison UK 2026. Full cost breakdown by dose, annual estimates, what each treatment actually costs long term and how to compare properly.";
+  "Saxenda vs Mounjaro vs Wegovy price comparison UK. Full cost breakdown by dose and annual estimates for each treatment.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(SAXENDA_MOUNJARO_WEGOVY_PRICE_UK_HERO_PNG)}`;
 
 export const metadata: Metadata = {

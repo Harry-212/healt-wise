@@ -7,7 +7,7 @@ const PATH = "/blog/buy-weight-loss-tablets";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BUY_TABLETS_CONFUSED_PNG)}`;
 
 export const metadata: Metadata = {
-  title: "Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You",
+  title: "Buy Weight Loss Tablets UK: Prices & Safety",
   description:
     "Buy weight loss tablets in the UK. Compare prices, safety, and prescription options before you choose.",
   keywords:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You",
+    title: "Buy Weight Loss Tablets UK: Prices & Safety",
     description:
       "Buy weight loss tablets in the UK. Compare prices, safety, and prescription options before you choose.",
     url: `${siteOrigin()}${PATH}`,
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     images: [
       {
         url: HERO_IMAGE,
-        alt: "Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You",
+        alt: "Buy Weight Loss Tablets UK: Prices & Safety",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You",
+    title: "Buy Weight Loss Tablets UK: Prices & Safety",
     description:
       "Buy weight loss tablets in the UK. Compare prices, safety, and prescription options before you choose.",
     images: [HERO_IMAGE],
@@ -42,7 +42,7 @@ export default function BuyWeightLossTabletsPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Buy Weight Loss Tablets in the UK: Compare Prices, Safety, and the Best Treatment for You",
+    headline: "Buy Weight Loss Tablets UK: Prices & Safety",
     description:
       "Buy weight loss tablets in the UK. Compare prices, safety, and prescription options before you choose.",
     image: [HERO_IMAGE],

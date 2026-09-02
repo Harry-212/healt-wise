@@ -4,7 +4,7 @@ import { blogImgPath, ARE_GLP1_SUPPLEMENTS_REAL_HERO_WEBP } from "./blog-assets"
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/are-glp-1-supplements-real";
-const TITLE = "Are GLP-1 Supplements Real or Just Marketing? UK Safety Guide";
+const TITLE = "Are GLP-1 Supplements Real or Just Marketing?";
 const DESCRIPTION =
   "Are GLP-1 supplements real? Learn what may help, what is hype, and how they differ from prescription GLP-1 medicines.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(ARE_GLP1_SUPPLEMENTS_REAL_HERO_WEBP)}`;

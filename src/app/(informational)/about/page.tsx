@@ -5,7 +5,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const TITLE = "About Healthwise360 | UK Weight Loss Provider Comparison";
 const DESCRIPTION =
-  "About Healthwise360: an independent comparison website for UK weight loss providers — provider pricing, pharmacy verification, editorial independence, affiliate disclosure and comparison methodology.";
+  "About Healthwise360: an independent UK weight loss comparison site — provider pricing, pharmacy verification and editorial independence.";
 
 export const metadata: Metadata = {
   title: {

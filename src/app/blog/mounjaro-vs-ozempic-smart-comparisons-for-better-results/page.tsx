@@ -4,7 +4,7 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results";
-const TITLE = "Mounjaro vs Ozempic: Smart Comparisons for Better Results";
+const TITLE = "Mounjaro vs Ozempic: Which Is Right for You?";
 const DESCRIPTION =
   "Mounjaro vs Ozempic: find which treatment fits your diabetes goals in the UK with clear, confident advice.";
 
@@ -101,7 +101,7 @@ export default function MounjaroVsOzempicArticlePage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Mounjaro vs Ozempic: Smart Comparisons for Better Results"
+        pageName="Mounjaro vs Ozempic: Which Is Right for You?"
         pagePath={PATH}
       />
 <script

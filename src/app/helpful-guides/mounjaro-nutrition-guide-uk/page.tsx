@@ -18,9 +18,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-nutrition-guide-uk",
-  title: "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results",
+  title: "Mounjaro Nutrition Guide UK: What to Eat",
   description: "Mounjaro controls appetite—but what you eat determines results quality. A practical, evidence-based guide to nutrition while using tirzepatide in the UK.",
-  openGraphTitle: "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results",
+  openGraphTitle: "Mounjaro Nutrition Guide UK: What to Eat",
 });
 
 
@@ -140,7 +140,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results",
+  headline: "Mounjaro Nutrition Guide UK: What to Eat",
   description:
     "Mounjaro controls appetite—but what you eat determines the quality of your results. A practical, evidence-based guide to nutrition while using tirzepatide in the UK.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

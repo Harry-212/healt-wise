@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-constipation-relief-uk",
-  title: "Mounjaro Constipation: Easy Ways to Find Relief (UK Guide)",
+  title: "Mounjaro Constipation: Easy Ways to Find Relief",
   description: "Constipation is a common Mounjaro side effect. Why it happens and the most effective hydration, fibre, movement and OTC strategies to ease it.",
-  openGraphTitle: "Mounjaro Constipation: Easy Ways to Find Relief (UK Guide)",
+  openGraphTitle: "Mounjaro Constipation: Easy Ways to Find Relief",
   openGraphDescription: "Constipation is a common early side effect of Mounjaro. Here's why it happens and how to manage it with hydration, fibre, movement, and OTC options.",
 });
 

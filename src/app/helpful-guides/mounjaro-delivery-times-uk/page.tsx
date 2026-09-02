@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-delivery-times-uk",
-  title: "Mounjaro Delivery Times UK: Why Safety Matters More Than Speed",
+  title: "Mounjaro Delivery Times UK: Safety First",
   description: "Fast Mounjaro delivery is advertised but prescribing takes time. What's involved, why delays happen, and how to choose a trustworthy UK provider.",
-  openGraphTitle: "Mounjaro Delivery Times UK: Why Safety Matters More Than Speed",
+  openGraphTitle: "Mounjaro Delivery Times UK: Safety First",
   openGraphDescription: "Online pharmacies advertise fast Mounjaro delivery—but responsible prescribing takes time. Here's what the dispensing process involves and how to choose a provider you can trust.",
 });
 
@@ -119,7 +119,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Mounjaro Delivery Times UK: Why Safety Matters More Than Speed",
+  headline: "Mounjaro Delivery Times UK: Safety First",
   description:
     "Online pharmacies advertise fast Mounjaro delivery—but responsible prescribing takes time. Here's what the dispensing process involves and how to choose a provider you can trust.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

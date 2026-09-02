@@ -8,7 +8,7 @@ const PATH = "/blog/weight-loss-injection-shortages-in-the-uk-what-you-need-to-k
 const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(SHORTAGES_HERO_WEBP)}`;
 
 export const metadata: Metadata = {
-  title: "What You Should Know About Weight Loss Treatment Shortages in the UK",
+  title: "Weight Loss Treatment Shortages in the UK",
   description:
     "Stay ahead of weight loss treatment shortages in the UK: what you need to know to reach your goals.",
   keywords: "weight loss treatment shortages in the uk: what you need to know",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "What You Should Know About Weight Loss Treatment Shortages in the UK",
+    title: "Weight Loss Treatment Shortages in the UK",
     description:
       "Stay ahead of weight loss treatment shortages in the UK: what you need to know to reach your goals.",
     url: `${siteOrigin()}${PATH}`,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "What You Should Know About Weight Loss Treatment Shortages in the UK",
+    title: "Weight Loss Treatment Shortages in the UK",
     description:
       "Stay ahead of weight loss treatment shortages in the UK: what you need to know to reach your goals.",
     images: [HERO_IMAGE],
@@ -42,7 +42,7 @@ export default function WeightLossInjectionShortagesUkPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "What You Should Know About Weight Loss Treatment Shortages in the UK",
+    headline: "Weight Loss Treatment Shortages in the UK",
     description:
       "Why GLP-1 weight loss treatments can be in short supply in the UK, how shortages may affect you, practical steps with your prescriber and pharmacy, and alternatives — informational only, not medical advice.",
     image: [HERO_IMAGE],
@@ -116,7 +116,7 @@ export default function WeightLossInjectionShortagesUkPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="What You Should Know About Weight Loss Treatment Shortages in the UK"
+        pageName="Weight Loss Treatment Shortages in the UK"
         pagePath={PATH}
       />
 <script

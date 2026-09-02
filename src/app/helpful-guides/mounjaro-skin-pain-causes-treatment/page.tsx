@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-skin-pain-causes-treatment",
-  title: "Mounjaro Skin Pain Explained: Causes, Symptoms & How to Treat It",
-  description: "Some Mounjaro users report skin sensitivity or burning. Likely causes and effective management strategies—nerve sensitivity, nutritional changes, blood sugar shifts—explained.",
-  openGraphTitle: "Mounjaro Skin Pain Explained: Causes, Symptoms & How to Treat It",
+  title: "Mounjaro Skin Pain Explained: Causes & Treatment",
+  description: "Some Mounjaro users report skin sensitivity or burning. Likely causes and effective management strategies explained.",
+  openGraphTitle: "Mounjaro Skin Pain Explained: Causes & Treatment",
   openGraphDescription: "Some Mounjaro users report skin sensitivity, burning, or pain from light touch. Here's what may be causing it and how to manage symptoms effectively.",
 });
 
@@ -103,7 +103,7 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-multivitamins-uk",
     category: "Medications",
-    title: "Multivitamins and Mounjaro in the UK: Do You Really Need Them?",
+    title: "Multivitamins and Mounjaro UK: Do You Need Them?",
     description:
       "Key nutrients to supplement while on Mounjaro—including those linked to nerve health and skin sensitivity.",
   },
@@ -119,7 +119,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Mounjaro Skin Pain Explained: Causes, Symptoms & How to Treat It",
+  headline: "Mounjaro Skin Pain Explained: Causes & Treatment",
   description:
     "Some Mounjaro users report skin sensitivity, burning, or pain from light touch. Here's what may be causing it and how to manage symptoms effectively.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

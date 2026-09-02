@@ -4,7 +4,7 @@ import { blogImgPath, GLP1_SUPPLEMENTS_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/glp-1-supplements-uk";
-const TITLE = "GLP-1 Supplements UK: What Helps, What's Hype and What to Avoid";
+const TITLE = "GLP-1 Supplements UK: What Helps, What's Hype";
 const DESCRIPTION =
   "GLP-1 supplements UK guide: protein, fibre, vitamins, safety checks and what not to confuse with medicine.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(GLP1_SUPPLEMENTS_HERO_WEBP)}`;

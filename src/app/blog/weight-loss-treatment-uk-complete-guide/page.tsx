@@ -9,9 +9,9 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/weight-loss-treatment-uk-complete-guide";
 const TITLE =
-  "The Complete Guide to Weight Loss Treatment in the UK (2026): GLP-1, How It Works, Costs & What to Expect";
+  "Weight Loss Treatment UK: Complete Guide";
 const DESCRIPTION =
-  "The complete UK guide to weight loss treatment 2026 covering GLP-1 treatments, how they work, NHS vs private costs, eligibility, Mounjaro, Wegovy and Saxenda explained.";
+  "The complete UK guide to weight loss treatment: GLP-1 options, NHS vs private costs, eligibility, and how each works.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(WEIGHT_LOSS_TREATMENT_UK_COMPLETE_GUIDE_HERO_PNG)}`;
 
 export const metadata: Metadata = {

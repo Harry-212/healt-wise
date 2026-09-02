@@ -20,9 +20,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-eligibility-bmi-requirements-uk",
-  title: "Mounjaro UK Eligibility Guide (2026): BMI Rules, Requirements & Exceptions",
+  title: "Mounjaro UK Eligibility Guide: BMI Rules",
   description: "Who qualifies for Mounjaro in the UK? BMI thresholds, accepted health conditions, ethnicity adjustments, what happens when BMI drops, and how to restart.",
-  openGraphTitle: "Mounjaro UK Eligibility Guide (2026): BMI Rules, Requirements & Exceptions",
+  openGraphTitle: "Mounjaro UK Eligibility Guide: BMI Rules",
   openGraphDescription: "Who qualifies for Mounjaro in the UK? A clear breakdown of BMI thresholds, accepted health conditions, ethnicity adjustments, and what happens when your BMI drops.",
 });
 
@@ -121,7 +121,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Mounjaro UK Eligibility Guide (2026): BMI Rules, Requirements & Exceptions",
+    "Mounjaro UK Eligibility Guide: BMI Rules",
   description:
     "Who qualifies for Mounjaro in the UK? A clear breakdown of BMI thresholds, accepted health conditions, ethnicity adjustments, and what happens when your BMI drops.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

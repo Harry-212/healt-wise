@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-bmi-cutoff-stopping-uk",
-  title: "Mounjaro BMI Cutoffs in the UK: Why Stopping Too Early Can Backfire",
+  title: "Mounjaro BMI Cutoffs UK: Stopping Too Early",
   description: "Many UK patients are stopped on Mounjaro at a 'normal' BMI. Here's why that approach is flawed and how to find a provider with a long-term plan.",
-  openGraphTitle: "Mounjaro BMI Cutoffs in the UK: Why Stopping Too Early Can Backfire",
+  openGraphTitle: "Mounjaro BMI Cutoffs UK: Stopping Too Early",
 });
 
 
@@ -124,7 +124,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Mounjaro BMI Cutoffs in the UK: Why Stopping Too Early Can Backfire",
+  headline: "Mounjaro BMI Cutoffs UK: Stopping Too Early",
   description:
     "Many UK patients are stopped on Mounjaro once they reach a 'normal' BMI. Here's why that approach is flawed and what the evidence says about long-term maintenance.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

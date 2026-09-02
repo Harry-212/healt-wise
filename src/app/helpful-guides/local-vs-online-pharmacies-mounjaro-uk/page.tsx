@@ -20,9 +20,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "local-vs-online-pharmacies-mounjaro-uk",
-  title: "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice?",
+  title: "Local vs Online Pharmacies for Mounjaro UK",
   description: "Online pharmacies are cheaper; local ones offer face-to-face support. An honest breakdown of both options for Mounjaro patients in the UK.",
-  openGraphTitle: "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice?",
+  openGraphTitle: "Local vs Online Pharmacies for Mounjaro UK",
 });
 
 
@@ -116,7 +116,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Local vs Online Pharmacies for Mounjaro in the UK: What's the Better Choice?",
+    "Local vs Online Pharmacies for Mounjaro UK",
   description:
     "Online pharmacies are cheaper; local ones offer face-to-face support. An honest breakdown of both options for Mounjaro patients in the UK.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "fake-online-pharmacy-uk-how-to-spot-stay-safe",
-  title: "How to Identify a Fake Online Pharmacy in the UK & Stay Safe",
+  title: "How to Identify a Fake Online Pharmacy UK",
   description: "Fake pharmacies sell unsafe medicines. Learn the warning signs, who regulates UK pharmacies (GPhC, MHRA), and how to verify a site before you buy.",
-  openGraphTitle: "How to Identify a Fake Online Pharmacy in the UK & Stay Safe",
+  openGraphTitle: "How to Identify a Fake Online Pharmacy UK",
   openGraphDescription: "Fake online pharmacies sell counterfeit or unsafe medicines. Learn the warning signs and how to verify a UK pharmacy before you buy.",
 });
 

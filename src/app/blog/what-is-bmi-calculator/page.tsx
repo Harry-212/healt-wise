@@ -8,33 +8,33 @@ const PATH = "/blog/what-is-bmi-calculator";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BMI_HERO_PNG)}`;
 
 export const metadata: Metadata = {
-  title: "BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next",
+  title: "BMI Calculator UK: What Your Number Means",
   description:
-    "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds, limitations, weight loss treatment eligibility, and what to do with your result.",
+    "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds and weight loss treatment eligibility.",
   keywords:
     "BMI calculator UK, what is my BMI, BMI calculator, calculate BMI UK, healthy BMI UK",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next",
+    title: "BMI Calculator UK: What Your Number Means",
     description:
-      "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds, limitations, weight loss treatment eligibility, and what to do with your result.",
+      "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds and weight loss treatment eligibility.",
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-05-30T00:00:00.000Z",
     images: [
       {
         url: HERO_IMAGE,
-        alt: "BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next",
+        alt: "BMI Calculator UK: What Your Number Means",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next",
+    title: "BMI Calculator UK: What Your Number Means",
     description:
-      "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds, limitations, weight loss treatment eligibility, and what to do with your result.",
+      "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds and weight loss treatment eligibility.",
     images: [HERO_IMAGE],
   },
 };
@@ -43,12 +43,12 @@ export default function BmiCalculatorBlogPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next",
+    headline: "BMI Calculator UK: What Your Number Means",
     description:
-      "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds, limitations, weight loss treatment eligibility, and what to do with your result.",
+      "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds and weight loss treatment eligibility.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: `${siteOrigin()}/logo-health-wise.webp` } },
     datePublished: "2026-05-30",
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -133,14 +133,14 @@ export default function BmiCalculatorBlogPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next"
+        pageName="BMI Calculator UK: What Your Number Means"
         pagePath={PATH}
       />
 <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            ...ARTICLE_SCHEMA,
+            "@context": "https://schema.org",
             "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA],
           }),
         }}

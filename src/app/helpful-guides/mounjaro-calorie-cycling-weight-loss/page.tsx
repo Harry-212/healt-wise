@@ -20,9 +20,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-calorie-cycling-weight-loss",
-  title: "Mounjaro Calorie Cycling: A Smarter Approach to Sustainable Weight Loss",
+  title: "Mounjaro Calorie Cycling: A Smarter Approach",
   description: "Calorie cycling complements Mounjaro's appetite regulation—helping prevent plateaus and improve long-term adherence to treatment in the UK.",
-  openGraphTitle: "Mounjaro Calorie Cycling: A Smarter Approach to Sustainable Weight Loss",
+  openGraphTitle: "Mounjaro Calorie Cycling: A Smarter Approach",
   openGraphDescription: "Calorie cycling is a flexible nutrition strategy that can complement Mounjaro's appetite regulation—helping to prevent plateaus and improve long-term adherence.",
 });
 
@@ -115,7 +115,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Mounjaro Calorie Cycling: A Smarter Approach to Sustainable Weight Loss",
+  headline: "Mounjaro Calorie Cycling: A Smarter Approach",
   description:
     "Calorie cycling is a flexible nutrition strategy that can complement Mounjaro's appetite regulation—helping to prevent plateaus and improve long-term adherence.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

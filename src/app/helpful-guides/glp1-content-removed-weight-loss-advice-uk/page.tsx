@@ -18,7 +18,7 @@ import {
 } from "@/components/guide/GuideLayout";
 
 const GUIDE_PAGE_TITLE =
-  "Why Weight Loss Treatment Content Is Being Removed by Social Media: Impact on Weight Loss Advice in the UK";
+  "Weight Loss Content Removed by Social Media: UK";
 
 export const metadata = buildGuideShareMetadata({
   slug: "glp1-content-removed-weight-loss-advice-uk",

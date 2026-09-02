@@ -4,7 +4,7 @@ import { blogImgPath, SEMAGLUTIDE_WHERE_TO_START_HERO_PNG } from "./blog-assets"
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/semaglutide-weight-loss-where-to-start-uk";
-const TITLE = "Semaglutide Weight Loss: Where to Start Safely in the UK";
+const TITLE = "Semaglutide Weight Loss: Where to Start UK";
 const DESCRIPTION =
   "Semaglutide weight loss UK guide: learn safe routes, prescription checks, price factors and pharmacy red flags.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(SEMAGLUTIDE_WHERE_TO_START_HERO_PNG)}`;

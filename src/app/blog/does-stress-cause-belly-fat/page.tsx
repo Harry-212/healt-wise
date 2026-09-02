@@ -10,14 +10,14 @@ const SOCIAL_PREVIEW_IMAGE = `${siteOrigin()}/blog/3.1-fatloss-og.jpg`;
 export const metadata: Metadata = {
   title: "Does Stress Cause Belly Fat?",
   description:
-    "Chronic stress raises cortisol, and cortisol directly fuels belly fat storage. Understand the stress-belly fat link and evidence-based strategies to break the cycle.",
+    "Chronic stress raises cortisol, and cortisol fuels belly fat storage. Understand the link and how to break the cycle.",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
     title: "Does Stress Cause Belly Fat?",
     description:
-      "Chronic stress raises cortisol, and cortisol directly fuels belly fat storage. Understand the stress-belly fat link and evidence-based strategies to break the cycle.",
+      "Chronic stress raises cortisol, and cortisol fuels belly fat storage. Understand the link and how to break the cycle.",
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-05-09T00:00:00.000Z",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Does Stress Cause Belly Fat?",
     description:
-      "Chronic stress raises cortisol, and cortisol directly fuels belly fat storage. Understand the stress-belly fat link and evidence-based strategies to break the cycle.",
+      "Chronic stress raises cortisol, and cortisol fuels belly fat storage. Understand the link and how to break the cycle.",
     images: [SOCIAL_PREVIEW_IMAGE],
   },
 };

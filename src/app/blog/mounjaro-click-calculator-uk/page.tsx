@@ -5,8 +5,8 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/mounjaro-click-calculator-uk";
-const TITLE = "Mounjaro Click Calculator UK: How Many Clicks Is Your Dose? (KwikPen Guide 2026)";
-const DESCRIPTION = "Mounjaro KwikPen click calculator for UK patients. Learn how many clicks equal each dose, the full click chart for all 6 pen strengths, units, mL conversions & FAQs.";
+const TITLE = "Mounjaro Click Calculator UK: KwikPen Guide";
+const DESCRIPTION = "Mounjaro KwikPen click calculator for UK patients. See how many clicks equal each dose across all 6 pen strengths.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(MOUNJARO_CLICK_CALCULATOR_UK_HERO_WEBP)}`;
 
 export const metadata: Metadata = {
@@ -46,7 +46,7 @@ export default function MounjaroClickCalculatorUkPage() {
     description: DESCRIPTION,
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: `${siteOrigin()}/logo-health-wise.webp` } },
     datePublished: "2026-06-02",
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -153,7 +153,7 @@ export default function MounjaroClickCalculatorUkPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            ...ARTICLE_SCHEMA,
+            "@context": "https://schema.org",
             "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA],
           }),
         }}

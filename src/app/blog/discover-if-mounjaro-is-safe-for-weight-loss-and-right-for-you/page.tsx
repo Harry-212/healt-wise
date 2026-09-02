@@ -4,7 +4,7 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "Discover If Mounjaro Is Safe for Weight Loss and Right for You",
+  title: "Is Mounjaro Safe for Weight Loss?",
   description:
     "Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding.",
   keywords: "is mounjaro safe for weight loss",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you`,
   },
   openGraph: {
-    title: "Discover If Mounjaro Is Safe for Weight Loss and Right for You",
+    title: "Is Mounjaro Safe for Weight Loss?",
     description:
       "Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding.",
     url: `${siteOrigin()}/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you`,
@@ -25,7 +25,7 @@ export default function MounjaroSafetyArticlePage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Discover If Mounjaro Is Safe for Weight Loss and Right for You",
+    headline: "Is Mounjaro Safe for Weight Loss?",
     description:
       "Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
@@ -98,7 +98,7 @@ export default function MounjaroSafetyArticlePage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Discover If Mounjaro Is Safe for Weight Loss and Right for You"
+        pageName="Is Mounjaro Safe for Weight Loss?"
         pagePath="/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you"
       />
 <script

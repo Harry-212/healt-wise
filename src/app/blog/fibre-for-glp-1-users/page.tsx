@@ -4,7 +4,7 @@ import { blogImgPath, FIBRE_GLP_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/fibre-for-glp-1-users";
-const TITLE = "Fibre for GLP-1 Users: Constipation and Fullness Support";
+const TITLE = "Fibre for GLP-1 Users: Constipation Support";
 const DESCRIPTION =
   "Fibre for GLP-1 users guide: constipation support, fullness, foods, fluids and safe supplement checks.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(FIBRE_GLP_HERO_WEBP)}`;

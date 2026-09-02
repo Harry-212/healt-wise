@@ -4,7 +4,7 @@ import { blogImgPath, CAN_I_BUY_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/can-i-buy-weight-loss-injections-uk";
-const TITLE = "Can I Buy Weight Loss Injections in the UK? Safe Provider and Price Guide";
+const TITLE = "Can I Buy Weight Loss Injections in the UK?";
 const DESCRIPTION =
   "Can I buy weight loss injections in the UK? Learn safe routes, provider checks, prices and red flags before treatment.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(CAN_I_BUY_HERO_PNG)}`;

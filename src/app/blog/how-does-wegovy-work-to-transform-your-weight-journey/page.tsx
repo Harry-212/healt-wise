@@ -4,7 +4,7 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
-  title: "How Does Wegovy Work to Transform Your Weight Journey",
+  title: "How Does Wegovy Work for Weight Loss?",
   description:
     "Find out how does Wegovy work to kickstart your weight loss, with guides on eligibility, cost and UK providers.",
   keywords: "how does wegovy work",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}/blog/how-does-wegovy-work-to-transform-your-weight-journey`,
   },
   openGraph: {
-    title: "How Does Wegovy Work to Transform Your Weight Journey",
+    title: "How Does Wegovy Work for Weight Loss?",
     description:
       "Find out how does Wegovy work to kickstart your weight loss, with guides on eligibility, cost and UK providers.",
     url: `${siteOrigin()}/blog/how-does-wegovy-work-to-transform-your-weight-journey`,
@@ -25,7 +25,7 @@ export default function WegovyArticlePage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "How Does Wegovy Work to Transform Your Weight Journey",
+    headline: "How Does Wegovy Work for Weight Loss?",
     description:
       "Find out how does Wegovy work to kickstart your weight loss, with guides on eligibility, cost and UK providers.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
@@ -90,7 +90,7 @@ export default function WegovyArticlePage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="How Does Wegovy Work to Transform Your Weight Journey"
+        pageName="How Does Wegovy Work for Weight Loss?"
         pagePath="/blog/how-does-wegovy-work-to-transform-your-weight-journey"
       />
 <script

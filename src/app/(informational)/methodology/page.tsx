@@ -5,7 +5,7 @@ import MethodologyClient from "./MethodologyClient";
 
 const TITLE = "How We Compare UK Weight Loss Providers | Methodology";
 const DESCRIPTION =
-  "Weight loss provider comparison methodology: pharmacy price checks, GPhC verification, total treatment cost, consultation fees, delivery charges, provider scoring and clinical support.";
+  "Our UK weight loss provider methodology: GPhC verification, total treatment cost, delivery charges and provider scoring.";
 
 export const metadata: Metadata = {
   title: {

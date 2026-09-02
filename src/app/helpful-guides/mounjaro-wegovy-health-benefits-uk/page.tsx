@@ -20,9 +20,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-wegovy-health-benefits-uk",
-  title: "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss",
+  title: "Mounjaro & Wegovy: Beyond Weight Loss",
   description: "Mounjaro and Wegovy do more than reduce weight. From blood sugar control to cardiovascular and liver health, here's what the clinical evidence shows.",
-  openGraphTitle: "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss",
+  openGraphTitle: "Mounjaro & Wegovy: Beyond Weight Loss",
 });
 
 
@@ -126,7 +126,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Health Benefits of Mounjaro and Wegovy: Beyond Weight Loss",
+  headline: "Mounjaro & Wegovy: Beyond Weight Loss",
   description:
     "Mounjaro and Wegovy do more than reduce weight. From blood sugar control to cardiovascular and liver health, here's what the clinical evidence shows.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

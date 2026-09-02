@@ -7,7 +7,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 const HERO_IMAGE_ABSOLUTE = `${siteOrigin()}${BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE}`;
 
 export const metadata: Metadata = {
-  title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
+  title: "Easy-to-Follow Wegovy Injection Instructions",
   description:
     "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
   keywords: "wegovy treatment instructions",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`,
   },
   openGraph: {
-    title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
+    title: "Easy-to-Follow Wegovy Injection Instructions",
     description:
       "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
     url: `${siteOrigin()}/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust`,
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     images: [
       {
         url: HERO_IMAGE_ABSOLUTE,
-        alt: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
+        alt: "Easy-to-Follow Wegovy Injection Instructions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
+    title: "Easy-to-Follow Wegovy Injection Instructions",
     description:
       "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
     images: [HERO_IMAGE_ABSOLUTE],
@@ -41,7 +41,7 @@ export default function WegovyInjectionInstructionsArticlePage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Easy-to-Follow Wegovy Injection Instructions You Can Trust",
+    headline: "Easy-to-Follow Wegovy Injection Instructions",
     description:
       "Follow clear wegovy treatment instructions to confidently start your UK weight loss journey today.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },

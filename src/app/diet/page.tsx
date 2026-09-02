@@ -8,7 +8,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Diet for sustainable weight loss",
   description:
-    "Science-backed diet strategies: balanced meals, sustainable calorie control, protein and fibre habits, sleep & stress—and how GLP-1 options can support nutrition in the UK.",
+    "Science-backed diet strategies: balanced meals, sustainable calorie control, protein and fibre habits for UK readers.",
   alternates: {
     canonical: PILLAR_DIET,
   },

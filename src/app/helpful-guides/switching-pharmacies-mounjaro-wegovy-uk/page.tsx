@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "switching-pharmacies-mounjaro-wegovy-uk",
-  title: "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide",
+  title: "Switching Pharmacies for Mounjaro or Wegovy UK",
   description: "Want to switch pharmacy for Mounjaro or Wegovy? How to compare regulated providers, what documents you need, and how to switch safely.",
-  openGraphTitle: "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide",
+  openGraphTitle: "Switching Pharmacies for Mounjaro or Wegovy UK",
 });
 
 
@@ -125,7 +125,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide",
+    "Switching Pharmacies for Mounjaro or Wegovy UK",
   description:
     "Want to switch pharmacy for Mounjaro or Wegovy? How to compare regulated providers, what documents you need, and how to switch safely.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-weight-loss-plateau",
-  title: "Why Weight Loss Slows on Mounjaro: Understanding Plateaus & Long-Term Progress",
+  title: "Why Weight Loss Slows on Mounjaro: Plateaus",
   description: "Weight loss naturally slows after the first weeks on Mounjaro. Why plateaus happen, what they mean for long-term progress, and how to stay on track.",
-  openGraphTitle: "Why Weight Loss Slows on Mounjaro: Understanding Plateaus & Long-Term Progress",
+  openGraphTitle: "Why Weight Loss Slows on Mounjaro: Plateaus",
   openGraphDescription: "Weight loss naturally slows after the first weeks on Mounjaro. Learn why plateaus happen, what they mean for long-term progress, and how to stay on track.",
 });
 
@@ -117,7 +117,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Why Weight Loss Slows on Mounjaro: Understanding Plateaus & Long-Term Progress",
+    "Why Weight Loss Slows on Mounjaro: Plateaus",
   description:
     "Weight loss naturally slows after the first weeks on Mounjaro. Learn why plateaus happen, what they mean for long-term progress, and how to stay on track.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

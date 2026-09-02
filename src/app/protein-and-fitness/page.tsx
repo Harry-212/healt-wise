@@ -9,7 +9,7 @@ import ProductGrid from "./ProductGrid";
 import ProteinFaq, { PROTEIN_FAQS } from "./ProteinFaq";
 
 const PATH = "/protein-and-fitness";
-const TITLE = "Protein & Fitness | High-Protein Complete Nutrition";
+const TITLE = "Protein & Fitness | Complete Nutrition";
 const DESCRIPTION =
   "No gimmicks. No gaps. Just complete, science-backed nutrition that works as hard as you do. Compare high-protein complete meals and fuel your fitness goals.";
 

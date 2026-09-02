@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-gp-notification-uk",
-  title: "Do UK Pharmacies Inform Your GP About Mounjaro? Complete Guide",
+  title: "Do UK Pharmacies Inform Your GP About Mounjaro?",
   description: "UK pharmacies must notify your GP when dispensing Mounjaro. Why it happens, how the process works, and what it means for your medical records.",
-  openGraphTitle: "Do UK Pharmacies Inform Your GP About Mounjaro? Complete Guide",
+  openGraphTitle: "Do UK Pharmacies Inform Your GP About Mounjaro?",
 });
 
 

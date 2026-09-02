@@ -9,7 +9,7 @@ const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(MOUWEG_HERO_WEBP)}`;
 
 export const metadata: Metadata = {
   title:
-    "How Mounjaro vs Wegovy: The Key Differences Explained Help You Choose",
+    "Mounjaro vs Wegovy: Key Differences Explained",
   description:
     "See how mounjaro vs wegovy: the key differences explained helps you choose your ideal UK weight loss shot.",
   keywords:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "How Mounjaro vs Wegovy: The Key Differences Explained Help You Choose",
+      "Mounjaro vs Wegovy: Key Differences Explained",
     description:
       "See how mounjaro vs wegovy: the key differences explained helps you choose your ideal UK weight loss shot.",
     url: `${siteOrigin()}${PATH}`,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "How Mounjaro vs Wegovy: The Key Differences Explained Help You Choose",
+      "Mounjaro vs Wegovy: Key Differences Explained",
     description:
       "See how mounjaro vs wegovy: the key differences explained helps you choose your ideal UK weight loss shot.",
     images: [HERO_IMAGE],
@@ -47,7 +47,7 @@ export default function MounjaroVsWegovyPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "How Mounjaro vs Wegovy: The Key Differences Explained Help You Choose",
+      "Mounjaro vs Wegovy: Key Differences Explained",
     description:
       "Tirzepatide (Mounjaro) vs semaglutide (Wegovy): mechanisms, trials, dosing, side effects, cost and UK access — informational only, not medical advice.",
     image: [HERO_IMAGE],
@@ -121,7 +121,7 @@ export default function MounjaroVsWegovyPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="How Mounjaro vs Wegovy: The Key Differences Explained Help You Choose"
+        pageName="Mounjaro vs Wegovy: Key Differences Explained"
         pagePath={PATH}
       />
 <script

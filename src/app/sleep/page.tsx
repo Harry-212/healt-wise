@@ -8,7 +8,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Sleep and weight loss",
   description:
-    "How sleep affects appetite, metabolism, and weight: poor sleep and weight gain, practical sleep hygiene, hormones, and how rest links with diet, exercise, stress, and GLP-1 treatment in the UK.",
+    "How sleep affects appetite, metabolism and weight: poor sleep and weight gain, and practical sleep hygiene tips.",
   alternates: {
     canonical: PILLAR_SLEEP,
   },

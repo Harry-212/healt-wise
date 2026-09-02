@@ -6,7 +6,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/wegovy-price-uk";
 const TITLE =
-  "Wegovy Price UK 2026: How Much Does Each Dose Cost and Is It Worth It?";
+  "Wegovy Price UK: How Much Does Each Dose Cost?";
 const DESCRIPTION =
   "How much does Wegovy cost in the UK in 2026? Full price breakdown by dose, monthly estimates, NHS vs private, and how it compares to Mounjaro.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(WEGOVY_PRICE_UK_HERO_WEBP)}`;
@@ -125,7 +125,7 @@ export default function WegovyPriceUkPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Wegovy Price UK 2026: How Much Does Each Dose Cost and Is It Worth It?"
+        pageName="Wegovy Price UK: How Much Does Each Dose Cost?"
         pagePath={PATH}
       />
 <script

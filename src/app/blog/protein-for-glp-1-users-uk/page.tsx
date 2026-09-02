@@ -4,7 +4,7 @@ import { blogImgPath, PROTEIN_GLP_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/protein-for-glp-1-users-uk";
-const TITLE = "Protein for GLP-1 Users UK: Food First, Supplements Second";
+const TITLE = "Protein for GLP-1 Users UK: Food First";
 const DESCRIPTION =
   "Protein for GLP-1 users UK guide: food-first support for Wegovy, Mounjaro and weight loss treatment users.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(PROTEIN_GLP_HERO_WEBP)}`;

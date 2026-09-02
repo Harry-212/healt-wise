@@ -4,7 +4,7 @@ import { blogImgPath, WEGOVY_PILL_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/wegovy-pill-uk";
-const TITLE = "Wegovy Pill UK: Price, Availability, Results and Safety Guide";
+const TITLE = "Wegovy Pill UK: Price, Availability & Safety";
 const DESCRIPTION =
   "Wegovy Pill UK guide: compare price, availability, results, dosage, side effects and tablet vs injection options.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(WEGOVY_PILL_HERO_PNG)}`;

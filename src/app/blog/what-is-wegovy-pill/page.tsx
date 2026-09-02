@@ -4,7 +4,7 @@ import { blogImgPath, WHAT_IS_WEGOVY_PILL_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/what-is-wegovy-pill";
-const TITLE = "What Is Wegovy Pill? Semaglutide Tablet Explained for UK Users";
+const TITLE = "What Is Wegovy Pill? Semaglutide Tablet UK";
 const DESCRIPTION =
   "Learn what Wegovy Pill is, how semaglutide tablets work, who they may suit, and how they compare with injections.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(WHAT_IS_WEGOVY_PILL_HERO_PNG)}`;

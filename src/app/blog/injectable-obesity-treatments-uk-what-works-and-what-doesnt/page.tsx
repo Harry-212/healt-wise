@@ -8,18 +8,18 @@ const PATH = "/blog/injectable-obesity-treatments-uk-what-works-and-what-doesnt"
 const HERO_IMAGE = `${siteOrigin()}${INJECTABLE_OBESITY_TREATMENTS_HERO}`;
 
 export const metadata: Metadata = {
-  title: "Injectable Obesity Treatments UK: What Works and What Doesn't",
+  title: "Injectable Obesity Treatments UK: What Works",
   description:
-    "Injectable obesity treatments in the UK: how Wegovy, Mounjaro and Saxenda work, NHS vs private access, eligibility, side effects, costs and realistic expectations.",
+    "Injectable obesity treatments in the UK: how Wegovy, Mounjaro and Saxenda work, NHS vs private access and costs.",
   keywords:
     "injectable obesity treatments UK, Wegovy, Mounjaro, Saxenda, GLP-1, weight loss injections UK, NHS obesity treatment",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "Injectable Obesity Treatments UK: What Works and What Doesn't",
+    title: "Injectable Obesity Treatments UK: What Works",
     description:
-      "Injectable obesity treatments in the UK: how Wegovy, Mounjaro and Saxenda work, NHS vs private access, eligibility, side effects, costs and realistic expectations.",
+      "Injectable obesity treatments in the UK: how Wegovy, Mounjaro and Saxenda work, NHS vs private access and costs.",
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-05-20T00:00:00.000Z",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Injectable Obesity Treatments UK: What Works and What Doesn't",
+    title: "Injectable Obesity Treatments UK: What Works",
     description:
-      "Injectable obesity treatments in the UK: how Wegovy, Mounjaro and Saxenda work, NHS vs private access, eligibility, side effects, costs and realistic expectations.",
+      "Injectable obesity treatments in the UK: how Wegovy, Mounjaro and Saxenda work, NHS vs private access and costs.",
     images: [HERO_IMAGE],
   },
 };
@@ -43,7 +43,7 @@ export default function InjectableObesityTreatmentsPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Injectable Obesity Treatments UK: What Works and What Doesn't",
+    headline: "Injectable Obesity Treatments UK: What Works",
     description:
       "UK injectable obesity treatments: mechanisms, NHS vs private access, Saxenda / Wegovy / Mounjaro comparison, eligibility, risks and cost context — informational only, not medical advice.",
     image: [HERO_IMAGE],

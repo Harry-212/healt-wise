@@ -7,7 +7,7 @@ const PATH = "/blog/mounjaro-weight-loss-before-and-after";
 const HERO_IMAGE = `${siteOrigin()}/blog/mounjaro%20weight%20loss%20before%20and%20after.webp`;
 
 export const metadata: Metadata = {
-  title: "Your Ultimate Guide to Mounjaro Weight Loss Before and After",
+  title: "Mounjaro Weight Loss: Before and After",
   description:
     "Explore the mounjaro weight loss before and after results to see how you can finally conquer stubborn pounds.",
   keywords: "mounjaro weight loss before and after",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "Your Ultimate Guide to Mounjaro Weight Loss Before and After",
+    title: "Mounjaro Weight Loss: Before and After",
     description:
       "Explore the mounjaro weight loss before and after results to see how you can finally conquer stubborn pounds.",
     url: `${siteOrigin()}${PATH}`,
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     images: [
       {
         url: HERO_IMAGE,
-        alt: "Your Ultimate Guide to Mounjaro Weight Loss Before and After",
+        alt: "Mounjaro Weight Loss: Before and After",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Ultimate Guide to Mounjaro Weight Loss Before and After",
+    title: "Mounjaro Weight Loss: Before and After",
     description:
       "Explore the mounjaro weight loss before and after results to see how you can finally conquer stubborn pounds.",
     images: [HERO_IMAGE],
@@ -41,7 +41,7 @@ export default function MounjaroBeforeAfterArticlePage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Your Ultimate Guide to Mounjaro Weight Loss Before and After",
+    headline: "Mounjaro Weight Loss: Before and After",
     description:
       "Explore Mounjaro weight loss before and after: how tirzepatide works, typical results, dosing context, and what shapes outcomes—informational only, not medical advice.",
     image: [HERO_IMAGE],
@@ -115,7 +115,7 @@ export default function MounjaroBeforeAfterArticlePage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Your Ultimate Guide to Mounjaro Weight Loss Before and After"
+        pageName="Mounjaro Weight Loss: Before and After"
         pagePath={PATH}
       />
 <script

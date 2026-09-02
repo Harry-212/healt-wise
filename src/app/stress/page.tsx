@@ -8,7 +8,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Stress and weight loss",
   description:
-    "How chronic stress, cortisol, sleep, and emotional eating affect weight—and practical strategies that work alongside diet, exercise, and GLP-1 treatment in the UK.",
+    "How chronic stress, cortisol and emotional eating affect weight, and strategies that work alongside diet and exercise.",
   alternates: {
     canonical: PILLAR_STRESS,
   },

@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-hot-weather-safety-uk",
-  title: "Mounjaro and Hot Weather UK: Hydration, Sun Safety & Heatwave Tips",
+  title: "Mounjaro and Hot Weather UK: Safety Tips",
   description: "Mounjaro raises dehydration risk in hot weather. UK summer safety: hydration targets, sun protection, GLP-1 digestive symptoms, and when to seek help.",
-  openGraphTitle: "Mounjaro and Hot Weather UK: Hydration, Sun Safety & Heatwave Tips",
+  openGraphTitle: "Mounjaro and Hot Weather UK: Safety Tips",
   openGraphDescription: "On Mounjaro, heat and reduced thirst cues raise dehydration risk. Hydration, sun protection, and when to seek help in UK heatwaves.",
 });
 
@@ -87,7 +87,7 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-feeling-cold-why-fixes",
     category: "Side Effects",
-    title: "Why Do You Feel Cold on Mounjaro? Causes, Science & Simple Fixes",
+    title: "Why Do You Feel Cold on Mounjaro? Causes & Fixes",
     description:
       "Cold sensitivity on GLP-1 treatment—and why feeling cool does not rule out dehydration in heat.",
   },

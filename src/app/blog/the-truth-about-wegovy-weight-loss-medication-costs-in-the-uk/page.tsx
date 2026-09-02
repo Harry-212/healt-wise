@@ -7,7 +7,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 const HERO_IMAGE_ABSOLUTE = `${siteOrigin()}${BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE}`;
 
 export const metadata: Metadata = {
-  title: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
+  title: "The Truth About Wegovy Costs in the UK",
   description:
     "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
   keywords: "wegovy weight loss medication",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk`,
   },
   openGraph: {
-    title: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
+    title: "The Truth About Wegovy Costs in the UK",
     description:
       "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
     url: `${siteOrigin()}/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk`,
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     images: [
       {
         url: HERO_IMAGE_ABSOLUTE,
-        alt: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
+        alt: "The Truth About Wegovy Costs in the UK",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
+    title: "The Truth About Wegovy Costs in the UK",
     description:
       "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
     images: [HERO_IMAGE_ABSOLUTE],
@@ -41,7 +41,7 @@ export default function WegovyCostsArticlePage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
+    headline: "The Truth About Wegovy Costs in the UK",
     description:
       "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
@@ -107,7 +107,7 @@ export default function WegovyCostsArticlePage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="The Truth About Wegovy Weight Loss Medication Costs in the UK"
+        pageName="The Truth About Wegovy Costs in the UK"
         pagePath="/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk"
       />
 <script

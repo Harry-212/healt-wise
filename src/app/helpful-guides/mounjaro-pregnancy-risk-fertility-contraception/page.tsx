@@ -18,7 +18,7 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-pregnancy-risk-fertility-contraception",
-  title: "Mounjaro and Pregnancy Risk: Fertility & Contraception Guide",
+  title: "Mounjaro and Pregnancy Risk: Fertility Guide",
   description: "Mounjaro may indirectly increase fertility as metabolic health improves. Clinical facts about tirzepatide, contraception, and pregnancy risk in the UK.",
   openGraphTitle: "Mounjaro and Pregnancy Risk: What You Need to Know About Fertility & Contraception",
 });
@@ -108,7 +108,7 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-side-effects-uk",
     category: "Medications",
-    title: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
+    title: "Mounjaro Side Effects UK: What to Expect",
     description:
       "Common and serious side effects, when to seek help, and how to manage early treatment symptoms.",
   },

@@ -5,7 +5,7 @@ import { BLOG_SURPRISING_MOUNJARO_SIDE_EFFECTS_HERO_IMAGE } from "@/lib/site-ass
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/the-surprising-mounjaro-side-effects-you-might-experience";
-const TITLE = "The Surprising Mounjaro Side Effects You Might Experience";
+const TITLE = "Surprising Mounjaro Side Effects to Expect";
 const DESCRIPTION =
   "Discover surprising mounjaro side effects you might experience and how you can manage them with confidence.";
 
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: HERO_IMAGE_ABSOLUTE,
-        alt: "The Surprising Mounjaro Side Effects You Might Experience",
+        alt: "Surprising Mounjaro Side Effects to Expect",
       },
     ],
   },
@@ -117,7 +117,7 @@ export default function MounjaroSideEffectsArticlePage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="The Surprising Mounjaro Side Effects You Might Experience"
+        pageName="Surprising Mounjaro Side Effects to Expect"
         pagePath={PATH}
       />
 <script

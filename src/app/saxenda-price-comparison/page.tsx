@@ -21,11 +21,11 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/saxenda-price-comparison",
   title:
-    "Compare Saxenda Prices UK (2026) — Cheapest & safest providers",
+    "Compare Saxenda Prices UK: Cheapest Providers",
   metaDescription:
-    "Compare illustrative Saxenda (liraglutide) pack prices across UK pharmacies: 1, 3, and 5 pens, £/mg, total and repeat pricing, delivery, trust, and discount mode. Independent snapshot — updated 2026.",
+    "Compare illustrative Saxenda (liraglutide) pack prices across UK pharmacies: 1, 3 and 5 pens, delivery and repeat pricing.",
   openGraphTitle:
-    "Compare Saxenda Prices UK (2026) — Cheapest & safest providers | Healthwise360",
+    "Compare Saxenda Prices UK: Cheapest Providers | Healthwise360",
   openGraphDescription:
     "Interactive UK Saxenda table: switch 1/3/5 pens, sort and filter, GPhC and cold-chain context. Pack charts and FAQs.",
   imagePath: "/saxenda health wise.png",

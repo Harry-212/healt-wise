@@ -20,9 +20,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-menopause-weight-loss-uk",
-  title: "Mounjaro and Menopause: A Complete UK Guide to Weight Loss Support",
+  title: "Mounjaro and Menopause: UK Weight Loss Guide",
   description: "Menopause-related weight gain has hormonal causes. How Mounjaro's dual GLP-1/GIP mechanism can help menopausal women, eligibility, and maximising results.",
-  openGraphTitle: "Mounjaro and Menopause: A Complete UK Guide to Weight Loss Support",
+  openGraphTitle: "Mounjaro and Menopause: UK Weight Loss Guide",
 });
 
 
@@ -125,7 +125,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Mounjaro and Menopause: A Complete UK Guide to Weight Loss Support",
+  headline: "Mounjaro and Menopause: UK Weight Loss Guide",
   description:
     "Menopause-related weight gain has hormonal causes. How Mounjaro's dual GLP-1/GIP mechanism can help menopausal women, eligibility, and maximising results.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

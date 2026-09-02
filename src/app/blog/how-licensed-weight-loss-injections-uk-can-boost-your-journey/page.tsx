@@ -7,7 +7,7 @@ const PATH = "/blog/how-licensed-weight-loss-injections-uk-can-boost-your-journe
 const HERO_IMAGE = `${siteOrigin()}/blog/How%20Licensed%20Weight%20Loss%20Injections%20UK%20Can%20Boost%20Your%20Journey.webp`;
 
 export const metadata: Metadata = {
-  title: "How Licensed Weight Loss Injections UK Can Boost Your Journey",
+  title: "How Licensed Weight Loss Injections UK Help",
   description:
     "How licensed MHRA-authorised weight loss injections in the UK (Mounjaro, Wegovy) work, NHS vs private access, benefits, side effects and realistic expectations.",
   keywords:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "How Licensed Weight Loss Injections UK Can Boost Your Journey",
+    title: "How Licensed Weight Loss Injections UK Help",
     description:
       "How licensed MHRA-authorised weight loss injections in the UK (Mounjaro, Wegovy) work, NHS vs private access, benefits, side effects and realistic expectations.",
     url: `${siteOrigin()}${PATH}`,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "How Licensed Weight Loss Injections UK Can Boost Your Journey",
+    title: "How Licensed Weight Loss Injections UK Help",
     description:
       "How licensed MHRA-authorised weight loss injections in the UK (Mounjaro, Wegovy) work, NHS vs private access, benefits, side effects and realistic expectations.",
     images: [HERO_IMAGE],
@@ -42,7 +42,7 @@ export default function LicensedWeightLossInjectionsUkPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "How Licensed Weight Loss Injections UK Can Boost Your Journey",
+    headline: "How Licensed Weight Loss Injections UK Help",
     description:
       "Licensed UK weight loss injections (Mounjaro, Wegovy): mechanisms, NHS vs private access, benefits, risks and maintenance — informational only, not medical advice.",
     image: [HERO_IMAGE],
@@ -116,7 +116,7 @@ export default function LicensedWeightLossInjectionsUkPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="How Licensed Weight Loss Injections UK Can Boost Your Journey"
+        pageName="How Licensed Weight Loss Injections UK Help"
         pagePath={PATH}
       />
 <script

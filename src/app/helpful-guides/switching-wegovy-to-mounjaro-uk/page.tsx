@@ -21,9 +21,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "switching-wegovy-to-mounjaro-uk",
-  title: "Switching from Wegovy to Mounjaro in the UK: Safe Transition Guide",
+  title: "Switching from Wegovy to Mounjaro: UK Guide",
   description: "Thinking of switching from Wegovy to Mounjaro? Why patients switch, clinical differences, how to transition safely, and what to expect during the changeover.",
-  openGraphTitle: "Switching from Wegovy to Mounjaro in the UK: Safe Transition Guide",
+  openGraphTitle: "Switching from Wegovy to Mounjaro: UK Guide",
 });
 
 
@@ -119,7 +119,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Switching from Wegovy to Mounjaro in the UK: Safe Transition Guide",
+  headline: "Switching from Wegovy to Mounjaro: UK Guide",
   description:
     "Thinking of switching from Wegovy to Mounjaro? This guide covers why patients switch, the clinical differences, how to transition safely, and what to expect.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

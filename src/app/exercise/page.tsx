@@ -8,7 +8,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Weight loss exercise guide",
   description:
-    "How exercise supports fat loss and maintenance: moderate vs vigorous activity, cardio vs strength, simple moves, sleep & stress, and how to combine movement with diet and GLP-1 treatment in the UK.",
+    "How exercise supports fat loss and maintenance: cardio vs strength, simple moves, and combining movement with diet.",
   alternates: {
     canonical: PILLAR_EXERCISE,
   },

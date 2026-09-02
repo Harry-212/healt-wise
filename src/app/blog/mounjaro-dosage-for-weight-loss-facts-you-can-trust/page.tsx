@@ -6,7 +6,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 const HERO_IMAGE = `${siteOrigin()}/blog/Healthy.webp`;
 
 export const metadata: Metadata = {
-  title: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
+  title: "Mounjaro Dosage for Weight Loss: The Facts",
   description:
     "Find out how your mounjaro dosage for weight loss can deliver safe, effective results with trusted UK advice.",
   keywords: "mounjaro dosage for weight loss",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust`,
   },
   openGraph: {
-    title: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
+    title: "Mounjaro Dosage for Weight Loss: The Facts",
     description:
       "Find out how your mounjaro dosage for weight loss can deliver safe, effective results with trusted UK advice.",
     url: `${siteOrigin()}/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust`,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
+    title: "Mounjaro Dosage for Weight Loss: The Facts",
     description:
       "Find out how your mounjaro dosage for weight loss can deliver safe, effective results with trusted UK advice.",
     images: [HERO_IMAGE],
@@ -40,7 +40,7 @@ export default function MounjaroArticlePage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Mounjaro Dosage for Weight Loss: Facts You Can Trust",
+    headline: "Mounjaro Dosage for Weight Loss: The Facts",
     description:
       "Learn how Mounjaro dosage for weight loss works, from starting at 2.5 mg to potential long-term success. Discover exactly how this GLP-1 & GIP medication helps curb appetite.",
     image: [HERO_IMAGE],
@@ -106,7 +106,7 @@ export default function MounjaroArticlePage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Mounjaro Dosage for Weight Loss: Facts You Can Trust"
+        pageName="Mounjaro Dosage for Weight Loss: The Facts"
         pagePath="/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust"
       />
 <script

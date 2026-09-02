@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "norovirus-mounjaro-wegovy-uk",
-  title: "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery",
+  title: "Norovirus & Mounjaro/Wegovy UK: Safe Recovery",
   description: "Norovirus can feel more intense on Mounjaro or Wegovy. Why it happens, symptoms to watch for, when to delay your injection, and how to recover safely.",
-  openGraphTitle: "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery",
+  openGraphTitle: "Norovirus & Mounjaro/Wegovy UK: Safe Recovery",
 });
 
 
@@ -117,7 +117,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Norovirus & Mounjaro/Wegovy (UK Guide): Symptoms, Risks & Safe Recovery",
+    "Norovirus & Mounjaro/Wegovy UK: Safe Recovery",
   description:
     "Norovirus can feel more intense on Mounjaro or Wegovy. Why it happens, symptoms to watch for, when to delay your injection, and how to recover safely.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

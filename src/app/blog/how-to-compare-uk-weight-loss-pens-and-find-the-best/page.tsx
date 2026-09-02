@@ -7,7 +7,7 @@ const PATH = "/blog/how-to-compare-uk-weight-loss-pens-and-find-the-best";
 const HERO_IMAGE = `${siteOrigin()}/blog/How%20to%20Compare%20UK%20Weight%20Loss%20Pens%20and%20Find%20the%20Best.webp`;
 
 export const metadata: Metadata = {
-  title: "How to Compare UK Weight Loss Pens and Find the Best",
+  title: "How to Compare UK Weight Loss Pens",
   description:
     "Learn how to compare UK weight loss pens—Saxenda, Wegovy and Mounjaro—for dosing, side effects, cost, NHS access and safe regulated prescribing.",
   keywords:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "How to Compare UK Weight Loss Pens and Find the Best",
+    title: "How to Compare UK Weight Loss Pens",
     description:
       "Learn how to compare UK weight loss pens—Saxenda, Wegovy and Mounjaro—for dosing, side effects, cost, NHS access and safe regulated prescribing.",
     url: `${siteOrigin()}${PATH}`,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "How to Compare UK Weight Loss Pens and Find the Best",
+    title: "How to Compare UK Weight Loss Pens",
     description:
       "Learn how to compare UK weight loss pens—Saxenda, Wegovy and Mounjaro—for dosing, side effects, cost, NHS access and safe regulated prescribing.",
     images: [HERO_IMAGE],
@@ -42,7 +42,7 @@ export default function CompareUKWeightLossPensPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "How to Compare UK Weight Loss Pens and Find the Best",
+    headline: "How to Compare UK Weight Loss Pens",
     description:
       "How to compare UK weight loss pens (Saxenda, Wegovy, Mounjaro): mechanisms, practical comparisons, safety, pricing and FAQs — informational only, not medical advice.",
     image: [HERO_IMAGE],
@@ -116,7 +116,7 @@ export default function CompareUKWeightLossPensPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="How to Compare UK Weight Loss Pens and Find the Best"
+        pageName="How to Compare UK Weight Loss Pens"
         pagePath={PATH}
       />
 <script

@@ -20,9 +20,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-early-weight-loss-why-it-slows",
-  title: "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down)",
+  title: "Why Mounjaro Weight Loss Slows After the Start",
   description: "Rapid early weight loss on Mounjaro is normal—but why does it slow? The biology behind initial results, what plateaus mean, and how to keep progressing.",
-  openGraphTitle: "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down)",
+  openGraphTitle: "Why Mounjaro Weight Loss Slows After the Start",
   openGraphDescription: "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology, what plateaus mean, and how to keep progressing sustainably.",
 });
 
@@ -110,7 +110,7 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-calorie-cycling-weight-loss",
     category: "Nutrition",
-    title: "Mounjaro Calorie Cycling: A Smarter Approach to Sustainable Weight Loss",
+    title: "Mounjaro Calorie Cycling: A Smarter Approach",
     description:
       "A flexible nutrition strategy to complement Mounjaro's appetite regulation and prevent plateau-related slowdowns.",
   },
@@ -120,7 +120,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down)",
+    "Why Mounjaro Weight Loss Slows After the Start",
   description:
     "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology, what plateaus mean, and how to keep progressing sustainably.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

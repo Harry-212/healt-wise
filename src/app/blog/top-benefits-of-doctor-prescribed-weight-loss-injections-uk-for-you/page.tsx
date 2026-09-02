@@ -8,15 +8,15 @@ const PATH = '/blog/top-benefits-of-doctor-prescribed-weight-loss-injections-uk-
 const HERO_IMAGE = `${siteOrigin()}${TOP_BENEFITS_WEIGHT_LOSS_INJECTIONS_HERO}`;
 
 export const metadata: Metadata = {
-  title: 'Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You',
-  description: 'Discover the top benefits of doctor prescribed weight loss treatments in the UK, including appetite control, medical support, and what to ask your clinician before choosing Wegovy, Mounjaro or Saxenda.',
+  title: 'Top Benefits of Doctor-Prescribed Weight Loss UK',
+  description: 'The top benefits of doctor-prescribed weight loss treatments in the UK: appetite control, medical support and safety.',
   keywords: 'doctor prescribed weight loss treatments uk, Wegovy, Mounjaro, Saxenda, GLP-1, prescription obesity treatment, UK weight loss treatments',
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: 'Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You',
-    description: 'Discover the top benefits of doctor prescribed weight loss treatments in the UK, including appetite control, medical support, and what to ask your clinician before choosing Wegovy, Mounjaro or Saxenda.',
+    title: 'Top Benefits of Doctor-Prescribed Weight Loss UK',
+    description: 'The top benefits of doctor-prescribed weight loss treatments in the UK: appetite control, medical support and safety.',
     url: `${siteOrigin()}${PATH}`,
     type: 'article',
     publishedTime: '2026-05-19T00:00:00.000Z',
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You',
-    description: 'Discover the top benefits of doctor prescribed weight loss treatments in the UK, including appetite control, medical support, and what to ask your clinician before choosing Wegovy, Mounjaro or Saxenda.',
+    title: 'Top Benefits of Doctor-Prescribed Weight Loss UK',
+    description: 'The top benefits of doctor-prescribed weight loss treatments in the UK: appetite control, medical support and safety.',
     images: [HERO_IMAGE],
   },
 };
@@ -41,7 +41,7 @@ export default function TopBenefitsDoctorPrescribedWeightLossInjectionsPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You"
+        pageName="Top Benefits of Doctor-Prescribed Weight Loss UK"
         pagePath={PATH}
       />
       <ArticleClient />

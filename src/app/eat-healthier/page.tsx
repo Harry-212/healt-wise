@@ -9,7 +9,7 @@ import EatHealthierFaq, { EAT_HEALTHIER_FAQS } from "./EatHealthierFaq";
 import ProductGrid from "./ProductGrid";
 
 const PATH = "/eat-healthier";
-const TITLE = "Eat Healthier | Complete Nutrition for Better Everyday Meals";
+const TITLE = "Eat Healthier | Complete Nutrition for Real Life";
 const DESCRIPTION =
   "Nutritious, balanced meals that fit real life — from complete high-protein powder to lighter instant ramen. Eat better without the guesswork.";
 

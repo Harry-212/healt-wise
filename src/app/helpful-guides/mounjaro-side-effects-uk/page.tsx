@@ -20,9 +20,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-side-effects-uk",
-  title: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
+  title: "Mounjaro Side Effects UK: What to Expect",
   description: "A complete overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—with evidence-based management strategies for each.",
-  openGraphTitle: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
+  openGraphTitle: "Mounjaro Side Effects UK: What to Expect",
 });
 
 
@@ -121,7 +121,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Mounjaro Side Effects UK: What to Expect and How to Manage Them",
+  headline: "Mounjaro Side Effects UK: What to Expect",
   description:
     "A complete, honest overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—with evidence-based management strategies for each.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

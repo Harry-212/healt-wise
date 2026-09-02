@@ -1,8 +1,5 @@
 import type { MetadataRoute } from "next";
-import {
-  CURATED_BLOG_ARTICLE_SLUGS,
-  getIndexedUkLocationArticleSlugs,
-} from "@/lib/blog";
+import { getAllBlogSitemapSlugs } from "@/lib/blog";
 import { COMPARE_SLUGS } from "@/lib/routes/compare-slugs";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
@@ -16,11 +13,13 @@ import {
 } from "@/lib/helpful-guide-slugs";
 import { BLOG_FEED_TAGS, blogTopicHubPath } from "@/lib/blog-feed";
 
-const STATIC_BLOG_SLUGS = ["uk-weight-loss"] as const;
-
 const EXCLUDED_SITEMAP_PATHS = new Set<string>([
   "/$",
   "/blog/locations-in-uk",
+  /** Consolidated via permanentRedirect() into /blog/can-i-buy-weight-loss-injections-uk — redirect stubs don't belong in the sitemap. */
+  "/blog/buy-weight-loss-injections-online-uk",
+  "/blog/buy-weight-loss-injections-uk",
+  "/blog/can-i-buy-weight-loss-injections-online",
   "/compare/best-weight-loss-injections-uk",
   "/compare/best-weight-loss-treatments-uk",
   "/pharmacies/chemist4u",
@@ -113,13 +112,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push(`/pharmacies/${id}`, 0.72);
   }
 
-  const ukLocationBlogSlugs = getIndexedUkLocationArticleSlugs();
-  const blogSlugs = new Set<string>([
-    ...CURATED_BLOG_ARTICLE_SLUGS,
-    ...STATIC_BLOG_SLUGS,
-    ...ukLocationBlogSlugs,
-  ]);
-  for (const slug of [...blogSlugs].sort()) {
+  for (const slug of getAllBlogSitemapSlugs()) {
     push(`/blog/${slug}`, 0.65);
   }
 

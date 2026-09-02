@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "how-we-verify-uk-pharmacies-gphc-safety-standards",
-  title: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained",
+  title: "How We Verify UK Pharmacies: GPhC Checks",
   description: "How Healthwise360 validates pharmacies against the GPhC register. Our safety verification process and how you can check a pharmacy yourself.",
-  openGraphTitle: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained",
+  openGraphTitle: "How We Verify UK Pharmacies: GPhC Checks",
 });
 
 
@@ -121,7 +121,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained",
+    "How We Verify UK Pharmacies: GPhC Checks",
   description:
     "How Healthwise360 validates pharmacies against the GPhC register. Our safety verification process and how you can check a pharmacy yourself.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

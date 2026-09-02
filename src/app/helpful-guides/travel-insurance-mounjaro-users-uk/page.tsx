@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "travel-insurance-mounjaro-users-uk",
-  title: "Travel Insurance for Mounjaro Users: UK Guide (2026)",
+  title: "Travel Insurance for Mounjaro Users: UK Guide",
   description: "Travelling on Mounjaro is usually straightforward. What insurers ask, why you must declare tirzepatide, what cover to look for, and a pre-trip checklist.",
-  openGraphTitle: "Travel Insurance for Mounjaro Users: UK Guide (2026)",
+  openGraphTitle: "Travel Insurance for Mounjaro Users: UK Guide",
   openGraphDescription: "Travelling on Mounjaro is usually straightforward. What insurers ask, why disclosure matters, and what your policy should include.",
 });
 
@@ -144,7 +144,7 @@ export default function GuideTravelInsuranceMounjaro() {
       slug="travel-insurance-mounjaro-users-uk"
       category="Safety Checks"
       categorySlug="safety-checks"
-      title="Travel Insurance for Mounjaro Users: UK Guide"
+      title="Travel Insurance for Mounjaro Users: UK Guide (2026)"
       description="Most travel insurers do not automatically refuse cover because you use Mounjaro—but you must answer questions honestly and declare your medication and related conditions. Here's how to prepare and what your policy should cover."
       readTime="4 min read"
       lastUpdated="April 2026"

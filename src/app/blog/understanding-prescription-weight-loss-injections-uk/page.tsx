@@ -9,7 +9,7 @@ const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(UK_RX_INJECTIONS_HERO_WEBP)}`;
 
 export const metadata: Metadata = {
   title:
-    "Understanding Prescription Weight Loss Treatments in the UK: What They May Actually Offer",
+    "Understanding Prescription Weight Loss UK",
   description:
     "Explore uk prescription weight loss treatments and discover if they're the safe, effective boost you need.",
   keywords: "uk prescription weight loss treatments",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Understanding Prescription Weight Loss Treatments in the UK: What They May Actually Offer",
+      "Understanding Prescription Weight Loss UK",
     description:
       "Explore uk prescription weight loss treatments and discover if they're the safe, effective boost you need.",
     url: `${siteOrigin()}${PATH}`,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Understanding Prescription Weight Loss Treatments in the UK: What They May Actually Offer",
+      "Understanding Prescription Weight Loss UK",
     description:
       "Explore uk prescription weight loss treatments and discover if they're the safe, effective boost you need.",
     images: [HERO_IMAGE],
@@ -46,7 +46,7 @@ export default function UnderstandingPrescriptionWeightLossInjectionsUkPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Understanding Prescription Weight Loss Treatments in the UK: What They May Actually Offer",
+      "Understanding Prescription Weight Loss UK",
     description:
       "GLP-1 class weight loss treatments in the UK: realistic expectations, Wegovy and Mounjaro, NHS vs private, risks, and long-term use — informational only, not medical advice.",
     image: [HERO_IMAGE],
@@ -120,7 +120,7 @@ export default function UnderstandingPrescriptionWeightLossInjectionsUkPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Understanding Prescription Weight Loss Treatments in the UK: What They May Actually Offer"
+        pageName="Understanding Prescription Weight Loss UK"
         pagePath={PATH}
       />
 <script

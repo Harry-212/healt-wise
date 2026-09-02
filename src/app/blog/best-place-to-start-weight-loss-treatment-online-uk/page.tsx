@@ -4,7 +4,7 @@ import { blogImgPath, BEST_PLACE_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/best-place-to-start-weight-loss-treatment-online-uk";
-const TITLE = "Best Place to Start Weight Loss Treatment Online UK: Safety, Prices and Provider Checks";
+const TITLE = "Best Place to Start Weight Loss Treatment UK";
 const DESCRIPTION =
   "Compare safe UK weight loss treatment providers, prices, pharmacy checks and support before starting treatment.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BEST_PLACE_HERO_PNG)}`;

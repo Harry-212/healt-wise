@@ -6,7 +6,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/mounjaro-price-uk";
 const TITLE =
-  "Mounjaro Price UK 2026: How Much Does Each Dose Cost and Where to Find It";
+  "Mounjaro Price UK: How Much Does Each Dose Cost?";
 const DESCRIPTION =
   "How much does Mounjaro cost in the UK in 2026? Full price breakdown by dose, monthly estimates, and what to check before buying from any pharmacy.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(MOUNJARO_PRICE_UK_HERO_WEBP)}`;
@@ -125,7 +125,7 @@ export default function MounjaroPriceUkPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Mounjaro Price UK 2026: How Much Does Each Dose Cost and Where to Find It"
+        pageName="Mounjaro Price UK: How Much Does Each Dose Cost?"
         pagePath={PATH}
       />
 <script
