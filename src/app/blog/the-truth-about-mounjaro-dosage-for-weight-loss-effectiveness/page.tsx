@@ -4,7 +4,7 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/the-truth-about-mounjaro-dosage-for-weight-loss-effectiveness";
-const TITLE = "The Truth About Mounjaro Dosage Effectiveness";
+const TITLE = "The Truth About Mounjaro Dosage";
 const DESCRIPTION =
   "Find the ideal mounjaro dosage for weight loss to maximise your results with clear, expert-backed guidance.";
 
@@ -93,7 +93,7 @@ export default function MounjaroDosageTruthArticlePage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="The Truth About Mounjaro Dosage Effectiveness"
+        pageName="The Truth About Mounjaro Dosage"
         pagePath={PATH}
       />
 <script

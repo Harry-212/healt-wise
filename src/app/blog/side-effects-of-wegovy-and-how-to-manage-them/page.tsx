@@ -8,7 +8,7 @@ const PATH = "/blog/side-effects-of-wegovy-and-how-to-manage-them";
 const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(WEGOVY_SIDE_HERO_WEBP)}`;
 
 export const metadata: Metadata = {
-  title: "Effective Tips for Handling Wegovy Side Effects",
+  title: "Tips for Handling Wegovy Side Effects",
   description:
     "Boost your weight loss with friendly tips on side effects of Wegovy and how to manage them in the UK.",
   keywords: "side effects of wegovy and how to manage them",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "Effective Tips for Handling Wegovy Side Effects",
+    title: "Tips for Handling Wegovy Side Effects",
     description:
       "Boost your weight loss with friendly tips on side effects of Wegovy and how to manage them in the UK.",
     url: `${siteOrigin()}${PATH}`,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Effective Tips for Handling Wegovy Side Effects",
+    title: "Tips for Handling Wegovy Side Effects",
     description:
       "Boost your weight loss with friendly tips on side effects of Wegovy and how to manage them in the UK.",
     images: [HERO_IMAGE],
@@ -42,7 +42,7 @@ export default function WegovySideEffectsPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Effective Tips for Handling Wegovy Side Effects",
+    headline: "Tips for Handling Wegovy Side Effects",
     description:
       "UK-focused, non-prescriptive tips for common Wegovy (semaglutide) side effects—digestion, energy, mood—and when to seek medical advice. Informational only, not medical advice.",
     image: [HERO_IMAGE],
@@ -116,7 +116,7 @@ export default function WegovySideEffectsPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Effective Tips for Handling Wegovy Side Effects"
+        pageName="Tips for Handling Wegovy Side Effects"
         pagePath={PATH}
       />
 <script

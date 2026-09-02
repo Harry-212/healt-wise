@@ -21,9 +21,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-weight-loss-injection-uk",
-  title: "Mounjaro Weight Loss Treatment UK: How It Works",
+  title: "Mounjaro Weight Loss Treatment UK",
   description: "Complete UK guide to Mounjaro for weight loss. How the dual GLP-1/GIP mechanism works, clinical results, eligibility, side effects, and 2026 costs.",
-  openGraphTitle: "Mounjaro Weight Loss Treatment UK: How It Works",
+  openGraphTitle: "Mounjaro Weight Loss Treatment UK",
 });
 
 
@@ -139,7 +139,7 @@ const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "Mounjaro Weight Loss Treatment UK: How It Works",
+    "Mounjaro Weight Loss Treatment UK",
   description:
     "Complete UK guide to Mounjaro for weight loss. How the dual GLP-1/GIP mechanism works, clinical results, eligibility, side effects, and 2026 costs.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

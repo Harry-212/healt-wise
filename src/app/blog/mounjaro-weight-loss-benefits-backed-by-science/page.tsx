@@ -4,7 +4,7 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/mounjaro-weight-loss-benefits-backed-by-science";
-const TITLE = "Mounjaro Weight Loss Benefits Backed by Science";
+const TITLE = "Mounjaro Weight Loss Benefits, Explained";
 const DESCRIPTION =
   "Unlock mounjaro weight loss benefits backed by science to help you shed stubborn pounds with confidence.";
 
@@ -93,7 +93,7 @@ export default function MounjaroWeightLossBenefitsArticlePage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Mounjaro Weight Loss Benefits Backed by Science"
+        pageName="Mounjaro Weight Loss Benefits, Explained"
         pagePath={PATH}
       />
 <script

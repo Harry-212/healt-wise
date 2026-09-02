@@ -31,7 +31,11 @@ function exerciseJsonLd() {
     description:
       "Weight loss exercise guide: role of movement, benefits, intensity targets, cardio vs resistance training, simple exercises, and how exercise fits with nutrition and medical weight loss options.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360" },
+    publisher: {
+      "@type": "Organization",
+      name: "Healthwise360",
+      logo: { "@type": "ImageObject", url: `${origin}/logo-health-wise.webp` },
+    },
     datePublished: "2026-04-14",
     dateModified: "2026-04-14",
     mainEntityOfPage: {

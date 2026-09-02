@@ -9,7 +9,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/saxenda-vs-mounjaro-vs-wegovy-price-uk";
 const TITLE =
-  "Saxenda vs Mounjaro vs Wegovy: Cheapest UK Option";
+  "Saxenda vs Mounjaro vs Wegovy: UK Prices";
 const DESCRIPTION =
   "Saxenda vs Mounjaro vs Wegovy price comparison UK. Full cost breakdown by dose and annual estimates for each treatment.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(SAXENDA_MOUNJARO_WEGOVY_PRICE_UK_HERO_PNG)}`;

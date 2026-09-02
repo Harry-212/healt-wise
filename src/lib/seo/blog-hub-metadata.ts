@@ -7,7 +7,7 @@ export const BLOG_HUB_DESCRIPTION =
 
 export function blogHubListingTitle(page?: number): string {
   if (!page || page <= 1) return BLOG_HUB_TITLE;
-  return `Weight Loss Injection News & Guides UK — Page ${page} | Healthwise360`;
+  return `Weight Loss News & Guides UK — Page ${page} | Healthwise360`;
 }
 
 export const BLOG_TOPIC_LABELS: Record<string, string> = {

@@ -18,7 +18,7 @@ import {
 } from "@/components/guide/GuideLayout";
 
 const GUIDE_PAGE_TITLE =
-  "Weight Loss Content Removed by Social Media: UK";
+  "Weight Loss Advice Removed by Social Media";
 
 export const metadata = buildGuideShareMetadata({
   slug: "glp1-content-removed-weight-loss-advice-uk",

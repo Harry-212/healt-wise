@@ -31,7 +31,11 @@ function dietJsonLd() {
     description:
       "Science-backed diet strategies for realistic, medically-informed weight loss without extreme restriction—balanced meals, calorie awareness, habits, and GLP-1 context.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360" },
+    publisher: {
+      "@type": "Organization",
+      name: "Healthwise360",
+      logo: { "@type": "ImageObject", url: `${origin}/logo-health-wise.webp` },
+    },
     datePublished: "2026-04-14",
     dateModified: "2026-04-14",
     mainEntityOfPage: {

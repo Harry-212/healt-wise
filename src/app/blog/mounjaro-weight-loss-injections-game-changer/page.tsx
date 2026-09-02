@@ -7,14 +7,14 @@ const PATH = '/blog/mounjaro-weight-loss-injections-game-changer';
 const HERO_IMAGE = `${siteOrigin()}/blog/Could%20Mounjaro%20Weight%20Loss%20Injections%20Be%20Your%20Game-Changer.webp`;
 
 export const metadata: Metadata = {
-  title: 'Could Mounjaro Be Your Weight Loss Game-Changer?',
+  title: 'Could Mounjaro Be Your Game-Changer?',
   description: 'Could mounjaro weight loss treatments be your breakthrough to finally conquer stubborn diet plateaus?',
   keywords: 'mounjaro weight loss treatments',
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: 'Could Mounjaro Be Your Weight Loss Game-Changer?',
+    title: 'Could Mounjaro Be Your Game-Changer?',
     description: 'Could mounjaro weight loss treatments be your breakthrough to finally conquer stubborn diet plateaus?',
     url: `${siteOrigin()}${PATH}`,
     type: 'article',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Could Mounjaro Be Your Weight Loss Game-Changer?',
+    title: 'Could Mounjaro Be Your Game-Changer?',
     description: 'Could mounjaro weight loss treatments be your breakthrough to finally conquer stubborn diet plateaus?',
     images: [HERO_IMAGE],
   },
@@ -38,7 +38,7 @@ export default function MounjaroInjectionsGameChangerPage() {
   const ARTICLE_SCHEMA = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Could Mounjaro Be Your Weight Loss Game-Changer?',
+    headline: 'Could Mounjaro Be Your Game-Changer?',
     description: 'An overview of Mounjaro (tirzepatide) treatments for weight management: mechanism, eligibility context, NHS vs private access, side effects, and realistic expectations—informational only, not medical advice.',
     image: [HERO_IMAGE],
     author: { '@type': 'Organization', name: 'Healthwise360 Research Team' },
@@ -111,7 +111,7 @@ export default function MounjaroInjectionsGameChangerPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Could Mounjaro Be Your Weight Loss Game-Changer?"
+        pageName="Could Mounjaro Be Your Game-Changer?"
         pagePath={PATH}
       />
 <script

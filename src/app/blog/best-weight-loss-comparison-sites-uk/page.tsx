@@ -9,7 +9,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/best-weight-loss-comparison-sites-uk";
 const TITLE =
-  "Best UK Weight Loss Comparison Sites: Reviewed";
+  "Best UK Weight Loss Comparison Sites";
 const DESCRIPTION =
   "We reviewed 6 UK weight loss comparison sites: Healthwise360, PenCompare, Click.Compare, MedEazy, Monj, WegoCompare. Which covers price, safety, GPhC & more?";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BEST_WEIGHT_LOSS_COMPARISON_SITES_UK_HERO_WEBP)}`;

@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-multivitamins-uk",
-  title: "Multivitamins and Mounjaro UK: Do You Need Them?",
+  title: "Do You Need Multivitamins on Mounjaro?",
   description: "Mounjaro reduces appetite and may lower nutrient intake. The evidence on multivitamins while using Mounjaro, cutting through influencer noise.",
-  openGraphTitle: "Multivitamins and Mounjaro UK: Do You Need Them?",
+  openGraphTitle: "Do You Need Multivitamins on Mounjaro?",
 });
 
 
@@ -112,7 +112,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Multivitamins and Mounjaro UK: Do You Need Them?",
+  headline: "Do You Need Multivitamins on Mounjaro?",
   description:
     "Mounjaro reduces appetite and may lower nutrient intake. The evidence on multivitamins while using Mounjaro, cutting through influencer noise.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

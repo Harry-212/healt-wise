@@ -135,6 +135,7 @@ const SCHEMA_JSON = {
           url: `${siteOrigin()}/logo-health-wise.webp`,
         },
       },
+      datePublished: "2026-04-09",
       dateModified: "2026-04-09",
       keywords:
         "Mounjaro, tirzepatide, UK prescription, online pharmacy, cold chain delivery, GLP-1",

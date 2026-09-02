@@ -7,7 +7,7 @@ const PATH = "/blog/discover-the-powerful-benefits-of-prescription-slimming-inje
 const HERO_IMAGE = `${siteOrigin()}/blog/Discover%20the%20Powerful%20Benefits%20of%20Prescription%20Slimming%20Injections%20UK.webp`;
 
 export const metadata: Metadata = {
-  title: "Benefits of Prescription Slimming Treatments UK",
+  title: "Prescription Slimming Treatments: Benefits",
   description:
     "Prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility and safety.",
   keywords:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "Benefits of Prescription Slimming Treatments UK",
+    title: "Prescription Slimming Treatments: Benefits",
     description:
       "Prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility and safety.",
     url: `${siteOrigin()}${PATH}`,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Benefits of Prescription Slimming Treatments UK",
+    title: "Prescription Slimming Treatments: Benefits",
     description:
       "Prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility and safety.",
     images: [HERO_IMAGE],
@@ -42,7 +42,7 @@ export default function PrescriptionSlimmingInjectionsUkPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Benefits of Prescription Slimming Treatments UK",
+    headline: "Prescription Slimming Treatments: Benefits",
     description:
       "UK prescription slimming injections (Wegovy, Mounjaro, Saxenda): mechanisms, eligibility, benefits, risks, NHS vs private — informational only, not medical advice.",
     image: [HERO_IMAGE],
@@ -116,7 +116,7 @@ export default function PrescriptionSlimmingInjectionsUkPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Benefits of Prescription Slimming Treatments UK"
+        pageName="Prescription Slimming Treatments: Benefits"
         pagePath={PATH}
       />
 <script

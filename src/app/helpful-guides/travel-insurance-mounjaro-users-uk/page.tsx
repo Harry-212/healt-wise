@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "travel-insurance-mounjaro-users-uk",
-  title: "Travel Insurance for Mounjaro Users: UK Guide",
+  title: "Travel Insurance for Mounjaro Users",
   description: "Travelling on Mounjaro is usually straightforward. What insurers ask, why you must declare tirzepatide, what cover to look for, and a pre-trip checklist.",
-  openGraphTitle: "Travel Insurance for Mounjaro Users: UK Guide",
+  openGraphTitle: "Travel Insurance for Mounjaro Users",
   openGraphDescription: "Travelling on Mounjaro is usually straightforward. What insurers ask, why disclosure matters, and what your policy should include.",
 });
 
@@ -108,7 +108,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Travel Insurance for Mounjaro Users: UK Guide",
+  headline: "Travel Insurance for Mounjaro Users",
   description:
     "Travelling on Mounjaro is usually straightforward. What insurers ask, why disclosure matters, and what your policy should include.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

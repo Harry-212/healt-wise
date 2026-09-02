@@ -31,7 +31,11 @@ function stressJsonLd() {
     description:
       "Science-aligned guide to stress and weight: cortisol, cravings, sleep, emotional eating, acute vs chronic stress, coping strategies, and how this fits with nutrition, exercise, and medical weight loss.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360" },
+    publisher: {
+      "@type": "Organization",
+      name: "Healthwise360",
+      logo: { "@type": "ImageObject", url: `${origin}/logo-health-wise.webp` },
+    },
     datePublished: "2026-04-14",
     dateModified: "2026-04-14",
     mainEntityOfPage: {

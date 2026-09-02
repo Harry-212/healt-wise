@@ -4,7 +4,7 @@ import { blogImgPath, BUY_WEIGHT_LOSS_PILLS_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/buy-weight-loss-pills-uk";
-const TITLE = "Buy Weight Loss Pills UK: Safe Options & Prices";
+const TITLE = "Buy Weight Loss Pills UK: Safe Options";
 const DESCRIPTION =
   "Buy weight loss pills UK safely. Compare orlistat, Mysimba, GLP-1 tablets, prices, risks and pharmacy checks.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BUY_WEIGHT_LOSS_PILLS_HERO_WEBP)}`;

@@ -9,7 +9,7 @@ const HERO_IMAGE = `${siteOrigin()}${blogWebpPath(MOUWEG_HERO_WEBP)}`;
 
 export const metadata: Metadata = {
   title:
-    "Mounjaro vs Wegovy: Key Differences Explained",
+    "Mounjaro vs Wegovy: Key Differences",
   description:
     "See how mounjaro vs wegovy: the key differences explained helps you choose your ideal UK weight loss shot.",
   keywords:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Mounjaro vs Wegovy: Key Differences Explained",
+      "Mounjaro vs Wegovy: Key Differences",
     description:
       "See how mounjaro vs wegovy: the key differences explained helps you choose your ideal UK weight loss shot.",
     url: `${siteOrigin()}${PATH}`,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Mounjaro vs Wegovy: Key Differences Explained",
+      "Mounjaro vs Wegovy: Key Differences",
     description:
       "See how mounjaro vs wegovy: the key differences explained helps you choose your ideal UK weight loss shot.",
     images: [HERO_IMAGE],
@@ -47,7 +47,7 @@ export default function MounjaroVsWegovyPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline:
-      "Mounjaro vs Wegovy: Key Differences Explained",
+      "Mounjaro vs Wegovy: Key Differences",
     description:
       "Tirzepatide (Mounjaro) vs semaglutide (Wegovy): mechanisms, trials, dosing, side effects, cost and UK access — informational only, not medical advice.",
     image: [HERO_IMAGE],
@@ -121,7 +121,7 @@ export default function MounjaroVsWegovyPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Mounjaro vs Wegovy: Key Differences Explained"
+        pageName="Mounjaro vs Wegovy: Key Differences"
         pagePath={PATH}
       />
 <script

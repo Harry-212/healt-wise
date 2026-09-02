@@ -11,7 +11,7 @@ import WeightManagementFaq, {
 } from "./WeightManagementFaq";
 
 const PATH = "/support-weight-management";
-const TITLE = "Support Weight Management | Complete Nutrition";
+const TITLE = "Support Weight Management | Nutrition";
 const DESCRIPTION =
   "Nutritionally complete meals that support sustainable weight management — from high-protein options to lower-calorie diet powder.";
 

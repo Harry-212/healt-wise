@@ -17,7 +17,7 @@ import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    `Contact ${SITE_BRAND_NAME} for general questions, data corrections, or editorial enquiries. ${siteBusinessAddressLine()}. Telephone: ${SITE_BUSINESS_PHONE_DISPLAY}.`,
+    `Contact ${SITE_BRAND_NAME} for questions, data corrections or editorial enquiries. ${siteBusinessAddressLine()}. Telephone: ${SITE_BUSINESS_PHONE_DISPLAY}.`,
   alternates: {
     canonical: `${siteOrigin()}/contact`,
   },

@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-gp-notification-uk",
-  title: "Do UK Pharmacies Inform Your GP About Mounjaro?",
+  title: "UK Pharmacies & GP Notification: Mounjaro",
   description: "UK pharmacies must notify your GP when dispensing Mounjaro. Why it happens, how the process works, and what it means for your medical records.",
-  openGraphTitle: "Do UK Pharmacies Inform Your GP About Mounjaro?",
+  openGraphTitle: "UK Pharmacies & GP Notification: Mounjaro",
 });
 
 
@@ -117,7 +117,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Do UK Pharmacies Inform Your GP About Mounjaro? (Complete Guide)",
+  headline: "UK Pharmacies & GP Notification: Mounjaro (Complete Guide)",
   description:
     "Yes—UK pharmacies are required to notify your GP when dispensing Mounjaro. Here's why it happens, how the process works, and what it means for your medical records.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

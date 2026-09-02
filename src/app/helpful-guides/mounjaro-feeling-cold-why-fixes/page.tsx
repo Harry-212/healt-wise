@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-feeling-cold-why-fixes",
-  title: "Why Do You Feel Cold on Mounjaro? Causes & Fixes",
+  title: "Why Do You Feel Cold on Mounjaro?",
   description: "Feeling cold on Mounjaro is common. The physiological causes—reduced calorie intake, fat loss and metabolic shifts—and what you can do about it.",
-  openGraphTitle: "Why Do You Feel Cold on Mounjaro? Causes & Fixes",
+  openGraphTitle: "Why Do You Feel Cold on Mounjaro?",
   openGraphDescription: "Unusual cold sensitivity is a commonly reported experience on Mounjaro. Here's the physiological explanation and what you can do about it.",
 });
 
@@ -119,7 +119,7 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Why Do You Feel Cold on Mounjaro? Causes & Fixes",
+  headline: "Why Do You Feel Cold on Mounjaro?",
   description:
     "Unusual cold sensitivity is a commonly reported experience on Mounjaro. Here's the physiological explanation and what you can do about it.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },

@@ -19,9 +19,9 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "kwikpen-disposal-recycling-uk",
-  title: "KwikPen Disposal & Recycling UK: Sharps Guide",
+  title: "KwikPen Disposal & Recycling UK",
   description: "How to dispose of Mounjaro KwikPens safely in the UK: sharps bins, general waste rules, returning unused medicine, and why recycling is not suitable.",
-  openGraphTitle: "KwikPen Disposal & Recycling UK: Sharps Guide",
+  openGraphTitle: "KwikPen Disposal & Recycling UK",
   openGraphDescription: "How to dispose of used Mounjaro KwikPens and needles safely in the UK—sharps bins, general waste rules, and returning unused medicine.",
 });
 

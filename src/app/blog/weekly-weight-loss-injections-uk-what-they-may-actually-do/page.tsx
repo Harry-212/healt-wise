@@ -8,7 +8,7 @@ const PATH = "/blog/weekly-weight-loss-injections-uk-what-they-may-actually-do";
 const HERO_IMAGE = WEEKLY_INJECTIONS_HERO_URL;
 
 export const metadata: Metadata = {
-  title: "Weekly Weight Loss Treatments UK: What They Do",
+  title: "Weekly Weight Loss Treatments UK",
   description:
     "Weekly weight loss treatments in the UK explained: how Wegovy and Mounjaro may affect appetite and access routes.",
   keywords: "weekly weight loss treatments UK",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "Weekly Weight Loss Treatments UK: What They Do",
+    title: "Weekly Weight Loss Treatments UK",
     description:
       "Weekly weight loss treatments in the UK explained: how Wegovy and Mounjaro may affect appetite and access routes.",
     url: `${siteOrigin()}${PATH}`,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Weekly Weight Loss Treatments UK: What They Do",
+    title: "Weekly Weight Loss Treatments UK",
     description:
       "Weekly weight loss treatments in the UK explained: how Wegovy and Mounjaro may affect appetite and access routes.",
     images: [HERO_IMAGE],
@@ -42,7 +42,7 @@ export default function WeeklyWeightLossInjectionsUkPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Weekly Weight Loss Treatments UK: What They Do",
+    headline: "Weekly Weight Loss Treatments UK",
     description:
       "A realistic guide to weekly weight loss treatments in the UK (GLP-1 medicines): what Wegovy and Mounjaro may do, access routes, side effects, and long-term expectations — informational only, not medical advice.",
     image: [HERO_IMAGE],
@@ -116,7 +116,7 @@ export default function WeeklyWeightLossInjectionsUkPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Weekly Weight Loss Treatments UK: What They Do"
+        pageName="Weekly Weight Loss Treatments UK"
         pagePath={PATH}
       />
 <script

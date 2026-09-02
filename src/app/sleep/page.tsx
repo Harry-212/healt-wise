@@ -31,7 +31,11 @@ function sleepJsonLd() {
     description:
       "Science-aligned guide to sleep and weight loss: appetite hormones, cravings, metabolism, practical sleep tips, and integration with nutrition, exercise, stress management, and medical weight loss.",
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360" },
+    publisher: {
+      "@type": "Organization",
+      name: "Healthwise360",
+      logo: { "@type": "ImageObject", url: `${origin}/logo-health-wise.webp` },
+    },
     datePublished: "2026-04-14",
     dateModified: "2026-04-14",
     mainEntityOfPage: {
