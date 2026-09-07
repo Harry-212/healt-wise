@@ -5,7 +5,13 @@ import { motion } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import type { CompareFaqItem } from "@/lib/routes/compare-faqs";
 
-export default function CompareFaqSection({ items }: { items: CompareFaqItem[] }) {
+export default function CompareFaqSection({
+  items,
+  subtitle = "Quick answers about how this comparison matrix works. This is not medical advice; always follow your prescriber and official patient information.",
+}: {
+  items: CompareFaqItem[];
+  subtitle?: string;
+}) {
   const [open, setOpen] = useState<number | null>(0);
 
   if (!items.length) return null;
@@ -30,9 +36,7 @@ export default function CompareFaqSection({ items }: { items: CompareFaqItem[] }
               Frequently Asked Questions
             </h2>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-600 md:text-base">
-              Quick answers about how this comparison matrix works. This is not
-              medical advice; always follow your prescriber and official patient
-              information.
+              {subtitle}
             </p>
           </div>
         </div>

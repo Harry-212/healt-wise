@@ -34,6 +34,7 @@ const EXCLUDED_SITEMAP_PATHS = new Set<string>([
 const STATIC_PATHS = [
   "/",
   "/about",
+  "/best-weight-loss-treatment-comparison-london",
   "/blog",
   "/contact",
   "/diet",
@@ -84,6 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/wegovy-price-comparison",
     "/mounjaro-price-comparison",
     "/saxenda-price-comparison",
+    "/best-weight-loss-treatment-comparison-london",
     "/blog",
     HELPFUL_GUIDES_HUB_PATH,
   ]);

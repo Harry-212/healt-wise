@@ -1,8 +1,19 @@
 /** Primary site logo (`public/logo-health-wise.webp`). */
 export const SITE_LOGO_SRC = "/logo-health-wise.webp";
 
-/** Homepage hero lifestyle photo (`public/comparing_weight_loss.jpeg`). */
-export const HOMEPAGE_HERO_LIFESTYLE_SRC = "/comparing_weight_loss.jpeg";
+/**
+ * Default social share card (`public/og-image.png`), sized 1200x630 per the
+ * Open Graph / Twitter card spec so links preview with an image instead of a
+ * blank grey box.
+ */
+export const SITE_SHARE_IMAGE_SRC = "/og-image.png";
+export const SITE_SHARE_IMAGE_WIDTH = 1200;
+export const SITE_SHARE_IMAGE_HEIGHT = 630;
+export const SITE_SHARE_IMAGE_ALT =
+  "Healthwise360 — Weight Loss Treatments UK, compare treatments and options";
+
+/** Homepage hero lifestyle photo (`public/comparing_weight_loss.webp`). */
+export const HOMEPAGE_HERO_LIFESTYLE_SRC = "/comparing_weight_loss.webp";
 export const HOMEPAGE_HERO_LIFESTYLE_ALT =
   "Couple discussing weight loss treatments";
 

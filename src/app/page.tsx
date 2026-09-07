@@ -5,6 +5,15 @@ import { Stethoscope } from "lucide-react";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { homePageJsonLdGraph } from "@/lib/seo/home-json-ld";
 import HeroNumanStyle from "@/components/ui/HeroNumanStyle";
+import CompareFaqSection from "@/components/compare/CompareFaqSection";
+import { compareFaqPageJsonLd } from "@/lib/routes/compare-faqs";
+import { HOME_PAGE_FAQS } from "@/lib/routes/home-faqs";
+import {
+  SITE_SHARE_IMAGE_ALT,
+  SITE_SHARE_IMAGE_HEIGHT,
+  SITE_SHARE_IMAGE_SRC,
+  SITE_SHARE_IMAGE_WIDTH,
+} from "@/lib/site-assets";
 
 /** Below-the-fold client sections (framer-motion / heavy UI) load in separate chunks for faster TTI. */
 const AboutSection2 = dynamic(() => import("@/components/ui/about-section-2"));
@@ -29,16 +38,27 @@ export const metadata: Metadata = {
     description:
       "Compare Mounjaro, Wegovy and Saxenda prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
     url: `${siteOrigin()}/`,
+    images: [
+      {
+        url: SITE_SHARE_IMAGE_SRC,
+        width: SITE_SHARE_IMAGE_WIDTH,
+        height: SITE_SHARE_IMAGE_HEIGHT,
+        alt: SITE_SHARE_IMAGE_ALT,
+      },
+    ],
   },
   twitter: {
+    card: "summary_large_image",
     title: "Compare Weight Loss Treatment Prices UK | Healthwise360",
     description:
       "Compare Mounjaro, Wegovy and Saxenda prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
+    images: [SITE_SHARE_IMAGE_SRC],
   },
 };
 
 export default function Homepage() {
   const homeLd = homePageJsonLdGraph();
+  const faqLd = compareFaqPageJsonLd(HOME_PAGE_FAQS);
 
   return (
     <div className="flex flex-col pb-6">
@@ -46,6 +66,11 @@ export default function Homepage() {
         type="application/ld+json"
         className="hw-homepage-schema"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeLd) }}
+      />
+      <script
+        type="application/ld+json"
+        className="hw-homepage-faq-schema"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
       <HeroNumanStyle />
       <div className="flex flex-col gap-0 pt-0">
@@ -106,6 +131,11 @@ export default function Homepage() {
             </div>
           </div>
         </section>
+
+        <CompareFaqSection
+          items={HOME_PAGE_FAQS}
+          subtitle="Quick answers about Healthwise360 and how our comparisons work. This is not medical advice; always follow your prescriber and official patient information."
+        />
       </div>
     </div>
   );

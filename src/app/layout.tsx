@@ -8,7 +8,13 @@ import SiteEndSection from "@/components/layout/SiteEndSection";
 import { SupabaseAuthProvider } from "@/components/providers/SupabaseAuthProvider";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
-import { SITE_FAVICON_SRC, SITE_LOGO_SRC } from "@/lib/site-assets";
+import {
+  SITE_FAVICON_SRC,
+  SITE_SHARE_IMAGE_ALT,
+  SITE_SHARE_IMAGE_HEIGHT,
+  SITE_SHARE_IMAGE_SRC,
+  SITE_SHARE_IMAGE_WIDTH,
+} from "@/lib/site-assets";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
 
@@ -34,7 +40,18 @@ export const metadata: Metadata = {
     type: "website",
     siteName: SITE_BRAND_NAME,
     locale: "en_GB",
-    images: [{ url: SITE_LOGO_SRC, alt: SITE_BRAND_NAME }],
+    images: [
+      {
+        url: SITE_SHARE_IMAGE_SRC,
+        width: SITE_SHARE_IMAGE_WIDTH,
+        height: SITE_SHARE_IMAGE_HEIGHT,
+        alt: SITE_SHARE_IMAGE_ALT,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [SITE_SHARE_IMAGE_SRC],
   },
   icons: {
     icon: [{ url: SITE_FAVICON_SRC, type: "image/png" }],
