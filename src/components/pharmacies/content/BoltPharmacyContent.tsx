@@ -160,6 +160,7 @@ export default function BoltPharmacyContent() {
                   href={providerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-pharmacy="Bolt Pharmacy"
                   className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} gap-2`}
                 >
                   Visit Bolt Pharmacy
@@ -596,6 +597,7 @@ export default function BoltPharmacyContent() {
                 href={providerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-pharmacy="Bolt Pharmacy"
                 className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} inline-flex gap-2`}
               >
                 Visit Bolt Pharmacy

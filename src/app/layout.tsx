@@ -17,6 +17,7 @@ import {
 } from "@/lib/site-assets";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
+import { OutboundClickTracker } from "@/components/analytics/OutboundClickTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -88,6 +89,7 @@ export default function RootLayout({
           <Footer />
         </SupabaseAuthProvider>
         <GoogleAnalytics />
+        <OutboundClickTracker />
         <MicrosoftClarity />
       </body>
     </html>

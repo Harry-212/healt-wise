@@ -149,6 +149,7 @@ export default function ProviderCard({ provider }: ProviderCardProps) {
             href={provider.affiliateUrl ?? "#"}
             target="_blank"
             rel="noopener noreferrer"
+            data-pharmacy={provider.name}
             className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand-cta px-6 py-2.5 font-semibold text-slate-900 transition-colors hover:brightness-95 sm:ml-auto sm:w-auto"
           >
             Visit pharmacy <ExternalLink className="h-4 w-4" />
