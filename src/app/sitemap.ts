@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllBlogSitemapSlugs } from "@/lib/blog";
+import { getAllBlogSitemapSlugs, getAllPostsMeta, totalPages } from "@/lib/blog";
 import { COMPARE_SLUGS } from "@/lib/routes/compare-slugs";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
@@ -11,7 +11,12 @@ import {
   helpfulGuidePath,
   helpfulGuidesCategoryHubPath,
 } from "@/lib/helpful-guide-slugs";
-import { BLOG_FEED_TAGS, blogTopicHubPath } from "@/lib/blog-feed";
+import {
+  BLOG_FEED_TAGS,
+  POSTS_PER_PAGE,
+  blogPagePath,
+  blogTopicHubPath,
+} from "@/lib/blog-feed";
 
 const EXCLUDED_SITEMAP_PATHS = new Set<string>([
   "/$",
@@ -125,6 +130,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     push(`/blog/${slug}`, 0.65);
   }
 
+  /** Paginated blog listing pages (page 1 is already covered by the hub paths above). */
+  const allPosts = getAllPostsMeta();
+  const allPostsPages = totalPages(allPosts.length, POSTS_PER_PAGE);
+  for (let page = 2; page <= allPostsPages; page++) {
+    push(blogPagePath(page), 0.5);
+  }
+  for (const topic of BLOG_FEED_TAGS) {
+    const topicCount = allPosts.filter((p) =>
+      p.feedTags?.includes(topic),
+    ).length;
+    const topicPages = totalPages(topicCount, POSTS_PER_PAGE);
+    for (let page = 2; page <= topicPages; page++) {
+      push(blogPagePath(page, topic), 0.5);
+    }
+  }
 
   return entries;
 }

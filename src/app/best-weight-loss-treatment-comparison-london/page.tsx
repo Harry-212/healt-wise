@@ -148,7 +148,7 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
                 NHS pathways, local clinics, and broader context specific to
                 London, see our{" "}
                 <Link
-                  href="/blog/london"
+                  href="/blog/weight-loss-treatment-london"
                   className="font-semibold text-brand-primary underline-offset-2 hover:underline"
                 >
                   weight loss treatment in London guide

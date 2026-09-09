@@ -225,6 +225,18 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                    href="/best-weight-loss-treatment-comparison-london"
+                    className={FOOTER_NAV_LINK}
+                  >
+                    <span>London Treatment Comparison</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/tools/bmi-calculator"
                     className={FOOTER_NAV_LINK}
                   >
