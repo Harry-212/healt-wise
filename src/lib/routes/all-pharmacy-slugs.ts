@@ -2,7 +2,15 @@ import { MOUNJARO_UK_COMPARE_PROVIDERS } from "@/lib/data/mounjaro-uk-compare-pr
 import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-providers";
 import { WEGOVY_UK_COMPARE_PROVIDERS } from "@/lib/data/wegovy-uk-compare-providers";
 
-/** Slugs with custom landing pages not (yet) in compare tables — keep in sync with `/pharmacies/[slug]`. */
+/**
+ * Slugs with custom landing pages not (yet) in compare tables — keep in sync with `/pharmacies/[slug]`.
+ *
+ * Excludes "get-weight-loss", "getadrip", and "pharmacy-xpress": these are alternate
+ * spellings of "getweightloss", "get-a-drip", and "pharmacy-express" (which already have
+ * compare-table entries). Duplicating the same review under two slugs produced identical
+ * titles/descriptions and an unlinked twin page, so those three now 308-redirect to their
+ * canonical slug in `/pharmacies/[slug]` instead of being statically generated here.
+ */
 export const EXTRA_PHARMACY_LANDING_SLUGS: readonly string[] = [
   "ayp-healthcare",
   "bolt-pharmacy",
@@ -11,13 +19,10 @@ export const EXTRA_PHARMACY_LANDING_SLUGS: readonly string[] = [
   "farmeci",
   "fylde-clinic",
   "genmeds",
-  "get-weight-loss",
-  "getadrip",
   "goodbody-clinic",
   "happy-pharmacy",
   "hey-slim",
   "medicspot",
-  "pharmacy-xpress",
   "quickmeds",
 ];
 

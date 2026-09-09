@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import AsdaOnlineDoctorContent from "@/components/pharmacies/content/AsdaOnlineDoctorContent";
@@ -443,19 +443,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
   }
 
   if (slug === "get-weight-loss") {
-    return (
-      <>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              getWeightLossPharmacyLandingJsonGraph("get-weight-loss"),
-            ),
-          }}
-        />
-        <GetWeightLossPharmacyContent />
-      </>
-    );
+    permanentRedirect("/pharmacies/getweightloss");
   }
 
   if (slug === "getweightloss") {
@@ -489,17 +477,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
   }
 
   if (slug === "getadrip") {
-    return (
-      <>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getADripPharmacyLandingJsonGraph("getadrip")),
-          }}
-        />
-        <GetADripPharmacyContent />
-      </>
-    );
+    permanentRedirect("/pharmacies/get-a-drip");
   }
 
   if (slug === "goodbody-clinic") {
@@ -853,19 +831,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
   }
 
   if (slug === "pharmacy-xpress") {
-    return (
-      <>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              pharmacyXpressPharmacyLandingJsonGraph("pharmacy-xpress"),
-            ),
-          }}
-        />
-        <PharmacyXpressPharmacyContent routeSlug="pharmacy-xpress" />
-      </>
-    );
+    permanentRedirect("/pharmacies/pharmacy-express");
   }
 
   if (slug === "pharmacy2u") {

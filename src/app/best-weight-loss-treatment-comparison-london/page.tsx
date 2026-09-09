@@ -30,7 +30,7 @@ export const revalidate = 0;
 const PAGE_TITLE = "Best Weight Loss Treatment Comparison London";
 const PAGE_META_TITLE = `${PAGE_TITLE} | Healthwise360`;
 const PAGE_META_DESCRIPTION =
-  "Independent comparison of Mounjaro, Wegovy and Saxenda prices from GPhC-registered UK pharmacies serving London. Compare doses, delivery, and total monthly cost.";
+  "Compare Mounjaro, Wegovy and Saxenda prices from GPhC-registered UK pharmacies serving London. Compare doses, delivery, and total monthly cost.";
 const PAGE_PATH = "/best-weight-loss-treatment-comparison-london";
 
 export const metadata: Metadata = {

@@ -8,7 +8,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const TITLE = "All UK Weight Loss Pharmacies | Healthwise360";
 const DESCRIPTION =
-  "Every UK online pharmacy and clinic reviewed by Healthwise360: GPhC-registered providers of Mounjaro, Wegovy and Saxenda, with independent pricing and safety reviews.";
+  "Every UK pharmacy reviewed by Healthwise360: GPhC-registered providers of Mounjaro, Wegovy and Saxenda, with independent pricing and safety reviews.";
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
