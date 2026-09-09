@@ -45,6 +45,7 @@ const STATIC_PATHS = [
   "/methodology",
   "/mounjaro-faq",
   "/mounjaro-price-comparison",
+  "/pharmacies",
   "/pharmacy-safety-gphc-verification",
   "/privacy-policy",
   "/protein-and-fitness",
@@ -87,6 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/saxenda-price-comparison",
     "/best-weight-loss-treatment-comparison-london",
     "/blog",
+    "/pharmacies",
     HELPFUL_GUIDES_HUB_PATH,
   ]);
 
