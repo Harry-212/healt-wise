@@ -237,6 +237,18 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                    href="/compare/wegovy-vs-saxenda"
+                    className={FOOTER_NAV_LINK}
+                  >
+                    <span>Wegovy vs Saxenda</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/tools/bmi-calculator"
                     className={FOOTER_NAV_LINK}
                   >
