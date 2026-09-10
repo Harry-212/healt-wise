@@ -298,6 +298,15 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="/editorial-team" className={FOOTER_NAV_LINK}>
+                    <span>Editorial Team</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
+                <li>
                   <Link href="/helpful-guides" className={FOOTER_NAV_LINK}>
                     <span>Helpful Health Guides</span>
                     <ChevronRight

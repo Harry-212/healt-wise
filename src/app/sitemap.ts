@@ -45,6 +45,7 @@ const STATIC_PATHS = [
   "/diet",
   "/eat-healthier",
   "/editorial-policy",
+  "/editorial-team",
   "/exercise",
   HELPFUL_GUIDES_HUB_PATH,
   "/methodology",

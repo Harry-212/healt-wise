@@ -43,6 +43,7 @@ export type LegalSection = {
   title: string;
   paragraphs: string[];
   bullets?: string[];
+  links?: { label: string; href: string }[];
 };
 
 export type LegalScrollyProps = {
@@ -134,6 +135,19 @@ export default function LegalScrollyClient({
                     <li key={`${sec.title}-b-${bi}`}>{b}</li>
                   ))}
                 </ul>
+              ) : null}
+              {sec.links && sec.links.length > 0 ? (
+                <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+                  {sec.links.map((l) => (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      className="text-sm font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+                    >
+                      {l.label} →
+                    </Link>
+                  ))}
+                </div>
               ) : null}
             </RevealBlock>
           ))}
