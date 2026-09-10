@@ -50,6 +50,14 @@ export default function EditorialPolicyPage() {
           ],
         },
         {
+          kicker: "Authorship",
+          title: "Who writes this",
+          paragraphs: [
+            "Content on Healthwise360 is written and maintained by the Healthwise360 Research Team, following the sourcing, accuracy, and correction process set out on this page before anything publishes.",
+            "We do not attach a named clinician's sign-off to a page unless a healthcare professional has actually reviewed it. Where that review exists, we state the reviewer's name and the date next to the relevant article. A page with no such line has been researched and edited against the public sources described below — it has not been reviewed by a named clinician, and we would rather say so than display a badge that means nothing.",
+          ],
+        },
+        {
           kicker: "Accuracy",
           title: "How we aim to keep content reliable",
           paragraphs: [
