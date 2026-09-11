@@ -2433,7 +2433,7 @@ export function locationArticleJsonLd(opts: {
       name: SITE_BRAND_NAME,
       logo: {
         "@type": "ImageObject",
-        url: "https://healthwise360.co.uk/logo-health-wise.webp",
+        url: "https://www.healthwise360.co.uk/logo-health-wise.webp",
       },
     },
     datePublished: "2026-04-09",

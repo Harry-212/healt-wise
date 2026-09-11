@@ -2,6 +2,15 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
+const APEX_HOST = "healthwise360.co.uk";
+
+/**
+ * Both public hostnames, so whichever one is not canonical always gets
+ * redirected. Matching only the apex left `www` serving 200 as a silent
+ * duplicate whenever the canonical origin resolved to the apex.
+ */
+const PUBLIC_HOSTS = new Set([APEX_HOST, `www.${APEX_HOST}`]);
+
 /**
  * One hop to the canonical origin (HTTPS + hostname from `siteOrigin()`),
  * only for the production healthwise360.co.uk hostnames. Skips localhost
@@ -29,8 +38,7 @@ export function canonicalHostRedirect(request: NextRequest): NextResponse | null
     canonicalHost = "www.healthwise360.co.uk";
   }
 
-  const apex = "healthwise360.co.uk";
-  if (host !== apex && host !== canonicalHost) return null;
+  if (!PUBLIC_HOSTS.has(host)) return null;
 
   const forwarded = request.headers.get("x-forwarded-proto");
   const scheme = (forwarded ?? request.nextUrl.protocol.replace(":", "")).toLowerCase();
