@@ -159,7 +159,7 @@ const SCHEMA = {
   ],
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-weight-loss-treatment-uk")}`,
+    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-weight-loss-injection-uk")}`,
   },
 };
 

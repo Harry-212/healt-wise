@@ -37,8 +37,6 @@ export default function BmiCalculatorPage() {
   return (
     <>
       <BreadcrumbJsonLd
-        sectionName="Tools"
-        sectionPath="/tools"
         pageName="BMI Calculator UK"
         pagePath="/tools/bmi-calculator"
       />

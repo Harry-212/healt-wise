@@ -21,8 +21,6 @@ export default function MounjaroClickCalculatorPage() {
   return (
     <>
       <BreadcrumbJsonLd
-        sectionName="Tools"
-        sectionPath="/tools"
         pageName="Mounjaro Click Calculator"
         pagePath="/tools/mounjaro-click-calculator"
       />

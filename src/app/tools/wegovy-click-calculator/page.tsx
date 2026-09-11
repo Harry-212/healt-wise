@@ -19,8 +19,6 @@ export default function WegovyClickCalculatorPage() {
   return (
     <>
       <BreadcrumbJsonLd
-        sectionName="Tools"
-        sectionPath="/tools"
         pageName="Wegovy Click Calculator"
         pagePath="/tools/wegovy-click-calculator"
       />

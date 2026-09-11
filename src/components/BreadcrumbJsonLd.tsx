@@ -1,8 +1,8 @@
 import { pageBreadcrumbJsonLd } from "@/lib/seo/breadcrumb-json-ld";
 
 type Props = {
-  sectionName: string;
-  sectionPath: string;
+  sectionName?: string;
+  sectionPath?: string;
   pageName: string;
   pagePath: string;
 };

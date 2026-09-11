@@ -41,16 +41,23 @@ export function breadcrumbListJsonLd(
 }
 
 export function pageBreadcrumbJsonLd(opts: {
-  sectionName: string;
-  sectionPath: string;
+  sectionName?: string;
+  sectionPath?: string;
   pageName: string;
   pagePath: string;
   id?: string;
   includeContext?: boolean;
 }): Record<string, unknown> {
+  /** Pages with no real section hub emit Home › Page — declaring a section
+   *  URL that 404s makes the whole BreadcrumbList invalid. */
+  const section =
+    opts.sectionName && opts.sectionPath
+      ? [{ name: opts.sectionName, item: opts.sectionPath }]
+      : [];
+
   return breadcrumbListJsonLd([
     { name: "Home", item: "/" },
-    { name: opts.sectionName, item: opts.sectionPath },
+    ...section,
     { name: opts.pageName, item: opts.pagePath },
   ], { id: opts.id, includeContext: opts.includeContext });
 }
