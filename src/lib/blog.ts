@@ -315,11 +315,11 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "weight-loss-treatment-price-comparison-uk",
     title:
-      "Weight Loss Treatment Price Comparison UK 2026: Mounjaro and Wegovy",
+      "Weight Loss Treatment Price Comparison UK 2026: Mounjaro, Wegovy & Saxenda",
     date: "2026-05-27",
     category: "Prices",
     description:
-      "Compare weight loss treatment prices in the UK 2026 covering Mounjaro, Wegovy and Saxenda. Cost per dose, monthly estimates and what to check before you start.",
+      "Compare UK weight loss treatment prices in 2026. See Mounjaro, Wegovy and Saxenda costs by dose, plus consultation, delivery and ongoing fees.",
     heroImage: "/blog/weight-loss-treatment-price-comparison-uk.png",
     feedTags: ["wegovy", "mounjaro", "safety"],
   },

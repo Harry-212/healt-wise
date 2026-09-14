@@ -7,22 +7,24 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 const PATH = "/blog/weight-loss-treatment-price-comparison-uk";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(PRICE_COMPARISON_HERO_PNG)}`;
 
+const META_DESCRIPTION =
+  "Compare UK weight loss treatment prices in 2026. See Mounjaro, Wegovy and Saxenda costs by dose, plus consultation, delivery and ongoing fees.";
+
 export const metadata: Metadata = {
-  title: "Weight Loss Treatment Price Comparison UK",
-  description:
-    "Compare weight loss treatment prices in the UK 2026 covering Mounjaro, Wegovy and Saxenda. Cost per dose, monthly estimates and what to check before you start.",
+  title: "Weight Loss Treatment Price Comparison UK 2026 | Costs",
+  description: META_DESCRIPTION,
   keywords:
     "weight loss treatment price, weight loss treatment price cost compare, weight loss treatment UK, fat loss treatment cost UK, mounjaro price UK, wegovy price UK",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: "Weight Loss Treatment Price Comparison UK",
-    description:
-      "Compare weight loss treatment prices in the UK 2026 covering Mounjaro, Wegovy and Saxenda. Cost per dose, monthly estimates and what to check before you start.",
+    title: "Weight Loss Treatment Price Comparison UK 2026 | Costs",
+    description: META_DESCRIPTION,
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-05-27T00:00:00.000Z",
+    modifiedTime: "2026-09-13T00:00:00.000Z",
     images: [
       {
         url: HERO_IMAGE,
@@ -32,9 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Weight Loss Treatment Price Comparison UK",
-    description:
-      "Compare weight loss treatment prices in the UK 2026 covering Mounjaro, Wegovy and Saxenda. Cost per dose, monthly estimates and what to check before you start.",
+    title: "Weight Loss Treatment Price Comparison UK 2026 | Costs",
+    description: META_DESCRIPTION,
     images: [HERO_IMAGE],
   },
 };
@@ -43,13 +44,14 @@ export default function WeightLossTreatmentPriceComparisonPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Weight Loss Treatment Price Comparison UK",
+    headline: "Weight Loss Treatment Price Comparison UK 2026: Mounjaro, Wegovy & Saxenda",
     description:
-      "Compare weight loss treatment prices in the UK 2026 covering Mounjaro, Wegovy and Saxenda. Cost per dose, monthly estimates and what to check before you start.",
+      "Compare UK weight loss treatment prices in 2026. See Mounjaro, Wegovy and Saxenda costs by dose, plus consultation, delivery and ongoing fees.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
     publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-05-27",
+    dateModified: "2026-09-13",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${siteOrigin()}${PATH}`,
@@ -65,55 +67,63 @@ export default function WeightLossTreatmentPriceComparisonPage() {
         name: "What is the cheapest weight loss treatment in the UK?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Based on independent monitoring, Mounjaro 2.5 mg (starter dose) from some GPhC-registered pharmacies begins from around £130 per pen. Wegovy starter doses follow a similar range. Saxenda pricing is structured differently due to its daily dosing. However, 'cheapest' at the starter stage may not reflect the most cost-effective option over the full treatment course, as dose escalation significantly affects monthly costs.",
+          text: "There is no single cheapest option in every situation. Starter doses of some private treatments can begin at around £130, but introductory pricing does not necessarily represent the cost later in treatment. The most meaningful comparison is usually the price of the treatment and dose you have actually been prescribed across several providers.",
         },
       },
       {
         "@type": "Question",
-        name: "Is Wegovy cheaper than Mounjaro in the UK?",
+        name: "How much does Mounjaro cost per month in the UK?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "At lower doses, both treatments are priced within a similar range. The difference becomes more apparent at higher doses: Mounjaro at 12.5 mg to 15 mg tends to cost more per pen than Wegovy at its 2.4 mg maintenance dose across most providers. However, this varies and should be checked against live pharmacy pricing.",
+          text: "Private Mounjaro prices can range from roughly £130 at lower doses to £340 or more at higher doses, depending on the provider. Prices frequently change, so check current provider-level data before purchasing.",
         },
       },
       {
         "@type": "Question",
-        name: "Can I get weight loss treatment free on the NHS?",
+        name: "How much does Wegovy cost privately in the UK?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Wegovy is now available through a limited NHS specialist weight management pathway. Mounjaro has received NICE approval and is in the process of being rolled out through NHS commissioning. However, access remains constrained by local availability and eligibility criteria. Most people in the UK currently access these treatments privately due to NHS capacity limitations.",
+          text: "Typical private prices for the commonly prescribed Wegovy dose range can run from approximately £130 to £295+, depending on dose and provider. Additional charges can increase the overall monthly cost.",
         },
       },
       {
         "@type": "Question",
-        name: "Are there additional costs beyond the medication price?",
+        name: "Is Wegovy cheaper than Mounjaro?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Consultation fees, delivery charges, and in some cases ongoing monitoring or programme fees are commonly charged separately. These can add a meaningful amount to the total monthly cost. Reviewing the full pricing structure of a provider, and not just the pen price, is strongly recommended before committing.",
+          text: "It can be at some dose levels and with some providers, particularly when comparing higher Mounjaro doses. However, neither treatment is universally cheaper — provider prices and promotions change, so compare the specific doses relevant to you.",
         },
       },
       {
         "@type": "Question",
-        name: "How do I know if an online pharmacy is safe and legitimate?",
+        name: "Do weight loss treatment prices increase when the dose increases?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Check that the pharmacy holds a valid GPhC registration number, which can be verified on the official GPhC register. Our platform only lists pharmacies that have been verified against this standard, and also include Trustpilot ratings to support further due diligence.",
+          text: "Often, yes. Higher-strength Mounjaro and Wegovy doses can cost substantially more than starter doses. This is why comparing only the first month's price can give an unrealistic idea of longer-term costs.",
         },
       },
       {
         "@type": "Question",
-        name: "Will treatment costs increase as my dose goes up?",
+        name: "Are there costs in addition to the medication?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. All three GLP-1 treatments use a titration model in which the dose is gradually increased over several months. Because higher-strength pens carry higher prices, your monthly cost will typically rise as you move through the titration schedule. Planning for this cost progression from the outset is an important part of budgeting for treatment.",
+          text: "There can be. Depending on the provider, additional costs may include consultations, delivery, subscriptions, clinical monitoring and other programme charges. Check the complete pricing structure before committing to treatment.",
         },
       },
       {
         "@type": "Question",
-        name: "Where can I compare prices from multiple pharmacies in one place?",
+        name: "How do I check whether an online pharmacy is legitimate?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Our interactive weight loss treatment comparison hub is an independent UK platform that displays live-updated prices from over 60 GPhC-registered pharmacies in a single interactive table. This covers Mounjaro, Wegovy, and Saxenda across all dose strengths, with no preference shown to any provider.",
+          text: "Check the details of the pharmacy supplying your medicine and confirm its registration through the General Pharmaceutical Council register. Do not rely only on branding or an online review score — you should also expect an appropriate clinical assessment before prescription-only weight-management medicine is supplied.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Where can I compare weight loss treatment prices from different UK providers?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Healthwise360 maintains an interactive comparison matrix covering more than 60 UK weight-management providers. You can filter and compare provider prices at individual dose levels and review corresponding pharmacy and provider information.",
         },
       },
     ],

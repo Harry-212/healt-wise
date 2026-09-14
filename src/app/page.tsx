@@ -17,7 +17,6 @@ import {
 
 /** Below-the-fold client sections (framer-motion / heavy UI) load in separate chunks for faster TTI. */
 const AboutSection2 = dynamic(() => import("@/components/ui/about-section-2"));
-const FoodToFuel = dynamic(() => import("@/components/ui/FoodToFuel"));
 const OurServices = dynamic(() => import("@/components/ui/OurServices"));
 const OurMethodology = dynamic(() => import("@/components/ui/OurMethodology"));
 const WhyChooseHealthWise = dynamic(
@@ -75,11 +74,6 @@ export default function Homepage() {
       <HeroNumanStyle />
       <div className="flex flex-col gap-0 pt-0">
         <AboutSection2 />
-
-        {/* Food to fuel your goals */}
-        <section id="food-to-fuel" className="w-full scroll-mt-4">
-          <FoodToFuel />
-        </section>
 
         {/* Our Services */}
         <section id="our-services" className="w-full scroll-mt-4">

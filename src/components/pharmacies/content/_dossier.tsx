@@ -12,6 +12,10 @@ import { SITE_BRAND_NAME } from "@/lib/site-brand";
 export const PHARMACY_PROVIDER_CTA_CLASSNAME =
   "inline-flex w-full items-center justify-center rounded-md bg-gradient-to-b from-emerald-700 to-emerald-800 px-5 py-3.5 text-sm font-bold uppercase tracking-[0.12em] text-white shadow-md ring-1 ring-emerald-950/20 transition hover:from-emerald-800 hover:to-emerald-900 hover:shadow-lg sm:w-auto";
 
+/** Same shape as the CTA above, but greyed out for providers whose site is currently down. */
+export const PHARMACY_PROVIDER_CTA_DISABLED_CLASSNAME =
+  "inline-flex w-full cursor-not-allowed items-center justify-center rounded-md bg-slate-300 px-5 py-3.5 text-sm font-bold uppercase tracking-[0.12em] text-slate-500 shadow-inner ring-1 ring-slate-400/30 sm:w-auto";
+
 const pharmacyCompareLinkClass =
   "font-semibold text-emerald-800 underline underline-offset-2 hover:text-emerald-950";
 
@@ -262,7 +266,8 @@ export function PharmacyDossierPage({
   publishedYear?: string;
   scopeLabel: string;
   providerName: string;
-  providerUrl: string;
+  /** Null when the provider's own site is currently down — renders a disabled placeholder instead of a link. */
+  providerUrl: string | null;
   docDetails: Array<{ k: string; v: string }>;
   discountCode: string;
   hasDiscount: boolean;
@@ -378,17 +383,27 @@ export function PharmacyDossierPage({
                 ))}
               </dl>
               <div className="mt-auto border-t border-dashed border-emerald-900/18 pt-5">
-                <a
-                  href={providerUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-                >
-                  Visit {providerName}
-                </a>
+                {providerUrl ? (
+                  <a
+                    href={providerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={PHARMACY_PROVIDER_CTA_CLASSNAME}
+                  >
+                    Visit {providerName}
+                  </a>
+                ) : (
+                  <span
+                    aria-disabled="true"
+                    className={PHARMACY_PROVIDER_CTA_DISABLED_CLASSNAME}
+                  >
+                    Visit {providerName}
+                  </span>
+                )}
                 <p className="mt-3 text-center text-sm font-medium leading-relaxed text-slate-600">
-                  Information only — confirm eligibility, pricing and prescribing rules on the
-                  provider&apos;s own site.
+                  {providerUrl
+                    ? "Information only — confirm eligibility, pricing and prescribing rules on the provider's own site."
+                    : "This provider's site is currently unreachable — link temporarily removed."}
                 </p>
               </div>
             </HazardBox>

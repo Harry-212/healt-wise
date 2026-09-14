@@ -3,12 +3,14 @@
 import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
+  PHARMACY_PROVIDER_CTA_DISABLED_CLASSNAME,
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
 } from "./_dossier";
 
-const providerUrl = "https://your-pharmacy.co.uk/";
+// your-pharmacy.co.uk is currently timing out — link disabled until it's back up.
+const providerUrl = null;
 
 const sectionLabel =
   "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
@@ -49,14 +51,18 @@ export default function YourPharmacyPharmacyContent() {
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
           Picking a weight loss pharmacy means balancing clinical rigour with everyday convenience.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
-            YourPharmacy
-          </a>{" "}
+          {providerUrl ? (
+            <a
+              href={providerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
+            >
+              YourPharmacy
+            </a>
+          ) : (
+            <span className="font-semibold text-emerald-900">YourPharmacy</span>
+          )}{" "}
           presents itself as a leading UK online pharmacy centring patient care from first assessment through
           discreet delivery, including regulated access to Mounjaro and Wegovy where appropriate.
         </p>
@@ -197,14 +203,23 @@ export default function YourPharmacyPharmacyContent() {
           live checkout against Health Wise comparison cells before you lock in long term therapy.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
-            Visit YourPharmacy
-          </a>
+          {providerUrl ? (
+            <a
+              href={providerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={PHARMACY_PROVIDER_CTA_CLASSNAME}
+            >
+              Visit YourPharmacy
+            </a>
+          ) : (
+            <span
+              aria-disabled="true"
+              className={PHARMACY_PROVIDER_CTA_DISABLED_CLASSNAME}
+            >
+              Visit YourPharmacy
+            </span>
+          )}
         </div>
       </section>
     </PharmacyDossierPage>

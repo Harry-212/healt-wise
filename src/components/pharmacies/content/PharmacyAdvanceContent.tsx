@@ -3,12 +3,14 @@
 import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
+  PHARMACY_PROVIDER_CTA_DISABLED_CLASSNAME,
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
 } from "./_dossier";
 
-const providerUrl = "https://pharmacyadvance.co.uk/";
+// pharmacyadvance.co.uk is currently returning 500 errors — link disabled until it's back up.
+const providerUrl = null;
 
 const sectionLabel =
   "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
@@ -305,14 +307,23 @@ export default function PharmacyAdvanceContent() {
           before starting therapy.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
-            Visit Pharmacy Advance
-          </a>
+          {providerUrl ? (
+            <a
+              href={providerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={PHARMACY_PROVIDER_CTA_CLASSNAME}
+            >
+              Visit Pharmacy Advance
+            </a>
+          ) : (
+            <span
+              aria-disabled="true"
+              className={PHARMACY_PROVIDER_CTA_DISABLED_CLASSNAME}
+            >
+              Visit Pharmacy Advance
+            </span>
+          )}
         </div>
       </section>
     </PharmacyDossierPage>
