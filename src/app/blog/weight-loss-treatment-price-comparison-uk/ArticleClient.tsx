@@ -12,6 +12,32 @@ import { blogImgPath, PRICE_COMPARISON_HERO_PNG } from "./blog-assets";
 
 const SHARE_PATH = "/blog/weight-loss-treatment-price-comparison-uk";
 const HERO_SRC = blogImgPath(PRICE_COMPARISON_HERO_PNG);
+const COMPARE_HUB_HREF = "/compare/mounjaro-vs-wegovy-vs-saxenda";
+
+/** In-article CTA buttons — matches the client's [BUTTON: ...] markers in the content brief. */
+const CTA_BUTTON_CLASSNAME =
+  "inline-flex w-full items-center justify-center rounded-md bg-gradient-to-b from-emerald-600 to-emerald-700 px-5 py-3 text-sm font-bold text-white shadow-md ring-1 ring-emerald-900/10 transition hover:from-emerald-700 hover:to-emerald-800 sm:w-auto";
+const CTA_PRIMARY_BUTTON_CLASSNAME =
+  "inline-flex w-full items-center justify-center rounded-md bg-gradient-to-b from-emerald-600 to-emerald-700 px-7 py-4 text-base font-bold text-white shadow-lg ring-1 ring-emerald-900/10 transition hover:from-emerald-700 hover:to-emerald-800 sm:w-auto";
+
+function CtaButton({
+  children,
+  primary = false,
+}: {
+  children: React.ReactNode;
+  primary?: boolean;
+}) {
+  return (
+    <div className="my-6">
+      <Link
+        href={COMPARE_HUB_HREF}
+        className={primary ? CTA_PRIMARY_BUTTON_CLASSNAME : CTA_BUTTON_CLASSNAME}
+      >
+        {children}
+      </Link>
+    </div>
+  );
+}
 
 const TOC = [
   { id: "cost-overview", label: "How much does weight loss treatment cost?" },
@@ -26,7 +52,9 @@ const TOC = [
   { id: "nhs", label: "Can you get treatment on the NHS?" },
   { id: "methodology", label: "How we compare prices" },
   { id: "faq", label: "Frequently Asked Questions" },
+  { id: "best-value", label: "Does the cheapest provider win?" },
   { id: "conclusion", label: "Conclusion" },
+  { id: "important-information", label: "Important information" },
 ];
 
 export default function ArticleClient() {
@@ -99,6 +127,25 @@ export default function ArticleClient() {
           />
         </header>
 
+            <div className={`space-y-4 pb-4 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
+              <p className="text-lg md:text-xl">
+                Private weight loss treatment in the UK can cost anywhere from around <strong>£130 to £350+ per month</strong>, depending on the medication, dose and provider.
+              </p>
+              <p>
+                But the cheapest advertised starter price does not always mean the lowest overall cost. Prices can increase as your dose changes, while consultation fees, delivery charges, subscriptions and ongoing clinical support can all affect what you actually pay.
+              </p>
+              <p>
+                This guide compares typical UK private prices for Mounjaro, Wegovy and Saxenda, including dose-level costs and the additional charges worth checking before choosing a provider. Healthwise360 also tracks advertised prices across more than 60 UK weight-management providers, allowing you to compare the same medication and dose between different providers rather than relying only on headline offers.
+              </p>
+              <CtaButton>Compare Current UK Weight Loss Treatment Prices</CtaButton>
+              <p className="text-sm italic opacity-90">
+                Prices change regularly. Always confirm the latest price, availability, consultation requirements and delivery costs directly with the provider before paying.
+              </p>
+              <p className="text-sm italic opacity-90">
+                Prescription weight-management medicines can only be supplied following an appropriate clinical assessment. This page compares costs and provider information; it does not recommend a particular medicine or replace advice from a qualified healthcare professional.
+              </p>
+            </div>
+
             <article className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}>
               <GuideSection darkMode={darkMode} id="cost-overview" heading="How Much Does Weight Loss Treatment Cost in the UK?">
                 <p className="text-lg md:text-xl">
@@ -108,13 +155,7 @@ export default function ArticleClient() {
                   This makes straightforward price comparison more difficult than it first appears. A pharmacy may advertise a competitive starter price, for example, but that does not necessarily tell you how much you could pay once your dose increases. For that reason, one of the most useful ways to compare providers is to check the same medication at the same dose.
                 </p>
                 <p>
-                  If you are comparing Mounjaro 5 mg, for example, compare 5 mg prices between providers rather than comparing a Mounjaro starter offer with the cost of a higher-dose treatment elsewhere. Our live comparison matrix tracks provider pricing by dose to make this type of like-for-like comparison easier — see the <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">live UK weight loss treatment price comparison</Link>.
-                </p>
-                <p>
-                  Healthwise360 also tracks advertised prices across more than 60 UK weight-management providers, allowing you to compare the same medication and dose between different providers rather than relying only on headline offers. Prices change regularly — always confirm the latest price, availability, consultation requirements and delivery costs directly with the provider before paying.
-                </p>
-                <p className="text-sm italic opacity-90">
-                  Prescription weight-management medicines can only be supplied following an appropriate clinical assessment. This page compares costs and provider information; it does not recommend a particular medicine or replace advice from a qualified healthcare professional.
+                  If you are comparing Mounjaro 5 mg, for example, compare 5 mg prices between providers rather than comparing a Mounjaro starter offer with the cost of a higher-dose treatment elsewhere. Our live comparison matrix tracks provider pricing by dose to make this type of like-for-like comparison easier — see the <Link href={COMPARE_HUB_HREF} className="font-medium text-emerald-600 hover:underline">live UK weight loss treatment price comparison</Link>.
                 </p>
               </GuideSection>
 
@@ -142,8 +183,9 @@ export default function ArticleClient() {
               <GuideSection darkMode={darkMode} id="price-comparison" heading="Weight Loss Treatment Price Comparison: Mounjaro, Wegovy & Saxenda">
                 <p>
                   Prices vary considerably between providers and can change frequently. The figures below should be treated as indicative market ranges, not guaranteed prices. For provider-by-provider prices checked against our latest dataset, use the{" "}
-                  <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">live comparison</Link> instead.
+                  <Link href={COMPARE_HUB_HREF} className="font-medium text-emerald-600 hover:underline">live comparison</Link> instead.
                 </p>
+                <CtaButton>Compare Live Provider Prices</CtaButton>
 
                 <h3 className={`mt-6 text-lg font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
                   Mounjaro Price by Dose
@@ -302,6 +344,7 @@ export default function ArticleClient() {
                 <p>
                   Weight loss treatment prices can change frequently. A comparison article published several months ago can become outdated even if the treatment information remains accurate. Healthwise360 maintains a live provider matrix separately from this guide, covering more than 60 UK weight-management providers at the time this page was last updated, so you can check current prices by treatment and dose.
                 </p>
+                <CtaButton>Compare Current Provider Prices</CtaButton>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="annual-cost" heading="How Much Could Weight Loss Treatment Cost Per Year?">
@@ -450,11 +493,21 @@ export default function ArticleClient() {
                     </h3>
                     <p>
                       Healthwise360 maintains an interactive{" "}
-                      <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">comparison matrix</Link> covering more than 60 UK weight-management providers. You can filter and compare provider prices at individual dose levels and review corresponding pharmacy and provider information.
+                      <Link href={COMPARE_HUB_HREF} className="font-medium text-emerald-600 hover:underline">comparison matrix</Link> covering more than 60 UK weight-management providers. You can filter and compare provider prices at individual dose levels and review corresponding pharmacy and provider information.
                     </p>
                   </div>
                 </div>
+                <CtaButton>Compare UK Weight Loss Treatment Prices</CtaButton>
               </section>
+
+              <GuideSection darkMode={darkMode} id="best-value" heading="Does the Cheapest Provider Offer the Best Value?">
+                <p>
+                  Not necessarily. Price is useful when you are comparing equivalent services, but it should be considered alongside pharmacy regulation, prescribing process, clinical support, delivery, transparency, provider reputation, and the total cost rather than the introductory price.
+                </p>
+                <p>
+                  For prescription medicines, a provider being £5 or £10 cheaper should not outweigh concerns about the quality or legitimacy of the service. The aim should be to make a safe, informed and financially realistic comparison.
+                </p>
+              </GuideSection>
 
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion: Compare the Full Cost, Not Just the Starter Price">
                 <p>
@@ -475,14 +528,29 @@ export default function ArticleClient() {
                   But those numbers only tell part of the story. Consultation fees, delivery charges, subscriptions, introductory discounts and dose increases can all change the actual amount you pay. The most useful approach is to compare the same treatment at the same dose, check the total cost, and verify the provider and supplying pharmacy.
                 </p>
                 <p>
-                  Healthwise360 tracks current advertised prices across more than 60 UK weight-management providers to make that comparison easier. Before starting or changing any prescription weight-management treatment, speak to an appropriately qualified healthcare professional.
+                  Healthwise360 tracks current advertised prices across more than 60 UK weight-management providers to make that comparison easier.
                 </p>
+                <CtaButton primary>Compare Current Weight Loss Treatment Prices</CtaButton>
                 <p>
-                  For a complete, live price comparison across all three treatments, explore the{" "}
-                  <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className="font-medium text-emerald-600 hover:underline">Mounjaro vs Wegovy vs Saxenda comparison</Link> hub to find the current rates.
+                  Before starting or changing any prescription weight-management treatment, speak to an appropriately qualified healthcare professional.
+                </p>
+              </GuideSection>
+
+              <GuideSection darkMode={darkMode} id="important-information" heading="Important Information">
+                <p className="text-sm italic opacity-90">
+                  This article is provided for general informational and price-comparison purposes only and does not constitute medical advice.
                 </p>
                 <p className="text-sm italic opacity-90">
-                  This article is provided for general informational and price-comparison purposes only and does not constitute medical advice. Mounjaro, Wegovy and Saxenda are prescription-only medicines in the UK — suitability, eligibility, dose and ongoing treatment must be assessed by an appropriate healthcare professional. Prices shown on this page are indicative and may change without notice; always confirm the current price and supplying pharmacy directly before making a purchase. Last reviewed: 13 September 2026.
+                  Mounjaro, Wegovy and Saxenda are prescription-only medicines in the UK. Suitability, eligibility, dose and ongoing treatment must be assessed by an appropriate healthcare professional.
+                </p>
+                <p className="text-sm italic opacity-90">
+                  Prices shown on this page are indicative and may change without notice. Promotions, eligibility requirements, delivery costs and provider terms can also vary.
+                </p>
+                <p className="text-sm italic opacity-90">
+                  Always confirm the current price and supplying pharmacy directly before making a purchase.
+                </p>
+                <p className="text-sm font-medium opacity-90">
+                  Last reviewed: 13 September 2026
                 </p>
               </GuideSection>
             </article>
