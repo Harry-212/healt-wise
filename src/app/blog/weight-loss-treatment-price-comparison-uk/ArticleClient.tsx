@@ -260,7 +260,7 @@ export default function ArticleClient() {
 
               <GuideSection darkMode={darkMode} id="quick-comparison" heading="Quick Weight Loss Treatment Cost Comparison">
                 <p>
-                  For a simple overview, the current private-market picture looks approximately like this. These ranges are useful for budgeting, but they should not be used to decide which medicine is clinically appropriate — the price you personally pay will depend on your prescription, dose and provider.
+                  For a simple overview, the current private-market picture looks approximately like this:
                 </p>
                 <div className={`my-6 overflow-hidden rounded-xl border ${darkMode ? "border-slate-800" : "border-slate-200"}`}>
                   <GuideTable
@@ -272,6 +272,9 @@ export default function ArticleClient() {
                     ]}
                   />
                 </div>
+                <p>
+                  These ranges are useful for budgeting, but they should not be used to decide which medicine is clinically appropriate. The price you personally pay will depend on your prescription, dose and provider.
+                </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="actual-vs-advertised" heading="Actual Cost vs Advertised Price: What Can Increase the Total?">
@@ -362,8 +365,7 @@ export default function ArticleClient() {
                   />
                 </div>
                 <p>
-                  These figures are estimates rather than quotes. Your actual first-year cost may also differ because treatment commonly involves a period of dose escalation rather than spending an entire year at one dose, and provider prices can change during treatment. For this reason, it is sensible to consider potential longer-term affordability, not simply whether the first month fits your budget — see our{" "}
-                  <Link href="/prices/cheapest-options-uk" className="font-medium text-emerald-600 hover:underline">cheapest weight loss treatment UK</Link> guide for a broader view.
+                  These figures are estimates rather than quotes. Your actual first-year cost may also differ because treatment commonly involves a period of dose escalation rather than spending an entire year at one dose. Provider prices can also change during treatment. For this reason, it is sensible to consider potential longer-term affordability, not simply whether the first month fits your budget.
                 </p>
               </GuideSection>
 
