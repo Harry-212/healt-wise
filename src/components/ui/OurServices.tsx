@@ -16,7 +16,6 @@ import {
 
 const TRACKER_HREF = "/tools/weight-loss-tracker";
 const MOUNJARO_HUB = HOMEPAGE_PRICE_HUB_LABELS.mounjaro;
-const WEGOVY_HUB = HOMEPAGE_PRICE_HUB_LABELS.wegovy;
 
 /** Link label aligned with homepage Experience section bullet. */
 const TRACKER_LINK_LABEL =
@@ -43,13 +42,10 @@ const SERVICES = [
         </a>
         . Also see{" "}
         <Link
-          href={WEGOVY_HUB.href}
+          href="/blog/weight-loss-treatment-price-comparison-uk"
           className="font-semibold text-amber-800 underline decoration-amber-300/80 underline-offset-2 transition hover:text-amber-950"
         >
-          <BrandHoverText
-            publicLabel={WEGOVY_HUB.publicLabel}
-            brandLabel={WEGOVY_HUB.brandLabel}
-          />
+          Weight loss treatment price comparison UK
         </Link>
         .
       </>
