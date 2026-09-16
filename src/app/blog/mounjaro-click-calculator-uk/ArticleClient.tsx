@@ -126,7 +126,7 @@ export default function ArticleClient() {
                   Clicks = (Desired dose in mg ÷ Pen strength in mg) × 60
                 </div>
                 <p>
-                  For example: if you have a 5 mg pen but your prescribed dose is 2.5 mg:
+                  For Example: how many clicks is 2.5 mounjaro on 5mg pen
                 </p>
                 <div className={`p-3 rounded-lg border font-mono text-center text-xs ${darkMode ? "bg-slate-900/60 border-slate-800" : "bg-slate-100 border-slate-200"}`}>
                   (2.5 ÷ 5) × 60 = 30 clicks
@@ -227,7 +227,7 @@ export default function ArticleClient() {
                         { cells: ["10 mg (full dose)", "60", "0.60"], highlight: true },
                         { cells: ["7.5 mg", "45", "0.45"] },
                         { cells: ["5 mg", "30", "0.30"] },
-                        { cells: ["2.5 mg", "18", "0.18"] },
+                        { cells: ["2.5 mg", "15", "0.15"] },
                       ]}
                     />
                   </div>
@@ -259,8 +259,8 @@ export default function ArticleClient() {
                         { cells: ["12.5 mg", "50", "0.50"] },
                         { cells: ["10 mg", "40", "0.40"] },
                         { cells: ["7.5 mg", "30", "0.30"] },
-                        { cells: ["5 mg", "24", "0.24"] },
-                        { cells: ["2.5 mg", "12", "0.12"] },
+                        { cells: ["5 mg", "20", "0.20"] },
+                        { cells: ["2.5 mg", "10", "0.10"] },
                       ]}
                     />
                   </div>
@@ -493,7 +493,7 @@ export default function ArticleClient() {
 
                   <div>
                     <h4 className={`text-base font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                      2. How many clicks is 2.5 mg on a 5 mg Mounjaro pen?
+                      2. How many clicks is 2.5 mounjaro on 5mg pen?
                     </h4>
                     <p className="mt-2 text-sm">
                       Using the formula (2.5 ÷ 5) × 60 = <strong>30 clicks</strong>. This represents half the pen's full dose volume.
@@ -502,7 +502,16 @@ export default function ArticleClient() {
 
                   <div>
                     <h4 className={`text-base font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                      3. How many clicks is 2.5 mg on a 7.5 mg Mounjaro pen?
+                      3. For Example: how many clicks on a 7.5 mounjaro pen for 5mg
+                    </h4>
+                    <p className="mt-2 text-sm">
+                      5 ÷ 7.5 × 60 = <strong>40 clicks</strong>. This represents two thirds of the full dose volume from the 7.5 mg pen.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className={`text-base font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
+                      4. How many clicks is 2.5 mg on a 7.5 mg Mounjaro pen?
                     </h4>
                     <p className="mt-2 text-sm">
                       (2.5 ÷ 7.5) × 60 = <strong>20 clicks</strong>. This is one third of the full dose volume from the 7.5 mg pen.
@@ -511,7 +520,7 @@ export default function ArticleClient() {
 
                   <div>
                     <h4 className={`text-base font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                      4. How many clicks is 5 mg on a 10 mg Mounjaro pen?
+                      5. How many clicks is 5 mg on a 10 mg Mounjaro pen?
                     </h4>
                     <p className="mt-2 text-sm">
                       (5 ÷ 10) × 60 = <strong>30 clicks</strong>. Half the full dose from a 10 mg pen.
@@ -520,7 +529,7 @@ export default function ArticleClient() {
 
                   <div>
                     <h4 className={`text-base font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                      5. How many clicks is 7.5 mg on a 15 mg Mounjaro pen?
+                      6. How many clicks is 7.5 mg on a 15 mg Mounjaro pen?
                     </h4>
                     <p className="mt-2 text-sm">
                       (7.5 ÷ 15) × 60 = <strong>30 clicks</strong>. Half the full dose volume from a 15 mg pen.
@@ -529,7 +538,7 @@ export default function ArticleClient() {
 
                   <div>
                     <h4 className={`text-base font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                      6. How many mL is one Mounjaro dose in the UK?
+                      7. How many mL is one Mounjaro dose in the UK?
                     </h4>
                     <p className="mt-2 text-sm">
                       One full Mounjaro dose on the UK KwikPen is <strong>0.6 mL</strong>, regardless of pen strength. This is different from the US single-dose pen, which delivers 0.5 mL per dose.
@@ -538,7 +547,7 @@ export default function ArticleClient() {
 
                   <div>
                     <h4 className={`text-base font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                      7. How many units is a Mounjaro dose on a U-100 syringe?
+                      8. How many units is a Mounjaro dose on a U-100 syringe?
                     </h4>
                     <p className="mt-2 text-sm">
                       On a U-100 syringe (100 units = 1 mL), 0.6 mL = <strong>60 units</strong>. This holds for all UK KwikPen strengths.
@@ -547,7 +556,7 @@ export default function ArticleClient() {
 
                   <div>
                     <h4 className={`text-base font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                      8. Is counting Mounjaro clicks safe?
+                      9. Is counting Mounjaro clicks safe?
                     </h4>
                     <p className="mt-2 text-sm">
                       Counting clicks to measure a partial dose is considered off-label use. The KwikPen is designed for full doses, and partial dosing by clicks introduces a small mechanical margin of error. The{" "}
@@ -560,7 +569,7 @@ export default function ArticleClient() {
 
                   <div>
                     <h4 className={`text-base font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                      9. Does Mounjaro have a 5th dose hidden in the pen?
+                      10. Does Mounjaro have a 5th dose hidden in the pen?
                     </h4>
                     <p className="mt-2 text-sm">
                       There is typically a small residual volume after four full doses, but it is not a reliable fifth dose. Eli Lilly does not endorse extracting it. The pen is designed and licensed for four prescribed doses.
@@ -569,7 +578,7 @@ export default function ArticleClient() {
 
                   <div>
                     <h4 className={`text-base font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}>
-                      10. Can I use the same formula for Wegovy click calculations?
+                      11. Can I use the same formula for Wegovy click calculations?
                     </h4>
                     <p className="mt-2 text-sm">
                       No. Wegovy is a single-dose auto-injector with no dial or click mechanism. The click calculator concept is specific to the Mounjaro multi-dose KwikPen format.

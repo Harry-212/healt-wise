@@ -68,10 +68,18 @@ export default function MounjaroClickCalculatorUkPage() {
       },
       {
         "@type": "Question",
-        name: "How many clicks is 2.5 mg on a 5 mg Mounjaro pen?",
+        name: "How many clicks is 2.5 mounjaro on 5mg pen?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Using the formula (2.5 ÷ 5) × 60, it equals 30 clicks. This represents half of the full dose volume of the 5 mg pen.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "For Example: how many clicks on a 7.5 mounjaro pen for 5mg",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Using the formula 5 ÷ 7.5 × 60, it equals 40 clicks. This represents two thirds of the full dose volume from the 7.5 mg pen.",
         },
       },
       {
