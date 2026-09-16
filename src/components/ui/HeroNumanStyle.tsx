@@ -68,12 +68,12 @@ export default function HeroNumanStyle() {
         <Image
           src={HOMEPAGE_HERO_LIFESTYLE_SRC}
           alt={HOMEPAGE_HERO_LIFESTYLE_ALT}
+          title={HOMEPAGE_HERO_LIFESTYLE_ALT}
           fill
           priority
-          quality={70}
-          sizes="100vw"
           fetchPriority="high"
           className="origin-top scale-110 object-cover object-top"
+          unoptimized
         />
       </div>
 

@@ -39,6 +39,7 @@ export default function BlogArticleHeroImage({
           <Image
             src={resolved}
             alt={alt}
+            title={alt}
             width={1600}
             height={900}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, min(768px, 48rem)"
@@ -58,6 +59,7 @@ export default function BlogArticleHeroImage({
         <Image
           src={resolved}
           alt={alt}
+          title={alt}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, min(768px, 48rem)"
           className="object-cover object-center"

@@ -214,6 +214,7 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
                   <Image
                     src={imageUrl}
                     alt={title}
+                    title={title}
                     fill
                     className="object-cover transition duration-500 group-hover:scale-105"
                     sizes="280px"

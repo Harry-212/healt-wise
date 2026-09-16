@@ -13,10 +13,12 @@ type SiteLogoLinkProps = {
 };
 
 /**
- * Site logo links to home. Served via the Next.js image optimizer so the
- * browser gets a properly sized/responsive webp/avif instead of the full
- * source file; `/_next/image` responses are forced inline via next.config.ts
- * headers(), so "Open image in new tab" still displays inline.
+ * Site logo links to home. Served directly (not via `/_next/image`) — on
+ * this Hostinger deploy that route always returns `Content-Disposition:
+ * attachment`, regardless of next.config.ts headers(), which forces a
+ * download instead of an inline preview when opened in a new tab. The
+ * source file itself is pre-sized/compressed (see `public/logo-health-wise.webp`)
+ * so this still ships a small file without needing the optimizer.
  */
 export default function SiteLogoLink({
   className = "",
@@ -26,6 +28,7 @@ export default function SiteLogoLink({
   priority = false,
   onClick,
 }: SiteLogoLinkProps) {
+  const logoLabel = `${SITE_BRAND_NAME} logo`;
   return (
     <Link
       href="/"
@@ -35,13 +38,14 @@ export default function SiteLogoLink({
     >
       <Image
         src={SITE_LOGO_SRC}
-        alt={`${SITE_BRAND_NAME} logo`}
+        alt={logoLabel}
+        title={logoLabel}
         width={width}
         height={height}
         className={imageClassName}
         fetchPriority={priority ? "high" : "low"}
         priority={priority}
-        sizes="200px"
+        unoptimized
       />
     </Link>
   );

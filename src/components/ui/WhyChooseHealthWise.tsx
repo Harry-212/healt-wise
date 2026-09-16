@@ -82,9 +82,11 @@ export default function WhyChooseHealthWise() {
                 <Image
                   src={SITE_LOGO_SRC}
                   alt={SITE_BRAND_NAME}
+                  title={SITE_BRAND_NAME}
                   width={800}
                   height={250}
                   className="h-9 w-auto max-w-[min(100%,220px)] object-contain object-left sm:h-12 sm:max-w-[min(100%,280px)] md:h-16 md:max-w-[min(100%,340px)] lg:h-20 lg:max-w-none"
+                  unoptimized
                 />
               </span>
             </h2>
@@ -192,10 +194,11 @@ export default function WhyChooseHealthWise() {
                 <Image
                   src="/why%20choose%20healthwise360.webp"
                   alt="Why choose Healthwise360 — comparison and treatment information context."
+                  title="Why choose Healthwise360 — comparison and treatment information context."
                   fill
-                  sizes="(max-width: 1024px) 100vw, 44vw"
                   className="object-cover object-[center_25%]"
                   priority={false}
+                  unoptimized
                 />
               </div>
             </div>
