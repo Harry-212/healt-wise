@@ -43,6 +43,7 @@ export function TipsPromoSection() {
           <Image
             src={TIPS_PROMO_IMAGE}
             alt="Healthcare professional consulting with a patient"
+            title="Healthcare professional consulting with a patient"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

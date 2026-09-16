@@ -48,6 +48,7 @@ export default function TimeSaverPage() {
           <Image
             src={heroTimeSaver}
             alt="Ready-to-go complete nutrition when you are short on time"
+            title="Ready-to-go complete nutrition when you are short on time"
             fill
             priority
             placeholder="blur"

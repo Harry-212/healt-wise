@@ -45,6 +45,7 @@ export function DietPromoSection() {
           <Image
             src={DIET_PROMO_IMAGE}
             alt="Healthcare consultation supporting weight management"
+            title="Healthcare consultation supporting weight management"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

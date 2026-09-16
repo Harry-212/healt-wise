@@ -43,6 +43,7 @@ export function StressPromoSection() {
           <Image
             src={STRESS_PROMO_IMAGE}
             alt="Health goals and progress on a phone"
+            title="Health goals and progress on a phone"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

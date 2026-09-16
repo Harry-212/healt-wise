@@ -136,6 +136,7 @@ export function GuideLayout({
                   <Image
                     src={thumbnail}
                     alt={title}
+                    title={title}
                     fill
                     className="object-cover object-center"
                     priority

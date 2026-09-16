@@ -10,6 +10,7 @@ export function SleepSystemBand() {
             <Image
               src={SLEEP_SYSTEM_IMAGE}
               alt="Calm daytime routine supporting better nights"
+              title="Calm daytime routine supporting better nights"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

@@ -36,6 +36,7 @@ export function TipsHero() {
           <Image
             src={TIPS_HERO_IMAGE}
             alt="Healthy meal prep and fresh ingredients on a table"
+            title="Healthy meal prep and fresh ingredients on a table"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

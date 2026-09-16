@@ -50,6 +50,7 @@ export default function SupportWeightManagementPage() {
           <Image
             src={heroManageWeight}
             alt="Complete nutrition to support sustainable weight management"
+            title="Complete nutrition to support sustainable weight management"
             fill
             priority
             placeholder="blur"

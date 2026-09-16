@@ -205,6 +205,7 @@ export default function BlogClient({
                   <Image
                     src={imgbbDisplaySrc(featured.image)}
                     alt={featured.title}
+                    title={featured.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 58vw"
                     quality={70}
@@ -251,6 +252,7 @@ export default function BlogClient({
                         <Image
                           src={thumbSrc}
                           alt={post.title}
+                          title={post.title}
                           fill
                           sizes="96px"
                           quality={70}
@@ -353,6 +355,7 @@ export default function BlogClient({
                     <Image
                       src={cardSrc}
                       alt={article.title}
+                      title={article.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       quality={70}

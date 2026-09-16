@@ -56,6 +56,7 @@ export default function MounjaroPenTilt({
         <img
           src={PEN_IMAGE}
           alt="Mounjaro KwikPen pre-filled injection device containing tirzepatide for subcutaneous use"
+          title="Mounjaro KwikPen pre-filled injection device containing tirzepatide for subcutaneous use"
           decoding="async"
           draggable={false}
           className="h-auto max-h-[min(380px,55vh)] w-auto max-w-[280px] bg-transparent object-contain [background:none]"

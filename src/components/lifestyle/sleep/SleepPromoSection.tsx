@@ -43,6 +43,7 @@ export function SleepPromoSection() {
           <Image
             src={SLEEP_PROMO_IMAGE}
             alt="Wellness tracking on a phone — habits and progress"
+            title="Wellness tracking on a phone — habits and progress"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

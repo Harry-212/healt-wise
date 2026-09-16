@@ -49,6 +49,7 @@ export default function WegovyClickCalculatorPage() {
             <Image
               src="/wegovy-health-wise.png"
               alt="Wegovy FlexTouch pens and official packaging UK"
+              title="Wegovy FlexTouch pens and official packaging UK"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 768px"

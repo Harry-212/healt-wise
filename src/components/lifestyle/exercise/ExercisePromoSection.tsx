@@ -43,6 +43,7 @@ export function ExercisePromoSection() {
           <Image
             src={EXERCISE_PROMO_IMAGE}
             alt="Tracking progress on a phone — fitness and health goals"
+            title="Tracking progress on a phone — fitness and health goals"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

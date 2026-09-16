@@ -54,7 +54,8 @@ export function TipsZigzagSection({
 
   const imageBlock = (
     <div className="relative aspect-[4/3] overflow-hidden rounded-[1.75rem] bg-slate-100 shadow-md shadow-slate-900/[0.05] sm:aspect-[16/11]">
-      <Image src={imageSrc} alt={imageAlt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+      <Image src={imageSrc} alt={imageAlt}
+      title={imageAlt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
     </div>
   );
 

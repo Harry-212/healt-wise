@@ -47,6 +47,7 @@ function ChapterImage({
       <Image
         src={src}
         alt={alt}
+        title={alt}
         fill
         className="object-cover"
         sizes={sizes}
@@ -197,6 +198,7 @@ export default function AboutScrollyClient() {
           <Image
             src={ABOUT_IMAGES.hero}
             alt={`About ${SITE_BRAND_NAME} — independent UK weight loss provider comparison`}
+            title={`About ${SITE_BRAND_NAME} — independent UK weight loss provider comparison`}
             fill
             className="object-cover opacity-100"
             sizes="100vw"
@@ -337,6 +339,7 @@ export default function AboutScrollyClient() {
           <Image
             src={ABOUT_IMAGES.depthBg}
             alt="Laboratory research scene — decorative parallax background on the about page"
+            title="Laboratory research scene — decorative parallax background on the about page"
             fill
             className="object-cover opacity-25"
             sizes="100vw"
@@ -379,6 +382,7 @@ export default function AboutScrollyClient() {
               <Image
                 src="/why choose healthwise360.webp"
                 alt={`Why choose ${SITE_BRAND_NAME} — independent UK weight loss provider comparison`}
+                title={`Why choose ${SITE_BRAND_NAME} — independent UK weight loss provider comparison`}
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 42vw, 100vw"

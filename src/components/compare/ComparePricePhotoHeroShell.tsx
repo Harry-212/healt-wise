@@ -32,6 +32,7 @@ export default function ComparePricePhotoHeroShell({
         <Image
           src={imageSrc}
           alt={imageAlt}
+          title={imageAlt}
           fill
           priority
           quality={80}

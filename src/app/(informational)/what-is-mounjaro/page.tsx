@@ -745,6 +745,7 @@ export default function WhatIsMounjaroPage() {
                     <Image
                       src={WHY_CHOOSE_HEALTHWISE360_SRC}
                       alt={WHY_CHOOSE_HEALTHWISE360_ALT}
+                      title={WHY_CHOOSE_HEALTHWISE360_ALT}
                       fill
                       className="object-contain object-center"
                       sizes="200px"

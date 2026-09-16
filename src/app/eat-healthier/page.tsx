@@ -48,6 +48,7 @@ export default function EatHealthierPage() {
           <Image
             src={heroEatHealthy}
             alt="Complete nutrition to help you eat healthier every day"
+            title="Complete nutrition to help you eat healthier every day"
             fill
             priority
             placeholder="blur"

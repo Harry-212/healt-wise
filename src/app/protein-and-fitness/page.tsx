@@ -48,6 +48,7 @@ export default function ProteinAndFitnessPage() {
           <Image
             src={heroProtein}
             alt="Complete high-protein nutrition that fuels your fitness"
+            title="Complete high-protein nutrition that fuels your fitness"
             fill
             priority
             placeholder="blur"

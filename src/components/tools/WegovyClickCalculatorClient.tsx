@@ -189,7 +189,8 @@ export default function WegovyClickCalculatorClient() {
       {/* ── Sticky hero ──────────────────────────────────────────── */}
       <section className="sticky top-0 z-0 flex min-h-[85vh] flex-col">
         <div className="relative flex min-h-[85vh] flex-1 flex-col">
-          <Image src="/hero_compare_wegovy.webp" alt="Medical consultation and Wegovy healthcare concept" fill priority className="object-cover object-center" sizes="100vw" />
+          <Image src="/hero_compare_wegovy.webp" alt="Medical consultation and Wegovy healthcare concept"
+          title="Medical consultation and Wegovy healthcare concept" fill priority className="object-cover object-center" sizes="100vw" />
           <div className="absolute inset-0 bg-linear-to-b from-emerald-950/90 via-emerald-950/85 to-slate-950/95" aria-hidden />
           <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-4 pb-32 pt-12 text-center sm:px-5 sm:pb-40 md:px-8">
             <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-emerald-300/90 flex items-center gap-1.5 justify-center">

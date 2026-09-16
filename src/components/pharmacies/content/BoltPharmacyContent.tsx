@@ -111,6 +111,7 @@ export default function BoltPharmacyContent() {
             <Image
               src="/logo_stamp_GPhc.webp"
               alt="GPhC registration mark"
+              title="GPhC registration mark"
               width={112}
               height={112}
               className="h-auto w-full object-contain opacity-95 drop-shadow-sm"

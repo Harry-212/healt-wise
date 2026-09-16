@@ -36,6 +36,7 @@ export function DietHero() {
           <Image
             src={DIET_HERO_IMAGE}
             alt="Balanced healthy meal prep and fresh ingredients"
+            title="Balanced healthy meal prep and fresh ingredients"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

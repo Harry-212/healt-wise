@@ -125,6 +125,7 @@ export default function BmiCalculatorPage() {
             <Image
               src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=75&w=1600"
               alt="Healthcare professional reviewing health measurements with a patient in a modern clinical setting"
+              title="Healthcare professional reviewing health measurements with a patient in a modern clinical setting"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 768px"

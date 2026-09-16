@@ -56,6 +56,7 @@ export default function SaxendaPenTilt({
         <img
           src={PEN_IMAGE}
           alt="Saxenda pre-filled injection pen containing liraglutide for once-daily weight management"
+          title="Saxenda pre-filled injection pen containing liraglutide for once-daily weight management"
           decoding="async"
           draggable={false}
           className="h-auto max-h-[min(380px,55vh)] w-auto max-w-[280px] bg-transparent object-contain [background:none]"

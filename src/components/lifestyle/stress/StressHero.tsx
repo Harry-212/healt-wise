@@ -37,6 +37,7 @@ export function StressHero() {
           <Image
             src={STRESS_HERO_DESK_IMAGE}
             alt="Person at a desk — work stress, screen time, and daily demands"
+            title="Person at a desk — work stress, screen time, and daily demands"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

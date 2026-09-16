@@ -557,6 +557,7 @@ export default function WeightTrackerClient() {
             <Image
               src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=75&w=2000"
               alt="Person tracking weight loss progress in a clean modern setting"
+              title="Person tracking weight loss progress in a clean modern setting"
               fill
               priority
               className="object-cover object-center"
@@ -738,6 +739,7 @@ export default function WeightTrackerClient() {
           <Image
             src="https://images.pexels.com/photos/5765827/pexels-photo-5765827.jpeg?auto=compress&cs=tinysrgb&w=1600"
             alt=""
+            title=""
             fill
             className="object-cover object-center opacity-20"
             sizes="100vw"

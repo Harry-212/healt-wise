@@ -10,6 +10,7 @@ export function TipsSupportBand() {
             <Image
               src={TIPS_SUPPORT_IMAGE}
               alt="Person in a calm stretching or yoga pose"
+              title="Person in a calm stretching or yoga pose"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

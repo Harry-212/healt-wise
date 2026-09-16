@@ -36,6 +36,7 @@ export function PharmacyHeroProviderLogo({
       <Image
         src={src}
         alt={alt}
+        title={alt}
         width={400}
         height={150}
         sizes="(max-width: 640px) 240px, 300px"
@@ -341,6 +342,7 @@ export function PharmacyDossierPage({
             <Image
               src="/logo_stamp_GPhc.webp"
               alt="GPhC registration mark"
+              title="GPhC registration mark"
               width={112}
               height={112}
               className="h-auto w-full object-contain opacity-95 drop-shadow-sm"

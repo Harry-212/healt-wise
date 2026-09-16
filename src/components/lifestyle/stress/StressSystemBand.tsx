@@ -10,6 +10,7 @@ export function StressSystemBand() {
             <Image
               src={STRESS_SYSTEM_IMAGE}
               alt="Calm morning routine — light, rest, and balance"
+              title="Calm morning routine — light, rest, and balance"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

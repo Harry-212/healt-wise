@@ -10,6 +10,7 @@ export function DietSupportBand() {
             <Image
               src={DIET_SUPPORT_IMAGE}
               alt="Walking outdoors — daily movement and routine"
+              title="Walking outdoors — daily movement and routine"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

@@ -213,6 +213,7 @@ export default function ProductGrid() {
                   <Image
                     src={product.image}
                     alt={product.name}
+                    title={product.name}
                     fill
                     placeholder="blur"
                     sizes="(min-width: 1080px) 340px, (min-width: 768px) 33vw, 50vw"
@@ -226,6 +227,7 @@ export default function ProductGrid() {
                     <Image
                       src={product.hoverImage}
                       alt={`${product.name} — alternate product packaging`}
+                      title={`${product.name} — alternate product packaging`}
                       fill
                       placeholder="blur"
                       sizes="(min-width: 1080px) 340px, (min-width: 768px) 33vw, 50vw"

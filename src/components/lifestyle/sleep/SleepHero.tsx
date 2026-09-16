@@ -36,6 +36,7 @@ export function SleepHero() {
           <Image
             src={SLEEP_HERO_IMAGE}
             alt="Peaceful rest in soft natural light — recovery and sleep"
+            title="Peaceful rest in soft natural light — recovery and sleep"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

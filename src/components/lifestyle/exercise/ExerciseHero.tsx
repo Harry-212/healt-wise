@@ -36,6 +36,7 @@ export function ExerciseHero() {
           <Image
             src={EXERCISE_HERO_IMAGE}
             alt="Person training outdoors in natural light — functional fitness and running"
+            title="Person training outdoors in natural light — functional fitness and running"
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"

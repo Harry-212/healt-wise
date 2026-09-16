@@ -10,6 +10,7 @@ export function ExerciseSystemBand() {
             <Image
               src={EXERCISE_SYSTEM_IMAGE}
               alt="Calm recovery and lifestyle balance — stretching and wellbeing"
+              title="Calm recovery and lifestyle balance — stretching and wellbeing"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

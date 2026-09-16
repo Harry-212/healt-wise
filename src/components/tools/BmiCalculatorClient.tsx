@@ -384,6 +384,7 @@ export default function BmiCalculatorClient() {
           <Image
             src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=75&w=2000"
             alt="Clinical health assessment setting"
+            title="Clinical health assessment setting"
             fill priority
             className="object-cover object-center"
             sizes="100vw"

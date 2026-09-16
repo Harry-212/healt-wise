@@ -61,6 +61,7 @@ export default function WegovyPenTilt({
         <img
           src={PEN_IMAGE}
           alt="Wegovy pre-filled injection pen containing semaglutide"
+          title="Wegovy pre-filled injection pen containing semaglutide"
           decoding="async"
           draggable={false}
           className="h-auto max-h-[min(380px,55vh)] w-auto max-w-[280px] bg-transparent object-contain [background:none]"

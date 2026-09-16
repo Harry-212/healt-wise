@@ -89,6 +89,7 @@ export default function LegalScrollyClient({
           <Image
             src={HERO_BG}
             alt={`${title} — decorative header background`}
+            title={`${title} — decorative header background`}
             fill
             className="object-cover object-[center_30%] opacity-35"
             sizes="100vw"
