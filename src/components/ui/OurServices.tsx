@@ -5,7 +5,6 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import BrandHoverText from "@/components/ui/BrandHoverText";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
-import { HOMEPAGE_PRICE_HUB_LABELS } from "@/lib/text/homepage-brand-labels";
 import {
   ShieldCheck,
   PoundSterling,
@@ -15,7 +14,6 @@ import {
 } from "lucide-react";
 
 const TRACKER_HREF = "/tools/weight-loss-tracker";
-const MOUNJARO_HUB = HOMEPAGE_PRICE_HUB_LABELS.mounjaro;
 
 /** Link label aligned with homepage Experience section bullet. */
 const TRACKER_LINK_LABEL =
@@ -25,22 +23,14 @@ const SERVICES = [
   {
     icon: PoundSterling,
     label: "Price Comparison",
-    href: MOUNJARO_HUB.href,
+    href: "https://www.healthwise360.co.uk/compare/mounjaro-vs-wegovy-vs-saxenda",
     ctaPublicLabel: "Compare prices",
-    ctaBrandLabel: MOUNJARO_HUB.brandLabel,
+    ctaBrandLabel: "Compare Prices for GLP1 Registered Pharmacies UK",
     desc: (
       <>
         Compare real-time costs across all UK verified providers, with the
         confidence they have been verified, and you can also check them out on{" "}
-        <a
-          href="https://www.trustpilot.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-semibold text-amber-800 underline decoration-amber-300/80 underline-offset-2 transition hover:text-amber-950"
-        >
-          Trustpilot
-        </a>
-        . Also see{" "}
+        Trustpilot. Also see{" "}
         <Link
           href="/blog/weight-loss-treatment-price-comparison-uk"
           className="font-semibold text-amber-800 underline decoration-amber-300/80 underline-offset-2 transition hover:text-amber-950"
