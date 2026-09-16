@@ -13,8 +13,10 @@ type SiteLogoLinkProps = {
 };
 
 /**
- * Site logo links to home. Served directly (not via `/_next/image`) so
- * "Open image in new tab" displays inline instead of forcing a download.
+ * Site logo links to home. Served via the Next.js image optimizer so the
+ * browser gets a properly sized/responsive webp/avif instead of the full
+ * source file; `/_next/image` responses are forced inline via next.config.ts
+ * headers(), so "Open image in new tab" still displays inline.
  */
 export default function SiteLogoLink({
   className = "",
@@ -39,7 +41,7 @@ export default function SiteLogoLink({
         className={imageClassName}
         fetchPriority={priority ? "high" : "low"}
         priority={priority}
-        unoptimized
+        sizes="200px"
       />
     </Link>
   );
