@@ -10,7 +10,6 @@ import {
   useMemo,
   useState,
 } from "react";
-import { createBrowserSupabaseClient } from "@/lib/supabase/client";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 
 export type SupabaseAuthContextValue = {
@@ -34,7 +33,9 @@ export function SupabaseAuthProvider({ children }: { children: React.ReactNode }
     let cancelled = false;
     let subscription: { unsubscribe: () => void } | null = null;
 
-    const start = () => {
+    const start = async () => {
+      if (cancelled) return;
+      const { createBrowserSupabaseClient } = await import("@/lib/supabase/client");
       if (cancelled) return;
       const supabase = createBrowserSupabaseClient();
       void supabase.auth.getSession().then(({ data: { session } }) => {
@@ -66,6 +67,7 @@ export function SupabaseAuthProvider({ children }: { children: React.ReactNode }
 
   const signOut = useCallback(async () => {
     if (!isSupabaseConfigured()) return;
+    const { createBrowserSupabaseClient } = await import("@/lib/supabase/client");
     const supabase = createBrowserSupabaseClient();
     await supabase.auth.signOut();
     setUser(null);
