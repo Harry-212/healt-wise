@@ -350,7 +350,7 @@ export default function ArticleClient() {
                       { cells: ["5 mg", "0.083 mg", "0.83 mg", "2.5 mg", "5 mg"] },
                       { cells: ["7.5 mg", "0.125 mg", "1.25 mg", "3.75 mg", "7.5 mg"] },
                       { cells: ["10 mg", "0.167 mg", "1.67 mg", "5 mg", "10 mg"] },
-                      { cells: ["12.5 mg", "0.042 mg", "2.08 mg", "6.25 mg", "12.5 mg"] },
+                      { cells: ["12.5 mg", "0.208 mg", "2.08 mg", "6.25 mg", "12.5 mg"] },
                       { cells: ["15 mg", "0.25 mg", "2.5 mg", "7.5 mg", "15 mg"] },
                     ]}
                   />
