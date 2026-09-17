@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import NavBar from "@/components/layout/NavBar";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
-import Footer from "@/components/layout/Footer";
 import SiteEndSection from "@/components/layout/SiteEndSection";
 import { SupabaseAuthProvider } from "@/components/providers/SupabaseAuthProvider";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -18,6 +18,9 @@ import {
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
 import { OutboundClickTracker } from "@/components/analytics/OutboundClickTracker";
+
+/** Footer pulls in framer-motion purely for its below-the-fold scroll-in animation; split it out of the shared root bundle. */
+const Footer = dynamic(() => import("@/components/layout/Footer"));
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
