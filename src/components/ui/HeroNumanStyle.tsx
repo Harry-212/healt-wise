@@ -73,7 +73,6 @@ export default function HeroNumanStyle() {
           priority
           fetchPriority="high"
           className="origin-top scale-110 object-cover object-top"
-          unoptimized
         />
       </div>
 
