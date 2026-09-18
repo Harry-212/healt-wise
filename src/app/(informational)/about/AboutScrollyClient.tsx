@@ -274,11 +274,18 @@ export default function AboutScrollyClient() {
                 </h2>
                 <p className="mt-4 text-pretty text-base leading-relaxed text-slate-600 sm:text-lg">
                   {SITE_BRAND_NAME} is not a pharmacy and is not owned by
-                  manufacturers. Tables lean on transparent criteria—provider
-                  pricing, availability and pharmacy verification—so you can
-                  align cost with safety posture. Where affiliate relationships
-                  apply, we disclose them and keep editorial independence
-                  separate from commercial links.
+                  manufacturers. Our{" "}
+                  <Link
+                    href={HOME_COMPARE_HUB_HREF}
+                    className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+                  >
+                    comparison tables
+                  </Link>{" "}
+                  lean on transparent criteria—provider pricing, availability
+                  and pharmacy verification—so you can align cost with safety
+                  posture. Where affiliate relationships apply, we disclose
+                  them and keep editorial independence separate from
+                  commercial links.
                 </p>
               </div>
             </div>
