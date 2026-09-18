@@ -18,7 +18,7 @@ export const metadata: Metadata = buildPageShareMetadata({
   openGraphTitle: "Mounjaro Click Calculator & Chart UK",
   openGraphDescription:
     "Easily calculate how many clicks are needed for your specific Mounjaro dose using our free tool. Includes a full dosage chart for UK KwikPens.",
-  imagePath: "/window.svg",
+  imagePath: "/og-image.png",
   imageAlt: "Health Wise — Mounjaro Click Calculator",
 });
 
@@ -174,9 +174,9 @@ export default function MounjaroClickCalculatorPage() {
 
           <div className="relative mt-12 aspect-16/10 w-full overflow-hidden rounded-2xl bg-slate-200 shadow-lg ring-1 ring-slate-200/80">
             <Image
-              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=75&w=1600"
-              alt="Patient consultation and medical care context"
-              title="Patient consultation and medical care context"
+              src="/blog/mounjaro-click-calculator-uk-hero-v2.png"
+              alt="Mounjaro KwikPen click calculator reference chart"
+              title="Mounjaro KwikPen click calculator reference chart"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 768px"

@@ -7,6 +7,7 @@ import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import SiteEndSection from "@/components/layout/SiteEndSection";
 import { SupabaseAuthProvider } from "@/components/providers/SupabaseAuthProvider";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { organizationJsonLd } from "@/lib/seo/organization-json-ld";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import {
   SITE_FAVICON_SRC,
@@ -82,6 +83,10 @@ export default function RootLayout({
           flexDirection: "column",
         }}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
+        />
         <SupabaseAuthProvider>
           <NavBar />
           <AnnouncementBar />

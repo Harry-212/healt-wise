@@ -4,6 +4,11 @@ import Image from 'next/image';
 import WegovyClickCalculatorClient from '@/components/tools/WegovyClickCalculatorClient';
 import { buildPageShareMetadata } from '@/lib/seo/share-metadata';
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import {
+  WEGOVY_CLICK_CALCULATOR_FAQ_ITEMS,
+  wegovyClickCalculatorArticleJsonLd,
+  wegovyClickCalculatorFaqJsonLd,
+} from "@/lib/seo/wegovy-json-ld";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: '/tools/wegovy-click-calculator',
@@ -11,18 +16,29 @@ export const metadata: Metadata = buildPageShareMetadata({
   metaDescription: 'Use our UK Wegovy click calculator and dose chart to view mathematical estimates for FlexTouch pens, prescribed doses and the new 7.2 mg option.',
   openGraphTitle: 'Wegovy Click Calculator UK: FlexTouch Dose Guide',
   openGraphDescription: 'Understand the mathematical relationship between UK Wegovy FlexTouch pen strengths, prescribed doses and the 7.2 mg update.',
-  imagePath: '/window.svg',
+  imagePath: '/og-image.png',
   imageAlt: 'Health Wise — Wegovy Click Calculator',
 });
 
 export default function WegovyClickCalculatorPage() {
+  const articleLd = wegovyClickCalculatorArticleJsonLd();
+  const faqLd = wegovyClickCalculatorFaqJsonLd();
+
   return (
     <>
       <BreadcrumbJsonLd
         pageName="Wegovy Click Calculator"
         pagePath="/tools/wegovy-click-calculator"
       />
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+
       <WegovyClickCalculatorClient />
       
       <article className="relative z-20 border-t border-slate-200/80 bg-background">
@@ -207,114 +223,23 @@ export default function WegovyClickCalculatorPage() {
             The official leaflet lists serious risks, including pancreatitis, severe allergic reactions, and sudden changes in eyesight, and requests patients to report suspected side effects to the MHRA.
           </p>
 
-          <h2 className="mt-20 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">Frequently Asked Questions</h2>
+          <h2
+            id="faq"
+            className="mt-20 scroll-mt-28 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+          >
+            Frequently Asked Questions
+          </h2>
           <div className="mt-6 divide-y divide-slate-200">
-            
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">1. What is a Wegovy click calculator?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                A Wegovy click calculator compares a dose entered by the user with the labelled strength of a selected FlexTouch pen. It provides a mathematical estimate only. It does not prescribe a dose or replace the dose counter, patient leaflet or instructions from a healthcare professional.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">2. Is counting Wegovy clicks an official dosing method?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                No. The official Wegovy patient leaflet instructs users not to set a dose by counting clicks. Patients should turn the selector until their prescribed dose appears on the dose counter.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">3. How many clicks are in a full Wegovy dose?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                The manufacturer does not instruct patients to identify a full dose by counting clicks. This calculator uses 74 as a mathematical reference, but that number must not be treated as an official dosing instruction.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">4. What Wegovy pen strengths are available in the UK?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                The standard FlexTouch range includes 0.25 mg, 0.5 mg, 1 mg, 1.7 mg and 2.4 mg pens. A 7.2 mg weekly dose has also been approved for certain adults with obesity, including a dedicated single-dose pen approved in April 2026.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">5. Does each Wegovy FlexTouch pen contain four doses?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                Yes. Each standard Wegovy FlexTouch pen contains four labelled doses of the strength printed on the pen.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">6. Is there a fifth dose in a Wegovy pen?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                No additional dose should be assumed. The patient leaflet says that some solution may remain after four doses, but the amount is insufficient for another dose and the pen should be disposed of.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">7. Can I use a 2.4 mg pen to take a smaller dose?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                Only follow the dose and method approved by your prescriber. Using clicks or partial pen settings to create a different dose is not the manufacturer’s instructed method and should not be attempted without specific clinical guidance.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">8. Can I use this calculator to change my Wegovy dose?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                No. Only a qualified prescriber should decide whether your dose should stay the same, increase, decrease or stop. The calculator is informational and does not provide individual medical advice.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">9. Is Wegovy 7.2 mg equal to 222 clicks?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                No. Healthwise360 does not represent 7.2 mg as 222 clicks. The 7.2 mg dose is a complete prescribed weekly regimen and must be administered using the product and instructions supplied by the prescriber.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">10. How is Wegovy 7.2 mg administered?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                The 7.2 mg dose was initially authorised as three consecutive 2.4 mg injections on the same day. A dedicated single-dose 7.2 mg pen was subsequently approved. Patients must follow the instructions for the exact product they receive.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">11. Can someone start Wegovy at 7.2 mg?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                No. Wegovy normally starts at 0.25 mg once weekly and is increased gradually when instructed by the prescriber. The 7.2 mg option is only considered for certain adults with obesity after treatment at 2.4 mg.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">12. Is Wegovy 7.2 mg available through the NHS?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                MHRA approval does not automatically mean a treatment is routinely funded by the NHS. NICE is currently developing its appraisal of semaglutide 7.2 mg for managing obesity. Patients should confirm current access with their healthcare provider.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">13. What happens if the dose counter stops early?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                The official instructions say that if the counter stops before the prescribed dose is reached, there is not enough medicine left for a full dose. The pen should be disposed of and a new pen used according to the supplied instructions.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">14. Is Wegovy the same as Mounjaro?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                No. Wegovy contains semaglutide, while Mounjaro contains tirzepatide. The medicines, pen mechanisms, labelled strengths and dosing instructions are different. A click calculation from one product must never be transferred to the other. MHRA explains that Wegovy is semaglutide (a GLP-1 receptor agonist) while Mounjaro contains tirzepatide which targets both GLP-1 and GIP receptors.
-              </p>
-            </div>
-
-            <div className="py-6">
-              <h3 className="text-base font-semibold text-slate-900">15. Does Healthwise360 store the dose I enter?</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                No. Calculations are completed in your browser and the dose entered is not saved or used to create a personal profile.
-              </p>
-            </div>
-            
+            {WEGOVY_CLICK_CALCULATOR_FAQ_ITEMS.map((item, index) => (
+              <div className="py-6" key={item.question}>
+                <h3 className="text-base font-semibold text-slate-900">
+                  {index + 1}. {item.question}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  {item.answer}
+                </p>
+              </div>
+            ))}
           </div>
 
           <div className="mt-14 rounded-2xl border border-slate-200 bg-slate-50/80 p-6">
