@@ -160,3 +160,58 @@ body {
 .hw-announce-marquee-track:hover {
   animation-play-state: paused;
 }
+
+/* Scroll-in reveal driven by <RevealOnView> (replaces framer-motion in site chrome). */
+.hw-reveal-item {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(0.1s + var(--hw-reveal-i, 0) * 0.1s);
+}
+
+.hw-reveal-pop {
+  opacity: 0;
+  scale: 0;
+  transition:
+    opacity 0.4s ease-out,
+    scale 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-revealed] .hw-reveal-item,
+[data-revealed] .hw-reveal-pop {
+  opacity: 1;
+  transform: none;
+  scale: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hw-reveal-item,
+  .hw-reveal-pop {
+    transition: none;
+  }
+}
+
+/* Mega menu dropdown entrance (replaces framer-motion AnimatePresence). */
+/* Animates `transform` only; Tailwind v4's -translate-x-1/2 uses the separate `translate` property. */
+@keyframes hw-menu-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hw-menu-in {
+  animation: hw-menu-in 0.18s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hw-menu-in {
+    animation: none;
+  }
+}

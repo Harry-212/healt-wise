@@ -20,7 +20,7 @@ import { HOMEPAGE_PRICE_HUB_LABELS } from "@/lib/text/homepage-brand-labels";
 import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 import SiteSocialLinks from "@/components/layout/SiteSocialLinks";
-import { motion } from "framer-motion";
+import RevealOnView from "@/components/ui/RevealOnView";
 
 const FOOTER_SUPPORT_LINKS = [
   { href: "/what-is-mounjaro", label: "Mounjaro" },
@@ -41,26 +41,6 @@ const FOOTER_NAV_LINK_PRIMARY =
 const FOOTER_EXPLORE_PHARMACIES_BTN =
   "inline-flex w-full touch-manipulation items-center justify-center rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2.5 text-sm font-bold text-emerald-300 transition-all duration-300 hover:border-emerald-400/60 hover:bg-emerald-500/20 hover:text-emerald-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50";
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { type: "spring" as const, stiffness: 100, damping: 15 },
-  },
-};
-
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -80,29 +60,23 @@ export default function Footer() {
 
       <div className="mx-auto max-w-[1400px] px-6 md:px-12 relative z-10">
         {/* Scroll to Top Button */}
-        <motion.button
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          whileHover={{ y: -5, scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={scrollToTop}
-          className="absolute -top-32 right-6 md:right-12 h-14 w-14 rounded-full bg-emerald-600 shadow-[0_0_20px_rgba(5,150,105,0.4)] flex items-center justify-center border border-emerald-400/30 z-50 group"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp className="h-6 w-6 text-white group-hover:animate-bounce" />
-        </motion.button>
+        <RevealOnView className="absolute -top-32 right-6 md:right-12 z-50" rootMargin="0px">
+          <button
+            type="button"
+            onClick={scrollToTop}
+            className="hw-reveal-pop group flex h-14 w-14 items-center justify-center rounded-full border border-emerald-400/30 bg-emerald-600 shadow-[0_0_20px_rgba(5,150,105,0.4)]"
+            aria-label="Scroll to top"
+          >
+            <span className="flex h-full w-full items-center justify-center rounded-full transition-transform duration-200 group-hover:-translate-y-[5px] group-hover:scale-105 group-active:scale-95">
+              <ArrowUp className="h-6 w-6 text-white group-hover:animate-bounce" />
+            </span>
+          </button>
+        </RevealOnView>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
+        <RevealOnView>
           {/* Top Section: Stay connected + business contact */}
-          <motion.div
-            variants={itemVariants}
-            className="mb-20 flex flex-col gap-12 border-b border-slate-800/80 pb-16 lg:flex-row lg:items-start lg:justify-between lg:gap-16"
+          <div
+            className="hw-reveal-item mb-20 flex flex-col gap-12 border-b border-slate-800/80 pb-16 lg:flex-row lg:items-start lg:justify-between lg:gap-16"
           >
             <div className="flex max-w-2xl flex-1 flex-col gap-4">
               <h2 className="text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
@@ -169,11 +143,11 @@ export default function Footer() {
                 heightClassName="h-44 sm:h-48"
               />
             </div>
-          </motion.div>
+          </div>
 
           {/* Middle Section: Links Grid */}
           <div className="mb-20 grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-3 lg:grid-cols-5">
-            <motion.div variants={itemVariants}>
+            <div className="hw-reveal-item" style={{ "--hw-reveal-i": 1 } as React.CSSProperties}>
               <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Treatments
               </h3>
@@ -269,9 +243,9 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants}>
+            <div className="hw-reveal-item" style={{ "--hw-reveal-i": 2 } as React.CSSProperties}>
               <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Trust &amp; Safety
               </h3>
@@ -316,9 +290,9 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants}>
+            <div className="hw-reveal-item" style={{ "--hw-reveal-i": 3 } as React.CSSProperties}>
               <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Support
               </h3>
@@ -335,9 +309,9 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants}>
+            <div className="hw-reveal-item" style={{ "--hw-reveal-i": 4 } as React.CSSProperties}>
               <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Company
               </h3>
@@ -379,9 +353,9 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants}>
+            <div className="hw-reveal-item" style={{ "--hw-reveal-i": 5 } as React.CSSProperties}>
               <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Pharmacies
               </h3>
@@ -406,7 +380,7 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </motion.div>
+            </div>
           </div>
 
           {/* Bottom Bar: Dark Pill */}
@@ -456,7 +430,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </RevealOnView>
       </div>
     </footer>
   );

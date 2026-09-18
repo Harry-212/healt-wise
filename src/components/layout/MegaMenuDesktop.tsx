@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import type { NavPanel } from '@/lib/nav/nav-config';
 import { NavLinkIcon, NAV_LINK_ACCENT_CLASSES } from '@/lib/nav/nav-icons';
@@ -142,15 +141,9 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
               <ChevronDown className={`h-3.5 w-3.5 shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} aria-hidden />
             </button>
 
-            <AnimatePresence>
-              {isOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 8 }}
-                  transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-                  className={`fixed left-1/2 z-[1000] ${shellW} -translate-x-1/2 px-1 ${PANEL_TOP}`}
-                  style={{ willChange: 'transform' }}
+            {isOpen && (
+                <div
+                  className={`hw-menu-in fixed left-1/2 z-[1000] ${shellW} -translate-x-1/2 px-1 ${PANEL_TOP}`}
                   onPointerEnter={() => {
                     if (!isTouch.current) cancelClose();
                   }}
@@ -200,9 +193,8 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
           </li>
         );
       })}

@@ -19,9 +19,20 @@ type SiteLogoLinkProps = {
  * header for subresource loads), it only turns "open image in new tab"
  * into a download.
  */
+const HEADER_LOGO_CLASS =
+  "h-9 w-auto max-w-[118px] object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.08)] sm:h-14 sm:max-w-none md:h-[4.5rem]";
+
+/**
+ * Rendered width of HEADER_LOGO_CLASS (800x250 source, 3.2:1): ≤118px on
+ * mobile, h-14 (~180px) from sm, h-[4.5rem] (~230px) from md. Without `sizes`,
+ * next/image emits 1x/2x candidates at the intrinsic 800px, so phones fetched
+ * the 1920w variant at high priority, competing with the hero LCP image.
+ */
+const HEADER_LOGO_SIZES = "(min-width: 768px) 230px, (min-width: 640px) 180px, 118px";
+
 export default function SiteLogoLink({
   className = "",
-  imageClassName = "h-9 w-auto max-w-[118px] object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.08)] sm:h-14 sm:max-w-none md:h-[4.5rem]",
+  imageClassName,
   width = 800,
   height = 250,
   priority = false,
@@ -41,7 +52,8 @@ export default function SiteLogoLink({
         title={logoLabel}
         width={width}
         height={height}
-        className={imageClassName}
+        className={imageClassName ?? HEADER_LOGO_CLASS}
+        sizes={imageClassName === undefined ? HEADER_LOGO_SIZES : undefined}
         fetchPriority={priority ? "high" : "low"}
         priority={priority}
       />

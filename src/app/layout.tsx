@@ -20,7 +20,7 @@ import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
 import { OutboundClickTracker } from "@/components/analytics/OutboundClickTracker";
 
-/** Footer pulls in framer-motion purely for its below-the-fold scroll-in animation; split it out of the shared root bundle. */
+/** Footer is below the fold on every page; split it out of the shared root bundle. */
 const Footer = dynamic(() => import("@/components/layout/Footer"));
 
 const geistSans = Geist({
