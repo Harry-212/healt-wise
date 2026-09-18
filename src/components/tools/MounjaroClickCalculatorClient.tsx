@@ -205,11 +205,24 @@ export default function MounjaroClickCalculatorClient() {
               <Syringe className="w-3 h-3" /> Information only · KwikPen UK
             </p>
             <h1 className="mx-auto mt-3 max-w-3xl text-balance text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-[2.4rem]">
-              Mounjaro Click Calculator & Dose Chart
+              Mounjaro Click Calculator UK
             </h1>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-300/95 sm:text-base">
-              Calculate exact KwikPen dial clicks for your custom dose, or view
-              our comprehensive dosage reference chart for UK Mounjaro pens.
+              Use this educational calculator to understand the proportional
+              relationship between a UK Mounjaro KwikPen strength and a dose
+              that has already been prescribed to you.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl rounded-xl border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-left text-xs leading-relaxed text-amber-100 sm:text-sm">
+              <strong className="font-semibold">Important:</strong> Mounjaro
+              KwikPens are designed to deliver four fixed labelled doses.
+              Using click counting to administer a partial dose falls outside
+              the standard manufacturer instructions. Do not use this
+              calculator to select, increase, reduce or otherwise change your
+              prescribed dose without guidance from your prescriber.
+            </p>
+            <p className="mx-auto mt-3 text-[0.7rem] text-slate-400">
+              Reviewed by: Alistair Campbell &middot; Last reviewed: 15
+              September 2026
             </p>
             {/* Tab pills in hero */}
             <div className="mt-8 flex gap-2 rounded-full bg-white/10 p-1 shadow-xl ring-1 ring-white/15 backdrop-blur-sm">
@@ -283,10 +296,10 @@ export default function MounjaroClickCalculatorClient() {
 
                       <div>
                         <label className="text-sm font-medium text-slate-700">
-                          2. Desired Dose (mg)
+                          2. Prescribed Dose (mg)
                         </label>
                         <p className="text-xs text-slate-500 mt-1 mb-2">
-                          Enter the dose you wish to inject.
+                          Enter the dose already prescribed to you.
                         </p>
                         <input
                           type="number"
@@ -385,6 +398,16 @@ export default function MounjaroClickCalculatorClient() {
                               </div>
                             </div>
                           </div>
+
+                          <p className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs leading-relaxed text-slate-600">
+                            <strong className="font-semibold text-slate-800">
+                              Important:
+                            </strong>{" "}
+                            This result is a mathematical reference only. It
+                            is not a dosing recommendation. Always follow the
+                            instructions supplied with your Mounjaro KwikPen
+                            and the directions given by your prescriber.
+                          </p>
 
                           {clicks > 60 && (
                             <div className="rounded-2xl border border-orange-200 bg-orange-50/80 p-5">
