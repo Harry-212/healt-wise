@@ -51,10 +51,5 @@ export function canonicalHostRedirect(request: NextRequest): NextResponse | null
   next.hostname = canonicalHost;
   next.protocol = "https:";
   next.port = "";
-  const response = NextResponse.redirect(next, 308);
-  // Let the Hostinger CDN serve this hop from the edge instead of forwarding
-  // every apex/http hit to the Node origin (~0.35s vs ~0.13s per redirect).
-  // Safe to cache: the target depends only on host + URL, which key the cache.
-  response.headers.set("Cache-Control", "public, max-age=86400, s-maxage=31536000");
-  return response;
+  return NextResponse.redirect(next, 308);
 }
