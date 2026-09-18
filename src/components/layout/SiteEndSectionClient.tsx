@@ -17,7 +17,6 @@ import {
   sanitizeBrandDisplayNames,
   textContainsBrandName,
 } from "@/lib/text/sanitize-brand-display-names";
-import { shouldServeImageDirect } from "@/lib/image-display";
 
 function hashToSeed(s: string): number {
   let h = 2166136261;
@@ -219,7 +218,6 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
                     className="object-cover transition duration-500 group-hover:scale-105"
                     sizes="280px"
                     unoptimized={
-                      shouldServeImageDirect(imageUrl) ||
                       imageUrl.includes("unsplash.com") ||
                       imageUrl.includes("ibb.co")
                     }

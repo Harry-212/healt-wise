@@ -122,7 +122,7 @@ export default function NavBar() {
       <header className="fixed inset-x-0 top-0 z-[90] w-full max-w-full overflow-x-clip overflow-y-visible border-b border-brand-border bg-brand-card/95 pt-[env(safe-area-inset-top,0px)] shadow-sm backdrop-blur supports-[backdrop-filter]:bg-brand-card/90">
         <div className="relative mx-auto flex h-16 max-w-[1400px] min-h-0 min-w-0 items-center gap-2 px-3 sm:h-24 md:h-28 sm:gap-3 sm:px-4 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-4 lg:px-6 xl:gap-6">
           <div className="flex min-w-0 shrink-0 justify-start lg:justify-self-start">
-            <SiteLogoLink />
+            <SiteLogoLink priority />
           </div>
 
           <nav
