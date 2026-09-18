@@ -23,6 +23,7 @@ const TOOL_CARDS = [
     iconDot: "bg-emerald-500/20",
     penBorder: "border-emerald-100",
     offset: "lg:-translate-y-2",
+    prefetch: true,
   },
   {
     href: "/tools/weight-loss-tracker",
@@ -35,6 +36,8 @@ const TOOL_CARDS = [
     iconDot: "bg-sky-500/20",
     penBorder: "border-sky-100",
     offset: "lg:translate-y-2",
+    /** Pulls in recharts (~150KB) — don't prefetch from the homepage hero. */
+    prefetch: false,
   },
   {
     href: "/tools/mounjaro-click-calculator",
@@ -47,6 +50,7 @@ const TOOL_CARDS = [
     iconDot: "bg-violet-500/20",
     penBorder: "border-violet-100",
     offset: "lg:-translate-y-2",
+    prefetch: true,
   },
 ] as const;
 
@@ -117,6 +121,7 @@ export default function HeroNumanStyle() {
                 <Link
                   key={tool.href}
                   href={tool.href}
+                  prefetch={tool.prefetch}
                   className={`group relative flex flex-col justify-between overflow-hidden rounded-xl bg-white/95 p-2.5 shadow-lg backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl ${tool.offset}`}
                 >
                   <div className="z-10 flex flex-col gap-0.5">
