@@ -17,6 +17,7 @@ const sizeClass = {
   sm: "rounded-xl px-4 py-2.5 text-sm",
   card: "rounded-lg px-3 py-2 text-xs",
   hero: "rounded-full px-8 py-3 text-sm",
+  calculator: "min-h-14 rounded-full px-9 py-3 text-lg",
   footer: "rounded-2xl px-9 py-4 text-base shadow-lg",
 } as const;
 
@@ -53,7 +54,9 @@ export default function CompareHereLink({
   ...rest
 }: Props) {
   const iconClass =
-    size === "footer" ? "h-5 w-5 shrink-0" : "h-4 w-4 shrink-0";
+    size === "footer" || size === "calculator"
+      ? "h-5 w-5 shrink-0"
+      : "h-4 w-4 shrink-0";
   const accentIconClass = navAccent
     ? NAV_LINK_ACCENT_CLASSES[navAccent].icon
     : "";
