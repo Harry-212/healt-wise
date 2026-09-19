@@ -17,7 +17,7 @@ const sizeClass = {
   sm: "rounded-xl px-4 py-2.5 text-sm",
   card: "rounded-lg px-3 py-2 text-xs",
   hero: "rounded-full px-8 py-3 text-sm",
-  calculator: "min-h-14 rounded-full px-9 py-3 text-lg",
+  calculator: "min-h-13 rounded-full px-5 py-3 text-base xl:px-7",
   footer: "rounded-2xl px-9 py-4 text-base shadow-lg",
 } as const;
 

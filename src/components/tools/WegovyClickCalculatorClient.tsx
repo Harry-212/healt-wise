@@ -436,15 +436,15 @@ export default function WegovyClickCalculatorClient() {
                             </div>
                           )}
 
-                          <div className="flex flex-wrap justify-center gap-x-10 gap-y-4 pt-6">
-                            <Link href="/compare/wegovy-vs-mounjaro" className="inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-full bg-emerald-600 px-9 text-lg font-semibold text-white transition hover:bg-emerald-700 shadow-sm sm:w-auto sm:min-w-56">
+                          <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 pt-6 xl:gap-x-8">
+                            <Link href="/compare/wegovy-vs-mounjaro" className="inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-emerald-600 px-5 text-base font-semibold text-white transition hover:bg-emerald-700 shadow-sm sm:w-auto sm:min-w-48 xl:px-7">
                               Compare GLP-1s <Zap className="inline h-5 w-5 fill-current" aria-hidden />
                             </Link>
                             <CompareHereLink
                               href="/wegovy-price-comparison"
                               size="calculator"
                               navAccent="emerald"
-                              className="w-full sm:w-auto sm:min-w-56"
+                              className="w-full sm:w-auto sm:min-w-48"
                             />
                           </div>
                         </motion.div>
