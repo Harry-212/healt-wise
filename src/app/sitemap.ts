@@ -62,6 +62,7 @@ const STATIC_PATHS = [
   "/terms-of-service",
   "/time-saver",
   "/tips",
+  "/tools",
   "/tools/bmi-calculator",
   "/tools/mounjaro-click-calculator",
   "/tools/wegovy-click-calculator",

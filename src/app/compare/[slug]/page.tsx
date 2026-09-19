@@ -127,8 +127,12 @@ export default async function ComparePage({ params }: Props) {
   return (
     <>
       <BreadcrumbJsonLd
-        sectionName="Compare"
-        sectionPath="/compare"
+        {...(isTripleHub
+          ? {}
+          : {
+              sectionName: "Compare treatments",
+              sectionPath: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+            })}
         pageName={webLdName || layout.hero.titleBold}
         pagePath={`/compare/${slug}`}
       />

@@ -244,6 +244,29 @@ const nextConfig: NextConfig = {
         destination: "/wegovy-price-comparison",
         permanent: true,
       },
+      // Maintenance lists were retired with the price lists (commit 967f98e)
+      // but Google still crawls them; send equity to the comparison hubs.
+      {
+        source: "/mounjaro-maintenance-pharmacies",
+        destination: "/mounjaro-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/wegovy-maintenance-pharmacies",
+        destination: "/wegovy-price-comparison",
+        permanent: true,
+      },
+      // No standalone /compare index — the triple comparison is the hub.
+      {
+        source: "/compare",
+        destination: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+        permanent: true,
+      },
+      {
+        source: "/helpful-guides/mounjaro-weight-loss-treatment-uk",
+        destination: "/helpful-guides/mounjaro-weight-loss-injection-uk",
+        permanent: true,
+      },
       {
         source: "/prices/saxenda-price-uk",
         destination: "/saxenda-price-comparison",

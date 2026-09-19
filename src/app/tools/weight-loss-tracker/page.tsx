@@ -19,6 +19,8 @@ export default function WeightLossTrackerPage() {
   return (
     <>
       <BreadcrumbJsonLd
+        sectionName="Tools"
+        sectionPath="/tools"
         pageName="Weight loss tracker UK"
         pagePath="/tools/weight-loss-tracker"
       />
