@@ -25,6 +25,7 @@ const TOC = [
   { id: "fifth-dose", label: "The Fifth Dose Question" },
   { id: "dose-splitting", label: "Off-Label Dose Splitting" },
   { id: "compare-wegovy", label: "Mounjaro KwikPen vs Wegovy Pen" },
+  { id: "related-guides", label: "More Mounjaro Guides" },
   { id: "faq", label: "FAQs" },
   { id: "conclusion", label: "Conclusion" },
 ];
@@ -395,6 +396,17 @@ export default function ArticleClient() {
                   </Link>
                   .
                 </p>
+                <p className="mt-4">
+                  Side effects such as nausea tend to be most noticeable in the days after each step up. Our{" "}
+                  <Link href="/helpful-guides/mounjaro-side-effects-uk" className="font-semibold text-emerald-600 hover:underline">
+                    Mounjaro side effects guide
+                  </Link>{" "}
+                  explains what to expect at each dose and when to contact your prescriber. If you have paused treatment, read{" "}
+                  <Link href="/helpful-guides/restarting-mounjaro-after-break-uk" className="font-semibold text-emerald-600 hover:underline">
+                    restarting Mounjaro after a break
+                  </Link>{" "}
+                  before you go back to your previous pen strength.
+                </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="fifth-dose" heading="The &quot;5th Dose&quot; Question: Is There Extra Medication Left in the Pen?">
@@ -478,6 +490,35 @@ export default function ArticleClient() {
                   </Link>
                   .
                 </p>
+              </GuideSection>
+
+              <GuideSection darkMode={darkMode} id="related-guides" heading="More Mounjaro Guides">
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>
+                    <Link href="/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust" className="font-semibold text-emerald-600 hover:underline">
+                      Mounjaro dosage for weight loss
+                    </Link>
+                    : how the dose stages work and strategies for long-term results.
+                  </li>
+                  <li>
+                    <Link href="/helpful-guides/mounjaro-eligibility-bmi-requirements-uk" className="font-semibold text-emerald-600 hover:underline">
+                      Mounjaro eligibility and BMI requirements
+                    </Link>
+                    : who can be prescribed Mounjaro in the UK.
+                  </li>
+                  <li>
+                    <Link href="/helpful-guides/mounjaro-delivery-storage-uk" className="font-semibold text-emerald-600 hover:underline">
+                      Mounjaro delivery and storage
+                    </Link>
+                    : keeping your KwikPen cold and what to do if a delivery arrives warm.
+                  </li>
+                  <li>
+                    <Link href="/mounjaro-faq" className="font-semibold text-emerald-600 hover:underline">
+                      Mounjaro FAQ
+                    </Link>
+                    : answers to common UK questions about fees, doses and pharmacy policies.
+                  </li>
+                </ul>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="faq" heading="FAQ: Mounjaro Click Calculator UK">

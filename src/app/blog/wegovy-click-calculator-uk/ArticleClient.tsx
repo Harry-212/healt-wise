@@ -26,6 +26,7 @@ const TOC = [
   { id: "cost-per-dose", label: "Cost per dose estimates" },
   { id: "uk-vs-us", label: "UK FlexTouch vs US pen" },
   { id: "safe-use", label: "Safe use reminders" },
+  { id: "related-guides", label: "More Wegovy guides" },
   { id: "faq", label: "FAQ" },
   { id: "conclusion", label: "Conclusion" },
 ];
@@ -893,6 +894,55 @@ export default function ArticleClient() {
                 <strong>is not a fifth dose</strong> and should not be used. The
                 pen should be safely discarded after the fourth injection.
               </p>
+            </GuideSection>
+
+            <GuideSection
+              darkMode={darkMode}
+              id="related-guides"
+              heading="More Wegovy Guides"
+            >
+              <ul className="list-disc space-y-3 pl-5">
+                <li>
+                  <Link
+                    href="/what-is-wegovy#side-effects-safety"
+                    className={linkClass}
+                  >
+                    Wegovy side effects and safety
+                  </Link>
+                  : common effects, serious risks and when to seek urgent
+                  help.
+                </li>
+                <li>
+                  <Link
+                    href="/wegovy-faq"
+                    className={linkClass}
+                  >
+                    Wegovy FAQ
+                  </Link>
+                  : answers to common UK questions about fees, doses and
+                  pharmacy policies.
+                </li>
+                <li>
+                  <Link
+                    href="/helpful-guides/switching-wegovy-to-mounjaro-uk"
+                    className={linkClass}
+                  >
+                    Switching from Wegovy to Mounjaro
+                  </Link>
+                  : how to switch safely and what to expect during the
+                  transition.
+                </li>
+                <li>
+                  <Link
+                    href="/helpful-guides/switching-pharmacies-mounjaro-wegovy-uk"
+                    className={linkClass}
+                  >
+                    Switching pharmacies for Wegovy
+                  </Link>
+                  : what you need and how the consultation works when you
+                  move to a new provider.
+                </li>
+              </ul>
             </GuideSection>
 
             <section
