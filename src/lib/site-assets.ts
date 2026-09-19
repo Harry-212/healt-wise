@@ -78,10 +78,6 @@ export const SITE_FAVICON_SRC = "/newiconhealthwise360.png";
 export const BLOG_TOP_BENEFITS_DOCTOR_PRESCRIBED_IMAGE =
   "/blog/Ttop%20Benefits%20of%20Doctor%20Prescribed%20Weight%20Loss%20Injections%20UK%20for%20You%20-%20Copy.webp";
 
-/** Blog hero + listing: The Truth About Wegovy… costs (`public/blog/TThe Truth About Wegovy… .webp`). */
-export const BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE =
-  "/blog/TThe%20Truth%20About%20Wegovy%20Weight%20Loss%20Medication%20Costs%20in%20the%20UK.webp";
-
 /** Blog hero + listing: Easy-to-Follow Wegovy injection instructions (`public/blog/EEasy-to-Follow… .webp`). */
 export const BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE =
   "/blog/EEasy-to-Follow%20Wegovy%20Injection%20Instructions%20You%20Can%20Trust.webp";

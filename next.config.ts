@@ -256,6 +256,28 @@ const nextConfig: NextConfig = {
         destination: "/wegovy-price-comparison",
         permanent: true,
       },
+      // Blog price articles cannibalised the price comparison hubs (neither
+      // got indexed) — consolidate each into its hub.
+      {
+        source: "/blog/mounjaro-price-uk",
+        destination: "/mounjaro-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/blog/wegovy-price-uk",
+        destination: "/wegovy-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/blog/the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk",
+        destination: "/wegovy-price-comparison",
+        permanent: true,
+      },
+      {
+        source: "/blog/saxenda-vs-mounjaro-vs-wegovy-price-uk",
+        destination: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+        permanent: true,
+      },
       // No standalone /compare index — the triple comparison is the hub.
       {
         source: "/compare",

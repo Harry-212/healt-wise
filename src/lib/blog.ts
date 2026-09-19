@@ -17,7 +17,6 @@ import {
   BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE,
   BLOG_MOUNT_KWIKPEN_USER_GUIDE_HERO_IMAGE,
   BLOG_SURPRISING_MOUNJARO_SIDE_EFFECTS_HERO_IMAGE,
-  BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE,
   BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE,
 } from "@/lib/site-assets";
 
@@ -247,17 +246,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["guides", "wegovy", "mounjaro", "safety"],
   },
   {
-    slug: "saxenda-vs-mounjaro-vs-wegovy-price-uk",
-    title:
-      "Saxenda vs Mounjaro vs Wegovy: Which Is the Cheapest Weight Loss Treatment in the UK?",
-    date: "2026-06-05",
-    category: "Prices",
-    description:
-      "Saxenda vs Mounjaro vs Wegovy price comparison UK 2026. Full cost breakdown by dose, annual estimates, what each treatment actually costs long term and how to compare properly.",
-    heroImage: "/blog/saxenda-vs-mounjaro-vs-wegovy-price-uk-hero.png",
-    feedTags: ["guides", "wegovy", "mounjaro", "safety"],
-  },
-  {
     slug: "best-weight-loss-comparison-sites-uk",
     title:
       "We Tested 6 UK Weight Loss Treatment Comparison Websites So You Don't Have To: Here's the Honest Verdict",
@@ -289,28 +277,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
       "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds, limitations, weight loss treatment eligibility, and what to do with your result.",
     heroImage: "/blog/bmi-calculator-hero.png",
     feedTags: ["guides", "wegovy", "mounjaro", "how-it-works"],
-  },
-  {
-    slug: "wegovy-price-uk",
-    title:
-      "Wegovy Price UK 2026: How Much Does Each Dose Cost and Is It Worth It?",
-    date: "2026-05-28",
-    category: "Prices",
-    description:
-      "How much does Wegovy cost in the UK in 2026? Full price breakdown by dose, monthly estimates, NHS vs private, and how it compares to Mounjaro.",
-    heroImage: "/blog/new%20wegovy%20price.webp",
-    feedTags: ["wegovy", "guides", "safety"],
-  },
-  {
-    slug: "mounjaro-price-uk",
-    title:
-      "Mounjaro Price UK 2026: How Much Does Each Dose Cost and Where to Find It",
-    date: "2026-05-28",
-    category: "Prices",
-    description:
-      "How much does Mounjaro cost in the UK in 2026? Full price breakdown by dose, monthly estimates, and what to check before buying from any pharmacy.",
-    heroImage: "/blog/new%20mounjaro%20price.webp",
-    feedTags: ["mounjaro", "guides", "safety"],
   },
   {
     slug: "weight-loss-treatment-price-comparison-uk",
@@ -546,16 +512,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
       "Learn how Mounjaro dosage works, the stages from 2.5 mg to higher doses, potential side effects, and long-term success strategies.",
     heroImage: "/blog/Healthy.webp",
     feedTags: ["mounjaro", "guides"],
-  },
-  {
-    slug: "the-truth-about-wegovy-weight-loss-medication-costs-in-the-uk",
-    title: "The Truth About Wegovy Weight Loss Medication Costs in the UK",
-    date: "2026-04-30",
-    category: "Safety",
-    description:
-      "Discover real UK costs for wegovy weight loss medication, see if you qualify and compare providers today.",
-    heroImage: BLOG_WEGOVY_COSTS_TRUTH_HERO_IMAGE,
-    feedTags: ["wegovy", "safety"],
   },
   {
     slug: "easy-to-follow-wegovy-injection-instructions-you-can-trust",
