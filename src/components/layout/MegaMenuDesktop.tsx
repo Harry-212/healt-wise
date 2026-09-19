@@ -141,8 +141,10 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
               <ChevronDown className={`h-3.5 w-3.5 shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} aria-hidden />
             </button>
 
-            {isOpen && (
-                <div
+            {/* Always in the server HTML (hidden until opened) so crawlers
+                see the menu links — Googlebot never hovers to open a panel. */}
+            <div
+                  hidden={!isOpen}
                   className={`hw-menu-in fixed left-1/2 z-[1000] ${shellW} -translate-x-1/2 px-1 ${PANEL_TOP}`}
                   onPointerEnter={() => {
                     if (!isTouch.current) cancelClose();
@@ -194,7 +196,6 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
                     </div>
                   </div>
                 </div>
-              )}
           </li>
         );
       })}

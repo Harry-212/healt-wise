@@ -146,6 +146,11 @@ export const NAV_PANELS: NavPanel[] = [
             href: "/tools/wegovy-click-calculator",
             icon: "calculator",
           },
+          {
+            label: "All weight loss tools",
+            href: "/tools",
+            icon: "sparkles",
+          },
         ],
       },
     ],
