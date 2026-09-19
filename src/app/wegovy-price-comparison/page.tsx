@@ -9,7 +9,12 @@ import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
 import {
   estimatedMonthlyCost,
   startingPrice,
+  WEGOVY_DOSE_KEYS,
+  wegovyPriceAmount,
 } from "@/lib/data/wegovy-uk-compare-providers";
+import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
+import AnnualCostSection from "@/components/compare/AnnualCostSection";
+import NhsAccessSection from "@/components/compare/NhsAccessSection";
 import { getWegovyCompareProviders } from "@/lib/data/compare-live";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
@@ -72,6 +77,15 @@ export default function CompareWegovyPricesUkPage() {
 
   const cheapest = WEGOVY_UK_COMPARE_PROVIDERS.reduce((a, b) =>
     startingPrice(a) <= startingPrice(b) ? a : b,
+  );
+  const annualCosts = buildAnnualCostEstimates(
+    WEGOVY_DOSE_KEYS,
+    ["1mg", "1.7mg", "2.4mg", "7.2mg"],
+    WEGOVY_UK_COMPARE_PROVIDERS.map((p) =>
+      Object.fromEntries(
+        WEGOVY_DOSE_KEYS.map((k) => [k, wegovyPriceAmount(p.prices[k])]),
+      ) as Record<(typeof WEGOVY_DOSE_KEYS)[number], number | null>,
+    ),
   );
   const bestValue =
     WEGOVY_UK_COMPARE_PROVIDERS.find((p) => p.badges?.includes("bestValue")) ??
@@ -328,6 +342,27 @@ export default function CompareWegovyPricesUkPage() {
             </p>
           </div>
         </section>
+
+        <AnnualCostSection
+          medicine="Wegovy"
+          estimates={annualCosts}
+          providerCount={WEGOVY_UK_COMPARE_PROVIDERS.length}
+        />
+
+        <NhsAccessSection medicine="Wegovy">
+          <p>
+            Yes, but access is limited. Wegovy has NICE approval for weight
+            management in England, and the NHS offers it through specialist
+            weight management services to people who meet specific clinical
+            criteria. The rollout is phased rather than universal.
+          </p>
+          <p>
+            In practice, most people in the UK still get Wegovy on a private
+            prescription, either because they do not meet the NHS criteria or
+            because waiting times and local availability make private access
+            the more realistic route.
+          </p>
+        </NhsAccessSection>
 
         {/* Discount strategy */}
         <section className="border-b border-slate-200/80 bg-amber-50/40 py-12 md:py-16">

@@ -6,10 +6,14 @@ import MounjaroCompareChartsSection from "@/components/compare/MounjaroCompareCh
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import MounjaroCompareShaderHero from "@/components/mounjaro/MounjaroCompareShaderHero";
 import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable";
+import AnnualCostSection from "@/components/compare/AnnualCostSection";
+import NhsAccessSection from "@/components/compare/NhsAccessSection";
 import {
   estimatedMonthlyCost,
+  MOUNJARO_DOSE_KEYS,
   startingPrice,
 } from "@/lib/data/mounjaro-uk-compare-providers";
+import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
 import { getMounjaroCompareProviders } from "@/lib/data/compare-live";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
@@ -72,6 +76,11 @@ export default function CompareMounjaroPricesUkPage() {
 
   const cheapest = MOUNJARO_UK_COMPARE_PROVIDERS.reduce((a, b) =>
     startingPrice(a) <= startingPrice(b) ? a : b,
+  );
+  const annualCosts = buildAnnualCostEstimates(
+    MOUNJARO_DOSE_KEYS,
+    ["5mg", "7.5mg", "10mg", "12.5mg", "15mg"],
+    MOUNJARO_UK_COMPARE_PROVIDERS.map((p) => p.prices),
   );
   const bestValue =
     MOUNJARO_UK_COMPARE_PROVIDERS.find((p) => p.badges?.includes("bestValue")) ??
@@ -316,6 +325,22 @@ export default function CompareMounjaroPricesUkPage() {
             </p>
           </div>
         </section>
+
+        <AnnualCostSection
+          medicine="Mounjaro"
+          estimates={annualCosts}
+          providerCount={MOUNJARO_UK_COMPARE_PROVIDERS.length}
+        />
+
+        <NhsAccessSection medicine="Mounjaro">
+          <p>
+            Mounjaro has NICE approval for weight management in the UK and is
+            being introduced into NHS services through a phased rollout.
+            Access is still limited by local commissioning criteria and
+            capacity, so most people in the UK currently get tirzepatide on a
+            private prescription.
+          </p>
+        </NhsAccessSection>
 
         <section className="border-b border-slate-200/80 bg-amber-50/40 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
