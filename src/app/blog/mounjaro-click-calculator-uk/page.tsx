@@ -143,7 +143,7 @@ export default function MounjaroClickCalculatorUkPage() {
         name: "Can I use the same formula for Wegovy click calculations?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. Wegovy is a single-dose auto-injector with no dial or click mechanism. The click calculator concept is specific to the Mounjaro multi-dose KwikPen format.",
+          text: "No. The UK Wegovy FlexTouch pen also holds four doses and clicks as you turn it, but a full dose corresponds to 74 clicks rather than 60, and the patient leaflet says to set every dose with the dose counter, not by counting clicks.",
         },
       },
     ],

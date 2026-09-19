@@ -24,7 +24,7 @@ const TOC = [
   { id: "titration-schedule", label: "Titration Schedule & Pens" },
   { id: "fifth-dose", label: "The Fifth Dose Question" },
   { id: "dose-splitting", label: "Off-Label Dose Splitting" },
-  { id: "compare-wegovy", label: "Mounjaro KwikPen vs Wegovy Pen" },
+  { id: "compare-wegovy", label: "Mounjaro KwikPen vs Wegovy FlexTouch" },
   { id: "related-guides", label: "More Mounjaro Guides" },
   { id: "faq", label: "FAQs" },
   { id: "conclusion", label: "Conclusion" },
@@ -461,27 +461,31 @@ export default function ArticleClient() {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="compare-wegovy" heading="How the Mounjaro KwikPen Compares to the Wegovy Pen">
+              <GuideSection darkMode={darkMode} id="compare-wegovy" heading="How the Mounjaro KwikPen Compares to the Wegovy FlexTouch Pen">
                 <p>
                   Because many UK patients research both Mounjaro and Wegovy before starting treatment, a brief comparison of the delivery devices is useful:
                 </p>
 
                 <div className="mt-6">
                   <GuideTable
-                    headers={["Feature", "Mounjaro KwikPen", "Wegovy Pen"]}
+                    headers={["Feature", "Mounjaro KwikPen", "Wegovy FlexTouch (UK)"]}
                     rows={[
                       { cells: ["Manufacturer", "Eli Lilly", "Novo Nordisk"] },
-                      { cells: ["Doses per pen", "4", "1 single dose"] },
+                      { cells: ["Doses per pen", "4", "4"] },
                       { cells: ["Volume per dose", "0.6 mL", "0.5 mL"] },
-                      { cells: ["Click mechanism", "Yes, with 60 clicks per full dose", "No, it is a single-use auto-injector"] },
-                      { cells: ["Pen strengths available", "6 strengths from 2.5 mg to 15 mg", "5 strengths from 0.25 mg to 2.4 mg"] },
+                      { cells: ["Click mechanism", "Rotating dial, 60 clicks per full dose", "Rotating selector, 74 clicks per full dose as a mathematical reference"] },
+                      { cells: ["Pen strengths available", "6 strengths from 2.5 mg to 15 mg", "5 strengths from 0.25 mg to 2.4 mg, plus a 7.2 mg dose"] },
                       { cells: ["Injection frequency", "Weekly", "Weekly"] },
                     ]}
                   />
                 </div>
 
                 <p className="mt-4">
-                  The key difference relevant to click calculations is that Wegovy uses a single-dose auto-injector with no dial, so there is no equivalent click-counting concept. The Mounjaro KwikPen's multi-dose design is what makes the click calculator relevant.
+                  Both pens hold four weekly doses and click as the selector turns, but the click counts differ: a full Wegovy dose corresponds to 74 clicks, not 60. The Wegovy patient leaflet also says not to set a dose by counting clicks, only by the dose counter. Our{" "}
+                  <Link href="/blog/wegovy-click-calculator-uk" className="font-semibold text-emerald-600 hover:underline">
+                    Wegovy click calculator guide
+                  </Link>{" "}
+                  explains the FlexTouch pen in detail.
                 </p>
                 <p>
                   For a full clinical and cost comparison between these two treatments, see our detailed{" "}
@@ -622,7 +626,7 @@ export default function ArticleClient() {
                       11. Can I use the same formula for Wegovy click calculations?
                     </h4>
                     <p className="mt-2 text-sm">
-                      No. Wegovy is a single-dose auto-injector with no dial or click mechanism. The click calculator concept is specific to the Mounjaro multi-dose KwikPen format.
+                      No. The UK Wegovy FlexTouch pen also holds four doses and clicks as you turn it, but a full dose corresponds to 74 clicks rather than 60, and the patient leaflet says to set every dose with the dose counter, not by counting clicks.
                     </p>
                   </div>
                 </div>
