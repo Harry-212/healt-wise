@@ -15,6 +15,7 @@ import {
   blogTopicTitle,
 } from "@/lib/seo/blog-hub-metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 type Props = {
   params: Promise<{ topic: string; page: string }>;
@@ -33,26 +34,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title = blogTopicTitle(raw, 1);
     const description = blogTopicDescription(raw, 1);
     const url = `${siteOrigin()}${blogHubPath(raw)}`;
-    return {
+    return withDefaultShareImage({
       title: { absolute: title },
       description,
       alternates: { canonical: url },
       openGraph: { title, description, url },
       twitter: { title, description },
-    };
+    });
   }
   const { totalPages } = getBlogPageFeed(page, { topic: raw });
   if (page > totalPages) return {};
   const title = blogTopicTitle(raw, page);
   const description = blogTopicDescription(raw, page);
   const url = `${siteOrigin()}${blogPagePath(page, raw)}`;
-  return {
+  return withDefaultShareImage({
     title: { absolute: title },
     description,
     alternates: { canonical: url },
     openGraph: { title, description, url },
     twitter: { title, description },
-  };
+  });
 }
 
 export default async function BlogTopicPaginatedPage({ params }: Props) {

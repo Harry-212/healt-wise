@@ -4,8 +4,9 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import { SLEEP_FAQ } from "@/lib/lifestyle/sleep-content";
 import { PILLAR_SLEEP } from "@/lib/lifestyle/pillar-routes";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: "Sleep and weight loss",
   description:
     "How sleep affects appetite, metabolism and weight: poor sleep and weight gain, and practical sleep hygiene tips.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     url: PILLAR_SLEEP,
     type: "article",
   },
-};
+});
 
 function sleepJsonLd() {
   const origin = siteOrigin();

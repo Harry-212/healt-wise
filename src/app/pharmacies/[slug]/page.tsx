@@ -168,6 +168,7 @@ import {
   yourpharmacyPharmacyLandingJsonGraph,
   zavaPharmacyLandingJsonGraph,
 } from "@/lib/seo/pharmacy-landing-json-ld";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -190,7 +191,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = w?.name ?? m?.name ?? sx?.name;
   if (!name) return { title: "Pharmacy" };
 
-  return {
+  return withDefaultShareImage({
     title: `${name} weight management review`,
     description: `${name} weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.`,
     alternates: { canonical },
@@ -200,7 +201,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${name} weight management review`,
       description: `Independent provider review of ${name} on Healthwise360.`,
     },
-  };
+  });
 }
 
 export default async function PharmacyProfilePage({ params }: Props) {

@@ -2,13 +2,14 @@
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const PATH = "/blog/the-truth-about-mounjaro-dosage-for-weight-loss-effectiveness";
 const TITLE = "The Truth About Mounjaro Dosage";
 const DESCRIPTION =
   "Find the ideal mounjaro dosage for weight loss to maximise your results with clear, expert-backed guidance.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: TITLE,
   description: DESCRIPTION,
   keywords: "mounjaro dosage for weight loss",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-04-15T00:00:00.000Z",
   },
-};
+});
 
 export default function MounjaroDosageTruthArticlePage() {
   const origin = siteOrigin();

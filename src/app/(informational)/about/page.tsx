@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import AboutScrollyClient from "./AboutScrollyClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const TITLE = "About Healthwise360 | UK Weight Loss Provider Comparison";
 const DESCRIPTION =
   "About Healthwise360: an independent UK weight loss comparison site — provider pricing, pharmacy verification and editorial independence.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: {
     absolute: TITLE,
   },
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
   },
-};
+});
 
 export default function AboutPage() {
   return (

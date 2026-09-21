@@ -2,13 +2,14 @@
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const PATH = "/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results";
 const TITLE = "Mounjaro vs Ozempic: Which Is Right for You?";
 const DESCRIPTION =
   "Mounjaro vs Ozempic: find which treatment fits your diabetes goals in the UK with clear, confident advice.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: TITLE,
   description: DESCRIPTION,
   keywords: "mounjaro vs ozempic",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-04-24T00:00:00.000Z",
   },
-};
+});
 
 export default function MounjaroVsOzempicArticlePage() {
   const origin = siteOrigin();

@@ -7,13 +7,14 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import heroEatHealthy from "../../../public/hero-eat-healther.jpg";
 import EatHealthierFaq, { EAT_HEALTHIER_FAQS } from "./EatHealthierFaq";
 import ProductGrid from "./ProductGrid";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const PATH = "/eat-healthier";
 const TITLE = "Eat Healthier | Complete Nutrition";
 const DESCRIPTION =
   "Nutritious, balanced meals that fit real life — from complete high-protein powder to lighter instant ramen. Eat better without the guesswork.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: TITLE,
   description: DESCRIPTION,
   alternates: {
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}${PATH}`,
     type: "website",
   },
-};
+});
 
 const FAQ_SCHEMA = {
   "@context": "https://schema.org",

@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { TipsPageClient } from "@/components/lifestyle/tips/TipsPageClient";
 import { PILLAR_TIPS } from "@/lib/lifestyle/pillar-routes";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const TIPS_TITLE = "Healthy Weight Loss Tips UK | Food, Exercise & Sleep";
 const TIPS_DESCRIPTION =
   "Explore practical weight-loss tips covering protein, fibre, appetite, exercise, sleep and sustainable habits that support long-term progress.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: { absolute: TIPS_TITLE },
   description: TIPS_DESCRIPTION,
   alternates: {
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     title: TIPS_TITLE,
     description: TIPS_DESCRIPTION,
   },
-};
+});
 
 export default function TipsPage() {
   return (

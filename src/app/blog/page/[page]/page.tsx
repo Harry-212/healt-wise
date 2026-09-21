@@ -13,6 +13,7 @@ import {
   blogHubPageDescription,
 } from "@/lib/seo/blog-hub-metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 type Props = {
   params: Promise<{ page: string }>;
@@ -23,13 +24,13 @@ function listingMetadata(canonicalPath: string, page: number): Metadata {
   const title = blogHubListingTitle(page);
   const description = blogHubPageDescription(page);
   const url = `${siteOrigin()}${canonicalPath}`;
-  return {
+  return withDefaultShareImage({
     title: { absolute: title },
     description,
     alternates: { canonical: url },
     openGraph: { title, description, url },
     twitter: { title, description },
-  };
+  });
 }
 
 export async function generateMetadata({

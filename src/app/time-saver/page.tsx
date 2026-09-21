@@ -7,13 +7,14 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import heroTimeSaver from "../../../public/hero-timer-saver.jpg";
 import ProductGrid from "./ProductGrid";
 import TimeSaverFaq, { TIME_SAVER_FAQS } from "./TimeSaverFaq";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const PATH = "/time-saver";
 const TITLE = "Time Saver | Ready-to-Go Complete Nutrition";
 const DESCRIPTION =
   "Grab-and-go meals, shakes, bars and instant pots — complete nutrition in seconds when you are short on time.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: TITLE,
   description: DESCRIPTION,
   alternates: {
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}${PATH}`,
     type: "website",
   },
-};
+});
 
 const FAQ_SCHEMA = {
   "@context": "https://schema.org",

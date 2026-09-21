@@ -7,13 +7,14 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import heroProtein from "../../../public/hero-protein.webp";
 import ProductGrid from "./ProductGrid";
 import ProteinFaq, { PROTEIN_FAQS } from "./ProteinFaq";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const PATH = "/protein-and-fitness";
 const TITLE = "Protein & Fitness | Complete Nutrition";
 const DESCRIPTION =
   "No gimmicks. No gaps. Just complete, science-backed nutrition that works as hard as you do. Compare high-protein complete meals and fuel your fitness goals.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: TITLE,
   description: DESCRIPTION,
   alternates: {
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}${PATH}`,
     type: "website",
   },
-};
+});
 
 const FAQ_SCHEMA = {
   "@context": "https://schema.org",

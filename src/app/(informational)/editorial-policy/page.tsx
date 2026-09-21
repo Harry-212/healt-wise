@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import LegalScrollyClient from "@/components/legal/LegalScrollyClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: {
     absolute: "Editorial Policy & Medical Content Standards | Healthwise360",
   },
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     description:
       "Read how Healthwise360 researches, reviews, updates and corrects UK weight-loss treatment content while maintaining editorial independence.",
   },
-};
+});
 
 const LAST = "12 April 2026";
 

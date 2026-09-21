@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import MethodologyClient from "./MethodologyClient";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const TITLE = "How We Compare UK Weight Loss Providers | Methodology";
 const DESCRIPTION =
   "Our UK weight loss provider methodology: GPhC verification, total treatment cost, delivery charges and provider scoring.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: {
     absolute: TITLE,
   },
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
   },
-};
+});
 
 export default function Methodology() {
   return (

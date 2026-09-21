@@ -4,8 +4,9 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import { EXERCISE_FAQ } from "@/lib/lifestyle/exercise-content";
 import { PILLAR_EXERCISE } from "@/lib/lifestyle/pillar-routes";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: "Weight loss exercise guide",
   description:
     "How exercise supports fat loss and maintenance: cardio vs strength, simple moves, and combining movement with diet.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     url: PILLAR_EXERCISE,
     type: "article",
   },
-};
+});
 
 function exerciseJsonLd() {
   const origin = siteOrigin();

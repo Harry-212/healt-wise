@@ -4,8 +4,9 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import { DIET_FAQ } from "@/lib/lifestyle/diet-content";
 import { PILLAR_DIET } from "@/lib/lifestyle/pillar-routes";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: "Diet for sustainable weight loss",
   description:
     "Science-backed diet strategies: balanced meals, sustainable calorie control, protein and fibre habits for UK readers.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     url: PILLAR_DIET,
     type: "article",
   },
-};
+});
 
 function dietJsonLd() {
   const origin = siteOrigin();

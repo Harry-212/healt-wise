@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 /**
  * Standard pharmacy profile SEO:
@@ -29,7 +30,7 @@ export function pharmacyReviewMetadata(opts: {
 }): Metadata {
   const title = pharmacyReviewTitle(opts.providerName);
   const description = pharmacyReviewDescription(opts.providerName);
-  return {
+  return withDefaultShareImage({
     title: { absolute: title },
     description,
     alternates: { canonical: opts.canonical },
@@ -39,7 +40,7 @@ export function pharmacyReviewMetadata(opts: {
       title,
       description,
     },
-  };
+  });
 }
 
 /** Slugs with custom dossier landings — keep in sync with `/pharmacies/[slug]` branches. */

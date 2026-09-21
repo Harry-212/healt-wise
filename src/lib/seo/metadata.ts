@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 /**
  * Title: [Keyword] UK (2026): Price, Comparison & Best Options
@@ -15,11 +16,11 @@ export function buildSeoMetadata(
   const shareTitle = `${title} | ${SITE_BRAND_NAME}`;
   const path = canonicalPath.startsWith("/") ? canonicalPath : `/${canonicalPath}`;
   const canonical = `${siteOrigin()}${path}`;
-  return {
+  return withDefaultShareImage({
     title,
     description,
     alternates: { canonical },
     openGraph: { title: shareTitle, description, url: canonical },
     twitter: { title: shareTitle, description },
-  };
+  });
 }

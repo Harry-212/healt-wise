@@ -315,7 +315,7 @@ export default function DotorPharmacyContent() {
             },
           ].map((f) => (
             <div key={f.q} className="border-t border-slate-200/70 pt-4">
-              <p className="font-semibold text-slate-900">{f.q}</p>
+              <h3 className="font-semibold text-slate-900">{f.q}</h3>
               <p className="mt-2 text-slate-800 leading-relaxed">{f.a}</p>
             </div>
           ))}

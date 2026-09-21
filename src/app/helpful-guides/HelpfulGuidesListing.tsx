@@ -9,6 +9,7 @@ import {
   type HelpfulGuideCategorySlug,
 } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 export const HELPFUL_GUIDES_DESCRIPTION =
   "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation. Written to help you make safer, more informed decisions.";
@@ -32,7 +33,7 @@ export function helpfulGuidesListingMetadata(
     ? helpfulGuidesCategoryHubPath(categorySlug)
     : HELPFUL_GUIDES_HUB_PATH;
 
-  return {
+  return withDefaultShareImage({
     title: { absolute: title },
     description,
     openGraph: {
@@ -44,7 +45,7 @@ export function helpfulGuidesListingMetadata(
     alternates: {
       canonical: `${siteOrigin()}${canonicalPath}`,
     },
-  };
+  });
 }
 
 const CATEGORIES = HELPFUL_GUIDE_CATEGORIES.map(({ label }) => label);

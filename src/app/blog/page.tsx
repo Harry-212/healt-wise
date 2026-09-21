@@ -12,10 +12,11 @@ import {
   BLOG_HUB_TITLE,
 } from "@/lib/seo/blog-hub-metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 function blogHubMetadata(canonicalPath: string): Metadata {
   const url = `${siteOrigin()}${canonicalPath}`;
-  return {
+  return withDefaultShareImage({
     title: { absolute: BLOG_HUB_TITLE },
     description: BLOG_HUB_DESCRIPTION,
     alternates: { canonical: url },
@@ -28,7 +29,7 @@ function blogHubMetadata(canonicalPath: string): Metadata {
       title: BLOG_HUB_TITLE,
       description: BLOG_HUB_DESCRIPTION,
     },
-  };
+  });
 }
 
 export async function generateMetadata({

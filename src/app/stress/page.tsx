@@ -4,8 +4,9 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import { STRESS_FAQ } from "@/lib/lifestyle/stress-content";
 import { PILLAR_STRESS } from "@/lib/lifestyle/pillar-routes";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: "Stress and weight loss",
   description:
     "How chronic stress, cortisol and emotional eating affect weight, and strategies that work alongside diet and exercise.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     url: PILLAR_STRESS,
     type: "article",
   },
-};
+});
 
 function stressJsonLd() {
   const origin = siteOrigin();

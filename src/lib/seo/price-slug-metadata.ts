@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import { buildSeoMetadata } from "@/lib/seo/metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 /** Per-slug SEO for `/prices/[slug]` — avoids one global template for every price page. */
 export function metadataForPriceSlug(slug: string): Metadata | null {
@@ -13,7 +14,7 @@ export function metadataForPriceSlug(slug: string): Metadata | null {
     const ogTitle = cfg.seo.openGraphTitle ?? cfg.seo.title;
     const ogDesc =
       cfg.seo.openGraphDescription ?? cfg.seo.description;
-    return {
+    return withDefaultShareImage({
       title: {
         absolute: cfg.seo.title,
       },
@@ -33,7 +34,7 @@ export function metadataForPriceSlug(slug: string): Metadata | null {
         description: ogDesc,
       },
       robots: { index: true, follow: true },
-    };
+    });
   }
 
   return buildSeoMetadata(cfg.keyword, `/prices/${slug}`);

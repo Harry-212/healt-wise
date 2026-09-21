@@ -219,9 +219,9 @@ export default function CloudPharmacyContent() {
       </div>
 
       <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
+        <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
           Frequently asked questions
-        </p>
+        </h2>
         <div className="mt-4 grid gap-5 md:grid-cols-2">
           {[
             {
@@ -250,7 +250,7 @@ export default function CloudPharmacyContent() {
             },
           ].map((item) => (
             <div key={item.q} className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-              <p className="font-bold text-slate-900">{item.q}</p>
+              <h3 className="font-bold text-slate-900">{item.q}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-700">{item.a}</p>
             </div>
           ))}

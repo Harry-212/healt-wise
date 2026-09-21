@@ -15,6 +15,7 @@ import {
   blogTopicTitle,
 } from "@/lib/seo/blog-hub-metadata";
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 type Props = {
   params: Promise<{ topic: string }>;
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = blogTopicTitle(raw);
   const description = blogTopicDescription(raw);
   const url = `${siteOrigin()}${blogHubPath(raw)}`;
-  return {
+  return withDefaultShareImage({
     title: { absolute: title },
     description,
     alternates: { canonical: url },
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
     },
-  };
+  });
 }
 
 export default async function BlogTopicPage({ params }: Props) {

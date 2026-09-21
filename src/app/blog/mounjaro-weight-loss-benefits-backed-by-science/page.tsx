@@ -2,13 +2,14 @@
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const PATH = "/blog/mounjaro-weight-loss-benefits-backed-by-science";
 const TITLE = "Mounjaro Weight Loss Benefits, Explained";
 const DESCRIPTION =
   "Unlock mounjaro weight loss benefits backed by science to help you shed stubborn pounds with confidence.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: TITLE,
   description: DESCRIPTION,
   keywords: "mounjaro weight loss",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-04-15T00:00:00.000Z",
   },
-};
+});
 
 export default function MounjaroWeightLossBenefitsArticlePage() {
   const origin = siteOrigin();

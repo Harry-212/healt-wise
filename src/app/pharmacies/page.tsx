@@ -5,12 +5,13 @@ import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
 import { landingProviderName } from "@/lib/seo/pharmacy-review-seo";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const TITLE = "All UK Weight Loss Pharmacies | Healthwise360";
 const DESCRIPTION =
   "Every UK pharmacy reviewed by Healthwise360: GPhC-registered providers of Mounjaro, Wegovy and Saxenda, with independent pricing and safety reviews.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: {
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
   },
-};
+});
 
 function displayName(slug: string): string {
   return (

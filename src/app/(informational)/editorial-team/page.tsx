@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import LegalScrollyClient from "@/components/legal/LegalScrollyClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const TITLE = "Editorial Team | Healthwise360";
 const DESCRIPTION =
   "Who writes and maintains Healthwise360's UK weight-loss treatment content, how we source it, and when a page carries a named clinical reviewer.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: {
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
   },
-};
+});
 
 const LAST = "10 September 2026";
 

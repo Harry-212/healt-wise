@@ -2,8 +2,9 @@
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: "Is Mounjaro Safe for Weight Loss?",
   description:
     "Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-04-14T00:00:00.000Z",
   },
-};
+});
 
 export default function MounjaroSafetyArticlePage() {
   const ARTICLE_SCHEMA = {

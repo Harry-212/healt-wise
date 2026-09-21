@@ -9,13 +9,14 @@ import ProductGrid from "./ProductGrid";
 import WeightManagementFaq, {
   SUPPORT_WEIGHT_MANAGEMENT_FAQS,
 } from "./WeightManagementFaq";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 const PATH = "/support-weight-management";
 const TITLE = "Support Weight Management | Nutrition";
 const DESCRIPTION =
   "Nutritionally complete meals that support sustainable weight management — from high-protein options to lower-calorie diet powder.";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: TITLE,
   description: DESCRIPTION,
   alternates: {
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}${PATH}`,
     type: "website",
   },
-};
+});
 
 const FAQ_SCHEMA = {
   "@context": "https://schema.org",

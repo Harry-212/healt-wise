@@ -2,8 +2,9 @@
 import ArticleClient from "./ArticleClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withDefaultShareImage({
   title: "How Does Wegovy Work for Weight Loss?",
   description:
     "Find out how does Wegovy work to kickstart your weight loss, with guides on eligibility, cost and UK providers.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2026-04-14T00:00:00.000Z",
   },
-};
+});
 
 export default function WegovyArticlePage() {
   const ARTICLE_SCHEMA = {
