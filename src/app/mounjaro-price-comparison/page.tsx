@@ -15,6 +15,7 @@ import {
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
 import { getMounjaroCompareProviders } from "@/lib/data/compare-live";
+import { getMounjaroLastUpdatedLabel } from "@/lib/data/compare-store";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
   MOUNJARO_COMPARE_UK_FAQ_ITEMS,
@@ -71,6 +72,7 @@ function compareWebPageJsonLd() {
 
 export default function CompareMounjaroPricesUkPage() {
   const MOUNJARO_UK_COMPARE_PROVIDERS = getMounjaroCompareProviders();
+  const mounjaroLastUpdated = getMounjaroLastUpdatedLabel();
   const faqLd = mounjaroCompareUkFaqJsonLd();
   const webLd = compareWebPageJsonLd();
 
@@ -105,7 +107,7 @@ export default function CompareMounjaroPricesUkPage() {
       />
 
       <article className="w-full">
-        <MounjaroCompareShaderHero />
+        <MounjaroCompareShaderHero lastUpdated={mounjaroLastUpdated} />
 
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />
@@ -130,7 +132,7 @@ export default function CompareMounjaroPricesUkPage() {
               highlighted cells show the lowest prices in your current view.
             </p>
             <div className="mt-10">
-              <MounjaroUkCompareTable providers={MOUNJARO_UK_COMPARE_PROVIDERS} />
+              <MounjaroUkCompareTable providers={MOUNJARO_UK_COMPARE_PROVIDERS} lastUpdated={mounjaroLastUpdated} />
             </div>
           </div>
         </section>

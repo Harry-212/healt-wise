@@ -8,6 +8,7 @@ import SaxendaCompareShaderHero from "@/components/saxenda/SaxendaCompareShaderH
 import SaxendaUkCompareTable from "@/components/saxenda/SaxendaUkCompareTable";
 import {
   SAXENDA_UK_COMPARE_PROVIDERS,
+  SAXENDA_UK_COMPARE_LAST_UPDATED,
   headlinePackPrice,
 } from "@/lib/data/saxenda-uk-compare-providers";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -82,7 +83,7 @@ export default function CompareSaxendaPricesUkPage() {
       />
 
       <article className="w-full">
-        <SaxendaCompareShaderHero />
+        <SaxendaCompareShaderHero lastUpdated={SAXENDA_UK_COMPARE_LAST_UPDATED} />
 
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />
@@ -109,7 +110,7 @@ export default function CompareSaxendaPricesUkPage() {
               for member offers when verified.
             </p>
             <div className="mt-10">
-              <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} />
+              <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} lastUpdated={SAXENDA_UK_COMPARE_LAST_UPDATED} />
             </div>
           </div>
         </section>

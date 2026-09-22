@@ -24,7 +24,11 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
-export default function MounjaroCompareShaderHero() {
+export default function MounjaroCompareShaderHero({
+  lastUpdated,
+}: {
+  lastUpdated?: string;
+}) {
   return (
     <ComparePricePhotoHeroShell
       imageSrc={COMPARE_MOUNJARO_PRICE_HERO_IMAGE_SRC}
@@ -52,7 +56,7 @@ export default function MounjaroCompareShaderHero() {
 
       <main className="relative z-20 flex flex-1 flex-col justify-end px-4 pb-12 pt-6 md:px-10 md:pb-16 lg:px-14 lg:pb-20">
         <div className="mx-auto w-full max-w-4xl text-center lg:mx-0 lg:max-w-3xl lg:text-left">
-          <CompareHeroLivePill sparkleClassName="text-violet-200" />
+          <CompareHeroLivePill sparkleClassName="text-violet-200" dateLabel={lastUpdated} />
 
           <h1 className="mb-4 text-balance text-4xl leading-[1.08] font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
             <span

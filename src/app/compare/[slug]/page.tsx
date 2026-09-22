@@ -16,6 +16,10 @@ import {
   getMounjaroCompareProviders,
   getWegovyCompareProviders,
 } from "@/lib/data/compare-live";
+import {
+  getMounjaroLastUpdatedLabel,
+  getWegovyLastUpdatedLabel,
+} from "@/lib/data/compare-store";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
 import {
   COMPARE_GLP1_PRICE_HERO_IMAGE_ALT,
@@ -115,7 +119,9 @@ export default async function ComparePage({ params }: Props) {
   const faqItems = getCompareFaqsForSlug(slug);
   const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
   const isTripleHub = slug === "mounjaro-vs-wegovy-vs-saxenda";
-  const pricesLastCheckedLabel = formatTodayUK();
+  const mounjaroLastUpdated = getMounjaroLastUpdatedLabel();
+  const wegovyLastUpdated = getWegovyLastUpdatedLabel();
+  const pricesLastCheckedLabel = mounjaroLastUpdated;
   const pricesLastCheckedIso = formatTodayIsoDate();
   const webLd = compareWebPageJsonLd(
     slug,
@@ -169,12 +175,15 @@ export default async function ComparePage({ params }: Props) {
             isTripleHub ? COMPARE_GLP1_PRICE_HERO_IMAGE_ALT : photoHero?.alt
           }
           showSubtitleLiveDate={false}
+          livePillDateLabel={mounjaroLastUpdated}
         />
 
         <CompareMedPriceTabs
           medications={layout.medications}
           mounjaroProviders={getMounjaroCompareProviders()}
           wegovyProviders={getWegovyCompareProviders()}
+          mounjaroLastUpdated={mounjaroLastUpdated}
+          wegovyLastUpdated={wegovyLastUpdated}
         />
 
         <section className="w-full border-b border-slate-200/80">

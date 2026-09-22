@@ -20,9 +20,10 @@ import {
   MOUNJARO_UK_COMPARE_PROVIDERS,
   type MounjaroUkProviderCompare,
 } from "@/lib/data/mounjaro-uk-compare-providers";
-import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-providers";
-import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
-import { formatTodayUK } from "@/lib/format-uk-date";
+import {
+  SAXENDA_UK_COMPARE_PROVIDERS,
+  SAXENDA_UK_COMPARE_LAST_UPDATED,
+} from "@/lib/data/saxenda-uk-compare-providers";
 
 /** UK brand names — used in triple-compare tab UI */
 const TAB_LABEL: Record<CompareMedicationTab, string> = {
@@ -82,10 +83,14 @@ function MedPanel({
   med,
   mounjaroProviders,
   wegovyProviders,
+  mounjaroLastUpdated,
+  wegovyLastUpdated,
 }: {
   med: CompareMedicationTab;
   mounjaroProviders: MounjaroUkProviderCompare[];
   wegovyProviders: WegovyUkProviderCompare[];
+  mounjaroLastUpdated?: string;
+  wegovyLastUpdated?: string;
 }) {
   return (
     <motion.div
@@ -110,13 +115,13 @@ function MedPanel({
       </div>
 
       {med === "wegovy" && (
-        <WegovyUkCompareTable providers={wegovyProviders} />
+        <WegovyUkCompareTable providers={wegovyProviders} lastUpdated={wegovyLastUpdated ?? "—"} />
       )}
       {med === "mounjaro" && (
-        <MounjaroUkCompareTable providers={mounjaroProviders} />
+        <MounjaroUkCompareTable providers={mounjaroProviders} lastUpdated={mounjaroLastUpdated ?? "—"} />
       )}
       {med === "saxenda" && (
-        <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} />
+        <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} lastUpdated={SAXENDA_UK_COMPARE_LAST_UPDATED} />
       )}
 
       <section className="mt-12 min-w-0 rounded-2xl border border-slate-200/80 bg-slate-50/50 px-3 py-8 sm:px-4 md:px-8 md:py-12">
@@ -154,13 +159,22 @@ export default function CompareMedPriceTabs({
   medications,
   mounjaroProviders = MOUNJARO_UK_COMPARE_PROVIDERS,
   wegovyProviders = WEGOVY_UK_COMPARE_PROVIDERS,
+  mounjaroLastUpdated,
+  wegovyLastUpdated,
 }: {
   medications: CompareMedicationTab[];
   mounjaroProviders?: MounjaroUkProviderCompare[];
   wegovyProviders?: WegovyUkProviderCompare[];
+  mounjaroLastUpdated?: string;
+  wegovyLastUpdated?: string;
 }) {
   const [active, setActive] = useState<CompareMedicationTab>(medications[0]!);
-  const pricesLastChecked = useTodayLabel(formatTodayUK());
+  const pricesLastChecked =
+    active === "mounjaro"
+      ? (mounjaroLastUpdated ?? "—")
+      : active === "wegovy"
+        ? (wegovyLastUpdated ?? "—")
+        : SAXENDA_UK_COMPARE_LAST_UPDATED;
 
   return (
     <section
@@ -260,6 +274,8 @@ export default function CompareMedPriceTabs({
               med={active}
               mounjaroProviders={mounjaroProviders}
               wegovyProviders={wegovyProviders}
+              mounjaroLastUpdated={mounjaroLastUpdated}
+              wegovyLastUpdated={wegovyLastUpdated}
             />
           </div>
         </AnimatePresence>

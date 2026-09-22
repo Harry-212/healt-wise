@@ -27,8 +27,7 @@ import {
 import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
 import { hasPharmacyPage } from "@/lib/routes/all-pharmacy-slugs";
 import { trustpilotHrefForProvider } from "@/lib/seo/trustpilot-link";
-import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
-import { formatTodayUK } from "@/lib/format-uk-date";
+
 import {
   COMPARE_TABLE_CARD_CLASS,
   COMPARE_TABLE_MOBILE_OUTDENT_CLASS,
@@ -82,8 +81,10 @@ function formatGBP(n: number) {
 
 export default function MounjaroUkCompareTable({
   providers,
+  lastUpdated,
 }: {
   providers: MounjaroUkProviderCompare[];
+  lastUpdated: string;
 }) {
   const [providerQuery, setProviderQuery] = useState("");
   const [priceMin, setPriceMin] = useState("");
@@ -95,7 +96,7 @@ export default function MounjaroUkCompareTable({
     dir: "asc",
   });
 
-  const pricesLastChecked = useTodayLabel(formatTodayUK());
+  const pricesLastChecked = lastUpdated;
 
   const visibleDoseKeys = useMemo<MounjaroDoseColumnKey[]>(
     () => (doseFilter === "all" ? [...MOUNJARO_DOSE_KEYS] : [doseFilter]),
@@ -615,7 +616,7 @@ export default function MounjaroUkCompareTable({
                         )}
                       </td>
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
-                        {pricesLastChecked ?? "—"}
+                        {p.updatedLabel || pricesLastChecked || "—"}
                       </td>
                     </tr>
                   );

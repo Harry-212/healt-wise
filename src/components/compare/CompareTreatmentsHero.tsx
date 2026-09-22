@@ -98,6 +98,7 @@ export default function CompareTreatmentsHero({
   showSubtitleLiveDate = false,
   showLivePill = false,
   highlightNavLinks = false,
+  livePillDateLabel,
 }: {
   variant: HeroShaderVariant;
   eyebrow: string;
@@ -118,6 +119,8 @@ export default function CompareTreatmentsHero({
   showLivePill?: boolean;
   /** Larger bordered nav pills (photo heroes). */
   highlightNavLinks?: boolean;
+  /** Override the Live pill date with a real "last updated" label. */
+  livePillDateLabel?: string;
 }) {
   const shaderMinH = wideDesktopHero
     ? "min-h-[min(82svh,580px)] sm:min-h-[min(80svh,640px)] md:min-h-[min(82svh,700px)] lg:min-h-[min(88svh,780px)] xl:min-h-[min(90svh,860px)]"
@@ -171,7 +174,7 @@ export default function CompareTreatmentsHero({
       <main className={mainClass}>
         <div className={contentMaxClass}>
           {showLivePill ? (
-            <CompareHeroLivePill sparkleClassName={sparkClass[variant]} />
+            <CompareHeroLivePill sparkleClassName={sparkClass[variant]} dateLabel={livePillDateLabel} />
           ) : showSnapshotPill ? (
             <GlassPill>
               <span className="inline-flex items-center gap-1.5">

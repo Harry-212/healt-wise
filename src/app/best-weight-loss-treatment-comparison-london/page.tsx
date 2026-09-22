@@ -11,7 +11,14 @@ import {
   getMounjaroCompareProviders,
   getWegovyCompareProviders,
 } from "@/lib/data/compare-live";
-import { SAXENDA_UK_COMPARE_PROVIDERS } from "@/lib/data/saxenda-uk-compare-providers";
+import {
+  getMounjaroLastUpdatedLabel,
+  getWegovyLastUpdatedLabel,
+} from "@/lib/data/compare-store";
+import {
+  SAXENDA_UK_COMPARE_PROVIDERS,
+  SAXENDA_UK_COMPARE_LAST_UPDATED,
+} from "@/lib/data/saxenda-uk-compare-providers";
 import { compareFaqPageJsonLd } from "@/lib/routes/compare-faqs";
 import { LONDON_COMPARISON_FAQS } from "@/lib/routes/london-comparison-faqs";
 import { londonComparisonJsonLdGraph } from "@/lib/seo/london-comparison-json-ld";
@@ -65,6 +72,8 @@ function londonWebPageJsonLd() {
 export default function BestWeightLossTreatmentComparisonLondonPage() {
   const mounjaroProviders = getMounjaroCompareProviders();
   const wegovyProviders = getWegovyCompareProviders();
+  const mounjaroLastUpdated = getMounjaroLastUpdatedLabel();
+  const wegovyLastUpdated = getWegovyLastUpdatedLabel();
   const lastChecked = formatTodayUK();
   const webLd = londonWebPageJsonLd();
   const faqLd = compareFaqPageJsonLd(LONDON_COMPARISON_FAQS);
@@ -179,7 +188,7 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
               provider name for its full profile.
             </p>
             <div className="mt-8">
-              <MounjaroUkCompareTable providers={mounjaroProviders} />
+              <MounjaroUkCompareTable providers={mounjaroProviders} lastUpdated={mounjaroLastUpdated} />
             </div>
           </div>
         </section>
@@ -197,7 +206,7 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
               pharmacies.
             </p>
             <div className="mt-8">
-              <WegovyUkCompareTable providers={wegovyProviders} />
+              <WegovyUkCompareTable providers={wegovyProviders} lastUpdated={wegovyLastUpdated} />
             </div>
           </div>
         </section>
@@ -215,7 +224,7 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
               once-daily schedule suits you better than a weekly pen.
             </p>
             <div className="mt-8">
-              <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} />
+              <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} lastUpdated={SAXENDA_UK_COMPARE_LAST_UPDATED} />
             </div>
           </div>
         </section>

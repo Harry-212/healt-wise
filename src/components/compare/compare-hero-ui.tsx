@@ -64,10 +64,15 @@ function todayUkParts() {
 
 export function CompareHeroLivePill({
   sparkleClassName,
+  dateLabel,
 }: {
   sparkleClassName: string;
+  /** When supplied, shows this label instead of today's date. */
+  dateLabel?: string;
 }) {
-  const { display, dateTime } = todayUkParts();
+  const today = todayUkParts();
+  const display = dateLabel ?? today.display;
+  const dateTime = dateLabel ? undefined : today.dateTime;
 
   return (
     <GlassPill>
@@ -83,9 +88,13 @@ export function CompareHeroLivePill({
         <span>
           <span className="font-semibold text-white">Live</span>
           {" · "}
-          <time dateTime={dateTime} className="text-white/90">
-            {display}
-          </time>
+          {dateTime ? (
+            <time dateTime={dateTime} className="text-white/90">
+              {display}
+            </time>
+          ) : (
+            <span className="text-white/90">{display}</span>
+          )}
         </span>
       </span>
     </GlassPill>

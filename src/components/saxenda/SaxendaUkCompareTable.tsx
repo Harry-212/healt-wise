@@ -27,8 +27,6 @@ import {
 } from "@/lib/data/saxenda-uk-compare-providers";
 import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
 import { formatUkGroupedInteger } from "@/lib/provider-helpers";
-import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
-import { formatTodayUK } from "@/lib/format-uk-date";
 import {
   COMPARE_TABLE_CARD_CLASS,
   COMPARE_TABLE_MOBILE_OUTDENT_CLASS,
@@ -117,8 +115,10 @@ function PackPriceCell({
 
 export default function SaxendaUkCompareTable({
   providers,
+  lastUpdated,
 }: {
   providers: SaxendaUkProviderCompare[];
+  lastUpdated: string;
 }) {
   const [providerQuery, setProviderQuery] = useState("");
   const [minRating, setMinRating] = useState("");
@@ -128,7 +128,7 @@ export default function SaxendaUkCompareTable({
     dir: "asc",
   });
 
-  const pricesLastChecked = useTodayLabel(formatTodayUK());
+  const pricesLastChecked = lastUpdated;
 
   const visiblePackKeys = useMemo<SaxendaPackKey[]>(
     () =>
@@ -598,7 +598,7 @@ export default function SaxendaUkCompareTable({
                       </td>
                       <td className="border-b border-slate-100/90 px-2 py-2.5 align-top text-xs text-slate-600" />
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
-                        {pricesLastChecked ?? "—"}
+                        {p.updatedLabel || pricesLastChecked || "—"}
                       </td>
                     </tr>
                   );

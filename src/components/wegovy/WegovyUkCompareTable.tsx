@@ -29,8 +29,6 @@ import {
 } from "@/lib/data/wegovy-uk-compare-providers";
 import { trustpilotHrefForProvider } from "@/lib/seo/trustpilot-link";
 import { hasPharmacyPage } from "@/lib/routes/all-pharmacy-slugs";
-import { useTodayLabel } from "@/lib/hooks/useTodayLabel";
-import { formatTodayUK } from "@/lib/format-uk-date";
 import {
   COMPARE_TABLE_CARD_CLASS,
   COMPARE_TABLE_MOBILE_OUTDENT_CLASS,
@@ -91,8 +89,10 @@ function doseHeaderLabel(key: WegovyDoseColumnKey): string {
 
 export default function WegovyUkCompareTable({
   providers,
+  lastUpdated,
 }: {
   providers: WegovyUkProviderCompare[];
+  lastUpdated: string;
 }) {
   const [providerQuery, setProviderQuery] = useState("");
   const [priceMin, setPriceMin] = useState("");
@@ -104,7 +104,7 @@ export default function WegovyUkCompareTable({
     dir: "asc",
   });
 
-  const pricesLastChecked = useTodayLabel(formatTodayUK());
+  const pricesLastChecked = lastUpdated;
 
   const visibleDoseKeys = useMemo<WegovyDoseColumnKey[]>(
     () =>
@@ -630,7 +630,7 @@ export default function WegovyUkCompareTable({
                         )}
                       </td>
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
-                        {pricesLastChecked ?? "—"}
+                        {p.updatedLabel || pricesLastChecked || "—"}
                       </td>
                     </tr>
                   );

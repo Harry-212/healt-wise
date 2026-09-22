@@ -16,6 +16,7 @@ import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
 import AnnualCostSection from "@/components/compare/AnnualCostSection";
 import NhsAccessSection from "@/components/compare/NhsAccessSection";
 import { getWegovyCompareProviders } from "@/lib/data/compare-live";
+import { getWegovyLastUpdatedLabel } from "@/lib/data/compare-store";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
   WEGOVY_COMPARE_UK_FAQ_ITEMS,
@@ -72,6 +73,7 @@ function compareWebPageJsonLd() {
 
 export default function CompareWegovyPricesUkPage() {
   const WEGOVY_UK_COMPARE_PROVIDERS = getWegovyCompareProviders();
+  const wegovyLastUpdated = getWegovyLastUpdatedLabel();
   const faqLd = wegovyCompareUkFaqJsonLd();
   const webLd = compareWebPageJsonLd();
 
@@ -110,7 +112,7 @@ export default function CompareWegovyPricesUkPage() {
       />
 
       <article className="w-full">
-        <WegovyCompareShaderHero />
+        <WegovyCompareShaderHero lastUpdated={wegovyLastUpdated} />
 
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />
@@ -137,7 +139,7 @@ export default function CompareWegovyPricesUkPage() {
               cells highlight the lowest prices in your current view.
             </p>
             <div className="mt-10">
-              <WegovyUkCompareTable providers={WEGOVY_UK_COMPARE_PROVIDERS} />
+              <WegovyUkCompareTable providers={WEGOVY_UK_COMPARE_PROVIDERS} lastUpdated={wegovyLastUpdated} />
             </div>
           </div>
         </section>
