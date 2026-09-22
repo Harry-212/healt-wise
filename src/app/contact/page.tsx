@@ -82,8 +82,6 @@ export default function ContactPage() {
                 <span className="flex items-start gap-3">
                   <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" aria-hidden />
                   <span>
-                    {SITE_BUSINESS_ADDRESS.suite}
-                    <br />
                     {SITE_BUSINESS_ADDRESS.street}
                     <br />
                     {SITE_BUSINESS_ADDRESS.city}, {SITE_BUSINESS_ADDRESS.postcode}

@@ -30,7 +30,7 @@ export function londonComparisonJsonLdGraph(): Record<string, unknown> {
     priceRange: "££",
     address: {
       "@type": "PostalAddress",
-      streetAddress: `${SITE_BUSINESS_ADDRESS.suite}, ${SITE_BUSINESS_ADDRESS.street}`,
+      streetAddress: SITE_BUSINESS_ADDRESS.street,
       addressLocality: SITE_BUSINESS_ADDRESS.city,
       postalCode: SITE_BUSINESS_ADDRESS.postcode,
       addressCountry: "GB",

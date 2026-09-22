@@ -117,8 +117,6 @@ export default function Footer() {
                     aria-hidden
                   />
                   <span>
-                    {SITE_BUSINESS_ADDRESS.suite}
-                    <br />
                     {SITE_BUSINESS_ADDRESS.street}
                     <br />
                     {SITE_BUSINESS_ADDRESS.city},{" "}

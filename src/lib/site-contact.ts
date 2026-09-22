@@ -2,7 +2,6 @@ import { SITE_BRAND_NAME } from "@/lib/site-brand";
 
 /** Registered business address shown in footer and on /contact. */
 export const SITE_BUSINESS_ADDRESS = {
-  suite: "Suite RA01",
   street: "195-197 Wood Street",
   city: "London",
   postcode: "E17 3NU",
@@ -70,14 +69,14 @@ export const SITE_SOCIAL_PROFILES = SITE_SOCIAL_LINKS.map((link) => link.href);
 
 /** Single-line address for compact UI (e.g. schema). */
 export function siteBusinessAddressLine(): string {
-  const { suite, street, city, postcode } = SITE_BUSINESS_ADDRESS;
-  return `${suite}, ${street}, ${city}, ${postcode}`;
+  const { street, city, postcode } = SITE_BUSINESS_ADDRESS;
+  return `${street}, ${city}, ${postcode}`;
 }
 
 /** Multi-line address block label. */
 export function siteBusinessAddressBlock(): string {
-  const { suite, street, city, postcode } = SITE_BUSINESS_ADDRESS;
-  return `${SITE_BRAND_NAME}\n${suite}, ${street}\n${city}, ${postcode}`;
+  const { street, city, postcode } = SITE_BUSINESS_ADDRESS;
+  return `${SITE_BRAND_NAME}\n${street}\n${city}, ${postcode}`;
 }
 
 /** Full address string for map search and embeds. */
