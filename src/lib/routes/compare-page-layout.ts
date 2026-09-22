@@ -63,10 +63,10 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       imageAlt: "Healthwise360 — Mounjaro vs Wegovy UK comparison",
     },
     intro: {
-      heading: "Why Compare On Price Data?",
+      heading: "Choosing Between Mounjaro And Wegovy",
       body: [
         "Wegovy (semaglutide) and Mounjaro (tirzepatide) are both pen-based weight-management treatments used in eligible UK adults, but dosing schedules, titration, and monthly spend patterns differ.",
-        "Use the comparison tabs at the top of this page to open the full advanced table and charts for each brand — identical datasets to our standalone price comparison pages so you can switch context without losing fidelity.",
+        "Use the comparison tabs at the top of this page to weigh upfront cost, dosing frequency, and titration path side by side — the same advanced tables and charts we maintain on our dedicated price pages.",
       ],
     },
     effectivenessTitle: "Effectiveness Snapshot",

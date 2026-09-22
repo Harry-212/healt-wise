@@ -24,6 +24,19 @@ function getDomain(href: string): string {
   }
 }
 
+/**
+ * Origin + path only, no query string or hash — affiliate IDs and other
+ * tracking parameters must not reach GA4 event data.
+ */
+function sanitizeLinkUrl(href: string): string {
+  try {
+    const url = new URL(href);
+    return `${url.origin}${url.pathname}`;
+  } catch {
+    return href;
+  }
+}
+
 export function isProviderLink(anchor: HTMLAnchorElement): boolean {
   return !!anchor.dataset.pharmacy;
 }
@@ -34,7 +47,7 @@ export function trackProviderClick(anchor: HTMLAnchorElement) {
   window.gtag("event", "provider_click", {
     provider_name: anchor.dataset.pharmacy,
     provider_id: anchor.dataset.providerId ?? undefined,
-    link_url: anchor.href,
+    link_url: sanitizeLinkUrl(anchor.href),
     link_domain: getDomain(anchor.href),
     link_text: anchor.textContent?.trim().slice(0, 100) ?? "",
     page_path: window.location.pathname,
@@ -46,7 +59,7 @@ export function trackOutboundClick(anchor: HTMLAnchorElement) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
 
   window.gtag("event", "outbound_click", {
-    link_url: anchor.href,
+    link_url: sanitizeLinkUrl(anchor.href),
     link_domain: getDomain(anchor.href),
     link_text: anchor.textContent?.trim().slice(0, 100) ?? "",
     page_path: window.location.pathname,

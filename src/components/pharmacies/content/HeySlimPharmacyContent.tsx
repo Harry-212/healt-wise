@@ -34,7 +34,7 @@ export default function HeySlimPharmacyContent() {
       heroProviderLogoAlt="Hey Slim"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> heySlim operates within the UK’s regulated online pharmacy sector, providing access to clinically approved weight loss medications. Because no two weight loss journeys are exactly alike, understanding the specific clinical protocols, shipping methods, and pricing tiers of heySlim is a crucial step in finding the right healthcare partner.</p></div>
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> heySlim is a UK-regulated online pharmacy offering supervised access to prescription weight loss treatment. Given how much eligibility, dosing and cost can differ between patients, it's worth knowing exactly how heySlim's consultation, delivery and pricing work before making a decision.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Weight loss is often framed as discipline. Eat less. Move more. Try harder. That can be a
           misleading oversimplification. For many people, appetite regulation, metabolic adaptation,

@@ -28,6 +28,12 @@ function listingMetadata(canonicalPath: string, page: number): Metadata {
     title: { absolute: title },
     description,
     alternates: { canonical: url },
+    // Page 2+ is noindex,follow — thin, repeatedly reshuffled listing pages
+    // don't need their own index entry; page 1 stays indexable.
+    robots:
+      page > 1
+        ? { index: false, follow: true }
+        : { index: true, follow: true },
     openGraph: { title, description, url },
     twitter: { title, description },
   });

@@ -93,8 +93,8 @@ export default function CurelyPharmacyContent() {
               1. Regulated access to authentic medication
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
-              Medication supplied through Curely appears sourced through regulated UK channels.
-              That may help support:
+              Medication supplied through Curely is sourced through regulated UK channels. That
+              supports:
             </p>
             <Points
               items={[
@@ -125,7 +125,7 @@ export default function CurelyPharmacyContent() {
               3. Wide range of weight loss treatments
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
-              Curely appears to offer several options, including prescription injections and oral
+              Curely offers several options, including prescription injections and oral
               treatments.
             </p>
             <p className="mt-4 font-bold text-slate-900">Prescription injections</p>
@@ -152,8 +152,8 @@ export default function CurelyPharmacyContent() {
               5. Ongoing pharmacist support
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
-              Curely appears to offer support via phone, email and pharmacist guidance — more than
-              a checkout process.
+              Curely offers support via phone, email and pharmacist guidance — more than a
+              checkout process.
             </p>
           </div>
         </div>
@@ -208,9 +208,8 @@ export default function CurelyPharmacyContent() {
           <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
             <p className="font-bold text-slate-900">Temperature control (where needed)</p>
             <p className="mt-2 text-slate-800 leading-relaxed">
-              Injectables may require careful handling. Curely appears to use insulated packaging
-              and cold-chain methods where required to maintain product effectiveness during
-              transit.
+              Injectables may require careful handling. Curely uses insulated packaging and
+              cold-chain methods where required to maintain product effectiveness during transit.
             </p>
           </div>
         </div>
@@ -266,7 +265,7 @@ export default function CurelyPharmacyContent() {
             },
             {
               q: "Does Curely offer tracked delivery?",
-              a: "Yes. Curely appears to offer Tracked 48, Tracked 24 and next-day special delivery options, with free tracked delivery over £20 in some cases.",
+              a: "Yes. Curely offers Tracked 48, Tracked 24 and next-day special delivery options, with free tracked delivery over £20 in some cases.",
             },
             {
               q: "Is Curely a regulated pharmacy?",
@@ -289,7 +288,7 @@ export default function CurelyPharmacyContent() {
         <h2 className="text-lg font-bold text-slate-900 sm:text-xl">Conclusion</h2>
         <p className="mt-3 text-slate-800 leading-relaxed">
           If you’re looking for a private route to prescription weight loss treatment, Curely
-          appears to offer a practical option. Access to medications such as Mounjaro and Wegovy,
+          offers a practical option. Access to medications such as Mounjaro and Wegovy,
           combined with pharmacist-led assessment, tracked delivery and discreet packaging, gives
           it more depth than a basic online storefront.
         </p>

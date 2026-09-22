@@ -1,6 +1,7 @@
 import { CURATED_APP_ROUTER_POSTS } from "@/lib/blog";
 import { GUIDE_IMAGES } from "@/lib/guide-images";
 import {
+  HELPFUL_GUIDE_DESCRIPTIONS,
   HELPFUL_GUIDE_SLUGS,
   helpfulGuidePath,
 } from "@/lib/helpful-guide-slugs";
@@ -53,8 +54,7 @@ export function getRecommendedReadingPool(): RecommendedItem[] {
         kind: "guide" as const,
         href: helpfulGuidePath(slug),
         title: GUIDE_TITLE_OVERRIDES[slug] ?? labelFromGuideSlug(slug),
-        description:
-          "Evidence-based UK guide on weight loss treatment, safety, and regulation.",
+        description: HELPFUL_GUIDE_DESCRIPTIONS[slug],
         imageUrl,
       },
     ];
