@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.pillsphere.com/online-clinic/weight-loss";
@@ -51,14 +52,9 @@ export default function PillSpherePharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Choosing a sustainable weight loss route online means picking providers that combine{" "}
           <strong>regulated prescribing</strong>, clear logistics, and honest pricing.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="PillSphere" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             PillSphere
-          </a>{" "}
+          </ProviderCta>{" "}
           operates as an online pharmacy and clinic so eligible patients can access prescription
           therapies without a bricks-and-mortar visit, aligned with mainstream UK telehealth practice.
         </p>
@@ -283,14 +279,9 @@ export default function PillSpherePharmacyContent() {
           maintenance dose before committing long term.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="PillSphere">
             Visit PillSphere
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

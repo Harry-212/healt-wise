@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://swift-doctor.com/";
@@ -50,14 +51,9 @@ export default function SwiftDoctorPharmacyContent() {
         <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Swift Doctor:</strong> Navigating online weight loss treatments can be complex. Swift Doctor is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Swift Doctor provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Patients comparing UK GLP-1 providers often prioritise turnaround.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Swift Doctor" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Swift Doctor
-          </a>{" "}
+          </ProviderCta>{" "}
           promotes itself as an online healthcare brand focused on weight loss prescriptions, remote
           approvals and doorstep delivery without traditional clinic friction.
         </p>
@@ -220,14 +216,9 @@ export default function SwiftDoctorPharmacyContent() {
           list alongside the regulated options indexed on Health Wise.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Swift Doctor">
             Visit Swift Doctor
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

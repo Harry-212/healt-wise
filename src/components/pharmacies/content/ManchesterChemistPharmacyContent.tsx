@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.manchesterchemist.com/";
@@ -49,14 +50,9 @@ export default function ManchesterChemistPharmacyContent() {
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Manchester Chemist" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Manchester Chemist
-          </a>{" "}
+          </ProviderCta>{" "}
           markets a highly regulated, community rooted alternative to faceless corporate platforms. Based in central
           Manchester, they bridge high street accountability with online access for medicines such as{" "}
           <strong>Mounjaro</strong> and <strong>Wegovy</strong> when clinically appropriate.
@@ -194,14 +190,9 @@ export default function ManchesterChemistPharmacyContent() {
           price on Health Wise grids before you reorder.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Manchester Chemist">
             Visit Manchester Chemist
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

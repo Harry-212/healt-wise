@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 export default function AshcroftPharmacyContent() {
@@ -308,14 +309,9 @@ export default function AshcroftPharmacyContent() {
           patients looking for private, faster access, it’s one provider worth considering.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Ashcroft Pharmacy">
             Visit Ashcroft Pharmacy
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

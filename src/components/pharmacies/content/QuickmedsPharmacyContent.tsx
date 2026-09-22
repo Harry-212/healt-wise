@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://quickmeds.co.uk/online-clinic/weight-loss/";
@@ -51,14 +52,9 @@ export default function QuickmedsPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           UK patients comparing private obesity care often prioritise <strong>regulation</strong>,{" "}
           <strong>speed</strong>, and <strong>discretion</strong>.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Quickmeds" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Quickmeds
-          </a>{" "}
+          </ProviderCta>{" "}
           markets its online clinic inside a <strong>GPhC registered</strong> pharmacy framework so
           prescription-only medicines such as <strong>Mounjaro</strong>, <strong>Wegovy</strong>, or{" "}
           <strong>Orlistat</strong> route through consultation and professional review rather than casual
@@ -261,14 +257,9 @@ export default function QuickmedsPharmacyContent() {
           doses.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Quickmeds">
             Visit Quickmeds
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

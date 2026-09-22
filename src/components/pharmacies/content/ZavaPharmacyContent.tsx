@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.zavamed.com/uk/weight-loss-treatment.html";
@@ -50,14 +51,9 @@ export default function ZavaPharmacyContent() {
         <div className="mb-6 rounded-xl border border-amber-100 bg-amber-50/30 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-amber-900">Independent Context:</strong> As part of your research into medically supported weight management, evaluating providers like Zava is highly recommended. This page is designed to give you a transparent overview of Zava's service model, from their online doctor assessments to how they securely dispatch temperature-sensitive treatments directly to your home.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Demand for GLP‑1 weight therapies strains GP capacity, pushing patients toward audited digital clinics.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Zava" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Zava UK
-          </a>{" "}
+          </ProviderCta>{" "}
           advertises prescription access reviewed by <strong>UK registered doctors</strong> without traditional
           clinic visits, spanning injectable and tablet portfolios.
         </p>
@@ -203,14 +199,9 @@ export default function ZavaPharmacyContent() {
           household, map their dose tier pricing against Health Wise comparisons before locking in repeat cycles.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Zava">
             Visit Zava
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://shape8.com/";
@@ -49,14 +50,9 @@ export default function Shape8PharmacyContent() {
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Shape8" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Shape8
-          </a>{" "}
+          </ProviderCta>{" "}
           frames weight care as a <strong>holistic transformation</strong>, not only a pharmaceutical sale. They supply
           modern GLP‑1 medicines such as <strong>Mounjaro</strong> and <strong>Wegovy</strong> while layering{" "}
           <strong>tech forward</strong> tracking and <strong>clinician feedback</strong> so medication translates toward
@@ -199,14 +195,9 @@ export default function Shape8PharmacyContent() {
           commit.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Shape8">
             Visit Shape8
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

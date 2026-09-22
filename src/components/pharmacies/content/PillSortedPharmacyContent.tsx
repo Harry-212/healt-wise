@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.pillsorted.com/";
@@ -51,14 +52,9 @@ export default function PillSortedPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Sustainable weight management increasingly rests on clinically proven medicines plus follow
           up, not only willpower.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="PillSorted" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             PillSorted
-          </a>{" "}
+          </ProviderCta>{" "}
           describes itself as a UK online pharmacy and telehealth provider that bundles medical review,
           personalised plans, and home delivery into one digital journey.
         </p>
@@ -267,14 +263,9 @@ export default function PillSortedPharmacyContent() {
           workflow, compare live checkout totals with other Health Wise dossiers at the same GLP-1 dose.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="PillSorted">
             Visit PillSorted
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

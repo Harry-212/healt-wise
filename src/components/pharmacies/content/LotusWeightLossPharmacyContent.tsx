@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.lotusweightloss.co.uk/";
@@ -53,14 +54,9 @@ export default function LotusWeightLossPharmacyContent() {
         </p>
         <p className="text-slate-800 leading-relaxed">
           Health Wise walks through what they advertise on{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Lotus Weight Loss" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             lotusweightloss.co.uk
-          </a>
+          </ProviderCta>
           : products, programme content, delivery rules, price examples, and how that compares in
           broad terms with generic online sellers. Always verify registration snapshots and your
           own eligibility on their live pages.
@@ -275,14 +271,9 @@ export default function LotusWeightLossPharmacyContent() {
           care versus pharmacy minimal contact elsewhere on Health Wise.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Lotus Weight Loss">
             Visit Lotus Weight Loss
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

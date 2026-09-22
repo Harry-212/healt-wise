@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.thefamilychemist.co.uk";
@@ -49,14 +50,9 @@ export default function TheFamilyChemistPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About The Family Chemist:</strong> Navigating online weight loss treatments can be complex. The Family Chemist is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that The Family Chemist provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="The Family Chemist" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             The Family Chemist
-          </a>{" "}
+          </ProviderCta>{" "}
           markets itself as a fully registered UK online pharmacy working within{" "}
           <strong>GPhC</strong> and <strong>MHRA</strong> aligned standards. Medicines, including weight loss
           lines, are described as dispensed under pharmacist oversight with clinical directors and independent
@@ -206,14 +202,9 @@ export default function TheFamilyChemistPharmacyContent() {
           Health Wise comparison rows for your GLP‑1 strength.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="The Family Chemist">
             Visit The Family Chemist
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.medicspot.co.uk/";
@@ -50,14 +51,9 @@ export default function MedicspotPharmacyContent() {
           Sustainable weight management usually needs more than willpower alone: medically supervised
           plans, evidence based medicines where eligible, follow up, and medicines reaching your door
           without repeated clinic travel.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Medicspot" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Medicspot
-          </a>{" "}
+          </ProviderCta>{" "}
           presents itself as that kind of UK clinician led provider, knitting together prescribing,
           coaching, and structured support in an online first pathway.
         </p>
@@ -262,14 +258,9 @@ export default function MedicspotPharmacyContent() {
           to your shortlist and compare totals on Health Wise with your clinician’s view.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Medicspot">
             Visit Medicspot
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

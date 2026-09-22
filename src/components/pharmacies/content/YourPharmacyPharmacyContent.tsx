@@ -7,6 +7,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 // your-pharmacy.co.uk is currently timing out — link disabled until it's back up.
@@ -52,14 +53,9 @@ export default function YourPharmacyPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Picking a weight loss pharmacy means balancing clinical rigour with everyday convenience.{" "}
           {providerUrl ? (
-            <a
-              href={providerUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-            >
+            <ProviderCta url={providerUrl} name="YourPharmacy" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
               YourPharmacy
-            </a>
+            </ProviderCta>
           ) : (
             <span className="font-semibold text-emerald-900">YourPharmacy</span>
           )}{" "}
@@ -204,14 +200,9 @@ export default function YourPharmacyPharmacyContent() {
         </p>
         <div className="mt-6">
           {providerUrl ? (
-            <a
-              href={providerUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-            >
+            <ProviderCta url={providerUrl} name="YourPharmacy">
               Visit YourPharmacy
-            </a>
+            </ProviderCta>
           ) : (
             <span
               aria-disabled="true"

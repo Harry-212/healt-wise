@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://medhut.co.uk/";
@@ -49,14 +50,9 @@ export default function MedHutPharmacyContent() {
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="MedHut" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             MedHut
-          </a>{" "}
+          </ProviderCta>{" "}
           describes a <strong>family run</strong> online pharmacy rooted in <strong>York</strong>, blending high street
           personality with nationwide digital access. Marketing positions them against faceless corporates, with emphasis
           on <strong>clinician led care</strong>, clear communication and support for medicines such as{" "}
@@ -200,14 +196,9 @@ export default function MedHutPharmacyContent() {
           routes.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="MedHut">
             Visit MedHut
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

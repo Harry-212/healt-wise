@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl =
@@ -270,14 +271,9 @@ export default function CloudPharmacyContent() {
           supervised support, it may be worth considering as part of a longer-term plan.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Cloud Pharmacy">
             Visit Cloud Pharmacy
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.theindependentpharmacy.co.uk/weight-loss";
@@ -49,14 +50,9 @@ export default function TheIndependentPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-slate-900">Why research The Independent Pharmacy?</strong> Every online pharmacy has a distinct approach to patient care, pricing, and medication delivery. This independent dossier breaks down how The Independent Pharmacy handles weight management consultations, offering you a clear look at their service structure so you can compare it against your personal health needs and preferences.</p></div>
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="The Independent Pharmacy" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             The Independent Pharmacy
-          </a>{" "}
+          </ProviderCta>{" "}
           positions itself among fully regulated UK digital pharmacies supplying prescription weight treatments
           with clinical review, discreet logistics and patient centred service. Demand for GLP‑1 therapies has
           attracted unsafe sellers; their narrative leans on statutory oversight as the counterweight.
@@ -209,14 +205,9 @@ export default function TheIndependentPharmacyContent() {
           against Health Wise tables for each GLP‑1 strength you need.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="The Independent Pharmacy">
             Visit The Independent Pharmacy
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

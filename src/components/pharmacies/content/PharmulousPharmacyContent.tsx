@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://pharmulous.co.uk/";
@@ -49,14 +50,9 @@ export default function PharmulousPharmacyContent() {
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Pharmulous" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Pharmulous
-          </a>{" "}
+          </ProviderCta>{" "}
           presents as a <strong>GP led</strong> online pharmacy where weight loss sits under the same rigour many
           expect from a traditional surgery. They specialise in <strong>Mounjaro</strong> and <strong>Wegovy</strong>{" "}
           access with emphasis on <strong>safety first</strong>, clinical excellence and convenience.
@@ -198,14 +194,9 @@ export default function PharmulousPharmacyContent() {
           their Trustpilot story is a stated differentiator.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Pharmulous">
             Visit Pharmulous
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

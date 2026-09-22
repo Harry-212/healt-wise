@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.joinvoy.com/weight-loss";
@@ -51,14 +52,9 @@ export default function VoyPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Choosing a weight loss service today means weighing effectiveness, credibility and how the programme
           fits your routine, not only the brand on the pen.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Voy" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Voy
-          </a>{" "}
+          </ProviderCta>{" "}
           promotes medically oriented support alongside digital convenience; the details that matter (eligible
           medicines, clinician types, subscription rhythm, courier partners) live on their live weight loss hub,
           which you should read in full before paying.
@@ -154,14 +150,9 @@ export default function VoyPharmacyContent() {
           month before you start.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Voy">
             Visit Voy
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

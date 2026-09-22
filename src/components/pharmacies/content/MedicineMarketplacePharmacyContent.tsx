@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://medicinemarketplace.com/";
@@ -57,14 +58,9 @@ export default function MedicineMarketplacePharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           The business highlights registration with a <strong>superintendent pharmacist</strong> and
           UK pharmacy regulation as its backbone. Health Wise explains how{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Medicine Market Place" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             medicinemarketplace.com
-          </a>{" "}
+          </ProviderCta>{" "}
           positions ordering, verification, delivery, costs, and review sentiment so you can place
           it next to GLP-1 only clinics elsewhere on the site.
         </p>
@@ -244,14 +240,9 @@ export default function MedicineMarketplacePharmacyContent() {
           medicine before comparing prices with other Health Wise dossiers.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Medicine Market Place">
             Visit Medicine Market Place
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

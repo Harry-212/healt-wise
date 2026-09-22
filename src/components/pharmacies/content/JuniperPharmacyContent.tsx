@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.myjuniper.co.uk/";
@@ -44,7 +45,7 @@ export default function JuniperPharmacyContent() {
       heroProviderLogoAlt="Juniper"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Juniper operates within the UK’s regulated online pharmacy sector, providing access to clinically approved weight loss medications. Because no two weight loss journeys are exactly alike, understanding the specific clinical protocols, shipping methods, and pricing tiers of Juniper is a crucial step in finding the right healthcare partner.</p></div>
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Juniper is a UK online pharmacy service built around prescription weight loss support. Everyone's situation is different — medical history, goals, budget — so it helps to understand exactly how Juniper's clinical process, delivery service and pricing work before deciding whether it's the right fit.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Losing a large amount of weight and keeping it off is hard. Many people find that classic
           diet plans and exercise work for a while, then stall, which is frustrating when life is
@@ -56,14 +57,9 @@ export default function JuniperPharmacyContent() {
           Health Wise explains that positioning in plain language so you can decide whether a
           bundled monthly programme fits you better than a bare pharmacy listing. Always read
           Juniper&apos;s own terms, clinical criteria, and pricing on{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Juniper" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             myjuniper.co.uk
-          </a>{" "}
+          </ProviderCta>{" "}
           before you enrol.
         </p>
       </section>
@@ -270,14 +266,9 @@ export default function JuniperPharmacyContent() {
           the clinician&apos;s plan for you, not only with a brand headline.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Juniper">
             Visit Juniper
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

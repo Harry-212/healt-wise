@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.numan.com/weight-loss";
@@ -47,16 +48,11 @@ export default function NumanPharmacyContent() {
       heroProviderLogoAlt="Numan"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Numan operates within the UK’s regulated online pharmacy sector, providing access to clinically approved weight loss medications. Because no two weight loss journeys are exactly alike, understanding the specific clinical protocols, shipping methods, and pricing tiers of Numan is a crucial step in finding the right healthcare partner.</p></div>
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Numan is a UK men's health platform that has expanded into prescription weight loss treatment through a regulated online pharmacy model. Because clinical suitability, delivery and cost vary by provider, it's worth understanding how Numan specifically runs its assessment and fulfilment process before choosing it.</p></div>
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Numan" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Numan
-          </a>{" "}
+          </ProviderCta>{" "}
           markets a personalised, clinically guided weight programme that goes beyond generic diet
           sheets or over the counter supplements. Prescription options such as{" "}
           <strong>Mounjaro (tirzepatide)</strong> and <strong>Wegovy (semaglutide)</strong> may
@@ -251,14 +247,9 @@ export default function NumanPharmacyContent() {
           Health Wise against simpler pharmacies if you only need minimal support around the pen.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Numan">
             Visit Numan
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

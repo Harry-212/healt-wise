@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.thenulife.com/weight-loss-management";
@@ -51,14 +52,9 @@ export default function NulifePharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Choosing a safe, medically supported weight loss route matters when unregulated products and
           quick fix marketing flood search results.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="NuLife Pharmacy" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             NuLife Pharmacy
-          </a>{" "}
+          </ProviderCta>{" "}
           positions itself as a UK online pharmacy offering clinically supervised treatments,
           personalised care plans, and discreet home delivery rather than anonymous checkout supply.
         </p>
@@ -300,14 +296,9 @@ export default function NulifePharmacyContent() {
           prescription tools.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="NuLife Pharmacy">
             Visit NuLife Pharmacy
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

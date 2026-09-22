@@ -7,6 +7,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.chequp.com";
@@ -368,14 +369,9 @@ export default function ChequpPharmacyContent() {
           delivery terms, and clinical suitability directly with the provider before starting any
           treatment.
         </p>
-        <a
-          href={providerUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} mt-4`}
-        >
+        <ProviderCta url={providerUrl} name="CheqUp Pharmacy" className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} mt-4`}>
           Visit CheqUp Pharmacy
-        </a>
+        </ProviderCta>
       </section>
     </PharmacyDossierPage>
   );

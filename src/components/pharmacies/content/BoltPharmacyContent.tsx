@@ -20,6 +20,7 @@ import {
   PharmacyBrandLogoFooter,
   PharmacyHeroProviderLogo,
   PharmacyPriceCompareHint,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl =
@@ -157,16 +158,14 @@ export default function BoltPharmacyContent() {
                 ))}
               </dl>
               <div className="mt-auto border-t border-dashed border-emerald-900/18 pt-5">
-                <a
-                  href={providerUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-pharmacy="Bolt Pharmacy"
+                <ProviderCta
+                  url={providerUrl}
+                  name="Bolt Pharmacy"
                   className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} gap-2`}
                 >
                   Visit Bolt Pharmacy
                   <ArrowRight className="h-4 w-4 shrink-0" />
-                </a>
+                </ProviderCta>
                 <p className="mt-3 text-center text-sm font-medium leading-relaxed text-slate-600">
                   Information only — confirm eligibility, pricing and prescribing rules on the
                   provider&apos;s own site.
@@ -300,7 +299,7 @@ export default function BoltPharmacyContent() {
           <section className="space-y-4">
             <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm">
               <p className="text-slate-800 leading-relaxed">
-                <strong className="text-indigo-900">Service Profile:</strong> Bolt Pharmacy operates within the UK’s regulated online pharmacy sector, providing access to clinically approved weight loss medications. Because no two weight loss journeys are exactly alike, understanding the specific clinical protocols, shipping methods, and pricing tiers of Bolt Pharmacy is a crucial step in finding the right healthcare partner.
+                <strong className="text-indigo-900">Service Profile:</strong> Bolt Pharmacy is one of several GPhC-regulated online providers in the UK offering prescription weight loss treatment. Every patient's history, tolerance and budget looks different, so before choosing a provider it helps to know exactly how Bolt Pharmacy handles clinical screening, delivery and pricing.
               </p>
             </div>
             <p className={body}>
@@ -594,16 +593,14 @@ export default function BoltPharmacyContent() {
               treatment, Bolt Pharmacy may well be worth considering.
             </p>
             <div className="mt-6">
-              <a
-                href={providerUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-pharmacy="Bolt Pharmacy"
+              <ProviderCta
+                url={providerUrl}
+                name="Bolt Pharmacy"
                 className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} inline-flex gap-2`}
               >
                 Visit Bolt Pharmacy
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </ProviderCta>
             </div>
           </section>
         </div>

@@ -16,21 +16,39 @@ export function isOutboundHref(href: string): boolean {
   }
 }
 
+function getDomain(href: string): string {
+  try {
+    return new URL(href).hostname;
+  } catch {
+    return href;
+  }
+}
+
+export function isProviderLink(anchor: HTMLAnchorElement): boolean {
+  return !!anchor.dataset.pharmacy;
+}
+
+export function trackProviderClick(anchor: HTMLAnchorElement) {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") return;
+
+  window.gtag("event", "provider_click", {
+    provider_name: anchor.dataset.pharmacy,
+    provider_id: anchor.dataset.providerId ?? undefined,
+    link_url: anchor.href,
+    link_domain: getDomain(anchor.href),
+    link_text: anchor.textContent?.trim().slice(0, 100) ?? "",
+    page_path: window.location.pathname,
+    transport_type: "beacon",
+  });
+}
+
 export function trackOutboundClick(anchor: HTMLAnchorElement) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
 
-  let domain = anchor.href;
-  try {
-    domain = new URL(anchor.href).hostname;
-  } catch {
-    // keep raw href as fallback
-  }
-
   window.gtag("event", "outbound_click", {
     link_url: anchor.href,
-    link_domain: domain,
+    link_domain: getDomain(anchor.href),
     link_text: anchor.textContent?.trim().slice(0, 100) ?? "",
-    pharmacy: anchor.dataset.pharmacy ?? undefined,
     page_path: window.location.pathname,
     transport_type: "beacon",
   });

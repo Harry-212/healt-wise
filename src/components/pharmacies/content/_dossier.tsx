@@ -8,9 +8,40 @@ import { CheckCircle2, ChevronRight, Copy, Home, Tag } from "lucide-react";
 import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 
-/** Same classes as the primary “Visit {provider}” CTA in Document details (use in conclusion links). */
+/** Same classes as the primary "Visit {provider}" CTA in Document details (use in conclusion links). */
 export const PHARMACY_PROVIDER_CTA_CLASSNAME =
   "inline-flex w-full items-center justify-center rounded-md bg-gradient-to-b from-emerald-700 to-emerald-800 px-5 py-3.5 text-sm font-bold uppercase tracking-[0.12em] text-white shadow-md ring-1 ring-emerald-950/20 transition hover:from-emerald-800 hover:to-emerald-900 hover:shadow-lg sm:w-auto";
+
+function toProviderId(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+export function ProviderCta({
+  url,
+  name,
+  id,
+  children,
+  className = PHARMACY_PROVIDER_CTA_CLASSNAME,
+}: {
+  url: string;
+  name: string;
+  id?: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-pharmacy={name}
+      data-provider-id={id ?? toProviderId(name)}
+      className={className}
+    >
+      {children}
+    </a>
+  );
+}
 
 /** Same shape as the CTA above, but greyed out for providers whose site is currently down. */
 export const PHARMACY_PROVIDER_CTA_DISABLED_CLASSNAME =
@@ -47,7 +78,7 @@ export function PharmacyHeroProviderLogo({
   );
 }
 
-/** Large footer logo (matches dossier “logo” disclaimer; reuse e.g. Bolt). */
+/** Large footer logo (matches dossier "logo" disclaimer; reuse e.g. Bolt). */
 export function PharmacyBrandLogoFooter() {
   return (
     <div className="flex justify-center py-4 sm:py-6">
@@ -58,7 +89,7 @@ export function PharmacyBrandLogoFooter() {
   );
 }
 
-/** Callout linking to Health Wise comparison tables (use under “How much does … cost?”). */
+/** Callout linking to Health Wise comparison tables (use under "How much does … cost?"). */
 export function PharmacyPriceCompareHint({
   className = "mt-3",
 }: {
@@ -386,14 +417,13 @@ export function PharmacyDossierPage({
               </dl>
               <div className="mt-auto border-t border-dashed border-emerald-900/18 pt-5">
                 {providerUrl ? (
-                  <a
-                    href={providerUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={PHARMACY_PROVIDER_CTA_CLASSNAME}
+                  <ProviderCta
+                    url={providerUrl}
+                    name={providerName}
+                    id={toProviderId(slugLabel)}
                   >
                     Visit {providerName}
-                  </a>
+                  </ProviderCta>
                 ) : (
                   <span
                     aria-disabled="true"

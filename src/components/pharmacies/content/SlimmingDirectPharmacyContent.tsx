@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://slimmingdirect.co.uk/";
@@ -50,14 +51,9 @@ export default function SlimmingDirectPharmacyContent() {
         <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-slate-900">Why research Slimming Direct?</strong> Every online pharmacy has a distinct approach to patient care, pricing, and medication delivery. This independent dossier breaks down how Slimming Direct handles weight management consultations, offering you a clear look at their service structure so you can compare it against your personal health needs and preferences.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Sustainable loss often depends on the provider as much as the molecule.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Slimming Direct" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Slimming Direct
-          </a>{" "}
+          </ProviderCta>{" "}
           describes a clinically led UK online programme combining prescription medicines, professional
           review and home delivery, including demand heavy GLP-1 injections where appropriate.
         </p>
@@ -242,14 +238,9 @@ export default function SlimmingDirectPharmacyContent() {
           Validate every quote on live pages and against Health Wise tables for your dose.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Slimming Direct">
             Visit Slimming Direct
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

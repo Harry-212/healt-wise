@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://getadrip.com/";
@@ -48,14 +49,9 @@ export default function GetADripPharmacyContent() {
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Get A Drip" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Get A Drip
-          </a>{" "}
+          </ProviderCta>{" "}
           built its brand on UK IV vitamin lounges before extending in 2026 into a{" "}
           <strong>specialised weight loss treatment programme</strong>. Unlike online only pharmacies, marketing
           stresses <strong>physical clinics</strong>, <strong>doctor led triage</strong> and hands on monitoring
@@ -199,14 +195,9 @@ export default function GetADripPharmacyContent() {
           economical postage, lighter digital pharmacies may suffice.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Get A Drip">
             Visit Get A Drip
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

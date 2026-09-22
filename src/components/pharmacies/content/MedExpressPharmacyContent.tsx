@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.medexpress.co.uk/clinics/weight-loss";
@@ -47,7 +48,7 @@ export default function MedExpressPharmacyContent() {
       heroProviderLogoAlt="MedExpress"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> MedExpress operates within the UK’s regulated online pharmacy sector, providing access to clinically approved weight loss medications. Because no two weight loss journeys are exactly alike, understanding the specific clinical protocols, shipping methods, and pricing tiers of MedExpress is a crucial step in finding the right healthcare partner.</p></div>
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> MedExpress is a long-established UK online pharmacy that also provides prescription weight loss treatment under regulated clinical oversight. As with any provider, the details of eligibility screening, delivery timing and pricing differ enough that it's worth checking how MedExpress specifically handles each before you commit.</p></div>
         <p className="text-slate-800 leading-relaxed">
           MedExpress positions its weight loss clinic inside a fully regulated UK online pharmacy:
           prescription medicines are UK licensed and prescribing sits with qualified clinicians, so
@@ -59,14 +60,9 @@ export default function MedExpressPharmacyContent() {
           contraindications, and escalation or titration plans need professional judgement. Public
           copy references experienced medical directors and prescribers guiding treatment selection.
           Health Wise summarises how{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="MedExpress" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             medexpress.co.uk
-          </a>{" "}
+          </ProviderCta>{" "}
           frames the service; confirm fees, eligibility, and product availability live before you
           order.
         </p>
@@ -264,14 +260,9 @@ export default function MedExpressPharmacyContent() {
           parcel lands.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="MedExpress">
             Visit MedExpress
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

@@ -4,6 +4,7 @@ import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
   PharmacyDossierPage,
+  ProviderCta,
   PharmacyPriceCompareHint,
   Points,
 } from "./_dossier";
@@ -57,14 +58,9 @@ export default function PharmacyXpressPharmacyContent({ routeSlug }: Props) {
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name={displayName} className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             {displayName}
-          </a>{" "}
+          </ProviderCta>{" "}
           markets a <strong>health first</strong> UK online pharmacy where the “support mechanism” for long term habits
           sits beside dispensing. For <strong>Mounjaro</strong> or <strong>Wegovy</strong> style GLP‑1 access they
           emphasise a <strong>clinically governed</strong> platform, safety messaging and professional guidance on
@@ -207,14 +203,9 @@ export default function PharmacyXpressPharmacyContent({ routeSlug }: Props) {
           may feel more rounded than bare dispensers.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name={displayName}>
             Visit {visitLabel}
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

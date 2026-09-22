@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://weprescribe.co.uk/condition/weight-loss/";
@@ -52,14 +53,9 @@ export default function WePrescribePharmacyContent() {
           Millions of UK adults need medical support beyond willpower; prescription therapies such as{" "}
           <strong>Wegovy</strong>, <strong>Mounjaro</strong>, <strong>Saxenda</strong> and{" "}
           <strong>Orlistat</strong> require lawful prescribing routes.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="WePrescribe" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             WePrescribe
-          </a>{" "}
+          </ProviderCta>{" "}
           presents itself as a UK licensed online pharmacy where{" "}
           <strong>pharmacist prescribers and clinicians</strong> assess questionnaires before any prescription
           only medicine ships.
@@ -211,14 +207,9 @@ export default function WePrescribePharmacyContent() {
           toward next.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="WePrescribe">
             Visit WePrescribe
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

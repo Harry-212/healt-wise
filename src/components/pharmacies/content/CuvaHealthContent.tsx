@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://cuvahealth.co.uk/treatment/weight-loss";
@@ -249,14 +250,9 @@ export default function CuvaHealthContent() {
           delivery and a more supported approach, it may be worth considering.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Cuva Health">
             Visit Cuva Health
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

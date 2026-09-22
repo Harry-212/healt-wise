@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 export default function AsdaOnlineDoctorContent() {
@@ -325,14 +326,9 @@ export default function AsdaOnlineDoctorContent() {
           accessing prescription weight loss medication in the UK.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Asda Online Doctor">
             Visit Asda Online Doctor
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

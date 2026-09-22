@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.simpleonlinepharmacy.co.uk/";
@@ -51,14 +52,9 @@ export default function SimpleOnlinePharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           When people search for safe, convenient weight loss support online they meet many sellers of
           medicines, injections and programmes. Not every route meets the same standards.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Simple Online Pharmacy" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Simple Online Pharmacy
-          </a>{" "}
+          </ProviderCta>{" "}
           presents itself as a regulated UK healthcare service with clinician led prescribing and home
           delivery. Below is how their public narrative describes regulation, the care pathway, delivery,
           typical costs and why patients might pick them.
@@ -259,14 +255,9 @@ export default function SimpleOnlinePharmacyContent() {
           Wise comparison tables and the provider’s live checkout.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Simple Online Pharmacy">
             Visit Simple Online Pharmacy
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

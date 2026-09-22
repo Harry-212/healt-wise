@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.mshweightloss.co.uk/";
@@ -51,14 +52,9 @@ export default function MshWeightLossPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Choosing a UK online weight loss clinic means weighing trust, clinical depth, and whether
           logistics match injectable cold chain rules.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="MSH Weight Loss" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             MSH Weight Loss
-          </a>{" "}
+          </ProviderCta>{" "}
           presents as a regulated clinic pathway rather than a single checkout: prescribing where
           suitable, ongoing monitoring, and courier delivery engineered around temperature sensitive
           pens.
@@ -293,14 +289,9 @@ export default function MshWeightLossPharmacyContent() {
           diary your renewal date, and read cancellation and weekend fee clauses before you subscribe.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="MSH Weight Loss">
             Visit MSH Weight Loss
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

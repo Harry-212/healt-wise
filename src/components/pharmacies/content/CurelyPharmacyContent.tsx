@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.curely.co.uk/online-doctor/weight-loss";
@@ -36,7 +37,7 @@ export default function CurelyPharmacyContent() {
       heroProviderLogoAlt="Curely"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Curely operates within the UK’s regulated online pharmacy sector, providing access to clinically approved weight loss medications. Because no two weight loss journeys are exactly alike, understanding the specific clinical protocols, shipping methods, and pricing tiers of Curely is a crucial step in finding the right healthcare partner.</p></div>
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Curely sits among the UK's regulated online pharmacies giving patients supervised access to prescription weight loss treatment. As no two people respond to treatment the same way, it's worth getting familiar with how Curely runs its consultations, handles delivery and structures pricing before signing up.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Weight loss is often framed as a discipline problem. Eat less. Move more. Stay
           consistent. That can be true in part. But it also misses a lot.
@@ -297,14 +298,9 @@ export default function CurelyPharmacyContent() {
           supervised access, it may be worth considering.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Curely">
             Visit Curely
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

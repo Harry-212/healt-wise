@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://click2pharmacy.co.uk/product/mounjaro-weight-loss-injections/";
@@ -283,14 +284,9 @@ export default function Click2PharmacyMounjaroContent() {
           and quicker access to medically supervised treatment, it’s one provider worth considering.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Click2Pharmacy">
             Visit Click2Pharmacy
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

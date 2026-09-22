@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.curatehealth.co.uk/collections/weight-loss";
@@ -271,14 +272,9 @@ export default function CuratePharmacyContent() {
           choice of fulfilment options, it may be worth considering.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Curate">
             Visit Curate
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://onlinedoctor.superdrug.com/";
@@ -51,14 +52,9 @@ export default function SuperdrugOnlineDoctorContent() {
         <p className="text-slate-800 leading-relaxed">
           Demand for medically supervised GLP-1 weight loss continues to grow; picking a familiar retail
           brand can feel reassuring.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Superdrug Online Doctor" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Superdrug Online Doctor
-          </a>{" "}
+          </ProviderCta>{" "}
           markets regulated access with transparent turnaround messaging, flexible fulfilment and bundled
           pricing themes on medicines such as Mounjaro and Wegovy where clinically appropriate.
         </p>
@@ -253,14 +249,9 @@ export default function SuperdrugOnlineDoctorContent() {
           faster niche couriers profiled elsewhere on Health Wise.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Superdrug Online Doctor">
             Visit Superdrug Online Doctor
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

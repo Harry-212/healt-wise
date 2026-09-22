@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.medino.com/";
@@ -52,14 +53,9 @@ export default function MedinoPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Accessing evidence based weight treatments through traditional routes can mean long waits,
           repeated appointments, and diary friction.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Medino" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Medino
-          </a>{" "}
+          </ProviderCta>{" "}
           markets a streamlined home based alternative: professional healthcare review, licensed
           medicines where appropriate, and rapid delivery once approved.
         </p>
@@ -334,14 +330,9 @@ export default function MedinoPharmacyContent() {
           your GP in the loop if shared care or duplicate prescribing could be an issue.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Medino">
             Visit Medino
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

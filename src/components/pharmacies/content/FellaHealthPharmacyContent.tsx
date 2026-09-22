@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.fellahealth.com/";
@@ -49,14 +50,9 @@ export default function FellaHealthPharmacyContent() {
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Fella Health" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Fella Health
-          </a>{" "}
+          </ProviderCta>{" "}
           positions itself as a men’s specialised digital clinic rather than a generic online pharmacy. The
           “metabolic programme” pairs GLP‑1 medicines such as <strong>Mounjaro</strong> and{" "}
           <strong>Wegovy</strong> with structured <strong>one to one health coaching</strong> for patients who
@@ -202,14 +198,9 @@ export default function FellaHealthPharmacyContent() {
           Wise dose tables; if accountability drives adherence, the coaching layer may justify the premium.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Fella Health">
             Visit Fella Health
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

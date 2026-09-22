@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.iqdoctor.co.uk/treatments/weight-loss/";
@@ -54,14 +55,9 @@ export default function IqDoctorPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Health Wise maps that model here so you can compare it with other providers. Nothing on
           this page replaces the product copy, eligibility rules, or live prices on{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="IQ Doctor" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             iqdoctor.co.uk
-          </a>
+          </ProviderCta>
           , and nothing here is personal medical advice.
         </p>
       </section>
@@ -313,14 +309,9 @@ export default function IqDoctorPharmacyContent() {
           registration yourself.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="IQ Doctor">
             Visit IQ Doctor
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

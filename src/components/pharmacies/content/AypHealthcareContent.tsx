@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 export default function AypHealthcareContent() {
@@ -274,14 +275,9 @@ export default function AypHealthcareContent() {
           strategy.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="AYP Healthcare">
             Visit AYP Healthcare
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

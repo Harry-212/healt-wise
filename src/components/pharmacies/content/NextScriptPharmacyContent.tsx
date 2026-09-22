@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://nextscript.co.uk/condition/weight-loss/";
@@ -51,14 +52,9 @@ export default function NextScriptPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           More UK patients now look for regulated online clinics instead of only NHS GP routes for
           obesity pharmacotherapy.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Next Script" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Next Script
-          </a>{" "}
+          </ProviderCta>{" "}
           markets a streamlined digital model: you stay remote while prescribers and a GPhC registered
           pharmacy handle assessment, approval, and supply.
         </p>
@@ -272,14 +268,9 @@ export default function NextScriptPharmacyContent() {
           your shortlist next to other Health Wise dossiers at the same dose and monthly budget.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Next Script">
             Visit Next Script
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

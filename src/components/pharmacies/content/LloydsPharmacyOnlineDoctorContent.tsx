@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://onlinedoctor.lloydspharmacy.com/";
@@ -60,14 +61,9 @@ export default function LloydsPharmacyOnlineDoctorContent() {
           need prescription only support, want a confidential digital pathway, and prefer
           professional backing alongside medication. Health Wise summarises how that pathway is
           described on{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Lloyds Online Doctor" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             onlinedoctor.lloydspharmacy.com
-          </a>
+          </ProviderCta>
           . Confirm eligibility, prices, and cut offs there before you pay.
         </p>
       </section>
@@ -288,14 +284,9 @@ export default function LloydsPharmacyOnlineDoctorContent() {
           logistics, it is a mainstream option to weigh against other dossiers on Health Wise.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Lloyds Online Doctor">
             Visit Lloyds Online Doctor
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://getweightloss.co.uk/";
@@ -49,14 +50,9 @@ export default function GetWeightLossPharmacyContent() {
     >
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="GetWeightLoss" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             GetWeightLoss
-          </a>{" "}
+          </ProviderCta>{" "}
           markets a clinician led digital health service built around a <strong>partnership</strong> metaphor:
           medical therapy plus evidence based guidance and a simplified fee structure. Their headline differentiator
           is a <strong>“No Teaser” pricing policy</strong> meant to avoid intro discounts that balloon after month
@@ -199,14 +195,9 @@ export default function GetWeightLossPharmacyContent() {
           committing long term.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="GetWeightLoss">
             Visit GetWeightLoss
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

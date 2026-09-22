@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://onlinemeds.co.uk/";
@@ -51,14 +52,9 @@ export default function OnlinemedsPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Weight loss decisions online are noisy: conflicting advice, NHS capacity limits, and
           sellers with uneven safety standards.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="OnlineMeds" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             OnlineMeds
-          </a>{" "}
+          </ProviderCta>{" "}
           positions itself as a <strong>specialist UK online pharmacy</strong> dedicated to weight
           management rather than a general storefront, so protocols and staff attention lean toward
           screening, titration, and follow-up for obesity medicines.
@@ -241,14 +237,9 @@ export default function OnlinemedsPharmacyContent() {
           you actually need rather than comparing starter strips only.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="OnlineMeds">
             Visit OnlineMeds
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

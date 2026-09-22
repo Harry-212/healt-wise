@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://livewellweightloss.co.uk/";
@@ -57,14 +58,9 @@ export default function LiveWellWeightLossPharmacyContent() {
           Health Wise summarises how that journey is supposed to work, what delivery and pricing
           look like in public copy, and what reviewers say, so you can line Live Well up next to
           other regulated options. Always confirm live rules and prices on{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Live Well Weight Loss" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             livewellweightloss.co.uk
-          </a>
+          </ProviderCta>
           .
         </p>
       </section>
@@ -295,14 +291,9 @@ export default function LiveWellWeightLossPharmacyContent() {
           for you, not only with a third party summary.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Live Well Weight Loss">
             Visit Live Well Weight Loss
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

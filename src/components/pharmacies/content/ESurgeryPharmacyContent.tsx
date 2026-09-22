@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://e-surgery.com/";
@@ -49,14 +50,9 @@ export default function ESurgeryPharmacyContent() {
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
           Sustainable weight management still depends on clinical rigour first;{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="e-Surgery" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             e-Surgery
-          </a>{" "}
+          </ProviderCta>{" "}
           markets a UK “sustainable” online pharmacy that pairs rapid access with environmental touches such as
           recyclable packaging, while supplying regulated Wegovy and Mounjaro pathways for eligible patients.
         </p>
@@ -200,14 +196,9 @@ export default function ESurgeryPharmacyContent() {
           next titration month.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="e-Surgery">
             Visit e-Surgery
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

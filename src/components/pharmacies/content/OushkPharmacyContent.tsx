@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.oushkpharmacy.com/online-doctor/weight-loss";
@@ -51,14 +52,9 @@ export default function OushkPharmacyContent() {
         <div className="mb-6 rounded-xl border border-slate-200 bg-slate-50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-slate-900">Why research Oushk Pharmacy?</strong> Every online pharmacy has a distinct approach to patient care, pricing, and medication delivery. This independent dossier breaks down how Oushk Pharmacy handles weight management consultations, offering you a clear look at their service structure so you can compare it against your personal health needs and preferences.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Demand for safe, medically supervised weight loss online keeps rising.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Oushk Pharmacy" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Oushk Pharmacy
-          </a>{" "}
+          </ProviderCta>{" "}
           markets a patient first service that pairs clinical expertise with convenience, discretion,
           and personalisation rather than anonymous checkout supply.
         </p>
@@ -266,14 +262,9 @@ export default function OushkPharmacyContent() {
           week.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Oushk Pharmacy">
             Visit Oushk Pharmacy
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

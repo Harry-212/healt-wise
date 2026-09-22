@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.pharmacy2u.co.uk/online-doctor/weight-loss";
@@ -275,14 +276,9 @@ export default function Pharmacy2uPharmacyContent() {
           and dose price at checkout and against Health Wise comparisons before committing.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Pharmacy2U">
             Visit Pharmacy2U
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

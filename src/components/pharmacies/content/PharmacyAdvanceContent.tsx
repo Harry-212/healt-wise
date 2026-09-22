@@ -7,6 +7,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 // pharmacyadvance.co.uk is currently returning 500 errors — link disabled until it's back up.
@@ -308,14 +309,9 @@ export default function PharmacyAdvanceContent() {
         </p>
         <div className="mt-6">
           {providerUrl ? (
-            <a
-              href={providerUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-            >
+            <ProviderCta url={providerUrl} name="Pharmacy Advance">
               Visit Pharmacy Advance
-            </a>
+            </ProviderCta>
           ) : (
             <span
               aria-disabled="true"

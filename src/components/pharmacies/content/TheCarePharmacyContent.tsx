@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://thecarepharmacy.com/";
@@ -51,14 +52,9 @@ export default function TheCarePharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Lasting weight change rarely comes from fad diets alone; many adults need clinician approved
           medicines plus structured follow up.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="The Care Pharmacy" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             The Care Pharmacy
-          </a>{" "}
+          </ProviderCta>{" "}
           markets itself as a fully regulated UK pharmacy blending digital clinics, pharmacist oversight and
           nationwide delivery so patients can start treatment without a face to face GP visit.
         </p>
@@ -221,14 +217,9 @@ export default function TheCarePharmacyContent() {
           inside one GPhC umbrella, their dossier belongs next to the other UK listings on Health Wise.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="The Care Pharmacy">
             Visit The Care Pharmacy
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

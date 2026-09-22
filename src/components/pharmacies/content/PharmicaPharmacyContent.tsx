@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.pharmica.co.uk/weight-loss/";
@@ -47,7 +48,7 @@ export default function PharmicaPharmacyContent() {
       heroProviderLogoAlt="Pharmica"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Pharmica operates within the UK’s regulated online pharmacy sector, providing access to clinically approved weight loss medications. Because no two weight loss journeys are exactly alike, understanding the specific clinical protocols, shipping methods, and pricing tiers of Pharmica is a crucial step in finding the right healthcare partner.</p></div>
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Pharmica is a GPhC-registered UK online pharmacy offering prescription weight loss treatment alongside its wider healthcare services. Since eligibility, delivery timelines and pricing differ across providers, it's worth understanding exactly how Pharmica handles each step before deciding if it's the right fit.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Pharmica publicly presents as a <strong>leading UK online pharmacy</strong> with strong
           reputation signals, clinically oriented weight-loss SKUs, fast logistics, and a
@@ -278,14 +279,9 @@ export default function PharmicaPharmacyContent() {
           and add the delivery tier you actually need before judging value.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Pharmica">
             Visit Pharmica
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

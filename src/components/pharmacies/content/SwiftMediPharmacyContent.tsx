@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.swiftmedi.co.uk/";
@@ -49,14 +50,9 @@ export default function SwiftMediPharmacyContent() {
       <section className="space-y-4">
         <p className="text-slate-800 leading-relaxed">
           Demand for Wegovy and Mounjaro makes picking a clinically sound platform as important as picking a dose.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="SwiftMedi" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             SwiftMedi
-          </a>{" "}
+          </ProviderCta>{" "}
           markets itself as a leading UK digital healthcare route that stresses regulation, authentic stock and
           transparent service rather than social media grey markets.
         </p>
@@ -201,14 +197,9 @@ export default function SwiftMediPharmacyContent() {
           their live checkout with Health Wise Mounjaro rows for each titration step you expect next.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="SwiftMedi">
             Visit SwiftMedi
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://www.mylondonpharmacy.co.uk/";
@@ -51,14 +52,9 @@ export default function MyLondonPharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Busy lives, long NHS waits, and noisy online sellers make it harder to pick a{" "}
           <strong>safe, supervised</strong> weight loss route.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="My London Pharmacy" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             My London Pharmacy
-          </a>{" "}
+          </ProviderCta>{" "}
           markets itself as a UK registered online pharmacy where licensed clinicians oversee
           treatment, data is handled securely, and medicines are sourced through legitimate supply
           chains rather than social marketplace risk.
@@ -269,14 +265,9 @@ export default function MyLondonPharmacyContent() {
           handy if your NHS team coordinates care.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="My London Pharmacy">
             Visit My London Pharmacy
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>

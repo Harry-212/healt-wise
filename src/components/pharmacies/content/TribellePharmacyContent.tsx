@@ -6,6 +6,7 @@ import {
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
+  ProviderCta,
 } from "./_dossier";
 
 const providerUrl = "https://tribelle.co.uk/treatments/injectable-weight-loss";
@@ -51,14 +52,9 @@ export default function TribellePharmacyContent() {
         <p className="text-slate-800 leading-relaxed">
           Excess weight intersects metabolism, mood and long term health; diet alone fails many adults.
           Injectable prescription therapies now sit beside lifestyle change.{" "}
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-emerald-900 underline-offset-2 hover:underline"
-          >
+          <ProviderCta url={providerUrl} name="Tribelle" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             Tribelle
-          </a>{" "}
+          </ProviderCta>{" "}
           describes a UK regulated, clinician led digital clinic supplying evidence based GLP‑1 medicines with
           home delivery.
         </p>
@@ -221,14 +217,9 @@ export default function TribellePharmacyContent() {
           Compare their live pen totals with Health Wise Mounjaro rows for each titration step before committing.
         </p>
         <div className="mt-6">
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={PHARMACY_PROVIDER_CTA_CLASSNAME}
-          >
+          <ProviderCta url={providerUrl} name="Tribelle">
             Visit Tribelle
-          </a>
+          </ProviderCta>
         </div>
       </section>
     </PharmacyDossierPage>
