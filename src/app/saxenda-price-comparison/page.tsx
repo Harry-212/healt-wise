@@ -103,11 +103,7 @@ export default function CompareSaxendaPricesUkPage() {
               <strong className="font-semibold text-slate-800">3 pens</strong>, and{" "}
               <strong className="font-semibold text-slate-800">5 pens</strong> — each
               cell shows the pack price and £/mg. Filter by name and rating; sort
-              any column. Use{" "}
-              <strong className="font-semibold text-slate-800">
-                Discount price
-              </strong>{" "}
-              for member offers when verified.
+              any column.
             </p>
             <div className="mt-10">
               <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} lastUpdated={SAXENDA_UK_COMPARE_LAST_UPDATED} />
@@ -279,13 +275,13 @@ export default function CompareSaxendaPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-amber-50/40 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              How to find discounted Saxenda prices
+              A note on discounted Saxenda prices
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
               Some providers may offer member pricing, introductory discounts, or
-              bundles. We are verifying these per pharmacy — use the{" "}
-              <strong className="text-slate-900">Discount price</strong> toggle
-              above to see where promotional cells will appear once confirmed.
+              bundles. We have not been able to independently confirm any current
+              discount terms, so promotional badges are hidden until verified.
+              Always check the provider&apos;s site for the latest offers.
             </p>
           </div>
         </section>

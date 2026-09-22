@@ -124,12 +124,9 @@ export default function CompareMounjaroPricesUkPage() {
             <p className="mt-3 max-w-3xl text-slate-600">
               Each pen strength has its own column (2.5 mg–15 mg). Filter by name,
               starting price band, rating, and delivery type; every column header
-              shows sort controls. Tap a provider name for its profile page. Use{" "}
-              <strong className="font-semibold text-slate-800">
-                Discount price
-              </strong>{" "}
-              to preview where verified offers will appear. Row tint and
-              highlighted cells show the lowest prices in your current view.
+              shows sort controls. Tap a provider name for its profile page. Row
+              tint and highlighted cells show the lowest prices in your current
+              view.
             </p>
             <div className="mt-10">
               <MounjaroUkCompareTable providers={MOUNJARO_UK_COMPARE_PROVIDERS} lastUpdated={mounjaroLastUpdated} />
@@ -347,13 +344,13 @@ export default function CompareMounjaroPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-amber-50/40 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              How to find discounted Mounjaro prices
+              A note on discounted Mounjaro prices
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
               Some providers may offer introductory discounts, subscription
-              pricing, or bundles. We are verifying these per pharmacy — use the{" "}
-              <strong className="text-slate-900">Discount price</strong> toggle
-              above to see where promotional rows will appear once confirmed.
+              pricing, or bundles. We have not been able to independently confirm
+              any current discount terms, so promotional badges are hidden until
+              verified. Always check the provider&apos;s site for the latest offers.
             </p>
           </div>
         </section>

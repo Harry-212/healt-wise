@@ -136,7 +136,6 @@ export const SAXENDA_UK_COMPARE_PROVIDERS: SaxendaUkProviderCompare[] = [
     name: "Superdrug Online Doctor",
     rating: 4.6,
     reviewCount: 3200,
-    promoNote: "10% off for Members",
     doses: {
       "0.6": 145,
       "1.2": 152,

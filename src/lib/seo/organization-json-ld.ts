@@ -15,7 +15,7 @@ import {
  */
 export function organizationJsonLd(): Record<string, unknown> {
   const base = siteOrigin();
-  const { suite, street, city, postcode } = SITE_BUSINESS_ADDRESS;
+  const { street, city, postcode } = SITE_BUSINESS_ADDRESS;
 
   return {
     "@context": "https://schema.org",
@@ -29,7 +29,7 @@ export function organizationJsonLd(): Record<string, unknown> {
       "Independent UK comparison for weight loss treatment prices, safety, and support.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: `${suite}, ${street}`,
+      streetAddress: street,
       addressLocality: city,
       postalCode: postcode,
       addressCountry: "GB",

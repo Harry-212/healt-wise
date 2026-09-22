@@ -131,12 +131,8 @@ export default function CompareWegovyPricesUkPage() {
               Each pen strength has its own column. Filter by name, starting
               price band, rating, and delivery type; every column header shows
               sort controls (active column uses a filled arrow). Tap a provider
-              name for its profile page. Use{" "}
-              <strong className="font-semibold text-slate-800">
-                Discount price
-              </strong>{" "}
-              to preview where verified offers will appear. Row tint and green
-              cells highlight the lowest prices in your current view.
+              name for its profile page. Row tint and green cells highlight the
+              lowest prices in your current view.
             </p>
             <div className="mt-10">
               <WegovyUkCompareTable providers={WEGOVY_UK_COMPARE_PROVIDERS} lastUpdated={wegovyLastUpdated} />
@@ -370,14 +366,13 @@ export default function CompareWegovyPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-amber-50/40 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              How to find discounted Wegovy prices
+              A note on discounted Wegovy prices
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
               Some providers may offer introductory discounts, subscription
-              pricing, or bundles. We are verifying these on a per-pharmacy
-              basis — use the{" "}
-              <strong className="text-slate-900">Discount price</strong> toggle
-              above to see where promotional rows will appear once confirmed.
+              pricing, or bundles. We have not been able to independently confirm
+              any current discount terms, so promotional badges are hidden until
+              verified. Always check the provider&apos;s site for the latest offers.
             </p>
           </div>
         </section>
