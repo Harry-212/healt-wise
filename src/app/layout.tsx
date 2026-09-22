@@ -16,9 +16,8 @@ import {
   SITE_SHARE_IMAGE_SRC,
   SITE_SHARE_IMAGE_WIDTH,
 } from "@/lib/site-assets";
-import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
-import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
 import { OutboundClickTracker } from "@/components/analytics/OutboundClickTracker";
+import { AnalyticsProvider } from "@/components/analytics/AnalyticsProvider";
 
 /** Footer is below the fold on every page; split it out of the shared root bundle. */
 const Footer = dynamic(() => import("@/components/layout/Footer"));
@@ -96,9 +95,8 @@ export default function RootLayout({
           </main>
           <Footer />
         </SupabaseAuthProvider>
-        <GoogleAnalytics />
+        <AnalyticsProvider />
         <OutboundClickTracker />
-        <MicrosoftClarity />
       </body>
     </html>
   );

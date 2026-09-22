@@ -1,0 +1,28 @@
+"use client";
+
+import { GA_MEASUREMENT_ID } from "@/lib/analytics/ga";
+import { type ConsentChoice } from "@/lib/analytics/consent";
+import Script from "next/script";
+import { Suspense } from "react";
+import { Ga4PageViews } from "./Ga4PageViews";
+
+export function GoogleAnalyticsClient({ consent }: { consent: ConsentChoice | null }) {
+  if (!GA_MEASUREMENT_ID) return null;
+
+  const consentDefault = consent === "granted" ? "granted" : "denied";
+
+  return (
+    <>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="lazyOnload"
+      />
+      <Script id="ga4-init" strategy="lazyOnload">
+        {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{analytics_storage:'${consentDefault}',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}');`}
+      </Script>
+      <Suspense fallback={null}>
+        <Ga4PageViews />
+      </Suspense>
+    </>
+  );
+}
