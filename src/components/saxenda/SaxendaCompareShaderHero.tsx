@@ -73,7 +73,7 @@ export default function SaxendaCompareShaderHero({
           </h1>
 
           <p className="mx-auto mb-6 max-w-2xl text-pretty text-sm font-light leading-relaxed text-white/75 lg:mx-0 md:text-base">
-            Compare illustrative Saxenda (liraglutide) pack prices across UK
+            Compare real Saxenda (liraglutide) pack prices across UK
             pharmacies: 1, 3, and 5 pens, £/mg, repeat pricing, delivery, and
             GPhC context — in one interactive table.
           </p>
@@ -90,7 +90,9 @@ export default function SaxendaCompareShaderHero({
 
           <p className="mx-auto mt-8 max-w-xl text-center text-[11px] leading-relaxed text-white/45 lg:mx-0 lg:text-left">
             Information only — not medical advice. Saxenda is prescription-only.
-            Prices are illustrative; confirm live rates before you pay.
+            Provider prices were checked on the dates shown in the table.
+            Prices and availability can change; confirm the final total and
+            any additional charges with the provider.
           </p>
 
           <div className="mt-8 flex justify-center lg:justify-start">

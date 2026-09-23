@@ -24,7 +24,7 @@ export const metadata: Metadata = buildPageShareMetadata({
   title:
     "Compare Saxenda Prices UK",
   metaDescription:
-    "Compare illustrative Saxenda (liraglutide) pack prices across UK pharmacies: 1, 3 and 5 pens, delivery and repeat pricing.",
+    "Compare real Saxenda (liraglutide) pack prices across UK pharmacies: 1, 3 and 5 pens, delivery and repeat pricing.",
   openGraphTitle:
     "Compare Saxenda Prices UK | Healthwise360",
   openGraphDescription:
@@ -40,7 +40,7 @@ function compareWebPageJsonLd() {
     "@type": "WebPage",
     name: "Compare Saxenda Prices UK (2026)",
     description:
-      "Independent comparison of illustrative Saxenda multi-pack (1/3/5 pens) prices across UK online pharmacies.",
+      "Independent comparison of Saxenda multi-pack (1/3/5 pens) prices across UK online pharmacies.",
     url: `${base}/saxenda-price-comparison`,
     dateModified: "2026-04-07",
     isPartOf: {
@@ -120,8 +120,8 @@ export default function CompareSaxendaPricesUkPage() {
               <p className="mt-4 max-w-3xl text-slate-600 leading-relaxed">
                 Saxenda is priced per pack of pens; ordering more pens at once
                 often lowers £/mg, but repeat pricing and delivery still vary by
-                provider. The charts below summarise how our illustrative
-                snapshot spreads by pack size — not a quote for your care.
+                provider. The charts below summarise how prices spread by
+                pack size — not a quote for your care.
               </p>
             </div>
             <div className="grid gap-8 lg:grid-cols-1">
@@ -187,7 +187,7 @@ export default function CompareSaxendaPricesUkPage() {
                   <tr>
                     <th className="px-4 py-3">Lens</th>
                     <th className="px-4 py-3">Example in this snapshot</th>
-                    <th className="px-4 py-3">1 pen (illustrative)</th>
+                    <th className="px-4 py-3">1 pen</th>
                     <th className="px-4 py-3">5 pens total</th>
                   </tr>
                 </thead>

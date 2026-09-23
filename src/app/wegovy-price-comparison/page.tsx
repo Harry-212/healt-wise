@@ -252,7 +252,7 @@ export default function CompareWegovyPricesUkPage() {
                   <tr>
                     <th className="px-4 py-3">Lens</th>
                     <th className="px-4 py-3">Example in this snapshot</th>
-                    <th className="px-4 py-3">Starting pen (illustrative)</th>
+                    <th className="px-4 py-3">Starting pen</th>
                     <th className="px-4 py-3">Monthly est.</th>
                   </tr>
                 </thead>

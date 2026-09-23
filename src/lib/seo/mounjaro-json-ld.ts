@@ -31,7 +31,7 @@ export const MOUNJARO_FAQ_ITEMS: { question: string; answer: string }[] = [
   {
     question: "How much does Mounjaro cost in the UK?",
     answer:
-      "Private Mounjaro prices vary by dose and provider. In our illustrative April 2026 sample, headline order prices often rise with strength; always confirm live pricing, consultation fees, and delivery on the pharmacy site before you pay.",
+      "Private Mounjaro prices vary by dose and provider. Based on the prices shown in our comparison table, headline order prices often rise with strength; always confirm live pricing, consultation fees, and delivery on the pharmacy site before you pay.",
   },
   {
     question: "How is Mounjaro different from Wegovy?",
@@ -136,12 +136,12 @@ export const MOUNJARO_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }
     {
       question: "How much does Mounjaro cost in the UK?",
       answer:
-        "Private Mounjaro pen prices depend on strength (2.5 mg up to 15 mg), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table shows illustrative starting and average-style monthly figures from a single snapshot—always confirm the live checkout price on the provider’s site.",
+        "Private Mounjaro pen prices depend on strength (2.5 mg up to 15 mg), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table shows estimated starting and average-style monthly figures, checked on the dates shown in the table—always confirm the live checkout price on the provider’s site.",
     },
     {
       question: "What is the cheapest Mounjaro UK provider?",
       answer:
-        "The lowest listed starting pen price in our April 2026 snapshot changes when you filter the table; several online clinics compete closely. The cheapest headline price is not always the best value—check consultation rules, delivery, cold-chain handling, and aftercare before you choose.",
+        "The lowest listed starting pen price shown in our comparison table changes when you filter the table; several online clinics compete closely. The cheapest headline price is not always the best value—check consultation rules, delivery, cold-chain handling, and aftercare before you choose.",
     },
     {
       question: "Do I need a prescription for Mounjaro?",

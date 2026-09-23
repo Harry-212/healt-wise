@@ -26,7 +26,7 @@ export const WEGOVY_FAQ_ITEMS: { question: string; answer: string }[] = [
   {
     question: "How much does Wegovy cost in the UK?",
     answer:
-      "Private Wegovy prices vary by dose and provider. In our illustrative April 2026 sample, headline monthly order prices for common pen strengths often fall roughly between about £169 and £269 before promotions—always confirm live pricing, consultation rules, and delivery on the pharmacy site.",
+      "Private Wegovy prices vary by dose and provider. Based on the prices shown in our comparison table, headline monthly order prices for common pen strengths often fall roughly between about £169 and £269 before promotions—always confirm live pricing, consultation rules, and delivery on the pharmacy site.",
   },
   {
     question: "Is Wegovy available on the NHS?",
@@ -179,12 +179,12 @@ export const WEGOVY_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }[]
     {
       question: "How much does Wegovy cost in the UK?",
       answer:
-        "Private Wegovy pen prices depend on dose (0.25 mg up to 2.4 mg), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table shows illustrative starting and average-style monthly figures from a single snapshot—always confirm the live checkout price on the provider’s site.",
+        "Private Wegovy pen prices depend on dose (0.25 mg up to 2.4 mg), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table shows estimated starting and average-style monthly figures, checked on the dates shown in the table—always confirm the live checkout price on the provider’s site.",
     },
     {
       question: "What is the cheapest Wegovy UK provider?",
       answer:
-        "The lowest listed starting pen price in our April 2026 snapshot varies when you filter the table; several chains and online clinics compete closely. The cheapest headline price is not always the best value—check consultation rules, delivery, cold-chain handling, and aftercare before you choose.",
+        "The lowest listed starting pen price shown in our comparison table varies when you filter the table; several chains and online clinics compete closely. The cheapest headline price is not always the best value—check consultation rules, delivery, cold-chain handling, and aftercare before you choose.",
     },
     {
       question: "Do I need a prescription for Wegovy?",

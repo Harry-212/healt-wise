@@ -60,12 +60,12 @@ export const SAXENDA_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }[
     {
       question: "How much does Saxenda cost in the UK?",
       answer:
-        "Private Saxenda prices depend on how many pens you order (often 1, 3, or 5), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table shows illustrative pack totals, £/mg, and repeat figures from a single snapshot—always confirm the live checkout price on the provider’s site.",
+        "Private Saxenda prices depend on how many pens you order (often 1, 3, or 5), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table shows pack totals, £/mg, and repeat figures checked on the dates shown in the table—always confirm the live checkout price on the provider’s site.",
     },
     {
       question: "What is the cheapest Saxenda UK provider?",
       answer:
-        "The lowest listed single-pen pack price in our April 2026 snapshot changes when you switch pack size in the table; Superdrug, Lloyds, and Boots often sit close together. The cheapest headline price is not always the best value—check consultation rules, delivery, cold-chain handling, and aftercare before you choose.",
+        "The lowest listed single-pen pack price shown in our comparison table changes when you switch pack size in the table; Superdrug, Lloyds, and Boots often sit close together. The cheapest headline price is not always the best value—check consultation rules, delivery, cold-chain handling, and aftercare before you choose.",
     },
     {
       question: "Do I need a prescription for Saxenda?",

@@ -91,7 +91,9 @@ export default function MounjaroCompareShaderHero({
 
           <p className="mx-auto mt-8 max-w-xl text-center text-[11px] leading-relaxed text-white/45 lg:mx-0 lg:text-left">
             Information only — not medical advice. Mounjaro is prescription-only.
-            Prices are illustrative; confirm live rates before you pay.
+            Provider prices were checked on the dates shown in the table.
+            Prices and availability can change; confirm the final total and
+            any additional charges with the provider.
           </p>
 
           <div className="mt-8 flex justify-center lg:justify-start">
