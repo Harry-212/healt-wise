@@ -1,4 +1,5 @@
 "use client";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -8,13 +9,11 @@ import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { siteOrigin } from "@/lib/seo/site-origin";
-import {
-  blogImgPath,
-  CAN_I_BUY_HERO_PNG,
-} from "./blog-assets";
+import { blogImgPath, CAN_I_BUY_HERO_PNG } from "./blog-assets";
 
 const SHARE_PATH = "/blog/can-i-buy-weight-loss-injections-uk";
-const TITLE = "Can I Buy Weight Loss Injections in the UK? Safe Provider and Price Guide";
+const TITLE =
+  "Can I Buy Weight Loss Injections in the UK? Safe Provider and Price Guide";
 const DESCRIPTION =
   "Can I buy weight loss injections in the UK? Learn safe routes, provider checks, prices and red flags before treatment.";
 const HERO_SRC = blogImgPath(CAN_I_BUY_HERO_PNG);
@@ -28,7 +27,10 @@ const TOC = [
   { id: "cost", label: "How much do they cost?" },
   { id: "safe-provider", label: "What makes a safe provider?" },
   { id: "warning-signs", label: "Warning signs before you buy" },
-  { id: "not-a-quick-fix", label: "Weight loss injections are not a quick fix" },
+  {
+    id: "not-a-quick-fix",
+    label: "Weight loss injections are not a quick fix",
+  },
   { id: "which-is-best", label: "Which weight loss injection is best?" },
   { id: "how-to-compare", label: "How to compare providers properly" },
   { id: "why-healthwise360", label: "Why independent comparison helps" },
@@ -105,7 +107,8 @@ export default function ArticleClient() {
             <h1
               className={`mb-6 text-3xl font-medium leading-[1.15] tracking-tight sm:text-4xl md:text-[44px] ${darkMode ? "text-white" : "text-slate-900"}`}
             >
-              Can I Buy Weight Loss Injections in the UK? Safe Provider and Price Guide
+              Can I Buy Weight Loss Injections in the UK? Safe Provider and
+              Price Guide
             </h1>
             <div
               className={`mb-8 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}
@@ -140,23 +143,36 @@ export default function ArticleClient() {
               heading="Can I Buy Weight Loss Injections in the UK? Safe Provider and Price Guide"
             >
               <p className="text-lg md:text-xl">
-                Yes, you may be able to buy weight loss injections in the UK through a regulated online or in-person consultation pathway. However, weight loss injections are prescription medicines, so they should only be supplied after a proper clinical assessment.
+                Yes, you may be able to buy weight loss injections in the UK
+                through a regulated online or in-person consultation pathway.
+                However, weight loss injections are prescription medicines, so
+                they should only be supplied after a proper clinical assessment.
               </p>
               <p>
-                This means the safest question is not simply &ldquo;can I buy weight loss injections?&rdquo; A better question is: &ldquo;Can I access weight loss treatment safely, legally, and at a fair long-term price?&rdquo;
+                This means the safest question is not simply &ldquo;can I buy
+                weight loss injections?&rdquo; A better question is: &ldquo;Can
+                I access weight loss treatment safely, legally, and at a fair
+                long-term price?&rdquo;
               </p>
               <p>
-                This guide explains how weight loss injections work in the UK, what checks should happen before treatment, how to compare provider prices, and what red flags to avoid. It is written for people who want clear, practical information before starting a consultation.
+                This guide explains how weight loss injections work in the UK,
+                what checks should happen before treatment, how to compare
+                provider prices, and what red flags to avoid. It is written for
+                people who want clear, practical information before starting a
+                consultation.
               </p>
               <p>
-                This is where platforms like Healthwise360 play a vital role. Healthwise360 helps users{" "}
+                This is where platforms like Healthwise360 play a vital role.
+                Healthwise360 helps users{" "}
                 <Link
                   href="/"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare weight loss treatment prices
                 </Link>
-                , review pharmacy checks, evaluate ongoing provider support, and verify safety information before choosing where to speak to a prescriber.
+                , review pharmacy checks, evaluate ongoing provider support, and
+                verify safety information before choosing where to speak to a
+                prescriber.
               </p>
             </GuideSection>
 
@@ -166,11 +182,12 @@ export default function ArticleClient() {
               heading="Can I Buy Weight Loss Injections Online?"
             >
               <p>
-                You may be able to access weight loss injections online in the UK, but only through a regulated healthcare route. A legitimate provider should ask health questions, check your suitability, and arrange clinician review before any treatment is approved.
+                You may be able to access weight loss injections online in the
+                UK, but only through a regulated healthcare route. A legitimate
+                provider should ask health questions, check your suitability,
+                and arrange clinician review before any treatment is approved.
               </p>
-              <p>
-                In most cases, the process should include:
-              </p>
+              <p>In most cases, the process should include:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>A medical questionnaire or consultation</li>
                 <li>BMI and eligibility checks</li>
@@ -181,10 +198,14 @@ export default function ArticleClient() {
                 <li>Information about side effects and aftercare</li>
               </ul>
               <p>
-                However, if a website offers prescription injections without proper checks, it should be treated as unsafe. You should also be careful with social media sellers, private message offers, and websites that promise instant fat loss.
+                However, if a website offers prescription injections without
+                proper checks, it should be treated as unsafe. You should also
+                be careful with social media sellers, private message offers,
+                and websites that promise instant fat loss.
               </p>
               <p>
-                Therefore, the answer is yes, but only if the route includes proper assessment and regulated supply.
+                Therefore, the answer is yes, but only if the route includes
+                proper assessment and regulated supply.
               </p>
             </GuideSection>
 
@@ -194,13 +215,21 @@ export default function ArticleClient() {
               heading="What Are Weight Loss Injections?"
             >
               <p>
-                Weight loss injections are prescription treatments used to support weight management in eligible adults. In the UK, the most commonly discussed options include Wegovy, Mounjaro, and Saxenda-style treatments.
+                Weight loss injections are prescription treatments used to
+                support weight management in eligible adults. In the UK, the
+                most commonly discussed options include Wegovy, Mounjaro, and
+                Saxenda-style treatments.
               </p>
               <p>
-                These medicines may help reduce appetite and support fullness. However, they are not quick fixes, and they should usually be used alongside diet, physical activity, and clinical guidance.
+                These medicines may help reduce appetite and support fullness.
+                However, they are not quick fixes, and they should usually be
+                used alongside diet, physical activity, and clinical guidance.
               </p>
               <p>
-                Besides that, weight loss injections are not suitable for everyone. A prescriber may need to consider your BMI, weight-related conditions, medical history, current medicines, pregnancy status, and previous treatment experience.
+                Besides that, weight loss injections are not suitable for
+                everyone. A prescriber may need to consider your BMI,
+                weight-related conditions, medical history, current medicines,
+                pregnancy status, and previous treatment experience.
               </p>
               <p>
                 To understand your starting baseline, you can{" "}
@@ -210,10 +239,13 @@ export default function ArticleClient() {
                 >
                   check your BMI for weight loss treatment
                 </Link>{" "}
-                to see if your measurements align with the medical criteria established for these advanced prescription treatments.
+                to see if your measurements align with the medical criteria
+                established for these advanced prescription treatments.
               </p>
               <p>
-                This is why a proper consultation matters. The goal is not just to access treatment. The goal is to check whether treatment is appropriate and safe for you.
+                This is why a proper consultation matters. The goal is not just
+                to access treatment. The goal is to check whether treatment is
+                appropriate and safe for you.
               </p>
             </GuideSection>
 
@@ -223,8 +255,8 @@ export default function ArticleClient() {
               heading="Why People Ask “Can I Buy Weight Loss Injections”"
             >
               <p>
-                People asking this are often close to taking action, but they may
-                still be unsure about legality, safety, price, or provider
+                People asking this are often close to taking action, but they
+                may still be unsure about legality, safety, price, or provider
                 choice.
               </p>
               <p>
@@ -258,17 +290,21 @@ export default function ArticleClient() {
               heading="Private Access vs NHS Access"
             >
               <p>
-                There are two broad routes for weight loss injections in the UK: NHS access and private access.
+                There are two broad routes for weight loss injections in the UK:
+                NHS access and private access.
               </p>
               <p>
-                NHS access depends on eligibility, local services, and clinical need. In many cases, NHS treatment may involve specialist weight management services or phased rollout through primary care for people who meet strict criteria.
+                NHS access depends on eligibility, local services, and clinical
+                need. In many cases, NHS treatment may involve specialist weight
+                management services or phased rollout through primary care for
+                people who meet strict criteria.
               </p>
               <p>
-                Private access may be faster for some users, but it usually involves ongoing monthly cost. Therefore, the decision should not be based only on speed or convenience.
+                Private access may be faster for some users, but it usually
+                involves ongoing monthly cost. Therefore, the decision should
+                not be based only on speed or convenience.
               </p>
-              <p>
-                Before paying privately, users should ask:
-              </p>
+              <p>Before paying privately, users should ask:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Am I likely to meet eligibility criteria?</li>
                 <li>Do I understand the monthly cost?</li>
@@ -286,10 +322,12 @@ export default function ArticleClient() {
                 >
                   compare Mounjaro vs Wegovy vs Saxenda
                 </Link>{" "}
-                to check the key differences in dosing structures, monthly cost, and expected health benefits across each medication.
+                to check the key differences in dosing structures, monthly cost,
+                and expected health benefits across each medication.
               </p>
               <p>
-                This is where a comparison site can add value. It helps users think beyond the first payment.
+                This is where a comparison site can add value. It helps users
+                think beyond the first payment.
               </p>
             </GuideSection>
 
@@ -299,10 +337,15 @@ export default function ArticleClient() {
               heading="How Much Do Weight Loss Injections Cost?"
             >
               <p>
-                Weight loss treatment price varies by medicine, dose, provider, delivery fee, consultation model, and support level. Therefore, one &ldquo;from&rdquo; price rarely tells the full story.
+                Weight loss treatment price varies by medicine, dose, provider,
+                delivery fee, consultation model, and support level. Therefore,
+                one &ldquo;from&rdquo; price rarely tells the full story.
               </p>
               <p>
-                A provider may show a low starting price, but that may only apply to the first dose or first month. Later doses may cost more, and some providers include extra support while others focus mainly on prescribing and dispensing.
+                A provider may show a low starting price, but that may only
+                apply to the first dose or first month. Later doses may cost
+                more, and some providers include extra support while others
+                focus mainly on prescribing and dispensing.
               </p>
               <p>
                 To get a clearer long-term outlook, reviewing an up-to-date{" "}
@@ -319,33 +362,63 @@ export default function ArticleClient() {
                 >
                   Wegovy price list UK
                 </Link>{" "}
-                helps clarify how monthly expenses scale as you transition to higher maintenance dosages.
+                helps clarify how monthly expenses scale as you transition to
+                higher maintenance dosages.
               </p>
-              <p>
-                When comparing weight loss injection prices, check:
-              </p>
+              <p>When comparing weight loss injection prices, check:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>
-                  <strong className={darkMode ? "text-slate-200" : "text-slate-800"}>Starter dose price:</strong> This is often the number shown in adverts.
+                  <strong
+                    className={darkMode ? "text-slate-200" : "text-slate-800"}
+                  >
+                    Starter dose price:
+                  </strong>{" "}
+                  This is often the number shown in adverts.
                 </li>
                 <li>
-                  <strong className={darkMode ? "text-slate-200" : "text-slate-800"}>Higher dose prices:</strong> The real monthly cost may change as treatment progresses.
+                  <strong
+                    className={darkMode ? "text-slate-200" : "text-slate-800"}
+                  >
+                    Higher dose prices:
+                  </strong>{" "}
+                  The real monthly cost may change as treatment progresses.
                 </li>
                 <li>
-                  <strong className={darkMode ? "text-slate-200" : "text-slate-800"}>Consultation fee:</strong> Some providers include this, while others may separate it.
+                  <strong
+                    className={darkMode ? "text-slate-200" : "text-slate-800"}
+                  >
+                    Consultation fee:
+                  </strong>{" "}
+                  Some providers include this, while others may separate it.
                 </li>
                 <li>
-                  <strong className={darkMode ? "text-slate-200" : "text-slate-800"}>Delivery fee:</strong> Discreet or tracked delivery may be included or added later.
+                  <strong
+                    className={darkMode ? "text-slate-200" : "text-slate-800"}
+                  >
+                    Delivery fee:
+                  </strong>{" "}
+                  Discreet or tracked delivery may be included or added later.
                 </li>
                 <li>
-                  <strong className={darkMode ? "text-slate-200" : "text-slate-800"}>Support level:</strong> Coaching, app support, and pharmacist access may change value.
+                  <strong
+                    className={darkMode ? "text-slate-200" : "text-slate-800"}
+                  >
+                    Support level:
+                  </strong>{" "}
+                  Coaching, app support, and pharmacist access may change value.
                 </li>
                 <li>
-                  <strong className={darkMode ? "text-slate-200" : "text-slate-800"}>Maintenance policy:</strong> Long-term treatment or maintenance may have different rules.
+                  <strong
+                    className={darkMode ? "text-slate-200" : "text-slate-800"}
+                  >
+                    Maintenance policy:
+                  </strong>{" "}
+                  Long-term treatment or maintenance may have different rules.
                 </li>
               </ul>
               <p>
-                As a result, the cheapest headline price is not always the best weight loss treatment price.
+                As a result, the cheapest headline price is not always the best
+                weight loss treatment price.
               </p>
             </GuideSection>
 
@@ -355,52 +428,76 @@ export default function ArticleClient() {
               heading="What Makes a Safe Provider?"
             >
               <p>
-                A safe provider should make its process clear. It should not make prescription treatment look like a simple checkout product.
+                A safe provider should make its process clear. It should not
+                make prescription treatment look like a simple checkout product.
               </p>
-              
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Proper Clinical Review
               </h3>
               <p>
-                The provider should ask about your health, weight, medicines, and medical history. If the questionnaire is too basic or treatment is approved too easily, that may be a concern.
+                The provider should ask about your health, weight, medicines,
+                and medical history. If the questionnaire is too basic or
+                treatment is approved too easily, that may be a concern.
               </p>
 
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Registered Pharmacy Route
               </h3>
               <p>
-                The pharmacy or supply route should be clear and checkable. A trustworthy provider should not hide who supplies the medicine. To stay secure, read about{" "}
+                The pharmacy or supply route should be clear and checkable. A
+                trustworthy provider should not hide who supplies the medicine.
+                To stay secure, read about{" "}
                 <Link
                   href="/pharmacy-safety-gphc-verification"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   pharmacy safety and GPhC verification
                 </Link>{" "}
-                to check registration badges and protect yourself from illegitimate operators.
+                to check registration badges and protect yourself from
+                illegitimate operators.
               </p>
 
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Clear Price Information
               </h3>
               <p>
-                A good provider should show pricing in a way that helps users understand the full cost. Ideally, this means dose-level pricing, delivery information, and repeat prescription rules.
+                A good provider should show pricing in a way that helps users
+                understand the full cost. Ideally, this means dose-level
+                pricing, delivery information, and repeat prescription rules.
               </p>
 
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Side Effect Guidance
               </h3>
               <p>
-                A responsible provider should explain possible side effects and tell users when to seek medical advice. Weight loss injections may cause digestive symptoms, fatigue, or other effects depending on the medicine.
+                A responsible provider should explain possible side effects and
+                tell users when to seek medical advice. Weight loss injections
+                may cause digestive symptoms, fatigue, or other effects
+                depending on the medicine.
               </p>
 
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Ongoing Support
               </h3>
               <p>
-                Support matters because users may have questions about dose changes, missed doses, side effects, diet, and long-term weight management.
+                Support matters because users may have questions about dose
+                changes, missed doses, side effects, diet, and long-term weight
+                management.
               </p>
               <p>
-                Therefore, a provider with better support may be better value than a cheaper provider with limited aftercare.
+                Therefore, a provider with better support may be better value
+                than a cheaper provider with limited aftercare.
               </p>
             </GuideSection>
 
@@ -410,11 +507,10 @@ export default function ArticleClient() {
               heading="Warning Signs Before You Buy"
             >
               <p>
-                Before using any online service, watch for red flags. Some warning signs are obvious, while others are more subtle.
+                Before using any online service, watch for red flags. Some
+                warning signs are obvious, while others are more subtle.
               </p>
-              <p>
-                Avoid sellers that:
-              </p>
+              <p>Avoid sellers that:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Offer injections without a prescription</li>
                 <li>Sell through social media messages only</li>
@@ -428,7 +524,8 @@ export default function ArticleClient() {
                 <li>Make the treatment sound risk-free</li>
               </ul>
               <p>
-                If something feels too easy, too cheap, or too fast, pause before paying.
+                If something feels too easy, too cheap, or too fast, pause
+                before paying.
               </p>
             </GuideSection>
 
@@ -438,14 +535,17 @@ export default function ArticleClient() {
               heading="Weight Loss Injections Are Not a Quick Fix"
             >
               <p>
-                Weight loss injections can support eligible users, but they are not a replacement for healthy routines. Most people still need to focus on food quality, protein intake, hydration, movement, and long-term habit change.
+                Weight loss injections can support eligible users, but they are
+                not a replacement for healthy routines. Most people still need
+                to focus on food quality, protein intake, hydration, movement,
+                and long-term habit change.
               </p>
               <p>
-                This point is important because some pages make treatment sound like a shortcut. However, a more responsible page should explain that treatment works best as part of a broader plan.
+                This point is important because some pages make treatment sound
+                like a shortcut. However, a more responsible page should explain
+                that treatment works best as part of a broader plan.
               </p>
-              <p>
-                Useful support habits include:
-              </p>
+              <p>Useful support habits include:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Eating enough protein</li>
                 <li>Staying hydrated</li>
@@ -456,7 +556,8 @@ export default function ArticleClient() {
                 <li>Speaking to a clinician about side effects</li>
               </ul>
               <p>
-                Besides that, users should not stop, restart, or change dose without following clinical instructions.
+                Besides that, users should not stop, restart, or change dose
+                without following clinical instructions.
               </p>
             </GuideSection>
 
@@ -466,28 +567,31 @@ export default function ArticleClient() {
               heading="Which Weight Loss Injection Is Best?"
             >
               <p>
-                There is no single best weight loss injection for everyone. The right option depends on clinical suitability, health history, weight goals, side effect risk, cost, and prescriber advice.
+                There is no single best weight loss injection for everyone. The
+                right option depends on clinical suitability, health history,
+                weight goals, side effect risk, cost, and prescriber advice.
               </p>
-              <p>
-                Common options include:
-              </p>
+              <p>Common options include:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Wegovy</li>
                 <li>Mounjaro</li>
                 <li>Saxenda-style or liraglutide-based treatment</li>
               </ul>
               <p>
-                However, the user should not choose based only on popularity. A medicine may be suitable for one person but not another.
+                However, the user should not choose based only on popularity. A
+                medicine may be suitable for one person but not another.
               </p>
               <p>
-                That is why Healthwise360 links users to a comprehensive comparison page to{" "}
+                That is why Healthwise360 links users to a comprehensive
+                comparison page to{" "}
                 <Link
                   href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro vs Wegovy vs Saxenda
                 </Link>
-                . This helps readers move from a general buying question into a structured, evidence-based treatment comparison.
+                . This helps readers move from a general buying question into a
+                structured, evidence-based treatment comparison.
               </p>
             </GuideSection>
 
@@ -497,52 +601,71 @@ export default function ArticleClient() {
               heading="How to Compare Providers Properly"
             >
               <p>
-                A useful comparison should not only ask, &ldquo;Who is cheapest?&rdquo;
+                A useful comparison should not only ask, &ldquo;Who is
+                cheapest?&rdquo;
               </p>
-              <p>
-                Instead, compare the full provider experience.
-              </p>
-              
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+              <p>Instead, compare the full provider experience.</p>
+
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Step 1: Check Eligibility
               </h3>
               <p>
-                Use a BMI calculator or complete a proper consultation. If you are not eligible, a responsible provider should not approve treatment.
+                Use a BMI calculator or complete a proper consultation. If you
+                are not eligible, a responsible provider should not approve
+                treatment.
               </p>
 
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Step 2: Compare Treatment Options
               </h3>
               <p>
-                Understand whether you are comparing Mounjaro, Wegovy, Saxenda, or another route. These are not identical treatments.
+                Understand whether you are comparing Mounjaro, Wegovy, Saxenda,
+                or another route. These are not identical treatments.
               </p>
 
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Step 3: Compare Price by Dose
               </h3>
               <p>
-                Look at starter dose, higher dose, delivery, and consultation costs. This gives a more honest view of long-term affordability.
+                Look at starter dose, higher dose, delivery, and consultation
+                costs. This gives a more honest view of long-term affordability.
               </p>
 
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Step 4: Check Pharmacy Safety
               </h3>
               <p>
-                Make sure the provider uses a regulated pharmacy route. Do not rely only on reviews or discount codes.
+                Make sure the provider uses a regulated pharmacy route. Do not
+                rely only on reviews or discount codes.
               </p>
 
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Step 5: Review Support
               </h3>
               <p>
-                Check whether you can contact a clinician, pharmacist, or support team if you have a problem.
+                Check whether you can contact a clinician, pharmacist, or
+                support team if you have a problem.
               </p>
 
-              <h3 className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}>
+              <h3
+                className={`text-xl font-bold mt-6 mb-3 ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
                 Step 6: Plan for Maintenance
               </h3>
               <p>
-                Weight loss treatment is not only about starting. You also need to understand what happens after several months, or when you reach your goal.
+                Weight loss treatment is not only about starting. You also need
+                to understand what happens after several months, or when you
+                reach your goal.
               </p>
             </GuideSection>
 
@@ -560,8 +683,11 @@ export default function ArticleClient() {
                 weigh options before you start.
               </p>
               <p>The practical approach is:</p>
-              <blockquote className={`border-l-4 p-4 my-4 italic ${darkMode ? "border-emerald-500 bg-slate-900 text-slate-300" : "border-emerald-600 bg-slate-50 text-slate-700"}`}>
-                Before you buy weight loss injections, compare safe providers, pharmacy checks, dose-level prices, and support options.
+              <blockquote
+                className={`border-l-4 p-4 my-4 italic ${darkMode ? "border-emerald-500 bg-slate-900 text-slate-300" : "border-emerald-600 bg-slate-50 text-slate-700"}`}
+              >
+                Before you buy weight loss injections, compare safe providers,
+                pharmacy checks, dose-level prices, and support options.
               </blockquote>
               <p>
                 This matches what most readers need: confidence before they
@@ -576,7 +702,8 @@ export default function ArticleClient() {
                 >
                   how Healthwise360 compares prices
                 </Link>{" "}
-                using our independent data model. We aim to offer the most comprehensive{" "}
+                using our independent data model. We aim to offer the most
+                comprehensive{" "}
                 <Link
                   href="/compare/mounjaro-vs-wegovy-vs-saxenda"
                   className="font-medium text-emerald-600 hover:underline"
@@ -594,9 +721,7 @@ export default function ArticleClient() {
                 so maintenance providers meet the same GPhC checks as titration
                 routes.
               </p>
-              <p>
-                Healthwise360 can support this journey with:
-              </p>
+              <p>Healthwise360 can support this journey with:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Weight loss treatment price comparison</li>
                 <li>Mounjaro vs Wegovy vs Saxenda comparison</li>
@@ -631,7 +756,10 @@ export default function ArticleClient() {
                     Can I buy weight loss injections in the UK?
                   </h3>
                   <p>
-                    Yes, you may be able to access weight loss injections in the UK through a regulated consultation pathway. However, they are prescription medicines and should only be supplied after clinical assessment.
+                    Yes, you may be able to access weight loss injections in the
+                    UK through a regulated consultation pathway. However, they
+                    are prescription medicines and should only be supplied after
+                    clinical assessment.
                   </p>
                 </div>
                 <div>
@@ -641,7 +769,10 @@ export default function ArticleClient() {
                     Can I buy weight loss injections online?
                   </h3>
                   <p>
-                    Online access may be available through regulated UK providers. However, a legitimate service should include a medical questionnaire, clinician review, and regulated pharmacy supply.
+                    Online access may be available through regulated UK
+                    providers. However, a legitimate service should include a
+                    medical questionnaire, clinician review, and regulated
+                    pharmacy supply.
                   </p>
                 </div>
                 <div>
@@ -651,7 +782,8 @@ export default function ArticleClient() {
                     Do I need a prescription for weight loss injections?
                   </h3>
                   <p>
-                    Yes. Prescription weight loss injections require proper clinical assessment and a valid prescription before supply.
+                    Yes. Prescription weight loss injections require proper
+                    clinical assessment and a valid prescription before supply.
                   </p>
                 </div>
                 <div>
@@ -661,7 +793,10 @@ export default function ArticleClient() {
                     Can I get weight loss injections on the NHS?
                   </h3>
                   <p>
-                    Some people may be eligible through NHS pathways, but access depends on clinical criteria, local services, and the treatment pathway. Private access is different and usually involves ongoing cost.
+                    Some people may be eligible through NHS pathways, but access
+                    depends on clinical criteria, local services, and the
+                    treatment pathway. Private access is different and usually
+                    involves ongoing cost.
                   </p>
                 </div>
                 <div>
@@ -671,7 +806,10 @@ export default function ArticleClient() {
                     What is the cheapest weight loss injection?
                   </h3>
                   <p>
-                    The cheapest option depends on the medicine, dose, provider, delivery fee, consultation model, and support package. Therefore, users should compare full treatment cost, not only the starting price.
+                    The cheapest option depends on the medicine, dose, provider,
+                    delivery fee, consultation model, and support package.
+                    Therefore, users should compare full treatment cost, not
+                    only the starting price.
                   </p>
                 </div>
                 <div>
@@ -681,7 +819,9 @@ export default function ArticleClient() {
                     Are weight loss injections safe?
                   </h3>
                   <p>
-                    They can be suitable for some eligible adults when prescribed and monitored properly. However, they may cause side effects and are not right for everyone.
+                    They can be suitable for some eligible adults when
+                    prescribed and monitored properly. However, they may cause
+                    side effects and are not right for everyone.
                   </p>
                 </div>
                 <div>
@@ -691,7 +831,9 @@ export default function ArticleClient() {
                     Which is better, Mounjaro or Wegovy?
                   </h3>
                   <p>
-                    There is no single best answer. The right option depends on clinical suitability, price, side effects, medical history, and prescriber advice.
+                    There is no single best answer. The right option depends on
+                    clinical suitability, price, side effects, medical history,
+                    and prescriber advice.
                   </p>
                 </div>
                 <div>
@@ -701,7 +843,9 @@ export default function ArticleClient() {
                     What should I check before paying?
                   </h3>
                   <p>
-                    Check the clinical assessment process, pharmacy registration, dose-level prices, delivery fees, side effect guidance, support options, and maintenance rules.
+                    Check the clinical assessment process, pharmacy
+                    registration, dose-level prices, delivery fees, side effect
+                    guidance, support options, and maintenance rules.
                   </p>
                 </div>
                 <div>
@@ -711,7 +855,10 @@ export default function ArticleClient() {
                     Can I buy weight loss injections without seeing a doctor?
                   </h3>
                   <p>
-                    You may not need an in-person appointment, but you still need clinical assessment. A remote consultation or questionnaire should be reviewed by an appropriate healthcare professional.
+                    You may not need an in-person appointment, but you still
+                    need clinical assessment. A remote consultation or
+                    questionnaire should be reviewed by an appropriate
+                    healthcare professional.
                   </p>
                 </div>
                 <div>
@@ -721,7 +868,9 @@ export default function ArticleClient() {
                     Should I choose the cheapest provider?
                   </h3>
                   <p>
-                    Not necessarily. A cheaper provider may not include the same support, delivery, review process, or maintenance guidance. Compare total value, not only price.
+                    Not necessarily. A cheaper provider may not include the same
+                    support, delivery, review process, or maintenance guidance.
+                    Compare total value, not only price.
                   </p>
                 </div>
               </div>
@@ -733,10 +882,16 @@ export default function ArticleClient() {
               heading="Conclusion"
             >
               <p>
-                So, can you buy weight loss injections in the UK? Yes, but only through a safe and regulated route. These treatments are prescription medicines, not ordinary online products.
+                So, can you buy weight loss injections in the UK? Yes, but only
+                through a safe and regulated route. These treatments are
+                prescription medicines, not ordinary online products.
               </p>
               <p>
-                A proper provider should check eligibility, review your medical history, explain side effects, use a regulated pharmacy route, and make the full treatment price clear. Besides that, users should avoid social media sellers, miracle claims, and websites that skip medical assessment.
+                A proper provider should check eligibility, review your medical
+                history, explain side effects, use a regulated pharmacy route,
+                and make the full treatment price clear. Besides that, users
+                should avoid social media sellers, miracle claims, and websites
+                that skip medical assessment.
               </p>
               <p>
                 Health Wise focuses on independent comparison, safety checks,
@@ -746,9 +901,10 @@ export default function ArticleClient() {
               <p
                 className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}
               >
-                Health Wise does not prescribe or supply medicines. This page is general information and is not medical advice.
+                Health Wise does not prescribe or supply medicines. This page is
+                general information and is not medical advice.
               </p>
-</GuideSection>
+            </GuideSection>
           </article>
 
           <div className="mt-10">
@@ -757,6 +913,10 @@ export default function ArticleClient() {
               title={TITLE}
               description={DESCRIPTION}
             />
+          </div>
+
+          <div className="mt-6">
+            <GooglePreferredSourceButton />
           </div>
         </BlogArticleColumn>
       </div>

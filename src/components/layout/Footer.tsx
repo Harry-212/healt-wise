@@ -21,6 +21,7 @@ import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 import SiteSocialLinks from "@/components/layout/SiteSocialLinks";
 import RevealOnView from "@/components/ui/RevealOnView";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 const FOOTER_SUPPORT_LINKS = [
   { href: "/what-is-mounjaro", label: "Mounjaro" },
@@ -423,6 +424,7 @@ export default function Footer() {
                   Terms of Use
                 </Link>
               </div>
+              <GooglePreferredSourceButton theme="dark" className="mb-1" />
               <div className="text-sm font-bold tracking-tight text-slate-400">
                 Copyright © {SITE_BRAND_NAME} 2026
               </div>

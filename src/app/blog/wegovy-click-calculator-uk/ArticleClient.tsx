@@ -1,4 +1,5 @@
 "use client";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -137,12 +138,15 @@ export default function ArticleClient() {
             >
               <p className="text-lg md:text-xl font-medium">
                 The Wegovy FlexTouch pen in the UK uses{" "}
-                <strong>74 clicks as the mathematical reference for one full
-                prescribed dose</strong>
-                , regardless of which pen strength you are using. This means that
-                a full 2.4 mg maintenance dose delivered from a 2.4 mg FlexTouch
-                pen corresponds to 74 selector clicks, and a full 0.25 mg starter
-                dose from a 0.25 mg pen also corresponds to 74 clicks.
+                <strong>
+                  74 clicks as the mathematical reference for one full
+                  prescribed dose
+                </strong>
+                , regardless of which pen strength you are using. This means
+                that a full 2.4 mg maintenance dose delivered from a 2.4 mg
+                FlexTouch pen corresponds to 74 selector clicks, and a full 0.25
+                mg starter dose from a 0.25 mg pen also corresponds to 74
+                clicks.
               </p>
               <p>
                 However, and this is the critical safety point that every Wegovy
@@ -154,12 +158,15 @@ export default function ArticleClient() {
                 . The selector on the FlexTouch pen makes a clicking sound when
                 turned, but this sound can vary depending on the direction in
                 which the selector is moved. The correct method is always to use
-                the dose counter displayed on the pen, following the instructions
-                from your prescriber.
+                the dose counter displayed on the pen, following the
+                instructions from your prescriber.
               </p>
               <p>
                 The{" "}
-                <Link href="/tools/wegovy-click-calculator" className={linkClass}>
+                <Link
+                  href="/tools/wegovy-click-calculator"
+                  className={linkClass}
+                >
                   Wegovy click calculator at Healthwise360
                 </Link>{" "}
                 provides mathematical dose estimates only, for educational
@@ -189,13 +196,17 @@ export default function ArticleClient() {
                 .
               </p>
               <p>
-                Understanding the distinction is essential for anyone researching
-                click calculations:
+                Understanding the distinction is essential for anyone
+                researching click calculations:
               </p>
 
               <h3 className={h3}>FlexTouch vs KwikPen: The Key Difference</h3>
               <GuideTable
-                headers={["Feature", "Wegovy FlexTouch (UK)", "Mounjaro KwikPen (UK)"]}
+                headers={[
+                  "Feature",
+                  "Wegovy FlexTouch (UK)",
+                  "Mounjaro KwikPen (UK)",
+                ]}
                 rows={[
                   {
                     cells: ["Manufacturer", "Novo Nordisk", "Eli Lilly"],
@@ -247,9 +258,9 @@ export default function ArticleClient() {
                 The FlexTouch selector makes clicking sounds when rotated, which
                 leads many users to assume clicks can be counted to measure a
                 dose. Novo Nordisk specifically addresses this in the patient
-                leaflet, noting that the clicking sound may vary depending on the
-                direction the selector is turned. The dose counter, not click
-                counting, is the authorised dosing method.
+                leaflet, noting that the clicking sound may vary depending on
+                the direction the selector is turned. The dose counter, not
+                click counting, is the authorised dosing method.
               </p>
 
               <h3 className={h3}>How Each Wegovy Pen Contains Four Doses</h3>
@@ -291,8 +302,8 @@ export default function ArticleClient() {
               <p>For example:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>
-                  Prescribed dose of 0.25 mg from a 0.5 mg pen: (0.25 ÷ 0.5) × 74
-                  = <strong>37 clicks</strong>
+                  Prescribed dose of 0.25 mg from a 0.5 mg pen: (0.25 ÷ 0.5) ×
+                  74 = <strong>37 clicks</strong>
                 </li>
                 <li>
                   Prescribed dose of 1 mg from a 2.4 mg pen: (1 ÷ 2.4) × 74 ={" "}
@@ -309,9 +320,9 @@ export default function ArticleClient() {
                 The Mounjaro KwikPen uses 60 clicks for a full dose (based on
                 0.6 mL × 100 units/mL = 60 units = 60 clicks on a U-100 scale).
                 Wegovy&apos;s FlexTouch uses a different reference because the
-                volume per dose is different: 0.5 mL per injection. The FlexTouch
-                mechanism and concentration structure produce a 74-click
-                mathematical reference point rather than 60.
+                volume per dose is different: 0.5 mL per injection. The
+                FlexTouch mechanism and concentration structure produce a
+                74-click mathematical reference point rather than 60.
               </p>
               <p>
                 This is why Wegovy click calculations must never be transferred
@@ -322,10 +333,11 @@ export default function ArticleClient() {
               <blockquote
                 className={`border-l-4 p-4 my-4 italic ${darkMode ? "border-amber-500 bg-slate-900" : "border-amber-500 bg-amber-50"}`}
               >
-                <strong>Important:</strong> The 74-click figure is a mathematical
-                reference for educational understanding. It is not an official
-                Novo Nordisk dosing instruction. Always use the dose counter on
-                the pen and follow your prescriber&apos;s instructions.
+                <strong>Important:</strong> The 74-click figure is a
+                mathematical reference for educational understanding. It is not
+                an official Novo Nordisk dosing instruction. Always use the dose
+                counter on the pen and follow your prescriber&apos;s
+                instructions.
               </blockquote>
             </GuideSection>
 
@@ -336,9 +348,9 @@ export default function ArticleClient() {
             >
               <p>
                 The following table shows mathematical click estimates for
-                standard and common partial doses across all Wegovy FlexTouch pen
-                strengths available in the UK. All values use the formula: Clicks
-                = (Desired dose ÷ Pen strength) × 74.
+                standard and common partial doses across all Wegovy FlexTouch
+                pen strengths available in the UK. All values use the formula:
+                Clicks = (Desired dose ÷ Pen strength) × 74.
               </p>
 
               <h3 className={h3}>Wegovy 0.25 mg Pen</h3>
@@ -453,7 +465,10 @@ export default function ArticleClient() {
                 For an interactive calculator where you can input any dose and
                 any pen strength and get an instant mathematical estimate, use
                 the{" "}
-                <Link href="/tools/wegovy-click-calculator" className={linkClass}>
+                <Link
+                  href="/tools/wegovy-click-calculator"
+                  className={linkClass}
+                >
                   Wegovy click calculator at Healthwise360
                 </Link>
                 .
@@ -467,22 +482,21 @@ export default function ArticleClient() {
             >
               <p>
                 This is the element of Wegovy click calculation that most
-                competitor resources do not yet cover accurately, because it is a
-                recent development specific to the UK and EU regulatory pathway.
+                competitor resources do not yet cover accurately, because it is
+                a recent development specific to the UK and EU regulatory
+                pathway.
               </p>
 
               <h3 className={h3}>What the MHRA Approved</h3>
               <p>
                 In <strong>January 2026</strong>, the MHRA approved a maximum
-                weekly dose of <strong>7.2 mg</strong> for certain adult patients
-                with obesity who have been on Wegovy 2.4 mg for at least four
-                weeks and require further weight management support.
+                weekly dose of <strong>7.2 mg</strong> for certain adult
+                patients with obesity who have been on Wegovy 2.4 mg for at
+                least four weeks and require further weight management support.
               </p>
 
               <h3 className={h3}>Two Administration Methods</h3>
-              <p>
-                The 7.2 mg dose was approved in two stages:
-              </p>
+              <p>The 7.2 mg dose was approved in two stages:</p>
               <p>
                 <strong>Method 1 (Original, early 2026):</strong> Three
                 consecutive injections of 2.4 mg on the same day using standard
@@ -490,8 +504,8 @@ export default function ArticleClient() {
               </p>
               <p>
                 <strong>Method 2 (From April 2026):</strong> A dedicated
-                single-dose 7.2 mg pen, approved by MHRA in April 2026, providing
-                the full 7.2 mg in a single injection.
+                single-dose 7.2 mg pen, approved by MHRA in April 2026,
+                providing the full 7.2 mg in a single injection.
               </p>
 
               <h3 className={h3}>
@@ -504,16 +518,16 @@ export default function ArticleClient() {
                 display this figure, for an important reason:
               </p>
               <p>
-                222 clicks does not represent an approved way to set a Wegovy 7.2
-                mg dose. The 7.2 mg prescription relates to a complete weekly
-                treatment dose, not one continuous turn of a standard FlexTouch
-                selector. The three-injection method requires three separate pen
-                uses, not 222 consecutive clicks on one device.
+                222 clicks does not represent an approved way to set a Wegovy
+                7.2 mg dose. The 7.2 mg prescription relates to a complete
+                weekly treatment dose, not one continuous turn of a standard
+                FlexTouch selector. The three-injection method requires three
+                separate pen uses, not 222 consecutive clicks on one device.
               </p>
               <p>
                 Displaying &ldquo;222 clicks&rdquo; would be both technically
-                misleading and clinically irresponsible. The dedicated 7.2 mg pen,
-                where applicable, has its own separate device and dosing
+                misleading and clinically irresponsible. The dedicated 7.2 mg
+                pen, where applicable, has its own separate device and dosing
                 instructions that do not involve click counting at all.
               </p>
 
@@ -603,9 +617,9 @@ export default function ArticleClient() {
               heading="How Wegovy Clicks Differ From Mounjaro Clicks: Side-by-Side"
             >
               <p>
-                Because many UK patients research both treatments simultaneously,
-                understanding the difference between the two click systems is
-                important.
+                Because many UK patients research both treatments
+                simultaneously, understanding the difference between the two
+                click systems is important.
               </p>
               <GuideTable
                 headers={["", "Wegovy (FlexTouch)", "Mounjaro (KwikPen)"]}
@@ -618,18 +632,10 @@ export default function ArticleClient() {
                     ],
                   },
                   {
-                    cells: [
-                      "Volume per full dose",
-                      "0.5 mL",
-                      "0.6 mL",
-                    ],
+                    cells: ["Volume per full dose", "0.5 mL", "0.6 mL"],
                   },
                   {
-                    cells: [
-                      "Volume per click",
-                      "~0.00676 mL",
-                      "0.01 mL",
-                    ],
+                    cells: ["Volume per click", "~0.00676 mL", "0.01 mL"],
                   },
                   {
                     cells: [
@@ -651,9 +657,10 @@ export default function ArticleClient() {
                 ]}
               />
               <p>
-                The two formulas are <strong>not interchangeable</strong>. If you
-                have been reading about Mounjaro click calculations (which use
-                60), those numbers do not apply to your Wegovy FlexTouch pen.
+                The two formulas are <strong>not interchangeable</strong>. If
+                you have been reading about Mounjaro click calculations (which
+                use 60), those numbers do not apply to your Wegovy FlexTouch
+                pen.
               </p>
               <p>
                 For Mounjaro click calculations, the{" "}
@@ -663,8 +670,8 @@ export default function ArticleClient() {
                 >
                   Mounjaro click calculator at Healthwise360
                 </Link>{" "}
-                covers all six Mounjaro pen strengths with a complete dose chart.
-                There is also a full editorial walkthrough in our{" "}
+                covers all six Mounjaro pen strengths with a complete dose
+                chart. There is also a full editorial walkthrough in our{" "}
                 <Link
                   href="/blog/mounjaro-click-calculator-uk"
                   className={linkClass}
@@ -676,10 +683,7 @@ export default function ArticleClient() {
               <p>
                 For a broader comparison of how Wegovy and Mounjaro differ in
                 mechanism, clinical evidence, and pricing, see the{" "}
-                <Link
-                  href="/compare/wegovy-vs-mounjaro"
-                  className={linkClass}
-                >
+                <Link href="/compare/wegovy-vs-mounjaro" className={linkClass}>
                   Wegovy vs Mounjaro comparison at Healthwise360
                 </Link>
                 .
@@ -744,8 +748,8 @@ export default function ArticleClient() {
               </ul>
               <p>
                 All of these are legitimate reasons to seek click information.
-                None of them override the instruction to use the dose counter and
-                follow prescriber guidance.
+                None of them override the instruction to use the dose counter
+                and follow prescriber guidance.
               </p>
             </GuideSection>
 
@@ -761,7 +765,10 @@ export default function ArticleClient() {
               </p>
               <p>
                 When a pen cost is entered into the{" "}
-                <Link href="/tools/wegovy-click-calculator" className={linkClass}>
+                <Link
+                  href="/tools/wegovy-click-calculator"
+                  className={linkClass}
+                >
                   Healthwise360 Wegovy click calculator
                 </Link>
                 , it provides a simple mathematical cost estimate based on the
@@ -805,28 +812,26 @@ export default function ArticleClient() {
               heading="Why the Wegovy FlexTouch Is Different From What Most Online Resources Describe"
             >
               <p>
-                Here is the critical competitive gap in the information landscape
-                for this keyword:
+                Here is the critical competitive gap in the information
+                landscape for this keyword:
               </p>
               <p>
                 <strong>
                   Most articles about &ldquo;Wegovy clicks&rdquo;, including the
-                  top US-based results, describe a single-dose autoinjector where
-                  &ldquo;one click&rdquo; delivers the entire dose.
+                  top US-based results, describe a single-dose autoinjector
+                  where &ldquo;one click&rdquo; delivers the entire dose.
                 </strong>{" "}
                 This is the US Wegovy pen design.
               </p>
               <p>
-                <strong>
-                  The UK Wegovy FlexTouch pen works differently.
-                </strong>{" "}
-                It has a rotating selector mechanism that allows dose setting and
-                produces multiple clicks during rotation, which is precisely why
-                UK patients search for click information. The UK FlexTouch has a
-                selector, a dose counter, and produces clicking sounds during
-                use. This is fundamentally different from the US single-dose
-                device described in many of the top Google results for this
-                query.
+                <strong>The UK Wegovy FlexTouch pen works differently.</strong>{" "}
+                It has a rotating selector mechanism that allows dose setting
+                and produces multiple clicks during rotation, which is precisely
+                why UK patients search for click information. The UK FlexTouch
+                has a selector, a dose counter, and produces clicking sounds
+                during use. This is fundamentally different from the US
+                single-dose device described in many of the top Google results
+                for this query.
               </p>
               <p>
                 This distinction matters enormously for UK patients who find
@@ -837,14 +842,17 @@ export default function ArticleClient() {
               </p>
               <p>
                 The{" "}
-                <Link href="/tools/wegovy-click-calculator" className={linkClass}>
+                <Link
+                  href="/tools/wegovy-click-calculator"
+                  className={linkClass}
+                >
                   Wegovy click calculator at Healthwise360
                 </Link>{" "}
                 is specifically designed for the{" "}
                 <strong>UK FlexTouch pen</strong>, covering all five standard
-                strengths (0.25 mg, 0.5 mg, 1 mg, 1.7 mg, 2.4 mg) and the new 7.2
-                mg option, with UK-specific regulatory context from the MHRA and
-                the current UK patient leaflet (revised June 2026).
+                strengths (0.25 mg, 0.5 mg, 1 mg, 1.7 mg, 2.4 mg) and the new
+                7.2 mg option, with UK-specific regulatory context from the MHRA
+                and the current UK patient leaflet (revised June 2026).
               </p>
             </GuideSection>
 
@@ -890,9 +898,9 @@ export default function ArticleClient() {
               </p>
               <p>
                 The residual solution remaining after four labelled doses from a
-                standard FlexTouch pen{" "}
-                <strong>is not a fifth dose</strong> and should not be used. The
-                pen should be safely discarded after the fourth injection.
+                standard FlexTouch pen <strong>is not a fifth dose</strong> and
+                should not be used. The pen should be safely discarded after the
+                fourth injection.
               </p>
             </GuideSection>
 
@@ -909,14 +917,10 @@ export default function ArticleClient() {
                   >
                     Wegovy side effects and safety
                   </Link>
-                  : common effects, serious risks and when to seek urgent
-                  help.
+                  : common effects, serious risks and when to seek urgent help.
                 </li>
                 <li>
-                  <Link
-                    href="/wegovy-faq"
-                    className={linkClass}
-                  >
+                  <Link href="/wegovy-faq" className={linkClass}>
                     Wegovy FAQ
                   </Link>
                   : answers to common UK questions about fees, doses and
@@ -939,8 +943,8 @@ export default function ArticleClient() {
                   >
                     Switching pharmacies for Wegovy
                   </Link>
-                  : what you need and how the consultation works when you
-                  move to a new provider.
+                  : what you need and how the consultation works when you move
+                  to a new provider.
                 </li>
               </ul>
             </GuideSection>
@@ -971,8 +975,8 @@ export default function ArticleClient() {
                   [
                     "2. How many clicks is a full Wegovy dose in the UK?",
                     <>
-                      The mathematical reference for a full Wegovy dose on the UK
-                      FlexTouch pen is 74 clicks, regardless of which pen
+                      The mathematical reference for a full Wegovy dose on the
+                      UK FlexTouch pen is 74 clicks, regardless of which pen
                       strength is used. However, Novo Nordisk instructs patients
                       not to set a dose by counting clicks. Always use the dose
                       counter on the pen and follow your prescriber&apos;s
@@ -983,9 +987,9 @@ export default function ArticleClient() {
                     "3. How many clicks is 0.25 mg Wegovy from a 0.5 mg pen?",
                     <>
                       Using the formula (0.25 ÷ 0.5) × 74 ={" "}
-                      <strong>37 clicks</strong>. This represents 50% of the full
-                      dose volume from a 0.5 mg pen. Note: this is a mathematical
-                      estimate only, not a prescribing instruction.
+                      <strong>37 clicks</strong>. This represents 50% of the
+                      full dose volume from a 0.5 mg pen. Note: this is a
+                      mathematical estimate only, not a prescribing instruction.
                     </>,
                   ],
                   [
@@ -993,8 +997,8 @@ export default function ArticleClient() {
                     <>
                       From a 2.4 mg FlexTouch pen, a full dose corresponds to 74
                       clicks, the standard reference for the UK device. The 2.4
-                      mg dose is the standard Wegovy maintenance dose, reached at
-                      week 17 of the UK titration schedule.
+                      mg dose is the standard Wegovy maintenance dose, reached
+                      at week 17 of the UK titration schedule.
                     </>,
                   ],
                   [
@@ -1010,12 +1014,12 @@ export default function ArticleClient() {
                   [
                     "6. Is the Wegovy 7.2 mg dose equal to 222 clicks?",
                     <>
-                      No. Healthwise360 specifically does not represent 7.2 mg as
-                      222 clicks. The 7.2 mg dose is a complete prescribed weekly
-                      regimen, either using a dedicated 7.2 mg single-dose pen
-                      (from April 2026) or three separate 2.4 mg injections on
-                      the same day. It does not represent 222 consecutive clicks
-                      on one device.
+                      No. Healthwise360 specifically does not represent 7.2 mg
+                      as 222 clicks. The 7.2 mg dose is a complete prescribed
+                      weekly regimen, either using a dedicated 7.2 mg
+                      single-dose pen (from April 2026) or three separate 2.4 mg
+                      injections on the same day. It does not represent 222
+                      consecutive clicks on one device.
                     </>,
                   ],
                   [
@@ -1024,9 +1028,9 @@ export default function ArticleClient() {
                       The standard UK FlexTouch range includes: 0.25 mg, 0.5 mg,
                       1 mg, 1.7 mg, and 2.4 mg. Additionally, a 7.2 mg weekly
                       dose has been approved by the MHRA for certain adult
-                      patients with obesity, available as a dedicated single-dose
-                      pen (from April 2026) or as three consecutive 2.4 mg
-                      injections.
+                      patients with obesity, available as a dedicated
+                      single-dose pen (from April 2026) or as three consecutive
+                      2.4 mg injections.
                     </>,
                   ],
                   [
@@ -1063,9 +1067,9 @@ export default function ArticleClient() {
                       contains four labelled doses. Many US-focused online
                       resources describe a single-injection autoinjector pen
                       where &ldquo;one click&rdquo; delivers the entire dose.
-                      These descriptions do not apply to the UK FlexTouch device.
-                      UK patients should use UK-specific resources and the
-                      current MHRA-approved patient leaflet.
+                      These descriptions do not apply to the UK FlexTouch
+                      device. UK patients should use UK-specific resources and
+                      the current MHRA-approved patient leaflet.
                     </>,
                   ],
                 ].map(([q, a]) => (
@@ -1089,8 +1093,8 @@ export default function ArticleClient() {
               <p>
                 The Wegovy FlexTouch pen in the UK uses{" "}
                 <strong>
-                  74 clicks as the mathematical reference for one full prescribed
-                  dose
+                  74 clicks as the mathematical reference for one full
+                  prescribed dose
                 </strong>{" "}
                 across all five standard pen strengths. The formula for any dose
                 calculation is:
@@ -1114,22 +1118,25 @@ export default function ArticleClient() {
                   0.25 mg from a 0.5 mg pen = <strong>37 clicks</strong>
                 </li>
                 <li>
-                  The <strong>7.2 mg dose is not 222 clicks</strong>. It requires
-                  a dedicated pen or three separate injections
+                  The <strong>7.2 mg dose is not 222 clicks</strong>. It
+                  requires a dedicated pen or three separate injections
                 </li>
               </ul>
               <p>
                 However, the most important fact about Wegovy click calculations
                 remains the official guidance:{" "}
-                <strong>do not set your dose by counting clicks</strong>. Use the
-                dose counter on the pen, follow your prescriber&apos;s
+                <strong>do not set your dose by counting clicks</strong>. Use
+                the dose counter on the pen, follow your prescriber&apos;s
                 instructions, and contact your pharmacist or prescriber if you
                 have any uncertainty about your dose.
               </p>
               <p>
                 For an interactive mathematical estimate at any dose and pen
                 combination, use the{" "}
-                <Link href="/tools/wegovy-click-calculator" className={linkClass}>
+                <Link
+                  href="/tools/wegovy-click-calculator"
+                  className={linkClass}
+                >
                   Wegovy click calculator at Healthwise360
                 </Link>
                 .
@@ -1140,10 +1147,7 @@ export default function ArticleClient() {
                   Wegovy price comparison at Healthwise360
                 </Link>
                 . For how Wegovy compares to Mounjaro:{" "}
-                <Link
-                  href="/compare/wegovy-vs-mounjaro"
-                  className={linkClass}
-                >
+                <Link href="/compare/wegovy-vs-mounjaro" className={linkClass}>
                   Wegovy vs Mounjaro comparison at Healthwise360
                 </Link>
                 . For the Mounjaro equivalent:{" "}
@@ -1167,6 +1171,10 @@ export default function ArticleClient() {
               </p>
             </GuideSection>
           </article>
+
+          <div className="mt-6">
+            <GooglePreferredSourceButton />
+          </div>
         </BlogArticleColumn>
       </div>
     </div>

@@ -1,4 +1,5 @@
 "use client";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -383,9 +384,7 @@ export default function ArticleClient() {
                 Wegovy, Mounjaro, semaglutide, and tirzepatide are prescription
                 medicines. Protein products are nutrition products.
               </p>
-              <p>
-                We separate three ideas that are often confused:
-              </p>
+              <p>We separate three ideas that are often confused:</p>
               <ol className="list-decimal space-y-3 pl-5">
                 <li>Prescription GLP-1 treatment</li>
                 <li>Food and lifestyle support</li>
@@ -560,9 +559,7 @@ export default function ArticleClient() {
                 Because of this, there is no single protein target that fits
                 everyone.
               </p>
-              <p>
-                Instead, ask yourself:
-              </p>
+              <p>Instead, ask yourself:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Am I eating protein at most meals?</li>
                 <li>Am I losing strength?</li>
@@ -1147,7 +1144,7 @@ export default function ArticleClient() {
                 Health Wise does not prescribe or supply medicines. This page is
                 general information and is not medical advice.
               </p>
-</GuideSection>
+            </GuideSection>
           </article>
 
           <div className="mt-10">
@@ -1156,6 +1153,10 @@ export default function ArticleClient() {
               title={TITLE}
               description={DESCRIPTION}
             />
+          </div>
+
+          <div className="mt-6">
+            <GooglePreferredSourceButton />
           </div>
         </BlogArticleColumn>
       </div>

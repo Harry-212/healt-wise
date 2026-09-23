@@ -1,4 +1,5 @@
 "use client";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -539,10 +540,10 @@ export default function ArticleClient() {
               <p>
                 Private access may be faster, but it also means you need to
                 understand ongoing cost and safety checks. Health Wise is a
-                comparison site, not a seller — so the most useful next steps are
-                usually a price comparison page, a pharmacy safety page, a BMI
-                page, or a treatment comparison page, depending on where you are
-                in the journey.
+                comparison site, not a seller — so the most useful next steps
+                are usually a price comparison page, a pharmacy safety page, a
+                BMI page, or a treatment comparison page, depending on where you
+                are in the journey.
               </p>
             </GuideSection>
 
@@ -678,7 +679,7 @@ export default function ArticleClient() {
                 Health Wise does not prescribe or supply medicines. This page is
                 general information and is not medical advice.
               </p>
-</GuideSection>
+            </GuideSection>
           </article>
 
           <div className="mt-10">
@@ -687,6 +688,10 @@ export default function ArticleClient() {
               title={TITLE}
               description={DESCRIPTION}
             />
+          </div>
+
+          <div className="mt-6">
+            <GooglePreferredSourceButton />
           </div>
         </BlogArticleColumn>
       </div>

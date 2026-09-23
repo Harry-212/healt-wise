@@ -1,4 +1,5 @@
 const CONSENT_KEY = "hw360_analytics_consent";
+export const CONSENT_CHANGE_EVENT = "hw360-consent-change";
 
 export type ConsentChoice = "granted" | "denied";
 
@@ -19,4 +20,9 @@ export function storeConsent(choice: ConsentChoice): void {
   } catch {
     // Silently fail if storage unavailable
   }
+  // Notify other component trees on the same page (e.g. Footer, guide
+  // pages) that don't share AnalyticsProvider's local state.
+  window.dispatchEvent(
+    new CustomEvent<ConsentChoice>(CONSENT_CHANGE_EVENT, { detail: choice }),
+  );
 }

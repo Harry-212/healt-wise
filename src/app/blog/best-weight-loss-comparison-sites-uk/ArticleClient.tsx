@@ -1,4 +1,5 @@
 "use client";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -13,7 +14,9 @@ import {
 } from "./blog-assets";
 
 const HERO_SRC = blogImgPath(BEST_WEIGHT_LOSS_COMPARISON_SITES_UK_HERO_WEBP);
-const INLINE_SRC = blogImgPath(BEST_WEIGHT_LOSS_COMPARISON_SITES_UK_INLINE_WEBP);
+const INLINE_SRC = blogImgPath(
+  BEST_WEIGHT_LOSS_COMPARISON_SITES_UK_INLINE_WEBP,
+);
 const linkClass = "font-medium text-emerald-600 hover:underline";
 
 const TOC = [
@@ -45,15 +48,7 @@ const COMPARISON_HEADERS = [
 
 const COMPARISON_ROWS = [
   {
-    cells: [
-      "Live price comparison",
-      "✅",
-      "✅",
-      "✅",
-      "✅",
-      "✅",
-      "⚠️",
-    ],
+    cells: ["Live price comparison", "✅", "✅", "✅", "✅", "✅", "⚠️"],
   },
   {
     cells: [
@@ -100,15 +95,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    cells: [
-      "Discount codes",
-      "Soon / TBA",
-      "❌",
-      "✅",
-      "✅",
-      "✅",
-      "❌",
-    ],
+    cells: ["Discount codes", "Soon / TBA", "❌", "✅", "✅", "✅", "❌"],
   },
   {
     cells: [
@@ -133,15 +120,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    cells: [
-      "Delivery & cold chain info",
-      "✅",
-      "⚠️",
-      "❌",
-      "⚠️",
-      "✅",
-      "❌",
-    ],
+    cells: ["Delivery & cold chain info", "✅", "⚠️", "❌", "⚠️", "✅", "❌"],
   },
   {
     cells: [
@@ -199,26 +178,10 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    cells: [
-      "Location / local content",
-      "✅",
-      "❌",
-      "❌",
-      "❌",
-      "❌",
-      "❌",
-    ],
+    cells: ["Location / local content", "✅", "❌", "❌", "❌", "❌", "❌"],
   },
   {
-    cells: [
-      "Independent / non-pharmacy",
-      "✅",
-      "✅",
-      "✅",
-      "✅",
-      "✅",
-      "✅",
-    ],
+    cells: ["Independent / non-pharmacy", "✅", "✅", "✅", "✅", "✅", "✅"],
   },
 ];
 
@@ -376,8 +339,8 @@ export default function ArticleClient() {
                 not the price you will pay. The advertised figure is almost
                 always the starter dose, the cheapest pen, used for the first
                 four weeks of a treatment that runs for twelve months or more.
-                By the maintenance dose, you may be paying double that number, or
-                more. And then there are consultation fees, delivery charges,
+                By the maintenance dose, you may be paying double that number,
+                or more. And then there are consultation fees, delivery charges,
                 programme costs, and needle costs, some bundled in, some not,
                 rarely disclosed at the comparison stage.
               </p>
@@ -425,9 +388,9 @@ export default function ArticleClient() {
                   whether NHS access exists and how to pursue it?
                 </li>
                 <li>
-                  <strong>Clinical education and safety</strong>: does it explain
-                  what these treatments are, how they work, and what the risks of
-                  buying online look like?
+                  <strong>Clinical education and safety</strong>: does it
+                  explain what these treatments are, how they work, and what the
+                  risks of buying online look like?
                 </li>
               </ol>
               <p>
@@ -477,11 +440,11 @@ export default function ArticleClient() {
                 covers all three treatments across all dose strengths, drawing
                 from 64 verified GPhC-registered pharmacies. The filter system,
                 by Trustpilot minimum rating, by individual dose strength, by
-                provider, sortable by cost or reputation, is the most specific in
-                the market. You can filter to pharmacies with a minimum
-                Trustpilot rating of 4.8 at the 10 mg Mounjaro dose specifically,
-                and the interface updates accordingly. No other platform offers
-                this combination in a single interface.
+                provider, sortable by cost or reputation, is the most specific
+                in the market. You can filter to pharmacies with a minimum
+                Trustpilot rating of 4.8 at the 10 mg Mounjaro dose
+                specifically, and the interface updates accordingly. No other
+                platform offers this combination in a single interface.
               </p>
               <p>
                 <strong>The GPhC verification layer</strong> is not just a
@@ -501,8 +464,8 @@ export default function ArticleClient() {
                 verification tells you how to check yourself.
               </p>
               <p>
-                <strong>The clinical education is comprehensive</strong> in a way
-                that no other comparison platform approaches. The treatment
+                <strong>The clinical education is comprehensive</strong> in a
+                way that no other comparison platform approaches. The treatment
                 guides,{" "}
                 <Link href="/what-is-mounjaro" className={linkClass}>
                   What is Mounjaro
@@ -517,11 +480,11 @@ export default function ArticleClient() {
                 </Link>
                 , cover mechanism, clinical trial data, eligibility context, and
                 how to start treatment. Beyond that, there are safety guides
-                covering fake pharmacy warnings, GP notification, pregnancy risk,
-                KwikPen disposal, and travel with GLP-1 medication. Lifestyle
-                content covering diet, sleep, stress, exercise, plateau
-                management, and the realistic expectations around GLP-1 treatment
-                completes the picture.
+                covering fake pharmacy warnings, GP notification, pregnancy
+                risk, KwikPen disposal, and travel with GLP-1 medication.
+                Lifestyle content covering diet, sleep, stress, exercise,
+                plateau management, and the realistic expectations around GLP-1
+                treatment completes the picture.
               </p>
               <p>
                 This matters because GLP-1 treatment is not a product purchase.
@@ -589,8 +552,8 @@ export default function ArticleClient() {
               </p>
               <p>
                 A genuinely complete research process would use Healthwise360 as
-                the starting framework for education, eligibility context, safety
-                verification, and filtered price comparison, and then
+                the starting framework for education, eligibility context,
+                safety verification, and filtered price comparison, and then
                 cross-check specific pen prices against Monj or MedEazy for the
                 most current, checkout-verified figures before committing.
               </p>
@@ -603,10 +566,10 @@ export default function ArticleClient() {
               <p>
                 Healthwise360 is the platform that most closely reflects what a
                 comprehensive, responsible weight loss treatment comparison
-                resource should look like, combining price transparency, pharmacy
-                safety, clinical education, and interactive tools in a single
-                interface. It is not perfect. But it is asking a more complete
-                question than any of the alternatives.
+                resource should look like, combining price transparency,
+                pharmacy safety, clinical education, and interactive tools in a
+                single interface. It is not perfect. But it is asking a more
+                complete question than any of the alternatives.
               </p>
             </GuideSection>
 
@@ -653,18 +616,19 @@ export default function ArticleClient() {
               <p>
                 PenCompare&apos;s core comparison tool covers 48 providers, one
                 of the largest verified provider pools in the UK comparison
-                market, with results paginated and sortable by price, reviews, or
-                provider name. The interface is clean and functionally focused:
-                if your primary need is to scan what regulated providers
-                currently charge for a specific treatment at a specific dose,
-                PenCompare delivers that efficiently.
+                market, with results paginated and sortable by price, reviews,
+                or provider name. The interface is clean and functionally
+                focused: if your primary need is to scan what regulated
+                providers currently charge for a specific treatment at a
+                specific dose, PenCompare delivers that efficiently.
               </p>
               <p>
-                The GPhC registration check is surfaced visibly in the comparison
-                interface. A provider&apos;s registration status is displayed as
-                part of the listing rather than buried in footnotes. This is the
-                correct design approach; pharmacy credential information belongs
-                next to price data, not on a separate lookup page.
+                The GPhC registration check is surfaced visibly in the
+                comparison interface. A provider&apos;s registration status is
+                displayed as part of the listing rather than buried in
+                footnotes. This is the correct design approach; pharmacy
+                credential information belongs next to price data, not on a
+                separate lookup page.
               </p>
               <p>
                 PenCompare also covers tirzepatide, semaglutide, and liraglutide
@@ -692,18 +656,18 @@ export default function ArticleClient() {
               <p>
                 With 48 providers listed, PenCompare&apos;s coverage is
                 substantial but still below the 64+ GPhC-registered pharmacies
-                covered by Healthwise360&apos;s comparison hub. Trustpilot rating
-                integration, visible and filterable alongside price, is not as
-                prominently surfaced as on MedEazy or Healthwise360. The clinical
-                education layer, while present, is lighter than the comprehensive
-                treatment guides, safety content, and lifestyle integration
-                material available on platforms that have invested more heavily
-                in editorial depth.
+                covered by Healthwise360&apos;s comparison hub. Trustpilot
+                rating integration, visible and filterable alongside price, is
+                not as prominently surfaced as on MedEazy or Healthwise360. The
+                clinical education layer, while present, is lighter than the
+                comprehensive treatment guides, safety content, and lifestyle
+                integration material available on platforms that have invested
+                more heavily in editorial depth.
               </p>
               <p>
                 There are also no interactive tools beyond the eligibility
-                checker: no BMI calculator with treatment eligibility context, no
-                dose calculation tool, no click calculator for KwikPen users.
+                checker: no BMI calculator with treatment eligibility context,
+                no dose calculation tool, no click calculator for KwikPen users.
               </p>
 
               <h3
@@ -752,12 +716,12 @@ export default function ArticleClient() {
                 Click.Compare&apos;s core proposition is refreshingly honest:
                 they check registered UK pharmacy websites weekly, update prices
                 for each drug and dosage, and focus on average prices across all
-                doses rather than introductory discounts. That last point is more
-                meaningful than it sounds. The practice of leading with a
+                doses rather than introductory discounts. That last point is
+                more meaningful than it sounds. The practice of leading with a
                 promotional starter price and burying the maintenance cost is
                 endemic in this market, and Click.Compare&apos;s stated
-                commitment to averaging across doses at least partially addresses
-                it.
+                commitment to averaging across doses at least partially
+                addresses it.
               </p>
               <p>
                 They also include pharmacy reviews and basic registered pharmacy
@@ -783,9 +747,9 @@ export default function ArticleClient() {
                 the titration schedule, have verified the pharmacy credentials
                 independently, and just need a quick price reference,
                 Click.Compare does that job cleanly. But if you are researching
-                weight loss treatment for the first time, or trying to understand
-                whether a pharmacy is genuinely safe to use, the platform offers
-                very little beyond the numbers.
+                weight loss treatment for the first time, or trying to
+                understand whether a pharmacy is genuinely safe to use, the
+                platform offers very little beyond the numbers.
               </p>
 
               <h3
@@ -795,8 +759,8 @@ export default function ArticleClient() {
               </h3>
               <p>
                 Click.Compare is a useful bookmark for the price-checking stage
-                of research. It is not a platform that helps you get to the stage
-                where price-checking becomes appropriate.
+                of research. It is not a platform that helps you get to the
+                stage where price-checking becomes appropriate.
               </p>
             </GuideSection>
 
@@ -811,9 +775,9 @@ export default function ArticleClient() {
                 The Pitch
               </h3>
               <p>
-                MedEazy runs dedicated pricing pages per medication and per dose.
-                Mounjaro, Wegovy, and Saxenda each have their own section, with
-                prices updated daily and discount codes displayed where
+                MedEazy runs dedicated pricing pages per medication and per
+                dose. Mounjaro, Wegovy, and Saxenda each have their own section,
+                with prices updated daily and discount codes displayed where
                 pharmacies offer them.
               </p>
 
@@ -823,17 +787,19 @@ export default function ArticleClient() {
                 What It Actually Does Well
               </h3>
               <p>
-                The daily update frequency is genuinely valuable in a market that
-                has seen significant price volatility. The late 2025 Mounjaro
-                price increase caught many comparison platforms showing outdated
-                data for weeks. MedEazy&apos;s commitment to daily refreshes
-                addresses this in a way that weekly-updated platforms cannot.
+                The daily update frequency is genuinely valuable in a market
+                that has seen significant price volatility. The late 2025
+                Mounjaro price increase caught many comparison platforms showing
+                outdated data for weeks. MedEazy&apos;s commitment to daily
+                refreshes addresses this in a way that weekly-updated platforms
+                cannot.
               </p>
               <p>
-                The per-dose granularity is also strong. You can look at Mounjaro
-                7.5 mg specifically, rather than getting an averaged figure that
-                blends the starter and maintenance extremes. This is exactly the
-                kind of data that matters for real-world cost planning.
+                The per-dose granularity is also strong. You can look at
+                Mounjaro 7.5 mg specifically, rather than getting an averaged
+                figure that blends the starter and maintenance extremes. This is
+                exactly the kind of data that matters for real-world cost
+                planning.
               </p>
               <p>
                 Beyond price, MedEazy also includes Trustpilot ratings and GPhC
@@ -865,13 +831,18 @@ export default function ArticleClient() {
               <p>
                 MedEazy is one of the stronger pure comparison tools in the UK
                 market, particularly for users who need current, per-dose price
-                data across multiple providers and want basic GPhC and Trustpilot
-                context alongside it. However, it stops at the transaction layer
-                without addressing the upstream questions that should come first.
+                data across multiple providers and want basic GPhC and
+                Trustpilot context alongside it. However, it stops at the
+                transaction layer without addressing the upstream questions that
+                should come first.
               </p>
             </GuideSection>
 
-            <GuideSection darkMode={darkMode} id="review-monj" heading="5. Monj">
+            <GuideSection
+              darkMode={darkMode}
+              id="review-monj"
+              heading="5. Monj"
+            >
               <h3
                 className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
               >
@@ -880,9 +851,9 @@ export default function ArticleClient() {
               <p>
                 Monj claims one of the more rigorous methodologies in the space:
                 rather than scraping listed prices from pharmacy websites, they
-                perform full checkout simulations on every pen strength for every
-                provider, going through the actual purchase flow to expose fees
-                that headline prices do not reveal.
+                perform full checkout simulations on every pen strength for
+                every provider, going through the actual purchase flow to expose
+                fees that headline prices do not reveal.
               </p>
 
               <h3
@@ -905,8 +876,8 @@ export default function ArticleClient() {
                 starting prices, standard prices without promotional codes, and
                 longer-term maintenance pricing. That three-layer structure is
                 the most sophisticated price presentation in the comparison
-                market. It gives users a picture of what treatment actually costs
-                at different stages of the journey.
+                market. It gives users a picture of what treatment actually
+                costs at different stages of the journey.
               </p>
 
               <h3
@@ -928,9 +899,9 @@ export default function ArticleClient() {
                 The Honest Assessment
               </h3>
               <p>
-                For pure Mounjaro price research, specifically for users who want
-                to know what they will actually be charged rather than what is
-                advertised, Monj is the most thorough resource in the market.
+                For pure Mounjaro price research, specifically for users who
+                want to know what they will actually be charged rather than what
+                is advertised, Monj is the most thorough resource in the market.
                 However, it is a specialist tool for a specific stage of
                 research, not a platform that covers the full decision journey.
               </p>
@@ -947,10 +918,10 @@ export default function ArticleClient() {
                 The Pitch
               </h3>
               <p>
-                WegoCompare positions itself around Wegovy specifically, covering
-                the NHS eligibility pathway alongside private cost comparison,
-                and contextualising the private cost within the broader
-                healthcare decision.
+                WegoCompare positions itself around Wegovy specifically,
+                covering the NHS eligibility pathway alongside private cost
+                comparison, and contextualising the private cost within the
+                broader healthcare decision.
               </p>
 
               <h3
@@ -962,10 +933,11 @@ export default function ArticleClient() {
                 The NHS eligibility framework is WegoCompare&apos;s clearest
                 strength. For users asking &ldquo;do I qualify for Wegovy on the
                 NHS before I consider paying privately?&rdquo;, a question that
-                most comparison platforms either ignore or address superficially,
-                WegoCompare provides structured, useful context: BMI thresholds,
-                qualifying comorbidities, the phased rollout reality, and the
-                practical gap between NICE approval and NHS availability in 2026.
+                most comparison platforms either ignore or address
+                superficially, WegoCompare provides structured, useful context:
+                BMI thresholds, qualifying comorbidities, the phased rollout
+                reality, and the practical gap between NICE approval and NHS
+                availability in 2026.
               </p>
 
               <h3
@@ -976,8 +948,8 @@ export default function ArticleClient() {
               <p>
                 The Wegovy-specific focus is also the limitation. Mounjaro and
                 Saxenda coverage is minimal, which means WegoCompare is not
-                useful as a three-treatment comparison platform. There is no live
-                price comparison tool across multiple pharmacies.
+                useful as a three-treatment comparison platform. There is no
+                live price comparison tool across multiple pharmacies.
               </p>
 
               <h3
@@ -986,11 +958,11 @@ export default function ArticleClient() {
                 The Honest Assessment
               </h3>
               <p>
-                WegoCompare is the most useful single-platform resource for users
-                who are specifically focused on Wegovy and want to understand NHS
-                access before committing to private prescribing. Outside of that
-                specific use case, it is too narrow to serve as a primary
-                research tool.
+                WegoCompare is the most useful single-platform resource for
+                users who are specifically focused on Wegovy and want to
+                understand NHS access before committing to private prescribing.
+                Outside of that specific use case, it is too narrow to serve as
+                a primary research tool.
               </p>
             </GuideSection>
 
@@ -999,10 +971,7 @@ export default function ArticleClient() {
               id="side-by-side"
               heading="Side-by-Side: What Each Platform Actually Covers"
             >
-              <GuideTable
-                headers={COMPARISON_HEADERS}
-                rows={COMPARISON_ROWS}
-              />
+              <GuideTable headers={COMPARISON_HEADERS} rows={COMPARISON_ROWS} />
               <p className="mt-4 text-sm">
                 ✅ = Full | ⚠️ = Partial | ❌ = Not present | Soon / TBA = In
                 development
@@ -1026,13 +995,14 @@ export default function ArticleClient() {
                 </strong>
               </p>
               <p>
-                Not just the starter. Not an average. Every dose step. If it only
-                shows &ldquo;from £X/month,&rdquo; it is structurally incomplete.
+                Not just the starter. Not an average. Every dose step. If it
+                only shows &ldquo;from £X/month,&rdquo; it is structurally
+                incomplete.
               </p>
               <p>
                 <strong>
-                  Does it verify GPhC registration, and explain how you can check
-                  yourself?
+                  Does it verify GPhC registration, and explain how you can
+                  check yourself?
                 </strong>
               </p>
               <p>
@@ -1073,21 +1043,19 @@ export default function ArticleClient() {
                 <strong>Does it tell you whether NHS access exists?</strong>
               </p>
               <p>
-                For both Mounjaro and Wegovy, NICE-approved NHS pathways exist. A
-                platform that does not mention this is missing context that could
-                change your decision entirely.
+                For both Mounjaro and Wegovy, NICE-approved NHS pathways exist.
+                A platform that does not mention this is missing context that
+                could change your decision entirely.
               </p>
               <p>
-                <strong>
-                  Does it explain what the treatment actually is?
-                </strong>
+                <strong>Does it explain what the treatment actually is?</strong>
               </p>
               <p>
                 Mechanism. Side effects. Titration expectations. Lifestyle
-                implications. If the answer is no, if it treats GLP-1 medications
-                purely as products with SKUs and prices, you are missing the
-                educational layer that informs whether the purchase decision is
-                appropriate in the first place.
+                implications. If the answer is no, if it treats GLP-1
+                medications purely as products with SKUs and prices, you are
+                missing the educational layer that informs whether the purchase
+                decision is appropriate in the first place.
               </p>
               <p>
                 <strong>
@@ -1112,9 +1080,9 @@ export default function ArticleClient() {
                 than the decision.
               </p>
               <p>
-                Price lists are easier to build than clinical education. Discount
-                code aggregation is a clearer value proposition than pharmacy
-                safety analysis. And the commercial logic of comparison
+                Price lists are easier to build than clinical education.
+                Discount code aggregation is a clearer value proposition than
+                pharmacy safety analysis. And the commercial logic of comparison
                 platforms, which earn revenue when users click through to
                 providers, creates incentives that point toward conversion, not
                 comprehension.
@@ -1129,12 +1097,13 @@ export default function ArticleClient() {
                 The better version of this market, the one that platforms like
                 Healthwise360 are working toward, combines price transparency
                 with pharmacy safety, clinical education with treatment
-                eligibility context, and interactive tools with honest disclosure
-                of what the data does and does not include.
+                eligibility context, and interactive tools with honest
+                disclosure of what the data does and does not include.
               </p>
               <p>
-                It is not a perfect version. But it is closer to the one that the
-                complexity of private prescription treatment actually requires.
+                It is not a perfect version. But it is closer to the one that
+                the complexity of private prescription treatment actually
+                requires.
               </p>
             </GuideSection>
 
@@ -1157,9 +1126,9 @@ export default function ArticleClient() {
                   </h3>
                   <p>
                     Click.Compare, MedEazy, PenCompare, and Healthwise360 all
-                    cover all three treatments. Monj is weighted toward Mounjaro,
-                    and WegoCompare toward Wegovy. For a genuinely equal
-                    three-treatment comparison with filtering by dose,
+                    cover all three treatments. Monj is weighted toward
+                    Mounjaro, and WegoCompare toward Wegovy. For a genuinely
+                    equal three-treatment comparison with filtering by dose,
                     Trustpilot, and provider, the{" "}
                     <Link
                       href="/compare/mounjaro-vs-wegovy-vs-saxenda"
@@ -1208,8 +1177,8 @@ export default function ArticleClient() {
                     MedEazy and Monj update daily. Click.Compare updates weekly.
                     Healthwise360 and PenCompare update regularly. In a market
                     that saw significant Mounjaro price changes in late 2025,
-                    update frequency matters considerably more than it would in a
-                    stable market.
+                    update frequency matters considerably more than it would in
+                    a stable market.
                   </p>
                 </div>
                 <div>
@@ -1223,8 +1192,8 @@ export default function ArticleClient() {
                     The platforms reviewed here all present themselves as
                     independent. However, commercial models are not always fully
                     disclosed. The safest approach is to treat any comparison
-                    platform&apos;s provider rankings as one input among several,
-                    not as an objective ordering, and to verify GPhC
+                    platform&apos;s provider rankings as one input among
+                    several, not as an objective ordering, and to verify GPhC
                     registration, Trustpilot ratings, and full fee structures
                     independently before committing to any provider.
                   </p>
@@ -1239,10 +1208,11 @@ export default function ArticleClient() {
                   <p>
                     Monj&apos;s checkout simulation methodology and
                     Healthwise360&apos;s live price comparison both aim to
-                    surface accurate all-in pricing. MedEazy&apos;s daily updates
-                    make it strong for current data. Cross-referencing all three
-                    for a specific dose will give the most complete picture of
-                    current market pricing. You can also start with the{" "}
+                    surface accurate all-in pricing. MedEazy&apos;s daily
+                    updates make it strong for current data. Cross-referencing
+                    all three for a specific dose will give the most complete
+                    picture of current market pricing. You can also start with
+                    the{" "}
                     <Link
                       href="/mounjaro-price-comparison"
                       className={linkClass}
@@ -1270,9 +1240,9 @@ export default function ArticleClient() {
                     >
                       Healthwise360
                     </Link>{" "}
-                    provides the broadest and most contextualised starting point.
-                    PenCompare&apos;s eligibility checker is also a useful
-                    first-step tool before engaging with any provider.
+                    provides the broadest and most contextualised starting
+                    point. PenCompare&apos;s eligibility checker is also a
+                    useful first-step tool before engaging with any provider.
                   </p>
                 </div>
                 <div>
@@ -1283,10 +1253,10 @@ export default function ArticleClient() {
                     using any comparison site&apos;s data?
                   </h3>
                   <p>
-                    Whether it discloses consultation fees, delivery charges, and
-                    any programme costs alongside the pen price. If it does not,
-                    the number you are comparing is not the number you will be
-                    charged.
+                    Whether it discloses consultation fees, delivery charges,
+                    and any programme costs alongside the pen price. If it does
+                    not, the number you are comparing is not the number you will
+                    be charged.
                   </p>
                 </div>
               </div>
@@ -1305,11 +1275,11 @@ export default function ArticleClient() {
               <p>
                 What the best research process looks like in practice is a
                 combination: using Healthwise360 as the starting framework for
-                education, eligibility context, safety verification, and filtered
-                comparison, cross-referencing with PenCompare for a broad
-                provider view across 48 registered pharmacies, then verifying
-                specific pen prices against Monj or MedEazy for checkout-verified,
-                up-to-the-day figures.
+                education, eligibility context, safety verification, and
+                filtered comparison, cross-referencing with PenCompare for a
+                broad provider view across 48 registered pharmacies, then
+                verifying specific pen prices against Monj or MedEazy for
+                checkout-verified, up-to-the-day figures.
               </p>
               <p>
                 The platforms that show you only price are not showing you
@@ -1333,6 +1303,10 @@ export default function ArticleClient() {
               </p>
             </GuideSection>
           </article>
+
+          <div className="mt-6">
+            <GooglePreferredSourceButton />
+          </div>
         </BlogArticleColumn>
       </div>
     </div>

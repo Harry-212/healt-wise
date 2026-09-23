@@ -1,4 +1,5 @@
 "use client";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -836,7 +837,7 @@ export default function ArticleClient() {
                 Health Wise does not sell medicines or supplements. This page is
                 general information and is not medical advice.
               </p>
-</GuideSection>
+            </GuideSection>
           </article>
 
           <div className="mt-10">
@@ -845,6 +846,10 @@ export default function ArticleClient() {
               title={TITLE}
               description={DESCRIPTION}
             />
+          </div>
+
+          <div className="mt-6">
+            <GooglePreferredSourceButton />
           </div>
         </BlogArticleColumn>
       </div>

@@ -1,4 +1,5 @@
 "use client";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -223,12 +224,13 @@ export default function ArticleClient() {
               heading="Why Fibre Matters for GLP-1 Users"
             >
               <p>
-                GLP-1 medicines may help reduce appetite and support fullness. As
-                a result, many users eat smaller meals and fewer snacks.
+                GLP-1 medicines may help reduce appetite and support fullness.
+                As a result, many users eat smaller meals and fewer snacks.
               </p>
               <p>
-                However, eating less can also mean eating less fibre. This matters
-                because fibre supports digestion, bowel regularity, and fullness.
+                However, eating less can also mean eating less fibre. This
+                matters because fibre supports digestion, bowel regularity, and
+                fullness.
               </p>
               <p>
                 Besides that, constipation is often discussed by users taking
@@ -254,8 +256,13 @@ export default function ArticleClient() {
               </p>
               <p>The key points are:</p>
               <ul className={listClass}>
-                <li>Food-first fibre is usually better than supplement-first fibre.</li>
-                <li>Increase fibre gradually to reduce bloating and discomfort.</li>
+                <li>
+                  Food-first fibre is usually better than supplement-first
+                  fibre.
+                </li>
+                <li>
+                  Increase fibre gradually to reduce bloating and discomfort.
+                </li>
                 <li>Drink enough water when increasing fibre.</li>
                 <li>
                   Fibre may help constipation, but it can make symptoms worse if
@@ -266,9 +273,13 @@ export default function ArticleClient() {
                   Severe or persistent constipation should be discussed with a
                   pharmacist, prescriber, or clinician.
                 </li>
-                <li>Fibre supplements are optional and not suitable for everyone.</li>
+                <li>
+                  Fibre supplements are optional and not suitable for everyone.
+                </li>
               </ul>
-              <p>In simple terms, fibre can help, but more is not always better.</p>
+              <p>
+                In simple terms, fibre can help, but more is not always better.
+              </p>
             </GuideSection>
 
             <GuideSection
@@ -281,8 +292,8 @@ export default function ArticleClient() {
                 Wegovy, Mounjaro, semaglutide, tirzepatide, or Wegovy Pill.
               </p>
               <p>
-                This matters because supplement marketing often uses phrases such
-                as &ldquo;natural GLP-1,&rdquo; &ldquo;appetite
+                This matters because supplement marketing often uses phrases
+                such as &ldquo;natural GLP-1,&rdquo; &ldquo;appetite
                 control,&rdquo; &ldquo;food noise support,&rdquo; or
                 &ldquo;Ozempic alternative.&rdquo; However, those phrases can
                 confuse users.
@@ -295,10 +306,7 @@ export default function ArticleClient() {
               <p>
                 For a clearer split between food support and medicine-like
                 claims, see our{" "}
-                <Link
-                  href="/blog/glp-1-supplements-uk"
-                  className={linkClass}
-                >
+                <Link href="/blog/glp-1-supplements-uk" className={linkClass}>
                   GLP-1 supplements UK guide
                 </Link>{" "}
                 and{" "}
@@ -323,9 +331,9 @@ export default function ArticleClient() {
                 intestine.
               </p>
               <p>
-                Instead, it helps support digestion in different ways. Some types
-                of fibre add bulk to stools, while other types feed gut bacteria
-                or help slow digestion.
+                Instead, it helps support digestion in different ways. Some
+                types of fibre add bulk to stools, while other types feed gut
+                bacteria or help slow digestion.
               </p>
               <p>Food sources of fibre include:</p>
               <ul className={listClass}>
@@ -367,8 +375,8 @@ export default function ArticleClient() {
                 forget to hydrate. However, fibre needs fluid to work well.
               </p>
               <p>
-                Third, some users focus heavily on protein but forget vegetables,
-                pulses, oats, fruit, and wholegrains.
+                Third, some users focus heavily on protein but forget
+                vegetables, pulses, oats, fruit, and wholegrains.
               </p>
               <p>
                 Finally, reduced movement may also affect bowel regularity.
@@ -385,8 +393,8 @@ export default function ArticleClient() {
               <p>For most people, the best place to start is normal food.</p>
               <p>
                 Food-first fibre is useful because it also brings vitamins,
-                minerals, water, texture, and satisfaction. Besides that, food is
-                usually easier to adjust than supplements.
+                minerals, water, texture, and satisfaction. Besides that, food
+                is usually easier to adjust than supplements.
               </p>
               <h3
                 className={`mt-6 mb-3 text-xl font-bold ${
@@ -415,8 +423,8 @@ export default function ArticleClient() {
                 Higher-Fibre Foods That May Need Gradual Introduction
               </h3>
               <p>
-                Some foods are very useful but may cause gas or bloating if added
-                too fast:
+                Some foods are very useful but may cause gas or bloating if
+                added too fast:
               </p>
               <ul className={listClass}>
                 <li>Beans</li>
@@ -488,9 +496,9 @@ export default function ArticleClient() {
               heading="Fibre and Fullness"
             >
               <p>
-                Fibre may help support fullness because high-fibre foods can take
-                longer to eat and digest. This may support appetite control,
-                especially when combined with protein.
+                Fibre may help support fullness because high-fibre foods can
+                take longer to eat and digest. This may support appetite
+                control, especially when combined with protein.
               </p>
               <p>
                 However, GLP-1 users often already feel fuller than usual.
@@ -568,7 +576,8 @@ export default function ArticleClient() {
               </ol>
               <p>
                 For example, start with berries at breakfast or vegetables in
-                soup. Then, add oats, lentils, beans, or seeds later if tolerated.
+                soup. Then, add oats, lentils, beans, or seeds later if
+                tolerated.
               </p>
               <p>
                 This approach is more sustainable than suddenly doubling fibre
@@ -586,9 +595,9 @@ export default function ArticleClient() {
                 harder or more uncomfortable.
               </p>
               <p>
-                For GLP-1 users, hydration can be easy to forget because appetite
-                and routine may change. Some people also feel nauseous, which can
-                reduce fluid intake.
+                For GLP-1 users, hydration can be easy to forget because
+                appetite and routine may change. Some people also feel nauseous,
+                which can reduce fluid intake.
               </p>
               <p>Practical hydration ideas include:</p>
               <ul className={listClass}>
@@ -630,9 +639,9 @@ export default function ArticleClient() {
                 <li>Cooked vegetables instead of raw salad</li>
               </ul>
               <p>
-                However, if nausea is severe or persistent, the user should speak
-                to a prescriber or pharmacist. Food changes may help, but they
-                should not replace medical support.
+                However, if nausea is severe or persistent, the user should
+                speak to a prescriber or pharmacist. Food changes may help, but
+                they should not replace medical support.
               </p>
             </GuideSection>
 
@@ -642,18 +651,19 @@ export default function ArticleClient() {
               heading="Fibre and Diarrhoea"
             >
               <p>
-                Some GLP-1 users may experience diarrhoea instead of constipation.
-                In that case, suddenly increasing fibre may not be helpful.
+                Some GLP-1 users may experience diarrhoea instead of
+                constipation. In that case, suddenly increasing fibre may not be
+                helpful.
               </p>
               <p>
-                Different types of fibre affect the gut differently. For example,
-                some people tolerate soluble fibre better, while large amounts of
-                roughage may worsen urgency.
+                Different types of fibre affect the gut differently. For
+                example, some people tolerate soluble fibre better, while large
+                amounts of roughage may worsen urgency.
               </p>
               <p>
                 If diarrhoea continues, users should focus on hydration and seek
-                advice. This is especially important if they feel weak, dizzy, or
-                unable to keep fluids down.
+                advice. This is especially important if they feel weak, dizzy,
+                or unable to keep fluids down.
               </p>
               <p>
                 Therefore, fibre guidance should be personalised where symptoms
@@ -785,9 +795,7 @@ export default function ArticleClient() {
                 <li>They feel dehydrated</li>
                 <li>They have bowel disease</li>
                 <li>They are taking multiple medicines</li>
-                <li>
-                  They want to start a fibre supplement but are unsure
-                </li>
+                <li>They want to start a fibre supplement but are unsure</li>
               </ul>
               <p>
                 Besides that, users should always tell their prescriber about
@@ -801,9 +809,9 @@ export default function ArticleClient() {
               heading="Practical Nutrition Support for Smaller Appetites"
             >
               <p>
-                Food-first fibre remains the best starting point for most people.
-                However, smaller appetites and busy routines can make balanced
-                meals harder to prepare every day.
+                Food-first fibre remains the best starting point for most
+                people. However, smaller appetites and busy routines can make
+                balanced meals harder to prepare every day.
               </p>
               <p>
                 Healthwise360&apos;s{" "}
@@ -823,8 +831,8 @@ export default function ArticleClient() {
                 <Link href="/protein-and-fitness" className={linkClass}>
                   high-protein nutrition collection
                 </Link>{" "}
-                may also help when whole meals feel too large. These products are
-                practical nutrition support, not substitutes for prescribed
+                may also help when whole meals feel too large. These products
+                are practical nutrition support, not substitutes for prescribed
                 treatment or professional advice.
               </p>
               <p>
@@ -948,8 +956,8 @@ export default function ArticleClient() {
               <p>
                 Fibre supplements may help some users, but they are optional and
                 should not be marketed as GLP-1 replacements. If symptoms are
-                severe, persistent, or worrying, professional advice is the safer
-                route.
+                severe, persistent, or worrying, professional advice is the
+                safer route.
               </p>
               <p>
                 Healthwise360 can support this journey with a practical,
@@ -974,6 +982,10 @@ export default function ArticleClient() {
               title={TITLE}
               description={DESCRIPTION}
             />
+          </div>
+
+          <div className="mt-6">
+            <GooglePreferredSourceButton />
           </div>
         </BlogArticleColumn>
       </div>

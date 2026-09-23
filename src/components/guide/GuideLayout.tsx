@@ -11,6 +11,7 @@ import {
 import { siteOrigin } from "@/lib/seo/site-origin";
 import GuideTocSidebar from "./GuideTocSidebar";
 import { GuideSharePanel } from "./GuideSharePanel";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 /** Splits a title at the first ":" so the subtitle starts on a new line. */
 function SplitTitle({ text }: { text: string }) {
@@ -224,6 +225,10 @@ export function GuideLayout({
                 />
               </div>
             ) : null}
+
+            <div className="mt-6">
+              <GooglePreferredSourceButton />
+            </div>
 
             {/* Back link */}
             <div className="mt-8">

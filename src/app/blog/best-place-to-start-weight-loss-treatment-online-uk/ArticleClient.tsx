@@ -1,4 +1,5 @@
 "use client";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -320,8 +321,9 @@ export default function ArticleClient() {
                 <li>Repeat prescription rules</li>
               </ul>
               <p>
-                That is where Health Wise tries to be useful: helping you compare
-                real monthly cost, not only the lowest advertised number.
+                That is where Health Wise tries to be useful: helping you
+                compare real monthly cost, not only the lowest advertised
+                number.
               </p>
             </GuideSection>
 
@@ -332,8 +334,8 @@ export default function ArticleClient() {
             >
               <p>
                 When people search for weight loss price or treatment cost, they
-                usually want a practical answer: what might I pay each month, and
-                is one provider better value than another?
+                usually want a practical answer: what might I pay each month,
+                and is one provider better value than another?
               </p>
               <p>
                 Prices vary because clinics package services differently. Some
@@ -462,8 +464,8 @@ export default function ArticleClient() {
               </p>
               <p>
                 A very low price may leave out support, delivery, or follow-up.
-                It may also only apply to the starting dose. Unusually low prices
-                can also be a warning sign if the seller is not properly
+                It may also only apply to the starting dose. Unusually low
+                prices can also be a warning sign if the seller is not properly
                 regulated.
               </p>
               <p>A safer value comparison balances price with:</p>
@@ -480,8 +482,8 @@ export default function ArticleClient() {
               </ul>
               <p>
                 That is why this guide is not written as a hunt for &ldquo;cheap
-                weight loss injections.&rdquo; The more useful question is how to
-                compare safe treatment prices properly.
+                weight loss injections.&rdquo; The more useful question is how
+                to compare safe treatment prices properly.
               </p>
             </GuideSection>
 
@@ -517,8 +519,8 @@ export default function ArticleClient() {
               heading="A Sensible Order to Compare Providers"
             >
               <p>
-                If you are not sure where to begin, do not pick a provider first.
-                Compare the options, then choose a consultation route.
+                If you are not sure where to begin, do not pick a provider
+                first. Compare the options, then choose a consultation route.
               </p>
               <p>A practical order looks like this:</p>
               <ol className="list-decimal space-y-3 pl-5">
@@ -626,8 +628,8 @@ export default function ArticleClient() {
                   <p>
                     Some people may access private weight loss treatment online
                     after a clinical assessment and valid prescription. Stick to
-                    regulated providers, and avoid unregulated websites or social
-                    media sellers.
+                    regulated providers, and avoid unregulated websites or
+                    social media sellers.
                   </p>
                 </div>
                 <div>
@@ -762,6 +764,10 @@ export default function ArticleClient() {
               title={TITLE}
               description={DESCRIPTION}
             />
+          </div>
+
+          <div className="mt-6">
+            <GooglePreferredSourceButton />
           </div>
         </BlogArticleColumn>
       </div>

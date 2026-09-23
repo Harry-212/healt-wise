@@ -1,4 +1,5 @@
 "use client";
+import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -937,8 +938,8 @@ export default function ArticleClient() {
                 severe stomach pain, or signs of a serious allergic reaction.
               </p>
               <p>
-                If side effects are affecting daily life, contact your prescriber
-                rather than stopping treatment on your own.
+                If side effects are affecting daily life, contact your
+                prescriber rather than stopping treatment on your own.
               </p>
             </GuideSection>
 
@@ -1339,7 +1340,7 @@ export default function ArticleClient() {
                 Health Wise does not prescribe or supply medicines. This page is
                 general information and is not medical advice.
               </p>
-</GuideSection>
+            </GuideSection>
           </article>
 
           <div className="mt-10">
@@ -1348,6 +1349,10 @@ export default function ArticleClient() {
               title={TITLE}
               description={DESCRIPTION}
             />
+          </div>
+
+          <div className="mt-6">
+            <GooglePreferredSourceButton />
           </div>
         </BlogArticleColumn>
       </div>
