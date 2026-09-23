@@ -26,14 +26,9 @@ export default function BrandHoverText({
 
   return (
     <span
-      className={`group/brand relative inline-flex max-w-full ${className}`.trim()}
+      data-tooltip={brandLabel}
+      className={`group/brand relative inline-flex max-w-full before:pointer-events-none before:absolute before:bottom-[calc(100%+6px)] before:left-1/2 before:z-30 before:-translate-x-1/2 before:whitespace-nowrap before:rounded-md before:bg-white before:px-2.5 before:py-1 before:text-xs before:font-medium before:text-slate-800 before:opacity-0 before:shadow-md before:ring-1 before:ring-slate-200/90 before:transition-opacity before:duration-150 before:content-[attr(data-tooltip)] group-hover/brand:before:opacity-100 group-focus-within/brand:before:opacity-100 ${className}`.trim()}
     >
-      <span
-        role="tooltip"
-        className="pointer-events-none absolute bottom-[calc(100%+6px)] left-1/2 z-30 -translate-x-1/2 whitespace-nowrap rounded-md bg-white px-2.5 py-1 text-xs font-medium text-slate-800 opacity-0 shadow-md ring-1 ring-slate-200/90 transition-opacity duration-150 group-hover/brand:opacity-100 group-focus-within/brand:opacity-100"
-      >
-        {brandLabel}
-      </span>
       <span tabIndex={0} className="max-w-full outline-none">
         {publicLabel}
       </span>

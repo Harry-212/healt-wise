@@ -42,7 +42,7 @@ function labelFromGuideSlug(slug: string): string {
 /** Canonical display titles for guides where the slug-derived label is misleading. */
 const GUIDE_TITLE_OVERRIDES: Partial<Record<string, string>> = {
   "glp1-content-removed-weight-loss-advice-uk":
-    "Why Weight Loss Treatment Content Is Being Removed by Social Media: Impact on Weight Loss Advice in the UK",
+    "Weight Loss Advice Removed by Social Media",
 };
 
 export function getRecommendedReadingPool(): RecommendedItem[] {

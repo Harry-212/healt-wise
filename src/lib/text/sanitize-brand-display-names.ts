@@ -54,5 +54,13 @@ export function sanitizeBrandDisplayNames(
     "Weight Loss Treatment comparison",
   );
 
+  // Collapse adjacent repeats left when two+ brand names sat next to each
+  // other in the original text (e.g. "Mounjaro Wegovy" -> "Weight Loss
+  // Treatment Weight Loss Treatment").
+  out = out.replace(
+    /(Weight Loss Treatment)(?:\s+Weight Loss Treatment)+/gi,
+    "$1",
+  );
+
   return out;
 }

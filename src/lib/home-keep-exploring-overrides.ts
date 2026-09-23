@@ -10,15 +10,15 @@ const OVERRIDES: Partial<Record<string, Partial<RecommendedItem>>> = {
   },
   "/blog/mounjaro-weight-loss-injections-game-changer": {
     imageUrl: "/blog/mounjaro%20weight%20loss%20before%20and%20after.webp",
-    title: "Could Weight Loss Treatment Be Your Game-Changer?",
+    title: "Could Mounjaro Be Your Game-Changer?",
     description:
-      "Could prescription weight loss treatment be your breakthrough to finally conquer stubborn diet plateaus? A UK-focused overview.",
+      "Could Mounjaro be your breakthrough to finally conquer stubborn diet plateaus? A UK-focused overview.",
   },
   "/blog/mounjaro-vs-ozempic-smart-comparisons-for-better-results": {
     imageUrl: "/blog/mounjaro%20weight%20loss%20results.webp",
-    title: "Weight Loss Treatment Comparisons: Smarter UK Choices",
+    title: "Mounjaro vs Ozempic: Which Is Right for You?",
     description:
-      "Compare weight loss treatment options in the UK with clear, independent context — eligibility, access, and what to ask a prescriber.",
+      "Compare Mounjaro and Ozempic in the UK with clear, independent context — eligibility, access, and what to ask a prescriber.",
   },
 };
 
