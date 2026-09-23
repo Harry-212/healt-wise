@@ -411,11 +411,7 @@ export default function HelpfulGuidesListing({
       ? `Clear, evidence-based guides on ${activeCategoryLabel.toLowerCase()} and UK healthcare regulation.`
       : "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
     url: collectionUrl,
-    hasPart: filtered.map((g) => ({
-      "@type": "Article",
-      name: g.title,
-      url: `${siteOrigin()}${helpfulGuidePath(g.slug)}`,
-    })),
+    hasPart: filtered.map((g) => `${siteOrigin()}${helpfulGuidePath(g.slug)}`),
   };
 
   return (

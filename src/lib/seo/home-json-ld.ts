@@ -66,7 +66,7 @@ function homeSchemaOrganization(base: string): Record<string, unknown> {
     ],
     sameAs: [...SITE_SOCIAL_PROFILES],
     termsOfService: `${base}/terms-of-service`,
-    publishingPrinciples: `${base}/privacy-policy`,
+    publishingPrinciples: `${base}/editorial-policy`,
   };
 }
 
