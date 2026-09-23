@@ -45,7 +45,7 @@ export function CookieConsent({ onConsent }: { onConsent: (choice: ConsentChoice
     >
       <div className="mx-auto flex max-w-4xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-slate-600">
-          We use cookies for analytics (Google Analytics and Microsoft Clarity) to
+          We use cookies for analytics (Google Analytics) to
           understand how visitors use this site. No personal data is sold or shared
           for advertising. You can change your choice at any time in our{" "}
           <a href="/privacy-policy" className="font-medium text-emerald-700 underline hover:text-emerald-800">

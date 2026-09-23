@@ -19,7 +19,7 @@ const CONTENT_SECURITY_POLICY = [
   [
     "script-src 'self' 'unsafe-inline'",
     isDev ? "'unsafe-eval'" : null,
-    "https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms",
+    "https://www.googletagmanager.com",
   ]
     .filter(Boolean)
     .join(" "),
@@ -27,7 +27,7 @@ const CONTENT_SECURITY_POLICY = [
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   "media-src 'self' https:",
-  "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.clarity.ms https://*.clarity.ms",
+  "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
   "frame-src 'self' https://www.google.com https://maps.google.com",
   "worker-src 'self' blob:",
   "upgrade-insecure-requests",
