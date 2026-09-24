@@ -20,6 +20,7 @@ import type { BlogFeedTag } from "@/lib/blog-feed";
 import { blogHubPath, blogPagePath } from "@/lib/blog-feed";
 import type { FeedArticle } from "@/lib/blog-feed";
 import { imgbbDisplaySrc } from "@/lib/imgbb-display-src";
+import { blogListingHeading, blogListingIntro } from "@/lib/seo/blog-hub-metadata";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -196,6 +197,14 @@ export default function BlogClient({
         ref={heroRef}
         className="mx-auto max-w-7xl px-4 pb-16 pt-10 text-white sm:px-8 md:px-12"
       >
+        <header className="hero-stagger mb-10 max-w-3xl">
+          <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            {blogListingHeading(activeTopic, currentPage)}
+          </h1>
+          <p className="mt-3 text-base leading-relaxed text-slate-400 sm:text-lg">
+            {blogListingIntro(activeTopic)}
+          </p>
+        </header>
         {featured ? (
           <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
             <div className="flex flex-col gap-6 lg:w-7/12 hero-stagger">
@@ -220,9 +229,9 @@ export default function BlogClient({
                     </span>
                   </div>
                 </div>
-                <h1 className="mt-6 text-2xl font-medium leading-tight tracking-tight text-white transition-colors group-hover:text-[#9ea7ff] sm:text-3xl md:text-4xl">
+                <h2 className="mt-6 text-2xl font-medium leading-tight tracking-tight text-white transition-colors group-hover:text-[#9ea7ff] sm:text-3xl md:text-4xl">
                   {featured.title}
-                </h1>
+                </h2>
               </Link>
               <div>
                 <Link

@@ -26,6 +26,22 @@ export const HELPFUL_GUIDE_CATEGORIES: ReadonlyArray<{
   { slug: "regulation", label: "Regulation" },
 ];
 
+/** One-line intro per category listing, describing the guides it holds. */
+export const HELPFUL_GUIDE_CATEGORY_INTROS: Record<HelpfulGuideCategorySlug, string> = {
+  medications:
+    "Guides to Mounjaro and Wegovy treatment in the UK: how the medicines work, how long access takes, weight-loss plateaus, pregnancy and other questions to raise with your prescriber.",
+  "pharmacy-safety":
+    "How to choose and use a UK pharmacy for weight-loss treatment: GPhC checks, local versus online pharmacies, switching provider and chilled delivery.",
+  "safety-checks":
+    "Practical safety checks while on treatment: spotting fake online pharmacies, disposing of used pens, travelling with medication and staying safe in hot weather.",
+  nutrition:
+    "Eating well alongside GLP-1 treatment: what to eat for steady progress and how approaches such as calorie cycling fit with Mounjaro.",
+  "side-effects":
+    "Guides to common side effects and setbacks on treatment, from constipation and feeling cold to stomach bugs and restarting after a break.",
+  regulation:
+    "How UK rules affect weight-loss treatment: whether pharmacies tell your GP, and why some online treatment content is being removed.",
+};
+
 const CATEGORY_SLUG_SET = new Set<string>(HELPFUL_GUIDE_CATEGORY_SLUGS);
 
 const CATEGORY_LABEL_TO_SLUG = Object.fromEntries(

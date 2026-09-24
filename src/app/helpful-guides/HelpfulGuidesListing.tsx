@@ -3,6 +3,7 @@ import Link from "next/link";
 import { GUIDE_IMAGES } from "@/lib/guide-images";
 import {
   HELPFUL_GUIDE_CATEGORIES,
+  HELPFUL_GUIDE_CATEGORY_INTROS,
   HELPFUL_GUIDES_HUB_PATH,
   helpfulGuidePath,
   helpfulGuidesCategoryHubPath,
@@ -25,8 +26,8 @@ export function helpfulGuidesListingMetadata(
     ? `${activeCategory.label} Guides | Healthwise360`
     : "Helpful Health Guides | Healthwise360";
 
-  const description = activeCategory
-    ? `Explore our clear, evidence-based UK guides on ${activeCategory.label.toLowerCase()}, treatment safety, and healthcare regulation.`
+  const description = categorySlug
+    ? HELPFUL_GUIDE_CATEGORY_INTROS[categorySlug]
     : HELPFUL_GUIDES_DESCRIPTION;
 
   const canonicalPath = categorySlug
@@ -407,8 +408,8 @@ export default function HelpfulGuidesListing({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: `${categoryName} | Healthwise360`,
-    description: activeCategoryLabel
-      ? `Clear, evidence-based guides on ${activeCategoryLabel.toLowerCase()} and UK healthcare regulation.`
+    description: activeCategorySlug
+      ? HELPFUL_GUIDE_CATEGORY_INTROS[activeCategorySlug]
       : "Clear, evidence-based guides on GLP-1 treatments, pharmacy safety, and UK healthcare regulation.",
     url: collectionUrl,
     hasPart: filtered.map((g) => `${siteOrigin()}${helpfulGuidePath(g.slug)}`),
@@ -428,12 +429,20 @@ export default function HelpfulGuidesListing({
             Healthwise360
           </p>
           <h1 className="mt-3 max-w-2xl text-balance text-3xl font-bold text-white sm:text-4xl md:text-5xl">
-            Your Helpful Health Guides
+            {activeCategoryLabel
+              ? `${activeCategoryLabel} Guides`
+              : "Your Helpful Health Guides"}
           </h1>
           <p className="mt-4 max-w-xl text-base text-slate-400 sm:text-lg">
-            Evidence-based guidance on GLP-1 treatments, pharmacy safety, and
-            UK healthcare regulation—so you can make safer, more informed
-            decisions.
+            {activeCategorySlug ? (
+              HELPFUL_GUIDE_CATEGORY_INTROS[activeCategorySlug]
+            ) : (
+              <>
+                Evidence-based guidance on GLP-1 treatments, pharmacy safety,
+                and UK healthcare regulation—so you can make safer, more
+                informed decisions.
+              </>
+            )}
           </p>
 
           {/* Category filter pills */}
