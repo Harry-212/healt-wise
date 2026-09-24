@@ -166,7 +166,6 @@ export default async function ComparePage({ params }: Props) {
           navLinks={layout.hero.navLinks}
           wideDesktopHero={isTripleHub}
           showSnapshotPill={!isTripleHub && !photoHero}
-          showLivePill={Boolean(photoHero) && !isTripleHub}
           highlightNavLinks={Boolean(photoHero) && !isTripleHub}
           heroPhotoSrc={
             isTripleHub ? COMPARE_GLP1_PRICE_HERO_IMAGE_SRC : photoHero?.src
@@ -175,7 +174,6 @@ export default async function ComparePage({ params }: Props) {
             isTripleHub ? COMPARE_GLP1_PRICE_HERO_IMAGE_ALT : photoHero?.alt
           }
           showSubtitleLiveDate={false}
-          livePillDateLabel={mounjaroLastUpdated}
         />
 
         <CompareMedPriceTabs

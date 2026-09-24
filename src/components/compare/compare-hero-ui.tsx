@@ -2,7 +2,6 @@
 
 import type { ReactNode } from "react";
 import { Sparkles } from "lucide-react";
-import { formatTodayUK } from "@/lib/hooks/useTodayLabel";
 
 export type CompareHeroAccent = "violet" | "emerald" | "sky";
 
@@ -51,50 +50,32 @@ export function GlassPill({ children }: { children: ReactNode }) {
   );
 }
 
-function todayUkParts() {
-  const d = new Date();
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  return {
-    display: formatTodayUK(d),
-    dateTime: `${y}-${m}-${day}`,
-  };
-}
-
-export function CompareHeroLivePill({
+/**
+ * "Prices checked · <date>" pill. Deliberately not labelled "Live" and not
+ * animated: provider prices are checked on specific dates, not streamed.
+ * Renders nothing when no checked date is supplied (never falls back to
+ * today's date).
+ */
+export function CompareHeroPricesCheckedPill({
   sparkleClassName,
   dateLabel,
 }: {
   sparkleClassName: string;
-  /** When supplied, shows this label instead of today's date. */
   dateLabel?: string;
 }) {
-  const today = todayUkParts();
-  const display = dateLabel ?? today.display;
-  const dateTime = dateLabel ? undefined : today.dateTime;
+  if (!dateLabel) return null;
 
   return (
     <GlassPill>
       <span className="inline-flex items-center gap-2">
-        <span className="relative flex h-2 w-2 shrink-0" aria-hidden>
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/75 opacity-75" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-        </span>
         <Sparkles
           className={`h-3.5 w-3.5 shrink-0 ${sparkleClassName}`}
           aria-hidden
         />
         <span>
-          <span className="font-semibold text-white">Live</span>
+          <span className="font-semibold text-white">Prices checked</span>
           {" · "}
-          {dateTime ? (
-            <time dateTime={dateTime} className="text-white/90">
-              {display}
-            </time>
-          ) : (
-            <span className="text-white/90">{display}</span>
-          )}
+          <span className="text-white/90">{dateLabel}</span>
         </span>
       </span>
     </GlassPill>

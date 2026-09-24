@@ -8,7 +8,6 @@ import ComparePricePhotoHeroShell from "@/components/compare/ComparePricePhotoHe
 import {
   COMPARE_HERO_NAV_GRID_CLASS,
   COMPARE_HERO_NAV_LINK_CLASS,
-  CompareHeroLivePill,
 } from "@/components/compare/compare-hero-ui";
 import {
   ShaderBackground,
@@ -96,9 +95,7 @@ export default function CompareTreatmentsHero({
   heroPhotoSrc,
   heroPhotoAlt = "",
   showSubtitleLiveDate = false,
-  showLivePill = false,
   highlightNavLinks = false,
-  livePillDateLabel,
 }: {
   variant: HeroShaderVariant;
   eyebrow: string;
@@ -115,12 +112,8 @@ export default function CompareTreatmentsHero({
   heroPhotoSrc?: string;
   heroPhotoAlt?: string;
   showSubtitleLiveDate?: boolean;
-  /** Live · today pill above the title (photo heroes). */
-  showLivePill?: boolean;
   /** Larger bordered nav pills (photo heroes). */
   highlightNavLinks?: boolean;
-  /** Override the Live pill date with a real "last updated" label. */
-  livePillDateLabel?: string;
 }) {
   const shaderMinH = wideDesktopHero
     ? "min-h-[min(82svh,580px)] sm:min-h-[min(80svh,640px)] md:min-h-[min(82svh,700px)] lg:min-h-[min(88svh,780px)] xl:min-h-[min(90svh,860px)]"
@@ -173,9 +166,7 @@ export default function CompareTreatmentsHero({
 
       <main className={mainClass}>
         <div className={contentMaxClass}>
-          {showLivePill ? (
-            <CompareHeroLivePill sparkleClassName={sparkClass[variant]} dateLabel={livePillDateLabel} />
-          ) : showSnapshotPill ? (
+          {showSnapshotPill ? (
             <GlassPill>
               <span className="inline-flex items-center gap-1.5">
                 <Sparkles

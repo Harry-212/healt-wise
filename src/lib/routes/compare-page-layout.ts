@@ -43,7 +43,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       titleBold: "Mounjaro vs Wegovy",
       subtitle:
         "Side-by-side UK pharmacy prices, charts, and context — same data as our dedicated price pages.",
-      snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
+      snapshotLabel: "Prices checked on the dates shown · confirm with the provider before you pay",
       navLinks: [
         { href: "/what-is-wegovy", label: "What Is Wegovy" },
         { href: "/what-is-mounjaro", label: "What Is Mounjaro" },
@@ -87,7 +87,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       titleBold: "Mounjaro vs Saxenda",
       subtitle:
         "Weekly GIP/GLP-1 vs daily GLP-1 — UK pack prices, filters, and charts in one place.",
-      snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
+      snapshotLabel: "Prices checked on the dates shown · confirm with the provider before you pay",
       navLinks: [
         { href: "/what-is-mounjaro", label: "What Is Mounjaro" },
         { href: "/what-is-saxenda", label: "What Is Saxenda" },
@@ -131,7 +131,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       titleBold: "Wegovy vs Saxenda",
       subtitle:
         "Weekly semaglutide vs daily liraglutide — UK pack prices, filters, and charts in one place.",
-      snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
+      snapshotLabel: "Prices checked on the dates shown · confirm with the provider before you pay",
       navLinks: [
         { href: "/what-is-wegovy", label: "What Is Wegovy" },
         { href: "/what-is-saxenda", label: "What Is Saxenda" },
@@ -175,7 +175,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       titleBold: "Compare Mounjaro, Wegovy and Saxenda in the UK",
       subtitle:
         "Compare active ingredients, dosing schedules, clinical evidence, eligibility, side effects and current UK provider prices.",
-      snapshotLabel: "Illustrative UK snapshot · verify live before you pay",
+      snapshotLabel: "Prices checked on the dates shown · confirm with the provider before you pay",
       navLinks: [
         { href: "/what-is-mounjaro", label: "Mounjaro" },
         { href: "/what-is-wegovy", label: "Wegovy" },
@@ -210,6 +210,6 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
     sideEffectsBody:
       "Gastrointestinal symptoms are common early across these therapies. Pancreatitis, gallbladder disease, and other risks appear in each summary of product characteristics. Daily versus weekly dosing schedules change counselling points — always read the PIL for the medicine you are prescribed.",
     bestChoiceBody:
-      "Total treatment cost usually includes assessment or consultation fees, delivery or cold-chain charges, follow-up, and the medicine itself. Compare illustrative pharmacy rows in the tabs above, then confirm live checkout totals, eligibility criteria, and NHS versus private access options with a regulated provider.",
+      "Total treatment cost usually includes assessment or consultation fees, delivery or cold-chain charges, follow-up, and the medicine itself. Compare the pharmacy rows in the tabs above, then confirm live checkout totals, eligibility criteria, and NHS versus private access options with a regulated provider.",
   },
 };

@@ -8,7 +8,7 @@ import ComparePricePhotoHeroShell from "@/components/compare/ComparePricePhotoHe
 import {
   COMPARE_HERO_NAV_INLINE_CLASS,
   COMPARE_HERO_NAV_LINK_CLASS,
-  CompareHeroLivePill,
+  CompareHeroPricesCheckedPill,
   compareHeroEligibilityClass,
   compareHeroFooterLinkClass,
 } from "@/components/compare/compare-hero-ui";
@@ -56,7 +56,7 @@ export default function SaxendaCompareShaderHero({
 
       <main className="relative z-20 flex flex-1 flex-col justify-end px-4 pb-12 pt-6 md:px-10 md:pb-16 lg:px-14 lg:pb-20">
         <div className="mx-auto w-full max-w-4xl text-center lg:mx-0 lg:max-w-3xl lg:text-left">
-          <CompareHeroLivePill sparkleClassName="text-sky-200" dateLabel={lastUpdated} />
+          <CompareHeroPricesCheckedPill sparkleClassName="text-sky-200" dateLabel={lastUpdated} />
 
           <h1 className="mb-4 text-balance text-4xl leading-[1.08] font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
             <span
