@@ -14,6 +14,11 @@ import {
   startingPrice,
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
+import {
+  buildMounjaroPriceInsights,
+  formatDose,
+  formatGbp,
+} from "@/lib/data/mounjaro-price-insights";
 import { getMounjaroCompareProviders } from "@/lib/data/compare-live";
 import { getMounjaroLastUpdatedLabel } from "@/lib/data/compare-store";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -61,7 +66,7 @@ function compareWebPageJsonLd() {
     description:
       "Compare Mounjaro prices by dose across 60+ GPhC-registered UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
     url: `${base}/mounjaro-price-comparison`,
-    dateModified: "2026-04-07",
+    dateModified: "2026-09-24",
     isPartOf: {
       "@type": "WebSite",
       name: "Healthwise360",
@@ -87,6 +92,7 @@ export default function CompareMounjaroPricesUkPage() {
   const bestValue =
     MOUNJARO_UK_COMPARE_PROVIDERS.find((p) => p.badges?.includes("bestValue")) ??
     MOUNJARO_UK_COMPARE_PROVIDERS[0];
+  const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
 
   return (
     <>
@@ -141,8 +147,8 @@ export default function CompareMounjaroPricesUkPage() {
                 More Mounjaro pricing resources
               </h2>
               <p className="mt-3 text-slate-600">
-                Use these supporting guides to understand list prices, maintenance
-                policies, and common provider questions before comparing pharmacies.
+                Questions about Mounjaro fees, pen strengths and switching
+                provider are answered in more depth here.
               </p>
             </div>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -172,13 +178,24 @@ export default function CompareMounjaroPricesUkPage() {
               <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
                 Mounjaro price UK: what you can expect
               </h2>
-              <p className="mt-4 max-w-3xl text-slate-600 leading-relaxed">
-                Mounjaro prices in the UK vary depending on the provider, dose,
-                and included services. Entry-level pricing often starts lower,
-                but monthly costs can increase as you titrate to higher strengths.
-                The charts below summarise how listed prices spread and climb by
-                pen strength across our snapshot — not a quote for your care.
-              </p>
+              {insights ? (
+                <p className="mt-4 max-w-3xl text-slate-600 leading-relaxed">
+                  Across the {insights.providerCount} providers in our table
+                  (prices checked {mounjaroLastUpdated}), a{" "}
+                  {formatDose(insights.starter.dose)} starter pen is listed from{" "}
+                  {formatGbp(insights.starter.low)} to{" "}
+                  {formatGbp(insights.starter.high)}, with a median of{" "}
+                  {formatGbp(insights.starter.median)}. At{" "}
+                  {formatDose(insights.top.dose)}, the highest strength, the range
+                  is {formatGbp(insights.top.low)} to{" "}
+                  {formatGbp(insights.top.high)} (median{" "}
+                  {formatGbp(insights.top.median)}). For the same provider, moving
+                  from {formatDose(insights.starter.dose)} to{" "}
+                  {formatDose(insights.top.dose)} adds a median of{" "}
+                  {formatGbp(insights.medianStepUp)} per pen. The charts below
+                  show how prices spread at each strength.
+                </p>
+              ) : null}
             </div>
             <div className="grid gap-8 lg:grid-cols-1">
               <MounjaroCompareChartsSection
@@ -193,32 +210,38 @@ export default function CompareMounjaroPricesUkPage() {
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
               Why do Mounjaro prices vary in the UK?
             </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              Prices can differ based on:
-            </p>
+            {insights ? (
+              <p className="mt-4 text-slate-600 leading-relaxed">
+                The same pen strength can cost very different amounts. The
+                widest gap in our table is at{" "}
+                {formatDose(insights.widest.dose)}, where listed prices run from{" "}
+                {formatGbp(insights.widest.low)} to{" "}
+                {formatGbp(insights.widest.high)}. The main reasons:
+              </p>
+            ) : null}
             <ul className="mt-4 list-inside list-disc space-y-2 text-slate-700">
               <li>
-                <strong className="font-semibold text-slate-900">Dose</strong>{" "}
-                — higher strengths typically cost more per month.
+                <strong className="font-semibold text-slate-900">
+                  Pen strength
+                </strong>{" "}
+                — each strength from 2.5 mg to 15 mg is priced separately, and
+                most providers charge more for each step up.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">
-                  Consultation fees
+                  Consultation model
                 </strong>{" "}
-                — some sites bundle assessment into the medicine price; others
-                break it out.
+                — online doctors and pharmacies may include the prescriber
+                assessment in the pen price, while programmes may bundle
+                coaching or app support.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">
-                  Delivery and cold-chain logistics
+                  Chilled delivery
                 </strong>{" "}
-                — refrigerated shipping affects headline totals.
-              </li>
-              <li>
-                <strong className="font-semibold text-slate-900">
-                  Support services
-                </strong>{" "}
-                — reviews, apps, or coaching may be reflected in pricing.
+                — Mounjaro pens are sent refrigerated. Delivery is usually
+                charged on top of the table prices; check each provider&apos;s
+                delivery note.
               </li>
             </ul>
           </div>
@@ -230,10 +253,19 @@ export default function CompareMounjaroPricesUkPage() {
               Cheapest Mounjaro vs best value: what matters?
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              The lowest price is not always the best option. Some providers
-              include consultations, support, or faster delivery, which may
-              offer better overall value once you factor in time, convenience,
-              and clinical follow-up.
+              {insights &&
+              insights.starter.lowProvider !== insights.top.lowProvider ? (
+                <>
+                  The cheapest {formatDose(insights.starter.dose)} starter pen
+                  is not the cheapest at {formatDose(insights.top.dose)}: in our
+                  table the lowest starter price is from{" "}
+                  {insights.starter.lowProvider}, but the lowest{" "}
+                  {formatDose(insights.top.dose)} price is from{" "}
+                  {insights.top.lowProvider}.{" "}
+                </>
+              ) : null}
+              Because most of a year is spent at a maintenance strength,
+              compare the dose you expect to stay on, not only the first pen.
             </p>
             <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200/90 shadow-sm">
               <table className="w-full border-collapse text-left text-sm">
@@ -318,10 +350,48 @@ export default function CompareMounjaroPricesUkPage() {
               How dose affects Mounjaro cost
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              As dose increases, the cost of treatment typically rises. Most
-              people begin at a lower strength and titrate over time; your
-              prescriber will individualise the schedule.
+              Lowest, median and highest listed price per pen at each strength
+              across our table. Your prescriber decides which strength you use
+              and when it changes.
             </p>
+            {insights ? (
+              <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white">
+                <table className="w-full text-left text-sm">
+                  <caption className="sr-only">
+                    Lowest, median and highest listed Mounjaro pen price by
+                    strength
+                  </caption>
+                  <thead className="bg-slate-50 text-slate-700">
+                    <tr>
+                      <th scope="col" className="px-4 py-3 font-semibold">
+                        Pen strength
+                      </th>
+                      <th scope="col" className="px-4 py-3 font-semibold">
+                        Lowest listed
+                      </th>
+                      <th scope="col" className="px-4 py-3 font-semibold">
+                        Median
+                      </th>
+                      <th scope="col" className="px-4 py-3 font-semibold">
+                        Highest listed
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 text-slate-600">
+                    {insights.doses.map((d) => (
+                      <tr key={d.dose}>
+                        <th scope="row" className="px-4 py-3 font-medium text-slate-900">
+                          {formatDose(d.dose)}
+                        </th>
+                        <td className="px-4 py-3 tabular-nums">{formatGbp(d.low)}</td>
+                        <td className="px-4 py-3 tabular-nums">{formatGbp(d.median)}</td>
+                        <td className="px-4 py-3 tabular-nums">{formatGbp(d.high)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
           </div>
         </section>
 
@@ -329,6 +399,14 @@ export default function CompareMounjaroPricesUkPage() {
           medicine="Mounjaro"
           estimates={annualCosts}
           providerCount={MOUNJARO_UK_COMPARE_PROVIDERS.length}
+          intro={
+            <>
+              Mounjaro usually starts at 2.5 mg once a week for four weeks, then
+              increases in 2.5 mg steps no sooner than every four weeks, up to
+              15 mg. Year one therefore includes several months on lower-priced
+              pens before any maintenance strength.
+            </>
+          }
         />
 
         <NhsAccessSection medicine="Mounjaro">
@@ -347,10 +425,12 @@ export default function CompareMounjaroPricesUkPage() {
               A note on discounted Mounjaro prices
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              Some providers may offer introductory discounts, subscription
-              pricing, or bundles. We have not been able to independently confirm
-              any current discount terms, so promotional badges are hidden until
-              verified. Always check the provider&apos;s site for the latest offers.
+              Prices in our Mounjaro table are standard list prices. First-order
+              voucher codes are excluded, and delivery is excluded unless a
+              provider only sells it as part of a programme price. Some providers
+              also advertise introductory, subscription or multi-month pricing;
+              we have not independently confirmed those terms, so they are not
+              shown. Check the provider&apos;s site for current offers.
             </p>
           </div>
         </section>
@@ -404,8 +484,8 @@ export default function CompareMounjaroPricesUkPage() {
               Ready to compare and next-step your care?
             </h2>
             <p className="mt-4 text-slate-300">
-              Use the table to shortlist providers, then confirm eligibility and
-              live pricing on regulated sites.
+              Shortlist providers at the strength you expect to use, then
+              confirm eligibility and the final total with the provider.
             </p>
             <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <CompareHereLink href="#mounjaro-compare-table" size="footer" />

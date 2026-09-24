@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type {
   AnnualCostEstimates,
   AnnualCostRow,
@@ -62,10 +63,13 @@ export default function AnnualCostSection({
   medicine,
   estimates,
   providerCount,
+  intro,
 }: {
   medicine: string;
   estimates: AnnualCostEstimates;
   providerCount: number;
+  /** Medicine-specific opening paragraph; defaults to the shared wording. */
+  intro?: ReactNode;
 }) {
   if (estimates.yearOne.length === 0 && estimates.ongoing.length === 0) {
     return null;
@@ -81,11 +85,16 @@ export default function AnnualCostSection({
           Total {medicine} cost: first year vs ongoing
         </h2>
         <p className="mt-4 leading-relaxed text-slate-600">
-          Monthly pen prices only tell part of the story. Most people spend
-          the first few months on lower starter strengths before settling on a
-          maintenance dose, so year one usually costs less than a full year at
-          maintenance. The figures below are calculated from the pen prices of
-          the {providerCount} providers in our table: one pen covers four weekly
+          {intro ?? (
+            <>
+              Monthly pen prices only tell part of the story. Most people spend
+              the first few months on lower starter strengths before settling on
+              a maintenance dose, so year one usually costs less than a full year
+              at maintenance.
+            </>
+          )}{" "}
+          The figures below are calculated from the pen prices of the{" "}
+          {providerCount} providers in our table: one pen covers four weekly
           doses, so a year is {PENS_PER_YEAR} pens.
         </p>
 
