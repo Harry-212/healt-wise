@@ -283,9 +283,9 @@ export default function AboutScrollyClient() {
                   </Link>{" "}
                   lean on transparent criteria—provider pricing, availability
                   and pharmacy verification—so you can align cost with safety
-                  posture. Where affiliate relationships apply, we disclose
-                  them and keep editorial independence separate from
-                  commercial links.
+                  posture. We do not currently earn commission from any
+                  provider we list; if that changes, those links will be
+                  labelled and will not affect how providers are ranked.
                 </p>
               </div>
             </div>
@@ -478,8 +478,8 @@ export default function AboutScrollyClient() {
           >
             Founded in 2026, {SITE_BRAND_NAME} exists to make UK weight loss
             provider markets easier to navigate—as an independent comparison
-            website with clear methodology, pharmacy checks and honest
-            affiliate disclosure.
+            website with clear methodology, pharmacy checks and clear
+            disclosure of any commercial relationships.
           </motion.p>
           <motion.div
             variants={staggerItem}

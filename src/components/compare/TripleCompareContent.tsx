@@ -124,7 +124,7 @@ const METHODOLOGY_POINTS = [
   },
   {
     label: "Affiliate disclosure",
-    body: "Some outbound links may earn a commission. This never changes rankings, prices you pay, or which providers are included.",
+    body: "Healthwise360 does not currently earn commission from providers on this page. If that changes, the links will be labelled, and it will never change rankings, the prices shown or which providers are included.",
   },
 ];
 

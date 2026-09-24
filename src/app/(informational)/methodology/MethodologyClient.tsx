@@ -796,14 +796,14 @@ export default function MethodologyClient() {
                       Affiliate Links & Commercial Relationships
                     </h3>
                     <p className="mt-3 text-slate-600 leading-relaxed">
-                      Transparency is absolute. Some outbound links on Healthwise360 may be tracked as affiliate links. If a user clicks these links and purchases treatment, we may earn a referral commission.
+                      Healthwise360 does not currently earn commission from any provider listed on this site. If we introduce affiliate or referral links in future, we will label them clearly and update this policy.
                     </p>
                   </div>
 
                   <div className="rounded-2xl border border-amber-200/60 bg-amber-50/20 p-5 sm:p-6">
                     <h4 className="font-extrabold text-slate-900 text-sm uppercase tracking-wider mb-2">Our Financial Integrity Pledge</h4>
                     <p className="text-sm leading-relaxed text-slate-600">
-                      Affiliate relationships do not control our core comparison methodology. We never allow a provider to buy a higher safety position, alter regulatory feedback, remove legitimate consumer warnings, or override our strict safety evaluation standards. 
+                      Commercial relationships never change how providers are ranked or the prices we show. No provider can buy a higher safety position, alter regulatory feedback, remove legitimate consumer warnings, or override our safety evaluation standards.
                     </p>
                   </div>
                 </section>
