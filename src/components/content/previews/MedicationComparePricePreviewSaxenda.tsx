@@ -121,8 +121,7 @@ export default function MedicationComparePricePreviewSaxenda() {
                     </>
                   ) : (
                     <>
-                      Interactive table: sort, filter, and discount preview on the
-                      comparison page.
+                      Interactive table: sort and filter on the comparison page.
                     </>
                   )}
                 </p>

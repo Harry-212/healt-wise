@@ -6,7 +6,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
   "wegovy-vs-mounjaro": [
     {
       q: "Are the prices on this page live checkout prices?",
-      a: "No. Figures are illustrative snapshots based on the same structured dataset we use on our dedicated price comparison pages. Pharmacies change prices, promotions, and bundles often. Always confirm the total at checkout on the provider you choose before you pay.",
+      a: "No. Provider prices were checked on the dates shown in each table. Prices and availability can change; confirm the final total and any additional charges with the provider before you pay.",
     },
     {
       q: "Why do Wegovy and Mounjaro monthly costs look so different?",
@@ -22,7 +22,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "How often is the comparison data refreshed?",
-      a: "Each matrix shows a visible data label near the heading. We update illustrative batches periodically, but private pharmacies can move faster than our labels. Treat numbers as a planning guide, not a quote.",
+      a: "Each table shows the date its prices were checked. Private providers can change prices between checks, so treat the figures as a planning guide, not a quote.",
     },
     {
       q: "What do the charts add beyond the matrix?",
@@ -56,16 +56,16 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
       a: "Not automatically. Total monthly cost depends on pack maths, dose progression, bundled fees, and how many pens you use per month. Compare totals in each tab rather than assuming from injection frequency alone.",
     },
     {
-      q: "Are these matrices suitable for NHS pricing?",
-      a: "This hub focuses on illustrative private pharmacy listings in our dataset. NHS pathways and charges differ by region and eligibility. Use NHS services for entitlement questions.",
+      q: "Does this page cover NHS prescriptions?",
+      a: "No. It compares private provider prices only. NHS access to Mounjaro and Saxenda follows local eligibility rules and service capacity; ask your GP or an NHS weight management service.",
     },
     {
       q: "Can I compare side-effect risk from the price matrix?",
       a: "No. Safety information belongs in the summary of product characteristics and patient information leaflet for your prescribed medicine. This page is intentionally pricing-focused.",
     },
     {
-      q: "What does “balance pick” mean in the snapshot strip?",
-      a: "It highlights a provider that scores well on a blend of factors in our illustrative model, not only the lowest headline price. It is a navigation aid, not a personal recommendation.",
+      q: "How many Saxenda pens are needed for a month?",
+      a: "Each Saxenda pen contains 18 mg of liraglutide. At the 3 mg daily maintenance dose that is six days per pen, so about five pens for 30 days; at lower starting doses a pen lasts longer. Your prescriber sets the dose.",
     },
     {
       q: "How do filters help with Saxenda pack sizes?",
@@ -76,8 +76,8 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
       a: "Yes. Each medicine has manufacturer storage guidance; pharmacies also describe dispatch and packaging in their listings. Read those details before you commit, especially in warm weather.",
     },
     {
-      q: "Can I trust discount preview modes?",
-      a: "Discount previews show how a listed promotion might affect totals when our dataset captures it. Promotions expire and eligibility rules apply at checkout.",
+      q: "Are discounts or introductory offers included?",
+      a: "No. The tables show standard list prices. First-order voucher codes and introductory offers are not included, because we have not independently confirmed their terms.",
     },
     {
       q: "What if my prescriber recommends a dose not listed in the matrix?",
@@ -100,7 +100,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "Are the prices live checkout quotes?",
-      a: "No. Figures are illustrative snapshots from the same structured datasets as our dedicated price pages. Always confirm the total at checkout before you pay.",
+      a: "No. Each table shows the date its provider prices were checked, and prices can change after that. Confirm the final total, including any consultation or delivery charge, with the provider.",
     },
     {
       q: "Can I use this page to choose between Wegovy and Saxenda?",
@@ -111,24 +111,24 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
       a: "Saxenda is often listed in multi-pen packs, while Wegovy is commonly listed by weekly strength and pen price. Use pack-size and dose columns to normalise what you are comparing.",
     },
     {
-      q: "Will delivery and cold-chain rules differ between the tabs?",
-      a: "Yes. Each medicine has manufacturer storage guidance, and pharmacies describe dispatch and packaging differently. Read those details before you commit.",
+      q: "Do both medicines need chilled delivery?",
+      a: "Yes. Unopened Wegovy and Saxenda pens are kept refrigerated, so providers ship them in insulated packaging. Delivery charges are usually separate from the prices in the tables; check each provider's delivery details.",
     },
     {
-      q: "Are these matrices suitable for NHS pricing?",
-      a: "This hub focuses on illustrative private pharmacy listings. NHS pathways and charges differ by region and eligibility.",
+      q: "Can I get Wegovy or Saxenda on the NHS instead?",
+      a: "Possibly, through NHS weight management services where local criteria are met, but access and waiting times vary by area. This page compares private prices only; your GP can advise on NHS routes.",
     },
     {
-      q: "What if my prescribed dose is not listed?",
-      a: "Dose availability varies by pharmacy and stock. Use the matrix for typical pricing bands, then confirm the exact strength and price with your clinician’s recommended provider.",
+      q: "How do monthly pen counts compare?",
+      a: "At maintenance, one Wegovy pen holds four weekly doses, so about one pen per four weeks. A Saxenda pen holds 18 mg, which at 3 mg a day lasts six days, so about five pens for 30 days. Use the pen or pack price in each tab to compare a month.",
     },
     {
-      q: "Can I trust discount preview modes?",
-      a: "Discount previews show how a listed promotion might affect totals when our dataset captures it. Promotions expire and eligibility rules apply at checkout.",
+      q: "Is liraglutide the same as semaglutide?",
+      a: "No. Both are GLP-1 receptor agonists, but they are different molecules: liraglutide (Saxenda) is taken daily and semaglutide (Wegovy) weekly. They are not interchangeable dose for dose, and any switch is planned by a prescriber.",
     },
     {
-      q: "Where do I verify a pharmacy is legitimate?",
-      a: "Use the GPhC register for Great Britain pharmacies and follow our pharmacy safety guide for red flags when buying prescription medicines online.",
+      q: "How can I check who will dispense my medicine?",
+      a: "Look for the pharmacy's GPhC registration number and check it on the General Pharmaceutical Council register. Our pharmacy safety guide lists warning signs when buying prescription medicines online.",
     },
   ],
 

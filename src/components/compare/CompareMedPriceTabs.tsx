@@ -108,7 +108,7 @@ function MedPanel({
           </h2>
           <p className="mt-2 max-w-3xl text-sm text-slate-600 md:text-base">
             The same sortable matrix as our dedicated price page for this
-            medicine: column sort, filters, discount preview, and GPhC context.
+            medicine: column sort, filters and GPhC registration numbers.
           </p>
         </div>
         <CompareHereLink href={FULL_PAGE[med]} size="sm" className="shrink-0" />
