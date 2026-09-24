@@ -29,7 +29,6 @@ import {
   SITE_SHARE_IMAGE_SRC,
 } from "@/lib/site-assets";
 import { siteBusinessAddressLine } from "@/lib/site-contact";
-import { formatTodayUK } from "@/lib/format-uk-date";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -74,7 +73,6 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
   const wegovyProviders = getWegovyCompareProviders();
   const mounjaroLastUpdated = getMounjaroLastUpdatedLabel();
   const wegovyLastUpdated = getWegovyLastUpdatedLabel();
-  const lastChecked = formatTodayUK();
   const webLd = londonWebPageJsonLd();
   const faqLd = compareFaqPageJsonLd(LONDON_COMPARISON_FAQS);
   const localBusinessLd = londonComparisonJsonLdGraph();
@@ -113,7 +111,8 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
               Compare Mounjaro, Wegovy, and Saxenda prices from GPhC-registered
               UK pharmacies serving London — dose by dose, provider by
-              provider. Last checked {lastChecked}.
+              provider. Prices checked: Mounjaro {mounjaroLastUpdated}, Wegovy{" "}
+              {wegovyLastUpdated}, Saxenda {SAXENDA_UK_COMPARE_LAST_UPDATED}.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link

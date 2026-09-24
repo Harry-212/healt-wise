@@ -38,12 +38,11 @@ import {
 } from "@/lib/routes/compare-faqs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
-import {
-  formatTodayIsoDate,
-  formatTodayUK,
-} from "@/lib/format-uk-date";
 
 type Props = { params: Promise<{ slug: string }> };
+
+/** Update when the versus-page copy or FAQs change. */
+const COMPARE_PAGES_CONTENT_MODIFIED = "2026-09-24";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -136,7 +135,8 @@ export default async function ComparePage({ params }: Props) {
         saxendaChecked: SAXENDA_UK_COMPARE_LAST_UPDATED,
       });
   const pricesLastCheckedLabel = mounjaroLastUpdated;
-  const pricesLastCheckedIso = formatTodayIsoDate();
+  // Date the page content last changed — not "today" on every request.
+  const pricesLastCheckedIso = COMPARE_PAGES_CONTENT_MODIFIED;
   const webLd = compareWebPageJsonLd(
     slug,
     webLdName || layout.hero.titleBold,
