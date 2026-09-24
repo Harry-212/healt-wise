@@ -134,7 +134,7 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
         </section>
 
         <section className="w-full border-b border-slate-200/80">
-          <TrustBarMarquee staticRow />
+          <TrustBarMarquee />
         </section>
 
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">

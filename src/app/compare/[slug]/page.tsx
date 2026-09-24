@@ -199,7 +199,7 @@ export default async function ComparePage({ params }: Props) {
         />
 
         <section className="w-full border-b border-slate-200/80">
-          <TrustBarMarquee staticRow />
+          <TrustBarMarquee />
         </section>
 
         {isTripleHub ? (
