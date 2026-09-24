@@ -1,5 +1,7 @@
 const CONSENT_KEY = "hw360_analytics_consent";
 export const CONSENT_CHANGE_EVENT = "hw360-consent-change";
+/** Fired by the footer "Cookie settings" link to reopen the consent banner. */
+export const OPEN_CONSENT_SETTINGS_EVENT = "hw360-open-consent-settings";
 
 export type ConsentChoice = "granted" | "denied";
 
@@ -25,4 +27,34 @@ export function storeConsent(choice: ConsentChoice): void {
   window.dispatchEvent(
     new CustomEvent<ConsentChoice>(CONSENT_CHANGE_EVENT, { detail: choice }),
   );
+}
+
+export function openConsentSettings(): void {
+  window.dispatchEvent(new Event(OPEN_CONSENT_SETTINGS_EVENT));
+}
+
+/**
+ * Delete Google Analytics cookies (`_ga`, `_ga_<id>`) after consent is
+ * withdrawn. GA sets them on the highest registrable domain
+ * (e.g. `.healthwise360.co.uk`), so every parent domain of the current host
+ * is tried, plus a host-only delete.
+ */
+export function clearAnalyticsCookies(): void {
+  const names = document.cookie
+    .split(";")
+    .map((c) => c.split("=")[0].trim())
+    .filter((name) => name === "_ga" || name.startsWith("_ga_"));
+  if (names.length === 0) return;
+
+  const parts = window.location.hostname.split(".");
+  const domains = [""];
+  for (let i = 0; i < parts.length - 1; i++) {
+    domains.push(`; domain=.${parts.slice(i).join(".")}`);
+  }
+
+  for (const name of names) {
+    for (const domain of domains) {
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${domain}`;
+    }
+  }
 }

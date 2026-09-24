@@ -22,6 +22,7 @@ import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 import SiteSocialLinks from "@/components/layout/SiteSocialLinks";
 import RevealOnView from "@/components/ui/RevealOnView";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import { openConsentSettings } from "@/lib/analytics/consent";
 
 const FOOTER_SUPPORT_LINKS = [
   { href: "/what-is-mounjaro", label: "Mounjaro" },
@@ -405,6 +406,14 @@ export default function Footer() {
                 >
                   Terms of Use
                 </Link>
+                <span className="text-slate-600">|</span>
+                <button
+                  type="button"
+                  onClick={openConsentSettings}
+                  className="rounded-md px-1.5 py-0.5 transition-all duration-200 hover:bg-white/10 hover:text-white hover:underline hover:underline-offset-4"
+                >
+                  Cookie settings
+                </button>
               </div>
             </div>
 
@@ -423,6 +432,14 @@ export default function Footer() {
                 >
                   Terms of Use
                 </Link>
+                <span className="text-slate-600">|</span>
+                <button
+                  type="button"
+                  onClick={openConsentSettings}
+                  className="rounded-md px-1.5 py-0.5 transition-all duration-200 hover:bg-white/10 hover:text-white hover:underline hover:underline-offset-4"
+                >
+                  Cookie settings
+                </button>
               </div>
               <GooglePreferredSourceButton theme="dark" className="mb-1" />
               <div className="text-sm font-bold tracking-tight text-slate-400">
