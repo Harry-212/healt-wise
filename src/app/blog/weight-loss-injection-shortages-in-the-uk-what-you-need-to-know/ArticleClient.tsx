@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -536,6 +537,7 @@ export default function ArticleClient() {
                 pharmacist.
               </p>
             </GuideSection>
+            <ArticleSources slug="weight-loss-injection-shortages-in-the-uk-what-you-need-to-know" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">

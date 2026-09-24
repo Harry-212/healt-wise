@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -749,6 +750,7 @@ export default function ArticleClient() {
                 conversation with your healthcare professional.
               </p>
             </GuideSection>
+            <ArticleSources slug="how-does-wegovy-work-to-transform-your-weight-journey" darkMode={darkMode} />
           </article>
 
           {/* Share Panel (Using the GuideSharePanel UI from the 'Guides' article context) */}

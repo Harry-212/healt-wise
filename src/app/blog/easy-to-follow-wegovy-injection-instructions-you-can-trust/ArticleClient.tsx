@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -606,6 +607,7 @@ export default function ArticleClient() {
                 treatment.
               </p>
             </GuideSection>
+            <ArticleSources slug="easy-to-follow-wegovy-injection-instructions-you-can-trust" darkMode={darkMode} />
           </article>
 
           {/* Share Panel (Using the GuideSharePanel UI from the 'Guides' article context) */}

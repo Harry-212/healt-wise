@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -735,6 +736,7 @@ export default function ArticleClient() {
                 instead of into checkout with guesswork.
               </p>
             </GuideSection>
+            <ArticleSources slug="can-i-buy-weight-loss-injections-online" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">

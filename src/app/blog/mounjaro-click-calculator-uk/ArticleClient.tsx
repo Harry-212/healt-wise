@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -1088,6 +1089,7 @@ export default function ArticleClient() {
               prescriber. Do not adjust your Mounjaro dose without clinical
               guidance.
             </p>
+            <ArticleSources slug="mounjaro-click-calculator-uk" darkMode={darkMode} />
           </article>
 
           <div className="mt-6">

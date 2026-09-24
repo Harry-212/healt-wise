@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -436,6 +437,7 @@ export default function ArticleClient() {
                 <li>(The Independent Pharmacy)</li>
               </ol>
             </GuideSection>
+            <ArticleSources slug="does-mounjaro-really-work-for-weight-loss-find-out-here" darkMode={darkMode} />
           </article>
 
           {/* Share Panel (Using the GuideSharePanel UI from the 'Guides' article context) */}

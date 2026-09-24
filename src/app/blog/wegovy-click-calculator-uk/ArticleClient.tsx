@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -1170,6 +1171,7 @@ export default function ArticleClient() {
                 the dosage instructions confirmed by your prescriber.
               </p>
             </GuideSection>
+            <ArticleSources slug="wegovy-click-calculator-uk" darkMode={darkMode} />
           </article>
 
           <div className="mt-6">

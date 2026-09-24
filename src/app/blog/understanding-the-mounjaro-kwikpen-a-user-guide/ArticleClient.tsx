@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -456,6 +457,7 @@ export default function ArticleClient() {
                 for you.
               </p>
             </GuideSection>
+            <ArticleSources slug="understanding-the-mounjaro-kwikpen-a-user-guide" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">

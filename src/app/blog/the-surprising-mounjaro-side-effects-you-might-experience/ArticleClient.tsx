@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -652,6 +653,7 @@ export default function ArticleClient() {
                 confidence and focus on your long-term health goals.
               </p>
             </GuideSection>
+            <ArticleSources slug="the-surprising-mounjaro-side-effects-you-might-experience" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">

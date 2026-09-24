@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useMemo, useState } from "react";
 import Link from "next/link";
@@ -581,6 +582,7 @@ export default function ArticleClient() {
                 information and does not replace advice from your clinician.
               </p>
             </GuideSection>
+            <ArticleSources slug="does-stress-cause-belly-fat" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">

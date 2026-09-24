@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -499,6 +500,7 @@ export default function ArticleClient() {
                 pharmacist.
               </p>
             </GuideSection>
+            <ArticleSources slug="side-effects-of-wegovy-and-how-to-manage-them" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">

@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -987,6 +988,7 @@ export default function ArticleClient() {
                 explain how thresholds are used in UK prescribing decisions.
               </p>
             </GuideSection>
+            <ArticleSources slug="what-is-bmi-calculator" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">

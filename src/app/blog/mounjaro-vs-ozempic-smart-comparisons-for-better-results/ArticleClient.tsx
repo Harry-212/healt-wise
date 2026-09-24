@@ -1,5 +1,6 @@
 "use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
+import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -625,6 +626,7 @@ export default function ArticleClient() {
                 injectable that aligns with your goals and circumstances.
               </p>
             </GuideSection>
+            <ArticleSources slug="mounjaro-vs-ozempic-smart-comparisons-for-better-results" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">
