@@ -8,6 +8,10 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { providerTablePriceSentence } from "@/lib/data/provider-price-summary";
+
+/** Checked table prices only (same medicine, strength and single pen). */
+const CURELY_TABLE_PRICES = providerTablePriceSentence("curely", "Curely");
 
 const providerUrl = "https://www.curely.co.uk/online-doctor/weight-loss";
 
@@ -195,9 +199,9 @@ export default function CurelyPharmacyContent() {
             <p className="font-bold text-slate-900">Tracked delivery options</p>
             <Points
               items={[
-                "Tracked 48: ~2–3 business days (often ~£2.99, sometimes free over £20)",
-                "Tracked 24: ~1–2 business days (often ~£4.39)",
-                "Special Delivery Before 1pm: next working day (often ~£5.95, cut-off dependent)",
+                "Tracked 48: about 2–3 business days",
+                "Tracked 24: about 1–2 business days",
+                "Special Delivery Before 1pm: next working day (cut-off dependent)",
               ]}
             />
             <p className="mt-4 text-slate-800 leading-relaxed">
@@ -222,12 +226,11 @@ export default function CurelyPharmacyContent() {
           </p>
           <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
-            Pricing varies by medication and dose. Some higher-dose Mounjaro may be priced in the
-            low <strong>£200s+</strong> per pen, with examples reported around <strong>£230+</strong>{" "}
-            for some strengths. Pill options (e.g. Orlistat / Alli) are generally lower cost.
+            {CURELY_TABLE_PRICES ?? "Curely's prices vary by medicine and strength; see our comparison tables for the strengths it lists."}
           </p>
           <p className="mt-3 text-slate-800 leading-relaxed">
-            Delivery is often free over £20, with faster services around <strong>£4–£6</strong>.
+            Delivery charges depend on the service you choose. We have not confirmed
+            Curely&apos;s current delivery fees, so check the total at checkout.
           </p>
         </section>
         <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
@@ -261,11 +264,11 @@ export default function CurelyPharmacyContent() {
             },
             {
               q: "How much does Curely weight loss treatment cost?",
-              a: "Costs may range from lower-priced oral treatments up to £230+ per pen for some higher-dose injections, depending on medication and strength.",
+              a: CURELY_TABLE_PRICES ?? "Curely's prices vary by medicine and strength; see our comparison tables for the strengths it lists.",
             },
             {
               q: "Does Curely offer tracked delivery?",
-              a: "Yes. Curely offers Tracked 48, Tracked 24 and next-day special delivery options, with free tracked delivery over £20 in some cases.",
+              a: "Yes. Curely offers Tracked 48, Tracked 24 and next-day special delivery options. We have not confirmed current delivery charges, so check the total at checkout.",
             },
             {
               q: "Is Curely a regulated pharmacy?",

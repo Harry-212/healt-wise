@@ -1,5 +1,6 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { providerTablePriceSentence } from "@/lib/data/provider-price-summary";
 
 const FAQ_BASE = "https://schema.org";
 
@@ -282,12 +283,13 @@ const CURELY_FAQ: FaqItem[] = [
   {
     question: "How much does Curely weight loss treatment cost?",
     answer:
-      "Costs may range from lower-priced oral treatments up to £230+ per pen for some higher-dose injections, depending on medication and strength.",
+      providerTablePriceSentence("curely", "Curely") ??
+      "Curely's prices vary by medicine and strength; see our comparison tables for the strengths it lists.",
   },
   {
     question: "Does Curely offer tracked delivery?",
     answer:
-      "Yes. Curely appears to offer Tracked 48, Tracked 24 and next-day special delivery options, with free tracked delivery over £20 in some cases.",
+      "Yes. Curely offers Tracked 48, Tracked 24 and next-day special delivery options. We have not confirmed current delivery charges, so check the total at checkout.",
   },
   {
     question: "Is Curely a regulated pharmacy?",
