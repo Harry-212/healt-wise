@@ -382,7 +382,12 @@ export default async function ComparePage({ params }: Props) {
                   id="compare-author-heading"
                   className="mt-2 text-xl font-bold text-slate-900 md:text-2xl"
                 >
-                  Alistair Greenwood
+                  <Link
+                    href="/editorial-team/alistair-greenwood"
+                    className="hover:text-brand-primary hover:underline underline-offset-2"
+                  >
+                    Alistair Greenwood
+                  </Link>
                 </h2>
                 <p className="mt-1 text-sm font-medium text-slate-600">
                   Founder of Healthwise360 | Weight-management pricing
@@ -397,6 +402,13 @@ export default async function ComparePage({ params }: Props) {
                   useful. He is not a healthcare professional and does not
                   provide medical advice.
                 </p>
+                <Link
+                  href="/editorial-team/alistair-greenwood"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
+                >
+                  Read Alistair&apos;s full profile
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
               </div>
             </div>
           </section>

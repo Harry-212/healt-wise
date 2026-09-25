@@ -54,6 +54,8 @@ export type LegalScrollyProps = {
   sections: LegalSection[];
   ctaHref?: string;
   ctaLabel?: string;
+  /** Hide the stock header photo, e.g. on a person's profile where it could read as their portrait. */
+  hideHeroImage?: boolean;
 };
 
 export default function LegalScrollyClient({
@@ -64,6 +66,7 @@ export default function LegalScrollyClient({
   sections,
   ctaHref = "/contact",
   ctaLabel = "Contact us",
+  hideHeroImage = false,
 }: LegalScrollyProps) {
   const reduce = useReducedMotion();
   const heroRef = useRef<HTMLDivElement>(null);
@@ -85,6 +88,7 @@ export default function LegalScrollyClient({
         className="relative flex min-h-[min(72dvh,620px)] flex-col justify-end overflow-hidden px-4 pb-12 pt-20 sm:px-6 sm:pb-14 sm:pt-24 md:px-10"
       >
         <motion.div className="absolute inset-0 bg-slate-950" style={{ scale: heroScale }} />
+        {hideHeroImage ? null : (
         <motion.div className="absolute inset-0" style={{ scale: heroScale }}>
           <Image
             src={HERO_BG}
@@ -97,6 +101,7 @@ export default function LegalScrollyClient({
             aria-hidden
           />
         </motion.div>
+        )}
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.5)_0%,rgba(15,23,42,0.92)_100%)]" />
         <motion.div
           className="relative z-[1] mx-auto w-full max-w-3xl"

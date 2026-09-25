@@ -41,6 +41,7 @@ const STATIC_PATHS = [
   "/eat-healthier",
   "/editorial-policy",
   "/editorial-team",
+  "/editorial-team/alistair-greenwood",
   "/exercise",
   HELPFUL_GUIDES_HUB_PATH,
   "/methodology",
