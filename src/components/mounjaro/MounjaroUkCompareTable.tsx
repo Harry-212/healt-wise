@@ -231,7 +231,8 @@ export default function MounjaroUkCompareTable({
           Latest price update {pricesLastChecked}
         </span>
       </div>
-      {checkSummary.onLatest < checkSummary.total ? (
+      {checkSummary.comparable &&
+      checkSummary.onLatest < checkSummary.total ? (
         <p className="-mt-2 px-1 text-xs text-slate-600">
           {checkSummary.onLatest} of {checkSummary.total} providers were checked
           on {pricesLastChecked}. The Updated column shows the date each

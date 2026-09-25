@@ -7,10 +7,14 @@ import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import SaxendaCompareShaderHero from "@/components/saxenda/SaxendaCompareShaderHero";
 import SaxendaUkCompareTable from "@/components/saxenda/SaxendaUkCompareTable";
 import {
+  SAXENDA_PACK_KEYS,
   SAXENDA_UK_COMPARE_PROVIDERS,
   SAXENDA_UK_COMPARE_LAST_UPDATED,
   headlinePackPrice,
+  type SaxendaPackKey,
+  type SaxendaUkProviderCompare,
 } from "@/lib/data/saxenda-uk-compare-providers";
+import { formatGbp } from "@/lib/data/mounjaro-price-insights";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
   SAXENDA_COMPARE_UK_FAQ_ITEMS,
@@ -51,6 +55,28 @@ function compareWebPageJsonLd() {
   };
 }
 
+const PENS_IN_PACK: Record<SaxendaPackKey, number> = { "1": 1, "3": 3, "5": 5 };
+
+type PackStat = {
+  pack: SaxendaPackKey;
+  low: SaxendaUkProviderCompare;
+  high: SaxendaUkProviderCompare;
+};
+
+/** Cheapest and dearest provider for each pack size, from the table data. */
+function packStats(providers: SaxendaUkProviderCompare[]): PackStat[] {
+  return SAXENDA_PACK_KEYS.map((pack) => {
+    const byPrice = [...providers].sort(
+      (a, b) => a.packs[pack].packPrice - b.packs[pack].packPrice,
+    );
+    return { pack, low: byPrice[0], high: byPrice[byPrice.length - 1] };
+  });
+}
+
+function perPen(p: SaxendaUkProviderCompare, pack: SaxendaPackKey): number {
+  return p.packs[pack].packPrice / PENS_IN_PACK[pack];
+}
+
 export default function CompareSaxendaPricesUkPage() {
   const faqLd = saxendaCompareUkFaqJsonLd();
   const webLd = compareWebPageJsonLd();
@@ -58,6 +84,24 @@ export default function CompareSaxendaPricesUkPage() {
   const cheapest = SAXENDA_UK_COMPARE_PROVIDERS.reduce((a, b) =>
     headlinePackPrice(a, "1") <= headlinePackPrice(b, "1") ? a : b,
   );
+  const stats = packStats(SAXENDA_UK_COMPARE_PROVIDERS);
+  const [single, , five] = stats;
+  // Per-pen saving from buying five pens instead of single pens, per provider.
+  const fivePackSavings = SAXENDA_UK_COMPARE_PROVIDERS.map(
+    (p) => perPen(p, "1") - perPen(p, "5"),
+  );
+  const minSaving = Math.min(...fivePackSavings);
+  const maxSaving = Math.max(...fivePackSavings);
+  const perMgSorted = SAXENDA_UK_COMPARE_PROVIDERS.flatMap((p) =>
+    SAXENDA_PACK_KEYS.map((pack) => ({
+      p,
+      pack,
+      perMg: p.packs[pack].pricePerMg,
+    })),
+  ).sort((a, b) => a.perMg - b.perMg);
+  const lowestPerMg = perMgSorted[0];
+  const highestPerMg = perMgSorted[perMgSorted.length - 1];
+  const packName = (k: SaxendaPackKey) => (k === "1" ? "single pen" : `${k}-pen pack`);
 
   return (
     <>
@@ -96,9 +140,11 @@ export default function CompareSaxendaPricesUkPage() {
               All three pack sizes appear side by side:{" "}
               <strong className="font-semibold text-slate-800">1 pen</strong>,{" "}
               <strong className="font-semibold text-slate-800">3 pens</strong>, and{" "}
-              <strong className="font-semibold text-slate-800">5 pens</strong> — each
-              cell shows the pack price and £/mg. Filter by name and rating; sort
-              any column.
+              <strong className="font-semibold text-slate-800">5 pens</strong>. Each
+              cell shows the pack price, which is what you pay for that pack,
+              and underneath it the £/mg: the pack price divided by the
+              liraglutide in the pack (18 mg per pen). Filter by name and
+              rating; sort any column.
             </p>
             <div className="mt-10">
               <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} lastUpdated={SAXENDA_UK_COMPARE_LAST_UPDATED} />
@@ -113,10 +159,21 @@ export default function CompareSaxendaPricesUkPage() {
                 Saxenda price UK: what you can expect
               </h2>
               <p className="mt-4 max-w-3xl text-slate-600 leading-relaxed">
-                Saxenda is priced per pack of pens; ordering more pens at once
-                often lowers £/mg, but repeat pricing and delivery still vary by
-                provider. The charts below summarise how prices spread by
-                pack size — not a quote for your care.
+                Across the {SAXENDA_UK_COMPARE_PROVIDERS.length} providers in our
+                table (latest price update {SAXENDA_UK_COMPARE_LAST_UPDATED}), a
+                single pen costs {formatGbp(single.low.packs["1"].packPrice)} to{" "}
+                {formatGbp(single.high.packs["1"].packPrice)}. A 3-pen pack costs{" "}
+                {formatGbp(stats[1].low.packs["3"].packPrice)} to{" "}
+                {formatGbp(stats[1].high.packs["3"].packPrice)} and a 5-pen pack{" "}
+                {formatGbp(five.low.packs["5"].packPrice)} to{" "}
+                {formatGbp(five.high.packs["5"].packPrice)}. Worked out per pen,
+                the 5-pen pack comes to {formatGbp(perPen(five.low, "5"))} to{" "}
+                {formatGbp(perPen(five.high, "5"))}. By £/mg, the lowest figure
+                is {formatGbp(lowestPerMg.perMg)} ({lowestPerMg.p.name},{" "}
+                {packName(lowestPerMg.pack)}) and the highest{" "}
+                {formatGbp(highestPerMg.perMg)} ({highestPerMg.p.name},{" "}
+                {packName(highestPerMg.pack)}). The charts below show the spread
+                for each pack size.
               </p>
             </div>
             <div className="grid gap-8 lg:grid-cols-1">
@@ -132,34 +189,30 @@ export default function CompareSaxendaPricesUkPage() {
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
               Why do Saxenda prices vary in the UK?
             </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              Prices can differ based on:
-            </p>
             <ul className="mt-4 list-inside list-disc space-y-2 text-slate-700">
               <li>
                 <strong className="font-semibold text-slate-900">
                   Pack size
                 </strong>{" "}
-                — 3- and 5-pen bundles may improve £/mg versus a single pen.
+                — at every provider in our table, buying five pens works out
+                cheaper per pen than buying single pens, by{" "}
+                {formatGbp(minSaving)} to {formatGbp(maxSaving)} a pen.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">
-                  Consultation fees
+                  Consultation model
                 </strong>{" "}
-                — some sites bundle assessment into the medicine price; others
-                break it out.
+                — online doctors and pharmacies may include the prescriber
+                assessment in the pack price; check what each provider
+                charges separately.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">
-                  Delivery and cold-chain logistics
+                  Delivery and collection
                 </strong>{" "}
-                — refrigerated shipping and collection options affect totals.
-              </li>
-              <li>
-                <strong className="font-semibold text-slate-900">
-                  Membership or promotions
-                </strong>{" "}
-                — loyalty or member pricing can change the headline checkout.
+                — at the {SAXENDA_UK_COMPARE_LAST_UPDATED} check, each provider
+                listed delivery as included; collection options differ, as
+                shown in the Delivery column.
               </li>
             </ul>
           </div>
@@ -177,6 +230,19 @@ export default function CompareSaxendaPricesUkPage() {
               Confirm the current details directly with the provider before
               making your choice.
             </p>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              {single.low.id !== five.low.id ? (
+                <>
+                  The cheapest single pen is not the cheapest 5-pen pack: in our
+                  table the lowest single-pen price is from {single.low.name},
+                  but the lowest 5-pen price is from {five.low.name}.{" "}
+                </>
+              ) : null}
+              Compare providers on the same pack size. Use the per-pen or £/mg
+              figure only when comparing different pack sizes, and remember a
+              larger pack costs more at checkout even when it is cheaper per
+              pen.
+            </p>
             <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200/90 shadow-sm">
               <table className="w-full border-collapse text-left text-sm">
                 <thead className="bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-500">
@@ -184,7 +250,7 @@ export default function CompareSaxendaPricesUkPage() {
                     <th className="px-4 py-3">Lens</th>
                     <th className="px-4 py-3">Example in this snapshot</th>
                     <th className="px-4 py-3">1 pen</th>
-                    <th className="px-4 py-3">5 pens total</th>
+                    <th className="px-4 py-3">5-pen pack</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -197,7 +263,7 @@ export default function CompareSaxendaPricesUkPage() {
                       £{headlinePackPrice(cheapest, "1").toFixed(2)}
                     </td>
                     <td className="px-4 py-3 tabular-nums text-slate-800">
-                      £{cheapest.packs["5"].totalCost.toFixed(2)}
+                      £{cheapest.packs["5"].packPrice.toFixed(2)}
                     </td>
                   </tr>
                 </tbody>
@@ -233,20 +299,6 @@ export default function CompareSaxendaPricesUkPage() {
                 GPhC verification guide
               </Link>
               .
-            </p>
-          </div>
-        </section>
-
-        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
-          <div className="mx-auto max-w-3xl px-4 md:px-8">
-            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Daily dosing and titration
-            </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              Saxenda is a daily injection; prescribers usually increase the dose
-              gradually. Pack purchases and repeat intervals can look different
-              from weekly GLP-1 pens — always follow the schedule your clinician
-              gives you.
             </p>
           </div>
         </section>

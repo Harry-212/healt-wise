@@ -27,6 +27,7 @@ import {
 } from "@/lib/data/saxenda-uk-compare-providers";
 import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
 import { formatUkGroupedInteger } from "@/lib/provider-helpers";
+import { summarisePriceChecks } from "@/lib/data/price-check-dates";
 import {
   COMPARE_TABLE_CARD_CLASS,
   COMPARE_TABLE_MOBILE_OUTDENT_CLASS,
@@ -129,6 +130,14 @@ export default function SaxendaUkCompareTable({
   });
 
   const pricesLastChecked = lastUpdated;
+  const checkSummary = useMemo(
+    () =>
+      summarisePriceChecks(
+        providers.map((p) => p.updatedLabel),
+        lastUpdated,
+      ),
+    [providers, lastUpdated],
+  );
 
   const visiblePackKeys = useMemo<SaxendaPackKey[]>(
     () =>
@@ -230,9 +239,17 @@ export default function SaxendaUkCompareTable({
         </span>
         <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3 py-1.5 text-xs font-semibold text-sky-800 shadow-sm ring-1 ring-sky-200/70">
           <CalendarClock className="h-3.5 w-3.5" aria-hidden />
-          Prices last checked {pricesLastChecked}
+          Latest price update {pricesLastChecked}
         </span>
       </div>
+      {checkSummary.comparable &&
+      checkSummary.onLatest < checkSummary.total ? (
+        <p className="-mt-2 px-1 text-xs text-slate-600">
+          {checkSummary.onLatest} of {checkSummary.total} providers were checked
+          on {pricesLastChecked}. The Updated column shows the date each
+          provider&apos;s prices were checked.
+        </p>
+      ) : null}
 
       <CompareFilterBar
         accent="sky"

@@ -56,22 +56,17 @@ export const SAXENDA_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }[
     {
       question: "How much does Saxenda cost in the UK?",
       answer:
-        "Private Saxenda prices depend on how many pens you order (often 1, 3, or 5), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table shows pack totals, £/mg, and repeat figures checked on the dates shown in the table—always confirm the live checkout price on the provider’s site.",
+        "Private Saxenda prices depend on how many pens you order (1, 3 or 5), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table lists the price of each pack size and the price per mg, with the date prices were checked—always confirm the final checkout price on the provider’s site.",
     },
     {
       question: "What is the cheapest Saxenda UK provider?",
       answer:
-        "The lowest listed single-pen pack price shown in our comparison table changes when you switch pack size in the table; Superdrug, Lloyds, and Boots often sit close together. The cheapest headline price is not always the best value—check consultation rules, delivery, cold-chain handling, and aftercare before you choose.",
+        "The cheapest provider can change with pack size, so compare the same pack size across providers first. Use the price per mg to compare different pack sizes, and check any consultation or delivery charges before comparing totals.",
     },
     {
       question: "Do I need a prescription for Saxenda?",
       answer:
         "Yes. Saxenda (liraglutide) is prescription-only in the UK. Legitimate private routes require an appropriate medical assessment by a qualified prescriber before a pharmacy can supply it.",
-    },
-    {
-      question: "Why do Saxenda prices vary between pharmacies?",
-      answer:
-        "Prices differ because of pack size, bundled consultation fees, delivery and cold-chain logistics, member discounts or promotions, and how each provider structures repeats. Use the pack-size tabs and filters to compare total value, not just the headline pen price.",
     },
   ];
 

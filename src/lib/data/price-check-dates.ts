@@ -22,6 +22,8 @@ export type PriceCheckSummary = {
   total: number;
   /** Providers whose own check date matches the latest update. */
   onLatest: number;
+  /** False when any date lacks a day/month/year we can compare (e.g. "4 April"). */
+  comparable: boolean;
 };
 
 /**
@@ -33,10 +35,10 @@ export function summarisePriceChecks(
   latestLabel: string,
 ): PriceCheckSummary {
   const latest = priceCheckDateKey(latestLabel);
+  const keys = providerLabels.map(priceCheckDateKey);
   return {
     total: providerLabels.length,
-    onLatest: providerLabels.filter(
-      (l) => latest != null && priceCheckDateKey(l) === latest,
-    ).length,
+    onLatest: keys.filter((k) => latest != null && k === latest).length,
+    comparable: latest != null && keys.every((k) => k != null),
   };
 }
