@@ -174,7 +174,7 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
           </div>
         </section>
 
-        <section
+        {/* <section
           id="london-mounjaro-compare"
           className="scroll-mt-24 border-b border-slate-200/80 bg-slate-50/70 py-12 md:py-16"
         >
@@ -190,7 +190,7 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
               <MounjaroUkCompareTable providers={mounjaroProviders} lastUpdated={mounjaroLastUpdated} />
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section
           id="london-wegovy-compare"
