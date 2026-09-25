@@ -56,6 +56,8 @@ export type LegalScrollyProps = {
   ctaLabel?: string;
   /** Hide the stock header photo, e.g. on a person's profile where it could read as their portrait. */
   hideHeroImage?: boolean;
+  /** Real portrait shown above the title, e.g. on an author profile. */
+  portrait?: { src: string; alt: string };
 };
 
 export default function LegalScrollyClient({
@@ -67,6 +69,7 @@ export default function LegalScrollyClient({
   ctaHref = "/contact",
   ctaLabel = "Contact us",
   hideHeroImage = false,
+  portrait,
 }: LegalScrollyProps) {
   const reduce = useReducedMotion();
   const heroRef = useRef<HTMLDivElement>(null);
@@ -107,6 +110,16 @@ export default function LegalScrollyClient({
           className="relative z-[1] mx-auto w-full max-w-3xl"
           style={{ opacity: heroCopyOpacity }}
         >
+          {portrait ? (
+            <Image
+              src={portrait.src}
+              alt={portrait.alt}
+              width={112}
+              height={112}
+              className="mb-6 h-24 w-24 rounded-full object-cover ring-4 ring-white/15 sm:h-28 sm:w-28"
+              priority
+            />
+          ) : null}
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400/90">
             {eyebrow}
           </p>

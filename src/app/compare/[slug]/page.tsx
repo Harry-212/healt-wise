@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, BadgeCheck, Scale, Shield } from "lucide-react";
@@ -375,6 +376,13 @@ export default async function ComparePage({ params }: Props) {
           >
             <div className="mx-auto max-w-3xl px-4 md:px-8">
               <div className="rounded-2xl border border-slate-200/90 bg-slate-50/70 p-6 shadow-sm md:p-8">
+                <Image
+                  src="/authors/alistair-greenwood.jpg"
+                  alt="Alistair Greenwood"
+                  width={80}
+                  height={80}
+                  className="mb-4 h-16 w-16 rounded-full object-cover ring-2 ring-white md:h-20 md:w-20"
+                />
                 <p className="text-xs font-bold uppercase tracking-wide text-slate-500">
                   Research and comparison by
                 </p>
