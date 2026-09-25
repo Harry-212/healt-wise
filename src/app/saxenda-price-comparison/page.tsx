@@ -58,11 +58,6 @@ export default function CompareSaxendaPricesUkPage() {
   const cheapest = SAXENDA_UK_COMPARE_PROVIDERS.reduce((a, b) =>
     headlinePackPrice(a, "1") <= headlinePackPrice(b, "1") ? a : b,
   );
-  const bestValue =
-    SAXENDA_UK_COMPARE_PROVIDERS.find((p) => p.promoNote) ??
-    SAXENDA_UK_COMPARE_PROVIDERS.reduce((a, b) =>
-      a.rating >= b.rating ? a : b,
-    );
 
   return (
     <>
@@ -173,13 +168,14 @@ export default function CompareSaxendaPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-4xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Cheapest Saxenda vs best value: what matters?
+              Compare the total cost and what&apos;s included
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              The lowest single-pen price is not always the best option. Some
-              providers include consultations, support, or faster collection,
-              which may offer better overall value once you factor in time,
-              convenience, and clinical follow-up.
+              A lower advertised price may not mean a lower total cost. Compare
+              the same dose and pack size, check delivery and consultation
+              charges, and review any offer conditions and included support.
+              Confirm the current details directly with the provider before
+              making your choice.
             </p>
             <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200/90 shadow-sm">
               <table className="w-full border-collapse text-left text-sm">
@@ -204,25 +200,8 @@ export default function CompareSaxendaPricesUkPage() {
                       £{cheapest.packs["5"].totalCost.toFixed(2)}
                     </td>
                   </tr>
-                  <tr className="bg-sky-50/30">
-                    <td className="px-4 py-3 font-semibold text-sky-800">
-                      Best value pick
-                    </td>
-                    <td className="px-4 py-3 text-slate-800">{bestValue.name}</td>
-                    <td className="px-4 py-3 tabular-nums text-slate-900">
-                      £{headlinePackPrice(bestValue, "1").toFixed(2)}
-                    </td>
-                    <td className="px-4 py-3 tabular-nums text-slate-800">
-                      £{bestValue.packs["5"].totalCost.toFixed(2)}
-                    </td>
-                  </tr>
                 </tbody>
               </table>
-              <p className="border-t border-slate-100 bg-slate-50/80 px-4 py-3 text-xs text-slate-500">
-                “Best value” is an editorial highlight for balance of price,
-                delivery note, and rating — not a clinical endorsement. Always
-                choose a regulated route you trust.
-              </p>
             </div>
           </div>
         </section>

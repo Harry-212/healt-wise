@@ -89,9 +89,6 @@ export default function CompareMounjaroPricesUkPage() {
     ["5mg", "7.5mg", "10mg", "12.5mg", "15mg"],
     MOUNJARO_UK_COMPARE_PROVIDERS.map((p) => p.prices),
   );
-  const bestValue =
-    MOUNJARO_UK_COMPARE_PROVIDERS.find((p) => p.badges?.includes("bestValue")) ??
-    MOUNJARO_UK_COMPARE_PROVIDERS[0];
   const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
 
   return (
@@ -250,8 +247,15 @@ export default function CompareMounjaroPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-4xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Cheapest Mounjaro vs best value: what matters?
+              Compare the total cost and what&apos;s included
             </h2>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              A lower advertised price may not mean a lower total cost. Compare
+              the same dose and pack size, check delivery and consultation
+              charges, and review any offer conditions and included support.
+              Confirm the current details directly with the provider before
+              making your choice.
+            </p>
             <p className="mt-4 text-slate-600 leading-relaxed">
               {insights &&
               insights.starter.lowProvider !== insights.top.lowProvider ? (
@@ -290,25 +294,8 @@ export default function CompareMounjaroPricesUkPage() {
                       £{estimatedMonthlyCost(cheapest)}
                     </td>
                   </tr>
-                  <tr className="bg-violet-50/30">
-                    <td className="px-4 py-3 font-semibold text-violet-800">
-                      Best value pick
-                    </td>
-                    <td className="px-4 py-3 text-slate-800">{bestValue.name}</td>
-                    <td className="px-4 py-3 tabular-nums text-slate-900">
-                      £{startingPrice(bestValue)}
-                    </td>
-                    <td className="px-4 py-3 tabular-nums text-slate-800">
-                      £{estimatedMonthlyCost(bestValue)}
-                    </td>
-                  </tr>
                 </tbody>
               </table>
-              <p className="border-t border-slate-100 bg-slate-50/80 px-4 py-3 text-xs text-slate-500">
-                “Best value” is an editorial highlight for balance of price,
-                delivery note, and rating — not a clinical endorsement. Always
-                choose a regulated route you trust.
-              </p>
             </div>
           </div>
         </section>
