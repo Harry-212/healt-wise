@@ -367,6 +367,40 @@ export default async function ComparePage({ params }: Props) {
         )}
 
         <CompareFaqSection items={faqItems} />
+
+        {isTripleHub ? (
+          <section
+            className="bg-white py-12 md:py-16"
+            aria-labelledby="compare-author-heading"
+          >
+            <div className="mx-auto max-w-3xl px-4 md:px-8">
+              <div className="rounded-2xl border border-slate-200/90 bg-slate-50/70 p-6 shadow-sm md:p-8">
+                <p className="text-xs font-bold uppercase tracking-wide text-slate-500">
+                  Research and comparison by
+                </p>
+                <h2
+                  id="compare-author-heading"
+                  className="mt-2 text-xl font-bold text-slate-900 md:text-2xl"
+                >
+                  Alistair Greenwood
+                </h2>
+                <p className="mt-1 text-sm font-medium text-slate-600">
+                  Founder of Healthwise360 | Weight-management pricing
+                  researcher
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-slate-600 md:text-base">
+                  Alistair uses his background in project management and
+                  information analysis to research providers, compare
+                  published treatment costs and explain what services
+                  include. Drawing on his own experience of weight-management
+                  challenges, he aims to make comparisons clearer and more
+                  useful. He is not a healthcare professional and does not
+                  provide medical advice.
+                </p>
+              </div>
+            </div>
+          </section>
+        ) : null}
       </article>
     </>
   );
