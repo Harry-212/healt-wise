@@ -85,7 +85,7 @@ export default function TrustSignals({
           className="h-4 w-4 shrink-0 text-brand-secondary"
           aria-hidden
         />
-        Doctor-reviewed guides
+        Editorial standards
       </span>
     </div>
   );

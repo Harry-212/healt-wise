@@ -10,10 +10,6 @@ export function mounjaroArticleJsonLd(): Record<string, unknown> {
       "Learn how Mounjaro works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",
     url: `${base}/what-is-mounjaro`,
     dateModified: "2026-04-07",
-    reviewedBy: {
-      "@type": "Person",
-      name: "Healthwise360 Research Team",
-    },
     isPartOf: {
       "@type": "WebSite",
       name: "Healthwise360",

@@ -10,10 +10,6 @@ export function saxendaArticleJsonLd(): Record<string, unknown> {
       "Learn how Saxenda works, who may qualify in the UK, daily dosing, expected results, side effects and typical private treatment costs.",
     url: `${base}/what-is-saxenda`,
     dateModified: "2026-04-07",
-    reviewedBy: {
-      "@type": "Person",
-      name: "Healthwise360 Research Team",
-    },
     isPartOf: {
       "@type": "WebSite",
       name: "Healthwise360",

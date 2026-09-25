@@ -732,7 +732,7 @@ export default function WhatIsMounjaroPage() {
                 <div className="grid gap-6 p-6 md:grid-cols-[minmax(0,1fr)_200px] md:items-center md:p-8">
                   <div>
                     <h2 className="text-xl font-bold text-slate-900">
-                      Medically reviewed &amp; editorial standards
+                      Editorial standards
                     </h2>
                     <p className="mt-2 text-sm leading-relaxed text-slate-600">
                       This guide is written for general education and price

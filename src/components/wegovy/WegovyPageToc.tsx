@@ -14,7 +14,7 @@ const ITEMS: { href: string; label: string }[] = [
   { href: "#best-providers", label: "Providers" },
   { href: "#trust-verification", label: "Trust" },
   { href: "#faq", label: "FAQ" },
-  { href: "#medical-review", label: "Review & references" },
+  { href: "#medical-review", label: "Standards & references" },
 ];
 
 export default function WegovyPageToc() {

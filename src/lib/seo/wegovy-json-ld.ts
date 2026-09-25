@@ -10,10 +10,6 @@ export function wegovyArticleJsonLd(): Record<string, unknown> {
       "Learn how Wegovy works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",
     url: `${base}/what-is-wegovy`,
     dateModified: "2026-04-06",
-    reviewedBy: {
-      "@type": "Person",
-      name: "Healthwise360 Research Team",
-    },
     isPartOf: {
       "@type": "WebSite",
       name: "Healthwise360",
