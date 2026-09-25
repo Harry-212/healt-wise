@@ -66,7 +66,7 @@ function compareWebPageJsonLd() {
     description:
       "Compare Mounjaro prices by dose across 60+ GPhC-registered UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
     url: `${base}/mounjaro-price-comparison`,
-    dateModified: "2026-09-24",
+    dateModified: "2026-09-25",
     isPartOf: {
       "@type": "WebSite",
       name: "Healthwise360",

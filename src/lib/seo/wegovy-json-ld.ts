@@ -175,7 +175,7 @@ export const WEGOVY_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }[]
     {
       question: "How much does Wegovy cost in the UK?",
       answer:
-        "Private Wegovy pen prices depend on dose (0.25 mg up to 2.4 mg), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table shows estimated starting and average-style monthly figures, checked on the dates shown in the table—always confirm the live checkout price on the provider’s site.",
+        "Private Wegovy pen prices depend on dose (0.25 mg up to 7.2 mg), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table shows estimated starting and average-style monthly figures, checked on the dates shown in the table—always confirm the live checkout price on the provider’s site.",
     },
     {
       question: "What is the cheapest Wegovy UK provider?",

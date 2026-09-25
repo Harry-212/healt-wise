@@ -62,7 +62,7 @@ function compareWebPageJsonLd() {
     description:
       "Compare Wegovy prices from 0.25 mg to 2.4 mg across regulated UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
     url: `${base}/wegovy-price-comparison`,
-    dateModified: "2026-04-07",
+    dateModified: "2026-09-25",
     isPartOf: {
       "@type": "WebSite",
       name: "Healthwise360",

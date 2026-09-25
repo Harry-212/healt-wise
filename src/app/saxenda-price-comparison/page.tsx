@@ -42,7 +42,7 @@ function compareWebPageJsonLd() {
     description:
       "Independent comparison of Saxenda multi-pack (1/3/5 pens) prices across UK online pharmacies.",
     url: `${base}/saxenda-price-comparison`,
-    dateModified: "2026-04-07",
+    dateModified: "2026-09-25",
     isPartOf: {
       "@type": "WebSite",
       name: "Healthwise360",
