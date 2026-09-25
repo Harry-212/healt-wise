@@ -243,7 +243,7 @@ export default function CompareSaxendaPricesUkPage() {
               larger pack costs more at checkout even when it is cheaper per
               pen.
             </p>
-            <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200/90 shadow-sm">
+            <div className="mt-8 overflow-x-auto rounded-2xl border border-slate-200/90 shadow-sm">
               <table className="w-full border-collapse text-left text-sm">
                 <thead className="bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-500">
                   <tr>
