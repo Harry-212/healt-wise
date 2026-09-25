@@ -26,6 +26,7 @@ import {
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
 import { hasPharmacyPage } from "@/lib/routes/all-pharmacy-slugs";
+import { summarisePriceChecks } from "@/lib/data/price-check-dates";
 import { trustpilotHrefForProvider } from "@/lib/seo/trustpilot-link";
 
 import {
@@ -97,6 +98,14 @@ export default function MounjaroUkCompareTable({
   });
 
   const pricesLastChecked = lastUpdated;
+  const checkSummary = useMemo(
+    () =>
+      summarisePriceChecks(
+        providers.map((p) => p.updatedLabel),
+        lastUpdated,
+      ),
+    [providers, lastUpdated],
+  );
 
   const visibleDoseKeys = useMemo<MounjaroDoseColumnKey[]>(
     () => (doseFilter === "all" ? [...MOUNJARO_DOSE_KEYS] : [doseFilter]),
@@ -219,9 +228,16 @@ export default function MounjaroUkCompareTable({
         </span>
         <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-white/80 px-3 py-1.5 text-xs font-semibold text-violet-800 shadow-sm ring-1 ring-violet-200/70">
           <CalendarClock className="h-3.5 w-3.5" aria-hidden />
-          Prices last checked {pricesLastChecked}
+          Latest price update {pricesLastChecked}
         </span>
       </div>
+      {checkSummary.onLatest < checkSummary.total ? (
+        <p className="-mt-2 px-1 text-xs text-slate-600">
+          {checkSummary.onLatest} of {checkSummary.total} providers were checked
+          on {pricesLastChecked}. The Updated column shows the date each
+          provider&apos;s prices were checked.
+        </p>
+      ) : null}
 
       <CompareFilterBar
         accent="violet"

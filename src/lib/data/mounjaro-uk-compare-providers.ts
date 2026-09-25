@@ -1411,20 +1411,22 @@ export function getMounjaroCompareProviderById(
   return MOUNJARO_UK_COMPARE_PROVIDERS.find((p) => p.id === id);
 }
 
-export function startingPrice(p: MounjaroUkProviderCompare): number {
-  return Math.min(...MOUNJARO_DOSE_KEYS.map((k) => p.prices[k]));
+/** Listed pen prices; a missing or zero price means the strength is not listed. */
+function listedPrices(p: MounjaroUkProviderCompare): number[] {
+  return MOUNJARO_DOSE_KEYS.map((k) => p.prices[k]).filter((n) => n > 0);
 }
 
-export function estimatedMonthlyCost(p: MounjaroUkProviderCompare): number {
-  const sum = MOUNJARO_DOSE_KEYS.reduce((acc, k) => acc + p.prices[k], 0);
-  return Math.round(sum / MOUNJARO_DOSE_KEYS.length);
+export function startingPrice(p: MounjaroUkProviderCompare): number {
+  const listed = listedPrices(p);
+  return listed.length > 0 ? Math.min(...listed) : 0;
 }
 
 export function dosePriceRangeByStrengthMounjaro(
   providers: MounjaroUkProviderCompare[],
 ): { dose: string; min: number; max: number; avg: number }[] {
   return MOUNJARO_DOSE_KEYS.map((k) => {
-    const vals = providers.map((p) => p.prices[k]);
+    const vals = providers.map((p) => p.prices[k]).filter((n) => n > 0);
+    if (vals.length === 0) return { dose: k, min: 0, max: 0, avg: 0 };
     const min = Math.min(...vals);
     const max = Math.max(...vals);
     const avg = Math.round(vals.reduce((a, b) => a + b, 0) / vals.length);

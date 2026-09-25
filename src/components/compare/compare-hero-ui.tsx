@@ -51,7 +51,8 @@ export function GlassPill({ children }: { children: ReactNode }) {
 }
 
 /**
- * "Prices checked · <date>" pill. Deliberately not labelled "Live" and not
+ * "Latest price update · <date>" pill (individual provider check dates are
+ * shown in each comparison table). Deliberately not labelled "Live" and not
  * animated: provider prices are checked on specific dates, not streamed.
  * Renders nothing when no checked date is supplied (never falls back to
  * today's date).
@@ -73,7 +74,7 @@ export function CompareHeroPricesCheckedPill({
           aria-hidden
         />
         <span>
-          <span className="font-semibold text-white">Prices checked</span>
+          <span className="font-semibold text-white">Latest price update</span>
           {" · "}
           <span className="text-white/90">{dateLabel}</span>
         </span>

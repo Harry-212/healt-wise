@@ -9,7 +9,6 @@ import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable
 import AnnualCostSection from "@/components/compare/AnnualCostSection";
 import NhsAccessSection from "@/components/compare/NhsAccessSection";
 import {
-  estimatedMonthlyCost,
   MOUNJARO_DOSE_KEYS,
   startingPrice,
 } from "@/lib/data/mounjaro-uk-compare-providers";
@@ -81,13 +80,18 @@ export default function CompareMounjaroPricesUkPage() {
   const faqLd = mounjaroCompareUkFaqJsonLd();
   const webLd = compareWebPageJsonLd();
 
-  const cheapest = MOUNJARO_UK_COMPARE_PROVIDERS.reduce((a, b) =>
-    startingPrice(a) <= startingPrice(b) ? a : b,
-  );
+  const cheapest = MOUNJARO_UK_COMPARE_PROVIDERS.filter(
+    (p) => startingPrice(p) > 0,
+  ).reduce((a, b) => (startingPrice(a) <= startingPrice(b) ? a : b));
   const annualCosts = buildAnnualCostEstimates(
     MOUNJARO_DOSE_KEYS,
     ["5mg", "7.5mg", "10mg", "12.5mg", "15mg"],
-    MOUNJARO_UK_COMPARE_PROVIDERS.map((p) => p.prices),
+    // A zero price means the strength is not listed by that provider.
+    MOUNJARO_UK_COMPARE_PROVIDERS.map((p) =>
+      Object.fromEntries(
+        MOUNJARO_DOSE_KEYS.map((k) => [k, p.prices[k] > 0 ? p.prices[k] : null]),
+      ) as Record<(typeof MOUNJARO_DOSE_KEYS)[number], number | null>,
+    ),
   );
   const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
 
@@ -125,9 +129,9 @@ export default function CompareMounjaroPricesUkPage() {
               Advanced comparison table
             </h2>
             <p className="mt-3 max-w-3xl text-slate-600">
-              Each pen strength has its own column (2.5 mg–15 mg). Filter by name,
-              starting price band, rating, and delivery type; every column header
-              shows sort controls. Tap a provider name for its profile page. Row
+              Each pen strength has its own column (2.5 mg–15 mg). Pick a
+              single strength, or filter by name, starting price band and
+              Trustpilot rating; every column header shows sort controls. Tap a provider name for its profile page. Row
               tint and highlighted cells show the lowest prices in your current
               view.
             </p>
@@ -178,7 +182,7 @@ export default function CompareMounjaroPricesUkPage() {
               {insights ? (
                 <p className="mt-4 max-w-3xl text-slate-600 leading-relaxed">
                   Across the {insights.providerCount} providers in our table
-                  (prices checked {mounjaroLastUpdated}), a{" "}
+                  (latest price update {mounjaroLastUpdated}), a{" "}
                   {formatDose(insights.starter.dose)} starter pen is listed from{" "}
                   {formatGbp(insights.starter.low)} to{" "}
                   {formatGbp(insights.starter.high)}, with a median of{" "}
@@ -278,7 +282,6 @@ export default function CompareMounjaroPricesUkPage() {
                     <th className="px-4 py-3">Lens</th>
                     <th className="px-4 py-3">Example in this snapshot</th>
                     <th className="px-4 py-3">Starting pen</th>
-                    <th className="px-4 py-3">Monthly est.</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -289,9 +292,6 @@ export default function CompareMounjaroPricesUkPage() {
                     <td className="px-4 py-3 text-slate-800">{cheapest.name}</td>
                     <td className="px-4 py-3 tabular-nums text-slate-900">
                       £{startingPrice(cheapest)}
-                    </td>
-                    <td className="px-4 py-3 tabular-nums text-slate-800">
-                      £{estimatedMonthlyCost(cheapest)}
                     </td>
                   </tr>
                 </tbody>
