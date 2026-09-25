@@ -670,13 +670,8 @@ export function getWegovyCompareProviderById(
 }
 
 export function startingPrice(p: WegovyUkProviderCompare): number {
-  return Math.min(...numericWegovyPrices(p.prices));
-}
-
-export function estimatedMonthlyCost(p: WegovyUkProviderCompare): number {
-  const values = numericWegovyPrices(p.prices);
-  const sum = values.reduce((acc, n) => acc + n, 0);
-  return Math.round(sum / values.length);
+  const listed = numericWegovyPrices(p.prices);
+  return listed.length > 0 ? Math.min(...listed) : 0;
 }
 
 export function dosePriceRangeByStrength(
@@ -687,6 +682,7 @@ export function dosePriceRangeByStrength(
       const amount = wegovyPriceAmount(p.prices[k]);
       return amount == null ? [] : [amount];
     });
+    if (vals.length === 0) return { dose: k, min: 0, max: 0, avg: 0 };
     const min = Math.min(...vals);
     const max = Math.max(...vals);
     const avg = Math.round(vals.reduce((a, b) => a + b, 0) / vals.length);

@@ -175,22 +175,17 @@ export const WEGOVY_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }[]
     {
       question: "How much does Wegovy cost in the UK?",
       answer:
-        "Private Wegovy pen prices depend on dose (0.25 mg up to 7.2 mg), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table shows estimated starting and average-style monthly figures, checked on the dates shown in the table—always confirm the live checkout price on the provider’s site.",
+        "Private Wegovy pen prices depend on dose (0.25 mg up to 7.2 mg), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table lists the price of one pen at each strength and the date each provider’s prices were checked; TBC means no confirmed price for that strength. Delivery is not included—always confirm the final checkout price on the provider’s site.",
     },
     {
       question: "What is the cheapest Wegovy UK provider?",
       answer:
-        "The lowest listed starting pen price shown in our comparison table varies when you filter the table; several chains and online clinics compete closely. The cheapest headline price is not always the best value—check consultation rules, delivery, cold-chain handling, and aftercare before you choose.",
+        "The cheapest provider can change from one strength to the next, so sort the table by the strength you expect to use rather than the 0.25 mg starter pen. Then add any delivery or consultation charges before comparing totals.",
     },
     {
       question: "Do I need a prescription for Wegovy?",
       answer:
         "Yes. Wegovy (semaglutide) is prescription-only in the UK. Legitimate private routes require an appropriate medical assessment by a qualified prescriber before a pharmacy can supply it.",
-    },
-    {
-      question: "Why do Wegovy prices vary between pharmacies?",
-      answer:
-        "Prices differ because of dose, bundled consultation fees, delivery and cold-chain logistics, promotions, and how each provider structures subscriptions or bundles. Use the table filters and the sections below to compare total value, not just the headline pen price.",
     },
   ];
 

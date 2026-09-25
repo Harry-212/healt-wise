@@ -7,11 +7,15 @@ import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import WegovyCompareShaderHero from "@/components/wegovy/WegovyCompareShaderHero";
 import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
 import {
-  estimatedMonthlyCost,
   startingPrice,
   WEGOVY_DOSE_KEYS,
   wegovyPriceAmount,
 } from "@/lib/data/wegovy-uk-compare-providers";
+import {
+  buildDosePriceInsights,
+  formatDose,
+  formatGbp,
+} from "@/lib/data/mounjaro-price-insights";
 import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
 import AnnualCostSection from "@/components/compare/AnnualCostSection";
 import NhsAccessSection from "@/components/compare/NhsAccessSection";
@@ -77,18 +81,30 @@ export default function CompareWegovyPricesUkPage() {
   const faqLd = wegovyCompareUkFaqJsonLd();
   const webLd = compareWebPageJsonLd();
 
-  const cheapest = WEGOVY_UK_COMPARE_PROVIDERS.reduce((a, b) =>
-    startingPrice(a) <= startingPrice(b) ? a : b,
+  const cheapest = WEGOVY_UK_COMPARE_PROVIDERS.filter(
+    (p) => startingPrice(p) > 0,
+  ).reduce((a, b) => (startingPrice(a) <= startingPrice(b) ? a : b));
+  // "TBC" / "OOS" cells are not listed prices.
+  const priceRows = WEGOVY_UK_COMPARE_PROVIDERS.map((p) =>
+    Object.fromEntries(
+      WEGOVY_DOSE_KEYS.map((k) => [k, wegovyPriceAmount(p.prices[k])]),
+    ) as Record<(typeof WEGOVY_DOSE_KEYS)[number], number | null>,
   );
   const annualCosts = buildAnnualCostEstimates(
     WEGOVY_DOSE_KEYS,
     ["1mg", "1.7mg", "2.4mg", "7.2mg"],
-    WEGOVY_UK_COMPARE_PROVIDERS.map((p) =>
-      Object.fromEntries(
-        WEGOVY_DOSE_KEYS.map((k) => [k, wegovyPriceAmount(p.prices[k])]),
-      ) as Record<(typeof WEGOVY_DOSE_KEYS)[number], number | null>,
-    ),
+    priceRows,
   );
+  const insights = buildDosePriceInsights(
+    WEGOVY_UK_COMPARE_PROVIDERS.map((p, i) => ({
+      name: p.name,
+      prices: priceRows[i],
+    })),
+    WEGOVY_DOSE_KEYS,
+    "0.25mg",
+    "2.4mg",
+  );
+  const highDose = insights?.doses.find((d) => d.dose === "7.2mg");
 
   return (
     <>
@@ -125,11 +141,13 @@ export default function CompareWegovyPricesUkPage() {
               Advanced comparison table
             </h2>
             <p className="mt-3 max-w-3xl text-slate-600">
-              Each pen strength has its own column. Filter by name, starting
-              price band, rating, and delivery type; every column header shows
-              sort controls (active column uses a filled arrow). Tap a provider
-              name for its profile page. Row tint and green cells highlight the
-              lowest prices in your current view.
+              Each pen strength has its own column (0.25 mg–7.2 mg). Pick a
+              single strength, or filter by name, starting price band and
+              Trustpilot rating; every column header shows sort controls
+              (active column uses a filled arrow). Tap a provider name for its
+              profile page. Row tint and green cells highlight the lowest prices
+              in your current view. TBC means we have no confirmed price for
+              that strength.
             </p>
             <div className="mt-10">
               <WegovyUkCompareTable providers={WEGOVY_UK_COMPARE_PROVIDERS} lastUpdated={wegovyLastUpdated} />
@@ -144,8 +162,8 @@ export default function CompareWegovyPricesUkPage() {
                 More Wegovy pricing resources
               </h2>
               <p className="mt-3 text-slate-600">
-                Use these supporting guides to understand list prices, maintenance
-                policies, and common provider questions before comparing pharmacies.
+                Questions about Wegovy fees, pen strengths and switching
+                provider are answered in more depth here.
               </p>
             </div>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -176,13 +194,34 @@ export default function CompareWegovyPricesUkPage() {
               <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
                 Wegovy price UK: what you can expect
               </h2>
-              <p className="mt-4 max-w-3xl text-slate-600 leading-relaxed">
-                Wegovy prices in the UK vary depending on the provider, dosage,
-                and included services. Entry-level pricing often starts lower,
-                but total monthly costs can increase as dosage levels rise. The
-                charts below summarise how listed prices spread and climb by pen
-                strength across our snapshot — not a quote for your care.
-              </p>
+              {insights ? (
+                <p className="mt-4 max-w-3xl text-slate-600 leading-relaxed">
+                  Across the {insights.providerCount} providers in our table
+                  (latest price update {wegovyLastUpdated}), a{" "}
+                  {formatDose(insights.starter.dose)} starter pen is listed from{" "}
+                  {formatGbp(insights.starter.low)} to{" "}
+                  {formatGbp(insights.starter.high)}, with a median of{" "}
+                  {formatGbp(insights.starter.median)}. At{" "}
+                  {formatDose(insights.top.dose)} the range is{" "}
+                  {formatGbp(insights.top.low)} to{" "}
+                  {formatGbp(insights.top.high)} (median{" "}
+                  {formatGbp(insights.top.median)}). For the same provider,
+                  moving from {formatDose(insights.starter.dose)} to{" "}
+                  {formatDose(insights.top.dose)} adds a median of{" "}
+                  {formatGbp(insights.medianStepUp)} per pen.
+                  {highDose ? (
+                    <>
+                      {" "}
+                      The 7.2 mg pen is listed by {highDose.listed} of{" "}
+                      {insights.providerCount} providers, from{" "}
+                      {formatGbp(highDose.low)} to {formatGbp(highDose.high)}{" "}
+                      (median {formatGbp(highDose.median)}); the others show
+                      TBC.
+                    </>
+                  ) : null}{" "}
+                  The charts below show how prices spread at each strength.
+                </p>
+              ) : null}
             </div>
             <div className="grid gap-8 lg:grid-cols-1">
               <WegovyCompareChartsSection
@@ -198,34 +237,35 @@ export default function CompareWegovyPricesUkPage() {
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
               Why do Wegovy prices vary in the UK?
             </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              Prices can differ based on:
-            </p>
+            {insights ? (
+              <p className="mt-4 text-slate-600 leading-relaxed">
+                The same pen strength can cost very different amounts. The
+                widest gap in our table is at{" "}
+                {formatDose(insights.widest.dose)}, where listed prices run from{" "}
+                {formatGbp(insights.widest.low)} to{" "}
+                {formatGbp(insights.widest.high)}. The main reasons:
+              </p>
+            ) : null}
             <ul className="mt-4 list-inside list-disc space-y-2 text-slate-700">
               <li>
-                <strong className="font-semibold text-slate-900">Dosage</strong>{" "}
-                — higher-strength pens typically cost more per month.
+                <strong className="font-semibold text-slate-900">
+                  Pen strength
+                </strong>{" "}
+                — each strength from 0.25 mg to 7.2 mg is priced separately, and
+                most providers charge more for each step up.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">
-                  Consultation fees
+                  Consultation model
                 </strong>{" "}
-                — some sites bundle assessment into the medicine price; others
-                break it out.
+                — online doctors and pharmacies may include the prescriber
+                assessment in the pen price, while programmes may bundle
+                coaching or app support.
               </li>
               <li>
-                <strong className="font-semibold text-slate-900">
-                  Delivery and cold-chain logistics
-                </strong>{" "}
-                — refrigerated shipping and courier choices affect headline
-                totals.
-              </li>
-              <li>
-                <strong className="font-semibold text-slate-900">
-                  Support services
-                </strong>{" "}
-                — ongoing reviews, apps, or coaching may be reflected in
-                pricing.
+                <strong className="font-semibold text-slate-900">Delivery</strong>{" "}
+                — our table shows the pen price only; check each provider&apos;s
+                delivery charge at checkout.
               </li>
             </ul>
           </div>
@@ -244,6 +284,22 @@ export default function CompareWegovyPricesUkPage() {
               Confirm the current details directly with the provider before
               making your choice.
             </p>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              {insights &&
+              insights.starter.lowProvider !== insights.top.lowProvider ? (
+                <>
+                  The cheapest {formatDose(insights.starter.dose)} starter pen
+                  is not the cheapest at {formatDose(insights.top.dose)}: in our
+                  table the lowest starter price is from{" "}
+                  {insights.starter.lowProvider}, but the lowest{" "}
+                  {formatDose(insights.top.dose)} price is from{" "}
+                  {insights.top.lowProvider}.{" "}
+                </>
+              ) : null}
+              To compare like for like, use the same strength column for every
+              provider, check whether a strength you may need is listed or shows
+              TBC, and add delivery and any separate consultation charge.
+            </p>
             <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200/90 shadow-sm">
               <table className="w-full border-collapse text-left text-sm">
                 <thead className="bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-500">
@@ -251,7 +307,6 @@ export default function CompareWegovyPricesUkPage() {
                     <th className="px-4 py-3">Lens</th>
                     <th className="px-4 py-3">Example in this snapshot</th>
                     <th className="px-4 py-3">Starting pen</th>
-                    <th className="px-4 py-3">Monthly est.</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -262,9 +317,6 @@ export default function CompareWegovyPricesUkPage() {
                     <td className="px-4 py-3 text-slate-800">{cheapest.name}</td>
                     <td className="px-4 py-3 tabular-nums text-slate-900">
                       £{startingPrice(cheapest)}
-                    </td>
-                    <td className="px-4 py-3 tabular-nums text-slate-800">
-                      £{estimatedMonthlyCost(cheapest)}
                     </td>
                   </tr>
                 </tbody>
@@ -313,12 +365,54 @@ export default function CompareWegovyPricesUkPage() {
               How dosage affects Wegovy cost
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              As dosage increases, the cost of treatment typically rises. Most
-              people begin at a lower dose and gradually increase to a
-              maintenance level, so your early months may look cheaper on paper
-              than later titration steps. Your prescriber will individualise the
-              schedule.
+              Lowest, median and highest listed price per pen at each strength
+              across our table, and how many providers list that strength. Your
+              prescriber decides which strength you use and when it changes.
             </p>
+            {insights ? (
+              <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white">
+                <table className="w-full text-left text-sm">
+                  <caption className="sr-only">
+                    Lowest, median and highest listed Wegovy pen price by
+                    strength
+                  </caption>
+                  <thead className="bg-slate-50 text-slate-700">
+                    <tr>
+                      <th scope="col" className="px-4 py-3 font-semibold">
+                        Pen strength
+                      </th>
+                      <th scope="col" className="px-4 py-3 font-semibold">
+                        Providers listing
+                      </th>
+                      <th scope="col" className="px-4 py-3 font-semibold">
+                        Lowest listed
+                      </th>
+                      <th scope="col" className="px-4 py-3 font-semibold">
+                        Median
+                      </th>
+                      <th scope="col" className="px-4 py-3 font-semibold">
+                        Highest listed
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 text-slate-600">
+                    {insights.doses.map((d) => (
+                      <tr key={d.dose}>
+                        <th scope="row" className="px-4 py-3 font-medium text-slate-900">
+                          {formatDose(d.dose)}
+                        </th>
+                        <td className="px-4 py-3 tabular-nums">
+                          {d.listed} of {insights.providerCount}
+                        </td>
+                        <td className="px-4 py-3 tabular-nums">{formatGbp(d.low)}</td>
+                        <td className="px-4 py-3 tabular-nums">{formatGbp(d.median)}</td>
+                        <td className="px-4 py-3 tabular-nums">{formatGbp(d.high)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : null}
           </div>
         </section>
 
@@ -326,6 +420,17 @@ export default function CompareWegovyPricesUkPage() {
           medicine="Wegovy"
           estimates={annualCosts}
           providerCount={WEGOVY_UK_COMPARE_PROVIDERS.length}
+          intro={
+            <>
+              Monthly pen prices only tell part of the story. Most people spend
+              the first few months on lower starter strengths before settling on
+              a maintenance dose, so year one usually costs less than a full year
+              at maintenance.
+              {highDose
+                ? ` The 7.2 mg rows use only the ${highDose.listed} providers that list a 7.2 mg price.`
+                : null}
+            </>
+          }
         />
 
         <NhsAccessSection medicine="Wegovy">
