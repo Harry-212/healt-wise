@@ -125,7 +125,7 @@ const nextConfig: NextConfig = {
       {
         source: "/compare/mounjaro-vs-wegovy-vs-saxenda",
         destination: "/compare/wegovy-vs-mounjaro",
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: "/lifestyle",
