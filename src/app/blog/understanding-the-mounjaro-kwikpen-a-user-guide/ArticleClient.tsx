@@ -186,7 +186,7 @@ export default function ArticleClient() {
                 If you are curious about new trends in injectable treatments,
                 you might find it helpful to check out our{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   UK weight loss treatments comparison hub

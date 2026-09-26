@@ -183,7 +183,7 @@ export default function PlymouthLocationContent({ loc, shareUrl }: Props) {
                   If you want to compare treatment categories before choosing a
                   local route, start with our{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     UK weight loss treatment comparison
@@ -655,7 +655,7 @@ export default function PlymouthLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

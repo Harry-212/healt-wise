@@ -177,7 +177,7 @@ export default function PortsmouthLocationContent({ loc, shareUrl }: Props) {
                   timelines, and South Hampshire slimming hacks. If you are still
                   comparing the wider UK treatment landscape, start with our{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     UK weight loss treatment comparison
@@ -628,7 +628,7 @@ export default function PortsmouthLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

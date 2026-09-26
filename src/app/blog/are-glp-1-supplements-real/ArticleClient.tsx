@@ -246,7 +246,7 @@ export default function ArticleClient() {
                 &ldquo;non-prescription alternative&rdquo;. If you are weighing
                 regulated options, it helps to{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro vs Wegovy vs Saxenda

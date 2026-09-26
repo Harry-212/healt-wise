@@ -422,7 +422,7 @@ export default function DoncasterLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     →{" "}
-                    <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
+                    <Link href="/compare/wegovy-vs-mounjaro" className={linkCls}>
                       Compare best weight loss treatments in the UK
                     </Link>
                   </li>

@@ -231,7 +231,7 @@ export default function CraigavonLocationContent({ loc, shareUrl }: Props) {
                 </p>
                 <p className={p}>
                   For plain language context, start with{" "}
-                  <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
+                  <Link href="/compare/wegovy-vs-mounjaro" className={linkCls}>
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read{" "}
@@ -392,7 +392,7 @@ export default function CraigavonLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     →{" "}
-                    <Link href="/compare/mounjaro-vs-wegovy-vs-saxenda" className={linkCls}>
+                    <Link href="/compare/wegovy-vs-mounjaro" className={linkCls}>
                       Compare best weight loss treatments in the UK
                     </Link>
                   </li>

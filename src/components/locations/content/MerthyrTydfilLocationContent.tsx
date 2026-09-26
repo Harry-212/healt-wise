@@ -165,7 +165,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Merthyr Tydfil&apos;s valleys and Cyfarthfa Castle trails inspire health. But hearty pubs or shift work add layers. The best weight loss treatment in Merthyr Tydfil? Grounded strategies blending local life with science. Start with our{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   comparator, then use this South Wales guide for local context.
@@ -517,14 +517,14 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       best weight loss treatments in the UK
                     </Link>
                     .
                   </li>
                   <li>
                     Compare medicines on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       Mounjaro versus Wegovy versus Saxenda
                     </Link>
                     .

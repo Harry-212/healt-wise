@@ -200,7 +200,7 @@ export default function BangorNorthernIrelandLocationContent({
                   management is both safe and sustainable for the long term.
                   Start orienting with our{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     best weight loss treatments in the UK
@@ -693,7 +693,7 @@ export default function BangorNorthernIrelandLocationContent({
                   <li>
                     →{" "}
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK
@@ -792,7 +792,7 @@ export default function BangorNorthernIrelandLocationContent({
                   community movement, and compare medical options with eyes open
                   via{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     our UK comparator

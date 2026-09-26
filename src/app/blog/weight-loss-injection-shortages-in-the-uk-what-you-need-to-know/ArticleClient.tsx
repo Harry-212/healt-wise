@@ -202,7 +202,7 @@ export default function ArticleClient() {
                 curious about how weight loss treatments rose to prominence, you
                 might enjoy our{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   UK weight loss treatments comparison hub

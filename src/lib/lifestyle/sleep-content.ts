@@ -160,6 +160,6 @@ export const SLEEP_INTERNAL_LINKS = [
   { href: "/tools/bmi-calculator", label: "BMI & calorie calculator" },
   { href: "/tools/weight-loss-tracker", label: "Weight loss tracker" },
   { href: "/blog", label: "Blog" },
-  { href: "/compare/mounjaro-vs-wegovy-vs-saxenda", label: "Mounjaro vs Wegovy vs Saxenda" },
+  { href: "/compare/wegovy-vs-mounjaro", label: "Mounjaro vs Wegovy vs Saxenda" },
   { href: "/helpful-guides/mounjaro-menopause-weight-loss-uk", label: "Menopause & weight (UK guide)" },
 ] as const;

@@ -164,7 +164,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Lincoln&apos;s cathedral spires and Brayford Pool inspire health goals. Chip shop temptations and A46 commutes challenge, though. The best weight loss treatment in Lincoln blends evidence, accessibility, and Lincolnshire practicality, so you do not need US style fads. Start with{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and{" "}
@@ -625,7 +625,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare pathways on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       best weight loss treatments in the UK
                     </Link>
                     .
@@ -669,7 +669,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion: Lincoln evidence path forward">
                 <p className={`text-lg md:text-xl ${p}`}>
                   Best weight loss treatment Lincoln demands patience over promises, NHS foundations when capacity exists, strategic private tools when eligible and paid, and relentless consistency. From 5 kg quick wins to 20 kg transformations, Lincolnshire locals hold the map: cathedral climbs, market smarts, science guided steps. Sustainable vitality beats temporary scales every time. Explore{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     Mounjaro versus Wegovy versus Saxenda
                   </Link>{" "}
                   when your clinician names brands.

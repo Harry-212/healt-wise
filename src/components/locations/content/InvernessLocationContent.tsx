@@ -334,7 +334,7 @@ export default function InvernessLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare providers using{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       our UK comparison page
                     </Link>
                     .

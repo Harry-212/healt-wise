@@ -171,7 +171,7 @@ export default function ArticleClient() {
                 rather than weekly dosing. To see how these therapies match up
                 clinically, you can{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro vs Wegovy vs Saxenda

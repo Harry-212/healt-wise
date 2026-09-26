@@ -160,7 +160,7 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   If you are comparing providers, start with our{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     best weight loss treatments in the UK comparison
                   </Link>{" "}
                   then read the basics on{" "}
@@ -242,7 +242,7 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   If you want a structured comparison of medication pros and cons, see{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     our UK comparison guide
                   </Link>{" "}
                   and use the{" "}
@@ -476,7 +476,7 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare providers on follow up, safety checks, and cancellation terms using{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       the UK comparison page
                     </Link>
                     .

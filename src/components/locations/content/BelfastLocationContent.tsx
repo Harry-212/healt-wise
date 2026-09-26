@@ -176,7 +176,7 @@ export default function BelfastLocationContent({ loc, shareUrl }: Props) {
                   places like FacetherapyNI emphasize sustainability over quick
                   fixes, start with{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     best weight loss treatments in the UK
@@ -435,7 +435,7 @@ export default function BelfastLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     →{" "}
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

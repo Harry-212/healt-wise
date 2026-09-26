@@ -318,7 +318,7 @@ export default function ArticleClient() {
               <p>
                 To make the best-informed decision, it is wise to{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro vs Wegovy vs Saxenda
@@ -586,7 +586,7 @@ export default function ArticleClient() {
                 That is why Healthwise360 links users to a comprehensive
                 comparison page to{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro vs Wegovy vs Saxenda
@@ -706,7 +706,7 @@ export default function ArticleClient() {
                 using our independent data model. We aim to offer the most
                 comprehensive{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   weight loss treatment price comparison UK

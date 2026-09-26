@@ -128,7 +128,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
 
                 <p className={`mt-4 ${p}`}>
                   Below, we walk through these questions in a grounded, evidence-based way, avoiding hype and focusing on what is realistic in the North East. You can also compare UK-wide pathways in our{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   guide.
@@ -278,7 +278,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
 
                 <p className={`mt-4 ${p}`}>
                   Crucially, injectable GLP-1 treatments are usually not a permanent solution. They work best when combined with changes in diet, activity, and behaviour. If someone stops taking them without changing habits, weight tends to creep back. Compare options using{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     Mounjaro versus Wegovy versus Saxenda
                   </Link>
                   .
@@ -570,14 +570,14 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       best weight loss treatments in the UK
                     </Link>
                     .
                   </li>
                   <li>
                     Compare GLP-1 options on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       Mounjaro versus Wegovy versus Saxenda
                     </Link>
                     .

@@ -180,7 +180,7 @@ export default function BlackburnLocationContent({ loc, shareUrl }: Props) {
                   iLipo—evidence varies, consult experts. If you are comparing
                   options, start with{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     best weight loss treatments in the UK
@@ -322,7 +322,7 @@ export default function BlackburnLocationContent({ loc, shareUrl }: Props) {
                   matters. Treat them as tools, not forever fixes. If you want a
                   calm comparison, start at{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     best weight loss treatments in the UK
@@ -530,7 +530,7 @@ export default function BlackburnLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     →{" "}
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

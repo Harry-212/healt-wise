@@ -162,7 +162,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Manchester has become one of the UK&apos;s most visible cities for weight management, and that is not surprising. It has a large private healthcare market, strong NHS pathways, and a population that is already searching for realistic answers rather than quick-fix promises. If you live in the city or wider Greater Manchester area, the real question is not simply which treatment sounds best. It is which treatment is actually suitable, safe, and sustainable for your situation. Compare pathways on{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read our{" "}
@@ -501,7 +501,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   If your main issue is hunger and repeated regain, GLP-1 medication may be worth discussing. If your condition is more severe, surgery may be the more effective route. If you are close to goal weight and want shape refinement, contouring might be enough. There is no prize for choosing the most dramatic option. For a fuller comparator view, open{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     Mounjaro versus Wegovy versus Saxenda
                   </Link>{" "}
                   and{" "}
@@ -569,7 +569,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       best weight loss treatments in the UK
                     </Link>
                     .

@@ -804,7 +804,7 @@ export default function ArticleClient() {
                 comparison, including Trustpilot ratings and GPhC verification
                 status, see the{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-semibold text-emerald-600 hover:underline"
                 >
                   Mounjaro vs Wegovy vs Saxenda price comparison
@@ -1147,7 +1147,7 @@ export default function ArticleClient() {
                     covers more than 64 GPhC registered pharmacies across all
                     three treatments and all dose strengths. The{" "}
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className="font-semibold text-emerald-600 hover:underline"
                     >
                       Mounjaro vs Wegovy vs Saxenda comparison hub
@@ -1218,7 +1218,7 @@ export default function ArticleClient() {
                 steps in your research, compare current prices across all three
                 treatments through the{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-semibold text-emerald-600 hover:underline"
                 >
                   Healthwise360 comparison hub

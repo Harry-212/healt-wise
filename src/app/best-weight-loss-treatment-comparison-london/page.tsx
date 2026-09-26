@@ -81,7 +81,7 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
     <>
       <BreadcrumbJsonLd
         sectionName="Compare treatments"
-        sectionPath="/compare/mounjaro-vs-wegovy-vs-saxenda"
+        sectionPath="/compare/wegovy-vs-mounjaro"
         pageName={PAGE_TITLE}
         pagePath={PAGE_PATH}
       />

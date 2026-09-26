@@ -209,7 +209,7 @@ export default function ArticleClient() {
                 Healthwise360 does not prescribe medication or provide personal
                 diet plans. Instead, it helps users{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className={linkClass}
                 >
                   compare weight loss treatment prices
@@ -840,7 +840,7 @@ export default function ArticleClient() {
                 Treatment choice should still be based on clinical suitability.
                 Readers can{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className={linkClass}
                 >
                   compare Mounjaro vs Wegovy vs Saxenda

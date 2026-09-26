@@ -280,7 +280,7 @@ export default function ArticleClient() {
                 </Link>{" "}
                 and then{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro, Wegovy and Saxenda prices
@@ -555,7 +555,7 @@ export default function ArticleClient() {
                 </li>
                 <li>
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className="font-medium text-emerald-600 hover:underline"
                   >
                     Compare Mounjaro, Wegovy and Saxenda prices

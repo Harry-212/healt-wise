@@ -168,7 +168,7 @@ export default function ArticleClient() {
                 broader obesity management, not standalone fixes. For a wider
                 view of options, see our{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   UK weight loss treatments comparison hub

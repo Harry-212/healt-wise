@@ -129,7 +129,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>
                     Medical weight loss injections (like{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       GLP-1 drugs
                     </Link>
                     ).
@@ -142,7 +142,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`mt-4 ${p}`}>
                   We will not be pushing any clinic or product. Instead, we will help you understand how to judge different options, what to ask, and what to expect from the NHS versus private providers in the Middlesbrough area. You can also compare broader routes in our{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     UK weight loss treatment comparison
                   </Link>{" "}
                   and check how we review information in our{" "}
@@ -369,7 +369,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                     Wegovy versus Mounjaro
                   </Link>{" "}
                   and{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     Mounjaro versus Wegovy versus Saxenda
                   </Link>
                   .
@@ -641,7 +641,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       best weight loss treatments in the UK
                     </Link>
                     .

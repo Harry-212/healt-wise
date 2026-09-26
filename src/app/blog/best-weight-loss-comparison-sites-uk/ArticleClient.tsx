@@ -433,7 +433,7 @@ export default function ArticleClient() {
               <p>
                 <strong>The comparison interface</strong> at{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className={linkClass}
                 >
                   Healthwise360&apos;s Mounjaro vs Wegovy vs Saxenda hub
@@ -1132,7 +1132,7 @@ export default function ArticleClient() {
                     equal three-treatment comparison with filtering by dose,
                     Trustpilot, and provider, the{" "}
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className={linkClass}
                     >
                       Mounjaro vs Wegovy vs Saxenda hub at Healthwise360
@@ -1236,7 +1236,7 @@ export default function ArticleClient() {
                     realistic cost is across the full treatment journey, and
                     which pharmacies are safe to use,{" "}
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className={linkClass}
                     >
                       Healthwise360

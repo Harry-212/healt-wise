@@ -166,7 +166,7 @@ export default function LondonderryLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   In practice, the best weight loss treatment in Londonderry is not a single product or one miracle injection. It is more likely to be a structured, evidence based approach that takes into account your weight history, appetite patterns, work schedule, stress, sleep, and whether you are trying to lose 5 kg or a much larger amount. Some people may do best with lifestyle led support alone. Others may need prescription medication, especially if obesity or weight related conditions are already present. Map options early on{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read{" "}
@@ -470,7 +470,7 @@ export default function LondonderryLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   The better question is not which one is strongest? but which one is suitable, available, affordable, and safe for me right now? That framing is more useful and more medically honest. Compare triplets on{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     Mounjaro versus Wegovy versus Saxenda
                   </Link>{" "}
                   and budget on{" "}
@@ -537,7 +537,7 @@ export default function LondonderryLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       best weight loss treatments in the UK
                     </Link>
                     .

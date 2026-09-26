@@ -704,7 +704,7 @@ export default function ArticleClient() {
               <p>
                 You can also{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro vs Wegovy vs Saxenda
@@ -1142,7 +1142,7 @@ export default function ArticleClient() {
                 </li>
                 <li>
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className="font-medium text-emerald-600 hover:underline"
                   >
                     compare Mounjaro vs Wegovy vs Saxenda

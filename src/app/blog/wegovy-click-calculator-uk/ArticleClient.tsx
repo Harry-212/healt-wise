@@ -798,7 +798,7 @@ export default function ArticleClient() {
                 </Link>{" "}
                 and the{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className={linkClass}
                 >
                   full weight loss treatment comparison hub

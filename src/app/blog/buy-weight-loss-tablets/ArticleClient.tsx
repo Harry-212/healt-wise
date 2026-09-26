@@ -630,7 +630,7 @@ export default function ArticleClient() {
                 soon change the market again. If you are comparing different
                 medical routes to lose weight, you can read our summary{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   comparing Mounjaro vs Wegovy vs Saxenda

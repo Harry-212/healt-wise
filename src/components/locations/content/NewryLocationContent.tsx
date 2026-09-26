@@ -159,7 +159,7 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   If you are searching for the best weight loss treatment in Newry, the useful question is not only &quot;what works fastest?&quot; It is also &quot;what is safe, sustainable, and actually available to me here?&quot; For wider context, compare the main routes in our{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   guide.
@@ -252,7 +252,7 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`mt-4 ${p}`}>
                   They are similar in purpose, but not identical in how they work or how they are dosed. Some people tolerate one better than another. Some respond more strongly to one medicine. A clinician may consider factors such as BMI, diabetes risk, previous side effects, and personal preference before deciding. Compare the main options in{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     Mounjaro versus Wegovy versus Saxenda
                   </Link>
                   .
@@ -562,14 +562,14 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment categories on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       best weight loss treatments in the UK
                     </Link>
                     .
                   </li>
                   <li>
                     Compare injections on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       Mounjaro versus Wegovy versus Saxenda
                     </Link>
                     .

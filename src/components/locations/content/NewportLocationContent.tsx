@@ -122,7 +122,7 @@ export default function NewportLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Newport&apos;s river Usk paths and castle gates inspire change. Yet, post-industrial pints or quick meals add up. The best weight loss treatment in Newport combines evidence-based medications with tailored coaching - safely, with local support. Compare wider routes in our{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   guide.
@@ -405,14 +405,14 @@ export default function NewportLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment types on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       best weight loss treatments in the UK
                     </Link>
                     .
                   </li>
                   <li>
                     Compare GLP-1 options on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       Mounjaro versus Wegovy versus Saxenda
                     </Link>
                     .

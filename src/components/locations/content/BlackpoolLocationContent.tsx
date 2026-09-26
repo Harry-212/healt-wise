@@ -178,7 +178,7 @@ export default function BlackpoolLocationContent({ loc, shareUrl }: Props) {
                   medications like semaglutide (Wegovy) or tirzepatide
                   (Mounjaro) via GP referral where eligible. Start with{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     best weight loss treatments in the UK
@@ -505,7 +505,7 @@ export default function BlackpoolLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     →{" "}
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

@@ -147,7 +147,7 @@ export default function ArticleClient() {
               If you are new to this class of therapies, you may also want to
               explore our{" "}
               <Link
-                href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                href="/compare/wegovy-vs-mounjaro"
                 className="font-medium text-brand-primary underline"
               >
                 UK weight loss treatments comparison hub

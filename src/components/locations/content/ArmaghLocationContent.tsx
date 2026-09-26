@@ -288,7 +288,7 @@ export default function ArmaghLocationContent({ loc, shareUrl }: Props) {
                   want a bird&apos;s-eye view of how injections, coaching, and
                   clinics compare nationally, start with{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     best weight loss treatments in the UK
@@ -793,7 +793,7 @@ export default function ArmaghLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     →{" "}
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

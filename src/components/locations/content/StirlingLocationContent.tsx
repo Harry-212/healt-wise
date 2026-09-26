@@ -193,7 +193,7 @@ export default function StirlingLocationContent({ loc, shareUrl }: Props) {
                 adults living in Stirling and the wider Forth Valley area. For a
                 wider UK view of how treatments compare, see our{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className={linkCls}
                 >
                   UK weight loss treatment comparison
@@ -774,7 +774,7 @@ export default function StirlingLocationContent({ loc, shareUrl }: Props) {
                 Medication should not be treated as a replacement for clinical
                 support, nutrition or sustainable behaviour change. Use our{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className={linkCls}
                 >
                   treatment comparison pages
@@ -1333,7 +1333,7 @@ export default function StirlingLocationContent({ loc, shareUrl }: Props) {
               <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                 <li>
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     Compare best weight loss treatments in the UK

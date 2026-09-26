@@ -158,7 +158,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-lg md:text-xl ${p}`}>
                   Lichfield&apos;s cathedral close and market squares inspire health goals. But sausage rolls from the Friday market or desk commutes toward Birmingham pile pounds on. Curious about the best weight loss treatment in Lichfield? Evidence favours monitored GLP 1 medicines like Mounjaro and Wegovy over fads, paired with local walks and habits. Compare options on{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   and read{" "}
@@ -406,7 +406,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare providers using{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       our UK comparison page
                     </Link>
                     .
@@ -462,7 +462,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   Whether you target 10 kg or 20 kg goals, both can be achievable with the timelines above when you stay monitored. Start local, stay monitored. Lichfield&apos;s transformation radius reaches your doorstep when you pair{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     Mounjaro versus Wegovy versus Saxenda
                   </Link>{" "}
                   decisions with habits.

@@ -90,7 +90,7 @@ export default function PharmaciesIndexPage() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
-              href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+              href="/compare/wegovy-vs-mounjaro"
               className="inline-flex items-center gap-1.5 rounded-full border border-emerald-700/20 bg-white px-4 py-2 text-sm font-semibold text-emerald-800 shadow-sm transition-colors hover:border-emerald-700/40 hover:bg-emerald-50"
             >
               <ShieldCheck className="h-4 w-4 text-emerald-700" aria-hidden />

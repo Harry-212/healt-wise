@@ -135,7 +135,7 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`mt-4 ${p}`}>
                   So when people talk about &quot;best weight loss treatment Northampton&quot;, they are referring less to a specific clinic name and more to a medically supervised, personalised, and step-by-step approach - one that can be tailored to Northampton life (commuting, town centre jobs, local schools, family routines). For broader context, compare the main paths in our{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     best weight loss treatments in the UK
                   </Link>{" "}
                   guide.
@@ -278,7 +278,7 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`mt-4 ${p}`}>
                   Compare medicine choices with{" "}
-                  <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                  <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     Mounjaro versus Wegovy versus Saxenda
                   </Link>{" "}
                   and check eligibility context with the{" "}
@@ -514,14 +514,14 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
                   <li>
                     Compare treatment categories on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       best weight loss treatments in the UK
                     </Link>
                     .
                   </li>
                   <li>
                     Compare GLP-1 medicines on{" "}
-                    <Link className={linkCls} href="/compare/mounjaro-vs-wegovy-vs-saxenda">
+                    <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                       Mounjaro versus Wegovy versus Saxenda
                     </Link>
                     .

@@ -184,7 +184,7 @@ export default function PeterboroughLocationContent({ loc, shareUrl }: Props) {
                   If you want a wider view before comparing local routes, start
                   with our{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className={linkCls}
                   >
                     UK weight loss treatment comparison
@@ -656,7 +656,7 @@ export default function PeterboroughLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className={linkCls}
                     >
                       Compare best weight loss treatments in the UK

@@ -235,7 +235,7 @@ export default function ArticleClient() {
                 than a basic &ldquo;request treatment&rdquo; page. It can help
                 users{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare weight loss treatment providers
@@ -286,7 +286,7 @@ export default function ArticleClient() {
               <p>
                 That is also why fat loss content and{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   weight loss treatment cost comparison
@@ -346,7 +346,7 @@ export default function ArticleClient() {
               <p>
                 For treatment differences, readers can move next to our{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Mounjaro vs Wegovy vs Saxenda comparison

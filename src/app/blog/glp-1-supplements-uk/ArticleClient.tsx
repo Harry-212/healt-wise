@@ -253,7 +253,7 @@ export default function ArticleClient() {
                 comparing Mounjaro, Wegovy, Saxenda, weight loss tablets, and
                 new oral GLP-1 options. If you are at that stage, it helps to{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro vs Wegovy vs Saxenda

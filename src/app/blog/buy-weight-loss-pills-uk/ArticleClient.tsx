@@ -254,7 +254,7 @@ export default function ArticleClient() {
                 against injections such as Mounjaro or Wegovy. If you are at
                 that stage, you can{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   compare Mounjaro vs Wegovy vs Saxenda
@@ -474,7 +474,7 @@ export default function ArticleClient() {
                 health profile, budget, and lifestyle?&rdquo; If injections are
                 still on your shortlist, our{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Mounjaro vs Wegovy vs Saxenda comparison

@@ -765,7 +765,7 @@ export default function ArticleClient() {
                   available privately is highly useful. You can check our
                   independent{" "}
                   <Link
-                    href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                    href="/compare/wegovy-vs-mounjaro"
                     className="font-medium text-emerald-600 hover:underline"
                   >
                     mounjaro vs wegovy vs saxenda comparison
@@ -898,7 +898,7 @@ export default function ArticleClient() {
                     not sufficient. For price and provider comparison, you can
                     visit our comprehensive{" "}
                     <Link
-                      href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                      href="/compare/wegovy-vs-mounjaro"
                       className="font-medium text-emerald-600 hover:underline"
                     >
                       mounjaro vs wegovy vs saxenda comparison
@@ -973,7 +973,7 @@ export default function ArticleClient() {
                 For those whose BMI falls in the overweight or obese range and
                 who are exploring treatment options, our interactive{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   weight loss treatment comparison

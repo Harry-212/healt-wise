@@ -339,7 +339,7 @@ export default function ArticleClient() {
                 can help you plan ahead. If you are new to this approach, you
                 may also appreciate our{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   UK weight loss treatments comparison hub

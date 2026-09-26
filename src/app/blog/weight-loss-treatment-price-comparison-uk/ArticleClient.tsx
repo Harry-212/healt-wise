@@ -14,7 +14,7 @@ import { blogImgPath, PRICE_COMPARISON_HERO_PNG } from "./blog-assets";
 
 const SHARE_PATH = "/blog/weight-loss-treatment-price-comparison-uk";
 const HERO_SRC = blogImgPath(PRICE_COMPARISON_HERO_PNG);
-const COMPARE_HUB_HREF = "/compare/mounjaro-vs-wegovy-vs-saxenda";
+const COMPARE_HUB_HREF = "/compare/wegovy-vs-mounjaro";
 
 /** In-article CTA buttons — matches the client's [BUTTON: ...] markers in the content brief. */
 const CTA_BUTTON_CLASSNAME =
@@ -253,7 +253,7 @@ export default function ArticleClient() {
                 compare the medicines themselves rather than simply their cost,
                 see our independent{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Mounjaro vs Wegovy vs Saxenda comparison
@@ -505,7 +505,7 @@ export default function ArticleClient() {
                 For a fair comparison, calculate the total expected monthly
                 cost, rather than comparing one number from an advert. See our{" "}
                 <Link
-                  href="/compare/mounjaro-vs-wegovy-vs-saxenda"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   current UK provider prices
