@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, BadgeCheck, Scale, Shield } from "lucide-react";
@@ -354,6 +355,59 @@ export default async function ComparePage({ params }: Props) {
         ) : null}
 
         <CompareFaqSection items={faqItems} />
+
+        {slug === "wegovy-vs-mounjaro" ? (
+          <section
+            className="bg-white py-12 md:py-16"
+            aria-labelledby="compare-author-heading"
+          >
+            <div className="mx-auto max-w-3xl px-4 md:px-8">
+              <div className="rounded-2xl border border-slate-200/90 bg-slate-50/70 p-6 shadow-sm md:p-8">
+                <Image
+                  src="/authors/alistair-greenwood.jpg"
+                  alt="Alistair Greenwood"
+                  width={80}
+                  height={80}
+                  className="mb-4 h-16 w-16 rounded-full object-cover ring-2 ring-white md:h-20 md:w-20"
+                />
+                <p className="text-xs font-bold uppercase tracking-wide text-slate-500">
+                  Research and comparison by
+                </p>
+                <h2
+                  id="compare-author-heading"
+                  className="mt-2 text-xl font-bold text-slate-900 md:text-2xl"
+                >
+                  <Link
+                    href="/editorial-team/alistair-greenwood"
+                    className="hover:text-brand-primary hover:underline underline-offset-2"
+                  >
+                    Alistair Greenwood
+                  </Link>
+                </h2>
+                <p className="mt-1 text-sm font-medium text-slate-600">
+                  Founder of Healthwise360 | Weight-management pricing
+                  researcher
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-slate-600 md:text-base">
+                  Alistair uses his background in project management and
+                  information analysis to research providers, compare
+                  published treatment costs and explain what services
+                  include. Drawing on his own experience of weight-management
+                  challenges, he aims to make comparisons clearer and more
+                  useful. He is not a healthcare professional and does not
+                  provide medical advice.
+                </p>
+                <Link
+                  href="/editorial-team/alistair-greenwood"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
+                >
+                  Read Alistair&apos;s full profile
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+              </div>
+            </div>
+          </section>
+        ) : null}
       </article>
     </>
   );
