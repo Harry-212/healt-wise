@@ -28,7 +28,7 @@ export const metadata: Metadata = buildPageShareMetadata({
   title:
     "Compare Saxenda Prices UK",
   metaDescription:
-    "Compare real Saxenda (liraglutide) pack prices across UK pharmacies: 1, 3 and 5 pens, delivery and repeat pricing.",
+    "Compare real Saxenda (liraglutide) pack prices across UK pharmacies: 1, 3 and 5 pens, delivery and the date each price was last checked.",
   openGraphTitle:
     "Compare Saxenda Prices UK | Healthwise360",
   openGraphDescription:
