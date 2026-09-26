@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     canonicalPath: "/mounjaro-price-comparison",
     title: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
     metaDescription:
-      "Compare Mounjaro prices by dose across 60+ GPhC-registered UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
+      "Compare Mounjaro pen prices by dose across 60+ GPhC-registered UK pharmacies. See delivery costs, provider ratings and the date each price was last checked.",
     openGraphTitle: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
     openGraphDescription:
-      "Compare Mounjaro prices by dose across 60+ GPhC-registered UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
+      "Compare Mounjaro pen prices by dose across 60+ GPhC-registered UK pharmacies. See delivery costs, provider ratings and the date each price was last checked.",
     imagePath: "/mounjaro healt wise.png",
     imageAlt: "Compare Mounjaro prices UK — Healthwise360",
   }),
@@ -63,7 +63,7 @@ function compareWebPageJsonLd() {
     "@type": "WebPage",
     name: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
     description:
-      "Compare Mounjaro prices by dose across 60+ GPhC-registered UK pharmacies. Review delivery fees, provider ratings and total monthly treatment costs.",
+      "Compare Mounjaro pen prices by dose across 60+ GPhC-registered UK pharmacies. See delivery costs, provider ratings and the date each price was last checked.",
     url: `${base}/mounjaro-price-comparison`,
     dateModified: "2026-09-25",
     isPartOf: {
