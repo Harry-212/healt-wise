@@ -116,7 +116,7 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
-                href="#london-mounjaro-compare"
+                href="#london-wegovy-compare"
                 className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:brightness-95"
               >
                 Compare prices below
