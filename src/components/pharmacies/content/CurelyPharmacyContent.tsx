@@ -1,19 +1,92 @@
 "use client";
 
+import Link from "next/link";
 import {
   HazardBox,
-  PHARMACY_PROVIDER_CTA_CLASSNAME,
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
   ProviderCta,
 } from "./_dossier";
-import { providerTablePriceSentence } from "@/lib/data/provider-price-summary";
+import {
+  providerTableFacts,
+  providerTablePriceSentence,
+  type ProviderTableRow,
+} from "@/lib/data/provider-price-summary";
 
 /** Checked table prices only (same medicine, strength and single pen). */
 const CURELY_TABLE_PRICES = providerTablePriceSentence("curely", "Curely");
+const CURELY_FACTS = providerTableFacts("curely");
 
 const providerUrl = "https://www.curely.co.uk/online-doctor/weight-loss";
+
+/** Provider details we have no recorded source or check date for. Listed openly, not filled in. */
+const CURELY_UNCONFIRMED = [
+  "Delivery services, delivery times and delivery charges",
+  "Packaging and cold-chain handling for injectable pens",
+  "Support channels (phone, email, pharmacist follow-up)",
+  "Whether Saxenda, Orlistat, Xenical or Alli are currently offered",
+  "The steps of the consultation and the eligibility criteria Curely applies",
+  "Any first-order offer, voucher or subscription pricing (our tables use list price only)",
+];
+
+const CURELY_FAQ = [
+  {
+    q: "Which medicines does Curely list in our comparison?",
+    a: "Mounjaro and Wegovy. Both appear in our price tables with the check date shown.",
+  },
+  {
+    q: "How much does Curely weight loss treatment cost?",
+    a:
+      CURELY_TABLE_PRICES ??
+      "Curely's prices vary by medicine and strength; see our comparison tables for the strengths it lists.",
+  },
+  {
+    q: "Does Curely charge for delivery?",
+    a: "We have not confirmed Curely's delivery services or charges, so this page does not state them. Check the total at checkout.",
+  },
+  {
+    q: "Is Curely a registered pharmacy?",
+    a: `Our comparison records list GPhC registration number ${CURELY_FACTS.gphcRegNo ?? "on file"}. You can confirm it on the GPhC register.`,
+  },
+  {
+    q: "Are non-injection treatments available?",
+    a: "We have not confirmed this for Curely, so we do not list any. Ask Curely directly.",
+  },
+];
+
+function PriceTable({
+  title,
+  rows,
+  checked,
+}: {
+  title: string;
+  rows: ProviderTableRow[];
+  checked: string;
+}) {
+  return (
+    <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
+      <p className="font-bold text-slate-900">{title}</p>
+      <p className="mt-1 text-xs text-slate-600">Single pen, list price. Checked {checked}.</p>
+      <table className="mt-3 w-full text-left text-sm">
+        <thead>
+          <tr className="border-b border-slate-200 text-slate-600">
+            <th className="py-1.5 pr-3 font-semibold">Strength</th>
+            <th className="py-1.5 font-semibold">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr key={r.strength} className="border-b border-slate-100 last:border-0">
+              <td className="py-1.5 pr-3 text-slate-800">{r.strength}</td>
+              <td className="py-1.5 text-slate-800">{r.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 export default function CurelyPharmacyContent() {
   /** Paste the live code here when available. */
@@ -25,15 +98,21 @@ export default function CurelyPharmacyContent() {
       slugLabel="Curely"
       fileRef="HW-CURELY-2026"
       title="Curely weight management review"
-      subtitle="Independent provider review of Curely: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat · Xenical · Alli"
+      subtitle="Independent provider review of Curely: checked Mounjaro and Wegovy prices by strength, registration details and what we have not yet confirmed (information only — not medical advice)."
+      scopeLabel="Scope: Mounjaro · Wegovy"
       providerName="Curely"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Curely" },
-        { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda · Orlistat · Xenical · Alli" },
-        { k: "Fulfilment", v: "Tracked delivery" },
+        { k: "Treatments compared", v: "Mounjaro · Wegovy" },
+        {
+          k: "Prices checked",
+          v:
+            [...new Set([CURELY_FACTS.mounjaro?.checked, CURELY_FACTS.wegovy?.checked])]
+              .filter(Boolean)
+              .join(" · ") || "See tables",
+        },
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
@@ -41,263 +120,93 @@ export default function CurelyPharmacyContent() {
       heroProviderLogoAlt="Curely"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Curely sits among the UK's regulated online pharmacies giving patients supervised access to prescription weight loss treatment. As no two people respond to treatment the same way, it's worth getting familiar with how Curely runs its consultations, handles delivery and structures pricing before signing up.</p></div>
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm">
+          <p className="text-slate-800 leading-relaxed">
+            <strong className="text-indigo-900">Service profile:</strong> Curely is an online
+            provider of prescription weight-loss medicines. This page sets out what we have
+            checked and can source, and lists separately what we have not yet confirmed.
+          </p>
+        </div>
         <p className="text-slate-800 leading-relaxed">
-          Weight loss is often framed as a discipline problem. Eat less. Move more. Stay
-          consistent. That can be true in part. But it also misses a lot.
-        </p>
-        <p className="text-slate-800 leading-relaxed">
-          Appetite signalling, stress, medication side effects, metabolic differences — those
-          factors may make weight loss harder than generic advice implies. That may be one reason
-          prescription treatments such as Mounjaro and Wegovy have drawn increasing attention in
-          the UK.
-        </p>
-        <p className="text-slate-800 leading-relaxed">
-          Curely weight loss treatment is part of that conversation. Through its online pharmacy
-          model, Curely offers access to prescription weight loss medications, pharmacist-led
-          consultations, tracked home delivery and ongoing support.
-        </p>
-        <p className="text-slate-800 leading-relaxed">
-          This guide looks at how Curely works, what treatments may be available, how delivery
-          operates, what pricing may look like, and why some patients choose it.
+          Curely appears in our Mounjaro and Wegovy comparison tables. The figures below are the
+          rows from those tables, with the check date shown on each.
         </p>
       </section>
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          What is Curely weight loss treatment?
+          Checked facts
         </p>
         <HazardBox className="mt-3 ring-1 ring-red-900/5">
-          <p className="text-slate-800 leading-relaxed">
-            Curely provides online access to prescription and non-prescription weight loss
-            treatments, subject to clinical review where required. Patients typically:
-          </p>
           <Points
             items={[
-              "Complete an online consultation",
-              "Receive pharmacist or prescriber review",
-              "Get approved if eligible",
-              "Have medication delivered to home or workplace",
+              ...(CURELY_FACTS.gphcRegNo
+                ? [`GPhC registration number recorded in our tables: ${CURELY_FACTS.gphcRegNo}`]
+                : []),
+              ...(CURELY_FACTS.rating != null
+                ? [`Customer rating shown in our tables: ${CURELY_FACTS.rating} out of 5`]
+                : []),
+              "A consultation is marked as included in the Mounjaro price record",
+              "Prices are list prices for a single pen; delivery is not included",
             ]}
           />
-          <p className="mt-4 text-slate-800 leading-relaxed">
-            Simple enough — but access is arguably the bigger point. Online treatment may reduce
-            friction compared with traditional routes.
-          </p>
         </HazardBox>
       </section>
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Provider review: Curely
+          Curely prices by strength
         </p>
-        <div className="mt-3 space-y-4">
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              1. Regulated access to authentic medication
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              Medication supplied through Curely is sourced through regulated UK channels. That
-              supports:
-            </p>
-            <Points
-              items={[
-                "Genuine medication supply",
-                "Appropriate dispensing controls",
-                "Reduced counterfeit risk",
-              ]}
+        <PharmacyPriceCompareHint />
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          {CURELY_FACTS.mounjaro ? (
+            <PriceTable
+              title="Mounjaro"
+              rows={CURELY_FACTS.mounjaro.rows}
+              checked={CURELY_FACTS.mounjaro.checked}
             />
-          </div>
-
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              2. Pharmacist-led online consultation
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              Before treatment approval, Curely requires a health assessment. Typically this
-              includes:
-            </p>
-            <Points items={["BMI", "Medical history", "Current medications", "Lifestyle details"]} />
-            <p className="mt-4 text-slate-800 leading-relaxed">
-              A pharmacist or prescriber reviews the information and may recommend suitable
-              options.
-            </p>
-          </div>
-
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              3. Wide range of weight loss treatments
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              Curely offers several options, including prescription injections and oral
-              treatments.
-            </p>
-            <p className="mt-4 font-bold text-slate-900">Prescription injections</p>
-            <Points items={["Mounjaro", "Wegovy", "Saxenda"]} />
-            <p className="mt-4 font-bold text-slate-900">Weight loss pills</p>
-            <Points items={["Orlistat", "Xenical", "Alli"]} />
-            <p className="mt-4 text-slate-800 leading-relaxed">
-              Some patients may prefer pills over injections — that flexibility can matter.
-            </p>
-          </div>
-
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              4. Discreet packaging and privacy
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              Curely states deliveries use plain packaging with no visible indication of contents,
-              which may be reassuring for people who prefer discretion.
-            </p>
-          </div>
-
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              5. Ongoing pharmacist support
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              Curely offers support via phone, email and pharmacist guidance — more than a
-              checkout process.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          How Curely works
-        </p>
-        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {[
-            {
-              t: "Step 1: Online consultation",
-              d: "Medical questionnaire covering weight, BMI, health history, current medications, and diet/exercise info.",
-            },
-            {
-              t: "Step 2: Review",
-              d: "A pharmacist or clinician reviews eligibility and which medication may suit you. Not everyone qualifies.",
-            },
-            {
-              t: "Step 3: Dispensing and dispatch",
-              d: "If approved: prescription issued, medication dispensed, then packaged and dispatched.",
-            },
-          ].map((s) => (
-            <div key={s.t} className="border border-slate-200/90 bg-white/80 p-4 shadow-sm">
-              <p className="font-bold text-slate-900">{s.t}</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-700">{s.d}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Curely delivery and shipping options
-        </p>
-        <div className="mt-3 grid gap-4 md:grid-cols-2">
-          <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-            <p className="font-bold text-slate-900">Tracked delivery options</p>
-            <Points
-              items={[
-                "Tracked 48: about 2–3 business days",
-                "Tracked 24: about 1–2 business days",
-                "Special Delivery Before 1pm: next working day (cut-off dependent)",
-              ]}
+          ) : null}
+          {CURELY_FACTS.wegovy ? (
+            <PriceTable
+              title="Wegovy"
+              rows={CURELY_FACTS.wegovy.rows}
+              checked={CURELY_FACTS.wegovy.checked}
             />
-            <p className="mt-4 text-slate-800 leading-relaxed">
-              Delivery features may include tracking numbers and redelivery attempts, with
-              direct-to-home or workplace shipping.
-            </p>
-          </div>
-          <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-            <p className="font-bold text-slate-900">Temperature control (where needed)</p>
-            <p className="mt-2 text-slate-800 leading-relaxed">
-              Injectables may require careful handling. Curely uses insulated packaging and
-              cold-chain methods where required to maintain product effectiveness during transit.
-            </p>
-          </div>
+          ) : null}
         </div>
-      </section>
-
-      <div className="grid gap-4 md:grid-cols-2">
-        <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
-          <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-            How much does Curely weight loss treatment cost?
-          </p>
-          <PharmacyPriceCompareHint />
-          <p className="mt-3 text-slate-800 leading-relaxed">
-            {CURELY_TABLE_PRICES ?? "Curely's prices vary by medicine and strength; see our comparison tables for the strengths it lists."}
-          </p>
-          <p className="mt-3 text-slate-800 leading-relaxed">
-            Delivery charges depend on the service you choose. We have not confirmed
-            Curely&apos;s current delivery fees, so check the total at checkout.
-          </p>
-        </section>
-        <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
-          <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-            Practical considerations
-          </p>
-          <Points
-            items={[
-              "Eligibility: often BMI > 30, or BMI > 27 with related conditions (assessment dependent)",
-              "Medication supports progress but doesn’t replace behaviour change",
-              "Side effects and dose adjustments can occur",
-              "Plan around delivery timing: approval happens before shipping starts",
-            ]}
-          />
-        </section>
-      </div>
-
-      <section>
-        <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Frequently asked questions
-        </h2>
-        <div className="mt-4 grid gap-5 sm:grid-cols-2">
-          {[
-            {
-              q: "Can I get Wegovy from Curely?",
-              a: "Yes, Wegovy may be available through Curely after completing a consultation and approval process.",
-            },
-            {
-              q: "Does Curely offer Mounjaro for weight loss?",
-              a: "Yes, Mounjaro appears among available treatment options, subject to suitability checks.",
-            },
-            {
-              q: "How much does Curely weight loss treatment cost?",
-              a: CURELY_TABLE_PRICES ?? "Curely's prices vary by medicine and strength; see our comparison tables for the strengths it lists.",
-            },
-            {
-              q: "Does Curely offer tracked delivery?",
-              a: "Yes. Curely offers Tracked 48, Tracked 24 and next-day special delivery options. We have not confirmed current delivery charges, so check the total at checkout.",
-            },
-            {
-              q: "Is Curely a regulated pharmacy?",
-              a: "Curely operates as a UK-regulated online pharmacy with pharmacist-led review and licensed dispensing.",
-            },
-            {
-              q: "Are non-injection alternatives available?",
-              a: "Yes. Options may include Orlistat, Xenical and Alli.",
-            },
-          ].map((item) => (
-            <div key={item.q} className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-              <h3 className="font-bold text-slate-900">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-700">{item.a}</p>
-            </div>
-          ))}
-        </div>
+        <p className="mt-4 text-sm leading-relaxed text-slate-700">
+          Wegovy 7.2 mg is listed below the 2.4 mg price in the supplied data. We have kept it as
+          listed; confirm both strengths with Curely before you order.
+        </p>
       </section>
 
       <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
-        <h2 className="text-lg font-bold text-slate-900 sm:text-xl">Conclusion</h2>
-        <p className="mt-3 text-slate-800 leading-relaxed">
-          If you’re looking for a private route to prescription weight loss treatment, Curely
-          offers a practical option. Access to medications such as Mounjaro and Wegovy,
-          combined with pharmacist-led assessment, tracked delivery and discreet packaging, gives
-          it more depth than a basic online storefront.
+        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
+          Not yet confirmed
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">
-          It may not suit everyone, but for those prioritising convenience, privacy and medically
-          supervised access, it may be worth considering.
+          We have no recorded source or check date for the details below, so this page does not
+          state them. Check them with Curely before you order.
+        </p>
+        <Points items={CURELY_UNCONFIRMED} />
+      </section>
+
+      <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
+        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
+          Our view
+        </p>
+        <p className="mt-3 text-slate-800 leading-relaxed">
+          This section is editorial opinion based only on the listed prices. Compare the same
+          strength and pack size across providers, and add delivery and any other charges to
+          reach a total. See the{" "}
+          <Link href="/mounjaro-price-comparison" className="font-semibold text-emerald-800 underline">
+            Mounjaro
+          </Link>{" "}
+          and{" "}
+          <Link href="/wegovy-price-comparison" className="font-semibold text-emerald-800 underline">
+            Wegovy
+          </Link>{" "}
+          tables for how Curely sits against other providers.
         </p>
         <div className="mt-6">
           <ProviderCta url={providerUrl} name="Curely">
@@ -305,7 +214,20 @@ export default function CurelyPharmacyContent() {
           </ProviderCta>
         </div>
       </section>
+
+      <section>
+        <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
+          Frequently asked questions
+        </h2>
+        <div className="mt-4 grid gap-5 sm:grid-cols-2">
+          {CURELY_FAQ.map((item) => (
+            <div key={item.q} className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
+              <h3 className="font-bold text-slate-900">{item.q}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-700">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </PharmacyDossierPage>
   );
 }
-

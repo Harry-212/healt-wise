@@ -68,3 +68,41 @@ export function providerTablePriceSentence(
   const checked = [...dates].join(" and ");
   return `In our comparison tables (prices checked ${checked}), ${providerName} lists ${parts.join(", and ")}. Prices for the other strengths are in the tables.`;
 }
+
+export type ProviderTableRow = { strength: string; price: string };
+export type ProviderTableFacts = {
+  mounjaro: { rows: ProviderTableRow[]; checked: string } | null;
+  wegovy: { rows: ProviderTableRow[]; checked: string } | null;
+  gphcRegNo: string | null;
+  rating: number | null;
+};
+
+/** Every checked table price for one provider (same rows as the comparison tables). */
+export function providerTableFacts(providerId: string): ProviderTableFacts {
+  const mj = getMounjaroCompareProviderById(providerId);
+  const wg = getWegovyCompareProviderById(providerId);
+
+  const mjRows = mj
+    ? MOUNJARO_DOSE_KEYS.filter((k) => mj.prices[k] > 0).map((k) => ({
+        strength: formatDose(k),
+        price: formatGbp(mj.prices[k]),
+      }))
+    : [];
+  const wgRows = wg
+    ? WEGOVY_DOSE_KEYS.map((k) => {
+        const cell = wg.prices[k];
+        const amount = wegovyPriceAmount(cell);
+        return {
+          strength: formatDose(k),
+          price: amount != null && amount > 0 ? formatGbp(amount) : String(cell),
+        };
+      })
+    : [];
+
+  return {
+    mounjaro: mj && mjRows.length ? { rows: mjRows, checked: mj.updatedLabel } : null,
+    wegovy: wg && wgRows.length ? { rows: wgRows, checked: wg.updatedLabel } : null,
+    gphcRegNo: mj?.gphcRegNo ?? wg?.gphcRegNo ?? null,
+    rating: mj?.rating ?? wg?.rating ?? null,
+  };
+}

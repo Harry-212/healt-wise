@@ -1,6 +1,6 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
-import { providerTablePriceSentence } from "@/lib/data/provider-price-summary";
+import { providerTableFacts, providerTablePriceSentence } from "@/lib/data/provider-price-summary";
 
 const FAQ_BASE = "https://schema.org";
 
@@ -271,14 +271,9 @@ const CURATE_FAQ: FaqItem[] = [
 
 const CURELY_FAQ: FaqItem[] = [
   {
-    question: "Can I get Wegovy from Curely?",
+    question: "Which medicines does Curely list in our comparison?",
     answer:
-      "Yes, Wegovy may be available through Curely after completing a consultation and approval process.",
-  },
-  {
-    question: "Does Curely offer Mounjaro for weight loss?",
-    answer:
-      "Yes, Mounjaro appears among available treatment options, subject to suitability checks.",
+      "Mounjaro and Wegovy. Both appear in our price tables with the check date shown.",
   },
   {
     question: "How much does Curely weight loss treatment cost?",
@@ -287,18 +282,18 @@ const CURELY_FAQ: FaqItem[] = [
       "Curely's prices vary by medicine and strength; see our comparison tables for the strengths it lists.",
   },
   {
-    question: "Does Curely offer tracked delivery?",
+    question: "Does Curely charge for delivery?",
     answer:
-      "Yes. Curely offers Tracked 48, Tracked 24 and next-day special delivery options. We have not confirmed current delivery charges, so check the total at checkout.",
+      "We have not confirmed Curely's delivery services or charges, so this page does not state them. Check the total at checkout.",
   },
   {
-    question: "Is Curely a regulated pharmacy?",
-    answer:
-      "Curely operates as a UK-regulated online pharmacy with pharmacist-led review and licensed dispensing.",
+    question: "Is Curely a registered pharmacy?",
+    answer: `Our comparison records list GPhC registration number ${providerTableFacts("curely").gphcRegNo ?? "on file"}. You can confirm it on the GPhC register.`,
   },
   {
-    question: "Are non-injection alternatives available?",
-    answer: "Yes. Options may include Orlistat, Xenical and Alli.",
+    question: "Are non-injection treatments available?",
+    answer:
+      "We have not confirmed this for Curely, so we do not list any. Ask Curely directly.",
   },
 ];
 
@@ -2513,7 +2508,7 @@ export function curelyPharmacyLandingJsonGraph(): Record<string, unknown> {
   const name =
     "Curely weight management review";
   const description =
-    "Curely weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
+    "Curely weight management review: checked Mounjaro and Wegovy prices by strength, registration details and what we have not yet confirmed. Independent provider review from Healthwise360 — not medical advice.";
 
   return {
     "@context": FAQ_BASE,
