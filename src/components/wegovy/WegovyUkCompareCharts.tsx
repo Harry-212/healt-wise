@@ -37,7 +37,7 @@ export function WegovyUkPriceRangeByDoseChart({ providers }: Props) {
     <figure className="min-w-0 max-w-full overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-4 shadow-sm md:p-6">
       <figcaption className="mb-4">
         <h3 className="text-lg font-semibold text-slate-900">
-          Illustrative price spread by pen strength
+          Listed price range by strength
         </h3>
         <p className="mt-1 text-sm text-slate-600">
           Min and max pen prices across listed providers (same snapshot). Teal
