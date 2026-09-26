@@ -28,7 +28,7 @@ const SERVICES = [
     ctaBrandLabel: "Compare Prices for GLP1 Registered Pharmacies UK",
     desc: (
       <>
-        Compare costs across all UK verified providers, with the
+        We compare costs across UK GPhC verified providers, with the
         confidence they have been verified, and you can also check them out on{" "}
         Trustpilot. Also see{" "}
         <Link
