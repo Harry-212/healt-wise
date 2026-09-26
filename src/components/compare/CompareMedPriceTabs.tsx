@@ -155,26 +155,74 @@ function MedPanel({
   );
 }
 
+const WEGOVY_PILL_TAB = "wegovy-pill";
+type ActiveTab = CompareMedicationTab | typeof WEGOVY_PILL_TAB;
+
+/** Wegovy Pill has no price table yet: point to the existing guides instead. */
+function WegovyPillPanel() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -6 }}
+      transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+      className="min-w-0"
+    >
+      <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+        <span className="text-brand-primary">Wegovy Pill</span>
+        <span className="text-slate-900"> UK</span>
+      </h2>
+      <p className="mt-2 max-w-3xl text-sm text-slate-600 md:text-base">
+        We do not list Wegovy Pill provider prices yet. Read our guides for what the
+        semaglutide tablet is, availability in the UK and how it compares with injections.
+      </p>
+      <div className="mt-6 flex flex-wrap gap-4">
+        <Link
+          href="/blog/wegovy-pill-uk"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
+        >
+          <Pill className="h-4 w-4" aria-hidden />
+          Wegovy Pill UK: price, availability and safety
+        </Link>
+        <Link
+          href="/blog/what-is-wegovy-pill"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
+        >
+          <Pill className="h-4 w-4" aria-hidden />
+          What is Wegovy Pill?
+        </Link>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function CompareMedPriceTabs({
   medications,
   mounjaroProviders = MOUNJARO_UK_COMPARE_PROVIDERS,
   wegovyProviders = WEGOVY_UK_COMPARE_PROVIDERS,
   mounjaroLastUpdated,
   wegovyLastUpdated,
+  showWegovyPillCard = false,
 }: {
   medications: CompareMedicationTab[];
   mounjaroProviders?: MounjaroUkProviderCompare[];
   wegovyProviders?: WegovyUkProviderCompare[];
   mounjaroLastUpdated?: string;
   wegovyLastUpdated?: string;
+  showWegovyPillCard?: boolean;
 }) {
-  const [active, setActive] = useState<CompareMedicationTab>(medications[0]!);
+  const [active, setActive] = useState<ActiveTab>(medications[0]!);
+  const tabs: ActiveTab[] = showWegovyPillCard
+    ? [...medications, WEGOVY_PILL_TAB]
+    : medications;
   const pricesLastChecked =
     active === "mounjaro"
       ? (mounjaroLastUpdated ?? "—")
       : active === "wegovy"
         ? (wegovyLastUpdated ?? "—")
-        : SAXENDA_UK_COMPARE_LAST_UPDATED;
+        : active === "saxenda"
+          ? SAXENDA_UK_COMPARE_LAST_UPDATED
+          : null;
 
   return (
     <section
@@ -187,18 +235,20 @@ export default function CompareMedPriceTabs({
             <p className="text-xs font-bold tracking-wide text-brand-primary">
               Provider prices
             </p>
-            <p className="mt-2 inline-flex flex-wrap items-center gap-2 text-sm font-semibold text-slate-800">
-              <Calendar
-                className="h-4 w-4 shrink-0 text-amber-600"
-                aria-hidden
-              />
-              <span className="font-normal text-slate-600">
-                Prices last checked
-              </span>
-              <span className="text-amber-700 tabular-nums">
-                {pricesLastChecked}
-              </span>
-            </p>
+            {pricesLastChecked ? (
+              <p className="mt-2 inline-flex flex-wrap items-center gap-2 text-sm font-semibold text-slate-800">
+                <Calendar
+                  className="h-4 w-4 shrink-0 text-amber-600"
+                  aria-hidden
+                />
+                <span className="font-normal text-slate-600">
+                  Prices last checked
+                </span>
+                <span className="text-amber-700 tabular-nums">
+                  {pricesLastChecked}
+                </span>
+              </p>
+            ) : null}
             <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
               Current provider prices
             </h2>
@@ -218,9 +268,9 @@ export default function CompareMedPriceTabs({
             Select a medicine to view the price matrix
           </p>
           <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:flex-wrap">
-            {medications.map((m) => {
+            {tabs.map((m) => {
               const on = active === m;
-              const acc = TAB_ACCENTS[m];
+              const acc = TAB_ACCENTS[m === WEGOVY_PILL_TAB ? "wegovy" : m];
               return (
                 <motion.button
                   key={m}
@@ -244,7 +294,9 @@ export default function CompareMedPriceTabs({
                     <Syringe className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden />
                   </span>
                   <span className="flex min-w-0 flex-1 flex-col gap-0.5">
-                    <span className="leading-tight">{TAB_LABEL[m]}</span>
+                    <span className="leading-tight">
+                      {m === WEGOVY_PILL_TAB ? "Wegovy Pill" : TAB_LABEL[m]}
+                    </span>
                     {!on ? (
                       <span className="text-[11px] font-semibold opacity-80">
                         Tap To Open
@@ -270,13 +322,17 @@ export default function CompareMedPriceTabs({
             aria-labelledby={`compare-tab-${active}`}
             className="min-w-0"
           >
-            <MedPanel
-              med={active}
-              mounjaroProviders={mounjaroProviders}
-              wegovyProviders={wegovyProviders}
-              mounjaroLastUpdated={mounjaroLastUpdated}
-              wegovyLastUpdated={wegovyLastUpdated}
-            />
+            {active === WEGOVY_PILL_TAB ? (
+              <WegovyPillPanel />
+            ) : (
+              <MedPanel
+                med={active}
+                mounjaroProviders={mounjaroProviders}
+                wegovyProviders={wegovyProviders}
+                mounjaroLastUpdated={mounjaroLastUpdated}
+                wegovyLastUpdated={wegovyLastUpdated}
+              />
+            )}
           </div>
         </AnimatePresence>
       </div>

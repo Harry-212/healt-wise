@@ -180,6 +180,7 @@ export default async function ComparePage({ params }: Props) {
           wegovyProviders={wegovyProviders}
           mounjaroLastUpdated={mounjaroLastUpdated}
           wegovyLastUpdated={wegovyLastUpdated}
+          showWegovyPillCard={slug === "wegovy-vs-mounjaro"}
         />
 
         <section className="w-full border-b border-slate-200/80">
