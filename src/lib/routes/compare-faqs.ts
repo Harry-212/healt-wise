@@ -44,6 +44,30 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
       q: "Where can I read more about methodology and safety?",
       a: "Use our methodology page for how we structure comparisons, our helpful guides hub for treatment context, and the GPhC verification guide for checking pharmacy credentials.",
     },
+    {
+      q: "What is the main difference between Mounjaro and Wegovy?",
+      a: "They use different active ingredients. Mounjaro contains tirzepatide, which acts on both the GIP and GLP-1 receptors, while Wegovy contains semaglutide, a GLP-1 receptor agonist. Alongside the active ingredient, the dose ladder and provider pricing are the other practical differences.",
+    },
+    {
+      q: "Are Mounjaro and Wegovy taken on the same schedule?",
+      a: "Both are weekly treatments injected once a week after titration. Each still begins at a low starting dose and builds up to a maintenance dose over several weeks.",
+    },
+    {
+      q: "Does the cheapest provider have the lowest total cost?",
+      a: "Not always. A low starting price can come with a consultation fee, a delivery charge, or a higher repeat price at your maintenance dose. Compare the total monthly cost across the months you expect to be on treatment rather than the headline figure alone.",
+    },
+    {
+      q: "Can these treatments be accessed through the NHS?",
+      a: "In some cases, yes, but NHS access follows national and local pathway rules, specific eligibility criteria and service capacity, and can involve waiting lists. Availability differs by region and by medicine. Ask your GP or an NHS weight-management service whether you qualify.",
+    },
+    {
+      q: "What should I verify before selecting a provider?",
+      a: "Check that the medicine is dispensed by a registered UK pharmacy, confirm whether consultation and delivery are included, look at the maintenance price rather than only the starting price, and read the terms for repeat orders and follow-up.",
+    },
+    {
+      q: "Can results from separate clinical trials be compared directly?",
+      a: "Not reliably. Each medicine was studied in its own trial programme with different populations, durations and dosing, so comparing headline figures across studies rarely gives a fair like-for-like conclusion. Read published outcomes as context for a clinical conversation, not as a ranking.",
+    },
   ],
 
   "mounjaro-vs-saxenda": [
@@ -132,52 +156,6 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
   ],
 
-  "mounjaro-vs-wegovy-vs-saxenda": [
-    {
-      q: "What is the main difference between Mounjaro, Wegovy and Saxenda?",
-      a: "They use different active ingredients. Mounjaro contains tirzepatide, which acts on both the GIP and GLP-1 receptors; Wegovy contains semaglutide and Saxenda contains liraglutide, which are GLP-1 receptor agonists. Alongside the active ingredient, the dosing schedule and provider pricing are the other practical differences.",
-    },
-    {
-      q: "Are Mounjaro and Wegovy taken on the same schedule?",
-      a: "Both Mounjaro and Wegovy are weekly treatments injected once a week after titration, while Saxenda is a daily treatment injected once a day. Each still begins at a low starting dose and builds up to a maintenance dose over several weeks.",
-    },
-    {
-      q: "Why can treatment prices vary between providers?",
-      a: "Provider pricing reflects how each pharmacy packages the medicine, consultation, follow-up and delivery. The same strength can be listed at different prices because some providers bundle these costs and others add them separately at checkout.",
-    },
-    {
-      q: "Does the cheapest provider have the lowest total cost?",
-      a: "Not always. A low starting price can come with a consultation fee, a delivery charge, or a higher repeat price at your maintenance dose. Compare the total monthly cost across the months you expect to be on treatment rather than the headline figure alone.",
-    },
-    {
-      q: "Why can weekly treatments cost more than daily treatments?",
-      a: "A weekly pen can carry a higher price per unit than a daily pen, but that does not decide the monthly total on its own. Pack size, dose escalation, and bundled consultation or delivery fees all affect the final cost, so a weekly treatment is not automatically more or less expensive than a daily one.",
-    },
-    {
-      q: "Are consultation and delivery included?",
-      a: "It depends on the provider. Where our dataset captures a consultation, subscription or delivery line, it appears alongside the medicine price. If a fee is not shown, assume you need to confirm it on the provider's own checkout before paying.",
-    },
-    {
-      q: "Can these treatments be accessed through the NHS?",
-      a: "In some cases, yes, but NHS access follows national and local pathway rules, specific eligibility criteria and service capacity, and can involve waiting lists. Availability differs by region and by medicine. Ask your GP or an NHS weight-management service whether you qualify.",
-    },
-    {
-      q: "Does Healthwise360 recommend one treatment?",
-      a: "No. Healthwise360 is an independent comparison publisher and does not recommend a specific medicine or pharmacy. We present the differences and pricing so you can prepare for a consultation; the decision belongs to a registered UK prescriber.",
-    },
-    {
-      q: "How often are provider prices checked?",
-      a: "Datasets are reviewed periodically and each one carries a visible last-checked label. Private pharmacies can change prices faster than our labels, so treat the figures as a planning guide and confirm the live total before you pay.",
-    },
-    {
-      q: "What should I verify before selecting a provider?",
-      a: "Check that the medicine is dispensed by a registered UK pharmacy, confirm whether consultation and delivery are included, look at the maintenance price rather than only the starting price, and read the terms for repeat orders and follow-up.",
-    },
-    {
-      q: "Can results from separate clinical trials be compared directly?",
-      a: "Not reliably. Each medicine was studied in its own trial programme with different populations, durations and dosing, so comparing headline figures across studies rarely gives a fair like-for-like conclusion. Read published outcomes as context for a clinical conversation, not as a ranking.",
-    },
-  ],
 };
 
 export function getCompareFaqsForSlug(slug: string): CompareFaqItem[] {

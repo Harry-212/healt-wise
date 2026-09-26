@@ -121,6 +121,12 @@ const nextConfig: NextConfig = {
         destination: "https://www.healthwise360.co.uk/",
         permanent: true,
       },
+      // Retired three-treatment hub: content now lives on the Mounjaro vs Wegovy page.
+      {
+        source: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+        destination: "/compare/wegovy-vs-mounjaro",
+        permanent: true,
+      },
       {
         source: "/lifestyle",
         destination: "/tips",

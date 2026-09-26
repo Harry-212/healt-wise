@@ -8,17 +8,17 @@ import {
 } from "lucide-react";
 
 /**
- * Long-form editorial content for the `/compare/mounjaro-vs-wegovy-vs-saxenda`
- * hub. Server-rendered so every paragraph, list, table and FAQ-adjacent block
- * is present in the initial HTML (crawlable — no client-gated copy).
+ * Long-form editorial content for `/compare/wegovy-vs-mounjaro`, moved here from
+ * the retired three-treatment hub (`/compare/mounjaro-vs-wegovy-vs-saxenda`) with
+ * all Saxenda copy removed. Sections that the versus page already covers in its
+ * own blocks (effectiveness, side effects, price matrix) are not repeated.
  *
- * Informational only; not medical advice. Semantic coverage is woven into
- * headings/prose (active ingredients, receptor mechanism, dosing, eligibility,
- * cost structure) rather than a keyword list.
+ * Server-rendered so every paragraph is present in the initial HTML. Informational
+ * only; not medical advice.
  */
 
 type Props = {
-  /** Human label for “Prices last checked” — today’s UK date. */
+  /** Human label for “Prices last checked”. */
   lastCheckedLabel: string;
 };
 
@@ -28,21 +28,12 @@ const GLANCE_ROWS = [
     ingredient: "Tirzepatide",
     target: "Dual GIP and GLP-1 receptor agonist",
     schedule: "Once weekly",
-    format: "Multi-dose or single-dose pen",
   },
   {
     brand: "Wegovy",
     ingredient: "Semaglutide",
     target: "GLP-1 receptor agonist",
     schedule: "Once weekly",
-    format: "Pre-filled single-dose pen",
-  },
-  {
-    brand: "Saxenda",
-    ingredient: "Liraglutide",
-    target: "GLP-1 receptor agonist",
-    schedule: "Once daily",
-    format: "Multi-dose adjustable pen",
   },
 ];
 
@@ -56,8 +47,8 @@ const PRESCRIBER_FACTORS = [
     body: "Past and present conditions, pregnancy plans, and family history that a prescriber reviews before treatment.",
   },
   {
-    title: "Treatment frequency",
-    body: "Whether a weekly or daily schedule fits your routine and how confident you feel self-administering a pen.",
+    title: "Treatment routine",
+    body: "Whether a once-weekly injection fits your routine and how confident you feel self-administering a pen.",
   },
   {
     title: "Potential side effects",
@@ -128,7 +119,9 @@ const METHODOLOGY_POINTS = [
   },
 ];
 
-export default function TripleCompareContent({ lastCheckedLabel }: Props) {
+export default function WegovyMounjaroLongFormContent({
+  lastCheckedLabel,
+}: Props) {
   const methodology = METHODOLOGY_POINTS.map((point) =>
     point.label === "Date checked"
       ? {
@@ -147,36 +140,34 @@ export default function TripleCompareContent({ lastCheckedLabel }: Props) {
       >
         <div className="mx-auto max-w-5xl px-4 md:px-8">
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-            Mounjaro vs Wegovy vs Saxenda at a Glance
+            Mounjaro vs Wegovy at a Glance
           </h2>
           <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
             <p>
-              Mounjaro, Wegovy and Saxenda are three prescription-only weight
-              management treatments licensed for use in the UK. They belong to
-              the same broad family of injectable medicines that act on gut
-              hormone pathways, but they use different active ingredients, follow
-              different dosing schedules and are priced differently by each
-              provider. This hub is built to compare those practical differences
-              side by side so you can prepare for a consultation, not to decide
-              which medicine is right for you.
+              Mounjaro and Wegovy are prescription-only weight management
+              treatments licensed for use in the UK. They belong to the same
+              broad family of injectable medicines that act on gut hormone
+              pathways, but they use different active ingredients and are priced
+              differently by each provider. This page is built to compare those
+              practical differences side by side so you can prepare for a
+              consultation, not to decide which medicine is right for you.
             </p>
             <p>
-              The table below summarises the core distinctions. Everything after
-              it explains the mechanism, dosing, evidence, safety, eligibility
-              and cost structure in more depth, followed by how we check provider
+              The table below summarises the core distinctions. The sections
+              after it explain the mechanism, dosing, eligibility, access and
+              cost structure in more depth, followed by how we check provider
               information and the factors worth discussing with a prescriber.
             </p>
           </div>
 
           <div className="mt-8 overflow-x-auto rounded-2xl border border-slate-200/90 shadow-sm">
-            <table className="w-full min-w-160 border-collapse text-left text-sm">
+            <table className="w-full min-w-120 border-collapse text-left text-sm">
               <thead>
                 <tr className="bg-slate-50 text-slate-900">
                   <th className="px-4 py-3 font-semibold">Treatment</th>
                   <th className="px-4 py-3 font-semibold">Active ingredient</th>
                   <th className="px-4 py-3 font-semibold">Receptor target</th>
                   <th className="px-4 py-3 font-semibold">Typical schedule</th>
-                  <th className="px-4 py-3 font-semibold">Pen format</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-600">
@@ -191,16 +182,14 @@ export default function TripleCompareContent({ lastCheckedLabel }: Props) {
                     <td className="px-4 py-3">{row.ingredient}</td>
                     <td className="px-4 py-3">{row.target}</td>
                     <td className="px-4 py-3">{row.schedule}</td>
-                    <td className="px-4 py-3">{row.format}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
           <p className="mt-3 text-xs text-slate-500">
-            Schedules and formats reflect typical UK licensing after titration.
-            Your prescriber confirms the exact dose and product for your
-            situation.
+            Schedules reflect typical UK licensing after titration. Your
+            prescriber confirms the exact dose and product for your situation.
           </p>
         </div>
       </section>
@@ -217,28 +206,27 @@ export default function TripleCompareContent({ lastCheckedLabel }: Props) {
           <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
             <p>
               The clearest way to understand these treatments is by their active
-              ingredient. Mounjaro contains tirzepatide, Wegovy contains
-              semaglutide, and Saxenda contains liraglutide. Each ingredient
-              works on receptors that the body normally uses to regulate hunger
-              and blood sugar after eating.
+              ingredient. Mounjaro contains tirzepatide and Wegovy contains
+              semaglutide. Each ingredient works on receptors that the body
+              normally uses to regulate hunger and blood sugar after eating.
             </p>
             <p>
-              Semaglutide and liraglutide are GLP-1 receptor agonists. They mimic
-              glucagon-like peptide-1, a hormone released from the gut, to support
-              appetite regulation, increase the feeling of fullness known as
-              satiety, and slow gastric emptying so that meals feel satisfying for
-              longer. Tirzepatide adds a second action: it engages the GIP
-              receptor as well as the GLP-1 receptor. This dual mechanism is the
-              main pharmacological difference between Mounjaro and the two GLP-1
-              only medicines.
+              Semaglutide is a GLP-1 receptor agonist. It mimics
+              glucagon-like peptide-1, a hormone released from the gut, to
+              support appetite regulation, increase the feeling of fullness known
+              as satiety, and slow gastric emptying so that meals feel
+              satisfying for longer. Tirzepatide adds a second action: it engages
+              the GIP receptor as well as the GLP-1 receptor. This dual mechanism
+              is the main pharmacological difference between Mounjaro and
+              Wegovy.
             </p>
             <p>
-              In everyday terms, all three reduce appetite and help people feel
-              full on smaller portions, but the receptor profile, the pace of
-              dose escalation and individual tolerability differ. None of these
-              medicines works in isolation — they are intended to support diet,
-              activity and behavioural change under clinical supervision, not to
-              replace them.
+              In everyday terms, both reduce appetite and help people feel full
+              on smaller portions, but the receptor profile, the pace of dose
+              escalation and individual tolerability differ. Neither medicine
+              works in isolation — they are intended to support diet, activity
+              and behavioural change under clinical supervision, not to replace
+              them.
             </p>
           </div>
         </div>
@@ -255,105 +243,24 @@ export default function TripleCompareContent({ lastCheckedLabel }: Props) {
           </h2>
           <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
             <p>
-              Dosing is where the practical routine of each treatment diverges.
-              Mounjaro and Wegovy are weekly treatments: after an introductory
-              period you inject once a week. Saxenda is a daily treatment,
-              injected once every day at a similar time. Whether a weekly or
-              daily schedule suits you is a genuine lifestyle question worth
-              raising in a consultation.
+              Mounjaro and Wegovy are both weekly treatments: after an
+              introductory period you inject once a week. Whether that routine
+              suits you is a genuine lifestyle question worth raising in a
+              consultation.
             </p>
             <p>
-              All three follow a titration plan. You begin at a low starting dose
-              to help the body adjust and reduce early side effects, then move
+              Both follow a titration plan. You begin at a low starting dose to
+              help the body adjust and reduce early side effects, then move
               through a structured dose escalation over several weeks until you
               reach a maintenance dose. The starting dose is not the dose most
               people stay on, which matters when you compare cost: early months
               on a low dose can be cheaper than later maintenance months.
             </p>
             <p>
-              The pen format also varies. Wegovy is commonly supplied as
-              pre-filled single-dose pens tied to a specific strength, Saxenda as
-              a multi-dose adjustable pen, and Mounjaro in pen formats that depend
-              on strength and supplier. Because of this, some pharmacies quote a
-              price per pen and others per pack, so it helps to translate any
-              quote into a monthly treatment cost for the dose you expect to use.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Clinical evidence */}
-      <section
-        id="clinical-evidence"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
-      >
-        <div className="mx-auto max-w-3xl px-4 md:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-            Clinical Evidence and Expected Results
-          </h2>
-          <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-            <p>
-              Each medicine has been studied in its own clinical trial programme,
-              and published results describe average weight change across large
-              groups of participants over many months alongside diet and activity
-              support. Those averages are useful context, but they are not
-              promises, and individual results vary widely.
-            </p>
-            <p>
-              It is also important to be cautious about direct comparisons.
-              Separate trials enrol different populations, run for different
-              durations and use different dosing, so lining up a headline figure
-              from one study against another rarely produces a fair like-for-like
-              conclusion. Clinical evidence describes what happened on average in
-              a study — it is not a ranking of which treatment will work best for
-              a particular person.
-            </p>
-            <p>
-              A prescriber weighs the evidence together with your history,
-              tolerability and goals. Read published outcomes as background for a
-              conversation rather than as a scoreboard.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Side effects */}
-      <section
-        id="side-effects"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-white py-12 md:py-16"
-      >
-        <div className="mx-auto max-w-3xl px-4 md:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-            Common Side Effects and Safety Considerations
-          </h2>
-          <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-            <p>
-              Across all three medicines, the most commonly reported side effects
-              are gastrointestinal: nausea, diarrhoea, constipation, indigestion
-              and reduced appetite, especially in the early weeks and when the
-              dose increases. For many people these ease over time, which is part
-              of why treatment starts low and builds gradually.
-            </p>
-            <p>
-              Each product also carries less common but more serious risks — such
-              as pancreatitis and gallbladder problems — which are listed in the
-              summary of product characteristics and patient information leaflet
-              for that specific medicine. There are contraindications and
-              cautions, including certain personal or family medical histories,
-              that make a treatment unsuitable for some people.
-            </p>
-            <p>
-              Because these are prescription-only medicines, safety monitoring is
-              part of proper care. Always read the leaflet for the product you are
-              actually prescribed, report side effects to your clinician, and seek
-              urgent advice for severe or persistent symptoms. Our{" "}
-              <Link
-                href="/helpful-guides"
-                className="font-semibold text-brand-primary underline-offset-2 hover:underline"
-              >
-                helpful guides
-              </Link>{" "}
-              add general context, but they do not replace medical advice.
+              The pen format can vary by strength and supplier. Because of this,
+              some pharmacies quote a price per pen and others per pack, so it
+              helps to translate any quote into a monthly treatment cost for the
+              dose you expect to use.
             </p>
           </div>
         </div>
@@ -414,7 +321,7 @@ export default function TripleCompareContent({ lastCheckedLabel }: Props) {
             </p>
             <p>
               Private access is usually faster and is self-funded through a
-              registered online pharmacy or clinic after a consultation. This hub
+              registered online pharmacy or clinic after a consultation. This page
               focuses on private provider pricing because that is where costs vary
               most and where a clear comparison helps. If you want to explore NHS
               options, speak to your GP or an NHS weight-management service about
@@ -424,53 +331,10 @@ export default function TripleCompareContent({ lastCheckedLabel }: Props) {
         </div>
       </section>
 
-      {/* Compare current UK provider prices */}
-      <section
-        id="provider-prices"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
-      >
-        <div className="mx-auto max-w-3xl px-4 md:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-            Compare Current UK Provider Prices
-          </h2>
-          <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-            <p>
-              The price matrix higher up this page lets you switch between
-              Mounjaro, Wegovy and Saxenda and sort UK weight-management providers
-              by dose and price. Provider pricing is not uniform: the same medicine
-              and strength can carry very different figures depending on how a
-              pharmacy packages consultations, follow-up and delivery.
-            </p>
-            <p>
-              When you read the tables, separate the starting price from the
-              maintenance price. The introductory dose is often cheaper, so a low
-              first-month figure can look more attractive than the repeat price you
-              will actually pay once you reach your maintenance dose. Comparing the
-              maintenance price gives a more realistic view of ongoing cost.
-            </p>
-            <p>
-              Use the matrix to shortlist providers for the dose band you expect to
-              discuss, then confirm the live total on the provider&rsquo;s own
-              checkout before paying — listed figures are an illustrative snapshot,
-              not a quote.
-            </p>
-          </div>
-          <div className="mt-6">
-            <Link
-              href="#compare-med-tabs"
-              className="inline-flex items-center gap-2 rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-95"
-            >
-              Open the price matrix
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Consultation, delivery and total cost */}
       <section
         id="total-cost"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-white py-12 md:py-16"
+        className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
       >
         <div className="mx-auto max-w-3xl px-4 md:px-8">
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
@@ -494,13 +358,22 @@ export default function TripleCompareContent({ lastCheckedLabel }: Props) {
               be on your maintenance dose is the fairest way to compare.
             </p>
           </div>
+          <div className="mt-6">
+            <Link
+              href="#compare-med-tabs"
+              className="inline-flex items-center gap-2 rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-95"
+            >
+              Open the price matrix
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Methodology */}
       <section
         id="methodology"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
+        className="scroll-mt-28 border-b border-slate-200/80 bg-white py-12 md:py-16"
       >
         <div className="mx-auto max-w-4xl px-4 md:px-8">
           <div className="flex items-start gap-3">
@@ -561,7 +434,7 @@ export default function TripleCompareContent({ lastCheckedLabel }: Props) {
       {/* Factors to discuss with a prescriber */}
       <section
         id="prescriber-factors"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-white py-12 md:py-16"
+        className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
       >
         <div className="mx-auto max-w-4xl px-4 md:px-8">
           <div className="flex items-start gap-3">

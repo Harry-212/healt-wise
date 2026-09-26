@@ -23,7 +23,7 @@ const SERVICES = [
   {
     icon: PoundSterling,
     label: "Price Comparison",
-    href: "https://www.healthwise360.co.uk/compare/mounjaro-vs-wegovy-vs-saxenda",
+    href: "https://www.healthwise360.co.uk/compare/wegovy-vs-mounjaro",
     ctaPublicLabel: "Compare prices",
     ctaBrandLabel: "Compare Prices for GLP1 Registered Pharmacies UK",
     desc: (

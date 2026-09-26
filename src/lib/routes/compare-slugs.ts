@@ -8,7 +8,4 @@ export const COMPARE_SLUGS: Record<string, { keyword: string }> = {
   "wegovy-vs-saxenda": {
     keyword: "Wegovy vs Saxenda",
   },
-  "mounjaro-vs-wegovy-vs-saxenda": {
-    keyword: "Mounjaro vs Wegovy vs Saxenda",
-  },
 };

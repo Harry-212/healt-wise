@@ -38,6 +38,7 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
     type: "Compare",
     title: "Wegovy vs Mounjaro",
     href: "/compare/wegovy-vs-mounjaro",
+    keywords: "tirzepatide semaglutide active ingredient dosing eligibility nhs private cost",
   },
   {
     type: "Compare",
@@ -48,12 +49,6 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
     type: "Compare",
     title: "Wegovy vs Saxenda",
     href: "/compare/wegovy-vs-saxenda",
-  },
-  {
-    type: "Compare",
-    title: "Mounjaro vs Wegovy vs Saxenda",
-    href: "/compare/mounjaro-vs-wegovy-vs-saxenda",
-    keywords: "tirzepatide semaglutide liraglutide three way best weight loss treatments uk",
   },
   {
     type: "Price",

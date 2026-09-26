@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, BadgeCheck, Scale, Shield } from "lucide-react";
@@ -12,7 +11,7 @@ import {
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
 import CompareMedPriceTabs from "@/components/compare/CompareMedPriceTabs";
-import TripleCompareContent from "@/components/compare/TripleCompareContent";
+import WegovyMounjaroLongFormContent from "@/components/compare/WegovyMounjaroLongFormContent";
 import {
   getMounjaroCompareProviders,
   getWegovyCompareProviders,
@@ -26,8 +25,6 @@ import { buildPriceGlance } from "@/lib/data/compare-price-glance";
 import { SAXENDA_UK_COMPARE_LAST_UPDATED } from "@/lib/data/saxenda-uk-compare-providers";
 import { formatDose, formatGbp } from "@/lib/data/mounjaro-price-insights";
 import {
-  COMPARE_GLP1_PRICE_HERO_IMAGE_ALT,
-  COMPARE_GLP1_PRICE_HERO_IMAGE_SRC,
   COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_ALT,
   COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_SRC,
   COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT,
@@ -43,7 +40,7 @@ import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 type Props = { params: Promise<{ slug: string }> };
 
 /** Update when the versus-page copy or FAQs change. */
-const COMPARE_PAGES_CONTENT_MODIFIED = "2026-09-24";
+const COMPARE_PAGES_CONTENT_MODIFIED = "2026-09-26";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -121,20 +118,17 @@ export default async function ComparePage({ params }: Props) {
         .join(" ");
   const faqItems = getCompareFaqsForSlug(slug);
   const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
-  const isTripleHub = slug === "mounjaro-vs-wegovy-vs-saxenda";
   const mounjaroLastUpdated = getMounjaroLastUpdatedLabel();
   const wegovyLastUpdated = getWegovyLastUpdatedLabel();
   const mounjaroProviders = getMounjaroCompareProviders();
   const wegovyProviders = getWegovyCompareProviders();
-  const priceGlance = isTripleHub
-    ? []
-    : buildPriceGlance(layout.medications, {
-        mounjaro: mounjaroProviders,
-        mounjaroChecked: mounjaroLastUpdated,
-        wegovy: wegovyProviders,
-        wegovyChecked: wegovyLastUpdated,
-        saxendaChecked: SAXENDA_UK_COMPARE_LAST_UPDATED,
-      });
+  const priceGlance = buildPriceGlance(layout.medications, {
+    mounjaro: mounjaroProviders,
+    mounjaroChecked: mounjaroLastUpdated,
+    wegovy: wegovyProviders,
+    wegovyChecked: wegovyLastUpdated,
+    saxendaChecked: SAXENDA_UK_COMPARE_LAST_UPDATED,
+  });
   const pricesLastCheckedLabel = mounjaroLastUpdated;
   // Date the page content last changed — not "today" on every request.
   const pricesLastCheckedIso = COMPARE_PAGES_CONTENT_MODIFIED;
@@ -148,12 +142,6 @@ export default async function ComparePage({ params }: Props) {
   return (
     <>
       <BreadcrumbJsonLd
-        {...(isTripleHub
-          ? {}
-          : {
-              sectionName: "Compare treatments",
-              sectionPath: "/compare/mounjaro-vs-wegovy-vs-saxenda",
-            })}
         pageName={webLdName || layout.hero.titleBold}
         pagePath={`/compare/${slug}`}
       />
@@ -179,15 +167,10 @@ export default async function ComparePage({ params }: Props) {
           subtitle={layout.hero.subtitle}
           snapshotLabel={layout.hero.snapshotLabel}
           navLinks={layout.hero.navLinks}
-          wideDesktopHero={isTripleHub}
-          showSnapshotPill={!isTripleHub && !photoHero}
-          highlightNavLinks={Boolean(photoHero) && !isTripleHub}
-          heroPhotoSrc={
-            isTripleHub ? COMPARE_GLP1_PRICE_HERO_IMAGE_SRC : photoHero?.src
-          }
-          heroPhotoAlt={
-            isTripleHub ? COMPARE_GLP1_PRICE_HERO_IMAGE_ALT : photoHero?.alt
-          }
+          showSnapshotPill={!photoHero}
+          highlightNavLinks={Boolean(photoHero)}
+          heroPhotoSrc={photoHero?.src}
+          heroPhotoAlt={photoHero?.alt}
           showSubtitleLiveDate={false}
         />
 
@@ -203,9 +186,6 @@ export default async function ComparePage({ params }: Props) {
           <TrustBarMarquee />
         </section>
 
-        {isTripleHub ? (
-          <TripleCompareContent lastCheckedLabel={pricesLastCheckedLabel} />
-        ) : (
         <>
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-5xl px-4 md:px-8">
@@ -365,62 +345,14 @@ export default async function ComparePage({ params }: Props) {
           </div>
         </section>
         </>
-        )}
+
+        {slug === "wegovy-vs-mounjaro" ? (
+          <WegovyMounjaroLongFormContent
+            lastCheckedLabel={pricesLastCheckedLabel}
+          />
+        ) : null}
 
         <CompareFaqSection items={faqItems} />
-
-        {isTripleHub ? (
-          <section
-            className="bg-white py-12 md:py-16"
-            aria-labelledby="compare-author-heading"
-          >
-            <div className="mx-auto max-w-3xl px-4 md:px-8">
-              <div className="rounded-2xl border border-slate-200/90 bg-slate-50/70 p-6 shadow-sm md:p-8">
-                <Image
-                  src="/authors/alistair-greenwood.jpg"
-                  alt="Alistair Greenwood"
-                  width={80}
-                  height={80}
-                  className="mb-4 h-16 w-16 rounded-full object-cover ring-2 ring-white md:h-20 md:w-20"
-                />
-                <p className="text-xs font-bold uppercase tracking-wide text-slate-500">
-                  Research and comparison by
-                </p>
-                <h2
-                  id="compare-author-heading"
-                  className="mt-2 text-xl font-bold text-slate-900 md:text-2xl"
-                >
-                  <Link
-                    href="/editorial-team/alistair-greenwood"
-                    className="hover:text-brand-primary hover:underline underline-offset-2"
-                  >
-                    Alistair Greenwood
-                  </Link>
-                </h2>
-                <p className="mt-1 text-sm font-medium text-slate-600">
-                  Founder of Healthwise360 | Weight-management pricing
-                  researcher
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-slate-600 md:text-base">
-                  Alistair uses his background in project management and
-                  information analysis to research providers, compare
-                  published treatment costs and explain what services
-                  include. Drawing on his own experience of weight-management
-                  challenges, he aims to make comparisons clearer and more
-                  useful. He is not a healthcare professional and does not
-                  provide medical advice.
-                </p>
-                <Link
-                  href="/editorial-team/alistair-greenwood"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
-                >
-                  Read Alistair&apos;s full profile
-                  <ArrowRight className="h-4 w-4" aria-hidden />
-                </Link>
-              </div>
-            </div>
-          </section>
-        ) : null}
       </article>
     </>
   );
