@@ -290,8 +290,6 @@ export default function GuideMounjaroPillar() {
           may lead to stronger results for some patients. However, individual
           response varies see our full{" "}
           <IL href="/compare/wegovy-vs-mounjaro">Wegovy vs Mounjaro comparison</IL>{" "}
-          and{" "}
-          <IL href="/compare/mounjaro-vs-saxenda">Mounjaro vs Saxenda comparison</IL>{" "}
           for a detailed breakdown.
 </GuideParagraph>
       </GuideSection>

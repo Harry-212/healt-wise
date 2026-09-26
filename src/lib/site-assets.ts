@@ -53,12 +53,6 @@ export const COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_SRC =
 export const COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT =
   "Mounjaro vs Wegovy UK — treatment and price comparison";
 
-/** Compare hub: Mounjaro vs Saxenda (`public/hero mounjaro vs saxenda.webp`). */
-export const COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_SRC =
-  "/hero mounjaro vs saxenda.webp";
-export const COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_ALT =
-  "Mounjaro vs Saxenda UK — treatment and price comparison";
-
 /** Compare hub: best weight loss treatments (`public/beast weight hero.webp`). */
 export const COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_SRC =
   "/beast weight hero.webp";

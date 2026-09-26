@@ -466,13 +466,6 @@ export default function WhatIsSaxendaPage() {
               </div>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/compare/mounjaro-vs-saxenda"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-sky-800 underline-offset-2 hover:underline"
-                >
-                  Mounjaro vs Saxenda comparison
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link
                   href="/compare/wegovy-vs-mounjaro"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 underline-offset-2 hover:underline"
                 >

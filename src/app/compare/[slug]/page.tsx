@@ -26,8 +26,6 @@ import { buildPriceGlance } from "@/lib/data/compare-price-glance";
 import { SAXENDA_UK_COMPARE_LAST_UPDATED } from "@/lib/data/saxenda-uk-compare-providers";
 import { formatDose, formatGbp } from "@/lib/data/mounjaro-price-insights";
 import {
-  COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_ALT,
-  COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_SRC,
   COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT,
   COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_SRC,
 } from "@/lib/site-assets";
@@ -50,10 +48,6 @@ const COMPARE_SLUG_PHOTO_HERO: Record<string, { src: string; alt: string }> = {
   "wegovy-vs-mounjaro": {
     src: COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_SRC,
     alt: COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT,
-  },
-  "mounjaro-vs-saxenda": {
-    src: COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_SRC,
-    alt: COMPARE_MOUNJARO_VS_SAXENDA_HERO_IMAGE_ALT,
   },
 };
 

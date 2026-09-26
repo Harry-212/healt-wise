@@ -41,16 +41,6 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
     keywords: "tirzepatide semaglutide active ingredient dosing eligibility nhs private cost",
   },
   {
-    type: "Compare",
-    title: "Mounjaro vs Saxenda",
-    href: "/compare/mounjaro-vs-saxenda",
-  },
-  {
-    type: "Compare",
-    title: "Wegovy vs Saxenda",
-    href: "/compare/wegovy-vs-saxenda",
-  },
-  {
     type: "Price",
     title: "Compare Wegovy prices UK",
     href: "/wegovy-price-comparison",

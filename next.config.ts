@@ -121,6 +121,17 @@ const nextConfig: NextConfig = {
         destination: "https://www.healthwise360.co.uk/",
         permanent: true,
       },
+      // Retired Saxenda head-to-head pages.
+      {
+        source: "/compare/mounjaro-vs-saxenda",
+        destination: "/saxenda-price-comparison",
+        statusCode: 301,
+      },
+      {
+        source: "/compare/wegovy-vs-saxenda",
+        destination: "/saxenda-price-comparison",
+        statusCode: 301,
+      },
       // Retired three-treatment hub: content now lives on the Mounjaro vs Wegovy page.
       {
         source: "/compare/mounjaro-vs-wegovy-vs-saxenda",

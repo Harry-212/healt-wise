@@ -76,16 +76,6 @@ export const NAV_PANELS: NavPanel[] = [
             href: "/compare/wegovy-vs-mounjaro",
             icon: "compare",
           },
-          {
-            label: "Mounjaro vs Saxenda",
-            href: "/compare/mounjaro-vs-saxenda",
-            icon: "swap",
-          },
-          {
-            label: "Wegovy vs Saxenda",
-            href: "/compare/wegovy-vs-saxenda",
-            icon: "compare",
-          },
         ],
       },
       {
