@@ -223,7 +223,9 @@ export default function WegovyUkCompareTable({
       ? "from lowest pen"
       : `for ${doseHeaderLabel(doseFilter)}`;
 
-  const colCount = 1 + visibleDoseKeys.length + 4;
+  // Hide the Notes column while no provider has a note; the field stays in the data.
+  const hasNotes = providers.some((p) => p.notes?.trim());
+  const colCount = 1 + visibleDoseKeys.length + 3 + (hasNotes ? 1 : 0);
 
   const providerThClass =
     "sticky left-0 z-50 w-24 sm:w-32 border-b border-r border-slate-200/90 bg-slate-50 px-2 py-3 pl-3 sm:px-3 sm:pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
@@ -512,12 +514,14 @@ export default function WegovyUkCompareTable({
                 >
                   <GphcColumnHeaderContent />
                 </th>
-                <th
-                  scope="col"
-                  className="w-22 sm:w-28 border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
-                >
-                  Notes
-                </th>
+                {hasNotes ? (
+                  <th
+                    scope="col"
+                    className="w-22 sm:w-28 border-b border-slate-200/90 bg-slate-50 px-2 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
+                  >
+                    Notes
+                  </th>
+                ) : null}
                 <th
                   scope="col"
                   className="w-[5rem] sm:w-[6.5rem] border-b border-slate-200/90 bg-slate-50 px-3 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
@@ -639,13 +643,15 @@ export default function WegovyUkCompareTable({
                           gphcRegNo={p.gphcRegNo}
                         />
                       </td>
-                      <td className="max-w-40 border-b border-slate-100/90 px-2 py-2.5 align-top text-xs leading-snug text-slate-600">
-                        {p.notes?.trim() ? (
-                          <span className="whitespace-pre-line">{p.notes}</span>
-                        ) : (
-                          <span className="text-slate-400">—</span>
-                        )}
-                      </td>
+                      {hasNotes ? (
+                        <td className="max-w-40 border-b border-slate-100/90 px-2 py-2.5 align-top text-xs leading-snug text-slate-600">
+                          {p.notes?.trim() ? (
+                            <span className="whitespace-pre-line">{p.notes}</span>
+                          ) : (
+                            <span className="text-slate-400">—</span>
+                          )}
+                        </td>
+                      ) : null}
                       <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
                         {p.updatedLabel || pricesLastChecked || "—"}
                       </td>
