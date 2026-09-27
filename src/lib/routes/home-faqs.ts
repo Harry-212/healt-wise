@@ -5,7 +5,7 @@ import type { CompareFaqItem } from "@/lib/routes/compare-faqs";
 export const HOME_PAGE_FAQS: CompareFaqItem[] = [
   {
     q: "What does Healthwise360 do?",
-    a: "Healthwise360 is an independent UK comparison site for weight loss treatments. We bring together pricing, dosing, and provider information for Mounjaro, Wegovy, and Saxenda so you can see your options in one place before you speak to a prescriber.",
+    a: "Healthwise360 is an independent UK comparison site for weight loss treatments. We bring together pricing, dosing, and provider information for Mounjaro and Wegovy so you can see your options in one place before you speak to a prescriber.",
   },
   {
     q: "Is Healthwise360 a pharmacy or a prescriber?",
