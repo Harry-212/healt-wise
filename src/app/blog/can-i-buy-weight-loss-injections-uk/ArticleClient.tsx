@@ -321,7 +321,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  compare Mounjaro vs Wegovy vs Saxenda
+                  compare Mounjaro vs Wegovy
                 </Link>{" "}
                 to check the key differences in dosing structures, monthly cost,
                 and expected health benefits across each medication.
@@ -589,7 +589,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  compare Mounjaro vs Wegovy vs Saxenda
+                  compare Mounjaro vs Wegovy
                 </Link>
                 . This helps readers move from a general buying question into a
                 structured, evidence-based treatment comparison.
@@ -725,7 +725,7 @@ export default function ArticleClient() {
               <p>Healthwise360 can support this journey with:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Weight loss treatment price comparison</li>
-                <li>Mounjaro vs Wegovy vs Saxenda comparison</li>
+                <li>Mounjaro vs Wegovy comparison</li>
                 <li>Mounjaro price list UK</li>
                 <li>Wegovy price list UK</li>
                 <li>BMI calculator</li>

@@ -256,7 +256,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  compare Mounjaro vs Wegovy vs Saxenda
+                  compare Mounjaro vs Wegovy
                 </Link>{" "}
                 before deciding whether nutrition support or prescription
                 treatment is the right next step.

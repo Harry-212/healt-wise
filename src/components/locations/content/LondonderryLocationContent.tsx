@@ -471,7 +471,7 @@ export default function LondonderryLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   The better question is not which one is strongest? but which one is suitable, available, affordable, and safe for me right now? That framing is more useful and more medically honest. Compare triplets on{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>{" "}
                   and budget on{" "}
                   <Link className={linkCls} href="/mounjaro-price-comparison">

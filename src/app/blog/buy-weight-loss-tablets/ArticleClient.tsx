@@ -633,7 +633,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  comparing Mounjaro vs Wegovy vs Saxenda
+                  comparing Mounjaro vs Wegovy
                 </Link>{" "}
                 to see what other options are approved in the UK. Therefore, the
                 best weight loss tablet is not the one with the loudest ad. It

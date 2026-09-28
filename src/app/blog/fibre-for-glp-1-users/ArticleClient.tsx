@@ -843,7 +843,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className={linkClass}
                 >
-                  compare Mounjaro vs Wegovy vs Saxenda
+                  compare Mounjaro vs Wegovy
                 </Link>
                 , review the{" "}
                 <Link href="/wegovy-price-comparison" className={linkClass}>

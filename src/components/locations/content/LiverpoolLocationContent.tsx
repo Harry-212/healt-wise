@@ -300,7 +300,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Discontinuation data: about two thirds regain weight within a year without maintenance habits, so maintenance phase planning is critical (JAMA, 2025 framing). Compare brands on{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>
                   .
                 </p>

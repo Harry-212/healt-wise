@@ -597,7 +597,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  compare Mounjaro vs Wegovy vs Saxenda
+                  compare Mounjaro vs Wegovy
                 </Link>{" "}
                 before committing. It helps users move from one-medicine intent
                 into a wider treatment comparison. If you choose tirzepatide,
@@ -633,7 +633,7 @@ export default function ArticleClient() {
               <p>Useful Health Wise tools for that decision include:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Weight loss treatment price comparison</li>
-                <li>Mounjaro vs Wegovy vs Saxenda comparison</li>
+                <li>Mounjaro vs Wegovy comparison</li>
                 <li>Wegovy price content</li>
                 <li>BMI calculator</li>
                 <li>Pharmacy safety and GPhC verification guide</li>

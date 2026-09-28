@@ -670,7 +670,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-lg md:text-xl ${p}`}>
                   Best weight loss treatment Lincoln demands patience over promises, NHS foundations when capacity exists, strategic private tools when eligible and paid, and relentless consistency. From 5 kg quick wins to 20 kg transformations, Lincolnshire locals hold the map: cathedral climbs, market smarts, science guided steps. Sustainable vitality beats temporary scales every time. Explore{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>{" "}
                   when your clinician names brands.
                 </p>

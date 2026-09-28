@@ -807,7 +807,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-semibold text-emerald-600 hover:underline"
                 >
-                  Mounjaro vs Wegovy vs Saxenda price comparison
+                  Mounjaro vs Wegovy price comparison
                 </Link>
                 .
               </p>
@@ -1150,7 +1150,7 @@ export default function ArticleClient() {
                       href="/compare/wegovy-vs-mounjaro"
                       className="font-semibold text-emerald-600 hover:underline"
                     >
-                      Mounjaro vs Wegovy vs Saxenda comparison hub
+                      Mounjaro vs Wegovy comparison hub
                     </Link>{" "}
                     includes Trustpilot filtering and dose specific pricing.
                   </p>

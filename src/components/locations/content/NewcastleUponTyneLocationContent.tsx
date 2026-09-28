@@ -279,7 +279,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
                 <p className={`mt-4 ${p}`}>
                   Crucially, injectable GLP-1 treatments are usually not a permanent solution. They work best when combined with changes in diet, activity, and behaviour. If someone stops taking them without changing habits, weight tends to creep back. Compare options using{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>
                   .
                 </p>
@@ -578,7 +578,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
                   <li>
                     Compare GLP-1 options on{" "}
                     <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                      Mounjaro versus Wegovy versus Saxenda
+                      Mounjaro versus Wegovy
                     </Link>
                     .
                   </li>

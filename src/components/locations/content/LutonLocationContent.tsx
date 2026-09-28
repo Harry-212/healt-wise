@@ -371,7 +371,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   If someone asks, What is a cheaper alternative to Mounjaro? the practical answer is that you should compare not just the headline price, but the likely total cost per month and the expected results. A cheaper treatment that does not fit your lifestyle may end up costing more emotionally and financially. Compare triplets on{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>
                   .
                 </p>

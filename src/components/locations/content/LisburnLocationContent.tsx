@@ -481,7 +481,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                 <p className={`mt-4 ${p}`}>
                   Compare triplets when budgeting:{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>
                   .
                 </p>

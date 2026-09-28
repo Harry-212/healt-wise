@@ -502,7 +502,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   If your main issue is hunger and repeated regain, GLP-1 medication may be worth discussing. If your condition is more severe, surgery may be the more effective route. If you are close to goal weight and want shape refinement, contouring might be enough. There is no prize for choosing the most dramatic option. For a fuller comparator view, open{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>{" "}
                   and{" "}
                   <Link className={linkCls} href="/methodology">

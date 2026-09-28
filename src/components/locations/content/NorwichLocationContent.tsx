@@ -493,7 +493,7 @@ export default function NorwichLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     Compare medicine options on{" "}
                     <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                      Mounjaro versus Wegovy versus Saxenda
+                      Mounjaro versus Wegovy
                     </Link>
                     .
                   </li>

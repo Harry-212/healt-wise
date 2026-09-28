@@ -768,7 +768,7 @@ export default function ArticleClient() {
                     href="/compare/wegovy-vs-mounjaro"
                     className="font-medium text-emerald-600 hover:underline"
                   >
-                    mounjaro vs wegovy vs saxenda comparison
+                    mounjaro vs wegovy comparison
                   </Link>{" "}
                   hub, which provides verified price data across licensed UK
                   providers.
@@ -901,7 +901,7 @@ export default function ArticleClient() {
                       href="/compare/wegovy-vs-mounjaro"
                       className="font-medium text-emerald-600 hover:underline"
                     >
-                      mounjaro vs wegovy vs saxenda comparison
+                      mounjaro vs wegovy comparison
                     </Link>{" "}
                     dashboard.
                   </p>

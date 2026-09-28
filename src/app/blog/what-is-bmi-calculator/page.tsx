@@ -113,7 +113,7 @@ export default function BmiCalculatorBlogPage() {
         name: "Does BMI affect my eligibility for Wegovy or Mounjaro?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "BMI is one of the key eligibility criteria for GLP-1 weight loss treatments in the UK. Generally, BMI 30+ may qualify without additional conditions, while BMI 27 to 29.9 may qualify with weight-related health conditions such as high blood pressure, type 2 diabetes, or sleep apnoea. However, eligibility is always determined by a licensed prescriber following a full clinical assessment, meaning BMI alone is not sufficient. For price and provider comparison, you can visit our comprehensive mounjaro vs wegovy vs saxenda comparison dashboard.",
+          text: "BMI is one of the key eligibility criteria for GLP-1 weight loss treatments in the UK. Generally, BMI 30+ may qualify without additional conditions, while BMI 27 to 29.9 may qualify with weight-related health conditions such as high blood pressure, type 2 diabetes, or sleep apnoea. However, eligibility is always determined by a licensed prescriber following a full clinical assessment, meaning BMI alone is not sufficient. For price and provider comparison, you can visit our comprehensive mounjaro vs wegovy comparison dashboard.",
         },
       },
       {

@@ -349,7 +349,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Mounjaro vs Wegovy vs Saxenda comparison
+                  Mounjaro vs Wegovy comparison
                 </Link>
                 , then check dose-level pricing through the{" "}
                 <Link

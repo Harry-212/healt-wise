@@ -623,7 +623,7 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     Compare medicines on{" "}
                     <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                      Mounjaro versus Wegovy versus Saxenda
+                      Mounjaro versus Wegovy
                     </Link>
                     .
                   </li>

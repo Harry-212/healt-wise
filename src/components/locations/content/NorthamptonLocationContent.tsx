@@ -279,7 +279,7 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
                 <p className={`mt-4 ${p}`}>
                   Compare medicine choices with{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>{" "}
                   and check eligibility context with the{" "}
                   <Link className={linkCls} href="/tools/bmi-calculator">
@@ -522,7 +522,7 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     Compare GLP-1 medicines on{" "}
                     <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                      Mounjaro versus Wegovy versus Saxenda
+                      Mounjaro versus Wegovy
                     </Link>
                     .
                   </li>

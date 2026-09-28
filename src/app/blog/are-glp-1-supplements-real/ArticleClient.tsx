@@ -249,7 +249,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  compare Mounjaro vs Wegovy vs Saxenda
+                  compare Mounjaro vs Wegovy
                 </Link>{" "}
                 before assuming a supplement can fill the same role.
               </p>

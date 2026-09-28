@@ -257,7 +257,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  compare Mounjaro vs Wegovy vs Saxenda
+                  compare Mounjaro vs Wegovy
                 </Link>{" "}
                 to see how the main injection routes compare before you decide
                 on a pill.
@@ -477,7 +477,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Mounjaro vs Wegovy vs Saxenda comparison
+                  Mounjaro vs Wegovy comparison
                 </Link>{" "}
                 is a practical next step alongside this pill guide.
               </p>

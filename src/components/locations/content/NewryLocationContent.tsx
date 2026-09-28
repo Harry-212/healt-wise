@@ -253,7 +253,7 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
                 <p className={`mt-4 ${p}`}>
                   They are similar in purpose, but not identical in how they work or how they are dosed. Some people tolerate one better than another. Some respond more strongly to one medicine. A clinician may consider factors such as BMI, diabetes risk, previous side effects, and personal preference before deciding. Compare the main options in{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>
                   .
                 </p>
@@ -570,7 +570,7 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     Compare injections on{" "}
                     <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                      Mounjaro versus Wegovy versus Saxenda
+                      Mounjaro versus Wegovy
                     </Link>
                     .
                   </li>

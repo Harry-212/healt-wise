@@ -370,7 +370,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                   </Link>{" "}
                   and{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>
                   .
                 </p>

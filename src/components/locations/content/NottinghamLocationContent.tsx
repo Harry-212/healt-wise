@@ -360,7 +360,7 @@ export default function NottinghamLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     Compare GLP-1 medicines on{" "}
                     <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                      Mounjaro versus Wegovy versus Saxenda
+                      Mounjaro versus Wegovy
                     </Link>
                     .
                   </li>

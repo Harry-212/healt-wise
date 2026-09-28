@@ -463,7 +463,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Whether you target 10 kg or 20 kg goals, both can be achievable with the timelines above when you stay monitored. Start local, stay monitored. Lichfield&apos;s transformation radius reaches your doorstep when you pair{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                    Mounjaro versus Wegovy versus Saxenda
+                    Mounjaro versus Wegovy
                   </Link>{" "}
                   decisions with habits.
                 </p>

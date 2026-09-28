@@ -2153,7 +2153,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What can I use if Mounjaro is too expensive?",
-        a: `Cheaper alternatives may include Wegovy, Saxenda, or an NHS weight management programme, depending on eligibility and access. Read [what Saxenda is](/what-is-saxenda) and compare triplets on [Mounjaro versus Wegovy versus Saxenda](/compare/wegovy-vs-mounjaro).`,
+        a: `Cheaper alternatives may include Wegovy, Saxenda, or an NHS weight management programme, depending on eligibility and access. Read [what Saxenda is](/what-is-saxenda) and compare [Mounjaro versus Wegovy](/compare/wegovy-vs-mounjaro).`,
       },
       {
         q: "Can Ozempic be bought from a normal pharmacy like Boots?",

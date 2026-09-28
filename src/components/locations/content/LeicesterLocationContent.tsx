@@ -507,7 +507,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     If you weigh surgery, read{" "}
                     <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
-                      Mounjaro versus Wegovy versus Saxenda
+                      Mounjaro versus Wegovy
                     </Link>{" "}
                     for injection context first.
                   </li>
