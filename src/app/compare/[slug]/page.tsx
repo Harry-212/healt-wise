@@ -166,7 +166,6 @@ export default async function ComparePage({ params }: Props) {
           highlightNavLinks={Boolean(photoHero)}
           heroPhotoSrc={photoHero?.src}
           heroPhotoAlt={photoHero?.alt}
-          showSubtitleLiveDate={false}
         />
 
         <CompareMedPriceTabs
@@ -275,6 +274,22 @@ export default async function ComparePage({ params }: Props) {
                     ))}
                   </tbody>
                 </table>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  href="/mounjaro-price-comparison"
+                  className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition hover:bg-slate-50"
+                >
+                  Full Mounjaro price comparison
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+                <Link
+                  href="/wegovy-price-comparison"
+                  className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition hover:bg-slate-50"
+                >
+                  Full Wegovy price comparison
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
               </div>
             </div>
           </section>

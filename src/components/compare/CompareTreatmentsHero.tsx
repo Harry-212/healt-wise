@@ -13,7 +13,6 @@ import {
   ShaderBackground,
   type HeroShaderVariant,
 } from "@/components/ui/hero-shader";
-import { useTodayUkParts } from "@/lib/hooks/useTodayLabel";
 
 const instrumentSerif = Instrument_Serif({
   weight: "400",
@@ -44,42 +43,6 @@ const sparkClass: Record<HeroShaderVariant, string> = {
   blue: "text-sky-200",
 };
 
-function HeroSubtitleLiveDateLine({
-  contentMaxClass,
-}: {
-  contentMaxClass: string;
-}) {
-  const parts = useTodayUkParts(null);
-
-  return (
-    <p
-      className={`${contentMaxClass} mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm font-medium tracking-tight text-white/90 md:text-base lg:justify-start`}
-    >
-      <span className="inline-flex items-center gap-2 text-emerald-200/95">
-        <span className="relative flex h-2 w-2 shrink-0" aria-hidden>
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300/70 opacity-75" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-300" />
-        </span>
-        Last Updated
-      </span>
-      <span className="text-white/55" aria-hidden>
-        ·
-      </span>
-      {parts ? (
-        <time dateTime={parts.dateTime} className="text-white/95 tabular-nums">
-          {parts.display}
-        </time>
-      ) : (
-        <span className="text-white/75">Loading date…</span>
-      )}
-      <span className="text-white/55" aria-hidden>
-        ·
-      </span>
-      <span className="text-white/80">UK</span>
-    </p>
-  );
-}
-
 export default function CompareTreatmentsHero({
   variant,
   eyebrow,
@@ -94,7 +57,6 @@ export default function CompareTreatmentsHero({
   /** Optional full-bleed hero photo (e.g. triple-medicine compare); dark overlay improves text contrast. */
   heroPhotoSrc,
   heroPhotoAlt = "",
-  showSubtitleLiveDate = false,
   highlightNavLinks = false,
 }: {
   variant: HeroShaderVariant;
@@ -111,7 +73,6 @@ export default function CompareTreatmentsHero({
   primaryCtaLabel?: string;
   heroPhotoSrc?: string;
   heroPhotoAlt?: string;
-  showSubtitleLiveDate?: boolean;
   /** Larger bordered nav pills (photo heroes). */
   highlightNavLinks?: boolean;
 }) {
@@ -193,10 +154,6 @@ export default function CompareTreatmentsHero({
 
           {subtitle.trim() ? (
             <p className={introClass}>{subtitle}</p>
-          ) : null}
-
-          {showSubtitleLiveDate ? (
-            <HeroSubtitleLiveDateLine contentMaxClass={contentMaxClass} />
           ) : null}
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
