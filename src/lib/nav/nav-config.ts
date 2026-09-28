@@ -54,13 +54,6 @@ export const NAV_PANELS: NavPanel[] = [
             emphasize: true,
           },
           {
-            label: "Compare Saxenda prices UK",
-            href: "/saxenda-price-comparison",
-            icon: "pound",
-            accent: "sky",
-            emphasize: true,
-          },
-          {
             label: "Compare Option UK",
             href: "/prices/cheapest-options-uk",
             icon: "pound",
@@ -83,7 +76,6 @@ export const NAV_PANELS: NavPanel[] = [
         links: [
           { label: "Mounjaro", href: "/what-is-mounjaro", icon: "syringe" },
           { label: "Wegovy", href: "/what-is-wegovy", icon: "syringe" },
-          { label: "Saxenda", href: "/what-is-saxenda", icon: "syringe" },
         ],
       },
       {

@@ -101,17 +101,13 @@ export function PharmacyPriceCompareHint({
     >
       <p className="font-bold text-emerald-950">Compare UK pharmacy prices</p>
       <p className="mt-2 leading-relaxed text-slate-700">
-        See illustrative side-by-side listings on Health Wise:{" "}
+        See checked side-by-side listings on Health Wise:{" "}
         <Link href="/mounjaro-price-comparison" className={pharmacyCompareLinkClass}>
           Mounjaro
         </Link>
         <span className="text-slate-400"> · </span>
         <Link href="/wegovy-price-comparison" className={pharmacyCompareLinkClass}>
           Wegovy
-        </Link>
-        <span className="text-slate-400"> · </span>
-        <Link href="/saxenda-price-comparison" className={pharmacyCompareLinkClass}>
-          Saxenda
         </Link>
         <span className="text-slate-400"> · </span>
         <Link href="/prices/cheapest-options-uk" className={pharmacyCompareLinkClass}>

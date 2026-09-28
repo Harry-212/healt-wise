@@ -16,7 +16,7 @@ import {
 const SCHEMA_LANGUAGE = "en-GB";
 
 const SITE_DESCRIPTION =
-  "Compare Mounjaro, Wegovy and Saxenda prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.";
+  "Compare Mounjaro and Wegovy prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.";
 
 function homeSchemaLogoUrl(base: string): string {
   return `${base}${SITE_LOGO_SRC}`;

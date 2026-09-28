@@ -51,7 +51,6 @@ const STATIC_PATHS = [
   "/pharmacy-safety-gphc-verification",
   "/privacy-policy",
   "/protein-and-fitness",
-  "/saxenda-price-comparison",
   "/sleep",
   "/stress",
   "/support-weight-management",
@@ -66,7 +65,6 @@ const STATIC_PATHS = [
   "/wegovy-faq",
   "/wegovy-price-comparison",
   "/what-is-mounjaro",
-  "/what-is-saxenda",
   "/what-is-wegovy",
 ] as const;
 
@@ -88,7 +86,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const HIGH_PRIORITY_HUBS = new Set<string>([
     "/wegovy-price-comparison",
     "/mounjaro-price-comparison",
-    "/saxenda-price-comparison",
     "/best-weight-loss-treatment-comparison-london",
     "/blog",
     "/pharmacies",
