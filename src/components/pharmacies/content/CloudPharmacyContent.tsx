@@ -1,16 +1,102 @@
 "use client";
 
+import Link from "next/link";
 import {
   HazardBox,
-  PHARMACY_PROVIDER_CTA_CLASSNAME,
   PharmacyDossierPage,
   PharmacyPriceCompareHint,
   Points,
   ProviderCta,
 } from "./_dossier";
+import {
+  providerTableFacts,
+  providerTablePriceSentence,
+  type ProviderTableRow,
+} from "@/lib/data/provider-price-summary";
+
+/** Checked table prices only (same medicine, strength and single pen). */
+const CLOUD_TABLE_PRICES = providerTablePriceSentence("cloud-pharmacy", "Cloud Pharmacy");
+const CLOUD_FACTS = providerTableFacts("cloud-pharmacy");
+/** Cloud Pharmacy is deliberately excluded from the public Mounjaro table (data-quality hold), so only list what is actually shown. */
+const CLOUD_CHECKED_MEDICINES = [
+  CLOUD_FACTS.mounjaro ? "Mounjaro" : null,
+  CLOUD_FACTS.wegovy ? "Wegovy" : null,
+].filter((v): v is string => Boolean(v));
+const CLOUD_CHECKED_MEDICINES_LABEL = CLOUD_CHECKED_MEDICINES.join(" · ") || "See tables";
 
 const providerUrl =
   "https://www.cloudpharmacy.co.uk/online-doctor/weight-loss-treatments/";
+
+/** Provider details we have no recorded source or check date for. Listed openly, not filled in. */
+const CLOUD_UNCONFIRMED = [
+  ...(CLOUD_FACTS.mounjaro
+    ? []
+    : ["Mounjaro pricing (not currently shown in our comparison table)"]),
+  "Delivery services, delivery times and delivery charges",
+  "Packaging and cold-chain handling for injectable pens",
+  "Support channels (phone, email, pharmacist follow-up)",
+  "Whether Saxenda, Orlistat or Mysimba are currently offered",
+  "The steps of the consultation and the eligibility criteria Cloud Pharmacy applies",
+  "Any first-order offer, voucher or subscription pricing (our tables use list price only)",
+];
+
+const CLOUD_FAQ = [
+  {
+    q: "Which medicines does Cloud Pharmacy list in our comparison?",
+    a: `${CLOUD_CHECKED_MEDICINES_LABEL}. It appears in our price tables with the check date shown.`,
+  },
+  {
+    q: "How much does Cloud Pharmacy weight loss treatment cost?",
+    a:
+      CLOUD_TABLE_PRICES ??
+      "Cloud Pharmacy's prices vary by medicine and strength; see our comparison tables for the strengths it lists.",
+  },
+  {
+    q: "Does Cloud Pharmacy charge for delivery?",
+    a: "We have not confirmed Cloud Pharmacy's delivery services or charges, so this page does not state them. Check the total at checkout.",
+  },
+  {
+    q: "Is Cloud Pharmacy a registered pharmacy?",
+    a: `Our comparison records list GPhC registration number ${CLOUD_FACTS.gphcRegNo ?? "on file"}. You can confirm it on the GPhC register.`,
+  },
+  {
+    q: "Are non-injection treatments available?",
+    a: "We have not confirmed this for Cloud Pharmacy, so we do not list any. Ask Cloud Pharmacy directly.",
+  },
+];
+
+function PriceTable({
+  title,
+  rows,
+  checked,
+}: {
+  title: string;
+  rows: ProviderTableRow[];
+  checked: string;
+}) {
+  return (
+    <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
+      <p className="font-bold text-slate-900">{title}</p>
+      <p className="mt-1 text-xs text-slate-600">Single pen, list price. Checked {checked}.</p>
+      <table className="mt-3 w-full text-left text-sm">
+        <thead>
+          <tr className="border-b border-slate-200 text-slate-600">
+            <th className="py-1.5 pr-3 font-semibold">Strength</th>
+            <th className="py-1.5 font-semibold">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr key={r.strength} className="border-b border-slate-100 last:border-0">
+              <td className="py-1.5 pr-3 text-slate-800">{r.strength}</td>
+              <td className="py-1.5 text-slate-800">{r.price}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 export default function CloudPharmacyContent() {
   /** Paste the live code here when available. */
@@ -22,15 +108,21 @@ export default function CloudPharmacyContent() {
       slugLabel="Cloud Pharmacy"
       fileRef="HW-CLOUD-2026"
       title="Cloud Pharmacy weight management review"
-      subtitle="Independent provider review of Cloud Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat · Mysimba"
+      subtitle={`Independent provider review of Cloud Pharmacy: checked ${CLOUD_CHECKED_MEDICINES_LABEL} prices by strength, registration details and what we have not yet confirmed (information only — not medical advice).`}
+      scopeLabel={`Scope: ${CLOUD_CHECKED_MEDICINES_LABEL}`}
       providerName="Cloud Pharmacy"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Cloud Pharmacy" },
-        { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda · Orlistat · Mysimba" },
-        { k: "Fulfilment", v: "Home delivery" },
+        { k: "Treatments compared", v: CLOUD_CHECKED_MEDICINES_LABEL },
+        {
+          k: "Prices checked",
+          v:
+            [...new Set([CLOUD_FACTS.mounjaro?.checked, CLOUD_FACTS.wegovy?.checked])]
+              .filter(Boolean)
+              .join(" · ") || "See tables",
+        },
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
@@ -38,237 +130,105 @@ export default function CloudPharmacyContent() {
       heroProviderLogoAlt="Cloud Pharmacy"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Cloud Pharmacy:</strong> Navigating online weight loss treatments can be complex. Cloud Pharmacy is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Cloud Pharmacy provides.</p></div>
+        <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm">
+          <p className="text-slate-800 leading-relaxed">
+            <strong className="text-blue-900">Service profile:</strong> Cloud Pharmacy is an
+            online provider of prescription weight-loss medicines. This page sets out what we
+            have checked and can source, and lists separately what we have not yet confirmed.
+          </p>
+        </div>
         <p className="text-slate-800 leading-relaxed">
-          Weight loss advice can sometimes sound overly neat. Eat less. Move more. Stay consistent.
-          If it were that simple, fewer people would struggle.
-        </p>
-        <p className="text-slate-800 leading-relaxed">
-          Real life tends to interfere. Hunger cues, stress eating, hormonal factors, sedentary
-          work, family routines — all of it can make long-term progress harder than standard advice
-          suggests. That may be part of why prescription treatments like Mounjaro and Wegovy have
-          become more widely considered across the UK.
-        </p>
-        <p className="text-slate-800 leading-relaxed">
-          Cloud Pharmacy weight loss treatment sits within that growing space. Through its online
-          prescribing service, Cloud Pharmacy offers consultations, access to prescription
-          medication, home delivery and ongoing support — all managed remotely.
-        </p>
-        <p className="text-slate-800 leading-relaxed">
-          This guide looks at how Cloud Pharmacy works, what treatments may be available, how
-          delivery is handled, what pricing may look like, and why some people choose it for
-          medically supported weight management.
+          Cloud Pharmacy appears in our {CLOUD_CHECKED_MEDICINES_LABEL} comparison table
+          {CLOUD_CHECKED_MEDICINES.length === 1 ? "" : "s"}. The figures below are the rows from
+          {CLOUD_CHECKED_MEDICINES.length === 1 ? " that table" : " those tables"}, with the check
+          date shown on each.
         </p>
       </section>
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          What is Cloud Pharmacy weight loss treatment?
+          Checked facts
         </p>
         <HazardBox className="mt-3 ring-1 ring-red-900/5">
-          <p className="text-slate-800 leading-relaxed">
-            Cloud Pharmacy provides online access to prescription weight loss medication, subject
-            to clinical review. Patients typically:
-          </p>
           <Points
             items={[
-              "Complete an online consultation",
-              "Receive a prescriber review",
-              "Get approved if suitable",
-              "Have medication delivered to their address",
+              ...(CLOUD_FACTS.gphcRegNo
+                ? [`GPhC registration number recorded in our tables: ${CLOUD_FACTS.gphcRegNo}`]
+                : []),
+              ...(CLOUD_FACTS.rating != null
+                ? [`Customer rating shown in our tables: ${CLOUD_FACTS.rating} out of 5`]
+                : []),
+              ...(CLOUD_CHECKED_MEDICINES[0]
+                ? [`A consultation is marked as included in the ${CLOUD_CHECKED_MEDICINES[0]} price record`]
+                : []),
+              "Prices are list prices for a single pen; delivery is not included",
             ]}
           />
-          <p className="mt-4 text-slate-800 leading-relaxed">
-            It’s a straightforward model — but convenience is only part of the appeal. Access is
-            often the bigger story.
-          </p>
         </HazardBox>
       </section>
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Provider review: Cloud Pharmacy
+          Cloud Pharmacy prices by strength
         </p>
-        <div className="mt-3 space-y-4">
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              1. Convenient access to prescription medication
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              You can manage the process from home. No waiting rooms. No second trip to collect a
-              prescription. That may suit people who:
-            </p>
-            <Points
-              items={[
-                "Prefer private treatment",
-                "Want quicker access",
-                "Value online healthcare",
-                "Have struggled through conventional routes",
-              ]}
+        <PharmacyPriceCompareHint />
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          {CLOUD_FACTS.mounjaro ? (
+            <PriceTable
+              title="Mounjaro"
+              rows={CLOUD_FACTS.mounjaro.rows}
+              checked={CLOUD_FACTS.mounjaro.checked}
             />
-          </div>
-
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              2. Access to clinically proven weight loss treatments
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              Cloud Pharmacy offers access to several prescription options, including:
-            </p>
-            <Points items={["Mounjaro", "Wegovy", "Saxenda", "Orlistat", "Mysimba"]} />
-            <p className="mt-4 text-slate-800 leading-relaxed">
-              GLP-1 treatments such as Mounjaro and Wegovy may help regulate appetite by increasing
-              satiety and reducing hunger signals, supporting lower calorie intake. Medication
-              doesn’t replace lifestyle change — but it may help some patients sustain it more
-              realistically.
-            </p>
-          </div>
-
-          <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
-            <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
-              3. Tablet-based alternatives are also available
-            </h2>
-            <p className="mt-3 text-slate-800 leading-relaxed">
-              Not everyone wants injections. Cloud Pharmacy also appears to offer oral options such
-              as Orlistat and Mysimba — different mechanisms, different trade-offs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          How Cloud Pharmacy works
-        </p>
-        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {[
-            {
-              t: "Step 1: Online consultation",
-              d: "Questionnaire covering weight, BMI, medical history, current medications and lifestyle details.",
-            },
-            {
-              t: "Step 2: Medical review",
-              d: "A prescriber reviews suitability and which medication may suit your needs. Not every applicant is approved.",
-            },
-            {
-              t: "Step 3: Prescription and fulfilment",
-              d: "If approved: prescription issued, medication prepared, packaged and dispatched.",
-            },
-          ].map((s) => (
-            <div key={s.t} className="border border-slate-200/90 bg-white/80 p-4 shadow-sm">
-              <p className="font-bold text-slate-900">{s.t}</p>
-              <p className="mt-2 text-sm leading-relaxed text-slate-700">{s.d}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Delivery and safe handling
-        </p>
-        <div className="mt-3 grid gap-4 md:grid-cols-2">
-          <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-            <p className="font-bold text-slate-900">Delivery timeframes and privacy</p>
-            <p className="mt-2 text-slate-800 leading-relaxed">
-              Timing may vary, though orders often appear to be processed shortly after approval,
-              with delivery within a few working days. Cloud states packaging is plain and
-              unbranded.
-            </p>
-          </div>
-          <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-            <p className="font-bold text-slate-900">Temperature-controlled delivery (where needed)</p>
-            <p className="mt-2 text-slate-800 leading-relaxed">
-              Injectable medications may require proper storage conditions. Cloud Pharmacy appears
-              to use insulated packaging and cold-chain methods where needed to preserve stability
-              during transit.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <div className="grid gap-4 md:grid-cols-2">
-        <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
-          <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-            How much does Cloud Pharmacy weight loss treatment cost?
-          </p>
-          <PharmacyPriceCompareHint />
-          <p className="mt-3 text-slate-800 leading-relaxed">
-            Pricing depends on medication and dose. Tablet costs may range around{" "}
-            <strong>£20–£100+</strong> per month, while injection costs may sit around{" "}
-            <strong>£130</strong> at lower doses and <strong>£300+</strong> at higher doses, with
-            escalation increasing costs over time.
-          </p>
-          <p className="mt-3 text-slate-800 leading-relaxed">
-            Pricing may include consultation, prescription, medication and delivery.
-          </p>
-        </section>
-        <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
-          <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-            Ongoing support and medical oversight
-          </p>
-          <p className="mt-3 text-slate-800 leading-relaxed">
-            Weight loss treatment is rarely static. Cloud Pharmacy may offer treatment reviews,
-            ongoing oversight and adjustments based on progress.
-          </p>
-          <p className="mt-3 text-slate-800 leading-relaxed">
-            Prescription weight loss medication is not suitable for everyone and may be considered
-            for people with BMI above 30, or BMI above 27 with related conditions — which is why
-            screening is necessary.
-          </p>
-        </section>
-      </div>
-
-      <section>
-        <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Frequently asked questions
-        </h2>
-        <div className="mt-4 grid gap-5 md:grid-cols-2">
-          {[
-            {
-              q: "Can I get Wegovy from Cloud Pharmacy?",
-              a: "Yes, Wegovy may be available through Cloud Pharmacy after an online consultation and approval.",
-            },
-            {
-              q: "Does Cloud Pharmacy offer Mounjaro for weight loss?",
-              a: "Yes, Mounjaro appears among available treatment options, subject to suitability checks.",
-            },
-            {
-              q: "How much does Cloud Pharmacy weight loss treatment cost?",
-              a: "Costs may range from around £20–£100+ for tablets and £130–£300+ per month for injections, depending on medication and dosage.",
-            },
-            {
-              q: "Does Cloud Pharmacy deliver weight management medication to your home?",
-              a: "Yes. Approved prescriptions are shipped directly to your address, often with tracked delivery and temperature-controlled packaging where required.",
-            },
-            {
-              q: "Is Cloud Pharmacy regulated?",
-              a: "Cloud Pharmacy operates as a licensed pharmacy provider supplying prescription medication through a medically reviewed process.",
-            },
-            {
-              q: "Are non-injection alternatives available?",
-              a: "Yes. Options may include Orlistat and Mysimba for patients who prefer oral treatment.",
-            },
-          ].map((item) => (
-            <div key={item.q} className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
-              <h3 className="font-bold text-slate-900">{item.q}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-700">{item.a}</p>
-            </div>
-          ))}
+          ) : null}
+          {CLOUD_FACTS.wegovy ? (
+            <PriceTable
+              title="Wegovy"
+              rows={CLOUD_FACTS.wegovy.rows}
+              checked={CLOUD_FACTS.wegovy.checked}
+            />
+          ) : null}
         </div>
       </section>
 
       <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
-        <h2 className="text-lg font-bold text-slate-900 sm:text-xl">Conclusion</h2>
-        <p className="mt-3 text-slate-800 leading-relaxed">
-          If you’re looking for a private route to prescription weight loss treatment, Cloud
-          Pharmacy appears to offer a practical option. Access to medications such as Mounjaro and
-          Wegovy, combined with online assessment, discreet delivery and ongoing support, gives
-          it more depth than a basic online checkout.
+        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
+          Not yet confirmed
         </p>
         <p className="mt-3 text-slate-800 leading-relaxed">
-          It may not suit everyone, but for those prioritising convenience, privacy and medically
-          supervised support, it may be worth considering as part of a longer-term plan.
+          We have no recorded source or check date for the details below, so this page does not
+          state them. Check them with Cloud Pharmacy before you order.
+        </p>
+        <Points items={CLOUD_UNCONFIRMED} />
+      </section>
+
+      <section className="border border-slate-300/80 bg-white/60 p-5 shadow-sm sm:p-6">
+        <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
+          Our view
+        </p>
+        <p className="mt-3 text-slate-800 leading-relaxed">
+          This section is editorial opinion based only on the listed prices. Compare the same
+          strength and pack size across providers, and add delivery and any other charges to
+          reach a total.
+          {CLOUD_FACTS.mounjaro ? (
+            <>
+              {" "}
+              See the{" "}
+              <Link href="/mounjaro-price-comparison" className="font-semibold text-emerald-800 underline">
+                Mounjaro
+              </Link>{" "}
+              table for how Cloud Pharmacy sits against other providers.
+            </>
+          ) : null}
+          {CLOUD_FACTS.wegovy ? (
+            <>
+              {" "}
+              See the{" "}
+              <Link href="/wegovy-price-comparison" className="font-semibold text-emerald-800 underline">
+                Wegovy
+              </Link>{" "}
+              table for how Cloud Pharmacy sits against other providers.
+            </>
+          ) : null}
         </p>
         <div className="mt-6">
           <ProviderCta url={providerUrl} name="Cloud Pharmacy">
@@ -276,7 +236,20 @@ export default function CloudPharmacyContent() {
           </ProviderCta>
         </div>
       </section>
+
+      <section>
+        <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
+          Frequently asked questions
+        </h2>
+        <div className="mt-4 grid gap-5 sm:grid-cols-2">
+          {CLOUD_FAQ.map((item) => (
+            <div key={item.q} className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
+              <h3 className="font-bold text-slate-900">{item.q}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-700">{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </PharmacyDossierPage>
   );
 }
-
