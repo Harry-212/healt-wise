@@ -1,12 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import Script from "next/script";
 import {
   CONSENT_CHANGE_EVENT,
   getStoredConsent,
   type ConsentChoice,
 } from "@/lib/analytics/consent";
+
+function subscribeToConsent(callback: () => void) {
+  window.addEventListener(CONSENT_CHANGE_EVENT, callback);
+  return () => window.removeEventListener(CONSENT_CHANGE_EVENT, callback);
+}
+
+function getServerConsent(): ConsentChoice | null {
+  return null;
+}
 
 /**
  * Google "Preferred Sources" button — lets readers mark Healthwise360 as a
@@ -22,16 +31,7 @@ export function GooglePreferredSourceButton({
   className?: string;
   theme?: "light" | "dark";
 }) {
-  const [consent, setConsent] = useState<ConsentChoice | null>(null);
-
-  useEffect(() => {
-    setConsent(getStoredConsent());
-    const onChange = (e: Event) => {
-      setConsent((e as CustomEvent<ConsentChoice>).detail);
-    };
-    window.addEventListener(CONSENT_CHANGE_EVENT, onChange);
-    return () => window.removeEventListener(CONSENT_CHANGE_EVENT, onChange);
-  }, []);
+  const consent = useSyncExternalStore(subscribeToConsent, getStoredConsent, getServerConsent);
 
   if (consent !== "granted") return null;
 

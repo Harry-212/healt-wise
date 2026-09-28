@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import {
   type ConsentChoice,
+  CONSENT_CHANGE_EVENT,
   OPEN_CONSENT_SETTINGS_EVENT,
   clearAnalyticsCookies,
   getStoredConsent,
@@ -22,39 +23,42 @@ function updateGtagConsent(choice: ConsentChoice) {
   });
 }
 
-export function CookieConsent({ onConsent }: { onConsent: (choice: ConsentChoice) => void }) {
-  const [visible, setVisible] = useState(false);
-  const [current, setCurrent] = useState<ConsentChoice | null>(null);
+function subscribeToConsent(callback: () => void) {
+  window.addEventListener(CONSENT_CHANGE_EVENT, callback);
+  return () => window.removeEventListener(CONSENT_CHANGE_EVENT, callback);
+}
 
-  useEffect(() => {
-    const stored = getStoredConsent();
-    if (stored) {
-      onConsent(stored);
-    } else {
-      setVisible(true);
-    }
-  }, [onConsent]);
+function getServerConsent(): ConsentChoice | null {
+  return null;
+}
+
+export function CookieConsent({ onConsent }: { onConsent: (choice: ConsentChoice) => void }) {
+  // Stored consent is an external system (localStorage); reading it through
+  // useSyncExternalStore keeps this in sync with other tabs/components
+  // without a setState call in an effect body.
+  const consent = useSyncExternalStore(subscribeToConsent, getStoredConsent, getServerConsent);
+  const [reopened, setReopened] = useState(false);
 
   // Footer "Cookie settings" link reopens the banner so a choice can be
   // changed or withdrawn as easily as it was given (UK ICO).
   useEffect(() => {
-    const open = () => {
-      setCurrent(getStoredConsent());
-      setVisible(true);
-    };
+    const open = () => setReopened(true);
     window.addEventListener(OPEN_CONSENT_SETTINGS_EVENT, open);
     return () => window.removeEventListener(OPEN_CONSENT_SETTINGS_EVENT, open);
   }, []);
+
+  useEffect(() => {
+    if (consent) onConsent(consent);
+  }, [consent, onConsent]);
 
   function handleChoice(choice: ConsentChoice) {
     storeConsent(choice);
     updateGtagConsent(choice);
     if (choice === "denied") clearAnalyticsCookies();
-    onConsent(choice);
-    setCurrent(choice);
-    setVisible(false);
+    setReopened(false);
   }
 
+  const visible = consent === null || reopened;
   if (!visible) return null;
 
   return (
@@ -69,9 +73,9 @@ export function CookieConsent({ onConsent }: { onConsent: (choice: ConsentChoice
           understand how visitors use this site. No personal data is sold or shared
           for advertising. You can change your choice at any time using
           &ldquo;Cookie settings&rdquo; in the footer.
-          {current && (
+          {reopened && consent && (
             <span className="mt-1 block font-medium text-slate-700">
-              Current choice: {current === "granted" ? "Accepted" : "Rejected"}
+              Current choice: {consent === "granted" ? "Accepted" : "Rejected"}
             </span>
           )}
         </p>
