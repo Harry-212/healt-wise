@@ -11,7 +11,8 @@ export function AnalyticsProvider() {
 
   return (
     <>
-      <GoogleAnalyticsClient consent={consent} />
+      {/* Consent Mode "basic": gtag.js only loads once consent is granted. */}
+      {consent === "granted" ? <GoogleAnalyticsClient /> : null}
       <CookieConsent onConsent={handleConsent} />
     </>
   );
