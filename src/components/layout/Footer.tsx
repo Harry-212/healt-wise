@@ -27,7 +27,6 @@ import { openConsentSettings } from "@/lib/analytics/consent";
 const FOOTER_SUPPORT_LINKS = [
   { href: "/what-is-mounjaro", label: "Mounjaro" },
   { href: "/what-is-wegovy", label: "Wegovy" },
-  { href: "/what-is-saxenda", label: "Saxenda" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
