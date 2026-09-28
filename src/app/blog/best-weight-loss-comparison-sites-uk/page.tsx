@@ -68,7 +68,7 @@ export default function BestWeightLossComparisonSitesPage() {
         name: "Is there one website that compares all three, Mounjaro, Wegovy, and Saxenda, equally?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Click.Compare, MedEazy, PenCompare, and Healthwise360 all cover all three treatments. Monj is weighted toward Mounjaro, and WegoCompare toward Wegovy. For a genuinely equal three-treatment comparison with filtering by dose, Trustpilot, and provider, the Mounjaro vs Wegovy vs Saxenda hub at Healthwise360 is the most complete option. PenCompare's 48-provider pool also gives broad three-treatment coverage.",
+          text: "Click.Compare, MedEazy, and PenCompare all cover all three treatments. Healthwise360 now focuses on a deeper Mounjaro vs Wegovy comparison rather than an equal three-way split. Monj is weighted toward Mounjaro, and WegoCompare toward Wegovy. For a genuinely equal three-treatment comparison with filtering by dose, Trustpilot, and provider, PenCompare's 48-provider pool gives the broadest three-treatment coverage.",
         },
       },
       {

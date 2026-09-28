@@ -283,7 +283,7 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  compare Mounjaro, Wegovy and Saxenda prices
+                  compare Mounjaro and Wegovy prices
                 </Link>{" "}
                 side by side. If you already know the drug you are considering,
                 move next to the{" "}
@@ -558,7 +558,7 @@ export default function ArticleClient() {
                     href="/compare/wegovy-vs-mounjaro"
                     className="font-medium text-emerald-600 hover:underline"
                   >
-                    Compare Mounjaro, Wegovy and Saxenda prices
+                    Compare Mounjaro and Wegovy prices
                   </Link>{" "}
                   at dose level, not just at &ldquo;from&rdquo; level.
                 </li>

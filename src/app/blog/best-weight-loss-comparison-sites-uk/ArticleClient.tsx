@@ -436,9 +436,9 @@ export default function ArticleClient() {
                   href="/compare/wegovy-vs-mounjaro"
                   className={linkClass}
                 >
-                  Healthwise360&apos;s Mounjaro vs Wegovy vs Saxenda hub
+                  Healthwise360&apos;s Mounjaro vs Wegovy hub
                 </Link>{" "}
-                covers all three treatments across all dose strengths, drawing
+                covers both treatments across all dose strengths, drawing
                 from 64 verified GPhC-registered pharmacies. The filter system,
                 by Trustpilot minimum rating, by individual dose strength, by
                 provider, sortable by cost or reputation, is the most specific
@@ -1126,19 +1126,20 @@ export default function ArticleClient() {
                     Wegovy, and Saxenda, equally?
                   </h3>
                   <p>
-                    Click.Compare, MedEazy, PenCompare, and Healthwise360 all
-                    cover all three treatments. Monj is weighted toward
-                    Mounjaro, and WegoCompare toward Wegovy. For a genuinely
-                    equal three-treatment comparison with filtering by dose,
-                    Trustpilot, and provider, the{" "}
+                    Click.Compare, MedEazy, and PenCompare all cover all three
+                    treatments. Healthwise360 now focuses on a deeper{" "}
                     <Link
                       href="/compare/wegovy-vs-mounjaro"
                       className={linkClass}
                     >
-                      Mounjaro vs Wegovy vs Saxenda hub at Healthwise360
+                      Mounjaro vs Wegovy comparison
                     </Link>{" "}
-                    is the most complete option. PenCompare&apos;s 48-provider
-                    pool also gives broad three-treatment coverage.
+                    rather than an equal three-way split. Monj is weighted
+                    toward Mounjaro, and WegoCompare toward Wegovy. For a
+                    genuinely equal three-treatment comparison with filtering
+                    by dose, Trustpilot, and provider, PenCompare&apos;s
+                    48-provider pool gives the broadest three-treatment
+                    coverage.
                   </p>
                 </div>
                 <div>
