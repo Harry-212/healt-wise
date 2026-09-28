@@ -8,7 +8,7 @@ const PATH = "/blog/weight-loss-treatment-price-comparison-uk";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(PRICE_COMPARISON_HERO_PNG)}`;
 
 const META_DESCRIPTION =
-  "Compare UK weight loss treatment prices in 2026. See Mounjaro, Wegovy and Saxenda costs by dose, plus consultation, delivery and ongoing fees.";
+  "Compare UK weight loss treatment prices, see Mounjaro and Wegovy costs by dose, consultation and delivery fees.";
 
 export const metadata: Metadata = {
   title: "Weight Loss Treatment Price Comparison UK 2026 | Costs",
@@ -44,9 +44,9 @@ export default function WeightLossTreatmentPriceComparisonPage() {
   const ARTICLE_SCHEMA = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Weight Loss Treatment Price Comparison UK 2026: Mounjaro, Wegovy & Saxenda",
+    headline: "Weight Loss Treatment Price Comparison UK 2026: Mounjaro and Wegovy",
     description:
-      "Compare UK weight loss treatment prices in 2026. See Mounjaro, Wegovy and Saxenda costs by dose, plus consultation, delivery and ongoing fees.",
+      "Compare UK weight loss treatment prices, see Mounjaro and Wegovy costs by dose, consultation and delivery fees.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
     publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },

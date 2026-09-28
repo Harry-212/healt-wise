@@ -110,8 +110,8 @@ export default function ArticleClient() {
             <h1
               className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? "text-white" : "text-slate-900"}`}
             >
-              Weight Loss Treatment Price Comparison UK 2026: Mounjaro, Wegovy
-              &amp; Saxenda
+              Weight Loss Treatment Price Comparison UK 2026: Mounjaro and
+              Wegovy
             </h1>
             <div
               className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}
@@ -127,7 +127,7 @@ export default function ArticleClient() {
 
             <BlogArticleHeroImage
               src={HERO_SRC}
-              alt="Weight Loss Treatment Price Comparison UK 2026 — Mounjaro, Wegovy and Saxenda pricing details"
+              alt="Weight Loss Treatment Price Comparison UK 2026 — Mounjaro and Wegovy pricing details"
             />
             <div
               id="guide-article-hero-end"
@@ -151,8 +151,8 @@ export default function ArticleClient() {
               ongoing clinical support can all affect what you actually pay.
             </p>
             <p>
-              This guide compares typical UK private prices for Mounjaro, Wegovy
-              and Saxenda, including dose-level costs and the additional charges
+              This guide compares typical UK private prices for Mounjaro and
+              Wegovy, including dose-level costs and the additional charges
               worth checking before choosing a provider. Healthwise360 also
               tracks advertised prices across more than 60 UK weight-management
               providers, allowing you to compare the same medication and dose
@@ -223,7 +223,7 @@ export default function ArticleClient() {
               heading="What Weight Loss Treatments Are Compared in This Guide?"
             >
               <p>
-                This guide focuses on three prescription injectable
+                This guide focuses on two prescription injectable
                 weight-management treatments commonly compared through UK
                 private providers. The treatment and dose appropriate for an
                 individual should be determined through a clinical assessment
@@ -242,21 +242,16 @@ export default function ArticleClient() {
                   dose before gradually increasing according to the prescribed
                   dosing schedule.
                 </li>
-                <li>
-                  <strong>Saxenda</strong> contains liraglutide. Unlike Mounjaro
-                  and Wegovy, Saxenda is normally injected once daily rather
-                  than once weekly.
-                </li>
               </ol>
               <p>
-                All three are prescription-only medicines. If you want to
+                Both are prescription-only medicines. If you want to
                 compare the medicines themselves rather than simply their cost,
                 see our independent{" "}
                 <Link
                   href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Mounjaro vs Wegovy vs Saxenda comparison
+                  Mounjaro vs Wegovy comparison
                 </Link>
                 .
               </p>
@@ -265,7 +260,7 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="price-comparison"
-              heading="Weight Loss Treatment Price Comparison: Mounjaro, Wegovy & Saxenda"
+              heading="Weight Loss Treatment Price Comparison: Mounjaro and Wegovy"
             >
               <p>
                 Prices vary considerably between providers and can change
@@ -280,7 +275,7 @@ export default function ArticleClient() {
                 </Link>{" "}
                 instead.
               </p>
-              <CtaButton>Compare Live Provider Prices</CtaButton>
+              <CtaButton>Current Provider Prices</CtaButton>
 
               <h3
                 className={`mt-6 text-lg font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
@@ -374,48 +369,6 @@ export default function ArticleClient() {
                   Wegovy prices UK
                 </Link>{" "}
                 page.
-              </p>
-
-              <h3
-                className={`mt-10 text-lg font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
-              >
-                Saxenda Price in the UK
-              </h3>
-              <p>
-                Saxenda differs from Mounjaro and Wegovy because it is normally
-                administered once daily. This means its pricing structure cannot
-                always be compared directly with the cost of a single weekly
-                treatment pen.
-              </p>
-              <div
-                className={`my-6 overflow-hidden rounded-xl border ${darkMode ? "border-slate-800" : "border-slate-200"}`}
-              >
-                <GuideTable
-                  headers={["Dosing", "Indicative monthly cost"]}
-                  rows={[
-                    {
-                      cells: [
-                        "0.6 mg–3 mg (titration range)",
-                        "£150 to £290 per month",
-                      ],
-                    },
-                  ]}
-                />
-              </div>
-              <p>
-                The exact monthly cost depends on dose, pack quantity and
-                provider — a seemingly lower package price does not necessarily
-                mean Saxenda will be less expensive over an equivalent treatment
-                period. When comparing Saxenda with weekly medicines, look at
-                the estimated monthly cost, not simply the price of an
-                individual pack. For further treatment information, see our{" "}
-                <Link
-                  href="/what-is-saxenda"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  Saxenda treatment overview
-                </Link>
-                .
               </p>
             </GuideSection>
 
@@ -1003,8 +956,8 @@ export default function ArticleClient() {
           <div className="mt-10">
             <GuideSharePanel
               url={shareUrl}
-              title="Weight Loss Treatment Price Comparison UK 2026: Mounjaro, Wegovy & Saxenda"
-              description="Compare UK weight loss treatment prices in 2026. See Mounjaro, Wegovy and Saxenda costs by dose, plus consultation, delivery and ongoing fees."
+              title="Weight Loss Treatment Price Comparison UK 2026: Mounjaro and Wegovy"
+              description="Compare UK weight loss treatment prices, see Mounjaro and Wegovy costs by dose, consultation and delivery fees."
             />
           </div>
 
