@@ -3,7 +3,7 @@ export const BLOG_HUB_TITLE =
   "Weight Loss Injection News & Guides UK | Healthwise360";
 
 export const BLOG_HUB_DESCRIPTION =
-  "Read UK news, safety updates and practical guides about Mounjaro, Wegovy, Saxenda, online pharmacies and prescription weight-loss treatment.";
+  "Read UK news, safety updates and practical guides about Mounjaro and Wegovy, online pharmacies and prescription weight-loss treatment.";
 
 export function blogHubListingTitle(page?: number): string {
   if (!page || page <= 1) return BLOG_HUB_TITLE;
@@ -70,7 +70,7 @@ export function blogTopicDescription(topic: string, page?: number): string {
 
 export function blogHubPageDescription(page?: number): string {
   if (page && page > 1) {
-    return `Page ${page} — UK guides and news on Mounjaro, Wegovy, Saxenda, online pharmacies and prescription weight-loss treatment.`;
+    return `Page ${page} — UK guides and news on Mounjaro and Wegovy, online pharmacies and prescription weight-loss treatment.`;
   }
   return BLOG_HUB_DESCRIPTION;
 }
