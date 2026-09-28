@@ -29,8 +29,8 @@ export default function CheapestOptionsHero() {
             </h1>
             <p className="mt-2.5 max-w-3xl text-base leading-snug text-white/75 sm:text-lg">
               Answers to common cost questions using our latest multi-pharmacy
-              tables: illustrative listings only — confirm every figure at
-              checkout and with your prescriber.
+              tables: prices were checked on the dates shown — confirm every
+              figure at checkout and with your prescriber.
             </p>
             <p className="mt-3 max-w-3xl text-sm leading-snug text-white/85 md:text-base">
               Every dose step, pack size, filter, and provider row — the

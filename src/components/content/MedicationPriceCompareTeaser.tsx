@@ -106,7 +106,7 @@ export default async function MedicationPriceCompareTeaser({
       </div>
       <p className="mt-4 text-center text-xs leading-relaxed text-slate-500">
         Prescription-only — a qualified clinician must assess you before supply.
-        Illustrative figures; confirm live checkout prices.
+        Prices were checked on the dates shown; confirm live checkout prices.
       </p>
     </section>
   );

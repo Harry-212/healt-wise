@@ -59,8 +59,8 @@ export default async function PricePage({ params }: Props) {
           {cfg.keyword}
         </h1>
         <p className="mt-4 text-sm text-slate-600 sm:text-base">
-          Compare {cfg.keyword.toLowerCase()} figures in the UK. Figures are
-          illustrative snapshots—always confirm with the pharmacy before you pay.
+          Compare {cfg.keyword.toLowerCase()} figures in the UK. Prices were
+          checked on the dates shown—always confirm with the pharmacy before you pay.
         </p>
 
         <TrustSignals className="mt-8" />
@@ -82,7 +82,7 @@ export default async function PricePage({ params }: Props) {
           </h2>
           <p className="text-slate-600">
             Monthly estimates depend on titration schedules. When we show a monthly
-            column, it is an illustrative 4-week equivalent unless otherwise
+            column, it is an estimated 4-week equivalent unless otherwise
             stated on the provider page.
           </p>
         </section>

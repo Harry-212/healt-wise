@@ -7,7 +7,7 @@ export const CHEAPEST_OPTIONS_FAQS: { question: string; answer: string }[] = [
     question:
       "What are the cheapest GLP-1 weight loss treatments in the UK privately?",
     answer:
-      "There is no single “cheapest” GLP-1 for everyone. Private UK listings vary by medicine (Wegovy, Mounjaro, Saxenda), dose, pack size, and whether consultation and delivery are bundled. Our Wegovy, Mounjaro, and Saxenda comparison tables list illustrative pen or pack prices across pharmacies so you can compare the same strength — you must still confirm live checkout prices and suitability with a prescriber.",
+      "There is no single “cheapest” GLP-1 for everyone. Private UK listings vary by medicine (Wegovy, Mounjaro, Saxenda), dose, pack size, and whether consultation and delivery are bundled. Our Wegovy, Mounjaro, and Saxenda comparison tables list pen or pack prices checked on the dates shown across pharmacies so you can compare the same strength — you must still confirm live checkout prices and suitability with a prescriber.",
   },
   {
     question: "Is Wegovy or Mounjaro cheaper in the UK?",
@@ -17,7 +17,7 @@ export const CHEAPEST_OPTIONS_FAQS: { question: string; answer: string }[] = [
   {
     question: "How much does Saxenda cost per month in the UK privately?",
     answer:
-      "Saxenda is a daily liraglutide pen; monthly cost depends on your titrated daily dose and whether you buy 1, 3, or 5 pen packs. Our Saxenda price comparison shows pack prices and £/mg-style hints per provider — totals are illustrative until your pharmacy confirms the basket.",
+      "Saxenda is a daily liraglutide pen; monthly cost depends on your titrated daily dose and whether you buy 1, 3, or 5 pen packs. Our Saxenda price comparison shows pack prices and £/mg-style hints per provider, checked on the dates shown — confirm the final basket total with your pharmacy.",
   },
   {
     question: "Why don’t the prices on this page match my pharmacy checkout?",
@@ -27,7 +27,7 @@ export const CHEAPEST_OPTIONS_FAQS: { question: string; answer: string }[] = [
   {
     question: "Can I use this guide to choose Wegovy, Mounjaro, or Saxenda?",
     answer:
-      "No. This page compares illustrative prices only. GLP-1 medicines are prescription-only in the UK; a qualified clinician must assess eligibility, risks, drug interactions, and monitoring. Healthwise360 does not diagnose conditions or prescribe treatment.",
+      "No. This page compares checked prices only. GLP-1 medicines are prescription-only in the UK; a qualified clinician must assess eligibility, risks, drug interactions, and monitoring. Healthwise360 does not diagnose conditions or prescribe treatment.",
   },
 ];
 

@@ -250,7 +250,7 @@ export default function CheapestOptionsUkPage() {
             id="chart-heading"
             className="text-2xl font-bold tracking-tight text-slate-900 md:text-[1.65rem]"
           >
-            Lowest listed “entry” order by brand (illustrative)
+            Lowest listed “entry” order by brand
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600 md:text-base">
             This chart answers:{" "}

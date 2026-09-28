@@ -1237,7 +1237,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
   if (w) meds.push("Wegovy");
   if (s) meds.push("Saxenda");
   const profileTitle = `${displayName} — ${meds.join(" & ")} UK prices (2026)`;
-  const profileDescription = `Independent snapshot: ${displayName} — illustrative ${meds.join(" and ")} pen prices and delivery notes on Healthwise360.`;
+  const profileDescription = `Independent snapshot: ${displayName} — checked ${meds.join(" and ")} pen prices and delivery notes on Healthwise360.`;
 
   return (
     <>
@@ -1291,7 +1291,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           {displayName}
         </h1>
         <p className="mt-4 text-slate-600 leading-relaxed">
-          Illustrative pen prices from our comparison snapshots for{" "}
+          Checked pen prices from our comparison tables for{" "}
           <strong className="font-semibold text-slate-800">{displayName}</strong>
           . Always confirm live pricing and prescribing rules on the provider’s
           own site.
@@ -1325,7 +1325,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
             id="wegovy-prices-heading"
             className="text-xl font-bold text-slate-900"
           >
-            Wegovy pen prices (illustrative)
+            Wegovy pen prices
           </h2>
           <p className="mt-2 text-sm text-slate-600">
             Per-strength figures — {WEGOVY_UK_COMPARE_LAST_UPDATED} snapshot.
@@ -1362,7 +1362,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
             id="mounjaro-prices-heading"
             className="text-xl font-bold text-slate-900"
           >
-            Mounjaro pen prices (illustrative)
+            Mounjaro pen prices
           </h2>
           <p className="mt-2 text-sm text-slate-600">
             Per-strength figures — {MOUNJARO_UK_COMPARE_LAST_UPDATED} snapshot.
@@ -1399,7 +1399,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
             id="saxenda-prices-heading"
             className="text-xl font-bold text-slate-900"
           >
-            Saxenda pack prices (illustrative)
+            Saxenda pack prices
           </h2>
           <p className="mt-2 text-sm text-slate-600">
             1 / 3 / 5 pens — {SAXENDA_UK_COMPARE_LAST_UPDATED} snapshot.
@@ -1443,7 +1443,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           </p>
 
           <h3 className="mt-10 text-lg font-bold text-slate-900">
-            Daily dose steps (illustrative)
+            Daily dose steps
           </h3>
           <p className="mt-1 text-sm text-slate-600">
             Order-style prices at each titration — same snapshot as the compare

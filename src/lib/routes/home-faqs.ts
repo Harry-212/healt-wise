@@ -13,7 +13,7 @@ export const HOME_PAGE_FAQS: CompareFaqItem[] = [
   },
   {
     q: "Are the prices shown live checkout prices?",
-    a: "No. Figures are illustrative snapshots based on our structured dataset, refreshed periodically. Pharmacies change prices, promotions, and bundles often, so always confirm the total at checkout with the provider you choose.",
+    a: "No. Provider prices were checked on the dates shown in the comparison table. Prices and availability can change, so always confirm the final total and any additional charges with the provider you choose.",
   },
   {
     q: "How do I know a pharmacy is legitimate?",

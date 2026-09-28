@@ -584,7 +584,7 @@ export default function WhatIsSaxendaPage() {
                 Best Saxenda providers (UK orientation)
               </h2>
               <p>
-                Illustrative providers in our tables include{" "}
+                Providers in our tables include{" "}
                 <strong>Boots Online Doctor</strong>,{" "}
                 <strong>Superdrug Online Doctor</strong>, and{" "}
                 <strong>Simple Online Pharmacy</strong>. Compare monthly all-in
