@@ -202,12 +202,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/compare/best-weight-loss-injections-uk",
-        destination: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+        destination: "/compare/wegovy-vs-mounjaro",
         permanent: true,
       },
       {
         source: "/compare/best-weight-loss-treatments-uk",
-        destination: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+        destination: "/compare/wegovy-vs-mounjaro",
         permanent: true,
       },
       {
@@ -292,13 +292,14 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/saxenda-vs-mounjaro-vs-wegovy-price-uk",
-        destination: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+        destination: "/compare/wegovy-vs-mounjaro",
         permanent: true,
       },
-      // No standalone /compare index — the triple comparison is the hub.
+      // No standalone /compare index — Wegovy vs Mounjaro is the hub
+      // (the three-treatment page was retired; see above).
       {
         source: "/compare",
-        destination: "/compare/mounjaro-vs-wegovy-vs-saxenda",
+        destination: "/compare/wegovy-vs-mounjaro",
         permanent: true,
       },
       {
