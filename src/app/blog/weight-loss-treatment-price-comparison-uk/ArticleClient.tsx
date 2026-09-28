@@ -393,7 +393,6 @@ export default function ArticleClient() {
                   rows={[
                     { cells: ["Mounjaro", "£130 to £340+", "Weekly"] },
                     { cells: ["Wegovy", "£130 to £295+", "Weekly"] },
-                    { cells: ["Saxenda", "£150 to £290", "Daily"] },
                   ]}
                 />
               </div>
@@ -578,7 +577,6 @@ export default function ArticleClient() {
                   rows={[
                     { cells: ["Mounjaro", "£260 to £340", "£3,120 to £4,080"] },
                     { cells: ["Wegovy", "£240 to £295", "£2,880 to £3,540"] },
-                    { cells: ["Saxenda", "£200 to £290", "£2,400 to £3,480"] },
                   ]}
                 />
               </div>
@@ -602,9 +600,7 @@ export default function ArticleClient() {
                 There is no single treatment that is always cheapest for every
                 person or every stage of treatment. At starter doses, Mounjaro
                 and Wegovy can sometimes appear relatively close in price. At
-                higher doses, the gap between providers and medicines can become
-                much larger. Saxenda uses a different daily dosing structure,
-                making direct pen-to-pen comparisons less useful.
+                higher doses, the gap between providers can become much larger.
               </p>
               <p>
                 More importantly, medication should not be selected primarily
@@ -894,10 +890,6 @@ export default function ArticleClient() {
                   <strong>Wegovy</strong>: approximately £130 to £295+ across
                   the commonly compared standard dose range
                 </li>
-                <li>
-                  <strong>Saxenda</strong>: approximately £150 to £290 per month
-                  depending on dose and provider
-                </li>
               </ul>
               <p>
                 But those numbers only tell part of the story. Consultation
@@ -933,7 +925,7 @@ export default function ArticleClient() {
                 advice.
               </p>
               <p className="text-sm italic opacity-90">
-                Mounjaro, Wegovy and Saxenda are prescription-only medicines in
+                Mounjaro and Wegovy are prescription-only medicines in
                 the UK. Suitability, eligibility, dose and ongoing treatment
                 must be assessed by an appropriate healthcare professional.
               </p>

@@ -9,16 +9,16 @@ const HERO_IMAGE = `${siteOrigin()}/blog/How%20to%20Compare%20UK%20Weight%20Loss
 export const metadata: Metadata = {
   title: "How to Compare UK Weight Loss Pens",
   description:
-    "Learn how to compare UK weight loss pens—Saxenda, Wegovy and Mounjaro—for dosing, side effects, cost, NHS access and safe regulated prescribing.",
+    "Learn how to compare UK weight loss pens—Wegovy and Mounjaro—for dosing, side effects, cost, NHS access and safe regulated prescribing.",
   keywords:
-    "UK weight loss pens, compare weight loss pens UK, Saxenda, Wegovy, Mounjaro, prescription weight loss",
+    "UK weight loss pens, compare weight loss pens UK, Wegovy, Mounjaro, prescription weight loss",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
     title: "How to Compare UK Weight Loss Pens",
     description:
-      "Learn how to compare UK weight loss pens—Saxenda, Wegovy and Mounjaro—for dosing, side effects, cost, NHS access and safe regulated prescribing.",
+      "Learn how to compare UK weight loss pens—Wegovy and Mounjaro—for dosing, side effects, cost, NHS access and safe regulated prescribing.",
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-05-23T00:00:00.000Z",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "How to Compare UK Weight Loss Pens",
     description:
-      "Learn how to compare UK weight loss pens—Saxenda, Wegovy and Mounjaro—for dosing, side effects, cost, NHS access and safe regulated prescribing.",
+      "Learn how to compare UK weight loss pens—Wegovy and Mounjaro—for dosing, side effects, cost, NHS access and safe regulated prescribing.",
     images: [HERO_IMAGE],
   },
 };
@@ -44,7 +44,7 @@ export default function CompareUKWeightLossPensPage() {
     "@type": "Article",
     headline: "How to Compare UK Weight Loss Pens",
     description:
-      "How to compare UK weight loss pens (Saxenda, Wegovy, Mounjaro): mechanisms, practical comparisons, safety, pricing and FAQs — informational only, not medical advice.",
+      "How to compare UK weight loss pens (Wegovy, Mounjaro): mechanisms, practical comparisons, safety, pricing and FAQs — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
     publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },

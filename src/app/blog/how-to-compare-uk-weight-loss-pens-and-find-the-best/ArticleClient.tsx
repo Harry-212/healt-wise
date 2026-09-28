@@ -114,7 +114,7 @@ export default function ArticleClient() {
 
             <BlogArticleHeroImage
               src={HERO_SRC}
-              alt="Compare UK weight loss pens — Saxenda, Wegovy and Mounjaro with regulated prescribing"
+              alt="Compare UK weight loss pens — Wegovy and Mounjaro with regulated prescribing"
             />
             <div
               id="guide-article-hero-end"
@@ -142,9 +142,9 @@ export default function ArticleClient() {
               <p>People are looking for support beyond traditional advice.</p>
               <p>And sometimes, they may need it.</p>
               <p>
-                Weight loss pens, including Saxenda, Wegovy, and Mounjaro, are
-                injectable medicines that may help regulate appetite, slow
-                digestion, and reduce hunger.
+                Weight loss pens such as Wegovy and Mounjaro are injectable
+                medicines that may help regulate appetite, slow digestion, and
+                reduce hunger.
               </p>
               <p>
                 In simple terms, they may help you eat less without feeling
@@ -197,22 +197,6 @@ export default function ArticleClient() {
               id="compare-options"
               heading="Compare the main options"
             >
-              <p>Three pens dominate most UK comparisons.</p>
-
-              <SubHeading darkMode={darkMode}>Saxenda</SubHeading>
-              <p>Saxenda is the older daily injection option.</p>
-              <p>Some people like the predictability of daily dosing.</p>
-              <p>Others find it inconvenient.</p>
-              <p>Both reactions make sense.</p>
-              <p>
-                Average weight loss may be more modest than newer agents, often
-                around 5 to 7 percent in some data.
-              </p>
-              <p>Still, modest does not mean irrelevant.</p>
-              <p>
-                A clinically meaningful loss can still improve health markers.
-              </p>
-
               <SubHeading darkMode={darkMode}>Wegovy</SubHeading>
               <p>
                 Wegovy is a weekly injection and has become a major reference
@@ -320,15 +304,10 @@ export default function ArticleClient() {
               id="dosing-pricing"
               heading="Dosing and pricing"
             >
-              <p>This is where comparison gets practical.</p>
               <p>
-                Saxenda may sometimes appear cheaper upfront, though daily
-                dosing can change the maths.
-              </p>
-              <p>Wegovy often sits in a middle range.</p>
-              <p>
-                Mounjaro may be the most expensive, particularly at higher
-                doses.
+                Comparison is important as some may appear cheaper upfront.
+                Wegovy may appear to be cheaper than Mounjaro but you need to
+                make sure it is right for you, particularly at higher doses.
               </p>
               <p>And costs can change.</p>
               <p>Quite a lot.</p>
@@ -454,10 +433,11 @@ export default function ArticleClient() {
                     What is a cheaper alternative to Mounjaro?
                   </h3>
                   <p>
-                    Depending on availability and response, Wegovy or Saxenda
-                    may sometimes be considered alternatives. Whether they are
-                    cheaper can depend on dose, provider, and NHS eligibility.
-                    Price alone probably should not decide the choice.
+                    Depending on availability, Wegovy may be considered as an
+                    alternative to Mounjaro. Whether it is cheaper can depend
+                    on dose, provider, and your eligibility. Price alone
+                    probably should not decide your choice — always speak to a
+                    medically qualified healthcare professional.
                   </p>
                 </div>
               </div>
@@ -574,7 +554,7 @@ export default function ArticleClient() {
             <GuideSharePanel
               url={shareUrl}
               title="How to Compare UK Weight Loss Pens and Find the Best"
-              description="Compare Saxenda, Wegovy and Mounjaro: dosing, side effects, cost, NHS access and safe prescribing in the UK."
+              description="Compare Wegovy and Mounjaro: dosing, side effects, cost, NHS access and safe prescribing in the UK."
             />
           </div>
 
