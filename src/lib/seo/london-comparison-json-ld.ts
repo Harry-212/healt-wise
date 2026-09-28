@@ -47,7 +47,7 @@ export function londonComparisonJsonLdGraph(): Record<string, unknown> {
     serviceType: "Weight loss treatment price comparison",
     name: "Best Weight Loss Treatment Comparison London",
     description:
-      "Independent comparison of Mounjaro, Wegovy and Saxenda pricing and GPhC-registered providers serving London.",
+      "Independent comparison of Mounjaro and Wegovy pricing and GPhC-registered providers serving London.",
     url: pageUrl,
     provider: { "@id": businessId },
     areaServed: {

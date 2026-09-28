@@ -5,7 +5,7 @@ import type { CompareFaqItem } from "@/lib/routes/compare-faqs";
 export const LONDON_COMPARISON_FAQS: CompareFaqItem[] = [
   {
     q: "What is the best weight loss treatment comparison for London residents?",
-    a: "There is no single \"best\" treatment — Mounjaro, Wegovy, and Saxenda suit different people, budgets, and dosing schedules. This page compares live UK pricing across GPhC-registered providers so you can shortlist options before a consultation, rather than recommending one medicine over another.",
+    a: "There is no single \"best\" treatment — Mounjaro and Wegovy suit different people, budgets, and dosing schedules. This page compares live UK pricing across GPhC-registered providers so you can shortlist options before a consultation, rather than recommending one medicine over another.",
   },
   {
     q: "Are these providers based in London, or do they deliver to London?",
@@ -25,6 +25,6 @@ export const LONDON_COMPARISON_FAQS: CompareFaqItem[] = [
   },
   {
     q: "How often is the London pricing comparison updated?",
-    a: "Each table shows a visible last-checked date. Figures are illustrative snapshots refreshed periodically; private pharmacies can change prices faster than our labels, so always confirm the total at checkout before you pay.",
+    a: "Each table shows a visible last-checked date. Provider prices were checked on the dates shown; private pharmacies can change prices faster than our labels, so always confirm the final total at checkout before you pay.",
   },
 ];

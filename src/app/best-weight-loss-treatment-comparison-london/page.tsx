@@ -6,7 +6,6 @@ import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
 import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable";
 import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
-import SaxendaUkCompareTable from "@/components/saxenda/SaxendaUkCompareTable";
 import {
   getMounjaroCompareProviders,
   getWegovyCompareProviders,
@@ -15,10 +14,6 @@ import {
   getMounjaroLastUpdatedLabel,
   getWegovyLastUpdatedLabel,
 } from "@/lib/data/compare-store";
-import {
-  SAXENDA_UK_COMPARE_PROVIDERS,
-  SAXENDA_UK_COMPARE_LAST_UPDATED,
-} from "@/lib/data/saxenda-uk-compare-providers";
 import { compareFaqPageJsonLd } from "@/lib/routes/compare-faqs";
 import { LONDON_COMPARISON_FAQS } from "@/lib/routes/london-comparison-faqs";
 import { londonComparisonJsonLdGraph } from "@/lib/seo/london-comparison-json-ld";
@@ -36,7 +31,7 @@ export const revalidate = 0;
 const PAGE_TITLE = "Best Weight Loss Treatment Comparison London";
 const PAGE_META_TITLE = `${PAGE_TITLE} | Healthwise360`;
 const PAGE_META_DESCRIPTION =
-  "Compare Mounjaro, Wegovy and Saxenda prices from GPhC-registered UK pharmacies serving London. Compare doses, delivery, and total monthly cost.";
+  "Compare Mounjaro and Wegovy prices from GPhC-registered UK pharmacies serving London. Compare doses, delivery, and total monthly cost.";
 const PAGE_PATH = "/best-weight-loss-treatment-comparison-london";
 
 export const metadata: Metadata = {
@@ -109,10 +104,10 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
               {PAGE_TITLE}
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
-              Compare Mounjaro, Wegovy, and Saxenda prices from GPhC-registered
+              Compare Mounjaro and Wegovy prices from GPhC-registered
               UK pharmacies serving London — dose by dose, provider by
               provider. Prices checked: Mounjaro {mounjaroLastUpdated}, Wegovy{" "}
-              {wegovyLastUpdated}, Saxenda {SAXENDA_UK_COMPARE_LAST_UPDATED}.
+              {wegovyLastUpdated}.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
@@ -210,25 +205,7 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
           </div>
         </section>
 
-        <section
-          id="london-saxenda-compare"
-          className="scroll-mt-24 border-b border-slate-200/80 bg-slate-50/70 py-12 md:py-16"
-        >
-          <div className="mx-auto max-w-7xl px-4 md:px-8">
-            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Saxenda price comparison
-            </h2>
-            <p className="mt-3 max-w-3xl text-slate-600">
-              Compare daily pack pricing across providers — useful if a
-              once-daily schedule suits you better than a weekly pen.
-            </p>
-            <div className="mt-8">
-              <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} lastUpdated={SAXENDA_UK_COMPARE_LAST_UPDATED} />
-            </div>
-          </div>
-        </section>
-
-        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+        <section className="border-b border-slate-200/80 bg-slate-50/70 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
               About this comparison
@@ -236,9 +213,9 @@ export default function BestWeightLossTreatmentComparisonLondonPage() {
             <p className="mt-4 text-slate-600 leading-relaxed">
               Healthwise360 is an independent UK comparison publisher,
               registered at {siteBusinessAddressLine()}. We do not sell,
-              prescribe, or dispense medicine. Figures above are illustrative
-              snapshots — always confirm the live total at checkout with the
-              provider you choose, and read our{" "}
+              prescribe, or dispense medicine. Provider prices were checked on
+              the dates shown — always confirm the live total at checkout with
+              the provider you choose, and read our{" "}
               <Link
                 href="/editorial-policy"
                 className="font-semibold text-brand-primary underline-offset-2 hover:underline"
