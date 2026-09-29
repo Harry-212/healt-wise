@@ -194,10 +194,6 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy
                   </Link>
-                  ,{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda
-                  </Link>
                   , “online clinic,” sometimes “NHS tier 3” and those searches can collide with
                   different realities on the ground.
                 </p>
@@ -247,26 +243,18 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                   Related:{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  ,{" "}
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>
                   . Definitions:{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     what Mounjaro is
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     what Wegovy is
-                  </Link>
-                  ,{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    what Saxenda is
                   </Link>
                   .
                 </p>
@@ -304,25 +292,17 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro
                   </Link>{" "}
-                  (tirzepatide),{" "}
+                  (tirzepatide) and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy
                   </Link>{" "}
-                  (semaglutide),{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda
-                  </Link>{" "}
-                  (liraglutide)—then check{" "}
+                  (semaglutide)—then check{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro prices
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy prices
-                  </Link>
-                  , and{" "}
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda prices
                   </Link>{" "}
                   if you are budgeting UK-facing totals.
                 </p>
@@ -425,10 +405,6 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
                     </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/saxenda-price-comparison" className={linkCls}>
-                      Saxenda price comparison
-                    </Link>
                   </li>
                   <li>
                     →{" "}
@@ -438,10 +414,6 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                     <span className={muted}> · </span>
                     <Link href="/what-is-wegovy" className={linkCls}>
                       What is Wegovy?
-                    </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/what-is-saxenda" className={linkCls}>
-                      What is Saxenda?
                     </Link>
                   </li>
                   <li>
@@ -514,14 +486,10 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                   Definitions:{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy
-                  </Link>
-                  ,{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda
                   </Link>
                   . Longer read:{" "}
                   <Link

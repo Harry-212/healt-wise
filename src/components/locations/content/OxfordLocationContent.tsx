@@ -321,14 +321,10 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
                   it helps to understand{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     what Mounjaro is
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     what Wegovy is
-                  </Link>
-                  , and{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    how Saxenda works
                   </Link>
                   .
                 </p>
@@ -627,14 +623,10 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
                   consultations, blood tests, and delivery. Our{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  , and{" "}
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>{" "}
                   can help you compare headline costs before checking what each
                   provider includes.
@@ -972,10 +964,6 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
                     <span className={muted}> · </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
-                    </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/saxenda-price-comparison" className={linkCls}>
-                      Saxenda price comparison
                     </Link>
                   </li>
                 </ul>

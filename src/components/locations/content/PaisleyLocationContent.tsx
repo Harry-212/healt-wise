@@ -242,14 +242,10 @@ export default function PaisleyLocationContent({ loc, shareUrl }: Props) {
                   prescriptions. Use our{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  , and{" "}
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>{" "}
                   when you need to compare headline costs before checking what
                   support is included.
@@ -270,14 +266,10 @@ export default function PaisleyLocationContent({ loc, shareUrl }: Props) {
                   proper clinical review. If you are new to the medicines, read{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     what Mounjaro is
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     what Wegovy is
-                  </Link>
-                  , and{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    how Saxenda works
                   </Link>{" "}
                   before booking a consultation.
                 </p>
@@ -676,10 +668,6 @@ export default function PaisleyLocationContent({ loc, shareUrl }: Props) {
                     <span className={muted}> · </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
-                    </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/saxenda-price-comparison" className={linkCls}>
-                      Saxenda price comparison
                     </Link>
                   </li>
                 </ul>

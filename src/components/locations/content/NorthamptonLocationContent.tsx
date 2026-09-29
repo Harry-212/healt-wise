@@ -239,13 +239,6 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
                     </Link>
                     ) - weekly injection, originally developed for diabetes but now also studied and increasingly used in obesity; it has dual mechanisms (GLP-1 + GIP-related).
                   </li>
-                  <li>
-                    Liraglutide (brand:{" "}
-                    <Link className={linkCls} href="/what-is-saxenda">
-                      Saxenda
-                    </Link>
-                    ) - daily injection, approved for obesity in adults with a BMI &gt;=30, or &gt;=27 with at least one weight-related condition (e.g. hypertension, type 2 diabetes, dyslipidaemia).
-                  </li>
                 </ul>
 
                 <h3 className={subh}>How they typically fit into Northampton care</h3>
@@ -530,14 +523,10 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
                     Compare costs with{" "}
                     <Link className={linkCls} href="/mounjaro-price-comparison">
                       Mounjaro price comparison
-                    </Link>
-                    ,{" "}
-                    <Link className={linkCls} href="/wegovy-price-comparison">
+                    </Link>{" "}
+                  and{" "}
+                  <Link className={linkCls} href="/wegovy-price-comparison">
                       Wegovy price comparison
-                    </Link>
-                    , and{" "}
-                    <Link className={linkCls} href="/saxenda-price-comparison">
-                      Saxenda price comparison
                     </Link>
                     .
                   </li>

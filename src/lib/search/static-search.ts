@@ -29,12 +29,6 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
     keywords: "tirzepatide",
   },
   {
-    type: "Treatment",
-    title: "What is Saxenda?",
-    href: "/what-is-saxenda",
-    keywords: "liraglutide daily",
-  },
-  {
     type: "Compare",
     title: "Wegovy vs Mounjaro",
     href: "/compare/wegovy-vs-mounjaro",
@@ -51,12 +45,6 @@ export const STATIC_SEARCH_ITEMS: SearchItem[] = [
     title: "Compare Mounjaro prices UK",
     href: "/mounjaro-price-comparison",
     keywords: "mounjaro tirzepatide comparison table cheapest pharmacy",
-  },
-  {
-    type: "Price",
-    title: "Compare Saxenda prices UK",
-    href: "/saxenda-price-comparison",
-    keywords: "saxenda liraglutide comparison table cheapest pharmacy pens",
   },
   {
     type: "Price",

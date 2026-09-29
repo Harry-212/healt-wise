@@ -261,14 +261,10 @@ export default function BlackburnLocationContent({ loc, shareUrl }: Props) {
                   injections, check budgets via{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro prices
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy prices
-                  </Link>
-                  , and{" "}
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda prices
                   </Link>
                   .
                 </p>
@@ -544,10 +540,6 @@ export default function BlackburnLocationContent({ loc, shareUrl }: Props) {
                     <span className={muted}> · </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
-                    </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/saxenda-price-comparison" className={linkCls}>
-                      Saxenda price comparison
                     </Link>
                   </li>
                   <li>

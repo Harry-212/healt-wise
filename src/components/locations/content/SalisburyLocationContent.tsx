@@ -741,13 +741,6 @@ export default function SalisburyLocationContent({ loc, shareUrl }: Props) {
                   </Link>
                   , containing semaglutide.
                 </li>
-                <li>
-                  Licensed{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    liraglutide
-                  </Link>{" "}
-                  treatment.
-                </li>
                 <li>Orlistat.</li>
                 <li>
                   Other licensed medicines where clinically appropriate.
@@ -935,14 +928,10 @@ export default function SalisburyLocationContent({ loc, shareUrl }: Props) {
                 hold the frequently changing pharmacy prices. Use the{" "}
                 <Link href="/mounjaro-price-comparison" className={linkCls}>
                   Mounjaro price comparison
-                </Link>
-                ,{" "}
-                <Link href="/wegovy-price-comparison" className={linkCls}>
-                  Wegovy price comparison
                 </Link>{" "}
                 and{" "}
-                <Link href="/saxenda-price-comparison" className={linkCls}>
-                  Saxenda price comparison
+                <Link href="/wegovy-price-comparison" className={linkCls}>
+                  Wegovy price comparison
                 </Link>{" "}
                 pages rather than repeating a price table that may quickly become
                 outdated. The Salisbury article should explain local access
@@ -1336,14 +1325,10 @@ export default function SalisburyLocationContent({ loc, shareUrl }: Props) {
                 arrangements and side-effect support using the{" "}
                 <Link href="/mounjaro-price-comparison" className={linkCls}>
                   Mounjaro
-                </Link>
-                ,{" "}
-                <Link href="/wegovy-price-comparison" className={linkCls}>
-                  Wegovy
                 </Link>{" "}
                 and{" "}
-                <Link href="/saxenda-price-comparison" className={linkCls}>
-                  Saxenda
+                <Link href="/wegovy-price-comparison" className={linkCls}>
+                  Wegovy
                 </Link>{" "}
                 comparison tables.
               </p>
@@ -1541,13 +1526,9 @@ export default function SalisburyLocationContent({ loc, shareUrl }: Props) {
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
                   </Link>
-                  <span className={muted}> · </span>
-                  <Link href="/wegovy-price-comparison" className={linkCls}>
+                    <span className={muted}> · </span>
+                    <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  <span className={muted}> · </span>
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>
                 </li>
                 <li>

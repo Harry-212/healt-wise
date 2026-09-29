@@ -992,12 +992,6 @@ export default function WeightTrackerClient() {
                     navAccent="emerald"
                     size="sm"
                   />
-                  <CompareHereLink
-                    href="/saxenda-price-comparison"
-                    label="Compare Saxenda costs here"
-                    navAccent="sky"
-                    size="sm"
-                  />
                 </div>
 
                 {/* Table */}

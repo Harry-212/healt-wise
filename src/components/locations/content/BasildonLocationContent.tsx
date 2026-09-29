@@ -198,14 +198,10 @@ export default function BasildonLocationContent({ loc, shareUrl }: Props) {
                   , then read{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy
-                  </Link>
-                  , and{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda
                   </Link>{" "}
                   if those brands keep appearing in your inbox.
                 </p>
@@ -608,26 +604,18 @@ export default function BasildonLocationContent({ loc, shareUrl }: Props) {
                   Orientation:{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy
-                  </Link>
-                  ,{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda
                   </Link>
                   . Budgets:{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro prices
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy prices
-                  </Link>
-                  ,{" "}
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda prices
                   </Link>
                   . Delivery:{" "}
                   <Link
@@ -717,10 +705,6 @@ export default function BasildonLocationContent({ loc, shareUrl }: Props) {
                     <span className={muted}> · </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
-                    </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/saxenda-price-comparison" className={linkCls}>
-                      Saxenda price comparison
                     </Link>
                   </li>
                   <li>

@@ -240,13 +240,7 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
                     <Link className={linkCls} href="/what-is-mounjaro">
                       Mounjaro
                     </Link>
-                    , which contains tirzepatide,
-                  </li>
-                  <li>
-                    <Link className={linkCls} href="/what-is-saxenda">
-                      Saxenda
-                    </Link>
-                    , which contains liraglutide.
+                    , which contains tirzepatide.
                   </li>
                 </ul>
 
@@ -354,14 +348,10 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   A useful rule: do not compare the sticker price alone. Compare the total monthly cost, including review fees, delivery, and repeat prescriptions. That gives a far clearer picture of what you will actually spend. Use our{" "}
-                  <Link className={linkCls} href="/saxenda-price-comparison">
-                    Saxenda price comparison
-                  </Link>
-                  ,{" "}
                   <Link className={linkCls} href="/wegovy-price-comparison">
                     Wegovy price comparison
-                  </Link>
-                  , and{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/mounjaro-price-comparison">
                     Mounjaro price comparison
                   </Link>{" "}

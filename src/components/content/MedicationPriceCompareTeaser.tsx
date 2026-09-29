@@ -1,7 +1,7 @@
 import Link from "next/link";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 
-type Variant = "wegovy" | "mounjaro" | "saxenda";
+type Variant = "wegovy" | "mounjaro";
 
 const CONFIG: Record<
   Variant,
@@ -44,19 +44,6 @@ const CONFIG: Record<
     headingAccent: "text-violet-800",
     linkClass: "text-violet-800 hover:text-violet-950",
   },
-  saxenda: {
-    sectionId: "saxenda-price-uk",
-    title: "UK Saxenda pack prices at a glance",
-    lead:
-      "Every pack size (1, 3, 5 pens) is visible for our sample pharmacies. On the comparison page you get sort, filters, delivery, trust blocks, and the same styling as here.",
-    compareHref: "/saxenda-price-comparison#saxenda-compare-table",
-    hubHref: "/prices/cheapest-options-uk",
-    hubLabel: "Cheapest GLP-1 options UK",
-    ring: "ring-sky-200/80",
-    bg: "from-sky-50/50 via-white to-white",
-    headingAccent: "text-sky-800",
-    linkClass: "text-sky-800 hover:text-sky-950",
-  },
 };
 
 export default async function MedicationPriceCompareTeaser({
@@ -70,11 +57,8 @@ export default async function MedicationPriceCompareTeaser({
     variant === "wegovy"
       ? (await import("@/components/content/previews/MedicationComparePricePreviewWegovy"))
           .default
-      : variant === "mounjaro"
-        ? (await import("@/components/content/previews/MedicationComparePricePreviewMounjaro"))
-            .default
-        : (await import("@/components/content/previews/MedicationComparePricePreviewSaxenda"))
-            .default;
+      : (await import("@/components/content/previews/MedicationComparePricePreviewMounjaro"))
+          .default;
 
   return (
     <section

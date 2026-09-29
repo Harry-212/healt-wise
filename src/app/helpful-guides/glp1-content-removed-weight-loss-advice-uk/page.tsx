@@ -192,8 +192,8 @@ export default function GuideGlp1ContentRemoval() {
           GLP 1 medications such as{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> and{" "}
           <IL href="/what-is-wegovy">Wegovy (semaglutide)</IL>. Similar
-          restrictions are also affecting content about{" "}
-          <IL href="/what-is-saxenda">Saxenda (liraglutide)</IL>.</GuideParagraph>
+          restrictions are also affecting content about other GLP 1
+          medications such as liraglutide.</GuideParagraph>
         <GuideParagraph>
           These changes are officially positioned as patient safety measures
           aimed at reducing misleading health claims. In practice, they are also

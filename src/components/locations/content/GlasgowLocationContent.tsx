@@ -166,14 +166,10 @@ export default function GlasgowLocationContent({ loc, shareUrl }: Props) {
                   , then read{" "}
                   <Link className={linkCls} href="/what-is-mounjaro">
                     what Mounjaro is
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/what-is-wegovy">
                     what Wegovy is
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/what-is-saxenda">
-                    what Saxenda is
                   </Link>
                   .
                 </p>

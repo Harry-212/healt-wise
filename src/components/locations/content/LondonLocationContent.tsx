@@ -457,14 +457,10 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                 the{" "}
                 <Link href="/mounjaro-price-comparison" className={linkCls}>
                   Mounjaro
-                </Link>
-                ,{" "}
-                <Link href="/wegovy-price-comparison" className={linkCls}>
-                  Wegovy
                 </Link>{" "}
                 and{" "}
-                <Link href="/saxenda-price-comparison" className={linkCls}>
-                  Saxenda
+                <Link href="/wegovy-price-comparison" className={linkCls}>
+                  Wegovy
                 </Link>{" "}
                 comparison tables.
               </p>
@@ -1420,13 +1416,9 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
                   </Link>
-                  <span className={muted}> · </span>
-                  <Link href="/wegovy-price-comparison" className={linkCls}>
+                    <span className={muted}> · </span>
+                    <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  <span className={muted}> · </span>
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>
                 </li>
                 <li>

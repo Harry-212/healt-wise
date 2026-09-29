@@ -470,14 +470,10 @@ export default function ArticleClient() {
                 guides,{" "}
                 <Link href="/what-is-mounjaro" className={linkClass}>
                   What is Mounjaro
-                </Link>
-                ,{" "}
+                </Link>{" "}
+                and{" "}
                 <Link href="/what-is-wegovy" className={linkClass}>
                   What is Wegovy
-                </Link>
-                , and{" "}
-                <Link href="/what-is-saxenda" className={linkClass}>
-                  What is Saxenda
                 </Link>
                 , cover mechanism, clinical trial data, eligibility context, and
                 how to start treatment. Beyond that, there are safety guides

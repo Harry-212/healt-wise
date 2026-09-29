@@ -229,14 +229,10 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                   Lisburn fit: shift workers benefit from weekly dosing schedules on semaglutide and tirzepatide, while Lagan trails amplify fat oxidation when you pair hills with resistance work. Read{" "}
                   <Link className={linkCls} href="/what-is-mounjaro">
                     what Mounjaro is
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/what-is-wegovy">
                     what Wegovy is
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/what-is-saxenda">
-                    what Saxenda is
                   </Link>
                   .
                 </p>

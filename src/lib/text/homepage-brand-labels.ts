@@ -13,9 +13,4 @@ export const HOMEPAGE_PRICE_HUB_LABELS = {
     brandLabel: "Wegovy Injections Prices UK",
     href: "/wegovy-price-comparison",
   },
-  saxenda: {
-    publicLabel: "Weight loss treatment options",
-    brandLabel: "Saxenda Price Comparison UK",
-    href: "/saxenda-price-comparison",
-  },
 } as const;

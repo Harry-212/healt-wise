@@ -470,16 +470,6 @@ export default function ArticleClient() {
                 responses vary, and some patients achieve significant outcomes
                 on liraglutide.
               </p>
-              <p>
-                For a complete clinical guide, see the{" "}
-                <Link
-                  href="/what-is-saxenda"
-                  className="font-semibold text-emerald-600 hover:underline"
-                >
-                  Saxenda weight loss treatment guide
-                </Link>
-                .
-              </p>
             </GuideSection>
 
             <div className="my-10">
@@ -1236,20 +1226,13 @@ export default function ArticleClient() {
                   className="font-semibold text-emerald-600 hover:underline"
                 >
                   Mounjaro
-                </Link>
-                ,{" "}
+                </Link>{" "}
+                or{" "}
                 <Link
                   href="/what-is-wegovy"
                   className="font-semibold text-emerald-600 hover:underline"
                 >
                   Wegovy
-                </Link>
-                , or{" "}
-                <Link
-                  href="/what-is-saxenda"
-                  className="font-semibold text-emerald-600 hover:underline"
-                >
-                  Saxenda
                 </Link>
                 .
               </p>

@@ -30,7 +30,6 @@ export async function GET() {
     "",
     `- ${origin}/wegovy-price-comparison`,
     `- ${origin}/mounjaro-price-comparison`,
-    `- ${origin}/saxenda-price-comparison`,
     "",
     "## Policies",
     "",

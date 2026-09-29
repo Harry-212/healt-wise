@@ -252,8 +252,7 @@ export default function GuideMounjaroPregnancy() {
           These are well understood physiological responses to meaningful weight
           loss. They are not unexpected side effects unique to Mounjaro they
           occur with any effective weight loss intervention, including{" "}
-          <IL href="/what-is-wegovy">Wegovy</IL> and{" "}
-          <IL href="/what-is-saxenda">Saxenda</IL>. Mounjaro's speed and
+          <IL href="/what-is-wegovy">Wegovy</IL>. Mounjaro's speed and
           magnitude of weight loss may simply make them more pronounced, as
           supported by the{" "}
           <EL href="https://www.nice.org.uk/guidance/cg189">
@@ -343,8 +342,7 @@ export default function GuideMounjaroPregnancy() {
         <GuideParagraph>
           The same dynamic applies, to varying degrees, to other GLP 1
           treatments including{" "}
-          <IL href="/what-is-wegovy">Wegovy</IL> and{" "}
-          <IL href="/what-is-saxenda">Saxenda</IL>. Framing this as an
+          <IL href="/what-is-wegovy">Wegovy</IL>. Framing this as an
           alarming or hidden risk specific to Mounjaro misrepresents the
           evidence.
 </GuideParagraph>

@@ -836,10 +836,6 @@ export default function OldhamLocationContent({ loc, shareUrl }: Props) {
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
                     </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/saxenda-price-comparison" className={linkCls}>
-                      Saxenda price comparison
-                    </Link>
                   </li>
                   <li>
                     -{" "}

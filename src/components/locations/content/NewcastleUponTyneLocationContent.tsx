@@ -224,14 +224,10 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
                     Option to add prescription medications like GLP-1 receptor agonists (for example{" "}
                     <Link className={linkCls} href="/what-is-wegovy">
                       Wegovy
-                    </Link>
-                    ,{" "}
-                    <Link className={linkCls} href="/what-is-mounjaro">
+                    </Link>{" "}
+                  and{" "}
+                  <Link className={linkCls} href="/what-is-mounjaro">
                       Mounjaro
-                    </Link>
-                    ,{" "}
-                    <Link className={linkCls} href="/what-is-saxenda">
-                      Saxenda
                     </Link>
                     ) if you meet eligibility criteria
                   </li>

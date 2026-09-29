@@ -209,14 +209,10 @@ export default function EastKilbrideLocationContent({ loc, shareUrl }: Props) {
                   If you want a quick primer, read{" "}
                   <Link className={linkCls} href="/what-is-wegovy">
                     what Wegovy is
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/what-is-mounjaro">
                     what Mounjaro is
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/what-is-saxenda">
-                    what Saxenda is
                   </Link>
                   . If budget is a concern, check{" "}
                   <Link className={linkCls} href="/wegovy-price-comparison">

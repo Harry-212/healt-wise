@@ -250,8 +250,7 @@ export default function AberdeenLocationContent({ loc, shareUrl }: Props) {
             Contrast with Tom, an offshore worker. Cryo worked short-term, but
             without meal tracking, pounds crept back. Lesson? Treatments
             aren&apos;t standalone; pair with apps like MyFitnessPal tuned for
-            Scottish portions or explore medical support like{" "}
-            <Link href="/what-is-saxenda">Saxenda</Link>.
+            Scottish portions or explore medical support from your GP.
           </p>
           <p>
             Longevity data from Obesity Reviews (2024) indicates 70-80%

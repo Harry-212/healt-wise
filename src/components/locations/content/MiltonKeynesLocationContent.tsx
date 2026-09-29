@@ -237,14 +237,10 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
                   For some people, that can be a major turning point. For others, side effects, cost, or supply issues make them less suitable. They also work best when combined with habit changes. Without that, some of the benefit may fade after treatment ends. Read{" "}
                   <Link className={linkCls} href="/what-is-mounjaro">
                     what Mounjaro is
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/what-is-wegovy">
                     what Wegovy is
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/what-is-saxenda">
-                    what Saxenda is
                   </Link>{" "}
                   for medicine basics.
                 </p>
@@ -475,14 +471,10 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
                   In broad terms, cheaper often means less potent, slower, or more effort-based. That does not make it bad. For some people, a lower-cost programme that they can stick with is better than a more expensive option they cannot maintain. Compare{" "}
                   <Link className={linkCls} href="/mounjaro-price-comparison">
                     Mounjaro prices
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/wegovy-price-comparison">
                     Wegovy prices
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/saxenda-price-comparison">
-                    Saxenda prices
                   </Link>{" "}
                   before deciding.
                 </p>

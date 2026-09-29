@@ -67,16 +67,14 @@ const TAB_ACCENTS: Record<
   },
 };
 
-const FULL_PAGE: Record<CompareMedicationTab, string> = {
+const FULL_PAGE: Partial<Record<CompareMedicationTab, string>> = {
   wegovy: "/wegovy-price-comparison",
   mounjaro: "/mounjaro-price-comparison",
-  saxenda: "/saxenda-price-comparison",
 };
 
-const WHAT_IS: Record<CompareMedicationTab, string> = {
+const WHAT_IS: Partial<Record<CompareMedicationTab, string>> = {
   wegovy: "/what-is-wegovy",
   mounjaro: "/what-is-mounjaro",
-  saxenda: "/what-is-saxenda",
 };
 
 function MedPanel({
@@ -111,7 +109,9 @@ function MedPanel({
             medicine: column sort, filters and GPhC registration numbers.
           </p>
         </div>
-        <CompareHereLink href={FULL_PAGE[med]} size="sm" className="shrink-0" />
+        {FULL_PAGE[med] && (
+          <CompareHereLink href={FULL_PAGE[med]} size="sm" className="shrink-0" />
+        )}
       </div>
 
       {med === "wegovy" && (
@@ -142,15 +142,17 @@ function MedPanel({
         )}
       </section>
 
-      <div className="mt-8 flex flex-wrap gap-3">
-        <Link
-          href={WHAT_IS[med]}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
-        >
-          <Pill className="h-4 w-4" aria-hidden />
-          What Is {TAB_LABEL[med]}?
-        </Link>
-      </div>
+      {WHAT_IS[med] && (
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link
+            href={WHAT_IS[med]}
+            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
+          >
+            <Pill className="h-4 w-4" aria-hidden />
+            What Is {TAB_LABEL[med]}?
+          </Link>
+        </div>
+      )}
     </motion.div>
   );
 }

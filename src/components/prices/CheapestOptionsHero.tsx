@@ -35,9 +35,8 @@ export default function CheapestOptionsHero() {
             <p className="mt-3 max-w-3xl text-sm leading-snug text-white/85 md:text-base">
               Every dose step, pack size, filter, and provider row — the
               canonical place to compare{" "}
-              <strong className="text-white">Mounjaro</strong>,{" "}
-              <strong className="text-white">Wegovy</strong>, and{" "}
-              <strong className="text-white">Saxenda</strong> side by side.
+              <strong className="text-white">Mounjaro</strong> and{" "}
+              <strong className="text-white">Wegovy</strong> side by side.
             </p>
             <ul className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
               <li className="flex-1 sm:flex-none">
@@ -55,15 +54,6 @@ export default function CheapestOptionsHero() {
                   label="Compare Wegovy costs here"
                   size="footer"
                   navAccent="emerald"
-                  className="w-full sm:min-w-[260px]"
-                />
-              </li>
-              <li className="flex-1 sm:flex-none">
-                <CompareHereLink
-                  href="/saxenda-price-comparison"
-                  label="Compare Saxenda costs here"
-                  size="footer"
-                  navAccent="sky"
                   className="w-full sm:min-w-[260px]"
                 />
               </li>

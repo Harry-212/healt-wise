@@ -466,7 +466,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What’s the most effective diet for Armagh locals?",
-        a: `Balanced calorie deficits that you can keep up usually beat extreme rules. NICE-style weight-management guidance favours sustainable eating patterns over crash diets—see our [comparison of the best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro) for how medicines like [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), or [Saxenda](/what-is-saxenda) sit *beside* food habits, not instead of them. If you are budgeting privately, check [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `Balanced calorie deficits that you can keep up usually beat extreme rules. NICE-style weight-management guidance favours sustainable eating patterns over crash diets—see our [comparison of the best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro) for how medicines like [Mounjaro](/what-is-mounjaro) or [Wegovy](/what-is-wegovy) sit *beside* food habits, not instead of them. If you are budgeting privately, check [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
         q: "How much exercise is needed for weight loss in Armagh?",
@@ -474,7 +474,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Do fat reduction treatments work for Armagh residents?",
-        a: `Non-surgical body contouring can change **local** fat thickness for suitable candidates, but it is not a substitute for overall energy balance. If you are also exploring prescription options, read [what Mounjaro is](/what-is-mounjaro), [what Wegovy is](/what-is-wegovy), and [what Saxenda is](/what-is-saxenda)—then compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) costs with your clinician’s follow-up plan in mind.`,
+        a: `Non-surgical body contouring can change **local** fat thickness for suitable candidates, but it is not a substitute for overall energy balance. If you are also exploring prescription options, read [what Mounjaro is](/what-is-mounjaro) and [what Wegovy is](/what-is-wegovy)—then compare [Mounjaro](/mounjaro-price-comparison) and [Wegovy](/wegovy-price-comparison) costs with your clinician’s follow-up plan in mind.`,
       },
       {
         q: "Can mindset alone drive weight loss here?",
@@ -495,7 +495,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most successful weight loss treatment in Belfast?",
-        a: `For many people, success looks like a layered plan: a calorie deficit you can repeat, strength and walking you can sustain, and medical support when appropriate. If a clinician discusses injections, start with [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda). Compare monthly totals via [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `For many people, success looks like a layered plan: a calorie deficit you can repeat, strength and walking you can sustain, and medical support when appropriate. If a clinician discusses injections, start with [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro), then read [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy). Compare monthly totals via [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
         q: "Can I get Ozempic in Northern Ireland?",
@@ -511,7 +511,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Dietitian programmes versus medicines, which is better?",
-        a: `Dietitians help with food structure, relapse prevention, and sustainability. Medicines can reduce appetite for some people, but pairing them with diet and movement usually improves outcomes. Use the [UK comparator hub](/compare/wegovy-vs-mounjaro) to understand how options stack, then compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) costs with a follow up plan.`,
+        a: `Dietitians help with food structure, relapse prevention, and sustainability. Medicines can reduce appetite for some people, but pairing them with diet and movement usually improves outcomes. Use the [UK comparator hub](/compare/wegovy-vs-mounjaro) to understand how options stack, then compare [Mounjaro](/mounjaro-price-comparison) and [Wegovy](/wegovy-price-comparison) costs with a follow up plan.`,
       },
       {
         q: "What are the risks of bariatric surgery in Belfast?",
@@ -540,7 +540,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most successful weight loss treatment in Birmingham?",
-        a: `Many people do best with a layered plan: a repeatable calorie deficit, strength and walking, and medical support when appropriate. Start with [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda). Compare costs via [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `Many people do best with a layered plan: a repeatable calorie deficit, strength and walking, and medical support when appropriate. Start with [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro), then read [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy). Compare costs via [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
         q: "Are injections safe long term?",
@@ -1776,7 +1776,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Are fat-reduction lasers a real weight loss treatment?",
-        a: `They can help with body contouring, but they are not usually the main treatment for obesity or significant weight loss. If you also need appetite support, read [what Wegovy is](/what-is-wegovy) and [what Saxenda is](/what-is-saxenda).`,
+        a: `They can help with body contouring, but they are not usually the main treatment for obesity or significant weight loss. If you also need appetite support, read [what Wegovy is](/what-is-wegovy).`,
       },
     ];
   }
@@ -1793,7 +1793,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Is there a safe cheaper option than Mounjaro?",
-        a: `Yes. Depending on your situation, a different prescription treatment, NHS support, or a structured lifestyle programme may be more affordable and still effective. Compare current bundles on [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
+        a: `Yes. Depending on your situation, a different prescription treatment, NHS support, or a structured lifestyle programme may be more affordable and still effective. Compare current bundles on [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison).`,
       },
       {
         q: "Can cosmetic fat reduction replace diet treatment?",
@@ -1876,7 +1876,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How much is Saxenda usually in Newry?",
-        a: `The price varies by provider, consultation fees, and whether delivery and follow-up are included. A monthly comparison is more useful than a single headline price because the real cost depends on the full prescribing package. Use [Saxenda price comparison](/saxenda-price-comparison) for UK pricing context.`,
+        a: `The price varies by provider, consultation fees, and whether delivery and follow-up are included. A monthly comparison is more useful than a single headline price because the real cost depends on the full prescribing package.`,
       },
       {
         q: "Can my GP prescribe Ozempic in Northern Ireland for weight loss?",
@@ -1942,7 +1942,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is a more affordable option than Mounjaro?",
-        a: `A cheaper alternative may be Wegovy, Saxenda, or a non-medication route through NHS support, depending on your situation. The cheapest option is often lifestyle support, but that is not always the most effective for every patient. Compare [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
+        a: `A cheaper alternative may be Wegovy, Saxenda, or a non-medication route through NHS support, depending on your situation. The cheapest option is often lifestyle support, but that is not always the most effective for every patient. Compare [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison).`,
       },
       {
         q: "Are fat-freezing treatments the same as weight loss treatments?",
@@ -2058,7 +2058,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What prescriptions can my doctor provide for weight loss in Scotland?",
-        a: `GLP 1 options include Wegovy (semaglutide weekly, about 12 to 15% trial loss bands), Mounjaro (tirzepatide dual hormone, about 20% trial bands), and Saxenda (liraglutide daily, milder averages). NHS usually prioritises lifestyle first per NICE, then tier 3 review. Read [what Wegovy is](/what-is-wegovy), [what Mounjaro is](/what-is-mounjaro), and [what Saxenda is](/what-is-saxenda).`,
+        a: `GLP 1 options include Wegovy (semaglutide weekly, about 12 to 15% trial loss bands), Mounjaro (tirzepatide dual hormone, about 20% trial bands), and Saxenda (liraglutide daily, milder averages). NHS usually prioritises lifestyle first per NICE, then tier 3 review. Read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "How safe are private online clinics for Livingston residents?",
@@ -2103,7 +2103,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Should I use the provider with the lowest price?",
-        a: `Not necessarily. Compare total cost, registration, clinical assessment, ongoing support, delivery arrangements and later-stage pricing using the [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison) and [Saxenda](/saxenda-price-comparison) comparison pages.`,
+        a: `Not necessarily. Compare total cost, registration, clinical assessment, ongoing support, delivery arrangements and later-stage pricing using the [Mounjaro](/mounjaro-price-comparison) and [Wegovy](/wegovy-price-comparison) comparison pages.`,
       },
       {
         q: "Can I get NHS weight-management support in London?",
@@ -2153,7 +2153,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What can I use if Mounjaro is too expensive?",
-        a: `Cheaper alternatives may include Wegovy, Saxenda, or an NHS weight management programme, depending on eligibility and access. Read [what Saxenda is](/what-is-saxenda) and compare [Mounjaro versus Wegovy](/compare/wegovy-vs-mounjaro).`,
+        a: `Cheaper alternatives may include Wegovy, Saxenda, or an NHS weight management programme, depending on eligibility and access. Compare [Mounjaro versus Wegovy](/compare/wegovy-vs-mounjaro).`,
       },
       {
         q: "Can Ozempic be bought from a normal pharmacy like Boots?",
@@ -2232,7 +2232,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What’s the ideal diet for Bangor coastal life?",
-        a: `Seafood-forward, calorie-aware patterns often fit harbour-town routines—grilled oily fish, vegetables, and portions you can repeat midweek without “starting again Monday.” Evidence on omega-rich patterns and adiposity is mixed at population level, but the bigger win is usually a deficit you can sustain. Map how that sits next to prescription options via our [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro) hub, then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if a clinician mentions them. Budgeting? Compare [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) totals.`,
+        a: `Seafood-forward, calorie-aware patterns often fit harbour-town routines—grilled oily fish, vegetables, and portions you can repeat midweek without “starting again Monday.” Evidence on omega-rich patterns and adiposity is mixed at population level, but the bigger win is usually a deficit you can sustain. Map how that sits next to prescription options via our [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro) hub, then read [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy) if a clinician mentions them. Budgeting? Compare [Mounjaro](/mounjaro-price-comparison) and [Wegovy](/wegovy-price-comparison) totals.`,
       },
       {
         q: "What’s the minimum exercise for Bangor weight loss?",
@@ -2240,7 +2240,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How effective is fat freezing in Northern Ireland?",
-        a: `Cryolipolysis and similar devices can reduce **local** fat thickness for suitable candidates; they are not a substitute for overall energy balance. Results depend on device, operator, and aftercare. If you are also weighing GLP-1 options, compare mechanisms first ([Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), [Saxenda](/what-is-saxenda)) and costs ([Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), [Saxenda prices](/saxenda-price-comparison)).`,
+        a: `Cryolipolysis and similar devices can reduce **local** fat thickness for suitable candidates; they are not a substitute for overall energy balance. Results depend on device, operator, and aftercare. If you are also weighing GLP-1 options, compare mechanisms first ([Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy)) and costs ([Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison)).`,
       },
       {
         q: "What role does sleep play in slimming around Bangor?",
@@ -2261,7 +2261,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the top diet for Bangor hikers?",
-        a: `Protein forward meals with Welsh lamb, leeks, and vegetables you can repeat after a trail day usually beat weekend only rules. See how food habits pair with medicines in our [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro) overview, then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if a clinician brings them up. Compare costs on [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `Protein forward meals with Welsh lamb, leeks, and vegetables you can repeat after a trail day usually beat weekend only rules. See how food habits pair with medicines in our [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro) overview, then read [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy) if a clinician brings them up. Compare costs on [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
         q: "What is the exercise minimum in Bangor?",
@@ -2269,7 +2269,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Are cryo style treatments viable in North Wales?",
-        a: `They may reduce **local** fat thickness for suitable candidates but will not replace overall energy balance. Ask clinics for realistic imaging and aftercare. If you also weigh GLP 1 options, compare [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda), then budgets via [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison).`,
+        a: `They may reduce **local** fat thickness for suitable candidates but will not replace overall energy balance. Ask clinics for realistic imaging and aftercare. If you also weigh GLP 1 options, compare [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy), then budgets via [Mounjaro](/mounjaro-price-comparison) and [Wegovy](/wegovy-price-comparison).`,
       },
       {
         q: "How does stress affect weight goals here?",
@@ -2290,7 +2290,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What are the best eats for Basildon commuters?",
-        a: `Market vegetables and lean protein, batch cooked grains, and repeat weekday lunches beat station grab bags most weeks. See how habits pair with medicines in [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) if your clinician mentions them. Compare costs via [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `Market vegetables and lean protein, batch cooked grains, and repeat weekday lunches beat station grab bags most weeks. See how habits pair with medicines in [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro), then read [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy) if your clinician mentions them. Compare costs via [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
         q: "What is the exercise baseline in Basildon?",
@@ -2298,7 +2298,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How effective is fat reduction tech?",
-        a: `Devices may trim **local** fat for suitable candidates but will not replace overall habits. Ask for realistic imaging and aftercare. If you also weigh GLP 1 options, compare [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) plus [Mounjaro](/mounjaro-price-comparison), [Wegovy](/wegovy-price-comparison), and [Saxenda](/saxenda-price-comparison) budgets.`,
+        a: `Devices may trim **local** fat for suitable candidates but will not replace overall habits. Ask for realistic imaging and aftercare. If you also weigh GLP 1 options, compare [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy) plus [Mounjaro](/mounjaro-price-comparison) and [Wegovy](/wegovy-price-comparison) budgets.`,
       },
       {
         q: "How important is sleep for weight loss here?",
@@ -2319,7 +2319,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the prime plan for Bath foodies?",
-        a: `Veggie forward plates with Somerset dairy or lean protein, sensible portions near the abbey, and repeat weekday breakfasts beat tourist only discipline. Map habits beside medicines via [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro), then read [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda). Compare [Mounjaro prices](/mounjaro-price-comparison), [Wegovy prices](/wegovy-price-comparison), and [Saxenda prices](/saxenda-price-comparison).`,
+        a: `Veggie forward plates with Somerset dairy or lean protein, sensible portions near the abbey, and repeat weekday breakfasts beat tourist only discipline. Map habits beside medicines via [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro), then read [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy). Compare [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
         q: "What are the motion musts in Bath?",
@@ -2327,7 +2327,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What results can cooling tech give?",
-        a: `Cryolipolysis style devices may trim **local** fat for suitable candidates; marketing percentages need consent context. Pair any device with food and sleep basics. If you weigh GLP 1 options, compare [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), and [Saxenda](/what-is-saxenda) plus price pages.`,
+        a: `Cryolipolysis style devices may trim **local** fat for suitable candidates; marketing percentages need consent context. Pair any device with food and sleep basics. If you weigh GLP 1 options, compare [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy) plus price pages.`,
       },
       {
         q: "Does hydration really matter for weight loss?",
@@ -2355,11 +2355,11 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
   return [
     {
       q: `What counts as the “best” weight loss treatment if you live in ${name}?`,
-      a: `There isn’t a single winner on a chart. For some people in ${name}, the strongest option will still be an NHS dietitian-led programme with no injection at all. For others—after assessment—GLP-1-class medicines may become appropriate: tirzepatide ([Mounjaro](/what-is-mounjaro)), semaglutide ([Wegovy](/what-is-wegovy)), or liraglutide ([Saxenda](/what-is-saxenda)), but only where monitoring exists. Compare indicative monthly totals on our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison). “Best” should probably mean “safest fit for you this year,” not “trendiest molecule.”`,
+      a: `There isn’t a single winner on a chart. For some people in ${name}, the strongest option will still be an NHS dietitian-led programme with no injection at all. For others—after assessment—GLP-1-class medicines may become appropriate: tirzepatide ([Mounjaro](/what-is-mounjaro)) or semaglutide ([Wegovy](/what-is-wegovy)), but only where monitoring exists. Compare indicative monthly totals on our [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison). “Best” should probably mean “safest fit for you this year,” not “trendiest molecule.”`,
     },
     {
       q: `Could I get Mounjaro, Wegovy, or Saxenda without going through my GP in ${name}?`,
-      a: `You might, through a private prescriber or a GPhC-registered online clinic, if you meet their clinical criteria—that can apply to [Mounjaro](/what-is-mounjaro), [Wegovy](/what-is-wegovy), or [Saxenda](/what-is-saxenda) where appropriate. That route can be faster on paper; it can also leave your GP surgery out of the loop unless you explicitly ask for shared care, which many practices will not agree to. On the NHS side, access often stays narrower than social media suggests, and ${icbOrBoard} may apply its own criteria on top of national guidance. If you are weighing costs, start with our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
+      a: `You might, through a private prescriber or a GPhC-registered online clinic, if you meet their clinical criteria—that can apply to [Mounjaro](/what-is-mounjaro) or [Wegovy](/what-is-wegovy) where appropriate. That route can be faster on paper; it can also leave your GP surgery out of the loop unless you explicitly ask for shared care, which many practices will not agree to. On the NHS side, access often stays narrower than social media suggests, and ${icbOrBoard} may apply its own criteria on top of national guidance. If you are weighing costs, start with our [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison).`,
     },
     {
       q: `Is NHS weight management in ${nation} actually realistic for ${name} residents?`,
@@ -2371,7 +2371,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     },
     {
       q: `Why do search results around ${name} mention “cheap” GLP-1s?`,
-      a: `Price is visible; clinical risk is harder to google. A low headline fee might exclude follow-up, or it might bundle blood tests you do not need. We tend to treat “cheap” as a signal to read the small print, not as proof of value. Comparing monthly totals—including repeats and delivery—usually paints a fairer picture for households in ${name}; try our [Mounjaro price comparison](/mounjaro-price-comparison), [Wegovy price comparison](/wegovy-price-comparison), and [Saxenda price comparison](/saxenda-price-comparison).`,
+      a: `Price is visible; clinical risk is harder to google. A low headline fee might exclude follow-up, or it might bundle blood tests you do not need. We tend to treat “cheap” as a signal to read the small print, not as proof of value. Comparing monthly totals—including repeats and delivery—usually paints a fairer picture for households in ${name}; try our [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison).`,
     },
     {
       q: `Where should scepticism go—not cynicism, just healthy doubt?`,

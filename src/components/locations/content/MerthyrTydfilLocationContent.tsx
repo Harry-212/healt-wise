@@ -225,14 +225,10 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                   Side effects? Nausea (titrate slow), gallbladder risks—GP bloods essential. Impossible to ignore: Not forever fixes; pair with 500-cal deficits for 1kg/week. Compare{" "}
                   <Link className={linkCls} href="/what-is-wegovy">
                     Wegovy
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/what-is-mounjaro">
                     Mounjaro
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/what-is-saxenda">
-                    Saxenda
                   </Link>{" "}
                   basics before choosing.
                 </p>
@@ -437,14 +433,10 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                   NHS: Free if eligible, but waits. Private: Faster, £2,000+/year. Compare{" "}
                   <Link className={linkCls} href="/mounjaro-price-comparison">
                     Mounjaro prices
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/wegovy-price-comparison">
                     Wegovy prices
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/saxenda-price-comparison">
-                    Saxenda prices
                   </Link>{" "}
                   before committing.
                 </p>

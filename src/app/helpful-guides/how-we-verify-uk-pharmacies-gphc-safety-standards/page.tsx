@@ -171,9 +171,8 @@ export default function GuidePharmacyVerification() {
           <IL href="/">Health Wise</IL>, we prioritise patient protection by
           carefully reviewing every pharmacy before it is listed on our
           platform. This applies to all GLP 1 treatments we cover, including{" "}
-          <IL href="/what-is-wegovy">Wegovy</IL>,{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL>, and{" "}
-          <IL href="/what-is-saxenda">Saxenda</IL>.</GuideParagraph>
+          <IL href="/what-is-wegovy">Wegovy</IL> and{" "}
+          <IL href="/what-is-mounjaro">Mounjaro</IL>.</GuideParagraph>
         <GuideParagraph>
           Our verification process is designed to ensure that only legitimate,
           regulated UK pharmacies are included helping you make safer, more

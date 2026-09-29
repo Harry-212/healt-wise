@@ -54,10 +54,6 @@ export default function AsdaOnlineDoctorContent() {
           <Link href="/what-is-mounjaro" className="font-semibold underline underline-offset-2">
             Mounjaro
           </Link>
-          ,{" "}
-          <Link href="/what-is-saxenda" className="font-semibold underline underline-offset-2">
-            Saxenda
-          </Link>
           , and Orlistat online without visiting a GP in person.
         </p>
         <p className="text-slate-800 leading-relaxed">

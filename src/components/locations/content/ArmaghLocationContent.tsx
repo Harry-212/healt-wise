@@ -198,14 +198,10 @@ export default function ArmaghLocationContent({ loc, shareUrl }: Props) {
                   weight loss, our explainers on{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy
-                  </Link>
-                  , and{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda
                   </Link>{" "}
                   help you read marketing claims with calmer eyes.
                 </p>
@@ -696,26 +692,18 @@ export default function ArmaghLocationContent({ loc, shareUrl }: Props) {
                   Definitions matter:{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro (tirzepatide)
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy (semaglutide)
-                  </Link>
-                  ,{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda (liraglutide)
                   </Link>
                   . Budget comparisons:{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  ,{" "}
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>
                   . For delivery practicalities, our{" "}
                   <Link
@@ -807,10 +795,6 @@ export default function ArmaghLocationContent({ loc, shareUrl }: Props) {
                     <span className={muted}> · </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
-                    </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/saxenda-price-comparison" className={linkCls}>
-                      Saxenda price comparison
                     </Link>
                   </li>
                   <li>

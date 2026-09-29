@@ -11,7 +11,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-type MedKey = "mounjaro" | "wegovy" | "saxenda";
+type MedKey = "mounjaro" | "wegovy";
 
 const ACCENT: Record<
   MedKey,
@@ -28,12 +28,6 @@ const ACCENT: Record<
     chip: "bg-teal-100 text-teal-900 ring-teal-200/80",
     glow: "from-teal-500/15 via-transparent to-transparent",
     bar: "bg-teal-500",
-  },
-  saxenda: {
-    ring: "ring-sky-200/90 hover:ring-sky-400/50",
-    chip: "bg-sky-100 text-sky-900 ring-sky-200/80",
-    glow: "from-sky-500/15 via-transparent to-transparent",
-    bar: "bg-sky-500",
   },
 };
 
@@ -74,46 +68,29 @@ const CARDS: {
     whatIs: "/what-is-wegovy",
     priceHref: "/wegovy-price-comparison",
   },
-  {
-    key: "saxenda",
-    brand: "Saxenda",
-    inn: "Daily injection pen (UK)",
-    tag: "GLP-1 · daily pen",
-    schedule: "Once daily (escalating dose schedule)",
-    mechanism:
-      "Shorter-acting GLP-1; packaging and pack economics differ from weekly pens.",
-    detail:
-      "Useful when comparing injection rhythm and pack sizes rather than headline pen price alone — daily schedules change how side effects and routines feel.",
-    whatIs: "/what-is-saxenda",
-    priceHref: "/saxenda-price-comparison",
-  },
 ];
 
-const MATRIX: { label: string; mounjaro: string; wegovy: string; saxenda: string }[] =
+const MATRIX: { label: string; mounjaro: string; wegovy: string }[] =
   [
     {
       label: "Brand",
       mounjaro: "Mounjaro",
       wegovy: "Wegovy",
-      saxenda: "Saxenda",
     },
     {
       label: "Typical Injection Rhythm",
       mounjaro: "Weekly",
       wegovy: "Weekly",
-      saxenda: "Daily",
     },
     {
       label: "Receptor Profile (Simplified)",
       mounjaro: "GIP + GLP-1",
       wegovy: "GLP-1",
-      saxenda: "GLP-1",
     },
     {
       label: "Pricing Lens On Our Tables",
       mounjaro: "Per Pen By Strength",
       wegovy: "Per Pen By Strength",
-      saxenda: "Often Per Pack Of Pens",
     },
   ];
 
@@ -131,7 +108,7 @@ export default function CompareTripleShowcase() {
               Overview
             </p>
             <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-              Three Medicines At A Glance
+              Two Medicines At A Glance
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-600 md:text-base">
               Each card follows the same layout: brand, mechanism summary, and a
@@ -150,7 +127,7 @@ export default function CompareTripleShowcase() {
           </Link>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-3 lg:items-stretch">
+        <div className="grid gap-4 lg:grid-cols-2 lg:items-stretch">
           {CARDS.map((c, i) => {
             const a = ACCENT[c.key];
             return (
@@ -254,9 +231,6 @@ export default function CompareTripleShowcase() {
                   <th scope="col" className="px-4 py-3 font-semibold text-teal-900">
                     Wegovy
                   </th>
-                  <th scope="col" className="px-4 py-3 font-semibold text-sky-900">
-                    Saxenda
-                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -273,7 +247,6 @@ export default function CompareTripleShowcase() {
                     </th>
                     <td className="px-4 py-3.5 text-slate-600">{row.mounjaro}</td>
                     <td className="px-4 py-3.5 text-slate-600">{row.wegovy}</td>
-                    <td className="px-4 py-3.5 text-slate-600">{row.saxenda}</td>
                   </tr>
                 ))}
               </tbody>

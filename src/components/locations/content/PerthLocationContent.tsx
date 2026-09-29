@@ -326,14 +326,10 @@ export default function PerthLocationContent({ loc, shareUrl }: Props) {
                   compare wider private pricing through our{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  , and{" "}
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>
                   .
                 </p>
@@ -661,10 +657,6 @@ export default function PerthLocationContent({ loc, shareUrl }: Props) {
                     <span className={muted}> · </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
-                    </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/saxenda-price-comparison" className={linkCls}>
-                      Saxenda price comparison
                     </Link>
                   </li>
                 </ul>

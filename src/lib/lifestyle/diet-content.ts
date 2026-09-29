@@ -128,7 +128,6 @@ export const DIET_INTERNAL_LINKS = [
   { href: PILLAR_SLEEP, label: "Sleep and weight loss" },
   { href: "/what-is-mounjaro", label: "What is Mounjaro?" },
   { href: "/what-is-wegovy", label: "What is Wegovy?" },
-  { href: "/what-is-saxenda", label: "What is Saxenda?" },
   { href: "/compare/wegovy-vs-mounjaro", label: "Wegovy vs Mounjaro" },
   { href: "/compare/wegovy-vs-mounjaro", label: "Mounjaro vs Wegovy" },
   { href: "/helpful-guides/mounjaro-nutrition-guide-uk", label: "Mounjaro nutrition guide UK" },

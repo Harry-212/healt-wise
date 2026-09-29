@@ -277,11 +277,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Liraglutide (Saxenda): daily pen, milder about 8% loss bands in trial summaries. Gateway option for needle anxiety when clinicians agree. Read{" "}
-                  <Link className={linkCls} href="/what-is-saxenda">
-                    what Saxenda is
-                  </Link>
-                  .
+                  Liraglutide (Saxenda): daily pen, milder about 8% loss bands in trial summaries. Gateway option for needle anxiety when clinicians agree.
                 </p>
 
                 <p className={subh}>Liverpool private access reality</p>

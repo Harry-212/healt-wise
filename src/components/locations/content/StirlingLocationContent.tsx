@@ -668,13 +668,6 @@ export default function StirlingLocationContent({ loc, shareUrl }: Props) {
                   </Link>
                   , containing semaglutide.
                 </li>
-                <li>
-                  Licensed{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    liraglutide
-                  </Link>{" "}
-                  treatment where clinically appropriate.
-                </li>
                 <li>Other prescription weight-management medicines.</li>
               </ul>
               <p className={p}>
@@ -911,14 +904,10 @@ export default function StirlingLocationContent({ loc, shareUrl }: Props) {
                 Use the Healthwise360{" "}
                 <Link href="/mounjaro-price-comparison" className={linkCls}>
                   Mounjaro price comparison
-                </Link>
-                ,{" "}
-                <Link href="/wegovy-price-comparison" className={linkCls}>
-                  Wegovy price comparison
                 </Link>{" "}
                 and{" "}
-                <Link href="/saxenda-price-comparison" className={linkCls}>
-                  Saxenda price comparison
+                <Link href="/wegovy-price-comparison" className={linkCls}>
+                  Wegovy price comparison
                 </Link>{" "}
                 pages for current provider data rather than inserting fixed
                 prices into this local guide. Prices can change more frequently
@@ -1158,14 +1147,10 @@ export default function StirlingLocationContent({ loc, shareUrl }: Props) {
                 using the{" "}
                 <Link href="/mounjaro-price-comparison" className={linkCls}>
                   Mounjaro
-                </Link>
-                ,{" "}
-                <Link href="/wegovy-price-comparison" className={linkCls}>
-                  Wegovy
                 </Link>{" "}
                 and{" "}
-                <Link href="/saxenda-price-comparison" className={linkCls}>
-                  Saxenda
+                <Link href="/wegovy-price-comparison" className={linkCls}>
+                  Wegovy
                 </Link>{" "}
                 comparison tables.
               </p>
@@ -1348,13 +1333,9 @@ export default function StirlingLocationContent({ loc, shareUrl }: Props) {
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
                   </Link>
-                  <span className={muted}> · </span>
-                  <Link href="/wegovy-price-comparison" className={linkCls}>
+                    <span className={muted}> · </span>
+                    <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  <span className={muted}> · </span>
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>
                 </li>
                 <li>

@@ -520,13 +520,6 @@ export default function LancasterLocationContent({ loc, shareUrl }: Props) {
                     </Link>{" "}
                     and bring your history to your GP.
                   </li>
-                  <li>
-                    Read{" "}
-                    <Link className={linkCls} href="/what-is-saxenda">
-                      what Saxenda is
-                    </Link>{" "}
-                    if daily injections suit your routine better than weekly pens.
-                  </li>
                 </ol>
               </GuideSection>
 

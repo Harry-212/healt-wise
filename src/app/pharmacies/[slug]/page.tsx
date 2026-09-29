@@ -1274,15 +1274,6 @@ export default async function PharmacyProfilePage({ params }: Props) {
             Back to Mounjaro price comparison
           </Link>
         )}
-        {s && (
-          <Link
-            href="/saxenda-price-comparison"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-sky-800 underline-offset-2 hover:underline"
-          >
-            <ArrowLeft className="h-4 w-4" aria-hidden />
-            Back to Saxenda price comparison
-          </Link>
-        )}
       </div>
 
       <header className="mt-8 border-b border-slate-200 pb-8">
@@ -1507,9 +1498,6 @@ export default async function PharmacyProfilePage({ params }: Props) {
         )}
         {m && (
           <CompareHereLink href="/mounjaro-price-comparison#mounjaro-compare-table" />
-        )}
-        {s && (
-          <CompareHereLink href="/saxenda-price-comparison#saxenda-compare-table" />
         )}
         <Link
           href="/helpful-guides"

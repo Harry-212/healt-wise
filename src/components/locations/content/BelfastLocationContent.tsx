@@ -184,14 +184,10 @@ export default function BelfastLocationContent({ loc, shareUrl }: Props) {
                   and read{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy
-                  </Link>
-                  , and{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda
                   </Link>
                   .
                 </p>
@@ -280,14 +276,10 @@ export default function BelfastLocationContent({ loc, shareUrl }: Props) {
                   If you are comparing brands and costs, start with{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  , and{" "}
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>
                   . For delivery practicalities, keep{" "}
                   <Link
@@ -449,10 +441,6 @@ export default function BelfastLocationContent({ loc, shareUrl }: Props) {
                     <span className={muted}> · </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
-                    </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/saxenda-price-comparison" className={linkCls}>
-                      Saxenda price comparison
                     </Link>
                   </li>
                   <li>

@@ -272,13 +272,6 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                     </Link>
                     .
                   </li>
-                  <li>
-                    Liraglutide (Saxenda), an older GLP-1 agent also used for weight management. Read{" "}
-                    <Link className={linkCls} href="/what-is-saxenda">
-                      what Saxenda is
-                    </Link>
-                    .
-                  </li>
                 </ul>
 
                 <p className={`mt-4 ${p}`}>These drugs work by:</p>
@@ -489,14 +482,10 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                   Many patients in Middlesbrough will find that the best approach is to start with NHS-based support, then consider private GLP-1 or body-contouring only if they meet the criteria and feel comfortable with the risks and costs. For budgeting, compare{" "}
                   <Link className={linkCls} href="/mounjaro-price-comparison">
                     Mounjaro prices
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/wegovy-price-comparison">
                     Wegovy prices
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/saxenda-price-comparison">
-                    Saxenda prices
                   </Link>
                   .
                 </p>
@@ -650,14 +639,10 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                     Review medicine basics on{" "}
                     <Link className={linkCls} href="/what-is-mounjaro">
                       Mounjaro
-                    </Link>
-                    ,{" "}
-                    <Link className={linkCls} href="/what-is-wegovy">
+                    </Link>{" "}
+                  and{" "}
+                  <Link className={linkCls} href="/what-is-wegovy">
                       Wegovy
-                    </Link>
-                    , and{" "}
-                    <Link className={linkCls} href="/what-is-saxenda">
-                      Saxenda
                     </Link>
                     .
                   </li>

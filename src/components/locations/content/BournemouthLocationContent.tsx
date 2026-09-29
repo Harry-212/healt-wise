@@ -170,14 +170,10 @@ export default function BournemouthLocationContent({ loc, shareUrl }: Props) {
                   and read{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro
-                  </Link>
-                  , and{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda
                   </Link>
                   .
                 </p>

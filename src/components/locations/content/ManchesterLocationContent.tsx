@@ -190,14 +190,10 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
                   A second reason Manchester stands out is that the area has a very active private clinic market. That does not automatically mean better care, but it does mean more access to medically supervised weight management options than many smaller towns. In practice, that can shorten waiting times for eligible people. It also means the quality of advice varies more than it should. Some providers are excellent. Others are mainly selling convenience. If you are weighing brands, start with{" "}
                   <Link className={linkCls} href="/what-is-mounjaro">
                     what Mounjaro is
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/what-is-wegovy">
                     what Wegovy is
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/what-is-saxenda">
-                    what Saxenda is
                   </Link>{" "}
                   so discussions stay clinical, not cosmetic.
                 </p>

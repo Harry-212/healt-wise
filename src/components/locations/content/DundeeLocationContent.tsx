@@ -166,14 +166,10 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
                   then read the basics on{" "}
                   <Link className={linkCls} href="/what-is-mounjaro">
                     what Mounjaro is
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/what-is-wegovy">
                     what Wegovy is
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/what-is-saxenda">
-                    what Saxenda is
                   </Link>
                   . For budgeting, you can also check{" "}
                   <Link className={linkCls} href="/mounjaro-price-comparison">

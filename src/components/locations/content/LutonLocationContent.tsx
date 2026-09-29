@@ -205,14 +205,10 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
                   Still, the phrase best weight loss injection should be handled carefully. Best is not always the one with the biggest headline results. It may be the one you can tolerate, afford, and use safely over time. Read{" "}
                   <Link className={linkCls} href="/what-is-mounjaro">
                     what Mounjaro is
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link className={linkCls} href="/what-is-wegovy">
                     what Wegovy is
-                  </Link>
-                  , and{" "}
-                  <Link className={linkCls} href="/what-is-saxenda">
-                    what Saxenda is
                   </Link>
                   .
                 </p>

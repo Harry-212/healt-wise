@@ -548,16 +548,6 @@ export default function WiganLocationContent({ loc, shareUrl }: Props) {
                   </Link>
                   .
                 </li>
-                <li>
-                  <strong className={strong}>
-                    Saxenda or another licensed liraglutide brand
-                  </strong>
-                  , where clinically appropriate. Compare background in{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    what is Saxenda
-                  </Link>
-                  .
-                </li>
                 <li>Other licensed weight-management medicines.</li>
               </ul>
               <p className={p}>
@@ -675,14 +665,10 @@ export default function WiganLocationContent({ loc, shareUrl }: Props) {
                 Healthwise360&apos;s{" "}
                 <Link href="/mounjaro-price-comparison" className={linkCls}>
                   Mounjaro price comparison
-                </Link>
-                ,{" "}
-                <Link href="/wegovy-price-comparison" className={linkCls}>
-                  Wegovy price comparison
                 </Link>{" "}
                 and{" "}
-                <Link href="/saxenda-price-comparison" className={linkCls}>
-                  Saxenda price comparison
+                <Link href="/wegovy-price-comparison" className={linkCls}>
+                  Wegovy price comparison
                 </Link>{" "}
                 pages should be used to compare the current provider information,
                 rather than placing fixed prices in this Wigan guide.
@@ -888,14 +874,10 @@ export default function WiganLocationContent({ loc, shareUrl }: Props) {
                 ongoing support and delivery terms using the{" "}
                 <Link href="/mounjaro-price-comparison" className={linkCls}>
                   Mounjaro
-                </Link>
-                ,{" "}
-                <Link href="/wegovy-price-comparison" className={linkCls}>
-                  Wegovy
                 </Link>{" "}
                 and{" "}
-                <Link href="/saxenda-price-comparison" className={linkCls}>
-                  Saxenda
+                <Link href="/wegovy-price-comparison" className={linkCls}>
+                  Wegovy
                 </Link>{" "}
                 comparison tables.
               </p>
@@ -1064,13 +1046,9 @@ export default function WiganLocationContent({ loc, shareUrl }: Props) {
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
                   </Link>
-                  <span className={muted}> · </span>
-                  <Link href="/wegovy-price-comparison" className={linkCls}>
+                    <span className={muted}> · </span>
+                    <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  <span className={muted}> · </span>
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>
                 </li>
                 <li>

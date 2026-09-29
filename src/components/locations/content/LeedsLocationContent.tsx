@@ -263,11 +263,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-base font-semibold ${strong}`}>Saxenda (liraglutide): daily starter option</p>
                 <p className={p}>
-                  3 mg daily injection, about 8% average loss in SCALE style trials. Better for some GLP 1 beginners, NHS tier 2 eligibility contexts vary. Private about £150 to £200 monthly. Read{" "}
-                  <Link className={linkCls} href="/what-is-saxenda">
-                    what Saxenda is
-                  </Link>
-                  .
+                  3 mg daily injection, about 8% average loss in SCALE style trials. Better for some GLP 1 beginners, NHS tier 2 eligibility contexts vary. Private about £150 to £200 monthly.
                 </p>
 
                 <p className={p}>

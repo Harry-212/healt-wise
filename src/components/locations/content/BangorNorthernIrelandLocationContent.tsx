@@ -208,14 +208,10 @@ export default function BangorNorthernIrelandLocationContent({
                   comparator, then dig into{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy
-                  </Link>
-                  , and{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda
                   </Link>{" "}
                   if those names keep appearing in your search results.
                 </p>
@@ -596,26 +592,18 @@ export default function BangorNorthernIrelandLocationContent({
                   Brand orientation:{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro (tirzepatide)
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy (semaglutide)
-                  </Link>
-                  ,{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda (liraglutide)
                   </Link>
                   . Compare monthly totals—including repeats and delivery—via{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
                     Mounjaro price comparison
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/wegovy-price-comparison" className={linkCls}>
                     Wegovy price comparison
-                  </Link>
-                  , and{" "}
-                  <Link href="/saxenda-price-comparison" className={linkCls}>
-                    Saxenda price comparison
                   </Link>
                   . Practical cold-chain tips:{" "}
                   <Link
@@ -707,10 +695,6 @@ export default function BangorNorthernIrelandLocationContent({
                     <span className={muted}> · </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
-                    </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/saxenda-price-comparison" className={linkCls}>
-                      Saxenda price comparison
                     </Link>
                   </li>
                   <li>

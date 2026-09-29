@@ -213,14 +213,10 @@ export default function DerbyLocationContent({ loc, shareUrl }: Props) {
                   and read{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>
                     Mounjaro
-                  </Link>
-                  ,{" "}
+                  </Link>{" "}
+                  and{" "}
                   <Link href="/what-is-wegovy" className={linkCls}>
                     Wegovy
-                  </Link>
-                  , and{" "}
-                  <Link href="/what-is-saxenda" className={linkCls}>
-                    Saxenda
                   </Link>
                   . If budgeting, compare{" "}
                   <Link href="/mounjaro-price-comparison" className={linkCls}>
