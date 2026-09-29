@@ -45,6 +45,14 @@ const CLOUD_FAQ = [
     q: "Which medicines does Cloud Pharmacy list in our comparison?",
     a: `${CLOUD_CHECKED_MEDICINES_LABEL}. It appears in our price tables with the check date shown.`,
   },
+  ...(CLOUD_FACTS.mounjaro
+    ? []
+    : [
+        {
+          q: "Does this page show Cloud Pharmacy Mounjaro prices?",
+          a: "We do not currently have a verified Cloud Pharmacy Mounjaro price record to display. This page lists the Wegovy prices held in our comparison records. Check Cloud Pharmacy directly for its current Mounjaro availability and prices.",
+        },
+      ]),
   {
     q: "How much does Cloud Pharmacy weight loss treatment cost?",
     a:
@@ -154,9 +162,6 @@ export default function CloudPharmacyContent() {
             items={[
               ...(CLOUD_FACTS.gphcRegNo
                 ? [`GPhC registration number recorded in our tables: ${CLOUD_FACTS.gphcRegNo}`]
-                : []),
-              ...(CLOUD_FACTS.rating != null
-                ? [`Customer rating shown in our tables: ${CLOUD_FACTS.rating} out of 5`]
                 : []),
               ...(CLOUD_CHECKED_MEDICINES[0]
                 ? [`A consultation is marked as included in the ${CLOUD_CHECKED_MEDICINES[0]} price record`]
