@@ -61,11 +61,6 @@ export function mounjaroClickCalculatorArticleJsonLd(): Record<string, unknown> 
       "Educational calculator showing the proportional relationship between a UK Mounjaro KwikPen strength and a dose already prescribed to you. Not a dosing recommendation.",
     url: `${base}/tools/mounjaro-click-calculator`,
     dateModified: "2026-09-15",
-    reviewedBy: {
-      "@type": "Person",
-      name: "Alistair Campbell",
-      jobTitle: "Not medical doctor",
-    },
     isPartOf: {
       "@type": "WebSite",
       name: "Healthwise360",

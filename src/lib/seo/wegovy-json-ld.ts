@@ -61,11 +61,6 @@ export function wegovyClickCalculatorArticleJsonLd(): Record<string, unknown> {
       "Educational calculator showing the mathematical relationship between a UK Wegovy FlexTouch pen strength and a dose already prescribed to you. Not a dosing recommendation.",
     url: `${base}/tools/wegovy-click-calculator`,
     dateModified: "2026-09-15",
-    reviewedBy: {
-      "@type": "Person",
-      name: "Alistair Campbell",
-      jobTitle: "Not medical doctor",
-    },
     isPartOf: {
       "@type": "WebSite",
       name: "Healthwise360",

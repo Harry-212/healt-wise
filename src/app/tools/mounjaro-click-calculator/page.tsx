@@ -399,22 +399,10 @@ export default function MounjaroClickCalculatorPage() {
               between a KwikPen strength and a dose that has already been
               prescribed.
             </p>
-            <dl className="mt-4 grid grid-cols-1 gap-x-6 gap-y-1 text-sm text-slate-600 sm:grid-cols-3">
+            <dl className="mt-4 grid grid-cols-1 gap-x-6 gap-y-1 text-sm text-slate-600">
               <div>
-                <dt className="font-semibold text-slate-900">Reviewer</dt>
-                <dd>Alistair Campbell, Not medical doctor</dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-slate-900">
-                  Reviewed date
-                </dt>
-                <dd>15 September 2026</dd>
-              </div>
-              <div>
-                <dt className="font-semibold text-slate-900">
-                  Next scheduled review
-                </dt>
-                <dd>1 October 2026</dd>
+                <dt className="font-semibold text-slate-900">Created by</dt>
+                <dd>Alistair Campbell, with our development team</dd>
               </div>
             </dl>
           </div>
