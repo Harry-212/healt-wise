@@ -35,7 +35,7 @@ const CLOUD_UNCONFIRMED = [
   "Delivery services, delivery times and delivery charges",
   "Packaging and cold-chain handling for injectable pens",
   "Support channels (phone, email, pharmacist follow-up)",
-  "Whether Saxenda, Orlistat or Mysimba are currently offered",
+  "Availability of other weight-management medicines",
   "The steps of the consultation and the eligibility criteria Cloud Pharmacy applies",
   "Any first-order offer, voucher or subscription pricing (our tables use list price only)",
 ];
@@ -169,9 +169,16 @@ export default function CloudPharmacyContent() {
 
       <section>
         <p className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">
-          Cloud Pharmacy prices by strength
+          Cloud Pharmacy Wegovy prices
         </p>
-        <PharmacyPriceCompareHint />
+        <PharmacyPriceCompareHint
+          heading="Compare prices across providers:"
+          intro=""
+          links={[
+            { href: "/wegovy-price-comparison", label: "Compare Wegovy prices" },
+            { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices" },
+          ]}
+        />
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           {CLOUD_FACTS.mounjaro ? (
             <PriceTable

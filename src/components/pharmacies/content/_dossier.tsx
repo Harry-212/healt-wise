@@ -92,27 +92,34 @@ export function PharmacyBrandLogoFooter() {
 /** Callout linking to Health Wise comparison tables (use under "How much does … cost?"). */
 export function PharmacyPriceCompareHint({
   className = "mt-3",
+  heading = "Compare UK pharmacy prices",
+  intro = "See checked side-by-side listings on Health Wise:",
+  links = [
+    { href: "/mounjaro-price-comparison", label: "Mounjaro" },
+    { href: "/wegovy-price-comparison", label: "Wegovy" },
+    { href: "/prices/cheapest-options-uk", label: "Cheapest GLP-1 hub" },
+  ],
 }: {
   className?: string;
+  heading?: string;
+  intro?: string;
+  links?: { href: string; label: string }[];
 }) {
   return (
     <div
       className={`rounded-md border border-emerald-800/20 bg-emerald-50/60 px-3 py-3 text-sm text-slate-800 shadow-sm ring-1 ring-emerald-900/10 sm:px-4 ${className}`}
     >
-      <p className="font-bold text-emerald-950">Compare UK pharmacy prices</p>
+      <p className="font-bold text-emerald-950">{heading}</p>
       <p className="mt-2 leading-relaxed text-slate-700">
-        See checked side-by-side listings on Health Wise:{" "}
-        <Link href="/mounjaro-price-comparison" className={pharmacyCompareLinkClass}>
-          Mounjaro
-        </Link>
-        <span className="text-slate-400"> · </span>
-        <Link href="/wegovy-price-comparison" className={pharmacyCompareLinkClass}>
-          Wegovy
-        </Link>
-        <span className="text-slate-400"> · </span>
-        <Link href="/prices/cheapest-options-uk" className={pharmacyCompareLinkClass}>
-          Cheapest GLP-1 hub
-        </Link>
+        {intro}{" "}
+        {links.map((link, i) => (
+          <span key={link.href}>
+            {i > 0 ? <span className="text-slate-400"> · </span> : null}
+            <Link href={link.href} className={pharmacyCompareLinkClass}>
+              {link.label}
+            </Link>
+          </span>
+        ))}
         .
       </p>
     </div>
