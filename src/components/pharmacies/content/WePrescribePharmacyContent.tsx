@@ -24,7 +24,7 @@ export default function WePrescribePharmacyContent() {
       fileRef="HW-WEPRESCRIBE-2026"
       title="WePrescribe weight management review"
       subtitle="Independent provider review of WePrescribe: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Tirzepatide · Semaglutide · Saxenda · Orlistat · Xenical · alli where listed"
+      scopeLabel="Scope: Tirzepatide · Semaglutide · Orlistat · Xenical · alli where listed"
       providerName="WePrescribe"
       providerUrl={providerUrl}
       docDetails={[
@@ -51,7 +51,7 @@ export default function WePrescribePharmacyContent() {
         <div className="mb-6 rounded-xl border border-amber-100 bg-amber-50/30 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-amber-900">Independent Context:</strong> As part of your research into medically supported weight management, evaluating providers like WePrescribe is highly recommended. This page is designed to give you a transparent overview of WePrescribe's service model, from their online doctor assessments to how they securely dispatch temperature-sensitive treatments directly to your home.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Millions of UK adults need medical support beyond willpower; prescription therapies such as{" "}
-          <strong>Wegovy</strong>, <strong>Mounjaro</strong>, <strong>Saxenda</strong> and{" "}
+          <strong>Wegovy</strong>, <strong>Mounjaro</strong> and{" "}
           <strong>Orlistat</strong> require lawful prescribing routes.{" "}
           <ProviderCta url={providerUrl} name="WePrescribe" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
             WePrescribe
@@ -83,7 +83,7 @@ export default function WePrescribePharmacyContent() {
         <p className={sectionLabel}>Structured patient journey</p>
         <Points
           items={[
-            "Select the therapy line that matches prescriber guidance (e.g. Wegovy, Mounjaro, Orlistat, Saxenda, alli, Xenical).",
+            "Select the therapy line that matches prescriber guidance (e.g. Wegovy, Mounjaro, Orlistat, alli, Xenical).",
             "Submit allergies, symptoms and concurrent drugs.",
             "Await clinical review outcome.",
             "If approved, prescriptions route to regulated dispensing with courier booking.",
@@ -98,7 +98,7 @@ export default function WePrescribePharmacyContent() {
         <p className={sectionLabel}>Treatments commonly referenced</p>
         <p className="mt-3 text-slate-800 leading-relaxed">
           Category pages list <strong>alli</strong>, <strong>Mounjaro</strong>, <strong>Orlistat</strong>,{" "}
-          <strong>Saxenda</strong>, <strong>Wegovy</strong> and <strong>Xenical</strong>. Injectable GLP‑1 options
+          <strong>Wegovy</strong> and <strong>Xenical</strong>. Injectable GLP‑1 options
           focus on appetite signalling; Orlistat and Xenical limit dietary fat absorption in the gut. Clinicians
           usually insist on parallel nutrition and activity coaching for durable outcomes.
         </p>
@@ -183,7 +183,7 @@ export default function WePrescribePharmacyContent() {
             },
             {
               q: "Which medicines are listed?",
-              a: "Weight loss hub references alli, Mounjaro, Orlistat, Saxenda, Wegovy and Xenical among others.",
+              a: "Weight loss hub references alli, Mounjaro, Orlistat, Wegovy and Xenical among others.",
             },
             {
               q: "Could uploads delay approval?",

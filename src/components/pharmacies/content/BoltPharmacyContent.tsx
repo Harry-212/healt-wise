@@ -143,7 +143,7 @@ export default function BoltPharmacyContent() {
                 {[
                   { k: "Published", v: "2026" },
                   { k: "Provider", v: "Bolt Pharmacy" },
-                  { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda" },
+                  { k: "Treatments", v: "Mounjaro · Wegovy" },
                   { k: "Fulfilment", v: "Home delivery" },
                 ].map((d, i) => (
                   <div
@@ -255,7 +255,7 @@ export default function BoltPharmacyContent() {
               <span className="text-slate-400" aria-hidden>
                 ·
               </span>
-              <span>Scope: Mounjaro · Wegovy · Saxenda</span>
+              <span>Scope: Mounjaro · Wegovy</span>
             </div>
           </div>
 
@@ -377,7 +377,7 @@ export default function BoltPharmacyContent() {
                 <h2 className={h2}>2. Clinical support and treatment options</h2>
                 <p className={`mt-3 ${body}`}>
                   A major reason people look at Bolt Pharmacy is access to prescription injections,
-                  including Mounjaro, Wegovy and Saxenda. These treatments may support weight loss
+                  including Mounjaro and Wegovy. These treatments may support weight loss
                   by:
                 </p>
                 <Points

@@ -24,7 +24,7 @@ export default function NextScriptPharmacyContent() {
       fileRef="HW-NEXT-SCRIPT-2026"
       title="Next Script weight management review"
       subtitle="Independent provider review of Next Script: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda"
+      scopeLabel="Scope: Mounjaro · Wegovy"
       providerName="Next Script"
       providerUrl={providerUrl}
       docDetails={[
@@ -35,7 +35,7 @@ export default function NextScriptPharmacyContent() {
         },
         {
           k: "Treatments",
-          v: "Mounjaro · Wegovy · Saxenda (subject to suitability)",
+          v: "Mounjaro · Wegovy (subject to suitability)",
         },
         {
           k: "Fulfilment",
@@ -70,7 +70,7 @@ export default function NextScriptPharmacyContent() {
         <p className={sectionLabel}>Modern treatment context</p>
         <p className="mt-3 text-slate-800 leading-relaxed">
           Clinical weight management now commonly includes medicines such as{" "}
-          <strong>Mounjaro</strong>, <strong>Wegovy</strong>, and <strong>Saxenda</strong> for
+          <strong>Mounjaro</strong> and <strong>Wegovy</strong> for
           eligible adults. Next Script frames access through a fully digital pathway so suitable
           patients can avoid routine face to face GP appointments while still meeting UK prescribing
           standards.
@@ -136,7 +136,6 @@ export default function NextScriptPharmacyContent() {
           items={[
             "Mounjaro (tirzepatide).",
             "Wegovy (semaglutide).",
-            "Saxenda (liraglutide).",
             "Mechanisms cited: appetite reduction, blood sugar support where relevant, longer fullness alongside lifestyle change.",
           ]}
         />
@@ -148,9 +147,8 @@ export default function NextScriptPharmacyContent() {
           <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Example bands from available summaries: <strong>Wegovy</strong> roughly{" "}
-            <strong>£80–£189</strong>, <strong>Mounjaro</strong> roughly <strong>£131–£266</strong>,{" "}
-            <strong>Saxenda</strong> roughly <strong>£68–£260</strong>, varying by dose, treatment
-            stage, and stock.
+            <strong>£80–£189</strong> and <strong>Mounjaro</strong> roughly <strong>£131–£266</strong>,
+            varying by dose, treatment stage, and stock.
           </p>
           <p className="mt-3 text-slate-800 leading-relaxed">
             Bundles often cover <strong>online consultation, clinical review, prescription, and
@@ -240,10 +238,6 @@ export default function NextScriptPharmacyContent() {
             {
               q: "What if my dose is out of stock?",
               a: "Private GLP-1 supply can gap when demand spikes; ask support for realistic restock timelines before you pay.",
-            },
-            {
-              q: "Is Saxenda the same cadence as weekly pens?",
-              a: "No. Saxenda is a different molecule and daily injection schedule; follow the prescriber plan, not another patient’s pen calendar.",
             },
             {
               q: "Should I tell my NHS GP?",

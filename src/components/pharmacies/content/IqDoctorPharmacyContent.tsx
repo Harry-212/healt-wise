@@ -24,7 +24,7 @@ export default function IqDoctorPharmacyContent() {
       fileRef="HW-IQ-DOCTOR-2026"
       title="IQ Doctor weight management review"
       subtitle="Independent provider review of IQ Doctor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat · Xenical · supplies"
+      scopeLabel="Scope: Mounjaro · Wegovy · Orlistat · Xenical · supplies"
       providerName="IQ Doctor"
       providerUrl={providerUrl}
       docDetails={[
@@ -35,7 +35,7 @@ export default function IqDoctorPharmacyContent() {
         },
         {
           k: "Treatments",
-          v: "Mounjaro · Wegovy · Saxenda · Orlistat · Xenical · ancillaries (where listed)",
+          v: "Mounjaro · Wegovy · Orlistat · Xenical · ancillaries (where listed)",
         },
         { k: "Fulfilment", v: "Royal Mail / DPD · tracked · cold chain for injectables when required" },
       ]}
@@ -73,7 +73,6 @@ export default function IqDoctorPharmacyContent() {
             items={[
               "Mounjaro (tirzepatide): weekly GLP-1/GIP injection where prescribed.",
               "Wegovy (semaglutide): weekly GLP-1 injection widely used for weight management.",
-              "Saxenda (liraglutide): daily injectable option for some patients.",
               "Orlistat 120mg: generic fat absorption limiting tablets.",
               "Xenical 120mg: branded or generic orlistat style supply where offered.",
               "Ancillaries: needles, sharps disposal containers, and related supplies where appropriate.",
@@ -145,8 +144,8 @@ export default function IqDoctorPharmacyContent() {
           <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
             <p className="font-bold text-slate-900">Injection pens</p>
             <p className="mt-2 text-sm leading-relaxed text-slate-700">
-              Mounjaro, Wegovy, and Saxenda are aimed at different cadences (weekly versus daily) and
-              different clinical profiles. Pens are designed for home use with titration and
+              Mounjaro and Wegovy are both weekly injections but differ in
+              clinical profile. Pens are designed for home use with titration and
               monitoring. Evidence for weight change is strongest when medication sits alongside
               sustained habit change, not instead of it.
             </p>
@@ -207,7 +206,7 @@ export default function IqDoctorPharmacyContent() {
             Public listings often show starting points such as{" "}
             <strong>Mounjaro from about £174.99</strong>, <strong>Wegovy from about £122.99</strong>,{" "}
             <strong>Orlistat 120mg from about £19.99</strong>, <strong>Xenical from about £34.99</strong>
-            , <strong>Saxenda from about £50.99</strong>, and small ancillaries around{" "}
+            , and small ancillaries around{" "}
             <strong>£2.49 to £2.99</strong>. Dose, pack size, and promotions change totals.
           </p>
           <p className="mt-3 text-sm text-slate-600">

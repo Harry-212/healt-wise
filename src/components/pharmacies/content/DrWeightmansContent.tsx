@@ -70,7 +70,7 @@ export default function DrWeightmansContent() {
           <p className="mt-4 text-slate-800 leading-relaxed">Common categories may include:</p>
           <Points
             items={[
-              "Prescription weight-loss medications (e.g. Mounjaro, Wegovy, Saxenda)",
+              "Prescription weight-loss medications (e.g. Mounjaro, Wegovy)",
               "Over-the-counter supplements (evidence varies)",
               "Meal replacement products (structured nutrition plans)",
               "Digital coaching and tracking tools",

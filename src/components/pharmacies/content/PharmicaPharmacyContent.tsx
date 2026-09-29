@@ -24,7 +24,7 @@ export default function PharmicaPharmacyContent() {
       fileRef="HW-PHARMICA-2026"
       title="Pharmica weight management review"
       subtitle="Independent provider review of Pharmica: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope:Mounjaro · Wegovy · Saxenda · Orlistat"
+      scopeLabel="Scope:Mounjaro · Wegovy · Orlistat"
       providerName="Pharmica"
       providerUrl={providerUrl}
       docDetails={[
@@ -273,7 +273,7 @@ export default function PharmicaPharmacyContent() {
         <p className={sectionLabel}>Conclusion</p>
         <p className="mt-3 text-slate-800 leading-relaxed">
           Overall, the Pharmica brand story is <strong>breadth plus logistics</strong>
-          : pharmacist-led digital checks, Mounjaro/Wegovy/Saxenda/Orlistat-style catalogue depth,
+          : pharmacist-led digital checks, Mounjaro/Wegovy/Orlistat-style catalogue depth,
           granular delivery pricing, same-day London option, strong discretion claims, repeat-friendly
           accounts, and bundled headline pricing. Use Health Wise comparisons at identical strengths
           and add the delivery tier you actually need before judging value.

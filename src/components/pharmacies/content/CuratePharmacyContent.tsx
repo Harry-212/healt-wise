@@ -26,7 +26,7 @@ const CURATE_UNCONFIRMED = [
   "Pharmacy collection as an alternative to delivery",
   "Packaging and cold-chain handling for injectable pens",
   "Support channels (phone, email, pharmacist follow-up)",
-  "Whether Saxenda or Orlistat are currently offered",
+  "Availability of other weight-management medicines",
   "The steps of the consultation and the eligibility criteria Curate applies",
   "Any first-order offer, voucher or subscription pricing (our tables use list price only)",
 ];

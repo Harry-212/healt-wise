@@ -23,13 +23,13 @@ export default function AshcroftPharmacyContent() {
       fileRef="HW-ASHCROFT-2026"
       title="Ashcroft Pharmacy weight management review"
       subtitle="Independent provider review of Ashcroft Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · tablets"
+      scopeLabel="Scope: Mounjaro · Wegovy · tablets"
       providerName="Ashcroft Pharmacy"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Ashcroft Pharmacy" },
-        { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda · tablets" },
+        { k: "Treatments", v: "Mounjaro · Wegovy · tablets" },
         { k: "Fulfilment", v: "Home delivery" },
       ]}
       discountCode={discountCode}
@@ -209,7 +209,7 @@ export default function AshcroftPharmacyContent() {
         <div className="mt-3 grid gap-4 sm:grid-cols-2">
           <div className="border border-slate-200/90 bg-white/80 p-5 shadow-sm">
             <p className="font-bold text-slate-900">Injection treatments</p>
-            <Points items={["Mounjaro", "Wegovy", "Saxenda"]} />
+            <Points items={["Mounjaro", "Wegovy"]} />
             <p className="mt-4 text-slate-800 leading-relaxed">
               These medications may support reduced hunger, portion control, and sustained weight
               loss efforts — though realistically, medication alone rarely does all the work.

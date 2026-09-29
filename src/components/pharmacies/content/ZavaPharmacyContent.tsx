@@ -68,8 +68,8 @@ export default function ZavaPharmacyContent() {
         <HazardBox className="mt-3 ring-1 ring-emerald-900/5">
           <p className="text-slate-800 leading-relaxed">
             <strong>Injectables:</strong> <strong>Wegovy</strong> (weekly semaglutide),{" "}
-            <strong>Mounjaro</strong> (dual GLP‑1/GIP tirzepatide) and <strong>liraglutide</strong> (generic Saxenda
-            style daily injections) for patients preferring established pen devices with hormonal appetite control.
+            <strong>Mounjaro</strong> (dual GLP‑1/GIP tirzepatide) and <strong>liraglutide</strong> (a daily
+            injectable GLP‑1 option) for patients preferring established pen devices with hormonal appetite control.
           </p>
           <p className="mt-4 text-slate-800 leading-relaxed">
             <strong>Tablets:</strong> <strong>Orlistat</strong>, <strong>Xenical</strong>,{" "}

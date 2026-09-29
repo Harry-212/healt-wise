@@ -26,7 +26,7 @@ export default function PharmacyAdvanceContent() {
       fileRef="HW-PHARMACY-ADVANCE-2026"
       title="Pharmacy Advance weight management review"
       subtitle="Independent provider review of Pharmacy Advance: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope:Mounjaro · Wegovy · Saxenda"
+      scopeLabel="Scope:Mounjaro · Wegovy"
       providerName="Pharmacy Advance"
       providerUrl={providerUrl}
       docDetails={[
@@ -100,10 +100,6 @@ export default function PharmacyAdvanceContent() {
           <li>
             <strong>Wegovy</strong> (semaglutide, weekly) — GLP-1 receptor agonist; efficacy and
             risks per official product information.
-          </li>
-          <li>
-            <strong>Saxenda</strong> (liraglutide, daily) — still within the GLP-1 agonist family in
-            marketing copy; availability depends on current clinical assessment.
           </li>
         </ul>
         <p className="mt-3 text-slate-800 leading-relaxed">
@@ -179,8 +175,8 @@ export default function PharmacyAdvanceContent() {
           <PharmacyPriceCompareHint />
           <p className="mt-3 text-slate-800 leading-relaxed">
             Illustrative public price points sometimes quoted online include Wegovy from around{" "}
-            <strong>£105.99</strong>, Mounjaro from around <strong>£154.99</strong>, Saxenda from
-            around <strong>£159.99</strong> — often positioned to include consultation and
+            <strong>£105.99</strong> and Mounjaro from around <strong>£154.99</strong> — often
+            positioned to include consultation and
             prescription issuance in the bundle narrative. Higher strengths and maintenance months
             cost more; compare <strong>like-for-like dose</strong> on Health Wise tables.
           </p>
@@ -279,10 +275,6 @@ export default function PharmacyAdvanceContent() {
             {
               q: "How do I compare Mounjaro price fairly?",
               a: "Use Health Wise Mounjaro comparison for the same mg strength and pack duration so monthly cost is apples-to-apples.",
-            },
-            {
-              q: "If I want Mounjaro, will I still see Saxenda on the site?",
-              a: "Catalogues list multiple GLP-1 lines; the prescriber chooses what is indicated and safe for you — marketing breadth does not mean you can self-select any injectable.",
             },
             {
               q: "Where do I verify GPhC registration?",

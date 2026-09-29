@@ -24,7 +24,7 @@ export default function Pharmacy2uPharmacyContent() {
       fileRef="HW-PHARMACY2U-2026"
       title="Pharmacy2U weight management review"
       subtitle="Independent provider review of Pharmacy2U: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat"
+      scopeLabel="Scope: Mounjaro · Wegovy · Orlistat"
       providerName="Pharmacy2U"
       providerUrl={providerUrl}
       docDetails={[
@@ -75,10 +75,6 @@ export default function Pharmacy2uPharmacyContent() {
           <li>
             <strong>Mounjaro</strong> (tirzepatide) and <strong>Wegovy</strong> (semaglutide) — GLP-1
             class injectables with appetite and glycaemic effects per SmPC.
-          </li>
-          <li>
-            <strong>Saxenda</strong> (liraglutide) — daily injectable in the same broad drug class in
-            marketing materials.
           </li>
           <li>
             <strong>Orlistat</strong> tablets — oral fat-absorption pathway for suitable patients who
@@ -251,7 +247,7 @@ export default function Pharmacy2uPharmacyContent() {
             },
             {
               q: "How should I compare monthly cost with other pharmacies?",
-              a: "Match drug, strength, pens per month, and included services; use Health Wise Mounjaro, Wegovy, and Saxenda comparison pages.",
+              a: "Match drug, strength, pens per month, and included services; use Health Wise Mounjaro and Wegovy comparison pages.",
             },
             {
               q: "Does Pharmacy2U replace NHS specialist obesity services?",

@@ -23,13 +23,13 @@ export default function AsdaOnlineDoctorContent() {
       fileRef="HW-ASDA-2026"
       title="Asda Online Doctor weight management review"
       subtitle="Independent provider review of Asda Online Doctor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat"
+      scopeLabel="Scope: Mounjaro · Wegovy · Orlistat"
       providerName="Asda Online Doctor"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Asda Online Doctor" },
-        { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda · Orlistat" },
+        { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat" },
         { k: "Fulfilment", v: "Home delivery" },
       ]}
       discountCode={discountCode}
@@ -80,7 +80,7 @@ export default function AsdaOnlineDoctorContent() {
           <p className="mt-4 text-slate-800 leading-relaxed">
             Its weight loss service includes access to:
           </p>
-          <Points items={["Mounjaro", "Wegovy", "Saxenda", "Orlistat"]} />
+          <Points items={["Mounjaro", "Wegovy", "Orlistat"]} />
           <p className="mt-4 text-slate-800 leading-relaxed">
             These treatments can help support weight loss by:
           </p>

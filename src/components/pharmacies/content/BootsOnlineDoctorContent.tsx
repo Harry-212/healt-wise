@@ -17,13 +17,13 @@ export default function BootsOnlineDoctorContent() {
       fileRef="HW-BOOTS-2026"
       title="Boots Online Doctor weight management review"
       subtitle="Independent provider review of Boots Online Doctor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Wegovy · Saxenda · Orlistat"
+      scopeLabel="Scope: Wegovy · Orlistat"
       providerName="Boots Online Doctor"
       providerUrl="https://onlinedoctor.boots.com/weight-loss"
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Boots Online Doctor" },
-        { k: "Treatments", v: "Wegovy · Saxenda · Orlistat" },
+        { k: "Treatments", v: "Wegovy · Orlistat" },
         { k: "Fulfilment", v: "Delivery · Collection" },
       ]}
       discountCode={discountCode}
@@ -40,7 +40,7 @@ export default function BootsOnlineDoctorContent() {
         </p>
         <p className="text-slate-800 leading-relaxed">
           That may be why prescription weight loss treatments have moved into mainstream UK
-          healthcare conversations. For some patients, medications like Wegovy or Saxenda may offer
+          healthcare conversations. For some patients, medications like Wegovy may offer
           support where lifestyle changes alone have not been enough.
         </p>
         <p className="text-slate-800 leading-relaxed">
@@ -89,10 +89,10 @@ export default function BootsOnlineDoctorContent() {
               2. Access to prescription options (injectable and oral)
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">
-              Boots Online Doctor may offer treatments including Wegovy, Saxenda, and Orlistat —
+              Boots Online Doctor may offer treatments including Wegovy and Orlistat —
               giving a mix of injections and tablet options.
             </p>
-            <Points items={["Wegovy", "Saxenda", "Orlistat"]} />
+            <Points items={["Wegovy", "Orlistat"]} />
           </div>
           <div className="rounded-sm border border-slate-200/90 bg-[#fbf9f4] p-5">
             <h2 className="font-sans text-lg font-bold text-slate-900 sm:text-xl">
@@ -173,10 +173,6 @@ export default function BootsOnlineDoctorContent() {
             {
               q: "Can I get Wegovy through Boots Online Doctor?",
               a: "Yes, Wegovy may be available following a consultation and approval process.",
-            },
-            {
-              q: "Does Boots Online Doctor offer Saxenda?",
-              a: "Yes, Saxenda may be available, subject to suitability checks.",
             },
             {
               q: "Can Boots deliver weight loss medication to my home?",

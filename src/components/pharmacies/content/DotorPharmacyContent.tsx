@@ -20,13 +20,13 @@ export default function DotorPharmacyContent() {
       fileRef="HW-DOTOR-2026"
       title="Dotor weight management review"
       subtitle="Independent provider review of Dotor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Mounjaro · Wegovy · Saxenda · Orlistat · Xenical · XLS Medical"
+      scopeLabel="Scope: Mounjaro · Wegovy · Orlistat · Xenical · XLS Medical"
       providerName="Dotor"
       providerUrl={providerUrl}
       docDetails={[
         { k: "Published", v: "2026" },
         { k: "Provider", v: "Dotor" },
-        { k: "Treatments", v: "Mounjaro · Wegovy · Saxenda · Orlistat · Xenical · XLS Medical" },
+        { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat · Xenical · XLS Medical" },
         { k: "Fulfilment", v: "In-house dispensing · DPD tracked delivery" },
       ]}
       discountCode={discountCode}
@@ -90,7 +90,7 @@ export default function DotorPharmacyContent() {
               Injectable weight loss treatments
             </h2>
             <p className="mt-3 text-slate-800 leading-relaxed">Available options may include:</p>
-            <Points items={["Mounjaro", "Wegovy", "Saxenda"]} />
+            <Points items={["Mounjaro", "Wegovy"]} />
             <p className="mt-4 text-slate-800 leading-relaxed">
               These medications may support weight loss by reducing appetite, increasing satiety,
               and helping some patients sustain lower calorie intake. That does not mean effortless

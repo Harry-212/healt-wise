@@ -25,7 +25,7 @@ const CURELY_UNCONFIRMED = [
   "Delivery services, delivery times and delivery charges",
   "Packaging and cold-chain handling for injectable pens",
   "Support channels (phone, email, pharmacist follow-up)",
-  "Whether Saxenda, Orlistat, Xenical or Alli are currently offered",
+  "Availability of other weight-management medicines",
   "The steps of the consultation and the eligibility criteria Curely applies",
   "Any first-order offer, voucher or subscription pricing (our tables use list price only)",
 ];

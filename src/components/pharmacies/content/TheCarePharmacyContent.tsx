@@ -24,7 +24,7 @@ export default function TheCarePharmacyContent() {
       fileRef="HW-THECAREPHARMACY-2026"
       title="The Care Pharmacy weight management review"
       subtitle="Independent provider review of The Care Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope: Tirzepatide · Semaglutide · Daily injectable alternatives · Orlistat · Saxenda where listed"
+      scopeLabel="Scope: Tirzepatide · Semaglutide · Daily injectable alternatives · Orlistat"
       providerName="The Care Pharmacy"
       providerUrl={providerUrl}
       docDetails={[
@@ -88,7 +88,6 @@ export default function TheCarePharmacyContent() {
             "Wegovy weekly semaglutide pens from about £99.99 in cited summaries.",
             "Nevolat daily injection alternative from about £124.99.",
             "Orlistat 120 mg capsules from about £39.99.",
-            "Saxenda injectable option near £279.99 in illustrative pricing.",
           ]}
         />
         <p className="mt-4 text-slate-800 leading-relaxed">
