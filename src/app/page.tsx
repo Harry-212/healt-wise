@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     absolute: "Compare Weight Loss Treatment Prices UK | Healthwise360",
   },
   description:
-    "Compare Mounjaro, Wegovy and Saxenda prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
+    "Compare Mounjaro and Wegovy prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
   alternates: {
     canonical: `${siteOrigin()}/`,
   },
   openGraph: {
     title: "Compare Weight Loss Treatment Prices UK | Healthwise360",
     description:
-      "Compare Mounjaro, Wegovy and Saxenda prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
+      "Compare Mounjaro and Wegovy prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
     url: `${siteOrigin()}/`,
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Compare Weight Loss Treatment Prices UK | Healthwise360",
     description:
-      "Compare Mounjaro, Wegovy and Saxenda prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
+      "Compare Mounjaro and Wegovy prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
     images: [SITE_SHARE_IMAGE_SRC],
   },
 };
