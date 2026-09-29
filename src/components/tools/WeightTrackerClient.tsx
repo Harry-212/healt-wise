@@ -65,11 +65,10 @@ import { exportWeightTrackerPdf } from "@/lib/tracker-pdf-export";
 import WeightTrackerStartQuery from "@/components/tools/WeightTrackerStartQuery";
 
 /* ──────────────────────────────────────────────────────── constants */
-const MEDS = ["Wegovy", "Mounjaro", "Saxenda", "Orlistat", "Other"] as const;
+const MEDS = ["Wegovy", "Mounjaro", "Orlistat", "Other"] as const;
 const DOSES: Record<string, string[]> = {
   Wegovy: ["0.25mg", "0.5mg", "1.0mg", "1.7mg", "2.4mg"],
   Mounjaro: ["2.5mg", "5mg", "7.5mg", "10mg", "12.5mg", "15mg"],
-  Saxenda: ["0.6mg", "1.2mg", "1.8mg", "2.4mg", "3.0mg"],
   Orlistat: ["60mg", "120mg"],
   Other: ["Other"],
 };
@@ -88,7 +87,7 @@ const BENEFITS = [
   {
     icon: ShieldCheck,
     title: "Built for UK GLP-1 users",
-    body: "Supports Wegovy, Mounjaro, and Saxenda tracking — with dose-specific fields.",
+    body: "Supports Wegovy and Mounjaro tracking — with dose-specific fields.",
   },
   {
     icon: LayoutDashboard,
@@ -626,7 +625,7 @@ export default function WeightTrackerClient() {
                   Built for UK weight loss treatment users
                 </h2>
                 <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-slate-600 sm:text-base">
-                  Whether you are on Wegovy, Mounjaro, or Saxenda — track every check-in with zero friction.
+                  Whether you are on Wegovy or Mounjaro — track every check-in with zero friction.
                 </p>
 
                 <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
