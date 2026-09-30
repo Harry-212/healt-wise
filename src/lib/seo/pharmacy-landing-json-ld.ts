@@ -112,11 +112,6 @@ const BOOTS_FAQ: FaqItem[] = [
       "Yes, Wegovy may be available through Boots Online Doctor following a consultation and approval process.",
   },
   {
-    question: "Does Boots Online Doctor offer Saxenda?",
-    answer:
-      "Yes, Saxenda appears to be among the weight loss treatments available, subject to suitability checks.",
-  },
-  {
     question: "How much does Boots Online Doctor weight loss treatment cost?",
     answer:
       "Costs may range from around £30–£100+ for tablets and £150–£300+ monthly for injections, depending on treatment and dosage.",
@@ -241,11 +236,6 @@ const CURATE_FAQ: FaqItem[] = [
     question: "Can I get Wegovy from Curate?",
     answer:
       "Yes, Wegovy may be available through Curate after an online consultation and approval.",
-  },
-  {
-    question: "Does Curate offer Saxenda for weight loss?",
-    answer:
-      "Yes, Saxenda appears among available treatment options, subject to suitability checks.",
   },
   {
     question: "How much does Curate weight loss treatment cost?",
@@ -699,9 +689,9 @@ const IQ_DOCTOR_FAQ: FaqItem[] = [
       "Mounjaro may be available after an online consultation and prescriber review, if clinically appropriate.",
   },
   {
-    question: "Does IQ Doctor offer Wegovy and Saxenda?",
+    question: "Does IQ Doctor offer Wegovy?",
     answer:
-      "Yes. Wegovy and Saxenda are among the weight loss treatments commonly listed, subject to suitability and approval.",
+      "Yes. Wegovy is among the weight loss treatments commonly listed, subject to suitability and approval.",
   },
   {
     question: "How does delivery work at IQ Doctor?",
@@ -1090,9 +1080,9 @@ const MY_LONDON_PHARMACY_FAQ: FaqItem[] = [
 
 const NEXT_SCRIPT_FAQ: FaqItem[] = [
   {
-    question: "Does Next Script offer Mounjaro, Wegovy and Saxenda?",
+    question: "Does Next Script offer Mounjaro and Wegovy?",
     answer:
-      "Public listings commonly include GLP-1 weekly injectables and Saxenda-style options subject to clinician approval after your questionnaire and checks.",
+      "Public listings commonly include GLP-1 weekly injectables subject to clinician approval after your questionnaire and checks.",
   },
   {
     question: "Why is there a video consultation on first order?",
@@ -1262,7 +1252,7 @@ const PHARMACY_ADVANCE_FAQ: FaqItem[] = [
   {
     question: "Which GLP-1 treatments might be offered?",
     answer:
-      "Marketing often lists Mounjaro (tirzepatide), Wegovy (semaglutide), and Saxenda (liraglutide) for eligible patients — availability and titration follow prescriber decision, not marketing copy.",
+      "Marketing often lists Mounjaro (tirzepatide) and Wegovy (semaglutide) for eligible patients — availability and titration follow prescriber decision, not marketing copy.",
   },
   {
     question: "Is cold-chain delivery mentioned for injectables?",
@@ -1295,7 +1285,7 @@ const PHARMACY2U_FAQ: FaqItem[] = [
   {
     question: "Which weight-loss medicines appear in marketing?",
     answer:
-      "Typical listings include Mounjaro, Wegovy, Saxenda, and sometimes Orlistat — suitability is decided only after clinician review of your questionnaire.",
+      "Typical listings include Mounjaro, Wegovy, and sometimes Orlistat — suitability is decided only after clinician review of your questionnaire.",
   },
   {
     question: "How fast can orders arrive?",
@@ -1427,7 +1417,7 @@ const PILLS2U_FAQ: FaqItem[] = [
   {
     question: "Which injectables are commonly listed?",
     answer:
-      "Marketing emphasises Mounjaro and Wegovy for suitable adults — Saxenda or tablets may or may not appear seasonally; check the live catalogue.",
+      "Marketing emphasises Mounjaro and Wegovy for suitable adults — tablets may or may not appear seasonally; check the live catalogue.",
   },
   {
     question: "How quickly can parcels arrive?",
@@ -1625,7 +1615,7 @@ const CARE_PHARMACY_FAQ: FaqItem[] = [
   {
     question: "Which weight loss medicines does The Care Pharmacy list?",
     answer:
-      "Marketing references Mounjaro, Wegovy, Nevolat, Orlistat, Saxenda and related lines, all subject to consultation approval.",
+      "Marketing references Mounjaro, Wegovy, Nevolat, Orlistat and related lines, all subject to consultation approval.",
   },
   {
     question: "How does delivery work for cold injectables?",
@@ -1645,7 +1635,7 @@ const CARE_PHARMACY_FAQ: FaqItem[] = [
   {
     question: "What illustrative prices appear?",
     answer:
-      "Summaries cite examples such as Mounjaro from about £149.99, Wegovy from about £99.99, Orlistat from about £39.99 and Saxenda near £279.99 — confirm live checkout.",
+      "Summaries cite examples such as Mounjaro from about £149.99, Wegovy from about £99.99 and Orlistat from about £39.99 — confirm live checkout.",
   },
 ];
 
@@ -1942,7 +1932,7 @@ const WE_PRESCRIBE_FAQ: FaqItem[] = [
   {
     question: "Which treatments are listed on the weight-loss hub?",
     answer:
-      "Examples include alli, Mounjaro, Orlistat, Saxenda, Wegovy and Xenical — subject to suitability.",
+      "Examples include alli, Mounjaro, Orlistat, Wegovy and Xenical — subject to suitability.",
   },
 ];
 
