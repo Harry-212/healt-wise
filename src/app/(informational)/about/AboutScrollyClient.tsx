@@ -41,56 +41,70 @@ function RevealBlock({
   );
 }
 
-type Section = {
-  kicker: string;
-  title: string;
+type SubBlock = {
+  heading: string;
   paragraphs: string[];
-  bullets?: string[];
-  numbered?: string[];
   links?: { label: string; href: string }[];
 };
 
+type Section = {
+  title: string;
+  paragraphs?: string[];
+  subBlocks?: SubBlock[];
+  numbered?: string[];
+  bullets?: string[];
+  trailingParagraph?: { text: string; link?: { label: string; href: string } };
+  links?: { label: string; href: string }[];
+};
+
+/**
+ * Structure and wording taken directly from Jeff's supplied document
+ * ("About Page.docx", sent via WhatsApp 30 Sep 2026) — headings below are
+ * Jeff's own section titles, not authored here. See sheet tab "Exact
+ * wording", Task 15: "Use Jeff's supplied text and links, not a new
+ * rewrite."
+ */
 const SECTIONS: Section[] = [
   {
-    kicker: "Compare provider prices",
     title: "What Healthwise360 does",
-    paragraphs: [
-      "Our comparison pages show published prices from UK weight-management providers. Where information is available, we look beyond the headline figure to identify consultation charges, delivery costs, introductory offers and ongoing prices.",
-      "Prices can change between checks. Each comparison should show when its information was last reviewed, and you should confirm the final cost directly with the provider before paying.",
+    subBlocks: [
+      {
+        heading: "Compare provider prices",
+        paragraphs: [
+          "Our comparison pages show published prices from UK weight-management providers. Where information is available, we look beyond the headline figure to identify consultation charges, delivery costs, introductory offers and ongoing prices.",
+          "Prices can change between checks. Each comparison should show when its information was last reviewed, and you should confirm the final cost directly with the provider before paying.",
+        ],
+      },
+      {
+        heading: "Make pharmacy checks easier",
+        paragraphs: [
+          "The website shows pharmacy registration information where available and explains how to check a supplying pharmacy on the General Pharmaceutical Council (GPhC) register. The company you order from and the pharmacy that dispenses your medicine may be different, so both are worth checking.",
+        ],
+        links: [
+          { label: "Read our pharmacy verification guide", href: "/pharmacy-safety-gphc-verification" },
+        ],
+      },
+      {
+        heading: "Explain the comparison",
+        paragraphs: [
+          "Our guides and tools help readers understand pricing, provider services and questions to raise during a clinical consultation. They are general information, not personal medical advice.",
+        ],
+        links: [
+          { label: "Explore our comparison methodology", href: "/methodology" },
+          { label: "Compare UK providers", href: HOME_COMPARE_HUB_HREF },
+        ],
+      },
     ],
   },
   {
-    kicker: "Make pharmacy checks easier",
-    title: "Verify who actually dispenses your medicine",
-    paragraphs: [
-      "The website shows pharmacy registration information where available and explains how to check a supplying pharmacy on the General Pharmaceutical Council (GPhC) register. The company you order from and the pharmacy that dispenses your medicine may be different, so both are worth checking.",
-    ],
-    links: [
-      { label: "Read our pharmacy verification guide", href: "/pharmacy-safety-gphc-verification" },
-    ],
-  },
-  {
-    kicker: "Explain the comparison",
-    title: "Guides and tools, not personal medical advice",
-    paragraphs: [
-      "Our guides and tools help readers understand pricing, provider services and questions to raise during a clinical consultation. They are general information, not personal medical advice.",
-    ],
-    links: [
-      { label: "Explore our comparison methodology", href: "/methodology" },
-      { label: "Compare UK providers", href: HOME_COMPARE_HUB_HREF },
-    ],
-  },
-  {
-    kicker: "Why we built Healthwise360",
-    title: "A founder who hit the same wall",
+    title: "Why we built Healthwise360",
     paragraphs: [
       "Founder Alistair Greenwood encountered the difficulty of comparing weight-management options while researching his own health and wellbeing. Published prices were easy to find in isolation, but it took more work to understand what they included and what the ongoing cost might be.",
       "His background in senior project management and information analysis shaped the approach to Healthwise360: organise the details, explain the method and show readers where they can check important facts for themselves.",
     ],
   },
   {
-    kicker: "How we compare providers",
-    title: "Published prices, checked dates, and an open methodology",
+    title: "How we compare providers",
     paragraphs: [
       "We use published provider information to record prices and available details about consultations, delivery, dispensing pharmacies and ongoing support. We present that information alongside the date it was checked and explain our approach in a published methodology.",
       "Three principles guide the work:",
@@ -100,11 +114,13 @@ const SECTIONS: Section[] = [
       "Show the source of important checks. Pharmacy registration can be checked against the official GPhC register.",
       "Be clear about uncertainty. Prices, stock and provider terms can change. A comparison is a starting point, not a live checkout quote.",
     ],
+    trailingParagraph: {
+      text: "We welcome corrections from readers and providers. If you find a price, registration detail or description that needs attention, ",
+      link: { label: "please contact us", href: "/contact" },
+    },
   },
   {
-    kicker: "Who Healthwise360 is for",
-    title: "UK adults who want to compare before they commit",
-    paragraphs: [],
+    title: "Who Healthwise360 is for",
     bullets: [
       "compare private weight-management providers before booking a consultation;",
       "understand the difference between a starting offer and ongoing costs;",
@@ -112,13 +128,15 @@ const SECTIONS: Section[] = [
       "compare what providers include, such as consultations, delivery and follow-up support; or",
       "prepare questions for a qualified healthcare professional.",
     ],
+    trailingParagraph: {
+      text: "A prescriber must assess your individual circumstances and decide whether any prescription treatment is appropriate.",
+    },
   },
   {
-    kicker: "How Healthwise360 is funded",
-    title: "Commercial relationships, disclosed",
+    title: "How Healthwise360 is funded",
     paragraphs: [
       "Some links on Healthwise360 may be affiliate links. Where a commercial relationship applies, we disclose it. A provider cannot pay to change a pharmacy verification result or override our published comparison criteria.",
-      "Whether or not a link earns commission, check the provider's current price, terms and pharmacy details before making a decision.",
+      "Whether or not a link earns commission, check the provider's current price, terms and pharmacy details before making a decision. You can read more in our editorial policy and comparison methodology.",
     ],
     links: [
       { label: "Editorial policy", href: "/editorial-policy" },
@@ -222,13 +240,41 @@ export default function AboutScrollyClient() {
         <div className="mx-auto max-w-3xl space-y-14 md:space-y-16">
           {SECTIONS.map((sec, i) => (
             <RevealBlock key={sec.title} delay={Math.min(i * 0.05, 0.2)}>
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
-                {sec.kicker}
-              </p>
               <h2 className="text-balance text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
                 {sec.title}
               </h2>
-              {sec.paragraphs.length > 0 ? (
+
+              {sec.subBlocks ? (
+                <div className="mt-5 space-y-8">
+                  {sec.subBlocks.map((sub) => (
+                    <div key={sub.heading}>
+                      <h3 className="text-base font-semibold text-slate-900">
+                        {sub.heading}
+                      </h3>
+                      <div className="mt-2 space-y-3 text-pretty text-base leading-relaxed text-slate-600">
+                        {sub.paragraphs.map((p, pi) => (
+                          <p key={`${sub.heading}-p-${pi}`}>{p}</p>
+                        ))}
+                      </div>
+                      {sub.links && sub.links.length > 0 ? (
+                        <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+                          {sub.links.map((l) => (
+                            <Link
+                              key={l.href}
+                              href={l.href}
+                              className="text-sm font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+                            >
+                              {l.label} →
+                            </Link>
+                          ))}
+                        </div>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
+              ) : null}
+
+              {sec.paragraphs && sec.paragraphs.length > 0 ? (
                 <div className="mt-4 space-y-4 text-pretty text-base leading-relaxed text-slate-600">
                   {sec.paragraphs.map((p, pi) => (
                     <p key={`${sec.title}-p-${pi}`}>{p}</p>
@@ -249,6 +295,20 @@ export default function AboutScrollyClient() {
                   ))}
                 </ul>
               ) : null}
+              {sec.trailingParagraph ? (
+                <p className="mt-4 text-pretty text-base leading-relaxed text-slate-600">
+                  {sec.trailingParagraph.text}
+                  {sec.trailingParagraph.link ? (
+                    <Link
+                      href={sec.trailingParagraph.link.href}
+                      className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+                    >
+                      {sec.trailingParagraph.link.label}
+                    </Link>
+                  ) : null}
+                  {sec.trailingParagraph.link ? "." : null}
+                </p>
+              ) : null}
               {sec.links && sec.links.length > 0 ? (
                 <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
                   {sec.links.map((l) => (
@@ -264,29 +324,6 @@ export default function AboutScrollyClient() {
               ) : null}
             </RevealBlock>
           ))}
-
-          {/* Who Healthwise360 is for — closing note */}
-          <RevealBlock delay={0.1}>
-            <p className="text-pretty text-sm italic leading-relaxed text-slate-500">
-              A prescriber must assess your individual circumstances and
-              decide whether any prescription treatment is appropriate.
-            </p>
-          </RevealBlock>
-
-          {/* Corrections note (part of "How we compare providers") */}
-          <RevealBlock delay={0.1}>
-            <p className="text-pretty text-base leading-relaxed text-slate-600">
-              We welcome corrections from readers and providers. If you find a
-              price, registration detail or description that needs attention,{" "}
-              <Link
-                href="/contact"
-                className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
-              >
-                please contact us
-              </Link>
-              .
-            </p>
-          </RevealBlock>
         </div>
       </section>
 
