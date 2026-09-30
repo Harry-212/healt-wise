@@ -3,6 +3,7 @@ import AboutScrollyClient from "./AboutScrollyClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import { withDefaultShareImage } from "@/lib/seo/default-share-image";
+import { aboutPageJsonLd } from "@/lib/seo/about-page-seo";
 
 const TITLE = "About Healthwise360 | UK Weight Loss Provider Comparison";
 const DESCRIPTION =
@@ -34,6 +35,10 @@ export default function AboutPage() {
         sectionPath="/helpful-guides"
         pageName="About Healthwise360"
         pagePath="/about"
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageJsonLd()) }}
       />
       <AboutScrollyClient />
     </>
