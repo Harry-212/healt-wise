@@ -45,7 +45,7 @@ export const COMPARE_SAXENDA_PRICE_HERO_IMAGE_ALT =
 /** Cheapest GLP-1 options UK hub hero (`public/cheapest_hero.webp`). */
 export const CHEAPEST_OPTIONS_UK_HERO_IMAGE_SRC = "/cheapest_hero.webp";
 export const CHEAPEST_OPTIONS_UK_HERO_IMAGE_ALT =
-  "Cheapest GLP-1 weight loss treatment prices UK — Mounjaro, Wegovy, and Saxenda";
+  "Cheapest GLP-1 weight loss treatment prices UK — Mounjaro and Wegovy";
 
 /** Compare hub: Mounjaro vs Wegovy (`public/hero wegovy vs mounjaro.webp`). */
 export const COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_SRC =
