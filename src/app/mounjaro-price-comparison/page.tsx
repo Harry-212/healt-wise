@@ -99,8 +99,6 @@ export default function CompareMounjaroPricesUkPage() {
     <>
       
       <BreadcrumbJsonLd
-        sectionName="Prices"
-        sectionPath="/prices"
         pageName="Compare Mounjaro Prices UK (2026)"
         pagePath="/mounjaro-price-comparison"
       />

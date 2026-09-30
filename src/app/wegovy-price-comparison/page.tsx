@@ -110,8 +110,6 @@ export default function CompareWegovyPricesUkPage() {
     <>
       
       <BreadcrumbJsonLd
-        sectionName="Prices"
-        sectionPath="/prices"
         pageName="Compare Wegovy Prices UK (2026)"
         pagePath="/wegovy-price-comparison"
       />

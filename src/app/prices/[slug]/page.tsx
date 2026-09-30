@@ -31,8 +31,6 @@ export default async function PricePage({ params }: Props) {
     return (
       <>
         <BreadcrumbJsonLd
-          sectionName="Prices"
-          sectionPath="/prices"
           pageName={cfg.keyword}
           pagePath={`/prices/${slug}`}
         />
@@ -48,8 +46,6 @@ export default async function PricePage({ params }: Props) {
   return (
     <>
       <BreadcrumbJsonLd
-        sectionName="Prices"
-        sectionPath="/prices"
         pageName={cfg.keyword}
         pagePath={`/prices/${slug}`}
       />
