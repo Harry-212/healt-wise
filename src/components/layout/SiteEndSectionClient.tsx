@@ -78,11 +78,48 @@ const HOME_HUB_LINKS = [
   { href: "/methodology", publicLabel: "Methodology", brandLabel: null },
 ] as const;
 
+const ABOUT_RESEARCH_LINKS = [
+  { href: "/methodology", label: "Our comparison methodology" },
+  { href: "/pharmacy-safety-gphc-verification", label: "Pharmacy safety and GPhC verification" },
+  { href: "/editorial-policy", label: "Our editorial policy" },
+  { href: "/editorial-team/alistair-greenwood", label: "Meet Alistair Greenwood" },
+] as const;
+
 export default function SiteEndSectionClient({ pool, dayKey }: Props) {
   const pathname = usePathname();
   const carouselRef = useRef<HTMLDivElement>(null);
   const isHome = normalizePath(pathname ?? "") === "/";
   const isMethodology = normalizePath(pathname ?? "") === "/methodology";
+  const isAbout = normalizePath(pathname ?? "") === "/about";
+
+  // The About page gets a fixed, non-rotating set of links instead of the
+  // usual "Keep exploring" carousel (client request, 30 Sep 2026).
+  if (isAbout) {
+    return (
+      <section
+        id="how-we-research"
+        className="border-t border-slate-200/90 bg-linear-to-b from-white to-slate-50/90"
+      >
+        <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+            How we research and compare
+          </h2>
+          <ul className="mt-6 flex flex-col gap-3">
+            {ABOUT_RESEARCH_LINKS.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-base font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+                >
+                  {item.label} →
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    );
+  }
 
   const picks = useMemo(() => {
     const path = normalizePath(pathname ?? "");

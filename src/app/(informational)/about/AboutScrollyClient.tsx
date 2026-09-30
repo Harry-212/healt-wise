@@ -47,11 +47,35 @@ type SubBlock = {
   links?: { label: string; href: string }[];
 };
 
+/** A plain run of text, or one linked to `href` — used for sentences that
+ * need an inline link in the middle (e.g. "...the official GPhC register"). */
+type RichPart = { text: string; href?: string };
+
+function RichText({ parts }: { parts: RichPart[] }) {
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.href ? (
+          <Link
+            key={i}
+            href={part.href}
+            className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+          >
+            {part.text}
+          </Link>
+        ) : (
+          <span key={i}>{part.text}</span>
+        ),
+      )}
+    </>
+  );
+}
+
 type Section = {
   title: string;
   paragraphs?: string[];
   subBlocks?: SubBlock[];
-  numbered?: string[];
+  numbered?: (string | RichPart[])[];
   bullets?: string[];
   trailingParagraph?: { text: string; link?: { label: string; href: string } };
   links?: { label: string; href: string }[];
@@ -72,7 +96,7 @@ const SECTIONS: Section[] = [
         heading: "Compare provider prices",
         paragraphs: [
           "Our comparison pages show published prices from UK weight-management providers. Where information is available, we look beyond the headline figure to identify consultation charges, delivery costs, introductory offers and ongoing prices.",
-          "Prices can change between checks. Each comparison should show when its information was last reviewed, and you should confirm the final cost directly with the provider before paying.",
+          "Prices can change between checks. Check the review date shown on each comparison and confirm the final cost directly with the provider before paying.",
         ],
       },
       {
@@ -91,7 +115,7 @@ const SECTIONS: Section[] = [
         ],
         links: [
           { label: "Explore our comparison methodology", href: "/methodology" },
-          { label: "Compare UK providers", href: HOME_COMPARE_HUB_HREF },
+          { label: "Compare Mounjaro and Wegovy", href: HOME_COMPARE_HUB_HREF },
         ],
       },
     ],
@@ -111,7 +135,11 @@ const SECTIONS: Section[] = [
     ],
     numbered: [
       "Look beyond introductory prices. A first-order offer may differ from the amount you pay later.",
-      "Show the source of important checks. Pharmacy registration can be checked against the official GPhC register.",
+      [
+        { text: "Show the source of important checks. Pharmacy registration can be checked against the " },
+        { text: "official GPhC register", href: "https://www.pharmacyregulation.org/registers" },
+        { text: "." },
+      ],
       "Be clear about uncertainty. Prices, stock and provider terms can change. A comparison is a starting point, not a live checkout quote.",
     ],
     trailingParagraph: {
@@ -121,6 +149,7 @@ const SECTIONS: Section[] = [
   },
   {
     title: "Who Healthwise360 is for",
+    paragraphs: ["Healthwise360 is for UK adults who want to:"],
     bullets: [
       "compare private weight-management providers before booking a consultation;",
       "understand the difference between a starting offer and ongoing costs;",
@@ -211,7 +240,7 @@ export default function AboutScrollyClient() {
           style={{ opacity: heroCopyOpacity }}
         >
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400/90">
-            About {SITE_BRAND_NAME}
+            {SITE_BRAND_NAME}
           </p>
           <h1 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl md:leading-[1.08]">
             About Healthwise360
@@ -284,7 +313,9 @@ export default function AboutScrollyClient() {
               {sec.numbered && sec.numbered.length > 0 ? (
                 <ol className="mt-5 list-inside list-decimal space-y-2.5 text-pretty text-base leading-relaxed text-slate-600 marker:font-semibold marker:text-emerald-600">
                   {sec.numbered.map((n, ni) => (
-                    <li key={`${sec.title}-n-${ni}`}>{n}</li>
+                    <li key={`${sec.title}-n-${ni}`}>
+                      {Array.isArray(n) ? <RichText parts={n} /> : n}
+                    </li>
                   ))}
                 </ol>
               ) : null}
@@ -383,26 +414,26 @@ export default function AboutScrollyClient() {
             <h2 className="text-balance text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
               Healthwise360 at a glance
             </h2>
-            <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-              <table className="w-full border-collapse text-left text-sm">
+            <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+              <table className="w-full table-fixed border-collapse text-left text-sm">
                 <thead>
                   <tr className="border-b border-slate-200 bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-500">
-                    <th className="px-4 py-3">Fact</th>
-                    <th className="px-4 py-3">Detail</th>
+                    <th className="w-[30%] px-4 py-3 sm:w-1/3">Fact</th>
+                    <th className="w-[70%] px-4 py-3 sm:w-2/3">Detail</th>
                   </tr>
                 </thead>
                 <tbody>
                   {AT_A_GLANCE.map((row) => (
                     <tr key={row.fact} className="border-b border-slate-100 last:border-0">
-                      <td className="px-4 py-3 align-top font-medium text-slate-900">
+                      <td className="break-words px-4 py-3 align-top font-medium text-slate-900">
                         {row.fact}
                       </td>
-                      <td className="px-4 py-3 align-top text-slate-600">{row.detail}</td>
+                      <td className="break-words px-4 py-3 align-top text-slate-600">{row.detail}</td>
                     </tr>
                   ))}
                   <tr>
-                    <td className="px-4 py-3 align-top font-medium text-slate-900">Contact</td>
-                    <td className="px-4 py-3 align-top text-slate-600">
+                    <td className="break-words px-4 py-3 align-top font-medium text-slate-900">Contact</td>
+                    <td className="break-words px-4 py-3 align-top text-slate-600">
                       <Link
                         href="/contact"
                         className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
@@ -442,7 +473,7 @@ export default function AboutScrollyClient() {
                     </span>
                   </summary>
                   <div className="border-t border-slate-100 px-5 pb-5 pt-1 text-sm leading-relaxed text-slate-600 md:px-6 md:pb-6">
-                    {item.answer}
+                    {item.answerRich ? <RichText parts={item.answerRich} /> : item.answer}
                   </div>
                 </details>
               ))}
@@ -472,7 +503,7 @@ export default function AboutScrollyClient() {
               href={HOME_COMPARE_HUB_HREF}
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-900/20 transition hover:bg-emerald-400"
             >
-              Compare UK providers
+              Compare Mounjaro and Wegovy
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
             <Link
