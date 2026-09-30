@@ -21,7 +21,7 @@ export default function CheapestOptionsHero() {
               {SITE_BRAND_NAME}
             </p>
             <p className="mt-1.5 text-xs font-semibold uppercase tracking-wide text-white/55">
-              UK private · Mounjaro · Wegovy · Saxenda
+              UK private · Mounjaro · Wegovy
             </p>
             <h1 className="mt-2 max-w-4xl text-balance text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl">
               Cheapest GLP-1 weight loss treatment in the UK — price snapshot

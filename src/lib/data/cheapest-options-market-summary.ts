@@ -3,10 +3,6 @@ import {
   MOUNJARO_UK_COMPARE_PROVIDERS,
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import {
-  SAXENDA_UK_COMPARE_LAST_UPDATED,
-  SAXENDA_UK_COMPARE_PROVIDERS,
-} from "@/lib/data/saxenda-uk-compare-providers";
-import {
   wegovyPriceAmount,
   WEGOVY_UK_COMPARE_LAST_UPDATED,
   WEGOVY_UK_COMPARE_PROVIDERS,
@@ -38,7 +34,6 @@ export type CheapestOptionsMarketSummary = {
   providerCounts: {
     wegovy: number;
     mounjaro: number;
-    saxenda: number;
   };
   wegovy: {
     min025: number;
@@ -52,12 +47,6 @@ export type CheapestOptionsMarketSummary = {
     median25: number;
     providerAtLowest25: string;
   };
-  saxenda: {
-    minPack1: number;
-    maxPack1: number;
-    medianPack1: number;
-    providerAtLowestPack1: string;
-  };
   /** For bar chart — same units are not clinically interchangeable. */
   entryPriceChart: { label: string; amount: number; detail: string }[];
 };
@@ -65,7 +54,6 @@ export type CheapestOptionsMarketSummary = {
 export function getCheapestOptionsMarketSummary(): CheapestOptionsMarketSummary {
   const wegovy = WEGOVY_UK_COMPARE_PROVIDERS;
   const mounjaro = MOUNJARO_UK_COMPARE_PROVIDERS;
-  const saxenda = SAXENDA_UK_COMPARE_PROVIDERS;
 
   const wegovy025 = wegovy.flatMap((p) => {
     const amount = wegovyPriceAmount(p.prices["0.25mg"]);
@@ -77,26 +65,21 @@ export function getCheapestOptionsMarketSummary(): CheapestOptionsMarketSummary 
   });
   const mounj25 = mounjaro.map((p) => p.prices["2.5mg"]);
   const mounj15 = mounjaro.map((p) => p.prices["15mg"]);
-  const sax1 = saxenda.map((p) => p.packs["1"].packPrice);
 
   const min025 = Math.min(...wegovy025);
   const max024 = Math.max(...wegovy024);
   const min25 = Math.min(...mounj25);
   const max15 = Math.max(...mounj15);
-  const minPack1 = Math.min(...sax1);
-  const maxPack1 = Math.max(...sax1);
 
   const pW = argMinBy(
     wegovy,
     (p) => wegovyPriceAmount(p.prices["0.25mg"]) ?? Number.POSITIVE_INFINITY,
   );
   const pM = argMinBy(mounjaro, (p) => p.prices["2.5mg"]);
-  const pS = argMinBy(saxenda, (p) => p.packs["1"].packPrice);
 
   const snapshotNote = [
     `Wegovy table: ${WEGOVY_UK_COMPARE_LAST_UPDATED}.`,
     `Mounjaro table: ${MOUNJARO_UK_COMPARE_LAST_UPDATED}.`,
-    `Saxenda table: ${SAXENDA_UK_COMPARE_LAST_UPDATED}.`,
   ].join(" ");
 
   return {
@@ -104,7 +87,6 @@ export function getCheapestOptionsMarketSummary(): CheapestOptionsMarketSummary 
     providerCounts: {
       wegovy: wegovy.length,
       mounjaro: mounjaro.length,
-      saxenda: saxenda.length,
     },
     wegovy: {
       min025: min025,
@@ -118,12 +100,6 @@ export function getCheapestOptionsMarketSummary(): CheapestOptionsMarketSummary 
       median25: median(mounj25),
       providerAtLowest25: pM?.name ?? "—",
     },
-    saxenda: {
-      minPack1: minPack1,
-      maxPack1: maxPack1,
-      medianPack1: median(sax1),
-      providerAtLowestPack1: pS?.name ?? "—",
-    },
     entryPriceChart: [
       {
         label: "Wegovy",
@@ -134,11 +110,6 @@ export function getCheapestOptionsMarketSummary(): CheapestOptionsMarketSummary 
         label: "Mounjaro",
         amount: min25,
         detail: "Lowest listed 2.5 mg pen in snapshot",
-      },
-      {
-        label: "Saxenda",
-        amount: minPack1,
-        detail: "Lowest listed 1-pen pack in snapshot",
       },
     ],
   };

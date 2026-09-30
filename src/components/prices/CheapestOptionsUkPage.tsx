@@ -78,14 +78,10 @@ export default function CheapestOptionsUkPage() {
             People searching{" "}
             <strong className="font-semibold text-slate-800">
               Mounjaro price UK
-            </strong>
-            ,{" "}
+            </strong>{" "}
+            or{" "}
             <strong className="font-semibold text-slate-800">
               cheapest Wegovy UK
-            </strong>
-            , or{" "}
-            <strong className="font-semibold text-slate-800">
-              Saxenda cost private
             </strong>{" "}
             usually want two things: a ballpark for private listings and a way
             to compare pharmacies fairly. This hub summarises patterns from our
@@ -95,7 +91,7 @@ export default function CheapestOptionsUkPage() {
           </p>
           <p className="mt-3 text-sm text-slate-500">{s.snapshotNote}</p>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
             {(
               [
                 {
@@ -115,15 +111,6 @@ export default function CheapestOptionsUkPage() {
                   who: s.wegovy.providerAtLowest025,
                   accent: "ring-teal-200/80 shadow-teal-900/5",
                   bar: "bg-teal-500",
-                },
-                {
-                  title: "Saxenda UK sample",
-                  count: s.providerCounts.saxenda,
-                  hint: "Lowest 1-pen pack in table",
-                  amount: s.saxenda.minPack1,
-                  who: s.saxenda.providerAtLowestPack1,
-                  accent: "ring-sky-200/80 shadow-sky-900/5",
-                  bar: "bg-sky-500",
                 },
               ] as const
             ).map((card) => (
@@ -214,27 +201,6 @@ export default function CheapestOptionsUkPage() {
                 </p>
               </div>
             </li>
-            <li className="flex gap-4 rounded-2xl border border-slate-200/90 bg-slate-50/50 p-5 md:p-6">
-              <span
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-100 text-sm font-bold text-sky-800"
-                aria-hidden
-              >
-                3
-              </span>
-              <div>
-                <p className="font-semibold text-slate-900">
-                  Saxenda: daily pen — pack size changes £ per day
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  Our small Saxenda sample lists 1-pen packs from about{" "}
-                  <strong className="text-slate-800">£{s.saxenda.minPack1}</strong>{" "}
-                  to{" "}
-                  <strong className="text-slate-800">£{s.saxenda.maxPack1}</strong>.
-                  Multi-pen packs often reduce stress cost; see the full Saxenda
-                  grid for £/mg-style columns.
-                </p>
-              </div>
-            </li>
           </ul>
         </SectionInner>
       </section>
@@ -281,9 +247,8 @@ export default function CheapestOptionsUkPage() {
           </h2>
           <p className="mt-3 max-w-3xl text-slate-600">
             Straight answers for search topics such as private{" "}
-            <strong className="text-slate-800">semaglutide</strong>,{" "}
-            <strong className="text-slate-800">tirzepatide</strong>, and{" "}
-            <strong className="text-slate-800">Saxenda pens</strong> — with the
+            <strong className="text-slate-800">semaglutide</strong> and{" "}
+            <strong className="text-slate-800">tirzepatide</strong> — with the
             same clinical caveat: prescribing is not decided on price alone.
           </p>
           <div className="mt-8 space-y-3">
