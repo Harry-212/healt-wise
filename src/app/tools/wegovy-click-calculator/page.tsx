@@ -245,6 +245,28 @@ export default function WegovyClickCalculatorPage() {
           </div>
 
           <div className="mt-14 rounded-2xl border border-slate-200 bg-slate-50/80 p-6">
+            <p className="text-sm font-semibold text-slate-900">
+              About This Calculator
+            </p>
+            <p className="mt-2 leading-relaxed text-slate-700">
+              Healthwise360 provides the Wegovy Click Calculator as an
+              educational reference. The calculator does not prescribe
+              Wegovy, decide whether Wegovy is suitable for you, select your
+              dose, or recommend increasing or decreasing your dose, and it
+              does not replace advice from a healthcare professional. It is
+              intended to help explain the mathematical relationship between
+              a FlexTouch pen strength and a dose that has already been
+              prescribed.
+            </p>
+            <dl className="mt-4 grid grid-cols-1 gap-x-6 gap-y-1 text-sm text-slate-600">
+              <div>
+                <dt className="font-semibold text-slate-900">Created by</dt>
+                <dd>Alistair Campbell, with our development team</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div className="mt-14 rounded-2xl border border-slate-200 bg-slate-50/80 p-6">
             <p className="text-sm font-semibold text-slate-900">Continue your journey</p>
             <ul className="mt-3 flex flex-col gap-2 text-sm text-slate-700 sm:flex-row sm:flex-wrap sm:gap-x-6">
               <li>

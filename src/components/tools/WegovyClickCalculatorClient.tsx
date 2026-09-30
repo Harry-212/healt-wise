@@ -200,7 +200,10 @@ export default function WegovyClickCalculatorClient() {
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-300/95 sm:text-base">
               Use this independent calculator to view a mathematical estimate of how a selected Wegovy FlexTouch pen strength relates to a prescribed dose.
             </p>
-            
+            <p className="mx-auto mt-3 text-[0.7rem] text-slate-400">
+              Created by Alistair Campbell with our development team.
+            </p>
+
             {/* Tab pills in hero */}
             <div className="mt-8 flex flex-wrap gap-2 justify-center rounded-full bg-white/10 p-1 shadow-xl ring-1 ring-white/15 backdrop-blur-sm">
               {TABS.map((t) => (
