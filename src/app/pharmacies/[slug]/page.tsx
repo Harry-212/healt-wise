@@ -86,12 +86,6 @@ import {
   MOUNJARO_DOSE_KEYS,
   MOUNJARO_UK_COMPARE_LAST_UPDATED,
 } from "@/lib/data/mounjaro-uk-compare-providers";
-import {
-  getSaxendaCompareProviderById,
-  SAXENDA_COMPARE_DOSE_KEYS,
-  SAXENDA_PACK_KEYS,
-  SAXENDA_UK_COMPARE_LAST_UPDATED,
-} from "@/lib/data/saxenda-uk-compare-providers";
 import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
 import { TrustpilotStarIcon } from "@/components/compare/TrustpilotRatingPresentation";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -187,8 +181,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const w = getWegovyCompareProviderById(slug);
   const m = getMounjaroCompareProviderById(slug);
-  const sx = getSaxendaCompareProviderById(slug);
-  const name = w?.name ?? m?.name ?? sx?.name;
+  const name = w?.name ?? m?.name;
   if (!name) return { title: "Pharmacy" };
 
   return withDefaultShareImage({
@@ -1199,10 +1192,9 @@ export default async function PharmacyProfilePage({ params }: Props) {
 
   const w = getWegovyCompareProviderById(slug);
   const m = getMounjaroCompareProviderById(slug);
-  const s = getSaxendaCompareProviderById(slug);
-  if (!w && !m && !s) notFound();
+  if (!w && !m) notFound();
 
-  const displayName = w?.name ?? m?.name ?? s!.name;
+  const displayName = w?.name ?? m!.name;
 
   if (slug === "asda-online-doctor") {
     return (
@@ -1235,7 +1227,6 @@ export default async function PharmacyProfilePage({ params }: Props) {
   const meds: string[] = [];
   if (m) meds.push("Mounjaro");
   if (w) meds.push("Wegovy");
-  if (s) meds.push("Saxenda");
   const profileTitle = `${displayName} — ${meds.join(" & ")} UK prices (2026)`;
   const profileDescription = `Independent snapshot: ${displayName} — checked ${meds.join(" and ")} pen prices and delivery notes on Healthwise360.`;
 
@@ -1298,14 +1289,9 @@ export default async function PharmacyProfilePage({ params }: Props) {
               Mounjaro from £{mounjaroStartingPrice(m)}
             </span>
           )}
-          {s && (
-            <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-900">
-              Saxenda from £{s.packs["1"].packPrice.toFixed(2)} (1 pen)
-            </span>
-          )}
           <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
             <TrustpilotStarIcon className="h-3.5 w-3.5 shrink-0" />
-            <span>Trustpilot {(w ?? m ?? s)!.rating.toFixed(1)}</span>
+            <span>Trustpilot {(w ?? m)!.rating.toFixed(1)}</span>
           </span>
         </div>
       </header>
@@ -1384,84 +1370,6 @@ export default async function PharmacyProfilePage({ params }: Props) {
         </section>
       )}
 
-      {s && (
-        <section className="border-t border-slate-200 py-10" aria-labelledby="saxenda-prices-heading">
-          <h2
-            id="saxenda-prices-heading"
-            className="text-xl font-bold text-slate-900"
-          >
-            Saxenda pack prices
-          </h2>
-          <p className="mt-2 text-sm text-slate-600">
-            1 / 3 / 5 pens — {SAXENDA_UK_COMPARE_LAST_UPDATED} snapshot.
-          </p>
-          <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="border-b border-slate-200 bg-slate-50 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  <th className="px-4 py-3">Pack</th>
-                  <th className="px-4 py-3">Pack price</th>
-                  <th className="px-4 py-3">£/mg</th>
-                  <th className="px-4 py-3">Repeat</th>
-                </tr>
-              </thead>
-              <tbody>
-                {SAXENDA_PACK_KEYS.map((k) => {
-                  const row = s.packs[k];
-                  const label =
-                    k === "1" ? "1 pen" : k === "3" ? "3 pens" : "5 pens";
-                  return (
-                    <tr key={k} className="border-b border-slate-100 last:border-0">
-                      <td className="px-4 py-3 text-slate-800">{label}</td>
-                      <td className="px-4 py-3 tabular-nums font-medium text-slate-900">
-                        £{row.packPrice.toFixed(2)}
-                      </td>
-                      <td className="px-4 py-3 tabular-nums text-slate-700">
-                        £{row.pricePerMg.toFixed(2)}/mg
-                      </td>
-                      <td className="px-4 py-3 tabular-nums text-slate-800">
-                        £{row.repeatPrice.toFixed(2)}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-2 text-xs text-slate-500">
-            Delivery: {s.packs["1"].deliverySummary} · GPhC ref:{" "}
-            {s.packs["1"].gphcRef} · Updated {s.updatedLabel}
-          </p>
-
-          <h3 className="mt-10 text-lg font-bold text-slate-900">
-            Daily dose steps
-          </h3>
-          <p className="mt-1 text-sm text-slate-600">
-            Order-style prices at each titration — same snapshot as the compare
-            table.
-          </p>
-          <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="border-b border-slate-200 bg-slate-50 text-left text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  <th className="px-4 py-3">Daily dose</th>
-                  <th className="px-4 py-3">Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                {SAXENDA_COMPARE_DOSE_KEYS.map((k) => (
-                  <tr key={k} className="border-b border-slate-100 last:border-0">
-                    <td className="px-4 py-3 text-slate-800">{k} mg</td>
-                    <td className="px-4 py-3 tabular-nums font-medium text-slate-900">
-                      £{s.doses[k]}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-      )}
 
       <section className="border-t border-slate-200 py-10" aria-labelledby="ops-heading">
         <h2 id="ops-heading" className="text-xl font-bold text-slate-900">
