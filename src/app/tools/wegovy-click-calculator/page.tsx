@@ -261,7 +261,7 @@ export default function WegovyClickCalculatorPage() {
             <dl className="mt-4 grid grid-cols-1 gap-x-6 gap-y-1 text-sm text-slate-600">
               <div>
                 <dt className="font-semibold text-slate-900">Created by</dt>
-                <dd>Alistair Campbell, with our development team</dd>
+                <dd>Alistair Greenwood, with our development team</dd>
               </div>
             </dl>
           </div>

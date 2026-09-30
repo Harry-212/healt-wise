@@ -201,7 +201,7 @@ export default function WegovyClickCalculatorClient() {
               Use this independent calculator to view a mathematical estimate of how a selected Wegovy FlexTouch pen strength relates to a prescribed dose.
             </p>
             <p className="mx-auto mt-3 text-[0.7rem] text-slate-400">
-              Created by Alistair Campbell with our development team.
+              Created by Alistair Greenwood with our development team.
             </p>
 
             {/* Tab pills in hero */}
