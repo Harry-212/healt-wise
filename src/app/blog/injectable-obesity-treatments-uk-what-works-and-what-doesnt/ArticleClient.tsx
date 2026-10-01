@@ -172,7 +172,7 @@ export default function ArticleClient() {
                 signalling.
               </p>
               <p>
-                Wegovy and Saxenda act through the GLP-1 pathway, helping you
+                Wegovy acts through the GLP-1 pathway, helping you
                 feel fuller for longer and, in many cases, eat less.
               </p>
               <p>
@@ -222,7 +222,7 @@ export default function ArticleClient() {
                 faster access.
               </p>
               <p>
-                Private prescribing for Wegovy, Saxenda, or Mounjaro may run
+                Private prescribing for Mounjaro and Wegovy may run
                 from roughly £150 to over £300 monthly. Costs can rise over
                 time.
               </p>
