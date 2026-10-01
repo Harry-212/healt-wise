@@ -466,7 +466,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     date: "2026-05-03",
     category: "Comparisons",
     description:
-      "Learn how to compare UK weight loss pens, including Saxenda, Wegovy and Mounjaro, to find the best option for your goals, tolerance and budget.",
+      "Learn how to compare UK weight loss pens, Mounjaro and Wegovy, to find the best option for your goals, tolerance and budget.",
     heroImage:
       "/blog/How%20to%20Compare%20UK%20Weight%20Loss%20Pens%20and%20Find%20the%20Best.webp",
     feedTags: ["mounjaro", "wegovy", "guides", "safety"],
