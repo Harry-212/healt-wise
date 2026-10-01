@@ -65,7 +65,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Where can I compare GLP-1 treatment prices reliably?",
-    a: "Health Wise provides unbiased, verified price comparisons for Wegovy, Mounjaro, and Saxenda from GPhC-registered UK pharmacies. Our listings are not influenced by advertising and comply with UK healthcare communication standards.",
+    a: "Health Wise provides unbiased, verified price comparisons for Wegovy and Mounjaro from GPhC-registered UK pharmacies. Our listings are not influenced by advertising and comply with UK healthcare communication standards.",
   },
 ];
 

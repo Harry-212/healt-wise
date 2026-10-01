@@ -133,7 +133,7 @@ export default function ArticleClient() {
             >
               <p className="text-lg md:text-xl">
                 When you hear about weight loss treatment options in the UK, you
-                might immediately think of products like Wegovy or Saxenda.
+                might immediately think of products like Wegovy.
                 However, Mounjaro KwikPen is another contender that has recently
                 drawn attention among people looking to manage their weight more
                 effectively. If you are interested in understanding the Mounjaro

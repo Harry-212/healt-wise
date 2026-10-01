@@ -108,7 +108,7 @@ export default function WeightLossTreatmentUkCompleteGuidePage() {
         name: "How do I compare weight loss treatment prices safely?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Use an independent comparison platform that covers all dose steps, shows GPhC verification and Trustpilot ratings alongside prices, and discloses hidden fees. Healthwise360 covers GPhC registered pharmacies across Mounjaro, Wegovy and Saxenda dose strengths.",
+          text: "Use an independent comparison platform that covers all dose steps, shows GPhC verification and Trustpilot ratings alongside prices, and discloses hidden fees. Healthwise360 covers GPhC registered pharmacies across Mounjaro and Wegovy dose strengths.",
         },
       },
       {

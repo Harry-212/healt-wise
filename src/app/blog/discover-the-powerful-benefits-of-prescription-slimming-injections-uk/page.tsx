@@ -9,16 +9,16 @@ const HERO_IMAGE = `${siteOrigin()}/blog/Discover%20the%20Powerful%20Benefits%20
 export const metadata: Metadata = {
   title: "Prescription Slimming Treatments: Benefits",
   description:
-    "Prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility and safety.",
+    "Prescription slimming injections in the UK: how Wegovy and Mounjaro work, eligibility and safety.",
   keywords:
-    "prescription slimming injections UK, Wegovy, Mounjaro, Saxenda, GLP-1, weight loss injections UK",
+    "prescription slimming injections UK, Wegovy, Mounjaro, GLP-1, weight loss injections UK",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
     title: "Prescription Slimming Treatments: Benefits",
     description:
-      "Prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility and safety.",
+      "Prescription slimming injections in the UK: how Wegovy and Mounjaro work, eligibility and safety.",
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-05-22T00:00:00.000Z",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Prescription Slimming Treatments: Benefits",
     description:
-      "Prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility and safety.",
+      "Prescription slimming injections in the UK: how Wegovy and Mounjaro work, eligibility and safety.",
     images: [HERO_IMAGE],
   },
 };
@@ -44,7 +44,7 @@ export default function PrescriptionSlimmingInjectionsUkPage() {
     "@type": "Article",
     headline: "Prescription Slimming Treatments: Benefits",
     description:
-      "UK prescription slimming injections (Wegovy, Mounjaro, Saxenda): mechanisms, eligibility, benefits, risks, NHS vs private — informational only, not medical advice.",
+      "UK prescription slimming injections (Wegovy, Mounjaro): mechanisms, eligibility, benefits, risks, NHS vs private — informational only, not medical advice.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
     publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: `${siteOrigin()}/logo-health-wise.webp` } },

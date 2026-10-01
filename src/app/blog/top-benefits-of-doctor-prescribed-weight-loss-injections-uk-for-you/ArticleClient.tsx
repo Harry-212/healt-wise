@@ -40,7 +40,7 @@ export default function ArticleClient() {
     headline:
       "Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You",
     description:
-      "A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda.",
+      "A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy or Mounjaro.",
     image: [`${siteOrigin()}${HERO_SRC}`],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
     publisher: {
@@ -75,7 +75,7 @@ export default function ArticleClient() {
         name: "Which weight loss treatment is most effective?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Mounjaro often shows the strongest average weight loss in trials, but Wegovy and Saxenda may still be the better fit for some patients depending on tolerability, cost, and access.",
+          text: "Mounjaro often shows the strongest average weight loss in trials, but Wegovy may still be the better fit for some patients depending on tolerability, cost, and access.",
         },
       },
       {
@@ -185,8 +185,8 @@ export default function ArticleClient() {
               </p>
               <p>
                 That gap is partly why doctor prescribed weight loss treatments
-                have gained traction across the UK. Treatments such as Wegovy,
-                Mounjaro and Saxenda are not cosmetic shortcuts. They are
+                have gained traction across the UK. Treatments such as Wegovy
+                and Mounjaro are not cosmetic shortcuts. They are
                 prescription medicines intended for people with clinical need
                 and medical supervision.
               </p>
@@ -293,7 +293,7 @@ export default function ArticleClient() {
             >
               <p>
                 Depending on eligibility, a UK doctor may discuss options such
-                as Wegovy, Mounjaro or Saxenda. Access often depends on BMI
+                as Wegovy or Mounjaro. Access often depends on BMI
                 thresholds, weight-related health risks, and whether treatment
                 is being pursued through NHS specialist pathways or private
                 prescribing.
@@ -330,7 +330,7 @@ export default function ArticleClient() {
               <p>
                 That sounds impressive. And it is. But averages can mislead.
                 Tolerability, access, cost and personal response matter too. For
-                some people, Wegovy or Saxenda may still be the better fit.
+                some people, Wegovy may still be the better fit.
               </p>
               <p>
                 Effectiveness is not only about headline percentages. It is also
@@ -483,8 +483,8 @@ export default function ArticleClient() {
                     What can my doctor give me for weight loss in the UK?
                   </h3>
                   <p>
-                    Depending on your eligibility, a doctor may discuss Wegovy,
-                    Mounjaro or Saxenda. Suitability depends on your medical
+                    Depending on your eligibility, a doctor may discuss Wegovy
+                    or Mounjaro. Suitability depends on your medical
                     history and prescribing criteria.
                   </p>
                 </div>
@@ -572,7 +572,7 @@ export default function ArticleClient() {
             <GuideSharePanel
               url={shareUrl}
               title="Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You"
-              description="A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy, Mounjaro or Saxenda."
+              description="A clear UK guide to the benefits of doctor prescribed weight loss treatments, when they may help, and what to expect from Wegovy or Mounjaro."
             />
           </div>
 

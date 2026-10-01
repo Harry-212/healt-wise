@@ -115,7 +115,7 @@ export default function ArticleClient() {
 
             <BlogArticleHeroImage
               src={HERO_SRC}
-              alt="Prescription slimming injections in the UK — Wegovy, Mounjaro and Saxenda under clinical oversight"
+              alt="Prescription slimming injections in the UK — Wegovy and Mounjaro under clinical oversight"
             />
             <div
               id="guide-article-hero-end"
@@ -154,7 +154,7 @@ export default function ArticleClient() {
               <p>That may be where the real shift starts.</p>
               <p>
                 In the UK, prescription slimming injections generally refer to
-                regulated medicines such as Wegovy, Mounjaro, and Saxenda. These
+                regulated medicines such as Wegovy and Mounjaro. These
                 are not over the counter products. They require prescribing
                 oversight.
               </p>
@@ -184,7 +184,7 @@ export default function ArticleClient() {
                 Most prescription slimming injections act through hormone
                 pathways linked to appetite.
               </p>
-              <p>Wegovy and Saxenda work through GLP-1 receptor activity.</p>
+              <p>Wegovy works through GLP-1 receptor activity.</p>
               <p>Mounjaro acts on GLP-1 and GIP pathways.</p>
               <p>
                 That extra mechanism may partly explain why some researchers
@@ -221,17 +221,7 @@ export default function ArticleClient() {
               id="options"
               heading="What are your options in the UK?"
             >
-              <p>Three names dominate most conversations.</p>
-
-              <SubHeading darkMode={darkMode}>Saxenda</SubHeading>
-              <p>Saxenda is taken daily.</p>
-              <p>Some people dislike daily injections.</p>
-              <p>Others prefer the routine.</p>
-              <p>It depends.</p>
-              <p>
-                Weight loss outcomes may be moderate, though for some patients
-                it can still be clinically meaningful.
-              </p>
+              <p>Two names dominate most conversations.</p>
 
               <SubHeading darkMode={darkMode}>Wegovy</SubHeading>
               <p>
@@ -540,7 +530,7 @@ export default function ArticleClient() {
             <GuideSharePanel
               url={shareUrl}
               title="Discover the Powerful Benefits of Prescription Slimming Treatments UK"
-              description="Prescription slimming injections in the UK: how Wegovy, Mounjaro and Saxenda work, eligibility, benefits, risks and costs."
+              description="Prescription slimming injections in the UK: how Wegovy and Mounjaro work, eligibility, benefits, risks and costs."
             />
           </div>
 

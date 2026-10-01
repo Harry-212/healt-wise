@@ -1154,8 +1154,8 @@ export default function ArticleClient() {
                       PenCompare
                     </a>{" "}
                     is a UK comparison site for prescription weight loss
-                    treatments, covering Mounjaro (tirzepatide), Wegovy
-                    (semaglutide), and Saxenda (liraglutide) across 48 regulated
+                    treatments, covering Mounjaro (tirzepatide) and Wegovy
+                    (semaglutide) across 48 regulated
                     providers. It allows users to sort by price, reviews, or
                     provider name, check GPhC registration status, use an
                     eligibility checker, and read basic educational content. It

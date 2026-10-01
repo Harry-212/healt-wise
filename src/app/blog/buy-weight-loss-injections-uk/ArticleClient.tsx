@@ -164,7 +164,7 @@ export default function ArticleClient() {
               <p>
                 The main prescription injections discussed in the UK private
                 market are Mounjaro, Wegovy, and liraglutide-based options such
-                as Nevolat or Saxenda-style treatments. Mounjaro contains
+                as Nevolat. Mounjaro contains
                 tirzepatide, which works on GIP and GLP-1 pathways. Wegovy
                 contains semaglutide, which works on GLP-1. Liraglutide is an
                 older GLP-1 medicine and usually requires daily injections

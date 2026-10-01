@@ -241,7 +241,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     date: "2026-06-09",
     category: "Guides",
     description:
-      "The complete UK guide to weight loss treatment 2026 covering GLP-1 treatments, how they work, NHS vs private costs, eligibility, Mounjaro, Wegovy and Saxenda explained.",
+      "The complete UK guide to weight loss treatment 2026 covering GLP-1 treatments, how they work, NHS vs private costs, eligibility, Mounjaro and Wegovy explained.",
     heroImage: "/blog/weight-loss-treatment-uk-complete-guide-hero.png",
     feedTags: ["guides", "wegovy", "mounjaro", "safety"],
   },
@@ -348,7 +348,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     date: "2026-05-07",
     category: "Guides",
     description:
-      "Discover the top benefits of doctor prescribed weight loss treatments in the UK, including appetite control, medical support, and what to ask your clinician before choosing Wegovy, Mounjaro or Saxenda.",
+      "Discover the top benefits of doctor prescribed weight loss treatments in the UK, including appetite control, medical support, and what to ask your clinician before choosing Wegovy or Mounjaro.",
     heroImage:
       "/blog/Ttop%20Benefits%20of%20Doctor%20Prescribed%20Weight%20Loss%20Injections%20UK%20for%20You%20-%20Copy.webp",
     feedTags: ["wegovy", "mounjaro", "guides", "how-it-works"],
@@ -359,7 +359,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     date: "2026-05-06",
     category: "Guides",
     description:
-      "Injectable obesity treatments in the UK: understand how Wegovy, Mounjaro and Saxenda work, NHS vs private access, costs, side effects and realistic expectations.",
+      "Injectable obesity treatments in the UK: understand how Wegovy and Mounjaro work, NHS vs private access, costs, side effects and realistic expectations.",
     heroImage: "/blog/injectable%20obesity%20treatments%20uk.avif",
     feedTags: ["wegovy", "mounjaro", "guides", "how-it-works"],
   },
@@ -455,7 +455,7 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     date: "2026-05-04",
     category: "Guides",
     description:
-      "Discover the powerful benefits of prescription slimming treatments in the UK, including how Wegovy, Mounjaro and Saxenda support appetite, blood sugar and long-term progress.",
+      "Discover the powerful benefits of prescription slimming treatments in the UK, including how Wegovy and Mounjaro support appetite, blood sugar and long-term progress.",
     heroImage:
       "/blog/Discover%20the%20Powerful%20Benefits%20of%20Prescription%20Slimming%20Injections%20UK.webp",
     feedTags: ["mounjaro", "wegovy", "guides", "safety"],

@@ -250,7 +250,7 @@ export default function ArticleClient() {
               <p>
                 Interest in GLP-1 supplements is rising because more people are
                 learning about medical weight loss treatment. Many users are
-                comparing Mounjaro, Wegovy, Saxenda, weight loss tablets, and
+                comparing Mounjaro, Wegovy, weight loss tablets, and
                 new oral GLP-1 options. If you are at that stage, it helps to{" "}
                 <Link
                   href="/compare/wegovy-vs-mounjaro"

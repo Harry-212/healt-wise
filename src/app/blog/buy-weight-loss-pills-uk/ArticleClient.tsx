@@ -460,7 +460,7 @@ export default function ArticleClient() {
                 <li>
                   Want a treatment with stronger average weight loss results
                 </li>
-                <li>Are already comparing Mounjaro, Wegovy, or Saxenda</li>
+                <li>Are already comparing Mounjaro or Wegovy</li>
                 <li>Want a more structured private weight loss programme</li>
               </ul>
               <p>
@@ -819,7 +819,7 @@ export default function ArticleClient() {
                     {
                       cells: [
                         "Injection treatment",
-                        "Mounjaro, Wegovy, Saxenda",
+                        "Mounjaro, Wegovy",
                         "Stronger medical weight loss support",
                         "Yes",
                         "Eligible adults wanting structured treatment",

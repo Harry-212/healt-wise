@@ -112,7 +112,7 @@ export default function ArticleClient() {
 
             <BlogArticleHeroImage
               src={HERO_SRC}
-              alt="Injectable obesity treatments in the UK — Wegovy, Mounjaro and Saxenda under medical supervision"
+              alt="Injectable obesity treatments in the UK — Wegovy and Mounjaro under medical supervision"
             />
             <div
               id="guide-article-hero-end"
@@ -523,7 +523,7 @@ export default function ArticleClient() {
             <GuideSharePanel
               url={shareUrl}
               title="Injectable Obesity Treatments UK: What Works and What Doesn't"
-              description="Injectable obesity treatments in the UK: NHS vs private access, Wegovy, Mounjaro and Saxenda, eligibility, risks and realistic expectations."
+              description="Injectable obesity treatments in the UK: NHS vs private access, Wegovy and Mounjaro, eligibility, risks and realistic expectations."
             />
           </div>
 

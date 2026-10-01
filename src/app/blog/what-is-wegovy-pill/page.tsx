@@ -128,7 +128,7 @@ export default function WhatIsWegovyPillPage() {
         name: "Can I take Wegovy Pill with injectable GLP-1 treatment?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. You should not take oral Wegovy with injectable Wegovy, Mounjaro, Ozempic, Saxenda, or another GLP-1 treatment unless a qualified healthcare professional specifically advises it.",
+          text: "No. You should not take oral Wegovy with injectable Wegovy, Mounjaro, Ozempic, or another GLP-1 treatment unless a qualified healthcare professional specifically advises it.",
         },
       },
     ],

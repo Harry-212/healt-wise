@@ -87,7 +87,7 @@ const REFERENCES = [
   {
     label: "Compare verified UK pharmacies — Health Wise",
     description:
-      "Browse our verified pharmacy listings for Wegovy, Mounjaro, and Saxenda, with pricing, availability, and compliance status.",
+      "Browse our verified pharmacy listings for Wegovy and Mounjaro, with pricing, availability, and compliance status.",
     href: "/prices/cheapest-options-uk",
     external: false,
   },

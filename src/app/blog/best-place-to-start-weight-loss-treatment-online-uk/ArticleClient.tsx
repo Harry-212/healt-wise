@@ -347,7 +347,7 @@ export default function ArticleClient() {
               <p>A fair comparison usually asks:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>
-                  Is the price for Mounjaro, Wegovy, Saxenda, or another
+                  Is the price for Mounjaro, Wegovy, or another
                   treatment?
                 </li>
                 <li>Is the price based on the starter dose only?</li>
@@ -545,7 +545,7 @@ export default function ArticleClient() {
                   <strong
                     className={darkMode ? "text-slate-200" : "text-slate-800"}
                   >
-                    Compare Mounjaro, Wegovy and Saxenda:
+                    Compare Mounjaro and Wegovy:
                   </strong>{" "}
                   Understand the main treatment differences before you focus
                   only on price.

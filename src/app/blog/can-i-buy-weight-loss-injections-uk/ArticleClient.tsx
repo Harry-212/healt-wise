@@ -218,8 +218,7 @@ export default function ArticleClient() {
               <p>
                 Weight loss injections are prescription treatments used to
                 support weight management in eligible adults. In the UK, the
-                most commonly discussed options include Wegovy, Mounjaro, and
-                Saxenda-style treatments.
+                most commonly discussed options include Wegovy and Mounjaro.
               </p>
               <p>
                 These medicines may help reduce appetite and support fullness.
@@ -576,7 +575,7 @@ export default function ArticleClient() {
               <ul className="list-disc space-y-3 pl-5">
                 <li>Wegovy</li>
                 <li>Mounjaro</li>
-                <li>Saxenda-style or liraglutide-based treatment</li>
+                <li>Liraglutide-based treatment</li>
               </ul>
               <p>
                 However, the user should not choose based only on popularity. A
@@ -624,7 +623,7 @@ export default function ArticleClient() {
                 Step 2: Compare Treatment Options
               </h3>
               <p>
-                Understand whether you are comparing Mounjaro, Wegovy, Saxenda,
+                Understand whether you are comparing Mounjaro, Wegovy,
                 or another route. These are not identical treatments.
               </p>
 

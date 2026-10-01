@@ -723,7 +723,7 @@ export default function ArticleClient() {
             >
               <p>
                 No. Users should not combine oral Wegovy with injectable Wegovy,
-                Mounjaro, Ozempic, Saxenda, or another GLP-1 medicine unless
+                Mounjaro, Ozempic, or another GLP-1 medicine unless
                 specifically advised by a qualified healthcare professional.
               </p>
               <p>
@@ -1015,7 +1015,7 @@ export default function ArticleClient() {
                   </h3>
                   <p>
                     No. You should not take oral Wegovy with injectable Wegovy,
-                    Mounjaro, Ozempic, Saxenda, or another GLP-1 treatment
+                    Mounjaro, Ozempic, or another GLP-1 treatment
                     unless a qualified healthcare professional specifically
                     advises it.
                   </p>

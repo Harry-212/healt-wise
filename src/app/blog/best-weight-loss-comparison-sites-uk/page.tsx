@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords:
-    "best weight loss comparison site UK, Mounjaro price comparison UK, Wegovy comparison UK, weight loss treatment comparison website UK, GLP-1 comparison site UK, compare Mounjaro price UK, GPhC verified pharmacy comparison, Mounjaro Wegovy Saxenda comparison website, best site to compare weight loss treatment UK, weight loss treatment price comparison tool UK, independent weight loss comparison UK, private prescription comparison UK, pencompare uk, compare weight loss injection UK 2026",
+    "best weight loss comparison site UK, Mounjaro price comparison UK, Wegovy comparison UK, weight loss treatment comparison website UK, GLP-1 comparison site UK, compare Mounjaro price UK, GPhC verified pharmacy comparison, Mounjaro Wegovy comparison website, best site to compare weight loss treatment UK, weight loss treatment price comparison tool UK, independent weight loss comparison UK, private prescription comparison UK, pencompare uk, compare weight loss injection UK 2026",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
@@ -76,7 +76,7 @@ export default function BestWeightLossComparisonSitesPage() {
         name: "What is PenCompare and how does it differ from other comparison sites?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "PenCompare is a UK comparison site for prescription weight loss treatments covering Mounjaro (tirzepatide), Wegovy (semaglutide), and Saxenda (liraglutide) across 48 regulated providers. It allows users to sort by price, reviews, or provider name, check GPhC registration status, use an eligibility checker, and read basic educational content. It is positioned as a Compare the Market for weight loss injections: functional and broad rather than deeply editorial.",
+          text: "PenCompare is a UK comparison site for prescription weight loss treatments covering Mounjaro (tirzepatide) and Wegovy (semaglutide) across 48 regulated providers. It allows users to sort by price, reviews, or provider name, check GPhC registration status, use an eligibility checker, and read basic educational content. It is positioned as a Compare the Market for weight loss injections: functional and broad rather than deeply editorial.",
         },
       },
       {

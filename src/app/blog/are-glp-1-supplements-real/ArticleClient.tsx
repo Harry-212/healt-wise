@@ -227,7 +227,7 @@ export default function ArticleClient() {
                 media marketing.
               </p>
               <p>
-                Many UK users are comparing Mounjaro, Wegovy, Saxenda,
+                Many UK users are comparing Mounjaro, Wegovy,
                 semaglutide tablets, weight loss tablets, and private pharmacy
                 providers. Health Wise already focuses on helping users{" "}
                 <Link

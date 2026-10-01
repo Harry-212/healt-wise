@@ -238,7 +238,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 Some services also offer liraglutide-based options, including
-                generic or Saxenda-style treatment. Asda&rsquo;s overview page
+                generic treatment. Asda&rsquo;s overview page
                 lists Mounjaro, Wegovy, and Nevolat, while Superdrug lists
                 Wegovy, Mounjaro, and liraglutide-based options on its weight
                 loss page. Simple Online Pharmacy, Chemist4U, and several

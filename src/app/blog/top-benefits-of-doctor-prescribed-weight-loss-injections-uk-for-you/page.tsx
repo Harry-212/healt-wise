@@ -10,7 +10,7 @@ const HERO_IMAGE = `${siteOrigin()}${TOP_BENEFITS_WEIGHT_LOSS_INJECTIONS_HERO}`;
 export const metadata: Metadata = {
   title: 'Doctor-Prescribed Weight Loss: Top Benefits',
   description: 'The top benefits of doctor-prescribed weight loss treatments in the UK: appetite control, medical support and safety.',
-  keywords: 'doctor prescribed weight loss treatments uk, Wegovy, Mounjaro, Saxenda, GLP-1, prescription obesity treatment, UK weight loss treatments',
+  keywords: 'doctor prescribed weight loss treatments uk, Wegovy, Mounjaro, GLP-1, prescription obesity treatment, UK weight loss treatments',
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
