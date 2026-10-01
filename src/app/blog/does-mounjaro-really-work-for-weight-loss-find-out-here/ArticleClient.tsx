@@ -110,23 +110,21 @@ export default function ArticleClient() {
             className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}
           >
             <p className="text-lg md:text-xl">
-              You may have seen tirzepatide, sold under the brand name Mounjaro,
-              generating buzz lately as a promising diabetes medication that
-              some people also use off label for significant weight reduction.
+              You may have seen tirzepatide, sold under the brand name
+              Mounjaro, generating buzz lately as a weight loss treatment.
+              Mounjaro (tirzepatide) is authorised in the UK for type 2
+              diabetes and, for eligible adults, weight management.{" "}
+              <a
+                href="https://www.gov.uk/government/news/mhra-authorises-diabetes-drug-mounjaro-tirzepatide-for-weight-management-and-weight-loss"
+                className="text-emerald-600 hover:underline"
+              >
+                Its UK weight-management indication was authorised on 8
+                November 2023.
+              </a>{" "}
               But how does Mounjaro work for weight loss, and is it right for
               you? Before jumping in, it is helpful to understand its effects on
               your body, potential side effects, and the importance of pairing
               any medical treatment with healthy lifestyle choices.
-            </p>
-            <p>
-              Mounjaro was approved by the US Food and Drug Administration (FDA)
-              in 2022 as a treatment for type 2 diabetes, although many adults
-              use it to help with weight management. Mounjaro contains
-              tirzepatide, which is unique because it targets two hormones (GLP
-              1 and GIP) that regulate blood sugar and appetite. This dual
-              action approach has shown notable results when combined with a
-              balanced diet, exercise, and ongoing support from healthcare
-              professionals.
             </p>
 
             <GuideSection

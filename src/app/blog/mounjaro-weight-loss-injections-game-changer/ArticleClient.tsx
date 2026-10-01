@@ -279,9 +279,16 @@ export default function ArticleClient() {
               heading="Consider Who Might Benefit"
             >
               <p>
-                Mounjaro is currently licensed for individuals with Type 2
-                diabetes. However, off label usage for weight management has
-                become a common topic of conversation. If you have a BMI over 30
+                Mounjaro (tirzepatide) is authorised in the UK for type 2
+                diabetes and, for eligible adults, weight management.{" "}
+                <a
+                  href="https://www.gov.uk/government/news/mhra-authorises-diabetes-drug-mounjaro-tirzepatide-for-weight-management-and-weight-loss"
+                  className="font-medium text-brand-primary underline"
+                >
+                  Its UK weight-management indication was authorised on 8
+                  November 2023.
+                </a>{" "}
+                If you have a BMI over 30
                 or are dealing with obesity related conditions like high blood
                 pressure or elevated cholesterol, you might be a candidate.
                 Women and men with long histories of weight struggles often look

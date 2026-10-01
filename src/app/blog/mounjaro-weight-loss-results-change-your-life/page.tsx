@@ -7,14 +7,14 @@ const PATH = '/blog/mounjaro-weight-loss-results-change-your-life';
 const HERO_IMAGE = `${siteOrigin()}/blog/Mounjaro%20Weight%20Loss%20Results%20That%20May%20Finally%20Change%20Your%20Life.webp`;
 
 export const metadata: Metadata = {
-  title: 'Mounjaro Weight Loss Results: What to Expect',
+  title: 'Mounjaro weight loss results: how to read the evidence',
   description: 'Understand Mounjaro weight loss study findings, patient accounts and the limits of comparing results.',
   keywords: 'mounjaro weight loss results',
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: 'Mounjaro Weight Loss Results: What to Expect',
+    title: 'Mounjaro weight loss results: how to read the evidence',
     description: 'Understand Mounjaro weight loss study findings, patient accounts and the limits of comparing results.',
     url: `${siteOrigin()}${PATH}`,
     type: 'article',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mounjaro Weight Loss Results: What to Expect',
+    title: 'Mounjaro weight loss results: how to read the evidence',
     description: 'Understand Mounjaro weight loss study findings, patient accounts and the limits of comparing results.',
     images: [HERO_IMAGE],
   },
@@ -38,7 +38,7 @@ export default function MounjaroWeightLossResultsPage() {
   const ARTICLE_SCHEMA = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Mounjaro Weight Loss Results: What to Expect',
+    headline: 'Mounjaro weight loss results: how to read the evidence',
     description: 'What to expect from Mounjaro (tirzepatide) weight loss results: mechanisms, real-world stories, side effects, maintenance after treatment, and professional oversight—informational only, not medical advice.',
     image: [HERO_IMAGE],
     author: { '@type': 'Organization', name: 'Healthwise360 Research Team' },
@@ -111,7 +111,7 @@ export default function MounjaroWeightLossResultsPage() {
       <BreadcrumbJsonLd
         sectionName="Blog"
         sectionPath="/blog"
-        pageName="Mounjaro Weight Loss Results: What to Expect"
+        pageName="Mounjaro weight loss results: how to read the evidence"
         pagePath={PATH}
       />
 <script

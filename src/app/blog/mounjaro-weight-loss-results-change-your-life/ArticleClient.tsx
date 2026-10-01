@@ -97,7 +97,7 @@ export default function ArticleClient() {
             <h1
               className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? "text-white" : "text-slate-900"}`}
             >
-              Mounjaro Weight Loss Results That May Finally Change Your Life
+              Mounjaro weight loss results: how to read the evidence
             </h1>
             <div
               className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}
@@ -835,8 +835,8 @@ export default function ArticleClient() {
           <div className="mt-10">
             <GuideSharePanel
               url={shareUrl}
-              title="Mounjaro Weight Loss Results That May Finally Change Your Life"
-              description="Discover what drives Mounjaro weight loss results, real stories, side effects, and how to maintain progress."
+              title="Mounjaro weight loss results: how to read the evidence"
+              description="Understand Mounjaro weight loss study findings, patient accounts and the limits of comparing results."
             />
           </div>
 
