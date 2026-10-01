@@ -155,10 +155,9 @@ export default function ArticleClient() {
                 treatments currently available in the UK are GLP 1 receptor
                 agonists, a class of medicines that work by regulating appetite,
                 slowing digestion, and influencing the brain&apos;s satiety
-                signals. The three principal options available privately are{" "}
-                <strong>Mounjaro (tirzepatide)</strong>,{" "}
-                <strong>Wegovy (semaglutide)</strong>, and{" "}
-                <strong>Saxenda (liraglutide)</strong>.
+                signals. The two principal options available privately are{" "}
+                <strong>Mounjaro (tirzepatide)</strong> and{" "}
+                <strong>Wegovy (semaglutide)</strong>.
               </p>
               <p>Based on clinical trial data:</p>
               <ul className="list-disc space-y-2 pl-5">
@@ -170,11 +169,6 @@ export default function ArticleClient() {
                 <li>
                   Wegovy produces average weight loss of{" "}
                   <strong>12 to 15%</strong> of body weight, based on STEP
-                  trials.
-                </li>
-                <li>
-                  Saxenda produces average weight loss of{" "}
-                  <strong>5 to 8%</strong> of body weight, based on SCALE
                   trials.
                 </li>
               </ul>
@@ -282,7 +276,7 @@ export default function ArticleClient() {
                 The Difference Between GLP 1 and GIP plus GLP 1
               </SubHeading>
               <p>
-                Mounjaro (tirzepatide) differs from Wegovy and Saxenda in one
+                Mounjaro (tirzepatide) differs from Wegovy in one
                 clinically significant way: it acts on two receptors
                 simultaneously.
               </p>
@@ -297,8 +291,7 @@ export default function ArticleClient() {
                 together, Mounjaro produces a synergistic effect that exceeds
                 the appetite and weight loss response seen with GLP 1 alone,
                 which is reflected in the higher average weight loss benchmarks
-                from the SURMOUNT trials compared to the STEP (Wegovy) and SCALE
-                (Saxenda) data.
+                from the SURMOUNT trials compared to the Wegovy Data.
               </p>
               <p>
                 This dual mechanism is why Mounjaro is considered a next
@@ -429,47 +422,6 @@ export default function ArticleClient() {
                 .
               </p>
 
-              <SubHeading darkMode={darkMode}>Saxenda (Liraglutide)</SubHeading>
-              <GuideTable
-                headers={["Feature", "Detail"]}
-                rows={[
-                  { cells: ["Manufacturer", "Novo Nordisk"] },
-                  { cells: ["Mechanism", "GLP 1 receptor agonist"] },
-                  { cells: ["Frequency", "Once daily"] },
-                  {
-                    cells: [
-                      "Available doses",
-                      "0.6 mg, 1.2 mg, 1.8 mg, 2.4 mg, 3.0 mg",
-                    ],
-                  },
-                  { cells: ["NICE approved", "Yes"] },
-                  {
-                    cells: [
-                      "NHS available",
-                      "Yes, available through some NHS weight management services",
-                    ],
-                  },
-                  {
-                    cells: ["Average weight loss", "5 to 8% of body weight"],
-                    highlight: true,
-                  },
-                ]}
-              />
-              <p>
-                Saxenda is the original GLP 1 weight loss treatment and has the
-                longest clinical track record of the three. It was approved in
-                the UK before Wegovy and Mounjaro and remains an established
-                option, particularly for patients whose prescribers prefer a
-                more conservative starting point or for whom daily dosing is
-                clinically preferable.
-              </p>
-              <p>
-                The lower average weight loss benchmark relative to the newer
-                weekly options reflects both the older generation of the
-                compound and the single receptor mechanism. However, individual
-                responses vary, and some patients achieve significant outcomes
-                on liraglutide.
-              </p>
             </GuideSection>
 
             <div className="my-10">
@@ -721,7 +673,7 @@ export default function ArticleClient() {
                 Private Market Pricing Overview (2026)
               </SubHeading>
               <p>
-                All three treatments follow a titration pricing structure. Costs
+                Both treatments follow a titration pricing structure. Costs
                 increase with each dose step.
               </p>
               <GuideTable
@@ -732,14 +684,6 @@ export default function ArticleClient() {
                   "Annual (Maintenance)",
                 ]}
                 rows={[
-                  {
-                    cells: [
-                      "Saxenda",
-                      "£79 to £120",
-                      "£150 to £290",
-                      "£1,800 to £3,480",
-                    ],
-                  },
                   {
                     cells: [
                       "Wegovy",
@@ -1040,7 +984,7 @@ export default function ArticleClient() {
                     individual responses vary, and &quot;most effective&quot;
                     for any specific person depends on their biology, health
                     history, and tolerance. Wegovy is the second highest
-                    efficacy option, followed by Saxenda.
+                    efficacy option.
                   </p>
                 </div>
                 <div>

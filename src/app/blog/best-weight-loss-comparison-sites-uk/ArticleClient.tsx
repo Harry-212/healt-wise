@@ -291,7 +291,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 That is not a coincidence. The UK private GLP-1 market for
-                Mounjaro, Wegovy, and Saxenda has grown at extraordinary speed
+                Mounjaro and Wegovy has grown at extraordinary speed
                 since 2023, and wherever patients go looking for information,
                 comparison platforms follow. Some of them are genuinely useful.
                 Some exist primarily to send you somewhere that pays them a
@@ -773,7 +773,7 @@ export default function ArticleClient() {
               </h3>
               <p>
                 MedEazy runs dedicated pricing pages per medication and per
-                dose. Mounjaro, Wegovy, and Saxenda each have their own section,
+                dose. Mounjaro and Wegovy each have their own section,
                 with prices updated daily and discount codes displayed where
                 pharmacies offer them.
               </p>
@@ -883,9 +883,9 @@ export default function ArticleClient() {
                 Where It Falls Short
               </h3>
               <p>
-                Monj is heavily weighted toward Mounjaro. Wegovy and Saxenda
+                Monj is heavily weighted toward Mounjaro. Wegovy
                 coverage is present but not the primary focus, which makes the
-                platform less useful for users genuinely weighing up all three
+                platform less useful for users genuinely weighing up both
                 treatment options. Clinical education is limited. There are no
                 interactive tools.
               </p>
@@ -943,9 +943,9 @@ export default function ArticleClient() {
                 Where It Falls Short
               </h3>
               <p>
-                The Wegovy-specific focus is also the limitation. Mounjaro and
-                Saxenda coverage is minimal, which means WegoCompare is not
-                useful as a three-treatment comparison platform. There is no
+                The Wegovy-specific focus is also the limitation. Mounjaro
+                coverage is minimal, which means WegoCompare is not
+                useful as a comparison platform for both treatments. There is no
                 live price comparison tool across multiple pharmacies.
               </p>
 
@@ -1118,8 +1118,7 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    1. Is there one website that compares all three, Mounjaro,
-                    Wegovy, and Saxenda, equally?
+                    1. Is there one website that compares Mounjaro and Wegovy equally?
                   </h3>
                   <p>
                     Click.Compare, MedEazy, and PenCompare all cover all three
