@@ -151,7 +151,7 @@ export default function GlasgowLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Most successful? NHSGGC CWMS and Weight Watchers combo, with some summaries citing 10 to 15% loss sustained for engaged participants. Mounjaro Scotland cost? £180 to £320 per month privately. Kelly Clarkson? GLP 1 plus lifestyle, per interviews. Cheaper alternative? Saxenda, often priced £130 to £200.
+                  Most successful? NHSGGC CWMS and Weight Watchers combo, with some summaries citing 10 to 15% loss sustained for engaged participants. Mounjaro Scotland cost? £180 to £320 per month privately. Kelly Clarkson? GLP 1 plus lifestyle, per interviews. Cheaper alternative? Structured NHS weight management or lifestyle support.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -231,7 +231,7 @@ export default function GlasgowLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Wegovy (semaglutide) is a weekly pen and trials often cite around 12 to 15% loss at about 68 weeks. Mounjaro (tirzepatide) is dual hormone, and some studies show higher average loss. Saxenda is a daily injection with more modest outcomes for many people and can be cheaper.
+                  Wegovy (semaglutide) is a weekly pen and trials often cite around 12 to 15% loss at about 68 weeks. Mounjaro (tirzepatide) is dual hormone, and some studies show higher average loss.
                 </p>
 
                 <p className={p}>

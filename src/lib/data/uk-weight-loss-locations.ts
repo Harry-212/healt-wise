@@ -152,7 +152,7 @@ function buildLongtails(
     `GLP-1 injections ${name} UK`,
     `Mounjaro ${name} weight loss`,
     `Wegovy ${name} private prescription`,
-    `Saxenda ${name} UK`,
+    `private weight loss treatment ${name}`,
     `online weight loss clinic ${name}`,
     `${nhs} weight management programme ${name}`,
     `obesity specialist ${name} UK`,

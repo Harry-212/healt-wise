@@ -244,7 +244,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
                 </p>
 
                 <p className={p}>
-                  Wegovy (semaglutide), Mounjaro (tirzepatide), and Saxenda (liraglutide) are among the most talked-about options in Newcastle at the moment. They are all:
+                  Wegovy (semaglutide) and Mounjaro (tirzepatide) are among the most talked-about options in Newcastle at the moment. They are all:
                 </p>
 
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>

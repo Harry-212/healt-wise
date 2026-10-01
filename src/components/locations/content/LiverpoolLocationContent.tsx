@@ -276,9 +276,6 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
                   Tirzepatide (Mounjaro): dual GLP 1 and GIP action, about 20.9% loss versus Wegovy about 14.9% in SURMOUNT 1 versus STEP 1 headline tables. Faster titration risks more nausea, so licensed paths start at 2.5 mg.
                 </p>
 
-                <p className={p}>
-                  Liraglutide (Saxenda): daily pen, milder about 8% loss bands in trial summaries. Gateway option for needle anxiety when clinicians agree.
-                </p>
 
                 <p className={subh}>Liverpool private access reality</p>
                 <p className={p}>
@@ -318,10 +315,6 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Mounjaro</td>
                         <td className={`border px-3 py-2 ${tableBorder}`}>About £199 at 2.5 mg toward about £299 at 15 mg</td>
-                      </tr>
-                      <tr>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>Saxenda</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About £165 to £220 during titration</td>
                       </tr>
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>NHS</td>

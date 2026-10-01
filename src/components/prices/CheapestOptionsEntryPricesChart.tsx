@@ -38,7 +38,7 @@ export function CheapestOptionsEntryPricesChart({ data }: { data: Row[] }) {
           <div
             className="h-full w-full"
             role="img"
-            aria-label="Bar chart of lowest listed entry prices for Wegovy, Mounjaro, and Saxenda"
+            aria-label="Bar chart of lowest listed entry prices for Wegovy and Mounjaro"
           >
             <BarChart
               width={dims.width}

@@ -8,10 +8,8 @@ import { useState } from "react";
 import type { CompareMedicationTab } from "@/lib/routes/compare-page-layout";
 import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
 import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable";
-import SaxendaUkCompareTable from "@/components/saxenda/SaxendaUkCompareTable";
 import WegovyCompareChartsSection from "@/components/compare/WegovyCompareChartsSection";
 import MounjaroCompareChartsSection from "@/components/compare/MounjaroCompareChartsSection";
-import SaxendaCompareChartsSection from "@/components/compare/SaxendaCompareChartsSection";
 import {
   WEGOVY_UK_COMPARE_PROVIDERS,
   type WegovyUkProviderCompare,
@@ -20,16 +18,11 @@ import {
   MOUNJARO_UK_COMPARE_PROVIDERS,
   type MounjaroUkProviderCompare,
 } from "@/lib/data/mounjaro-uk-compare-providers";
-import {
-  SAXENDA_UK_COMPARE_PROVIDERS,
-  SAXENDA_UK_COMPARE_LAST_UPDATED,
-} from "@/lib/data/saxenda-uk-compare-providers";
 
-/** UK brand names — used in triple-compare tab UI */
+/** UK brand names — used in compare tab UI */
 const TAB_LABEL: Record<CompareMedicationTab, string> = {
   mounjaro: "Mounjaro",
   wegovy: "Wegovy",
-  saxenda: "Saxenda",
 };
 
 const TAB_ACCENTS: Record<
@@ -55,14 +48,6 @@ const TAB_ACCENTS: Record<
     idle:
       "bg-white text-teal-950 ring-2 ring-teal-200/90 hover:ring-teal-400 hover:shadow-[0_6px_24px_-8px_rgba(13,148,136,0.3)] hover:-translate-y-0.5 active:translate-y-0",
     iconIdle: "bg-teal-100 text-teal-700",
-    iconActive: "bg-white/20 text-white",
-  },
-  saxenda: {
-    active:
-      "bg-linear-to-br from-sky-500 via-sky-600 to-sky-800 text-white shadow-[0_8px_30px_-6px_rgba(2,132,199,0.5)] ring-2 ring-sky-200/90",
-    idle:
-      "bg-white text-sky-950 ring-2 ring-sky-200/90 hover:ring-sky-400 hover:shadow-[0_6px_24px_-8px_rgba(2,132,199,0.3)] hover:-translate-y-0.5 active:translate-y-0",
-    iconIdle: "bg-sky-100 text-sky-800",
     iconActive: "bg-white/20 text-white",
   },
 };
@@ -120,9 +105,6 @@ function MedPanel({
       {med === "mounjaro" && (
         <MounjaroUkCompareTable providers={mounjaroProviders} lastUpdated={mounjaroLastUpdated ?? "—"} />
       )}
-      {med === "saxenda" && (
-        <SaxendaUkCompareTable providers={SAXENDA_UK_COMPARE_PROVIDERS} lastUpdated={SAXENDA_UK_COMPARE_LAST_UPDATED} />
-      )}
 
       <section className="mt-12 min-w-0 rounded-2xl border border-slate-200/80 bg-slate-50/50 px-3 py-8 sm:px-4 md:px-8 md:py-12">
         <div className="mb-6 flex min-w-0 flex-col gap-2 sm:mb-8 sm:flex-row sm:items-center sm:gap-3">
@@ -136,9 +118,6 @@ function MedPanel({
         )}
         {med === "mounjaro" && (
           <MounjaroCompareChartsSection providers={mounjaroProviders} />
-        )}
-        {med === "saxenda" && (
-          <SaxendaCompareChartsSection providers={SAXENDA_UK_COMPARE_PROVIDERS} />
         )}
       </section>
 
@@ -222,9 +201,7 @@ export default function CompareMedPriceTabs({
       ? (mounjaroLastUpdated ?? "—")
       : active === "wegovy"
         ? (wegovyLastUpdated ?? "—")
-        : active === "saxenda"
-          ? SAXENDA_UK_COMPARE_LAST_UPDATED
-          : null;
+        : null;
 
   return (
     <section

@@ -169,7 +169,7 @@ export default function BirminghamLocationContent({ loc, shareUrl }: Props) {
               >
                 <p className={`text-lg md:text-xl ${p}`}>
                   Top weight loss treatments in Birmingham include medical
-                  injections like Wegovy, Mounjaro, or Saxenda available via
+                  injections like Wegovy or Mounjaro available via
                   private or NHS routes plus lifestyle programs and, for severe
                   cases, bariatric surgeries such as gastric sleeve or band at
                   hospitals like Spire Parkway. Start with{" "}

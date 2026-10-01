@@ -300,10 +300,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
                   explains GIP plus GLP 1 basics.
                 </p>
 
-                <p className={`text-base font-semibold ${strong}`}>Saxenda (liraglutide) starter option</p>
-                <p className={p}>
-                  Daily injection, milder effect (about 6 to 8% loss in SCALE style summaries). Better for some GLP 1 newcomers or people who prefer a thinner pen. Leicester private: about £160 monthly in many quotes.
-                </p>
+
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="non-injection" heading="Non injection alternatives: pills and programmes">

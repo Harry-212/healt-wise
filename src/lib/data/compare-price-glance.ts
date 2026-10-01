@@ -6,7 +6,6 @@ import {
   wegovyPriceAmount,
   type WegovyUkProviderCompare,
 } from "./wegovy-uk-compare-providers";
-import { SAXENDA_UK_COMPARE_PROVIDERS } from "./saxenda-uk-compare-providers";
 import type { CompareMedicationTab } from "@/lib/routes/compare-page-layout";
 
 export type DoseSummary = {
@@ -49,7 +48,6 @@ function summarise(dose: string, values: (number | null)[]): DoseSummary | null 
 /**
  * One row per medicine for the versus-page price summary, computed from the
  * same live data as the tabs so the figures always match the tables.
- * Saxenda has no per-strength figures here while its prices are re-checked.
  */
 export function buildPriceGlance(
   medications: CompareMedicationTab[],
@@ -58,7 +56,6 @@ export function buildPriceGlance(
     mounjaroChecked: string;
     wegovy: WegovyUkProviderCompare[];
     wegovyChecked: string;
-    saxendaChecked: string;
   },
 ): PriceGlanceRow[] {
   return medications.map((med) => {
@@ -75,31 +72,20 @@ export function buildPriceGlance(
         higher: summarise(last, data.mounjaro.map((p) => p.prices[last])),
       };
     }
-    if (med === "wegovy") {
-      return {
-        medication: med,
-        label: "Wegovy",
-        schedule: "Once weekly",
-        providerCount: data.wegovy.length,
-        checked: data.wegovyChecked,
-        starter: summarise(
-          "0.25mg",
-          data.wegovy.map((p) => wegovyPriceAmount(p.prices["0.25mg"])),
-        ),
-        higher: summarise(
-          "2.4mg",
-          data.wegovy.map((p) => wegovyPriceAmount(p.prices["2.4mg"])),
-        ),
-      };
-    }
     return {
       medication: med,
-      label: "Saxenda",
-      schedule: "Once daily",
-      providerCount: SAXENDA_UK_COMPARE_PROVIDERS.length,
-      checked: data.saxendaChecked,
-      starter: null,
-      higher: null,
+      label: "Wegovy",
+      schedule: "Once weekly",
+      providerCount: data.wegovy.length,
+      checked: data.wegovyChecked,
+      starter: summarise(
+        "0.25mg",
+        data.wegovy.map((p) => wegovyPriceAmount(p.prices["0.25mg"])),
+      ),
+      higher: summarise(
+        "2.4mg",
+        data.wegovy.map((p) => wegovyPriceAmount(p.prices["2.4mg"])),
+      ),
     };
   });
 }

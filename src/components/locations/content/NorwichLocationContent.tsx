@@ -263,7 +263,7 @@ export default function NorwichLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  People in Norwich often ask whether one is the cheaper alternative to the other. In general, a cheaper alternative to Mounjaro may be Wegovy, Saxenda, or sometimes a more structured lifestyle-led programme if medication is not essential. The cheapest option is still usually behavioural support through the NHS or a medically supervised diet plan, but that does not help everyone enough on its own. The better question is not only &quot;which is cheaper?&quot; but &quot;which option gives me the best chance of success for the cost and risk involved?&quot; Compare{" "}
+                  People in Norwich often ask whether one is the cheaper alternative to the other. In general, a cheaper alternative to Mounjaro may be Wegovy, or sometimes a more structured lifestyle-led programme if medication is not essential. The cheapest option is still usually behavioural support through the NHS or a medically supervised diet plan, but that does not help everyone enough on its own. The better question is not only &quot;which is cheaper?&quot; but &quot;which option gives me the best chance of success for the cost and risk involved?&quot; Compare{" "}
                   <Link className={linkCls} href="/compare/wegovy-vs-mounjaro">
                     Wegovy versus Mounjaro
                   </Link>
@@ -539,7 +539,7 @@ export default function NorwichLocationContent({ loc, shareUrl }: Props) {
                   <div className={`rounded-xl border p-5 ${border} ${boxBg}`}>
                     <p className={`text-base font-semibold ${strong}`}>What is a more affordable option than Mounjaro?</p>
                     <p className={`mt-2 text-sm leading-relaxed ${p}`}>
-                      A cheaper alternative may be Wegovy, Saxenda, or a non-medication route through NHS support, depending on your situation. The cheapest option is often lifestyle support, but that is not always the most effective for every patient.
+                      A cheaper alternative may be Wegovy, or a non-medication route through NHS support, depending on your situation. The cheapest option is often lifestyle support, but that is not always the most effective for every patient.
                     </p>
                   </div>
 

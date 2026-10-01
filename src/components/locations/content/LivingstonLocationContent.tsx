@@ -242,7 +242,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  GPhC registered online clinics prescribe and deliver refrigerated pens such as semaglutide as Wegovy, tirzepatide as Mounjaro, and liraglutide as Saxenda into Livingston postcodes when eligible. Cold chain stays vital because Friday rain delays can spoil efficacy if couriers leave pens in porch heat.
+                  GPhC registered online clinics prescribe and deliver refrigerated pens such as semaglutide as Wegovy, tirzepatide as Mounjaro, into Livingston postcodes when eligible. Cold chain stays vital because Friday rain delays can spoil efficacy if couriers leave pens in porch heat.
                 </p>
 
                 <p className={p}>
@@ -268,7 +268,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="glp1" heading="GLP 1 medicines: the science behind Livingston treatments">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Prescriptions available? Yes. GLP 1 class medicines include Wegovy with semaglutide at about 12 to 15% trial loss bands, Mounjaro with tirzepatide near 20% dual hormone summaries, and Saxenda with liraglutide as a daily pen. Eligibility often starts near BMI 30 plus with risk factors, stricter on NHS than marketing blurbs suggest.
+                  Prescriptions available? Yes. GLP 1 class medicines include Wegovy with semaglutide at about 12 to 15% trial loss bands, Mounjaro with tirzepatide near 20% dual hormone summaries. Eligibility often starts near BMI 30 plus with risk factors, stricter on NHS than marketing blurbs suggest.
                 </p>
 
                 <p className={p}>
@@ -301,13 +301,6 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
                         <td className={`border px-3 py-2 ${tableBorder}`}>Weekly</td>
                         <td className={`border px-3 py-2 ${tableBorder}`}>About 18 to 22%</td>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Private mostly while NHS pilots vary</td>
-                      </tr>
-                      <tr>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>Saxenda (liraglutide)</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>GLP 1 daily</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>Daily pen</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About 8 to 10%</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>NHS tier 3 in some boards, private</td>
                       </tr>
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>B12 or IV infusions</td>

@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import {
   blogImgPath,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords:
-    "weight loss treatment UK, weight loss treatment guide UK, GLP-1 weight loss UK, prescription weight loss UK 2026, weight loss injection UK, tirzepatide UK, semaglutide UK, liraglutide UK, NHS weight loss treatment, private weight loss treatment UK, GLP-1 mechanism, weight loss treatment eligibility UK, mounjaro guide UK, wegovy guide UK, saxenda guide UK, weight management medication UK, NICE approved weight loss UK, prescription obesity treatment UK, weight loss medication how it works, fat loss treatment UK",
+    "weight loss treatment UK, weight loss treatment guide UK, GLP-1 weight loss UK, prescription weight loss UK 2026, weight loss injection UK, tirzepatide UK, semaglutide UK, liraglutide UK, NHS weight loss treatment, private weight loss treatment UK, GLP-1 mechanism, weight loss treatment eligibility UK, mounjaro guide UK, wegovy guide UK, weight management medication UK, NICE approved weight loss UK, prescription obesity treatment UK, weight loss medication how it works, fat loss treatment UK",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },

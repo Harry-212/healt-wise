@@ -156,8 +156,8 @@ export default function PaisleyLocationContent({ loc, shareUrl }: Props) {
                 </p>
                 <p className={p}>
                   Best weight loss treatment Paisley Scotland means balancing
-                  NHS and private GLP 1 options such as Mounjaro, Wegovy, and
-                  Saxenda, non surgical contouring such as HIFU and fat
+                  NHS and private GLP 1 options such as Mounjaro and Wegovy,
+                  non surgical contouring such as HIFU and fat
                   dissolving, practical timelines, and local Renfrewshire habits
                   for safe slimming. If you are still comparing the bigger UK
                   picture, start with our{" "}
@@ -213,8 +213,7 @@ export default function PaisleyLocationContent({ loc, shareUrl }: Props) {
                   slowing gastric emptying. Tirzepatide, sold as Mounjaro, adds
                   a GIP mechanism for stronger satiety. Trials show around 20%
                   loss for tirzepatide compared with around 15% for semaglutide,
-                  sold as Wegovy, in selected groups. Liraglutide, sold as
-                  Saxenda, is a daily and often milder starter option.
+                  sold as Wegovy, in selected groups.
                 </p>
                 <p className={p}>
                   Paisley residents may access these medicines through GP and
@@ -515,7 +514,7 @@ export default function PaisleyLocationContent({ loc, shareUrl }: Props) {
                     </h3>
                     <p className="mt-2">
                       Yes, GPs can prescribe GLP 1 medicines such as Mounjaro,
-                      Wegovy, or Saxenda if you are eligible via NHS tier 3 style
+                      or Wegovy if you are eligible via NHS tier 3 style
                       pathways, commonly BMI 35 or higher with comorbidities.
                       Waits may be 3 to 6 months. Private routes are faster and
                       can start from around GBP150 per month through GPhC linked

@@ -2,6 +2,9 @@
 
 # Task tracker (local only, do not commit)
 TASKS.md
+Note.md
+Notes.md
+.claude/
 
 # dependencies
 /node_modules

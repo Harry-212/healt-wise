@@ -29,7 +29,7 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
     () => [
       { id: "intro", label: "Oxford weight loss environment" },
       { id: "meaning", label: "What best really means" },
-      { id: "injections", label: "Wegovy, Mounjaro and Saxenda" },
+      { id: "injections", label: "Wegovy and Mounjaro" },
       { id: "lifestyle-fit", label: "GLP-1s in Oxford life" },
       { id: "beyond-medication", label: "Surgery and body contouring" },
       { id: "three-months", label: "Losing 14 kg in 3 months" },
@@ -240,7 +240,7 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
                   patient, but it does explain why local GPs and clinics often
                   ask about BMI, health conditions, previous weight loss
                   attempts, and medication history before recommending Wegovy,
-                  Mounjaro, Saxenda, or surgery. If someone in Oxford is told
+                  Mounjaro, or surgery. If someone in Oxford is told
                   they are not yet eligible for Wegovy, there is usually a
                   clinical rationale, not just a financial one.
                 </p>
@@ -259,10 +259,10 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
               <GuideSection
                 darkMode={darkMode}
                 id="injections"
-                heading="Medical weight loss injections in Oxford: Wegovy, Mounjaro, Saxenda, and others"
+                heading="Medical weight loss injections in Oxford: Wegovy, Mounjaro, and others"
               >
                 <p className={`text-lg md:text-xl ${p}`}>
-                  GLP-1 receptor agonists like Wegovy, Mounjaro, and Saxenda are
+                  GLP-1 receptor agonists like Wegovy and Mounjaro are
                   among the most discussed weight loss medications in Oxford
                   because they can produce meaningful reductions in body weight
                   when used correctly under medical supervision.
@@ -286,12 +286,6 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
                     suggest slightly higher average reductions than semaglutide
                     alone for some people, with a similar safety profile when
                     used appropriately.
-                  </li>
-                  <li>
-                    Saxenda, or liraglutide, is a daily injection and is
-                    generally considered a bit milder than Wegovy, but it can
-                    still be effective for some people, especially if weekly pens
-                    feel intimidating.
                   </li>
                 </ul>
                 <p className={p}>

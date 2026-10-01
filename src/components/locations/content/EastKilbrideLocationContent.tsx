@@ -182,7 +182,7 @@ export default function EastKilbrideLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Private: GPhC registered online services deliver refrigerated pens (semaglutide, Wegovy, tirzepatide, Mounjaro, liraglutide, Saxenda). Faster, but check titration and a slow dose ramp to reduce nausea. MHRA regulated pharmacies maintain cold chains which is vital for efficacy.
+                  Private: GPhC registered online services deliver refrigerated pens (semaglutide, Wegovy, tirzepatide, Mounjaro). Faster, but check titration and a slow dose ramp to reduce nausea. MHRA regulated pharmacies maintain cold chains which is vital for efficacy.
                 </p>
 
                 <p className={p}>
@@ -192,7 +192,7 @@ export default function EastKilbrideLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="glp1" heading="GLP 1 basics: what fits East Kilbride life?">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Wegovy (semaglutide)? Appetite curb, 12 to 15% loss (trials). Mounjaro (tirzepatide)? Dual action, similar results. Saxenda? Daily injection, milder.
+                  Wegovy (semaglutide)? Appetite curb, 12 to 15% loss (trials). Mounjaro (tirzepatide)? Dual action, similar results.
                 </p>
 
                 <p className={p}>

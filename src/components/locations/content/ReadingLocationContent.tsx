@@ -170,7 +170,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
                 </p>
                 <p className={p}>
                   Best weight loss treatment Reading UK includes NHS and private
-                  GLP 1 access such as Wegovy, Mounjaro, and Saxenda, local
+                  GLP 1 access such as Wegovy and Mounjaro, local
                   tips, timelines for stone and 20kg loss, and safety guides for
                   Thames Valley slimming. If you are still comparing treatment
                   types, start with our{" "}
@@ -274,8 +274,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
                   higher with diabetes or other comorbidities in some pathways.
                   Tirzepatide, sold as Mounjaro, combines GIP and GLP 1 action
                   and has shown around 20% loss in selected trials compared with
-                  around 15% for Wegovy. Liraglutide, sold as Saxenda, is daily,
-                  starter friendly, and averages lower results for many people.
+                  around 15% for Wegovy.
                 </p>
                 <p className={p}>
                   Ozempic is semaglutide too, but is diabetes focused rather
@@ -351,7 +350,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
                   <li>Ask for the titration plan, nausea policy, and repeat bloods.</li>
                   <li>
                     Budget GBP200 or more per month including delivery, because
-                    Mounjaro, Wegovy, and Saxenda prices vary.
+                    Mounjaro and Wegovy prices vary.
                   </li>
                   <li>
                     Do not use GLP 1 treatment during pregnancy or when planning

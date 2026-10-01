@@ -40,7 +40,7 @@ export default function LondonderryLocationContent({ loc, shareUrl }: Props) {
       { id: "realistic", label: "How much weight can realistically be lost" },
       { id: "trustworthy", label: "What makes a weight loss program trustworthy" },
       { id: "local", label: "Local practical factors in Londonderry" },
-      { id: "brands", label: "How to think about Mounjaro, Wegovy, and Saxenda" },
+      { id: "brands", label: "How to think about Mounjaro and Wegovy" },
       { id: "before-start", label: "What to do before starting" },
       { id: "sources", label: "Key guidance" },
       { id: "trust", label: "Why Health Wise is a comparator, not a prescriber" },
@@ -459,13 +459,13 @@ export default function LondonderryLocationContent({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="brands" heading="How to think about Mounjaro, Wegovy, and Saxenda">
+              <GuideSection darkMode={darkMode} id="brands" heading="How to think about Mounjaro and Wegovy">
                 <p className={p}>
                   People often compare these medicines as if one is automatically best. That is too simplistic. They are different tools with different dosing schedules, side effect profiles, and practical considerations.
                 </p>
 
                 <p className={p}>
-                  Wegovy is widely discussed for obesity treatment and appetite control. Mounjaro is often talked about for strong weight reduction and dual action appetite effects. Saxenda is older and may be suitable for some people who prefer a daily injection or who are assessed as appropriate for it.
+                  Wegovy is widely discussed for obesity treatment and appetite control. Mounjaro is often talked about for strong weight reduction and dual action appetite effects.
                 </p>
 
                 <p className={p}>

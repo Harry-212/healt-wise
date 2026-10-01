@@ -150,7 +150,7 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  The best weight loss treatments in Dundee often involve prescription options like Mounjaro, Wegovy, and Saxenda injections, which may aid 10 to 20% body weight loss when combined with diet and exercise, per clinical trials, available via NHS or private GPs, alongside fat freezing at aesthetic spots.
+                  The best weight loss treatments in Dundee often involve prescription options like Mounjaro and Wegovy injections, which may aid 10 to 20% body weight loss when combined with diet and exercise, per clinical trials, available via NHS or private GPs, alongside fat freezing at aesthetic spots.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -229,7 +229,7 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Saxenda daily injections have smaller average loss in many studies, around 8 to 10%, and are not for everyone. NICE recommendations and local NHS pathways shape what is offered and for whom, including whether there are obesity related health issues.
+                  NICE recommendations and local NHS pathways shape what is offered and for whom, including whether there are obesity related health issues.
                 </p>
 
                 <p className={p}>
@@ -268,15 +268,7 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
                     >
                       NEJM semaglutide trial link
                     </a>
-                    ,{" "}
-                    <a
-                      href="https://www.nice.org.uk/guidance/ta664"
-                      className={linkCls}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      NICE TA664 Saxenda guidance link
-                    </a>
+                    
                     .
                   </p>
                 </div>

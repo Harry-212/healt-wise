@@ -171,7 +171,7 @@ export default function PerthLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   Best weight loss treatment Perth Scotland means understanding
                   NHS Tayside referrals, private GLP 1 options such as Mounjaro,
-                  Wegovy, and Saxenda, realistic timelines for 2 stone loss, and
+                  and Wegovy, realistic timelines for 2 stone loss, and
                   local Perth habits for safe slimming. If you are comparing
                   national options before booking locally, start with our{" "}
                   <Link
@@ -296,16 +296,11 @@ export default function PerthLocationContent({ loc, shareUrl }: Props) {
                     Wegovy, or semaglutide, is a weekly pen with around 15%
                     average loss reported in selected weight management studies.
                   </li>
-                  <li>
-                    Saxenda, or liraglutide, is a daily option that may feel
-                    milder or more starter friendly for some patients.
-                  </li>
                 </ul>
                 <p className={p}>
                   Costs often sit around GBP150 to GBP350 per month including
                   delivery and titration, with Mounjaro commonly around GBP200 to
-                  GBP300, Wegovy around GBP150 to GBP250, and Saxenda around
-                  GBP180 to GBP280 depending on dose and provider. Access usually
+                  GBP300, Wegovy around GBP150 to GBP250 depending on dose and provider. Access usually
                   starts with an online consultation, BMI 30 or higher, and no
                   contraindication such as pancreatitis history. Cold chain
                   shipping matters because temperature handling can affect
@@ -347,13 +342,12 @@ export default function PerthLocationContent({ loc, shareUrl }: Props) {
                   and can reach up to 20% loss in selected trial settings.
                   Wegovy is weekly and may be NHS eligible at BMI 35 or higher,
                   or BMI 30 or higher with comorbidities in some pathways.
-                  Saxenda uses a daily dose ramp.
+                 
                 </p>
                 <p className={p}>
                   Mounjaro versus Wegovy is not a simple winner takes all
                   question. Mounjaro may have a dual action edge for some people,
-                  but Wegovy can suit others, and Saxenda remains useful for
-                  selected patients. GP prescribing is usually tied to BMI,
+                  but Wegovy can suit others. GP prescribing is usually tied to BMI,
                   comorbidities, and post lifestyle assessment. Private access is
                   easier, but it still needs proper screening.
                 </p>
@@ -540,7 +534,7 @@ export default function PerthLocationContent({ loc, shareUrl }: Props) {
                     </h3>
                     <p className="mt-2">
                       Private routes often cost around GBP150 to GBP350 per
-                      month for Mounjaro, Wegovy, or Saxenda including delivery,
+                      month for Mounjaro or Wegovy including delivery,
                       titration, and follow up depending on provider. NHS
                       treatment is free when eligibility and pathway approval are
                       met.

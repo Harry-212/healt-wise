@@ -334,10 +334,6 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                   These drugs act on both GLP-1 and GIP receptors. In trials, patients often lose around 18-24% of body weight, which is impressive but not guaranteed. Availability in UK clinics can vary, and supply is sometimes limited.
                 </p>
 
-                <p className={`font-semibold ${strong}`}>Liraglutide (Saxenda):</p>
-                <p className={p}>
-                  An older GLP-1, usually given daily. It typically produces around 8-12% weight loss on average, which is still significant but generally less dramatic than newer options.
-                </p>
 
                 <p className={p}>Success rates depend on several factors:</p>
 
@@ -371,7 +367,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="prescriptions" heading="What can doctors prescribe for weight loss in the UK?">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  In the UK, doctors can prescribe licensed weight-loss medicines only to patients who meet specific criteria, often after attempting lifestyle changes. The most prominent options are GLP-1 receptor agonists such as semaglutide (Wegovy) and liraglutide (Saxenda), plus some older drugs like orlistat. Most of these are only available after a proper assessment, including blood tests, BMI calculation, and consideration of other health conditions. Non-medication pathways (NHS weight-management programmes, specialist obesity services, and bariatric surgery) are also part of the picture, and many GPs will try these before writing a prescription.
+                  In the UK, doctors can prescribe licensed weight-loss medicines only to patients who meet specific criteria, often after attempting lifestyle changes. The most prominent options are GLP-1 receptor agonists such as semaglutide (Wegovy) and tirzepatide (Mounjaro), plus some older drugs like orlistat. Most of these are only available after a proper assessment, including blood tests, BMI calculation, and consideration of other health conditions. Non-medication pathways (NHS weight-management programmes, specialist obesity services, and bariatric surgery) are also part of the picture, and many GPs will try these before writing a prescription.
                 </p>
 
                 <p className={p}>For people in Middlesbrough, the question &quot;what can doctors actually prescribe for weight loss here?&quot; can be broken down into three main categories:</p>
@@ -434,7 +430,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>Comprehensive blood tests.</li>
                   <li>Personalised diet plans.</li>
-                  <li>Prescription GLP-1 injections (Wegovy-style, Ozempic-style, or Saxenda-style).</li>
+                  <li>Prescription GLP-1 injections (Wegovy-style or Mounjaro-style).</li>
                   <li>Follow-up appointments and dose adjustments.</li>
                 </ul>
 
@@ -696,14 +692,14 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                       &quot;Which weight loss injection has the highest success rate?&quot;
                     </p>
                     <p className={`mt-3 text-sm leading-relaxed ${p}`}>
-                      In that form, the answer is similar: the newer GLP-1 options (Semaglutide-Wegovy, and tirzepatide-type) tend to show the largest average weight loss in trials, but they also come with more side effects and stricter eligibility rules than older options like Saxenda.
+                      In that form, the answer is similar: the newer GLP-1 options (Semaglutide-Wegovy, and tirzepatide-type) tend to show the largest average weight loss in trials, but they also come with more side effects and strict eligibility rules.
                     </p>
                   </div>
 
                   <div className={`rounded-xl border p-5 ${border} ${boxBg}`}>
                     <p className={`text-base font-semibold ${strong}`}>3. What can UK doctors legally prescribe for weight loss, and under what conditions?</p>
                     <p className={`mt-2 text-sm leading-relaxed ${p}`}>
-                      In the UK, doctors can prescribe weight-loss medicines only when certain criteria are met, often after attempts at lifestyle change. The main options are GLP-1 receptor agonists (such as semaglutide for Wegovy, or liraglutide for Saxenda) and the older drug orlistat. These are usually only suitable for adults with higher BMI and obesity-related health risks, and treatment must be accompanied by proper monitoring, including blood tests and dose-titration. Doctors can also refer patients to NHS weight-management and specialist obesity services rather than prescribing medication.
+                      In the UK, doctors can prescribe weight-loss medicines only when certain criteria are met, often after attempts at lifestyle change. The main options are GLP-1 receptor agonists (such as semaglutide for Wegovy, or tirzepatide for Mounjaro) and the older drug orlistat. These are usually only suitable for adults with higher BMI and obesity-related health risks, and treatment must be accompanied by proper monitoring, including blood tests and dose-titration. Doctors can also refer patients to NHS weight-management and specialist obesity services rather than prescribing medication.
                     </p>
                     <p className={`mt-3 text-sm leading-relaxed ${p}`}>
                       This question maps to &quot;What can doctors prescribe for weight loss in the UK?&quot; in your original list. The key points for someone in Middlesbrough considering treatment are:

@@ -1,7 +1,7 @@
 export interface PharmacyProvider {
   id: string;
   name: string;
-  brandOffered: "Mounjaro" | "Wegovy" | "Both" | "Saxenda";
+  brandOffered: "Mounjaro" | "Wegovy" | "Both";
   dose: string[];
   /** Typical single-order / starting pack price shown as “from”. */
   totalPrice: number;

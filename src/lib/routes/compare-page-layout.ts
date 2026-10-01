@@ -1,6 +1,6 @@
 import type { PageShareMetadataInput } from "@/lib/seo/share-metadata";
 
-export type CompareMedicationTab = "wegovy" | "mounjaro" | "saxenda";
+export type CompareMedicationTab = "wegovy" | "mounjaro";
 
 /** Matches `HeroShaderVariant` in `@/components/ui/hero-shader` (avoid server → client type import). */
 export type CompareHeroShaderVariant = "teal" | "violet" | "blue";

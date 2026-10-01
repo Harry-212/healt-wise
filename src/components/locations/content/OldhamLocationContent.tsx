@@ -30,7 +30,7 @@ export default function OldhamLocationContent({ loc, shareUrl }: Props) {
       { id: "intro", label: "Why the best Oldham option depends on you" },
       { id: "free-nhs", label: "Free NHS and local authority programmes" },
       { id: "medical-options", label: "Medical weight loss options" },
-      { id: "glp1", label: "Mounjaro, Wegovy, Ozempic and Saxenda" },
+      { id: "glp1", label: "Mounjaro, Wegovy and Ozempic" },
       { id: "choosing", label: "How to choose in Oldham" },
       { id: "faq", label: "Frequently Asked Questions" },
       { id: "conclusion", label: "Building your Oldham plan" },
@@ -198,7 +198,7 @@ export default function OldhamLocationContent({ loc, shareUrl }: Props) {
                   funded programmes for people who want to build habits without
                   medications, local pharmacy-based clinics for people who can
                   afford private prescriptions or need faster access, and weight
-                  loss injections such as Mounjaro, Wegovy, Ozempic, or Saxenda
+                  loss injections such as Mounjaro, Wegovy, or Ozempic
                   for those who meet specific clinical and safety criteria.
                 </p>
                 <p className={p}>
@@ -548,7 +548,7 @@ export default function OldhamLocationContent({ loc, shareUrl }: Props) {
                 <h3
                   className={`pt-2 text-base font-semibold tracking-tight ${strong}`}
                 >
-                  Key differences: Mounjaro, Wegovy, Ozempic, and Saxenda
+                  Key differences: Mounjaro, Wegovy, and Ozempic
                 </h3>
                 <ul className={`list-disc space-y-2 pl-5 ${p}`}>
                   <li>
@@ -568,11 +568,6 @@ export default function OldhamLocationContent({ loc, shareUrl }: Props) {
                     dose for type 2 diabetes, but is sometimes used off-label for
                     weight loss. The NHS usually reserves weight-loss-focused
                     prescriptions for approved products like Wegovy.
-                  </li>
-                  <li>
-                    Saxenda, or liraglutide, is an older GLP-1-class drug,
-                    typically given as a daily injection and commonly used in
-                    private clinics where patients prefer a familiar brand.
                   </li>
                 </ul>
                 <p className={p}>
@@ -710,7 +705,7 @@ export default function OldhamLocationContent({ loc, shareUrl }: Props) {
                       There is no single drug that automatically replaces
                       Mounjaro. Clinicians may switch patients to another
                       GLP-1-class medicine such as Wegovy, Ozempic-type
-                      compounds, or Saxenda, adjust doses, or rely more on
+                      compounds, adjust doses, or rely more on
                       intensive lifestyle support and other medications. If
                       supply issues or NHS funding changes affect Mounjaro, your
                       clinician will usually discuss alternatives that match your

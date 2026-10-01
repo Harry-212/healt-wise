@@ -285,7 +285,7 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
     return "Best weight loss treatments Crawley: injections like Wegovy and Mounjaro via private clinics, cryolipolysis options, plus evidence based tips for sustainable Sussex slimming.";
   }
   if (loc.slug === "cumbernauld") {
-    return "Best weight loss treatment Cumbernauld: Scotland options like Saxenda and CoolSculpting, NHS programs, costs, eligibility, and local tips for North Lanarkshire.";
+    return "Best weight loss treatment Cumbernauld: Scotland options like Wegovy and CoolSculpting, NHS programs, costs, eligibility, and local tips for North Lanarkshire.";
   }
   if (loc.slug === "derby") {
     return "Best weight loss treatment Derby: non surgical options like Mounjaro and Wegovy, Derby clinic insights, and safe fat loss strategies for lasting results.";
@@ -303,7 +303,7 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
     return "Best weight loss treatment Durham UK: evidence based tips, local hacks, timelines for 5kg and 20kg loss, and UK insights for County Durham slimming.";
   }
   if (loc.slug === "east-kilbride") {
-    return "Best weight loss treatment East Kilbride: NHS and private access guide, GLP 1 tips (Mounjaro, Wegovy, Saxenda), timelines, and local Scotland hacks for safe slimming.";
+    return "Best weight loss treatment East Kilbride: NHS and private access guide, GLP 1 tips (Mounjaro, Wegovy), timelines, and local Scotland hacks for safe slimming.";
   }
   if (loc.slug === "edinburgh") {
     return "Best weight loss treatment Edinburgh: NHS Lothian programs, Mounjaro and Wegovy access, 10kg timelines, Ozempic reality, complete Scotland guide.";
@@ -1524,7 +1524,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What can UK doctors legally prescribe for weight loss, and under what conditions?",
-        a: `In the UK, doctors can prescribe weight-loss medicines only when criteria are met, often after attempts at lifestyle change. The main options include GLP 1 receptor agonists such as semaglutide for Wegovy or liraglutide for Saxenda, plus older options like orlistat. Proper monitoring, blood tests, and titration matter. Use the [BMI calculator](/tools/bmi-calculator) as a preparation tool before speaking with a clinician.`,
+        a: `In the UK, doctors can prescribe weight-loss medicines only when criteria are met, often after attempts at lifestyle change. The main options include GLP 1 receptor agonists such as semaglutide for Wegovy, plus older options like orlistat. Proper monitoring, blood tests, and titration matter. Use the [BMI calculator](/tools/bmi-calculator) as a preparation tool before speaking with a clinician.`,
       },
       {
         q: "What is the NHS-funded weight loss programme, and how can someone in Middlesbrough access it?",
@@ -1685,7 +1685,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is the best Lincoln area exercise for fat loss?",
-        a: `Cathedral Hill intervals plus Arboretum circuits can burn roughly 400 calories hourly for many paces and keep post exercise oxygen elevated for hours afterward when you recover well. Pair hills with two weekly strength sessions. Compare medicine assisted options on [Mounjaro versus Wegovy versus Saxenda](/compare/wegovy-vs-mounjaro).`,
+        a: `Cathedral Hill intervals plus Arboretum circuits can burn roughly 400 calories hourly for many paces and keep post exercise oxygen elevated for hours afterward when you recover well. Pair hills with two weekly strength sessions. Compare medicine assisted options on [Mounjaro versus Wegovy](/compare/wegovy-vs-mounjaro).`,
       },
     ];
   }
@@ -1756,7 +1756,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Which weight loss medicine works best in the UK?",
-        a: `The best medicine depends on the person, but GLP 1 treatments such as Mounjaro, Wegovy, and Saxenda are among the most effective prescription options for eligible patients. Read [what Mounjaro is](/what-is-mounjaro), [what Wegovy is](/what-is-wegovy), and [Mounjaro versus Wegovy versus Saxenda](/compare/wegovy-vs-mounjaro).`,
+        a: `The best medicine depends on the person, but GLP 1 treatments such as Mounjaro and Wegovy are among the most effective prescription options for eligible patients. Read [what Mounjaro is](/what-is-mounjaro), [what Wegovy is](/what-is-wegovy), and [Mounjaro versus Wegovy](/compare/wegovy-vs-mounjaro).`,
       },
       {
         q: "What is the strongest weight loss injection available in the UK?",
@@ -1875,7 +1875,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
         a: `For many eligible adults, clinically approved GLP 1 medicines combined with lifestyle support are among the most effective options. That said, the best choice depends on medical history, tolerance, access, and whether the treatment can be properly monitored. Compare the main routes using [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro).`,
       },
       {
-        q: "How much is Saxenda usually in Newry?",
+        q: "How much are private weight loss injections usually in Newry?",
         a: `The price varies by provider, consultation fees, and whether delivery and follow-up are included. A monthly comparison is more useful than a single headline price because the real cost depends on the full prescribing package.`,
       },
       {
@@ -1942,7 +1942,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is a more affordable option than Mounjaro?",
-        a: `A cheaper alternative may be Wegovy, Saxenda, or a non-medication route through NHS support, depending on your situation. The cheapest option is often lifestyle support, but that is not always the most effective for every patient. Compare [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison).`,
+        a: `A cheaper alternative may be Wegovy or a non-medication route through NHS support, depending on your situation. The cheapest option is often lifestyle support, but that is not always the most effective for every patient. Compare [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison).`,
       },
       {
         q: "Are fat-freezing treatments the same as weight loss treatments?",
@@ -2058,7 +2058,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What prescriptions can my doctor provide for weight loss in Scotland?",
-        a: `GLP 1 options include Wegovy (semaglutide weekly, about 12 to 15% trial loss bands), Mounjaro (tirzepatide dual hormone, about 20% trial bands), and Saxenda (liraglutide daily, milder averages). NHS usually prioritises lifestyle first per NICE, then tier 3 review. Read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
+        a: `GLP 1 options include Wegovy (semaglutide weekly, about 12 to 15% trial loss bands) and Mounjaro (tirzepatide dual hormone, about 20% trial bands). NHS usually prioritises lifestyle first per NICE, then tier 3 review. Read [what Wegovy is](/what-is-wegovy) and [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "How safe are private online clinics for Livingston residents?",
@@ -2153,7 +2153,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What can I use if Mounjaro is too expensive?",
-        a: `Cheaper alternatives may include Wegovy, Saxenda, or an NHS weight management programme, depending on eligibility and access. Compare [Mounjaro versus Wegovy](/compare/wegovy-vs-mounjaro).`,
+        a: `Cheaper alternatives may include Wegovy or an NHS weight management programme, depending on eligibility and access. Compare [Mounjaro versus Wegovy](/compare/wegovy-vs-mounjaro).`,
       },
       {
         q: "Can Ozempic be bought from a normal pharmacy like Boots?",
@@ -2358,7 +2358,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       a: `There isn’t a single winner on a chart. For some people in ${name}, the strongest option will still be an NHS dietitian-led programme with no injection at all. For others—after assessment—GLP-1-class medicines may become appropriate: tirzepatide ([Mounjaro](/what-is-mounjaro)) or semaglutide ([Wegovy](/what-is-wegovy)), but only where monitoring exists. Compare indicative monthly totals on our [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison). “Best” should probably mean “safest fit for you this year,” not “trendiest molecule.”`,
     },
     {
-      q: `Could I get Mounjaro, Wegovy, or Saxenda without going through my GP in ${name}?`,
+      q: `Could I get Mounjaro or Wegovy without going through my GP in ${name}?`,
       a: `You might, through a private prescriber or a GPhC-registered online clinic, if you meet their clinical criteria—that can apply to [Mounjaro](/what-is-mounjaro) or [Wegovy](/what-is-wegovy) where appropriate. That route can be faster on paper; it can also leave your GP surgery out of the loop unless you explicitly ask for shared care, which many practices will not agree to. On the NHS side, access often stays narrower than social media suggests, and ${icbOrBoard} may apply its own criteria on top of national guidance. If you are weighing costs, start with our [Mounjaro price comparison](/mounjaro-price-comparison) and [Wegovy price comparison](/wegovy-price-comparison).`,
     },
     {

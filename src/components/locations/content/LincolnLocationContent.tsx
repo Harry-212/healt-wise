@@ -351,12 +351,6 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
                         <td className={`border px-3 py-2 ${tableBorder}`}>About 21% at highest studied dose bands</td>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Private primarily while NHS rollout varies</td>
                       </tr>
-                      <tr>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>Saxenda</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>GLP 1 daily</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About 8% at 3 mg maintenance in trial summaries</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>Tier 2 eligible in some services</td>
-                      </tr>
                     </tbody>
                   </table>
                 </div>

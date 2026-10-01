@@ -36,7 +36,7 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
       { id: "most-effective", label: "What is often most effective" },
       { id: "nhs", label: "NHS routes in Northern Ireland" },
       { id: "private", label: "Private treatment in Newry" },
-      { id: "saxenda-cost", label: "Saxenda cost in Newry" },
+      { id: "treatment-cost", label: "Treatment costs in Newry" },
       { id: "ozempic-gp", label: "GP prescribing and Ozempic" },
       { id: "celebrity", label: "What celebrity weight loss tells us" },
       { id: "trustworthy", label: "What makes a provider trustworthy" },
@@ -195,7 +195,7 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="why-compare" heading="Why Newry residents compare so many options">
                 <p className={p}>
-                  People in Newry are not really looking for a single product. They are looking for access, confidence, and a provider they can trust. That is why searches often include names like Wegovy, Mounjaro, Saxenda, and &quot;private weight loss clinic.&quot; Those terms signal different needs, not just different brands.
+                  People in Newry are not really looking for a single product. They are looking for access, confidence, and a provider they can trust. That is why searches often include names like Wegovy and Mounjaro, and &quot;private weight loss clinic.&quot; Those terms signal different needs, not just different brands.
                 </p>
 
                 <p className={p}>In Northern Ireland, people also have to think about:</p>
@@ -329,9 +329,9 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="saxenda-cost" heading="How much does Saxenda cost in Newry?">
+              <GuideSection darkMode={darkMode} id="treatment-cost" heading="How much do weight loss treatments cost in Newry?">
                 <p className={p}>
-                  People often ask about Saxenda because it is still a well-known option and sometimes appears as a first step in weight loss prescribing. The price can vary a lot depending on:
+                  People often ask about treatment costs because prices can vary depending on:
                 </p>
 
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
@@ -343,7 +343,7 @@ export default function NewryLocationContent({ loc, shareUrl }: Props) {
                 </ul>
 
                 <p className={`mt-4 ${p}`}>
-                  Because Saxenda is a daily injection, the cost can feel different from weekly options. Some users prefer the simplicity of a weekly medicine like Wegovy or Mounjaro. Others may be more comfortable with Saxenda because they want a slower, more familiar starting point.
+                  Because modern GLP-1 options like Wegovy and Mounjaro are weekly injections, monthly pricing typically covers a full 4-week pen.
                 </p>
 
                 <p className={p}>

@@ -261,10 +261,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
                   Leeds tip: cold chain delivery matters. Refrigerated pens survive Yorkshire winters better than summer heatwaves if delivery sits on a step.
                 </p>
 
-                <p className={`text-base font-semibold ${strong}`}>Saxenda (liraglutide): daily starter option</p>
-                <p className={p}>
-                  3 mg daily injection, about 8% average loss in SCALE style trials. Better for some GLP 1 beginners, NHS tier 2 eligibility contexts vary. Private about £150 to £200 monthly.
-                </p>
+
 
                 <p className={p}>
                   Kelly Clarkson truth: her 40 lb drop? Interviews describe semaglutide family medicines plus personal training, the same compounds class many Leeds residents access on clinician routes, minus celebrity budget (Variety, 2025 reporting). Budget tools:{" "}

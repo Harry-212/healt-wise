@@ -259,15 +259,14 @@ export default function PrestonLocationContent({ loc, shareUrl }: Props) {
               <GuideSection
                 darkMode={darkMode}
                 id="glp1"
-                heading="GLP 1 deep dive: Preston access to Mounjaro, Wegovy, and Saxenda"
+                heading="GLP 1 deep dive: Preston access to Mounjaro and Wegovy"
               >
                 <p className={`text-lg md:text-xl ${p}`}>
                   GLP 1 medicines mimic gut hormones and delay stomach emptying.
                   Wegovy is a weekly semaglutide pen and may be NHS eligible for
                   BMI 35 or higher, or BMI 30 or higher with comorbidities in
                   some pathways. Mounjaro is tirzepatide with dual action, and
-                  selected trials show around 20% body weight loss. Saxenda is a
-                  daily option with a milder onset.
+                  selected trials show around 20% body weight loss.
                 </p>
                 <p className={p}>
                   Side effects can include nausea, especially during dose
@@ -443,7 +442,7 @@ export default function PrestonLocationContent({ loc, shareUrl }: Props) {
                       What is a cheaper alternative to Mounjaro in Preston?
                     </h3>
                     <p className="mt-2">
-                      Wegovy or Saxenda may cost around GBP150 to GBP250 per
+                      or Wegovy may cost around GBP150 to GBP250 per
                       month depending on provider, dose, and delivery. Wegovy can
                       offer similar 12 to 15% loss in selected groups and may be
                       more cost effective than Mounjaro for some Preston
@@ -562,8 +561,7 @@ export default function PrestonLocationContent({ loc, shareUrl }: Props) {
               >
                 <p className={`text-lg md:text-xl ${p}`}>
                   Best weight loss treatment Preston means NHS first safety plus
-                  smart private GLP 1 treatment such as Mounjaro, Wegovy, or
-                  Saxenda when clinically suitable. Local tips such as markets
+                  smart private GLP 1 treatment such as Mounjaro or Wegovy when clinically suitable. Local tips such as markets
                   and parks, plus realistic timelines for 5kg and 20kg, make the
                   plan more doable.
                 </p>

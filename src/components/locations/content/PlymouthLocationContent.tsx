@@ -553,8 +553,7 @@ export default function PlymouthLocationContent({ loc, shareUrl }: Props) {
                     <p className="mt-2">
                       Wegovy, based on semaglutide, is often cheaper than
                       Mounjaro by about GBP50 to GBP100 per month depending on
-                      dose and provider. Saxenda is a daily option and can be
-                      milder, but compare full totals including delivery and
+                      dose and provider. Compare full totals including delivery and
                       follow up.
                     </p>
                   </div>

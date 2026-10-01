@@ -32,7 +32,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
       { id: "intro", label: `Why best weight loss treatment in ${name} is personal` },
       { id: "options", label: "Weight loss options in Luton" },
       { id: "injections-how", label: "How weight loss injections work" },
-      { id: "brands", label: "Mounjaro, Wegovy, and Saxenda" },
+      { id: "brands", label: "Mounjaro and Wegovy" },
       { id: "pill-vs-injection", label: "Which pill or injection works best" },
       { id: "surgery", label: "Bariatric surgery in Luton" },
       { id: "nhs", label: "NHS weight management support" },
@@ -158,7 +158,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  The best weight loss treatment in Luton depends on your BMI, health conditions, budget, and how quickly you need support. For many people, the most effective options are medically supervised weight loss injections such as Mounjaro, Wegovy, or Saxenda, while bariatric surgery may suit those with severe obesity or related conditions. NHS weight management programmes can also be the right starting point, especially if you want structured support without paying privately.
+                  The best weight loss treatment in Luton depends on your BMI, health conditions, budget, and how quickly you need support. For many people, the most effective options are medically supervised weight loss injections such as Mounjaro or Wegovy, while bariatric surgery may suit those with severe obesity or related conditions. NHS weight management programmes can also be the right starting point, especially if you want structured support without paying privately.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -190,7 +190,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="injections-how" heading="How weight loss injections work">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Weight loss injections such as Mounjaro, Wegovy, and Saxenda reduce appetite, help people feel full sooner, and can support significant weight loss when combined with diet and lifestyle changes.
+                  Weight loss injections such as Mounjaro and Wegovy reduce appetite, help people feel full sooner, and can support significant weight loss when combined with diet and lifestyle changes.
                 </p>
 
                 <p className={p}>
@@ -198,7 +198,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Mounjaro contains tirzepatide, which acts on two hormone pathways rather than one. Wegovy contains semaglutide. Saxenda contains liraglutide and is taken daily rather than weekly. Each has a different dosing schedule, different side effect patterns, and different practical pros and cons. That sounds technical, but it matters in real life. A weekly injection may be easier to stick with than a daily one, while a daily routine may suit someone who wants tighter control over their habits.
+                  Mounjaro contains tirzepatide, which acts on two hormone pathways rather than one, while Wegovy contains semaglutide. Both are weekly injections with proven evidence for weight management.
                 </p>
 
                 <p className={p}>
@@ -214,9 +214,9 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="brands" heading="Mounjaro, Wegovy, and Saxenda">
+              <GuideSection darkMode={darkMode} id="brands" heading="Mounjaro and Wegovy">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Mounjaro is often considered the most effective of the three for average weight loss, Wegovy is widely used and well studied, and Saxenda may suit some people who prefer a daily option.
+                  Mounjaro is often considered the most effective for average weight loss, while Wegovy is widely used and well studied.
                 </p>
 
                 <p className={p}>
@@ -224,7 +224,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Wegovy is also very well known and has strong evidence behind it. It may suit people who want a weekly medicine with a long track record in obesity care. Saxenda is older, daily, and sometimes chosen when a slower, more familiar routine is preferred. In practical terms, Saxenda can feel less intimidating for some people, though the daily injection schedule is not ideal for everyone.
+                  Wegovy is also very well known and has strong evidence behind it. It may suit people who want a weekly medicine with a long track record in obesity care.
                 </p>
 
                 <p className={p}>
@@ -353,11 +353,11 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="cheaper" heading="Cheaper alternatives to Mounjaro">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Cheaper alternatives to Mounjaro may include Wegovy, Saxenda, structured NHS weight management, or lifestyle programmes, depending on your eligibility and goals.
+                  Cheaper alternatives to Mounjaro may include Wegovy, structured NHS weight management, or lifestyle programmes, depending on your eligibility and goals.
                 </p>
 
                 <p className={p}>
-                  A cheaper option is not automatically a worse option. That is worth saying clearly. If Mounjaro is out of budget, another prescription treatment may still offer good results. Saxenda may be less expensive in some cases, though the daily injection schedule is less convenient. Wegovy may also be considered depending on eligibility and local availability.
+                  A cheaper option is not automatically a worse option. That is worth saying clearly. If Mounjaro is out of budget, another prescription treatment may still offer good results. Wegovy may also be considered depending on eligibility and local availability.
                 </p>
 
                 <p className={p}>
@@ -546,7 +546,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  The best weight loss treatment in Luton is the one that matches your health profile, budget, and support needs. For some people, that means injections like Mounjaro, Wegovy, or Saxenda; for others, it means NHS support or bariatric surgery. The strongest outcome usually comes from combining the right treatment with real world habits and proper medical oversight.
+                  The best weight loss treatment in Luton is the one that matches your health profile, budget, and support needs. For some people, that means injections like Mounjaro or Wegovy; for others, it means NHS support or bariatric surgery. The strongest outcome usually comes from combining the right treatment with real world habits and proper medical oversight.
                 </p>
               </GuideSection>
 

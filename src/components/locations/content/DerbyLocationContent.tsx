@@ -200,7 +200,7 @@ export default function DerbyLocationContent({ loc, shareUrl }: Props) {
                   >
                     10.1056/NEJMoa2206030
                   </a>
-                  . Saxenda, liraglutide, is a daily injection option in some pathways.
+                  .
                 </p>
                 <p className={p}>
                   Critique: nausea is common for some people and weight can rebound off medicine without lifestyle. Pair with diet.

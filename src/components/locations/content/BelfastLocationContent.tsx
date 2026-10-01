@@ -169,7 +169,7 @@ export default function BelfastLocationContent({ loc, shareUrl }: Props) {
               >
                 <p className={`text-lg md:text-xl ${p}`}>
                   Top weight loss treatments in Belfast include medically
-                  supervised options like Mounjaro or Saxenda via private
+                  supervised options like Mounjaro or Wegovy via private
                   clinics (e.g., Belfast Private GP, Kingsbridge Private
                   Hospital, Vitalis Health), dietitian-led programs, and
                   bariatric surgery for severe cases. Personalized plans from

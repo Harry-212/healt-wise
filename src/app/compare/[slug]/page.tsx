@@ -23,7 +23,6 @@ import {
 } from "@/lib/data/compare-store";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
 import { buildPriceGlance } from "@/lib/data/compare-price-glance";
-import { SAXENDA_UK_COMPARE_LAST_UPDATED } from "@/lib/data/saxenda-uk-compare-providers";
 import { formatDose, formatGbp } from "@/lib/data/mounjaro-price-insights";
 import {
   COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT,
@@ -122,7 +121,6 @@ export default async function ComparePage({ params }: Props) {
     mounjaroChecked: mounjaroLastUpdated,
     wegovy: wegovyProviders,
     wegovyChecked: wegovyLastUpdated,
-    saxendaChecked: SAXENDA_UK_COMPARE_LAST_UPDATED,
   });
   const pricesLastCheckedLabel = mounjaroLastUpdated;
   // Date the page content last changed — not "today" on every request.

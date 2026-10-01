@@ -150,7 +150,7 @@ export default function CumbernauldLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Leading weight loss treatments near Cumbernauld include medical options like Saxenda and Wegovy via pharmacies, non surgical fat reduction such as CoolSculpting at aesthetic clinics, and NHS Scotland structured programs. Personalized support appears at places like Clinetix for consultations and M and D Green Pharmacy for private services. Spire Aesthetics in Cumbernauld offers CoolSculpting specifics.
+                  Leading weight loss treatments near Cumbernauld include medical options like Wegovy and Mounjaro via pharmacies, non surgical fat reduction such as CoolSculpting at aesthetic clinics, and NHS Scotland structured programs. Personalized support appears at places like Clinetix for consultations and M and D Green Pharmacy for private services. Spire Aesthetics in Cumbernauld offers CoolSculpting specifics.
                 </p>
                 <p className={p}>
                   Brief links{" "}
@@ -200,7 +200,7 @@ export default function CumbernauldLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="medical" heading="Medical weight management options in Scotland">
                 <p className={p}>
-                  GLP 1 medicines lead many comparisons. Saxenda can curb appetite and Wegovy is similar. NICE approvals are referenced with TA664.
+                  GLP 1 medicines lead many comparisons. Wegovy and Mounjaro can curb appetite. NICE approvals are referenced with TA664.
                 </p>
                 <p className={p}>
                   Mounjaro is a dual action option. Trials describe about 15 to 20% loss in a year for eligible people. NEJM DOI{" "}
@@ -421,7 +421,7 @@ export default function CumbernauldLocationContent({ loc, shareUrl }: Props) {
               <GuideSharePanel
                 url={shareUrl}
                 title={PAGE_TITLE}
-                description="Cumbernauld Scotland: Saxenda and CoolSculpting context, NHS programs, and safe UK comparisons for weight loss treatments."
+                description="Cumbernauld Scotland: Wegovy and CoolSculpting context, NHS programs, and safe UK comparisons for weight loss treatments."
               />
             </div>
         </BlogArticleColumn>

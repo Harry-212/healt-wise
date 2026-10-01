@@ -23,7 +23,7 @@ export const HOMEPAGE_HERO_LIFESTYLE_ALT =
  */
 export const COMPARE_GLP1_PRICE_HERO_IMAGE_SRC = "/new hero compare.webp";
 export const COMPARE_GLP1_PRICE_HERO_IMAGE_ALT =
-  "UK pharmacy comparison — Mounjaro, Wegovy, and Saxenda";
+  "UK pharmacy comparison — Mounjaro and Wegovy";
 
 /** Wegovy price comparison hero (`public/hero_compare_wegovy.webp`). */
 export const COMPARE_WEGOVY_PRICE_HERO_IMAGE_SRC = "/hero_compare_wegovy.webp";
@@ -35,12 +35,6 @@ export const COMPARE_MOUNJARO_PRICE_HERO_IMAGE_SRC =
   "/hero section compare mounjaro.webp";
 export const COMPARE_MOUNJARO_PRICE_HERO_IMAGE_ALT =
   "Mounjaro UK price comparison — private pharmacy listings";
-
-/** Saxenda price comparison hero (`public/hero_compare _saxenda.webp`). */
-export const COMPARE_SAXENDA_PRICE_HERO_IMAGE_SRC =
-  "/hero_compare _saxenda.webp";
-export const COMPARE_SAXENDA_PRICE_HERO_IMAGE_ALT =
-  "Saxenda UK price comparison — private pharmacy listings";
 
 /** Cheapest GLP-1 options UK hub hero (`public/cheapest_hero.webp`). */
 export const CHEAPEST_OPTIONS_UK_HERO_IMAGE_SRC = "/cheapest_hero.webp";
@@ -57,7 +51,7 @@ export const COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT =
 export const COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_SRC =
   "/beast weight hero.webp";
 export const COMPARE_BEST_WEIGHT_LOSS_UK_HERO_IMAGE_ALT =
-  "Best weight loss treatments UK — Wegovy, Mounjaro, and Saxenda compared";
+  "Best weight loss treatments UK — Wegovy and Mounjaro compared";
 
 /** Why choose Health Wise graphic (`public/why choose healthwise360.webp`). */
 export const WHY_CHOOSE_HEALTHWISE360_SRC =

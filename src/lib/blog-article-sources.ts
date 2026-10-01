@@ -36,11 +36,6 @@ const S = {
     publisher: "Electronic Medicines Compendium (emc)",
     href: "https://www.medicines.org.uk/emc/product/15481",
   },
-  emcSaxenda: {
-    label: "Saxenda — Summary of Product Characteristics",
-    publisher: "Electronic Medicines Compendium (emc)",
-    href: "https://www.medicines.org.uk/emc/product/2313/smpc",
-  },
   niceTa875: {
     label: "Semaglutide for managing overweight and obesity (TA875)",
     publisher: "NICE",

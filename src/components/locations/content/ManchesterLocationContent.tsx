@@ -157,7 +157,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  The best weight loss treatment in Manchester usually depends on medical need, body mass index, lifestyle, and access to supervised care. In the UK, the strongest evidence tends to support medically guided GLP-1 treatments such as Mounjaro, Wegovy, or Saxenda for eligible patients, while bariatric surgery remains the most effective option for people with severe obesity and related health conditions. Some clinics in Manchester also offer non-surgical fat reduction technologies, but these are usually better understood as body-contouring tools rather than core weight loss solutions.
+                  The best weight loss treatment in Manchester usually depends on medical need, body mass index, lifestyle, and access to supervised care. In the UK, the strongest evidence tends to support medically guided GLP-1 treatments such as Mounjaro or Wegovy for eligible patients, while bariatric surgery remains the most effective option for people with severe obesity and related health conditions. Some clinics in Manchester also offer non-surgical fat reduction technologies, but these are usually better understood as body-contouring tools rather than core weight loss solutions.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -227,15 +227,15 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="glp1" heading="GLP-1 injections in Manchester">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  In Manchester, the most searched medical weight loss treatments are GLP-1 injections such as Mounjaro, Wegovy, and Saxenda. These medicines work by reducing appetite, increasing fullness, and helping some people eat less without constant hunger. They are not cosmetic products, and they usually work best when paired with dietary changes and follow-up care.
+                  In Manchester, the most searched medical weight loss treatments are GLP-1 injections such as Mounjaro and Wegovy. These medicines work by reducing appetite, increasing fullness, and helping some people eat less without constant hunger. They are not cosmetic products, and they usually work best when paired with dietary changes and follow-up care.
                 </p>
 
                 <p className={p}>
-                  GLP-1 medicines have changed the conversation around obesity treatment in the UK. People now ask about them by brand name because they have become widely discussed, especially in private clinics. The three names most often mentioned are Mounjaro, Wegovy, and Saxenda.
+                  GLP-1 medicines have changed the conversation around obesity treatment in the UK. People now ask about them by brand name because they have become widely discussed, especially in private clinics. The three names most often mentioned are Mounjaro and Wegovy.
                 </p>
 
                 <p className={p}>
-                  Mounjaro contains tirzepatide. Wegovy contains semaglutide. Saxenda contains liraglutide. All three are prescription medicines, and all three should be understood as medical treatments rather than shortcut products.
+                  Mounjaro contains tirzepatide. Wegovy contains semaglutide. Both are prescription medicines, and both should be understood as medical treatments rather than shortcut products.
                 </p>
 
                 <p className={`mt-6 font-semibold ${strong}`}>Why GLP-1s are popular</p>
@@ -260,7 +260,6 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>Mounjaro is often viewed as the most powerful option for weight reduction, although access and eligibility matter.</li>
                   <li>Wegovy is well known and commonly discussed because it has strong evidence for obesity management.</li>
-                  <li>Saxenda is older, daily rather than weekly, and sometimes used when a slower or different approach is preferred.</li>
                 </ul>
 
                 <p className={`mt-4 ${p}`}>

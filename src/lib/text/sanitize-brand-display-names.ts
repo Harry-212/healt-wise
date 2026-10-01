@@ -5,22 +5,17 @@
  */
 
 const BRAND_NAMES =
-  /\b(Mounjaro|Wegovy|Saxenda|Ozempic|Zepbound)\b/gi;
+  /\b(Mounjaro|Wegovy|Ozempic|Zepbound)\b/gi;
 
 /** Known nav / hub phrases → clearer brand-free labels before word replace. */
 const PHRASE_REPLACEMENTS: ReadonlyArray<readonly [RegExp, string]> = [
   [/Compare Mounjaro prices UK/gi, "Compare weight loss treatment prices UK"],
   [/Compare Wegovy prices UK/gi, "Compare weight loss treatment prices UK"],
-  [/Compare Saxenda prices UK/gi, "Compare weight loss treatment prices UK"],
   [/Mounjaro Click Calculator & Chart/gi, "Weight loss treatment click calculator"],
   [/Wegovy Click Calculator & Chart/gi, "Weight loss treatment click calculator"],
-  [/Mounjaro vs Wegovy vs Saxenda/gi, "Weight loss treatment comparison"],
   [/Mounjaro vs Wegovy/gi, "Weight loss treatment comparison"],
-  [/Mounjaro vs Saxenda/gi, "Weight loss treatment comparison"],
-  [/Wegovy vs Saxenda/gi, "Weight loss treatment comparison"],
   [/Mounjaro Prices/gi, "Weight loss treatment prices"],
   [/Wegovy Prices/gi, "Weight loss treatment prices"],
-  [/Saxenda Prices/gi, "Weight loss treatment prices"],
 ];
 
 export function textContainsBrandName(text: string): boolean {

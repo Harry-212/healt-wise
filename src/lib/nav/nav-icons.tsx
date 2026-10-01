@@ -50,7 +50,7 @@ export const NAV_LINK_ICONS: Record<string, LucideIcon> = {
 /**
  * Static class strings keyed by accent so Tailwind's JIT scanner can
  * preserve them. Picked to match the colour each medicine uses on its
- * own price-comparison page: Mounjaro=violet, Wegovy=emerald, Saxenda=sky.
+ * own price-comparison page: Mounjaro=violet, Wegovy=emerald.
  */
 type NavAccentClasses = {
   /** Desktop link container: tinted bg + coloured text + hover. */

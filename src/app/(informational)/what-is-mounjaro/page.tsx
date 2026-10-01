@@ -476,9 +476,6 @@ export default function WhatIsMounjaroPage() {
                       <th className="px-4 py-3 font-semibold text-slate-900">
                         Wegovy (semaglutide)
                       </th>
-                      <th className="px-4 py-3 font-semibold text-slate-900">
-                        Saxenda (liraglutide)
-                      </th>
                     </tr>
                   </thead>
                   <tbody className="text-slate-700">
@@ -488,7 +485,6 @@ export default function WhatIsMounjaroPage() {
                       </td>
                       <td className="px-4 py-3">Dual GIP + GLP-1 agonist</td>
                       <td className="px-4 py-3">GLP-1 agonist</td>
-                      <td className="px-4 py-3">GLP-1 agonist (daily)</td>
                     </tr>
                     <tr className="border-b border-slate-100">
                       <td className="px-4 py-3 font-medium text-slate-900">
@@ -496,7 +492,6 @@ export default function WhatIsMounjaroPage() {
                       </td>
                       <td className="px-4 py-3">Once weekly (pen)</td>
                       <td className="px-4 py-3">Once weekly (pen)</td>
-                      <td className="px-4 py-3">Once daily (pen)</td>
                     </tr>
                     <tr className="border-b border-slate-100">
                       <td className="px-4 py-3 font-medium text-slate-900">
@@ -510,16 +505,12 @@ export default function WhatIsMounjaroPage() {
                         Substantial mean loss vs placebo at 68 w (STEP-style
                         trials)
                       </td>
-                      <td className="px-4 py-3">
-                        Lower mean effect than weekly GLP-1 options in many
-                        comparisons
-                      </td>
                     </tr>
                     <tr className="border-b border-slate-100">
                       <td className="px-4 py-3 font-medium text-slate-900">
                         Cost (UK private)
                       </td>
-                      <td className="px-4 py-3" colSpan={3}>
+                      <td className="px-4 py-3" colSpan={2}>
                         Varies by dose and provider; compare monthly all-in
                         costs including consultation and delivery.
                       </td>
@@ -528,7 +519,7 @@ export default function WhatIsMounjaroPage() {
                       <td className="px-4 py-3 font-medium text-slate-900">
                         Side effects
                       </td>
-                      <td className="px-4 py-3" colSpan={3}>
+                      <td className="px-4 py-3" colSpan={2}>
                         GI effects common; rare serious risks exist—seek urgent
                         care for severe abdominal pain or allergic symptoms per
                         patient information.

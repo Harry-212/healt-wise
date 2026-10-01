@@ -257,13 +257,13 @@ export default function PortsmouthLocationContent({ loc, shareUrl }: Props) {
               <GuideSection
                 darkMode={darkMode}
                 id="private"
-                heading="Private weight loss injections: Wegovy, Mounjaro, and Saxenda access"
+                heading="Private weight loss injections: Wegovy and Mounjaro access"
               >
                 <p className={`text-lg md:text-xl ${p}`}>
                   Private injections, especially GLP 1 medicines, feel legible:
                   price, calendar, and courier tracking. For Portsmouth, online
                   pharmacies can deliver refrigerated pens such as semaglutide
-                  Wegovy, tirzepatide Mounjaro, and liraglutide Saxenda.
+                  Wegovy (semaglutide) and Mounjaro (tirzepatide).
                 </p>
                 <ul className={`list-disc space-y-2 pl-5 ${p}`}>
                   <li>
@@ -273,10 +273,6 @@ export default function PortsmouthLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     Mounjaro is a dual GIP and GLP 1 medicine with around 20%
                     loss reported in selected trial settings.
-                  </li>
-                  <li>
-                    Saxenda is a daily option and can be a milder starter for
-                    some people.
                   </li>
                 </ul>
                 <p className={p}>
@@ -483,7 +479,7 @@ export default function PortsmouthLocationContent({ loc, shareUrl }: Props) {
                   NHS support is free through the Wellbeing programme, and GLP 1
                   medicines may be available if you meet criteria. Private
                   options usually cost around GBP150 to GBP350 per month for
-                  Wegovy, Mounjaro, or Saxenda, with delivery varying between
+                  Wegovy or Mounjaro, with delivery varying between
                   urban and more awkward local routes.
                 </p>
                 <p className={p}>

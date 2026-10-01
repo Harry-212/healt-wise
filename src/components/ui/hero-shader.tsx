@@ -81,7 +81,7 @@ interface ShaderBackgroundProps {
   children: React.ReactNode;
   /** Minimum block height (default matches reference layout). */
   minHeight?: string;
-  /** Mesh gradient palette — teal (Wegovy), violet (Mounjaro), blue (Saxenda). */
+  /** Mesh gradient palette — teal (Wegovy), violet (Mounjaro), blue accent. */
   variant?: HeroShaderVariant;
   /**
    * When true, never runs WebGL or loads the shader chunk — static CSS gradient only.

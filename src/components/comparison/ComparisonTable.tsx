@@ -118,7 +118,6 @@ export default function ComparisonTable({
             <option value="Wegovy">Wegovy</option>
             <option value="Mounjaro">Mounjaro</option>
             <option value="Both">Both</option>
-            <option value="Saxenda">Saxenda</option>
           </select>
         </label>
         <label className="flex w-full min-w-0 flex-col gap-1 text-xs font-medium text-brand-secondary sm:min-w-[140px] sm:w-auto">

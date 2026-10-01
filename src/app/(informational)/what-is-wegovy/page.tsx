@@ -466,9 +466,6 @@ export default function WhatIsWegovyPage() {
                       <th className="px-4 py-3 font-semibold text-slate-900">
                         Mounjaro (tirzepatide)
                       </th>
-                      <th className="px-4 py-3 font-semibold text-slate-900">
-                        Saxenda (liraglutide)
-                      </th>
                     </tr>
                   </thead>
                   <tbody className="text-slate-700">
@@ -478,7 +475,6 @@ export default function WhatIsWegovyPage() {
                       </td>
                       <td className="px-4 py-3">Once weekly (pen)</td>
                       <td className="px-4 py-3">Once weekly (pen)</td>
-                      <td className="px-4 py-3">Once daily (pen)</td>
                     </tr>
                     <tr className="border-b border-slate-100">
                       <td className="px-4 py-3 font-medium text-slate-900">
@@ -491,16 +487,12 @@ export default function WhatIsWegovyPage() {
                       <td className="px-4 py-3">
                         Substantial mean loss in SURMOUNT programme trials
                       </td>
-                      <td className="px-4 py-3">
-                        Lower mean effect than weekly GLP-1/GIP options in many
-                        comparisons
-                      </td>
                     </tr>
                     <tr className="border-b border-slate-100">
                       <td className="px-4 py-3 font-medium text-slate-900">
                         Cost (UK private)
                       </td>
-                      <td className="px-4 py-3" colSpan={3}>
+                      <td className="px-4 py-3" colSpan={2}>
                         Varies by dose and provider; compare monthly all-in
                         costs including consultation and delivery.
                       </td>
@@ -509,7 +501,7 @@ export default function WhatIsWegovyPage() {
                       <td className="px-4 py-3 font-medium text-slate-900">
                         Side effects
                       </td>
-                      <td className="px-4 py-3" colSpan={3}>
+                      <td className="px-4 py-3" colSpan={2}>
                         GI effects common; rare serious risks exist for all
                         GLP-1 agents—seek urgent care for severe abdominal pain
                         or allergic symptoms per patient information.

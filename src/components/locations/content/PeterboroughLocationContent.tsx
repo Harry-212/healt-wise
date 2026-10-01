@@ -322,7 +322,7 @@ export default function PeterboroughLocationContent({ loc, shareUrl }: Props) {
                 </p>
                 <p className={p}>
                   Private clinics offer injections such as semaglutide, Ozempic,
-                  tirzepatide, Mounjaro, liraglutide, and Saxenda. They may also
+                  tirzepatide, Mounjaro, and semaglutide (Wegovy). They may also
                   offer advanced body contouring such as cryolipolysis,
                   ultrasound cavitation, and radiofrequency. Legibility is
                   genuine: fixed pricing, quick scheduling, and delivery
@@ -361,7 +361,7 @@ export default function PeterboroughLocationContent({ loc, shareUrl }: Props) {
                 heading="How to access GLP 1 medicines safely: NHS versus private paths in Peterborough"
               >
                 <p className={`text-lg md:text-xl ${p}`}>
-                  You might get Ozempic, Mounjaro, or Saxenda without going
+                  You might get Mounjaro or Wegovy without going
                   through your GP via a private prescriber or GPhC registered
                   online clinic, if you meet their clinical criteria. But that
                   route can leave your GP surgery out of the loop unless you ask

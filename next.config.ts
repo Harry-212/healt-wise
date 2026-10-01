@@ -309,7 +309,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/prices/saxenda-price-uk",
-        destination: "/saxenda-price-comparison",
+        destination: "/compare/wegovy-vs-mounjaro",
+        permanent: true,
+      },
+      {
+        source: "/saxenda-price-comparison",
+        destination: "/compare/wegovy-vs-mounjaro",
         permanent: true,
       },
       {

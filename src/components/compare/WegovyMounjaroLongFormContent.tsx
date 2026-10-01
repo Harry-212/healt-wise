@@ -9,8 +9,8 @@ import {
 
 /**
  * Long-form editorial content for `/compare/wegovy-vs-mounjaro`, moved here from
- * the retired three-treatment hub (`/compare/mounjaro-vs-wegovy-vs-saxenda`) with
- * all Saxenda copy removed. Sections that the versus page already covers in its
+ * the retired comparison hub with
+ * Sections that the versus page already covers in its
  * own blocks (effectiveness, side effects, price matrix) are not repeated.
  *
  * Server-rendered so every paragraph is present in the initial HTML. Informational

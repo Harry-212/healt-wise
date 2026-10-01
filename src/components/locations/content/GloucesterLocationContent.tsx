@@ -226,7 +226,7 @@ export default function GloucesterLocationContent({ loc, shareUrl }: Props) {
 
 
                 <p className={p}>
-                  Wegovy (semaglutide) is single action with trial summaries often around 15% at about a year. NHS eligibility is commonly framed around BMI 35 plus, or BMI 30 plus with issues. Saxenda is a daily alternative with smaller average losses for many people.
+                  Wegovy (semaglutide) is single action with trial summaries often around 15% at about a year. NHS eligibility is commonly framed around BMI 35 plus, or BMI 30 plus with issues.
                 </p>
 
                 <p className={p}>

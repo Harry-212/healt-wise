@@ -18,7 +18,7 @@ function buildPlaceSnapshot(slug: string, name: string, nation: UkNation): strin
     `People living in or around ${name} often compare notes online because waiting-room answers vary: two households can hear different thresholds for referral even when national guidance reads the same on paper.`,
     `${name} is part of the UK's mixed urban fabric—where pharmacy regulation is national, courier networks are commercial, and accountability still comes down to named clinicians and registered premises.`,
     `From ${name}, it is easy to assume “everyone” is on a weekly injection because feeds are national; day-to-day triage in ${nation} still spends more time on blood pressure, sleep, and medications than on trending molecules.`,
-    `${name} readers bump into the same vocabulary—Mounjaro, Wegovy, Saxenda—while local NHS branding and board-level messaging shift the practical path to structured support.`,
+    `${name} readers bump into the same vocabulary—Mounjaro, Wegovy—while local NHS branding and board-level messaging shift the practical path to structured support.`,
     `Community identity in ${name} does not rewrite pharmacology, but it can change whether you are offered group programmes first, whether shared care is realistic, and how quickly repeat prescriptions move.`,
     `${name} illustrates why “near me” searches deserve scrutiny: the safest clinic might be a regulated courier away, while the closest advert might be the riskiest shortcut.`,
     `Service directories age quickly; ${name} residents benefit from checking registration numbers and superintendent pharmacist names rather than trusting hero imagery alone.`,

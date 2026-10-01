@@ -222,7 +222,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Saxenda (liraglutide): daily injection, milder entry level option with about 5 to 10% loss bands in trial summaries. All require titration because slow dose increases minimise nausea, with about 60% of people reporting mild GI symptoms initially in product summaries.
+                  All treatments require titration because slow dose increases minimise nausea, with about 60% of people reporting mild GI symptoms initially in product summaries.
                 </p>
 
                 <p className={p}>
@@ -352,10 +352,6 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Ozempic</td>
                         <td className={`border px-3 py-2 ${tableBorder}`}>About £179 at 0.25 mg toward about £269 at 1 mg, off label for weight loss when clinician agrees</td>
-                      </tr>
-                      <tr>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>Saxenda</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About £165 to £215 daily, about six pens monthly in many plans</td>
                       </tr>
                     </tbody>
                   </table>

@@ -117,7 +117,7 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading="Best Weight Loss Treatment Northampton: Medically Supervised, Localised, and Realistic Paths">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  The best weight loss treatment in Northampton typically means a medically supervised program - such as NHS-delivered dietetic services, supervised exercise plans, GLP-1 injections (e.g. Wegovy, Mounjaro, Ozempic, Saxenda) where eligible, or bariatric surgery (gastric sleeve or band) for higher-risk obesity. For most people, combining diet, physical activity, and long-term behavioural support works better than quick-fix pills or apps. In Northampton, access usually starts with a GP referral, especially if GLP-1 drugs or surgery are being considered.
+                  The best weight loss treatment in Northampton typically means a medically supervised program - such as NHS-delivered dietetic services, supervised exercise plans, GLP-1 injections (e.g. Wegovy, Mounjaro, Ozempic) where eligible, or bariatric surgery (gastric sleeve or band) for higher-risk obesity. For most people, combining diet, physical activity, and long-term behavioural support works better than quick-fix pills or apps. In Northampton, access usually starts with a GP referral, especially if GLP-1 drugs or surgery are being considered.
                 </p>
               </GuideSection>
 
@@ -210,9 +210,9 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
                 </ul>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="glp1" heading="GLP-1 injections in Northampton: Wegovy, Mounjaro, Ozempic, Saxenda">
+              <GuideSection darkMode={darkMode} id="glp1" heading="GLP-1 injections in Northampton: Wegovy, Mounjaro, Ozempic">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  GLP-1 injections like Wegovy, Mounjaro, Ozempic, and Saxenda are commonly searched for people in Northampton, especially when trying to understand &quot;where can I get Mounjaro in Northampton?&quot; or &quot;what qualifies you for Ozempic on the NHS?&quot; These are not lifestyle hacks; they are prescription medicines, usually only available after a formal medical assessment and specific criteria.
+                  GLP-1 injections like Wegovy, Mounjaro, and Ozempic are commonly searched for people in Northampton, especially when trying to understand &quot;where can I get Mounjaro in Northampton?&quot; or &quot;what qualifies you for Ozempic on the NHS?&quot; These are not lifestyle hacks; they are prescription medicines, usually only available after a formal medical assessment and specific criteria.
                 </p>
 
                 <h3 className={subh}>What GLP-1 drugs are</h3>
@@ -553,7 +553,7 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
                         <li>A calorie-controlled, balanced diet tailored to your life in Northampton.</li>
                         <li>Regular physical activity you can realistically keep up (e.g., walking, gym sessions, home workouts).</li>
                         <li>Behaviour change support (e.g., working with a dietitian or therapist).</li>
-                        <li>In some cases, GLP-1 injections (Wegovy, Mounjaro, Ozempic, Saxenda) or bariatric surgery, when medically appropriate and under specialist care.</li>
+                        <li>In some cases, GLP-1 injections (Wegovy, Mounjaro, Ozempic) or bariatric surgery, when medically appropriate and under specialist care.</li>
                       </ul>
                       <p>This kind of combination is what national guidelines (NICE, professional obesity societies) and local NHS teams in Northampton tend to recommend.</p>
                     </div>

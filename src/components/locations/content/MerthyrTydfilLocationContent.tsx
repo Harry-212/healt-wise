@@ -196,7 +196,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Private: GPhC-registered online services deliver refrigerated pens (semaglutide/Wegovy, tirzepatide/Mounjaro, liraglutide/Saxenda). Faster, but check titration (slow dose ramp to cut nausea). Example: MHRA-regulated pharmacies maintain cold chains—vital for efficacy. Read{" "}
+                  Private: GPhC-registered online services deliver refrigerated pens (semaglutide/Wegovy, tirzepatide/Mounjaro). Faster, but check titration (slow dose ramp to cut nausea). Example: MHRA-regulated pharmacies maintain cold chains—vital for efficacy. Read{" "}
                   <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
                     how we verify UK pharmacies
                   </Link>{" "}
@@ -214,11 +214,11 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="glp1" heading="GLP-1 Basics: What Fits Merthyr Tydfil Life?">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Wegovy (semaglutide)? Appetite curb, 12-15% loss (trials). Mounjaro (tirzepatide)? Dual action, similar results. Saxenda? Daily jab, milder.
+                  Wegovy (semaglutide)? Appetite curb, 12-15% loss (trials). Mounjaro (tirzepatide)? Dual action, similar results.
                 </p>
 
                 <p className={p}>
-                  GLP-1s mimic gut hormones, slowing emptying. Wegovy: Weekly pen, NHS eligible BMI 35+ (30+ comorbidities). Mounjaro: Adds GIP for extra satiety—trials show 20% loss. Saxenda: Daily, starter-friendly.
+                  GLP-1s mimic gut hormones, slowing emptying. Wegovy: Weekly pen, NHS eligible BMI 35+ (30+ comorbidities). Mounjaro: Adds GIP for extra satiety—trials show 20% loss.
                 </p>
 
                 <p className={p}>
@@ -426,7 +426,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="prices" heading="Price Breakdowns for Budgeting">
                 <p className={p}>
-                  Wegovy: £180-260/month (semaglutide). Saxenda: £150-220. Mounjaro: £180-280. Delivery £20-40 (cold chain).
+                  Wegovy: £180-260/month (semaglutide). Mounjaro: £180-280. Delivery £20-40 (cold chain).
                 </p>
 
                 <p className={p}>
