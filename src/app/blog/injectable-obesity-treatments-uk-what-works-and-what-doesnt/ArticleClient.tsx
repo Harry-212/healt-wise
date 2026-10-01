@@ -265,16 +265,6 @@ export default function ArticleClient() {
                 in rare cases more serious concerns requiring medical review.
               </p>
 
-              <SubHeading darkMode={darkMode}>Saxenda</SubHeading>
-              <p>Saxenda differs partly because it is taken daily.</p>
-              <p>For some, daily injections feel inconvenient.</p>
-              <p>Others prefer the dose flexibility.</p>
-              <p>It may depend on the person.</p>
-              <p>
-                And that comes up often in obesity medicine: there may not be
-                one universally &ldquo;best&rdquo; option. There may only be a
-                best fit.
-              </p>
             </GuideSection>
 
             <GuideSection
