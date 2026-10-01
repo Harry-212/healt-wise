@@ -92,6 +92,24 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
   const isMethodology = normalizePath(pathname ?? "") === "/methodology";
   const isAbout = normalizePath(pathname ?? "") === "/about";
 
+  const picks = useMemo(() => {
+    const path = normalizePath(pathname ?? "");
+    if (path === "/methodology") {
+      return getMethodologyRelatedReading().slice(0, CARD_COUNT);
+    }
+    const filtered =
+      path && path !== "/"
+        ? pool.filter((item) => normalizePath(item.href) !== path)
+        : [...pool];
+    const withoutInjections = filtered.filter(excludesInjectionKeyword);
+    const seed = hashToSeed(`${dayKey}|${path || "home"}|recommendations`);
+    const shuffled = seededShuffle(
+      withoutInjections.length >= CARD_COUNT ? withoutInjections : filtered,
+      seed,
+    );
+    return shuffled.slice(0, CARD_COUNT);
+  }, [pool, dayKey, pathname]);
+
   // The About page gets a fixed, non-rotating set of links instead of the
   // usual "Keep exploring" carousel (client request, 30 Sep 2026).
   if (isAbout) {
@@ -120,24 +138,6 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
       </section>
     );
   }
-
-  const picks = useMemo(() => {
-    const path = normalizePath(pathname ?? "");
-    if (path === "/methodology") {
-      return getMethodologyRelatedReading().slice(0, CARD_COUNT);
-    }
-    const filtered =
-      path && path !== "/"
-        ? pool.filter((item) => normalizePath(item.href) !== path)
-        : [...pool];
-    const withoutInjections = filtered.filter(excludesInjectionKeyword);
-    const seed = hashToSeed(`${dayKey}|${path || "home"}|recommendations`);
-    const shuffled = seededShuffle(
-      withoutInjections.length >= CARD_COUNT ? withoutInjections : filtered,
-      seed,
-    );
-    return shuffled.slice(0, CARD_COUNT);
-  }, [pool, dayKey, pathname]);
 
   const keepExploringIntro = isMethodology
     ? "Related trust and safety pages that explain how we verify pharmacies, score providers and maintain editorial standards."
