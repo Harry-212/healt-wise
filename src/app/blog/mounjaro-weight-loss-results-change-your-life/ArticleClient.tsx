@@ -124,26 +124,9 @@ export default function ArticleClient() {
             className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}
           >
             <p className="text-lg md:text-xl">
-              Mounjaro weight loss results can be transformative if you have
-              struggled with multiple diets and are ready to try a proven
-              medical approach. In recent years, this injectable medication
-              gained traction for delivering promising outcomes, with some users
-              losing a significant percentage of their body weight in just a few
-              months. By tapping into specific hormones responsible for
-              regulating appetite and blood sugar, Mounjaro (also known as
-              tirzepatide) stands out as a dual action treatment that may
-              finally help you overturn years of frustrating weight
-              fluctuations.
-            </p>
-            <p>
-              However, any weight loss journey requires steady commitment,
-              realistic expectations, and an understanding of how these
-              treatments fit into your overall wellbeing. Below, you will learn
-              how Mounjaro works, hear from real users who have successfully
-              shed pounds, and discover practical steps to maintain your results
-              over the long term. If you have been searching for a lifeline in
-              your weight loss efforts, this guide will help you see whether
-              Mounjaro might become the support you have been looking for.
+              This article looks at study findings and published patient accounts about
+              Mounjaro weight loss. It separates group averages from individual stories
+              and identifies the information needed to interpret each result.
             </p>
 
             <GuideSection
@@ -806,10 +789,6 @@ export default function ArticleClient() {
                 eluded you until now. The changes you make can be the ones that
                 finally stick, allowing you to treasure long term wellbeing
                 without the roller coaster of regain.
-              </p>
-              <p>
-                You are in control use Mounjaro as the tool to unlock the
-                healthier life that once felt out of reach.
               </p>
               <p
                 className={`text-sm leading-relaxed ${darkMode ? "text-slate-400" : "text-slate-500"}`}

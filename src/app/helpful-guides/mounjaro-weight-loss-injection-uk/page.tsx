@@ -48,7 +48,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Is Mounjaro better than other treatments?",
-    a: "It may produce greater average weight loss due to its dual-hormone action targeting both GLP-1 and GIP receptors, but suitability depends on individual health factors. A clinician will assess whether Mounjaro, Wegovy, or Saxenda is most appropriate for you.",
+    a: "It may produce greater average weight loss due to its dual-hormone action targeting both GLP-1 and GIP receptors, but suitability depends on individual health factors. A clinician will assess which treatment is appropriate for you.",
   },
   {
     q: "Can I get Mounjaro without a prescription?",
@@ -282,7 +282,6 @@ export default function GuideMounjaroPillar() {
               highlight: true,
             },
             { cells: ["Wegovy (semaglutide)", "Weekly", "12–15%"] },
-            { cells: ["Saxenda (liraglutide)", "Daily", "5–10%"] },
           ]}
         />
         <GuideParagraph>
@@ -436,7 +435,7 @@ export default function GuideMounjaroPillar() {
       {/* ── Key Takeaways ── */}
       <GuideKeyTakeaways
         items={[
-          "Mounjaro (tirzepatide) is a once-weekly treatment targeting both GLP-1 and GIP receptors—a dual mechanism not found in Wegovy or Saxenda.",
+          "Mounjaro (tirzepatide) is a once-weekly treatment targeting both GLP-1 and GIP receptors—a dual mechanism.",
           "Clinical trials show average weight loss of 15–22% body weight, with some patients losing over 20% at 12 months.",
           "Eligibility requires BMI ≥ 30, or ≥ 27 with a related health condition, assessed by a licensed clinician.",
           "Most side effects are mild and temporary; serious side effects are less common but require medical attention.",

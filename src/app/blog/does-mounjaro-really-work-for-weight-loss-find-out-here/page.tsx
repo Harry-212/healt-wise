@@ -63,7 +63,7 @@ export default function MounjaroEffectivenessArticlePage() {
         name: "Do I need a prescription to try Mounjaro for weight loss?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Mounjaro is a prescription medication that is typically prescribed for type 2 diabetes. Using it off-label for weight loss should always be done under a doctor’s close supervision.",
+          text: "Yes. Mounjaro is a prescription-only medicine in the UK.",
         },
       },
       {
@@ -76,10 +76,10 @@ export default function MounjaroEffectivenessArticlePage() {
       },
       {
         "@type": "Question",
-        name: "Is Mounjaro FDA-approved for losing weight?",
+        name: "Is Mounjaro authorised for weight management in the UK?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Currently, Mounjaro is only FDA-approved for type 2 diabetes. Its weight loss benefits come from its mechanism of action, but it remains an off-label treatment for obesity and overweight. Guidelines may change with further research and regulatory review.",
+          text: "Yes, for eligible adults. UK authorisation and NHS access criteria are different questions.",
         },
       },
       {

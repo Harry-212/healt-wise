@@ -135,9 +135,15 @@ export default function ArticleClient() {
               heading="Explore Mounjaro For Weight Loss"
             >
               <p>
-                Although Mounjaro is officially licensed for type 2 diabetes,
-                you might encounter doctors prescribing it off label for weight
-                loss. This is because clinical studies suggest tirzepatide may
+                Mounjaro (tirzepatide) is authorised in the UK for type 2 diabetes
+                and, for eligible adults, weight management.{" "}
+                <a
+                  href="https://www.gov.uk/government/news/mhra-authorises-diabetes-drug-mounjaro-tirzepatide-for-weight-management-and-weight-loss"
+                  className="text-emerald-600 hover:underline"
+                >
+                  Its UK weight-management indication was authorised on 8 November 2023.
+                </a>{" "}
+                This is because clinical studies suggest tirzepatide may
                 lead to significant reductions in body weight for people with
                 obesity or related health risks. According to a meta analysis of
                 10 randomized controlled trials involving 9,873 patients between
@@ -213,9 +219,7 @@ export default function ArticleClient() {
                 effects.
               </p>
               <p>
-                When using Mounjaro off label purely for weight management, it
-                is essential to remember that it remains unapproved by the FDA
-                specifically for that purpose. If you experience persistent
+                If you experience persistent
                 unpleasant effects, or if you notice changes in your wellbeing
                 that worry you, contact your healthcare provider promptly.
               </p>
@@ -324,10 +328,7 @@ export default function ArticleClient() {
                     Q: Do I need a prescription to try Mounjaro for weight loss?
                   </h3>
                   <p>
-                    A: Yes. Mounjaro is a prescription medication that is
-                    typically prescribed for type 2 diabetes. Using it off label
-                    for weight loss should always be done under a doctor’s close
-                    supervision.
+                    A: Yes. Mounjaro is a prescription-only medicine in the UK.
                   </p>
                 </div>
 
@@ -349,14 +350,10 @@ export default function ArticleClient() {
                   <h3
                     className={`text-xl font-bold mb-3 ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Q: Is Mounjaro FDA-approved for losing weight?
+                    Q: Is Mounjaro authorised for weight management in the UK?
                   </h3>
                   <p>
-                    A: Currently, Mounjaro is only FDA approved for type 2
-                    diabetes. Its weight loss benefits come from its mechanism
-                    of action, but it remains an off label treatment for obesity
-                    and overweight. Guidelines may change with further research
-                    and regulatory review.
+                    A: Yes, for eligible adults. UK authorisation and NHS access criteria are different questions.
                   </p>
                 </div>
 

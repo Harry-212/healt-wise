@@ -8,14 +8,14 @@ const HERO_IMAGE = `${siteOrigin()}/blog/Mounjaro%20Weight%20Loss%20Results%20Th
 
 export const metadata: Metadata = {
   title: 'Mounjaro Weight Loss Results: What to Expect',
-  description: 'Discover if mounjaro weight loss results can finally change your life and help you shed stubborn kilos.',
+  description: 'Understand Mounjaro weight loss study findings, patient accounts and the limits of comparing results.',
   keywords: 'mounjaro weight loss results',
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
     title: 'Mounjaro Weight Loss Results: What to Expect',
-    description: 'Discover if mounjaro weight loss results can finally change your life and help you shed stubborn kilos.',
+    description: 'Understand Mounjaro weight loss study findings, patient accounts and the limits of comparing results.',
     url: `${siteOrigin()}${PATH}`,
     type: 'article',
     publishedTime: '2026-04-19T00:00:00.000Z',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Mounjaro Weight Loss Results: What to Expect',
-    description: 'Discover if mounjaro weight loss results can finally change your life and help you shed stubborn kilos.',
+    description: 'Understand Mounjaro weight loss study findings, patient accounts and the limits of comparing results.',
     images: [HERO_IMAGE],
   },
 };
