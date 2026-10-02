@@ -113,7 +113,7 @@ function compareWebPageJsonLd(providers: any[]) {
       item: {
         "@type": "Organization",
         name: provider.name,
-        url: `${base}/pharmacies/${provider.slug}`,
+        url: `${base}/pharmacies/${provider.id}`,
       },
     })),
   };
