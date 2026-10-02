@@ -28,7 +28,7 @@
  * - Port 465: SMTP_SECURE=true. Port 587: SMTP_SECURE=false (STARTTLS).
  */
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import nodemailer, { type Transporter } from "nodemailer";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 
 const DEFAULT_CONTACT_INBOX = "contact@healthwise360.co.uk";
@@ -65,7 +65,7 @@ function escapeHtml(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
-function createHostingerTransport(): nodemailer.Transporter | null {
+function createHostingerTransport(): Transporter | null {
   const host = process.env.SMTP_HOST?.trim() || "smtp.hostinger.com";
   const portRaw = process.env.SMTP_PORT?.trim();
   const port = portRaw ? Number(portRaw) : 465;
