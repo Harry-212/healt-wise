@@ -94,14 +94,13 @@ function TableStoppingResearch({ darkMode }: { darkMode: boolean }) {
         className={`border-t px-3 py-2 text-xs ${darkMode ? "border-slate-700 text-slate-500" : "border-slate-200 text-slate-500"}`}
       >
         Summary figures reported in coverage of tirzepatide discontinuation
-        studies (see <em>Pharmaceutical Journal</em>). For{" "}
+        studies (see <em>Pharmaceutical Journal</em>).{" "}
         <Link
           href="/wegovy-price-comparison"
           className="font-medium text-emerald-600 hover:underline"
         >
-          Wegovy price comparison
+          Compare listed Wegovy prices.
         </Link>
-        .
       </p>
     </div>
   );
@@ -350,14 +349,13 @@ export default function ArticleClient() {
                 </strong>
                 . Once appetite suppression is removed, older appetite signals
                 can return especially challenging if you struggle with portions
-                or emotional eating. For{" "}
+                or emotional eating.{" "}
                 <Link
                   href="/mounjaro-price-comparison"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Mounjaro price comparison
+                  Compare listed Mounjaro prices.
                 </Link>
-                .
               </p>
               <p>
                 This pattern is not unique to Mounjaro. The lesson: medication
@@ -558,14 +556,13 @@ export default function ArticleClient() {
                 Structured eating plans, activity targets (for example toward UK
                 activity guidelines), and medication where appropriate work best
                 together. That stack improves the odds of steady progress even
-                if doses change later. For{" "}
+                if doses change later.{" "}
                 <Link
                   href="/helpful-guides/mounjaro-weight-loss-injection-uk"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Mounjaro weight loss treatment UK
+                  Read our UK Mounjaro treatment guide.
                 </Link>
-                .
               </p>
             </GuideSection>
 
@@ -599,53 +596,17 @@ export default function ArticleClient() {
               heading="Finding support in your local area"
             >
               <p>
-                While Mounjaro can be a powerful tool, having the right support
-                can make a significant difference in your journey. Many patients
-                prefer working with regulated clinics or pharmacies that offer
-                personalised guidance.
-              </p>
-              <p>
-                Before choosing a provider, read our{" "}
+                Healthwise360 is an independent UK publisher and comparison
+                platform. We provide information about providers and prices;
+                we do not prescribe treatment. Read our{" "}
                 <Link
-                  href="/what-is-mounjaro"
-                  className="font-semibold text-[#3562ff] underline-offset-2 hover:underline"
-                >
-                  guide to Mounjaro
-                </Link>{" "}
-                and our{" "}
-                <Link
-                  href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards"
+                  href="/pharmacy-safety-gphc-verification"
                   className="font-semibold text-[#3562ff] underline-offset-2 hover:underline"
                 >
                   pharmacy verification guide
                 </Link>{" "}
-                to confirm you are dealing with a GPhC-registered prescriber.
-                Comparing regulated providers helps ensure safe and continuous
-                care.
+                before comparing providers.
               </p>
-              <div
-                className={`mt-6 rounded-xl border p-6 ${darkMode ? "border-slate-800 bg-slate-900" : "border-slate-100 bg-slate-50"}`}
-              >
-                <h3
-                  className={`mb-2 text-lg font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
-                >
-                  Ready to explore options near you?
-                </h3>
-                <p
-                  className={`mb-4 ${darkMode ? "text-slate-400" : "text-slate-600"}`}
-                >
-                  Discover verified providers in your city and find the right
-                  medical weight loss plan tailored to your needs. Visit our
-                  comprehensive UK locations guide to see options available in
-                  your local area.
-                </p>
-                <Link
-                  href="/blog/topic/locations"
-                  className={`inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium transition-colors ${darkMode ? "bg-[#3562ff] text-white hover:bg-[#2a4fd6]" : "bg-[#3562ff] text-white hover:bg-[#2a4fd6]"}`}
-                >
-                  Explore local UK providers
-                </Link>
-              </div>
             </GuideSection>
 
             <div className="my-10">
@@ -750,14 +711,7 @@ export default function ArticleClient() {
                 expectations, and the same patience you would bring to any major
                 health decision. This article is informational only and not
                 medical advice; always follow personalised guidance from your
-                care team. For{" "}
-                <Link
-                  href="/blog/mounjaro-weight-loss-benefits-backed-by-science"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  Mounjaro weight loss benefits
-                </Link>
-                .
+                care team.
               </p>
             </GuideSection>
 

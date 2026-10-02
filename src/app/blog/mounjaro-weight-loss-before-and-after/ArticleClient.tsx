@@ -21,7 +21,7 @@ const TOC = [
   { id: "how-works", label: "Explore how Mounjaro works" },
   { id: "typical-results", label: "View typical before and after" },
   { id: "factors", label: "Consider factors shaping results" },
-  { id: "stories", label: "See real-life success stories" },
+  { id: "stories", label: "What to check in a personal account" },
   { id: "dosing-safety", label: "Use dosing tips for safety" },
   { id: "maximise-plan", label: "Maximise your Mounjaro plan" },
   { id: "next-steps", label: "Take your next steps" },
@@ -114,14 +114,7 @@ export default function ArticleClient() {
               involves, how it works, and the real world outcomes people have
               experienced. By understanding the data and practical steps, you
               can decide whether Mounjaro fits your weight loss goals and plan
-              your next steps confidently. For{" "}
-              <Link
-                href="/blog/side-effects-of-wegovy-and-how-to-manage-them"
-                className="font-medium text-emerald-600 hover:underline"
-              >
-                managing Wegovy side effects
-              </Link>
-              .
+              your next steps confidently.
             </p>
 
             <GuideSection
@@ -276,32 +269,13 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="stories"
-              heading="See Real-Life Success Stories"
+              heading="What to check in a personal account"
             >
               <p>
-                Part of the growing interest in Mounjaro comes from firsthand
-                testimonials of people who found renewed motivation. For
-                instance, Heike reported losing 13 kg over four months. She
-                combined Mounjaro treatments with small, healthy adjustments to
-                her routine and regained the energy to manage daily tasks
-                without exhaustion (ZAVA).
-              </p>
-              <p>
-                Other remarkable stories include individuals who have
-                transformed their BMI from a severely obese range to near normal
-                levels. In one case, a user reported shedding over 200 pounds in
-                under two years, attributing much of that success to consistent
-                treatments and a patient approach to diet (Prescription Doctor).
-                These accounts remind you that steady effort, rather than
-                dramatic overnight changes, is truly key. If you want more
-                insight into potential outcomes and timelines, you can check{" "}
-                <Link
-                  href="/what-is-mounjaro#weight-loss-results"
-                  className="font-medium text-brand-primary underline"
-                >
-                  Mounjaro weight loss results
-                </Link>
-                .
+                This article does not present verified Healthwise360 patient
+                case studies. Published personal accounts need a traceable
+                source and enough context to understand the starting point,
+                duration and other support involved.
               </p>
             </GuideSection>
 

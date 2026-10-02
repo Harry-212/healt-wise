@@ -364,14 +364,13 @@ export default function ArticleClient() {
                 </Link>{" "}
                 success stories. However, keep in mind that your experience can
                 vary based on your diet, activity level, dosage, and other
-                lifestyle factors. For{" "}
+                lifestyle factors.{" "}
                 <Link
                   href="/helpful-guides/mounjaro-weight-loss-injection-uk"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Mounjaro weight loss treatment UK
+                  Read our UK Mounjaro treatment guide.
                 </Link>
-                .
               </p>
             </GuideSection>
 

@@ -271,18 +271,6 @@ export default function ArticleClient() {
                 These accounts can be both eye opening and motivating,
                 illustrating that Mounjaro is not just a theory.
               </p>
-              <SubHeading darkMode={darkMode}>Possible challenges</SubHeading>
-              <p>
-                Of course, not everyone’s story is purely positive. One patient,
-                Emma, experienced a suspected stroke and was later diagnosed
-                with postural tachycardia syndrome (PoTS) after she abruptly
-                ceased treatment. (BBC) While this kind of scenario is rare, it
-                underscores the importance of medical supervision and consistent
-                follow up as you navigate Mounjaro treatment. You should also be
-                ready to discuss any sudden symptoms that might arise. Although
-                the majority of users do not encounter severe complications,
-                remaining vigilant is wise.
-              </p>
               <SubHeading darkMode={darkMode}>
                 Rapid utilisation across the UK
               </SubHeading>
@@ -480,15 +468,6 @@ export default function ArticleClient() {
                 adjust medications, tweak your food intake, or recommend tips
                 for boosting movement during your day.
               </p>
-              <p>
-                Should you decide to pause or stop Mounjaro, close monitoring
-                remains vital. Patients coming off tirzepatide without guidance
-                can experience a bounce back in appetite, sometimes leading to
-                unexpected health complications. Emma’s story is a cautionary
-                tale of why abrupt discontinuation and lack of oversight can
-                come with risks. (BBC) A gradual approach allows your body to
-                recalibrate more gently.
-              </p>
             </GuideSection>
 
             <GuideSection
@@ -542,20 +521,9 @@ export default function ArticleClient() {
                 Considering a second round
               </SubHeading>
               <p>
-                Restarting Mounjaro is sometimes an option, particularly if you
-                notice a slow creep on the scale and other strategies do not
-                hold it in check. However, your doctor might recommend a
-                different approach the second time around, possibly at a lower
-                maintenance dose or in an intermittent cycle, to minimise cost
-                and side effects. (Apollo247)
-              </p>
-              <p>
-                You may need to manage your expectations. Weight loss upon
-                restarting can be slower than the first time, and you might run
-                into recurring side effects. Changes in dosage, frequency, or
-                lifestyle support can all influence how effective a second round
-                will be. Ultimately, you and your healthcare provider will
-                decide whether reintroducing Mounjaro is beneficial.
+                Questions about restarting Mounjaro should be discussed with
+                your prescriber. This article does not provide a restart
+                schedule.
               </p>
             </GuideSection>
 
