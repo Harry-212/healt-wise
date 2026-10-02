@@ -17,7 +17,7 @@ export const HOME_PAGE_FAQS: CompareFaqItem[] = [
   },
   {
     q: "How do I know a pharmacy is legitimate?",
-    a: "Check that the pharmacy is registered with the General Pharmacy Council (GPhC) for Great Britain. Our GPhC verification guide walks through the red flags to look for before you order.",
+    a: "Check that the pharmacy is registered with the General Pharmaceutical Council (GPhC) for Great Britain. Our GPhC verification guide walks through the red flags to look for before you order.",
   },
   {
     q: "Can I get these treatments on the NHS instead of privately?",
