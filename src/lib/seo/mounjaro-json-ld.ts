@@ -53,18 +53,24 @@ export function mounjaroFaqJsonLd(): Record<string, unknown> {
 
 export function mounjaroClickCalculatorArticleJsonLd(): Record<string, unknown> {
   const base = siteOrigin();
+  const pageUrl = `${base}/tools/mounjaro-click-calculator`;
   return {
-    "@context": "https://schema.org",
     "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
     name: "Mounjaro Click Calculator UK",
     description:
       "Educational calculator showing the proportional relationship between a UK Mounjaro KwikPen strength and a dose already prescribed to you. Not a dosing recommendation.",
-    url: `${base}/tools/mounjaro-click-calculator`,
+    url: pageUrl,
     dateModified: "2026-09-15",
     isPartOf: {
-      "@type": "WebSite",
-      name: "Healthwise360",
-      url: base,
+      "@id": `${base}/#website`,
+    },
+    publisher: {
+      "@id": `${base}/#organization`,
+    },
+    inLanguage: "en-GB",
+    breadcrumb: {
+      "@id": `${pageUrl}#breadcrumb`,
     },
   };
 }
@@ -107,10 +113,11 @@ export const MOUNJARO_CLICK_CALCULATOR_FAQ_ITEMS: {
 
 export function mounjaroClickCalculatorFaqJsonLd(): Record<string, unknown> {
   const base = siteOrigin();
+  const pageUrl = `${base}/tools/mounjaro-click-calculator`;
   return {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
-    url: `${base}/tools/mounjaro-click-calculator`,
+    "@id": `${pageUrl}#faq`,
+    isPartOf: { "@id": `${pageUrl}#webpage` },
     mainEntity: MOUNJARO_CLICK_CALCULATOR_FAQ_ITEMS.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -141,9 +148,8 @@ export const MOUNJARO_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }
     },
   ];
 
-export function mounjaroCompareUkFaqJsonLd(): Record<string, unknown> {
-  return {
-    "@context": "https://schema.org",
+export function mounjaroCompareUkFaqJsonLd(pageUrl?: string): Record<string, unknown> {
+  const faqNode: Record<string, unknown> = {
     "@type": "FAQPage",
     mainEntity: MOUNJARO_COMPARE_UK_FAQ_ITEMS.map((item) => ({
       "@type": "Question",
@@ -154,4 +160,13 @@ export function mounjaroCompareUkFaqJsonLd(): Record<string, unknown> {
       },
     })),
   };
+
+  if (pageUrl) {
+    faqNode["@id"] = `${pageUrl}#faq`;
+    faqNode["isPartOf"] = { "@id": `${pageUrl}#webpage` };
+  } else {
+    faqNode["@context"] = "https://schema.org";
+  }
+
+  return faqNode;
 }

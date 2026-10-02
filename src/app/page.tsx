@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 
 export default function Homepage() {
   const homeLd = homePageJsonLdGraph();
-  const faqLd = compareFaqPageJsonLd(HOME_PAGE_FAQS);
+  const faqLd = compareFaqPageJsonLd(HOME_PAGE_FAQS, siteOrigin().replace(/\/$/, "") + "/");
 
   return (
     <div className="flex flex-col pb-6">

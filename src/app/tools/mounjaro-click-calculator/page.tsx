@@ -9,6 +9,7 @@ import {
   mounjaroClickCalculatorArticleJsonLd,
   mounjaroClickCalculatorFaqJsonLd,
 } from "@/lib/seo/mounjaro-json-ld";
+import { siteOrigin } from "@/lib/seo/site-origin";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/tools/mounjaro-click-calculator",
@@ -98,21 +99,44 @@ export default function MounjaroClickCalculatorPage() {
   const articleLd = mounjaroClickCalculatorArticleJsonLd();
   const faqLd = mounjaroClickCalculatorFaqJsonLd();
 
+  const base = siteOrigin();
+  const pageUrl = `${base}/tools/mounjaro-click-calculator`;
+
+  const breadcrumb = {
+    "@type": "BreadcrumbList",
+    "@id": `${pageUrl}#breadcrumb`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${base}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Tools",
+        item: `${base}/tools`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Mounjaro Click Calculator",
+        item: pageUrl,
+      },
+    ],
+  };
+
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [articleLd, faqLd, breadcrumb],
+  };
+
   return (
     <>
-      <BreadcrumbJsonLd
-        sectionName="Tools"
-        sectionPath="/tools"
-        pageName="Mounjaro Click Calculator"
-        pagePath="/tools/mounjaro-click-calculator"
-      />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }}
       />
       <MounjaroClickCalculatorClient />
       <article className="relative z-20 border-t border-slate-200/80 bg-background">

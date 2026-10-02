@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogImgPath, MOUNJARO_CLICK_CALCULATOR_UK_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -39,24 +39,52 @@ export const metadata: Metadata = {
 };
 
 export default function MounjaroClickCalculatorUkPage() {
-  const ARTICLE_SCHEMA = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: TITLE,
+  const pageUrl = `${siteOrigin()}${PATH}`;
+  
+  const webpage = {
+    "@type": "MedicalWebPage",
+    "@id": `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: TITLE,
     description: DESCRIPTION,
-    image: [HERO_IMAGE],
-    author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: `${siteOrigin()}/logo-health-wise.webp` } },
-    datePublished: "2026-06-02",
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${siteOrigin()}${PATH}`,
+    isPartOf: {
+      "@id": `${siteOrigin()}/#website`,
+    },
+    publisher: {
+      "@id": `${siteOrigin()}/#organization`,
+    },
+    inLanguage: "en-GB",
+    mainEntity: {
+      "@id": `${pageUrl}#article`,
     },
   };
 
+  const article = {
+    "@type": "Article",
+    "@id": `${pageUrl}#article`,
+    headline: TITLE,
+    description: DESCRIPTION,
+    image: [HERO_IMAGE],
+    mainEntityOfPage: {
+      "@id": `${pageUrl}#webpage`,
+    },
+    author: {
+      "@type": "Organization",
+      "@id": `${siteOrigin()}/editorial-team#organization`,
+      name: "Healthwise360 Research Team",
+      url: `${siteOrigin()}/editorial-team`,
+    },
+    publisher: {
+      "@id": `${siteOrigin()}/#organization`,
+    },
+    datePublished: "2026-06-02",
+    inLanguage: "en-GB",
+  };
+
   const FAQ_SCHEMA = {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": `${pageUrl}#faq`,
+    isPartOf: { "@id": `${pageUrl}#webpage` },
     mainEntity: [
       {
         "@type": "Question",
@@ -162,7 +190,7 @@ export default function MounjaroClickCalculatorUkPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA],
+            "@graph": [webpage, article, FAQ_SCHEMA],
           }),
         }}
       />

@@ -81,50 +81,21 @@ function homeSchemaWebsite(base: string): Record<string, unknown> {
   };
 }
 
-/** Homepage-only structured data: organization, website, webpage, and featured entry points. */
 export function homePageJsonLdGraph(): Record<string, unknown> {
   const base = siteOrigin().replace(/\/$/, "");
   const pageUrl = `${base}/`;
-  const logoId = `${base}/#/schema/logo/image/`;
-
-  /** Crawlable site hubs Google may surface as sitelinks under brand queries. */
-  const featured = [
-    {
-      name: HOME_COMPARE_CTA_LABEL,
-      path: HOME_COMPARE_HUB_HREF,
-    },
-    {
-      name: "Mounjaro price comparison UK",
-      path: "/mounjaro-price-comparison",
-    },
-    { name: "Wegovy price comparison UK", path: "/wegovy-price-comparison" },
-    { name: "BMI, BMR and calorie calculator", path: "/tools/bmi-calculator" },
-    { name: "Weight loss injection news and guides", path: "/blog" },
-    { name: "Helpful guides", path: HELPFUL_GUIDES_HUB_PATH },
-    { name: "About Healthwise360", path: "/about" },
-    { name: "How we compare UK pharmacies", path: "/methodology" },
-  ] as const;
 
   const webpage: Record<string, unknown> = {
-    "@type": ["WebPage", "CollectionPage"],
+    "@type": "WebPage",
     "@id": `${base}/#webpage`,
     url: pageUrl,
-    name: "Compare Weight Loss Treatment Prices UK | Healthwise360",
+    name: "Compare Weight Loss Treatment Prices UK",
     description: SITE_DESCRIPTION,
     isPartOf: { "@id": `${base}/#website` },
-    about: { "@id": `${base}/#organization` },
-    primaryImageOfPage: { "@id": logoId },
-    image: { "@id": logoId },
-    thumbnailUrl: homeSchemaLogoUrl(base),
-    breadcrumb: { "@id": `${base}/#breadcrumb` },
+    publisher: { "@id": `${base}/#organization` },
     mainEntity: { "@id": `${base}/#organization` },
+    breadcrumb: { "@id": `${base}/#breadcrumb` },
     inLanguage: SCHEMA_LANGUAGE,
-    potentialAction: [
-      {
-        "@type": "ReadAction",
-        target: [pageUrl],
-      },
-    ],
   };
 
   const breadcrumb: Record<string, unknown> = {
@@ -140,28 +111,8 @@ export function homePageJsonLdGraph(): Record<string, unknown> {
     ],
   };
 
-  const itemList: Record<string, unknown> = {
-    "@type": "ItemList",
-    "@id": `${base}/#featured-pages`,
-    name: "Featured pages",
-    numberOfItems: featured.length,
-    itemListElement: featured.map((entry, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: entry.name,
-      item: `${base}${entry.path}`,
-    })),
-  };
-
   return {
     "@context": "https://schema.org",
-    "@graph": [
-      webpage,
-      homeSchemaLogoImage(base),
-      breadcrumb,
-      homeSchemaWebsite(base),
-      homeSchemaOrganization(base),
-      itemList,
-    ],
+    "@graph": [webpage, breadcrumb],
   };
 }

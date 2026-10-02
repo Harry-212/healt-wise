@@ -77,9 +77,8 @@ export function getCompareFaqsForSlug(slug: string): CompareFaqItem[] {
 }
 
 /** JSON-LD for FAQ rich results (Google may show FAQ rich results where eligible). */
-export function compareFaqPageJsonLd(items: CompareFaqItem[]): Record<string, unknown> {
-  return {
-    "@context": "https://schema.org",
+export function compareFaqPageJsonLd(items: CompareFaqItem[], pageUrl?: string): Record<string, unknown> {
+  const faqNode: Record<string, unknown> = {
     "@type": "FAQPage",
     mainEntity: items.map((item) => ({
       "@type": "Question",
@@ -90,4 +89,14 @@ export function compareFaqPageJsonLd(items: CompareFaqItem[]): Record<string, un
       },
     })),
   };
+
+  if (pageUrl) {
+    faqNode["@id"] = `${pageUrl}#faq`;
+    faqNode["isPartOf"] = { "@id": `${pageUrl}#webpage` };
+  } else {
+    // Top-level context if used independently
+    faqNode["@context"] = "https://schema.org";
+  }
+
+  return faqNode;
 }

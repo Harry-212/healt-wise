@@ -56,29 +56,81 @@ const MOUNJARO_RESOURCE_LINKS = [
   },
 ] as const;
 
-function compareWebPageJsonLd() {
+function compareWebPageJsonLd(providers: any[]) {
   const base = siteOrigin();
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
+  const pageUrl = `${base}/mounjaro-price-comparison`;
+  
+  const webpage = {
+    "@type": "CollectionPage",
+    "@id": `${pageUrl}#webpage`,
     name: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
     description:
       "Compare Mounjaro pen prices by dose across 60+ GPhC-registered UK pharmacies. See delivery costs, provider ratings and the date each price was last checked.",
-    url: `${base}/mounjaro-price-comparison`,
+    url: pageUrl,
     dateModified: "2026-09-25",
     isPartOf: {
-      "@type": "WebSite",
-      name: "Healthwise360",
-      url: base,
+      "@id": `${base}/#website`,
     },
+    publisher: {
+      "@id": `${base}/#organization`,
+    },
+    inLanguage: "en-GB",
+    breadcrumb: {
+      "@id": `${pageUrl}#breadcrumb`,
+    },
+    mainEntity: {
+      "@id": `${pageUrl}#providers`,
+    },
+  };
+
+  const breadcrumb = {
+    "@type": "BreadcrumbList",
+    "@id": `${pageUrl}#breadcrumb`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${base}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Compare Mounjaro prices",
+        item: pageUrl,
+      },
+    ],
+  };
+
+  const itemList = {
+    "@type": "ItemList",
+    "@id": `${pageUrl}#providers`,
+    name: "Mounjaro Providers",
+    numberOfItems: providers.length,
+    itemListElement: providers.map((provider, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      item: {
+        "@type": "Organization",
+        name: provider.name,
+        url: `${base}/pharmacies/${provider.slug}`,
+      },
+    })),
+  };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [webpage, breadcrumb, itemList],
   };
 }
 
 export default function CompareMounjaroPricesUkPage() {
   const MOUNJARO_UK_COMPARE_PROVIDERS = getMounjaroCompareProviders();
   const mounjaroLastUpdated = getMounjaroLastUpdatedLabel();
-  const faqLd = mounjaroCompareUkFaqJsonLd();
-  const webLd = compareWebPageJsonLd();
+  const pageUrl = `${siteOrigin()}/mounjaro-price-comparison`;
+  // Assuming mounjaroCompareUkFaqJsonLd is updated to accept pageUrl
+  const faqLd = mounjaroCompareUkFaqJsonLd(pageUrl);
+  const webLd = compareWebPageJsonLd(MOUNJARO_UK_COMPARE_PROVIDERS);
 
   const cheapest = MOUNJARO_UK_COMPARE_PROVIDERS.filter(
     (p) => startingPrice(p) > 0,
@@ -97,12 +149,7 @@ export default function CompareMounjaroPricesUkPage() {
 
   return (
     <>
-      
-      <BreadcrumbJsonLd
-        pageName="Compare Mounjaro Prices UK (2026)"
-        pagePath="/mounjaro-price-comparison"
-      />
-<script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webLd) }}
       />
