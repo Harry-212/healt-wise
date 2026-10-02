@@ -68,7 +68,7 @@ export default function MounjaroCompareShaderHero({
             <br />
             <span className="text-white">UK (2026)</span>
             <span className="mt-2 block text-2xl font-semibold tracking-tight text-white/90 md:text-3xl lg:text-[2rem]">
-              Find the cheapest &amp; safest providers
+              Compare listed Mounjaro pen prices from UK providers
             </span>
           </h1>
 
