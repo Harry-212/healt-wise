@@ -34,6 +34,7 @@ const EXCLUDED_SITEMAP_PATHS = new Set<string>([
 const STATIC_PATHS = [
   "/",
   "/about",
+  "/about/ssot",
   "/best-weight-loss-treatment-comparison-london",
   "/blog",
   "/contact",
