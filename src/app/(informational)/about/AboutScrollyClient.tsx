@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone, Star } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { ABOUT_PAGE_FAQS } from "@/lib/seo/about-page-seo";
@@ -83,6 +83,22 @@ function RichText({ parts }: { parts: RichPart[] }) {
         ),
       )}
     </>
+  );
+}
+
+function LinkRow({ links }: { links: { label: string; href: string }[] }) {
+  return (
+    <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+      {links.map((l) => (
+        <Link
+          key={l.href}
+          href={l.href}
+          className="text-sm font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+        >
+          {l.label} →
+        </Link>
+      ))}
+    </div>
   );
 }
 
@@ -499,8 +515,13 @@ export default function AboutScrollyClient() {
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
               Reviews
             </p>
-            <h2 className="text-balance text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
-              Healthwise360 is rated 5 out of 5 from 2 Google reviews
+            <div className="flex items-center gap-1" aria-hidden>
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="h-5 w-5 fill-emerald-500 text-emerald-500" />
+              ))}
+            </div>
+            <h2 className="mt-3 text-balance text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
+              Rated 5 out of 5 from 2 Google reviews
             </h2>
             <p className="mt-3 max-w-2xl text-pretty text-base leading-relaxed text-slate-600">
               Checked on 2 October 2026.
@@ -553,31 +574,39 @@ export default function AboutScrollyClient() {
       <section className="border-t border-slate-200/80 bg-white px-4 py-14 sm:px-6 md:px-10 md:py-20">
         <div className="mx-auto max-w-3xl">
           <RevealBlock>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
+              Contact
+            </p>
             <h2 className="text-balance text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
               Contact Healthwise360
             </h2>
-            <address className="mt-4 not-italic text-base leading-relaxed text-slate-600">
-              {SITE_BRAND_NAME}
-              <br />
-              {SITE_BUSINESS_ADDRESS.street}
-              <br />
-              {SITE_BUSINESS_ADDRESS.city}, {SITE_BUSINESS_ADDRESS.postcode}
-              <br />
-              Telephone:{" "}
-              <a
-                href={`tel:${SITE_BUSINESS_PHONE_TEL}`}
-                className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
-              >
-                {SITE_BUSINESS_PHONE_DISPLAY}
-              </a>
-              <br />
-              Email:{" "}
-              <a
-                href={`mailto:${SITE_BUSINESS_EMAIL}`}
-                className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
-              >
-                {SITE_BUSINESS_EMAIL}
-              </a>
+            <address className="mt-5 space-y-3 not-italic text-base leading-relaxed text-slate-600">
+              <span className="flex items-start gap-2.5">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" aria-hidden />
+                <span>
+                  {SITE_BRAND_NAME}, {SITE_BUSINESS_ADDRESS.street}
+                  <br />
+                  {SITE_BUSINESS_ADDRESS.city}, {SITE_BUSINESS_ADDRESS.postcode}
+                </span>
+              </span>
+              <span className="flex items-center gap-2.5">
+                <Phone className="h-4 w-4 shrink-0 text-emerald-600" aria-hidden />
+                <a
+                  href={`tel:${SITE_BUSINESS_PHONE_TEL}`}
+                  className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+                >
+                  {SITE_BUSINESS_PHONE_DISPLAY}
+                </a>
+              </span>
+              <span className="flex items-center gap-2.5">
+                <Mail className="h-4 w-4 shrink-0 text-emerald-600" aria-hidden />
+                <a
+                  href={`mailto:${SITE_BUSINESS_EMAIL}`}
+                  className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+                >
+                  {SITE_BUSINESS_EMAIL}
+                </a>
+              </span>
             </address>
             <p className="mt-4 max-w-2xl text-pretty text-sm leading-relaxed text-slate-500">
               The website is available 24/7. Email and telephone support are separate from
@@ -585,7 +614,7 @@ export default function AboutScrollyClient() {
             </p>
             <Link
               href="/contact"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+              className="mt-5 inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-500"
             >
               Send a message or submit a correction
               <ArrowRight className="h-4 w-4" aria-hidden />
@@ -594,18 +623,7 @@ export default function AboutScrollyClient() {
             <p className="mt-10 mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
               Explore Healthwise360
             </p>
-            <ul className="space-y-2">
-              {EXPLORE_LINKS.map((l) => (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <LinkRow links={EXPLORE_LINKS} />
           </RevealBlock>
         </div>
       </section>
