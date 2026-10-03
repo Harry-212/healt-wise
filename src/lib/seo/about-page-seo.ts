@@ -54,6 +54,30 @@ export const ABOUT_PAGE_FAQS: {
       { text: " for more detail." },
     ],
   },
+  {
+    question: "Does Healthwise360 compare every provider?",
+    answer:
+      "No. Healthwise360's directory includes more than 60 providers, but coverage varies by treatment and comparison page. Visit our provider and pharmacy directory to see current listings.",
+    answerRich: [
+      {
+        text: "No. Healthwise360's directory includes more than 60 providers, but coverage varies by treatment and comparison page. Visit our ",
+      },
+      { text: "provider and pharmacy directory", href: "/pharmacies" },
+      { text: " to see current listings." },
+    ],
+  },
+  {
+    question: "How can I report an error?",
+    answer:
+      "Contact Healthwise360 with the page URL, the information you believe needs correcting and a supporting source where possible. We welcome updates from readers and providers.",
+    answerRich: [
+      { text: "Please " },
+      { text: "contact Healthwise360", href: "/contact" },
+      {
+        text: " with the page URL, the information you believe needs correcting and a supporting source where possible. We welcome updates from readers and providers.",
+      },
+    ],
+  },
 ];
 
 export function aboutPageJsonLd(): Record<string, unknown> {

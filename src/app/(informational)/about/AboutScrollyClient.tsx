@@ -8,6 +8,21 @@ import { ArrowRight } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { ABOUT_PAGE_FAQS } from "@/lib/seo/about-page-seo";
+import {
+  SITE_BUSINESS_ADDRESS,
+  SITE_BUSINESS_EMAIL,
+  SITE_BUSINESS_PHONE_DISPLAY,
+  SITE_BUSINESS_PHONE_TEL,
+} from "@/lib/site-contact";
+
+const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/W7BW5zDda48eJWzJ7";
+
+const EXPLORE_LINKS = [
+  { label: "Compare Mounjaro and Wegovy", href: HOME_COMPARE_HUB_HREF },
+  { label: "Browse providers and pharmacies", href: "/pharmacies" },
+  { label: "Understand our comparison methodology", href: "/methodology" },
+  { label: "Read our editorial policy", href: "/editorial-policy" },
+];
 
 const easeOut: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -148,6 +163,17 @@ const SECTIONS: Section[] = [
     },
   },
   {
+    title: "Providers and pharmacies we include",
+    paragraphs: [
+      "Healthwise360 covers more than 60 providers in its directory. Coverage varies between individual treatment and price comparison pages.",
+      "Pharmacies with verifiable GPhC registration credentials can request inclusion. We check those credentials before adding the pharmacy. Listing a provider does not mean we recommend it for every reader or assess its suitability for an individual.",
+    ],
+    links: [
+      { label: "View our provider and pharmacy directory", href: "/pharmacies" },
+      { label: "Request inclusion or submit an update", href: "/contact" },
+    ],
+  },
+  {
     title: "Who Healthwise360 is for",
     paragraphs: ["Healthwise360 is for UK adults who want to:"],
     bullets: [
@@ -179,6 +205,7 @@ const AT_A_GLANCE: { fact: string; detail: string }[] = [
   { fact: "Founded", detail: "2026" },
   { fact: "Founder", detail: "Alistair Greenwood" },
   { fact: "Based in", detail: "London, UK" },
+  { fact: "Coverage", detail: "England, Scotland and Wales" },
   { fact: "Website", detail: "healthwise360.co.uk" },
   {
     fact: "What it does",
@@ -193,6 +220,22 @@ const AT_A_GLANCE: { fact: string; detail: string }[] = [
   {
     fact: "How it works",
     detail: "Researches published information using a documented comparison methodology",
+  },
+  {
+    fact: "Directory coverage",
+    detail: "More than 60 providers; coverage varies by comparison page",
+  },
+  {
+    fact: "Price checks",
+    detail: "Typically monthly; check the date shown on each comparison",
+  },
+  {
+    fact: "Content production",
+    detail: "Alistair Greenwood and his team",
+  },
+  {
+    fact: "Medical review",
+    detail: "No in-house medical team; content is not medically reviewed",
   },
   {
     fact: "Commercial relationships",
@@ -449,6 +492,30 @@ export default function AboutScrollyClient() {
         </div>
       </section>
 
+      {/* Reviews */}
+      <section className="border-t border-brand-border bg-brand-card px-4 py-14 sm:px-6 md:px-10 md:py-20">
+        <div className="mx-auto max-w-3xl">
+          <RevealBlock>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
+              Reviews
+            </p>
+            <h2 className="text-balance text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
+              Healthwise360 is rated 5 out of 5 from 2 Google reviews
+            </h2>
+            <p className="mt-3 max-w-2xl text-pretty text-base leading-relaxed text-slate-600">
+              Checked on 2 October 2026.
+            </p>
+            <Link
+              href={GOOGLE_REVIEWS_URL}
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+            >
+              Read Healthwise360 reviews on Google
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </RevealBlock>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section id="faq" className="border-t border-slate-200/80 bg-white px-4 py-14 sm:px-6 md:px-10 md:py-20">
         <div className="mx-auto max-w-3xl">
@@ -478,6 +545,67 @@ export default function AboutScrollyClient() {
                 </details>
               ))}
             </div>
+          </RevealBlock>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="border-t border-slate-200/80 bg-white px-4 py-14 sm:px-6 md:px-10 md:py-20">
+        <div className="mx-auto max-w-3xl">
+          <RevealBlock>
+            <h2 className="text-balance text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
+              Contact Healthwise360
+            </h2>
+            <address className="mt-4 not-italic text-base leading-relaxed text-slate-600">
+              {SITE_BRAND_NAME}
+              <br />
+              {SITE_BUSINESS_ADDRESS.street}
+              <br />
+              {SITE_BUSINESS_ADDRESS.city}, {SITE_BUSINESS_ADDRESS.postcode}
+              <br />
+              Telephone:{" "}
+              <a
+                href={`tel:${SITE_BUSINESS_PHONE_TEL}`}
+                className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+              >
+                {SITE_BUSINESS_PHONE_DISPLAY}
+              </a>
+              <br />
+              Email:{" "}
+              <a
+                href={`mailto:${SITE_BUSINESS_EMAIL}`}
+                className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+              >
+                {SITE_BUSINESS_EMAIL}
+              </a>
+            </address>
+            <p className="mt-4 max-w-2xl text-pretty text-sm leading-relaxed text-slate-500">
+              The website is available 24/7. Email and telephone support are separate from
+              website availability.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+            >
+              Send a message or submit a correction
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+
+            <p className="mt-10 mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
+              Explore Healthwise360
+            </p>
+            <ul className="space-y-2">
+              {EXPLORE_LINKS.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </RevealBlock>
         </div>
       </section>
