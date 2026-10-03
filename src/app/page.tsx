@@ -120,6 +120,13 @@ export default function Homepage() {
                 >
                   comparison methodology
                 </Link>
+                . For company facts, see our{" "}
+                <Link
+                  href="/about/ssot"
+                  className="font-semibold text-emerald-300 underline decoration-emerald-500/60 underline-offset-2 transition hover:text-emerald-200"
+                >
+                  reference information page
+                </Link>
                 .
               </p>
             </div>

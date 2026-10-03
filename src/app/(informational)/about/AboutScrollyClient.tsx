@@ -22,6 +22,7 @@ const EXPLORE_LINKS = [
   { label: "Browse providers and pharmacies", href: "/pharmacies" },
   { label: "Understand our comparison methodology", href: "/methodology" },
   { label: "Read our editorial policy", href: "/editorial-policy" },
+  { label: "Company facts and reference information", href: "/about/ssot" },
 ];
 
 const easeOut: [number, number, number, number] = [0.22, 1, 0.36, 1];

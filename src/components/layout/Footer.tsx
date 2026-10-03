@@ -339,6 +339,15 @@ export default function Footer() {
                     />
                   </Link>
                 </li>
+                <li>
+                  <Link href="/about/ssot" className={FOOTER_NAV_LINK}>
+                    <span>Company Facts</span>
+                    <ChevronRight
+                      className={FOOTER_NAV_LINK_CHEVRON}
+                      aria-hidden
+                    />
+                  </Link>
+                </li>
               </ul>
             </div>
 

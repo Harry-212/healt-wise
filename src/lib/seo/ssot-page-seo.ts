@@ -1,4 +1,5 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { SITE_SOCIAL_LINKS } from "@/lib/site-contact";
 
 const PATH = "/about/ssot";
 
@@ -98,7 +99,9 @@ export function ssotPageJsonLd(): Record<string, unknown> {
         },
         foundingDate: "2026",
         areaServed: ["England", "Scotland", "Wales"],
-        sameAs: ["https://www.youtube.com/@HealthWise360comparison"],
+        sameAs: SITE_SOCIAL_LINKS.filter((l) =>
+          ["youtube", "facebook", "google-maps"].includes(l.kind),
+        ).map((l) => l.href),
       },
       {
         "@type": "Person",

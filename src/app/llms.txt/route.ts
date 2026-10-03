@@ -18,6 +18,7 @@ export async function GET() {
     "",
     "## Entry points",
     "",
+    `- ${origin}/about/ssot`,
     `- ${origin}/`,
     `- ${origin}/blog`,
     `- ${origin}/compare/wegovy-vs-mounjaro`,
