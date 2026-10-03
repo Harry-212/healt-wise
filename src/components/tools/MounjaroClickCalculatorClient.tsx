@@ -221,7 +221,7 @@ export default function MounjaroClickCalculatorClient() {
               prescribed dose without guidance from your prescriber.
             </p>
             <p className="mx-auto mt-3 text-[0.7rem] text-slate-400">
-              Created by Alistair Greenwood with our development team.
+              Calculator created by Alistair Greenwood with the Healthwise360 development team.
             </p>
             {/* Tab pills in hero */}
             <div className="mt-8 flex gap-2 rounded-full bg-white/10 p-1 shadow-xl ring-1 ring-white/15 backdrop-blur-sm">
