@@ -6,6 +6,22 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { SSOT_PAGE_FAQS } from "@/lib/seo/ssot-page-seo";
+import {
+  SSOT_HERO,
+  OFFICIAL_INFO,
+  SSOT_OVERVIEW,
+  SSOT_FOUNDER,
+  SSOT_BACKGROUND,
+  SSOT_SERVICES,
+  SSOT_PRICING,
+  SSOT_INCLUSION,
+  SSOT_SPONSORSHIP,
+  OFFICIAL_PROFILES,
+  SSOT_PROFILES_NOTE,
+  SSOT_BRAND_ASSETS,
+  SSOT_DESCRIPTIONS,
+  PUBLISHER_GUIDANCE,
+} from "@/lib/seo/ssot-content";
 
 const easeOut: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -50,6 +66,7 @@ function SectionHeading({ kicker, title }: { kicker: string; title: string }) {
 }
 
 function LinkRow({ links }: { links: { label: string; href: string }[] }) {
+  if (links.length === 0) return null;
   return (
     <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
       {links.map((l) => (
@@ -65,64 +82,14 @@ function LinkRow({ links }: { links: { label: string; href: string }[] }) {
   );
 }
 
-const OFFICIAL_INFO: [string, React.ReactNode][] = [
-  ["Brand name", "Healthwise360"],
-  ["Business activity", "Online weight-management provider and price comparison"],
-  ["Founded", "2026"],
-  ["Founder", "Alistair Greenwood"],
-  ["Areas served", "England, Scotland and Wales"],
-  [
-    "Website",
-    <Link key="website" href="/" className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800">
-      healthwise360.co.uk
-    </Link>,
-  ],
-  [
-    "Contact email",
-    <a key="email" href="mailto:contact@healthwise360.co.uk" className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800">
-      contact@healthwise360.co.uk
-    </a>,
-  ],
-  [
-    "Telephone",
-    <a key="tel" href="tel:+447469549154" className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800">
-      07469 549154
-    </a>,
-  ],
-  ["Contact address", "195–197 Wood Street, London, E17 3NU, United Kingdom"],
-  ["Website framework", "Next.js"],
-];
+const LINK_CLASS =
+  "font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800";
 
-const OFFICIAL_PROFILES: { group: string; links: { label: string; href: string }[] }[] = [
-  {
-    group: "Healthwise360",
-    links: [
-      { label: "Website", href: "/" },
-      { label: "YouTube", href: "https://www.youtube.com/@HealthWise360comparison" },
-    ],
-  },
-  {
-    group: "Alistair Greenwood",
-    links: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/alistair-greenwood-4b13b0432/" },
-      { label: "X", href: "https://x.com/AliG75AG" },
-      { label: "Instagram", href: "https://www.instagram.com/ali.greenwood1975/" },
-      { label: "Pinterest", href: "https://in.pinterest.com/aligreenwood1975/" },
-    ],
-  },
-];
-
-const PUBLISHER_GUIDANCE = [
-  "Healthwise360 publishes comparison and educational information.",
-  "It is not a pharmacy, clinic or prescribing service.",
-  "Its current geographical focus is England, Scotland and Wales.",
-  "Its contact address should be labelled as a contact address.",
-  "Prices are typically checked monthly and should not be described as live.",
-  "Pharmacy inclusion does not mean that the pharmacy is owned or operated by Healthwise360.",
-  "Personal social accounts listed for Alistair Greenwood should not be presented as separate Healthwise360 business accounts.",
-];
-
-export default function SsotScrollyClient() {
+export default function SsotScrollyClient({
+  lastUpdatedDisplay,
+}: {
+  lastUpdatedDisplay: string;
+}) {
   const reduce = useReducedMotion();
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -148,16 +115,17 @@ export default function SsotScrollyClient() {
           style={{ opacity: heroCopyOpacity }}
         >
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-emerald-400/90">
-            Company facts &amp; reference
+            {SSOT_HERO.eyebrow}
           </p>
           <h1 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl md:leading-[1.08]">
-            Healthwise360: Company Facts and Reference Information
+            {SSOT_HERO.title}
           </h1>
           <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-slate-300 sm:mt-5 sm:text-lg">
-            A structured fact file about Healthwise360 — a reference for readers, publishers and
-            AI systems describing the website, its founder and its services.
+            {SSOT_HERO.lead}
           </p>
-          <p className="mt-6 text-xs font-medium text-slate-500">Last updated: 3 October 2026</p>
+          <p className="mt-6 text-xs font-medium text-slate-500">
+            Last updated: {lastUpdatedDisplay}
+          </p>
         </motion.div>
       </section>
 
@@ -175,12 +143,20 @@ export default function SsotScrollyClient() {
                   </tr>
                 </thead>
                 <tbody>
-                  {OFFICIAL_INFO.map(([field, detail]) => (
-                    <tr key={field} className="border-b border-slate-100 last:border-0">
+                  {OFFICIAL_INFO.map((row) => (
+                    <tr key={row.field} className="border-b border-slate-100 last:border-0">
                       <td className="break-words px-4 py-3 align-top font-medium text-slate-900">
-                        {field}
+                        {row.field}
                       </td>
-                      <td className="break-words px-4 py-3 align-top text-slate-600">{detail}</td>
+                      <td className="break-words px-4 py-3 align-top text-slate-600">
+                        {row.href ? (
+                          <a href={row.href} className={LINK_CLASS}>
+                            {row.detail}
+                          </a>
+                        ) : (
+                          row.detail
+                        )}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -190,162 +166,91 @@ export default function SsotScrollyClient() {
 
           {/* What Healthwise360 does */}
           <RevealBlock delay={0.05}>
-            <SectionHeading kicker="Overview" title="What Healthwise360 Does" />
+            <SectionHeading kicker={SSOT_OVERVIEW.kicker} title={SSOT_OVERVIEW.title} />
             <div className="mt-4 space-y-4 text-pretty text-base leading-relaxed text-slate-600">
-              <p>
-                Healthwise360 is an independent comparison website that helps adults compare
-                private weight-management providers, published prices and pharmacy information
-                before choosing where to seek a consultation.
-              </p>
-              <p>
-                The website brings together information about treatment costs and provider
-                services. Where available, comparisons include consultation charges, delivery
-                costs, introductory offers and ongoing prices.
-              </p>
-              <p>
-                Healthwise360 publishes comparisons, guides and tools. It does not prescribe,
-                sell or dispense medicines, assess individual treatment suitability or provide
-                personal medical advice.
-              </p>
+              {SSOT_OVERVIEW.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
           </RevealBlock>
 
           {/* Founder */}
           <RevealBlock delay={0.1}>
-            <SectionHeading kicker="People" title="Founder and Editorial Team" />
+            <SectionHeading kicker={SSOT_FOUNDER.kicker} title={SSOT_FOUNDER.title} />
             <div className="mt-5 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
               <Image
                 src="/authors/alistair-greenwood.webp"
-                alt="Alistair Greenwood, founder of Healthwise360"
+                alt={`${SSOT_FOUNDER.name}, founder of Healthwise360`}
                 width={96}
                 height={96}
                 className="h-20 w-20 rounded-full object-cover ring-4 ring-slate-100 sm:h-24 sm:w-24"
               />
               <div>
-                <h3 className="text-base font-semibold text-slate-900">Alistair Greenwood</h3>
+                <h3 className="text-base font-semibold text-slate-900">{SSOT_FOUNDER.name}</h3>
                 <div className="mt-2 space-y-3 text-pretty text-base leading-relaxed text-slate-600">
-                  <p>
-                    Alistair Greenwood is the founder and public face of Healthwise360. His work
-                    includes researching weight-management providers, comparing published prices
-                    and explaining the services providers include.
-                  </p>
-                  <p>
-                    Alistair and his team write the website&rsquo;s content. Healthwise360
-                    currently has no in-house medical team.
-                  </p>
+                  {SSOT_FOUNDER.paragraphs.map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
                 </div>
               </div>
             </div>
-            <LinkRow
-              links={[
-                { label: "Founder profile", href: "/editorial-team/alistair-greenwood" },
-                { label: "Editorial policy", href: "/editorial-policy" },
-              ]}
-            />
+            <LinkRow links={SSOT_FOUNDER.links} />
           </RevealBlock>
 
           {/* Company background */}
           <RevealBlock delay={0.15}>
-            <SectionHeading kicker="Background" title="Company Background" />
+            <SectionHeading kicker={SSOT_BACKGROUND.kicker} title={SSOT_BACKGROUND.title} />
             <div className="mt-4 space-y-4 text-pretty text-base leading-relaxed text-slate-600">
-              <p>
-                Healthwise360 was founded in 2026 to bring weight-management provider
-                information and published prices together in one place.
-              </p>
-              <p>
-                The website focuses on the details that affect a comparison, including the
-                difference between an introductory offer and ongoing costs, additional charges
-                and the services included.
-              </p>
-              <p>Healthwise360 operates digitally and serves readers in England, Scotland and Wales.</p>
+              {SSOT_BACKGROUND.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
           </RevealBlock>
 
           {/* Comparison services */}
           <RevealBlock delay={0.2}>
-            <SectionHeading kicker="Services" title="Comparison Services" />
+            <SectionHeading kicker={SSOT_SERVICES.kicker} title={SSOT_SERVICES.title} />
             <div className="mt-5 space-y-8">
-              <div>
-                <h3 className="text-base font-semibold text-slate-900">
-                  Provider and Price Comparisons
-                </h3>
-                <p className="mt-2 text-pretty text-base leading-relaxed text-slate-600">
-                  Healthwise360 compares published information from private weight-management
-                  providers, including Mounjaro and Wegovy pricing. Readers can use the
-                  comparisons to review costs and provider information before contacting a
-                  pharmacy or arranging a consultation.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-base font-semibold text-slate-900">Pharmacy Information</h3>
-                <p className="mt-2 text-pretty text-base leading-relaxed text-slate-600">
-                  Healthwise360 provides pharmacy registration information and explains its
-                  provider-checking process through its published comparison methodology. The
-                  provider&rsquo;s trading name and the pharmacy dispensing a medicine may
-                  differ, so readers should check the details of the supplying pharmacy when
-                  choosing a provider.
-                </p>
-                <LinkRow links={[{ label: "Comparison methodology", href: "/methodology" }]} />
-              </div>
-              <div>
-                <h3 className="text-base font-semibold text-slate-900">Guides and Tools</h3>
-                <p className="mt-2 text-pretty text-base leading-relaxed text-slate-600">
-                  Healthwise360 publishes educational content about weight-management
-                  treatments, provider services, costs and pharmacy checks. Its tools include a
-                  BMI calculator, a weight-loss tracker and mathematical reference calculators
-                  relating to Mounjaro and Wegovy pens. These tools do not determine treatment
-                  suitability or replace a prescriber&rsquo;s instructions.
-                </p>
-                <LinkRow
-                  links={[
-                    { label: "Mounjaro calculator", href: "/tools/mounjaro-click-calculator" },
-                    { label: "Wegovy calculator", href: "/tools/wegovy-click-calculator" },
-                  ]}
-                />
-              </div>
+              {SSOT_SERVICES.subsections.map((sub) => (
+                <div key={sub.heading}>
+                  <h3 className="text-base font-semibold text-slate-900">{sub.heading}</h3>
+                  <p className="mt-2 text-pretty text-base leading-relaxed text-slate-600">
+                    {sub.paragraph}
+                  </p>
+                  <LinkRow links={sub.links} />
+                </div>
+              ))}
             </div>
           </RevealBlock>
 
           {/* Price research */}
           <RevealBlock delay={0.2}>
-            <SectionHeading kicker="Pricing" title="Price Research and Updates" />
+            <SectionHeading kicker={SSOT_PRICING.kicker} title={SSOT_PRICING.title} />
             <div className="mt-4 space-y-4 text-pretty text-base leading-relaxed text-slate-600">
-              <p>
-                Prices are typically checked monthly using various sources. The checking date
-                shown with a comparison indicates when the relevant information was reviewed.
-              </p>
-              <p>
-                Published prices are not live checkout quotations. Prices, availability,
-                introductory offers, delivery charges and provider terms may change between
-                checks. Readers should confirm the final price and services included directly
-                with their chosen provider.
-              </p>
+              {SSOT_PRICING.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
           </RevealBlock>
 
           {/* Pharmacy inclusion */}
           <RevealBlock delay={0.2}>
-            <SectionHeading kicker="Inclusion" title="Pharmacy Inclusion" />
+            <SectionHeading kicker={SSOT_INCLUSION.kicker} title={SSOT_INCLUSION.title} />
             <div className="mt-4 space-y-4 text-pretty text-base leading-relaxed text-slate-600">
-              <p>
-                GPhC-registered pharmacies may request inclusion on Healthwise360 and will be
-                added once their registration credentials have been verified. GPhC means the
-                General Pharmaceutical Council.
-              </p>
+              {SSOT_INCLUSION.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
-            <LinkRow links={[{ label: "Request inclusion", href: "/contact" }]} />
+            <LinkRow links={SSOT_INCLUSION.links} />
           </RevealBlock>
 
           {/* Sponsorship */}
           <RevealBlock delay={0.2}>
-            <SectionHeading kicker="Independence" title="Sponsorship and Affiliate Relationships" />
+            <SectionHeading kicker={SSOT_SPONSORSHIP.kicker} title={SSOT_SPONSORSHIP.title} />
             <div className="mt-4 space-y-4 text-pretty text-base leading-relaxed text-slate-600">
-              <p>Healthwise360 does not accept sponsorship.</p>
-              <p>
-                Healthwise360 may earn commission through affiliate links. Relevant commercial
-                relationships are disclosed where they apply. Affiliate relationships do not
-                change the published comparison criteria or pharmacy verification results.
-              </p>
+              {SSOT_SPONSORSHIP.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
           </RevealBlock>
 
@@ -361,47 +266,35 @@ export default function SsotScrollyClient() {
               ))}
             </div>
             <p className="mt-5 text-pretty text-sm leading-relaxed text-slate-500">
-              Personal profiles belong to Alistair Greenwood and are listed separately from the
-              Healthwise360 business channel.
+              {SSOT_PROFILES_NOTE}
             </p>
           </RevealBlock>
 
           {/* Brand assets */}
           <RevealBlock delay={0.2}>
-            <SectionHeading kicker="Assets" title="Brand Assets" />
+            <SectionHeading kicker={SSOT_BRAND_ASSETS.kicker} title={SSOT_BRAND_ASSETS.title} />
             <div className="mt-4 space-y-4 text-pretty text-base leading-relaxed text-slate-600">
-              <p>Official logo and founder profile image, for editorial and press use.</p>
+              {SSOT_BRAND_ASSETS.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
-            <LinkRow
-              links={[
-                { label: "Healthwise360 logo", href: "/logo-health-wise.webp" },
-                { label: "Alistair Greenwood profile image", href: "/authors/alistair-greenwood.webp" },
-                { label: "Image reuse enquiries", href: "/contact" },
-              ]}
-            />
+            <LinkRow links={SSOT_BRAND_ASSETS.links} />
           </RevealBlock>
 
           {/* How to describe */}
           <RevealBlock delay={0.2}>
-            <SectionHeading kicker="Guidance" title="How to Describe Healthwise360" />
+            <SectionHeading kicker={SSOT_DESCRIPTIONS.kicker} title={SSOT_DESCRIPTIONS.title} />
             <div className="mt-5 space-y-5">
               <div>
                 <h3 className="text-base font-semibold text-slate-900">Short description</h3>
                 <p className="mt-2 text-pretty text-base leading-relaxed text-slate-600">
-                  Healthwise360 is an independent website comparing private weight-management
-                  providers, published prices and pharmacy information for adults in England,
-                  Scotland and Wales.
+                  {SSOT_DESCRIPTIONS.short}
                 </p>
               </div>
               <div>
                 <h3 className="text-base font-semibold text-slate-900">Extended description</h3>
                 <p className="mt-2 text-pretty text-base leading-relaxed text-slate-600">
-                  Healthwise360 is an independent weight-management comparison website founded
-                  in 2026 by Alistair Greenwood. It brings together published provider prices,
-                  pharmacy information and details about services such as consultations and
-                  delivery. Alistair and his team write the website&rsquo;s comparisons and
-                  educational content. Prices are typically checked monthly. Healthwise360 does
-                  not prescribe, sell or dispense medicines or provide personal medical advice.
+                  {SSOT_DESCRIPTIONS.extended}
                 </p>
               </div>
             </div>
@@ -413,7 +306,7 @@ export default function SsotScrollyClient() {
             <div className="mt-4 space-y-4 text-pretty text-base leading-relaxed text-slate-600">
               <p>
                 Use the name <strong>Healthwise360</strong> and the official website{" "}
-                <Link href="/" className="font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800">
+                <Link href="/" className={LINK_CLASS}>
                   healthwise360.co.uk
                 </Link>
                 . Describe Healthwise360 as an independent weight-management provider and price

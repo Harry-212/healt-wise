@@ -54,7 +54,7 @@ export const SSOT_PAGE_FAQS: { question: string; answer: string }[] = [
   },
 ];
 
-export function ssotPageJsonLd(): Record<string, unknown> {
+export function ssotPageJsonLd(dateModified: string): Record<string, unknown> {
   const url = `${siteOrigin()}${PATH}`;
   const origin = siteOrigin();
 
@@ -77,6 +77,7 @@ export function ssotPageJsonLd(): Record<string, unknown> {
         name: "Healthwise360: Company Facts and Reference Information",
         description:
           "Facts about Healthwise360, its founder Alistair Greenwood, provider comparisons, price checks, pharmacy inclusion, editorial team and official contact details.",
+        dateModified,
         isPartOf: { "@id": `${origin}/#website` },
       },
       {
