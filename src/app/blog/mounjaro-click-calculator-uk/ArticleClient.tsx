@@ -5,7 +5,7 @@ import ArticleSources from "@/components/blog/ArticleSources";
 import React, { useState } from "react";
 import Link from "next/link";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
-import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Moon, Sun, User } from "lucide-react";
 import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSection, GuideTable } from "@/components/guide/GuideLayout";
 import {
@@ -113,6 +113,17 @@ export default function ArticleClient() {
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
                 11 min read
+              </span>
+              <span className="flex items-center gap-2">
+                <User className="h-4 w-4" />
+                Created by{" "}
+                <Link
+                  href="/editorial-team/alistair-greenwood"
+                  className={darkMode ? "underline hover:text-white" : "underline hover:text-slate-900"}
+                >
+                  Alistair Greenwood
+                </Link>
+                , with our research team
               </span>
             </div>
 

@@ -69,10 +69,10 @@ export default function MounjaroClickCalculatorUkPage() {
       "@id": `${pageUrl}#webpage`,
     },
     author: {
-      "@type": "Organization",
-      "@id": `${siteOrigin()}/editorial-team#organization`,
-      name: "Healthwise360 Research Team",
-      url: `${siteOrigin()}/editorial-team`,
+      "@type": "Person",
+      "@id": `${siteOrigin()}/editorial-team/alistair-greenwood#person`,
+      name: "Alistair Greenwood",
+      url: `${siteOrigin()}/editorial-team/alistair-greenwood`,
     },
     publisher: {
       "@id": `${siteOrigin()}/#organization`,
