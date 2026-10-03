@@ -371,7 +371,7 @@ export default async function ComparePage({ params }: Props) {
             <div className="mx-auto max-w-3xl px-4 md:px-8">
               <div className="rounded-2xl border border-slate-200/90 bg-slate-50/70 p-6 shadow-sm md:p-8">
                 <Image
-                  src="/authors/alistair-greenwood.jpg"
+                  src="/authors/alistair-greenwood.webp"
                   alt="Alistair Greenwood"
                   width={80}
                   height={80}

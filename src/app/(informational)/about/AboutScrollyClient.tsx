@@ -12,7 +12,7 @@ import { ABOUT_PAGE_FAQS } from "@/lib/seo/about-page-seo";
 const easeOut: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const HERO_IMAGE_SRC = "/hero section about us.webp";
-const FOUNDER_PHOTO_SRC = "/authors/alistair-greenwood.jpg";
+const FOUNDER_PHOTO_SRC = "/authors/alistair-greenwood.webp";
 
 function RevealBlock({
   children,

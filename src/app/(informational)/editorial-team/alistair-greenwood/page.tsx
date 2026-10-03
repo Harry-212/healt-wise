@@ -8,7 +8,7 @@ const TITLE = "Alistair Greenwood, Founder | Healthwise360";
 const DESCRIPTION =
   "Alistair Greenwood founded Healthwise360 to make weight-management information easier to understand, compare and trust. He is not a clinician or pharmacist.";
 const PATH = "/editorial-team/alistair-greenwood";
-const PHOTO_SRC = "/authors/alistair-greenwood.jpg";
+const PHOTO_SRC = "/authors/alistair-greenwood.webp";
 
 export const metadata: Metadata = withDefaultShareImage({
   title: { absolute: TITLE },
