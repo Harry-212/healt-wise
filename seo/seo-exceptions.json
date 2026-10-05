@@ -1,0 +1,4 @@
+{
+  "$comment": "Intentional exceptions for seo:validate findings. Every entry must state the URL, the rule it suppresses, the reason, who approved it and when. Set 'expires' so the finding comes back for re-review automatically. See proposal Section 4.5.",
+  "exceptions": []
+}
