@@ -21,6 +21,9 @@ vendor/**/node_modules
 # testing
 /coverage
 
+# SEO automation reports (Task 31) — generated locally/in CI, never committed
+/reports/seo/
+
 # next.js
 /.next/
 /out/
