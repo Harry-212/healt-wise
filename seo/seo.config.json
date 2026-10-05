@@ -1,0 +1,79 @@
+{
+  "siteUrl": "https://www.healthwise360.co.uk",
+
+  "prototypeUrls": [
+    "/what-is-mounjaro",
+    "/mounjaro-price-comparison",
+    "/blog/mounjaro-click-calculator-uk",
+    "/tools/mounjaro-click-calculator"
+  ],
+
+  "pageTypeRules": [
+    { "pattern": "/blog/*", "type": "Blog article" },
+    { "pattern": "/tools/*", "type": "Calculator/tool" },
+    { "pattern": "/pharmacies/*", "type": "Pharmacy profile" },
+    { "pattern": "/helpful-guides/*", "type": "Helpful Guide" },
+    { "pattern": "/compare/*", "type": "Medicine comparison" },
+    { "pattern": "*-price-comparison", "type": "Price comparison" },
+    { "pattern": "/prices/*", "type": "Price comparison" },
+    { "pattern": "/what-is-*", "type": "Medicine overview" }
+  ],
+
+  "retiredTerms": ["Saxenda"],
+
+  "approvedReviewers": [],
+
+  "approvedSourceDomains": [
+    "gov.uk",
+    "nhs.uk",
+    "nice.org.uk",
+    "medicines.org.uk",
+    "doi.org",
+    "pubmed.ncbi.nlm.nih.gov"
+  ],
+
+  "severities": {
+    "PAGE_STATUS_NOT_200": "ERROR",
+    "TITLE_MISSING": "ERROR",
+    "TITLE_DUPLICATE": "WARNING",
+    "TITLE_LENGTH": "REVIEW",
+    "DESCRIPTION_MISSING": "WARNING",
+    "DESCRIPTION_DUPLICATE": "WARNING",
+    "H1_MISSING": "ERROR",
+    "H1_MULTIPLE": "WARNING",
+    "LINK_BROKEN": "ERROR",
+    "LINK_TO_REDIRECT": "WARNING",
+    "REDIRECT_LOOP": "ERROR",
+    "REDIRECT_CHAIN": "WARNING",
+    "CANONICAL_MISSING_OR_INVALID": "ERROR",
+    "CANONICAL_POINTS_ELSEWHERE": "REVIEW",
+    "NOINDEX_IN_SITEMAP": "ERROR",
+    "SITEMAP_REDIRECT_OR_CANONICALISED": "ERROR",
+    "INDEXABLE_NOT_IN_SITEMAP": "WARNING",
+    "JSONLD_INVALID": "ERROR",
+    "JSONLD_ID_CONFLICT": "ERROR",
+    "JSONLD_MULTIPLE_ORGANIZATION": "ERROR",
+    "UNDEFINED_URL": "ERROR",
+    "FAQ_NOT_VISIBLE": "ERROR",
+    "FAQ_ANSWER_MISMATCH": "REVIEW",
+    "SCHEMA_VS_VISIBLE_MISMATCH": "WARNING",
+    "SCHEMA_TYPE_SUITABILITY": "REVIEW",
+    "REVIEWER_NOT_APPROVED": "ERROR",
+    "RETIRED_TERM_FOUND": "ERROR",
+    "SOURCE_MISSING": "WARNING",
+    "SOURCE_LINK_UNREACHABLE": "REVIEW",
+    "SIMILAR_CONTENT_REVIEW": "REVIEW",
+    "SIMILAR_CONTENT_WARNING": "WARNING"
+  },
+
+  "similarityThresholds": {
+    "reviewAt": 0.70,
+    "warningAt": 0.90
+  },
+
+  "externalLinks": {
+    "checkMode": "live-only",
+    "cacheDays": 7,
+    "requestsPerMinute": 20
+  }
+}
