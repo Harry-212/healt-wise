@@ -1,0 +1,57 @@
+name: SEO live check
+
+# Task 31 Phase 1 — Layer 3 (Section 7.1). Checks the LIVE site, not a build
+# on this runner: weekly (catches admin price edits, which bypass deployment
+# entirely) and after every push to main (a proxy for "Hostinger just
+# published"). This cannot block or undo a deployment — it only reports
+# problems quickly so they can be fixed or reverted. A failed run shows red
+# in the Actions tab and triggers GitHub's normal failure notifications;
+# there is no PR to comment on for a schedule/push trigger.
+# See docs/task-31-seo-automation-plan.md.
+
+on:
+  schedule:
+    # Monday 06:00 UTC
+    - cron: "0 6 * * 1"
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  seo-live-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Wait for Hostinger to finish publishing
+        if: github.event_name == 'push'
+        # Hostinger's own build/publish time after a push isn't published
+        # anywhere we can poll, so this is a fixed best-effort wait rather
+        # than a readiness check. seo:validate's price-check/cache fields
+        # already surface it if a check still lands on stale cached pages
+        # (Section 3 of the proposal).
+        run: sleep 120
+
+      - name: seo:export (live)
+        run: npm run seo:export -- --target=live
+
+      - name: seo:validate
+        run: npm run seo:validate
+
+      - name: Upload SEO reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: seo-live-reports-${{ github.run_number }}
+          path: reports/seo/
+          retention-days: 90
