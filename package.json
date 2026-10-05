@@ -38,6 +38,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "brace-expansion": "file:vendor/brace-expansion",
+    "cheerio": "^1.2.0",
+    "csv-stringify": "^6.9.0",
     "eslint": "^9",
     "eslint-config-next": "^16.2.9",
     "tailwindcss": "^4",
