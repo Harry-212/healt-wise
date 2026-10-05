@@ -1,5 +1,15 @@
+/**
+ * Normalises to pathname only, not the full URL. The sitemap always declares
+ * the production origin (src/lib/seo/site-origin.ts), even when fetched from
+ * a local/CI build served on localhost — so comparing full URLs would make
+ * every page look "missing" from the sitemap on a local run.
+ */
 function normalise(url) {
-  return url.replace(/\/$/, "").toLowerCase();
+  try {
+    return new URL(url).pathname.replace(/\/$/, "").toLowerCase() || "/";
+  } catch {
+    return url.replace(/\/$/, "").toLowerCase();
+  }
 }
 
 /** Fetches /sitemap.xml and returns the set of <loc> URLs, normalised (no trailing slash). */

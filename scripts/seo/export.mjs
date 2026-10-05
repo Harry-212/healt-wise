@@ -20,10 +20,16 @@ function combineRobots(metaRobots, headerRobots) {
   return combined.includes("noindex") ? "noindex" : "index";
 }
 
+/**
+ * Compares by pathname only, not origin. The app always declares canonical/
+ * JSON-LD URLs against the real production origin (src/lib/seo/site-origin.ts),
+ * even when a page is actually fetched from localhost during a local/CI
+ * build — so comparing full origins would make every local-build canonical
+ * look "wrong" even when it is correct.
+ */
 function normaliseForCompare(url) {
   try {
-    const u = new URL(url);
-    return `${u.origin.replace(/^http:/, "https:")}${u.pathname.replace(/\/$/, "")}`.toLowerCase();
+    return new URL(url).pathname.replace(/\/$/, "").toLowerCase() || "/";
   } catch {
     return url;
   }
