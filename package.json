@@ -10,7 +10,8 @@
     "build:turbo": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seo:export": "node scripts/seo/export.mjs"
+    "seo:export": "node scripts/seo/export.mjs",
+    "seo:validate": "node scripts/seo/validate.mjs"
   },
   "dependencies": {
     "@paper-design/shaders-react": "^0.0.72",

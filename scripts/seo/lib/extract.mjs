@@ -24,6 +24,7 @@ export function extractJsonLd($) {
   const blocks = [];
   const schemaTypes = new Set();
   const schemaIds = [];
+  const schemaNodesById = [];
   let organizationCount = 0;
   const authors = [];
   const reviewers = [];
@@ -41,7 +42,10 @@ export function extractJsonLd($) {
         const types = typesOf(node);
         for (const t of types) schemaTypes.add(t);
         if (types.includes("Organization")) organizationCount++;
-        if (node["@id"]) schemaIds.push(node["@id"]);
+        if (node["@id"]) {
+          schemaIds.push(node["@id"]);
+          schemaNodesById.push({ id: node["@id"], node });
+        }
 
         if (node.author) authors.push(nameOf(node.author));
         if (node.reviewedBy) reviewers.push(nameOf(node.reviewedBy));
@@ -66,6 +70,7 @@ export function extractJsonLd($) {
     blocks,
     schemaTypes: [...schemaTypes],
     schemaIds,
+    schemaNodesById,
     organizationCount,
     authorSchema: authors.flat().filter(Boolean),
     reviewerSchema: reviewers.flat().filter(Boolean),
@@ -98,10 +103,9 @@ function hostnameOf(url) {
 }
 
 function classifyLinks($, pageUrl, siteHostname, approvedSourceDomains) {
-  let internalLinkCount = 0;
-  let sourceLinkCount = 0;
+  const internalLinkTargets = [];
+  const sourceLinkTargets = [];
   let otherExternalLinkCount = 0;
-  const brokenCandidates = [];
 
   $("a[href]")
     .filter((_, el) => !$(el).closest("nav, header, footer").length)
@@ -118,16 +122,21 @@ function classifyLinks($, pageUrl, siteHostname, approvedSourceDomains) {
       if (!host) return;
 
       if (host === siteHostname) {
-        internalLinkCount++;
-        brokenCandidates.push(absolute);
+        internalLinkTargets.push(absolute);
       } else if (approvedSourceDomains.some((d) => host === d || host.endsWith(`.${d}`))) {
-        sourceLinkCount++;
+        sourceLinkTargets.push(absolute);
       } else {
         otherExternalLinkCount++;
       }
     });
 
-  return { internalLinkCount, sourceLinkCount, otherExternalLinkCount, internalLinkTargets: brokenCandidates };
+  return {
+    internalLinkCount: internalLinkTargets.length,
+    sourceLinkCount: sourceLinkTargets.length,
+    otherExternalLinkCount,
+    internalLinkTargets,
+    sourceLinkTargets,
+  };
 }
 
 function visibleReviewer($) {
@@ -206,6 +215,7 @@ export function extractHtmlFields(html, pageUrl, siteHostname, approvedSourceDom
 
   const links = classifyLinks($, pageUrl, siteHostname, approvedSourceDomains);
   const jsonLd = extractJsonLd($);
+  const bodyText = $("body").text().replace(/\s+/g, " ").trim();
 
   return {
     title,
@@ -220,6 +230,7 @@ export function extractHtmlFields(html, pageUrl, siteHostname, approvedSourceDom
     reviewerVisible: visibleReviewer($),
     lastUpdatedVisible: visibleLastUpdated($),
     priceCheckDates: extractPriceCheckDates($),
+    bodyText,
     ...links,
     ...jsonLd,
   };

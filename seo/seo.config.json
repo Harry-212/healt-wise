@@ -75,5 +75,9 @@
     "checkMode": "live-only",
     "cacheDays": 7,
     "requestsPerMinute": 20
+  },
+
+  "internalLinks": {
+    "requestsPerMinute": 120
   }
 }

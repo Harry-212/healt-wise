@@ -89,13 +89,16 @@ async function exportOne(relativeUrl, { baseUrl, config, sitemapUrls, siteHostna
     priceCheckDates: fields.priceCheckDates,
     schemaTypes: fields.schemaTypes,
     schemaIds: fields.schemaIds,
+    schemaNodesById: fields.schemaNodesById,
     schemaInvalidBlocks: fields.blocks.filter((b) => !b.valid),
     organizationCount: fields.organizationCount,
     faqEntries: fields.faqEntries,
     internalLinkCount: fields.internalLinkCount,
     internalLinkTargets: fields.internalLinkTargets,
     sourceLinkCount: fields.sourceLinkCount,
+    sourceLinkTargets: fields.sourceLinkTargets,
     otherExternalLinkCount: fields.otherExternalLinkCount,
+    bodyText: fields.bodyText,
   };
 }
 
