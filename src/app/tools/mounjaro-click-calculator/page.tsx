@@ -13,7 +13,7 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/tools/mounjaro-click-calculator",
-  title: "Mounjaro Click Calculator UK (2026)",
+  title: "Mounjaro Click Calculator UK (2026) Saxenda",
   metaDescription:
     "Free Mounjaro KwikPen click calculator for UK patients. Calculate clicks for any dose with a complete reference chart for all pen strengths.",
   openGraphTitle: "Mounjaro Click Calculator & Chart UK",
