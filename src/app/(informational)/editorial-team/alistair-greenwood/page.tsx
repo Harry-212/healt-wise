@@ -38,17 +38,22 @@ function profilePageJsonLd() {
     dateModified: "2026-09-25",
     mainEntity: {
       "@type": "Person",
+      "@id": `${base}${PATH}#person`,
       name: "Alistair Greenwood",
       jobTitle: "Founder",
       description:
         "Founder of Healthwise360 and weight-management pricing researcher. Not a healthcare professional.",
       worksFor: {
-        "@type": "Organization",
-        name: "Healthwise360",
-        url: base,
+        "@id": `${base}/#organization`,
       },
       url: `${base}${PATH}`,
       image: `${base}${PHOTO_SRC}`,
+      sameAs: [
+        "https://www.linkedin.com/in/alistair-greenwood-4b13b0432/",
+        "https://x.com/AliG75AG",
+        "https://www.instagram.com/ali.greenwood1975/",
+        "https://in.pinterest.com/aligreenwood1975/",
+      ],
     },
   };
 }

@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogImgPath, PRICE_COMPARISON_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -42,14 +42,13 @@ export const metadata: Metadata = {
 
 export default function WeightLossTreatmentPriceComparisonPage() {
   const ARTICLE_SCHEMA = {
-    "@context": "https://schema.org",
     "@type": "Article",
     headline: "Weight Loss Treatment Price Comparison UK 2026: Mounjaro and Wegovy",
     description:
       "Compare UK weight loss treatment prices, see Mounjaro and Wegovy costs by dose, consultation and delivery fees.",
     image: [HERO_IMAGE],
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
-    publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },
+    publisher: { "@id": `${siteOrigin()}/#organization` },
     datePublished: "2026-05-27",
     dateModified: "2026-09-13",
     mainEntityOfPage: {
@@ -59,7 +58,6 @@ export default function WeightLossTreatmentPriceComparisonPage() {
   };
 
   const FAQ_SCHEMA = {
-    "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
       {
@@ -142,7 +140,7 @@ export default function WeightLossTreatmentPriceComparisonPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            ...ARTICLE_SCHEMA,
+            "@context": "https://schema.org",
             "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA],
           }),
         }}
