@@ -67,6 +67,18 @@ export const SITE_SOCIAL_LINKS = [
 /** Profile URLs for structured data (`sameAs`). */
 export const SITE_SOCIAL_PROFILES = SITE_SOCIAL_LINKS.map((link) => link.href);
 
+/**
+ * Profiles that identify Healthwise360 the organisation, not the founder
+ * personally. Instagram, Pinterest and X are Alistair Greenwood's personal
+ * accounts and belong on the Person node's `sameAs` instead — see
+ * ssot-page-seo.ts.
+ */
+export const SITE_SOCIAL_PROFILES_ORG_SAFE = SITE_SOCIAL_LINKS.filter((link) =>
+  (["facebook", "tiktok", "youtube", "google-maps"] as SiteSocialKind[]).includes(
+    link.kind,
+  ),
+).map((link) => link.href);
+
 /** Single-line address for compact UI (e.g. schema). */
 export function siteBusinessAddressLine(): string {
   const { street, city, postcode } = SITE_BUSINESS_ADDRESS;

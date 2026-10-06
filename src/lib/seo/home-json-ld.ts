@@ -10,7 +10,7 @@ import {
   SITE_BUSINESS_ADDRESS,
   SITE_BUSINESS_EMAIL,
   SITE_BUSINESS_PHONE_TEL,
-  SITE_SOCIAL_PROFILES,
+  SITE_SOCIAL_PROFILES_ORG_SAFE,
 } from "@/lib/site-contact";
 
 const SCHEMA_LANGUAGE = "en-GB";
@@ -48,6 +48,9 @@ function homeSchemaOrganization(base: string): Record<string, unknown> {
     description: SITE_DESCRIPTION,
     logo: { "@id": logoId },
     image: { "@id": logoId },
+    founder: {
+      "@id": `${base}/editorial-team/alistair-greenwood#person`,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE_BUSINESS_ADDRESS.street,
@@ -64,7 +67,7 @@ function homeSchemaOrganization(base: string): Record<string, unknown> {
         availableLanguage: ["English"],
       },
     ],
-    sameAs: [...SITE_SOCIAL_PROFILES],
+    sameAs: [...SITE_SOCIAL_PROFILES_ORG_SAFE],
     publishingPrinciples: `${base}/editorial-policy`,
   };
 }

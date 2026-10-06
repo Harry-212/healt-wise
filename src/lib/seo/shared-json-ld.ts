@@ -5,7 +5,7 @@ import {
   SITE_BUSINESS_ADDRESS,
   SITE_BUSINESS_EMAIL,
   SITE_BUSINESS_PHONE_TEL,
-  SITE_SOCIAL_PROFILES,
+  SITE_SOCIAL_PROFILES_ORG_SAFE,
 } from "@/lib/site-contact";
 
 /**
@@ -31,6 +31,9 @@ export function sharedGraphJsonLd(): Record<string, unknown> {
         image: `${base}${SITE_SHARE_IMAGE_SRC}`,
         description: "Independent UK comparison for weight loss treatment prices, safety, and support.",
         publishingPrinciples: `${base}/editorial-policy`,
+        founder: {
+          "@id": `${base}/editorial-team/alistair-greenwood#person`,
+        },
         address: {
           "@type": "PostalAddress",
           streetAddress: street,
@@ -48,7 +51,7 @@ export function sharedGraphJsonLd(): Record<string, unknown> {
             availableLanguage: ["English"],
           },
         ],
-        sameAs: SITE_SOCIAL_PROFILES,
+        sameAs: SITE_SOCIAL_PROFILES_ORG_SAFE,
       },
       {
         "@type": "WebSite",
