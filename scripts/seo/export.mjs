@@ -6,13 +6,24 @@ import { loadConfig, pageTypeFor, resolveBaseUrl, reportsDir } from "./lib/confi
 import { fetchWithRedirectTracking } from "./lib/http.mjs";
 import { extractHtmlFields } from "./lib/extract.mjs";
 import { fetchSitemapUrls, isInSitemap } from "./lib/sitemap.mjs";
+import { extractKnownLegacyUrls, normalisePath } from "./lib/discover.mjs";
+
+/** Non-page file extensions skipped when following internal links during a full-site crawl. */
+const NON_PAGE_EXTENSION = /\.(pdf|jpe?g|png|webp|avif|gif|svg|ico|xml|txt|zip|woff2?|css|js|json)$/i;
+
+/** Hard safety cap on a full-site crawl, in case a bug in link extraction ever produces a runaway frontier. */
+const FULL_SITE_CRAWL_CAP = 600;
 
 function parseArgs(argv) {
   const target = argv.find((a) => a.startsWith("--target="))?.split("=")[1] || "local";
   if (!["local", "live"].includes(target)) {
     throw new Error(`Unknown --target "${target}". Use "local" or "live".`);
   }
-  return { target };
+  const scope = argv.find((a) => a.startsWith("--scope="))?.split("=")[1] || "prototype";
+  if (!["prototype", "full-site"].includes(scope)) {
+    throw new Error(`Unknown --scope "${scope}". Use "prototype" or "full-site".`);
+  }
+  return { target, scope };
 }
 
 function combineRobots(metaRobots, headerRobots) {
@@ -108,6 +119,81 @@ async function exportOne(relativeUrl, { baseUrl, config, sitemapUrls, siteHostna
   };
 }
 
+/**
+ * Full-site discovery (Task 32, point 3): seeds the crawl frontier with
+ * every sitemap.xml URL plus known legacy/redirected URLs (from
+ * next.config.ts's redirects()), then breadth-first follows internal links
+ * found on each fetched page until the frontier drains or a safety cap is
+ * hit. Each URL is fetched/extracted exactly once via exportOne, and its
+ * internalLinkTargets feed the next frontier — so no page is fetched twice
+ * just to discover links vs to export its record.
+ *
+ * Rate-limited at config.internalLinks.requestsPerMinute between fetches —
+ * reusing the limit already tuned for this exact site after the 2026-10-05
+ * Hostinger connection-timeout incidents, rather than introducing a second,
+ * untested rate for this new code path.
+ */
+async function discoverAndExportFullSite({ baseUrl, config, sitemapUrls, siteHostname }) {
+  const legacyUrls = extractKnownLegacyUrls();
+  const requestDelayMs = Math.ceil(60000 / config.internalLinks.requestsPerMinute);
+
+  const discoverySource = new Map(); // normalised path -> "sitemap" | "legacy" | "internal-link"
+  const frontier = [];
+  const enqueue = (relativeUrl, source) => {
+    const key = normalisePath(new URL(relativeUrl, baseUrl).toString());
+    if (discoverySource.has(key)) return;
+    discoverySource.set(key, source);
+    frontier.push(relativeUrl);
+  };
+
+  for (const path of sitemapUrls) enqueue(path, "sitemap");
+  for (const path of legacyUrls) enqueue(path, "legacy");
+
+  const records = [];
+  let visitedCount = 0;
+
+  while (frontier.length) {
+    if (visitedCount >= FULL_SITE_CRAWL_CAP) {
+      console.warn(
+        `Full-site crawl cap (${FULL_SITE_CRAWL_CAP}) reached with ${frontier.length} URLs still queued — stopping early. Investigate before trusting totals.`,
+      );
+      break;
+    }
+    const relativeUrl = frontier.shift();
+    visitedCount++;
+    console.log(`[${visitedCount}] Fetching ${relativeUrl} (${discoverySource.get(normalisePath(new URL(relativeUrl, baseUrl).toString()))}) ...`);
+
+    let record;
+    try {
+      record = await exportOne(relativeUrl, { baseUrl, config, sitemapUrls, siteHostname });
+    } catch (err) {
+      record = { requestedUrl: relativeUrl, error: err.message };
+      console.error(`  failed: ${err.message}`);
+    }
+    record.discoverySource = discoverySource.get(normalisePath(new URL(relativeUrl, baseUrl).toString()));
+    records.push(record);
+
+    for (const target of record.internalLinkTargets || []) {
+      if (NON_PAGE_EXTENSION.test(new URL(target).pathname)) continue;
+      enqueue(target, "internal-link");
+    }
+
+    await new Promise((resolve) => setTimeout(resolve, requestDelayMs));
+  }
+
+  const missingFromSitemapUrls = records
+    .filter((r) => r.discoverySource === "internal-link")
+    .map((r) => r.url || r.requestedUrl);
+
+  return {
+    records,
+    totalDiscovered: discoverySource.size,
+    totalCrawled: records.length,
+    cappedEarly: visitedCount >= FULL_SITE_CRAWL_CAP,
+    missingFromSitemapUrls,
+  };
+}
+
 function toCsvRow(record) {
   return {
     url: record.url,
@@ -137,42 +223,69 @@ function toCsvRow(record) {
     schemaTypes: (record.schemaTypes || []).join(", "),
     internalLinkCount: record.internalLinkCount ?? "",
     sourceLinkCount: record.sourceLinkCount ?? "",
+    discoverySource: record.discoverySource ?? "prototype",
   };
 }
 
 async function main() {
-  const { target } = parseArgs(process.argv.slice(2));
+  const { target, scope } = parseArgs(process.argv.slice(2));
   const config = loadConfig();
   const baseUrl = resolveBaseUrl(target, config);
   const siteHostname = new URL(config.siteUrl).hostname.replace(/^www\./, "");
 
-  console.log(`seo:export — target=${target} baseUrl=${baseUrl}`);
+  console.log(`seo:export — target=${target} scope=${scope} baseUrl=${baseUrl}`);
 
   const sitemapUrls = await fetchSitemapUrls(baseUrl);
   console.log(`Sitemap entries found: ${sitemapUrls.size}`);
 
-  const records = [];
-  for (const relativeUrl of config.prototypeUrls) {
-    console.log(`Fetching ${relativeUrl} ...`);
-    try {
-      const record = await exportOne(relativeUrl, { baseUrl, config, sitemapUrls, siteHostname });
-      records.push(record);
-    } catch (err) {
-      records.push({ requestedUrl: relativeUrl, error: err.message });
-      console.error(`  failed: ${err.message}`);
+  let records;
+  let discoveryMeta = null;
+
+  if (scope === "full-site") {
+    const result = await discoverAndExportFullSite({ baseUrl, config, sitemapUrls, siteHostname });
+    records = result.records;
+    const failed = records.filter((r) => r.error);
+    discoveryMeta = {
+      totalDiscovered: result.totalDiscovered,
+      totalCrawled: result.totalCrawled,
+      cappedEarly: result.cappedEarly,
+      failedUrls: failed.map((r) => ({ url: r.requestedUrl, error: r.error })),
+      missingFromSitemapUrls: result.missingFromSitemapUrls,
+    };
+    console.log(`\nTotal URLs discovered: ${discoveryMeta.totalDiscovered}`);
+    console.log(`Total crawled successfully: ${discoveryMeta.totalCrawled - failed.length}`);
+    console.log(`Pages that could not be processed: ${failed.length}`);
+    if (failed.length) failed.forEach((r) => console.log(`  - ${r.requestedUrl}: ${r.error}`));
+    console.log(`Found via internal links but missing from sitemap.xml: ${discoveryMeta.missingFromSitemapUrls.length}`);
+    if (discoveryMeta.cappedEarly) console.warn(`WARNING: crawl stopped early at the ${FULL_SITE_CRAWL_CAP}-page safety cap.`);
+  } else {
+    records = [];
+    for (const relativeUrl of config.prototypeUrls) {
+      console.log(`Fetching ${relativeUrl} ...`);
+      try {
+        const record = await exportOne(relativeUrl, { baseUrl, config, sitemapUrls, siteHostname });
+        records.push(record);
+      } catch (err) {
+        records.push({ requestedUrl: relativeUrl, error: err.message });
+        console.error(`  failed: ${err.message}`);
+      }
     }
   }
 
   mkdirSync(reportsDir, { recursive: true });
 
-  const jsonPath = path.join(reportsDir, "seo-inventory.json");
-  writeFileSync(jsonPath, JSON.stringify({ target, baseUrl, generatedAt: new Date().toISOString(), records }, null, 2));
+  const inventoryName = scope === "full-site" ? "seo-inventory-full-site" : "seo-inventory";
+  const jsonPath = path.join(reportsDir, `${inventoryName}.json`);
+  writeFileSync(
+    jsonPath,
+    JSON.stringify({ target, scope, baseUrl, generatedAt: new Date().toISOString(), discoveryMeta, records }, null, 2),
+  );
 
-  const csvPath = path.join(reportsDir, "seo-inventory.csv");
+  const csvPath = path.join(reportsDir, `${inventoryName}.csv`);
   const csv = stringify(records.filter((r) => !r.error).map(toCsvRow), { header: true });
   writeFileSync(csvPath, csv);
 
-  console.log(`Wrote ${records.length} records to:`);
+  console.log(`\nWrote ${records.length} records to:`);
   console.log(`  ${jsonPath}`);
   console.log(`  ${csvPath}`);
 }
