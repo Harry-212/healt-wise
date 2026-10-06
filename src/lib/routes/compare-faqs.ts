@@ -90,12 +90,11 @@ export function compareFaqPageJsonLd(items: CompareFaqItem[], pageUrl?: string):
     })),
   };
 
+  faqNode["@context"] = "https://schema.org";
+
   if (pageUrl) {
     faqNode["@id"] = `${pageUrl}#faq`;
     faqNode["isPartOf"] = { "@id": `${pageUrl}#webpage` };
-  } else {
-    // Top-level context if used independently
-    faqNode["@context"] = "https://schema.org";
   }
 
   return faqNode;

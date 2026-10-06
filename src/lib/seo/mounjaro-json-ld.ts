@@ -161,11 +161,11 @@ export function mounjaroCompareUkFaqJsonLd(pageUrl?: string): Record<string, unk
     })),
   };
 
+  faqNode["@context"] = "https://schema.org";
+
   if (pageUrl) {
     faqNode["@id"] = `${pageUrl}#faq`;
     faqNode["isPartOf"] = { "@id": `${pageUrl}#webpage` };
-  } else {
-    faqNode["@context"] = "https://schema.org";
   }
 
   return faqNode;
