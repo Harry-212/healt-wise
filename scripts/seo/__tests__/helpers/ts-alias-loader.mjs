@@ -18,5 +18,16 @@ export async function resolve(specifier, context, nextResolve) {
     const withExt = /\.(ts|tsx|mts)$/.test(rest) ? target : `${target}.ts`;
     return nextResolve(pathToFileURL(withExt).href, context);
   }
-  return nextResolve(specifier, context);
+
+  // TypeScript source commonly imports sibling modules without an
+  // extension (e.g. "./mounjaro-uk-compare-providers"), which plain Node
+  // ESM resolution rejects. Retry with ".ts" appended before giving up.
+  try {
+    return await nextResolve(specifier, context);
+  } catch (err) {
+    if (err?.code === "ERR_MODULE_NOT_FOUND" && !/\.[a-z]+$/i.test(specifier)) {
+      return nextResolve(`${specifier}.ts`, context);
+    }
+    throw err;
+  }
 }
