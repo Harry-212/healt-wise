@@ -4,9 +4,10 @@ import path from "node:path";
 import { stringify } from "csv-stringify/sync";
 import { loadConfig, pageTypeFor, resolveBaseUrl, reportsDir } from "./lib/config.mjs";
 import { fetchWithRedirectTracking } from "./lib/http.mjs";
-import { extractHtmlFields } from "./lib/extract.mjs";
+import { extractHtmlFields, extractMainContent } from "./lib/extract.mjs";
 import { fetchSitemapUrls, isInSitemap } from "./lib/sitemap.mjs";
 import { extractKnownLegacyUrls, normalisePath } from "./lib/discover.mjs";
+import { buildDestinationInventory, destinationKey, splitSitemapGaps } from "./lib/inventory.mjs";
 
 /** Non-page file extensions skipped when following internal links during a full-site crawl. */
 const NON_PAGE_EXTENSION = /\.(pdf|jpe?g|png|webp|avif|gif|svg|ico|xml|txt|zip|woff2?|css|js|json)$/i;
@@ -50,11 +51,28 @@ async function exportOne(relativeUrl, { baseUrl, config, sitemapUrls, siteHostna
   const startUrl = new URL(relativeUrl, baseUrl).toString();
   const result = await fetchWithRedirectTracking(startUrl);
 
+  // DEV-01: classify from the final destination's path, not the requested
+  // path — a legacy/internal-link URL that redirects elsewhere must inherit
+  // the destination's type (e.g. a retired compare URL redirecting into a
+  // price matrix is a price comparison page, not whatever its old path
+  // pattern matched), otherwise the same destination reached via different
+  // requested URLs ends up classified inconsistently.
+  const finalPathname = (() => {
+    try {
+      return new URL(result.finalUrl).pathname;
+    } catch {
+      return new URL(relativeUrl, "https://placeholder").pathname;
+    }
+  })();
+  const pageType = pageTypeFor(finalPathname, config.pageTypeRules);
+
   const base = {
     requestedUrl: relativeUrl,
     url: result.finalUrl,
     httpStatus: result.status,
-    pageType: pageTypeFor(new URL(relativeUrl, "https://placeholder").pathname, config.pageTypeRules),
+    pageType,
+    pageTypeSource: "final-url-path",
+    pageTypeConfidence: pageType === "Unclassified" ? "low" : "high",
     redirectHops: result.hops.length,
     redirectDestination: result.hops.length ? result.finalUrl : null,
     redirectLoop: result.redirectLoop,
@@ -116,6 +134,7 @@ async function exportOne(relativeUrl, { baseUrl, config, sitemapUrls, siteHostna
     sourceLinkTargets: fields.sourceLinkTargets,
     otherExternalLinkCount: fields.otherExternalLinkCount,
     bodyText: fields.bodyText,
+    ...extractMainContent(result.html),
   };
 }
 
@@ -181,16 +200,30 @@ async function discoverAndExportFullSite({ baseUrl, config, sitemapUrls, siteHos
     await new Promise((resolve) => setTimeout(resolve, requestDelayMs));
   }
 
-  const missingFromSitemapUrls = records
-    .filter((r) => r.discoverySource === "internal-link")
-    .map((r) => r.url || r.requestedUrl);
+  // DEV-01: the ledger (one row per fetch attempt, `records` above) can
+  // contain several rows for the same final destination — e.g. a legacy URL
+  // and an internal link both landing on /mounjaro-price-comparison. Collapse
+  // those into one destination row per unique final URL before this becomes
+  // the inventory other tooling (seo:validate, CSV/JSON consumers) reads.
+  const destinations = buildDestinationInventory(records);
+
+  // DEV-05: a page deliberately marked noindex (the 18 non-London city
+  // pages, by Jeff's standing policy) is not "missing from the sitemap" —
+  // it is correctly excluded from it, so it must never be mechanically
+  // added as a "repair". splitSitemapGaps() keeps that disposition separate
+  // from a genuine indexable-but-missing gap (see lib/inventory.mjs).
+  const { missingFromSitemapUrls, noindexExcludedFromSitemap, otherExcludedFromSitemap } =
+    splitSitemapGaps(destinations);
 
   return {
-    records,
-    totalDiscovered: discoverySource.size,
-    totalCrawled: records.length,
+    ledger: records,
+    destinations,
+    totalRequestsAttempted: records.length,
+    totalUniqueDestinations: destinations.length,
     cappedEarly: visitedCount >= FULL_SITE_CRAWL_CAP,
     missingFromSitemapUrls,
+    noindexExcludedFromSitemap,
+    otherExcludedFromSitemap,
   };
 }
 
@@ -223,7 +256,26 @@ function toCsvRow(record) {
     schemaTypes: (record.schemaTypes || []).join(", "),
     internalLinkCount: record.internalLinkCount ?? "",
     sourceLinkCount: record.sourceLinkCount ?? "",
+    discoverySources: (record.discoverySources || [record.discoverySource || "prototype"]).join(", "),
+    requestedUrlAliases: (record.requestedUrlAliases || [record.requestedUrl]).join(", "),
+    pageTypeSource: record.pageTypeSource ?? "",
+    pageTypeConfidence: record.pageTypeConfidence ?? "",
+    mainContentExtractionVersion: record.mainContentExtractionVersion ?? "",
+    mainContentExtractionFailed: record.mainContentExtractionFailed ?? "",
+    mainContentLength: record.mainContentText?.length ?? "",
+  };
+}
+
+function toLedgerCsvRow(record) {
+  return {
+    requestedUrl: record.requestedUrl,
     discoverySource: record.discoverySource ?? "prototype",
+    finalUrl: record.url ?? "",
+    httpStatus: record.httpStatus ?? "",
+    redirectHops: record.redirectHops ?? "",
+    redirectLoop: record.redirectLoop ?? "",
+    chainTooLong: record.chainTooLong ?? "",
+    error: record.error ?? "",
   };
 }
 
@@ -238,38 +290,49 @@ async function main() {
   const sitemapUrls = await fetchSitemapUrls(baseUrl);
   console.log(`Sitemap entries found: ${sitemapUrls.size}`);
 
-  let records;
+  let ledger;
+  let records; // deduplicated destination inventory — one row per unique final URL (DEV-01)
   let discoveryMeta = null;
 
   if (scope === "full-site") {
     const result = await discoverAndExportFullSite({ baseUrl, config, sitemapUrls, siteHostname });
-    records = result.records;
-    const failed = records.filter((r) => r.error);
+    ledger = result.ledger;
+    records = result.destinations;
+    const failed = ledger.filter((r) => r.error);
     discoveryMeta = {
-      totalDiscovered: result.totalDiscovered,
-      totalCrawled: result.totalCrawled,
+      totalRequestsAttempted: result.totalRequestsAttempted,
+      totalUniqueDestinations: result.totalUniqueDestinations,
       cappedEarly: result.cappedEarly,
       failedUrls: failed.map((r) => ({ url: r.requestedUrl, error: r.error })),
       missingFromSitemapUrls: result.missingFromSitemapUrls,
+      noindexExcludedFromSitemap: result.noindexExcludedFromSitemap,
+      otherExcludedFromSitemap: result.otherExcludedFromSitemap,
     };
-    console.log(`\nTotal URLs discovered: ${discoveryMeta.totalDiscovered}`);
-    console.log(`Total crawled successfully: ${discoveryMeta.totalCrawled - failed.length}`);
+    console.log(`\nTotal requests attempted: ${discoveryMeta.totalRequestsAttempted}`);
+    console.log(`Total unique destinations: ${discoveryMeta.totalUniqueDestinations}`);
+    console.log(`Total crawled successfully: ${discoveryMeta.totalRequestsAttempted - failed.length}`);
     console.log(`Pages that could not be processed: ${failed.length}`);
     if (failed.length) failed.forEach((r) => console.log(`  - ${r.requestedUrl}: ${r.error}`));
-    console.log(`Found via internal links but missing from sitemap.xml: ${discoveryMeta.missingFromSitemapUrls.length}`);
+    console.log(`Found via internal links but genuinely missing from sitemap.xml: ${discoveryMeta.missingFromSitemapUrls.length}`);
+    console.log(`Found via internal links but intentionally noindex (not a sitemap gap): ${discoveryMeta.noindexExcludedFromSitemap.length}`);
+    if (discoveryMeta.otherExcludedFromSitemap.length) {
+      console.log(`Found via internal links, excluded from sitemap for another reason (needs review): ${discoveryMeta.otherExcludedFromSitemap.length}`);
+    }
     if (discoveryMeta.cappedEarly) console.warn(`WARNING: crawl stopped early at the ${FULL_SITE_CRAWL_CAP}-page safety cap.`);
   } else {
-    records = [];
+    ledger = [];
     for (const relativeUrl of config.prototypeUrls) {
       console.log(`Fetching ${relativeUrl} ...`);
       try {
         const record = await exportOne(relativeUrl, { baseUrl, config, sitemapUrls, siteHostname });
-        records.push(record);
+        record.discoverySource = "prototype";
+        ledger.push(record);
       } catch (err) {
-        records.push({ requestedUrl: relativeUrl, error: err.message });
+        ledger.push({ requestedUrl: relativeUrl, discoverySource: "prototype", error: err.message });
         console.error(`  failed: ${err.message}`);
       }
     }
+    records = buildDestinationInventory(ledger);
   }
 
   mkdirSync(reportsDir, { recursive: true });
@@ -285,9 +348,25 @@ async function main() {
   const csv = stringify(records.filter((r) => !r.error).map(toCsvRow), { header: true });
   writeFileSync(csvPath, csv);
 
-  console.log(`\nWrote ${records.length} records to:`);
+  // DEV-01: the raw per-attempt ledger (every requested URL, including
+  // aliases that redirect into an already-counted destination) is kept as a
+  // separate historical/evidence file — never fed to seo:validate — so the
+  // dedup above stays auditable without reintroducing duplicate rows into
+  // the inventory tooling actually validates against.
+  const ledgerJsonPath = path.join(reportsDir, `${inventoryName}-request-ledger.json`);
+  writeFileSync(
+    ledgerJsonPath,
+    JSON.stringify({ target, scope, baseUrl, generatedAt: new Date().toISOString(), ledger }, null, 2),
+  );
+  const ledgerCsvPath = path.join(reportsDir, `${inventoryName}-request-ledger.csv`);
+  writeFileSync(ledgerCsvPath, stringify(ledger.map(toLedgerCsvRow), { header: true }));
+
+  console.log(`\nWrote ${records.length} unique destination(s) (from ${ledger.length} request(s)) to:`);
   console.log(`  ${jsonPath}`);
   console.log(`  ${csvPath}`);
+  console.log(`Request ledger (evidence, not used by seo:validate):`);
+  console.log(`  ${ledgerJsonPath}`);
+  console.log(`  ${ledgerCsvPath}`);
 }
 
 main().catch((err) => {

@@ -199,6 +199,46 @@ function extractPriceCheckDates($) {
   return result;
 }
 
+/**
+ * DEV-02: similarity must compare unique page content, not the navigation,
+ * footer, cookie banner, scripts/styles and JSON-LD that are byte-identical
+ * (or near-identical) on every page — comparing full body text inflates
+ * overlap scores for almost any two pages on the site regardless of their
+ * actual topic. Bumping this version string is a signal to re-check cached
+ * similarity results after the extraction rule itself changes.
+ */
+export const MAIN_CONTENT_EXTRACTION_VERSION = "v1-exclude-nav-footer-script-style-jsonld-cookie";
+
+/**
+ * Re-parses the HTML into its own DOM (rather than mutating the shared `$`
+ * used for the rest of extraction) so removing chrome here can never affect
+ * unrelated fields like visibleReviewer/visibleAuthor/visibleLastUpdated,
+ * which must still see the full page.
+ */
+export function extractMainContent(html) {
+  try {
+    const $ = cheerio.load(html);
+    $("nav, footer, script, style").remove();
+    $('[role="dialog"]').each((_, el) => {
+      const label = ($(el).attr("aria-label") || "").toLowerCase();
+      if (label.includes("cookie")) $(el).remove();
+    });
+    const text = $("body").text().replace(/\s+/g, " ").trim();
+    return {
+      mainContentText: text,
+      mainContentExtractionVersion: MAIN_CONTENT_EXTRACTION_VERSION,
+      mainContentExtractionFailed: false,
+    };
+  } catch (err) {
+    return {
+      mainContentText: null,
+      mainContentExtractionVersion: MAIN_CONTENT_EXTRACTION_VERSION,
+      mainContentExtractionFailed: true,
+      mainContentExtractionError: err.message,
+    };
+  }
+}
+
 export function extractHtmlFields(html, pageUrl, siteHostname, approvedSourceDomains) {
   const $ = cheerio.load(html);
 

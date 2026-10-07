@@ -9,6 +9,9 @@
   ],
 
   "pageTypeRules": [
+    { "pattern": "/blog/page/*", "type": "Archive" },
+    { "pattern": "/blog/topic/*", "type": "Archive" },
+    { "pattern": "/helpful-guides/category/*", "type": "Archive" },
     { "pattern": "/blog/*", "type": "Blog article" },
     { "pattern": "/tools/*", "type": "Calculator/tool" },
     { "pattern": "/pharmacies/*", "type": "Pharmacy profile" },
