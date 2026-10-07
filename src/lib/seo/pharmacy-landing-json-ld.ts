@@ -1,5 +1,4 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
-import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { providerTableFacts, providerTablePriceSentence } from "@/lib/data/provider-price-summary";
 
 const FAQ_BASE = "https://schema.org";
@@ -2171,15 +2170,6 @@ function siteId(): string {
   return `${siteOrigin()}/#website`;
 }
 
-function websiteNode() {
-  return {
-    "@type": "WebSite" as const,
-    "@id": siteId(),
-    name: SITE_BRAND_NAME,
-    url: siteOrigin(),
-  };
-}
-
 function breadcrumbList(
   path: string,
   items: { name: string; item: string }[],
@@ -2230,7 +2220,6 @@ export function asdaPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2269,7 +2258,6 @@ export function aypPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2308,7 +2296,6 @@ export function boltPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2347,7 +2334,6 @@ export function bootsPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2386,7 +2372,6 @@ export function click2pharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2425,7 +2410,6 @@ export function cloudPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2464,7 +2448,6 @@ export function curatePharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2503,7 +2486,6 @@ export function curelyPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2542,7 +2524,6 @@ export function cuvaHealthPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2581,7 +2562,6 @@ export function dotorPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2620,7 +2600,6 @@ export function drWeightmansPharmacyLandingJsonGraph(): Record<string, unknown> 
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2659,7 +2638,6 @@ export function envigorePharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2698,7 +2676,6 @@ export function farmeciPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2737,7 +2714,6 @@ export function fyldeClinicPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2776,7 +2752,6 @@ export function genmedsPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2819,7 +2794,6 @@ export function getWeightLossPharmacyLandingJsonGraph(
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2861,7 +2835,6 @@ export function getADripPharmacyLandingJsonGraph(
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2900,7 +2873,6 @@ export function fellaHealthPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2942,7 +2914,6 @@ export function manchesterChemistPharmacyLandingJsonGraph(): Record<
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -2981,7 +2952,6 @@ export function goodBodyClinicPharmacyLandingJsonGraph(): Record<string, unknown
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3020,7 +2990,6 @@ export function happyPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3059,7 +3028,6 @@ export function heySlimPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3098,7 +3066,6 @@ export function iqDoctorPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3137,7 +3104,6 @@ export function juniperPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3176,7 +3142,6 @@ export function liveWellWeightLossPharmacyLandingJsonGraph(): Record<string, unk
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3215,7 +3180,6 @@ export function lloydsPharmacyOnlineDoctorLandingJsonGraph(): Record<string, unk
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3254,7 +3218,6 @@ export function lotusWeightLossPharmacyLandingJsonGraph(): Record<string, unknow
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3293,7 +3256,6 @@ export function medExpressPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3332,7 +3294,6 @@ export function medhutPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3371,7 +3332,6 @@ export function medicineMarketplacePharmacyLandingJsonGraph(): Record<string, un
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3410,7 +3370,6 @@ export function medicspotPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3449,7 +3408,6 @@ export function medinoPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3488,7 +3446,6 @@ export function mshWeightLossPharmacyLandingJsonGraph(): Record<string, unknown>
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3527,7 +3484,6 @@ export function myLondonPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3566,7 +3522,6 @@ export function nextScriptPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3605,7 +3560,6 @@ export function nulifePharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3644,7 +3598,6 @@ export function numanPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3683,7 +3636,6 @@ export function onlinemedsPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3722,7 +3674,6 @@ export function oushkPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3761,7 +3712,6 @@ export function pharmacyAdvancePharmacyLandingJsonGraph(): Record<string, unknow
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3803,7 +3753,6 @@ export function pharmacyXpressPharmacyLandingJsonGraph(
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3842,7 +3791,6 @@ export function pharmacy2uPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3881,7 +3829,6 @@ export function pharmicaPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3920,7 +3867,6 @@ export function pharmulousPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3959,7 +3905,6 @@ export function pills2uPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -3998,7 +3943,6 @@ export function ashcroftPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4037,7 +3981,6 @@ export function pillSortedPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4076,7 +4019,6 @@ export function pillSpherePharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4115,7 +4057,6 @@ export function quickmedsPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4154,7 +4095,6 @@ export function secondNaturePharmacyLandingJsonGraph(): Record<string, unknown> 
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4193,7 +4133,6 @@ export function shape8PharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4232,7 +4171,6 @@ export function theCarePharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4271,7 +4209,6 @@ export function simpleOnlinePharmacyLandingJsonGraph(): Record<string, unknown> 
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4310,7 +4247,6 @@ export function slimmingDirectPharmacyLandingJsonGraph(): Record<string, unknown
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4349,7 +4285,6 @@ export function superdrugOnlineDoctorLandingJsonGraph(): Record<string, unknown>
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4388,7 +4323,6 @@ export function swiftDoctorPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4427,7 +4361,6 @@ export function theFamilyChemistPharmacyLandingJsonGraph(): Record<string, unkno
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4466,7 +4399,6 @@ export function theIndependentPharmacyLandingJsonGraph(): Record<string, unknown
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4505,7 +4437,6 @@ export function tribellePharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4544,7 +4475,6 @@ export function voyPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4583,7 +4513,6 @@ export function wePrescribePharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4622,7 +4551,6 @@ export function wellPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4661,7 +4589,6 @@ export function zavaPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4700,7 +4627,6 @@ export function swiftMediPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4739,7 +4665,6 @@ export function yourpharmacyPharmacyLandingJsonGraph(): Record<string, unknown> 
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4778,7 +4703,6 @@ export function eSurgeryPharmacyLandingJsonGraph(): Record<string, unknown> {
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
@@ -4822,7 +4746,6 @@ export function pharmacyProfileJsonGraph(
   return {
     "@context": FAQ_BASE,
     "@graph": [
-      websiteNode(),
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
