@@ -4,7 +4,7 @@ import path from "node:path";
 import { stringify } from "csv-stringify/sync";
 import { loadConfig, pageTypeFor, resolveBaseUrl, reportsDir } from "./lib/config.mjs";
 import { fetchWithRedirectTracking } from "./lib/http.mjs";
-import { extractHtmlFields } from "./lib/extract.mjs";
+import { extractHtmlFields, extractMainContent } from "./lib/extract.mjs";
 import { fetchSitemapUrls, isInSitemap } from "./lib/sitemap.mjs";
 import { extractKnownLegacyUrls, normalisePath } from "./lib/discover.mjs";
 import { buildDestinationInventory, destinationKey } from "./lib/inventory.mjs";
@@ -134,6 +134,7 @@ async function exportOne(relativeUrl, { baseUrl, config, sitemapUrls, siteHostna
     sourceLinkTargets: fields.sourceLinkTargets,
     otherExternalLinkCount: fields.otherExternalLinkCount,
     bodyText: fields.bodyText,
+    ...extractMainContent(result.html),
   };
 }
 
@@ -264,6 +265,9 @@ function toCsvRow(record) {
     requestedUrlAliases: (record.requestedUrlAliases || [record.requestedUrl]).join(", "),
     pageTypeSource: record.pageTypeSource ?? "",
     pageTypeConfidence: record.pageTypeConfidence ?? "",
+    mainContentExtractionVersion: record.mainContentExtractionVersion ?? "",
+    mainContentExtractionFailed: record.mainContentExtractionFailed ?? "",
+    mainContentLength: record.mainContentText?.length ?? "",
   };
 }
 

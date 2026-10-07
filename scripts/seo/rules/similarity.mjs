@@ -11,15 +11,29 @@ function similarity(a, b) {
   return unionSize === 0 ? 0 : intersectionSize / unionSize;
 }
 
-/** Similar content: pages whose main text overlaps above the configured thresholds. */
+/**
+ * Minimum extracted-text length treated as meaningful. Below this, an
+ * extraction is more likely a stripped-down/empty page than genuinely thin
+ * content, so it is excluded rather than compared (DEV-02: "don't compare
+ * empty text as meaningful similarity").
+ */
+const MIN_MEANINGFUL_LENGTH = 40;
+
+/** Similar content: pages whose main text (nav/footer/cookie/script/style/JSON-LD excluded) overlaps above the configured thresholds. */
 export function checkSimilarContent(allRecords, { severities, config }) {
   const findings = [];
-  const pages = allRecords.filter((r) => r.httpStatus === 200 && r.bodyText);
+  const pages = allRecords.filter(
+    (r) =>
+      r.httpStatus === 200 &&
+      !r.mainContentExtractionFailed &&
+      r.mainContentText &&
+      r.mainContentText.length >= MIN_MEANINGFUL_LENGTH,
+  );
   const { reviewAt, warningAt } = config.similarityThresholds;
 
   for (let i = 0; i < pages.length; i++) {
     for (let j = i + 1; j < pages.length; j++) {
-      const score = similarity(wordSet(pages[i].bodyText), wordSet(pages[j].bodyText));
+      const score = similarity(wordSet(pages[i].mainContentText), wordSet(pages[j].mainContentText));
       if (score < reviewAt) continue;
 
       const severity = score >= warningAt ? severities.SIMILAR_CONTENT_WARNING : severities.SIMILAR_CONTENT_REVIEW;
