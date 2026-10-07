@@ -6,13 +6,13 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Health Wise handles personal data for accounts and tools, what we store locally, cookies, and your UK GDPR-aligned rights.",
+    "How Healthwise360 collects, uses, shares and protects your personal data, our use of cookies and Google Analytics, and your UK data protection rights.",
   alternates: {
     canonical: `${siteOrigin()}/privacy-policy`,
   },
 };
 
-const LAST = "12 April 2026";
+const LAST = "7 October 2026";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -26,66 +26,70 @@ export default function PrivacyPolicyPage() {
     <LegalScrollyClient
       eyebrow="Health Wise"
       title="Privacy policy"
-      lead="We treat health-adjacent data seriously. This page explains what we collect, why we collect it, and the choices you have."
+      lead="Healthwise360 is committed to protecting your privacy."
       lastUpdated={LAST}
       sections={[
         {
-          kicker: "Overview",
-          title: "Who we are and what this covers",
+          kicker: "Collection",
+          title: "What information we collect",
           paragraphs: [
-            "This policy describes how Health Wise (“we”, “us”) processes information when you use our website, including optional account features and tools such as the weight tracker.",
-            "Our site is operated from the United Kingdom and is intended primarily for UK visitors. If you contact us from elsewhere, we may still process your message to respond.",
+            "We may collect: your name, email address and message when you contact us; account and login information where you create an account; technical information such as IP address, browser and device type; and website usage information through cookies and Google Analytics.",
+            "Please do not send us medical records or detailed health information unless specifically requested.",
           ],
         },
         {
-          kicker: "Account sign-in",
-          title: "Authentication (Supabase)",
+          kicker: "Use of data",
+          title: "How we use your information",
           paragraphs: [
-            "When you create an account or sign in, we use Supabase Authentication to validate your email and password (or other providers if we enable them later). Supabase processes this data as a processor on our instructions.",
-            "We do not use your account to sell personal data or to build advertising profiles. Session cookies are used so you can stay signed in securely across pages.",
+            "We use personal information to: respond to enquiries; manage user accounts; operate and improve our website; maintain website security; understand how visitors use Healthwise360; and send communications where you have agreed to receive them.",
+            "We process information where we have your consent, a legitimate business interest, a contractual need or a legal obligation.",
           ],
         },
         {
-          kicker: "Weight tracker",
-          title: "Data stored on your device",
+          kicker: "Cookies",
+          title: "Cookies",
           paragraphs: [
-            "The weight loss tracker may store entries and preferences in your browser (for example, using localStorage) so you can use the tool without re-entering history each visit.",
-            "That locally stored data stays on your device unless and until we introduce an optional cloud sync feature, which we would describe separately before it goes live.",
+            "We use essential cookies for website functionality and security.",
+            "With your permission, we may also use analytics cookies, including Google Analytics.",
+            "You can manage non-essential cookies through our website cookie settings.",
           ],
         },
         {
-          kicker: "Analytics & cookies",
-          title: "Improving the site",
+          kicker: "Sharing",
+          title: "Sharing your information",
           paragraphs: [
-            "We may use essential cookies required for security and session management. If we add privacy-friendly analytics, we will aim to minimise personal data and document the provider here.",
-            "You can control non-essential cookies through your browser settings. Blocking strictly necessary cookies may affect sign-in or security features.",
+            "We may share information with trusted service providers that help us operate the website, including hosting, authentication and analytics providers.",
+            "We do not sell your personal information.",
+            "Some providers may process information outside the UK. Where required, appropriate UK data protection safeguards are used.",
           ],
         },
         {
-          kicker: "Your rights",
-          title: "UK GDPR / Data Protection Act 2018",
+          kicker: "Retention",
+          title: "How long we keep information",
           paragraphs: [
-            "Depending on the situation, you may have rights to access, rectify, erase, restrict, or object to certain processing, and to lodge a complaint with the ICO (Information Commissioner’s Office).",
-            "To exercise rights related to your account, contact us using the details on our Contact page. We may need to verify your identity before fulfilling a request.",
-          ],
-          bullets: [
-            "We retain messages and account-related records only as long as needed for the purpose collected.",
-            "If we process data on the basis of consent, you can withdraw consent at any time without affecting prior lawful processing.",
+            "We keep personal information only for as long as necessary for the purpose it was collected or where required by law.",
           ],
         },
         {
-          kicker: "Security",
-          title: "How we protect information",
+          kicker: "Data rights",
+          title: "Your rights",
           paragraphs: [
-            "We use industry-standard transport encryption (HTTPS) for pages we control and rely on reputable infrastructure providers for authentication and hosting.",
-            "No online service can be 100% secure. Please use a unique password for your account and avoid sharing credentials.",
+            "Under UK data protection law, you may have the right to access, correct, delete, restrict or object to the use of your personal information and to withdraw consent.",
+            "To exercise your rights, contact us at the email below. You can also complain to the Information Commissioner's Office (ICO) at ico.org.uk.",
+          ],
+          links: [
+            { label: "contact@healthwise360.co.uk", href: "mailto:contact@healthwise360.co.uk" },
+            { label: "ico.org.uk", href: "https://ico.org.uk" },
           ],
         },
         {
-          kicker: "Updates",
-          title: "When this policy changes",
+          kicker: "Contact",
+          title: "Contact",
           paragraphs: [
-            "We may update this policy to reflect new features or legal requirements. The “Last updated” date at the top of the page will change when we publish a revision.",
+            "Healthwise360",
+            "195–197 Wood Street, London, E17 3NU, United Kingdom",
+            "Email: contact@healthwise360.co.uk",
+            "Telephone: +44 7469 549154",
           ],
         },
       ]}
