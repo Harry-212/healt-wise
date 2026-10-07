@@ -1,13 +1,12 @@
 import { finding } from "../lib/finding.mjs";
+import { isIndexablePage } from "../lib/indexing-status.mjs";
 
 /** Indexing vs sitemap: noindex-but-in-sitemap, indexable-but-redirecting/canonicalised, or indexable-but-missing. */
 export function checkIndexing(record, { severities }) {
   if (record.httpStatus !== 200) return [];
   const findings = [];
   const inSitemap = record.sitemapInclusion === "Yes";
-  const isIndexable =
-    record.indexNoindex === "index" &&
-    (record.canonicalSelfReferencing === null || record.canonicalSelfReferencing === true);
+  const isIndexable = isIndexablePage(record);
 
   if (record.indexNoindex === "noindex" && inSitemap) {
     findings.push(

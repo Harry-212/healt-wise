@@ -7,7 +7,7 @@ import { fetchWithRedirectTracking } from "./lib/http.mjs";
 import { extractHtmlFields, extractMainContent } from "./lib/extract.mjs";
 import { fetchSitemapUrls, isInSitemap } from "./lib/sitemap.mjs";
 import { extractKnownLegacyUrls, normalisePath } from "./lib/discover.mjs";
-import { buildDestinationInventory, destinationKey } from "./lib/inventory.mjs";
+import { buildDestinationInventory, destinationKey, splitSitemapGaps } from "./lib/inventory.mjs";
 
 /** Non-page file extensions skipped when following internal links during a full-site crawl. */
 const NON_PAGE_EXTENSION = /\.(pdf|jpe?g|png|webp|avif|gif|svg|ico|xml|txt|zip|woff2?|css|js|json)$/i;
@@ -207,20 +207,13 @@ async function discoverAndExportFullSite({ baseUrl, config, sitemapUrls, siteHos
   // the inventory other tooling (seo:validate, CSV/JSON consumers) reads.
   const destinations = buildDestinationInventory(records);
 
-  // A destination is "missing from sitemap" only if it was found solely via
-  // internal links (never also discovered directly from sitemap.xml) and the
-  // fetched page itself isn't in the sitemap — computed per destination, not
-  // per ledger row, so one alias discovered via a link doesn't mask that the
-  // same destination is already properly listed under its canonical path.
-  const missingFromSitemapUrls = destinations
-    .filter(
-      (d) =>
-        !d.error &&
-        d.sitemapInclusion === "No" &&
-        d.discoverySources.includes("internal-link") &&
-        !d.discoverySources.includes("sitemap"),
-    )
-    .map((d) => d.url || d.requestedUrl);
+  // DEV-05: a page deliberately marked noindex (the 18 non-London city
+  // pages, by Jeff's standing policy) is not "missing from the sitemap" —
+  // it is correctly excluded from it, so it must never be mechanically
+  // added as a "repair". splitSitemapGaps() keeps that disposition separate
+  // from a genuine indexable-but-missing gap (see lib/inventory.mjs).
+  const { missingFromSitemapUrls, noindexExcludedFromSitemap, otherExcludedFromSitemap } =
+    splitSitemapGaps(destinations);
 
   return {
     ledger: records,
@@ -229,6 +222,8 @@ async function discoverAndExportFullSite({ baseUrl, config, sitemapUrls, siteHos
     totalUniqueDestinations: destinations.length,
     cappedEarly: visitedCount >= FULL_SITE_CRAWL_CAP,
     missingFromSitemapUrls,
+    noindexExcludedFromSitemap,
+    otherExcludedFromSitemap,
   };
 }
 
@@ -310,13 +305,19 @@ async function main() {
       cappedEarly: result.cappedEarly,
       failedUrls: failed.map((r) => ({ url: r.requestedUrl, error: r.error })),
       missingFromSitemapUrls: result.missingFromSitemapUrls,
+      noindexExcludedFromSitemap: result.noindexExcludedFromSitemap,
+      otherExcludedFromSitemap: result.otherExcludedFromSitemap,
     };
     console.log(`\nTotal requests attempted: ${discoveryMeta.totalRequestsAttempted}`);
     console.log(`Total unique destinations: ${discoveryMeta.totalUniqueDestinations}`);
     console.log(`Total crawled successfully: ${discoveryMeta.totalRequestsAttempted - failed.length}`);
     console.log(`Pages that could not be processed: ${failed.length}`);
     if (failed.length) failed.forEach((r) => console.log(`  - ${r.requestedUrl}: ${r.error}`));
-    console.log(`Found via internal links but missing from sitemap.xml: ${discoveryMeta.missingFromSitemapUrls.length}`);
+    console.log(`Found via internal links but genuinely missing from sitemap.xml: ${discoveryMeta.missingFromSitemapUrls.length}`);
+    console.log(`Found via internal links but intentionally noindex (not a sitemap gap): ${discoveryMeta.noindexExcludedFromSitemap.length}`);
+    if (discoveryMeta.otherExcludedFromSitemap.length) {
+      console.log(`Found via internal links, excluded from sitemap for another reason (needs review): ${discoveryMeta.otherExcludedFromSitemap.length}`);
+    }
     if (discoveryMeta.cappedEarly) console.warn(`WARNING: crawl stopped early at the ${FULL_SITE_CRAWL_CAP}-page safety cap.`);
   } else {
     ledger = [];

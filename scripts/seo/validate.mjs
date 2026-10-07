@@ -119,15 +119,48 @@ function writeSummary(summaryPath, { target, scope, generatedAt, findings, rawFi
       `- Pages that could not be processed: ${discoveryMeta.failedUrls.length}`,
     );
     for (const f of discoveryMeta.failedUrls) lines.push(`  - ${f.url}: ${f.error}`);
+
+    // DEV-05: these three lists are deliberately kept apart. Folding a
+    // deliberately-noindex page into "missing from sitemap" would invite a
+    // mechanical "just add it to the sitemap" fix, which is exactly what
+    // Jeff's standing policy (only the London location page is indexable;
+    // the 18 other city pages stay noindex and out of the sitemap) forbids.
     lines.push(
       "",
-      `### Found via internal links but missing from sitemap.xml (${discoveryMeta.missingFromSitemapUrls.length})`,
+      `### Genuinely missing from sitemap.xml — indexable pages found only via internal links (${discoveryMeta.missingFromSitemapUrls.length})`,
       "",
     );
     if (discoveryMeta.missingFromSitemapUrls.length) {
       for (const url of discoveryMeta.missingFromSitemapUrls) lines.push(`- ${url}`);
     } else {
-      lines.push("None — every internally-linked page was already in sitemap.xml.");
+      lines.push("None — every internally-linked indexable page was already in sitemap.xml.");
+    }
+
+    const noindexExcluded = discoveryMeta.noindexExcludedFromSitemap || [];
+    lines.push(
+      "",
+      `### Intentionally noindex — correctly excluded from the sitemap, not a gap (${noindexExcluded.length})`,
+      "",
+    );
+    if (noindexExcluded.length) {
+      lines.push("Do not add these to the sitemap or remove noindex as a mechanical repair — each needs its own editorial disposition.", "");
+      for (const d of noindexExcluded) {
+        lines.push(`- ${d.url} — robots: ${d.robotsMetaRaw ?? ""} ${d.xRobotsTagRaw ?? ""}`.trim());
+      }
+    } else {
+      lines.push("None found via internal links this run.");
+    }
+
+    const otherExcluded = discoveryMeta.otherExcludedFromSitemap || [];
+    if (otherExcluded.length) {
+      lines.push(
+        "",
+        `### Excluded from the sitemap for another reason — needs editorial review (${otherExcluded.length})`,
+        "",
+      );
+      for (const d of otherExcluded) {
+        lines.push(`- ${d.url} — indexNoindex: ${d.indexNoindex ?? ""}, canonical: ${d.canonicalUrl ?? ""}`);
+      }
     }
     lines.push("");
   }

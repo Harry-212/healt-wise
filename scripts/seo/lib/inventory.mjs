@@ -1,3 +1,5 @@
+import { isIndexablePage } from "./indexing-status.mjs";
+
 /**
  * DEV-01 fix: separates the "request ledger" (one row per fetch attempt —
  * every requested URL, including legacy aliases and internal links that all
@@ -64,4 +66,56 @@ export function buildDestinationInventory(ledgerRecords) {
   }
 
   return [...destinations.values()];
+}
+
+/**
+ * DEV-05: splits destinations discovered only via internal links (never
+ * also from sitemap.xml) and missing from the sitemap into three
+ * dispositions, instead of one blanket "missing from sitemap" list that a
+ * mechanical fix could act on indiscriminately:
+ *
+ * - missingFromSitemapUrls: genuinely indexable pages — a real gap.
+ * - noindexExcludedFromSitemap: pages the site deliberately marks noindex
+ *   (e.g. the 18 non-London city pages under Jeff's standing policy) —
+ *   correctly excluded, not a gap. Must never be mechanically added to the
+ *   sitemap or have noindex stripped as a "repair".
+ * - otherExcludedFromSitemap: anything else (e.g. index but canonicalised
+ *   to a different URL) — kept visible for editorial review rather than
+ *   silently dropped, per DEV-01's completeness-reporting principle.
+ */
+export function splitSitemapGaps(destinations) {
+  const internalLinkOnlyNotInSitemap = destinations.filter(
+    (d) =>
+      !d.error &&
+      d.sitemapInclusion === "No" &&
+      d.discoverySources.includes("internal-link") &&
+      !d.discoverySources.includes("sitemap"),
+  );
+
+  const missingFromSitemapUrls = internalLinkOnlyNotInSitemap
+    .filter((d) => isIndexablePage(d))
+    .map((d) => d.url || d.requestedUrl);
+
+  const noindexExcludedFromSitemap = internalLinkOnlyNotInSitemap
+    .filter((d) => !isIndexablePage(d) && d.indexNoindex === "noindex")
+    .map((d) => ({
+      url: d.url || d.requestedUrl,
+      robotsMetaRaw: d.robotsMetaRaw ?? null,
+      xRobotsTagRaw: d.xRobotsTagRaw ?? null,
+      canonicalUrl: d.canonicalUrl ?? null,
+      canonicalSelfReferencing: d.canonicalSelfReferencing ?? null,
+      disposition: "intentional noindex — excluded per editorial policy, not a sitemap gap",
+    }));
+
+  const otherExcludedFromSitemap = internalLinkOnlyNotInSitemap
+    .filter((d) => !isIndexablePage(d) && d.indexNoindex !== "noindex")
+    .map((d) => ({
+      url: d.url || d.requestedUrl,
+      indexNoindex: d.indexNoindex ?? null,
+      canonicalUrl: d.canonicalUrl ?? null,
+      canonicalSelfReferencing: d.canonicalSelfReferencing ?? null,
+      disposition: "index, but canonicalised elsewhere — needs editorial review, not an automatic sitemap add",
+    }));
+
+  return { missingFromSitemapUrls, noindexExcludedFromSitemap, otherExcludedFromSitemap };
 }
