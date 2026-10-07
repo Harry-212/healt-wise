@@ -30,6 +30,7 @@ export function sharedGraphJsonLd(): Record<string, unknown> {
         },
         image: `${base}${SITE_SHARE_IMAGE_SRC}`,
         description: "Independent UK comparison for weight loss treatment prices, safety, and support.",
+        foundingDate: "2026",
         publishingPrinciples: `${base}/editorial-policy`,
         founder: {
           "@id": `${base}/editorial-team/alistair-greenwood#person`,

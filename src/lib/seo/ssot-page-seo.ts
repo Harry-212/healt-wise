@@ -86,6 +86,8 @@ export function ssotPageJsonLd(dateModified: string): Record<string, unknown> {
         url: `${origin}/editorial-team/alistair-greenwood`,
         image: `${origin}/authors/alistair-greenwood.webp`,
         jobTitle: "Founder",
+        description:
+          "Founder of Healthwise360 and weight-management pricing researcher. Not a healthcare professional.",
         worksFor: { "@id": `${origin}/#organization` },
         sameAs: [
           "https://www.linkedin.com/in/alistair-greenwood-4b13b0432/",
