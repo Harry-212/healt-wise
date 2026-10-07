@@ -26,7 +26,6 @@ import {
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import { pharmacyProfileHref } from "@/lib/data/wegovy-uk-compare-providers";
 import { hasPharmacyPage } from "@/lib/routes/all-pharmacy-slugs";
-import { summarisePriceChecks } from "@/lib/data/price-check-dates";
 import { trustpilotHrefForProvider } from "@/lib/seo/trustpilot-link";
 
 import {
@@ -98,14 +97,6 @@ export default function MounjaroUkCompareTable({
   });
 
   const pricesLastChecked = lastUpdated;
-  const checkSummary = useMemo(
-    () =>
-      summarisePriceChecks(
-        providers.map((p) => p.updatedLabel),
-        lastUpdated,
-      ),
-    [providers, lastUpdated],
-  );
 
   const visibleDoseKeys = useMemo<MounjaroDoseColumnKey[]>(
     () => (doseFilter === "all" ? [...MOUNJARO_DOSE_KEYS] : [doseFilter]),
@@ -209,7 +200,7 @@ export default function MounjaroUkCompareTable({
 
   // Hide the Notes column while no provider has a note; the field stays in the data.
   const hasNotes = providers.some((p) => p.notes?.trim());
-  const colCount = 1 + visibleDoseKeys.length + 3 + (hasNotes ? 1 : 0);
+  const colCount = 1 + visibleDoseKeys.length + 2 + (hasNotes ? 1 : 0);
 
   const providerThClass =
     "sticky left-0 z-50 w-24 sm:w-32 border-b border-r border-slate-200/90 bg-slate-50 px-2 py-3 pl-3 sm:px-3 sm:pl-4 shadow-[4px_0_12px_-8px_rgba(15,23,42,0.15)]";
@@ -233,14 +224,10 @@ export default function MounjaroUkCompareTable({
           Latest price update {pricesLastChecked}
         </span>
       </div>
-      {checkSummary.comparable &&
-      checkSummary.onLatest < checkSummary.total ? (
-        <p className="-mt-2 px-1 text-xs text-slate-600">
-          {checkSummary.onLatest} of {checkSummary.total} providers were checked
-          on {pricesLastChecked}. The Updated column shows the date each
-          provider&apos;s prices were checked.
-        </p>
-      ) : null}
+      <p className="-mt-2 px-1 text-xs text-slate-600">
+        All standard retail prices are reviewed in the first week of every
+        month and changed if required.
+      </p>
 
       <CompareFilterBar
         accent="violet"
@@ -510,12 +497,6 @@ export default function MounjaroUkCompareTable({
                     Notes
                   </th>
                 ) : null}
-                <th
-                  scope="col"
-                  className="w-[5rem] sm:w-[6.5rem] border-b border-slate-200/90 bg-slate-50 px-3 py-3 text-xs font-semibold uppercase tracking-wide text-slate-700"
-                >
-                  Updated
-                </th>
               </tr>
             </thead>
             <tbody className="text-slate-800">
@@ -638,9 +619,6 @@ export default function MounjaroUkCompareTable({
                           )}
                         </td>
                       ) : null}
-                      <td className="border-b border-slate-100/90 px-3 py-2.5 align-middle text-xs text-slate-600">
-                        {p.updatedLabel || pricesLastChecked || "—"}
-                      </td>
                     </tr>
                   );
                 })
