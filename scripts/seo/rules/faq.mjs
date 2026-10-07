@@ -1,7 +1,19 @@
 import { finding } from "../lib/finding.mjs";
 
+/**
+ * DEV-04: punctuation-only differences (curly vs straight quotes, the
+ * typographic apostrophe) must not fail this check — the visible page
+ * typically renders curly quotes via HTML entities (&ldquo;/&rdquo;/&lsquo;/
+ * &rsquo;), which cheerio decodes to their Unicode characters, while Schema
+ * text is typically written with plain ASCII quotes. Folding both to ASCII
+ * before comparing treats them as the same wording, which they are.
+ */
+function normaliseQuotes(text) {
+  return text.replace(/[‘’‚‛]/g, "'").replace(/[“”„‟]/g, '"');
+}
+
 function normalise(text) {
-  return (text || "").replace(/\s+/g, " ").trim().toLowerCase();
+  return normaliseQuotes((text || "").replace(/\s+/g, " ").trim().toLowerCase());
 }
 
 /**
