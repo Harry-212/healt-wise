@@ -103,8 +103,9 @@ function writeSummary(summaryPath, { target, scope, generatedAt, findings, recor
     lines.push(
       "## Discovery",
       "",
-      `- Total URLs discovered: ${discoveryMeta.totalDiscovered}`,
-      `- Total crawled successfully: ${discoveryMeta.totalCrawled - discoveryMeta.failedUrls.length}`,
+      `- Total requests attempted: ${discoveryMeta.totalRequestsAttempted}`,
+      `- Total unique destinations: ${discoveryMeta.totalUniqueDestinations}`,
+      `- Total crawled successfully: ${discoveryMeta.totalRequestsAttempted - discoveryMeta.failedUrls.length}`,
       `- Pages that could not be processed: ${discoveryMeta.failedUrls.length}`,
     );
     for (const f of discoveryMeta.failedUrls) lines.push(`  - ${f.url}: ${f.error}`);
