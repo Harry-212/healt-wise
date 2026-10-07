@@ -1,5 +1,4 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
-import { SITE_SOCIAL_LINKS } from "@/lib/site-contact";
 
 const PATH = "/about/ssot";
 
@@ -79,30 +78,6 @@ export function ssotPageJsonLd(dateModified: string): Record<string, unknown> {
           "Facts about Healthwise360, its founder Alistair Greenwood, provider comparisons, price checks, pharmacy inclusion, editorial team and official contact details.",
         dateModified,
         isPartOf: { "@id": `${origin}/#website` },
-      },
-      {
-        "@type": "Organization",
-        "@id": `${origin}/#organization`,
-        name: "Healthwise360",
-        url: origin,
-        logo: `${origin}/logo-health-wise.webp`,
-        founder: {
-          "@id": `${origin}/editorial-team/alistair-greenwood#person`,
-        },
-        email: "contact@healthwise360.co.uk",
-        telephone: "+447469549154",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "195-197 Wood Street",
-          addressLocality: "London",
-          postalCode: "E17 3NU",
-          addressCountry: "GB",
-        },
-        foundingDate: "2026",
-        areaServed: ["England", "Scotland", "Wales"],
-        sameAs: SITE_SOCIAL_LINKS.filter((l) =>
-          ["youtube", "facebook", "google-maps"].includes(l.kind),
-        ).map((l) => l.href),
       },
       {
         "@type": "Person",
