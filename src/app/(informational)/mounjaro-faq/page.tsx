@@ -36,7 +36,7 @@ export default function MounjaroFaq() {
         </div>
         <div className="rounded-xl border bg-card p-4 sm:p-6">
           <h3 className="text-lg font-bold text-slate-900 mb-2">Can I switch doses?</h3>
-          <p className="text-slate-600">Yes, the standard titration protocol starts at 2.5mg and steps up to 15mg. You must consult your prescribing doctor before changing any dose, and not all pharmacies will let you jump doses if you transfer midway.</p>
+          <p className="text-slate-600">Yes the gradual increase of this medication starts at 2.5mg and steps up to 15mg. You must consult your prescribing doctor before changing any dose, and not all pharmacies will let you jump doses if you transfer midway.</p>
         </div>
       </div>
     </div>

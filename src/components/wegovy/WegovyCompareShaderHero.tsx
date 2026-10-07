@@ -65,7 +65,7 @@ export default function WegovyCompareShaderHero({
             <br />
             <span className="text-white">UK (2026)</span>
             <span className="mt-2 block text-2xl font-semibold tracking-tight text-white/90 md:text-3xl lg:text-[2rem]">
-              Find the cheapest &amp; safest providers
+              Lowest checked price we found
             </span>
           </h1>
 
