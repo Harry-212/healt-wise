@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { stringify } from "csv-stringify/sync";
 import { loadConfig, loadExceptions, reportsDir } from "./lib/config.mjs";
-import { applyExceptions } from "./lib/finding.mjs";
+import { applyExceptions, dedupeFindings } from "./lib/finding.mjs";
 import { checkStatus } from "./rules/status.mjs";
 import { checkMetadata } from "./rules/metadata.mjs";
 import { checkHeadings } from "./rules/headings.mjs";
@@ -69,11 +69,13 @@ function rankDistinctIssues(active, limit) {
   return ranked.slice(0, limit);
 }
 
-function writeSummary(summaryPath, { target, scope, generatedAt, findings, records, discoveryMeta }) {
+function writeSummary(summaryPath, { target, scope, generatedAt, findings, rawFindingsCount, records, discoveryMeta }) {
   const active = findings.filter((f) => !f.exception);
   const suppressed = findings.filter((f) => f.exception);
   const counts = { ERROR: 0, WARNING: 0, REVIEW: 0 };
   for (const f of active) counts[f.severity] = (counts[f.severity] || 0) + 1;
+  const distinctAffectedDestinations = new Set(active.map((f) => f.url)).size;
+  const repeatedEventCount = rawFindingsCount - findings.length;
 
   const isFullSite = scope === "full-site";
   const findingsCsvName = isFullSite ? "seo-findings-full-site" : "seo-findings";
@@ -85,6 +87,14 @@ function writeSummary(summaryPath, { target, scope, generatedAt, findings, recor
     `Target: ${target}`,
     `Generated: ${generatedAt}`,
     `Pages checked: ${records.length}`,
+    "",
+    // DEV-02: raw rows vs distinct findings vs affected destinations are
+    // different numbers and must never be collapsed into one whole-site
+    // total — a single root cause can produce many raw rows without being
+    // many distinct problems.
+    `- Raw finding rows (before dedupe): ${rawFindingsCount}`,
+    `- Distinct findings (deduped by severity+rule+URL+evidence): ${findings.length}${repeatedEventCount > 0 ? ` (${repeatedEventCount} repeated event(s) collapsed)` : ""}`,
+    `- Distinct affected destinations (active, non-suppressed): ${distinctAffectedDestinations}`,
     "",
     `- ERROR: ${counts.ERROR}`,
     `- WARNING: ${counts.WARNING}`,
@@ -215,6 +225,13 @@ async function main() {
   findings.push(...checkSimilarContent(records, context));
   findings.push(...(await checkSourceReachability(records, context)));
 
+  // DEV-02: collapse exact-duplicate findings (same severity+rule+URL+
+  // evidence) before exceptions/sorting, and keep the pre-dedupe count only
+  // for reporting how many repeated events were collapsed — never feed the
+  // raw count back into anything that looks like a distinct-issue total.
+  const rawFindingsCount = findings.length;
+  findings = dedupeFindings(findings);
+
   findings = applyExceptions(findings, exceptions);
   findings.sort((a, b) => SEVERITY_ORDER[a.severity] - SEVERITY_ORDER[b.severity]);
 
@@ -223,7 +240,7 @@ async function main() {
 
   writeFileSync(
     path.join(reportsDir, `${findingsName}.json`),
-    JSON.stringify({ target, scope, generatedAt, findings }, null, 2),
+    JSON.stringify({ target, scope, generatedAt, rawFindingsCount, findings }, null, 2),
   );
 
   const activeForCsv = findings.filter((f) => !f.exception);
@@ -237,15 +254,24 @@ async function main() {
         problem: f.problem,
         expected: f.expected,
         evidence: f.evidence,
+        occurrences: f.occurrences,
       })),
       { header: true },
     ),
   );
 
-  writeSummary(path.join(reportsDir, `${summaryName}.md`), { target, scope, generatedAt, findings, records, discoveryMeta });
+  writeSummary(path.join(reportsDir, `${summaryName}.md`), {
+    target,
+    scope,
+    generatedAt,
+    findings,
+    rawFindingsCount,
+    records,
+    discoveryMeta,
+  });
 
   const errorCount = findings.filter((f) => !f.exception && f.severity === "ERROR").length;
-  console.log(`Findings: ${findings.length} (${errorCount} ERROR, active).`);
+  console.log(`Findings: ${findings.length} distinct (${rawFindingsCount} raw rows before dedupe), ${errorCount} ERROR active.`);
   console.log(`Wrote reports/seo/${findingsName}.json, .csv and ${summaryName}.md`);
 
   // Report-only for full-site (Task 32, point 4): never fails the process,
