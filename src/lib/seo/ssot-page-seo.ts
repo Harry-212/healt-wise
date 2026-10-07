@@ -1,5 +1,4 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
-import { SITE_SOCIAL_LINKS } from "@/lib/site-contact";
 
 const PATH = "/about/ssot";
 
@@ -81,36 +80,14 @@ export function ssotPageJsonLd(dateModified: string): Record<string, unknown> {
         isPartOf: { "@id": `${origin}/#website` },
       },
       {
-        "@type": "Organization",
-        "@id": `${origin}/#organization`,
-        name: "Healthwise360",
-        url: origin,
-        logo: `${origin}/logo-health-wise.webp`,
-        founder: {
-          "@id": `${origin}/editorial-team/alistair-greenwood#person`,
-        },
-        email: "contact@healthwise360.co.uk",
-        telephone: "+447469549154",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "195-197 Wood Street",
-          addressLocality: "London",
-          postalCode: "E17 3NU",
-          addressCountry: "GB",
-        },
-        foundingDate: "2026",
-        areaServed: ["England", "Scotland", "Wales"],
-        sameAs: SITE_SOCIAL_LINKS.filter((l) =>
-          ["youtube", "facebook", "google-maps"].includes(l.kind),
-        ).map((l) => l.href),
-      },
-      {
         "@type": "Person",
         "@id": `${origin}/editorial-team/alistair-greenwood#person`,
         name: "Alistair Greenwood",
         url: `${origin}/editorial-team/alistair-greenwood`,
         image: `${origin}/authors/alistair-greenwood.webp`,
         jobTitle: "Founder",
+        description:
+          "Founder of Healthwise360 and weight-management pricing researcher. Not a healthcare professional.",
         worksFor: { "@id": `${origin}/#organization` },
         sameAs: [
           "https://www.linkedin.com/in/alistair-greenwood-4b13b0432/",
