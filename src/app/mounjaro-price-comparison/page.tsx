@@ -26,7 +26,6 @@ import {
   mounjaroCompareUkFaqJsonLd,
 } from "@/lib/seo/mounjaro-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
-import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -56,7 +55,7 @@ const MOUNJARO_RESOURCE_LINKS = [
   },
 ] as const;
 
-function compareWebPageJsonLd(providers: any[]) {
+function compareWebPageJsonLd(providers: MounjaroUkProviderCompare[]) {
   const base = siteOrigin();
   const pageUrl = `${base}/mounjaro-price-comparison`;
   
@@ -181,7 +180,11 @@ export default function CompareMounjaroPricesUkPage() {
               view.
             </p>
             <div className="mt-10">
-              <MounjaroUkCompareTable providers={MOUNJARO_UK_COMPARE_PROVIDERS} lastUpdated={mounjaroLastUpdated} />
+              <MounjaroUkCompareTable
+                providers={MOUNJARO_UK_COMPARE_PROVIDERS}
+                lastUpdated={mounjaroLastUpdated}
+                showCostGuideLink
+              />
             </div>
           </div>
         </section>
