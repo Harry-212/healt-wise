@@ -4,6 +4,10 @@ import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
+import {
+  trackCalculatorArticleToTool,
+  trackCalculatorToPriceComparison,
+} from "@/lib/analytics/calculator";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
@@ -162,6 +166,7 @@ export default function ArticleClient() {
                 To make this process seamless, you can use our interactive{" "}
                 <Link
                   href="/tools/mounjaro-click-calculator"
+                  onClick={() => trackCalculatorArticleToTool("/tools/mounjaro-click-calculator")}
                   className="font-semibold text-emerald-600 hover:underline"
                 >
                   Mounjaro KwikPen click calculator
@@ -373,6 +378,7 @@ export default function ArticleClient() {
                 specific dose and pen, you can access our dedicated{" "}
                 <Link
                   href="/tools/mounjaro-click-calculator"
+                  onClick={() => trackCalculatorArticleToTool("/tools/mounjaro-click-calculator")}
                   className="font-semibold text-emerald-600 hover:underline"
                 >
                   Mounjaro KwikPen click calculator
@@ -602,6 +608,7 @@ export default function ArticleClient() {
                 multiple pharmacies, feel free to use our independent{" "}
                 <Link
                   href="/mounjaro-price-comparison"
+                  onClick={() => trackCalculatorToPriceComparison("/mounjaro-price-comparison")}
                   className="font-semibold text-emerald-600 hover:underline"
                 >
                   Mounjaro private pharmacy price comparison
@@ -732,6 +739,7 @@ export default function ArticleClient() {
                 Our online{" "}
                 <Link
                   href="/tools/mounjaro-click-calculator"
+                  onClick={() => trackCalculatorArticleToTool("/tools/mounjaro-click-calculator")}
                   className="font-semibold text-emerald-600 hover:underline"
                 >
                   Mounjaro click calculator
@@ -980,6 +988,7 @@ export default function ArticleClient() {
                     margin of error. The{" "}
                     <Link
                       href="/tools/mounjaro-click-calculator"
+                      onClick={() => trackCalculatorArticleToTool("/tools/mounjaro-click-calculator")}
                       className="font-semibold text-emerald-600 hover:underline"
                     >
                       Mounjaro click calculator
@@ -1061,6 +1070,7 @@ export default function ArticleClient() {
                 Use our interactive{" "}
                 <Link
                   href="/tools/mounjaro-click-calculator"
+                  onClick={() => trackCalculatorArticleToTool("/tools/mounjaro-click-calculator")}
                   className="font-semibold text-emerald-600 hover:underline"
                 >
                   Mounjaro click calculator
