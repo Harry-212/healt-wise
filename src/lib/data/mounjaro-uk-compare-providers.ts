@@ -1395,6 +1395,47 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
     consultationIncluded: true,
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
+  {
+    id: "slinic",
+    name: "Slinic",
+    deliveryNote: "DPD 24hr tracked, £4.99 (not included in price)",
+    rating: 4.7,
+    headlineFrom: 129,
+    gphcRegNo: "1033727",
+    trustpilotUrl: "https://uk.trustpilot.com/review/slinic.co.uk",
+    prices: {
+      "2.5mg": 129,
+      "5mg": 155,
+      "7.5mg": 206,
+      "10mg": 230,
+      "12.5mg": 247,
+      "15mg": 267,
+    },
+    updatedLabel: "8 Oct 2026",
+    consultationIncluded: true,
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
+  },
+  {
+    id: "dosedirect",
+    name: "DoseDirect",
+    deliveryNote:
+      "Included — tracked, cold-chain, same-day dispatch before 1pm Mon-Fri",
+    rating: 4.6,
+    headlineFrom: 134.99,
+    gphcRegNo: "",
+    trustpilotUrl: "https://uk.trustpilot.com/review/dosedirect.co.uk",
+    prices: {
+      "2.5mg": 134.99,
+      "5mg": 155.99,
+      "7.5mg": 207.99,
+      "10mg": 231.99,
+      "12.5mg": 248.99,
+      "15mg": 267.99,
+    },
+    updatedLabel: "8 Oct 2026",
+    consultationIncluded: true,
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
+  },
 ];
 
 export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] =
