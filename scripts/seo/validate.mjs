@@ -69,6 +69,25 @@ function rankDistinctIssues(active, limit) {
   return ranked.slice(0, limit);
 }
 
+/**
+ * checkSimilarContent emits two findings per pair (one per participating
+ * page, both naming each other in `evidence`) — so counting findings alone
+ * double-counts pairs and conflates "pairs flagged" with "pages affected".
+ * This recovers the two numbers Task 38 asks for separately: unordered pairs
+ * vs. distinct pages.
+ */
+function similarityPairStats(active) {
+  const simFindings = active.filter((f) => f.rule.startsWith("SIMILAR_CONTENT"));
+  const pairKeys = new Set();
+  const affectedPages = new Set();
+  for (const f of simFindings) {
+    affectedPages.add(f.url);
+    const other = /Overlaps with: (\S+)/.exec(f.evidence || "")?.[1];
+    if (other) pairKeys.add([f.url, other].sort().join("|"));
+  }
+  return { pairCount: pairKeys.size, affectedPageCount: affectedPages.size };
+}
+
 function writeSummary(summaryPath, { target, scope, generatedAt, findings, rawFindingsCount, records, discoveryMeta }) {
   const active = findings.filter((f) => !f.exception);
   const suppressed = findings.filter((f) => f.exception);
@@ -76,6 +95,7 @@ function writeSummary(summaryPath, { target, scope, generatedAt, findings, rawFi
   for (const f of active) counts[f.severity] = (counts[f.severity] || 0) + 1;
   const distinctAffectedDestinations = new Set(active.map((f) => f.url)).size;
   const repeatedEventCount = rawFindingsCount - findings.length;
+  const { pairCount: similarityPairCount, affectedPageCount: similarityAffectedPages } = similarityPairStats(active);
 
   const isFullSite = scope === "full-site";
   const findingsCsvName = isFullSite ? "seo-findings-full-site" : "seo-findings";
@@ -100,6 +120,7 @@ function writeSummary(summaryPath, { target, scope, generatedAt, findings, rawFi
     `- WARNING: ${counts.WARNING}`,
     `- REVIEW: ${counts.REVIEW}`,
     `- Suppressed by exceptions: ${suppressed.length}`,
+    `- Similarity: ${similarityPairCount} unordered pair(s) flagged, affecting ${similarityAffectedPages} distinct page(s)`,
     "",
     isFullSite
       ? "**Report-only** — this run does not block deployment and made no content/schema/redirect changes."
@@ -186,7 +207,7 @@ function writeSummary(summaryPath, { target, scope, generatedAt, findings, rawFi
       }
       if (group.rule.startsWith("SIMILAR_CONTENT")) {
         lines.push(
-          "   - **Caveat**: this rule compares the entire `<body>` text (Task 31's `checkSimilarContent`), which includes the shared nav/footer/menu boilerplate present on every page, not just the unique article content. At full-site scale that inflates the overlap score for nearly every page pair — treat this count as a signal to spot-check, not literal proof of duplicate content. Narrowing the rule to main-content text only would need its own change, which is out of scope for a report-only audit.",
+          "   - **Caveat**: similarity is calculated from the main page content only — navigation, footer, cookie banner, scripts, styles and JSON-LD are excluded before comparison. Treat this count as a signal to spot-check, not literal proof of duplicate content.",
         );
       }
       lines.push("");
