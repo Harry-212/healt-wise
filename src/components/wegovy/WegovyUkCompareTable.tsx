@@ -90,9 +90,11 @@ function doseHeaderLabel(key: WegovyDoseColumnKey): string {
 export default function WegovyUkCompareTable({
   providers,
   lastUpdated,
+  showCostGuideLink = false,
 }: {
   providers: WegovyUkProviderCompare[];
   lastUpdated: string;
+  showCostGuideLink?: boolean;
 }) {
   const [providerQuery, setProviderQuery] = useState("");
   const [priceMin, setPriceMin] = useState("");
@@ -244,6 +246,18 @@ export default function WegovyUkCompareTable({
         All standard retail prices are reviewed in the first week of every
         month and changed if required.
       </p>
+      {showCostGuideLink ? (
+        <p className="mt-2 px-1 text-xs text-slate-600">
+          Read our guide to{" "}
+          <Link
+            href="/blog/weight-loss-treatment-price-comparison-uk"
+            className="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-900"
+          >
+            treatment costs and additional fees
+          </Link>{" "}
+          to understand what to check when comparing providers.
+        </p>
+      ) : null}
 
       <CompareFilterBar
         accent="emerald"
