@@ -1,4 +1,4 @@
-﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -36,30 +36,69 @@ const TOC = [
   { id: "faq", label: "Frequently Asked Questions" },
 ];
 
-const FAQ_ITEMS = [
+interface FaqItemWithSchema {
+  q: string;
+  a: React.ReactNode;
+  textAnswer: string;
+}
+
+const FAQ_ITEMS: FaqItemWithSchema[] = [
   {
     q: "Can I switch pharmacies for Mounjaro mid-treatment?",
-    a: "Yes. You can switch pharmacy at any point during your treatment. Most providers accept patients who are already established on a GLP-1 medication. You will typically need to provide evidence of your current prescription and treatment history.",
+    a: "You can ask another provider to assess you for continuing treatment, but acceptance is not guaranteed. Check its requirements for existing patients and provide the treatment information it requests. Discuss the timing with the prescribing team, especially if you may run out of medicine or have had a treatment gap.",
+    textAnswer:
+      "You can ask another provider to assess you for continuing treatment, but acceptance is not guaranteed. Check its requirements for existing patients and provide the treatment information it requests. Discuss the timing with the prescribing team, especially if you may run out of medicine or have had a treatment gap.",
   },
   {
     q: "Do I need a new prescription when switching pharmacies?",
-    a: "Yes—a new pharmacy will need to issue its own prescription following a medical review. In most cases this is a brief online consultation or questionnaire. Your existing prescription from another provider cannot be transferred directly.",
+    a: "Ask the receiving service whether you are changing prescribing providers or asking another pharmacy to dispense an existing prescription. These are different arrangements. Confirm whether it can accept your existing prescription or requires a new assessment and prescription. Do not assume your prescription or order will move automatically.",
+    textAnswer:
+      "Ask the receiving service whether you are changing prescribing providers or asking another pharmacy to dispense an existing prescription. These are different arrangements. Confirm whether it can accept your existing prescription or requires a new assessment and prescription. Do not assume your prescription or order will move automatically.",
   },
   {
     q: "Will switching pharmacies affect my dosing schedule?",
-    a: "It should not, provided the transition is smooth. Plan the switch so there is no gap in supply—ideally initiate the process with the new pharmacy before your current stock runs out.",
+    a: "Ask the prescribing team how to manage the timing of the switch. Tell them when you last took your medicine and whether you have had any treatment gaps. Do not change your dose or restart treatment without advice from your prescriber.",
+    textAnswer:
+      "Ask the prescribing team how to manage the timing of the switch. Tell them when you last took your medicine and whether you have had any treatment gaps. Do not change your dose or restart treatment without advice from your prescriber.",
   },
   {
     q: "How do I know if a new pharmacy is legitimate?",
-    a: "Check that the pharmacy is registered with the General Pharmaceutical Council (GPhC) using their online register. All legally operating UK pharmacies—local and online—must be GPhC-registered. The pharmacy's website should also display the EU common logo (a green cross with blue stars) if they sell prescription medicines online.",
+    a: (
+      <>
+        Check the supplying pharmacy on the{" "}
+        <EL href="https://www.pharmacyregulation.org/registers/pharmacy">
+          GPhC register
+        </EL>{" "}
+        if it is based in England, Scotland or Wales, or the{" "}
+        <EL href="https://www.psni.org.uk/search-the-registers/">
+          PSNI register
+        </EL>{" "}
+        if it is based in Northern Ireland. Match the registered details with
+        those provided by the service.
+        <br />
+        <br />
+        Do not rely on a website badge alone. Online medicine sellers based in
+        Great Britain are no longer required to display the EU common logo.{" "}
+        <EL href="https://www.gov.uk/guidance/distance-selling-logo-for-medicines-sellers-in-northern-ireland">
+          Different requirements apply
+        </EL>{" "}
+        to sellers based in Northern Ireland.
+      </>
+    ),
+    textAnswer:
+      "Check the supplying pharmacy on the GPhC register if it is based in England, Scotland or Wales, or the PSNI register if it is based in Northern Ireland. Match the registered details with those provided by the service. Do not rely on a website badge alone. Online medicine sellers based in Great Britain are no longer required to display the EU common logo. Different requirements apply to sellers based in Northern Ireland.",
   },
   {
     q: "What documents do I need to switch pharmacies?",
     a: "Typically: photos of your injection pen box (showing the medication name and dose), your current prescription label, and any previous order confirmations. Some providers may also ask for your BMI, medical history, and GP details.",
+    textAnswer:
+      "Typically: photos of your injection pen box (showing the medication name and dose), your current prescription label, and any previous order confirmations. Some providers may also ask for your BMI, medical history, and GP details.",
   },
   {
     q: "Is it safe to switch from a local to an online pharmacy?",
-    a: "Yes, provided the online pharmacy is GPhC-registered and employs qualified prescribers. The main trade-off is losing face-to-face support—consider whether you need ongoing clinical guidance before switching to a fully online provider.",
+    a: "Check the supplying pharmacy’s registration, how the prescribing assessment works and what follow-up support is available. Discuss whether the service meets your needs with your prescriber, particularly if you need face-to-face care. Registration alone does not establish that a service is suitable for you.",
+    textAnswer:
+      "Check the supplying pharmacy’s registration, how the prescribing assessment works and what follow-up support is available. Discuss whether the service meets your needs with your prescriber, particularly if you need face-to-face care. Registration alone does not establish that a service is suitable for you.",
   },
 ];
 
@@ -67,8 +106,20 @@ const REFERENCES = [
   {
     label: "GPhC — Find a registered pharmacy",
     description:
-      "The official General Pharmaceutical Council register to verify any UK pharmacy before using their services.",
+      "Register for checking pharmacies in England, Scotland and Wales.",
     href: "https://www.pharmacyregulation.org/registers/pharmacy",
+  },
+  {
+    label: "PSNI — Pharmacy register",
+    description:
+      "Register of pharmaceutical chemists and pharmacy premises in Northern Ireland.",
+    href: "https://www.psni.org.uk/search-the-registers/",
+  },
+  {
+    label: "MHRA — Distance Selling Logo guidance",
+    description:
+      "MHRA regulatory guidance on distance selling logo requirements for online medicine sellers.",
+    href: "https://www.gov.uk/guidance/distance-selling-logo-for-medicines-sellers-in-northern-ireland",
   },
   {
     label: "MHRA — Buying prescription medicines online safely",
@@ -79,7 +130,7 @@ const REFERENCES = [
   {
     label: "NICE — Tirzepatide for managing overweight and obesity (TA1026)",
     description:
-      "NICE technology appraisal confirming eligibility criteria for Mounjaro (tirzepatide) in the UK.",
+      "NICE guidance on tirzepatide for managing overweight and obesity in the NHS.",
     href: "https://www.nice.org.uk/guidance/ta1026",
   },
   {
@@ -151,7 +202,7 @@ const FAQ_SCHEMA = {
   mainEntity: FAQ_ITEMS.map((item) => ({
     "@type": "Question",
     name: item.q,
-    acceptedAnswer: { "@type": "Answer", text: item.a },
+    acceptedAnswer: { "@type": "Answer", text: item.textAnswer },
   })),
 };
 
@@ -191,36 +242,23 @@ export default function GuideSwitchingPharmacy() {
 
       <GuideSection id="eligibility" heading="Check Eligibility Before You Switch">
         <GuideParagraph>
-          Before moving to a new provider, confirm you still meet UK prescribing
-          criteria. Even if you are already established on treatment, a new
-          pharmacy will conduct its own medical review.
-</GuideParagraph>
+          Before switching, ask the new provider whether it accepts patients who
+          are already receiving treatment and what information it needs.
+        </GuideParagraph>
         <GuideParagraph>
-          Standard{" "}
-          <EL href="https://www.nice.org.uk/guidance/ta1026">
-            NICE eligibility criteria
-          </EL>{" "}
-          for Mounjaro include:</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "BMI ≥ 30 (obesity), or",
-            "BMI ≥ 27 with at least one weight-related health condition (e.g. type 2 diabetes, hypertension)",
-          ]}
-        />
+          NHS access criteria and private prescribing requirements are
+          different. Having a prescription from one provider does not guarantee
+          that another provider will continue your treatment.
+        </GuideParagraph>
         <GuideParagraph>
-          Some pharmacies may accept:
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Lower BMI thresholds adjusted for ethnicity-based risk factors (consistent with NICE guidance)",
-            "Existing patients continuing a stable maintenance dose, with appropriate clinical justification",
-          ]}
-        />
-        <GuideCallout variant="tip">
-          Always review a new provider's eligibility page before booking a
-          consultation. If you do not meet their stated criteria, you may be
-          declined—wasting time and potentially a consultation fee.
-        </GuideCallout>
+          Tell the new prescriber your current medicine and dose, when you last
+          used it, any treatment gaps and any side effects. They will assess
+          whether continuing treatment is appropriate.
+        </GuideParagraph>
+        <GuideParagraph>
+          Check the assessment requirements and any consultation fees before
+          applying.
+        </GuideParagraph>
       </GuideSection>
 
       <GuideSection id="how-to-choose" heading="How to Choose a New Pharmacy">
@@ -234,24 +272,33 @@ export default function GuideSwitchingPharmacy() {
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           1. Regulation
         </h3>
+        <GuideParagraph>
+          Check which pharmacy will dispense your medicine. Its name may be
+          different from the website or prescribing-service brand.
+        </GuideParagraph>
         <GuideBulletListRich
           items={[
             <>
-              Ensure the pharmacy is registered with the{" "}
+              For pharmacies based in England, Scotland or Wales, check the{" "}
               <EL href="https://www.pharmacyregulation.org/registers/pharmacy">
                 General Pharmaceutical Council (GPhC)
-              </EL>
-              —this is the legal minimum for operating in the UK.
+              </EL>{" "}
+              register.
             </>,
             <>
-              See{" "}
-              <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
-                how we verify pharmacies
-              </IL>{" "}
-              for the checks Health Wise applies before listing any provider.
+              For pharmacies based in Northern Ireland, check the{" "}
+              <EL href="https://www.psni.org.uk/search-the-registers/">
+                Pharmaceutical Society of Northern Ireland (PSNI) register
+              </EL>
+              .
             </>,
           ]}
         />
+        <GuideParagraph>
+          Match the pharmacy’s name, address and registration number with the
+          provider’s details. Ask the provider to explain any differences before
+          proceeding.
+        </GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           2. Pricing Transparency
@@ -277,12 +324,10 @@ export default function GuideSwitchingPharmacy() {
           ]}
         />
         <GuideCallout variant="warning">
-          Be cautious of providers that do not require a medical consultation,
-          offer unusually low prices, or are not listed on the{" "}
-          <EL href="https://www.pharmacyregulation.org/registers/pharmacy">
-            GPhC register
-          </EL>
-          . These are red flags for unregulated or counterfeit supply.
+          Check the supplying pharmacy’s registration and ask how the prescribing
+          assessment works. If registration details cannot be verified or the
+          service offers prescription medicine without an appropriate assessment,
+          do not proceed until your concerns have been resolved.
         </GuideCallout>
       </GuideSection>
 
@@ -298,7 +343,7 @@ export default function GuideSwitchingPharmacy() {
             "Prescription label — from your existing provider, showing the dispensing date and prescriber",
             "Previous order confirmation — email or portal screenshot from your current pharmacy",
             "Your BMI and relevant health details — most providers ask for current weight, height, and any related conditions",
-            "GP details — for mandatory GP notification (see our guide on GP notification for Mounjaro)",
+            "Your GP or usual prescriber’s contact details, together with any consent needed to obtain or share information relevant to your care.",
           ]}
         />
         <GuideParagraph>
@@ -308,29 +353,25 @@ export default function GuideSwitchingPharmacy() {
 
       <GuideSection id="consultation" heading="Consultation Process Explained">
         <GuideParagraph>
-          All UK pharmacies are required to conduct a medical review before
-          issuing a prescription for{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
-          <IL href="/what-is-wegovy">Wegovy</IL>. This applies even if you
-          are switching not starting fresh.
-</GuideParagraph>
+          The new prescriber must assess whether continuing treatment is
+          appropriate, even if you already take the medicine.
+        </GuideParagraph>
         <GuideParagraph>
-          You will typically need to:
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Provide your current BMI and health details via a questionnaire or portal",
-            "Share relevant medical history, including any existing conditions and current medications",
-            "Upload supporting documents confirming your existing treatment",
-            "Complete a video consultation in some cases — particularly for first-time prescriptions at regulated telehealth providers",
-          ]}
-        />
-        <GuideCallout variant="info">
-          The consultation is not just a formality. A qualified prescriber
-          reviews your information and makes a clinical decision. If a provider
-          issues a prescription without any review, that is a regulatory
-          concern.
-        </GuideCallout>
+          Expect questions about your medical history, current treatment and
+          side effects. The provider should explain how it checks the
+          information needed for prescribing, including relevant measurements
+          such as weight, height or BMI.
+        </GuideParagraph>
+        <GuideParagraph>
+          Ask which documents or appointments you need before paying. Completing
+          a questionnaire or submitting an application does not guarantee a
+          prescription.
+        </GuideParagraph>
+        <div className="mt-4">
+          <EL href="https://www.pharmacyregulation.org/standards/guidance/prescribing">
+            GPhC guidance for pharmacist prescribers
+          </EL>
+        </div>
       </GuideSection>
 
       <GuideSection id="after-switch" heading="After You Switch">
@@ -360,12 +401,9 @@ export default function GuideSwitchingPharmacy() {
               .
             </>,
             <>
-              <strong>Confirm GP notification</strong> — your new pharmacy
-              should notify your GP when dispensing. See{" "}
-              <IL href="/helpful-guides/mounjaro-gp-notification-uk">
-                why GP notification matters
-              </IL>
-              .
+              Ask how the provider will communicate with your GP or usual
+              prescriber, what information it needs to share and how consent is
+              handled.
             </>,
           ]}
         />
@@ -373,11 +411,11 @@ export default function GuideSwitchingPharmacy() {
 
       <GuideKeyTakeaways
         items={[
-          "Switching pharmacies for Mounjaro or Wegovy is straightforward—but always choose a GPhC-registered provider.",
-          "You will need a new medical consultation and prescription—existing prescriptions cannot be transferred between pharmacies.",
-          "Prepare your injection pen photos, prescription label, and order confirmation in advance to speed up the process.",
-          "Compare providers on regulation, pricing transparency, and service quality—not price alone.",
-          "After switching, confirm GP notification and keep tracking your progress consistently.",
+          "Check the supplying pharmacy on the appropriate official register.",
+          "Confirm the new provider’s assessment and prescription requirements.",
+          "Prepare the treatment records and documents it requests.",
+          "Compare total costs, follow-up support and delivery arrangements.",
+          "Discuss treatment timing and information sharing with the prescribing team.",
         ]}
       />
 
@@ -385,10 +423,10 @@ export default function GuideSwitchingPharmacy() {
       <GuideReferences items={REFERENCES} />
 
       <GuideDisclaimer>
-        This guide is for informational purposes only. Always verify that any
-        pharmacy is GPhC-registered and that prescriptions are issued by
-        qualified clinicians. Do not obtain prescription medications without a
-        valid prescription from a registered UK prescriber.
+        This guide provides general information and does not replace advice from
+        your prescriber. Check the supplying pharmacy’s registration and discuss
+        any change of provider with the prescribing team. Do not change your dose
+        or restart treatment based on this article.
       </GuideDisclaimer>
 
       <GuideFaq items={FAQ_ITEMS} />
