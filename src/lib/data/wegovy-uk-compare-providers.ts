@@ -536,6 +536,22 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "2.4mg": 189.99,
     "7.2mg": 259.99,
   },
+  slinic: {
+    "0.25mg": 83,
+    "0.5mg": 93,
+    "1mg": 93,
+    "1.7mg": 144,
+    "2.4mg": 196,
+    "7.2mg": 350,
+  },
+  dosedirect: {
+    "0.25mg": 99.99,
+    "0.5mg": 104.99,
+    "1mg": 109.99,
+    "1.7mg": 139.99,
+    "2.4mg": 189.99,
+    "7.2mg": "TBC",
+  },
 };
 
 const WEGOVY_EXTRA_PROVIDER_SEEDS: MounjaroUkProviderCompare[] = [

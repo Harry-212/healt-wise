@@ -14,6 +14,7 @@ import CloudPharmacyContent from "@/components/pharmacies/content/CloudPharmacyC
 import CuratePharmacyContent from "@/components/pharmacies/content/CuratePharmacyContent";
 import CurelyPharmacyContent from "@/components/pharmacies/content/CurelyPharmacyContent";
 import CuvaHealthContent from "@/components/pharmacies/content/CuvaHealthContent";
+import DoseDirectPharmacyContent from "@/components/pharmacies/content/DoseDirectPharmacyContent";
 import DotorPharmacyContent from "@/components/pharmacies/content/DotorPharmacyContent";
 import DrWeightmansContent from "@/components/pharmacies/content/DrWeightmansContent";
 import ESurgeryPharmacyContent from "@/components/pharmacies/content/ESurgeryPharmacyContent";
@@ -60,6 +61,7 @@ import Shape8PharmacyContent from "@/components/pharmacies/content/Shape8Pharmac
 import SkinAndShapePharmacyContent from "@/components/pharmacies/content/SkinAndShapePharmacyContent";
 import SimpleOnlinePharmacyContent from "@/components/pharmacies/content/SimpleOnlinePharmacyContent";
 import SlimmingDirectPharmacyContent from "@/components/pharmacies/content/SlimmingDirectPharmacyContent";
+import SlinicPharmacyContent from "@/components/pharmacies/content/SlinicPharmacyContent";
 import SuperdrugOnlineDoctorContent from "@/components/pharmacies/content/SuperdrugOnlineDoctorContent";
 import SwiftDoctorPharmacyContent from "@/components/pharmacies/content/SwiftDoctorPharmacyContent";
 import SwiftMediPharmacyContent from "@/components/pharmacies/content/SwiftMediPharmacyContent";
@@ -348,6 +350,31 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <DotorPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "dosedirect") {
+    const title = "DoseDirect weight loss review (UK) — pharmacist-led care";
+    const description =
+      "DoseDirect: GPhC-registered distance-selling pharmacy, online clinical questionnaire, pharmacist independent prescriber review, same-day dispatch before 1pm and ongoing dose-review support. Information from Healthwise360 — not medical advice.";
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyProfileJsonGraph({
+                slug,
+                name: "DoseDirect",
+                title,
+                description,
+              }),
+            ),
+          }}
+        />
+        <DoseDirectPharmacyContent />
       </>
     );
   }
@@ -1018,6 +1045,31 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <SlimmingDirectPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "slinic") {
+    const title = "Slinic weight loss review (UK) — Mounjaro bundle package";
+    const description =
+      "Slinic: GPhC-registered pharmacy and weight-management clinic, online assessment and consultation, named prescriber review, Mounjaro bundle package, free consultation and DPD tracked delivery. Information from Healthwise360 — not medical advice.";
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyProfileJsonGraph({
+                slug,
+                name: "Slinic",
+                title,
+                description,
+              }),
+            ),
+          }}
+        />
+        <SlinicPharmacyContent />
       </>
     );
   }
