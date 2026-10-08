@@ -148,7 +148,11 @@ export default function CompareWegovyPricesUkPage() {
               that strength.
             </p>
             <div className="mt-10">
-              <WegovyUkCompareTable providers={WEGOVY_UK_COMPARE_PROVIDERS} lastUpdated={wegovyLastUpdated} />
+              <WegovyUkCompareTable
+                providers={WEGOVY_UK_COMPARE_PROVIDERS}
+                lastUpdated={wegovyLastUpdated}
+                showCostGuideLink
+              />
             </div>
           </div>
         </section>
