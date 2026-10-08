@@ -360,7 +360,11 @@ export function GuideDisclaimer({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function GuideFaq({ items }: { items: { q: string; a: string }[] }) {
+export function GuideFaq({
+  items,
+}: {
+  items: { q: string; a: React.ReactNode }[];
+}) {
   return (
     <section id="faq" className="scroll-mt-28">
       <h2 className="text-xl font-semibold text-slate-900">
@@ -384,9 +388,9 @@ export function GuideFaq({ items }: { items: { q: string; a: string }[] }) {
                 />
               </svg>
             </summary>
-            <p className="mt-3 pr-8 text-sm leading-relaxed text-slate-600">
+            <div className="mt-3 pr-8 text-sm leading-relaxed text-slate-600">
               {item.a}
-            </p>
+            </div>
           </details>
         ))}
       </dl>
