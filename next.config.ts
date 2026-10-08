@@ -372,6 +372,11 @@ const nextConfig: NextConfig = {
         destination: "/helpful-guides",
         permanent: true,
       },
+      {
+        source: "/blog/best-weight-loss-comparison-sites-uk",
+        destination: "/blog",
+        permanent: true,
+      },
       ...HELPFUL_GUIDE_SLUGS.map((slug) => ({
         source: `/${slug}`,
         destination: `/helpful-guides/${slug}`,

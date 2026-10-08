@@ -151,7 +151,6 @@ const BUYING_SAFELY: SourceKey[] = ["gphcRegister", "fakeMeds", "mhra"];
 const ARTICLE_SOURCE_KEYS: Record<string, SourceKey[]> = {
   "are-glp-1-supplements-real": ["fakeMeds", "mhra", "yellowCard", "nhsHealthyWeight", "niceNg246"],
   "best-place-to-start-weight-loss-treatment-online-uk": [...BUYING_SAFELY, "nhsObesityTreatment", "niceNg246"],
-  "best-weight-loss-comparison-sites-uk": [...BUYING_SAFELY, "nhsObesityTreatment"],
   "buy-weight-loss-injections-online-uk": [...BUYING_SAFELY, "niceTa875", "niceTa1026"],
   "buy-weight-loss-injections-uk": [...BUYING_SAFELY, "niceTa875", "niceTa1026", "yellowCard"],
   "buy-weight-loss-pills-uk": [...BUYING_SAFELY, "nhsObesityTreatment", "niceNg246"],
