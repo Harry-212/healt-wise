@@ -47,6 +47,8 @@ export default function SlinicPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      heroProviderLogoSrc="/logo pharmacy/Slinic.webp"
+      heroProviderLogoAlt="Slinic"
     >
       <section className="space-y-4">
         <p className={paragraphClass}>
