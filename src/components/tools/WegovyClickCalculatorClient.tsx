@@ -6,6 +6,11 @@ import CompareHereLink from '@/components/ui/CompareHereLink';
 import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion';
 import { Zap, Calculator, Grid3X3, Syringe, AlertCircle, HelpCircle, ShieldAlert } from 'lucide-react';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import {
+  trackCalculatorStart,
+  trackCalculatorComplete,
+  trackCalculatorToPriceComparison,
+} from '@/lib/analytics/calculator';
 
 /* ── types ────────────────────────────────────────────────────────── */
 type Tab = 'calculator' | 'chart' | 'how-it-works' | 'safety';
@@ -138,6 +143,15 @@ export default function WegovyClickCalculatorClient() {
   const [penCostStr, setPenCostStr] = useState('');
 
   const resultRef = useRef<HTMLDivElement | null>(null);
+  const hasStartedRef = useRef(false);
+  const wasValidRef = useRef(false);
+
+  /* genuine action: first interaction with pen strength or dose inputs */
+  const handleStart = () => {
+    if (hasStartedRef.current) return;
+    hasStartedRef.current = true;
+    trackCalculatorStart();
+  };
 
   /* derived values */
   const penStrength = useMemo(() => pn(penStrengthStr), [penStrengthStr]);
@@ -158,6 +172,15 @@ export default function WegovyClickCalculatorClient() {
   const isExceeded = useMemo(() => {
     return !is72Case && desiredDose > penStrength;
   }, [is72Case, desiredDose, penStrength]);
+
+  /* genuine action: a calculation produces a valid result (fires once per
+     valid→invalid→valid cycle, not on every keystroke while already valid) */
+  useEffect(() => {
+    if (hasResult && !wasValidRef.current) {
+      trackCalculatorComplete();
+    }
+    wasValidRef.current = hasResult;
+  }, [hasResult]);
 
   /* scroll to result on first result */
   useLayoutEffect(() => {
@@ -252,7 +275,10 @@ export default function WegovyClickCalculatorClient() {
                             <button
                               key={opt.val}
                               type="button"
-                              onClick={() => setPenStrengthStr(opt.val)}
+                              onClick={() => {
+                                handleStart();
+                                setPenStrengthStr(opt.val);
+                              }}
                               className={`rounded-xl border p-2.5 text-xs sm:text-sm font-semibold transition-all text-center leading-tight ${
                                 penStrengthStr === opt.val ? 'border-emerald-600 bg-emerald-50 text-emerald-900 shadow-sm ring-1 ring-emerald-600' : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50'
                               }`}
@@ -273,14 +299,24 @@ export default function WegovyClickCalculatorClient() {
                           step="0.05"
                           className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-base text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 transition-all"
                           value={desiredDoseStr}
-                          onChange={(e) => setDesiredDoseStr(e.target.value)}
+                          onChange={(e) => {
+                            handleStart();
+                            setDesiredDoseStr(e.target.value);
+                          }}
                           placeholder="e.g. 0.25"
                           aria-label="Prescribed Dose"
                         />
                         <div className="mt-3 flex flex-wrap gap-1.5 items-center">
                           <span className="text-[0.65rem] font-semibold uppercase text-slate-400 mr-1">Quick Options:</span>
                           {DOSE_OPTIONS.map((d) => (
-                            <button key={d} onClick={() => setDesiredDoseStr(d)} className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 transition hover:bg-slate-200">
+                            <button
+                              key={d}
+                              onClick={() => {
+                                handleStart();
+                                setDesiredDoseStr(d);
+                              }}
+                              className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 transition hover:bg-slate-200"
+                            >
                               {d}mg
                             </button>
                           ))}
@@ -448,6 +484,9 @@ export default function WegovyClickCalculatorClient() {
                               size="calculator"
                               navAccent="emerald"
                               className="w-full sm:w-auto sm:min-w-48"
+                              onClick={() =>
+                                trackCalculatorToPriceComparison('/wegovy-price-comparison')
+                              }
                             />
                           </div>
                         </motion.div>

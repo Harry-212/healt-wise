@@ -18,6 +18,11 @@ import {
   HelpCircle,
 } from "lucide-react";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import {
+  trackCalculatorStart,
+  trackCalculatorComplete,
+  trackCalculatorToPriceComparison,
+} from "@/lib/analytics/calculator";
 
 /* ── types ────────────────────────────────────────────────────────── */
 type Tab = "calculator" | "chart";
@@ -134,6 +139,15 @@ export default function MounjaroClickCalculatorClient() {
   const [desiredDoseStr, setDesiredDoseStr] = useState("2.5");
 
   const resultRef = useRef<HTMLDivElement | null>(null);
+  const hasStartedRef = useRef(false);
+  const wasValidRef = useRef(false);
+
+  /* genuine action: first interaction with pen strength or dose inputs */
+  const handleStart = () => {
+    if (hasStartedRef.current) return;
+    hasStartedRef.current = true;
+    trackCalculatorStart();
+  };
 
   /* derived values */
   const penStrength = useMemo(() => pn(penStrengthStr), [penStrengthStr]);
@@ -151,6 +165,15 @@ export default function MounjaroClickCalculatorClient() {
       desiredDose > 0
     );
   }, [penStrength, desiredDose]);
+
+  /* genuine action: a calculation produces a valid result (fires once per
+     valid→invalid→valid cycle, not on every keystroke while already valid) */
+  useEffect(() => {
+    if (hasResult && !wasValidRef.current) {
+      trackCalculatorComplete();
+    }
+    wasValidRef.current = hasResult;
+  }, [hasResult]);
 
   /* scroll to result on first result */
   useLayoutEffect(() => {
@@ -280,7 +303,10 @@ export default function MounjaroClickCalculatorClient() {
                             <button
                               key={pen}
                               type="button"
-                              onClick={() => setPenStrengthStr(pen.toString())}
+                              onClick={() => {
+                                handleStart();
+                                setPenStrengthStr(pen.toString());
+                              }}
                               className={`rounded-xl border py-2.5 text-sm font-semibold transition-all ${
                                 penStrengthStr === pen.toString()
                                   ? "border-violet-600 bg-violet-50 text-violet-900 shadow-sm ring-1 ring-violet-600"
@@ -307,7 +333,10 @@ export default function MounjaroClickCalculatorClient() {
                           step="0.5"
                           className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-base text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-violet-500 focus:outline-none focus:ring-2 focus:ring-violet-500/30 transition-all"
                           value={desiredDoseStr}
-                          onChange={(e) => setDesiredDoseStr(e.target.value)}
+                          onChange={(e) => {
+                            handleStart();
+                            setDesiredDoseStr(e.target.value);
+                          }}
                           placeholder="e.g. 2.5"
                           aria-label="Desired Dose"
                         />
@@ -318,7 +347,10 @@ export default function MounjaroClickCalculatorClient() {
                           {[2.5, 3.75, 5, 7.5].map((d) => (
                             <button
                               key={d}
-                              onClick={() => setDesiredDoseStr(d.toString())}
+                              onClick={() => {
+                                handleStart();
+                                setDesiredDoseStr(d.toString());
+                              }}
                               className="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600 transition hover:bg-slate-200"
                             >
                               {d}mg
@@ -443,6 +475,9 @@ export default function MounjaroClickCalculatorClient() {
                               href="/mounjaro-price-comparison"
                               size="calculator"
                               className="w-full sm:w-auto sm:min-w-48"
+                              onClick={() =>
+                                trackCalculatorToPriceComparison("/mounjaro-price-comparison")
+                              }
                             />
                           </div>
                         </motion.div>

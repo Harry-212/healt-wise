@@ -28,7 +28,7 @@ function getDomain(href: string): string {
  * Origin + path only, no query string or hash — affiliate IDs and other
  * tracking parameters must not reach GA4 event data.
  */
-function sanitizeLinkUrl(href: string): string {
+export function sanitizeLinkUrl(href: string): string {
   try {
     const url = new URL(href);
     return `${url.origin}${url.pathname}`;
