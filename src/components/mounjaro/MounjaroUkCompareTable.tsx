@@ -82,9 +82,11 @@ function formatGBP(n: number) {
 export default function MounjaroUkCompareTable({
   providers,
   lastUpdated,
+  showCostGuideLink = false,
 }: {
   providers: MounjaroUkProviderCompare[];
   lastUpdated: string;
+  showCostGuideLink?: boolean;
 }) {
   const [providerQuery, setProviderQuery] = useState("");
   const [priceMin, setPriceMin] = useState("");
@@ -228,6 +230,18 @@ export default function MounjaroUkCompareTable({
         All standard retail prices are reviewed in the first week of every
         month and changed if required.
       </p>
+      {showCostGuideLink ? (
+        <p className="mt-2 px-1 text-xs text-slate-600">
+          Read our guide to{" "}
+          <Link
+            href="/blog/weight-loss-treatment-price-comparison-uk"
+            className="font-medium text-violet-700 underline underline-offset-2 hover:text-violet-900"
+          >
+            treatment costs and additional fees
+          </Link>{" "}
+          to understand what to check when comparing providers.
+        </p>
+      ) : null}
 
       <CompareFilterBar
         accent="violet"

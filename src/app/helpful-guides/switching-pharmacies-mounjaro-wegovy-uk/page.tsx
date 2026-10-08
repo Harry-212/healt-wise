@@ -311,6 +311,13 @@ export default function GuideSwitchingPharmacy() {
             "Hidden charges — check for auto-renewal or subscription lock-ins",
           ]}
         />
+        <GuideParagraph>
+          You can{" "}
+          <IL href="/mounjaro-price-comparison">compare Mounjaro prices</IL> or{" "}
+          <IL href="/wegovy-price-comparison">compare Wegovy prices</IL> when
+          checking provider costs. Confirm what is included directly with the
+          provider.
+        </GuideParagraph>
 
         <h3 className="mb-2 mt-5 text-base font-semibold text-slate-800">
           3. Service Quality

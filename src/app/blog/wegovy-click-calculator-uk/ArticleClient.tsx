@@ -4,6 +4,10 @@ import ArticleSources from "@/components/blog/ArticleSources";
 
 import React, { useState } from "react";
 import Link from "next/link";
+import {
+  trackCalculatorArticleToTool,
+  trackCalculatorToPriceComparison,
+} from "@/lib/analytics/calculator";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
@@ -166,6 +170,7 @@ export default function ArticleClient() {
                 The{" "}
                 <Link
                   href="/tools/wegovy-click-calculator"
+                  onClick={() => trackCalculatorArticleToTool("/tools/wegovy-click-calculator")}
                   className={linkClass}
                 >
                   Wegovy click calculator at Healthwise360
@@ -468,6 +473,7 @@ export default function ArticleClient() {
                 the{" "}
                 <Link
                   href="/tools/wegovy-click-calculator"
+                  onClick={() => trackCalculatorArticleToTool("/tools/wegovy-click-calculator")}
                   className={linkClass}
                 >
                   Wegovy click calculator at Healthwise360
@@ -768,6 +774,7 @@ export default function ArticleClient() {
                 When a pen cost is entered into the{" "}
                 <Link
                   href="/tools/wegovy-click-calculator"
+                  onClick={() => trackCalculatorArticleToTool("/tools/wegovy-click-calculator")}
                   className={linkClass}
                 >
                   Healthwise360 Wegovy click calculator
@@ -793,7 +800,7 @@ export default function ArticleClient() {
               <p>
                 For current verified pricing across all five Wegovy dose
                 strengths from 64+ GPhC-registered UK pharmacies, see the{" "}
-                <Link href="/wegovy-price-comparison" className={linkClass}>
+                <Link href="/wegovy-price-comparison" className={linkClass} onClick={() => trackCalculatorToPriceComparison("/wegovy-price-comparison")}>
                   Wegovy price comparison at Healthwise360
                 </Link>{" "}
                 and the{" "}
@@ -845,6 +852,7 @@ export default function ArticleClient() {
                 The{" "}
                 <Link
                   href="/tools/wegovy-click-calculator"
+                  onClick={() => trackCalculatorArticleToTool("/tools/wegovy-click-calculator")}
                   className={linkClass}
                 >
                   Wegovy click calculator at Healthwise360
@@ -1042,6 +1050,7 @@ export default function ArticleClient() {
                       See the{" "}
                       <Link
                         href="/tools/wegovy-click-calculator"
+                        onClick={() => trackCalculatorArticleToTool("/tools/wegovy-click-calculator")}
                         className={linkClass}
                       >
                         Wegovy click calculator at Healthwise360
@@ -1136,6 +1145,7 @@ export default function ArticleClient() {
                 combination, use the{" "}
                 <Link
                   href="/tools/wegovy-click-calculator"
+                  onClick={() => trackCalculatorArticleToTool("/tools/wegovy-click-calculator")}
                   className={linkClass}
                 >
                   Wegovy click calculator at Healthwise360
@@ -1144,7 +1154,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 For Wegovy pricing across verified UK pharmacies:{" "}
-                <Link href="/wegovy-price-comparison" className={linkClass}>
+                <Link href="/wegovy-price-comparison" className={linkClass} onClick={() => trackCalculatorToPriceComparison("/wegovy-price-comparison")}>
                   Wegovy price comparison at Healthwise360
                 </Link>
                 . For how Wegovy compares to Mounjaro:{" "}

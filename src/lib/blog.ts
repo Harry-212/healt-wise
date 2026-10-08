@@ -246,17 +246,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["guides", "wegovy", "mounjaro", "safety"],
   },
   {
-    slug: "best-weight-loss-comparison-sites-uk",
-    title:
-      "We Tested 6 UK Weight Loss Treatment Comparison Websites So You Don't Have To: Here's the Honest Verdict",
-    date: "2026-07-19",
-    category: "Comparisons",
-    description:
-      "We reviewed 6 UK weight loss comparison sites: Healthwise360, PenCompare, Click.Compare, MedEazy, Monj, WegoCompare. Which covers price, safety, GPhC & more?",
-    heroImage: "/blog/best-weight-loss-comparison-sites-uk-hero.png",
-    feedTags: ["guides", "wegovy", "mounjaro", "safety"],
-  },
-  {
     slug: "mounjaro-click-calculator-uk",
     title:
       "Mounjaro Click Calculator UK: How Many Clicks Is Your Dose? (KwikPen Guide 2026)",
