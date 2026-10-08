@@ -11,6 +11,7 @@ import NhsAccessSection from "@/components/compare/NhsAccessSection";
 import {
   MOUNJARO_DOSE_KEYS,
   startingPrice,
+  type MounjaroUkProviderCompare,
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
 import {
