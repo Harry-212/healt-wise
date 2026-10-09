@@ -7,8 +7,12 @@ import { gphcPharmacyRegisterUrl } from "@/lib/seo/gphc-pharmacy-register-url";
  * A promoted-provider banner shown above a compare table. Client request
  * (9 Oct 2026): "add the affiliate links at the top... or an extra section
  * at the top for them" when onboarding a new provider — this is that
- * section. Local-preview only until reviewed; not wired to any tracking
- * beyond the provider's own site link.
+ * section.
+ *
+ * The "Visit" CTA goes to the provider's own `/pharmacies/:slug` page
+ * first, same as every other provider's name link sitewide, rather than
+ * straight to their external site — that page is also where the
+ * discount-code box and the GPhC/Trustpilot verification live.
  */
 export default function FeaturedProviderBanner({
   medicationLabel,
@@ -20,7 +24,6 @@ export default function FeaturedProviderBanner({
   trustpilotUrl,
   gphcRegNo,
   profileHref,
-  providerUrl,
 }: {
   medicationLabel: string;
   providerName: string;
@@ -31,7 +34,6 @@ export default function FeaturedProviderBanner({
   trustpilotUrl?: string;
   gphcRegNo: string;
   profileHref: string;
-  providerUrl: string;
 }) {
   return (
     <section
@@ -92,14 +94,12 @@ export default function FeaturedProviderBanner({
               £{headlineFrom.toFixed(2)}
             </span>
           </p>
-          <a
-            href={providerUrl}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
+          <Link
+            href={profileHref}
             className="inline-flex items-center justify-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800"
           >
             Visit {providerName}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

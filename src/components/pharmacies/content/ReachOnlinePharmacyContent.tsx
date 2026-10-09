@@ -17,8 +17,8 @@ const sectionLabel =
 const paragraphClass = "text-slate-800 leading-relaxed";
 
 export default function ReachOnlinePharmacyContent() {
-  const discountCode = "";
-  const hasDiscount = false;
+  const discountCode = "Welcome10health";
+  const hasDiscount = true;
 
   return (
     <PharmacyDossierPage
