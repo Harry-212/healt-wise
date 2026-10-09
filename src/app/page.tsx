@@ -25,17 +25,17 @@ const WhyChooseHealthWise = dynamic(
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Compare Weight Loss Treatment Prices UK | Healthwise360",
+    absolute: "Compare UK Weight-Loss Treatment Prices for Mounjaro & Wegovy | Healthwise360",
   },
   description:
-    "Compare Mounjaro and Wegovy prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
+    "Compare checked UK provider prices, additional fees, pharmacy registration and support for Mounjaro and Wegovy. Independent information only.",
   alternates: {
     canonical: `${siteOrigin()}/`,
   },
   openGraph: {
-    title: "Compare Weight Loss Treatment Prices UK | Healthwise360",
+    title: "Compare UK Weight-Loss Treatment Prices for Mounjaro & Wegovy | Healthwise360",
     description:
-      "Compare Mounjaro and Wegovy prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
+      "Compare checked UK provider prices, additional fees, pharmacy registration and support for Mounjaro and Wegovy. Independent information only.",
     url: `${siteOrigin()}/`,
     images: [
       {
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Compare Weight Loss Treatment Prices UK | Healthwise360",
+    title: "Compare UK Weight-Loss Treatment Prices for Mounjaro & Wegovy | Healthwise360",
     description:
-      "Compare Mounjaro and Wegovy prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.",
+      "Compare checked UK provider prices, additional fees, pharmacy registration and support for Mounjaro and Wegovy. Independent information only.",
     images: [SITE_SHARE_IMAGE_SRC],
   },
 };
