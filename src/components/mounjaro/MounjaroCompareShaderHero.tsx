@@ -24,6 +24,11 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
+/** Narrower than the shell default (DEV-09, 9 Oct 2026): Mounjaro's hero content
+ * ran taller than the viewport. Only this page's minimums are reduced —
+ * Wegovy keeps the shared default. */
+const MOUNJARO_HERO_MIN_H = "min-h-[480px] sm:min-h-[520px] lg:min-h-[560px]";
+
 export default function MounjaroCompareShaderHero({
   lastUpdated,
 }: {
@@ -33,8 +38,9 @@ export default function MounjaroCompareShaderHero({
     <ComparePricePhotoHeroShell
       imageSrc={COMPARE_MOUNJARO_PRICE_HERO_IMAGE_SRC}
       imageAlt={COMPARE_MOUNJARO_PRICE_HERO_IMAGE_ALT}
+      minHeightClass={MOUNJARO_HERO_MIN_H}
     >
-      <header className="relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-6 pb-2 md:px-10 lg:px-14">
+      <header className="relative z-20 flex shrink-0 items-center justify-between gap-4 px-4 pt-4 pb-1 md:px-10 lg:px-14">
         <Link
           href="/"
           className="text-sm font-medium text-white/85 transition hover:text-white"
@@ -54,11 +60,11 @@ export default function MounjaroCompareShaderHero({
         </nav>
       </header>
 
-      <main className="relative z-20 flex flex-1 flex-col justify-end px-4 pb-12 pt-6 md:px-10 md:pb-16 lg:px-14 lg:pb-20">
+      <main className="relative z-20 flex flex-1 flex-col justify-end px-4 pb-6 pt-4 md:px-10 md:pb-8 lg:px-14 lg:pb-10">
         <div className="mx-auto w-full max-w-4xl text-center lg:mx-0 lg:max-w-3xl lg:text-left">
           <CompareHeroPricesCheckedPill sparkleClassName="text-violet-200" dateLabel={lastUpdated} />
 
-          <h1 className="mb-4 text-balance text-4xl leading-[1.08] font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+          <h1 className="mb-3 text-balance text-4xl leading-[1.08] font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
             <span
               className={`${instrumentSerif.className} text-violet-100/95 italic`}
             >
@@ -72,7 +78,7 @@ export default function MounjaroCompareShaderHero({
             </span>
           </h1>
 
-          <p className="mx-auto mb-6 max-w-2xl text-pretty text-sm font-light leading-relaxed text-white/75 lg:mx-0 md:text-base">
+          <p className="mx-auto mb-4 max-w-2xl text-pretty text-sm font-light leading-relaxed text-white/75 lg:mx-0 md:text-base">
             Compare real Mounjaro (tirzepatide) prices across UK pharmacies. See
             starting pen costs, estimated monthly spend, and every dose column in
             one interactive table — with regulated context and independent
@@ -89,14 +95,14 @@ export default function MounjaroCompareShaderHero({
             </Link>
           </div>
 
-          <p className="mx-auto mt-8 max-w-xl text-center text-[11px] leading-relaxed text-white/45 lg:mx-0 lg:text-left">
+          <p className="mx-auto mt-4 max-w-xl text-center text-[11px] leading-relaxed text-white/45 lg:mx-0 lg:text-left">
             Information only — not medical advice. Mounjaro is prescription-only.
             Provider prices were checked on the dates shown in the table.
             Prices and availability can change; confirm the final total and
             any additional charges with the provider.
           </p>
 
-          <div className="mt-8 flex justify-center lg:justify-start">
+          <div className="mt-4 flex justify-center lg:justify-start">
             <Link
               href="/what-is-mounjaro"
               className={compareHeroFooterLinkClass("violet")}
