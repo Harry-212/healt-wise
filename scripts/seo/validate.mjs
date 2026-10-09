@@ -15,7 +15,7 @@ import { checkSchema, checkSchemaIdConflicts } from "./rules/schema.mjs";
 import { checkFaq } from "./rules/faq.mjs";
 import { checkReviewer } from "./rules/reviewer.mjs";
 import { checkRetiredTerms } from "./rules/retired-terms.mjs";
-import { checkSourceMissing, checkSourceReachability } from "./rules/sources.mjs";
+import { checkSourceMissing, checkSourceReachability, buildSourceLinkReport } from "./rules/sources.mjs";
 import { checkSimilarContent } from "./rules/similarity.mjs";
 
 const PER_PAGE_RULES = [
@@ -88,6 +88,30 @@ function similarityPairStats(active) {
   return { pairCount: pairKeys.size, affectedPageCount: affectedPages.size };
 }
 
+/**
+ * Agus Friday Step 2 / Task 39: SOURCE_LINK_UNREACHABLE findings and the
+ * distinct pages they affect are different numbers (one page can cite the
+ * same dead source more than once, or cite several dead sources) and must
+ * never be reported as if they were the same count. Also breaks the active
+ * findings down by classification (Broken/Blocked/Temporarily unavailable)
+ * so the summary states confirmed-broken counts separately from bot-blocked
+ * ones, per the client's "a blocked request must not be reported as broken".
+ */
+function sourceLinkStats(active) {
+  const sourceFindings = active.filter((f) => f.rule === "SOURCE_LINK_UNREACHABLE");
+  const affectedPages = new Set(sourceFindings.map((f) => f.url));
+  const classificationCounts = { Broken: 0, Blocked: 0, "Temporarily unavailable": 0 };
+  for (const f of sourceFindings) {
+    const match = /\[(Broken|Blocked|Temporarily unavailable)\]\s*$/.exec(f.evidence || "");
+    if (match) classificationCounts[match[1]] += 1;
+  }
+  return {
+    findingCount: sourceFindings.length,
+    affectedPageCount: affectedPages.size,
+    ...classificationCounts,
+  };
+}
+
 function writeSummary(summaryPath, { target, scope, generatedAt, findings, rawFindingsCount, records, discoveryMeta }) {
   const active = findings.filter((f) => !f.exception);
   const suppressed = findings.filter((f) => f.exception);
@@ -96,6 +120,7 @@ function writeSummary(summaryPath, { target, scope, generatedAt, findings, rawFi
   const distinctAffectedDestinations = new Set(active.map((f) => f.url)).size;
   const repeatedEventCount = rawFindingsCount - findings.length;
   const { pairCount: similarityPairCount, affectedPageCount: similarityAffectedPages } = similarityPairStats(active);
+  const sourceLink = sourceLinkStats(active);
 
   const isFullSite = scope === "full-site";
   const findingsCsvName = isFullSite ? "seo-findings-full-site" : "seo-findings";
@@ -121,6 +146,15 @@ function writeSummary(summaryPath, { target, scope, generatedAt, findings, rawFi
     `- REVIEW: ${counts.REVIEW}`,
     `- Suppressed by exceptions: ${suppressed.length}`,
     `- Similarity: ${similarityPairCount} unordered pair(s) flagged, affecting ${similarityAffectedPages} distinct page(s)`,
+    "",
+    // Task 39/42: findings and affected pages are reported as two separate
+    // numbers (see sourceLinkStats), and classification counts make clear a
+    // bot-blocked link is not the same as a confirmed-broken one.
+    `- SOURCE_LINK_UNREACHABLE — ${sourceLink.findingCount} finding(s) affecting ${sourceLink.affectedPageCount} page(s)`,
+    `  - Confirmed broken (404/410): ${sourceLink.Broken}`,
+    `  - Blocked (401/403/405/429 — likely bot-blocked, not confirmed broken): ${sourceLink.Blocked}`,
+    `  - Temporarily unavailable (timeout/5xx): ${sourceLink["Temporarily unavailable"]}`,
+    `  - Full per-link breakdown (page, anchor text, where found, recommended action): ${isFullSite ? "seo-source-links-full-site.csv" : "seo-source-links.csv"}`,
     "",
     isFullSite
       ? "**Report-only** — this run does not block deployment and made no content/schema/redirect changes."
@@ -279,6 +313,8 @@ async function main() {
   findings.push(...checkSimilarContent(records, context));
   findings.push(...(await checkSourceReachability(records, context)));
 
+  const sourceLinkRows = target === "live" ? await buildSourceLinkReport(records, config) : [];
+
   // DEV-02: collapse exact-duplicate findings (same severity+rule+URL+
   // evidence) before exceptions/sorting, and keep the pre-dedupe count only
   // for reporting how many repeated events were collapsed — never feed the
@@ -314,6 +350,25 @@ async function main() {
     ),
   );
 
+  const sourceLinksName = scope === "full-site" ? "seo-source-links-full-site" : "seo-source-links";
+  writeFileSync(
+    path.join(reportsDir, `${sourceLinksName}.csv`),
+    stringify(
+      sourceLinkRows.map((r) => ({
+        pageUrl: r.pageUrl,
+        pageTitle: r.pageTitle,
+        anchorText: r.anchorText,
+        destinationUrl: r.destinationUrl,
+        httpResult: r.httpResult,
+        classification: r.classification,
+        whereFound: r.whereFound,
+        recommendedAction: r.recommendedAction,
+        pagesUsingThisSource: r.pagesUsingThisSource,
+      })),
+      { header: true },
+    ),
+  );
+
   writeSummary(path.join(reportsDir, `${summaryName}.md`), {
     target,
     scope,
@@ -326,7 +381,7 @@ async function main() {
 
   const errorCount = findings.filter((f) => !f.exception && f.severity === "ERROR").length;
   console.log(`Findings: ${findings.length} distinct (${rawFindingsCount} raw rows before dedupe), ${errorCount} ERROR active.`);
-  console.log(`Wrote reports/seo/${findingsName}.json, .csv and ${summaryName}.md`);
+  console.log(`Wrote reports/seo/${findingsName}.json, .csv, ${summaryName}.md and ${sourceLinksName}.csv (${sourceLinkRows.length} row(s))`);
 
   // Report-only for full-site (Task 32, point 4): never fails the process,
   // so nothing downstream can accidentally treat a whole-site finding as a

@@ -14,6 +14,7 @@
     "seo:validate": "node scripts/seo/validate.mjs",
     "seo:export:full-site": "node scripts/seo/export.mjs --scope=full-site",
     "seo:validate:full-site": "node scripts/seo/validate.mjs --scope=full-site",
+    "seo:editorial-queue": "node scripts/seo/editorial-queue.mjs",
     "seo:test": "node --test \"scripts/seo/__tests__/**/*.test.mjs\""
   },
   "dependencies": {
