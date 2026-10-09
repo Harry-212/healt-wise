@@ -1,11 +1,16 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import {
   sourceMissingRows,
   titleLengthRows,
   similarityRows,
   manualRows,
 } from "../editorial-queue.mjs";
+
+const scriptPath = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../editorial-queue.mjs");
 
 function inventoryWith(records) {
   return { records };
@@ -56,6 +61,15 @@ test("Task 41: the queue starts with the Switching Pharmacies guide as a manual 
   assert.ok(rows.length >= 1);
   assert.match(rows[0].pageUrl, /switching-pharmacies/);
   assert.equal(rows[0].taskNumber, "CSV #43");
+});
+
+test("regression: running the script directly (node scripts/seo/editorial-queue.mjs) actually invokes main() and writes output, not just exits silently", () => {
+  // Guards the Windows path-separator bug: comparing import.meta.url against
+  // a raw `file://${process.argv[1]}` concatenation silently fails on
+  // Windows (backslash path vs forward-slash file URL), so main() never ran
+  // and the command exited 0 having written nothing.
+  const output = execFileSync("node", [scriptPath], { encoding: "utf8" });
+  assert.match(output, /Wrote reports[\\/]seo[\\/]seo-editorial-queue\.csv/);
 });
 
 test("Task 41: every row has all twelve required columns populated (not undefined)", () => {
