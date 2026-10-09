@@ -132,6 +132,7 @@ async function exportOne(relativeUrl, { baseUrl, config, sitemapUrls, siteHostna
     internalLinkTargets: fields.internalLinkTargets,
     sourceLinkCount: fields.sourceLinkCount,
     sourceLinkTargets: fields.sourceLinkTargets,
+    sourceLinks: fields.sourceLinks,
     otherExternalLinkCount: fields.otherExternalLinkCount,
     bodyText: fields.bodyText,
     ...extractMainContent(result.html),

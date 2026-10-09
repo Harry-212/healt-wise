@@ -102,9 +102,31 @@ function hostnameOf(url) {
   }
 }
 
+/**
+ * Where a link sits on the page, for editorial triage (DEV-06 / Task 39/40):
+ * "main content, FAQ, sources section or JSON-LD". The site's shared
+ * templates (GuideLayout, ArticleSources, UkLocationArticleClient, etc.)
+ * consistently wrap these two areas in `#faq` and `#references`/`#sources`,
+ * so a closest-ancestor-id check is reliable sitewide without per-template
+ * special-casing. Anything else counts as main content.
+ */
+function locationOf($, el) {
+  const faqAncestor = $(el).closest("#faq");
+  if (faqAncestor.length) return "FAQ";
+  const sourcesAncestor = $(el).closest("#references, #sources");
+  if (sourcesAncestor.length) return "Sources section";
+  return "Main content";
+}
+
+function anchorTextOf($, el) {
+  const text = $(el).text().replace(/\s+/g, " ").trim();
+  return text || null;
+}
+
 function classifyLinks($, pageUrl, siteHostname, approvedSourceDomains) {
   const internalLinkTargets = [];
   const sourceLinkTargets = [];
+  const sourceLinks = [];
   let otherExternalLinkCount = 0;
 
   $("a[href]")
@@ -125,10 +147,27 @@ function classifyLinks($, pageUrl, siteHostname, approvedSourceDomains) {
         internalLinkTargets.push(absolute);
       } else if (approvedSourceDomains.some((d) => host === d || host.endsWith(`.${d}`))) {
         sourceLinkTargets.push(absolute);
+        sourceLinks.push({
+          url: absolute,
+          anchorText: anchorTextOf($, el),
+          location: locationOf($, el),
+        });
       } else {
         otherExternalLinkCount++;
       }
     });
+
+  // A source can be cited only in structured data (e.g. a `citation`/`url`
+  // field inside an approved-domain reference) without ever appearing as a
+  // visible <a href>. Those still need reachability checking and editorial
+  // visibility, flagged with location "JSON-LD" and no anchor text since
+  // none is rendered.
+  const htmlSourceUrls = new Set(sourceLinkTargets);
+  for (const url of jsonLdSourceUrls($, approvedSourceDomains)) {
+    if (htmlSourceUrls.has(url)) continue;
+    sourceLinkTargets.push(url);
+    sourceLinks.push({ url, anchorText: null, location: "JSON-LD" });
+  }
 
   return {
     internalLinkCount: internalLinkTargets.length,
@@ -136,7 +175,42 @@ function classifyLinks($, pageUrl, siteHostname, approvedSourceDomains) {
     otherExternalLinkCount,
     internalLinkTargets,
     sourceLinkTargets,
+    sourceLinks,
   };
+}
+
+/** Walks every JSON-LD block's string values for URLs on an approved source domain (e.g. a `citation` field). */
+function jsonLdSourceUrls($, approvedSourceDomains) {
+  const found = new Set();
+
+  function walk(value) {
+    if (typeof value === "string") {
+      if (/^https?:\/\//i.test(value)) {
+        const host = hostnameOf(value);
+        if (host && approvedSourceDomains.some((d) => host === d || host.endsWith(`.${d}`))) {
+          found.add(value);
+        }
+      }
+      return;
+    }
+    if (Array.isArray(value)) {
+      for (const item of value) walk(item);
+      return;
+    }
+    if (value && typeof value === "object") {
+      for (const v of Object.values(value)) walk(v);
+    }
+  }
+
+  $('script[type="application/ld+json"]').each((_, el) => {
+    try {
+      walk(JSON.parse($(el).contents().text()));
+    } catch {
+      // invalid JSON-LD is reported separately by checkSchema; skip here
+    }
+  });
+
+  return found;
 }
 
 function visibleReviewer($) {
