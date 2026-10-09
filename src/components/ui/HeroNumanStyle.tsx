@@ -52,7 +52,7 @@ const TOOL_CARDS = [
 export default function HeroNumanStyle() {
   return (
     <section
-      className="relative w-full max-w-full overflow-x-hidden overflow-y-visible bg-[#f4f7f5] pt-5 pb-3 md:pt-6 md:pb-4 lg:pt-8 lg:pb-5"
+      className="relative w-full max-w-full overflow-x-hidden overflow-y-visible bg-[#f4f7f5] pt-4 pb-2 md:pt-5 md:pb-3 lg:pt-6 lg:pb-4"
       style={{ position: "relative", overflowX: "hidden" }}
     >
       <div
@@ -81,7 +81,7 @@ export default function HeroNumanStyle() {
       >
         <div className="flex flex-col justify-between gap-5 md:gap-6 lg:flex-row lg:items-center">
           <div className="w-full min-w-0 lg:w-[60%] lg:max-w-none">
-            <div className="relative w-full max-w-[min(100%,46rem)] rounded-2xl bg-white/95 p-4.5 shadow-lg ring-1 ring-slate-200/90 backdrop-blur-md sm:p-6 lg:max-w-[min(100%,52rem)] xl:max-w-4xl">
+            <div className="relative w-full max-w-[min(100%,46rem)] rounded-2xl bg-white/95 p-4 shadow-lg ring-1 ring-slate-200/90 backdrop-blur-md sm:p-5 lg:max-w-[min(100%,52rem)] xl:max-w-4xl">
               {/* Eyebrow badge */}
               <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-bold tracking-wider text-emerald-800 uppercase ring-1 ring-emerald-200/70 sm:text-xs">
                 INDEPENDENT UK PRICE INFORMATION
