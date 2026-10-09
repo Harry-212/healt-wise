@@ -56,6 +56,22 @@ test("Task 45/41: SIMILAR_CONTENT pairs are deduped to one row, not two (no doub
   assert.equal(rows.length, 1);
 });
 
+test("regression: a similarity pair other than the two named in Task 45 gets its own accurate decision text, not a copy-pasted example naming unrelated pages", () => {
+  const findings = [
+    { rule: "SIMILAR_CONTENT_REVIEW", url: "https://example.test/pharmacies/curate", evidence: "Overlaps with: https://example.test/pharmacies/curely (73%)" },
+    { rule: "SIMILAR_CONTENT_REVIEW", url: "https://example.test/pharmacies/curely", evidence: "Overlaps with: https://example.test/pharmacies/curate (73%)" },
+  ];
+  const inventory = inventoryWith([
+    { url: "https://example.test/pharmacies/curate", title: "Curate", indexNoindex: "index" },
+    { url: "https://example.test/pharmacies/curely", title: "Curely", indexNoindex: "index" },
+  ]);
+  const rows = similarityRows(findings, inventory);
+  assert.equal(rows.length, 1);
+  assert.doesNotMatch(rows[0].decisionRequired, /St Albans|York/);
+  assert.match(rows[0].decisionRequired, /curate/);
+  assert.match(rows[0].decisionRequired, /curely/);
+});
+
 test("Task 41: the queue starts with the Switching Pharmacies guide as a manual (non-derived) row", () => {
   const rows = manualRows();
   assert.ok(rows.length >= 1);
