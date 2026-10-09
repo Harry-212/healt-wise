@@ -57,7 +57,7 @@ const TOOL_CARDS = [
 export default function HeroNumanStyle() {
   return (
     <section
-      className="relative w-full max-w-full overflow-x-hidden overflow-y-visible bg-[#f4f7f5] pt-10 pb-5 md:pt-12 md:pb-6 lg:pt-14 lg:pb-8"
+      className="relative w-full max-w-full overflow-x-hidden overflow-y-visible bg-[#f4f7f5] pt-5 pb-3 md:pt-6 md:pb-4 lg:pt-8 lg:pb-5"
       style={{ position: "relative", overflowX: "hidden" }}
     >
       <div
@@ -76,7 +76,7 @@ export default function HeroNumanStyle() {
           fill
           priority
           fetchPriority="high"
-          className="origin-top scale-110 object-cover object-top"
+          className="origin-top scale-105 object-cover object-[center_20%] sm:object-[center_15%]"
         />
       </div>
 
@@ -85,23 +85,20 @@ export default function HeroNumanStyle() {
         style={{ position: "relative", zIndex: 10 }}
       >
         <div className="flex flex-col justify-between gap-5 md:gap-6 lg:flex-row lg:items-end">
-          <div className="w-full min-w-0 lg:w-[58%] lg:max-w-none lg:pb-3">
-            <div className="relative w-full max-w-[min(100%,44rem)] rounded-2xl bg-linear-to-br from-white/92 via-white/72 to-white/25 px-4 py-5 shadow-sm ring-1 ring-white/60 backdrop-blur-[2px] sm:px-6 sm:py-6 lg:max-w-[min(100%,52rem)] xl:max-w-4xl">
+          <div className="w-full min-w-0 lg:w-[58%] lg:max-w-none lg:pb-1">
+            <div className="relative w-full max-w-[min(100%,44rem)] rounded-2xl bg-linear-to-br from-white/92 via-white/72 to-white/25 px-4 py-3.5 shadow-sm ring-1 ring-white/60 backdrop-blur-[2px] sm:px-6 sm:py-4.5 lg:max-w-[min(100%,52rem)] xl:max-w-4xl">
               <h1 className="text-[1.65rem] font-black leading-[1.08] tracking-tight text-slate-950 sm:text-3xl md:text-4xl md:leading-[1.1] lg:text-[3.1rem] lg:leading-[1.06] xl:text-[3.4rem]">
                 Compare Weight Loss Treatment Prices UK
               </h1>
-              <p className="mt-4 max-w-2xl text-base font-medium text-slate-800 md:text-lg">
-                {" "}
-                <br />
-                <br />
+              <p className="mt-2.5 max-w-2xl text-sm font-medium text-slate-800 sm:text-base md:text-lg">
                 Independent UK comparison for prices, safety, and support.
               </p>
             </div>
 
-            <div className="mt-7 flex w-full sm:mt-9 md:mt-10">
+            <div className="mt-4 flex w-full sm:mt-5 md:mt-6">
               <Link
                 href={HOME_COMPARE_HUB_HREF}
-                className={`${homepageYellowCtaSolid} group relative w-full max-w-md overflow-hidden rounded-full px-6 py-3.5 text-base font-bold leading-snug tracking-tight ring-2 ring-amber-300/50 hover:ring-amber-400/80 hover:shadow-amber-500/30 sm:w-auto sm:px-8 sm:py-4 sm:text-lg md:text-xl`}
+                className={`${homepageYellowCtaSolid} group relative w-full max-w-md overflow-hidden rounded-full px-5 py-2.5 text-base font-bold leading-snug tracking-tight ring-2 ring-amber-300/50 hover:ring-amber-400/80 hover:shadow-amber-500/30 sm:w-auto sm:px-7 sm:py-3 sm:text-lg md:text-xl`}
               >
                 <span className="text-center">
                   {HOME_COMPARE_HERO_CTA_LABEL}
