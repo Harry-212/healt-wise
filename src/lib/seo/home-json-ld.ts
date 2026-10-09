@@ -16,7 +16,7 @@ import {
 const SCHEMA_LANGUAGE = "en-GB";
 
 const SITE_DESCRIPTION =
-  "Compare Mounjaro and Wegovy prices across GPhC-registered UK pharmacies. Review doses, delivery fees, provider ratings and total treatment costs.";
+  "Compare checked UK provider prices, additional fees, pharmacy registration and support for Mounjaro and Wegovy. Independent information only.";
 
 function homeSchemaLogoUrl(base: string): string {
   return `${base}${SITE_LOGO_SRC}`;
@@ -92,7 +92,7 @@ export function homePageJsonLdGraph(): Record<string, unknown> {
     "@type": "WebPage",
     "@id": `${base}/#webpage`,
     url: pageUrl,
-    name: "Compare Weight Loss Treatment Prices UK",
+    name: "Compare UK Weight-Loss Treatment Prices for Mounjaro & Wegovy",
     description: SITE_DESCRIPTION,
     isPartOf: { "@id": `${base}/#website` },
     publisher: { "@id": `${base}/#organization` },
