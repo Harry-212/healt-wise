@@ -125,7 +125,22 @@ export function similarityRows(findings, inventory) {
     if (seenPairs.has(pairKey)) continue;
     seenPairs.add(pairKey);
 
+    // Task 45 named two specific pairs (archive overlap, St Albans/York) when
+    // this generator was written, but similarity findings are live data —
+    // a third pair (or more) can appear on a later rerun, as it did here
+    // (pharmacy profile pages). The decision text must describe whichever
+    // pair actually triggered, not a copy-pasted example.
     const isArchivePair = f.url.includes("/blog/topic/guides") || other.includes("/blog/topic/guides");
+    const bothNoindexCityPages =
+      !isArchivePair && !isIndexable(inventory, f.url) && !isIndexable(inventory, other);
+    let decisionRequired;
+    if (isArchivePair) {
+      decisionRequired = "Decide keep/merge/noindex for /blog vs /blog/topic/guides — explain the separate purpose and keyword owner for each";
+    } else if (bothNoindexCityPages) {
+      decisionRequired = `Confirm these two city pages are intentionally distinct noindex pages (both outside Jeff's London-only indexable policy), not accidental near-duplicates: ${f.url} vs ${other}`;
+    } else {
+      decisionRequired = `Confirm these two pages are intentionally distinct content, not accidental near-duplicates: ${f.url} vs ${other}`;
+    }
     rows.push({
       taskNumber: "CSV #45",
       priority: "Medium",
@@ -135,9 +150,7 @@ export function similarityRows(findings, inventory) {
       exactAffectedWordingOrAnchor: `Pair: ${f.url} <-> ${other}`,
       currentSource: "N/A",
       suggestedSource: "N/A",
-      decisionRequired: isArchivePair
-        ? "Decide keep/merge/noindex for /blog vs /blog/topic/guides — explain the separate purpose and keyword owner for each"
-        : "Confirm St Albans and York are intentionally distinct noindex pages (both outside Jeff's London-only indexable policy), not accidental near-duplicates",
+      decisionRequired,
       approvalRequiredFrom: "Jeff",
       developerActionAfterApproval: "Implement the approved keep/merge/noindex decision; no redirect/delete/rewrite until approved",
       status: "Not started",
