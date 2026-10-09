@@ -1436,6 +1436,27 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
     consultationIncluded: true,
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
+  {
+    id: "reach-online-pharmacy",
+    name: "Reach Online Pharmacy",
+    deliveryNote:
+      "From £4.99 (standard, 2-3 days); tracked 24/48h £5.99; guaranteed 1pm next-day (temp-controlled) £9.99",
+    rating: 4.5,
+    headlineFrom: 139.49,
+    gphcRegNo: "1093332",
+    trustpilotUrl: "https://uk.trustpilot.com/review/reachonlinepharmacy.com",
+    prices: {
+      "2.5mg": 139.49,
+      "5mg": 158.39,
+      "7.5mg": 217.99,
+      "10mg": 239.39,
+      "12.5mg": 267.29,
+      "15mg": 290.69,
+    },
+    updatedLabel: "27 Sep 2026",
+    consultationIncluded: true,
+    ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
+  },
 ];
 
 export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] =

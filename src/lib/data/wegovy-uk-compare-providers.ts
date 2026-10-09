@@ -552,6 +552,14 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "2.4mg": 189.99,
     "7.2mg": "TBC",
   },
+  "reach-online-pharmacy": {
+    "0.25mg": 85.49,
+    "0.5mg": 89.99,
+    "1mg": 93.59,
+    "1.7mg": 157.49,
+    "2.4mg": 206.09,
+    "7.2mg": 245.69,
+  },
 };
 
 const WEGOVY_EXTRA_PROVIDER_SEEDS: MounjaroUkProviderCompare[] = [
@@ -636,6 +644,11 @@ const WEGOVY_CHECKED_20_SEP_2026 = new Set<string>([
   "zava",
 ]);
 
+/** Providers checked on a date other than the two the ternary below covers (20 Sep / fallback). */
+const WEGOVY_UPDATED_LABEL_OVERRIDE: Record<string, string> = {
+  "reach-online-pharmacy": "27 Sep 2026",
+};
+
 function providerSeedToWegovy(
   provider: MounjaroUkProviderCompare,
 ): WegovyUkProviderCompare | null {
@@ -652,9 +665,9 @@ function providerSeedToWegovy(
     trustpilotUrl: provider.trustpilotUrl,
     linkProfilePage: provider.linkProfilePage,
     prices,
-    updatedLabel: WEGOVY_CHECKED_20_SEP_2026.has(provider.id)
-      ? "20 Sep 2026"
-      : "May 2026",
+    updatedLabel:
+      WEGOVY_UPDATED_LABEL_OVERRIDE[provider.id] ??
+      (WEGOVY_CHECKED_20_SEP_2026.has(provider.id) ? "20 Sep 2026" : "May 2026"),
     consultationIncluded: provider.consultationIncluded,
     badges: provider.badges,
     ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",

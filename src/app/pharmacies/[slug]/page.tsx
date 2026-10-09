@@ -15,6 +15,7 @@ import CuratePharmacyContent from "@/components/pharmacies/content/CuratePharmac
 import CurelyPharmacyContent from "@/components/pharmacies/content/CurelyPharmacyContent";
 import CuvaHealthContent from "@/components/pharmacies/content/CuvaHealthContent";
 import DoseDirectPharmacyContent from "@/components/pharmacies/content/DoseDirectPharmacyContent";
+import ReachOnlinePharmacyContent from "@/components/pharmacies/content/ReachOnlinePharmacyContent";
 import DotorPharmacyContent from "@/components/pharmacies/content/DotorPharmacyContent";
 import DrWeightmansContent from "@/components/pharmacies/content/DrWeightmansContent";
 import ESurgeryPharmacyContent from "@/components/pharmacies/content/ESurgeryPharmacyContent";
@@ -375,6 +376,32 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <DoseDirectPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "reach-online-pharmacy") {
+    const title =
+      "Reach Online Pharmacy weight loss review (UK) — GPhC-registered";
+    const description =
+      "Reach Online Pharmacy: GPhC-registered UK pharmacy, online clinical questionnaire, review by UK-registered clinicians, tracked next-day delivery and ongoing dose-review support. Information from Healthwise360 — not medical advice.";
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyProfileJsonGraph({
+                slug,
+                name: "Reach Online Pharmacy",
+                title,
+                description,
+              }),
+            ),
+          }}
+        />
+        <ReachOnlinePharmacyContent />
       </>
     );
   }
