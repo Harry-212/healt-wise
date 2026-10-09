@@ -456,7 +456,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
                   guidance rather than panicking.
                 </p>
                 <p className={p}>
-                  Shakes and pills often promise more than they deliver.
+                  Shakes and tablets often promise more than they deliver.
                   Regulator warnings around unsafe products still matter. The
                   best maintenance usually comes from combinations that keep
                   working after 6 months, not one dramatic month.

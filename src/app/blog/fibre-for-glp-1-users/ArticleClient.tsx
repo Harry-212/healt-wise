@@ -193,7 +193,7 @@ export default function ArticleClient() {
                 </Link>
                 , semaglutide, tirzepatide, or{" "}
                 <Link href="/blog/wegovy-pill-uk" className={linkClass}>
-                  Wegovy Pill
+                  Wegovy Tablet
                 </Link>
                 , the safest approach is usually simple: increase fibre
                 gradually, drink enough fluids, and choose food-first options
@@ -290,7 +290,7 @@ export default function ArticleClient() {
             >
               <p>
                 Fibre supplements are not GLP-1 medicines. They do not replace
-                Wegovy, Mounjaro, semaglutide, tirzepatide, or Wegovy Pill.
+                Wegovy, Mounjaro, semaglutide, tirzepatide, or Wegovy Tablet.
               </p>
               <p>
                 This matters because supplement marketing often uses phrases
@@ -912,7 +912,7 @@ export default function ArticleClient() {
                   ],
                   [
                     "Is fibre the same as a GLP-1 supplement?",
-                    "No. Fibre is a nutrition support tool, not a prescription GLP-1 medicine. It should not be presented as a replacement for Wegovy, Mounjaro, semaglutide, tirzepatide, or Wegovy Pill.",
+                    "No. Fibre is a nutrition support tool, not a prescription GLP-1 medicine. It should not be presented as a replacement for Wegovy, Mounjaro, semaglutide, tirzepatide, or Wegovy Tablet.",
                   ],
                   [
                     "What should I drink when increasing fibre?",
@@ -949,7 +949,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 For people using Wegovy, Mounjaro, semaglutide, tirzepatide, or
-                Wegovy Pill, the goal should not be extreme fibre intake. The
+                Wegovy Tablet, the goal should not be extreme fibre intake. The
                 better goal is a steady food-first routine that includes
                 vegetables, fruit, oats, pulses, wholegrains, and hydration in a
                 way that feels manageable.

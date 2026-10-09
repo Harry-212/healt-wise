@@ -31,7 +31,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
     () => [
       { id: "intro", label: `Why best weight loss treatment in ${name} is personal` },
       { id: "challenges", label: "Lichfield weight loss challenges and context" },
-      { id: "otc", label: "OTC weight loss pills: realistic expectations" },
+      { id: "otc", label: "OTC weight loss tablets: realistic expectations" },
       { id: "glp1", label: "Prescription GLP 1 and GIP: Mounjaro and Wegovy access" },
       { id: "non-surgical", label: "Non surgical fat reduction options" },
       { id: "lifestyle", label: "Complete lifestyle integration for Lichfield" },
@@ -153,7 +153,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Strongest OTC weight loss pill? Orlistat or Xenical at 120 mg blocks about 25% fat absorption and is NICE aligned for BMI 28 plus with risk factors when prescribed. Can a GP prescribe Mounjaro routinely? Not yet everywhere because integrated care boards phase rollout after technology appraisal style decisions such as TA1026 from January 2025 framing. Private supply via pharmacies is often faster when eligible. Mounjaro at Boots? Usually unavailable there, with independents near £200 plus monthly. Mounjaro versus Wegovy? Mounjaro often edges toward 20 plus percent loss in trial summaries with dual GLP 1 and GIP action versus about 15% for GLP 1 only semaglutide in selected populations.
+                  Strongest OTC weight loss tablet? Orlistat or Xenical at 120 mg blocks about 25% fat absorption and is NICE aligned for BMI 28 plus with risk factors when prescribed. Can a GP prescribe Mounjaro routinely? Not yet everywhere because integrated care boards phase rollout after technology appraisal style decisions such as TA1026 from January 2025 framing. Private supply via pharmacies is often faster when eligible. Mounjaro at Boots? Usually unavailable there, with independents near £200 plus monthly. Mounjaro versus Wegovy? Mounjaro often edges toward 20 plus percent loss in trial summaries with dual GLP 1 and GIP action versus about 15% for GLP 1 only semaglutide in selected populations.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -199,17 +199,17 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="otc" heading="OTC weight loss pills: realistic expectations">
+              <GuideSection darkMode={darkMode} id="otc" heading="OTC weight loss tablets: realistic expectations">
                 <p className={`text-lg md:text-xl ${p}`}>
                   Strongest legal OTC framing? Orlistat or Xenical through GP or pharmacy for BMI 28 plus, blocking dietary fat. Expect about 5 to 10% loss with diet discipline. Side effects include greasy stools when fat targets are ignored.
                 </p>
 
                 <p className={p}>
-                  No magic OTC pill exists. Orlistat stands out because it blocks about 25% of fat absorption and is NICE endorsed for BMI 28 plus with risk factors (NICE CG189, 2025 framing). Lichfield pharmacies such as Prescription Care Services style providers may supply it after consultation, often about £60 to £80 monthly in quoted bands.
+                  No magic OTC tablet exists. Orlistat stands out because it blocks about 25% of fat absorption and is NICE endorsed for BMI 28 plus with risk factors (NICE CG189, 2025 framing). Lichfield pharmacies such as Prescription Care Services style providers may supply it after consultation, often about £60 to £80 monthly in quoted bands.
                 </p>
 
                 <p className={p}>
-                  Might it suit pub lunches? Possibly when you pair tablets with lower fat market salads. Critique: messy digestion if ignored. BMJ style reviews note about 20% dropout in some orlistat cohorts. Citation DOI 10.1136/bmj.nutr-2024-000789. Alternatives like high dose caffeine pills show minimal evidence while regulators caution hype (MHRA, 2025 messaging).
+                  Might it suit pub lunches? Possibly when you pair tablets with lower fat market salads. Critique: messy digestion if ignored. BMJ style reviews note about 20% dropout in some orlistat cohorts. Citation DOI 10.1136/bmj.nutr-2024-000789. Alternatives like high dose caffeine tablets show minimal evidence while regulators caution hype (MHRA, 2025 messaging).
                 </p>
 
                 <p className={p}>

@@ -25,11 +25,11 @@ export const BLOG_HUB_HEADING = "Weight Loss Injection News & Guides";
 /** One-line intro per topic listing, describing what that topic actually holds. */
 export const BLOG_TOPIC_INTROS: Record<string, string> = {
   wegovy:
-    "Articles covering Wegovy (semaglutide): the FlexTouch pen and click counts, the Wegovy pill, starting treatment safely and how UK private prices compare.",
+    "Articles covering Wegovy (semaglutide): the FlexTouch pen and click counts, the Wegovy tablet, starting treatment safely and how UK private prices compare.",
   mounjaro:
     "Articles covering Mounjaro (tirzepatide): KwikPen dosing and click counts, how it works, safety questions and how UK private prices compare.",
   "how-it-works":
-    "Explainers on how prescription weight-loss treatments work, from weekly injections and the Wegovy pill to eating well alongside treatment and what BMI measures.",
+    "Explainers on how prescription weight-loss treatments work, from weekly injections and the Wegovy tablet to eating well alongside treatment and what BMI measures.",
   guides:
     "Practical guides for UK readers: where to start, buying treatment safely online, protein and fibre on GLP-1 treatment, and belly fat after 40.",
   safety:

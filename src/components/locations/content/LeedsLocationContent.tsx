@@ -33,7 +33,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
       { id: "challenges", label: "Leeds unique weight loss challenges" },
       { id: "services", label: "Leeds weight management services explained" },
       { id: "glp1", label: "GLP 1 powerhouse treatments available in Leeds" },
-      { id: "alternatives", label: "Non injection alternatives: pills, procedures, programmes" },
+      { id: "alternatives", label: "Non injection alternatives: tablets, procedures, programmes" },
       { id: "timeline", label: "Your Leeds specific weight loss timeline" },
       { id: "local", label: "Local Leeds resources and hacks" },
       { id: "risks", label: "Risk management: what Leeds clinics stress less often" },
@@ -154,7 +154,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Top Leeds treatments in 2026? GLP 1 injections (Mounjaro and Wegovy) plus lifestyle can reach about 15 to 20% loss where programmes align with NICE style guidance. Leeds Weight Management Service? NHS tier 2 and tier 3 via GP, with free counselling and dietetics when you qualify. Kelly Clarkson? GLP 1 plus workouts in interviews. UK Ozempic alternative? Wegovy. Strongest OTC pill? Orlistat 120 mg (modest about 5% loss). Ozempic regain? About two thirds rebound without habits.
+                  Top Leeds treatments in 2026? GLP 1 injections (Mounjaro and Wegovy) plus lifestyle can reach about 15 to 20% loss where programmes align with NICE style guidance. Leeds Weight Management Service? NHS tier 2 and tier 3 via GP, with free counselling and dietetics when you qualify. Kelly Clarkson? GLP 1 plus workouts in interviews. UK Ozempic alternative? Wegovy. Strongest OTC tablet? Orlistat 120 mg (modest about 5% loss). Ozempic regain? About two thirds rebound without habits.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -276,9 +276,9 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="alternatives" heading="Non injection alternatives: pills, procedures, programmes">
+              <GuideSection darkMode={darkMode} id="alternatives" heading="Non injection alternatives: tablets, procedures, programmes">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Strongest OTC weight loss pill UK? Orlistat 120 mg (Alli or Xenical) blocks about 25% fat absorption, about 5 to 7% loss but GI side effects.
+                  Strongest OTC weight loss tablet UK? Orlistat 120 mg (Alli or Xenical) blocks about 25% fat absorption, about 5 to 7% loss but GI side effects.
                 </p>
 
                 <p className={`text-base font-semibold ${strong}`}>Prescription medications</p>

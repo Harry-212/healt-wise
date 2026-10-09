@@ -193,7 +193,7 @@ export default function DundeeLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Quick-fix “pill culture” is rarely enough on its own. The more reliable pattern is boring-but-effective: a repeatable calorie deficit, protein and fibre you can sustain, and activity you can keep doing through dark winters. Medicines can help some eligible people, but they still need follow-up and habit support.
+                  Quick-fix “tablet culture” is rarely enough on its own. The more reliable pattern is boring-but-effective: a repeatable calorie deficit, protein and fibre you can sustain, and activity you can keep doing through dark winters. Medicines can help some eligible people, but they still need follow-up and habit support.
                 </p>
 
                 <p className={`text-sm ${muted}`}>

@@ -343,7 +343,7 @@ export default function DoncasterLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  OTC pills are usually weaker. Check safety notes at{" "}
+                  OTC tablets are usually weaker. Check safety notes at{" "}
                   <a
                     href="https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency"
                     className={linkCls}

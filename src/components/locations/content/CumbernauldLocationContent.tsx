@@ -193,7 +193,7 @@ export default function CumbernauldLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Pills alone can be risky. The Lancet (2024) notes many people need support. Haggis cravings call for hybrids.
+                  Tablets alone can be risky. The Lancet (2024) notes many people need support. Haggis cravings call for hybrids.
                 </p>
 
               </GuideSection>

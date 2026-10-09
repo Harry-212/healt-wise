@@ -33,7 +33,7 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
       { id: "options", label: "Weight loss options in Luton" },
       { id: "injections-how", label: "How weight loss injections work" },
       { id: "brands", label: "Mounjaro and Wegovy" },
-      { id: "pill-vs-injection", label: "Which pill or injection works best" },
+      { id: "tablet-vs-injection", label: "Which tablet or injection works best" },
       { id: "surgery", label: "Bariatric surgery in Luton" },
       { id: "nhs", label: "NHS weight management support" },
       { id: "choose", label: "How to choose the right option" },
@@ -240,9 +240,9 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="pill-vs-injection" heading="Which pill or injection works best">
+              <GuideSection darkMode={darkMode} id="pill-vs-injection" heading="Which tablet or injection works best">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  There is no single best pill or injection for everyone, but GLP 1 based medicines are currently among the most effective medical treatments for obesity in the UK.
+                  There is no single best tablet or injection for everyone, but GLP 1 based medicines are currently among the most effective medical treatments for obesity in the UK.
                 </p>
 
                 <p className={p}>
@@ -250,11 +250,11 @@ export default function LutonLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Some people ask for a pill because they do not want injections. That is understandable. The challenge is that oral weight loss options are still more limited than injectable ones in the UK. There are prescription medicines that can help with weight loss, but the most discussed and often most effective options at the moment are injectable.
+                  Some people ask for a tablet because they do not want injections. That is understandable. The challenge is that oral weight loss options are still more limited than injectable ones in the UK. There are prescription medicines that can help with weight loss, but the most discussed and often most effective options at the moment are injectable.
                 </p>
 
                 <p className={p}>
-                  If someone is asking, What is the most successful weight loss pill in the UK? the better answer is that no pill outperforms every injectable option for obesity treatment. If ease matters more than maximum effect, that changes the discussion. If cost matters more than speed, that changes it again. That is why one size fits all answers are usually weak answers.
+                  If someone is asking, What is the most successful weight loss tablet in the UK? the better answer is that no tablet outperforms every injectable option for obesity treatment. If ease matters more than maximum effect, that changes the discussion. If cost matters more than speed, that changes it again. That is why one size fits all answers are usually weak answers.
                 </p>
               </GuideSection>
 

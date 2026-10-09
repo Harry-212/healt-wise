@@ -401,11 +401,11 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    What is the strongest weight loss prescription pill in the
+                    What is the strongest weight loss prescription tablet in the
                     UK?
                   </h3>
                   <p>
-                    Among prescription pills, options like Orlistat have long
+                    Among prescription tablets, options like Orlistat have long
                     been used, though they work differently from injections.
                     Injectable therapies currently appear to outperform oral
                     options in many comparisons.

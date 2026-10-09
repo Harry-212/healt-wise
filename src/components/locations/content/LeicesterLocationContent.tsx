@@ -33,7 +33,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
       { id: "nhs", label: "NHS Leicester weight management pathways" },
       { id: "private", label: "Private weight loss clinics serving Leicester" },
       { id: "glp1", label: "GLP 1 medications: Leicester specific breakdown" },
-      { id: "non-injection", label: "Non injection alternatives: pills and programmes" },
+      { id: "non-injection", label: "Non injection alternatives: tablets and programmes" },
       { id: "timelines", label: "Realistic weight loss timelines with checklists" },
       { id: "diet", label: "Mounjaro diet guide: Leicester market hacks" },
       { id: "surgical", label: "Surgical options for severe cases" },
@@ -303,9 +303,9 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
 
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="non-injection" heading="Non injection alternatives: pills and programmes">
+              <GuideSection darkMode={darkMode} id="non-injection" heading="Non injection alternatives: tablets and programmes">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Strongest OTC weight loss pill UK? Orlistat 120 mg (Alli or Xenical) blocks about 25% dietary fat absorption, about 5 to 7% bodyweight loss over 6 months in some trials, with GI side effects.
+                  Strongest OTC weight loss tablet UK? Orlistat 120 mg (Alli or Xenical) blocks about 25% dietary fat absorption, about 5 to 7% bodyweight loss over 6 months in some trials, with GI side effects.
                 </p>
                 <p className={`text-base font-semibold ${strong}`}>Prescription medications</p>
                 <p className={p}>

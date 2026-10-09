@@ -115,7 +115,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Best Weight Loss Treatment ${name}: medical, NHS, and lifestyle options explained`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  The most successful weight loss treatment in Middlesbrough usually combines medically supervised support (NHS or private clinics), lifestyle change, and, where appropriate, prescription medications like GLP-1 injections. There is no single &quot;best&quot; treatment for everyone; success depends on individual health, eligibility, and long-term behaviour change rather than pills alone. NHS-funded weight management programmes in England focus on structured lifestyle support, while private clinics can offer GLP-1 injections and body-contouring as add-ons, always under qualified clinicians.
+                  The most successful weight loss treatment in Middlesbrough usually combines medically supervised support (NHS or private clinics), lifestyle change, and, where appropriate, prescription medications like GLP-1 injections. There is no single &quot;best&quot; treatment for everyone; success depends on individual health, eligibility, and long-term behaviour change rather than tablets alone. NHS-funded weight management programmes in England focus on structured lifestyle support, while private clinics can offer GLP-1 injections and body-contouring as add-ons, always under qualified clinicians.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -667,7 +667,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                   <div className={`rounded-xl border p-5 ${border} ${boxBg}`}>
                     <p className={`text-base font-semibold ${strong}`}>1. What is the most effective weight loss treatment for adults in Middlesbrough?</p>
                     <p className={`mt-2 text-sm leading-relaxed ${p}`}>
-                      The most effective treatment for weight loss in adults in Middlesbrough is usually a combination of medically supervised lifestyle change, support groups, and, where appropriate, prescription weight-loss medications like GLP-1 injections. Simply relying on pills or injections without changing diet, activity, and sleep habits rarely leads to long-term success.
+                      The most effective treatment for weight loss in adults in Middlesbrough is usually a combination of medically supervised lifestyle change, support groups, and, where appropriate, prescription weight-loss medications like GLP-1 injections. Simply relying on tablets or injections without changing diet, activity, and sleep habits rarely leads to long-term success.
                     </p>
                     <p className={`mt-3 text-sm leading-relaxed ${p}`}>For most adults in Middlesbrough, the best-evidence-based approach is:</p>
                     <ul className={`mt-3 list-disc space-y-2 pl-6 text-sm ${p}`}>

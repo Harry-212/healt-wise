@@ -593,7 +593,7 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Are weight loss injections better than pills for fat loss?
+                    Are weight loss injections better than tablets for fat loss?
                   </h3>
                   <p>
                     They can be very effective, but “better” depends on the

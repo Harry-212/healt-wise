@@ -144,21 +144,21 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "what-is-wegovy-pill",
-    title: "What Is Wegovy Pill? Semaglutide Tablet Explained for UK Users",
+    title: "What Is Wegovy Tablet? Semaglutide Tablet Explained for UK Users",
     date: "2026-07-02",
     category: "Guides",
     description:
-      "Learn what Wegovy Pill is, how semaglutide tablets work, who they may suit, and how they compare with injections.",
+      "Learn what Wegovy Tablet is, how semaglutide tablets work, who they may suit, and how they compare with injections.",
     heroImage: "/blog/what-is-wegovy-1.png",
     feedTags: ["guides", "wegovy", "how-it-works", "safety"],
   },
   {
     slug: "wegovy-pill-uk",
-    title: "Wegovy Pill UK: Price, Availability, Results and Safety Guide",
+    title: "Wegovy Tablet UK: Price, Availability, Results and Safety Guide",
     date: "2026-07-01",
     category: "Guides",
     description:
-      "Wegovy Pill UK guide: compare price, availability, results, dosage, side effects and tablet vs injection options.",
+      "Wegovy Tablet UK guide: compare price, availability, results, dosage, side effects and tablet vs injection options.",
     heroImage: "/blog/wegovy-pills.png",
     feedTags: ["guides", "wegovy", "safety", "how-it-works"],
   },
@@ -215,11 +215,11 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   {
     slug: "buy-weight-loss-pills-uk",
     title:
-      "Buy Weight Loss Pills UK: Safe Options, Prices and Treatment Comparison",
+      "Buy Weight Loss Tablets UK: Safe Options, Prices and Treatment Comparison",
     date: "2026-06-19",
     category: "Guides",
     description:
-      "Buy weight loss pills UK safely. Compare orlistat, Mysimba, GLP-1 tablets, prices, risks and pharmacy checks.",
+      "Buy weight loss tablets UK safely. Compare orlistat, Mysimba, GLP-1 tablets, prices, risks and pharmacy checks.",
     heroImage: "/blog/buy-weight-loss-piils-1.webp",
     feedTags: ["guides", "safety", "how-it-works", "wegovy"],
   },

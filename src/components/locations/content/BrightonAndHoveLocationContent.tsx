@@ -194,7 +194,7 @@ export default function BrightonAndHoveLocationContent({ loc, shareUrl }: Props)
                   .
                 </p>
                 <p className={p}>
-                  Pill fads can look flashy. Many people regain weight when plans are not sustainable, so flexible routines matter.
+                  Tablet fads can look flashy. Many people regain weight when plans are not sustainable, so flexible routines matter.
                 </p>
 
               </GuideSection>

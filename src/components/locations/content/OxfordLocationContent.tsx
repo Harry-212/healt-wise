@@ -156,7 +156,7 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
                 </p>
                 <p className={p}>
                   The real best treatment for someone in Oxford is rarely a
-                  single product, pill, or clinic. It is a personalised,
+                  single product, tablet, or clinic. It is a personalised,
                   medically framed strategy that fits lifestyle, health history,
                   and local infrastructure. This guide explains how to think
                   through that choice while keeping the focus on safety,
@@ -771,7 +771,7 @@ export default function OxfordLocationContent({ loc, shareUrl }: Props) {
                       Wegovy and Mounjaro are GLP-1-based treatments that mimic
                       gut hormones. They slow gastric emptying, increase
                       feelings of fullness, and can improve blood sugar control.
-                      They are not magic pills and must be used as part of a
+                      They are not magic tablets and must be used as part of a
                       wider plan that includes diet, activity, and monitoring.
                     </p>
                   </div>

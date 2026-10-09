@@ -175,7 +175,7 @@ export default function CambridgeLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  Pill fads can be hyped. Rebound risk is real when routines are not sustainable, so cycling culture helps only when it is consistent.
+                  Tablet fads can be hyped. Rebound risk is real when routines are not sustainable, so cycling culture helps only when it is consistent.
                 </p>
 
               </GuideSection>

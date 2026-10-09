@@ -486,7 +486,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Are supplements essential for the best results?",
-        a: `Rarely. Most people do better with consistent meals, movement, and—where appropriate—prescribed medicines overseen by a clinician. Treat “miracle” pills with the same scepticism we outline in our [methodology](/methodology); for injection context, start with [Mounjaro in the UK](/helpful-guides/mounjaro-weight-loss-injection-uk).`,
+        a: `Rarely. Most people do better with consistent meals, movement, and—where appropriate—prescribed medicines overseen by a clinician. Treat “miracle” tablets with the same scepticism we outline in our [methodology](/methodology); for injection context, start with [Mounjaro in the UK](/helpful-guides/mounjaro-weight-loss-injection-uk).`,
       },
     ];
   }
@@ -576,7 +576,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
         a: `People describe it as three meals per day, a daily water target, and a short walk. It can help as simple structure, but evidence is lighter than for a repeatable calorie deficit plus strength and walking. Use it as a routine, not a rigid rule.`,
       },
       {
-        q: "What is the most successful weight loss pill in the UK?",
+        q: "What is the most successful weight loss tablet in the UK?",
         a: `There is no single winner for everyone. In UK discussions, many people compare tirzepatide and semaglutide based options, but eligibility, side effects, and follow up matter more than rankings. Read [Mounjaro](/what-is-mounjaro) and [Wegovy](/what-is-wegovy), then compare ongoing costs on [Mounjaro prices](/mounjaro-price-comparison) and [Wegovy prices](/wegovy-price-comparison).`,
       },
       {
@@ -708,7 +708,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
         a: `It can be possible for some people, but steep deficits can increase rebound risk. A safer plan is clinician guided and focuses on a repeatable calorie deficit, higher daily steps, strength work, and sleep. Use our [BMI calculator](/tools/bmi-calculator) as a screening aid, not a diagnosis.`,
       },
       {
-        q: "Top UK weight loss pill?",
+        q: "Top UK weight loss tablet?",
         a: `Orlistat is a long standing option with modest average loss for some people and known gastrointestinal side effects. Many people now compare injection medicines, but eligibility and follow up matter more than rankings.`,
       },
       {
@@ -753,7 +753,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
         a: `Some people can do it, but it is aggressive and rebound risk can rise. A safer plan uses a repeatable calorie deficit, strength training, and clinician oversight if you use medicines. Use our [BMI calculator](/tools/bmi-calculator) as a screening tool, not a diagnosis.`,
       },
       {
-        q: "Most successful weight loss pill in UK?",
+        q: "Most successful weight loss tablet in UK?",
         a: `There is no single winner for everyone. Orlistat is a long standing oral option with modest average loss for some people and known gastrointestinal side effects. Many people now compare injection medicines, but eligibility and follow up matter more than rankings.`,
       },
       {
@@ -1142,7 +1142,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
         a: `Most rapid drops are water and glycogen, not fat. Hydration, lower sodium, and routine sleep can reduce water weight, but it is not a long term strategy.`,
       },
       {
-        q: "Top over the counter pill for Derby users?",
+        q: "Top over the counter tablet for Derby users?",
         a: `Orlistat is commonly discussed as an oral option with modest average loss for some people and known gastrointestinal side effects. It is not a substitute for diet changes.`,
       },
       {
@@ -1179,7 +1179,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
         a: `Reports often mention GLP 1 medicines plus lifestyle changes. Treat celebrity stories as motivation, not a protocol.`,
       },
       {
-        q: "Strongest OTC weight loss pill UK?",
+        q: "Strongest OTC weight loss tablet UK?",
         a: `Orlistat is commonly discussed as an over the counter option with modest average loss for some people and known gastrointestinal side effects. It is not a substitute for diet changes.`,
       },
       {
@@ -1516,7 +1516,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "What is the most effective weight loss treatment for adults in Middlesbrough?",
-        a: `The most effective treatment for weight loss in adults in Middlesbrough is usually a combination of medically supervised lifestyle change, support groups, and, where appropriate, prescription weight-loss medications like GLP 1 injections. Simply relying on pills or injections without changing diet, activity, and sleep habits rarely leads to long-term success. Compare the main routes using [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro).`,
+        a: `The most effective treatment for weight loss in adults in Middlesbrough is usually a combination of medically supervised lifestyle change, support groups, and, where appropriate, prescription weight-loss medications like GLP 1 injections. Simply relying on tablets or injections without changing diet, activity, and sleep habits rarely leads to long-term success. Compare the main routes using [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro).`,
       },
       {
         q: "Which prescription weight-loss injection tends to produce the greatest average weight loss in UK trials?",
@@ -1577,7 +1577,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
         a: `Wegovy is the same compound as Ozempic (semaglutide) at doses licensed for weight management in the UK. Read [what Wegovy is](/what-is-wegovy) and ask your prescriber how dosing differs from diabetes use.`,
       },
       {
-        q: "Which over the counter pill delivers maximum legal weight loss?",
+        q: "Which over the counter tablet delivers maximum legal weight loss?",
         a: `Orlistat 120 mg (Alli or Xenical) blocks about a quarter of dietary fat absorption and can produce roughly 5 to 7% body weight loss over about 6 months in some people, with GI side effects. Ask a pharmacist and keep protein and hydration steady.`,
       },
       {
@@ -1631,7 +1631,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
   if (loc.slug === "lichfield") {
     return [
       {
-        q: "What is the most effective OTC slimming pill in the UK?",
+        q: "What is the most effective OTC slimming tablet in the UK?",
         a: `Orlistat or Xenical is the main licensed fat blocker for BMI 28 plus with risk factors when a clinician or pharmacist agrees. Expect about 5 to 10% loss with a lower fat diet, plus greasy stool risk if you ignore fat targets. Read [our methodology](/methodology) before you buy any add on supplements online.`,
       },
       {

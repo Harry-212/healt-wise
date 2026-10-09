@@ -480,7 +480,7 @@ export default function BangorNorthernIrelandLocationContent({
                   before you chase dose changes alone.
                 </p>
                 <p className={p}>
-                  Pills and powders marketed online rarely earn the hype; the{" "}
+                  Tablets and powders marketed online rarely earn the hype; the{" "}
                   <a
                     href="https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency"
                     className={linkCls}

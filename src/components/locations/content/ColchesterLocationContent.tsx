@@ -225,7 +225,7 @@ export default function ColchesterLocationContent({ loc, shareUrl }: Props) {
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="core" heading="Core strategies beyond medicines">
-                <p className={p}>Pills aside, foundations endure.</p>
+                <p className={p}>Tablets aside, foundations endure.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="diet" heading="Diet dynamics for Colchester eats">

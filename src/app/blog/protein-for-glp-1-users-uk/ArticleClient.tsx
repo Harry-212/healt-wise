@@ -280,7 +280,7 @@ export default function ArticleClient() {
                   href="/blog/wegovy-pill-uk"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Wegovy Pill
+                  Wegovy Tablet
                 </Link>
                 , the best approach is usually simple: start with protein-rich
                 foods first, then consider supplements only if they genuinely
@@ -1117,7 +1117,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 For people using Wegovy, Mounjaro, semaglutide, tirzepatide, or
-                Wegovy Pill, appetite may reduce and portions may become
+                Wegovy Tablet, appetite may reduce and portions may become
                 smaller. Therefore, planning protein-rich meals can help support
                 strength, fullness, and general diet quality.
               </p>
