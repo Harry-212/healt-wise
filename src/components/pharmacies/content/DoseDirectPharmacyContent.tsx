@@ -34,7 +34,7 @@ export default function DoseDirectPharmacyContent() {
         { k: "Published", v: "2026" },
         {
           k: "Provider",
-          v: "DoseDirect (GPhC-registered distance-selling pharmacy — registration number to be confirmed)",
+          v: "DoseDirect (GPhC-registered distance-selling pharmacy, registration number 9012841)",
         },
         {
           k: "Pathway",
@@ -121,12 +121,12 @@ export default function DoseDirectPharmacyContent() {
           directly with the provider before starting any treatment. Verify
           the supplying pharmacy on the{" "}
           <a
-            href="https://www.pharmacyregulation.org/registers/pharmacy/"
+            href="https://www.pharmacyregulation.org/registers/pharmacy/9012841"
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-slate-800 underline-offset-2 hover:underline"
           >
-            GPhC register
+            GPhC register (DoseDirect, registration 9012841)
           </a>
           .
         </p>

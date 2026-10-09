@@ -1422,7 +1422,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
       "Included — tracked, cold-chain, same-day dispatch before 1pm Mon-Fri",
     rating: 4.6,
     headlineFrom: 134.99,
-    gphcRegNo: "",
+    gphcRegNo: "9012841",
     trustpilotUrl: "https://uk.trustpilot.com/review/dosedirect.co.uk",
     prices: {
       "2.5mg": 134.99,
