@@ -146,7 +146,6 @@ export default function CompareWegovyPricesUkPage() {
                 trustpilotUrl={featuredProvider.trustpilotUrl}
                 gphcRegNo={featuredProvider.gphcRegNo}
                 profileHref={`/pharmacies/${featuredProvider.id}`}
-                providerUrl="https://reachonlinepharmacy.com/weight-loss/"
               />
             </div>
           </section>

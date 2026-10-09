@@ -182,7 +182,6 @@ export default function CompareMounjaroPricesUkPage() {
                 trustpilotUrl={featuredProvider.trustpilotUrl}
                 gphcRegNo={featuredProvider.gphcRegNo}
                 profileHref={`/pharmacies/${featuredProvider.id}`}
-                providerUrl="https://reachonlinepharmacy.com/weight-loss/"
               />
             </div>
           </section>
