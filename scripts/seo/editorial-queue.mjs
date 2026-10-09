@@ -22,6 +22,7 @@
  */
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { stringify } from "csv-stringify/sync";
 import { reportsDir } from "./lib/config.mjs";
 
@@ -210,6 +211,6 @@ function main() {
   console.log(`Wrote reports/seo/seo-editorial-queue.csv (${rows.length} rows: ${manualRows().length} manual, ${rows.length - manualRows().length} derived from findings)`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   main();
 }
