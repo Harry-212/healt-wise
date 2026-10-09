@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import MounjaroCompareChartsSection from "@/components/compare/MounjaroCompareChartsSection";
+import FeaturedProviderBanner from "@/components/compare/FeaturedProviderBanner";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import MounjaroCompareShaderHero from "@/components/mounjaro/MounjaroCompareShaderHero";
 import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable";
@@ -146,6 +147,9 @@ export default function CompareMounjaroPricesUkPage() {
     ),
   );
   const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
+  const featuredProvider = MOUNJARO_UK_COMPARE_PROVIDERS.find(
+    (p) => p.id === "reach-online-pharmacy",
+  );
 
   return (
     <>
@@ -164,6 +168,25 @@ export default function CompareMounjaroPricesUkPage() {
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />
         </section>
+
+        {featuredProvider && (
+          <section className="border-b border-slate-200/80 bg-background py-8 md:py-10">
+            <div className="mx-auto max-w-7xl px-4 md:px-8">
+              <FeaturedProviderBanner
+                medicationLabel="Mounjaro"
+                providerName={featuredProvider.name}
+                logoSrc="/logo pharmacy/Reach Online Pharmacy.webp"
+                logoAlt={featuredProvider.name}
+                headlineFrom={featuredProvider.headlineFrom}
+                rating={featuredProvider.rating}
+                trustpilotUrl={featuredProvider.trustpilotUrl}
+                gphcRegNo={featuredProvider.gphcRegNo}
+                profileHref={`/pharmacies/${featuredProvider.id}`}
+                providerUrl="https://reachonlinepharmacy.com/weight-loss/"
+              />
+            </div>
+          </section>
+        )}
 
         <section
           id="mounjaro-compare-table"

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import WegovyCompareChartsSection from "@/components/compare/WegovyCompareChartsSection";
+import FeaturedProviderBanner from "@/components/compare/FeaturedProviderBanner";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import WegovyCompareShaderHero from "@/components/wegovy/WegovyCompareShaderHero";
 import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
@@ -105,6 +106,9 @@ export default function CompareWegovyPricesUkPage() {
     "2.4mg",
   );
   const highDose = insights?.doses.find((d) => d.dose === "7.2mg");
+  const featuredProvider = WEGOVY_UK_COMPARE_PROVIDERS.find(
+    (p) => p.id === "reach-online-pharmacy",
+  );
 
   return (
     <>
@@ -128,6 +132,25 @@ export default function CompareWegovyPricesUkPage() {
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />
         </section>
+
+        {featuredProvider && (
+          <section className="border-b border-slate-200/80 bg-background py-8 md:py-10">
+            <div className="mx-auto max-w-7xl px-4 md:px-8">
+              <FeaturedProviderBanner
+                medicationLabel="Wegovy"
+                providerName={featuredProvider.name}
+                logoSrc="/logo pharmacy/Reach Online Pharmacy.webp"
+                logoAlt={featuredProvider.name}
+                headlineFrom={featuredProvider.headlineFrom}
+                rating={featuredProvider.rating}
+                trustpilotUrl={featuredProvider.trustpilotUrl}
+                gphcRegNo={featuredProvider.gphcRegNo}
+                profileHref={`/pharmacies/${featuredProvider.id}`}
+                providerUrl="https://reachonlinepharmacy.com/weight-loss/"
+              />
+            </div>
+          </section>
+        )}
 
         {/* Core table */}
         <section
