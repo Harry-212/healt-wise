@@ -70,7 +70,7 @@ const FAQ_ITEMS: FaqItemWithSchema[] = [
           GPhC register
         </EL>{" "}
         if it is based in England, Scotland or Wales, or the{" "}
-        <EL href="https://www.psni.org.uk/search-the-registers/">
+        <EL href="https://registers.psni.org.uk/">
           PSNI register
         </EL>{" "}
         if it is based in Northern Ireland. Match the registered details with
@@ -79,7 +79,7 @@ const FAQ_ITEMS: FaqItemWithSchema[] = [
         <br />
         Do not rely on a website badge alone. Online medicine sellers based in
         Great Britain are no longer required to display the EU common logo.{" "}
-        <EL href="https://www.gov.uk/guidance/distance-selling-logo-for-medicines-sellers-in-northern-ireland">
+        <EL href="https://www.gov.uk/guidance/register-for-the-distance-selling-logo">
           Different requirements apply
         </EL>{" "}
         to sellers based in Northern Ireland.
@@ -113,13 +113,13 @@ const REFERENCES = [
     label: "PSNI — Pharmacy register",
     description:
       "Register of pharmaceutical chemists and pharmacy premises in Northern Ireland.",
-    href: "https://www.psni.org.uk/search-the-registers/",
+    href: "https://registers.psni.org.uk/",
   },
   {
     label: "MHRA — Distance Selling Logo guidance",
     description:
       "MHRA regulatory guidance on distance selling logo requirements for online medicine sellers.",
-    href: "https://www.gov.uk/guidance/distance-selling-logo-for-medicines-sellers-in-northern-ireland",
+    href: "https://www.gov.uk/guidance/register-for-the-distance-selling-logo",
   },
   {
     label: "MHRA — Buying prescription medicines online safely",
@@ -287,7 +287,7 @@ export default function GuideSwitchingPharmacy() {
             </>,
             <>
               For pharmacies based in Northern Ireland, check the{" "}
-              <EL href="https://www.psni.org.uk/search-the-registers/">
+              <EL href="https://registers.psni.org.uk/">
                 Pharmaceutical Society of Northern Ireland (PSNI) register
               </EL>
               .
