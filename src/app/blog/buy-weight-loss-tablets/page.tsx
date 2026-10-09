@@ -85,7 +85,7 @@ export default function BuyWeightLossTabletsPage() {
       },
       {
         "@type": "Question",
-        name: "What is the strongest prescription weight loss pill?",
+        name: "What is the strongest prescription weight loss tablet?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "In current UK pharmacy comparisons, Mysimba and prescription-strength orlistat products are the main prescription oral options. However, “strongest” depends on what you mean because Mysimba targets appetite, while Orlistat and Xenical target fat absorption. Superdrug also makes that distinction in its comparison page.",
@@ -112,7 +112,7 @@ export default function BuyWeightLossTabletsPage() {
         name: "Are new oral GLP-1 weight loss tablets available yet?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The MHRA approved the first GLP-1 tablet for weight loss in the UK on June 11, 2026. However, live market availability is still early and uneven. Pharmacy Online already shows a pre-order entry, while Oxford lists a Wegovy pill entry as out of stock, so you should expect rapid changes.",
+          text: "The MHRA approved the first GLP-1 tablet for weight loss in the UK on June 11, 2026. However, live market availability is still early and uneven. Pharmacy Online already shows a pre-order entry, while Oxford lists a Wegovy tablet entry as out of stock, so you should expect rapid changes.",
         },
       },
     ],

@@ -190,7 +190,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
 
               <GuideSection darkMode={darkMode} id="medical-programmes" heading="Medical Weight Loss Programs in Newcastle">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  If you are in Newcastle, the most successful weight loss treatment for many people is a structured medical weight loss program - not a one-day detox or miracle pill. These programs usually combine diet advice from a dietitian or nutritionist, physical activity planning, and psychological support (for example help with emotional eating, stress, sleep). Some services also include access to prescription weight loss medications if you meet specific criteria, and they are delivered either through NHS-funded pathways or private clinics.
+                  If you are in Newcastle, the most successful weight loss treatment for many people is a structured medical weight loss program - not a one-day detox or miracle tablet. These programs usually combine diet advice from a dietitian or nutritionist, physical activity planning, and psychological support (for example help with emotional eating, stress, sleep). Some services also include access to prescription weight loss medications if you meet specific criteria, and they are delivered either through NHS-funded pathways or private clinics.
                 </p>
 
                 <p className={p}>In Newcastle, several routes to medical weight loss exist:</p>
@@ -610,7 +610,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
                       <li>Medical weight-loss programs or medications (for those with high BMI, type 2 diabetes, or other obesity-related conditions)</li>
                       <li>In rare cases, bariatric surgery</li>
                     </ul>
-                    <p className={`mt-3 text-sm leading-relaxed ${p}`}>What this means in practice is that no single product or pill can replace the basics of eating less, moving more, and changing habits. The &quot;most successful&quot; treatment is the one that you can stick to safely over the long term, with medical guidance when needed.</p>
+                    <p className={`mt-3 text-sm leading-relaxed ${p}`}>What this means in practice is that no single product or tablet can replace the basics of eating less, moving more, and changing habits. The &quot;most successful&quot; treatment is the one that you can stick to safely over the long term, with medical guidance when needed.</p>
                   </div>
 
                   <div className={`rounded-xl border p-5 ${border} ${boxBg}`}>
@@ -670,7 +670,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
 
                   <div className={`rounded-xl border p-5 ${border} ${boxBg}`}>
                     <p className={`text-base font-semibold ${strong}`}>5. Is the Best Weight Loss Treatment in Newcastle Safe and Sustainable?</p>
-                    <p className={`mt-2 text-sm leading-relaxed ${p}`}>A treatment is only &quot;best&quot; if it is both effective and safe and sustainable. Rapid weight loss (for example, very low-calorie diets or unregulated pills) can lead to:</p>
+                    <p className={`mt-2 text-sm leading-relaxed ${p}`}>A treatment is only &quot;best&quot; if it is both effective and safe and sustainable. Rapid weight loss (for example, very low-calorie diets or unregulated tablets) can lead to:</p>
                     <ul className={`mt-3 list-disc space-y-2 pl-6 text-sm ${p}`}>
                       <li>Gallstones</li>
                       <li>Muscle loss</li>
@@ -712,7 +712,7 @@ export default function NewcastleUponTyneLocationContent({ loc, shareUrl }: Prop
                 </ul>
 
                 <p className={`mt-4 text-lg md:text-xl ${p}`}>
-                  There is no magic pill, and no single &quot;Newcastle weight loss plan&quot; that fits everyone. What works best is a personalised approach, guided by a healthcare professional, and built on habits that you can maintain over time. If you live in Newcastle and are serious about losing weight, the best first step is often a conversation with your GP - and then building a realistic plan around your life, not a headline.
+                  There is no magic tablet, and no single &quot;Newcastle weight loss plan&quot; that fits everyone. What works best is a personalised approach, guided by a healthcare professional, and built on habits that you can maintain over time. If you live in Newcastle and are serious about losing weight, the best first step is often a conversation with your GP - and then building a realistic plan around your life, not a headline.
                 </p>
               </GuideSection>
 

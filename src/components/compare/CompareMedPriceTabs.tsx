@@ -150,11 +150,11 @@ function WegovyPillPanel() {
       className="min-w-0"
     >
       <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-        <span className="text-brand-primary">Wegovy Pill</span>
+        <span className="text-brand-primary">Wegovy Tablet</span>
         <span className="text-slate-900"> UK</span>
       </h2>
       <p className="mt-2 max-w-3xl text-sm text-slate-600 md:text-base">
-        We do not list Wegovy Pill provider prices yet. Read our guides for what the
+        We do not list Wegovy Tablet provider prices yet. Read our guides for what the
         semaglutide tablet is, availability in the UK and how it compares with injections.
       </p>
       <div className="mt-6 flex flex-wrap gap-4">
@@ -163,14 +163,14 @@ function WegovyPillPanel() {
           className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
         >
           <Pill className="h-4 w-4" aria-hidden />
-          Wegovy Pill UK: price, availability and safety
+          Wegovy Tablet UK: price, availability and safety
         </Link>
         <Link
           href="/blog/what-is-wegovy-pill"
           className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
         >
           <Pill className="h-4 w-4" aria-hidden />
-          What is Wegovy Pill?
+          What is Wegovy Tablet?
         </Link>
       </div>
     </motion.div>
@@ -274,7 +274,7 @@ export default function CompareMedPriceTabs({
                   </span>
                   <span className="flex min-w-0 flex-1 flex-col gap-0.5">
                     <span className="leading-tight">
-                      {m === WEGOVY_PILL_TAB ? "Wegovy Pill" : TAB_LABEL[m]}
+                      {m === WEGOVY_PILL_TAB ? "Wegovy Tablet" : TAB_LABEL[m]}
                     </span>
                     {!on ? (
                       <span className="text-[11px] font-semibold opacity-80">

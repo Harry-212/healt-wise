@@ -402,7 +402,7 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    What is the most successful weight loss pill in the UK?
+                    What is the most successful weight loss tablet in the UK?
                   </h3>
                   <p>
                     Among oral prescription options, Orlistat has been widely

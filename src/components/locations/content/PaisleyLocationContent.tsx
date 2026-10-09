@@ -329,7 +329,7 @@ export default function PaisleyLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   For teens aged 12 to 18, Weigh to Go at Ferguslie Clinic is a
                   youth focused option with dietetics and counselling tailored to
-                  younger people. Pills and injections are usually limited in NHS
+                  younger people. Tablets and injections are usually limited in NHS
                   youth pathways, while lifestyle remains the core foundation.
                 </p>
                 <p className={p}>

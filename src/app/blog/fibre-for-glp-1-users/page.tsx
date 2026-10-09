@@ -126,7 +126,7 @@ export default function FibreForGlp1UsersPage() {
         name: "Is fibre the same as a GLP-1 supplement?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. Fibre is a nutrition support tool, not a prescription GLP-1 medicine. It should not be presented as a replacement for Wegovy, Mounjaro, semaglutide, tirzepatide, or Wegovy Pill.",
+          text: "No. Fibre is a nutrition support tool, not a prescription GLP-1 medicine. It should not be presented as a replacement for Wegovy, Mounjaro, semaglutide, tirzepatide, or Wegovy Tablet.",
         },
       },
       {

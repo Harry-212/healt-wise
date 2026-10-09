@@ -117,7 +117,7 @@ export default function NorthamptonLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading="Best Weight Loss Treatment Northampton: Medically Supervised, Localised, and Realistic Paths">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  The best weight loss treatment in Northampton typically means a medically supervised program - such as NHS-delivered dietetic services, supervised exercise plans, GLP-1 injections (e.g. Wegovy, Mounjaro, Ozempic) where eligible, or bariatric surgery (gastric sleeve or band) for higher-risk obesity. For most people, combining diet, physical activity, and long-term behavioural support works better than quick-fix pills or apps. In Northampton, access usually starts with a GP referral, especially if GLP-1 drugs or surgery are being considered.
+                  The best weight loss treatment in Northampton typically means a medically supervised program - such as NHS-delivered dietetic services, supervised exercise plans, GLP-1 injections (e.g. Wegovy, Mounjaro, Ozempic) where eligible, or bariatric surgery (gastric sleeve or band) for higher-risk obesity. For most people, combining diet, physical activity, and long-term behavioural support works better than quick-fix tablets or apps. In Northampton, access usually starts with a GP referral, especially if GLP-1 drugs or surgery are being considered.
                 </p>
               </GuideSection>
 

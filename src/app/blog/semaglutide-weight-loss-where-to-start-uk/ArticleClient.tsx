@@ -367,7 +367,7 @@ export default function ArticleClient() {
                 loss and weight management. However, this is still a
                 prescription-only medicine. Therefore, users should not confuse
                 it with GLP-1 supplements or generic &ldquo;weight loss
-                pills.&rdquo;
+                tablets.&rdquo;
               </p>
               <p>
                 This distinction is important because many people searching for
@@ -554,7 +554,7 @@ export default function ArticleClient() {
               <p>
                 That means more people are now asking whether they can choose
                 tablets instead of weekly injections. Common questions include
-                tablet vs injection differences, Wegovy pill pricing, and what
+                tablet vs injection differences, Wegovy tablet pricing, and what
                 oral semaglutide costs in the UK.
               </p>
               <p>

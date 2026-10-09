@@ -18,22 +18,22 @@ import {
 
 const SHARE_PATH = "/blog/buy-weight-loss-pills-uk";
 const TITLE =
-  "Buy Weight Loss Pills UK: Safe Options, Prices and Treatment Comparison";
+  "Buy Weight Loss Tablets UK: Safe Options, Prices and Treatment Comparison";
 const DESCRIPTION =
-  "Buy weight loss pills UK safely. Compare orlistat, Mysimba, GLP-1 tablets, prices, risks and pharmacy checks.";
+  "Buy weight loss tablets UK safely. Compare orlistat, Mysimba, GLP-1 tablets, prices, risks and pharmacy checks.";
 const HERO_SRC = blogImgPath(BUY_WEIGHT_LOSS_PILLS_HERO_WEBP);
 const INLINE_SRC = blogImgPath(BUY_WEIGHT_LOSS_PILLS_INLINE_WEBP);
 
 const TOC = [
   { id: "buy-online", label: "Can you buy online in the UK?" },
-  { id: "what-are-pills", label: "What are weight loss pills?" },
-  { id: "best-options", label: "Best weight loss pills UK" },
-  { id: "pills-vs-injections", label: "Pills vs injections" },
+  { id: "what-are-tablets", label: "What are weight loss tablets?" },
+  { id: "best-options", label: "Best weight loss tablets UK" },
+  { id: "tablets-vs-injections", label: "Tablets vs injections" },
   { id: "costs", label: "How much do they cost?" },
   { id: "compare-price", label: "How to compare price properly" },
   { id: "pharmacy-safety", label: "Why pharmacy safety matters" },
   { id: "eligibility", label: "Who may be eligible?" },
-  { id: "pills-vs-fat-burners", label: "Pills vs fat burners" },
+  { id: "tablets-vs-fat-burners", label: "Tablets vs fat burners" },
   { id: "comparison-table", label: "Comparison table" },
   { id: "faq", label: "Frequently Asked Questions" },
   { id: "conclusion", label: "Conclusion" },
@@ -97,7 +97,7 @@ export default function ArticleClient() {
           </Link>
           <span>/</span>
           <span className={darkMode ? "text-slate-200" : "text-slate-600"}>
-            Buy Weight Loss Pills UK
+            Buy Weight Loss Tablets UK
           </span>
         </nav>
 
@@ -108,7 +108,7 @@ export default function ArticleClient() {
             <h1
               className={`mb-6 text-3xl font-medium leading-[1.15] tracking-tight sm:text-4xl md:text-[44px] ${darkMode ? "text-white" : "text-slate-900"}`}
             >
-              Buy Weight Loss Pills UK: Safe Options, Prices and Treatment
+              Buy Weight Loss Tablets UK: Safe Options, Prices and Treatment
               Comparison
             </h1>
             <div
@@ -126,7 +126,7 @@ export default function ArticleClient() {
 
             <BlogArticleHeroImage
               src={HERO_SRC}
-              alt="Buy weight loss pills UK safely with options, prices and treatment comparison guidance"
+              alt="Buy weight loss tablets UK safely with options, prices and treatment comparison guidance"
             />
             <div
               id="guide-article-hero-end"
@@ -141,10 +141,10 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="intro"
-              heading="Buy Weight Loss Pills UK: Safe Options, Prices and Treatment Comparison"
+              heading="Buy Weight Loss Tablets UK: Safe Options, Prices and Treatment Comparison"
             >
               <p className="text-lg md:text-xl">
-                Buying weight loss pills in the UK can feel confusing because
+                Buying weight loss tablets in the UK can feel confusing because
                 the phrase covers several different types of treatment. Some
                 people are looking for prescription weight loss tablets, while
                 others are searching for pharmacy weight loss capsules, appetite
@@ -161,7 +161,7 @@ export default function ArticleClient() {
                 Healthwise360 helps UK users compare weight loss treatment
                 options, prices, provider policies, and pharmacy safety checks
                 in one place. Therefore, this guide explains how to buy weight
-                loss pills safely in the UK, what options may be available, how
+                loss tablets safely in the UK, what options may be available, how
                 prices can vary, and how tablets compare with injections.
               </p>
             </GuideSection>
@@ -169,11 +169,11 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="buy-online"
-              heading="Can You Buy Weight Loss Pills Online in the UK?"
+              heading="Can You Buy Weight Loss Tablets Online in the UK?"
             >
               <p>
                 Yes, adults in the UK may be able to buy certain weight loss
-                pills online, but the route depends on the medicine. Some
+                tablets online, but the route depends on the medicine. Some
                 treatments require a private prescription after an online
                 consultation, while lower-dose options may be available through
                 a pharmacy after suitability checks.
@@ -186,7 +186,7 @@ export default function ArticleClient() {
                 fake weight loss medicines are sold online.
               </p>
               <p>
-                This is why a proper weight loss pill comparison should look
+                This is why a proper weight loss tablet comparison should look
                 beyond the headline price. Instead, you should compare:
               </p>
               <ul className="list-disc space-y-3 pl-5">
@@ -200,7 +200,7 @@ export default function ArticleClient() {
                 <li>Whether the monthly price is realistic long term</li>
               </ul>
               <p>
-                In short, you can buy weight loss pills online in the UK, but
+                In short, you can buy weight loss tablets online in the UK, but
                 you should avoid unregulated sellers, social media offers, and
                 websites that promise fast fat loss without a medical review.
                 Before you compare providers, it helps to{" "}
@@ -216,17 +216,17 @@ export default function ArticleClient() {
 
             <GuideSection
               darkMode={darkMode}
-              id="what-are-pills"
-              heading="What Are Weight Loss Pills?"
+              id="what-are-tablets"
+              heading="What Are Weight Loss Tablets?"
             >
               <p>
-                Weight loss pills are oral treatments that may support weight
+                Weight loss tablets are oral treatments that may support weight
                 management when combined with diet, activity, and ongoing
                 lifestyle changes. However, they do not all work in the same
                 way.
               </p>
               <p>
-                Some weight loss pills reduce how much fat your body absorbs
+                Some weight loss tablets reduce how much fat your body absorbs
                 from food. Others may work on appetite, cravings, or fullness.
                 Besides that, the UK market is now moving toward oral GLP-1
                 options, which may appeal to people who want a non-injection
@@ -248,9 +248,9 @@ export default function ArticleClient() {
               </ul>
               <p>
                 Therefore, when people search for &ldquo;buy weight loss
-                pills&rdquo;, they may not all mean the same thing. Some want
+                tablets&rdquo;, they may not all mean the same thing. Some want
                 the cheapest weight loss price. Others want a clinically proven
-                weight loss treatment. Meanwhile, some want to compare pills
+                weight loss treatment. Meanwhile, some want to compare tablets
                 against injections such as Mounjaro or Wegovy. If you are at
                 that stage, you can{" "}
                 <Link
@@ -260,17 +260,17 @@ export default function ArticleClient() {
                   compare Mounjaro vs Wegovy
                 </Link>{" "}
                 to see how the main injection routes compare before you decide
-                on a pill.
+                on a tablet.
               </p>
             </GuideSection>
 
             <GuideSection
               darkMode={darkMode}
               id="best-options"
-              heading="Best Weight Loss Pills UK: What Options Are Commonly Compared?"
+              heading="Best Weight Loss Tablets UK: What Options Are Commonly Compared?"
             >
               <p>
-                There is no single best weight loss pill for everyone. The right
+                There is no single best weight loss tablet for everyone. The right
                 option depends on your BMI, health conditions, current
                 medicines, eating habits, budget, and whether you want a
                 prescription treatment or a pharmacy option.
@@ -323,7 +323,7 @@ export default function ArticleClient() {
               <p>
                 Alli and Orlos are lower-dose orlistat products that may be
                 available through a pharmacy. However, they are still not casual
-                &ldquo;diet pills&rdquo; in the way many people imagine.
+                &ldquo;diet tablets&rdquo; in the way many people imagine.
               </p>
               <p>
                 The NHS states that lower-dose orlistat can be bought from a
@@ -332,13 +332,13 @@ export default function ArticleClient() {
               </p>
               <p>
                 This matters because buyers often compare pharmacy weight loss
-                pills with prescription treatment without understanding the
+                tablets with prescription treatment without understanding the
                 difference. A lower-dose pharmacy option may be easier to
                 access, but it may also have different suitability rules,
                 different strength, and different expectations.
               </p>
               <p>
-                Therefore, if you are comparing fat loss pills, always check:
+                Therefore, if you are comparing fat loss tablets, always check:
               </p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Active ingredient</li>
@@ -394,7 +394,7 @@ export default function ArticleClient() {
                 Semaglutide Tablets
               </h3>
               <p>
-                The UK weight loss pill market changed in June 2026 when the
+                The UK weight loss tablet market changed in June 2026 when the
                 MHRA approved the UK&rsquo;s first GLP-1 receptor agonist tablet
                 for weight loss and weight management. The approved semaglutide
                 tablet may be prescribed to adults with obesity, or adults who
@@ -403,7 +403,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 This is important because many people who search &ldquo;buy
-                weight loss pills&rdquo; are now looking for a non-injection
+                weight loss tablets&rdquo; are now looking for a non-injection
                 alternative to GLP-1 treatment. However, it is not the same as a
                 standard slimming tablet.
               </p>
@@ -421,7 +421,7 @@ export default function ArticleClient() {
                   href="/blog/wegovy-pill-uk"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Wegovy Pill UK guide
+                  Wegovy Tablet UK guide
                 </Link>
                 . If you want to see how the injectable version is priced while
                 oral supply develops, check the{" "}
@@ -437,15 +437,15 @@ export default function ArticleClient() {
 
             <GuideSection
               darkMode={darkMode}
-              id="pills-vs-injections"
-              heading="Weight Loss Pills vs Weight Loss Injections"
+              id="tablets-vs-injections"
+              heading="Weight Loss Tablets vs Weight Loss Injections"
             >
               <p>
                 Many buyers compare tablets against injections before choosing a
                 weight loss treatment. This is sensible because the best option
                 is not always the cheapest or newest one.
               </p>
-              <p>Weight loss pills may appeal if you:</p>
+              <p>Weight loss tablets may appeal if you:</p>
               <ul className="list-disc space-y-3 pl-5">
                 <li>Prefer an oral treatment</li>
                 <li>Do not want to use injections</li>
@@ -479,14 +479,14 @@ export default function ArticleClient() {
                 >
                   Mounjaro vs Wegovy comparison
                 </Link>{" "}
-                is a practical next step alongside this pill guide.
+                is a practical next step alongside this tablet guide.
               </p>
             </GuideSection>
 
             <div className="my-10">
               <BlogArticleHeroImage
                 src={INLINE_SRC}
-                alt="Comparing weight loss pill options, prices and pharmacy safety checks in the UK"
+                alt="Comparing weight loss tablet options, prices and pharmacy safety checks in the UK"
                 priority={false}
                 showFullImage
               />
@@ -495,10 +495,10 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="costs"
-              heading="How Much Do Weight Loss Pills Cost in the UK?"
+              heading="How Much Do Weight Loss Tablets Cost in the UK?"
             >
               <p>
-                Weight loss pill prices in the UK vary depending on the
+                Weight loss tablet prices in the UK vary depending on the
                 medicine, strength, provider, pack size, consultation model, and
                 delivery fee.
               </p>
@@ -541,7 +541,7 @@ export default function ArticleClient() {
                   price comparison methodology
                 </Link>{" "}
                 explains how we weigh dose, fees, and provider transparency when
-                you are comparing pills against pens.
+                you are comparing tablets against pens.
               </p>
             </GuideSection>
 
@@ -605,7 +605,7 @@ export default function ArticleClient() {
                 </li>
               </ul>
               <p>
-                Because of this, the cheapest weight loss pill may not always be
+                Because of this, the cheapest weight loss tablet may not always be
                 the best-value treatment. However, a transparent price
                 comparison can help you avoid overpaying. To see exactly how we
                 score providers on price and safety, read{" "}
@@ -622,10 +622,10 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="pharmacy-safety"
-              heading="Why Pharmacy Safety Matters Before Buying Weight Loss Pills"
+              heading="Why Pharmacy Safety Matters Before Buying Weight Loss Tablets"
             >
               <p>
-                Weight loss pills are often targeted by unsafe online sellers
+                Weight loss tablets are often targeted by unsafe online sellers
                 because the demand is high. As a result, people may find fake
                 products, unlicensed medicines, or websites that avoid proper
                 clinical checks.
@@ -653,7 +653,7 @@ export default function ArticleClient() {
                 <li>The site explains side effects and eligibility clearly</li>
               </ul>
               <p>
-                A safe provider should not make weight loss pills look like a
+                A safe provider should not make weight loss tablets look like a
                 quick cosmetic shortcut. Instead, they should explain who the
                 treatment is for, who should avoid it, and when to speak to a
                 clinician. The most reliable first step is to{" "}
@@ -670,7 +670,7 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="eligibility"
-              heading="Who May Be Eligible for Weight Loss Pills?"
+              heading="Who May Be Eligible for Weight Loss Tablets?"
             >
               <p>
                 Eligibility depends on the medicine. However, many regulated
@@ -717,18 +717,18 @@ export default function ArticleClient() {
                 >
                   weight loss tracker UK
                 </Link>{" "}
-                can help you monitor progress alongside any pill or injection
+                can help you monitor progress alongside any tablet or injection
                 route you choose.
               </p>
             </GuideSection>
 
             <GuideSection
               darkMode={darkMode}
-              id="pills-vs-fat-burners"
-              heading="Are Weight Loss Pills Better Than Fat Burners?"
+              id="tablets-vs-fat-burners"
+              heading="Are Weight Loss Tablets Better Than Fat Burners?"
             >
               <p>
-                Many people searching for weight loss pills also see
+                Many people searching for weight loss tablets also see
                 supplement-style fat burners, carb blockers, binders, teas, or
                 appetite gummies.
               </p>
@@ -737,7 +737,7 @@ export default function ArticleClient() {
                 medicines.
               </p>
               <p>
-                A prescription weight loss pill has a defined active ingredient,
+                A prescription weight loss tablet has a defined active ingredient,
                 clinical suitability rules, and regulated supply. A
                 supplement-style fat burner may be sold as a wellness product,
                 but that does not mean it offers the same evidence, clinical
@@ -782,7 +782,7 @@ export default function ArticleClient() {
                   rows={[
                     {
                       cells: [
-                        "Fat absorption pill",
+                        "Fat absorption tablet",
                         "Orlistat, Xenical",
                         "Reduces fat absorption",
                         "Usually yes",
@@ -844,10 +844,10 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Can I buy weight loss pills online in the UK?
+                    Can I buy weight loss tablets online in the UK?
                   </h3>
                   <p>
-                    Yes, some weight loss pills can be bought online in the UK,
+                    Yes, some weight loss tablets can be bought online in the UK,
                     but regulated treatments should come from a registered
                     pharmacy and may require a prescription or pharmacist
                     suitability check. Avoid unregulated websites, social media
@@ -858,10 +858,10 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    What is the best weight loss pill in the UK?
+                    What is the best weight loss tablet in the UK?
                   </h3>
                   <p>
-                    There is no single best weight loss pill for everyone.
+                    There is no single best weight loss tablet for everyone.
                     Orlistat may suit people looking for a fat absorption
                     treatment, Mysimba may suit some people looking for appetite
                     support, and semaglutide tablets may suit eligible adults
@@ -872,7 +872,7 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Are weight loss pills cheaper than injections?
+                    Are weight loss tablets cheaper than injections?
                   </h3>
                   <p>
                     Often, older oral options such as orlistat may have a lower
@@ -912,7 +912,7 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Is there a weight loss pill version of Wegovy?
+                    Is there a weight loss tablet version of Wegovy?
                   </h3>
                   <p>
                     The MHRA approved a semaglutide tablet for weight loss and
@@ -925,7 +925,7 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Are fat burners the same as weight loss pills?
+                    Are fat burners the same as weight loss tablets?
                   </h3>
                   <p>
                     No. Many fat burners are supplements, not regulated obesity
@@ -937,7 +937,7 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    What should I check before buying weight loss pills?
+                    What should I check before buying weight loss tablets?
                   </h3>
                   <p>
                     Check the pharmacy registration, consultation process,
@@ -955,9 +955,9 @@ export default function ArticleClient() {
               heading="Conclusion"
             >
               <p>
-                Buying weight loss pills in the UK should be a careful,
+                Buying weight loss tablets in the UK should be a careful,
                 safety-first decision. The best option is not always the
-                cheapest pill or the most advertised treatment. Instead, the
+                cheapest tablet or the most advertised treatment. Instead, the
                 right choice depends on your BMI, health history, goals, budget,
                 and whether tablets or injections fit your lifestyle better.
               </p>
@@ -971,7 +971,7 @@ export default function ArticleClient() {
               <p>
                 However, every serious weight loss treatment should be supplied
                 through a regulated route with proper checks. Therefore, before
-                you buy weight loss pills online, compare the treatment type,
+                you buy weight loss tablets online, compare the treatment type,
                 price, provider safety, and pharmacy registration.
               </p>
               <p>
@@ -980,7 +980,7 @@ export default function ArticleClient() {
                 decisions before choosing where to buy.
               </p>
             </GuideSection>
-            <ArticleSources slug="buy-weight-loss-pills-uk" darkMode={darkMode} />
+            <ArticleSources slug="buy-weight-loss-tablets-uk" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">

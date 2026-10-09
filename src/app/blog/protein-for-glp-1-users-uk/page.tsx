@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords:
-    "protein for glp-1 users uk, protein wegovy, protein mounjaro, glp-1 diet support, protein powder weight loss, semaglutide nutrition, tirzepatide protein, wegovy pill nutrition, muscle loss glp-1",
+    "protein for glp-1 users uk, protein wegovy, protein mounjaro, glp-1 diet support, protein powder weight loss, semaglutide nutrition, tirzepatide protein, wegovy tablet nutrition, muscle loss glp-1",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },

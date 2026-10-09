@@ -4,16 +4,16 @@ import { blogImgPath, WEGOVY_PILL_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/wegovy-pill-uk";
-const TITLE = "Wegovy Pill UK: Price, Availability & Safety";
+const TITLE = "Wegovy Tablet UK: Price, Availability & Safety";
 const DESCRIPTION =
-  "Wegovy Pill UK guide: compare price, availability, results, dosage, side effects and tablet vs injection options.";
+  "Wegovy Tablet UK guide: compare price, availability, results, dosage, side effects and tablet vs injection options.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(WEGOVY_PILL_HERO_PNG)}`;
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords:
-    "wegovy pill uk, wegovy tablet uk, oral semaglutide uk, wegovy pill price uk, wegovy pill vs injection, wegovy pill results, wegovy pill dosage, wegovy pill side effects, glp-1 pill uk, weight loss tablet uk",
+    "wegovy tablet uk, wegovy tablet uk, oral semaglutide uk, wegovy tablet price uk, wegovy tablet vs injection, wegovy tablet results, wegovy tablet dosage, wegovy tablet side effects, glp-1 tablet uk, weight loss tablet uk",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: HERO_IMAGE,
-        alt: "Wegovy Pill UK price availability results and safety guide",
+        alt: "Wegovy Tablet UK price availability results and safety guide",
       },
     ],
   },
@@ -73,7 +73,7 @@ export default function WegovyPillUkPage() {
       {
         "@type": "ListItem",
         position: 3,
-        name: "Wegovy Pill UK",
+        name: "Wegovy Tablet UK",
         item: `${siteOrigin()}${PATH}`,
       },
     ],
@@ -85,23 +85,23 @@ export default function WegovyPillUkPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "What is Wegovy Pill?",
+        name: "What is Wegovy Tablet?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Wegovy Pill is a prescription-only GLP-1 medication in tablet form. It contains semaglutide and is designed to support medically supervised weight loss and weight management. Unlike Wegovy Pen, which is injected weekly, Wegovy Pill is taken once daily as an oral tablet.",
+          text: "Wegovy Tablet is a prescription-only GLP-1 medication in tablet form. It contains semaglutide and is designed to support medically supervised weight loss and weight management. Unlike Wegovy Pen, which is injected weekly, Wegovy Tablet is taken once daily as an oral tablet.",
         },
       },
       {
         "@type": "Question",
-        name: "How is Wegovy Pill different from the Wegovy injection?",
+        name: "How is Wegovy Tablet different from the Wegovy injection?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Wegovy Pill is taken once daily as a tablet, while Wegovy Pen is taken once weekly as an injection. The tablet avoids needles and may be stored differently, but it must be taken on an empty stomach with strict timing. The injection does not require the same daily fasting routine.",
+          text: "Wegovy Tablet is taken once daily as a tablet, while Wegovy Pen is taken once weekly as an injection. The tablet avoids needles and may be stored differently, but it must be taken on an empty stomach with strict timing. The injection does not require the same daily fasting routine.",
         },
       },
       {
         "@type": "Question",
-        name: "What dose of Wegovy Pill do new users usually start with?",
+        name: "What dose of Wegovy Tablet do new users usually start with?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "New users usually start with the lowest dose, 1.5mg once daily. The dose may then increase gradually to 4mg, 9mg, and 25mg if suitable. However, dose changes should always be reviewed by a clinician, and some people may stay on a lower dose for longer.",
@@ -109,7 +109,7 @@ export default function WegovyPillUkPage() {
       },
       {
         "@type": "Question",
-        name: "How effective is Wegovy Pill for weight loss?",
+        name: "How effective is Wegovy Tablet for weight loss?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "In OASIS 4, oral semaglutide 25mg was studied over 64 weeks alongside lifestyle changes, with average weight loss reported around 16.6%. However, individual results vary, and the study does not guarantee what one person will lose.",
@@ -117,10 +117,10 @@ export default function WegovyPillUkPage() {
       },
       {
         "@type": "Question",
-        name: "How do you take Wegovy Pill correctly?",
+        name: "How do you take Wegovy Tablet correctly?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Wegovy Pill is usually taken once daily in the morning on an empty stomach. It should be swallowed whole with a small amount of plain water. Users should wait before eating, drinking, or taking other oral medicines, and they should not split, crush, or chew the tablet.",
+          text: "Wegovy Tablet is usually taken once daily in the morning on an empty stomach. It should be swallowed whole with a small amount of plain water. Users should wait before eating, drinking, or taking other oral medicines, and they should not split, crush, or chew the tablet.",
         },
       },
     ],

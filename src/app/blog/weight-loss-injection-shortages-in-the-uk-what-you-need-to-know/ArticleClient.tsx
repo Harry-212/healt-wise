@@ -351,7 +351,7 @@ export default function ArticleClient() {
               <p className="text-sm opacity-90">
                 While this table only touches on a few well known treatments,
                 there are additional prescription medications or methods besides
-                treatments, such as weight loss pills or medically supervised
+                treatments, such as weight loss tablets or medically supervised
                 programmes. If supply chains continue to stabilise, your
                 original choice may become more accessible once again.
               </p>

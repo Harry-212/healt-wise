@@ -267,8 +267,8 @@ export default function ArticleClient() {
                 A new factor has entered the market. The MHRA announced on June
                 11, 2026 that the first GLP-1 tablet for weight loss was
                 approved in the UK. At the same time, Pharmacy Online already
-                shows a Wegovy pill pre-order entry, while Oxford lists a Wegovy
-                pill page as out of stock. So, if you search buy weight loss
+                shows a Wegovy tablet pre-order entry, while Oxford lists a Wegovy
+                tablet page as out of stock. So, if you search buy weight loss
                 tablets now, you will increasingly see both traditional tablets
                 and newer oral GLP-1 options. If you are comparing oral and
                 injectable routes, checking our{" "}
@@ -554,7 +554,7 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    What is the strongest prescription weight loss pill?
+                    What is the strongest prescription weight loss tablet?
                   </h3>
                   <p>
                     In current UK pharmacy comparisons, Mysimba and
@@ -603,7 +603,7 @@ export default function ArticleClient() {
                     The MHRA approved the first GLP-1 tablet for weight loss in
                     the UK on June 11, 2026. However, live market availability
                     is still early and uneven. Pharmacy Online already shows a
-                    pre-order entry, while Oxford lists a Wegovy pill entry as
+                    pre-order entry, while Oxford lists a Wegovy tablet entry as
                     out of stock, so you should expect rapid changes.
                   </p>
                 </div>

@@ -35,7 +35,7 @@ export default function MedicineMarketplacePharmacyContent() {
         },
         {
           k: "Range",
-          v: "Diet aids · slimming pills · supplements · prescription medicines after consultation",
+          v: "Diet aids · slimming tablets · supplements · prescription medicines after consultation",
         },
         {
           k: "Fulfilment",
@@ -71,7 +71,7 @@ export default function MedicineMarketplacePharmacyContent() {
         <HazardBox className="mt-3 ring-1 ring-emerald-900/5">
           <Points
             items={[
-              "Weight loss category spans diet aids, slimming pills, and supplements in one catalogue.",
+              "Weight loss category spans diet aids, slimming tablets, and supplements in one catalogue.",
               "Broader health SKU mix than a single brand clinic; useful if you want OTC alongside Rx where offered.",
               "Site navigation by category, price band, or condition described as simple for repeat buyers.",
               "Checkout framed as a short flow: pick product, pay, email confirmation.",

@@ -177,7 +177,7 @@ export default function CarlisleLocationContent({ loc, shareUrl }: Props) {
                   .
                 </p>
                 <p className={p}>
-                  “One lever” plans usually fail: pills without food structure, or workouts without a realistic weekly meal pattern. A more durable approach is small changes you can repeat—protein-forward meals, planned snacks for long drives, and strength training twice weekly to protect muscle while you lose fat.
+                  “One lever” plans usually fail: tablets without food structure, or workouts without a realistic weekly meal pattern. A more durable approach is small changes you can repeat—protein-forward meals, planned snacks for long drives, and strength training twice weekly to protect muscle while you lose fat.
                 </p>
                 <p className={`text-sm ${muted}`}>
                   If you want a UK-safe “ground rules” reference, start with{" "}

@@ -39,7 +39,7 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
       { id: "overlooked", label: "What most people overlook" },
       { id: "successful", label: "What is the most successful treatment?" },
       { id: "kelly-clarkson", label: "How did Kelly Clarkson really lose weight?" },
-      { id: "pill", label: "Most successful weight loss pill in the UK" },
+      { id: "tablet", label: "Most successful weight loss tablet in the UK" },
       { id: "cheaper", label: "Cheaper alternative to Mounjaro" },
       { id: "decision", label: "A practical way to choose in Milton Keynes" },
       { id: "mistakes", label: "Common mistakes people make" },
@@ -438,9 +438,9 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="pill" heading="What is the most successful weight loss pill in the UK?">
+              <GuideSection darkMode={darkMode} id="pill" heading="What is the most successful weight loss tablet in the UK?">
                 <p className={p}>
-                  If by &quot;pill&quot; you mean oral medication that supports weight loss, the reality is more limited than many people expect. In the UK, the strongest evidence for prescription weight management tends to be with medicines that are not pills, especially injectable GLP-1 treatments. Oral options exist, but they are generally less dramatic.
+                  If by &quot;tablet&quot; you mean oral medication that supports weight loss, the reality is more limited than many people expect. In the UK, the strongest evidence for prescription weight management tends to be with medicines that are not tablets, especially injectable GLP-1 treatments. Oral options exist, but they are generally less dramatic.
                 </p>
 
                 <p className={p}>So the honest answer is:</p>
@@ -451,7 +451,7 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
                 </ul>
 
                 <p className={`mt-4 ${p}`}>
-                  That is why people comparing treatments should look beyond the word &quot;pill&quot; and focus on evidence, eligibility, and supervision.
+                  That is why people comparing treatments should look beyond the word &quot;tablet&quot; and focus on evidence, eligibility, and supervision.
                 </p>
               </GuideSection>
 

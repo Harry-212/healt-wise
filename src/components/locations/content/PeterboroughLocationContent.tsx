@@ -238,7 +238,7 @@ export default function PeterboroughLocationContent({ loc, shareUrl }: Props) {
                 heading="What makes a weight loss treatment most effective? The evidence based answer"
               >
                 <p className={`text-lg md:text-xl ${p}`}>
-                  The most effective treatment is not a single pill or class. It
+                  The most effective treatment is not a single tablet or class. It
                   is a multi component, medically supervised programme that
                   combines nutrition, physical activity, and behavioural support.
                   GLP 1 medicines such as semaglutide, Ozempic, tirzepatide, and

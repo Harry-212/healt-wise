@@ -4,16 +4,16 @@ import { blogImgPath, BUY_WEIGHT_LOSS_PILLS_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/buy-weight-loss-pills-uk";
-const TITLE = "Buy Weight Loss Pills UK: Safe Options";
+const TITLE = "Buy Weight Loss Tablets UK: Safe Options";
 const DESCRIPTION =
-  "Buy weight loss pills UK safely. Compare orlistat, Mysimba, GLP-1 tablets, prices, risks and pharmacy checks.";
+  "Buy weight loss tablets UK safely. Compare orlistat, Mysimba, GLP-1 tablets, prices, risks and pharmacy checks.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BUY_WEIGHT_LOSS_PILLS_HERO_WEBP)}`;
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   keywords:
-    "buy weight loss pills uk, weight loss pills uk, orlistat uk, mysimba uk, semaglutide tablet uk, wegovy pill uk, alli orlos uk, prescription weight loss pills uk, pharmacy weight loss pills, weight loss pill prices uk, fat absorption pills uk, glp-1 tablet weight loss uk, safe weight loss pills online uk, weight loss pill comparison uk",
+    "buy weight loss tablets uk, weight loss tablets uk, orlistat uk, mysimba uk, semaglutide tablet uk, wegovy tablet uk, alli orlos uk, prescription weight loss tablets uk, pharmacy weight loss tablets, weight loss tablet prices uk, fat absorption tablets uk, glp-1 tablet weight loss uk, safe weight loss tablets online uk, weight loss tablet comparison uk",
   alternates: {
     canonical: `${siteOrigin()}${PATH}`,
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: HERO_IMAGE,
-        alt: "Buy weight loss pills UK safely with price and treatment comparison guidance",
+        alt: "Buy weight loss tablets UK safely with price and treatment comparison guidance",
       },
     ],
   },
@@ -73,7 +73,7 @@ export default function BuyWeightLossPillsUkPage() {
       {
         "@type": "ListItem",
         position: 3,
-        name: "Buy Weight Loss Pills UK",
+        name: "Buy Weight Loss Tablets UK",
         item: `${siteOrigin()}${PATH}`,
       },
     ],
@@ -85,23 +85,23 @@ export default function BuyWeightLossPillsUkPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Can I buy weight loss pills online in the UK?",
+        name: "Can I buy weight loss tablets online in the UK?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, some weight loss pills can be bought online in the UK, but regulated treatments should come from a registered pharmacy and may require a prescription or pharmacist suitability check. Avoid unregulated websites, social media sellers, and offers that skip medical assessment.",
+          text: "Yes, some weight loss tablets can be bought online in the UK, but regulated treatments should come from a registered pharmacy and may require a prescription or pharmacist suitability check. Avoid unregulated websites, social media sellers, and offers that skip medical assessment.",
         },
       },
       {
         "@type": "Question",
-        name: "What is the best weight loss pill in the UK?",
+        name: "What is the best weight loss tablet in the UK?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "There is no single best weight loss pill for everyone. Orlistat may suit people looking for a fat absorption treatment, Mysimba may suit some people looking for appetite support, and semaglutide tablets may suit eligible adults looking for an oral GLP-1 option.",
+          text: "There is no single best weight loss tablet for everyone. Orlistat may suit people looking for a fat absorption treatment, Mysimba may suit some people looking for appetite support, and semaglutide tablets may suit eligible adults looking for an oral GLP-1 option.",
         },
       },
       {
         "@type": "Question",
-        name: "Are weight loss pills cheaper than injections?",
+        name: "Are weight loss tablets cheaper than injections?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Often, older oral options such as orlistat may have a lower starting price than GLP-1 injections. However, the total weight loss treatment price depends on pack size, provider fees, delivery, follow-up, and how long the treatment continues.",
@@ -125,7 +125,7 @@ export default function BuyWeightLossPillsUkPage() {
       },
       {
         "@type": "Question",
-        name: "Is there a weight loss pill version of Wegovy?",
+        name: "Is there a weight loss tablet version of Wegovy?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "The MHRA approved a semaglutide tablet for weight loss and weight management in the UK on 11 June 2026. However, it is prescription-only and availability may depend on private providers and future NHS decisions.",
@@ -133,7 +133,7 @@ export default function BuyWeightLossPillsUkPage() {
       },
       {
         "@type": "Question",
-        name: "Are fat burners the same as weight loss pills?",
+        name: "Are fat burners the same as weight loss tablets?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "No. Many fat burners are supplements, not regulated obesity medicines. They should not be treated as equal to prescription weight loss treatment.",
@@ -141,7 +141,7 @@ export default function BuyWeightLossPillsUkPage() {
       },
       {
         "@type": "Question",
-        name: "What should I check before buying weight loss pills?",
+        name: "What should I check before buying weight loss tablets?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Check the pharmacy registration, consultation process, active ingredient, treatment suitability, side effects, total cost, delivery fees, and follow-up support. Also, use a BMI calculator before comparing treatment options.",

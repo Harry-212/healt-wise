@@ -17,24 +17,24 @@ import {
 } from "./blog-assets";
 
 const SHARE_PATH = "/blog/what-is-wegovy-pill";
-const TITLE = "What Is Wegovy Pill? Semaglutide Tablet Explained for UK Users";
+const TITLE = "What Is Wegovy Tablet? Semaglutide Tablet Explained for UK Users";
 const DESCRIPTION =
-  "Learn what Wegovy Pill is, how semaglutide tablets work, who they may suit, and how they compare with injections.";
+  "Learn what Wegovy Tablet is, how semaglutide tablets work, who they may suit, and how they compare with injections.";
 const HERO_SRC = blogImgPath(WHAT_IS_WEGOVY_PILL_HERO_PNG);
 const INLINE_SRC = blogImgPath(WHAT_IS_WEGOVY_PILL_INLINE_PNG);
 
 const TOC = [
-  { id: "intro", label: "What is Wegovy Pill?" },
-  { id: "what-is-wegovy-pill", label: "Semaglutide tablet explained" },
+  { id: "intro", label: "What is Wegovy Tablet?" },
+  { id: "what-is-wegovy-tablet", label: "Semaglutide tablet explained" },
   { id: "why-attention", label: "Why it is getting attention" },
   { id: "prescription", label: "Is it a prescription medicine?" },
   { id: "how-it-works", label: "How does it work?" },
-  { id: "vs-injection", label: "Pill vs injection" },
+  { id: "vs-injection", label: "Tablet vs injection" },
   { id: "how-to-take", label: "How do you take it?" },
   { id: "dose-strength", label: "Starting strength and dose schedule" },
-  { id: "effectiveness", label: "How effective is Wegovy Pill?" },
-  { id: "vs-mounjaro", label: "Wegovy Pill vs Mounjaro" },
-  { id: "vs-rybelsus", label: "Wegovy Pill vs Rybelsus" },
+  { id: "effectiveness", label: "How effective is Wegovy Tablet?" },
+  { id: "vs-mounjaro", label: "Wegovy Tablet vs Mounjaro" },
+  { id: "vs-rybelsus", label: "Wegovy Tablet vs Rybelsus" },
   { id: "not-supplement", label: "Not a GLP-1 supplement" },
   { id: "who-might-suit", label: "Who might it suit?" },
   { id: "side-effects", label: "Possible side effects" },
@@ -67,7 +67,7 @@ function PillVsInjectionTable({ darkMode }: { darkMode: boolean }) {
               Feature
             </th>
             <th className={`border-b px-3 py-2 font-semibold ${cell}`}>
-              Wegovy Pill
+              Wegovy Tablet
             </th>
             <th className={`border-b px-3 py-2 font-semibold ${cell}`}>
               Wegovy Injection
@@ -192,7 +192,7 @@ export default function ArticleClient() {
           </Link>
           <span>/</span>
           <span className={darkMode ? "text-slate-200" : "text-slate-600"}>
-            What Is Wegovy Pill
+            What Is Wegovy Tablet
           </span>
         </nav>
 
@@ -203,7 +203,7 @@ export default function ArticleClient() {
             <h1
               className={`mb-6 text-3xl font-medium leading-[1.15] tracking-tight sm:text-4xl md:text-[44px] ${darkMode ? "text-white" : "text-slate-900"}`}
             >
-              What Is Wegovy Pill? Semaglutide Tablet Explained for UK Users
+              What Is Wegovy Tablet? Semaglutide Tablet Explained for UK Users
             </h1>
             <div
               className={`mb-8 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}
@@ -219,7 +219,7 @@ export default function ArticleClient() {
 
             <BlogArticleHeroImage
               src={HERO_SRC}
-              alt="What Is Wegovy Pill semaglutide tablet explained for UK weight loss treatment users"
+              alt="What Is Wegovy Tablet semaglutide tablet explained for UK weight loss treatment users"
             />
             <div
               id="guide-article-hero-end"
@@ -234,21 +234,21 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="intro"
-              heading="What Is Wegovy Pill? Semaglutide Tablet Explained for UK Users"
+              heading="What Is Wegovy Tablet? Semaglutide Tablet Explained for UK Users"
             >
               <p className="text-lg md:text-xl">
-                Wegovy Pill is a prescription-only semaglutide tablet for
+                Wegovy Tablet is a prescription-only semaglutide tablet for
                 medically supervised weight loss and weight management. It is
                 designed for eligible adults who may benefit from GLP-1
                 treatment but prefer a tablet instead of a weekly injection.
               </p>
               <p>
-                However, Wegovy Pill is not a normal diet pill, fat burner, or
+                However, Wegovy Tablet is not a normal diet tablet, fat burner, or
                 supplement. It is a regulated medicine, and it should only be
                 used after a proper clinical assessment.
               </p>
               <p>
-                This guide explains what Wegovy Pill is, how it works, how it
+                This guide explains what Wegovy Tablet is, how it works, how it
                 compares with Wegovy injection, and what UK users should check
                 before starting a consultation.
               </p>
@@ -268,11 +268,11 @@ export default function ArticleClient() {
 
             <GuideSection
               darkMode={darkMode}
-              id="what-is-wegovy-pill"
-              heading="What Is Wegovy Pill?"
+              id="what-is-wegovy-tablet"
+              heading="What Is Wegovy Tablet?"
             >
               <p>
-                Wegovy Pill is an oral version of semaglutide used for weight
+                Wegovy Tablet is an oral version of semaglutide used for weight
                 loss and weight management. Semaglutide belongs to a class of
                 medicines called GLP-1 receptor agonists.
               </p>
@@ -284,7 +284,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 Wegovy has already been known as a once-weekly injection.
-                However, Wegovy Pill offers a tablet format, taken once daily.
+                However, Wegovy Tablet offers a tablet format, taken once daily.
               </p>
               <p>
                 This makes it attractive to people who dislike needles or prefer
@@ -296,10 +296,10 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="why-attention"
-              heading="Why Wegovy Pill Is Getting So Much Attention"
+              heading="Why Wegovy Tablet Is Getting So Much Attention"
             >
               <p>
-                Wegovy Pill is trending because it changes the conversation
+                Wegovy Tablet is trending because it changes the conversation
                 around weight loss treatment. Many people are interested in
                 GLP-1 medicines, but some are hesitant about injections.
               </p>
@@ -311,7 +311,7 @@ export default function ArticleClient() {
                 and whether a daily tablet fits their routine.
               </p>
               <p>
-                Besides that, many users are comparing Wegovy Pill with Wegovy
+                Besides that, many users are comparing Wegovy Tablet with Wegovy
                 Pen, Mounjaro, Rybelsus, Ozempic, and GLP-1 supplements.
               </p>
               <p>
@@ -324,7 +324,7 @@ export default function ArticleClient() {
                   href="/blog/wegovy-pill-uk"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Wegovy Pill UK guide
+                  Wegovy Tablet UK guide
                 </Link>
                 .
               </p>
@@ -333,10 +333,10 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="prescription"
-              heading="Is Wegovy Pill a Prescription Medicine?"
+              heading="Is Wegovy Tablet a Prescription Medicine?"
             >
               <p>
-                Yes. Wegovy Pill is a prescription-only medicine. This means it
+                Yes. Wegovy Tablet is a prescription-only medicine. This means it
                 should only be supplied after a healthcare professional has
                 checked whether it is suitable.
               </p>
@@ -354,7 +354,7 @@ export default function ArticleClient() {
               </ul>
               <p>
                 Therefore, users should avoid websites or sellers that offer
-                Wegovy Pill without a medical questionnaire, ID check, or
+                Wegovy Tablet without a medical questionnaire, ID check, or
                 clinical review.
               </p>
               <p>
@@ -366,15 +366,15 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="how-it-works"
-              heading="How Does Wegovy Pill Work?"
+              heading="How Does Wegovy Tablet Work?"
             >
               <p>
-                Wegovy Pill works by mimicking GLP-1, a natural hormone that
+                Wegovy Tablet works by mimicking GLP-1, a natural hormone that
                 helps regulate appetite. This may help reduce hunger, increase
                 fullness, and lower food cravings.
               </p>
               <p>
-                However, Wegovy Pill does not remove the need for lifestyle
+                However, Wegovy Tablet does not remove the need for lifestyle
                 changes. It is intended to work alongside a reduced-calorie
                 diet, regular movement, and long-term habit support.
               </p>
@@ -396,14 +396,14 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="vs-injection"
-              heading="Is Wegovy Pill the Same as Wegovy Injection?"
+              heading="Is Wegovy Tablet the Same as Wegovy Injection?"
             >
               <p>
-                Wegovy Pill and Wegovy injection both involve semaglutide for
+                Wegovy Tablet and Wegovy injection both involve semaglutide for
                 weight loss. However, the format is different.
               </p>
               <p>
-                Wegovy Pill is taken once daily as a tablet. Wegovy injection is
+                Wegovy Tablet is taken once daily as a tablet. Wegovy injection is
                 usually taken once weekly using a pen.
               </p>
               <p>The main differences are:</p>
@@ -423,7 +423,7 @@ export default function ArticleClient() {
                   href="/blog/wegovy-pill-uk"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Wegovy Pill UK guide
+                  Wegovy Tablet UK guide
                 </Link>{" "}
                 and compare tablet versus pen formats in the section above.
               </p>
@@ -432,7 +432,7 @@ export default function ArticleClient() {
             <div className="my-10">
               <BlogArticleHeroImage
                 src={INLINE_SRC}
-                alt="Wegovy Pill semaglutide tablet compared with weekly Wegovy injection for UK weight loss treatment"
+                alt="Wegovy Tablet semaglutide tablet compared with weekly Wegovy injection for UK weight loss treatment"
                 priority={false}
                 showFullImage
               />
@@ -441,10 +441,10 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="how-to-take"
-              heading="How Do You Take Wegovy Pill?"
+              heading="How Do You Take Wegovy Tablet?"
             >
               <p>
-                Wegovy Pill must be taken carefully because oral semaglutide
+                Wegovy Tablet must be taken carefully because oral semaglutide
                 absorption depends on timing.
               </p>
               <p>A typical routine is:</p>
@@ -472,10 +472,10 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="dose-strength"
-              heading="What Strength Does Wegovy Pill Start At?"
+              heading="What Strength Does Wegovy Tablet Start At?"
             >
               <p>
-                Wegovy Pill usually starts at the lowest dose. The dose can then
+                Wegovy Tablet usually starts at the lowest dose. The dose can then
                 increase gradually if the clinician confirms it is suitable.
               </p>
               <p>A typical dose schedule is:</p>
@@ -500,7 +500,7 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="effectiveness"
-              heading="How Effective Is Wegovy Pill?"
+              heading="How Effective Is Wegovy Tablet?"
             >
               <p>
                 Clinical evidence suggests oral semaglutide can support
@@ -528,7 +528,7 @@ export default function ArticleClient() {
               <blockquote
                 className={`border-l-4 p-4 my-4 italic ${darkMode ? "border-emerald-500 bg-slate-900 text-slate-300" : "border-emerald-600 bg-slate-50 text-slate-700"}`}
               >
-                Wegovy Pill may support significant average weight loss for
+                Wegovy Tablet may support significant average weight loss for
                 eligible adults, but results depend on suitability, dose
                 tolerance, lifestyle changes, and clinical support.
               </blockquote>
@@ -537,15 +537,15 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="vs-mounjaro"
-              heading="Wegovy Pill vs Mounjaro"
+              heading="Wegovy Tablet vs Mounjaro"
             >
               <p>
-                Wegovy Pill contains semaglutide. Mounjaro contains tirzepatide.
+                Wegovy Tablet contains semaglutide. Mounjaro contains tirzepatide.
               </p>
               <p>
                 Both are part of the wider GLP-1 weight loss treatment
                 conversation, but they are not the same medicine. Mounjaro is an
-                injectable treatment, while Wegovy Pill is an oral semaglutide
+                injectable treatment, while Wegovy Tablet is an oral semaglutide
                 tablet.
               </p>
               <p>
@@ -586,11 +586,11 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="vs-rybelsus"
-              heading="Wegovy Pill vs Rybelsus"
+              heading="Wegovy Tablet vs Rybelsus"
             >
               <p>This is one of the most important confusion points.</p>
               <p>
-                Wegovy Pill and Rybelsus are both connected to semaglutide
+                Wegovy Tablet and Rybelsus are both connected to semaglutide
                 tablets. However, they are not the same treatment route.
               </p>
               <p>
@@ -599,7 +599,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 Therefore, users should not treat Rybelsus as a casual
-                substitute for Wegovy Pill. They should also avoid using
+                substitute for Wegovy Tablet. They should also avoid using
                 diabetes medicines for weight loss without proper clinical
                 advice.
               </p>
@@ -608,10 +608,10 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="not-supplement"
-              heading="Wegovy Pill Is Not a GLP-1 Supplement"
+              heading="Wegovy Tablet Is Not a GLP-1 Supplement"
             >
               <p>
-                Wegovy Pill is a prescription medicine. It is not a GLP-1
+                Wegovy Tablet is a prescription medicine. It is not a GLP-1
                 supplement.
               </p>
               <p>
@@ -656,10 +656,10 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="who-might-suit"
-              heading="Who Might Wegovy Pill Suit?"
+              heading="Who Might Wegovy Tablet Suit?"
             >
               <p>
-                Wegovy Pill may suit some eligible adults who prefer a daily
+                Wegovy Tablet may suit some eligible adults who prefer a daily
                 tablet and can follow the timing instructions correctly.
               </p>
               <p>It may appeal to people who:</p>
@@ -677,7 +677,7 @@ export default function ArticleClient() {
                 routine difficult.
               </p>
               <p>
-                Besides that, Wegovy Pill may not be suitable for people with
+                Besides that, Wegovy Tablet may not be suitable for people with
                 certain medical histories, pregnancy, breastfeeding, or specific
                 medicine interactions.
               </p>
@@ -690,7 +690,7 @@ export default function ArticleClient() {
               heading="What Are the Possible Side Effects?"
             >
               <p>
-                Like all medicines, Wegovy Pill can cause side effects. Many are
+                Like all medicines, Wegovy Tablet can cause side effects. Many are
                 digestive and may be more noticeable when starting treatment or
                 increasing dose.
               </p>
@@ -719,7 +719,7 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="with-other-glp1"
-              heading="Can You Take Wegovy Pill With Other GLP-1 Medicines?"
+              heading="Can You Take Wegovy Tablet With Other GLP-1 Medicines?"
             >
               <p>
                 No. Users should not combine oral Wegovy with injectable Wegovy,
@@ -752,7 +752,7 @@ export default function ArticleClient() {
               id="diet-lifestyle"
               heading="Do You Need Diet and Lifestyle Changes?"
             >
-              <p>Yes. Wegovy Pill is not a standalone treatment.</p>
+              <p>Yes. Wegovy Tablet is not a standalone treatment.</p>
               <p>
                 It is designed to support weight management alongside lifestyle
                 changes. This may include reduced-calorie eating, higher protein
@@ -792,14 +792,14 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="weight-return"
-              heading="Can Weight Return After Stopping Wegovy Pill?"
+              heading="Can Weight Return After Stopping Wegovy Tablet?"
             >
               <p>
                 Weight regain can happen after stopping GLP-1 treatment,
                 especially if lifestyle habits are not maintained.
               </p>
               <p>
-                Wegovy Pill may support weight loss while being taken, but
+                Wegovy Tablet may support weight loss while being taken, but
                 long-term success depends on sustainable habits and a clear
                 maintenance plan.
               </p>
@@ -813,10 +813,10 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="compare-providers"
-              heading="How to Compare Wegovy Pill Providers Safely"
+              heading="How to Compare Wegovy Tablet Providers Safely"
             >
               <p>
-                When Wegovy Pill becomes more widely available privately, users
+                When Wegovy Tablet becomes more widely available privately, users
                 may compare providers based on price. However, price should not
                 be the only factor.
               </p>
@@ -865,7 +865,7 @@ export default function ArticleClient() {
                     href="/blog/wegovy-pill-uk"
                     className="font-medium text-emerald-600 hover:underline"
                   >
-                    Wegovy Pill UK guide
+                    Wegovy Tablet UK guide
                   </Link>
                 </li>
                 <li>
@@ -947,10 +947,10 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    What is Wegovy Pill?
+                    What is Wegovy Tablet?
                   </h3>
                   <p>
-                    Wegovy Pill is a prescription-only semaglutide tablet for
+                    Wegovy Tablet is a prescription-only semaglutide tablet for
                     medically supervised weight loss and weight management. It
                     is taken once daily and is designed for eligible adults who
                     may benefit from GLP-1 treatment.
@@ -960,11 +960,11 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Is Wegovy Pill the same as Wegovy injection?
+                    Is Wegovy Tablet the same as Wegovy injection?
                   </h3>
                   <p>
-                    Wegovy Pill and Wegovy injection both involve semaglutide
-                    for weight loss. However, Wegovy Pill is taken daily as a
+                    Wegovy Tablet and Wegovy injection both involve semaglutide
+                    for weight loss. However, Wegovy Tablet is taken daily as a
                     tablet, while Wegovy injection is usually taken once weekly
                     using a pen.
                   </p>
@@ -973,10 +973,10 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    How does Wegovy Pill work?
+                    How does Wegovy Tablet work?
                   </h3>
                   <p>
-                    Wegovy Pill mimics GLP-1, a natural hormone involved in
+                    Wegovy Tablet mimics GLP-1, a natural hormone involved in
                     appetite and fullness. It may help reduce hunger, lower
                     cravings, and support weight loss when combined with diet
                     and lifestyle changes.
@@ -986,11 +986,11 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Is Wegovy Pill the same as Rybelsus?
+                    Is Wegovy Tablet the same as Rybelsus?
                   </h3>
                   <p>
                     No. Rybelsus is a semaglutide tablet used for type 2
-                    diabetes. Wegovy Pill is a semaglutide tablet for weight
+                    diabetes. Wegovy Tablet is a semaglutide tablet for weight
                     loss and weight management.
                   </p>
                 </div>
@@ -998,10 +998,10 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Is Wegovy Pill a GLP-1 supplement?
+                    Is Wegovy Tablet a GLP-1 supplement?
                   </h3>
                   <p>
-                    No. Wegovy Pill is a prescription medicine, not a
+                    No. Wegovy Tablet is a prescription medicine, not a
                     supplement. GLP-1 supplements may support general nutrition,
                     but they should not be treated as replacements for regulated
                     GLP-1 medicines.
@@ -1011,7 +1011,7 @@ export default function ArticleClient() {
                   <h3
                     className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Can I take Wegovy Pill with injectable GLP-1 treatment?
+                    Can I take Wegovy Tablet with injectable GLP-1 treatment?
                   </h3>
                   <p>
                     No. You should not take oral Wegovy with injectable Wegovy,
@@ -1029,13 +1029,13 @@ export default function ArticleClient() {
               heading="Conclusion"
             >
               <p>
-                Wegovy Pill is a major development in UK weight loss treatment
+                Wegovy Tablet is a major development in UK weight loss treatment
                 because it offers a prescription-only oral semaglutide option.
                 For eligible adults who dislike injections, this may be an
                 important alternative.
               </p>
               <p>
-                However, it is not a normal diet pill, supplement, or shortcut.
+                However, it is not a normal diet tablet, supplement, or shortcut.
                 It requires clinical assessment, correct timing, dose review,
                 lifestyle support, and safe pharmacy supply.
               </p>
@@ -1045,7 +1045,7 @@ export default function ArticleClient() {
                   href="/blog/wegovy-pill-uk"
                   className="font-medium text-emerald-600 hover:underline"
                 >
-                  Wegovy Pill UK guide
+                  Wegovy Tablet UK guide
                 </Link>{" "}
                 by explaining the core entity clearly. It should then guide
                 users toward price comparison, pharmacy safety, GLP-1 supplement
@@ -1058,7 +1058,7 @@ export default function ArticleClient() {
                 general information and is not medical advice.
               </p>
             </GuideSection>
-            <ArticleSources slug="what-is-wegovy-pill" darkMode={darkMode} />
+            <ArticleSources slug="what-is-wegovy-tablet" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">
