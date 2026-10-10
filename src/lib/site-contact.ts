@@ -29,11 +29,6 @@ export const SITE_SOCIAL_LINKS = [
     kind: "facebook",
   },
   {
-    href: "https://www.instagram.com/ali.greenwood1975/",
-    label: "Instagram",
-    kind: "instagram",
-  },
-  {
     href: "https://uk.pinterest.com/aligreenwood1975/",
     label: "Pinterest",
     kind: "pinterest",

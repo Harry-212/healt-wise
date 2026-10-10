@@ -51,7 +51,6 @@ function profilePageJsonLd() {
       sameAs: [
         "https://www.linkedin.com/in/alistair-greenwood-4b13b0432/",
         "https://x.com/AliG75AG",
-        "https://www.instagram.com/ali.greenwood1975/",
         "https://in.pinterest.com/aligreenwood1975/",
       ],
     },

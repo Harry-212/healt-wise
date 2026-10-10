@@ -133,7 +133,6 @@ export const OFFICIAL_PROFILES: { group: string; links: { label: string; href: s
     links: [
       { label: "LinkedIn", href: "https://www.linkedin.com/in/alistair-greenwood-4b13b0432/" },
       { label: "X", href: "https://x.com/AliG75AG" },
-      { label: "Instagram", href: "https://www.instagram.com/ali.greenwood1975/" },
       { label: "Pinterest", href: "https://in.pinterest.com/aligreenwood1975/" },
     ],
   },
