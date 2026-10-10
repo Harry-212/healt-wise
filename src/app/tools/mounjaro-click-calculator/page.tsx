@@ -13,9 +13,9 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/tools/mounjaro-click-calculator",
-  title: "Mounjaro Click Calculator UK (2026)",
+  title: "Mounjaro Click Calculator UK & Mounjaro Click Chart",
   metaDescription:
-    "Free Mounjaro KwikPen click calculator for UK patients. Calculate clicks for any dose with a complete reference chart for all pen strengths.",
+    "Free Mounjaro KwikPen click calculator & Mounjaro click chart for UK patients. Calculate clicks for any dose with a complete reference chart for all pen strengths.",
   openGraphTitle: "Mounjaro Click Calculator & Chart UK",
   openGraphDescription:
     "Easily calculate how many clicks are needed for your specific Mounjaro dose using our free tool. Includes a full dosage chart for UK KwikPens.",
@@ -207,6 +207,36 @@ export default function MounjaroClickCalculatorPage() {
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 768px"
             />
+          </div>
+
+          <h2 className="mt-16 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+            Mounjaro Click Chart — Full Dose Reference Table
+          </h2>
+          <p className="mt-4 leading-relaxed text-slate-700">
+            This free reference chart shows the dose (mg) and volume (mL) at
+            every 10 clicks, from 10 to 150, for all six UK Mounjaro KwikPen
+            strengths. Download it to keep alongside your prescription
+            information.
+          </p>
+          <div className="relative mt-6 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg ring-1 ring-slate-200/80">
+            <Image
+              src="/blog/mounjaro-click-chart-uk-reference.webp"
+              alt="Mounjaro Click Chart: UK KwikPen dose and volume reference table for 2.5mg, 5mg, 7.5mg, 10mg, 12.5mg and 15mg pens"
+              title="Mounjaro Click Chart — UK KwikPen reference table"
+              width={1054}
+              height={1492}
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mt-6 flex justify-center">
+            <a
+              href="/blog/mounjaro-click-chart-uk-reference.webp"
+              download="mounjaro-click-chart-uk.webp"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800"
+            >
+              Download the Mounjaro Click Chart
+            </a>
           </div>
 
           <h2 className="mt-16 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
