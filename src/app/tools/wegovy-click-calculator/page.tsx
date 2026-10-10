@@ -74,6 +74,36 @@ export default function WegovyClickCalculatorPage() {
             />
           </div>
 
+          <h2 className="mt-16 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+            Wegovy Click Chart — Full Dose Reference Table
+          </h2>
+          <p className="mt-4 leading-relaxed text-slate-700">
+            This free reference chart shows the dose (mg) and percentage of a
+            full dose at every 10 clicks, from 10 to 74, for all five UK
+            Wegovy FlexTouch pen strengths. Download it to keep alongside
+            your prescription information.
+          </p>
+          <div className="relative mt-6 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg ring-1 ring-slate-200/80">
+            <Image
+              src="/blog/wegovy-click-chart-uk-reference.webp"
+              alt="Wegovy Click Chart: UK FlexTouch dose and percentage reference table for 0.25mg, 0.5mg, 1mg, 1.7mg and 2.4mg pens"
+              title="Wegovy Click Chart — UK FlexTouch reference table"
+              width={1055}
+              height={1491}
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="h-auto w-full"
+            />
+          </div>
+          <div className="mt-6 flex justify-center">
+            <a
+              href="/blog/wegovy-click-chart-uk-reference.webp"
+              download="wegovy-click-chart-uk.webp"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800"
+            >
+              Download the Wegovy Click Chart
+            </a>
+          </div>
+
           <h2 className="mt-16 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">How this Wegovy click calculator works</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
             This calculator compares the dose entered with the labelled strength of the selected pen. It then expresses that relationship as a percentage and, where applicable, as a mathematical click estimate.
