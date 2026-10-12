@@ -11,7 +11,7 @@ const META_DESCRIPTION =
   "Compare UK weight loss treatment prices, see Mounjaro and Wegovy costs by dose, consultation and delivery fees.";
 
 export const metadata: Metadata = {
-  title: "Weight Loss Treatment Price Comparison UK 2026 | Costs",
+  title: "Weight Loss Treatment Price Comparison UK 2026",
   description: META_DESCRIPTION,
   keywords:
     "weight loss treatment price, weight loss treatment price cost compare, weight loss treatment UK, fat loss treatment cost UK, mounjaro price UK, wegovy price UK",
