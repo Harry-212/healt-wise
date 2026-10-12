@@ -1342,7 +1342,7 @@ export default function ArticleClient() {
                 general information and is not medical advice.
               </p>
             </GuideSection>
-            <ArticleSources slug="wegovy-tablet-uk" darkMode={darkMode} />
+            <ArticleSources slug="wegovy-pill-uk" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">

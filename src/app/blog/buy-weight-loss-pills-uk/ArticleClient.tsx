@@ -980,7 +980,7 @@ export default function ArticleClient() {
                 decisions before choosing where to buy.
               </p>
             </GuideSection>
-            <ArticleSources slug="buy-weight-loss-tablets-uk" darkMode={darkMode} />
+            <ArticleSources slug="buy-weight-loss-pills-uk" darkMode={darkMode} />
           </article>
 
           <div className="mt-10">
