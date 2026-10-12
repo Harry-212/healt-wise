@@ -35,6 +35,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: title },
     description,
     alternates: { canonical: url },
+    // "guides" overlaps heavily with /blog; keep it live and crawlable but out of the index/sitemap.
+    robots: raw === "guides" ? { index: false, follow: true } : undefined,
     openGraph: {
       title,
       description,
