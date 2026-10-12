@@ -7,7 +7,7 @@ const PATH = '/blog/mounjaro-weight-loss-results-change-your-life';
 const HERO_IMAGE = `${siteOrigin()}/blog/Mounjaro%20Weight%20Loss%20Results%20That%20May%20Finally%20Change%20Your%20Life.webp`;
 
 export const metadata: Metadata = {
-  title: 'Mounjaro weight loss results: how to read the evidence',
+  title: 'Mounjaro Results: How to Read the Evidence',
   description: 'Understand Mounjaro weight loss study findings, patient accounts and the limits of comparing results.',
   keywords: 'mounjaro weight loss results',
   alternates: {
