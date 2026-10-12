@@ -22,6 +22,8 @@ const EXCLUDED_SITEMAP_PATHS = new Set<string>([
   "/blog/can-i-buy-weight-loss-injections-online",
   /** Legacy path that redirect()s to the locations topic hub — not a real destination page. */
   "/blog/uk-weight-loss",
+  /** noindex,follow — overlaps heavily with /blog; stays live and crawlable but out of the sitemap. */
+  "/blog/topic/guides",
   "/compare/best-weight-loss-injections-uk",
   "/compare/best-weight-loss-treatments-uk",
   "/pharmacies/chemist4u",
