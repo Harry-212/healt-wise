@@ -68,6 +68,9 @@ export function mounjaroClickCalculatorArticleJsonLd(): Record<string, unknown> 
     publisher: {
       "@id": `${base}/#organization`,
     },
+    creator: {
+      "@id": `${base}/editorial-team/alistair-greenwood#person`,
+    },
     inLanguage: "en-GB",
     breadcrumb: {
       "@id": `${pageUrl}#breadcrumb`,

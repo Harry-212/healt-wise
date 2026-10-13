@@ -66,6 +66,12 @@ export function wegovyClickCalculatorArticleJsonLd(): Record<string, unknown> {
       name: "Healthwise360",
       url: base,
     },
+    publisher: {
+      "@id": `${base}/#organization`,
+    },
+    creator: {
+      "@id": `${base}/editorial-team/alistair-greenwood#person`,
+    },
   };
 }
 
