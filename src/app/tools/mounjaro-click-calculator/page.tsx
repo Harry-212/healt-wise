@@ -221,10 +221,10 @@ export default function MounjaroClickCalculatorPage() {
           <div className="relative mt-6 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg ring-1 ring-slate-200/80">
             <Image
               src="/blog/mounjaro-click-chart-uk-reference.webp"
-              alt="Mounjaro Click Chart: UK KwikPen dose and volume reference table for 2.5mg, 5mg, 7.5mg, 10mg, 12.5mg and 15mg pens"
+              alt="Mounjaro Click Chart: UK KwikPen dose reference table (0.6 mL total pen volume) for 2.5mg, 5mg, 7.5mg, 10mg, 12.5mg and 15mg pens"
               title="Mounjaro Click Chart — UK KwikPen reference table"
-              width={1054}
-              height={1492}
+              width={1024}
+              height={1536}
               sizes="(max-width: 768px) 100vw, 768px"
               className="h-auto w-full"
             />
