@@ -13,9 +13,9 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 
 export const metadata: Metadata = buildPageShareMetadata({
   canonicalPath: "/tools/mounjaro-click-calculator",
-  title: "Mounjaro Click Calculator UK & Mounjaro Click Chart",
+  title: "Mounjaro Click Calculator and Chart UK",
   metaDescription:
-    "Free Mounjaro KwikPen click calculator & Mounjaro click chart for UK patients. Calculate clicks for any dose with a complete reference chart for all pen strengths.",
+    "Educational Mounjaro KwikPen click calculator and reference chart for doses already prescribed in the UK, with information about non-standard click counting.",
   openGraphTitle: "Mounjaro Click Calculator & Chart UK",
   openGraphDescription:
     "Easily calculate how many clicks are needed for your specific Mounjaro dose using our free tool. Includes a full dosage chart for UK KwikPens.",
@@ -213,18 +213,18 @@ export default function MounjaroClickCalculatorPage() {
             Mounjaro Click Chart — Full Dose Reference Table
           </h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            This free reference chart shows the dose (mg) and volume (mL) at
-            every 10 clicks, from 10 to 150, for all six UK Mounjaro KwikPen
-            strengths. Download it to keep alongside your prescription
-            information.
+            This free reference chart shows the dose (mg) at every 10 clicks,
+            from 10 to 150, for all six UK Mounjaro KwikPen strengths (each
+            with a 0.6 mL total fill volume). Download it to keep alongside
+            your prescription information.
           </p>
           <div className="relative mt-6 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg ring-1 ring-slate-200/80">
             <Image
               src="/blog/mounjaro-click-chart-uk-reference.webp"
-              alt="Mounjaro Click Chart: UK KwikPen dose and volume reference table for 2.5mg, 5mg, 7.5mg, 10mg, 12.5mg and 15mg pens"
+              alt="Mounjaro Click Chart: UK KwikPen dose reference table (0.6 mL total pen volume) for 2.5mg, 5mg, 7.5mg, 10mg, 12.5mg and 15mg pens"
               title="Mounjaro Click Chart — UK KwikPen reference table"
-              width={1054}
-              height={1492}
+              width={1024}
+              height={1536}
               sizes="(max-width: 768px) 100vw, 768px"
               className="h-auto w-full"
             />
