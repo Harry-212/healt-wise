@@ -37,6 +37,19 @@ const MEDICINE_TOPIC_PAGE_TYPES = new Set([
   "Calculator or tool",
 ]);
 
+/**
+ * Task 61 (2026-10-14, approved per Task 58): pages whose page type is
+ * normally medicine-specific but that are deliberately general — a
+ * multi-measure calculator, or a price page that intentionally compares
+ * both medicines rather than naming one. Confirmed correctly classified by
+ * a human in Task 58; the automation just needed to stop asking it to be
+ * re-reviewed every run.
+ */
+const GENERAL_TOPIC_PAGE_URL_EXCEPTIONS = new Set([
+  "/tools/bmi-calculator",
+  "/prices/cheapest-options-uk",
+]);
+
 function parseArgs(argv) {
   const target = argv.find((a) => a.startsWith("--target="))?.split("=")[1] || "live";
   const inputArg = argv.find((a) => a.startsWith("--input="))?.split("=")[1];
@@ -72,6 +85,9 @@ function derivePrimaryTopic(record, pageType) {
   if (hasWegovy) return "Wegovy";
 
   if (MEDICINE_TOPIC_PAGE_TYPES.has(pageType)) {
+    if (GENERAL_TOPIC_PAGE_URL_EXCEPTIONS.has(pathnameOf(record.url))) {
+      return "General";
+    }
     // This page type normally names a medicine, but this one doesn't —
     // flag it rather than guessing which medicine (or "none") it covers.
     return "REVIEW";

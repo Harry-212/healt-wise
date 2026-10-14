@@ -62,9 +62,54 @@ test("Task 7: primary topic detects medicine keywords from the URL and title", (
 
 test("Task 7: a medicine-typed page with no medicine keyword is REVIEW, never guessed", () => {
   assert.equal(
-    derivePrimaryTopic({ url: "https://x.test/prices/cheapest-options-uk", title: "Cheapest options" }, "Medicine price comparison"),
+    derivePrimaryTopic({ url: "https://x.test/some-other-price-comparison", title: "Some other comparison" }, "Medicine price comparison"),
     "REVIEW",
   );
+});
+
+test("Task 61: the BMI/BMR calculator and the combined Mounjaro-and-Wegovy price page are exceptions to the medicine-topic requirement, not REVIEW", () => {
+  assert.equal(
+    derivePrimaryTopic({ url: "https://x.test/tools/bmi-calculator", title: "BMI, BMR & Calorie Calculator UK | Free Online Tool" }, "Calculator or tool"),
+    "General",
+  );
+  assert.equal(
+    derivePrimaryTopic({ url: "https://x.test/prices/cheapest-options-uk", title: "Cheapest Weight Loss Injections UK | Treatment Price Guide" }, "Medicine price comparison"),
+    "General",
+  );
+});
+
+test("Task 61: the two exceptions no longer trigger human_decision_required for primary_topic once classified end to end", () => {
+  const bmiRow = classifyRecord(
+    {
+      url: "https://x.test/tools/bmi-calculator",
+      httpStatus: 200,
+      indexNoindex: "index",
+      title: "BMI, BMR & Calorie Calculator UK | Free Online Tool",
+      canonicalUrl: "https://x.test/tools/bmi-calculator",
+      canonicalSelfReferencing: true,
+      h1s: [],
+      schemaTypes: [],
+    },
+    CONFIG,
+  );
+  assert.equal(bmiRow.primary_topic, "General");
+  assert.equal(bmiRow.human_decision_required, "No");
+
+  const priceRow = classifyRecord(
+    {
+      url: "https://x.test/prices/cheapest-options-uk",
+      httpStatus: 200,
+      indexNoindex: "index",
+      title: "Cheapest Weight Loss Injections UK | Treatment Price Guide",
+      canonicalUrl: "https://x.test/prices/cheapest-options-uk",
+      canonicalSelfReferencing: true,
+      h1s: [],
+      schemaTypes: [],
+    },
+    { ...CONFIG, pageTypeTaxonomyV2: [...TAXONOMY, { pattern: "/prices/*", type: "Medicine price comparison" }] },
+  );
+  assert.equal(priceRow.primary_topic, "General");
+  assert.equal(priceRow.human_decision_required, "No");
 });
 
 test("Task 7: a pharmacy profile or blog article with no medicine keyword is General, not REVIEW", () => {
