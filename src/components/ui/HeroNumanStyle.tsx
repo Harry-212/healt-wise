@@ -89,7 +89,7 @@ export default function HeroNumanStyle() {
 
               {/* H1 Title */}
               <h1 className="mt-2.5 text-2xl font-black leading-[1.12] tracking-tight text-slate-950 sm:text-3xl md:text-4xl lg:text-[2.2rem] xl:text-[2.45rem] lg:leading-[1.12]">
-                Compare Mounjaro and Wegovy provider prices in the UK
+                Weight Loss Injections Price Comparison UK
               </h1>
 
               {/* Description & disclaimer */}
