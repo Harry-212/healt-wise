@@ -24,6 +24,12 @@ const EXCLUDED_SITEMAP_PATHS = new Set<string>([
   "/blog/uk-weight-loss",
   /** noindex,follow — overlaps heavily with /blog; stays live and crawlable but out of the sitemap. */
   "/blog/topic/guides",
+  "/blog/topic/mounjaro",
+  "/blog/topic/locations",
+  "/blog/topic/how-it-works",
+  /** noindex,follow — overlaps heavily with /helpful-guides; stays live and crawlable but out of the sitemap. */
+  "/helpful-guides/category/medications",
+  "/helpful-guides/category/nutrition",
   "/compare/best-weight-loss-injections-uk",
   "/compare/best-weight-loss-treatments-uk",
   "/pharmacies/chemist4u",

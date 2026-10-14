@@ -23,19 +23,25 @@ const WhyChooseHealthWise = dynamic(
   () => import("@/components/ui/WhyChooseHealthWise"),
 );
 
+const HOME_SEO_TITLE =
+  "Weight Loss Injections Price Comparison UK | Healthwise360";
+const HOME_SEO_DESCRIPTION =
+  "Compare weight loss injection prices at 60+ GPhC registered UK pharmacies. See Mounjaro from £99 and Wegovy from £83, at every dose.";
+const HOME_OG_TITLE = "Compare Weight Loss Injection Prices in the UK";
+const HOME_OG_DESCRIPTION =
+  "Mounjaro and Wegovy prices at 60+ GPhC registered UK pharmacies, for every dose. Free, independent and no paid rankings.";
+
 export const metadata: Metadata = {
   title: {
-    absolute: "Compare UK Weight-Loss Treatment Prices for Mounjaro & Wegovy | Healthwise360",
+    absolute: HOME_SEO_TITLE,
   },
-  description:
-    "Compare checked UK provider prices, additional fees, pharmacy registration and support for Mounjaro and Wegovy. Independent information only.",
+  description: HOME_SEO_DESCRIPTION,
   alternates: {
     canonical: `${siteOrigin()}/`,
   },
   openGraph: {
-    title: "Compare UK Weight-Loss Treatment Prices for Mounjaro & Wegovy | Healthwise360",
-    description:
-      "Compare checked UK provider prices, additional fees, pharmacy registration and support for Mounjaro and Wegovy. Independent information only.",
+    title: HOME_OG_TITLE,
+    description: HOME_OG_DESCRIPTION,
     url: `${siteOrigin()}/`,
     images: [
       {
@@ -48,9 +54,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Compare UK Weight-Loss Treatment Prices for Mounjaro & Wegovy | Healthwise360",
-    description:
-      "Compare checked UK provider prices, additional fees, pharmacy registration and support for Mounjaro and Wegovy. Independent information only.",
+    title: HOME_OG_TITLE,
+    description: HOME_OG_DESCRIPTION,
     images: [SITE_SHARE_IMAGE_SRC],
   },
 };

@@ -34,9 +34,20 @@ export function helpfulGuidesListingMetadata(
     ? helpfulGuidesCategoryHubPath(categorySlug)
     : HELPFUL_GUIDES_HUB_PATH;
 
+  // These category listings overlap heavily with /helpful-guides; keep them
+  // live and crawlable but out of the index/sitemap.
+  const NOINDEX_CATEGORIES: ReadonlyArray<HelpfulGuideCategorySlug> = [
+    "medications",
+    "nutrition",
+  ];
+
   return withDefaultShareImage({
     title: { absolute: title },
     description,
+    robots:
+      categorySlug && NOINDEX_CATEGORIES.includes(categorySlug)
+        ? { index: false, follow: true }
+        : undefined,
     openGraph: {
       title,
       description,

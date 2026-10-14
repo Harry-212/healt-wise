@@ -6,10 +6,15 @@ import type { RecommendedItem } from "@/lib/recommended-reading";
  * article bodies while keeping the carousel compliant on `/`.
  */
 const OVERRIDES: Partial<Record<string, Partial<RecommendedItem>>> = {
+  // Redirected (301) to the stronger page on this topic — point the card
+  // straight at the destination instead of round-tripping through the redirect.
   "/blog/understanding-prescription-weight-loss-injections-uk": {
+    href: "/blog/weight-loss-treatment-uk-complete-guide",
     imageUrl: "/blog/pharmacies.webp",
   },
+  // Redirected (301) to /blog/mounjaro-weight-loss-before-and-after.
   "/blog/mounjaro-weight-loss-injections-game-changer": {
+    href: "/blog/mounjaro-weight-loss-before-and-after",
     imageUrl: "/blog/mounjaro%20weight%20loss%20before%20and%20after.webp",
     title: "Could Mounjaro Be Your Game-Changer?",
     description:

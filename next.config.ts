@@ -377,6 +377,165 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       },
+      // Zero-click pack 1, section A: old URLs that 404 but still appear in
+      // Google — send them to the live page.
+      {
+        source: "/blog/mounjaro-click-calculator",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-click-calculator-kwikpen-guide",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-kwikpen-guide",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-kikpen-guide-|-healthwise360",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-kwikpen-clicks-per-dose-chart",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-kwikpen-specific-index",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-many-clicks-is-your-dose-kwikpen-guide-2026",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-calculator-uk",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-kwikpen-click-calculator",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-kwikpen-clicks-per-pen-client",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-kwikpen-guide--healthworks360",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-kwikpen-guide-lake",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-kwikpen-guide-uk",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/wegovy-click-counting-ink-uk",
+        destination: "/tools/wegovy-click-calculator",
+        permanent: true,
+      },
+      {
+        source: "/tools/wegovy-click-calculator-uk",
+        destination: "/tools/wegovy-click-calculator",
+        permanent: true,
+      },
+      {
+        source: "/helpful-guides/restarting-mounjaro-after-break",
+        destination: "/helpful-guides/restarting-mounjaro-after-break-uk",
+        permanent: true,
+      },
+      {
+        source: "/helpful-guides/restarting-mounjaro-break-uk",
+        destination: "/helpful-guides/restarting-mounjaro-after-break-uk",
+        permanent: true,
+      },
+      // Zero-click pack 1, section B: duplicate pages that overlap a
+      // stronger page on the same topic and get no clicks.
+      {
+        source: "/blog/mounjaro-vs-wegovy-key-differences-explained",
+        destination: "/compare/wegovy-vs-mounjaro",
+        permanent: true,
+      },
+      {
+        source: "/blog/injectable-obesity-treatments-uk-what-works-and-what-doesnt",
+        destination: "/blog/weight-loss-treatment-uk-complete-guide",
+        permanent: true,
+      },
+      {
+        source: "/blog/understanding-prescription-weight-loss-injections-uk",
+        destination: "/blog/weight-loss-treatment-uk-complete-guide",
+        permanent: true,
+      },
+      {
+        source: "/blog/what-is-wegovy-pill",
+        destination: "/blog/wegovy-pill-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/the-truth-about-mounjaro-dosage-for-weight-loss-effectiveness",
+        destination: "/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust",
+        permanent: true,
+      },
+      {
+        source: "/blog/does-mounjaro-really-work-for-weight-loss-find-out-here",
+        destination: "/what-is-mounjaro",
+        permanent: true,
+      },
+      {
+        source: "/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you",
+        destination: "/what-is-mounjaro",
+        permanent: true,
+      },
+      {
+        source: "/helpful-guides/mounjaro-weight-loss-injection-uk",
+        destination: "/what-is-mounjaro",
+        permanent: true,
+      },
+      {
+        source: "/blog/buy-weight-loss-pills-uk",
+        destination: "/blog/buy-weight-loss-tablets",
+        permanent: true,
+      },
+      {
+        source: "/blog/the-surprising-mounjaro-side-effects-you-might-experience",
+        destination: "/helpful-guides/mounjaro-side-effects-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/mounjaro-weight-loss-injections-game-changer",
+        destination: "/blog/mounjaro-weight-loss-before-and-after",
+        permanent: true,
+      },
+      {
+        source: "/blog/glp-1-supplements-uk",
+        destination: "/blog/are-glp-1-supplements-real",
+        permanent: true,
+      },
+      {
+        source: "/blog/understanding-the-mounjaro-kwikpen-a-user-guide",
+        destination: "/blog/mounjaro-click-calculator-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-does-wegovy-work-to-transform-your-weight-journey",
+        destination: "/what-is-wegovy",
+        permanent: true,
+      },
       ...HELPFUL_GUIDE_SLUGS.map((slug) => ({
         source: `/${slug}`,
         destination: `/helpful-guides/${slug}`,
