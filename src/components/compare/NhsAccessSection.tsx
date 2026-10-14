@@ -2,9 +2,11 @@ import type { ReactNode } from "react";
 
 export default function NhsAccessSection({
   medicine,
+  heading,
   children,
 }: {
   medicine: string;
+  heading?: string;
   children: ReactNode;
 }) {
   return (
@@ -14,7 +16,7 @@ export default function NhsAccessSection({
     >
       <div className="mx-auto max-w-3xl space-y-4 px-4 leading-relaxed text-slate-600 md:px-8">
         <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-          Is {medicine} available on the NHS?
+          {heading ?? `Is ${medicine} available on the NHS?`}
         </h2>
         {children}
         <p>
