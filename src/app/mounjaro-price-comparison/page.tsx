@@ -7,16 +7,22 @@ import FeaturedProviderBanner from "@/components/compare/FeaturedProviderBanner"
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import MounjaroCompareShaderHero from "@/components/mounjaro/MounjaroCompareShaderHero";
 import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable";
+import MounjaroPriceSnapshot from "@/components/mounjaro/MounjaroPriceSnapshot";
+import MounjaroPriceByDoseSection from "@/components/mounjaro/MounjaroPriceByDoseSection";
+import MounjaroCheapestSection from "@/components/mounjaro/MounjaroCheapestSection";
+import MounjaroFirstMonthsCostSection from "@/components/mounjaro/MounjaroFirstMonthsCostSection";
 import AnnualCostSection from "@/components/compare/AnnualCostSection";
 import NhsAccessSection from "@/components/compare/NhsAccessSection";
 import {
   MOUNJARO_DOSE_KEYS,
-  startingPrice,
   type MounjaroUkProviderCompare,
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
 import {
   buildMounjaroPriceInsights,
+  buildFirstMonthsCostEstimate,
+  cheapestAcrossDoses,
+  cheapestProvidersAtDose,
   formatDose,
   formatGbp,
 } from "@/lib/data/mounjaro-price-insights";
@@ -24,7 +30,7 @@ import { getMounjaroCompareProviders } from "@/lib/data/compare-live";
 import { getMounjaroLastUpdatedLabel } from "@/lib/data/compare-store";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
-  MOUNJARO_COMPARE_UK_FAQ_ITEMS,
+  buildMounjaroCompareUkFaqItems,
   mounjaroCompareUkFaqJsonLd,
 } from "@/lib/seo/mounjaro-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
@@ -129,24 +135,61 @@ export default function CompareMounjaroPricesUkPage() {
   const MOUNJARO_UK_COMPARE_PROVIDERS = getMounjaroCompareProviders();
   const mounjaroLastUpdated = getMounjaroLastUpdatedLabel();
   const pageUrl = `${siteOrigin()}/mounjaro-price-comparison`;
-  // Assuming mounjaroCompareUkFaqJsonLd is updated to accept pageUrl
-  const faqLd = mounjaroCompareUkFaqJsonLd(pageUrl);
-  const webLd = compareWebPageJsonLd(MOUNJARO_UK_COMPARE_PROVIDERS);
 
-  const cheapest = MOUNJARO_UK_COMPARE_PROVIDERS.filter(
-    (p) => startingPrice(p) > 0,
-  ).reduce((a, b) => (startingPrice(a) <= startingPrice(b) ? a : b));
+  const priceRows = MOUNJARO_UK_COMPARE_PROVIDERS.map((p) =>
+    Object.fromEntries(
+      MOUNJARO_DOSE_KEYS.map((k) => [k, p.prices[k] > 0 ? p.prices[k] : null]),
+    ) as Record<(typeof MOUNJARO_DOSE_KEYS)[number], number | null>,
+  );
   const annualCosts = buildAnnualCostEstimates(
     MOUNJARO_DOSE_KEYS,
     ["5mg", "7.5mg", "10mg", "12.5mg", "15mg"],
-    // A zero price means the strength is not listed by that provider.
-    MOUNJARO_UK_COMPARE_PROVIDERS.map((p) =>
-      Object.fromEntries(
-        MOUNJARO_DOSE_KEYS.map((k) => [k, p.prices[k] > 0 ? p.prices[k] : null]),
-      ) as Record<(typeof MOUNJARO_DOSE_KEYS)[number], number | null>,
-    ),
+    priceRows,
+  );
+  const firstSixMonths = buildFirstMonthsCostEstimate(
+    MOUNJARO_DOSE_KEYS,
+    6,
+    priceRows,
   );
   const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
+  const nameRows = MOUNJARO_UK_COMPARE_PROVIDERS.map((p) => ({
+    name: p.name,
+    prices: p.prices,
+  }));
+  const cheapestByDose = Object.fromEntries(
+    MOUNJARO_DOSE_KEYS.map((k) => [k, cheapestProvidersAtDose(nameRows, k, 3)]),
+  );
+  const cheapestAcross = cheapestAcrossDoses(nameRows, MOUNJARO_DOSE_KEYS);
+  const providerCount = MOUNJARO_UK_COMPARE_PROVIDERS.length;
+
+  const faqItems = insights
+    ? buildMounjaroCompareUkFaqItems({
+        providerCount,
+        starterLow: insights.starter.low,
+        starterMedian: insights.starter.median,
+        starterWeekly: formatGbp(
+          Math.round((insights.starter.low / 4) * 100) / 100,
+        ),
+        topHigh: insights.top.high,
+        topMedian: insights.top.median,
+        topWeekly: formatGbp(Math.round((insights.top.low / 4) * 100) / 100),
+        cheapestLeader: cheapestAcross?.leader ?? insights.starter.lowProvider,
+        cheapestLeaderWins: cheapestAcross?.leaderWins ?? 0,
+        cheapestTotalDoses: cheapestAcross?.totalDoses ?? MOUNJARO_DOSE_KEYS.length,
+        cheapestException: cheapestAcross?.exceptions[0]
+          ? {
+              dose: cheapestAcross.exceptions[0].dose,
+              provider: cheapestAcross.exceptions[0].provider,
+              price:
+                cheapestByDose[cheapestAcross.exceptions[0].dose]?.[0]
+                  ?.price ?? 0,
+            }
+          : undefined,
+      })
+    : [];
+  const faqLd = mounjaroCompareUkFaqJsonLd(faqItems, pageUrl);
+  const webLd = compareWebPageJsonLd(MOUNJARO_UK_COMPARE_PROVIDERS);
+
   const featuredProvider = MOUNJARO_UK_COMPARE_PROVIDERS.find(
     (p) => p.id === "reach-online-pharmacy",
   );
@@ -163,7 +206,19 @@ export default function CompareMounjaroPricesUkPage() {
       />
 
       <article className="w-full">
-        <MounjaroCompareShaderHero lastUpdated={mounjaroLastUpdated} />
+        <MounjaroCompareShaderHero
+          lastUpdated={mounjaroLastUpdated}
+          cheapestPrice={insights?.starter.low}
+          cheapestProvider={insights?.starter.lowProvider}
+          providerCount={providerCount}
+        />
+
+        {insights ? (
+          <MounjaroPriceSnapshot
+            insights={insights}
+            typicalFirstSixMonths={firstSixMonths.totalTypical}
+          />
+        ) : null}
 
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />
@@ -193,14 +248,32 @@ export default function CompareMounjaroPricesUkPage() {
         >
           <div className="mx-auto max-w-7xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Advanced comparison table
+              Compare Mounjaro prices UK at every pharmacy
             </h2>
             <p className="mt-3 max-w-3xl text-slate-600">
-              Each pen strength has its own column (2.5 mg–15 mg). Pick a
-              single strength, or filter by name, starting price band and
-              Trustpilot rating; every column header shows sort controls. Tap a provider name for its profile page. Row
-              tint and highlighted cells show the lowest prices in your current
-              view.
+              This is our full Mounjaro price comparison table for the UK. It
+              shows the price of every dose at {providerCount} pharmacies,
+              with each pharmacy&apos;s rating and GPhC number. Each row also
+              shows the delivery charge and the total, so you see what you
+              will really pay.
+            </p>
+            <p className="mt-3 max-w-3xl text-slate-600">
+              You can compare Mounjaro prices online here instead of
+              visiting {providerCount} websites. Mounjaro UK prices change
+              often, so the date of the last check sits above the table.
+            </p>
+            <div className="mt-6 max-w-3xl">
+              <p className="font-semibold text-slate-900">How to use it:</p>
+              <ol className="mt-2 list-decimal space-y-1 pl-5 text-slate-600">
+                <li>Pick your dose.</li>
+                <li>Sort by price, from the lowest price up.</li>
+                <li>Tap a pharmacy to see its full review.</li>
+              </ol>
+            </div>
+            <p className="mt-4 max-w-3xl text-sm text-slate-500">
+              This Mounjaro injection price comparison for the UK works as a
+              free Mounjaro price checker and a Mounjaro price comparison
+              chart in one.
             </p>
             <div className="mt-10">
               <MounjaroUkCompareTable
@@ -211,6 +284,18 @@ export default function CompareMounjaroPricesUkPage() {
             </div>
           </div>
         </section>
+
+        {insights ? (
+          <MounjaroPriceByDoseSection
+            doses={insights.doses}
+            cheapestByDose={cheapestByDose}
+          />
+        ) : null}
+
+        <MounjaroCheapestSection
+          cheapestAcross={cheapestAcross}
+          cheapestStarterPrice={insights?.starter.low ?? 0}
+        />
 
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-6xl px-4 md:px-8">
@@ -294,111 +379,137 @@ export default function CompareMounjaroPricesUkPage() {
             <ul className="mt-4 list-inside list-disc space-y-2 text-slate-700">
               <li>
                 <strong className="font-semibold text-slate-900">
-                  Pen strength
+                  Your dose.
                 </strong>{" "}
-                — each strength from 2.5 mg to 15 mg is priced separately, and
-                most providers charge more for each step up.
+                Higher doses cost more.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">
-                  Consultation model
+                  Delivery.
                 </strong>{" "}
-                — online doctors and pharmacies may include the prescriber
-                assessment in the pen price, while programmes may bundle
-                coaching or app support.
+                Pens are sent cold, and most pharmacies charge extra for
+                this.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">
-                  Chilled delivery
+                  Consultation fees.
                 </strong>{" "}
-                — Mounjaro pens are sent refrigerated. Delivery is usually
-                charged on top of the table prices; check each provider&apos;s
-                delivery note.
+                Most are free, but a few pharmacies add one.
+              </li>
+              <li>
+                <strong className="font-semibold text-slate-900">
+                  First order offers.
+                </strong>{" "}
+                A low first price can go up in month 2.
+              </li>
+              <li>
+                <strong className="font-semibold text-slate-900">
+                  Subscriptions.
+                </strong>{" "}
+                Some pharmacies lock you into a monthly plan.
+              </li>
+              <li>
+                <strong className="font-semibold text-slate-900">
+                  Bundles.
+                </strong>{" "}
+                Buying 2 or 3 pens at once can lower the price of each pen.
               </li>
             </ul>
+            <p className="mt-4 text-slate-600 leading-relaxed">
+              That is why a good Mounjaro cost comparison in the UK looks at
+              the full price, not just the headline price.
+            </p>
           </div>
         </section>
 
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
-          <div className="mx-auto max-w-4xl px-4 md:px-8">
+          <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Compare the total cost and what&apos;s included
+              How to compare Mounjaro prices in 4 steps
             </h2>
+            <ol className="mt-4 list-decimal space-y-2 pl-5 text-slate-700">
+              <li>Pick the dose you will be on, not only the starter dose.</li>
+              <li>
+                Sort by price in our table to see the best prices for
+                Mounjaro first.
+              </li>
+              <li>
+                Add delivery and any fees on the pharmacy&apos;s website.
+                This is how you compare Mounjaro costs, not just prices.
+              </li>
+              <li>
+                Check the GPhC number on the official register before you
+                pay.
+              </li>
+            </ol>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              A lower advertised price may not mean a lower total cost. Compare
-              the same dose and pack size, check delivery and consultation
-              charges, and review any offer conditions and included support.
-              Confirm the current details directly with the provider before
-              making your choice.
+              A Mounjaro price comparison in the UK is only fair if you
+              compare the same dose. Our Mounjaro comparison site does steps
+              1, 2 and 4 for you, for free. It also lets you compare
+              Mounjaro providers on support and delivery, not just price.
             </p>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              {insights &&
-              insights.starter.lowProvider !== insights.top.lowProvider ? (
-                <>
-                  The cheapest {formatDose(insights.starter.dose)} starter pen
-                  is not the cheapest at {formatDose(insights.top.dose)}: in our
-                  table the lowest starter price is from{" "}
-                  {insights.starter.lowProvider}, but the lowest{" "}
-                  {formatDose(insights.top.dose)} price is from{" "}
-                  {insights.top.lowProvider}.{" "}
-                </>
-              ) : null}
-              Because most of a year is spent at a maintenance strength,
-              compare the dose you expect to stay on, not only the first pen.
-            </p>
-            <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200/90 shadow-sm">
-              <table className="w-full border-collapse text-left text-sm">
-                <thead className="bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  <tr>
-                    <th className="px-4 py-3">Lens</th>
-                    <th className="px-4 py-3">Example in this snapshot</th>
-                    <th className="px-4 py-3">Starting pen</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100">
-                  <tr className="bg-violet-50/50">
-                    <td className="px-4 py-3 font-semibold text-violet-900">
-                      Cheapest listed
-                    </td>
-                    <td className="px-4 py-3 text-slate-800">{cheapest.name}</td>
-                    <td className="px-4 py-3 tabular-nums text-slate-900">
-                      £{startingPrice(cheapest)}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </div>
         </section>
 
         <section className="border-b border-slate-200/80 bg-slate-50/80 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              UK verified Mounjaro providers
+              How we check every Mounjaro pharmacy
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              All providers in our table are presented for comparison in a UK
-              regulated-medicine context. Confirm the supplying pharmacy on the{" "}
-              <a
-                href="https://www.pharmacyregulation.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-violet-800 underline-offset-2 hover:underline"
-              >
-                General Pharmaceutical Council (GPhC)
-              </a>{" "}
-              register before you pay.
+              Every pharmacy in our table passes the same 5 checks. No
+              pharmacy can pay to rank higher.
             </p>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              For more on safety, see our{" "}
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
+              <li>
+                <strong className="font-semibold text-slate-900">
+                  GPhC registration.
+                </strong>{" "}
+                We check each pharmacy on the official{" "}
+                <a
+                  href="https://www.pharmacyregulation.org/registers"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-violet-800 underline-offset-2 hover:underline"
+                >
+                  GPhC register
+                </a>
+                .
+              </li>
+              <li>
+                <strong className="font-semibold text-slate-900">
+                  Safe prescribing.
+                </strong>{" "}
+                A prescriber must check your health before any pen is sent.
+              </li>
+              <li>
+                <strong className="font-semibold text-slate-900">
+                  Full price.
+                </strong>{" "}
+                We record the price of every dose.
+              </li>
+              <li>
+                <strong className="font-semibold text-slate-900">
+                  Delivery.
+                </strong>{" "}
+                We check cold packing, delivery times and tracking.
+              </li>
+              <li>
+                <strong className="font-semibold text-slate-900">
+                  Support.
+                </strong>{" "}
+                We look at dose advice and how easy it is to get help.
+              </li>
+            </ul>
+            <div className="mt-6">
               <Link
-                href="/pharmacy-safety-gphc-verification"
-                className="font-semibold text-violet-800 underline-offset-2 hover:underline"
+                href="/methodology"
+                className="group inline-flex items-center gap-2 font-semibold text-violet-800 underline-offset-2 hover:underline"
               >
-                GPhC verification guide
+                Read how we check prices
+                <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
-              .
-            </p>
+            </div>
           </div>
         </section>
 
@@ -453,27 +564,47 @@ export default function CompareMounjaroPricesUkPage() {
           </div>
         </section>
 
+        {insights ? (
+          <MounjaroFirstMonthsCostSection
+            starterLow={insights.starter.low}
+            topLow={insights.top.low}
+            topHigh={insights.top.high}
+            firstSixMonths={firstSixMonths}
+          />
+        ) : null}
+
         <AnnualCostSection
           medicine="Mounjaro"
           estimates={annualCosts}
           providerCount={MOUNJARO_UK_COMPARE_PROVIDERS.length}
+          heading="Mounjaro cost for a full year"
+          headingLevel="h3"
           intro={
             <>
               Mounjaro usually starts at 2.5 mg once a week for four weeks, then
               increases in 2.5 mg steps no sooner than every four weeks, up to
               15 mg. Year one therefore includes several months on lower-priced
-              pens before any maintenance strength.
+              pens before any maintenance strength. Based on 13 pens a year.
             </>
           }
         />
 
-        <NhsAccessSection medicine="Mounjaro">
+        <NhsAccessSection
+          medicine="Mounjaro"
+          heading="Can you get Mounjaro on the NHS?"
+        >
           <p>
-            Mounjaro has NICE approval for weight management in the UK and is
-            being introduced into NHS services through a phased rollout.
-            Access is still limited by local commissioning criteria and
-            capacity, so most people in the UK currently get tirzepatide on a
-            private prescription.
+            Yes, but only a small group of people can get it right now. The
+            NHS is bringing Mounjaro in slowly, starting with people who
+            have a very high BMI and health problems linked to their
+            weight. If you get Mounjaro on the NHS, you pay a normal
+            prescription charge or nothing.
+          </p>
+          <p>
+            Most people pay privately for now, at the prices in our table.
+            In any Mounjaro price comparison, the UK NHS route is the
+            cheapest, if you qualify. Ask your GP, and compare Mounjaro
+            prices for the UK here if you go private.
           </p>
         </NhsAccessSection>
 
@@ -516,10 +647,10 @@ export default function CompareMounjaroPricesUkPage() {
         <section className="border-b border-slate-200/80 bg-slate-50/80 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Frequently asked questions
+              Mounjaro price comparison FAQs
             </h2>
             <div className="mt-8 space-y-3">
-              {MOUNJARO_COMPARE_UK_FAQ_ITEMS.map((item) => (
+              {faqItems.map((item) => (
                 <details
                   key={item.question}
                   className="group rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-sm open:shadow-md"

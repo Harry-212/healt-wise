@@ -64,16 +64,24 @@ export default function AnnualCostSection({
   estimates,
   providerCount,
   intro,
+  heading,
+  headingLevel = "h2",
 }: {
   medicine: string;
   estimates: AnnualCostEstimates;
   providerCount: number;
   /** Medicine-specific opening paragraph; defaults to the shared wording. */
   intro?: ReactNode;
+  /** Overrides the default "Total X cost: first year vs ongoing" heading. */
+  heading?: string;
+  /** Render the heading as h3 when nested under another section's h2. */
+  headingLevel?: "h2" | "h3";
 }) {
   if (estimates.yearOne.length === 0 && estimates.ongoing.length === 0) {
     return null;
   }
+
+  const Heading = headingLevel;
 
   return (
     <section
@@ -81,9 +89,9 @@ export default function AnnualCostSection({
       className="border-b border-slate-200/80 bg-slate-50/80 py-12 md:py-16"
     >
       <div className="mx-auto max-w-3xl px-4 md:px-8">
-        <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-          Total {medicine} cost: first year vs ongoing
-        </h2>
+        <Heading className="text-2xl font-bold text-slate-900 md:text-3xl">
+          {heading ?? `Total ${medicine} cost: first year vs ongoing`}
+        </Heading>
         <p className="mt-4 leading-relaxed text-slate-600">
           {intro ?? (
             <>

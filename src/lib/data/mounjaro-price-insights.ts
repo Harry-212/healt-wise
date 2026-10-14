@@ -110,6 +110,118 @@ export function buildMounjaroPriceInsights(
   );
 }
 
+export type CheapestAtDose = { name: string; price: number };
+
+/** The `n` cheapest listed providers at one strength, lowest first. */
+export function cheapestProvidersAtDose<K extends string>(
+  rows: PriceRow<K>[],
+  dose: K,
+  n = 3,
+): CheapestAtDose[] {
+  return rows
+    .filter((r) => (r.prices[dose] ?? 0) > 0)
+    .map((r) => ({ name: r.name, price: r.prices[dose] as number }))
+    .sort((a, b) => a.price - b.price)
+    .slice(0, n);
+}
+
+export type CheapestAcrossDoses = {
+  /** Provider cheapest at the most strengths. */
+  leader: string;
+  /** How many of `doseKeys` the leader is cheapest at. */
+  leaderWins: number;
+  totalDoses: number;
+  /** Strengths the leader was NOT cheapest at, with who was and by how much. */
+  exceptions: { dose: string; provider: string; marginPence: number }[];
+};
+
+/**
+ * Which provider is cheapest most often across a set of strengths, for copy
+ * like "X was cheapest for 5 of 6 doses". Ties broken by provider name so
+ * the result is stable run to run.
+ */
+export function cheapestAcrossDoses<K extends string>(
+  rows: PriceRow<K>[],
+  doseKeys: readonly K[],
+): CheapestAcrossDoses | null {
+  const winners = doseKeys
+    .map((dose) => {
+      const cheapest = cheapestProvidersAtDose(rows, dose, 2);
+      if (cheapest.length === 0) return null;
+      return { dose, cheapest };
+    })
+    .filter((w): w is { dose: K; cheapest: CheapestAtDose[] } => w !== null);
+  if (winners.length === 0) return null;
+
+  const winCounts = new Map<string, number>();
+  for (const w of winners) {
+    const name = w.cheapest[0].name;
+    winCounts.set(name, (winCounts.get(name) ?? 0) + 1);
+  }
+  const leader = [...winCounts.entries()].sort(
+    (a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "en-GB"),
+  )[0][0];
+
+  const exceptions = winners
+    .filter((w) => w.cheapest[0].name !== leader)
+    .map((w) => ({
+      dose: w.dose,
+      provider: w.cheapest[0].name,
+      marginPence: w.cheapest[1]
+        ? Math.round((w.cheapest[1].price - w.cheapest[0].price) * 100)
+        : 0,
+    }));
+
+  return {
+    leader,
+    leaderWins: winCounts.get(leader) ?? 0,
+    totalDoses: winners.length,
+    exceptions,
+  };
+}
+
+export type MonthCostRow = { month: number; dose: string; low: number; typical: number };
+export type FirstMonthsCostEstimate = {
+  rows: MonthCostRow[];
+  /** Sum of each month's lowest listed price — the cheapest reachable total, dose by dose. */
+  totalLow: number;
+  /** Sum of each month's typical (median) listed price. */
+  totalTypical: number;
+};
+
+/**
+ * Month-by-month cost for the first `months` strengths of the titration
+ * ladder (one pen per month). Each month's low/typical comes independently
+ * from whichever providers list that strength — same approach as the
+ * homepage's "first 3 months" table — so the totals are column sums, not a
+ * single best-case provider bundle.
+ */
+export function buildFirstMonthsCostEstimate<K extends string>(
+  ladder: readonly K[],
+  months: number,
+  priceRows: Record<K, number | null>[],
+): FirstMonthsCostEstimate {
+  const steps = ladder.slice(0, months);
+  const rows: MonthCostRow[] = steps.map((dose, idx) => {
+    const prices = priceRows
+      .map((row) => row[dose])
+      .filter((p): p is number => p != null);
+    return {
+      month: idx + 1,
+      dose,
+      low: prices.length ? Math.round(Math.min(...prices) * 100) / 100 : 0,
+      typical: prices.length ? Math.round(median(prices) * 100) / 100 : 0,
+    };
+  });
+
+  const round2 = (n: number) => Math.round(n * 100) / 100;
+  return {
+    rows,
+    totalLow: round2(rows.reduce((sum, r) => sum + r.low, 0)),
+    totalTypical: round2(rows.reduce((sum, r) => sum + r.typical, 0)),
+  };
+}
+
 const gbpWhole = new Intl.NumberFormat("en-GB", {
   style: "currency",
   currency: "GBP",

@@ -17,6 +17,7 @@ import {
   COMPARE_MOUNJARO_PRICE_HERO_IMAGE_SRC,
 } from "@/lib/site-assets";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { formatGbp } from "@/lib/data/mounjaro-price-insights";
 
 const instrumentSerif = Instrument_Serif({
   weight: "400",
@@ -31,8 +32,14 @@ const MOUNJARO_HERO_MIN_H = "min-h-[480px] sm:min-h-[520px] lg:min-h-[560px]";
 
 export default function MounjaroCompareShaderHero({
   lastUpdated,
+  cheapestPrice,
+  cheapestProvider,
+  providerCount,
 }: {
   lastUpdated?: string;
+  cheapestPrice?: number;
+  cheapestProvider?: string;
+  providerCount?: number;
 }) {
   return (
     <ComparePricePhotoHeroShell
@@ -68,31 +75,54 @@ export default function MounjaroCompareShaderHero({
             <span
               className={`${instrumentSerif.className} text-violet-100/95 italic`}
             >
-              Compare
+              Mounjaro
             </span>{" "}
-            <span className="font-bold text-white">Mounjaro prices</span>
-            <br />
-            <span className="text-white">UK (2026)</span>
-            <span className="mt-2 block text-2xl font-semibold tracking-tight text-white/90 md:text-3xl lg:text-[2rem]">
-              Compare listed Mounjaro pen prices from UK providers
-            </span>
+            <span className="font-bold text-white">Price Comparison UK</span>
           </h1>
 
           <p className="mx-auto mb-4 max-w-2xl text-pretty text-sm font-light leading-relaxed text-white/75 lg:mx-0 md:text-base">
-            Compare real Mounjaro (tirzepatide) prices across UK pharmacies. See
-            starting pen costs, estimated monthly spend, and every dose column in
-            one interactive table — with regulated context and independent
-            methodology.
+            {cheapestPrice != null && cheapestProvider ? (
+              <>
+                The cheapest Mounjaro in the UK is {formatGbp(cheapestPrice)}{" "}
+                for a 2.5 mg starter pen at {cheapestProvider}. We compare
+                Mounjaro prices at{" "}
+                {providerCount != null ? providerCount : "60+"} GPhC
+                registered UK pharmacies, so you can find the best price for
+                Mounjaro at every dose in under a minute.
+              </>
+            ) : (
+              <>
+                Compare real Mounjaro (tirzepatide) prices across UK
+                pharmacies. See starting pen costs, estimated monthly spend,
+                and every dose column in one interactive table — with
+                regulated context and independent methodology.
+              </>
+            )}
           </p>
 
           <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:justify-start">
-            <CompareHereLink href="#mounjaro-compare-table" size="hero" />
+            <CompareHereLink
+              href="#mounjaro-compare-table"
+              size="hero"
+              label="Compare Mounjaro prices"
+            />
             <Link
-              href="/what-is-mounjaro#eligibility-uk"
+              href="#mounjaro-price-by-dose"
               className={compareHeroEligibilityClass("violet")}
             >
-              Check eligibility
+              See the price for my dose
             </Link>
+          </div>
+
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-xs font-semibold text-white/80 lg:justify-start">
+            {lastUpdated ? (
+              <span>Prices checked {lastUpdated}</span>
+            ) : null}
+            <span>
+              {providerCount != null ? providerCount : "60+"} GPhC registered
+              pharmacies
+            </span>
+            <span>No paid rankings</span>
           </div>
 
           <p className="mx-auto mt-4 max-w-xl text-center text-[11px] leading-relaxed text-white/45 lg:mx-0 lg:text-left">
