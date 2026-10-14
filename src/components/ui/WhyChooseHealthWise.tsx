@@ -3,12 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Zap,
   Scale,
   PoundSterling,
   ShieldCheck,
-  Lock,
-  LineChart,
+  Ban,
+  ClipboardCheck,
+  Calculator,
   ChevronDown,
   Sparkles,
 } from "lucide-react";
@@ -24,40 +24,40 @@ const FEATURES: {
   icon: LucideIcon;
 }[] = [
   {
-    id: "independent",
-    title: "Independent and unbiased",
-    desc: "We are not tied to any single provider. Our platform is designed to compare multiple options objectively, so you can see what truly offers the best value based on your needs.",
+    id: "one-place",
+    title: "Mounjaro and Wegovy in one place",
+    desc: "A full weight loss jab comparison for the UK, with no need to visit two sites.",
     icon: Scale,
   },
   {
-    id: "pricing",
-    title: "Real pricing, not just starting costs",
-    desc: "We go beyond headline prices. Our comparisons include dosage based costs, monthly estimates, and potential hidden fees, so you understand the full financial commitment before you start.",
+    id: "real-cost",
+    title: "The real cost",
+    desc: "The price of every dose, plus your first 3 months total.",
     icon: PoundSterling,
   },
   {
-    id: "verified",
-    title: "Verified UK providers",
-    desc: "Every provider listed is checked against UK regulatory standards, including pharmacy registration and prescribing practices. We prioritise safety and reliability at every step.",
+    id: "gphc",
+    title: "60+ GPhC registered pharmacies",
+    desc: "Each one shows its GPhC number, so you can check it yourself.",
     icon: ShieldCheck,
   },
   {
-    id: "decisions",
-    title: "Built for better decisions",
-    desc: "Our platform is designed to help you compare quickly and confidently. From side by side comparisons to clear breakdowns, everything is structured to support real decision making, not overwhelm you.",
-    icon: Zap,
+    id: "no-paid-rankings",
+    title: "No paid rankings",
+    desc: "Price and our 5 checks decide the order. Nothing else.",
+    icon: Ban,
   },
   {
-    id: "tracker",
-    title: "Track your progress privately",
-    desc: "With our built in tracking hub, you can monitor your weight loss journey, log your medication, and stay consistent in one private, secure space.",
-    icon: Lock,
+    id: "full-review",
+    title: "A full review for every pharmacy",
+    desc: "This is more than a weight loss comparison. Compare UK weight loss providers on support, delivery and reviews, not just price.",
+    icon: ClipboardCheck,
   },
   {
-    id: "value",
-    title: "Focused on long term value",
-    desc: "Weight loss treatment is not just about getting started. We help you understand ongoing costs, maintenance plans, and long term considerations so you can plan ahead with confidence.",
-    icon: LineChart,
+    id: "free-tools",
+    title: "Free dose tools",
+    desc: "Click calculators and a BMI calculator for when you start.",
+    icon: Calculator,
   },
 ];
 
@@ -76,8 +76,8 @@ export default function WhyChooseHealthWise() {
       <div className="mx-auto max-w-[1400px] overflow-x-clip rounded-2xl border border-slate-200/90 bg-linear-to-br from-emerald-50/50 via-white to-slate-50/80 shadow-sm ring-1 ring-slate-100">
         <div className="flex flex-col lg:flex-row lg:items-stretch">
           <div className="order-2 flex min-w-0 flex-1 flex-col px-5 py-6 sm:px-8 sm:py-8 lg:order-1 lg:w-[56%] lg:max-w-[56%] lg:py-10">
-            <h2 className="flex min-w-0 flex-nowrap items-center gap-x-3 text-2xl font-black uppercase leading-none tracking-tight text-slate-950 sm:gap-x-4 sm:text-3xl md:text-[2.35rem]">
-              <span className="shrink-0">Why choose</span>
+            <h2 className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 text-2xl font-black leading-none tracking-tight text-slate-950 sm:gap-x-4 sm:text-3xl md:text-[2.35rem]">
+              <span className="shrink-0 uppercase">Why choose</span>
               <span className="min-w-0 shrink">
                 <Image
                   src={SITE_LOGO_SRC}
@@ -89,16 +89,21 @@ export default function WhyChooseHealthWise() {
                   unoptimized
                 />
               </span>
+              <span className="shrink-0 normal-case">
+                to compare weight loss injection prices
+              </span>
             </h2>
 
             <div className="mt-4 space-y-2 text-sm leading-relaxed text-slate-600 md:text-[15px]">
               <p>
-                Choosing a weight loss treatment in the UK can be confusing.
-                Prices vary, providers differ in quality, and not all
-                information is transparent.
+                Whether you call it a weight loss injection, a jab, a
+                medication, or a treatment, you want the same thing: the best
+                price from a safe UK pharmacy. That is why we built a weight
+                loss treatment price comparison that shows the full cost.
               </p>
               <p className="text-base font-bold text-slate-900">
-                {SITE_BRAND_NAME} is built to simplify that decision.
+                Here is why {SITE_BRAND_NAME} is the easy way to compare
+                weight loss injection prices in the UK.
               </p>
             </div>
 

@@ -71,66 +71,62 @@ export default function AboutSection2() {
               timelineRef={heroRef}
               customVariants={revealVariants}
               id="about-heading"
-              className="mb-6 text-lg leading-snug font-semibold text-brand-primary sm:text-xl md:text-2xl"
+              className="mb-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
             >
-              {SITE_BRAND_NAME} is an{" "}
-              <TimelineContent
-                as="span"
-                animationNum={1}
-                timelineRef={heroRef}
-                customVariants={textVariants}
-                className={hlGreen}
-              >
-                independent UK comparison
-              </TimelineContent>{" "}
-              site that helps you compare{" "}
-              <TimelineContent
-                as="span"
-                animationNum={2}
-                timelineRef={heroRef}
-                customVariants={textVariants}
-                className={hlAccent}
-              >
-                UK weight loss providers
-              </TimelineContent>{" "}
-              and review pricing and delivery for weight loss treatments from
-              GPhC-registered online pharmacies, so you see the full cost
-              picture before you start a consultation.
+              What is {SITE_BRAND_NAME}?
             </TimelineContent>
 
-            <div className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:items-end sm:justify-between sm:gap-2">
-              <TimelineContent
-                as="div"
-                animationNum={3}
-                timelineRef={heroRef}
-                customVariants={textVariants}
-                className="mb-0 text-xs sm:text-xl"
-              >
-                <div className="mb-2 font-medium capitalize text-brand-primary">
-                  {SITE_BRAND_NAME}:{" "}
-                  <span className="font-bold">we compare</span>, we don&apos;t
-                  prescribe
-                </div>
-                <div className="font-semibold tracking-wide text-emerald-700 uppercase">
-                  Weight Loss Treatment in the UK
-                </div>
-              </TimelineContent>
+            <TimelineContent
+              as="p"
+              animationNum={1}
+              timelineRef={heroRef}
+              customVariants={textVariants}
+              className="max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg"
+            >
+              {SITE_BRAND_NAME} is an{" "}
+              <span className={hlGreen}>
+                independent UK price comparison
+              </span>{" "}
+              site for weight loss injections. We compare{" "}
+              <span className={hlAccent}>Mounjaro and Wegovy prices</span> at
+              60+ GPhC-registered pharmacies, so you can see the full cost
+              before you start a consultation.
+            </TimelineContent>
 
-              <TimelineContent
-                as="div"
-                animationNum={4}
-                timelineRef={heroRef}
-                customVariants={textVariants}
-                className="shrink-0"
+            <TimelineContent
+              as="p"
+              animationNum={2}
+              timelineRef={heroRef}
+              customVariants={textVariants}
+              className="mt-4 max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg"
+            >
+              We compare; we do not prescribe. We never sell or send
+              medicines, and we never tell you which pharmacy to choose. The
+              choice is always yours.
+            </TimelineContent>
+
+            <TimelineContent
+              as="div"
+              animationNum={3}
+              timelineRef={heroRef}
+              customVariants={textVariants}
+              className="mt-6"
+            >
+              <Link
+                href="/about"
+                className="group inline-flex items-center text-sm font-semibold text-emerald-800 transition hover:text-emerald-950 sm:text-base"
               >
-                <Link
-                  href="/about"
-                  className="text-sm font-semibold text-emerald-800 underline decoration-emerald-300/80 underline-offset-2 transition hover:text-emerald-950 sm:text-right"
-                >
+                <span className="underline underline-offset-4 decoration-emerald-500/50 group-hover:decoration-emerald-700">
                   About {SITE_BRAND_NAME}
-                </Link>
-              </TimelineContent>
-            </div>
+                </span>
+                <span
+                  className="ml-1.5 transition-transform duration-200 group-hover:translate-x-1"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+              </Link>
+            </TimelineContent>
           </div>
         </div>
       </TimelineSection>
