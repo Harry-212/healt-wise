@@ -49,6 +49,7 @@ const TOC = [
   { id: "price-comparison", label: "Price comparison by dose" },
   { id: "quick-comparison", label: "Quick cost comparison" },
   { id: "actual-vs-advertised", label: "Actual cost vs advertised price" },
+  { id: "price-supply-period", label: "Four weeks or one calendar month?" },
   { id: "how-to-compare", label: "How to compare prices properly" },
   { id: "annual-cost", label: "Estimated annual cost of treatment" },
   { id: "cheapest", label: "Which treatment is cheapest?" },
@@ -463,6 +464,28 @@ export default function ArticleClient() {
                   current UK provider prices
                 </Link>{" "}
                 for a full breakdown.
+              </p>
+            </GuideSection>
+
+            <GuideSection
+              darkMode={darkMode}
+              id="price-supply-period"
+              heading="Does the price cover four weeks or one calendar month?"
+            >
+              <p>
+                Check the quantity and supply period covered by each
+                advertised price. A price per pen, a charge every four weeks
+                and a charge per calendar month are different units and
+                should not be treated as equivalent.
+              </p>
+              <p>
+                Before comparing providers, check the medicine, prescribed
+                strength, quantity supplied, billing interval and any
+                separate consultation, delivery or programme fees.
+              </p>
+              <p>
+                If the provider does not clearly explain what the quoted
+                price covers, ask it to confirm before paying.
               </p>
             </GuideSection>
 
