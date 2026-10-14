@@ -3,14 +3,11 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Zap,
-  LineChart,
   ShieldCheck,
-  Package,
+  PoundSterling,
   Stethoscope,
+  Package,
   Headphones,
-  Scale,
-  RefreshCw,
-  AlertCircle,
 } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
@@ -25,54 +22,32 @@ const METHOD_STEPS: {
   {
     id: "gphc",
     icon: ShieldCheck,
-    label: "GPhC Registration and Compliance - Checked",
-    desc: "We check pharmacies against the General Pharmaceutical Council (GPhC) register so listed supply routes meet UK regulatory expectations.",
+    label: "GPhC registration",
+    desc: "We check every pharmacy on the official General Pharmaceutical Council register.",
   },
   {
     id: "clinical",
     icon: Stethoscope,
-    label: "Clinical safety and prescribing",
-    desc: "We review eligibility, consultations, and prescribing pathways so approvals involve qualified professionals and appropriate clinical checks.",
+    label: "Safe prescribing",
+    desc: "A qualified prescriber must review your health before any medicine is sent.",
+  },
+  {
+    id: "pricing",
+    icon: PoundSterling,
+    label: "Full price",
+    desc: "We record the price of every dose, plus delivery and any extra fees.",
   },
   {
     id: "delivery",
     icon: Package,
     label: "Delivery",
-    desc: "We assess packaging, cold chain handling where needed, shipping times, and courier practices so treatment reaches you reliably.",
+    desc: "We check cold packaging, delivery times, and tracking.",
   },
   {
     id: "support",
     icon: Headphones,
     label: "Ongoing support",
-    desc: "We factor in follow up access, guidance, and longer term care arrangements as part of a rounded view of each provider.",
-  },
-  {
-    id: "pricing",
-    icon: LineChart,
-    label: "Price transparency",
-    desc: "We compare published prices by dosage and programme stage, flag hidden fees, and highlight total cost where possible.",
-  },
-];
-
-const FOOTER_BLOCKS: {
-  title: string;
-  body: string;
-  icon: LucideIcon;
-}[] = [
-  {
-    icon: Scale,
-    title: "Independent and unbiased",
-    body: "We are independent. Commissions do not drive rankings: data, safety standards, and user value do, not promotional deals.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Data accuracy and updates",
-    body: "We aim to keep pricing and listings current; prices and availability still change. Confirm details with the provider before you buy.",
-  },
-  {
-    icon: AlertCircle,
-    title: "Important information",
-    body: "UK prescription weight loss medicines are POM: a licensed professional must approve supply. Eligibility varies. This is not medical advice. Speak to a clinician before treatment.",
+    desc: "We look at follow-up help, dose advice, and how easy it is to get in touch.",
   },
 ];
 
@@ -80,7 +55,10 @@ export default function OurMethodology() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="w-full bg-white px-4 py-3 text-slate-800 sm:px-6 md:px-8 lg:px-10">
+    <section
+      id="how-we-compare"
+      className="w-full scroll-mt-24 bg-white px-4 py-3 text-slate-800 sm:px-6 md:px-8 lg:px-10"
+    >
       <div className="mx-auto max-w-[1400px] overflow-x-clip rounded-2xl border border-slate-200/90 bg-linear-to-br from-emerald-50/50 via-white to-slate-50/80 shadow-sm ring-1 ring-slate-100">
         <div className="mx-auto max-w-[1200px] p-5 sm:p-6 md:p-8 lg:p-10">
           <div className="mb-8 border-b border-slate-200/80 pb-8 md:mb-10 md:pb-10">
@@ -93,7 +71,7 @@ export default function OurMethodology() {
                   5
                 </span>
                 <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-emerald-800/75">
-                  steps
+                  checks
                 </span>
               </div>
               <div className="min-w-0 flex-1 space-y-3">
@@ -101,31 +79,12 @@ export default function OurMethodology() {
                   {SITE_BRAND_NAME}
                 </span>
                 <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl lg:text-[2.15rem] lg:leading-tight">
-                  How we evaluate providers
+                  How we compare weight loss injection prices in the UK
                 </h2>
                 <p className="max-w-3xl text-[15px] leading-relaxed text-slate-600 md:text-base">
-                  {SITE_BRAND_NAME} is an independent UK comparison: we rank
-                  weight loss providers fairly—with no preferred pharmacy. Each
-                  listing is judged the same way, weighing clinical safety with
-                  real-world service and value. Scores rest on five pillars:{" "}
-                  <span className="font-semibold text-slate-800">
-                    regulation
-                  </span>
-                  ,{" "}
-                  <span className="font-semibold text-slate-800">
-                    clinical prescribing
-                  </span>
-                  ,{" "}
-                  <span className="font-semibold text-slate-800">delivery</span>
-                  ,{" "}
-                  <span className="font-semibold text-slate-800">
-                    ongoing support
-                  </span>
-                  , and{" "}
-                  <span className="font-semibold text-slate-800">
-                    price transparency
-                  </span>
-                  .
+                  Every pharmacy in our UK weight loss injections price
+                  comparison passes the same 5 checks. No pharmacy can pay to
+                  rank higher.
                 </p>
               </div>
             </div>
@@ -156,7 +115,7 @@ export default function OurMethodology() {
                   </div>
                   <div className="mb-3">
                     <span className="inline-block rounded-sm bg-emerald-600/12 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-900">
-                      Step {String(idx + 1).padStart(2, "0")}
+                      Check {String(idx + 1).padStart(2, "0")}
                     </span>
                   </div>
 
@@ -238,7 +197,7 @@ export default function OurMethodology() {
                         />
                       </div>
                       <span className="rounded-sm bg-emerald-600/12 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-900">
-                        Step {String(idx + 1).padStart(2, "0")}
+                        Check {String(idx + 1).padStart(2, "0")}
                       </span>
                     </div>
                     <h3
@@ -268,45 +227,14 @@ export default function OurMethodology() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-3 md:mt-14 md:grid-cols-3 md:gap-4">
-          {FOOTER_BLOCKS.map((block) => {
-            const FIcon = block.icon;
-            return (
-              <div
-                key={block.title}
-                className="rounded-2xl border border-emerald-100/90 bg-white/90 p-5 shadow-sm backdrop-blur-sm md:p-5"
-              >
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 ring-1 ring-emerald-100">
-                  <FIcon
-                    className="h-5 w-5 text-emerald-700"
-                    strokeWidth={1.75}
-                    aria-hidden
-                  />
-                </div>
-                <h4 className="text-sm font-bold text-slate-900 md:text-base">
-                  {block.title}
-                </h4>
-                <p className="mt-2 text-xs leading-relaxed text-slate-600 md:text-sm">
-                  {block.body}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-slate-600 md:text-sm">
-            More on how we collect and update data: see the full safety guide.
-          </p>
-          <div className="flex flex-wrap items-center gap-2 sm:justify-end">
-            <Link
-              href="/methodology"
-              className="group inline-flex min-h-[52px] shrink-0 items-center justify-center gap-2 rounded-full border-2 border-amber-500/50 bg-amber-300 px-8 py-3.5 text-base font-extrabold text-slate-900 shadow-lg transition hover:scale-[1.02] hover:bg-amber-400 active:scale-[0.98] sm:min-h-[56px] sm:px-10 sm:text-lg"
-            >
-              Read full guide
-              <Zap className="h-5 w-5 fill-slate-900 transition-transform group-hover:scale-110 sm:h-6 sm:w-6" aria-hidden />
-            </Link>
-          </div>
+        <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-end">
+          <Link
+            href="/methodology"
+            className="group inline-flex min-h-[52px] shrink-0 items-center justify-center gap-2 rounded-full border-2 border-amber-500/50 bg-amber-300 px-8 py-3.5 text-base font-extrabold text-slate-900 shadow-lg transition hover:scale-[1.02] hover:bg-amber-400 active:scale-[0.98] sm:min-h-[56px] sm:px-10 sm:text-lg"
+          >
+            Read our full methodology
+            <Zap className="h-5 w-5 fill-slate-900 transition-transform group-hover:scale-110 sm:h-6 sm:w-6" aria-hidden />
+          </Link>
         </div>
         </div>
       </div>
