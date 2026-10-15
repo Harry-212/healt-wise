@@ -188,17 +188,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = w?.name ?? m?.name;
   if (!name) return { title: "Pharmacy" };
 
-  return withDefaultShareImage({
-    title: `${name} weight management review`,
-    description: `${name} weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.`,
-    alternates: { canonical },
-    openGraph: {
-      type: "website",
-      url: canonical,
-      title: `${name} weight management review`,
-      description: `Independent provider review of ${name} on Healthwise360.`,
-    },
-  });
+  return pharmacyReviewMetadata({ providerName: name, canonical });
 }
 
 export default async function PharmacyProfilePage({ params }: Props) {

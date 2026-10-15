@@ -479,15 +479,27 @@ export default function WegovyClickCalculatorClient() {
                             <Link href="/compare/wegovy-vs-mounjaro" className="inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-emerald-600 px-5 text-base font-semibold text-white transition hover:bg-emerald-700 shadow-sm sm:w-auto sm:min-w-48 xl:px-7">
                               Compare GLP-1s <Zap className="inline h-5 w-5 fill-current" aria-hidden />
                             </Link>
-                            <CompareHereLink
-                              href="/wegovy-price-comparison"
-                              size="calculator"
-                              navAccent="emerald"
-                              className="w-full sm:w-auto sm:min-w-48"
-                              onClick={() =>
-                                trackCalculatorToPriceComparison('/wegovy-price-comparison')
-                              }
-                            />
+                            {(() => {
+                              const validDoses = [0.25, 0.5, 1, 1.7, 2.4, 7.2];
+                              const selectedDose = validDoses.includes(desiredDose)
+                                ? desiredDose
+                                : validDoses.includes(penStrength)
+                                  ? penStrength
+                                  : 0.25;
+                              const doseSlug = `${selectedDose}mg`.replace(".", "-");
+                              const priceHref = `/wegovy-price-comparison#wegovy-${doseSlug}-price`;
+                              return (
+                                <Link
+                                  href={priceHref}
+                                  onClick={() =>
+                                    trackCalculatorToPriceComparison(priceHref)
+                                  }
+                                  className="inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-emerald-700 px-5 text-base font-bold text-white shadow-sm transition hover:bg-emerald-800 sm:w-auto sm:min-w-48 xl:px-7"
+                                >
+                                  Compare prices for Wegovy {selectedDose} mg →
+                                </Link>
+                              );
+                            })()}
                           </div>
                         </motion.div>
                       )}

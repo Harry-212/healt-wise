@@ -1,5 +1,5 @@
-"use client";
-
+import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
@@ -22,21 +22,19 @@ export default function LotusWeightLossPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Lotus Weight Loss"
       fileRef="HW-LOTUS-2026"
-      title="Lotus Weight Loss weight management review"
+      title="Lotus Weight Loss Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of Lotus Weight Loss: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Orlistat · UK regulated pathway"
       providerName="Lotus Weight Loss"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
-        {
-          k: "Provider",
-          v: "Lotus Weight Loss (CQC registered service, GPhC 9010938 — verify current entries)",
-        },
-        { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat (subject to assessment)" },
+        { k: "Last updated", v: "20 September 2026" },
+        { k: "Provider", v: "Lotus Weight Loss" },
+        { k: "GPhC", v: "9010938" },
+        { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat" },
         {
           k: "Fulfilment",
-          v: "Royal Mail 24 / DPD · tracked · refrigerated injectable packs · home or workplace only",
+          v: "Royal Mail 24 / DPD · refrigerated injectable packs",
         },
       ]}
       discountCode={discountCode}
@@ -45,6 +43,26 @@ export default function LotusWeightLossPharmacyContent() {
       heroProviderLogoAlt="Lotus Weight Loss"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            Lotus Weight Loss sells Mounjaro from £154 (2.5 mg) to £284 (15 mg) a pen, at our 20 September 2026 price check. Lotus Weight Loss is listed on the GPhC register (number 9010938), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ).
+          </p>
+        </div>
+        <PharmacyPriceTable slug="lotus-weight-loss" providerName="Lotus Weight Loss" />
         <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Lotus Weight Loss is positioned as a UK clinic-style pathway for medically supervised weight management. A useful comparison looks at how the service operates day to day: the consultation and eligibility checks, clinician oversight, what support is included, and how delivery is managed for prescription treatments. This dossier provides independent context about Lotus Weight Loss so you can evaluate the provider more clearly.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Lotus Weight Loss describes itself as a UK specialist clinic rather than a quick fix diet
@@ -222,6 +240,13 @@ export default function LotusWeightLossPharmacyContent() {
             refrigerate promptly.
           </li>
         </ul>
+      </section>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is Lotus Weight Loss legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          Yes. Lotus Weight Loss is listed on the official GPhC register (number 9010938). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
+        </p>
       </section>
 
       <section className="border border-slate-200/90 bg-[#fbf9f4] p-6">

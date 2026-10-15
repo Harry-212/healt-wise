@@ -471,14 +471,27 @@ export default function MounjaroClickCalculatorClient() {
                                 aria-hidden
                               />
                             </Link>
-                            <CompareHereLink
-                              href="/mounjaro-price-comparison"
-                              size="calculator"
-                              className="w-full sm:w-auto sm:min-w-48"
-                              onClick={() =>
-                                trackCalculatorToPriceComparison("/mounjaro-price-comparison")
-                              }
-                            />
+                            {(() => {
+                              const validDoses = [2.5, 5, 7.5, 10, 12.5, 15];
+                              const selectedDose = validDoses.includes(desiredDose)
+                                ? desiredDose
+                                : validDoses.includes(penStrength)
+                                  ? penStrength
+                                  : 2.5;
+                              const doseSlug = `${selectedDose}mg`.replace(".", "-");
+                              const priceHref = `/mounjaro-price-comparison#mounjaro-${doseSlug}-price`;
+                              return (
+                                <Link
+                                  href={priceHref}
+                                  onClick={() =>
+                                    trackCalculatorToPriceComparison(priceHref)
+                                  }
+                                  className="inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-emerald-700 px-5 text-base font-bold text-white shadow-sm transition hover:bg-emerald-800 sm:w-auto sm:min-w-48 xl:px-7"
+                                >
+                                  Compare prices for Mounjaro {selectedDose} mg →
+                                </Link>
+                              );
+                            })()}
                           </div>
                         </motion.div>
                       )}

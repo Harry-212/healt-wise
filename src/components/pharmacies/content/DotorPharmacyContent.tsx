@@ -1,5 +1,5 @@
-"use client";
-
+import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   HazardBox,
   PharmacyDossierPage,
@@ -18,14 +18,15 @@ export default function DotorPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Dotor"
       fileRef="HW-DOTOR-2026"
-      title="Dotor weight management review"
+      title="Dotor Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of Dotor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Orlistat · Xenical · XLS Medical"
       providerName="Dotor"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
+        { k: "Last updated", v: "20 September 2026" },
         { k: "Provider", v: "Dotor" },
+        { k: "GPhC", v: "9012775" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat · Xenical · XLS Medical" },
         { k: "Fulfilment", v: "In-house dispensing · DPD tracked delivery" },
       ]}
@@ -35,6 +36,26 @@ export default function DotorPharmacyContent() {
       heroProviderLogoAlt="Dotor"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            Dotor sells Mounjaro from £131.36 (2.5 mg) to £275.05 (15 mg) a pen, at our 20 September 2026 price check. Dotor is listed on the GPhC register (number 9012775), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ).
+          </p>
+        </div>
+        <PharmacyPriceTable slug="dotor" providerName="Dotor" />
         <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-indigo-900">Service Profile:</strong> Dotor is a UK-based online pharmacy service offering supervised access to prescription weight loss medication. Because eligibility, dosing and cost vary from person to person, it's worth understanding exactly how Dotor's consultation process, delivery timelines and pricing structure work before committing to a plan.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Weight loss can look straightforward on paper. Eat less. Move more. Stay consistent.
@@ -284,6 +305,13 @@ export default function DotorPharmacyContent() {
           </p>
         </section>
       </div>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is Dotor legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          Yes. Dotor is listed on the official GPhC register (number 9012775). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
+        </p>
+      </section>
 
       <section className="border border-slate-200/90 bg-[#fbf9f4] p-6">
         <h2 className="font-sans text-xl font-bold text-slate-900">Frequently asked questions</h2>

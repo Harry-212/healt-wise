@@ -9,15 +9,15 @@ import { withDefaultShareImage } from "@/lib/seo/default-share-image";
  */
 
 export function pharmacyReviewTitle(providerName: string): string {
-  return `${providerName} weight management review`;
+  return `${providerName} Review 2026: Mounjaro & Wegovy Prices`;
 }
 
 export function pharmacyReviewDescription(providerName: string): string {
-  return `${providerName}: UK GLP-1 prices, consultation, delivery and clinical support. Independent pharmacy review. GPhC-registered. Not medical advice.`;
+  return `Is ${providerName} legit? Our ${providerName} review covers Mounjaro and Wegovy prices for every dose, the GPhC number, delivery and support.`;
 }
 
 export function pharmacyReviewH1(providerName: string): string {
-  return pharmacyReviewTitle(providerName);
+  return `${providerName} Review: Mounjaro and Wegovy Prices`;
 }
 
 export function pharmacyReviewSubtitle(providerName: string): string {

@@ -1,5 +1,5 @@
-"use client";
-
+import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
@@ -22,24 +22,22 @@ export default function MyLondonPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="My London Pharmacy"
       fileRef="HW-MY-LONDON-2026"
-      title="My London Pharmacy weight management review"
+      title="My London Pharmacy Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of My London Pharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy-class GLP-1 · weekly injectables · subscription options"
       providerName="My London Pharmacy"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
-        {
-          k: "Provider",
-          v: "My London Pharmacy (GPhC 9011790 — verify premises on register)",
-        },
+        { k: "Last updated", v: "20 September 2026" },
+        { k: "Provider", v: "My London Pharmacy" },
+        { k: "GPhC", v: "9011790" },
         {
           k: "Access",
-          v: "Digital consultation (~2 min stated) · clinician review · prescription often included without separate fee (confirm live funnel)",
+          v: "Digital consultation (~2 min stated) · clinician review · prescription included",
         },
         {
           k: "Fulfilment",
-          v: "Next-day UK delivery (stated) · discreet packaging · tracked couriers · cold chain where required",
+          v: "Next-day UK delivery (stated) · discreet packaging · cold chain where required",
         },
       ]}
       discountCode={discountCode}
@@ -48,6 +46,26 @@ export default function MyLondonPharmacyContent() {
       heroProviderLogoAlt="My London Pharmacy"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            My London Pharmacy sells Mounjaro from £145 (2.5 mg) to £299 (15 mg) a pen, at our 20 September 2026 price check. My London Pharmacy is listed on the GPhC register (number 9011790), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ).
+          </p>
+        </div>
+        <PharmacyPriceTable slug="my-london-pharmacy" providerName="My London Pharmacy" />
         <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About My London Pharmacy:</strong> Navigating online weight loss treatments can be complex. My London Pharmacy is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that My London Pharmacy provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Busy lives, long NHS waits, and noisy online sellers make it harder to pick a{" "}
@@ -215,6 +233,13 @@ export default function MyLondonPharmacyContent() {
           Suitable readers may include people who struggled with diet-only approaches, want medically
           supervised GLP-1 or dual incretin therapy, value privacy and speed, live far from specialist
           clinics, or need structured digital follow-up through a portal.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is My London Pharmacy legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          Yes. My London Pharmacy is listed on the official GPhC register (number 9011790). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
         </p>
       </section>
 
