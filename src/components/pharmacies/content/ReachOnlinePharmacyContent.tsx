@@ -131,9 +131,10 @@ export default function ReachOnlinePharmacyContent() {
         <ProviderCta
           url={providerUrl}
           name="Reach Online Pharmacy"
+          copyCode={discountCode}
           className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} mt-4`}
         >
-          Visit Reach Online Pharmacy
+          Visit Reach Online Pharmacy (Use Code Welcome10health)
         </ProviderCta>
       </section>
     </PharmacyDossierPage>

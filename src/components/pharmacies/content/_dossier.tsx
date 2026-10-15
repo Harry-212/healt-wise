@@ -20,15 +20,34 @@ export function ProviderCta({
   url,
   name,
   id,
+  copyCode,
   children,
   className = PHARMACY_PROVIDER_CTA_CLASSNAME,
+  onCopySuccess,
 }: {
   url: string;
   name: string;
   id?: string;
+  copyCode?: string;
   children: ReactNode;
   className?: string;
+  onCopySuccess?: () => void;
 }) {
+  const [justCopied, setJustCopied] = useState(false);
+
+  const handleClick = () => {
+    if (copyCode && copyCode.trim()) {
+      try {
+        navigator.clipboard.writeText(copyCode.trim());
+        setJustCopied(true);
+        onCopySuccess?.();
+        setTimeout(() => setJustCopied(false), 3000);
+      } catch (err) {
+        console.error("Failed to copy code on visit", err);
+      }
+    }
+  };
+
   return (
     <a
       href={url}
@@ -36,9 +55,17 @@ export function ProviderCta({
       rel="noopener noreferrer"
       data-pharmacy={name}
       data-provider-id={id ?? toProviderId(name)}
+      onClick={handleClick}
       className={className}
     >
-      {children}
+      {justCopied ? (
+        <span className="inline-flex items-center justify-center gap-1.5 animate-pulse">
+          <CheckCircle2 className="h-4 w-4 text-emerald-300" />
+          Code copied! Opening {name}...
+        </span>
+      ) : (
+        children
+      )}
     </a>
   );
 }
@@ -227,7 +254,13 @@ function DiscountCodeBox({
                 provider&apos;s site. Always confirm live pricing before payment.
               </p>
             </div>
-            <div className="shrink-0 self-center rounded-md border border-emerald-800/20 bg-emerald-50/40 px-4 py-3.5 text-center shadow-sm sm:self-start min-w-30 sm:min-w-32">
+            <div
+              onClick={hasDiscountCode ? onCopy : undefined}
+              className={`shrink-0 self-center rounded-md border border-emerald-800/20 bg-emerald-50/40 px-4 py-3.5 text-center shadow-sm sm:self-start min-w-30 sm:min-w-32 ${
+                hasDiscountCode ? "cursor-pointer hover:bg-emerald-100/70 transition" : ""
+              }`}
+              title={hasDiscountCode ? "Click to copy code" : undefined}
+            >
               <p className="font-mono text-xs font-bold uppercase tracking-widest text-emerald-900/75">
                 Code
               </p>
@@ -424,6 +457,11 @@ export function PharmacyDossierPage({
                     url={providerUrl}
                     name={providerName}
                     id={toProviderId(slugLabel)}
+                    copyCode={hasDiscountCode ? discountCode : undefined}
+                    onCopySuccess={() => {
+                      setCopied(true);
+                      setTimeout(() => setCopied(false), 3000);
+                    }}
                   >
                     Visit {providerName}
                   </ProviderCta>
@@ -435,6 +473,11 @@ export function PharmacyDossierPage({
                     Visit {providerName}
                   </span>
                 )}
+                {hasDiscountCode ? (
+                  <p className="mt-2 text-center text-xs font-semibold text-emerald-800">
+                    ✨ Automatically copies code <span className="font-mono font-bold text-emerald-950 underline">{discountCode}</span> when clicked
+                  </p>
+                ) : null}
                 <p className="mt-3 text-center text-sm font-medium leading-relaxed text-slate-600">
                   {providerUrl
                     ? "Information only — confirm eligibility, pricing and prescribing rules on the provider's own site."
