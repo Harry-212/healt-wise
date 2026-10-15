@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import WegovyCompareChartsSection from "@/components/compare/WegovyCompareChartsSection";
-import FeaturedProviderBanner from "@/components/compare/FeaturedProviderBanner";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import WegovyCompareShaderHero from "@/components/wegovy/WegovyCompareShaderHero";
 import WegovyUkCompareTable from "@/components/wegovy/WegovyUkCompareTable";
@@ -148,10 +147,6 @@ export default function CompareWegovyPricesUkPage() {
   const faqLd = wegovyCompareUkFaqJsonLd(WEGOVY_COMPARE_UK_FAQ_ITEMS, pageUrl);
   const webLd = compareWebPageJsonLd(WEGOVY_UK_COMPARE_PROVIDERS);
 
-  const featuredProvider = WEGOVY_UK_COMPARE_PROVIDERS.find(
-    (p) => p.id === "reach-online-pharmacy",
-  );
-
   return (
     <>
       <script
@@ -222,25 +217,6 @@ export default function CompareWegovyPricesUkPage() {
             </div>
           </div>
         </section>
-
-        {/* Featured provider moved below the price table per Section 1 note */}
-        {featuredProvider && (
-          <section className="border-b border-slate-200/80 bg-background py-8 md:py-10">
-            <div className="mx-auto max-w-7xl px-4 md:px-8">
-              <FeaturedProviderBanner
-                medicationLabel="Wegovy"
-                providerName={featuredProvider.name}
-                logoSrc="/logo pharmacy/Reach Online Pharmacy.webp"
-                logoAlt={featuredProvider.name}
-                headlineFrom={featuredProvider.headlineFrom}
-                rating={featuredProvider.rating}
-                trustpilotUrl={featuredProvider.trustpilotUrl}
-                gphcRegNo={featuredProvider.gphcRegNo}
-                profileHref={`/pharmacies/${featuredProvider.id}`}
-              />
-            </div>
-          </section>
-        )}
 
         {/* Section 4: Price by dose */}
         {insights ? (

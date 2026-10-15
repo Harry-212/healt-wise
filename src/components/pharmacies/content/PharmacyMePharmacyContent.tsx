@@ -128,6 +128,7 @@ export default function PharmacyMePharmacyContent() {
         <ProviderCta
           url={providerUrl}
           name="Pharmacy + Me"
+          copyCode={discountCode}
           className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} mt-4`}
         >
           Visit Pharmacy + Me (Use Code hw360)
