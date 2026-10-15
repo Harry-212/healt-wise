@@ -16,6 +16,7 @@ import CurelyPharmacyContent from "@/components/pharmacies/content/CurelyPharmac
 import CuvaHealthContent from "@/components/pharmacies/content/CuvaHealthContent";
 import DoseDirectPharmacyContent from "@/components/pharmacies/content/DoseDirectPharmacyContent";
 import ReachOnlinePharmacyContent from "@/components/pharmacies/content/ReachOnlinePharmacyContent";
+import PharmacyMePharmacyContent from "@/components/pharmacies/content/PharmacyMePharmacyContent";
 import DotorPharmacyContent from "@/components/pharmacies/content/DotorPharmacyContent";
 import DrWeightmansContent from "@/components/pharmacies/content/DrWeightmansContent";
 import ESurgeryPharmacyContent from "@/components/pharmacies/content/ESurgeryPharmacyContent";
@@ -402,6 +403,31 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <ReachOnlinePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "pharmacy-me") {
+    const title = "Pharmacy + Me weight loss review (UK) — GPhC-registered";
+    const description =
+      "Pharmacy + Me: GPhC-registered UK online pharmacy (PHARMKG Ltd, 9012604), free clinical assessment, review by UK-registered Pharmacist Independent Prescribers, tracked Royal Mail delivery, and ongoing clinical care. Information from Healthwise360 — not medical advice.";
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyProfileJsonGraph({
+                slug,
+                name: "Pharmacy + Me",
+                title,
+                description,
+              }),
+            ),
+          }}
+        />
+        <PharmacyMePharmacyContent />
       </>
     );
   }

@@ -89,6 +89,7 @@ export const PHARMACY_LANDING_PROVIDER_NAMES: Record<string, string> = {
   onlinemeds: "OnlineMeds",
   oushk: "Oushk Pharmacy",
   "pharmacy-advance": "Pharmacy Advance",
+  "pharmacy-me": "Pharmacy + Me",
   "pharmacy-express": "Pharmacy Xpress",
   "pharmacy-xpress": "Pharmacy Xpress",
   pharmacy2u: "Pharmacy2U",
