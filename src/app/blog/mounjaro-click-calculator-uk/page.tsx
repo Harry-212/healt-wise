@@ -5,8 +5,8 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 const PATH = "/blog/mounjaro-click-calculator-uk";
-const TITLE = "Mounjaro Click Calculator UK: KwikPen Guide";
-const DESCRIPTION = "Mounjaro KwikPen click calculator for UK patients. See how many clicks equal each dose across all 6 pen strengths.";
+const TITLE = "How Many Clicks Is a Mounjaro Dose? KwikPen Chart UK";
+const DESCRIPTION = "How many clicks is your Mounjaro dose? KwikPen click chart for all 6 UK pen strengths, with the maths explained and safety tips.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(MOUNJARO_CLICK_CALCULATOR_UK_HERO_WEBP)}`;
 
 export const metadata: Metadata = {

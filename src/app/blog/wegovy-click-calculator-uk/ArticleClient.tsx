@@ -106,8 +106,7 @@ export default function ArticleClient() {
             <h1
               className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? "text-white" : "text-slate-900"}`}
             >
-              Wegovy Click Calculator UK: How Many Clicks Per Dose? FlexTouch
-              Guide 2026
+              How Many Clicks Is a Wegovy Dose? FlexTouch Click Chart UK (2026)
             </h1>
             <div
               className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}

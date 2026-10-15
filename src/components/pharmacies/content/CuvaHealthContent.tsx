@@ -1,5 +1,5 @@
-"use client";
-
+import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
@@ -20,14 +20,15 @@ export default function CuvaHealthContent() {
     <PharmacyDossierPage
       slugLabel="Cuva Health"
       fileRef="HW-CUVA-2026"
-      title="Cuva Health weight management review"
+      title="Cuva Health Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of Cuva Health: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Liraglutide"
       providerName="Cuva Health"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
+        { k: "Last updated", v: "20 September 2026" },
         { k: "Provider", v: "Cuva Health" },
+        { k: "GPhC", v: "9012581" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Liraglutide" },
         { k: "Fulfilment", v: "Tracked 24 + cold-chain (where needed)" },
       ]}
@@ -37,7 +38,26 @@ export default function CuvaHealthContent() {
       heroProviderLogoAlt="Cuva Health"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Cuva Health is described as a UK digital pathway into prescription-supported weight management. To compare services properly, it’s worth understanding the end-to-end experience — how the consultation is gathered, how clinicians review eligibility, what ongoing support looks like, and how delivery is handled. This dossier summarises publicly available context about Cuva Health so you can make a clearer, more informed choice.</p></div>
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            Cuva Health sells Mounjaro from £139.99 (2.5 mg) to £294.99 (15 mg) a pen, at our 20 September 2026 price check. Cuva Health is listed on the GPhC register (number 9012581), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ).
+          </p>
+        </div>
+        <PharmacyPriceTable slug="cuva-health" providerName="Cuva Health" />
         <p className="text-slate-800 leading-relaxed">
           Losing weight is often framed as a discipline problem. Eat less. Move more. Try harder.
           That explanation can feel too simplistic.
@@ -197,6 +217,13 @@ export default function CuvaHealthContent() {
           </p>
         </section>
       </div>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is Cuva Health legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          Yes. Cuva Health is listed on the official GPhC register (number 9012581). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
+        </p>
+      </section>
 
       <section>
         <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">

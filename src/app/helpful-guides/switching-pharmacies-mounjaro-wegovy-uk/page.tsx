@@ -19,9 +19,10 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "switching-pharmacies-mounjaro-wegovy-uk",
-  title: "Switching Pharmacies for Mounjaro/Wegovy",
-  description: "Want to switch pharmacy for Mounjaro or Wegovy? How to compare regulated providers, what documents you need, and how to switch safely.",
-  openGraphTitle: "Switching Pharmacies for Mounjaro/Wegovy",
+  title: "How to Switch Pharmacy for Mounjaro or Wegovy (UK 2026)",
+  description:
+    "Switch pharmacy for Mounjaro or Wegovy in 5 simple steps. What to tell the new pharmacy, how to avoid a missed dose and how to find a cheaper price.",
+  openGraphTitle: "How to Switch Pharmacy for Mounjaro or Wegovy (UK 2026)",
 });
 
 
@@ -175,10 +176,9 @@ const RELATED_GUIDES = [
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline:
-    "Switching Pharmacies for Mounjaro/Wegovy",
+  headline: "How to Switch Pharmacy for Mounjaro or Wegovy (UK 2026)",
   description:
-    "Want to switch pharmacy for Mounjaro or Wegovy? How to compare regulated providers, what documents you need, and how to switch safely.",
+    "Switch pharmacy for Mounjaro or Wegovy in 5 simple steps. What to tell the new pharmacy, how to avoid a missed dose and how to find a cheaper price.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
   publisher: {
     "@type": "Organization",
@@ -189,7 +189,7 @@ const SCHEMA = {
     },
   },
   datePublished: "2026-04-09",
-  dateModified: "2026-04-09",
+  dateModified: "2026-10-14",
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": `${siteOrigin()}${helpfulGuidePath("switching-pharmacies-mounjaro-wegovy-uk")}`,
@@ -212,23 +212,58 @@ export default function GuideSwitchingPharmacy() {
       slug="switching-pharmacies-mounjaro-wegovy-uk"
       category="Pharmacy Safety"
       categorySlug="pharmacy-safety"
-      title="Switching Pharmacies for Mounjaro or Wegovy in the UK: Step-by-Step Guide"
-      description="Switching pharmacies for your Mounjaro or Wegovy prescription is increasingly common in the UK. Here's how to do it safely—covering eligibility, what documents you need, how to choose a regulated provider, and what to expect."
+      title="How to Switch Pharmacy for Mounjaro or Wegovy in the UK"
+      description="Switch pharmacy for Mounjaro or Wegovy in 5 simple steps. What to tell the new pharmacy, how to avoid a missed dose and how to find a cheaper price."
       readTime="4 min read"
-      lastUpdated="April 2026"
+      lastUpdated="October 2026"
       toc={TOC}
       schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
+      <div className="mb-8 rounded-xl border border-emerald-900/15 bg-emerald-50/60 p-5 shadow-sm sm:p-6">
+        <p className="text-lg font-bold text-emerald-950 sm:text-xl">
+          Switch in 5 steps:
+        </p>
+        <ol className="mt-4 list-decimal space-y-2.5 pl-5 text-base text-slate-800 leading-relaxed">
+          <li>
+            Compare prices for your current dose (links:{" "}
+            <IL
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </IL>{" "}
+            and{" "}
+            <IL
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </IL>
+            ).
+          </li>
+          <li>
+            Check the new pharmacy&apos;s GPhC number on the official register.
+          </li>
+          <li>
+            Answer the new pharmacy&apos;s health questions and tell them your current dose and the date of your last injection.
+          </li>
+          <li>
+            Order before your last pen runs out, so you do not miss a dose.
+          </li>
+          <li>
+            Cancel any subscription with your old pharmacy.
+          </li>
+        </ol>
+      </div>
+
       <GuideSection id="why-switch" heading="Why People Switch Pharmacies">
         <GuideParagraph>
-          Switching pharmacies for{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL> or{" "}
-          <IL href="/what-is-wegovy">Wegovy</IL> is increasingly common in the
-          UK. Patients may find a better suited provider as the market matures
-          and more regulated options become available.</GuideParagraph>
+          Patients may find a better suited provider as the market matures and
+          more regulated options become available.
+        </GuideParagraph>
         <GuideParagraph>
           Typical reasons people switch include:
-</GuideParagraph>
+        </GuideParagraph>
         <GuideBulletList
           items={[
             "Lower treatment costs — prices vary significantly between providers. See our Mounjaro price comparison for current UK rates.",

@@ -1,5 +1,5 @@
-"use client";
-
+import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
@@ -22,17 +22,15 @@ export default function TheFamilyChemistPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="The Family Chemist"
       fileRef="HW-FAMILYCHEMIST-2026"
-      title="The Family Chemist weight management review"
+      title="The Family Chemist Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of The Family Chemist: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · Nevolat · Orlistat · Xenical · Accessories"
       providerName="The Family Chemist"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
-        {
-          k: "Provider",
-          v: "The Family Chemist (GPhC 9012915 — verify premises on register)",
-        },
+        { k: "Last updated", v: "20 September 2026" },
+        { k: "Provider", v: "The Family Chemist" },
+        { k: "GPhC", v: "9012915" },
         {
           k: "Model",
           v: "Free online questionnaire · clinician review · treatment choice if eligible · pharmacist dispensing · courier dispatch",
@@ -48,6 +46,26 @@ export default function TheFamilyChemistPharmacyContent() {
       heroProviderLogoAlt="The Family Chemist"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            The Family Chemist sells Mounjaro from £164.99 (2.5 mg) to £293.99 (15 mg) a pen, at our 20 September 2026 price check. The Family Chemist is listed on the GPhC register (number 9012915), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ).
+          </p>
+        </div>
+        <PharmacyPriceTable slug="the-family-chemist" providerName="The Family Chemist" />
         <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About The Family Chemist:</strong> Navigating online weight loss treatments can be complex. The Family Chemist is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that The Family Chemist provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           <ProviderCta url={providerUrl} name="The Family Chemist" className="font-semibold text-emerald-900 underline-offset-2 hover:underline">
@@ -154,6 +172,13 @@ export default function TheFamilyChemistPharmacyContent() {
             "Realistic expectations: medicines work best with diet, movement and long term habits rather than as instant fixes.",
           ]}
         />
+      </section>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is The Family Chemist legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          Yes. The Family Chemist is listed on the official GPhC register (number 9012915). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
+        </p>
       </section>
 
       <section className="border border-slate-200/90 bg-[#fbf9f4] p-6">
