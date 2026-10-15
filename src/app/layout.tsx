@@ -81,6 +81,7 @@ export default function RootLayout({
           display: "flex",
           flexDirection: "column",
         }}
+        suppressHydrationWarning
       >
         <script
           type="application/ld+json"
