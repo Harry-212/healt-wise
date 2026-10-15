@@ -5,68 +5,48 @@ export type CompareFaqItem = { q: string; a: string };
 export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
   "wegovy-vs-mounjaro": [
     {
-      q: "Are the prices on this page live checkout prices?",
-      a: "No. Provider prices were checked on the dates shown in each table. Prices and availability can change; confirm the final total and any additional charges with the provider before you pay.",
+      q: "Is wegovy as good as mounjaro?",
+      a: "Both are effective, MHRA-approved weekly weight-loss injections, but clinical trials show differences. In large clinical trials, patients on the highest dose of Mounjaro (tirzepatide, SURMOUNT-1) achieved an average weight loss of approximately 21% to 22.5%, compared with approximately 15% to 16% on Wegovy (semaglutide, STEP-1). However, individual responses, side effect tolerance, and personal health factors vary. A registered UK prescriber will assess which medicine is most suitable for you.",
     },
     {
-      q: "Why do Wegovy and Mounjaro monthly costs look so different?",
-      a: "Monthly spend depends on dose step, pen pricing, whether consultations and delivery are bundled, and how often you move up in titration. The matrix lets you sort and filter so you can compare like-for-like strengths where possible, but your prescriber decides the appropriate dose and schedule.",
+      q: "Is wegovy the same as mounjaro?",
+      a: "No, they contain different active ingredients and work on different hormone pathways. Wegovy contains semaglutide, which acts solely as a GLP-1 receptor agonist. Mounjaro contains tirzepatide, a dual receptor agonist targeting both GIP and GLP-1 receptors. Both are weekly pens, but they use different dose strengths, different titration schedules, and have different price structures.",
     },
     {
-      q: "Does a higher matrix price always mean worse value?",
-      a: "Not necessarily. Some listings include follow-up messaging, app support, or bundled reviews that others price separately. Use the columns for consultation fees, delivery, and trust signals alongside the headline pen price.",
+      q: "Is mounjaro better than wegovy?",
+      a: "In head-to-head trial comparisons and separate clinical trials, Mounjaro has shown higher average percentage weight loss at comparable timeframes. However, 'better' depends on the patient: Wegovy has a longer real-world track record in the UK, different dose increments, and may be better tolerated by individuals who experience persistent side effects on dual agonists. Neither medicine is universally better for every individual.",
     },
     {
-      q: "Can I use this page to decide whether Wegovy or Mounjaro is right for me?",
-      a: "No. This hub is for comparing pricing structure and pharmacy context in the UK. Eligibility, contraindications, and monitoring plans are clinical decisions for a registered prescriber after a full assessment.",
+      q: "Is wegovy or mounjaro more effective?",
+      a: "Clinical trial data indicates Mounjaro is generally more effective in terms of average weight reduction (averaging 21% to 22.5% reduction versus 15% to 16% for Wegovy at their maximum doses). Real-world effectiveness also depends heavily on sustained dietary changes, regular physical activity, and how comfortably you can tolerate the dose escalation schedule.",
     },
     {
-      q: "How often is the comparison data refreshed?",
-      a: "Each table shows the date its prices were checked. Private providers can change prices between checks, so treat the figures as a planning guide, not a quote.",
-    },
-    {
-      q: "What do the charts add beyond the matrix?",
-      a: "Distribution views help you see spreads and clustering across providers for the same dose band. They complement sorting in the matrix but do not replace reading provider-specific terms.",
-    },
-    {
-      q: "Why is GPhC verification mentioned everywhere?",
-      a: "Prescription-only medicines from UK routes should involve a regulated prescriber and a pharmacy accountable to UK standards. We surface GPhC registration lines to make it easier to cross-check who is supplying your medicine.",
-    },
-    {
-      q: "If stock is short, will the matrix show it?",
-      a: "Where our dataset includes stock or maintenance flags, you will see them in line with our standalone pages. Availability still changes quickly, so confirm directly with the pharmacy when you are ready to order.",
-    },
-    {
-      q: "Can I switch between brands using only this comparison?",
-      a: "Switching GLP-1 class medicines is a medical decision with titration rules and risk review. This page does not provide switching protocols. Speak to your prescriber before stopping or changing medicine.",
-    },
-    {
-      q: "Where can I read more about methodology and safety?",
-      a: "Use our methodology page for how we structure comparisons, our helpful guides hub for treatment context, and the GPhC verification guide for checking pharmacy credentials.",
+      q: "Why are people switching from mounjaro to wegovy?",
+      a: "Patients generally switch between Mounjaro and Wegovy due to tolerability or side effects, local stock availability, price differences at their specific maintenance dose, or because their weight loss has plateaued. Any switch must be supervised by a registered UK prescriber and typically involves starting from an introductory dose step.",
     },
     {
       q: "What is the main difference between Mounjaro and Wegovy?",
-      a: "They use different active ingredients. Mounjaro contains tirzepatide, which acts on both the GIP and GLP-1 receptors, while Wegovy contains semaglutide, a GLP-1 receptor agonist. Alongside the active ingredient, the dose ladder and provider pricing are the other practical differences.",
+      a: "The primary difference is the active pharmaceutical ingredient and receptor mechanism. Wegovy uses semaglutide (a single GLP-1 receptor agonist), whereas Mounjaro uses tirzepatide (a dual GIP and GLP-1 receptor agonist). They also follow different titration ladders (Wegovy steps from 0.25 mg to 2.4 mg; Mounjaro steps from 2.5 mg to 15 mg) and differ in monthly pharmacy pricing.",
     },
     {
-      q: "Are Mounjaro and Wegovy taken on the same schedule?",
-      a: "Both are weekly treatments injected once a week after titration. Each still begins at a low starting dose and builds up to a maintenance dose over several weeks.",
+      q: "How much do Wegovy and Mounjaro cost per month in the UK?",
+      a: "Wegovy starts from £83 per month for the 0.25 mg starter pen, rising to £135 to £290 per month for the 2.4 mg maintenance dose. Mounjaro starts from approximately £119 to £129 for 2.5 mg, rising to £150 to £230+ per month at higher maintenance doses (10 mg to 15 mg). Final totals depend on the pharmacy, consultation fees, and cold-chain delivery charges.",
+    },
+    {
+      q: "Can I switch between Wegovy and Mounjaro?",
+      a: "Yes, but switching GLP-1 class medications requires clinical assessment by a registered UK prescriber. You cannot simply transition directly across equivalent strengths. Prescribers typically review your medical history, establish an appropriate wash-out or reset schedule, and start you on a lower introductory dose to protect digestive tolerance.",
+    },
+    {
+      q: "Can you get Wegovy or Mounjaro on the NHS?",
+      a: "Both medicines have been recommended by NICE for NHS use in adults living with obesity who have weight-related health conditions (generally BMI 35+ or lower for specific ethnic groups) through specialist Tier 3 or Tier 4 weight management services. However, NHS waiting lists are lengthy and capacity is limited, which is why most UK adults currently access treatment through regulated private GPhC pharmacies.",
     },
     {
       q: "Does the cheapest provider have the lowest total cost?",
-      a: "Not always. A low starting price can come with a consultation fee, a delivery charge, or a higher repeat price at your maintenance dose. Compare the total monthly cost across the months you expect to be on treatment rather than the headline figure alone.",
+      a: "Not always. A low starter pen price may be offset by consultation fees, delivery charges, or sharp price increases once you progress to higher maintenance doses. To find the best value, calculate the projected total cost across 6 to 12 months at the maintenance dose you expect to remain on.",
     },
     {
-      q: "Can these treatments be accessed through the NHS?",
-      a: "In some cases, yes, but NHS access follows national and local pathway rules, specific eligibility criteria and service capacity, and can involve waiting lists. Availability differs by region and by medicine. Ask your GP or an NHS weight-management service whether you qualify.",
-    },
-    {
-      q: "What should I verify before selecting a provider?",
-      a: "Check that the medicine is dispensed by a registered UK pharmacy, confirm whether consultation and delivery are included, look at the maintenance price rather than only the starting price, and read the terms for repeat orders and follow-up.",
-    },
-    {
-      q: "Can results from separate clinical trials be compared directly?",
-      a: "Not reliably. Each medicine was studied in its own trial programme with different populations, durations and dosing, so comparing headline figures across studies rarely gives a fair like-for-like conclusion. Read published outcomes as context for a clinical conversation, not as a ranking.",
+      q: "Are the prices on this page live checkout prices?",
+      a: "Provider prices were checked on the dates shown in each table. While we audit our dataset monthly across 60+ GPhC registered pharmacies, private providers may adjust listed prices, voucher codes, or delivery terms at any time. Always verify the final checkout total on the provider's website before ordering.",
     },
   ],
 

@@ -3,400 +3,674 @@ import {
   ArrowRight,
   BadgeCheck,
   CalendarCheck,
+  CheckCircle2,
   ClipboardList,
+  ExternalLink,
+  HelpCircle,
+  Pill,
+  Scale,
   ShieldCheck,
+  Sparkles,
+  Zap,
 } from "lucide-react";
 
 /**
- * Long-form editorial content for `/compare/wegovy-vs-mounjaro`, moved here from
- * the retired comparison hub with
- * Sections that the versus page already covers in its
- * own blocks (effectiveness, side effects, price matrix) are not repeated.
- *
- * Server-rendered so every paragraph is present in the initial HTML. Informational
- * only; not medical advice.
+ * Editorial long-form content for `/compare/wegovy-vs-mounjaro`.
+ * Fully structured to match the 2026 Mounjaro vs Wegovy Keyword Plan & Blueprint.
+ * Server-rendered for 100% search crawler indexability.
  */
 
 type Props = {
   /** Human label for “Prices last checked”. */
   lastCheckedLabel: string;
+  priceGlanceSlot?: React.ReactNode;
+  priceTabsSlot?: React.ReactNode;
 };
 
-const GLANCE_ROWS = [
+const KEY_FACTS = [
   {
-    brand: "Mounjaro",
-    ingredient: "Tirzepatide",
-    target: "Dual GIP and GLP-1 receptor agonist",
-    schedule: "Once weekly",
+    title: "Different Active Ingredients",
+    body: "Wegovy contains semaglutide, a single GLP-1 receptor agonist. Mounjaro contains tirzepatide, a dual receptor agonist targeting both GIP and GLP-1 receptors.",
+    tint: "text-violet-600",
+    bg: "bg-violet-50/50",
   },
   {
-    brand: "Wegovy",
-    ingredient: "Semaglutide",
-    target: "GLP-1 receptor agonist",
-    schedule: "Once weekly",
+    title: "Same Weekly Injection Rhythm",
+    body: "Both medicines are self-injected once weekly using pre-filled pen devices. Each pen contains four weekly doses, covering approximately four weeks of treatment.",
+    tint: "text-brand-primary",
+    bg: "bg-emerald-50/50",
+  },
+  {
+    title: "Different Dose Ladders",
+    body: "Wegovy titrates from 0.25 mg up to 2.4 mg (some UK pharmacies also stock 7.2 mg). Mounjaro steps up from 2.5 mg in 2.5 mg increments up to a top dose of 15 mg.",
+    tint: "text-sky-600",
+    bg: "bg-sky-50/50",
+  },
+];
+
+const DOSE_LADDER_ROWS = [
+  {
+    month: "Month 1 (Starter)",
+    wegovy: "0.25 mg once weekly",
+    mounjaro: "2.5 mg once weekly",
+    purpose: "Introduces medicine, primes receptor sensitivity",
+  },
+  {
+    month: "Month 2",
+    wegovy: "0.5 mg once weekly",
+    mounjaro: "5 mg once weekly",
+    purpose: "First dose escalation step; appetite suppression deepens",
+  },
+  {
+    month: "Month 3",
+    wegovy: "1 mg once weekly",
+    mounjaro: "7.5 mg once weekly",
+    purpose: "Intermediate strength for sustained fullness",
+  },
+  {
+    month: "Month 4",
+    wegovy: "1.7 mg once weekly",
+    mounjaro: "10 mg once weekly",
+    purpose: "Higher therapeutic dose; common long-term plateau breaker",
+  },
+  {
+    month: "Month 5+",
+    wegovy: "2.4 mg once weekly (usual maintenance)",
+    mounjaro: "12.5 mg once weekly",
+    purpose: "Near-maximum or full maintenance strength",
+  },
+  {
+    month: "Month 6+",
+    wegovy: "7.2 mg weekly (where prescribed/stocked)",
+    mounjaro: "15 mg once weekly (highest maintenance)",
+    purpose: "Top licensed strength for maximal trial-matched outcomes",
   },
 ];
 
 const PRESCRIBER_FACTORS = [
   {
-    title: "Clinical eligibility",
-    body: "Whether your BMI and any weight-related conditions meet the licensed criteria for the medicine being discussed.",
+    title: "Clinical eligibility & BMI",
+    body: "Whether your BMI and any weight-related conditions (such as hypertension or pre-diabetes) meet licensed UK prescribing criteria.",
   },
   {
-    title: "Medical history",
-    body: "Past and present conditions, pregnancy plans, and family history that a prescriber reviews before treatment.",
+    title: "Medical history & contraindications",
+    body: "Past medical conditions, thyroid history, pancreatitis risk, pregnancy planning, and current medications reviewed by a prescriber.",
   },
   {
-    title: "Treatment routine",
-    body: "Whether a once-weekly injection fits your routine and how confident you feel self-administering a pen.",
+    title: "Treatment routine & confidence",
+    body: "Whether a weekly self-injection routine suits your lifestyle and how confident you feel using the pen device correctly.",
   },
   {
-    title: "Potential side effects",
-    body: "How the common gastrointestinal effects and rarer risks in each patient information leaflet apply to you.",
+    title: "Potential side effect profile",
+    body: "How known gastrointestinal symptoms and rarer risks in each patient information leaflet (PIL) align with your digestive health.",
   },
   {
-    title: "Previous treatment",
-    body: "Any earlier weight-management medicines you have tried, including how you tolerated and responded to them.",
+    title: "Previous weight-loss treatments",
+    body: "Any earlier GLP-1 medicines or weight management programmes you have tried, including tolerability and weight loss achieved.",
   },
   {
-    title: "Total ongoing cost",
-    body: "The maintenance price plus consultation and delivery, projected across the months you expect to stay on treatment.",
+    title: "Total ongoing treatment cost",
+    body: "Projected monthly expenses across 6 to 12 months at maintenance doses, factoring in consultation fees and temperature-controlled postage.",
   },
   {
-    title: "Follow-up requirements",
-    body: "How reviews, dose changes and repeat prescriptions are handled by the provider you are considering.",
+    title: "Follow-up & repeat prescribing",
+    body: "How clinical reviews, dose adjustments, and repeat orders are managed by the specific GPhC pharmacy you choose.",
   },
   {
-    title: "Personal preferences",
-    body: "Practical factors such as storage, travel, injection routine and the level of coaching or app support you want.",
+    title: "Storage & travel requirements",
+    body: "Cold-chain fridge storage requirements before first use (2°C–8°C) and room temperature stability limits when traveling.",
   },
   {
-    title: "Prescriber assessment",
-    body: "The final judgement belongs to a registered UK clinician after a full consultation — this page cannot make it for you.",
+    title: "Final prescriber assessment",
+    body: "The final prescribing decision rests with a registered UK clinician after a thorough health check — this comparison is not medical advice.",
   },
 ];
 
 const METHODOLOGY_POINTS = [
   {
-    label: "Date checked",
-    body: "Each dataset shows when provider information was last reviewed.",
+    label: "Price check frequency",
+    body: "Every pharmacy price in our comparison is independently reviewed and recorded against public website listings at regular intervals.",
   },
   {
-    label: "Source used",
-    body: "Prices are read from public provider and pharmacy pages, then recorded against a structured dataset rather than typed from memory.",
+    label: "GPhC pharmacy registration",
+    body: "We verify each provider against the General Pharmaceutical Council (GPhC) register to confirm they are authorized to dispense in Great Britain.",
   },
   {
-    label: "Delivery included?",
-    body: "We note separately whether a listed price already includes standard delivery or whether postage is added at checkout.",
+    label: "Cold-chain delivery fees included",
+    body: "We explicitly flag whether tracked temperature-controlled cold-chain delivery is included in the listed price or added at checkout.",
   },
   {
-    label: "Consultation fees",
-    body: "Where a provider charges an assessment or consultation fee, we flag it so a low medicine price is not mistaken for a low total.",
+    label: "Consultation & prescriber fees",
+    body: "Where clinics charge separate consultation or clinical assessment fees, we highlight them clearly so you see true total costs.",
   },
   {
-    label: "Discount codes",
-    body: "Headline figures exclude time-limited voucher codes; promotions expire and eligibility rules apply, so we treat them as previews only.",
+    label: "No paid ranking bias",
+    body: "Providers cannot pay to appear higher in our tables. Default sorting is strictly by lowest verified price for your chosen dose.",
   },
   {
-    label: "Unavailable doses",
-    body: "When a strength is out of stock or not listed, that row is marked rather than filled with an estimated price.",
-  },
-  {
-    label: "Provider vs dispensing pharmacy",
-    body: "The brand you order from is not always the registered pharmacy that dispenses. We distinguish the two so you can verify who supplies the medicine.",
-  },
-  {
-    label: "Trustpilot ratings",
-    body: "Where shown, review scores are captured from public listings at the time of checking and can move independently of price.",
-  },
-  {
-    label: "Update frequency",
-    body: "Datasets are refreshed periodically. Private pharmacies can change prices faster than our labels, so numbers are a planning guide, not a quote.",
-  },
-  {
-    label: "Affiliate disclosure",
-    body: "Healthwise360 does not currently earn commission from providers on this page. If that changes, the links will be labelled, and it will never change rankings, the prices shown or which providers are included.",
+    label: "Independent comparisons",
+    body: "Healthwise360 does not dispense medicines or provide clinical consultations. We publish objective price and safety information.",
   },
 ];
 
 export default function WegovyMounjaroLongFormContent({
   lastCheckedLabel,
+  priceGlanceSlot,
+  priceTabsSlot,
 }: Props) {
-  const methodology = METHODOLOGY_POINTS.map((point) =>
-    point.label === "Date checked"
-      ? {
-          ...point,
-          body: `Each dataset shows when provider information was last reviewed. Current figures reflect a ${lastCheckedLabel} snapshot.`,
-        }
-      : point,
-  );
-
   return (
     <>
-      {/* At a glance */}
+      {/* ============================================================== */}
+      {/* SECTION 3: DIFFERENCE */}
+      {/* ============================================================== */}
       <section
-        id="at-a-glance"
+        id="difference"
         className="scroll-mt-28 border-b border-slate-200/80 bg-white py-12 md:py-16"
+        aria-labelledby="difference-heading"
       >
         <div className="mx-auto max-w-5xl px-4 md:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-            Mounjaro vs Wegovy at a Glance
-          </h2>
-          <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-            <p>
-              Mounjaro and Wegovy are prescription-only weight management
-              treatments licensed for use in the UK. They belong to the same
-              broad family of injectable medicines that act on gut hormone
-              pathways, but they use different active ingredients and are priced
-              differently by each provider. This page is built to compare those
-              practical differences side by side so you can prepare for a
-              consultation, not to decide which medicine is right for you.
-            </p>
-            <p>
-              The table below summarises the core distinctions. The sections
-              after it explain the mechanism, dosing, eligibility, access and
-              cost structure in more depth, followed by how we check provider
-              information and the factors worth discussing with a prescriber.
-            </p>
-          </div>
-
-          <div className="mt-8 overflow-x-auto rounded-2xl border border-slate-200/90 shadow-sm">
-            <table className="w-full min-w-120 border-collapse text-left text-sm">
-              <thead>
-                <tr className="bg-slate-50 text-slate-900">
-                  <th className="px-4 py-3 font-semibold">Treatment</th>
-                  <th className="px-4 py-3 font-semibold">Active ingredient</th>
-                  <th className="px-4 py-3 font-semibold">Receptor target</th>
-                  <th className="px-4 py-3 font-semibold">Typical schedule</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-100 text-slate-600">
-                {GLANCE_ROWS.map((row) => (
-                  <tr key={row.brand} className="align-top">
-                    <th
-                      scope="row"
-                      className="px-4 py-3 font-semibold text-slate-900"
-                    >
-                      {row.brand}
-                    </th>
-                    <td className="px-4 py-3">{row.ingredient}</td>
-                    <td className="px-4 py-3">{row.target}</td>
-                    <td className="px-4 py-3">{row.schedule}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-3 text-xs text-slate-500">
-            Schedules reflect typical UK licensing after titration. Your
-            prescriber confirms the exact dose and product for your situation.
-          </p>
-        </div>
-      </section>
-
-      {/* Active ingredients */}
-      <section
-        id="active-ingredients"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
-      >
-        <div className="mx-auto max-w-3xl px-4 md:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-            Active Ingredients and How They Work
-          </h2>
-          <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-            <p>
-              The clearest way to understand these treatments is by their active
-              ingredient. Mounjaro contains tirzepatide and Wegovy contains
-              semaglutide. Each ingredient works on receptors that the body
-              normally uses to regulate hunger and blood sugar after eating.
-            </p>
-            <p>
-              Semaglutide is a GLP-1 receptor agonist. It mimics
-              glucagon-like peptide-1, a hormone released from the gut, to
-              support appetite regulation, increase the feeling of fullness known
-              as satiety, and slow gastric emptying so that meals feel
-              satisfying for longer. Tirzepatide adds a second action: it engages
-              the GIP receptor as well as the GLP-1 receptor. This dual mechanism
-              is the main pharmacological difference between Mounjaro and
-              Wegovy.
-            </p>
-            <p>
-              In everyday terms, both reduce appetite and help people feel full
-              on smaller portions, but the receptor profile, the pace of dose
-              escalation and individual tolerability differ. Neither medicine
-              works in isolation — they are intended to support diet, activity
-              and behavioural change under clinical supervision, not to replace
-              them.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Dosing schedules */}
-      <section
-        id="dosing"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-white py-12 md:py-16"
-      >
-        <div className="mx-auto max-w-3xl px-4 md:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-            Dosing Schedules and Treatment Formats
-          </h2>
-          <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-            <p>
-              Mounjaro and Wegovy are both weekly treatments: after an
-              introductory period you inject once a week. Whether that routine
-              suits you is a genuine lifestyle question worth raising in a
-              consultation.
-            </p>
-            <p>
-              Both follow a titration plan. You begin at a low starting dose to
-              help the body adjust and reduce early side effects, then move
-              through a structured dose escalation over several weeks until you
-              reach a maintenance dose. The starting dose is not the dose most
-              people stay on, which matters when you compare cost: early months
-              on a low dose can be cheaper than later maintenance months.
-            </p>
-            <p>
-              The pen format can vary by strength and supplier. Because of this,
-              some pharmacies quote a price per pen and others per pack, so it
-              helps to translate any quote into a monthly treatment cost for the
-              dose you expect to use.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Eligibility */}
-      <section
-        id="eligibility"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
-      >
-        <div className="mx-auto max-w-3xl px-4 md:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-            UK Eligibility and Clinical Assessment
-          </h2>
-          <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-            <p>
-              Eligibility for these treatments in the UK generally rests on BMI
-              thresholds together with clinical judgement. They are typically
-              considered for adults living with obesity, or for those who are
-              overweight with a weight-related condition such as high blood
-              pressure, raised blood sugar or sleep apnoea. Exact BMI eligibility
-              can differ by medicine and by provider.
-            </p>
-            <p>
-              Before any prescription, a registered clinician carries out a
-              clinical assessment. This reviews your medical history, current
-              medicines, and any contraindications, and confirms that a weight
-              management medicine is appropriate for you. Because these are
-              prescription-only medicines, they cannot be bought without this
-              step, and a legitimate UK provider will always assess you first.
-            </p>
-            <p>
-              Meeting a BMI cut-off does not guarantee suitability, and being
-              close to one does not automatically exclude you. The assessment
-              exists to weigh benefits against risks for your individual
-              circumstances.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* NHS and private access */}
-      <section
-        id="nhs-private"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-white py-12 md:py-16"
-      >
-        <div className="mx-auto max-w-3xl px-4 md:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-            NHS and Private Treatment Access
-          </h2>
-          <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-            <p>
-              There are two broad routes to these medicines in the UK. NHS access,
-              where it is available, follows national and local pathway rules,
-              specific eligibility criteria and service capacity, and can involve
-              waiting lists or specialist clinic referral. Availability differs by
-              region and by medicine.
-            </p>
-            <p>
-              Private access is usually faster and is self-funded through a
-              registered online pharmacy or clinic after a consultation. This page
-              focuses on private provider pricing because that is where costs vary
-              most and where a clear comparison helps. If you want to explore NHS
-              options, speak to your GP or an NHS weight-management service about
-              whether you qualify.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Consultation, delivery and total cost */}
-      <section
-        id="total-cost"
-        className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
-      >
-        <div className="mx-auto max-w-3xl px-4 md:px-8">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-            Consultation, Delivery and Total Treatment Costs
-          </h2>
-          <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-            <p>
-              The headline pen or pack price is only part of what you pay. A
-              realistic monthly treatment cost usually combines the medicine
-              itself with any consultation fee, a delivery charge for tracked or
-              temperature-controlled shipping, and the repeat price on future
-              orders. Some providers bundle these into one figure; others list
-              them separately.
-            </p>
-            <p>
-              This is why the cheapest headline medicine is not always the lowest
-              total cost. A provider with a slightly higher pen price but no
-              consultation fee and free delivery can work out cheaper over several
-              months than one with a low medicine price and added charges at
-              checkout. Projecting the total cost across the months you expect to
-              be on your maintenance dose is the fairest way to compare.
-            </p>
-          </div>
-          <div className="mt-6">
-            <Link
-              href="#compare-med-tabs"
-              className="inline-flex items-center gap-2 rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-95"
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-violet-800">
+              <Scale className="h-3.5 w-3.5" aria-hidden />
+              Mechanism & Evidence
+            </span>
+            <h2
+              id="difference-heading"
+              className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
             >
-              Open the price matrix
-              <ArrowRight className="h-4 w-4" aria-hidden />
+              What is the difference between Mounjaro and Wegovy?
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+              The fundamental difference between Mounjaro and Wegovy lies in their active ingredients and the biological hormone receptors they target. Wegovy contains semaglutide, which acts solely as a GLP-1 receptor agonist. Mounjaro contains tirzepatide, a dual-action molecule that stimulates both GIP (glucose-dependent insulinotropic polypeptide) and GLP-1 receptors.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-violet-200/90 bg-violet-50/30 p-6 md:p-8">
+              <div className="flex items-center gap-2">
+                <span className="rounded-lg bg-violet-600 p-1.5 text-white">
+                  <Pill className="h-5 w-5" aria-hidden />
+                </span>
+                <h3 className="text-lg font-bold text-slate-900">
+                  Wegovy (Semaglutide)
+                </h3>
+              </div>
+              <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-violet-700">
+                Single GLP-1 Receptor Agonist
+              </p>
+              <div className="mt-4 space-y-3 text-sm leading-relaxed text-slate-600">
+                <p>
+                  Semaglutide mimics natural glucagon-like peptide-1 produced in the gut. By binding to GLP-1 receptors in the brain's appetite control centres (the hypothalamus), it sends signals of fullness, reduces cravings, and slows gastric emptying so you remain satisfied on smaller portions.
+                </p>
+                <p>
+                  In the landmark STEP-1 clinical trial (published in the <em>New England Journal of Medicine</em>), adults taking Wegovy 2.4 mg alongside lifestyle intervention achieved an average weight loss of approximately <strong>14.9% to 15.8%</strong> of their starting body weight over 68 weeks.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-emerald-200/90 bg-emerald-50/30 p-6 md:p-8">
+              <div className="flex items-center gap-2">
+                <span className="rounded-lg bg-emerald-600 p-1.5 text-white">
+                  <Zap className="h-5 w-5" aria-hidden />
+                </span>
+                <h3 className="text-lg font-bold text-slate-900">
+                  Mounjaro (Tirzepatide)
+                </h3>
+              </div>
+              <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-brand-primary">
+                Dual GIP & GLP-1 Receptor Agonist
+              </p>
+              <div className="mt-4 space-y-3 text-sm leading-relaxed text-slate-600">
+                <p>
+                  Tirzepatide engages both GIP and GLP-1 receptors simultaneously. GIP enhances metabolic regulation, fat storage utilisation, and works synergistically with GLP-1 to suppress appetite and prevent nausea while improving insulin secretion.
+                </p>
+                <p>
+                  In the SURMOUNT-1 clinical trial, adults taking the highest 15 mg dose of Mounjaro achieved an average weight loss of <strong>20.9% to 22.5%</strong> over 72 weeks. In the SURMOUNT-5 head-to-head trial, tirzepatide demonstrated superior percentage weight reduction compared directly with semaglutide.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 3 Key Fact Cards */}
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {KEY_FACTS.map((fact) => (
+              <div
+                key={fact.title}
+                className={`rounded-2xl border border-slate-200/90 ${fact.bg} p-5 shadow-sm transition`}
+              >
+                <BadgeCheck className={`h-6 w-6 ${fact.tint}`} aria-hidden />
+                <h4 className="mt-3 font-semibold text-slate-900">{fact.title}</h4>
+                <p className="mt-1 text-xs leading-relaxed text-slate-600 md:text-sm">
+                  {fact.body}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-amber-200/80 bg-amber-50/50 p-5 text-sm leading-relaxed text-amber-900">
+            <p className="font-semibold">Important Clinical Context:</p>
+            <p className="mt-1">
+              While clinical trials report average percentage weight reduction across large cohorts, your personal response depends on individual biological factors, tolerability, lifestyle support, and adherence. A registered UK prescriber must evaluate your medical history before recommending either medicine.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/* SECTION 4: COST */}
+      {/* ============================================================== */}
+      <section
+        id="cost"
+        className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
+        aria-labelledby="cost-heading"
+      >
+        <div className="mx-auto max-w-5xl px-4 md:px-8">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-primary">
+              <Zap className="h-3.5 w-3.5" aria-hidden />
+              Pricing & Value
+            </span>
+            <h2
+              id="cost-heading"
+              className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
+            >
+              Wegovy vs Mounjaro cost UK
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+              Comparing Wegovy vs Mounjaro cost in the UK requires looking beyond the introductory starter pen. While Wegovy currently has the cheapest starter pen (£83 at Slinic for 0.25 mg), monthly costs escalate significantly as you progress through titration to your long-term maintenance dose.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900">
+                Wegovy Pricing Profile (UK)
+              </h3>
+              <ul className="mt-4 space-y-3 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-primary" />
+                  <span><strong>Starter pen (0.25 mg):</strong> Starts from £83/month; median ~£100 across 62 pharmacies.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-primary" />
+                  <span><strong>Maintenance pen (2.4 mg):</strong> Starts from £135/month; median ~£200; can reach £290.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-primary" />
+                  <span><strong>First 6 months titration:</strong> Approximately £639.96 (lowest) to £914 (typical).</span>
+                </li>
+              </ul>
+              <div className="mt-6">
+                <Link
+                  href="/wegovy-price-comparison"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary hover:underline underline-offset-2"
+                >
+                  View all 62 Wegovy pharmacy prices
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900">
+                Mounjaro Pricing Profile (UK)
+              </h3>
+              <ul className="mt-4 space-y-3 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-primary" />
+                  <span><strong>Starter pen (2.5 mg):</strong> Starts from ~£119–£129/month; median ~£145 across 60+ pharmacies.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-primary" />
+                  <span><strong>Maintenance pen (10–15 mg):</strong> Starts from ~£150–£180/month; median ~£200–£230.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-primary" />
+                  <span><strong>First 6 months titration:</strong> Approximately £850 to £1,150 across typical titration schedules.</span>
+                </li>
+              </ul>
+              <div className="mt-6">
+                <Link
+                  href="/mounjaro-price-comparison"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary hover:underline underline-offset-2"
+                >
+                  View all 60+ Mounjaro pharmacy prices
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {priceGlanceSlot ? (
+            <div className="mt-10">{priceGlanceSlot}</div>
+          ) : null}
+
+          {priceTabsSlot ? (
+            <div id="compare-med-tabs" className="mt-10 scroll-mt-28">
+              {priceTabsSlot}
+            </div>
+          ) : null}
+
+          {/* Practical comparison guide */}
+          <div className="mt-10 rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm">
+            <h3 className="text-lg font-bold text-slate-900">
+              How to Avoid Overpaying on Ongoing Treatment
+            </h3>
+            <div className="mt-4 grid gap-4 sm:grid-cols-3 text-sm text-slate-600">
+              <div className="rounded-xl border border-slate-100 bg-slate-50/60 p-4">
+                <p className="font-semibold text-slate-900">1. Compare Maintenance Cost</p>
+                <p className="mt-1">
+                  You spend most of your treatment on maintenance doses (2.4 mg for Wegovy or 10–15 mg for Mounjaro). A cheap month 1 pen is no saving if month 5 jumps by £100.
+                </p>
+              </div>
+              <div className="rounded-xl border border-slate-100 bg-slate-50/60 p-4">
+                <p className="font-semibold text-slate-900">2. Include Delivery & Cold Chain</p>
+                <p className="mt-1">
+                  Both pens require insulated cold-chain transport (2°C–8°C). Some pharmacies charge £4.95 to £9.95 for shipping, while others include tracked courier delivery free.
+                </p>
+              </div>
+              <div className="rounded-xl border border-slate-100 bg-slate-50/60 p-4">
+                <p className="font-semibold text-slate-900">3. Switch Between GPhC Pharmacies</p>
+                <p className="mt-1">
+                  You are not locked into one pharmacy. If another GPhC-registered provider offers your maintenance strength for less, you can transfer after completing their clinical check.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/* SECTION 5: DOSE */}
+      {/* ============================================================== */}
+      <section
+        id="dose"
+        className="scroll-mt-28 border-b border-slate-200/80 bg-white py-12 md:py-16"
+        aria-labelledby="dose-heading"
+      >
+        <div className="mx-auto max-w-5xl px-4 md:px-8">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-800">
+              <Pill className="h-3.5 w-3.5" aria-hidden />
+              Dosing & Titration
+            </span>
+            <h2
+              id="dose-heading"
+              className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
+            >
+              Wegovy and Mounjaro dose comparison
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+              Both Wegovy and Mounjaro follow a mandatory dose escalation schedule (titration) where you begin at a low introductory dose and step up every 4 weeks. This gradual transition gives your gastrointestinal system time to adapt to gut hormone receptor stimulation, substantially lowering the incidence and severity of nausea, reflux, and digestive upset. You should only advance to a higher strength if your current dose is well tolerated and approved by your prescriber.
+            </p>
+          </div>
+
+          {/* Dose Ladder Table */}
+          <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200/90 shadow-sm">
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-140 border-collapse text-left text-sm">
+                <thead>
+                  <tr className="border-b border-slate-200 bg-slate-50 text-slate-900">
+                    <th scope="col" className="px-5 py-3.5 font-bold">Titration Stage</th>
+                    <th scope="col" className="px-5 py-3.5 font-bold text-violet-900 bg-violet-50/50">Wegovy Dose Ladder</th>
+                    <th scope="col" className="px-5 py-3.5 font-bold text-brand-primary bg-emerald-50/50">Mounjaro Dose Ladder</th>
+                    <th scope="col" className="px-5 py-3.5 font-bold text-slate-700">Clinical Objective</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 text-slate-700">
+                  {DOSE_LADDER_ROWS.map((row) => (
+                    <tr key={row.month} className="hover:bg-slate-50/80 transition-colors">
+                      <th scope="row" className="px-5 py-3.5 font-semibold text-slate-900">
+                        {row.month}
+                      </th>
+                      <td className="px-5 py-3.5 bg-violet-50/20 font-medium text-slate-800">
+                        {row.wegovy}
+                      </td>
+                      <td className="px-5 py-3.5 bg-emerald-50/20 font-medium text-slate-800">
+                        {row.mounjaro}
+                      </td>
+                      <td className="px-5 py-3.5 text-xs text-slate-600">
+                        {row.purpose}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Dose calculation tools links */}
+          <div className="mt-6 flex flex-wrap gap-4 items-center">
+            <span className="text-sm font-semibold text-slate-700">Need dose or click calculation help?</span>
+            <Link
+              href="/tools/wegovy-click-calculator"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-800 shadow-xs hover:bg-slate-50"
+            >
+              Wegovy click calculator
+              <ExternalLink className="h-3.5 w-3.5 text-slate-500" />
+            </Link>
+            <Link
+              href="/tools/mounjaro-click-calculator"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-800 shadow-xs hover:bg-slate-50"
+            >
+              Mounjaro click calculator
+              <ExternalLink className="h-3.5 w-3.5 text-slate-500" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Methodology */}
+      {/* ============================================================== */}
+      {/* SECTION 6: SIDE EFFECTS */}
+      {/* ============================================================== */}
+      <section
+        id="side-effects"
+        className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
+        aria-labelledby="side-effects-heading"
+      >
+        <div className="mx-auto max-w-5xl px-4 md:px-8">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-rose-800">
+              <ShieldCheck className="h-3.5 w-3.5" aria-hidden />
+              Safety & Tolerance
+            </span>
+            <h2
+              id="side-effects-heading"
+              className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
+            >
+              Wegovy vs Mounjaro side effects
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+              Because both Wegovy and Mounjaro act on gut hormone pathways that regulate gastric motility, they share a very similar gastrointestinal side effect profile. Most side effects are mild to moderate and peak during the first 1 to 2 weeks of starting a new dose step before settling.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900">
+                Most Common Side Effects (Both Medicines)
+              </h3>
+              <p className="mt-2 text-xs text-slate-500">
+                Reported by more than 1 in 10 patients in clinical trials:
+              </p>
+              <ul className="mt-4 space-y-2.5 text-sm text-slate-600">
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-rose-500" />
+                  <span><strong>Nausea:</strong> Especially when eating too quickly or having fatty meals.</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-rose-500" />
+                  <span><strong>Diarrhoea or Constipation:</strong> Caused by altered intestinal transit times.</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-rose-500" />
+                  <span><strong>Vomiting:</strong> Usually linked to overeating beyond fullness cues.</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-rose-500" />
+                  <span><strong>Indigestion & Acid Reflux:</strong> From delayed stomach emptying.</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-rose-500" />
+                  <span><strong>Fatigue & Headache:</strong> Common early in titration as calorie intake drops.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900">
+                Tolerability Comparison & Rare Risks
+              </h3>
+              <div className="mt-3 space-y-3 text-sm leading-relaxed text-slate-600">
+                <p>
+                  <strong>Dual vs Single Agonist:</strong> In clinical head-to-head comparisons, overall rates of gastrointestinal events were broadly comparable, though some patients find tirzepatide's dual mechanism produces slightly less intense nausea, while others tolerate semaglutide better.
+                </p>
+                <p>
+                  <strong>Rare Serious Risks:</strong> Pancreatitis (severe persistent stomach pain radiating to the back), gallbladder disease (gallstones), and acute kidney injury from severe dehydration.
+                </p>
+                <p>
+                  Always review the official Patient Information Leaflet (PIL) inside your medicine box and report adverse reactions to the MHRA Yellow Card scheme.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-4 items-center">
+            <Link
+              href="/helpful-guides"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-primary hover:underline underline-offset-2"
+            >
+              Read our side-effect management guides
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <span className="text-slate-300">•</span>
+            <Link
+              href="/pharmacy-safety-gphc-verification"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-primary hover:underline underline-offset-2"
+            >
+              How we verify GPhC pharmacy safety
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/* SECTION 7: NHS ACCESS */}
+      {/* ============================================================== */}
+      <section
+        id="nhs"
+        className="scroll-mt-28 border-b border-slate-200/80 bg-white py-12 md:py-16"
+        aria-labelledby="nhs-heading"
+      >
+        <div className="mx-auto max-w-5xl px-4 md:px-8">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-800">
+              <HelpCircle className="h-3.5 w-3.5" aria-hidden />
+              NHS Pathways
+            </span>
+            <h2
+              id="nhs-heading"
+              className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
+            >
+              Mounjaro or Wegovy on the NHS
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+              Both Wegovy and Mounjaro have received approval from the National Institute for Health and Care Excellence (NICE) for NHS prescribing, but strict clinical criteria and severe specialist capacity constraints mean most patients face substantial waiting times or turn to private GPhC pharmacies.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-200/90 bg-slate-50/60 p-6">
+              <h3 className="text-lg font-bold text-slate-900">
+                Wegovy on the NHS (NICE TA875)
+              </h3>
+              <ul className="mt-4 space-y-2.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-blue-600 shrink-0" />
+                  <span><strong>Eligibility:</strong> BMI of at least 35 kg/m² (or 30 kg/m² for people from South Asian, Chinese, Black African or African-Caribbean backgrounds) plus at least one weight-related condition.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-blue-600 shrink-0" />
+                  <span><strong>Service Tier:</strong> Prescribed only within specialist Tier 3 / Tier 4 multidisciplinary weight management clinics.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-blue-600 shrink-0" />
+                  <span><strong>2-Year Maximum:</strong> NHS treatment is capped at a maximum of 2 years under current NICE guidance.</span>
+                </li>
+              </ul>
+              <div className="mt-4">
+                <Link
+                  href="/what-is-wegovy"
+                  className="text-xs font-semibold text-brand-primary hover:underline"
+                >
+                  Learn more in What is Wegovy guide →
+                </Link>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200/90 bg-slate-50/60 p-6">
+              <h3 className="text-lg font-bold text-slate-900">
+                Mounjaro on the NHS (NICE TA1005)
+              </h3>
+              <ul className="mt-4 space-y-2.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-blue-600 shrink-0" />
+                  <span><strong>Eligibility:</strong> Recommended for adults with a BMI of 35 kg/m² and at least one weight-related comorbidity (with ethnic minority threshold reductions).</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-blue-600 shrink-0" />
+                  <span><strong>Phased Rollout:</strong> NHS England is implementing a structured multi-year rollout, prioritising patients with highest clinical urgency.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1 h-2 w-2 rounded-full bg-blue-600 shrink-0" />
+                  <span><strong>Capacity Reality:</strong> Tier 3 waiting lists across most NHS integrated care boards often exceed 12 to 24 months.</span>
+                </li>
+              </ul>
+              <div className="mt-4">
+                <Link
+                  href="/what-is-mounjaro"
+                  className="text-xs font-semibold text-brand-primary hover:underline"
+                >
+                  Learn more in What is Mounjaro guide →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================== */}
+      {/* SECTION 8: METHODOLOGY & PRESCRIBER FACTORS */}
+      {/* ============================================================== */}
       <section
         id="methodology"
         className="scroll-mt-28 border-b border-slate-200/80 bg-white py-12 md:py-16"
+        aria-labelledby="methodology-heading"
       >
-        <div className="mx-auto max-w-4xl px-4 md:px-8">
+        <div className="mx-auto max-w-5xl px-4 md:px-8">
           <div className="flex items-start gap-3">
-            <span className="mt-1 rounded-xl bg-emerald-50 p-2 text-emerald-700 ring-1 ring-emerald-200/80">
+            <span className="mt-1 rounded-xl bg-emerald-50 p-2 text-brand-primary ring-1 ring-emerald-200/80">
               <ClipboardList className="h-5 w-5" aria-hidden />
             </span>
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+              <h2
+                id="methodology-heading"
+                className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
+              >
                 How Healthwise360 Checks Provider Information
               </h2>
-              <p className="mt-3 text-slate-600 leading-relaxed">
-                Healthwise360 is an independent comparison publisher. We do not
-                sell medicines and we do not provide medical advice. Here is how
-                the pricing and provider details on this page are recorded.
+              <p className="mt-2 text-slate-600 leading-relaxed max-w-3xl">
+                Healthwise360 is an independent UK comparison publisher. Current data reflects a {lastCheckedLabel} audit across 60+ regulated pharmacies. Here is how our verification safeguards accuracy:
               </p>
             </div>
           </div>
 
-          <dl className="mt-8 grid gap-4 sm:grid-cols-2">
-            {methodology.map((point) => (
+          <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {METHODOLOGY_POINTS.map((point) => (
               <div
                 key={point.label}
-                className="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm"
+                className="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-xs"
               >
                 <dt className="flex items-center gap-2 font-semibold text-slate-900">
                   <BadgeCheck
@@ -405,7 +679,7 @@ export default function WegovyMounjaroLongFormContent({
                   />
                   {point.label}
                 </dt>
-                <dd className="mt-1 text-sm text-slate-600 leading-relaxed">
+                <dd className="mt-2 text-xs leading-relaxed text-slate-600 md:text-sm">
                   {point.body}
                 </dd>
               </div>
@@ -415,41 +689,41 @@ export default function WegovyMounjaroLongFormContent({
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/methodology"
-              className="inline-flex items-center gap-2 rounded-xl bg-brand-primary px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-95"
+              className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
             >
               Read our full methodology
               <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
             <Link
-              href="/pharmacy-safety-gphc-verification"
+              href="/prices/cheapest-options-uk"
               className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition hover:bg-slate-50"
             >
-              <ShieldCheck className="h-4 w-4 text-emerald-600" aria-hidden />
-              How we verify pharmacies
+              Cheapest options hub
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Factors to discuss with a prescriber */}
+      {/* Factors to discuss with prescriber */}
       <section
         id="prescriber-factors"
         className="scroll-mt-28 border-b border-slate-200/80 bg-slate-50/60 py-12 md:py-16"
+        aria-labelledby="prescriber-heading"
       >
-        <div className="mx-auto max-w-4xl px-4 md:px-8">
+        <div className="mx-auto max-w-5xl px-4 md:px-8">
           <div className="flex items-start gap-3">
             <span className="mt-1 rounded-xl bg-violet-50 p-2 text-violet-700 ring-1 ring-violet-200/80">
               <CalendarCheck className="h-5 w-5" aria-hidden />
             </span>
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+              <h2
+                id="prescriber-heading"
+                className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
+              >
                 Factors to Discuss With a Prescriber
               </h2>
-              <p className="mt-3 text-slate-600 leading-relaxed">
-                This page does not give personal medical recommendations. Use the
-                points below to prepare for a consultation — the decision about
-                whether any treatment is right for you belongs to a registered UK
-                clinician.
+              <p className="mt-2 text-slate-600 leading-relaxed max-w-3xl">
+                This comparison provides pricing and trial context, not medical recommendations. Use the checklist below to prepare for your online or in-person consultation:
               </p>
             </div>
           </div>
@@ -458,10 +732,10 @@ export default function WegovyMounjaroLongFormContent({
             {PRESCRIBER_FACTORS.map((factor) => (
               <div
                 key={factor.title}
-                className="rounded-2xl border border-slate-200/90 bg-linear-to-br from-slate-50 to-white p-5 shadow-sm"
+                className="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-xs"
               >
                 <p className="font-semibold text-slate-900">{factor.title}</p>
-                <p className="mt-1 text-sm text-slate-600 leading-relaxed">
+                <p className="mt-1.5 text-xs leading-relaxed text-slate-600 md:text-sm">
                   {factor.body}
                 </p>
               </div>
