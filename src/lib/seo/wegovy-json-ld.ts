@@ -174,27 +174,79 @@ export function wegovyClickCalculatorFaqJsonLd(): Record<string, unknown> {
 export const WEGOVY_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }[] =
   [
     {
-      question: "How much does Wegovy cost in the UK?",
+      question: "What is the price of Wegovy in the UK?",
       answer:
-        "Private Wegovy pen prices depend on dose (0.25 mg up to 7.2 mg), the pharmacy, and whether consultation and delivery fees are bundled. Our comparison table lists the price of one pen at each strength and the date each provider’s prices were checked; TBC means no confirmed price for that strength. Delivery is not included—always confirm the final checkout price on the provider’s site.",
+        "Wegovy costs from £83 to £290 for one pen in the UK, on doses from 0.25 mg to 2.4 mg. The 7.2 mg pen costs from £199.99. The price depends on your dose and your pharmacy.",
     },
     {
-      question: "What is the cheapest Wegovy UK provider?",
+      question: "How much is Wegovy per month?",
       answer:
-        "The cheapest provider can change from one strength to the next, so sort the table by the strength you expect to use rather than the 0.25 mg starter pen. Then add any delivery or consultation charges before comparing totals.",
+        "One pen lasts a month. So Wegovy costs from £83 a month on the starter dose and from £135 a month on 2.4 mg. Most people pay about £200 a month on 2.4 mg.",
     },
     {
-      question: "Do I need a prescription for Wegovy?",
+      question: "How much is Wegovy per week?",
       answer:
-        "Yes. Wegovy (semaglutide) is prescription-only in the UK. Legitimate private routes require an appropriate medical assessment by a qualified prescriber before a pharmacy can supply it.",
+        "Wegovy costs from £20.75 a week in the UK. One pen holds 4 weekly doses, so the weekly price is the pen price divided by 4. On 2.4 mg, it is from £33.75 a week.",
+    },
+    {
+      question: "What is the cheapest Wegovy provider in the UK?",
+      answer:
+        "It depends on your dose. In our 20 September 2026 check, Next Script was cheapest for 0.5 mg and 1 mg, and Medicine Marketplace was cheapest for 1.7 mg and 2.4 mg.",
+    },
+    {
+      question: "What's the cheapest place to get Wegovy?",
+      answer:
+        "A GPhC registered online pharmacy, if you pay privately. Compare the dose you will be on, add delivery, and check the month 2 price. Our table sorts the cheapest Wegovy prices first.",
+    },
+    {
+      question: "Is cheap Wegovy safe?",
+      answer:
+        "Yes, if it comes from a GPhC registered pharmacy and a prescriber checks your health first. Never buy from a site that does not ask about your health.",
+    },
+    {
+      question: "Can you buy Wegovy in the UK?",
+      answer:
+        "Yes. Wegovy jabs in the UK need a prescription. An online pharmacy can give you one after a health check, or you may get it on the NHS if you qualify.",
+    },
+    {
+      question: "Is the Wegovy price going up?",
+      answer:
+        "Each pharmacy sets its own price, and some change it every month. Prices can go up or down at any time. We check them every month and show the date, so you see the latest price before you order.",
+    },
+    {
+      question: "Will Wegovy get cheaper in the UK?",
+      answer:
+        "No one can say for sure. The best way to pay less today is to compare prices for your dose before each order.",
+    },
+    {
+      question: "Do Wegovy prices include delivery?",
+      answer:
+        "Not always. It depends on the pharmacy. Many add a delivery charge at checkout because the pen must stay cold, so always check the final price before you pay.",
+    },
+    {
+      question: "Can I switch pharmacy to get a better price?",
+      answer:
+        "Yes. A new pharmacy will do its own health check first. Tell them your current dose so you can carry on without a break.",
+    },
+    {
+      question: "What are the best websites to compare Wegovy prices in the UK?",
+      answer:
+        "Pick a site that checks every pharmacy's GPhC number, shows the date of each price, covers every dose and does not let pharmacies pay to rank higher. Healthwise360 does all four.",
+    },
+    {
+      question: "How often do you check Wegovy prices?",
+      answer:
+        "We check every price in the first week of each month. The date of the last check is shown next to the prices.",
     },
   ];
 
-export function wegovyCompareUkFaqJsonLd(): Record<string, unknown> {
-  return {
-    "@context": "https://schema.org",
+export function wegovyCompareUkFaqJsonLd(
+  items: { question: string; answer: string }[] = WEGOVY_COMPARE_UK_FAQ_ITEMS,
+  pageUrl?: string,
+): Record<string, unknown> {
+  const faqNode: Record<string, unknown> = {
     "@type": "FAQPage",
-    mainEntity: WEGOVY_COMPARE_UK_FAQ_ITEMS.map((item) => ({
+    mainEntity: items.map((item) => ({
       "@type": "Question",
       name: item.question,
       acceptedAnswer: {
@@ -203,4 +255,13 @@ export function wegovyCompareUkFaqJsonLd(): Record<string, unknown> {
       },
     })),
   };
+
+  faqNode["@context"] = "https://schema.org";
+
+  if (pageUrl) {
+    faqNode["@id"] = `${pageUrl}#faq`;
+    faqNode["isPartOf"] = { "@id": `${pageUrl}#webpage` };
+  }
+
+  return faqNode;
 }
