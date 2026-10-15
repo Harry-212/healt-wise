@@ -72,15 +72,13 @@ export default function MounjaroCompareShaderHero({
           <CompareHeroPricesCheckedPill sparkleClassName="text-violet-200" dateLabel={lastUpdated} />
 
           <h1 className="mb-3 text-balance text-4xl leading-[1.08] font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-            <span
-              className={`${instrumentSerif.className} text-violet-100/95 italic`}
-            >
-              Mounjaro
-            </span>{" "}
-            <span className="font-bold text-white">Price Comparison UK</span>
+            Mounjaro Price Comparison UK
           </h1>
 
-          <p className="mx-auto mb-4 max-w-2xl text-pretty text-sm font-light leading-relaxed text-white/75 lg:mx-0 md:text-base">
+          <p
+            id="hero-answer"
+            className="mx-auto mb-4 max-w-2xl text-pretty text-sm font-light leading-relaxed text-white/75 lg:mx-0 md:text-base"
+          >
             {cheapestPrice != null && cheapestProvider ? (
               <>
                 The cheapest Mounjaro in the UK is {formatGbp(cheapestPrice)}{" "}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CalendarClock } from "lucide-react";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import MounjaroCompareChartsSection from "@/components/compare/MounjaroCompareChartsSection";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
@@ -9,8 +9,7 @@ import MounjaroUkCompareTable from "@/components/mounjaro/MounjaroUkCompareTable
 import MounjaroPriceSnapshot from "@/components/mounjaro/MounjaroPriceSnapshot";
 import MounjaroPriceByDoseSection from "@/components/mounjaro/MounjaroPriceByDoseSection";
 import MounjaroCheapestSection from "@/components/mounjaro/MounjaroCheapestSection";
-import MounjaroFirstMonthsCostSection from "@/components/mounjaro/MounjaroFirstMonthsCostSection";
-import AnnualCostSection from "@/components/compare/AnnualCostSection";
+import MounjaroMonthlyCostSection from "@/components/mounjaro/MounjaroMonthlyCostSection";
 import NhsAccessSection from "@/components/compare/NhsAccessSection";
 import {
   MOUNJARO_DOSE_KEYS,
@@ -40,17 +39,17 @@ export const revalidate = 0;
 export const metadata: Metadata = {
   ...buildPageShareMetadata({
     canonicalPath: "/mounjaro-price-comparison",
-    title: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
+    title: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
     metaDescription:
-      "Compare Mounjaro pen prices by dose across 60+ GPhC-registered UK pharmacies. See delivery costs, provider ratings and the date each price was last checked.",
-    openGraphTitle: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
+      "Compare Mounjaro prices at 67 GPhC registered UK pharmacies. Find the cheapest Mounjaro in the UK for every dose, from 2.5 mg to 15 mg.",
+    openGraphTitle: "Mounjaro Price Comparison UK: Cheapest Price by Dose",
     openGraphDescription:
-      "Compare Mounjaro pen prices by dose across 60+ GPhC-registered UK pharmacies. See delivery costs, provider ratings and the date each price was last checked.",
+      "See the lowest Mounjaro price for every dose at 67 UK pharmacies. Checked and dated, with no paid rankings.",
     imagePath: "/mounjaro healt wise.png",
     imageAlt: "Compare Mounjaro prices UK — Healthwise360",
   }),
   title: {
-    absolute: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
+    absolute: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
   },
 };
 
@@ -69,11 +68,11 @@ function compareWebPageJsonLd(providers: MounjaroUkProviderCompare[]) {
   const webpage = {
     "@type": "CollectionPage",
     "@id": `${pageUrl}#webpage`,
-    name: "Mounjaro Price Comparison UK | Compare 60+ Pharmacies",
+    name: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
     description:
-      "Compare Mounjaro pen prices by dose across 60+ GPhC-registered UK pharmacies. See delivery costs, provider ratings and the date each price was last checked.",
+      "Compare Mounjaro prices at 67 GPhC registered UK pharmacies. Find the cheapest Mounjaro in the UK for every dose, from 2.5 mg to 15 mg.",
     url: pageUrl,
-    dateModified: "2026-09-25",
+    dateModified: "2026-10-15",
     isPartOf: {
       "@id": `${base}/#website`,
     },
@@ -201,6 +200,7 @@ export default function CompareMounjaroPricesUkPage() {
       />
 
       <article className="w-full">
+        {/* Section 1: Hero (H1: Mounjaro Price Comparison UK) */}
         <MounjaroCompareShaderHero
           lastUpdated={mounjaroLastUpdated}
           cheapestPrice={insights?.starter.low}
@@ -208,6 +208,7 @@ export default function CompareMounjaroPricesUkPage() {
           providerCount={providerCount}
         />
 
+        {/* Section 2: Snapshot (H2: Mounjaro prices UK at a glance) */}
         {insights ? (
           <MounjaroPriceSnapshot
             insights={insights}
@@ -219,6 +220,7 @@ export default function CompareMounjaroPricesUkPage() {
           <TrustBarMarquee />
         </section>
 
+        {/* Section 3: Price table (H2: Compare Mounjaro prices UK at every pharmacy) */}
         <section
           id="mounjaro-compare-table"
           className="scroll-mt-28 border-b border-slate-200/80 bg-background py-12 md:py-16"
@@ -252,7 +254,12 @@ export default function CompareMounjaroPricesUkPage() {
               free Mounjaro price checker and a Mounjaro price comparison
               chart in one.
             </p>
-            <div className="mt-10">
+
+            <div className="mt-8">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50/80 px-3.5 py-1 text-xs font-semibold text-violet-800">
+                <CalendarClock className="h-3.5 w-3.5" aria-hidden />
+                Prices checked {mounjaroLastUpdated}
+              </div>
               <MounjaroUkCompareTable
                 providers={MOUNJARO_UK_COMPARE_PROVIDERS}
                 lastUpdated={mounjaroLastUpdated}
@@ -262,6 +269,7 @@ export default function CompareMounjaroPricesUkPage() {
           </div>
         </section>
 
+        {/* Section 4: Price by dose (H2: Mounjaro price by dose (UK)) */}
         {insights ? (
           <MounjaroPriceByDoseSection
             doses={insights.doses}
@@ -269,76 +277,25 @@ export default function CompareMounjaroPricesUkPage() {
           />
         ) : null}
 
+        {/* Section 5: Cheapest (H2: Where is the cheapest Mounjaro in the UK?) */}
         <MounjaroCheapestSection
           cheapestAcross={cheapestAcross}
           cheapestStarterPrice={insights?.starter.low ?? 0}
         />
 
-        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
-          <div className="mx-auto max-w-6xl px-4 md:px-8">
-            <div className="max-w-3xl">
-              <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-                More Mounjaro pricing resources
-              </h2>
-              <p className="mt-3 text-slate-600">
-                Questions about Mounjaro fees, pen strengths and switching
-                provider are answered in more depth here.
-              </p>
-            </div>
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {MOUNJARO_RESOURCE_LINKS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="group rounded-2xl border border-violet-100 bg-violet-50/40 p-5 transition hover:-translate-y-0.5 hover:border-violet-200 hover:bg-violet-50 hover:shadow-sm"
-                >
-                  <h3 className="font-bold text-violet-950">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                    {item.description}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-violet-800 underline-offset-2 group-hover:underline">
-                    Read more
-                    <ArrowRight className="h-4 w-4" aria-hidden />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Section 6: Monthly cost (H2: How much does Mounjaro cost per month in the UK?) */}
+        {insights ? (
+          <MounjaroMonthlyCostSection
+            starterLow={insights.starter.low}
+            topLow={insights.top.low}
+            topHigh={insights.top.high}
+            firstSixMonths={firstSixMonths}
+            annualCosts={annualCosts}
+            providerCount={providerCount}
+          />
+        ) : null}
 
-        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
-          <div className="mx-auto max-w-6xl space-y-12 px-4 md:px-8">
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-                Mounjaro price UK: what you can expect
-              </h2>
-              {insights ? (
-                <p className="mt-4 max-w-3xl text-slate-600 leading-relaxed">
-                  Across the {insights.providerCount} providers in our table
-                  (latest price update {mounjaroLastUpdated}), a{" "}
-                  {formatDose(insights.starter.dose)} starter pen is listed from{" "}
-                  {formatGbp(insights.starter.low)} to{" "}
-                  {formatGbp(insights.starter.high)}, with a median of{" "}
-                  {formatGbp(insights.starter.median)}. At{" "}
-                  {formatDose(insights.top.dose)}, the highest strength, the range
-                  is {formatGbp(insights.top.low)} to{" "}
-                  {formatGbp(insights.top.high)} (median{" "}
-                  {formatGbp(insights.top.median)}). For the same provider, moving
-                  from {formatDose(insights.starter.dose)} to{" "}
-                  {formatDose(insights.top.dose)} adds a median of{" "}
-                  {formatGbp(insights.medianStepUp)} per pen. The charts below
-                  show how prices spread at each strength.
-                </p>
-              ) : null}
-            </div>
-            <div className="grid gap-8 lg:grid-cols-1">
-              <MounjaroCompareChartsSection
-                providers={MOUNJARO_UK_COMPARE_PROVIDERS}
-              />
-            </div>
-          </div>
-        </section>
-
+        {/* Section 7: Why prices vary (H2: Why do Mounjaro prices vary in the UK?) */}
         <section className="border-b border-slate-200/80 bg-slate-50/80 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
@@ -399,6 +356,7 @@ export default function CompareMounjaroPricesUkPage() {
           </div>
         </section>
 
+        {/* Section 8: How to compare (H2: How to compare Mounjaro prices in 4 steps) */}
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
@@ -428,6 +386,7 @@ export default function CompareMounjaroPricesUkPage() {
           </div>
         </section>
 
+        {/* Section 9: How we check (H2: How we check every Mounjaro pharmacy) */}
         <section className="border-b border-slate-200/80 bg-slate-50/80 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
@@ -490,82 +449,7 @@ export default function CompareMounjaroPricesUkPage() {
           </div>
         </section>
 
-        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
-          <div className="mx-auto max-w-3xl px-4 md:px-8">
-            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              How dose affects Mounjaro cost
-            </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              Lowest, median and highest listed price per pen at each strength
-              across our table. Your prescriber decides which strength you use
-              and when it changes.
-            </p>
-            {insights ? (
-              <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200 bg-white">
-                <table className="w-full text-left text-sm">
-                  <caption className="sr-only">
-                    Lowest, median and highest listed Mounjaro pen price by
-                    strength
-                  </caption>
-                  <thead className="bg-slate-50 text-slate-700">
-                    <tr>
-                      <th scope="col" className="px-4 py-3 font-semibold">
-                        Pen strength
-                      </th>
-                      <th scope="col" className="px-4 py-3 font-semibold">
-                        Lowest listed
-                      </th>
-                      <th scope="col" className="px-4 py-3 font-semibold">
-                        Median
-                      </th>
-                      <th scope="col" className="px-4 py-3 font-semibold">
-                        Highest listed
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 text-slate-600">
-                    {insights.doses.map((d) => (
-                      <tr key={d.dose}>
-                        <th scope="row" className="px-4 py-3 font-medium text-slate-900">
-                          {formatDose(d.dose)}
-                        </th>
-                        <td className="px-4 py-3 tabular-nums">{formatGbp(d.low)}</td>
-                        <td className="px-4 py-3 tabular-nums">{formatGbp(d.median)}</td>
-                        <td className="px-4 py-3 tabular-nums">{formatGbp(d.high)}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            ) : null}
-          </div>
-        </section>
-
-        {insights ? (
-          <MounjaroFirstMonthsCostSection
-            starterLow={insights.starter.low}
-            topLow={insights.top.low}
-            topHigh={insights.top.high}
-            firstSixMonths={firstSixMonths}
-          />
-        ) : null}
-
-        <AnnualCostSection
-          medicine="Mounjaro"
-          estimates={annualCosts}
-          providerCount={MOUNJARO_UK_COMPARE_PROVIDERS.length}
-          heading="Mounjaro cost for a full year"
-          headingLevel="h3"
-          intro={
-            <>
-              Mounjaro usually starts at 2.5 mg once a week for four weeks, then
-              increases in 2.5 mg steps no sooner than every four weeks, up to
-              15 mg. Year one therefore includes several months on lower-priced
-              pens before any maintenance strength. Based on 13 pens a year.
-            </>
-          }
-        />
-
+        {/* Section 10: NHS (H2: Can you get Mounjaro on the NHS?) */}
         <NhsAccessSection
           medicine="Mounjaro"
           heading="Can you get Mounjaro on the NHS?"
@@ -585,42 +469,7 @@ export default function CompareMounjaroPricesUkPage() {
           </p>
         </NhsAccessSection>
 
-        <section className="border-b border-slate-200/80 bg-amber-50/40 py-12 md:py-16">
-          <div className="mx-auto max-w-3xl px-4 md:px-8">
-            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              A note on discounted Mounjaro prices
-            </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              Prices in our Mounjaro table are standard list prices. First-order
-              voucher codes are excluded, and delivery is excluded unless a
-              provider only sells it as part of a programme price. Some providers
-              also advertise introductory, subscription or multi-month pricing;
-              we have not independently confirmed those terms, so they are not
-              shown. Check the provider&apos;s site for current offers.
-            </p>
-          </div>
-        </section>
-
-        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
-          <div className="mx-auto max-w-3xl px-4 md:px-8">
-            <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              What is Mounjaro?
-            </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              Mounjaro (tirzepatide) is a dual GIP/GLP-1 injection used for weight
-              management in eligible adults alongside diet and activity changes.
-              It is not suitable for everyone and requires medical supervision.
-            </p>
-            <Link
-              href="/what-is-mounjaro"
-              className="mt-6 inline-flex items-center gap-2 font-semibold text-violet-800 underline-offset-2 hover:underline"
-            >
-              Learn more about how Mounjaro works
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </Link>
-          </div>
-        </section>
-
+        {/* Section 11: FAQ (H2: Mounjaro price comparison FAQs) */}
         <section className="border-b border-slate-200/80 bg-slate-50/80 py-12 md:py-16">
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
@@ -633,7 +482,9 @@ export default function CompareMounjaroPricesUkPage() {
                   className="group rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-sm open:shadow-md"
                 >
                   <summary className="cursor-pointer list-none text-base font-semibold text-slate-900 after:float-right after:text-slate-400 after:content-['+'] group-open:after:content-['−']">
-                    {item.question}
+                    <h3 className="inline text-base font-semibold text-slate-900">
+                      {item.question}
+                    </h3>
                   </summary>
                   <p className="mt-3 text-sm leading-relaxed text-slate-600">
                     {item.answer}
@@ -644,11 +495,113 @@ export default function CompareMounjaroPricesUkPage() {
           </div>
         </section>
 
+        {/* Supporting Context & Resources (No H2/H3 tags to strictly preserve heading hierarchy) */}
+        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-6xl space-y-12 px-4 md:px-8">
+            <div>
+              <p className="text-xl font-bold text-slate-900 md:text-2xl">
+                Mounjaro price UK: what you can expect
+              </p>
+              {insights ? (
+                <p className="mt-3 max-w-3xl text-slate-600 leading-relaxed text-sm md:text-base">
+                  Across the {insights.providerCount} providers in our table
+                  (latest price update {mounjaroLastUpdated}), a{" "}
+                  {formatDose(insights.starter.dose)} starter pen is listed from{" "}
+                  {formatGbp(insights.starter.low)} to{" "}
+                  {formatGbp(insights.starter.high)}, with a median of{" "}
+                  {formatGbp(insights.starter.median)}. At{" "}
+                  {formatDose(insights.top.dose)}, the highest strength, the range
+                  is {formatGbp(insights.top.low)} to{" "}
+                  {formatGbp(insights.top.high)} (median{" "}
+                  {formatGbp(insights.top.median)}). For the same provider, moving
+                  from {formatDose(insights.starter.dose)} to{" "}
+                  {formatDose(insights.top.dose)} adds a median of{" "}
+                  {formatGbp(insights.medianStepUp)} per pen. The charts below
+                  show how prices spread at each strength.
+                </p>
+              ) : null}
+            </div>
+            <div className="grid gap-8 lg:grid-cols-1">
+              <MounjaroCompareChartsSection
+                providers={MOUNJARO_UK_COMPARE_PROVIDERS}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-6xl px-4 md:px-8">
+            <div className="max-w-3xl">
+              <p className="text-xl font-bold text-slate-900 md:text-2xl">
+                More Mounjaro pricing resources
+              </p>
+              <p className="mt-2 text-sm text-slate-600 md:text-base">
+                Questions about Mounjaro fees, pen strengths and switching
+                provider are answered in more depth here.
+              </p>
+            </div>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {MOUNJARO_RESOURCE_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group rounded-2xl border border-violet-100 bg-violet-50/40 p-5 transition hover:-translate-y-0.5 hover:border-violet-200 hover:bg-violet-50 hover:shadow-sm"
+                >
+                  <p className="font-bold text-violet-950">{item.title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                    {item.description}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-violet-800 underline-offset-2 group-hover:underline">
+                    Read more
+                    <ArrowRight className="h-4 w-4" aria-hidden />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-slate-200/80 bg-amber-50/40 py-12 md:py-16">
+          <div className="mx-auto max-w-3xl px-4 md:px-8">
+            <p className="text-xl font-bold text-slate-900 md:text-2xl">
+              A note on discounted Mounjaro prices
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 md:text-base">
+              Prices in our Mounjaro table are standard list prices. First-order
+              voucher codes are excluded, and delivery is excluded unless a
+              provider only sells it as part of a programme price. Some providers
+              also advertise introductory, subscription or multi-month pricing;
+              we have not independently confirmed those terms, so they are not
+              shown. Check the provider&apos;s site for current offers.
+            </p>
+          </div>
+        </section>
+
+        <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+          <div className="mx-auto max-w-3xl px-4 md:px-8">
+            <p className="text-xl font-bold text-slate-900 md:text-2xl">
+              What is Mounjaro?
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 md:text-base">
+              Mounjaro (tirzepatide) is a dual GIP/GLP-1 injection used for weight
+              management in eligible adults alongside diet and activity changes.
+              It is not suitable for everyone and requires medical supervision.
+            </p>
+            <Link
+              href="/what-is-mounjaro"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-violet-800 underline-offset-2 hover:underline"
+            >
+              Learn more about how Mounjaro works
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
+        </section>
+
         <section className="bg-slate-900 py-14 text-white md:py-20">
           <div className="mx-auto max-w-3xl px-4 text-center md:px-8">
-            <h2 className="text-2xl font-bold md:text-3xl">
+            <p className="text-2xl font-bold md:text-3xl">
               Ready to compare and next-step your care?
-            </h2>
+            </p>
             <p className="mt-4 text-slate-300">
               Shortlist providers at the strength you expect to use, then
               confirm eligibility and the final total with the provider.
