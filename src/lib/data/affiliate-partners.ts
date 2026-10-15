@@ -9,15 +9,14 @@ export type AffiliatePartnerInfo = {
 };
 
 /**
- * The 3 verified commercial affiliate pharmacies that have an active
+ * The 4 verified commercial affiliate pharmacies that have an active
  * affiliate tracking link and/or voucher discount code.
- *
- * Slinic is NOT an affiliate (no affiliate link or promo code provided).
  */
 export const AFFILIATE_PARTNER_IDS = new Set<string>([
   "pharmacy-me",
   "reach-online-pharmacy",
   "dosedirect",
+  "slinic",
 ]);
 
 export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
@@ -48,6 +47,16 @@ export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
       "https://questionnaire.semble.io/eb4dacb08b394c9c1a9ea4f4d0be2cb1a9c4cd2c",
     ctaLabel: "Start Consultation",
     perkSummary: "Free delivery included",
+  },
+  slinic: {
+    id: "slinic",
+    name: "Slinic",
+    badgeLabel: "Featured Partner",
+    code: undefined,
+    affiliateUrl:
+      "https://slinic.co.uk/condition/weight-loss/?utm_source=healthwise&utm_medium=referral&utm_campaign=weight-loss",
+    ctaLabel: "Visit Slinic",
+    perkSummary: "Free consultation included",
   },
 };
 
