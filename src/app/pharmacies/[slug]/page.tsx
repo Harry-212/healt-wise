@@ -153,6 +153,7 @@ import {
   shape8PharmacyLandingJsonGraph,
   simpleOnlinePharmacyLandingJsonGraph,
   slimmingDirectPharmacyLandingJsonGraph,
+  slinicPharmacyLandingJsonGraph,
   superdrugOnlineDoctorLandingJsonGraph,
   swiftDoctorPharmacyLandingJsonGraph,
   swiftMediPharmacyLandingJsonGraph,
@@ -1093,23 +1094,12 @@ export default async function PharmacyProfilePage({ params }: Props) {
   }
 
   if (slug === "slinic") {
-    const title = "Slinic weight loss review (UK) — Mounjaro bundle package";
-    const description =
-      "Slinic: GPhC-registered pharmacy and weight-management clinic, online assessment and consultation, named prescriber review, Mounjaro bundle package, free consultation and DPD tracked delivery. Information from Healthwise360 — not medical advice.";
-
     return (
       <>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              pharmacyProfileJsonGraph({
-                slug,
-                name: "Slinic",
-                title,
-                description,
-              }),
-            ),
+            __html: JSON.stringify(slinicPharmacyLandingJsonGraph()),
           }}
         />
         <SlinicPharmacyContent />
