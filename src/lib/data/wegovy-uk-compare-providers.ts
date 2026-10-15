@@ -560,6 +560,14 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "2.4mg": 206.09,
     "7.2mg": 245.69,
   },
+  "pharmacy-me": {
+    "0.25mg": 72.89,
+    "0.5mg": 72.89,
+    "1mg": 72.89,
+    "1.7mg": 123.29,
+    "2.4mg": 173.69,
+    "7.2mg": 175.49,
+  },
 };
 
 const WEGOVY_EXTRA_PROVIDER_SEEDS: MounjaroUkProviderCompare[] = [
@@ -647,6 +655,7 @@ const WEGOVY_CHECKED_20_SEP_2026 = new Set<string>([
 /** Providers checked on a date other than the two the ternary below covers (20 Sep / fallback). */
 const WEGOVY_UPDATED_LABEL_OVERRIDE: Record<string, string> = {
   "reach-online-pharmacy": "27 Sep 2026",
+  "pharmacy-me": "12 Oct 2026",
 };
 
 function providerSeedToWegovy(
