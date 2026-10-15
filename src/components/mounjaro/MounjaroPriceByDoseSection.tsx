@@ -70,7 +70,7 @@ export default function MounjaroPriceByDoseSection({
             const extra = DOSE_EXTRAS.find((e) => e.dose === d.dose);
             const cheapest = cheapestByDose[d.dose] ?? [];
             return (
-              <div key={d.dose}>
+              <div key={d.dose} id={`mounjaro-${d.dose.replace('.', '-')}-price`} className="scroll-mt-28">
                 <h3 className="text-lg font-bold text-slate-900">
                   Mounjaro {formatDose(d.dose)} price UK
                 </h3>

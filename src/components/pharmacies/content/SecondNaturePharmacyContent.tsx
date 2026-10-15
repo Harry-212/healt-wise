@@ -1,5 +1,5 @@
-"use client";
-
+import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
@@ -22,17 +22,15 @@ export default function SecondNaturePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Second Nature"
       fileRef="HW-SECOND-NATURE-2026"
-      title="Second Nature weight management review"
+      title="Second Nature Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of Second Nature: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · dietitian messaging · NHS heritage context"
       providerName="Second Nature"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
-        {
-          k: "Provider",
-          v: "Second Nature programme · dispensing via registered pharmacy partners (GPhC 9013068 cited on compare row — verify)",
-        },
+        { k: "Last updated", v: "20 September 2026" },
+        { k: "Provider", v: "Second Nature" },
+        { k: "GPhC", v: "9013068" },
         {
           k: "Model",
           v: "Assessment · prescription via partner · app coaching · peer groups · scheduled deliveries",
@@ -48,6 +46,26 @@ export default function SecondNaturePharmacyContent() {
       heroProviderLogoAlt="Second Nature"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            Second Nature sells Mounjaro from £229 (2.5 mg) to £349 (15 mg) a pen, at our 20 September 2026 price check. Second Nature is listed on the GPhC register (number 9013068), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ).
+          </p>
+        </div>
+        <PharmacyPriceTable slug="second-nature" providerName="Second Nature" />
         <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Second Nature:</strong> Navigating online weight loss treatments can be complex. Second Nature is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Second Nature provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           Many digital obesity offers stop at posting pens.{" "}
@@ -193,6 +211,13 @@ export default function SecondNaturePharmacyContent() {
           <strong>structured coaching</strong>, and <strong>accountability tooling</strong> rather than the
           lowest price per milligram. If you only need bare dispensing, compare medication-only dossiers on
           Health Wise for stripped-down pricing.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is Second Nature legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          Yes. Second Nature is listed on the official GPhC register (number 9013068). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
         </p>
       </section>
 

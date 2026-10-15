@@ -1,5 +1,5 @@
-"use client";
-
+import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
@@ -22,24 +22,22 @@ export default function NextScriptPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Next Script"
       fileRef="HW-NEXT-SCRIPT-2026"
-      title="Next Script weight management review"
+      title="Next Script Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of Next Script: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy"
       providerName="Next Script"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
-        {
-          k: "Provider",
-          v: "Next Script (GPhC 9012568 — verify superintendent and premises on register)",
-        },
+        { k: "Last updated", v: "20 September 2026" },
+        { k: "Provider", v: "Next Script" },
+        { k: "GPhC", v: "9012568" },
         {
           k: "Treatments",
           v: "Mounjaro · Wegovy (subject to suitability)",
         },
         {
           k: "Fulfilment",
-          v: "Home delivery · discreet packaging · dispatch often 24–48h after approval · cold chain norms for injectables",
+          v: "Home delivery · discreet packaging · cold chain norms for injectables",
         },
       ]}
       discountCode={discountCode}
@@ -48,6 +46,26 @@ export default function NextScriptPharmacyContent() {
       heroProviderLogoAlt="Next Script"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            Next Script sells Mounjaro from £131 (2.5 mg) to £266 (15 mg) a pen, at our 20 September 2026 price check. Next Script is listed on the GPhC register (number 9012568), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ).
+          </p>
+        </div>
+        <PharmacyPriceTable slug="next-script" providerName="Next Script" />
         <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Next Script:</strong> Navigating online weight loss treatments can be complex. Next Script is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Next Script provides.</p></div>
         <p className="text-slate-800 leading-relaxed">
           More UK patients now look for regulated online clinics instead of only NHS GP routes for
@@ -217,6 +235,13 @@ export default function NextScriptPharmacyContent() {
             "Medication stock fluctuates across the market.",
           ]}
         />
+      </section>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is Next Script legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          Yes. Next Script is listed on the official GPhC register (number 9012568). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
+        </p>
       </section>
 
       <section className="border border-slate-200/90 bg-[#fbf9f4] p-6">

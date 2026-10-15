@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   HazardBox,
   PharmacyDossierPage,
@@ -98,22 +99,16 @@ export default function CuratePharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Curate"
       fileRef="HW-CURATE-2026"
-      title="Curate weight management review"
+      title="Curate Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of Curate: checked Mounjaro and Wegovy prices by strength, registration details and what we have not yet confirmed (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy"
       providerName="Curate"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
+        { k: "Last updated", v: "20 September 2026" },
         { k: "Provider", v: "Curate" },
+        { k: "GPhC", v: "9012920" },
         { k: "Treatments compared", v: "Mounjaro · Wegovy" },
-        {
-          k: "Prices checked",
-          v:
-            [...new Set([CURATE_FACTS.mounjaro?.checked, CURATE_FACTS.wegovy?.checked])]
-              .filter(Boolean)
-              .join(" · ") || "See tables",
-        },
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
@@ -121,17 +116,26 @@ export default function CuratePharmacyContent() {
       heroProviderLogoAlt="Curate"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-amber-100 bg-amber-50/30 p-5 shadow-sm">
-          <p className="text-slate-800 leading-relaxed">
-            <strong className="text-amber-900">Service profile:</strong> Curate is an online
-            provider of prescription weight-loss medicines. This page sets out what we have
-            checked and can source, and lists separately what we have not yet confirmed.
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            Curate sells Mounjaro from £189 (2.5 mg) to £329 (15 mg) a pen, at our 20 September 2026 price check. Curate is listed on the GPhC register (number 9012920), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ).
           </p>
         </div>
-        <p className="text-slate-800 leading-relaxed">
-          Curate appears in our Mounjaro and Wegovy comparison tables. The figures below are the
-          rows from those tables, with the check date shown on each.
-        </p>
+        <PharmacyPriceTable slug="curate" providerName="Curate" />
       </section>
 
       <section>
@@ -214,6 +218,13 @@ export default function CuratePharmacyContent() {
             Visit Curate
           </ProviderCta>
         </div>
+      </section>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is Curate legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          Yes. Curate is listed on the official GPhC register (number 9012920). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
+        </p>
       </section>
 
       <section>
