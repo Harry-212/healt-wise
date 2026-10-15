@@ -46,7 +46,7 @@ export default function PharmacyMePharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
-      heroProviderLogoSrc="/logo pharmacy/Pharmacy + Me.webp"
+      heroProviderLogoSrc="/logo pharmacy/pharmacy-me.webp"
       heroProviderLogoAlt="Pharmacy + Me"
       heroProviderLogoClassName="h-10 w-auto max-w-[min(100%,20rem)] object-contain object-center sm:h-12 md:h-14 md:max-w-[min(100%,24rem)]"
     >
