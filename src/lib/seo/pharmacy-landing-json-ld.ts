@@ -1693,14 +1693,37 @@ const SLIMMING_DIRECT_FAQ: FaqItem[] = [
       "Materials mention a clinical fee around £25–£35 if you cancel after review but before a prescription is issued.",
   },
   {
-    question: "Can I refund dispensed medication?",
-    answer:
-      "Generally not once prescription medicines are dispensed and dispatched, except narrow regulatory exceptions — standard UK pharmacy practice.",
-  },
-  {
     question: "How strong is Slimming Direct’s reputation?",
     answer:
       "Third-party summaries reference Trustpilot ratings around 4.5/5; always read recent reviews yourself.",
+  },
+];
+
+const SLINIC_FAQ: FaqItem[] = [
+  {
+    question: "Is Slinic registered with the GPhC?",
+    answer:
+      "Yes. Slinic operates under Read & Simonstone Pharmacy Ltd, officially registered with the General Pharmaceutical Council under GPhC registration number 1033727.",
+  },
+  {
+    question: "Is the video consultation really free?",
+    answer:
+      "Yes. Slinic includes the online video consultation and clinical review at no extra charge, without separate prescription administration fees.",
+  },
+  {
+    question: "What comes in the free starter pack?",
+    answer:
+      "First-time Mounjaro 2.5 mg orders include a complimentary starter kit featuring a sharps bin, pen needles, alcohol swabs, and an instructional injection guide.",
+  },
+  {
+    question: "How much is delivery for Slinic orders?",
+    answer:
+      "Delivery is £4.99 via DPD 24-hour tracked cold-chain courier to ensure temperature-sensitive pens arrive safely and ready for refrigeration.",
+  },
+  {
+    question: "Do I have to sign up for a monthly subscription?",
+    answer:
+      "No. Slinic does not require long-term subscriptions or lock-in contracts. You can order pens per dose titration or clinical need without surprise charges.",
   },
 ];
 
@@ -4263,6 +4286,43 @@ export function slimmingDirectPharmacyLandingJsonGraph(): Record<string, unknown
       ]),
       {
         ...faqPageEntity(SLIMMING_DIRECT_FAQ),
+        "@id": `${url}#faq`,
+        url,
+      },
+    ],
+  };
+}
+
+/**
+ * JSON-LD @graph: WebSite, WebPage, BreadcrumbList, FAQPage — Slinic.
+ */
+export function slinicPharmacyLandingJsonGraph(): Record<string, unknown> {
+  const origin = siteOrigin();
+  const path = "/pharmacies/slinic";
+  const url = `${origin}${path}`;
+  const name = "Slinic weight management review";
+  const description =
+    "Slinic weight management review: treatment prices, consultation process, delivery fees, clinical support, registered pharmacy context and total monthly cost. Independent provider review from Healthwise360 — not medical advice.";
+
+  return {
+    "@context": FAQ_BASE,
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name,
+        description,
+        inLanguage: "en-GB",
+        isPartOf: { "@id": siteId() },
+      },
+      breadcrumbList(path, [
+        { name: "Home", item: origin },
+        { name: DEFAULT_CRUMB.name, item: `${origin}${DEFAULT_CRUMB.path}` },
+        { name: "Slinic", item: url },
+      ]),
+      {
+        ...faqPageEntity(SLINIC_FAQ),
         "@id": `${url}#faq`,
         url,
       },
