@@ -8,7 +8,8 @@ import HeroNumanStyle from "@/components/ui/HeroNumanStyle";
 import PriceSnapshotSection from "@/components/ui/PriceSnapshotSection";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
 import { compareFaqPageJsonLd } from "@/lib/routes/compare-faqs";
-import { HOME_PAGE_FAQS } from "@/lib/routes/home-faqs";
+import { buildHomePageFaqs } from "@/lib/routes/home-faqs";
+import { getLivePriceSummary } from "@/lib/data/home-price-summary";
 import {
   SITE_SHARE_IMAGE_ALT,
   SITE_SHARE_IMAGE_HEIGHT,
@@ -45,7 +46,7 @@ const WhyChooseHealthWise = dynamic(
 const HOME_SEO_TITLE =
   "Weight Loss Injections Price Comparison UK | Healthwise360";
 const HOME_SEO_DESCRIPTION =
-  "Compare weight loss injection prices at 60+ GPhC registered UK pharmacies. See Mounjaro from £99 and Wegovy from £83, at every dose.";
+  "Compare weight loss injection prices at 60+ GPhC registered UK pharmacies. See Mounjaro from £119 and Wegovy from £73, at every dose.";
 const HOME_OG_TITLE = "Compare Weight Loss Injection Prices in the UK";
 const HOME_OG_DESCRIPTION =
   "Mounjaro and Wegovy prices at 60+ GPhC registered UK pharmacies, for every dose. Free, independent and no paid rankings.";
@@ -80,8 +81,19 @@ export const metadata: Metadata = {
 };
 
 export default function Homepage() {
-  const homeLd = homePageJsonLdGraph();
-  const faqLd = compareFaqPageJsonLd(HOME_PAGE_FAQS, siteOrigin().replace(/\/$/, "") + "/");
+  const priceSummary = getLivePriceSummary();
+  const homeFaqs = buildHomePageFaqs(
+    priceSummary.wegovyStarterLow,
+    priceSummary.mounjaroStarterLow,
+    priceSummary.mounjaroTopHigh,
+  );
+  const homeLd = homePageJsonLdGraph({
+    mounjaroStarterLow: priceSummary.mounjaroStarterLow.replace("£", ""),
+    mounjaroTopHigh: priceSummary.mounjaroTopHigh.replace("£", ""),
+    wegovyStarterLow: priceSummary.wegovyStarterLow.replace("£", ""),
+    wegovyTopHigh: priceSummary.wegovyTopHigh.replace("£", ""),
+  });
+  const faqLd = compareFaqPageJsonLd(homeFaqs, siteOrigin().replace(/\/$/, "") + "/");
 
   return (
     <div className="flex flex-col pb-6">
@@ -95,19 +107,37 @@ export default function Homepage() {
         className="hw-homepage-faq-schema"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
-      <HeroNumanStyle />
+      <HeroNumanStyle
+        wegovyStarterLow={priceSummary.wegovyStarterLow}
+        mounjaroStarterLow={priceSummary.mounjaroStarterLow}
+      />
       <div className="flex flex-col gap-0 pt-0">
-        <PriceSnapshotSection />
+        <PriceSnapshotSection
+          rows={priceSummary.snapshotRows}
+          lastUpdated={priceSummary.lastUpdated}
+        />
 
         <AboutSection2 />
 
         <ChooseYourPathSection />
 
-        <CostSection />
+        <CostSection
+          wegovyStarterLow={priceSummary.wegovyStarterLow}
+          mounjaroStarterLow={priceSummary.mounjaroStarterLow}
+          mounjaroTopHigh={priceSummary.mounjaroTopHigh}
+          mounjaroStarterHigh={priceSummary.mounjaroStarterHigh}
+          mounjaroStarterDiff={priceSummary.mounjaroStarterGap}
+        />
 
-        <FirstThreeMonthsCostSection />
+        <FirstThreeMonthsCostSection
+          data={priceSummary.firstThreeMonths}
+          lastUpdated={priceSummary.lastUpdated}
+        />
 
-        <MounjaroVsWegovySection />
+        <MounjaroVsWegovySection
+          mounjaroStarterLow={priceSummary.mounjaroStarterLow}
+          wegovyStarterLow={priceSummary.wegovyStarterLow}
+        />
 
         <WhyPricesDifferSection />
 
@@ -167,7 +197,7 @@ export default function Homepage() {
         </section>
 
         <CompareFaqSection
-          items={HOME_PAGE_FAQS}
+          items={homeFaqs}
           subtitle="Quick answers about Healthwise360 and how our comparisons work. This is not medical advice; always follow your prescriber and official patient information."
         />
       </div>

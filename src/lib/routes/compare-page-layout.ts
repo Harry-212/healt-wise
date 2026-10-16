@@ -44,7 +44,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       titleItalic: "",
       titleBold: "Wegovy vs Mounjaro",
       subtitle:
-        "Mounjaro led to more weight loss than Wegovy in a head to head trial. Wegovy usually costs less. Here is how Wegovy vs Mounjaro compares in the UK on weight loss, dose, side effects, NHS access and the real price. A Wegovy starter pen costs from £83 and a Mounjaro starter pen from £99.",
+        "Mounjaro led to more weight loss than Wegovy in a head to head trial. Wegovy usually costs less. Here is how Wegovy vs Mounjaro compares in the UK on weight loss, dose, side effects, NHS access and the real price. A Wegovy starter pen costs from £73 and a Mounjaro starter pen from £119.",
       snapshotLabel: "Prices checked 20 September 2026 · Same prices as our price pages · No paid rankings",
       navLinks: [
         { href: "#quick-verdict", label: "At a Glance" },

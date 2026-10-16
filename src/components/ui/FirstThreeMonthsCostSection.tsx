@@ -1,12 +1,47 @@
 import HomeSectionCard from "@/components/ui/HomeSectionCard";
+import type { HomePriceSummary } from "@/lib/data/home-price-summary";
 
-const ROWS = [
-  { month: "Month 1", mounjaroDose: "2.5 mg", mounjaroPrice: "£99", wegovyDose: "0.25 mg", wegovyPrice: "£84.98" },
-  { month: "Month 2", mounjaroDose: "5 mg", mounjaroPrice: "£154", wegovyDose: "0.5 mg", wegovyPrice: "£84.98" },
-  { month: "Month 3", mounjaroDose: "7.5 mg", mounjaroPrice: "£178", wegovyDose: "1 mg", wegovyPrice: "£84.98" },
-] as const;
+export interface FirstThreeMonthsCostSectionProps {
+  data?: HomePriceSummary["firstThreeMonths"];
+  lastUpdated?: string;
+}
 
-export default function FirstThreeMonthsCostSection() {
+const DEFAULT_DATA: HomePriceSummary["firstThreeMonths"] = {
+  rows: [
+    {
+      month: "Month 1",
+      mounjaroDose: "2.5 mg",
+      mounjaroPrice: "£119.69",
+      wegovyDose: "0.25 mg",
+      wegovyPrice: "£72.89",
+    },
+    {
+      month: "Month 2",
+      mounjaroDose: "5 mg",
+      mounjaroPrice: "£134.99",
+      wegovyDose: "0.5 mg",
+      wegovyPrice: "£72.89",
+    },
+    {
+      month: "Month 3",
+      mounjaroDose: "7.5 mg",
+      mounjaroPrice: "£185.39",
+      wegovyDose: "1 mg",
+      wegovyPrice: "£72.89",
+    },
+  ],
+  mounjaroTotal: "£440.07",
+  wegovyTotal: "£218.67",
+  mounjaroProvider: "Pharmacy + Me",
+  wegovyProvider: "Pharmacy + Me",
+};
+
+export default function FirstThreeMonthsCostSection({
+  data = DEFAULT_DATA,
+  lastUpdated = "20 September 2026",
+}: FirstThreeMonthsCostSectionProps) {
+  const rows = data.rows ?? DEFAULT_DATA.rows;
+
   return (
     <HomeSectionCard>
       <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -30,7 +65,7 @@ export default function FirstThreeMonthsCostSection() {
             </tr>
           </thead>
           <tbody>
-            {ROWS.map((row) => (
+            {rows.map((row) => (
               <tr key={row.month} className="border-t border-slate-200">
                 <td className="px-4 py-3 font-medium text-slate-900">{row.month}</td>
                 <td className="px-4 py-3 text-slate-700">{row.mounjaroDose}</td>
@@ -41,18 +76,16 @@ export default function FirstThreeMonthsCostSection() {
             ))}
             <tr className="border-t border-slate-200 bg-emerald-50/60 font-bold text-slate-900">
               <td className="px-4 py-3" colSpan={2}>3-month total</td>
-              <td className="px-4 py-3">£431</td>
+              <td className="px-4 py-3">{data.mounjaroTotal}</td>
               <td className="px-4 py-3" />
-              <td className="px-4 py-3">£254.94</td>
+              <td className="px-4 py-3">{data.wegovyTotal}</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <p className="mt-4 text-xs text-slate-500 sm:text-sm">
-        The cheapest totals come from one pharmacy for all 3 months: Medicine
-        Marketplace for Mounjaro and Next Script for Wegovy, at our 20
-        September 2026 check.
+        Prices based on the lowest affiliated pharmacy prices at our latest check ({lastUpdated}).
       </p>
     </HomeSectionCard>
   );

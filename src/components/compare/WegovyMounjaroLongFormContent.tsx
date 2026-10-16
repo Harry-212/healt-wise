@@ -10,50 +10,46 @@ import {
   Zap,
 } from "lucide-react";
 
+import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
+
 /**
  * Editorial long-form content for `/compare/wegovy-vs-mounjaro`.
  * Implements Sections 3–9 of the Healthwise360 Wegovy vs Mounjaro Page Content specification.
  */
 
-const LATEST_PRICE_CHECK_ROWS = [
+const DEFAULT_LATEST_PRICE_CHECK_ROWS: HomePriceSnapshotRow[] = [
   {
     dose: "Wegovy 0.25 mg (starter)",
-    lowest: "£83",
+    lowest: "£72.89",
     typical: "£100",
     highest: "£205",
   },
   {
     dose: "Wegovy 2.4 mg (usual top dose)",
-    lowest: "£135",
+    lowest: "£173.69",
     typical: "£200",
     highest: "£290",
   },
   {
     dose: "Mounjaro 2.5 mg (starter)",
-    lowest: "£99",
+    lowest: "£119.69",
     typical: "£154",
     highest: "£229",
   },
   {
     dose: "Mounjaro 15 mg (top dose)",
-    lowest: "£229",
+    lowest: "£245.69",
     typical: "£299",
     highest: "£359.95",
   },
 ];
 
-const FIRST_SIX_MONTHS_ROWS = [
-  {
-    dose: "Wegovy (0.25 mg up to 2.4 mg)",
-    lowest: "£639.96",
-    typical: "£914",
-  },
-  {
-    dose: "Mounjaro (2.5 mg up to 15 mg)",
-    lowest: "£1,069.04",
-    typical: "£1,408",
-  },
-];
+const DEFAULT_FIRST_SIX_MONTHS = {
+  wegovyLow: "£701.04",
+  wegovyTypical: "£914",
+  mounjaroLow: "£1,110.74",
+  mounjaroTypical: "£1,408",
+};
 
 const DOSE_COMPARISON_ROWS = [
   { weeks: "1 to 4", wegovy: "0.25 mg", mounjaro: "2.5 mg" },
@@ -73,7 +69,28 @@ const COMMON_SIDE_EFFECTS = [
   "Feeling tired",
 ];
 
-export default function WegovyMounjaroLongFormContent() {
+export interface WegovyMounjaroLongFormContentProps {
+  priceRows?: HomePriceSnapshotRow[];
+  firstSixMonths?: {
+    wegovyLow: string;
+    wegovyTypical: string;
+    mounjaroLow: string;
+    mounjaroTypical: string;
+  };
+  wegovy72Low?: string;
+  wegovy72Typical?: string;
+  wegovy72Listed?: number;
+  wegovyProviderCount?: number;
+}
+
+export default function WegovyMounjaroLongFormContent({
+  priceRows = DEFAULT_LATEST_PRICE_CHECK_ROWS,
+  firstSixMonths = DEFAULT_FIRST_SIX_MONTHS,
+  wegovy72Low = "£175.49",
+  wegovy72Typical = "£259",
+  wegovy72Listed = 48,
+  wegovyProviderCount = 62,
+}: WegovyMounjaroLongFormContentProps) {
   return (
     <>
       {/* ============================================================== */}
@@ -208,7 +225,7 @@ export default function WegovyMounjaroLongFormContent() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-slate-700">
-                  {LATEST_PRICE_CHECK_ROWS.map((row) => (
+                  {priceRows.map((row) => (
                     <tr
                       key={row.dose}
                       className="transition-colors hover:bg-slate-50/80"
@@ -254,7 +271,7 @@ export default function WegovyMounjaroLongFormContent() {
               </Link>
             </div>
             <p>
-              A Wegovy 7.2 mg pen costs from £199.99 and about £254 at most providers. Only 48 of our 62 Wegovy providers list it.
+              A Wegovy 7.2 mg pen costs from {wegovy72Low} and about {wegovy72Typical} at most providers. Only {wegovy72Listed} of our {wegovyProviderCount} Wegovy providers list it.
             </p>
           </div>
 
@@ -287,7 +304,18 @@ export default function WegovyMounjaroLongFormContent() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-slate-700">
-                  {FIRST_SIX_MONTHS_ROWS.map((row) => (
+                  {[
+                    {
+                      dose: "Wegovy (0.25 mg up to 2.4 mg)",
+                      lowest: firstSixMonths.wegovyLow,
+                      typical: firstSixMonths.wegovyTypical,
+                    },
+                    {
+                      dose: "Mounjaro (2.5 mg up to 15 mg)",
+                      lowest: firstSixMonths.mounjaroLow,
+                      typical: firstSixMonths.mounjaroTypical,
+                    },
+                  ].map((row) => (
                     <tr
                       key={row.dose}
                       className="transition-colors hover:bg-slate-50/80"
@@ -312,7 +340,7 @@ export default function WegovyMounjaroLongFormContent() {
           </div>
 
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
-            Over 6 months, Mounjaro costs about £429 more at the lowest prices and about £494 more at typical prices. This assumes your dose goes up every 4 weeks until the top dose. Your prescriber decides when. The lowest prices can come from different pharmacies.
+            Over 6 months, Mounjaro costs more at both the lowest and typical prices. This assumes your dose goes up every 4 weeks until the top dose. Your prescriber decides when. The lowest prices can come from different pharmacies.
           </p>
         </div>
       </section>
