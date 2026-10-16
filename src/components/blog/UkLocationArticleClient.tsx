@@ -493,7 +493,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                   </Link>
                   . Longer read:{" "}
                   <Link
-                    href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                    href="/what-is-mounjaro"
                     className={linkCls}
                   >
                     Mounjaro weight loss (UK guide)

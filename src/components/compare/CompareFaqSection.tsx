@@ -7,9 +7,11 @@ import type { CompareFaqItem } from "@/lib/routes/compare-faqs";
 
 export default function CompareFaqSection({
   items,
+  heading = "Frequently Asked Questions",
   subtitle = "Quick answers about how this comparison matrix works. This is not medical advice; always follow your prescriber and official patient information.",
 }: {
   items: CompareFaqItem[];
+  heading?: string;
   subtitle?: string;
 }) {
   const [open, setOpen] = useState<number | null>(0);
@@ -33,11 +35,13 @@ export default function CompareFaqSection({
               id="compare-faq-heading"
               className="mt-3 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
             >
-              Frequently Asked Questions
+              {heading}
             </h2>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-600 md:text-base">
-              {subtitle}
-            </p>
+            {subtitle ? (
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-600 md:text-base">
+                {subtitle}
+              </p>
+            ) : null}
           </div>
         </div>
 
@@ -57,9 +61,9 @@ export default function CompareFaqSection({
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-start justify-between gap-4 px-4 py-4 text-left transition md:px-5 md:py-4"
                 >
-                  <span className="text-base font-semibold leading-snug text-slate-900 md:text-[1.05rem]">
+                  <h3 className="text-base font-semibold leading-snug text-slate-900 md:text-[1.05rem]">
                     {item.q}
-                  </span>
+                  </h3>
                   <motion.span
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.2 }}

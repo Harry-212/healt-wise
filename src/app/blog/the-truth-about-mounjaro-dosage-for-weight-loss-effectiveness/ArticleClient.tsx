@@ -227,7 +227,7 @@ export default function ArticleClient() {
                 </Link>
                 , and{" "}
                 <Link
-                  href="/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you"
+                  href="/what-is-mounjaro"
                   className="font-semibold text-brand-primary underline-offset-2 hover:underline"
                 >
                   whether Mounjaro is safe and right for you
@@ -253,7 +253,7 @@ export default function ArticleClient() {
                 Many patients notice early changes within roughly weeks two to
                 four helpful if past progress felt slow. For a deeper dive, read{" "}
                 <Link
-                  href="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here"
+                  href="/what-is-mounjaro"
                   className="font-semibold text-brand-primary underline-offset-2 hover:underline"
                 >
                   how Mounjaro works for weight loss
@@ -396,7 +396,7 @@ export default function ArticleClient() {
                 </Link>{" "}
                 and practical injection habits in{" "}
                 <Link
-                  href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                  href="/what-is-mounjaro"
                   className="font-semibold text-brand-primary underline-offset-2 hover:underline"
                 >
                   Mounjaro weight loss treatments (UK)

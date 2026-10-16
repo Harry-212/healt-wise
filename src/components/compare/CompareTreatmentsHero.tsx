@@ -157,13 +157,20 @@ export default function CompareTreatmentsHero({
           ) : null}
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-            <a
-              href="#compare-med-tabs"
+            <Link
+              href="/wegovy-price-comparison"
               className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-md transition hover:brightness-95"
             >
-              {primaryCtaLabel}
+              Compare Wegovy prices
               <Zap className="h-4 w-4 fill-slate-900" aria-hidden />
-            </a>
+            </Link>
+            <Link
+              href="/mounjaro-price-comparison"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-emerald-600"
+            >
+              Compare Mounjaro prices
+              <Zap className="h-4 w-4 fill-white" aria-hidden />
+            </Link>
             <Link
               href="/prices/cheapest-options-uk"
               className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/15"
@@ -171,6 +178,14 @@ export default function CompareTreatmentsHero({
               Cheapest Options Hub
               <Zap className="h-4 w-4 fill-white opacity-90" aria-hidden />
             </Link>
+          </div>
+
+          <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-white/80 lg:mx-0 lg:justify-start sm:text-sm">
+            <span>Prices checked 20 September 2026</span>
+            <span aria-hidden="true">·</span>
+            <span>Same prices as our price pages</span>
+            <span aria-hidden="true">·</span>
+            <span>No paid rankings</span>
           </div>
         </div>
       </main>

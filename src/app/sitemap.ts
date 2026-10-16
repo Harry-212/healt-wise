@@ -36,6 +36,21 @@ const EXCLUDED_SITEMAP_PATHS = new Set<string>([
   "/pharmacies/click-pharmacy",
   "/pharmacies/phlo-clinic",
   "/pharmacies/simply-meds-online",
+  /** Redirected duplicate pages (Zero-click pack 1, section B) — 308 to stronger hubs. */
+  "/blog/mounjaro-vs-wegovy-key-differences-explained",
+  "/blog/injectable-obesity-treatments-uk-what-works-and-what-doesnt",
+  "/blog/understanding-prescription-weight-loss-injections-uk",
+  "/blog/what-is-wegovy-pill",
+  "/blog/the-truth-about-mounjaro-dosage-for-weight-loss-effectiveness",
+  "/blog/does-mounjaro-really-work-for-weight-loss-find-out-here",
+  "/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you",
+  "/helpful-guides/mounjaro-weight-loss-injection-uk",
+  "/blog/buy-weight-loss-pills-uk",
+  "/blog/the-surprising-mounjaro-side-effects-you-might-experience",
+  "/blog/mounjaro-weight-loss-injections-game-changer",
+  "/blog/glp-1-supplements-uk",
+  "/blog/understanding-the-mounjaro-kwikpen-a-user-guide",
+  "/blog/how-does-wegovy-work-to-transform-your-weight-journey",
 ]);
 
 /** Fixed App Router paths without dynamic segments. */

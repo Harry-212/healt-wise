@@ -101,7 +101,7 @@ const REFERENCES = [
 
 const RELATED_GUIDES = [
   {
-    href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
+    href: "/what-is-mounjaro",
     category: "Medications",
     title: "Mounjaro Weight Loss Treatment UK: Full Guide (2026)",
     description:

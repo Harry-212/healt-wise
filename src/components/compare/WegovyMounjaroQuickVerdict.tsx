@@ -1,58 +1,58 @@
-import Link from "next/link";
-import { ArrowRight, BadgeCheck, Scale, Sparkles, Zap } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 const COMPARISON_ROWS = [
   {
-    feature: "Active ingredient",
+    feature: "Medicine inside",
     wegovy: "Semaglutide",
     mounjaro: "Tirzepatide",
   },
   {
-    feature: "Receptor target",
-    wegovy: "GLP-1 receptor agonist",
-    mounjaro: "Dual GIP & GLP-1 receptor agonist",
+    feature: "Made by",
+    wegovy: "Novo Nordisk",
+    mounjaro: "Eli Lilly",
   },
   {
-    feature: "Average weight loss in trials",
-    wegovy: "Up to ~15%–16% (STEP-1 trial, 68 weeks)",
-    mounjaro: "Up to ~21%–22.5% (SURMOUNT-1 trial, 72 weeks)",
+    feature: "Hormones it copies",
+    wegovy: "GLP-1",
+    mounjaro: "GLP-1 and GIP",
+  },
+  {
+    feature: "How you take it",
+    wegovy: "One injection a week",
+    mounjaro: "One injection a week",
+  },
+  {
+    feature: "Starter dose",
+    wegovy: "0.25 mg",
+    mounjaro: "2.5 mg",
+  },
+  {
+    feature: "Usual top dose",
+    wegovy: "2.4 mg (some providers also list 7.2 mg)",
+    mounjaro: "15 mg",
+  },
+  {
+    feature: "Average weight loss in its main trial",
+    wegovy: "14.9% after 68 weeks (2.4 mg)",
+    mounjaro: "20.9% after 72 weeks (15 mg)",
     highlight: true,
   },
   {
-    feature: "Starting dose (Month 1)",
-    wegovy: "0.25 mg once weekly",
-    mounjaro: "2.5 mg once weekly",
-  },
-  {
-    feature: "Maximum maintenance dose",
-    wegovy: "2.4 mg weekly (48/62 pharmacies also list 7.2 mg)",
-    mounjaro: "15 mg once weekly",
-  },
-  {
-    feature: "Cheapest starter pen price",
-    wegovy: "From £83 / month (Slinic)",
-    mounjaro: "From ~£119–£129 / month",
+    feature: "Head to head trial result",
+    wegovy: "13.7% after 72 weeks",
+    mounjaro: "20.2% after 72 weeks",
     highlight: true,
   },
   {
-    feature: "Injection routine",
-    wegovy: "Once weekly pre-filled FlexTouch pen",
-    mounjaro: "Once weekly pre-filled KwikPen",
+    feature: "Starter pen from",
+    wegovy: "£83",
+    mounjaro: "£99",
+    highlight: true,
   },
   {
-    feature: "UK regulatory status",
-    wegovy: "MHRA licensed for weight management",
-    mounjaro: "MHRA licensed for weight management",
-  },
-  {
-    feature: "NHS availability",
-    wegovy: "NICE recommended (Tier 3/4 specialist clinics, 2-yr limit)",
-    mounjaro: "NICE recommended (phased NHS rollout)",
-  },
-  {
-    feature: "Prescriber assessment",
-    wegovy: "Required (GPhC-registered clinical check)",
-    mounjaro: "Required (GPhC-registered clinical check)",
+    feature: "Typical price of the top dose pen",
+    wegovy: "£200 (2.4 mg)",
+    mounjaro: "£299 (15 mg)",
   },
 ];
 
@@ -67,20 +67,19 @@ export default function WegovyMounjaroQuickVerdict() {
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-violet-800">
             <Sparkles className="h-3.5 w-3.5" aria-hidden />
-            Quick Verdict
+            Quick comparison
           </span>
-          <span className="text-xs text-slate-500 font-medium">Side-by-side comparison</span>
         </div>
 
         <h2
           id="quick-verdict-heading"
           className="mt-4 text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
         >
-          Wegovy vs Mounjaro at a Glance
+          Wegovy vs Mounjaro at a glance
         </h2>
 
         <p className="mt-3 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
-          Wegovy (semaglutide) and Mounjaro (tirzepatide) are both once-weekly weight-loss injections licensed in the UK, but they work on different gut hormone receptors, follow different dose ladders, and differ in monthly cost. In clinical trials, Mounjaro produced higher average weight reduction (~21% vs ~15%), while Wegovy offers a longer UK safety history and a lower starting pen price from £83.
+          Wegovy versus Mounjaro: both are weekly pen injections for weight loss. They use different medicines, so the doses and prices are not the same. Use this Wegovy vs Mounjaro UK summary to compare Wegovy and Mounjaro on the main facts.
         </p>
 
         {/* Comparison table */}
@@ -93,10 +92,10 @@ export default function WegovyMounjaroQuickVerdict() {
                     Feature
                   </th>
                   <th scope="col" className="px-5 py-4 font-bold text-violet-900 bg-violet-50/60 w-1/3">
-                    Wegovy (Semaglutide)
+                    Wegovy
                   </th>
                   <th scope="col" className="px-5 py-4 font-bold text-brand-primary bg-emerald-50/60 w-1/3">
-                    Mounjaro (Tirzepatide)
+                    Mounjaro
                   </th>
                 </tr>
               </thead>
@@ -124,34 +123,56 @@ export default function WegovyMounjaroQuickVerdict() {
           </div>
         </div>
 
-        <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-500">
-          <p>
-            * Trial figures reflect average weight loss in STEP-1 and SURMOUNT-1 clinical programmes. Individual response and tolerability vary.
-          </p>
-          <p className="font-medium text-slate-600">
-            A prescriber decides which medicine is clinically right for you.
+        {/* In short summary */}
+        <div className="mt-8 rounded-2xl border border-slate-200/90 bg-slate-50/70 p-6">
+          <p className="font-bold text-slate-900">In short:</p>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-700 md:text-base">
+            <li>
+              <strong className="font-semibold text-slate-900">Weight loss.</strong> Mounjaro led in the head to head trial.
+            </li>
+            <li>
+              <strong className="font-semibold text-slate-900">Cost.</strong> Wegovy costs less for the same month of treatment.
+            </li>
+            <li>
+              <strong className="font-semibold text-slate-900">Doses.</strong> Wegovy has 5 steps up to 2.4 mg. Mounjaro has 6 steps up to 15 mg.
+            </li>
+          </ul>
+          <p className="mt-4 text-sm font-medium text-slate-700 md:text-base">
+            A prescriber decides which one is right for you.
           </p>
         </div>
 
-        {/* Quick jump CTA buttons */}
-        <div className="mt-8 flex flex-wrap items-center gap-3">
+        <p className="mt-4 text-xs leading-relaxed text-slate-500 sm:text-sm">
+          Trial results:{" "}
           <a
-            href="#cost"
-            className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
+            href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-emerald-800 underline-offset-2 hover:underline"
           >
-            Compare UK Pharmacy Prices
-            <Zap className="h-4 w-4 fill-white" aria-hidden />
+            SURMOUNT-1 (Mounjaro)
           </a>
+          ,{" "}
           <a
-            href="#difference"
-            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50"
+            href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-emerald-800 underline-offset-2 hover:underline"
           >
-            Read Full Differences
-            <ArrowRight className="h-4 w-4" aria-hidden />
+            STEP 1 (Wegovy)
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://www.nejm.org/doi/full/10.1056/NEJMoa2416394"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-emerald-800 underline-offset-2 hover:underline"
+          >
+            SURMOUNT-5 (head to head)
           </a>
-        </div>
+          .
+        </p>
       </div>
     </section>
   );
 }
-

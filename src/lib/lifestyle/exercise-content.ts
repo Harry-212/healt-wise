@@ -167,7 +167,7 @@ export const EXERCISE_INTERNAL_LINKS = [
   { href: "/tools/bmi-calculator", label: "BMI & calorie calculator" },
   { href: "/tools/weight-loss-tracker", label: "Weight loss tracker" },
   { href: "/blog", label: "Blog" },
-  { href: "/blog/how-does-wegovy-work-to-transform-your-weight-journey", label: "How Wegovy works" },
+  { href: "/what-is-wegovy", label: "How Wegovy works" },
   { href: "/wegovy-price-comparison", label: "Compare Wegovy prices UK" },
   { href: "/mounjaro-price-comparison", label: "Compare Mounjaro prices UK" },
 ] as const;

@@ -95,7 +95,7 @@ const REFERENCES = [
     label: "Mounjaro weight loss treatment UK — full guide — Health Wise",
     description:
       "Complete guide to Mounjaro—mechanism, clinical results, eligibility, dosing, and UK pricing.",
-    href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
+    href: "/what-is-mounjaro",
     external: false,
   },
 ];

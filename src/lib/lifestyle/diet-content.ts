@@ -89,7 +89,7 @@ export const DIET_RELATED = [
     readTime: "7 min",
     title: "Do weight loss medications affect diet?",
     excerpt: "Understand how treatments like GLP-1 work with nutrition.",
-    href: "/blog/how-does-wegovy-work-to-transform-your-weight-journey",
+    href: "/what-is-wegovy",
   },
 ] as const;
 
