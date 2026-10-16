@@ -101,7 +101,7 @@ const RELATED_GUIDES = [
       "Understand why progress naturally slows and what markers matter beyond the scale.",
   },
   {
-    href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
+    href: "/what-is-mounjaro",
     category: "Medications",
     title: "Mounjaro Weight Loss Treatment UK: Full Guide",
     description:

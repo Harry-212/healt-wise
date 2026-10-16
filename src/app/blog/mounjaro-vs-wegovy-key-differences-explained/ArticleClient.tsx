@@ -154,7 +154,7 @@ export default function ArticleClient() {
               </Link>
               . Once you have narrowed your choice, our linked articles on{" "}
               <Link
-                href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                href="/what-is-mounjaro"
                 className="font-medium text-brand-primary underline"
               >
                 Mounjaro weight loss treatment (UK)
@@ -493,7 +493,7 @@ export default function ArticleClient() {
                 </Link>{" "}
                 guide and practical use context in{" "}
                 <Link
-                  href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                  href="/what-is-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   Mounjaro weight loss treatment UK

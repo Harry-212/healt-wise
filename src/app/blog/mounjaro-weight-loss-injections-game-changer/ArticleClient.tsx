@@ -366,7 +366,7 @@ export default function ArticleClient() {
                 vary based on your diet, activity level, dosage, and other
                 lifestyle factors.{" "}
                 <Link
-                  href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                  href="/what-is-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Read our UK Mounjaro treatment guide.
@@ -594,7 +594,7 @@ export default function ArticleClient() {
                 things all at once. You might explore how the treatment works by
                 diving into topics such as{" "}
                 <Link
-                  href="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here"
+                  href="/what-is-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   how does Mounjaro work for weight loss

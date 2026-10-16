@@ -700,7 +700,7 @@ export default function BangorNorthernIrelandLocationContent({
                   <li>
                     →{" "}
                     <Link
-                      href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                      href="/what-is-mounjaro"
                       className={linkCls}
                     >
                       Mounjaro weight loss injection (UK guide)

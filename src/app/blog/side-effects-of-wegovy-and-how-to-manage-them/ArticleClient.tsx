@@ -295,14 +295,14 @@ export default function ArticleClient() {
               <p>
                 For a deeper comparison of treatment based options, check out{" "}
                 <Link
-                  href="/blog/mounjaro-vs-wegovy-key-differences-explained"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   Mounjaro vs Wegovy: the key differences explained
                 </Link>
                 . You might also find it helpful to read{" "}
                 <Link
-                  href="/blog/understanding-the-mounjaro-kwikpen-a-user-guide"
+                  href="/blog/mounjaro-click-calculator-uk"
                   className="font-medium text-brand-primary underline"
                 >
                   understanding the Mounjaro KwikPen: a user guide

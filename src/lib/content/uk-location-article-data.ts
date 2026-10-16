@@ -486,7 +486,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Are supplements essential for the best results?",
-        a: `Rarely. Most people do better with consistent meals, movement, and—where appropriate—prescribed medicines overseen by a clinician. Treat “miracle” tablets with the same scepticism we outline in our [methodology](/methodology); for injection context, start with [Mounjaro in the UK](/helpful-guides/mounjaro-weight-loss-injection-uk).`,
+        a: `Rarely. Most people do better with consistent meals, movement, and—where appropriate—prescribed medicines overseen by a clinician. Treat “miracle” tablets with the same scepticism we outline in our [methodology](/methodology); for injection context, start with [Mounjaro in the UK](/what-is-mounjaro).`,
       },
     ];
   }

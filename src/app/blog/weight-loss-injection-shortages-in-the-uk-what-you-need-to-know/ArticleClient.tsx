@@ -299,7 +299,7 @@ export default function ArticleClient() {
                 Wondering how various options stack up against each other? If
                 you are curious, you could look at{" "}
                 <Link
-                  href="/blog/mounjaro-vs-wegovy-key-differences-explained"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   Mounjaro vs Wegovy: the key differences explained
@@ -308,7 +308,7 @@ export default function ArticleClient() {
                 one might suit you better than another. You may also benefit
                 from learning how to properly handle certain devices, like in{" "}
                 <Link
-                  href="/blog/understanding-the-mounjaro-kwikpen-a-user-guide"
+                  href="/blog/mounjaro-click-calculator-uk"
                   className="font-medium text-brand-primary underline"
                 >
                   understanding the Mounjaro KwikPen: a user guide

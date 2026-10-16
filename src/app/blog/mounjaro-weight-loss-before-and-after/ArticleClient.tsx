@@ -136,7 +136,7 @@ export default function ArticleClient() {
                 without feeling deprived. You can learn more about the overall
                 approach in our{" "}
                 <Link
-                  href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                  href="/what-is-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   Mounjaro weight loss
@@ -162,7 +162,7 @@ export default function ArticleClient() {
               <p>
                 For a deeper look at the science behind it, visit{" "}
                 <Link
-                  href="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here"
+                  href="/what-is-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   how does Mounjaro work for weight loss
@@ -298,7 +298,7 @@ export default function ArticleClient() {
                 treatments. For a practical overview of what that routine looks
                 like, see{" "}
                 <Link
-                  href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                  href="/what-is-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   Mounjaro weight loss treatments
@@ -474,7 +474,7 @@ export default function ArticleClient() {
                     </Link>{" "}
                     and{" "}
                     <Link
-                      href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                      href="/what-is-mounjaro"
                       className="font-medium text-brand-primary underline"
                     >
                       treatments

@@ -259,7 +259,7 @@ export default function ArticleClient() {
               <p>
                 See{" "}
                 <Link
-                  href="/blog/mounjaro-vs-wegovy-key-differences-explained"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   Mounjaro vs Wegovy: the key differences explained

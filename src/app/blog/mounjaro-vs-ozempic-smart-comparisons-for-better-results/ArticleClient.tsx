@@ -188,7 +188,7 @@ export default function ArticleClient() {
               When you’re exploring pharmaceutical approaches to weight
               management, you’ve probably come across{" "}
               <Link
-                href="/blog/mounjaro-vs-wegovy-key-differences-explained"
+                href="/compare/wegovy-vs-mounjaro"
                 className="font-semibold text-[#3562ff] underline-offset-2 hover:underline"
               >
                 mounjaro vs ozempic
@@ -268,7 +268,7 @@ export default function ArticleClient() {
                 appetite suppression and energy expenditure. For more details on
                 this, you can read{" "}
                 <Link
-                  href="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here"
+                  href="/what-is-mounjaro"
                   className="font-semibold text-[#3562ff] underline-offset-2 hover:underline"
                 >
                   how Mounjaro really works
@@ -336,7 +336,7 @@ export default function ArticleClient() {
                 incretin mimetics, but dual agonism can introduce differences in
                 frequency and severity. To dive deeper, you might read about{" "}
                 <Link
-                  href="/blog/the-surprising-mounjaro-side-effects-you-might-experience"
+                  href="/helpful-guides/mounjaro-side-effects-uk"
                   className="font-semibold text-[#3562ff] underline-offset-2 hover:underline"
                 >
                   Mounjaro side effects
