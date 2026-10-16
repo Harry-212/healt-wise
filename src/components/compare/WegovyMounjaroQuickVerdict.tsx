@@ -1,62 +1,73 @@
 import { Sparkles } from "lucide-react";
 
-const COMPARISON_ROWS = [
-  {
-    feature: "Medicine inside",
-    wegovy: "Semaglutide",
-    mounjaro: "Tirzepatide",
-  },
-  {
-    feature: "Made by",
-    wegovy: "Novo Nordisk",
-    mounjaro: "Eli Lilly",
-  },
-  {
-    feature: "Hormones it copies",
-    wegovy: "GLP-1",
-    mounjaro: "GLP-1 and GIP",
-  },
-  {
-    feature: "How you take it",
-    wegovy: "One injection a week",
-    mounjaro: "One injection a week",
-  },
-  {
-    feature: "Starter dose",
-    wegovy: "0.25 mg",
-    mounjaro: "2.5 mg",
-  },
-  {
-    feature: "Usual top dose",
-    wegovy: "2.4 mg (some providers also list 7.2 mg)",
-    mounjaro: "15 mg",
-  },
-  {
-    feature: "Average weight loss in its main trial",
-    wegovy: "14.9% after 68 weeks (2.4 mg)",
-    mounjaro: "20.9% after 72 weeks (15 mg)",
-    highlight: true,
-  },
-  {
-    feature: "Head to head trial result",
-    wegovy: "13.7% after 72 weeks",
-    mounjaro: "20.2% after 72 weeks",
-    highlight: true,
-  },
-  {
-    feature: "Starter pen from",
-    wegovy: "£83",
-    mounjaro: "£99",
-    highlight: true,
-  },
-  {
-    feature: "Typical price of the top dose pen",
-    wegovy: "£200 (2.4 mg)",
-    mounjaro: "£299 (15 mg)",
-  },
-];
+export interface WegovyMounjaroQuickVerdictProps {
+  wegovyStarterLow?: string;
+  mounjaroStarterLow?: string;
+  wegovyTopTypical?: string;
+  mounjaroTopTypical?: string;
+}
 
-export default function WegovyMounjaroQuickVerdict() {
+export default function WegovyMounjaroQuickVerdict({
+  wegovyStarterLow = "£72.89",
+  mounjaroStarterLow = "£119.69",
+  wegovyTopTypical = "£200",
+  mounjaroTopTypical = "£299",
+}: WegovyMounjaroQuickVerdictProps) {
+  const comparisonRows = [
+    {
+      feature: "Medicine inside",
+      wegovy: "Semaglutide",
+      mounjaro: "Tirzepatide",
+    },
+    {
+      feature: "Made by",
+      wegovy: "Novo Nordisk",
+      mounjaro: "Eli Lilly",
+    },
+    {
+      feature: "Hormones it copies",
+      wegovy: "GLP-1",
+      mounjaro: "GLP-1 and GIP",
+    },
+    {
+      feature: "How you take it",
+      wegovy: "One injection a week",
+      mounjaro: "One injection a week",
+    },
+    {
+      feature: "Starter dose",
+      wegovy: "0.25 mg",
+      mounjaro: "2.5 mg",
+    },
+    {
+      feature: "Usual top dose",
+      wegovy: "2.4 mg (some providers also list 7.2 mg)",
+      mounjaro: "15 mg",
+    },
+    {
+      feature: "Average weight loss in its main trial",
+      wegovy: "14.9% after 68 weeks (2.4 mg)",
+      mounjaro: "20.9% after 72 weeks (15 mg)",
+      highlight: true,
+    },
+    {
+      feature: "Head to head trial result",
+      wegovy: "13.7% after 72 weeks",
+      mounjaro: "20.2% after 72 weeks",
+      highlight: true,
+    },
+    {
+      feature: "Starter pen from",
+      wegovy: wegovyStarterLow,
+      mounjaro: mounjaroStarterLow,
+      highlight: true,
+    },
+    {
+      feature: "Typical price of the top dose pen",
+      wegovy: `${wegovyTopTypical} (2.4 mg)`,
+      mounjaro: `${mounjaroTopTypical} (15 mg)`,
+    },
+  ];
   return (
     <section
       id="quick-verdict"
@@ -100,7 +111,7 @@ export default function WegovyMounjaroQuickVerdict() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-700">
-                {COMPARISON_ROWS.map((row) => (
+                {comparisonRows.map((row) => (
                   <tr
                     key={row.feature}
                     className={`transition-colors hover:bg-slate-50/80 ${

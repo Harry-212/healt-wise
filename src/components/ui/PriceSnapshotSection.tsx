@@ -1,14 +1,23 @@
 import Link from "next/link";
 import HomeSectionCard from "@/components/ui/HomeSectionCard";
+import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
 
-const ROWS = [
-  { dose: "Mounjaro 2.5 mg (starter)", lowest: "£99", typical: "£154", highest: "£229" },
-  { dose: "Mounjaro 15 mg (top dose)", lowest: "£229", typical: "£299", highest: "£359.95" },
-  { dose: "Wegovy 0.25 mg (starter)", lowest: "£83", typical: "£100", highest: "£205" },
-  { dose: "Wegovy 2.4 mg (top dose)", lowest: "£135", typical: "£200", highest: "£290" },
-] as const;
+const DEFAULT_ROWS: HomePriceSnapshotRow[] = [
+  { dose: "Mounjaro 2.5 mg (starter)", lowest: "£119.69", typical: "£154", highest: "£229" },
+  { dose: "Mounjaro 15 mg (top dose)", lowest: "£245.69", typical: "£299", highest: "£359.95" },
+  { dose: "Wegovy 0.25 mg (starter)", lowest: "£72.89", typical: "£100", highest: "£205" },
+  { dose: "Wegovy 2.4 mg (top dose)", lowest: "£173.69", typical: "£200", highest: "£290" },
+];
 
-export default function PriceSnapshotSection() {
+export interface PriceSnapshotSectionProps {
+  rows?: HomePriceSnapshotRow[];
+  lastUpdated?: string;
+}
+
+export default function PriceSnapshotSection({
+  rows = DEFAULT_ROWS,
+  lastUpdated = "20 September 2026",
+}: PriceSnapshotSectionProps) {
   return (
     <HomeSectionCard id="price-snapshot">
       <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -31,7 +40,7 @@ export default function PriceSnapshotSection() {
             </tr>
           </thead>
           <tbody>
-            {ROWS.map((row) => (
+            {rows.map((row) => (
               <tr key={row.dose} className="border-t border-slate-200">
                 <td className="px-4 py-3 font-medium text-slate-900">{row.dose}</td>
                 <td className="px-4 py-3 text-slate-700">{row.lowest}</td>
@@ -45,7 +54,7 @@ export default function PriceSnapshotSection() {
 
       <p className="mt-4 text-xs text-slate-500 sm:text-sm">
         Prices are for the pen only. Delivery is usually extra. Last checked
-        20 September 2026.
+        {" "}{lastUpdated}.
       </p>
 
       <div className="mt-5">

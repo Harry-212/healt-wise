@@ -1,3 +1,4 @@
+import type { CheapestAcrossDoses } from "@/lib/data/mounjaro-price-insights";
 import { formatGbp } from "@/lib/data/wegovy-price-insights";
 
 const CHEAPEST_WAY_STEPS = [
@@ -24,8 +25,10 @@ const CHEAPEST_WAY_STEPS = [
 ];
 
 export default function WegovyCheapestSection({
-  starterLow = 83,
+  cheapestAcross,
+  starterLow = 72.89,
 }: {
+  cheapestAcross?: CheapestAcrossDoses | null;
   starterLow?: number;
 }) {
   return (
@@ -34,16 +37,27 @@ export default function WegovyCheapestSection({
         <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
           Where is the cheapest Wegovy in the UK?
         </h2>
-        <p className="mt-4 leading-relaxed text-slate-600">
-          No single pharmacy was cheapest for every dose in our latest check.
-          Next Script was the cheapest place for Wegovy in the UK on 0.5 mg and
-          1 mg, at £84.98. Medicine Marketplace was the cheapest place to buy
-          Wegovy in the UK on 1.7 mg and 2.4 mg, the doses most people stay on
-          longest. Slinic had the cheapest starter pen, and AYP Healthcare the
-          cheapest 7.2 mg pen. So the cheapest place to get Wegovy depends on
-          your dose. Always look at the date next to the price, as this can
-          change each month.
-        </p>
+        {cheapestAcross ? (
+          <p className="mt-4 leading-relaxed text-slate-600">
+            In our latest check, {cheapestAcross.leader} was the cheapest place
+            to buy Wegovy in the UK for {cheapestAcross.leaderWins} of the{" "}
+            {cheapestAcross.totalDoses} doses.{" "}
+            {cheapestAcross.exceptions.map((ex, i) => (
+              <span key={ex.dose}>
+                {ex.provider} was cheapest for {ex.dose.replace("mg", " mg")}
+                {ex.marginPence > 0 ? `, by just ${ex.marginPence}p` : ""}.
+                {i < cheapestAcross.exceptions.length - 1 ? " " : " "}
+              </span>
+            ))}
+            Always look at the date next to the price, as this can change each
+            month.
+          </p>
+        ) : (
+          <p className="mt-4 leading-relaxed text-slate-600">
+            The cheapest place to get Wegovy depends on your dose. Always look
+            at the date next to the price, as this can change each month.
+          </p>
+        )}
 
         <h3 className="mt-8 text-lg font-bold text-slate-900">
           What&apos;s the cheapest way to get Wegovy?

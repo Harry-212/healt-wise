@@ -14,6 +14,7 @@ import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
 import WegovyMounjaroQuickVerdict from "@/components/compare/WegovyMounjaroQuickVerdict";
 import WegovyMounjaroLongFormContent from "@/components/compare/WegovyMounjaroLongFormContent";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
+import { getLivePriceSummary } from "@/lib/data/home-price-summary";
 import {
   COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT,
   COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_SRC,
@@ -90,6 +91,7 @@ export default async function ComparePage({ params }: Props) {
   const layout = layoutForSlug(slug);
   if (!cfg || !layout) notFound();
 
+  const priceSummary = getLivePriceSummary();
   const webLdName = layout.share.title;
   const faqItems = getCompareFaqsForSlug(slug);
   const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
@@ -139,7 +141,12 @@ export default async function ComparePage({ params }: Props) {
         />
 
         {/* Section 2: Quick comparison */}
-        <WegovyMounjaroQuickVerdict />
+        <WegovyMounjaroQuickVerdict
+          wegovyStarterLow={priceSummary.wegovyStarterLow}
+          mounjaroStarterLow={priceSummary.mounjaroStarterLow}
+          wegovyTopTypical={priceSummary.wegovyTopTypical}
+          mounjaroTopTypical={priceSummary.mounjaroTopTypical}
+        />
 
         {/* Trust Marquee */}
         <section className="w-full border-b border-slate-200/80">
@@ -148,7 +155,14 @@ export default async function ComparePage({ params }: Props) {
 
         {/* Sections 3 through 9 */}
         {slug === "wegovy-vs-mounjaro" ? (
-          <WegovyMounjaroLongFormContent />
+          <WegovyMounjaroLongFormContent
+            priceRows={priceSummary.compareSnapshotRows}
+            firstSixMonths={priceSummary.firstSixMonths}
+            wegovy72Low={priceSummary.wegovy72Low}
+            wegovy72Typical={priceSummary.wegovy72Typical}
+            wegovy72Listed={priceSummary.wegovy72Listed}
+            wegovyProviderCount={priceSummary.wegovyProviderCount}
+          />
         ) : (
           <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
             <div className="mx-auto max-w-5xl px-4 md:px-8">
