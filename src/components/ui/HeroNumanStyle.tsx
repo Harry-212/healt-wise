@@ -9,11 +9,13 @@ import {
 export interface HeroNumanStyleProps {
   wegovyStarterLow?: string;
   mounjaroStarterLow?: string;
+  pricesChecked?: string;
 }
 
 export default function HeroNumanStyle({
   wegovyStarterLow = "£72.89",
   mounjaroStarterLow = "£119.69",
+  pricesChecked = "20 September 2026",
 }: HeroNumanStyleProps) {
   return (
     <section
@@ -109,7 +111,7 @@ export default function HeroNumanStyle({
               <div className="mt-4 border-t border-slate-200/80 pt-3 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs font-semibold text-slate-700 sm:text-[13px]">
                 <div className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-emerald-600 shrink-0" strokeWidth={2.5} />
-                  <span>Prices checked 20 September 2026</span>
+                  <span>Prices checked {pricesChecked}</span>
                 </div>
                 <div className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-emerald-600 shrink-0" strokeWidth={2.5} />

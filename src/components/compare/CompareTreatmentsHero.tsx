@@ -59,6 +59,7 @@ export default function CompareTreatmentsHero({
   heroPhotoAlt = "",
   highlightNavLinks = false,
   subtitleId,
+  pricesChecked = "20 September 2026",
 }: {
   variant: HeroShaderVariant;
   eyebrow: string;
@@ -78,6 +79,8 @@ export default function CompareTreatmentsHero({
   highlightNavLinks?: boolean;
   /** Optional id on the subtitle paragraph (e.g. speakable target). */
   subtitleId?: string;
+  /** Latest price-check date shown under the hero buttons. */
+  pricesChecked?: string;
 }) {
   const shaderMinH = wideDesktopHero
     ? "min-h-[min(82svh,580px)] sm:min-h-[min(80svh,640px)] md:min-h-[min(82svh,700px)] lg:min-h-[min(88svh,780px)] xl:min-h-[min(90svh,860px)]"
@@ -184,7 +187,7 @@ export default function CompareTreatmentsHero({
           </div>
 
           <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-white/80 lg:mx-0 lg:justify-start sm:text-sm">
-            <span>Prices checked 20 September 2026</span>
+            <span>Prices checked {pricesChecked}</span>
             <span aria-hidden="true">·</span>
             <span>Same prices as our price pages</span>
             <span aria-hidden="true">·</span>
