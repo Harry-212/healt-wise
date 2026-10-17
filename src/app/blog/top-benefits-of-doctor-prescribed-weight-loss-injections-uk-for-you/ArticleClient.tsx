@@ -219,7 +219,7 @@ export default function ArticleClient() {
                 If you want a wider view of how these treatments fit into UK
                 weight loss care, see our guide on{" "}
                 <Link
-                  href="/blog/understanding-prescription-weight-loss-injections-uk"
+                  href="/blog/weight-loss-treatment-uk-complete-guide"
                   className="font-medium text-brand-primary underline"
                 >
                   understanding prescription weight loss treatments in the UK
@@ -340,7 +340,7 @@ export default function ArticleClient() {
               <p>
                 Compare the two main options in our{" "}
                 <Link
-                  href="/blog/mounjaro-vs-wegovy-key-differences-explained"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   Mounjaro vs Wegovy comparison

@@ -246,7 +246,7 @@ export default function ArticleClient() {
                 injection routes are often presented side by side. If you want
                 to start with the basics of one of the most searched pens, our{" "}
                 <Link
-                  href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                  href="/what-is-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Mounjaro weight loss injection UK guide

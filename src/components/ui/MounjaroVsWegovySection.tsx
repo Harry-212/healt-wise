@@ -1,17 +1,25 @@
 import Link from "next/link";
 import HomeSectionCard from "@/components/ui/HomeSectionCard";
 
-const ROWS = [
-  { feature: "Medicine inside", mounjaro: "Tirzepatide", wegovy: "Semaglutide" },
-  { feature: "Made by", mounjaro: "Eli Lilly", wegovy: "Novo Nordisk" },
-  { feature: "How you take it", mounjaro: "One injection a week", wegovy: "One injection a week" },
-  { feature: "Starter dose", mounjaro: "2.5 mg", wegovy: "0.25 mg" },
-  { feature: "Usual top dose", mounjaro: "15 mg", wegovy: "2.4 mg" },
-  { feature: "Average weight loss in the main trial", mounjaro: "20.9% after 72 weeks (15 mg dose)", wegovy: "14.9% after 68 weeks" },
-  { feature: "Starter pen from", mounjaro: "£99", wegovy: "£83" },
-] as const;
+export interface MounjaroVsWegovySectionProps {
+  mounjaroStarterLow?: string;
+  wegovyStarterLow?: string;
+}
 
-export default function MounjaroVsWegovySection() {
+export default function MounjaroVsWegovySection({
+  mounjaroStarterLow = "£119.69",
+  wegovyStarterLow = "£72.89",
+}: MounjaroVsWegovySectionProps) {
+  const rows = [
+    { feature: "Medicine inside", mounjaro: "Tirzepatide", wegovy: "Semaglutide" },
+    { feature: "Made by", mounjaro: "Eli Lilly", wegovy: "Novo Nordisk" },
+    { feature: "How you take it", mounjaro: "One injection a week", wegovy: "One injection a week" },
+    { feature: "Starter dose", mounjaro: "2.5 mg", wegovy: "0.25 mg" },
+    { feature: "Usual top dose", mounjaro: "15 mg", wegovy: "2.4 mg" },
+    { feature: "Average weight loss in the main trial", mounjaro: "20.9% after 72 weeks (15 mg dose)", wegovy: "14.9% after 68 weeks" },
+    { feature: "Starter pen from", mounjaro: mounjaroStarterLow, wegovy: wegovyStarterLow },
+  ];
+
   return (
     <HomeSectionCard>
       <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -33,7 +41,7 @@ export default function MounjaroVsWegovySection() {
             </tr>
           </thead>
           <tbody>
-            {ROWS.map((row) => (
+            {rows.map((row) => (
               <tr key={row.feature} className="border-t border-slate-200">
                 <td className="px-4 py-3 font-medium text-slate-900">{row.feature}</td>
                 <td className="px-4 py-3 text-slate-700">{row.mounjaro}</td>

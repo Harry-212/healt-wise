@@ -13,12 +13,7 @@ import {
   buildUkLocationTitle,
 } from "@/lib/content/uk-location-article-data";
 import { UK_WEIGHT_LOSS_LOCATIONS } from "@/lib/data/uk-weight-loss-locations";
-import {
-  BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE,
-  BLOG_MOUNT_KWIKPEN_USER_GUIDE_HERO_IMAGE,
-  BLOG_SURPRISING_MOUNJARO_SIDE_EFFECTS_HERO_IMAGE,
-  BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE,
-} from "@/lib/site-assets";
+import { BLOG_WEGOVY_INJECTION_INSTRUCTIONS_HERO_IMAGE } from "@/lib/site-assets";
 
 export { POSTS_PER_PAGE } from "@/lib/blog-feed";
 
@@ -143,16 +138,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["guides", "wegovy", "mounjaro", "how-it-works"],
   },
   {
-    slug: "what-is-wegovy-pill",
-    title: "What Is Wegovy Tablet? Semaglutide Tablet Explained for UK Users",
-    date: "2026-07-02",
-    category: "Guides",
-    description:
-      "Learn what Wegovy Tablet is, how semaglutide tablets work, who they may suit, and how they compare with injections.",
-    heroImage: "/blog/what-is-wegovy-1.png",
-    feedTags: ["guides", "wegovy", "how-it-works", "safety"],
-  },
-  {
     slug: "wegovy-pill-uk",
     title: "Wegovy Tablet UK: Price, Availability, Results and Safety Guide",
     date: "2026-07-01",
@@ -201,27 +186,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
       "Are GLP-1 supplements real? Learn what may help, what is hype, and how they differ from prescription GLP-1 medicines.",
     heroImage: "/blog/are-glp-1-real.webp",
     feedTags: ["safety", "guides", "how-it-works", "mounjaro", "wegovy"],
-  },
-  {
-    slug: "glp-1-supplements-uk",
-    title: "GLP-1 Supplements UK: What Helps, What's Hype and What to Avoid",
-    date: "2026-06-20",
-    category: "Guides",
-    description:
-      "GLP-1 supplements UK guide: protein, fibre, vitamins, safety checks and what not to confuse with medicine.",
-    heroImage: "/blog/glp-1-supplement.webp",
-    feedTags: ["guides", "safety", "how-it-works", "mounjaro", "wegovy"],
-  },
-  {
-    slug: "buy-weight-loss-pills-uk",
-    title:
-      "Buy Weight Loss Tablets UK: Safe Options, Prices and Treatment Comparison",
-    date: "2026-06-19",
-    category: "Guides",
-    description:
-      "Buy weight loss tablets UK safely. Compare orlistat, Mysimba, GLP-1 tablets, prices, risks and pharmacy checks.",
-    heroImage: "/blog/buy-weight-loss-piils-1.webp",
-    feedTags: ["guides", "safety", "how-it-works", "wegovy"],
   },
   {
     slug: "buy-weight-loss-tablets",
@@ -320,17 +284,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["wegovy", "mounjaro", "guides", "how-it-works"],
   },
   {
-    slug: "understanding-prescription-weight-loss-injections-uk",
-    title:
-      "Understanding Prescription Weight Loss Treatments in the UK: What They May Actually Offer",
-    date: "2026-04-25",
-    category: "Guides",
-    description:
-      "Explore uk prescription weight loss treatments and discover if they're the safe, effective boost you need.",
-    heroImage: "/blog/UK%20prescription%20weight%20loss%20injection.webp",
-    feedTags: ["wegovy", "mounjaro", "guides", "how-it-works"],
-  },
-  {
     slug: "top-benefits-of-doctor-prescribed-weight-loss-injections-uk-for-you",
     title:
       "Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You",
@@ -343,16 +296,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["wegovy", "mounjaro", "guides", "how-it-works"],
   },
   {
-    slug: "injectable-obesity-treatments-uk-what-works-and-what-doesnt",
-    title: "Injectable Obesity Treatments UK: What Works and What Doesn't",
-    date: "2026-05-06",
-    category: "Guides",
-    description:
-      "Injectable obesity treatments in the UK: understand how Wegovy and Mounjaro work, NHS vs private access, costs, side effects and realistic expectations.",
-    heroImage: "/blog/injectable%20obesity%20treatments%20uk.avif",
-    feedTags: ["wegovy", "mounjaro", "guides", "how-it-works"],
-  },
-  {
     slug: "mounjaro-vs-ozempic-smart-comparisons-for-better-results",
     title: "Mounjaro vs Ozempic: Smart Comparisons for Better Results",
     date: "2026-04-24",
@@ -362,16 +305,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     heroImage:
       "/blog/Mounjaro%20vs%20Ozempic%20Smart%20Comparisons%20for%20Better%20Results.webp",
     feedTags: ["mounjaro", "how-it-works", "guides"],
-  },
-  {
-    slug: "the-surprising-mounjaro-side-effects-you-might-experience",
-    title: "The Surprising Mounjaro Side Effects You Might Experience",
-    date: "2026-04-24",
-    category: "Guides",
-    description:
-      "Discover surprising mounjaro side effects you might experience and how you can manage them with confidence.",
-    heroImage: BLOG_SURPRISING_MOUNJARO_SIDE_EFFECTS_HERO_IMAGE,
-    feedTags: ["mounjaro", "guides", "safety"],
   },
   {
     slug: "weight-loss-injection-shortages-in-the-uk-what-you-need-to-know",
@@ -393,27 +326,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
       "Boost your weight loss with friendly tips on side effects of Wegovy and how to manage them in the UK.",
     heroImage: "/blog/tired.webp",
     feedTags: ["wegovy", "guides", "safety"],
-  },
-  {
-    slug: "understanding-the-mounjaro-kwikpen-a-user-guide",
-    title: "Feel confident on your journey - A Simple Guide",
-    date: "2026-04-21",
-    category: "Guides",
-    description:
-      "Get confident with understanding the mounjaro kwikpen: a user guide to your UK weight loss treatment journey.",
-    heroImage: BLOG_MOUNT_KWIKPEN_USER_GUIDE_HERO_IMAGE,
-    feedTags: ["mounjaro", "guides", "how-it-works"],
-  },
-  {
-    slug: "mounjaro-vs-wegovy-key-differences-explained",
-    title:
-      "How Mounjaro vs Wegovy: The Key Differences Explained Help You Choose",
-    date: "2026-04-20",
-    category: "Comparisons",
-    description:
-      "See how mounjaro vs wegovy: the key differences explained helps you choose your ideal UK weight loss shot.",
-    heroImage: "/blog/How%20Mounjaro%20vs%20Wegovy.webp",
-    feedTags: ["mounjaro", "wegovy", "guides"],
   },
   {
     slug: "mounjaro-weight-loss-results-change-your-life",
@@ -461,17 +373,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["mounjaro", "wegovy", "guides", "safety"],
   },
   {
-    slug: "mounjaro-weight-loss-injections-game-changer",
-    title: "Could Mounjaro Weight Loss Treatments Be Your Game-Changer?",
-    date: "2026-04-18",
-    category: "Guides",
-    description:
-      "Could mounjaro weight loss treatments be your breakthrough to finally conquer stubborn diet plateaus?",
-    heroImage:
-      "/blog/Could%20Mounjaro%20Weight%20Loss%20Injections%20Be%20Your%20Game-Changer.webp",
-    feedTags: ["mounjaro", "guides"],
-  },
-  {
     slug: "mounjaro-weight-loss-before-and-after",
     title: "Your Ultimate Guide to Mounjaro Weight Loss Before and After",
     date: "2026-04-17",
@@ -481,16 +382,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     heroImage:
       "/blog/Your%20Ultimate%20Guide%20to%20Mounjaro%20Weight%20Loss%20Before%20and%20After.webp",
     feedTags: ["mounjaro", "guides"],
-  },
-  {
-    slug: "how-does-wegovy-work-to-transform-your-weight-journey",
-    title: "How Does Wegovy Work to Transform Your Weight Journey",
-    date: "2026-05-02",
-    category: "Guides",
-    description:
-      "Discover exactly how the Wegovy weight loss treatment works in your body, from mimicking the GLP-1 hormone to reducing appetite and slowing gastric emptying.",
-    heroImage: "https://i.ibb.co.com/qYntkdQh/how-does-wegovy-work.png",
-    feedTags: ["wegovy", "how-it-works"],
   },
   {
     slug: "mounjaro-dosage-for-weight-loss-facts-you-can-trust",
@@ -513,27 +404,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["wegovy", "guides"],
   },
   {
-    slug: "discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you",
-    title: "Discover If Mounjaro Is Safe for Weight Loss and Right for You",
-    date: "2026-04-28",
-    category: "Safety",
-    description:
-      "Wondering is mounjaro safe for weight loss? Get your UK eligibility, cost & provider insights before deciding.",
-    heroImage:
-      "/blog/Discover%20If%20Mounjaro%20Is%20Safe%20for%20Weight%20Loss%20and%20Right.webp",
-    feedTags: ["mounjaro", "safety"],
-  },
-  {
-    slug: "does-mounjaro-really-work-for-weight-loss-find-out-here",
-    title: "Does Mounjaro Really Work for Weight Loss? Find Out Here",
-    date: "2026-04-27",
-    category: "Guides",
-    description:
-      "How does Mounjaro work for weight loss? Discover your eligibility, costs and UK providers in one guide.",
-    heroImage: BLOG_DOES_MOUNJARO_WORK_HERO_IMAGE,
-    feedTags: ["mounjaro", "how-it-works"],
-  },
-  {
     slug: "mounjaro-weight-loss-benefits-backed-by-science",
     title: "Mounjaro Weight Loss Benefits Backed by Science",
     date: "2026-04-26",
@@ -544,18 +414,24 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
       "/blog/Mounjaro%20Weight%20Loss%20Benefits%20Backed%20by%20Science.webp",
     feedTags: ["mounjaro", "how-it-works"],
   },
-  {
-    slug: "the-truth-about-mounjaro-dosage-for-weight-loss-effectiveness",
-    title: "The Truth About Mounjaro Dosage for Weight Loss Effectiveness",
-    date: "2026-04-16",
-    category: "Guides",
-    description:
-      "Find the ideal mounjaro dosage for weight loss to maximise your results with clear, expert-backed guidance.",
-    heroImage:
-      "/blog/The%20Truth%20About%20Mounjaro%20Dosage%20for%20Weight%20Loss%20Effectiveness.webp",
-    feedTags: ["mounjaro", "guides"],
-  },
 ];
+
+/** Redirected `/blog/:slug` duplicate slugs (Zero-click pack 1, section B). */
+const REDIRECTED_BLOG_SLUGS = new Set<string>([
+  "mounjaro-vs-wegovy-key-differences-explained",
+  "injectable-obesity-treatments-uk-what-works-and-what-doesnt",
+  "understanding-prescription-weight-loss-injections-uk",
+  "what-is-wegovy-pill",
+  "the-truth-about-mounjaro-dosage-for-weight-loss-effectiveness",
+  "does-mounjaro-really-work-for-weight-loss-find-out-here",
+  "discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you",
+  "buy-weight-loss-pills-uk",
+  "the-surprising-mounjaro-side-effects-you-might-experience",
+  "mounjaro-weight-loss-injections-game-changer",
+  "glp-1-supplements-uk",
+  "understanding-the-mounjaro-kwikpen-a-user-guide",
+  "how-does-wegovy-work-to-transform-your-weight-journey",
+]);
 
 /** Curated long-form `/blog/:slug` App Router articles (each includes an in-page FAQ). */
 export const CURATED_BLOG_ARTICLE_SLUGS: readonly string[] =
@@ -605,6 +481,7 @@ function blogArticleSlugsOnDisk(): string[] {
       (slug) =>
         slug !== "[slug]" &&
         slug !== "page" &&
+        !REDIRECTED_BLOG_SLUGS.has(slug) &&
         fs.existsSync(path.join(base, slug, "page.tsx")),
     )
     .sort();
@@ -617,7 +494,7 @@ export function getAllBlogSitemapSlugs(): string[] {
     ...blogArticleSlugsOnDisk(),
     ...getIndexedUkLocationArticleSlugs(),
   ]);
-  return [...slugs].sort();
+  return [...slugs].filter((slug) => !REDIRECTED_BLOG_SLUGS.has(slug)).sort();
 }
 
 /**

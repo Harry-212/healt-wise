@@ -277,7 +277,7 @@ export default function ArticleClient() {
                 management issues. If you would like more details, you can
                 explore{" "}
                 <Link
-                  href="/blog/mounjaro-vs-wegovy-key-differences-explained"
+                  href="/compare/wegovy-vs-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   Mounjaro vs Wegovy: the key differences explained

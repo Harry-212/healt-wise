@@ -99,7 +99,7 @@ const RELATED_GUIDES = [
       "What safe delivery looks like, temperature zones explained, and what to do if something goes wrong.",
   },
   {
-    href: "/helpful-guides/mounjaro-weight-loss-injection-uk",
+    href: "/what-is-mounjaro",
     category: "Medications",
     title: "Mounjaro Weight Loss Treatment UK: Full Guide",
     description:

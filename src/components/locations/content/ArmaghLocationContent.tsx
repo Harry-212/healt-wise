@@ -800,7 +800,7 @@ export default function ArmaghLocationContent({ loc, shareUrl }: Props) {
                   <li>
                     →{" "}
                     <Link
-                      href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                      href="/what-is-mounjaro"
                       className={linkCls}
                     >
                       Mounjaro weight loss injection (UK guide)

@@ -29,12 +29,12 @@ function median(values: number[]): number {
     : (sorted[mid - 1] + sorted[mid]) / 2;
 }
 
-function summarise(dose: string, totals: number[]): AnnualCostRow | null {
-  if (totals.length === 0) return null;
+function summarise(dose: string, allTotals: number[]): AnnualCostRow | null {
+  if (allTotals.length === 0) return null;
   return {
     dose,
-    low: Math.round(Math.min(...totals)),
-    typical: Math.round(median(totals)),
+    low: Math.round(Math.min(...allTotals)),
+    typical: Math.round(median(allTotals)),
   };
 }
 
@@ -55,15 +55,21 @@ export function buildAnnualCostEstimates<K extends string>(
     const steps = ladder.slice(0, ladder.indexOf(target));
     const pensAtTarget = PENS_PER_YEAR - steps.length;
 
-    const yearOneTotals = priceRows.flatMap((row) => {
-      const path = [...steps, target].map((k) => row[k]);
-      if (path.some((p) => p == null)) return [];
-      const stepCost = steps.reduce((sum, k) => sum + (row[k] as number), 0);
-      return [stepCost + pensAtTarget * (row[target] as number)];
-    });
-    const ongoingTotals = priceRows.flatMap((row) =>
-      row[target] == null ? [] : [PENS_PER_YEAR * (row[target] as number)],
-    );
+    const computeYearOne = (rows: Record<K, number | null>[]) =>
+      rows.flatMap((row) => {
+        const path = [...steps, target].map((k) => row[k]);
+        if (path.some((p) => p == null)) return [];
+        const stepCost = steps.reduce((sum, k) => sum + (row[k] as number), 0);
+        return [stepCost + pensAtTarget * (row[target] as number)];
+      });
+
+    const computeOngoing = (rows: Record<K, number | null>[]) =>
+      rows.flatMap((row) =>
+        row[target] == null ? [] : [PENS_PER_YEAR * (row[target] as number)],
+      );
+
+    const yearOneTotals = computeYearOne(priceRows);
+    const ongoingTotals = computeOngoing(priceRows);
 
     const y1 = summarise(target, yearOneTotals);
     const on = summarise(target, ongoingTotals);

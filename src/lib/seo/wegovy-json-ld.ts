@@ -171,27 +171,49 @@ export function wegovyClickCalculatorFaqJsonLd(): Record<string, unknown> {
   };
 }
 
-export const WEGOVY_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }[] =
-  [
+export type WegovyCompareFaqParams = {
+  starterLow: string;
+  starterWeekly: string;
+  dose24Low: string;
+  dose24High: string;
+  dose24Typical: string;
+  dose24Weekly: string;
+  dose72Low: string;
+  cheapestLeader: string;
+  cheapestLeaderWins: number;
+  cheapestTotalDoses: number;
+};
+
+export function buildWegovyCompareUkFaqItems(
+  params?: WegovyCompareFaqParams,
+): { question: string; answer: string }[] {
+  const starterLow = params?.starterLow ?? "£72.89";
+  const starterWeekly = params?.starterWeekly ?? "£18.22";
+  const dose24Low = params?.dose24Low ?? "£173.69";
+  const dose24High = params?.dose24High ?? "£290";
+  const dose24Typical = params?.dose24Typical ?? "£200";
+  const dose24Weekly = params?.dose24Weekly ?? "£43.42";
+  const dose72Low = params?.dose72Low ?? "£175.49";
+  const cheapestLeader = params?.cheapestLeader ?? "Pharmacy + Me";
+  const cheapestLeaderWins = params?.cheapestLeaderWins ?? 6;
+  const cheapestTotalDoses = params?.cheapestTotalDoses ?? 6;
+
+  return [
     {
       question: "What is the price of Wegovy in the UK?",
-      answer:
-        "Wegovy costs from £83 to £290 for one pen in the UK, on doses from 0.25 mg to 2.4 mg. The 7.2 mg pen costs from £199.99. The price depends on your dose and your pharmacy.",
+      answer: `Wegovy costs from ${starterLow} to ${dose24High} for one pen in the UK, on doses from 0.25 mg to 2.4 mg. The 7.2 mg pen costs from ${dose72Low}. The price depends on your dose and your pharmacy.`,
     },
     {
       question: "How much is Wegovy per month?",
-      answer:
-        "One pen lasts a month. So Wegovy costs from £83 a month on the starter dose and from £135 a month on 2.4 mg. Most people pay about £200 a month on 2.4 mg.",
+      answer: `One pen lasts a month. So Wegovy costs from ${starterLow} a month on the starter dose and from ${dose24Low} a month on 2.4 mg. Most people pay about ${dose24Typical} a month on 2.4 mg.`,
     },
     {
       question: "How much is Wegovy per week?",
-      answer:
-        "Wegovy costs from £20.75 a week in the UK. One pen holds 4 weekly doses, so the weekly price is the pen price divided by 4. On 2.4 mg, it is from £33.75 a week.",
+      answer: `Wegovy costs from ${starterWeekly} a week in the UK. One pen holds 4 weekly doses, so the weekly price is the pen price divided by 4. On 2.4 mg, it is from ${dose24Weekly} a week.`,
     },
     {
       question: "What is the cheapest Wegovy provider in the UK?",
-      answer:
-        "It depends on your dose. In our 20 September 2026 check, Next Script was cheapest for 0.5 mg and 1 mg, and Medicine Marketplace was cheapest for 1.7 mg and 2.4 mg.",
+      answer: `${cheapestLeader} had the lowest price for ${cheapestLeaderWins} of the ${cheapestTotalDoses} doses in our latest check.`,
     },
     {
       question: "What's the cheapest place to get Wegovy?",
@@ -239,6 +261,10 @@ export const WEGOVY_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }[]
         "We check every price in the first week of each month. The date of the last check is shown next to the prices.",
     },
   ];
+}
+
+export const WEGOVY_COMPARE_UK_FAQ_ITEMS: { question: string; answer: string }[] =
+  buildWegovyCompareUkFaqItems();
 
 export function wegovyCompareUkFaqJsonLd(
   items: { question: string; answer: string }[] = WEGOVY_COMPARE_UK_FAQ_ITEMS,

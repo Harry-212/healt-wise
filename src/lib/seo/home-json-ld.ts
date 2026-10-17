@@ -20,7 +20,7 @@ const SITE_DESCRIPTION =
 
 const HOME_PAGE_NAME = "Weight Loss Injections Price Comparison UK";
 const HOME_PAGE_DESCRIPTION =
-  "Compare weight loss injection prices at 60+ GPhC registered UK pharmacies. See Mounjaro from £99 and Wegovy from £83, at every dose.";
+  "Compare weight loss injection prices at 60+ GPhC registered UK pharmacies. See Mounjaro from £119 and Wegovy from £73, at every dose.";
 
 const SITE_KNOWS_ABOUT = [
   "Weight loss injections price comparison UK",
@@ -157,7 +157,21 @@ function homeSchemaPriceSnapshotDataset(base: string): Record<string, unknown> {
   };
 }
 
-function homeSchemaMounjaroProduct(base: string): Record<string, unknown> {
+export interface HomePageJsonLdOptions {
+  mounjaroStarterLow?: string;
+  mounjaroTopHigh?: string;
+  wegovyStarterLow?: string;
+  wegovyTopHigh?: string;
+  lastUpdatedDateIso?: string;
+}
+
+function homeSchemaMounjaroProduct(
+  base: string,
+  options?: HomePageJsonLdOptions,
+): Record<string, unknown> {
+  const lowPrice = options?.mounjaroStarterLow ?? "119.69";
+  const highPrice = options?.mounjaroTopHigh ?? "359.95";
+
   return {
     "@type": ["Drug", "Product"],
     "@id": `${base}/#mounjaro`,
@@ -176,14 +190,20 @@ function homeSchemaMounjaroProduct(base: string): Record<string, unknown> {
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "GBP",
-      lowPrice: "99.00",
-      highPrice: "359.95",
+      lowPrice,
+      highPrice,
       url: `${base}/mounjaro-price-comparison`,
     },
   };
 }
 
-function homeSchemaWegovyProduct(base: string): Record<string, unknown> {
+function homeSchemaWegovyProduct(
+  base: string,
+  options?: HomePageJsonLdOptions,
+): Record<string, unknown> {
+  const lowPrice = options?.wegovyStarterLow ?? "72.89";
+  const highPrice = options?.wegovyTopHigh ?? "290.00";
+
   return {
     "@type": ["Drug", "Product"],
     "@id": `${base}/#wegovy`,
@@ -202,14 +222,16 @@ function homeSchemaWegovyProduct(base: string): Record<string, unknown> {
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "GBP",
-      lowPrice: "83.00",
-      highPrice: "290.00",
+      lowPrice,
+      highPrice,
       url: `${base}/wegovy-price-comparison`,
     },
   };
 }
 
-export function homePageJsonLdGraph(): Record<string, unknown> {
+export function homePageJsonLdGraph(
+  options?: HomePageJsonLdOptions,
+): Record<string, unknown> {
   const base = siteOrigin().replace(/\/$/, "");
   const pageUrl = `${base}/`;
 
@@ -274,8 +296,8 @@ export function homePageJsonLdGraph(): Record<string, unknown> {
       webpage,
       breadcrumb,
       homeSchemaPriceSnapshotDataset(base),
-      homeSchemaMounjaroProduct(base),
-      homeSchemaWegovyProduct(base),
+      homeSchemaMounjaroProduct(base, options),
+      homeSchemaWegovyProduct(base, options),
     ],
   };
 }

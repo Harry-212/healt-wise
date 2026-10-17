@@ -246,7 +246,7 @@ export default function ArticleClient() {
                 especially if standalone diet or exercise has not been enough.
                 For a deeper look at mechanisms, see our guide on{" "}
                 <Link
-                  href="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here"
+                  href="/what-is-mounjaro"
                   className="font-semibold text-brand-primary underline-offset-2 hover:underline"
                 >
                   how Mounjaro works for weight loss
@@ -465,7 +465,7 @@ export default function ArticleClient() {
                 steady scale movement, or challenges with side effects and cost.
                 For context on expectations and safety, see{" "}
                 <Link
-                  href="/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you"
+                  href="/what-is-mounjaro"
                   className="font-semibold text-brand-primary underline-offset-2 hover:underline"
                 >
                   whether Mounjaro is safe and right for you
@@ -483,7 +483,7 @@ export default function ArticleClient() {
                 Communities sometimes discuss injection technique; for UK
                 focused practical context, see{" "}
                 <Link
-                  href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                  href="/what-is-mounjaro"
                   className="font-semibold text-brand-primary underline-offset-2 hover:underline"
                 >
                   Mounjaro weight loss treatments (UK)
@@ -558,7 +558,7 @@ export default function ArticleClient() {
                 together. That stack improves the odds of steady progress even
                 if doses change later.{" "}
                 <Link
-                  href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                  href="/what-is-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Read our UK Mounjaro treatment guide.

@@ -778,7 +778,7 @@ export default function ArticleClient() {
                 </li>
                 <li>
                   <Link
-                    href="/blog/glp-1-supplements-uk"
+                    href="/blog/are-glp-1-supplements-real"
                     className="font-medium text-emerald-600 hover:underline"
                   >
                     GLP-1 supplements UK guide
@@ -1182,7 +1182,7 @@ export default function ArticleClient() {
                 </li>
                 <li>
                   <Link
-                    href="/blog/glp-1-supplements-uk"
+                    href="/blog/are-glp-1-supplements-real"
                     className="font-medium text-emerald-600 hover:underline"
                   >
                     GLP-1 supplements UK guide

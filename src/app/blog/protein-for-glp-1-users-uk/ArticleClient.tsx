@@ -395,7 +395,7 @@ export default function ArticleClient() {
                 If you are weighing food support against supplement marketing,
                 read our{" "}
                 <Link
-                  href="/blog/glp-1-supplements-uk"
+                  href="/blog/are-glp-1-supplements-real"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   GLP-1 supplements UK guide
@@ -973,7 +973,7 @@ export default function ArticleClient() {
                 , or a clinician-led plan. For wider context on supplement
                 marketing claims, read our{" "}
                 <Link
-                  href="/blog/glp-1-supplements-uk"
+                  href="/blog/are-glp-1-supplements-real"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   GLP-1 supplements UK guide

@@ -166,7 +166,7 @@ export default function ArticleClient() {
                 curious about the science behind tirzepatide, you can learn more
                 in our dedicated article on{" "}
                 <Link
-                  href="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here"
+                  href="/what-is-mounjaro"
                   className="font-medium text-brand-primary underline"
                 >
                   how does Mounjaro work for weight loss
@@ -339,7 +339,7 @@ export default function ArticleClient() {
                 maintain a comfortable routine. If you want additional
                 information on the medication itself, see{" "}
                 <Link
-                  href="/blog/mounjaro-weight-loss-injections-game-changer"
+                  href="/blog/mounjaro-weight-loss-before-and-after"
                   className="font-medium text-brand-primary underline"
                 >
                   Mounjaro weight loss treatments
@@ -612,7 +612,7 @@ export default function ArticleClient() {
               <ul className="list-disc space-y-2 pl-5">
                 <li>
                   <Link
-                    href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                    href="/what-is-mounjaro"
                     className="font-medium text-brand-primary underline"
                   >
                     Mounjaro weight loss
@@ -628,7 +628,7 @@ export default function ArticleClient() {
                 </li>
                 <li>
                   <Link
-                    href="/blog/mounjaro-weight-loss-injections-game-changer"
+                    href="/blog/mounjaro-weight-loss-before-and-after"
                     className="font-medium text-brand-primary underline"
                   >
                     Mounjaro weight loss treatments
@@ -764,7 +764,7 @@ export default function ArticleClient() {
                 For more on how Mounjaro fits into UK treatment pathways, see
                 our{" "}
                 <Link
-                  href="/helpful-guides/mounjaro-weight-loss-injection-uk"
+                  href="/what-is-mounjaro"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Mounjaro weight loss treatment guide

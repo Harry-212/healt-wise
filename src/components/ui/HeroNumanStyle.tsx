@@ -6,7 +6,15 @@ import {
   HOMEPAGE_HERO_LIFESTYLE_SRC,
 } from "@/lib/site-assets";
 
-export default function HeroNumanStyle() {
+export interface HeroNumanStyleProps {
+  wegovyStarterLow?: string;
+  mounjaroStarterLow?: string;
+}
+
+export default function HeroNumanStyle({
+  wegovyStarterLow = "£72.89",
+  mounjaroStarterLow = "£119.69",
+}: HeroNumanStyleProps) {
   return (
     <section
       className="relative w-full max-w-full overflow-x-hidden overflow-y-visible bg-[#f4f7f5] pt-4 pb-2 md:pt-5 md:pb-3 lg:pt-6 lg:pb-4"
@@ -54,8 +62,8 @@ export default function HeroNumanStyle() {
                 id="hero-answer"
                 className="mt-2.5 max-w-2xl text-sm font-medium leading-relaxed text-slate-700 sm:text-base"
               >
-                A Wegovy starter pen costs from £83, and a Mounjaro starter
-                pen from £99. We check weight loss injection prices at 60+
+                A Wegovy starter pen costs from {wegovyStarterLow}, and a Mounjaro starter
+                pen from {mounjaroStarterLow}. We check weight loss injection prices at 60+
                 GPhC registered UK pharmacies, so you can see the real price
                 of every dose before you pay.
               </p>

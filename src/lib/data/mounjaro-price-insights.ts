@@ -31,6 +31,7 @@ export type MounjaroPriceInsights = PriceInsights<DoseKey>;
 
 /** One provider's listed price per strength; null = not listed. */
 export type PriceRow<K extends string> = {
+  id?: string;
   name: string;
   prices: Record<K, number | null>;
 };
@@ -48,6 +49,7 @@ function doseStat<K extends string>(
   const priced = rows.filter((r) => (r.prices[dose] ?? 0) > 0);
   if (priced.length === 0) return null;
   const price = (r: PriceRow<K>) => r.prices[dose] as number;
+  // Lowest is independent of affiliate status: every verified provider counts.
   const lowest = priced.reduce((a, b) => (price(a) <= price(b) ? a : b));
   const values = priced.map(price);
   return {
@@ -101,6 +103,7 @@ export function buildMounjaroPriceInsights(
 ): MounjaroPriceInsights | null {
   return buildDosePriceInsights(
     providers.map((p) => ({
+      id: p.id,
       name: p.name,
       prices: Object.fromEntries(
         MOUNJARO_DOSE_KEYS.map((k) => [k, p.prices[k] > 0 ? p.prices[k] : null]),
@@ -110,17 +113,17 @@ export function buildMounjaroPriceInsights(
   );
 }
 
-export type CheapestAtDose = { name: string; price: number };
+export type CheapestAtDose = { id?: string; name: string; price: number };
 
-/** The `n` cheapest listed providers at one strength, lowest first. */
+/** The `n` cheapest listed providers at one strength, lowest first, across all verified providers. */
 export function cheapestProvidersAtDose<K extends string>(
   rows: PriceRow<K>[],
   dose: K,
   n = 3,
 ): CheapestAtDose[] {
-  return rows
-    .filter((r) => (r.prices[dose] ?? 0) > 0)
-    .map((r) => ({ name: r.name, price: r.prices[dose] as number }))
+  const priced = rows.filter((r) => (r.prices[dose] ?? 0) > 0);
+  return priced
+    .map((r) => ({ id: r.id, name: r.name, price: r.prices[dose] as number }))
     .sort((a, b) => a.price - b.price)
     .slice(0, n);
 }
@@ -191,10 +194,8 @@ export type FirstMonthsCostEstimate = {
 
 /**
  * Month-by-month cost for the first `months` strengths of the titration
- * ladder (one pen per month). Each month's low/typical comes independently
- * from whichever providers list that strength — same approach as the
- * homepage's "first 3 months" table — so the totals are column sums, not a
- * single best-case provider bundle.
+ * ladder (one pen per month). Low and typical both come from all providers
+ * in the matrix.
  */
 export function buildFirstMonthsCostEstimate<K extends string>(
   ladder: readonly K[],
@@ -203,14 +204,16 @@ export function buildFirstMonthsCostEstimate<K extends string>(
 ): FirstMonthsCostEstimate {
   const steps = ladder.slice(0, months);
   const rows: MonthCostRow[] = steps.map((dose, idx) => {
-    const prices = priceRows
+    const allPrices = priceRows
       .map((row) => row[dose])
-      .filter((p): p is number => p != null);
+      .filter((p): p is number => p != null && p > 0);
     return {
       month: idx + 1,
       dose,
-      low: prices.length ? Math.round(Math.min(...prices) * 100) / 100 : 0,
-      typical: prices.length ? Math.round(median(prices) * 100) / 100 : 0,
+      low: allPrices.length
+        ? Math.round(Math.min(...allPrices) * 100) / 100
+        : 0,
+      typical: allPrices.length ? Math.round(median(allPrices) * 100) / 100 : 0,
     };
   });
 

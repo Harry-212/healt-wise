@@ -151,6 +151,7 @@ export default function CompareMounjaroPricesUkPage() {
   );
   const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
   const nameRows = MOUNJARO_UK_COMPARE_PROVIDERS.map((p) => ({
+    id: p.id,
     name: p.name,
     prices: p.prices,
   }));

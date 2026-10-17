@@ -37,6 +37,7 @@ function doseStat(
   const priced = rows.filter((r) => (r.prices[dose] ?? 0) > 0);
   if (priced.length === 0) return null;
   const price = (r: (typeof rows)[number]) => r.prices[dose] as number;
+  // Lowest is independent of affiliate status: every verified provider counts.
   const lowest = priced.reduce((a, b) => (price(a) <= price(b) ? a : b));
   const values = priced.map(price);
   return {
@@ -99,15 +100,14 @@ export function cheapestWegovyAtDose(
   dose: WegovyDoseKey,
   n = 3,
 ): WegovyCheapestAtDose[] {
-  return providers
+  const priced = providers
     .map((p) => ({
       id: p.id,
       name: p.name,
       price: wegovyPriceAmount(p.prices[dose]),
     }))
-    .filter((p): p is WegovyCheapestAtDose => p.price != null && p.price > 0)
-    .sort((a, b) => a.price - b.price)
-    .slice(0, n);
+    .filter((p): p is WegovyCheapestAtDose => p.price != null && p.price > 0);
+  return priced.sort((a, b) => a.price - b.price).slice(0, n);
 }
 
 export type WegovyMonthCostRow = {

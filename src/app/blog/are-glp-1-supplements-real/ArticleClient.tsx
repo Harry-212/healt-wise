@@ -174,7 +174,7 @@ export default function ArticleClient() {
                 can compare supplement claims safely before spending money. For
                 a wider overview of nutrition support on treatment, see our{" "}
                 <Link
-                  href="/blog/glp-1-supplements-uk"
+                  href="/blog/are-glp-1-supplements-real"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   GLP-1 supplements UK guide

@@ -216,7 +216,7 @@ export default function ArticleClient() {
             <p>
               We will explain{" "}
               <Link
-                href="/blog/does-mounjaro-really-work-for-weight-loss-find-out-here"
+                href="/what-is-mounjaro"
                 className="font-semibold text-[#3562ff] underline-offset-2 hover:underline"
               >
                 how Mounjaro works
@@ -305,7 +305,7 @@ export default function ArticleClient() {
                 when they begin Mounjaro. These reactions usually surface early
                 and most often relate to your digestive system or{" "}
                 <Link
-                  href="/blog/understanding-the-mounjaro-kwikpen-a-user-guide"
+                  href="/blog/mounjaro-click-calculator-uk"
                   className="font-semibold text-[#3562ff] underline-offset-2 hover:underline"
                 >
                   injection technique
@@ -640,7 +640,7 @@ export default function ArticleClient() {
                 Understanding potential Mounjaro side effects is an essential
                 step before beginning treatment to ensure{" "}
                 <Link
-                  href="/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you"
+                  href="/what-is-mounjaro"
                   className="font-semibold text-[#3562ff] underline-offset-2 hover:underline"
                 >
                   Mounjaro is safe

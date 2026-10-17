@@ -1,48 +1,65 @@
+import type { AnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
 import { formatDose, formatGbp } from "@/lib/data/wegovy-price-insights";
 import type { WegovyFirstSixMonthsCostEstimate } from "@/lib/data/wegovy-price-insights";
 
 const YEAR_ONE_AND_AFTER_ROWS = [
   {
     dose: "1mg",
-    yearOneLow: 1105,
+    yearOneLow: 948,
     yearOneTypical: 1609,
-    afterLow: 1105,
+    afterLow: 948,
     afterTypical: 1638,
   },
   {
     dose: "1.7mg",
-    yearOneLow: 1446,
+    yearOneLow: 1452,
     yearOneTypical: 2034,
-    afterLow: 1521,
+    afterLow: 1603,
     afterTypical: 2197,
   },
   {
     dose: "2.4mg",
-    yearOneLow: 1608,
+    yearOneLow: 1905,
     yearOneTypical: 2337,
-    afterLow: 1755,
+    afterLow: 2258,
     afterTypical: 2600,
   },
   {
     dose: "7.2mg",
-    yearOneLow: 2144,
+    yearOneLow: 1920,
     yearOneTypical: 2766,
-    afterLow: 2600,
+    afterLow: 2281,
     afterTypical: 3308,
   },
 ];
 
 export default function WegovyMonthlyCostSection({
-  starterLow = 83,
-  topLow = 135,
+  starterLow = 72.89,
+  topLow = 173.69,
   topHigh = 290,
   firstSixMonths,
+  annualCosts,
 }: {
   starterLow?: number;
   topLow?: number;
   topHigh?: number;
   firstSixMonths: WegovyFirstSixMonthsCostEstimate;
+  annualCosts?: AnnualCostEstimates;
 }) {
+  const annualRows =
+    annualCosts && annualCosts.yearOne.length > 0
+      ? annualCosts.yearOne.map((y1) => {
+          const on = annualCosts.ongoing.find((o) => o.dose === y1.dose);
+          return {
+            dose: y1.dose,
+            yearOneLow: y1.low,
+            yearOneTypical: y1.typical,
+            afterLow: on?.low ?? y1.low,
+            afterTypical: on?.typical ?? y1.typical,
+          };
+        })
+      : YEAR_ONE_AND_AFTER_ROWS;
+
   return (
     <section
       id="wegovy-monthly-cost"
@@ -149,7 +166,7 @@ export default function WegovyMonthlyCostSection({
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 text-slate-600">
-              {YEAR_ONE_AND_AFTER_ROWS.map((row) => (
+              {annualRows.map((row) => (
                 <tr key={row.dose}>
                   <th
                     scope="row"

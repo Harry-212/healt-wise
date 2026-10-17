@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, BadgeCheck, Scale, Shield } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { COMPARE_SLUGS } from "@/lib/routes/compare-slugs";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import {
@@ -11,20 +11,10 @@ import {
 } from "@/lib/routes/compare-page-layout";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import CompareTreatmentsHero from "@/components/compare/CompareTreatmentsHero";
-import CompareMedPriceTabs from "@/components/compare/CompareMedPriceTabs";
 import WegovyMounjaroQuickVerdict from "@/components/compare/WegovyMounjaroQuickVerdict";
 import WegovyMounjaroLongFormContent from "@/components/compare/WegovyMounjaroLongFormContent";
-import {
-  getMounjaroCompareProviders,
-  getWegovyCompareProviders,
-} from "@/lib/data/compare-live";
-import {
-  getMounjaroLastUpdatedLabel,
-  getWegovyLastUpdatedLabel,
-} from "@/lib/data/compare-store";
 import CompareFaqSection from "@/components/compare/CompareFaqSection";
-import { buildPriceGlance } from "@/lib/data/compare-price-glance";
-import { formatDose, formatGbp } from "@/lib/data/mounjaro-price-insights";
+import { getLivePriceSummary } from "@/lib/data/home-price-summary";
 import {
   COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_ALT,
   COMPARE_WEGOVY_VS_MOUNJARO_HERO_IMAGE_SRC,
@@ -39,7 +29,7 @@ import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 type Props = { params: Promise<{ slug: string }> };
 
 /** Update when the versus-page copy or FAQs change. */
-const COMPARE_PAGES_CONTENT_MODIFIED = "2026-10-15";
+const COMPARE_PAGES_CONTENT_MODIFIED = "2026-10-16";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -101,121 +91,16 @@ export default async function ComparePage({ params }: Props) {
   const layout = layoutForSlug(slug);
   if (!cfg || !layout) notFound();
 
+  const priceSummary = getLivePriceSummary();
   const webLdName = layout.share.title;
   const faqItems = getCompareFaqsForSlug(slug);
   const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
-  const mounjaroLastUpdated = getMounjaroLastUpdatedLabel();
-  const wegovyLastUpdated = getWegovyLastUpdatedLabel();
-  const mounjaroProviders = getMounjaroCompareProviders();
-  const wegovyProviders = getWegovyCompareProviders();
-  const priceGlance = buildPriceGlance(layout.medications, {
-    mounjaro: mounjaroProviders,
-    mounjaroChecked: mounjaroLastUpdated,
-    wegovy: wegovyProviders,
-    wegovyChecked: wegovyLastUpdated,
-  });
-  const pricesLastCheckedLabel = mounjaroLastUpdated;
   const pricesLastCheckedIso = COMPARE_PAGES_CONTENT_MODIFIED;
   const webLd = compareWebPageJsonLd(
     slug,
     webLdName,
     layout.share.metaDescription,
     pricesLastCheckedIso,
-  );
-
-  const priceGlanceSlot = priceGlance.length > 0 ? (
-    <div className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm md:p-8">
-      <h3 className="text-xl font-bold tracking-tight text-slate-900 md:text-2xl">
-        Prices at a Glance
-      </h3>
-      <p className="mt-2 text-sm leading-relaxed text-slate-600 md:text-base">
-        Median listed price per pen across the pharmacies in each table, with the lowest and highest verified prices in brackets. Figures come from the latest audit across 60+ GPhC-registered UK pharmacies.
-      </p>
-      <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
-        <table className="w-full text-left text-sm">
-          <caption className="sr-only">Price summary by medicine</caption>
-          <thead className="bg-slate-50 text-slate-700">
-            <tr>
-              <th scope="col" className="px-4 py-3 font-semibold">Medicine</th>
-              <th scope="col" className="px-4 py-3 font-semibold">Schedule</th>
-              <th scope="col" className="px-4 py-3 font-semibold">Pharmacies</th>
-              <th scope="col" className="px-4 py-3 font-semibold">Starting strength</th>
-              <th scope="col" className="px-4 py-3 font-semibold">Higher maintenance strength</th>
-              <th scope="col" className="px-4 py-3 font-semibold">Prices checked</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-slate-100 text-slate-600">
-            {priceGlance.map((row) => (
-              <tr key={row.medication}>
-                <th scope="row" className="px-4 py-3 font-medium text-slate-900">
-                  {row.label}
-                </th>
-                <td className="px-4 py-3">{row.schedule}</td>
-                <td className="px-4 py-3 tabular-nums">{row.providerCount}</td>
-                {row.starter && row.higher ? (
-                  <>
-                    <td className="px-4 py-3 tabular-nums font-medium text-slate-800">
-                      {formatDose(row.starter.dose)}: {formatGbp(row.starter.median)}{" "}
-                      <span className="text-slate-500 font-normal">
-                        ({formatGbp(row.starter.low)}–{formatGbp(row.starter.high)})
-                      </span>
-                    </td>
-                    <td className="px-4 py-3 tabular-nums font-medium text-slate-800">
-                      {formatDose(row.higher.dose)}: {formatGbp(row.higher.median)}{" "}
-                      <span className="text-slate-500 font-normal">
-                        ({formatGbp(row.higher.low)}–{formatGbp(row.higher.high)})
-                      </span>
-                    </td>
-                  </>
-                ) : (
-                  <td colSpan={2} className="px-4 py-3">
-                    Sold in packs of pens; see the {row.label} tab for pack prices.
-                  </td>
-                )}
-                <td className="px-4 py-3">{row.checked}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      <div className="mt-6 flex flex-wrap gap-3">
-        <Link
-          href="/mounjaro-price-comparison"
-          className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition hover:bg-slate-50"
-        >
-          Full Mounjaro price comparison
-          <ArrowRight className="h-4 w-4" aria-hidden />
-        </Link>
-        <Link
-          href="/wegovy-price-comparison"
-          className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition hover:bg-slate-50"
-        >
-          Full Wegovy price comparison
-          <ArrowRight className="h-4 w-4" aria-hidden />
-        </Link>
-      </div>
-    </div>
-  ) : null;
-
-  const priceTabsSlot = (
-    <div>
-      <div className="mb-4">
-        <h3 className="text-xl font-bold tracking-tight text-slate-900 md:text-2xl">
-          Compare Wegovy and Mounjaro Prices at 60+ Pharmacies
-        </h3>
-        <p className="mt-1 text-sm text-slate-600">
-          Switch between tabs below to inspect dose prices, delivery charges, and total checkout prices across verified GPhC UK pharmacies.
-        </p>
-      </div>
-      <CompareMedPriceTabs
-        medications={layout.medications}
-        mounjaroProviders={mounjaroProviders}
-        wegovyProviders={wegovyProviders}
-        mounjaroLastUpdated={mounjaroLastUpdated}
-        wegovyLastUpdated={wegovyLastUpdated}
-        showWegovyPillCard={slug === "wegovy-vs-mounjaro"}
-      />
-    </div>
   );
 
   return (
@@ -253,50 +138,70 @@ export default async function ComparePage({ params }: Props) {
           highlightNavLinks={Boolean(photoHero)}
           heroPhotoSrc={photoHero?.src}
           heroPhotoAlt={photoHero?.alt}
-          primaryCtaLabel="Compare Prices & Doses"
         />
 
-        {/* Section 2: Quick Verdict Side-by-side Summary Table */}
-        <WegovyMounjaroQuickVerdict />
+        {/* Section 2: Quick comparison */}
+        <WegovyMounjaroQuickVerdict
+          wegovyStarterLow={priceSummary.wegovyStarterLow}
+          mounjaroStarterLow={priceSummary.mounjaroStarterLow}
+          wegovyTopTypical={priceSummary.wegovyTopTypical}
+          mounjaroTopTypical={priceSummary.mounjaroTopTypical}
+        />
 
         {/* Trust Marquee */}
         <section className="w-full border-b border-slate-200/80">
           <TrustBarMarquee />
         </section>
 
-        {/* Sections 3 through 8: Difference, Cost (with Glance & Tabs slots), Dose, Side Effects, NHS, Methodology */}
+        {/* Sections 3 through 9 */}
         {slug === "wegovy-vs-mounjaro" ? (
           <WegovyMounjaroLongFormContent
-            lastCheckedLabel={pricesLastCheckedLabel}
-            priceGlanceSlot={priceGlanceSlot}
-            priceTabsSlot={priceTabsSlot}
+            priceRows={priceSummary.compareSnapshotRows}
+            firstSixMonths={priceSummary.firstSixMonths}
+            wegovy72Low={priceSummary.wegovy72Low}
+            wegovy72Typical={priceSummary.wegovy72Typical}
+            wegovy72Listed={priceSummary.wegovy72Listed}
+            wegovyProviderCount={priceSummary.wegovyProviderCount}
           />
         ) : (
-          <>
-            <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
-              <div className="mx-auto max-w-5xl px-4 md:px-8">
-                <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
-                  {layout.intro.heading}
-                </h2>
-                <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
-                  {layout.intro.body.map((p, i) => (
-                    <p key={i}>{p}</p>
-                  ))}
-                </div>
+          <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
+            <div className="mx-auto max-w-5xl px-4 md:px-8">
+              <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+                {layout.intro.heading}
+              </h2>
+              <div className="mt-6 space-y-4 text-slate-600 leading-relaxed">
+                {layout.intro.body.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
               </div>
-            </section>
-            {priceGlanceSlot}
-            {priceTabsSlot}
-          </>
+            </div>
+          </section>
         )}
 
-        {/* Section 9: FAQ */}
+        {/* Section 11: FAQ */}
         <CompareFaqSection
           items={faqItems}
-          subtitle="Top questions asked by UK patients comparing Wegovy and Mounjaro, answered factually based on clinical trials and UK pharmacy data."
+          heading="Wegovy vs Mounjaro FAQs"
+          subtitle=""
         />
 
-        {/* Section 10: Author Card */}
+        {/* Highlighted Important information box */}
+        {slug === "wegovy-vs-mounjaro" ? (
+          <section className="border-b border-slate-200/80 bg-white py-8 md:py-10">
+            <div className="mx-auto max-w-3xl px-4 md:px-8">
+              <div className="rounded-2xl border border-amber-300/90 bg-amber-50/80 p-5 text-sm leading-relaxed text-amber-950 shadow-xs md:p-6 md:text-base">
+                <p>
+                  <strong className="font-bold text-amber-950">
+                    Important information:
+                  </strong>{" "}
+                  Wegovy and Mounjaro are prescription only medicines in the UK. A registered prescriber must check that they are right for you. This page gives price and general information only. It is not medical advice. If you are unsure, speak to your GP or call NHS 111.
+                </p>
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        {/* Author Card */}
         {slug === "wegovy-vs-mounjaro" ? (
           <section
             className="bg-white py-12 md:py-16"
@@ -314,7 +219,7 @@ export default async function ComparePage({ params }: Props) {
                 <p className="text-xs font-bold uppercase tracking-wide text-slate-500">
                   Research and comparison by
                 </p>
-                <h2
+                <p
                   id="compare-author-heading"
                   className="mt-2 text-xl font-bold text-slate-900 md:text-2xl"
                 >
@@ -324,7 +229,7 @@ export default async function ComparePage({ params }: Props) {
                   >
                     Alistair Greenwood
                   </Link>
-                </h2>
+                </p>
                 <p className="mt-1 text-sm font-medium text-slate-600">
                   Founder of Healthwise360 | Weight-management pricing
                   researcher

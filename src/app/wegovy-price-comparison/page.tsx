@@ -10,9 +10,12 @@ import WegovyPriceSnapshot from "@/components/wegovy/WegovyPriceSnapshot";
 import WegovyPriceByDoseSection from "@/components/wegovy/WegovyPriceByDoseSection";
 import WegovyCheapestSection from "@/components/wegovy/WegovyCheapestSection";
 import WegovyMonthlyCostSection from "@/components/wegovy/WegovyMonthlyCostSection";
+import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
+import { cheapestAcrossDoses } from "@/lib/data/mounjaro-price-insights";
 import {
   WEGOVY_DOSE_KEYS,
   type WegovyUkProviderCompare,
+  wegovyPriceAmount,
 } from "@/lib/data/wegovy-uk-compare-providers";
 import {
   buildWegovyPriceInsights,
@@ -25,6 +28,7 @@ import { getWegovyCompareProviders } from "@/lib/data/compare-live";
 import { getWegovyLastUpdatedLabel } from "@/lib/data/compare-store";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import {
+  buildWegovyCompareUkFaqItems,
   WEGOVY_COMPARE_UK_FAQ_ITEMS,
   wegovyCompareUkFaqJsonLd,
 } from "@/lib/seo/wegovy-json-ld";
@@ -136,6 +140,25 @@ export default function CompareWegovyPricesUkPage() {
     WEGOVY_UK_COMPARE_PROVIDERS,
   );
 
+  const priceRows = WEGOVY_UK_COMPARE_PROVIDERS.map((p) =>
+    Object.fromEntries(
+      WEGOVY_DOSE_KEYS.map((k) => [k, wegovyPriceAmount(p.prices[k])]),
+    ) as Record<(typeof WEGOVY_DOSE_KEYS)[number], number | null>,
+  );
+  const annualCosts = buildAnnualCostEstimates(
+    WEGOVY_DOSE_KEYS,
+    ["1mg", "1.7mg", "2.4mg", "7.2mg"],
+    priceRows,
+  );
+  const nameRows = WEGOVY_UK_COMPARE_PROVIDERS.map((p) => ({
+    id: p.id,
+    name: p.name,
+    prices: Object.fromEntries(
+      WEGOVY_DOSE_KEYS.map((k) => [k, wegovyPriceAmount(p.prices[k])]),
+    ) as Record<(typeof WEGOVY_DOSE_KEYS)[number], number | null>,
+  }));
+  const cheapestAcross = cheapestAcrossDoses(nameRows, WEGOVY_DOSE_KEYS);
+
   const cheapestByDose = Object.fromEntries(
     WEGOVY_DOSE_KEYS.map((k) => [
       k,
@@ -143,8 +166,31 @@ export default function CompareWegovyPricesUkPage() {
     ]),
   );
 
+  const dose24Stat = insights?.doses.find((d) => d.dose === "2.4mg") ?? insights?.top;
+  const dose72Stat = insights?.doses.find((d) => d.dose === "7.2mg");
+  const faqItems = insights && dose24Stat
+    ? buildWegovyCompareUkFaqItems({
+        starterLow: formatGbp(insights.starter.low),
+        starterWeekly: formatGbp(
+          Math.round((insights.starter.low / 4) * 100) / 100,
+        ),
+        dose24Low: formatGbp(dose24Stat.low),
+        dose24High: formatGbp(dose24Stat.high),
+        dose24Typical: formatGbp(dose24Stat.median),
+        dose24Weekly: formatGbp(
+          Math.round((dose24Stat.low / 4) * 100) / 100,
+        ),
+        dose72Low: formatGbp(dose72Stat?.low ?? 175.49),
+        cheapestLeader: cheapestAcross?.leader ?? insights.starter.lowProvider,
+        cheapestLeaderWins:
+          cheapestAcross?.leaderWins ?? WEGOVY_DOSE_KEYS.length,
+        cheapestTotalDoses:
+          cheapestAcross?.totalDoses ?? WEGOVY_DOSE_KEYS.length,
+      })
+    : WEGOVY_COMPARE_UK_FAQ_ITEMS;
+
   const providerCount = WEGOVY_UK_COMPARE_PROVIDERS.length;
-  const faqLd = wegovyCompareUkFaqJsonLd(WEGOVY_COMPARE_UK_FAQ_ITEMS, pageUrl);
+  const faqLd = wegovyCompareUkFaqJsonLd(faqItems, pageUrl);
   const webLd = compareWebPageJsonLd(WEGOVY_UK_COMPARE_PROVIDERS);
 
   return (
@@ -227,7 +273,10 @@ export default function CompareWegovyPricesUkPage() {
         ) : null}
 
         {/* Section 5: Cheapest */}
-        <WegovyCheapestSection starterLow={insights?.starter.low} />
+        <WegovyCheapestSection
+          cheapestAcross={cheapestAcross}
+          starterLow={insights?.starter.low}
+        />
 
         {/* Resources links */}
         <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
@@ -268,6 +317,7 @@ export default function CompareWegovyPricesUkPage() {
           topLow={insights?.top.low}
           topHigh={insights?.top.high}
           firstSixMonths={firstSixMonths}
+          annualCosts={annualCosts}
         />
 
         {/* Price overview charts */}
@@ -311,8 +361,10 @@ export default function CompareWegovyPricesUkPage() {
               Why do Wegovy prices vary in the UK?
             </h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              The same Wegovy pen can cost £135 at one pharmacy and £290 at
-              another. So what sets the price? These six things:
+              The same Wegovy pen can cost{" "}
+              {formatGbp(insights?.top.low ?? 173.69)} at one pharmacy and{" "}
+              {formatGbp(insights?.top.high ?? 290)} at another. So what sets
+              the price? These six things:
             </p>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
               <li>
@@ -477,7 +529,7 @@ export default function CompareWegovyPricesUkPage() {
               Wegovy price comparison FAQs
             </h2>
             <div className="mt-8 space-y-3">
-              {WEGOVY_COMPARE_UK_FAQ_ITEMS.map((item) => (
+              {faqItems.map((item) => (
                 <details
                   key={item.question}
                   className="group rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-sm open:shadow-md"

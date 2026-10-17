@@ -166,7 +166,7 @@ function WegovyPillPanel() {
           Wegovy Tablet UK: price, availability and safety
         </Link>
         <Link
-          href="/blog/what-is-wegovy-pill"
+          href="/blog/wegovy-pill-uk"
           className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
         >
           <Pill className="h-4 w-4" aria-hidden />

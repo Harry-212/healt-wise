@@ -307,7 +307,7 @@ export default function ArticleClient() {
               <p>
                 For a clearer split between food support and medicine-like
                 claims, see our{" "}
-                <Link href="/blog/glp-1-supplements-uk" className={linkClass}>
+                <Link href="/blog/are-glp-1-supplements-real" className={linkClass}>
                   GLP-1 supplements UK guide
                 </Link>{" "}
                 and{" "}
