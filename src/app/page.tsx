@@ -110,6 +110,7 @@ export default function Homepage() {
       <HeroNumanStyle
         wegovyStarterLow={priceSummary.wegovyStarterLow}
         mounjaroStarterLow={priceSummary.mounjaroStarterLow}
+        pricesChecked={priceSummary.lastUpdated}
       />
       <div className="flex flex-col gap-0 pt-0">
         <PriceSnapshotSection
