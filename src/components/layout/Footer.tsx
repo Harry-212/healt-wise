@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { hasHeadingFreeChrome } from "@/lib/seo/heading-free-chrome";
 import { ArrowUp, ChevronRight, Phone, MapPin } from "lucide-react";
 import {
   HOME_COMPARE_CTA_LABEL,
@@ -43,6 +45,9 @@ const FOOTER_EXPLORE_PHARMACIES_BTN =
   "inline-flex w-full touch-manipulation items-center justify-center rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2.5 text-sm font-bold text-emerald-300 transition-all duration-300 hover:border-emerald-400/60 hover:bg-emerald-500/20 hover:text-emerald-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/50";
 
 export default function Footer() {
+  const chromeHeadings = hasHeadingFreeChrome(usePathname());
+  const FooterH2 = chromeHeadings ? "p" : "h2";
+  const FooterH3 = chromeHeadings ? "p" : "h3";
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -80,12 +85,12 @@ export default function Footer() {
             className="hw-reveal-item mb-20 flex flex-col gap-12 border-b border-slate-800/80 pb-16 lg:flex-row lg:items-start lg:justify-between lg:gap-16"
           >
             <div className="flex max-w-2xl flex-1 flex-col gap-4">
-              <h2 className="text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
+              <FooterH2 className="text-3xl font-bold leading-tight tracking-tight text-white md:text-4xl lg:text-5xl">
                 Stay{" "}
                 <span className="bg-linear-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                   informed.
                 </span>
-              </h2>
+              </FooterH2>
               <p className="mt-2 max-w-xl text-base leading-relaxed text-slate-400 md:text-lg">
                 Get useful updates on UK weight-management providers, treatment
                 costs, pharmacy verification and changes to our comparison
@@ -147,9 +152,9 @@ export default function Footer() {
           {/* Middle Section: Links Grid */}
           <div className="mb-20 grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-3 lg:grid-cols-5">
             <div className="hw-reveal-item" style={{ "--hw-reveal-i": 1 } as React.CSSProperties}>
-              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+              <FooterH3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Treatments
-              </h3>
+              </FooterH3>
               <ul className="space-y-2">
                 <li>
                   <Link
@@ -233,9 +238,9 @@ export default function Footer() {
             </div>
 
             <div className="hw-reveal-item" style={{ "--hw-reveal-i": 2 } as React.CSSProperties}>
-              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+              <FooterH3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Trust &amp; Safety
-              </h3>
+              </FooterH3>
               <ul className="space-y-2">
                 <li>
                   <Link
@@ -280,9 +285,9 @@ export default function Footer() {
             </div>
 
             <div className="hw-reveal-item" style={{ "--hw-reveal-i": 3 } as React.CSSProperties}>
-              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+              <FooterH3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Support
-              </h3>
+              </FooterH3>
               <ul className="space-y-2">
                 {FOOTER_SUPPORT_LINKS.map(({ href, label }) => (
                   <li key={href}>
@@ -299,9 +304,9 @@ export default function Footer() {
             </div>
 
             <div className="hw-reveal-item" style={{ "--hw-reveal-i": 4 } as React.CSSProperties}>
-              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+              <FooterH3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Company
-              </h3>
+              </FooterH3>
               <ul className="space-y-2">
                 <li>
                   <Link href="/about" className={FOOTER_NAV_LINK}>
@@ -352,9 +357,9 @@ export default function Footer() {
             </div>
 
             <div className="hw-reveal-item" style={{ "--hw-reveal-i": 5 } as React.CSSProperties}>
-              <h3 className="mb-6 text-lg font-bold tracking-tight text-white">
+              <FooterH3 className="mb-6 text-lg font-bold tracking-tight text-white">
                 Pharmacies
-              </h3>
+              </FooterH3>
               <ul className="space-y-2">
                 {FOOTER_PHARMACY_LINKS.map(({ href, label }) => (
                   <li key={href}>

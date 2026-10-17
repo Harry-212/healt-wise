@@ -1,6 +1,19 @@
 /** FAQ copy for `/compare/[slug]` — informational only; not medical advice. */
 
-export type CompareFaqItem = { q: string; a: string };
+export type CompareFaqItem = {
+  q: string;
+  a: string;
+  /** False keeps the question on the page but out of the FAQPage JSON-LD. */
+  inSchema?: boolean;
+};
+
+/** Live figures that the price-based FAQ answers quote. */
+export type CompareFaqPriceFigures = {
+  wegovySixMonthsLow: string;
+  mounjaroSixMonthsLow: string;
+  wegovySixMonthsTypical: string;
+  mounjaroSixMonthsTypical: string;
+};
 
 export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
   "wegovy-vs-mounjaro": [
@@ -26,7 +39,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "Which costs less, Wegovy or Mounjaro?",
-      a: "Wegovy costs less for the same month of treatment. In our Wegovy vs Mounjaro price comparison, the first 6 months add up to £639.96 for Wegovy and £1,069.04 for Mounjaro at the lowest prices. At typical prices they add up to £914 and £1,408.",
+      a: "Wegovy costs less for the same month of treatment. In our Wegovy vs Mounjaro price comparison, the first 6 months add up to {wegovySixMonthsLow} for Wegovy and {mounjaroSixMonthsLow} for Mounjaro at the lowest prices. At typical prices they add up to {wegovySixMonthsTypical} and {mounjaroSixMonthsTypical}.",
     },
     {
       q: "Which has fewer side effects?",
@@ -45,21 +58,39 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
       a: "Sometimes. Some GPs in England can prescribe Mounjaro, and Wegovy is given through NHS specialist weight management services. Rules and waiting times differ by area. Ask your GP.",
     },
     {
+      q: "Are the prices on this page live checkout prices?",
+      a: "No. They are the prices listed on each provider website when we checked them, not live checkout prices. Delivery or consultation fees may be extra, so confirm the final total with the provider.",
+      inSchema: false,
+    },
+    {
       q: "How often do you check prices?",
       a: "We check every price in the first week of each month. The date of the last check is shown next to the prices.",
     },
   ],
 };
 
-export function getCompareFaqsForSlug(slug: string): CompareFaqItem[] {
-  return COMPARE_PAGE_FAQS[slug] ?? [];
+export function getCompareFaqsForSlug(
+  slug: string,
+  figures?: CompareFaqPriceFigures,
+): CompareFaqItem[] {
+  const items = COMPARE_PAGE_FAQS[slug] ?? [];
+  if (!figures) return items;
+  return items.map((item) => ({
+    ...item,
+    a: item.a.replace(
+      /\{(\w+)\}/g,
+      (match, key: string) => figures[key as keyof CompareFaqPriceFigures] ?? match,
+    ),
+  }));
 }
 
 /** JSON-LD for FAQ rich results (Google may show FAQ rich results where eligible). */
 export function compareFaqPageJsonLd(items: CompareFaqItem[], pageUrl?: string): Record<string, unknown> {
   const faqNode: Record<string, unknown> = {
     "@type": "FAQPage",
-    mainEntity: items.map((item) => ({
+    mainEntity: items
+      .filter((item) => item.inSchema !== false)
+      .map((item) => ({
       "@type": "Question",
       name: item.q,
       acceptedAnswer: {

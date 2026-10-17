@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { hasHeadingFreeChrome } from "@/lib/seo/heading-free-chrome";
 import { useMemo, useRef } from "react";
 import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import BrandHoverText from "@/components/ui/BrandHoverText";
@@ -91,6 +92,9 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
   const isHome = normalizePath(pathname ?? "") === "/";
   const isMethodology = normalizePath(pathname ?? "") === "/methodology";
   const isAbout = normalizePath(pathname ?? "") === "/about";
+  const chromeHeadings = hasHeadingFreeChrome(pathname);
+  const KeepH2 = chromeHeadings ? "p" : "h2";
+  const CardH3 = chromeHeadings ? "p" : "h3";
 
   const picks = useMemo(() => {
     const path = normalizePath(pathname ?? "");
@@ -159,9 +163,9 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
               <Sparkles className="h-3.5 w-3.5" aria-hidden />
               Recommended for you
             </p>
-            <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+            <KeepH2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
               Keep exploring
-            </h2>
+            </KeepH2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">
               {keepExploringIntro}
             </p>
@@ -270,7 +274,7 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-4">
-                  <h3 className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900 group-hover:text-emerald-800">
+                  <CardH3 className="line-clamp-2 text-sm font-semibold leading-snug text-slate-900 group-hover:text-emerald-800">
                     {showBrandTooltip ? (
                       <BrandHoverText
                         publicLabel={title}
@@ -279,7 +283,7 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
                     ) : (
                       title
                     )}
-                  </h3>
+                  </CardH3>
                   <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-slate-500">
                     {description}
                   </p>

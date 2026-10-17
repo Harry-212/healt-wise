@@ -58,6 +58,7 @@ export default function CompareTreatmentsHero({
   heroPhotoSrc,
   heroPhotoAlt = "",
   highlightNavLinks = false,
+  subtitleId,
 }: {
   variant: HeroShaderVariant;
   eyebrow: string;
@@ -75,6 +76,8 @@ export default function CompareTreatmentsHero({
   heroPhotoAlt?: string;
   /** Larger bordered nav pills (photo heroes). */
   highlightNavLinks?: boolean;
+  /** Optional id on the subtitle paragraph (e.g. speakable target). */
+  subtitleId?: string;
 }) {
   const shaderMinH = wideDesktopHero
     ? "min-h-[min(82svh,580px)] sm:min-h-[min(80svh,640px)] md:min-h-[min(82svh,700px)] lg:min-h-[min(88svh,780px)] xl:min-h-[min(90svh,860px)]"
@@ -153,7 +156,7 @@ export default function CompareTreatmentsHero({
           </h1>
 
           {subtitle.trim() ? (
-            <p className={introClass}>{subtitle}</p>
+            <p id={subtitleId} className={introClass}>{subtitle}</p>
           ) : null}
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
