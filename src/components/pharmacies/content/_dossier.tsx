@@ -7,6 +7,7 @@ import { useState } from "react";
 import { CheckCircle2, ChevronRight, Copy, Home, Tag } from "lucide-react";
 import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { MOUNJARO_UK_COMPARE_LAST_UPDATED } from "@/lib/data/mounjaro-uk-compare-providers";
 
 /** Same classes as the primary "Visit {provider}" CTA in Document details (use in conclusion links). */
 export const PHARMACY_PROVIDER_CTA_CLASSNAME =
@@ -311,7 +312,6 @@ export function PharmacyDossierPage({
   fileRef,
   title,
   subtitle,
-  publishedYear = "2026",
   scopeLabel,
   providerName,
   providerUrl,
@@ -331,7 +331,6 @@ export function PharmacyDossierPage({
   fileRef: string;
   title: string;
   subtitle: string;
-  publishedYear?: string;
   scopeLabel: string;
   providerName: string;
   /** Null when the provider's own site is currently down — renders a disabled placeholder instead of a link. */
@@ -348,6 +347,12 @@ export function PharmacyDossierPage({
 }) {
   const [copied, setCopied] = useState(false);
   const hasDiscountCode = discountCode.trim().length > 0;
+
+  // Same date the page's price table was checked: the page's own "Last updated"
+  // fact when it has one, otherwise the latest price-check date.
+  const lastUpdated =
+    docDetails.find((d) => d.k === "Last updated")?.v ??
+    MOUNJARO_UK_COMPARE_LAST_UPDATED;
 
   const handleCopy = async () => {
     if (!hasDiscountCode) return;
@@ -500,7 +505,7 @@ export function PharmacyDossierPage({
               {subtitle}
             </p>
             <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-emerald-900/10 pt-3 text-sm font-semibold text-slate-700 sm:text-base">
-              <span className="font-mono">Published {publishedYear}</span>
+              <span className="font-mono">Last updated {lastUpdated}</span>
               <span className="text-slate-400" aria-hidden>
                 ·
               </span>
