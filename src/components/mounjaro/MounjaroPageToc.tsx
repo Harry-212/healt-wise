@@ -2,19 +2,18 @@ import Link from "next/link";
 
 const ITEMS: { href: string; label: string }[] = [
   { href: "#what-is-mounjaro", label: "What is Mounjaro?" },
+  { href: "#mounjaro-facts-at-a-glance", label: "Facts at a glance" },
+  { href: "#mounjaro-words-explained", label: "Words explained" },
   { href: "#how-mounjaro-works", label: "How it works" },
-  { href: "#mounjaro-month-timeline", label: "Month timeline" },
-  { href: "#weight-loss-results", label: "Trial results" },
-  { href: "#dosage-plan", label: "Dosage plan" },
-  { href: "#mounjaro-price-uk", label: "Price UK" },
-  { href: "#mounjaro-vs-others", label: "vs other treatments" },
-  { href: "#side-effects-safety", label: "Side effects" },
-  { href: "#eligibility-uk", label: "Eligibility" },
-  { href: "#how-to-get-mounjaro-uk", label: "How to get in the UK" },
-  { href: "#best-providers", label: "Providers" },
-  { href: "#trust-verification", label: "Trust" },
+  { href: "#what-mounjaro-is-used-for", label: "What it is used for" },
+  { href: "#tirzepatide-and-ingredients", label: "Tirzepatide & ingredients" },
+  { href: "#doses-and-kwikpen", label: "Doses & KwikPen" },
+  { href: "#how-long-it-takes", label: "How long it takes" },
+  { href: "#who-can-take-it", label: "Who can take it" },
+  { href: "#mounjaro-side-effects", label: "Side effects" },
+  { href: "#compare-mounjaro-prices", label: "Compare prices" },
+  { href: "#questions-to-ask", label: "Questions to ask" },
   { href: "#faq", label: "FAQ" },
-  { href: "#medical-review", label: "Standards & references" },
 ];
 
 export default function MounjaroPageToc() {
