@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
@@ -10,8 +12,7 @@ import {
   ProviderCta,
 } from "./_dossier";
 
-// your-pharmacy.co.uk is currently timing out — link disabled until it's back up.
-const providerUrl = null;
+const providerUrl = "https://yourpharmacy.uk/";
 
 const sectionLabel =
   "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
@@ -24,16 +25,16 @@ export default function YourPharmacyPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="YourPharmacy"
       fileRef="HW-YOURPHARMACY-2026"
-      title="YourPharmacy weight management review"
+      title="YourPharmacy Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of YourPharmacy: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Tirzepatide · Semaglutide · GLP‑1 supply where clinically approved"
       providerName="YourPharmacy"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
+        { k: "Last updated", v: "20 September 2026" },
         {
           k: "Provider",
-          v: "YourPharmacy (GPhC 9012029 — verify premises on register)",
+          v: "YourPharmacy (GPhC 9012029)",
         },
         {
           k: "Model",
@@ -50,6 +51,26 @@ export default function YourPharmacyPharmacyContent() {
       heroProviderLogoAlt="YourPharmacy"
     >
       <section className="space-y-4">
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            YourPharmacy is an online UK service for weight loss injections. See its Mounjaro and Wegovy price for every dose below, from our 20 September 2026 price check, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ). A prescriber checks your health before any medicine is sent.
+          </p>
+        </div>
+        <PharmacyPriceTable slug="yourpharmacy" providerName="YourPharmacy" />
         <p className="text-slate-800 leading-relaxed">
           Picking a weight loss pharmacy means balancing clinical rigour with everyday convenience.{" "}
           {providerUrl ? (
@@ -151,6 +172,13 @@ export default function YourPharmacyPharmacyContent() {
         <p className="mt-4 text-slate-800 leading-relaxed">
           The overall story merges traditional pharmacy assurance with e commerce speed so UK patients can access
           “life changing” GLP‑1 treatments with confidence in legality and discretion.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is YourPharmacy legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          YourPharmacy is listed on the official GPhC register (number 9012029). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
         </p>
       </section>
 

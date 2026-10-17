@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -147,7 +147,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -206,7 +206,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="access" heading="NHS versus private: how access works in Livingston">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  NHS route? GP referral to tier 2 group sessions or tier 3 specialist dietitian review, free at point of use, with about 5 to 10% loss proven in adherent summaries. Private? Online clinics for Wegovy or Mounjaro often quote about £150 to £300 monthly with faster starts, but GPhC registration and cold chain proof still matter.
+                  NHS route? GP referral to tier 2 group sessions or tier 3 specialist dietitian review, free at point of use, with about 5 to 10% loss proven in adherent summaries. Private? Online clinics for Wegovy or Mounjaro often quote about Â£150 to Â£300 monthly with faster starts, but GPhC registration and cold chain proof still matter.
                 </p>
 
                 <p className={p}>
@@ -250,7 +250,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Costs: about £200 to £400 monthly including delivery and repeats in marketing tables. Titration, meaning slow dose ramps, cuts nausea, so read invoices for hidden consultation fees.
+                  Costs: about Â£200 to Â£400 monthly including delivery and repeats in marketing tables. Titration, meaning slow dose ramps, cuts nausea, so read invoices for hidden consultation fees.
                 </p>
 
                 <p className={p}>
@@ -259,7 +259,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   US insight: plastic surgery adjacent med spas in New Jersey sometimes market semaglutide and tirzepatide with health checks under names such as T Spa by Tutela style branding. UK plastic surgeons may offer non surgical adjuncts, but NHS Scotland still prioritises medical weight management first. Verify any private route with our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>
                   .
@@ -440,7 +440,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Cost</td>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Free at point of use</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About £150 to £400 monthly</td>
+                        <td className={`border px-3 py-2 ${tableBorder}`}>About Â£150 to Â£400 monthly</td>
                       </tr>
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Wait</td>

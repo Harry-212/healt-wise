@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -21,9 +21,9 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-delivery-storage-uk",
   title: "Mounjaro Delivery & Storage UK: Rules",
-  description: "Mounjaro must be stored between 2°C and 8°C. How to check your delivery, understand temperature safety zones, and what to do if it arrives warm.",
+  description: "Mounjaro must be stored between 2Â°C and 8Â°C. How to check your delivery, understand temperature safety zones, and what to do if it arrives warm.",
   openGraphTitle: "Mounjaro Delivery & Storage UK: Rules",
-  openGraphDescription: "Mounjaro must be refrigerated between 2°C and 8°C. Learn how to check your delivery and what to do if your medication arrives warm.",
+  openGraphDescription: "Mounjaro must be refrigerated between 2Â°C and 8Â°C. Learn how to check your delivery and what to do if your medication arrives warm.",
 });
 
 
@@ -39,11 +39,11 @@ const TOC = [
 const FAQ_ITEMS = [
   {
     q: "Can I use Mounjaro if it arrived warm?",
-    a: "Only if it stayed below 30°C and within the safe time limits. If it remained below 30°C, it can be used for up to 21 days (some sources cite 30 days—always check the patient information leaflet for the specific product you received). If you cannot confirm the temperature, contact the pharmacy before using it.",
+    a: "Only if it stayed below 30Â°C and within the safe time limits. If it remained below 30Â°C, it can be used for up to 21 days (some sources cite 30 daysâ€”always check the patient information leaflet for the specific product you received). If you cannot confirm the temperature, contact the pharmacy before using it.",
   },
   {
     q: "How should I store Mounjaro at home?",
-    a: "Store Mounjaro in a refrigerator between 2°C and 8°C. Do not freeze it. Keep it in the original packaging and out of direct light. If it has been removed from the fridge, it can be kept at room temperature below 30°C for a limited period—check your patient information leaflet for the exact timeframe.",
+    a: "Store Mounjaro in a refrigerator between 2Â°C and 8Â°C. Do not freeze it. Keep it in the original packaging and out of direct light. If it has been removed from the fridge, it can be kept at room temperature below 30Â°C for a limited periodâ€”check your patient information leaflet for the exact timeframe.",
   },
   {
     q: "What if my Mounjaro pen was frozen in transit?",
@@ -51,7 +51,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Can I travel with Mounjaro?",
-    a: "Yes, but you must keep it refrigerated or ensure it stays below 30°C if travelling without a cool bag. For longer trips, use an insulated travel case with a cooling element. Check airline regulations for carrying injectable medications and bring a copy of your prescription.",
+    a: "Yes, but you must keep it refrigerated or ensure it stays below 30Â°C if travelling without a cool bag. For longer trips, use an insulated travel case with a cooling element. Check airline regulations for carrying injectable medications and bring a copy of your prescription.",
   },
   {
     q: "What packaging should a legitimate Mounjaro delivery include?",
@@ -61,34 +61,34 @@ const FAQ_ITEMS = [
 
 const REFERENCES = [
   {
-    label: "Mounjaro (tirzepatide) SmPC — storage and handling",
+    label: "Mounjaro (tirzepatide) SmPC â€” storage and handling",
     description:
-      "Official prescribing reference confirming storage requirements of 2°C–8°C refrigerated, and the 21-day room temperature rule below 30°C.",
+      "Official prescribing reference confirming storage requirements of 2Â°Câ€“8Â°C refrigerated, and the 21-day room temperature rule below 30Â°C.",
     href: "https://www.medicines.org.uk/emc/product/15481",
   },
   {
-    label: "MHRA — Cold chain guidance for medicines",
+    label: "MHRA â€” Cold chain guidance for medicines",
     description:
       "MHRA guidance on the transport and storage of temperature-sensitive medicines in the UK supply chain.",
     href: "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency",
   },
   {
-    label: "NHS — Tirzepatide (Mounjaro) — storage information",
+    label: "NHS â€” Tirzepatide (Mounjaro) â€” storage information",
     description:
       "NHS patient information on how to store and handle Mounjaro correctly at home.",
     href: "https://www.england.nhs.uk/long-read/tirzepatide-in-primary-care-for-weight-management-information-on-wraparound-care/",
   },
   {
-    label: "GPhC — Standards for registered pharmacies: premises and equipment",
+    label: "GPhC â€” Standards for registered pharmacies: premises and equipment",
     description:
       "GPhC standards requiring pharmacies to maintain appropriate storage conditions for all dispensed medicines.",
     href: "https://www.pharmacyregulation.org/standards/standards-registered-pharmacies",
   },
   {
-    label: "How we verify UK pharmacies — Health Wise",
+    label: "How we verify UK pharmacies â€” Health Wise",
     description:
       "How Health Wise checks cold-chain compliance for every pharmacy listed on our platform.",
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     external: false,
   },
 ];
@@ -99,7 +99,7 @@ const RELATED_GUIDES = [
     category: "Medications",
     title: "How Long Does It Take to Get Mounjaro in the UK?",
     description:
-      "From consultation to cold-chain delivery—the full Mounjaro prescription timeline explained.",
+      "From consultation to cold-chain deliveryâ€”the full Mounjaro prescription timeline explained.",
   },
   {
     href: "/helpful-guides/mounjaro-delivery-times-uk",
@@ -109,7 +109,7 @@ const RELATED_GUIDES = [
       "Typical UK delivery windows, what affects speed, and how to plan around your next dose.",
   },
   {
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     category: "Pharmacy Safety",
     title: "How We Verify UK Pharmacies: GPhC Checks Explained",
     description:
@@ -120,7 +120,7 @@ const RELATED_GUIDES = [
     category: "Medications",
     title: "Mounjaro Hot Weather Safety UK",
     description:
-      "How heat affects pens in transit and at home—and what to do if temperatures rise.",
+      "How heat affects pens in transit and at homeâ€”and what to do if temperatures rise.",
   },
 ];
 
@@ -130,7 +130,7 @@ const SCHEMA = {
   headline:
     "Mounjaro Delivery & Storage UK: Rules",
   description:
-    "Mounjaro must be refrigerated between 2°C and 8°C. Learn how to check your delivery and what to do if your medication arrives warm.",
+    "Mounjaro must be refrigerated between 2Â°C and 8Â°C. Learn how to check your delivery and what to do if your medication arrives warm.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
   publisher: {
     "@type": "Organization",
@@ -172,13 +172,13 @@ export default function GuideMounjaroStorage() {
       toc={TOC}
       schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
-      {/* ── Section 1 ── */}
+      {/* â”€â”€ Section 1 â”€â”€ */}
       <GuideSection id="storage" heading="Storage Requirements">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> must be kept
           refrigerated at:</GuideParagraph>
         <GuideCallout variant="info">
-          <strong>2°C to 8°C</strong> — refrigerated storage is required at
+          <strong>2Â°C to 8Â°C</strong> â€” refrigerated storage is required at
           all times until use. This is a mandatory requirement set out in the{" "}
           <EL href="https://www.medicines.org.uk/emc/product/15481">
             official Mounjaro SmPC
@@ -187,16 +187,16 @@ export default function GuideMounjaroStorage() {
         </GuideCallout>
         <GuideBulletList
           items={[
-            "Store in a refrigerator — not in the door, which can experience temperature fluctuations",
+            "Store in a refrigerator â€” not in the door, which can experience temperature fluctuations",
             "Keep in the original packaging and away from direct light",
-            "Do not freeze — freezing permanently damages the formulation",
+            "Do not freeze â€” freezing permanently damages the formulation",
             "Once removed from the fridge, refer to the patient information leaflet for room temperature time limits",
           ]}
         />
         <GuideParagraph>
           These requirements apply throughout the entire supply chain from the
           manufacturer, to the{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             pharmacy
           </IL>
           , through delivery, and into your home. Failure at any point can
@@ -204,19 +204,19 @@ export default function GuideMounjaroStorage() {
 </GuideParagraph>
       </GuideSection>
 
-      {/* ── Section 2 ── */}
+      {/* â”€â”€ Section 2 â”€â”€ */}
       <GuideSection id="safe-delivery" heading="What Safe Delivery Looks Like">
         <GuideParagraph>
           A proper cold chain delivery from a{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             GPhC registered pharmacy
           </IL>{" "}
           should include:</GuideParagraph>
         <GuideBulletList
           items={[
-            "Insulated packaging — typically a polystyrene box or specialist insulated bag",
-            "Ice packs or gel packs — to maintain temperature during transit",
-            "Cool temperature on arrival — the packaging and medication should feel cold when opened",
+            "Insulated packaging â€” typically a polystyrene box or specialist insulated bag",
+            "Ice packs or gel packs â€” to maintain temperature during transit",
+            "Cool temperature on arrival â€” the packaging and medication should feel cold when opened",
           ]}
         />
         <GuideParagraph>
@@ -228,7 +228,7 @@ export default function GuideMounjaroStorage() {
         <GuideCallout variant="tip">
           For full details on how we verify pharmacy delivery and storage
           compliance, see our{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             pharmacy verification guide
           </IL>
           . We check cold-chain handling for every provider listed on{" "}
@@ -236,7 +236,7 @@ export default function GuideMounjaroStorage() {
         </GuideCallout>
       </GuideSection>
 
-      {/* ── Section 3 ── */}
+      {/* â”€â”€ Section 3 â”€â”€ */}
       <GuideSection id="if-warm" heading="What If It Gets Warm?">
         <GuideParagraph>
           Temperature excursions during delivery are rare when using a
@@ -249,30 +249,30 @@ export default function GuideMounjaroStorage() {
         <GuideTempZones
           zones={[
             {
-              range: "2–8°C",
-              label: "Refrigerated — fully safe for use",
+              range: "2â€“8Â°C",
+              label: "Refrigerated â€” fully safe for use",
               status: "safe",
             },
             {
-              range: "8–30°C",
-              label: "Room temperature — usable within time limit (check leaflet)",
+              range: "8â€“30Â°C",
+              label: "Room temperature â€” usable within time limit (check leaflet)",
               status: "caution",
             },
             {
-              range: "Above 30°C",
-              label: "Unsafe — do not use, contact pharmacy",
+              range: "Above 30Â°C",
+              label: "Unsafe â€” do not use, contact pharmacy",
               status: "danger",
             },
           ]}
         />
         <GuideParagraph>
-          If the medication has been exposed to temperatures above 30°C, do
+          If the medication has been exposed to temperatures above 30Â°C, do
           not use it. Contact your pharmacy to report the issue and request a
           replacement. Keep the packaging as evidence of the temperature
           breach.</GuideParagraph>
       </GuideSection>
 
-      {/* ── Section 4 ── */}
+      {/* â”€â”€ Section 4 â”€â”€ */}
       <GuideSection id="warning-signs" heading="Warning Signs">
         <GuideParagraph>
           Be cautious if your delivery shows any of the following signs of
@@ -280,16 +280,16 @@ export default function GuideMounjaroStorage() {
 </GuideParagraph>
         <GuideBulletListRich
           items={[
-            "No insulation — the package is a standard cardboard box or envelope with no thermal lining.",
-            "Warm packaging on arrival — the contents should feel cold, not room temperature.",
-            "Melted or absent ice packs — indicates the cold-chain may have failed during transit.",
+            "No insulation â€” the package is a standard cardboard box or envelope with no thermal lining.",
+            "Warm packaging on arrival â€” the contents should feel cold, not room temperature.",
+            "Melted or absent ice packs â€” indicates the cold-chain may have failed during transit.",
             <>
-              Poor or absent packaging — if the pen is not in its original box,
+              Poor or absent packaging â€” if the pen is not in its original box,
               or the patient information leaflet is missing, contact the
               pharmacy before use.
             </>,
             <>
-              No GPhC registration displayed — legitimate pharmacies are
+              No GPhC registration displayed â€” legitimate pharmacies are
               legally required to show their registration. Verify at the{" "}
               <EL href="https://www.pharmacyregulation.org/registers/pharmacy">
                 GPhC register
@@ -301,7 +301,7 @@ export default function GuideMounjaroStorage() {
         <GuideParagraph>
           These warning signs are also indicators of an unregistered or
           unverified supplier. Our{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             pharmacy verification guide
           </IL>{" "}
           explains the checks that distinguish compliant providers from
@@ -310,24 +310,24 @@ export default function GuideMounjaroStorage() {
           before listing.</GuideParagraph>
       </GuideSection>
 
-      {/* ── Key Takeaways ── */}
+      {/* â”€â”€ Key Takeaways â”€â”€ */}
       <GuideKeyTakeaways
         items={[
-          "Mounjaro must be stored at 2°C–8°C (refrigerated). Do not freeze.",
+          "Mounjaro must be stored at 2Â°Câ€“8Â°C (refrigerated). Do not freeze.",
           "Safe delivery includes insulated packaging, ice packs, and a cool temperature on arrival.",
-          "If Mounjaro remained below 30°C, it can be used within the time limit specified in the patient information leaflet.",
-          "If it was exposed to temperatures above 30°C, do not use it—contact the pharmacy for a replacement.",
+          "If Mounjaro remained below 30Â°C, it can be used within the time limit specified in the patient information leaflet.",
+          "If it was exposed to temperatures above 30Â°C, do not use itâ€”contact the pharmacy for a replacement.",
           "Absent insulation, warm packaging, or missing documentation are red flags that should prompt a call to the pharmacy before use.",
         ]}
       />
 
-      {/* ── Related Guides ── */}
+      {/* â”€â”€ Related Guides â”€â”€ */}
       <GuideRelatedGuides guides={RELATED_GUIDES} />
 
-      {/* ── References ── */}
+      {/* â”€â”€ References â”€â”€ */}
       <GuideReferences items={REFERENCES} />
 
-      {/* ── Disclaimer ── */}
+      {/* â”€â”€ Disclaimer â”€â”€ */}
       <GuideDisclaimer>
         This guide is for informational purposes only. Always consult the
         patient information leaflet supplied with your{" "}
@@ -336,7 +336,7 @@ export default function GuideMounjaroStorage() {
         medication, contact your prescribing pharmacy or clinician before use.
       </GuideDisclaimer>
 
-      {/* ── FAQ ── */}
+      {/* â”€â”€ FAQ â”€â”€ */}
       <GuideFaq items={FAQ_ITEMS} />
     </GuideLayout>
   );

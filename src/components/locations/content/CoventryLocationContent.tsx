@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -139,7 +139,7 @@ export default function CoventryLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · May 2026
+              Independent guide Â· May 2026
             </span>
           </div>
 
@@ -197,12 +197,12 @@ export default function CoventryLocationContent({ loc, shareUrl }: Props) {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    NHS — healthy weight overview
+                    NHS â€” healthy weight overview
                   </a>
                   .
                 </p>
                 <p className={p}>
-                  A Coventry-friendly strategy is planning for shift meals and “grab-and-go” moments: protein-first choices, a pre-decided snack, and strength work twice weekly so fat loss does not become muscle loss. Medicines can help eligible people, but only with assessment and follow-up.
+                  A Coventry-friendly strategy is planning for shift meals and â€œgrab-and-goâ€ moments: protein-first choices, a pre-decided snack, and strength work twice weekly so fat loss does not become muscle loss. Medicines can help eligible people, but only with assessment and follow-up.
                 </p>
                 <p className={`text-sm ${muted}`}>
                   Useful UK guidance:{" "}
@@ -214,7 +214,7 @@ export default function CoventryLocationContent({ loc, shareUrl }: Props) {
                   >
                     NICE NG246
                   </a>
-                  {" · "}
+                  {" Â· "}
                   <a
                     href="https://www.nhs.uk/live-well/healthy-weight/"
                     className={linkCls}
@@ -368,7 +368,7 @@ export default function CoventryLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="resources" heading="Coventry resources rundown">
                 <p className={p}>
                   FarGo Village markets and War Memorial Park can support movement and food routines. Groups and accountability are referenced in published sources. If you buy online, use{" "}
-                  <Link href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards" className={linkCls}>
+                  <Link href="/pharmacy-safety-gphc-verification" className={linkCls}>
                     how we verify UK pharmacies
                   </Link>{" "}
                   and compare providers using{" "}
@@ -396,7 +396,7 @@ export default function CoventryLocationContent({ loc, shareUrl }: Props) {
                         rel="noopener noreferrer"
                         target="_blank"
                       >
-                        {s.label.replace(/\s*—\s*/g, ": ")}
+                        {s.label.replace(/\s*â€”\s*/g, ": ")}
                       </a>
                       <span className={muted}>: {s.note}</span>
                     </li>
@@ -427,23 +427,23 @@ export default function CoventryLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="next-steps" heading="Practical next steps (UK wide, including Coventry)">
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
-                    →{" "}
+                    â†’{" "}
                     <Link href="/compare/wegovy-vs-mounjaro" className={linkCls}>
                       Compare best weight loss treatments in the UK
                     </Link>
                   </li>
                   <li>
-                    →{" "}
+                    â†’{" "}
                     <Link href="/mounjaro-price-comparison" className={linkCls}>
                       Mounjaro price comparison
                     </Link>
-                    <span className={muted}> · </span>
+                    <span className={muted}> Â· </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
                     </Link>
                   </li>
                   <li>
-                    →{" "}
+                    â†’{" "}
                     <Link href="/tools/bmi-calculator" className={linkCls}>
                       BMI calculator
                     </Link>

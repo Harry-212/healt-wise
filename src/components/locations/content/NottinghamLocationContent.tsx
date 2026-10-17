@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -103,7 +103,7 @@ export default function NottinghamLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -160,7 +160,7 @@ export default function NottinghamLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Nottingham sits in the heart of the East Midlands, a mix of urban buzz and green spaces like the在国家 Forest. Yet, health data paints a challenging picture: According to NHS Digital 2025 reports, over 30% of Nottingham adults fall into obesity categories (BMI 30+), aligning with the wider UK average where 62% of adults carry excess weight. The East Midlands region, including Nottinghamshire, publishes intelligence at a national level via Public Health England tools, but local nuances matter - textile factory shifts, long commutes on the A52, and weekend trips to the Bullring can lead to calorie-heavy habits without intentional movement. Treat these figures as context for service design, not a verdict on personal choices; your clinician&apos;s assessment always trumps stats.
+                  Nottingham sits in the heart of the East Midlands, a mix of urban buzz and green spaces like theåœ¨å›½å®¶ Forest. Yet, health data paints a challenging picture: According to NHS Digital 2025 reports, over 30% of Nottingham adults fall into obesity categories (BMI 30+), aligning with the wider UK average where 62% of adults carry excess weight. The East Midlands region, including Nottinghamshire, publishes intelligence at a national level via Public Health England tools, but local nuances matter - textile factory shifts, long commutes on the A52, and weekend trips to the Bullring can lead to calorie-heavy habits without intentional movement. Treat these figures as context for service design, not a verdict on personal choices; your clinician&apos;s assessment always trumps stats.
                 </p>
 
                 <p className={p}>
@@ -283,13 +283,13 @@ export default function NottinghamLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>Eligibility: BMI 35+ (30+ comorbidities); failed lifestyle.</li>
                   <li>Providers: Local pharmacies (e.g., GPhC-registered in the city center).</li>
-                  <li>Cost: NHS free; private £150-350/month.</li>
+                  <li>Cost: NHS free; private Â£150-350/month.</li>
                   <li>Monitoring: Blood tests, follow-ups.</li>
                 </ul>
 
                 <p className={`mt-4 ${p}`}>
                   Verify private sellers with our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>{" "}
                   and{" "}

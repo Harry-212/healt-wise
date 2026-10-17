@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -142,7 +142,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -153,7 +153,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is personal`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Strongest OTC weight loss tablet? Orlistat or Xenical at 120 mg blocks about 25% fat absorption and is NICE aligned for BMI 28 plus with risk factors when prescribed. Can a GP prescribe Mounjaro routinely? Not yet everywhere because integrated care boards phase rollout after technology appraisal style decisions such as TA1026 from January 2025 framing. Private supply via pharmacies is often faster when eligible. Mounjaro at Boots? Usually unavailable there, with independents near £200 plus monthly. Mounjaro versus Wegovy? Mounjaro often edges toward 20 plus percent loss in trial summaries with dual GLP 1 and GIP action versus about 15% for GLP 1 only semaglutide in selected populations.
+                  Strongest OTC weight loss tablet? Orlistat or Xenical at 120 mg blocks about 25% fat absorption and is NICE aligned for BMI 28 plus with risk factors when prescribed. Can a GP prescribe Mounjaro routinely? Not yet everywhere because integrated care boards phase rollout after technology appraisal style decisions such as TA1026 from January 2025 framing. Private supply via pharmacies is often faster when eligible. Mounjaro at Boots? Usually unavailable there, with independents near Â£200 plus monthly. Mounjaro versus Wegovy? Mounjaro often edges toward 20 plus percent loss in trial summaries with dual GLP 1 and GIP action versus about 15% for GLP 1 only semaglutide in selected populations.
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -205,7 +205,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  No magic OTC tablet exists. Orlistat stands out because it blocks about 25% of fat absorption and is NICE endorsed for BMI 28 plus with risk factors (NICE CG189, 2025 framing). Lichfield pharmacies such as Prescription Care Services style providers may supply it after consultation, often about £60 to £80 monthly in quoted bands.
+                  No magic OTC tablet exists. Orlistat stands out because it blocks about 25% of fat absorption and is NICE endorsed for BMI 28 plus with risk factors (NICE CG189, 2025 framing). Lichfield pharmacies such as Prescription Care Services style providers may supply it after consultation, often about Â£60 to Â£80 monthly in quoted bands.
                 </p>
 
                 <p className={p}>
@@ -227,11 +227,11 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Lichfield realities: private routes via Whittington or Touchwood style pharmacies with video consults from about £69 plus appear in local marketing. Prescription Care style services confirm injectables for eligible people when screened. NHS tier 3 via Staffordshire integrated care systems can carry waits about 6 to 12 months depending on capacity. Hedging: you must titrate slowly because nausea often peaks weeks 2 to 4.
+                  Lichfield realities: private routes via Whittington or Touchwood style pharmacies with video consults from about Â£69 plus appear in local marketing. Prescription Care style services confirm injectables for eligible people when screened. NHS tier 3 via Staffordshire integrated care systems can carry waits about 6 to 12 months depending on capacity. Hedging: you must titrate slowly because nausea often peaks weeks 2 to 4.
                 </p>
 
                 <p className={p}>
-                  Mounjaro versus Wegovy UK: Mounjaro&apos;s GIP edge can yield about 6% extra average loss in some trial comparisons, with fewer GI sides reported for some cohorts. Costs: about £200 to £300 monthly private. Boots? No Mounjaro shelf offer in most branches, independents only in many regions.
+                  Mounjaro versus Wegovy UK: Mounjaro&apos;s GIP edge can yield about 6% extra average loss in some trial comparisons, with fewer GI sides reported for some cohorts. Costs: about Â£200 to Â£300 monthly private. Boots? No Mounjaro shelf offer in most branches, independents only in many regions.
                 </p>
 
                 <p className={p}>
@@ -359,7 +359,7 @@ export default function LichfieldLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="warnings" heading="Warnings, risks, and smart checks">
                 <p className={p}>
                   GP oversight stays essential. Thyroid and medicine history matter for contraindications. MHRA flags fake pens in drug safety messaging (MHRA 2025). Private routes: GPhC check prescribers using our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>
                   .

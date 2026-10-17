@@ -837,7 +837,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Where can I get Mounjaro in Cardiff?",
-        a: `People often look at private clinics and pharmacies for quicker access than NHS waiting times. If you use a private route, prioritise registration, cold chain delivery, and follow up. Use [how we verify UK pharmacies](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and [our methodology](/methodology) before you pay.`,
+        a: `People often look at private clinics and pharmacies for quicker access than NHS waiting times. If you use a private route, prioritise registration, cold chain delivery, and follow up. Use [how we verify UK pharmacies](/pharmacy-safety-gphc-verification) and [our methodology](/methodology) before you pay.`,
       },
       {
         q: "Can I lose 10kg in 2 months with Ozempic?",
@@ -961,7 +961,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Cheaper alternative to Mounjaro?",
-        a: `Always be careful with claims about compounded or unlicensed versions. In the UK, prescriptions should come from appropriately regulated routes with monitoring. Use [our methodology](/methodology) and [how we verify UK pharmacies](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) before paying.`,
+        a: `Always be careful with claims about compounded or unlicensed versions. In the UK, prescriptions should come from appropriately regulated routes with monitoring. Use [our methodology](/methodology) and [how we verify UK pharmacies](/pharmacy-safety-gphc-verification) before paying.`,
       },
       {
         q: "Do harbour walks suffice for fat loss?",
@@ -1056,7 +1056,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Private vs pharmacy for Craigavon access?",
-        a: `Both routes can be viable when appropriately regulated. Prioritise assessment, follow up, and safe delivery. Use [how we verify UK pharmacies](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) before you pay.`,
+        a: `Both routes can be viable when appropriately regulated. Prioritise assessment, follow up, and safe delivery. Use [how we verify UK pharmacies](/pharmacy-safety-gphc-verification) before you pay.`,
       },
     ];
   }
@@ -1586,7 +1586,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How soon can Leeds residents access private Mounjaro?",
-        a: `Some GPhC registered services offer same week screening when capacity allows, often about £220 to £320 monthly including titration plans. Verify providers using our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and read [what Mounjaro is](/what-is-mounjaro).`,
+        a: `Some GPhC registered services offer same week screening when capacity allows, often about £220 to £320 monthly including titration plans. Verify providers using our [pharmacy verification guide](/pharmacy-safety-gphc-verification) and read [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "NHS versus private: which wins for 20 kg loss?",
@@ -1619,7 +1619,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "NHS versus private speed in Leicester?",
-        a: `NHS tier 2 often starts after about 2 to 4 months when capacity allows and is free at point of use. Private GLP 1 can start in about 1 to 2 weeks in some services at about £200 plus monthly. Verify any private route with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `NHS tier 2 often starts after about 2 to 4 months when capacity allows and is free at point of use. Private GLP 1 can start in about 1 to 2 weeks in some services at about £200 plus monthly. Verify any private route with our [pharmacy verification guide](/pharmacy-safety-gphc-verification).`,
       },
       {
         q: "Can Leicester GPs handle shared care?",
@@ -1640,7 +1640,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is Mounjaro monthly cost from major UK chains?",
-        a: `Boots does not stock Mounjaro as a default chain offer in many areas, so independents often quote about £200 to £300 monthly including titration support. Compare totals on [Mounjaro price comparison](/mounjaro-price-comparison) and verify prescribers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `Boots does not stock Mounjaro as a default chain offer in many areas, so independents often quote about £200 to £300 monthly including titration support. Compare totals on [Mounjaro price comparison](/mounjaro-price-comparison) and verify prescribers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification).`,
       },
       {
         q: "How does Mounjaro compare with semaglutide (Wegovy) for effectiveness?",
@@ -1681,7 +1681,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "NHS versus private: which wins in Lincoln?",
-        a: `NHS tier 3 is often strongest for BMI 40 plus because it is free at point of use and multidisciplinary when capacity exists. Private GLP 1 can be faster for BMI 30 to 39.9 with comorbidities when eligible and paid. Hybrid models need explicit shared care agreements. Verify private routes with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `NHS tier 3 is often strongest for BMI 40 plus because it is free at point of use and multidisciplinary when capacity exists. Private GLP 1 can be faster for BMI 30 to 39.9 with comorbidities when eligible and paid. Hybrid models need explicit shared care agreements. Verify private routes with our [pharmacy verification guide](/pharmacy-safety-gphc-verification).`,
       },
       {
         q: "What is the best Lincoln area exercise for fat loss?",
@@ -1706,7 +1706,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Is tirzepatide (Mounjaro) available for weight loss in Northern Ireland?",
-        a: `Yes through GPhC registered private pharmacies and clinics for eligible adults when prescribing governance is satisfied. Weekly injection cold chain delivery into BT postcodes is standard. NHS tier 3 consideration is narrower, often BMI 40 plus or BMI 35 plus with comorbidities depending on trust policy. Verify any seller with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and read [what Mounjaro is](/what-is-mounjaro).`,
+        a: `Yes through GPhC registered private pharmacies and clinics for eligible adults when prescribing governance is satisfied. Weekly injection cold chain delivery into BT postcodes is standard. NHS tier 3 consideration is narrower, often BMI 40 plus or BMI 35 plus with comorbidities depending on trust policy. Verify any seller with our [pharmacy verification guide](/pharmacy-safety-gphc-verification) and read [what Mounjaro is](/what-is-mounjaro).`,
       },
       {
         q: "How much does Ozempic cost monthly for weight loss in Northern Ireland?",
@@ -1747,7 +1747,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "NHS versus private Liverpool: which delivers faster results?",
-        a: `NHS tier 2 and tier 3 are free at point of use but waits often reach about 6 to 12 months for specialist GLP 1 review. Private can start pens within days when eligible and paid. Hybrid wins when your GP agrees shared care for blood tests. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and read [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro).`,
+        a: `NHS tier 2 and tier 3 are free at point of use but waits often reach about 6 to 12 months for specialist GLP 1 review. Private can start pens within days when eligible and paid. Hybrid wins when your GP agrees shared care for blood tests. Verify sellers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification) and read [best weight loss treatments in the UK](/compare/wegovy-vs-mounjaro).`,
       },
     ];
   }
@@ -1801,7 +1801,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Do I need a clinic for weight loss?",
-        a: `Not always. Some people do well with self-managed lifestyle change. Others need medical assessment, especially if weight is affecting health. Use the [BMI calculator](/tools/bmi-calculator) as a preparation aid and verify private sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `Not always. Some people do well with self-managed lifestyle change. Others need medical assessment, especially if weight is affecting health. Use the [BMI calculator](/tools/bmi-calculator) as a preparation aid and verify private sellers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification).`,
       },
       {
         q: "What should I ask before starting treatment?",
@@ -1830,7 +1830,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Is the Best Weight Loss Treatment in Newcastle Safe and Sustainable?",
-        a: `A treatment is only best if it is effective, safe, and sustainable. Safer approaches usually involve gradual weight loss, balanced diet, regular exercise, and medical supervision when using medication or considering surgery. Verify private sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `A treatment is only best if it is effective, safe, and sustainable. Safer approaches usually involve gradual weight loss, balanced diet, regular exercise, and medical supervision when using medication or considering surgery. Verify private sellers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification).`,
       },
       {
         q: "Where Should I Start If I Live in Newcastle?",
@@ -1859,7 +1859,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How do I access GLP-1 injections like Semaglutide in Newport safely?",
-        a: `NHS access usually starts through GP referral and can involve waits of 3-6 months. Private access may be faster via GPhC-registered clinics, often around £200-350/month. Verify prescriber/pharmacy, titration plan, side-effect policy, and cold-chain delivery with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `NHS access usually starts through GP referral and can involve waits of 3-6 months. Private access may be faster via GPhC-registered clinics, often around £200-350/month. Verify prescriber/pharmacy, titration plan, side-effect policy, and cold-chain delivery with our [pharmacy verification guide](/pharmacy-safety-gphc-verification).`,
       },
       {
         q: "What local Newport resources support weight loss journeys?",
@@ -1892,7 +1892,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Do I need the NHS, or can I go private?",
-        a: `Either may work, depending on your situation. NHS care is often lower cost and more structured, while private care may be faster and more convenient. The right option depends on urgency, budget, and the level of monitoring you need. Verify private sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `Either may work, depending on your situation. NHS care is often lower cost and more structured, while private care may be faster and more convenient. The right option depends on urgency, budget, and the level of monitoring you need. Verify private sellers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification).`,
       },
     ];
   }
@@ -1921,7 +1921,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How can I tell if a weight loss option in Northampton is safe and trustworthy?",
-        a: `Look for clear links to NHS or recognised hospitals and obesity clinics, named clinicians with verifiable qualifications, transparent criteria and side-effect information, guideline references, and no pressure to pay large sums without proper assessment. Verify private sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `Look for clear links to NHS or recognised hospitals and obesity clinics, named clinicians with verifiable qualifications, transparent criteria and side-effect information, guideline references, and no pressure to pay large sums without proper assessment. Verify private sellers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification).`,
       },
     ];
   }
@@ -1975,7 +1975,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Best Nottingham clinics for injections?",
-        a: `Look for specialist or pharmacy-managed services that are GPhC registered, with proper screening, titration, and follow-up. There is no single best centre. Verify private sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `Look for specialist or pharmacy-managed services that are GPhC registered, with proper screening, titration, and follow-up. There is no single best centre. Verify private sellers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification).`,
       },
       {
         q: "Safe 20kg loss timeline?",
@@ -2004,7 +2004,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Can I get GLP-1 without GP in Merthyr Tydfil?",
-        a: `Yes, via GPhC online clinics (BMI 30+). But GP shared care ensures monitoring; private may skip. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
+        a: `Yes, via GPhC online clinics (BMI 30+). But GP shared care ensures monitoring; private may skip. Verify sellers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
       },
       {
         q: "How realistic is NHS weight management here?",
@@ -2037,7 +2037,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How do I know if private treatment is safe?",
-        a: `Check that the prescriber and pharmacy are properly registered, the follow-up is clear, and the treatment plan includes side-effect monitoring. If anything feels vague, pause before paying. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
+        a: `Check that the prescriber and pharmacy are properly registered, the follow-up is clear, and the treatment plan includes side-effect monitoring. If anything feels vague, pause before paying. Verify sellers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
       },
     ];
   }
@@ -2062,7 +2062,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How safe are private online clinics for Livingston residents?",
-        a: `GPhC registered services can be safe when cold chain, titration plans, and repeat blood tests are explicit. Risks spike when history checks are skipped. Always loop your GP for monitoring. Verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
+        a: `GPhC registered services can be safe when cold chain, titration plans, and repeat blood tests are explicit. Risks spike when history checks are skipped. Always loop your GP for monitoring. Verify sellers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification) and [fake online pharmacy UK guide](/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe).`,
       },
       {
         q: "What local Livingston resources boost success?",
@@ -2120,7 +2120,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How much does Mounjaro usually cost each month in Ireland or nearby UK markets?",
-        a: `Monthly pricing varies by dose, supplier, monitoring, and whether follow up is bundled. Compare the full monthly package, not headline pen prices alone. Use [Mounjaro price comparison](/mounjaro-price-comparison) and verify sellers with our [pharmacy verification guide](/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards).`,
+        a: `Monthly pricing varies by dose, supplier, monitoring, and whether follow up is bundled. Compare the full monthly package, not headline pen prices alone. Use [Mounjaro price comparison](/mounjaro-price-comparison) and verify sellers with our [pharmacy verification guide](/pharmacy-safety-gphc-verification).`,
       },
       {
         q: "Can I get weight loss injections on the NHS in Northern Ireland?",

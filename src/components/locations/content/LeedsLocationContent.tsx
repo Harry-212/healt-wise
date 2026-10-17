@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -143,7 +143,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -210,7 +210,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Mayfield style private GP care offers faster access but about £200 plus monthly. Spire Leeds Hospital provides surgical consults (gastric sleeve or balloon) for severe cases. Reality check: you must usually exhaust lifestyle first because the NHS will not rush pens without pathways.
+                  Mayfield style private GP care offers faster access but about Â£200 plus monthly. Spire Leeds Hospital provides surgical consults (gastric sleeve or balloon) for severe cases. Reality check: you must usually exhaust lifestyle first because the NHS will not rush pens without pathways.
                 </p>
 
                 <p className={p}>
@@ -245,7 +245,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-base font-semibold ${strong}`}>Wegovy (semaglutide): the gold standard framing</p>
                 <p className={p}>
-                  Weekly injection mimics GLP 1 hormone and can slash appetite substantially in responders. STEP trials: about 15% average loss at 68 weeks (NEJM, 2024; DOI 10.1056/NEJMoa2206038). Leeds access: NHS tier 3 at BMI 35 plus in many policies, private clinics often about £189 to £289 monthly.
+                  Weekly injection mimics GLP 1 hormone and can slash appetite substantially in responders. STEP trials: about 15% average loss at 68 weeks (NEJM, 2024; DOI 10.1056/NEJMoa2206038). Leeds access: NHS tier 3 at BMI 35 plus in many policies, private clinics often about Â£189 to Â£289 monthly.
                 </p>
 
                 <p className={p}>
@@ -254,7 +254,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-base font-semibold ${strong}`}>Mounjaro (tirzepatide): dual action leader</p>
                 <p className={p}>
-                  GIP plus GLP 1 mechanism yields about 20 to 22% loss in SURMOUNT style summaries for selected people (2025 reporting). Leeds private prescribing is common at about £220 to £320 monthly. Stronger satiety than Wegovy in some head to head discussions, but costlier.
+                  GIP plus GLP 1 mechanism yields about 20 to 22% loss in SURMOUNT style summaries for selected people (2025 reporting). Leeds private prescribing is common at about Â£220 to Â£320 monthly. Stronger satiety than Wegovy in some head to head discussions, but costlier.
                 </p>
 
                 <p className={p}>
@@ -289,7 +289,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-base font-semibold ${strong}`}>Surgical options at Spire Leeds</p>
                 <p className={p}>
-                  BMI 40 plus: gastric bypass (about 20 to 30% excess weight loss framing in clinician discussions), sleeve gastrectomy. Private about £8k to £12k, NHS tier 4 with long waits (2 plus years in some regions).
+                  BMI 40 plus: gastric bypass (about 20 to 30% excess weight loss framing in clinician discussions), sleeve gastrectomy. Private about Â£8k to Â£12k, NHS tier 4 with long waits (2 plus years in some regions).
                 </p>
 
                 <p className={`text-base font-semibold ${strong}`}>Behavioural programmes</p>
@@ -314,7 +314,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-base font-semibold ${strong}`}>Phase 2: acceleration (months 2 to 3, plus about 6 to 8 kg)</p>
                 <p className={p}>
-                  Add Wegovy 0.5 mg plus resistance bands (Argos, about £15). Journal of Obesity style reviews: combined approaches can more than double results for adherent cohorts versus diet alone in some summaries.
+                  Add Wegovy 0.5 mg plus resistance bands (Argos, about Â£15). Journal of Obesity style reviews: combined approaches can more than double results for adherent cohorts versus diet alone in some summaries.
                 </p>
 
                 <p className={`text-base font-semibold ${strong}`}>Phase 3: maintenance (month 4 onward, hold losses)</p>
@@ -335,7 +335,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>Kirkgate Market: lean lamb, fresh turmeric (anti inflammatory cooking)</li>
                   <li>Otley Run alternative: zero alcohol beer plus 5 km walks</li>
-                  <li>University gyms: public access near £20 monthly where offered</li>
+                  <li>University gyms: public access near Â£20 monthly where offered</li>
                   <li>NHS Stop Smoking Services: nicotine withdrawal can double emotional eating, tackle both together</li>
                   <li>Weather proof: indoor Temple Newsam circuits when rain hits, about 300 calories hourly for many</li>
                 </ul>
@@ -349,7 +349,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
                 <p className={`text-base font-semibold ${strong}`}>GLP 1 pitfalls</p>
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>Muscle loss: about 40% of weight lost can be lean mass without resistance training in some analyses</li>
-                  <li>Cost creep: £2,500 plus yearly after titration for many private plans</li>
+                  <li>Cost creep: Â£2,500 plus yearly after titration for many private plans</li>
                   <li>GP disconnect: private scripts rarely transfer to NHS shared care without agreement</li>
                   <li>MHRA warnings 2026 framing: counterfeit pens circulate, verify packs and regulated supply</li>
                   <li>Pregnancy planning: stop about 2 months prior when planning conception because animal studies flag risks</li>
@@ -357,7 +357,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   Learn verification steps in our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>
                   .
@@ -366,18 +366,18 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="costs" heading="Cost breakdown: Leeds reality check">
                 <ul className={`list-none space-y-1 pl-0 font-mono text-sm ${p}`}>
-                  <li>NHS tier 2: £0 (12 weeks)</li>
-                  <li>Private Wegovy (6 months): about £1,200</li>
-                  <li>Gym membership: about £240</li>
-                  <li>Kitchen scale plus app: about £25</li>
+                  <li>NHS tier 2: Â£0 (12 weeks)</li>
+                  <li>Private Wegovy (6 months): about Â£1,200</li>
+                  <li>Gym membership: about Â£240</li>
+                  <li>Kitchen scale plus app: about Â£25</li>
                   <li className="mt-2 border-t border-slate-300 pt-2 dark:border-slate-600">
-                    Total sustainable approach example: about £1,465
+                    Total sustainable approach example: about Â£1,465
                   </li>
-                  <li>Versus surgical: £10k plus single payment in private markets</li>
+                  <li>Versus surgical: Â£10k plus single payment in private markets</li>
                 </ul>
 
                 <p className={p}>
-                  Pro tip: private month 1 near £189, then NHS tier 2 after referral when accepted, hybrid can save about £800 yearly in some budgeting models.
+                  Pro tip: private month 1 near Â£189, then NHS tier 2 after referral when accepted, hybrid can save about Â£800 yearly in some budgeting models.
                 </p>
               </GuideSection>
 
@@ -386,7 +386,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
                   Factory workers: a 16 hour fasting window with 8 hour eating fits some shifts and can add about 4% extra loss to calorie control in some NEJM style summaries (2025). Hydrate heavily and break fast with protein, not pasties.
                 </p>
                 <p className={p}>
-                  Students: Orlistat plus meal prep, budget near £50 monthly when self catering.
+                  Students: Orlistat plus meal prep, budget near Â£50 monthly when self catering.
                 </p>
                 <p className={p}>
                   Parents: Saturday park runs with kids add social accountability and about 20% adherence lift in some behaviour studies.
@@ -398,7 +398,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="measuring" heading="Measuring success beyond scales">
                 <p className={p}>
-                  Waist circumference trumps BMI alone for metabolic risk in many guidelines. A four inch waist drop can halve diabetes risk in population models. DEXA scans at private hospitals such as Spire Leeds often quote about £120 baseline in marketing materials.
+                  Waist circumference trumps BMI alone for metabolic risk in many guidelines. A four inch waist drop can halve diabetes risk in population models. DEXA scans at private hospitals such as Spire Leeds often quote about Â£120 baseline in marketing materials.
                 </p>
                 <p className={p}>
                   Habit stacking: breakfast protein first can cut daily calories about 300 automatically for some people through fullness timing.
@@ -491,7 +491,7 @@ export default function LeedsLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>GP BMI check (free)</li>
                   <li>Roundhay 45 minutes daily (free)</li>
-                  <li>Protein first meals (about £2 daily when planned)</li>
+                  <li>Protein first meals (about Â£2 daily when planned)</li>
                   <li>App tracking (free)</li>
                 </ul>
 

@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   HazardBox,
   PHARMACY_PROVIDER_CTA_CLASSNAME,
@@ -10,8 +12,7 @@ import {
   ProviderCta,
 } from "./_dossier";
 
-// pharmacyadvance.co.uk is currently returning 500 errors — link disabled until it's back up.
-const providerUrl = null;
+const providerUrl = "https://pharmacyadvance.co.uk/";
 
 const sectionLabel =
   "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
@@ -24,16 +25,16 @@ export default function PharmacyAdvanceContent() {
     <PharmacyDossierPage
       slugLabel="Pharmacy Advance"
       fileRef="HW-PHARMACY-ADVANCE-2026"
-      title="Pharmacy Advance weight management review"
+      title="Pharmacy Advance Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of Pharmacy Advance: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
-      scopeLabel="Scope:Mounjaro · Wegovy"
+      scopeLabel="Scope: Mounjaro · Wegovy"
       providerName="Pharmacy Advance"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
+        { k: "Last updated", v: "20 September 2026" },
         {
           k: "Provider",
-          v: "Pharmacy Advance (GPhC 9012423 — verify premises on register)",
+          v: "Pharmacy Advance (GPhC 9012423)",
         },
         {
           k: "Pathway",
@@ -50,7 +51,26 @@ export default function PharmacyAdvanceContent() {
       heroProviderLogoAlt="Pharmacy Advance"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-blue-900">About Pharmacy Advance:</strong> Navigating online weight loss treatments can be complex. Pharmacy Advance is one of several UK-registered services offering prescription medication alongside professional guidance. Before proceeding with any treatment, it is essential to review the specific fulfillment policies, consultation requirements, and support structures that Pharmacy Advance provides.</p></div>
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            Pharmacy Advance is an online UK service for weight loss injections. See its Mounjaro and Wegovy price for every dose below, from our 20 September 2026 price check, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ). A prescriber checks your health before any medicine is sent.
+          </p>
+        </div>
+        <PharmacyPriceTable slug="pharmacy-advance" providerName="Pharmacy Advance" />
         <p className="text-slate-800 leading-relaxed">
           Marketing summaries for Pharmacy Advance typically position the brand as a{" "}
           <strong>regulated UK online pharmacy</strong> for prescription weight-loss treatment,
@@ -253,6 +273,13 @@ export default function PharmacyAdvanceContent() {
           pharmacy with mandatory consultation is intended to improve odds of genuine product,
           proper medical review, and support channels — you should still verify premises and
           superintendent details yourself on the register.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is Pharmacy Advance legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          Pharmacy Advance is listed on the official GPhC register (number 9012423). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
         </p>
       </section>
 

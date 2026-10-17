@@ -377,7 +377,7 @@ export default function GuideMounjaroPillar() {
             Mounjaro price comparison tool
           </IL>{" "}
           to find the lowest verified prices from{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             GPhC registered pharmacies
           </IL>
           .
@@ -416,7 +416,7 @@ export default function GuideMounjaroPillar() {
           Mounjaro must be prescribed by a registered UK clinician and
           dispensed by a GPhC-registered pharmacy. Before choosing a provider,
           read our{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             pharmacy verification guide
           </IL>{" "}
           or use our{" "}

@@ -128,23 +128,15 @@ export default function ArticleClient() {
                 the cycle.
               </p>
               <p>
-                If you are also curious how cortisol fits with other midlife
-                hormones, our guide{" "}
-                <Link
-                  href="/blog/can-hormones-cause-belly-fat-after-40"
-                  className="font-medium text-brand-primary underline"
-                >
-                  Can hormones cause belly fat after 40?
-                </Link>{" "}
-                walks through oestrogen, testosterone, insulin and stress in one
-                place. For the broader picture of waist changes in your 40s,{" "}
+                If you are curious how cortisol fits with other midlife hormones
+                and waist changes, our comprehensive guide{" "}
                 <Link
                   href="/blog/why-does-belly-fat-increase-after-40"
                   className="font-medium text-brand-primary underline"
                 >
-                  Why does belly fat increase after 40?
+                  Belly Fat After 40: Hormones and What Helps
                 </Link>{" "}
-                is a useful companion read.
+                walks through oestrogen, testosterone, insulin, stress, and GLP-1 options in one place.
               </p>
             </GuideSection>
 

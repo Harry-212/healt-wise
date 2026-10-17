@@ -154,15 +154,6 @@ const ALL_GUIDES = [
     readTime: "3 min read",
   },
   {
-    slug: "how-we-verify-uk-pharmacies-gphc-safety-standards",
-    title:
-      "How We Verify UK Pharmacies: GPhC Checks & Safety Standards Explained",
-    description:
-      "We check every pharmacy against the GPhC register before listing. Discover the multi-layer verification process that keeps your purchases safe.",
-    category: "Pharmacy Safety" as Category,
-    readTime: "5 min read",
-  },
-  {
     slug: "mounjaro-pregnancy-risk-fertility-contraception",
     title:
       "Mounjaro and Pregnancy Risk: What You Need to Know About Fertility & Contraception",

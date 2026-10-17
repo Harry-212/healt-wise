@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 import ArticleSources from "@/components/blog/ArticleSources";
 
@@ -252,7 +252,7 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="why-search"
-              heading="Why People Ask “Can I Buy Weight Loss Injections”"
+              heading="Why People Ask â€œCan I Buy Weight Loss Injectionsâ€"
             >
               <p>
                 People asking this are often close to taking action, but they
@@ -713,7 +713,7 @@ export default function ArticleClient() {
                 to help patients make informed, budget-friendly choices. For
                 long-term planning, see our{" "}
                 <Link
-                  href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards"
+                  href="/pharmacy-safety-gphc-verification"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   pharmacy verification guide
@@ -896,7 +896,7 @@ export default function ArticleClient() {
               <p>
                 Health Wise focuses on independent comparison, safety checks,
                 price transparency, and clear guidance before you start a
-                consultation — rather than pushing a single treatment funnel.
+                consultation â€” rather than pushing a single treatment funnel.
               </p>
               <p
                 className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}

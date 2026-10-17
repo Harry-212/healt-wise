@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   PHARMACY_PROVIDER_CTA_CLASSNAME,
   PharmacyDossierPage,
@@ -11,7 +12,7 @@ import {
 
 export default function AsdaOnlineDoctorContent() {
   const providerUrl =
-    "https://onlinedoctor.asda.com/uk/weight-loss-treatment.html?utm_source=healthwise360";
+    "https://onlinedoctor.asda.com/uk/weight-loss-treatment.html";
 
   /** Paste the live code here when available. */
   const discountCode = "";
@@ -21,14 +22,14 @@ export default function AsdaOnlineDoctorContent() {
     <PharmacyDossierPage
       slugLabel="Asda Online Doctor"
       fileRef="HW-ASDA-2026"
-      title="Asda Online Doctor weight management review"
+      title="Asda Online Doctor Review: Mounjaro and Wegovy Prices"
       subtitle="Independent provider review of Asda Online Doctor: consultation process, clinical support, registered pharmacy fulfilment, delivery fees, treatment prices and total monthly cost (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Orlistat"
       providerName="Asda Online Doctor"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Published", v: "2026" },
-        { k: "Provider", v: "Asda Online Doctor" },
+        { k: "Last updated", v: "20 September 2026" },
+        { k: "Provider", v: "Asda Online Doctor (GPhC 1116105)" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat" },
         { k: "Fulfilment", v: "Home delivery" },
       ]}
@@ -38,7 +39,26 @@ export default function AsdaOnlineDoctorContent() {
       heroProviderLogoAlt="Asda Online Doctor"
     >
       <section className="space-y-4">
-        <div className="mb-6 rounded-xl border border-emerald-100 bg-emerald-50/50 p-5 shadow-sm"><p className="text-slate-800 leading-relaxed"><strong className="text-emerald-900">Provider Overview:</strong> Asda Online Doctor provides a UK-facing digital care pathway for people researching medically supported weight management. When comparing providers, it helps to look beyond headlines and understand how the service actually works — the initial assessment, clinical review, follow-up support, and delivery handling. This dossier summarises public information about Asda Online Doctor to support a more informed decision.</p></div>
+        <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
+          <p className="text-base leading-relaxed text-slate-800">
+            Asda Online Doctor is an online UK service for weight loss injections. See its Mounjaro and Wegovy price for every dose below, from our 20 September 2026 price check, or{" "}
+            <Link
+              href="/mounjaro-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Mounjaro prices
+            </Link>{" "}
+            at all 67 pharmacies (or{" "}
+            <Link
+              href="/wegovy-price-comparison"
+              className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+            >
+              compare Wegovy prices
+            </Link>
+            ). A prescriber checks your health before any medicine is sent.
+          </p>
+        </div>
+        <PharmacyPriceTable slug="asda-online-doctor" providerName="Asda Online Doctor" />
         <p className="text-slate-800 leading-relaxed">
           Losing weight is not always easy, especially when diet and exercise alone do not produce
           the results you need. For many people in the UK, prescription treatments such as weight
@@ -277,6 +297,13 @@ export default function AsdaOnlineDoctorContent() {
           </p>
         </section>
       </div>
+
+      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 className="text-xl font-bold text-slate-900">Is Asda Online Doctor legit?</h2>
+        <p className="mt-3 leading-relaxed text-slate-800">
+          Asda Online Doctor is listed on the official GPhC register (number 1116105). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
+        </p>
+      </section>
 
       <section>
         <h2 className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-red-900/90 sm:text-sm">

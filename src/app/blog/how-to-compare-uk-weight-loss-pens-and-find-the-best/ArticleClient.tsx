@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
 import ArticleSources from "@/components/blog/ArticleSources";
 
@@ -114,7 +114,7 @@ export default function ArticleClient() {
 
             <BlogArticleHeroImage
               src={HERO_SRC}
-              alt="Compare UK weight loss pens — Wegovy and Mounjaro with regulated prescribing"
+              alt="Compare UK weight loss pens â€” Wegovy and Mounjaro with regulated prescribing"
             />
             <div
               id="guide-article-hero-end"
@@ -290,7 +290,7 @@ export default function ArticleClient() {
               <p>
                 For pharmacy checks, see{" "}
                 <Link
-                  href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards"
+                  href="/pharmacy-safety-gphc-verification"
                   className="font-medium text-brand-primary underline"
                 >
                   how we verify UK pharmacies (GPhC)
@@ -393,7 +393,7 @@ export default function ArticleClient() {
                     studies suggest average weight reduction of around 20
                     percent with Mounjaro, compared with roughly 14 percent for
                     Wegovy under similar study conditions. That said,
-                    &ldquo;most effective&rdquo; can be misleading—effectiveness
+                    &ldquo;most effective&rdquo; can be misleadingâ€”effectiveness
                     may depend on total weight lost, appetite control,
                     tolerability, cost, or long-term maintenance.
                   </p>
@@ -436,7 +436,7 @@ export default function ArticleClient() {
                     Depending on availability, Wegovy may be considered as an
                     alternative to Mounjaro. Whether it is cheaper can depend
                     on dose, provider, and your eligibility. Price alone
-                    probably should not decide your choice — always speak to a
+                    probably should not decide your choice â€” always speak to a
                     medically qualified healthcare professional.
                   </p>
                 </div>

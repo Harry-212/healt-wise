@@ -28,13 +28,15 @@ export default function ArticleClient() {
     () => [
       { id: "intro", label: "Introduction" },
       { id: "changes", label: "What changes in your body after 40?" },
+      { id: "four-hormones", label: "The four key hormones driving belly fat" },
       { id: "visceral-vs-subcutaneous", label: "Visceral vs subcutaneous fat" },
       {
         id: "why-old-approach-fails",
         label: "Why old approaches stop working",
       },
       { id: "summary", label: "What actually drives belly fat after 40" },
-      { id: "reverse", label: "Can you reverse belly fat after 40?" },
+      { id: "reverse", label: "Evidence-based steps that help" },
+      { id: "glp1-treatments", label: "When GLP-1 treatment may be an option" },
       { id: "healthwise360", label: "How HealthWise360 can help" },
       { id: "faq", label: "Frequently Asked Questions" },
       { id: "conclusion", label: "Conclusion" },
@@ -87,7 +89,7 @@ export default function ArticleClient() {
             <h1
               className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${darkMode ? "text-white" : "text-slate-900"}`}
             >
-              Why Does Belly Fat Increase After 40? Causes &amp; Solutions
+              Belly Fat After 40: Hormones and What Helps
             </h1>
             <div
               className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}
@@ -227,6 +229,52 @@ export default function ArticleClient() {
                 particularly in the abdominal area. After 40, the body&apos;s
                 stress response system also becomes less efficient at returning
                 to baseline, meaning cortisol stays elevated longer.
+              </p>
+            </GuideSection>
+
+            <GuideSection
+              darkMode={darkMode}
+              id="four-hormones"
+              heading="The Four Key Hormones Driving Belly Fat After 40"
+            >
+              <p className="text-lg">
+                Hormones act as biochemical signaling molecules that direct exactly where your body stores adipose tissue and how readily it mobilises fat for fuel. After 40, four primary hormones undergo pronounced shifts:
+              </p>
+
+              <h3
+                className={`mt-6 text-xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
+                1. Oestrogen (in Women)
+              </h3>
+              <p>
+                During perimenopause and menopause, fluctuating and ultimately declining oestrogen levels trigger a fundamental shift in fat distribution. Prior to 40, oestrogen directs excess energy into subcutaneous storage around the hips, thighs, and buttocks. As oestrogen declines, the body preferentially deposits adipose tissue viscerally deep within the abdominal cavity. Lower oestrogen is also linked with reduced insulin sensitivity and slower lipid oxidation.
+              </p>
+
+              <h3
+                className={`mt-6 text-xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
+                2. Testosterone (in Men and Women)
+              </h3>
+              <p>
+                In men, circulating testosterone levels decline gradually at approximately 1% per year after age 30. Reduced testosterone accelerates age-related muscle loss (sarcopenia), depresses baseline daily calorie expenditure, and promotes central visceral fat accumulation. In women, declining oestrogen combined with relatively higher free androgens can also accentuate midsection weight gain.
+              </p>
+
+              <h3
+                className={`mt-6 text-xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
+                3. Cortisol (The Stress & Sleep Hormone)
+              </h3>
+              <p>
+                Midlife frequently brings demanding career, family, and eldercare responsibilities, often compounded by fragmented sleep. Chronic psychological or physiological stress keeps cortisol persistently elevated. Visceral fat cells express up to four times more glucocorticoid (cortisol) receptors than subcutaneous fat cells, making your waistline uniquely sensitive to stress-induced fat storage.
+              </p>
+
+              <h3
+                className={`mt-6 text-xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
+              >
+                4. Insulin (Blood Glucose Regulation)
+              </h3>
+              <p>
+                Peripheral insulin sensitivity naturally declines with age and reduced skeletal muscle activity. When muscle and liver cells become resistant to insulin, the pancreas secretes higher baseline concentrations to clear blood glucose. Elevated circulating insulin actively suppresses lipolysis (fat breakdown) and channels surplus dietary energy straight into visceral adipose depots.
               </p>
             </GuideSection>
 
@@ -403,6 +451,53 @@ export default function ArticleClient() {
 
             <GuideSection
               darkMode={darkMode}
+              id="glp1-treatments"
+              heading="When GLP-1 Treatment May Be an Option"
+            >
+              <p>
+                For many adults over 40, significant hormonal shifts and established insulin resistance mean that lifestyle changes alone may struggle to reduce stubborn visceral belly fat, particularly when accompanied by an elevated BMI.
+              </p>
+              <p>
+                In the UK, modern prescription GLP-1 and dual GIP/GLP-1 receptor agonists such as{" "}
+                <Link
+                  href="/what-is-mounjaro"
+                  className="font-medium text-emerald-600 hover:underline dark:text-emerald-400"
+                >
+                  Mounjaro (tirzepatide)
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/what-is-wegovy"
+                  className="font-medium text-emerald-600 hover:underline dark:text-emerald-400"
+                >
+                  Wegovy (semaglutide)
+                </Link>{" "}
+                are licensed for chronic weight management. These medications mimic natural incretin hormones to reduce appetite, quieten constant &quot;food noise&quot;, delay gastric emptying, and improve metabolic insulin sensitivity.
+              </p>
+              <p>
+                Under UK clinical guidelines (NICE), private and NHS prescribing eligibility typically requires a BMI of 30 kg/m² or above, or a BMI of 27 kg/m² or above with at least one weight-related condition such as hypertension, pre-diabetes, or obstructive sleep apnoea (with lower thresholds of 27.5 and 23 for people from South Asian, Chinese, Black African, or African-Caribbean backgrounds).
+              </p>
+              <p>
+                If you and your doctor decide medical weight loss treatment is appropriate, you can compare transparent pen prices across licensed UK pharmacies in our{" "}
+                <Link
+                  href="/mounjaro-price-comparison"
+                  className="font-semibold text-emerald-600 hover:underline dark:text-emerald-400"
+                >
+                  Mounjaro price comparison
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/wegovy-price-comparison"
+                  className="font-semibold text-emerald-600 hover:underline dark:text-emerald-400"
+                >
+                  Wegovy price comparison
+                </Link>{" "}
+                tables.
+              </p>
+            </GuideSection>
+
+            <GuideSection
+              darkMode={darkMode}
               id="healthwise360"
               heading="How HealthWise360 Can Help"
             >
@@ -414,8 +509,7 @@ export default function ArticleClient() {
               </p>
               <p className="font-semibold">Explore our related guides:</p>
               <p>
-                Can Hormones Cause Belly Fat After 40? If you want a practical
-                hormones first angle, start with our menopause and weight guide:{" "}
+                Hormones and weight management in midlife: explore our practical guide to{" "}
                 <Link
                   href="/helpful-guides/mounjaro-menopause-weight-loss-uk"
                   className="font-medium text-brand-primary underline"

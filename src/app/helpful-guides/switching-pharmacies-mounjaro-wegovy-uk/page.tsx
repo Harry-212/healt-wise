@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -97,58 +97,58 @@ const FAQ_ITEMS: FaqItemWithSchema[] = [
   },
   {
     q: "Is it safe to switch from a local to an online pharmacy?",
-    a: "Check the supplying pharmacy’s registration, how the prescribing assessment works and what follow-up support is available. Discuss whether the service meets your needs with your prescriber, particularly if you need face-to-face care. Registration alone does not establish that a service is suitable for you.",
+    a: "Check the supplying pharmacyâ€™s registration, how the prescribing assessment works and what follow-up support is available. Discuss whether the service meets your needs with your prescriber, particularly if you need face-to-face care. Registration alone does not establish that a service is suitable for you.",
     textAnswer:
-      "Check the supplying pharmacy’s registration, how the prescribing assessment works and what follow-up support is available. Discuss whether the service meets your needs with your prescriber, particularly if you need face-to-face care. Registration alone does not establish that a service is suitable for you.",
+      "Check the supplying pharmacyâ€™s registration, how the prescribing assessment works and what follow-up support is available. Discuss whether the service meets your needs with your prescriber, particularly if you need face-to-face care. Registration alone does not establish that a service is suitable for you.",
   },
 ];
 
 const REFERENCES = [
   {
-    label: "GPhC — Find a registered pharmacy",
+    label: "GPhC â€” Find a registered pharmacy",
     description:
       "Register for checking pharmacies in England, Scotland and Wales.",
     href: "https://www.pharmacyregulation.org/registers/pharmacy",
   },
   {
-    label: "PSNI — Pharmacy register",
+    label: "PSNI â€” Pharmacy register",
     description:
       "Register of pharmaceutical chemists and pharmacy premises in Northern Ireland.",
     href: "https://registers.psni.org.uk/",
   },
   {
-    label: "MHRA — Distance Selling Logo guidance",
+    label: "MHRA â€” Distance Selling Logo guidance",
     description:
       "MHRA regulatory guidance on distance selling logo requirements for online medicine sellers.",
     href: "https://www.gov.uk/guidance/register-for-the-distance-selling-logo",
   },
   {
-    label: "MHRA — Buying prescription medicines online safely",
+    label: "MHRA â€” Buying prescription medicines online safely",
     description:
       "MHRA guidance on how to identify legitimate online pharmacies and protect yourself from counterfeit medications.",
     href: "https://fakemeds.campaign.gov.uk/",
   },
   {
-    label: "NICE — Tirzepatide for managing overweight and obesity (TA1026)",
+    label: "NICE â€” Tirzepatide for managing overweight and obesity (TA1026)",
     description:
       "NICE guidance on tirzepatide for managing overweight and obesity in the NHS.",
     href: "https://www.nice.org.uk/guidance/ta1026",
   },
   {
-    label: "NHS — Wegovy prescribing criteria",
+    label: "NHS â€” Wegovy prescribing criteria",
     description:
       "NHS information on who is eligible for GLP-1 weight management treatments including Wegovy in England.",
     href: "https://www.nice.org.uk/guidance/ta875/informationforpublic",
   },
   {
-    label: "How we verify UK pharmacies — Health Wise",
+    label: "How we verify UK pharmacies â€” Health Wise",
     description:
       "Our GPhC-based pharmacy verification process and what every listed provider must meet.",
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     external: false,
   },
   {
-    label: "Mounjaro price comparison UK — Health Wise",
+    label: "Mounjaro price comparison UK â€” Health Wise",
     description:
       "Up-to-date price comparison across verified UK Mounjaro providers.",
     href: "/mounjaro-price-comparison",
@@ -165,7 +165,7 @@ const RELATED_GUIDES = [
       "An honest breakdown of the differences between local and online pharmacy services for Mounjaro patients.",
   },
   {
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     category: "Pharmacy Safety",
     title: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards",
     description:
@@ -266,11 +266,11 @@ export default function GuideSwitchingPharmacy() {
         </GuideParagraph>
         <GuideBulletList
           items={[
-            "Lower treatment costs — prices vary significantly between providers. See our Mounjaro price comparison for current UK rates.",
-            "Faster prescription processing — some providers turn around consultations and dispatch within 24 hours.",
-            "Better clinical support — more responsive clinicians or pharmacist access.",
-            "Easier online access — streamlined repeat ordering and digital consultation options.",
-            "Stock availability — some pharmacies have more consistent supply of higher doses.",
+            "Lower treatment costs â€” prices vary significantly between providers. See our Mounjaro price comparison for current UK rates.",
+            "Faster prescription processing â€” some providers turn around consultations and dispatch within 24 hours.",
+            "Better clinical support â€” more responsive clinicians or pharmacist access.",
+            "Easier online access â€” streamlined repeat ordering and digital consultation options.",
+            "Stock availability â€” some pharmacies have more consistent supply of higher doses.",
           ]}
         />
       </GuideSection>
@@ -330,8 +330,8 @@ export default function GuideSwitchingPharmacy() {
           ]}
         />
         <GuideParagraph>
-          Match the pharmacy’s name, address and registration number with the
-          provider’s details. Ask the provider to explain any differences before
+          Match the pharmacyâ€™s name, address and registration number with the
+          providerâ€™s details. Ask the provider to explain any differences before
           proceeding.
         </GuideParagraph>
 
@@ -340,10 +340,10 @@ export default function GuideSwitchingPharmacy() {
         </h3>
         <GuideBulletList
           items={[
-            "Medication cost per pen/dose — compare like-for-like",
-            "Delivery fees — some providers charge separately",
-            "Consultation fees — some platforms charge per medical review",
-            "Hidden charges — check for auto-renewal or subscription lock-ins",
+            "Medication cost per pen/dose â€” compare like-for-like",
+            "Delivery fees â€” some providers charge separately",
+            "Consultation fees â€” some platforms charge per medical review",
+            "Hidden charges â€” check for auto-renewal or subscription lock-ins",
           ]}
         />
         <GuideParagraph>
@@ -359,14 +359,14 @@ export default function GuideSwitchingPharmacy() {
         </h3>
         <GuideBulletList
           items={[
-            "Consultation process — video, questionnaire, or hybrid?",
-            "Response time — how quickly does the clinical team respond to queries?",
-            "Customer reviews — Trustpilot ratings and patient feedback",
-            "Support for side effects — is clinical advice available if you experience issues?",
+            "Consultation process â€” video, questionnaire, or hybrid?",
+            "Response time â€” how quickly does the clinical team respond to queries?",
+            "Customer reviews â€” Trustpilot ratings and patient feedback",
+            "Support for side effects â€” is clinical advice available if you experience issues?",
           ]}
         />
         <GuideCallout variant="warning">
-          Check the supplying pharmacy’s registration and ask how the prescribing
+          Check the supplying pharmacyâ€™s registration and ask how the prescribing
           assessment works. If registration details cannot be verified or the
           service offers prescription medicine without an appropriate assessment,
           do not proceed until your concerns have been resolved.
@@ -381,11 +381,11 @@ export default function GuideSwitchingPharmacy() {
 </GuideParagraph>
         <GuideBulletList
           items={[
-            "Photos of your current injection pen box — showing the medication name (e.g. Mounjaro or Wegovy) and dose strength",
-            "Prescription label — from your existing provider, showing the dispensing date and prescriber",
-            "Previous order confirmation — email or portal screenshot from your current pharmacy",
-            "Your BMI and relevant health details — most providers ask for current weight, height, and any related conditions",
-            "Your GP or usual prescriber’s contact details, together with any consent needed to obtain or share information relevant to your care.",
+            "Photos of your current injection pen box â€” showing the medication name (e.g. Mounjaro or Wegovy) and dose strength",
+            "Prescription label â€” from your existing provider, showing the dispensing date and prescriber",
+            "Previous order confirmation â€” email or portal screenshot from your current pharmacy",
+            "Your BMI and relevant health details â€” most providers ask for current weight, height, and any related conditions",
+            "Your GP or usual prescriberâ€™s contact details, together with any consent needed to obtain or share information relevant to your care.",
           ]}
         />
         <GuideParagraph>
@@ -423,18 +423,18 @@ export default function GuideSwitchingPharmacy() {
         <GuideBulletListRich
           items={[
             <>
-              <strong>Continue tracking your weight and medication</strong> —
+              <strong>Continue tracking your weight and medication</strong> â€”
               maintain a consistent record to share with your clinician at
               follow-up reviews.
             </>,
             <>
-              <strong>Book follow-ups as needed</strong> — your new pharmacy
+              <strong>Book follow-ups as needed</strong> â€” your new pharmacy
               will have its own review schedule. Understand when your next
               clinical check is due.
             </>,
             <>
               <strong>Monitor any changes in side effects or progress</strong>{" "}
-              — switching pharmacy does not change the medication, but
+              â€” switching pharmacy does not change the medication, but
               differences in pen device or storage handling may occasionally
               affect experience. See our guide on{" "}
               <IL href="/helpful-guides/mounjaro-delivery-storage-uk">
@@ -454,7 +454,7 @@ export default function GuideSwitchingPharmacy() {
       <GuideKeyTakeaways
         items={[
           "Check the supplying pharmacy on the appropriate official register.",
-          "Confirm the new provider’s assessment and prescription requirements.",
+          "Confirm the new providerâ€™s assessment and prescription requirements.",
           "Prepare the treatment records and documents it requests.",
           "Compare total costs, follow-up support and delivery arrangements.",
           "Discuss treatment timing and information sharing with the prescribing team.",
@@ -466,7 +466,7 @@ export default function GuideSwitchingPharmacy() {
 
       <GuideDisclaimer>
         This guide provides general information and does not replace advice from
-        your prescriber. Check the supplying pharmacy’s registration and discuss
+        your prescriber. Check the supplying pharmacyâ€™s registration and discuss
         any change of provider with the prescribing team. Do not change your dose
         or restart treatment based on this article.
       </GuideDisclaimer>

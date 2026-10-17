@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -143,7 +143,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -232,8 +232,8 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="private" heading="Private weight loss clinics serving Leicester">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Private GLP 1 is often faster with about 1 to 2 weeks to start in some services. Costs often land about £180 to £350 monthly. GPhC registered clinics are mandatory for safe supply. Use our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  Private GLP 1 is often faster with about 1 to 2 weeks to start in some services. Costs often land about Â£180 to Â£350 monthly. GPhC registered clinics are mandatory for safe supply. Use our{" "}
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>{" "}
                   instead of guessing on adverts alone.
@@ -263,7 +263,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="glp1" heading="GLP 1 medications: Leicester specific breakdown">
                 <p className={`text-base font-semibold ${strong}`}>Wegovy (semaglutide) deep dive</p>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Wegovy weekly pen, about 15% average loss in STEP style data (NEJM 2024). Leicester NHS: BMI 35 plus often discussed for tier 3 access. Private: about £220 monthly starter dose bands in many clinics.
+                  Wegovy weekly pen, about 15% average loss in STEP style data (NEJM 2024). Leicester NHS: BMI 35 plus often discussed for tier 3 access. Private: about Â£220 monthly starter dose bands in many clinics.
                 </p>
 
                 <p className={p}>
@@ -363,7 +363,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`text-base font-semibold ${strong}`}>Leicester market power moves</p>
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
-                  <li>Highcross vegetables: okra, spinach, cauliflower rice (about 3 portions for about £2 in many stalls)</li>
+                  <li>Highcross vegetables: okra, spinach, cauliflower rice (about 3 portions for about Â£2 in many stalls)</li>
                   <li>The Shires chicken: grilled thighs over breast for satiety in some meal plans</li>
                   <li>Leicester Market dal: lentil soups where fibre slows gastric emptying</li>
                 </ul>
@@ -387,7 +387,7 @@ export default function LeicesterLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="surgical" heading="Surgical options for severe cases">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Leicester bariatric? NHS University Hospitals routes often carry about a 2 year wait at BMI 40 plus in many regions. Private Nuffield Health Leicester Hospital offers gastric sleeve or bypass bands around £10k to £15k in marketing materials.
+                  Leicester bariatric? NHS University Hospitals routes often carry about a 2 year wait at BMI 40 plus in many regions. Private Nuffield Health Leicester Hospital offers gastric sleeve or bypass bands around Â£10k to Â£15k in marketing materials.
                 </p>
 
                 <p className={p}>

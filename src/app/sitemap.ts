@@ -51,6 +51,10 @@ const EXCLUDED_SITEMAP_PATHS = new Set<string>([
   "/blog/glp-1-supplements-uk",
   "/blog/understanding-the-mounjaro-kwikpen-a-user-guide",
   "/blog/how-does-wegovy-work-to-transform-your-weight-journey",
+  /** Redirected pages (Zero-click pack 4, section D) */
+  "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+  "/blog/what-is-bmi-calculator",
+  "/blog/can-hormones-cause-belly-fat-after-40",
 ]);
 
 /** Fixed App Router paths without dynamic segments. */

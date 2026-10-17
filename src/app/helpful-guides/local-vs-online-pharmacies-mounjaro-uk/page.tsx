@@ -83,7 +83,7 @@ const REFERENCES = [
     label: "How we verify UK pharmacies — Health Wise",
     description:
       "Our pharmacy verification process, including GPhC checks and the safety standards every listed provider must meet.",
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     external: false,
   },
   {
@@ -97,7 +97,7 @@ const REFERENCES = [
 
 const RELATED_GUIDES = [
   {
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     category: "Pharmacy Safety",
     title: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards",
     description:
@@ -181,7 +181,7 @@ export default function GuideLocalVsOnline() {
         <GuideCallout variant="info">
           Health Wise checks every pharmacy we list against the GPhC register.
           See{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             how our pharmacy verification process works
           </IL>
           .
