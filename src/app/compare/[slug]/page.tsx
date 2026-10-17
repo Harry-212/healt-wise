@@ -53,11 +53,21 @@ function layoutForSlug(slug: string): ComparePageLayoutConfig | null {
   return layout;
 }
 
+/** Provider counts in the description follow the live price tables. */
+function liveMetaDescription(description: string): string {
+  const { wegovyProviderCount, mounjaroProviderCount } = getLivePriceSummary();
+  return description.replace(
+    "at 62 and 67 providers",
+    `at ${wegovyProviderCount} and ${mounjaroProviderCount} providers`,
+  );
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const layout = layoutForSlug(slug);
   if (!layout) return {};
-  const meta = buildPageShareMetadata(layout.share);
+  const metaDescription = liveMetaDescription(layout.share.metaDescription);
+  const meta = buildPageShareMetadata({ ...layout.share, metaDescription });
   return {
     ...meta,
     title: { absolute: layout.share.title },
@@ -122,7 +132,7 @@ export default async function ComparePage({ params }: Props) {
             __html: JSON.stringify(
               compareWegovyMounjaroJsonLd({
                 name: webLdName,
-                description: layout.share.metaDescription,
+                description: liveMetaDescription(layout.share.metaDescription),
                 contentModified: pricesLastCheckedIso,
                 pricesChecked: priceSummary.lastUpdated,
                 wegovyProviderCount: priceSummary.wegovyProviderCount,
@@ -168,6 +178,7 @@ export default async function ComparePage({ params }: Props) {
           titleBold={layout.hero.titleBold}
           subtitle={heroSubtitle}
           subtitleId="hero-answer"
+          pricesChecked={priceSummary.lastUpdated}
           snapshotLabel={layout.hero.snapshotLabel}
           navLinks={layout.hero.navLinks}
           showSnapshotPill={!photoHero}
