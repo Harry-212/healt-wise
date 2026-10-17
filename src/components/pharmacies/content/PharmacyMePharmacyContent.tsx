@@ -10,7 +10,7 @@ import {
   ProviderCta,
 } from "./_dossier";
 
-const providerUrl = "https://pharmacyme.co.uk/go/hw360";
+const providerUrl = "https://pharmacyme.co.uk/go/healthwise360";
 
 const sectionLabel =
   "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";

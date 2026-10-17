@@ -25,7 +25,7 @@ export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
     name: "Pharmacy + Me",
     badgeLabel: "Featured Partner",
     code: "hw360",
-    affiliateUrl: "https://pharmacyme.co.uk/go/hw360",
+    affiliateUrl: "https://pharmacyme.co.uk/go/healthwise360",
     ctaLabel: "Claim Deal",
     perkSummary: "Use code hw360",
   },
