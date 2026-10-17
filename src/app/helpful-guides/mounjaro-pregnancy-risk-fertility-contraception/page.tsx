@@ -113,7 +113,7 @@ const RELATED_GUIDES = [
       "Common and serious side effects, when to seek help, and how to manage early treatment symptoms.",
   },
   {
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     category: "Pharmacy Safety",
     title: "How We Verify UK Pharmacies: GPhC Checks Explained",
     description:

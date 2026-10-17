@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -140,7 +140,7 @@ export default function ColchesterLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · May 2026
+              Independent guide Â· May 2026
             </span>
           </div>
 
@@ -367,7 +367,7 @@ export default function ColchesterLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="resources" heading="Colchester resources rundown">
                 <p className={p}>
                   Layer Marney trails and markets. Groups can amplify results in some reports. If you buy online, use{" "}
-                  <Link href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards" className={linkCls}>
+                  <Link href="/pharmacy-safety-gphc-verification" className={linkCls}>
                     how we verify UK pharmacies
                   </Link>{" "}
                   and compare providers using{" "}
@@ -395,7 +395,7 @@ export default function ColchesterLocationContent({ loc, shareUrl }: Props) {
                         rel="noopener noreferrer"
                         target="_blank"
                       >
-                        {s.label.replace(/\s*—\s*/g, ": ")}
+                        {s.label.replace(/\s*â€”\s*/g, ": ")}
                       </a>
                       <span className={muted}>: {s.note}</span>
                     </li>
@@ -426,23 +426,23 @@ export default function ColchesterLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="next-steps" heading="Practical next steps (UK wide, including Colchester)">
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
-                    →{" "}
+                    â†’{" "}
                     <Link href="/compare/wegovy-vs-mounjaro" className={linkCls}>
                       Compare best weight loss treatments in the UK
                     </Link>
                   </li>
                   <li>
-                    →{" "}
+                    â†’{" "}
                     <Link href="/mounjaro-price-comparison" className={linkCls}>
                       Mounjaro price comparison
                     </Link>
-                    <span className={muted}> · </span>
+                    <span className={muted}> Â· </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
                     </Link>
                   </li>
                   <li>
-                    →{" "}
+                    â†’{" "}
                     <Link href="/tools/bmi-calculator" className={linkCls}>
                       BMI calculator
                     </Link>

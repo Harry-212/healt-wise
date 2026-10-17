@@ -80,48 +80,87 @@ export default function BmiCalculatorPage() {
             id="bmi-categories"
             className="mt-14 scroll-mt-28 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
           >
-            BMI categories and NHS BMI thresholds
+            What Your BMI Number Means: NHS Categories & Thresholds
           </h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            For most UK adults, NHS-style{" "}
-            <strong className="font-medium text-slate-900">BMI categories</strong>{" "}
-            are:
-          </p>
-          <ul className="mt-3 list-inside list-disc space-y-2 text-slate-700">
-            <li>
-              <strong>Under 18.5:</strong> underweight
-            </li>
-            <li>
-              <strong>18.5–24.9:</strong> healthy weight
-            </li>
-            <li>
-              <strong>25–29.9:</strong> overweight
-            </li>
-            <li>
-              <strong>30 or above:</strong> obese
-            </li>
-          </ul>
-          <p className="mt-4 leading-relaxed text-slate-700">
-            These{" "}
-            <strong className="font-medium text-slate-900">
-              NHS BMI thresholds
-            </strong>{" "}
-            are screening bands. Muscle mass, ethnicity, age, waist size, and
-            medical history can change how a clinician interprets the same BMI.
+            For most UK adults aged 18 and over, NHS and World Health Organisation (WHO) clinical classifications define your BMI number as follows:
           </p>
 
-          <h3 className="mt-10 text-lg font-bold text-slate-900">
+          <div className="my-6 overflow-hidden rounded-xl border border-slate-200 shadow-xs">
+            <table className="w-full text-left text-sm">
+              <thead className="border-b border-slate-200 bg-slate-50 text-slate-700">
+                <tr>
+                  <th className="px-4 py-3 font-bold">BMI Range</th>
+                  <th className="px-4 py-3 font-bold">NHS Category</th>
+                  <th className="px-4 py-3 font-bold">What It Means</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 bg-white">
+                <tr>
+                  <td className="px-4 py-3 font-semibold text-slate-900">Below 18.5</td>
+                  <td className="px-4 py-3 text-slate-800">Underweight</td>
+                  <td className="px-4 py-3 text-slate-600">May indicate nutritional deficiency or underlying conditions. Discuss with your GP.</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-semibold text-slate-900">18.5 to 24.9</td>
+                  <td className="px-4 py-3 text-emerald-800 font-semibold">Healthy weight</td>
+                  <td className="px-4 py-3 text-slate-600">Associated with the lowest population-level risk of cardiometabolic conditions.</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-semibold text-slate-900">25.0 to 29.9</td>
+                  <td className="px-4 py-3 text-amber-800 font-semibold">Overweight</td>
+                  <td className="px-4 py-3 text-slate-600">May increase long-term risk of type 2 diabetes and hypertension without lifestyle management.</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-semibold text-slate-900">30.0 to 34.9</td>
+                  <td className="px-4 py-3 text-rose-800 font-semibold">Obese (Class I)</td>
+                  <td className="px-4 py-3 text-slate-600">Standard NHS threshold for structured weight management and private GLP-1 eligibility.</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-semibold text-slate-900">35.0 to 39.9</td>
+                  <td className="px-4 py-3 text-rose-800 font-semibold">Obese (Class II)</td>
+                  <td className="px-4 py-3 text-slate-600">Meets NICE criteria for tier 3 specialised weight management and medical treatments.</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-semibold text-slate-900">40.0 and above</td>
+                  <td className="px-4 py-3 text-rose-900 font-bold">Obese (Class III / Severe)</td>
+                  <td className="px-4 py-3 text-slate-600">Highest metabolic risk category; qualifies for specialist clinical interventions and bariatric pathways.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="rounded-xl border border-emerald-900/15 bg-emerald-50/60 p-5 shadow-xs">
+            <h3 className="font-bold text-emerald-950 text-base">
+              Lower thresholds for ethnic minority backgrounds
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-700">
+              NICE guidelines explicitly state that health risks associated with excess weight occur at lower BMI levels in adults of South Asian, Chinese, Black African, and African-Caribbean family backgrounds. For these groups, <strong>overweight starts at BMI 23.0</strong> and <strong>obesity starts at BMI 27.5</strong>.
+            </p>
+          </div>
+
+          <h3 className="mt-8 text-lg font-bold text-slate-900">
+            Waist circumference: The vital companion metric
+          </h3>
+          <p className="mt-3 leading-relaxed text-slate-700">
+            BMI cannot measure where fat is stored. Visceral fat wrapped around internal organs poses greater health risks than subcutaneous fat under the skin. NHS guidance recommends measuring waist circumference:
+          </p>
+          <ul className="mt-3 space-y-2 text-sm text-slate-700">
+            <li>• <strong>Women:</strong> Increased health risk at 80 cm (31.5 inches) or above; very high risk at 88 cm (34.5 inches).</li>
+            <li>• <strong>Men:</strong> Increased health risk at 94 cm (37 inches) or above; very high risk at 102 cm (40 inches).</li>
+          </ul>
+
+          <h3 className="mt-8 text-lg font-bold text-slate-900">
             Weight management eligibility — what BMI can (and cannot) tell you
           </h3>
           <p className="mt-3 leading-relaxed text-slate-700">
-            BMI categories help clinicians triage who may benefit from structured{" "}
-            <strong className="font-medium text-slate-900">
-              weight management
-            </strong>{" "}
-            support. Some pathways also discuss BMI 27+ when weight-related
-            conditions are present. Eligibility for any clinical programme still
-            needs a full assessment—this tool cannot confirm or deny access.
+            BMI categories help clinicians triage who may benefit from structured weight management support. In the UK, private and NHS prescription treatments such as Mounjaro (tirzepatide) and Wegovy (semaglutide) typically require:
           </p>
+          <ul className="mt-3 space-y-2 text-sm text-slate-700">
+            <li>• <strong>BMI of 30 kg/m² or above</strong> without other conditions.</li>
+            <li>• <strong>BMI of 27 kg/m² or above</strong> with at least one weight-related medical condition (e.g. hypertension, dyslipidaemia, obstructive sleep apnoea, or pre-diabetes).</li>
+            <li>• Reduced by 2.5 kg/m² for individuals from South Asian, Chinese, Black African, or African-Caribbean backgrounds.</li>
+          </ul>
 
           <div className="relative mt-12 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-200 shadow-lg ring-1 ring-slate-200/80">
             <Image
@@ -214,10 +253,10 @@ export default function BmiCalculatorPage() {
             <ul className="mt-3 flex flex-col gap-2 text-sm text-slate-700 sm:flex-row sm:flex-wrap sm:gap-x-6">
               <li>
                 <Link
-                  href="/blog/what-is-bmi-calculator"
+                  href="/pharmacy-safety-gphc-verification"
                   className="font-medium text-emerald-800 underline underline-offset-2"
                 >
-                  What is a BMI calculator?
+                  Pharmacy safety &amp; GPhC checks
                 </Link>
               </li>
               <li>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -146,7 +146,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -417,7 +417,7 @@ export default function ManchesterLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`mt-6 ${p}`}>
                   A weaker clinic often focuses on speed and sales language. It may promise convenience, but leave out the boring parts that actually protect you. That is usually where the problems start. Before you pay, read{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     how we verify UK pharmacies
                   </Link>{" "}
                   and{" "}

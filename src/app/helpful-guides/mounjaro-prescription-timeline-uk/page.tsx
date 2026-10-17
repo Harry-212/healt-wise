@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -21,9 +21,9 @@ import {
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-prescription-timeline-uk",
   title: "Mounjaro Prescription & Delivery Timeline UK",
-  description: "Most patients receive Mounjaro within 1–3 days of approval. Learn the prescription process and how to avoid common delays.",
+  description: "Most patients receive Mounjaro within 1â€“3 days of approval. Learn the prescription process and how to avoid common delays.",
   openGraphTitle: "How Long Does Mounjaro Take in the UK? Prescription Timeline",
-  openGraphDescription: "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process and how to avoid common delays.",
+  openGraphDescription: "Most patients receive Mounjaro within 1â€“3 days of approval. Learn the full prescription process and how to avoid common delays.",
 });
 
 
@@ -57,32 +57,32 @@ const FAQ_ITEMS = [
 
 const REFERENCES = [
   {
-    label: "Mounjaro (tirzepatide) SmPC — cold-chain storage requirements",
+    label: "Mounjaro (tirzepatide) SmPC â€” cold-chain storage requirements",
     description:
-      "Official prescribing reference confirming Mounjaro's storage requirements of 2°C–8°C and transport conditions.",
+      "Official prescribing reference confirming Mounjaro's storage requirements of 2Â°Câ€“8Â°C and transport conditions.",
     href: "https://www.medicines.org.uk/emc/product/15481",
   },
   {
-    label: "MHRA — Prescription-only medicines in the UK",
+    label: "MHRA â€” Prescription-only medicines in the UK",
     description:
       "MHRA guidance on the legal framework for prescription-only medicines, including what a valid prescription requires.",
     href: "https://www.gov.uk/government/publications/rules-for-the-sale-supply-and-administration-of-medicines",
   },
   {
-    label: "NHS — How to get a prescription",
+    label: "NHS â€” How to get a prescription",
     description:
       "NHS guidance on obtaining prescriptions from GPs and private providers in the UK.",
     href: "https://www.nhs.uk/nhs-services/prescriptions-and-pharmacies/",
   },
   {
-    label: "How we verify UK pharmacies — Health Wise",
+    label: "How we verify UK pharmacies â€” Health Wise",
     description:
       "Our verification process for pharmacies listed on Health Wise, including cold-chain compliance checks.",
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     external: false,
   },
   {
-    label: "Compare Mounjaro prices UK — Health Wise",
+    label: "Compare Mounjaro prices UK â€” Health Wise",
     description:
       "Find verified Mounjaro prices from GPhC-registered pharmacies, including delivery information.",
     href: "/mounjaro-price-comparison",
@@ -103,10 +103,10 @@ const RELATED_GUIDES = [
     category: "Medications",
     title: "Mounjaro Weight Loss Treatment UK: Full Guide",
     description:
-      "How Mounjaro works, clinical results, eligibility, and costs—everything you need to know.",
+      "How Mounjaro works, clinical results, eligibility, and costsâ€”everything you need to know.",
   },
   {
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     category: "Pharmacy Safety",
     title: "How We Verify UK Pharmacies: GPhC Checks Explained",
     description:
@@ -125,7 +125,7 @@ const SCHEMA_JSON = {
       headline:
         "How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline",
       description:
-        "Most patients receive Mounjaro within 1–3 days of approval. Learn the full prescription process and how to avoid common delays.",
+        "Most patients receive Mounjaro within 1â€“3 days of approval. Learn the full prescription process and how to avoid common delays.",
       author: { "@type": "Organization", name: "Healthwise360 Research Team" },
       publisher: {
         "@type": "Organization",
@@ -163,29 +163,29 @@ export default function GuideMounjaroTimeline() {
       category="Medications"
       categorySlug="medications"
       title="How Long Does It Take to Get Mounjaro in the UK? Prescription & Delivery Timeline"
-      description="From consultation to doorstep delivery—most patients receive Mounjaro within 1–3 days of approval. Here's what happens at each stage and how to avoid common delays."
+      description="From consultation to doorstep deliveryâ€”most patients receive Mounjaro within 1â€“3 days of approval. Here's what happens at each stage and how to avoid common delays."
       readTime="3 min read"
       lastUpdated="April 2026"
       toc={TOC}
       schemaJson={SCHEMA_JSON}
     >
-      {/* ── Section 1 ── */}
+      {/* â”€â”€ Section 1 â”€â”€ */}
       <GuideSection id="timeline" heading="Typical Timeline">
         <GuideParagraph>
           Most patients receive{" "}
           <IL href="/what-is-mounjaro">Mounjaro</IL> within:</GuideParagraph>
         <GuideStatCards
           stats={[
-            { value: "1–3", label: "Days for approval", sub: "After consultation" },
+            { value: "1â€“3", label: "Days for approval", sub: "After consultation" },
             { value: "Next day", label: "Delivery", sub: "After dispatch" },
             { value: "24hrs", label: "Typical review", sub: "Business days" },
-            { value: "2–8°C", label: "Cold-chain", sub: "Required in transit" },
+            { value: "2â€“8Â°C", label: "Cold-chain", sub: "Required in transit" },
           ]}
         />
         <GuideParagraph>
           The total time from starting your consultation to receiving your
-          medication is typically 2–4 working days with most{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          medication is typically 2â€“4 working days with most{" "}
+          <IL href="/pharmacy-safety-gphc-verification">
             GPhC registered online pharmacies
           </IL>
           . You can use our{" "}
@@ -194,7 +194,7 @@ export default function GuideMounjaroTimeline() {
 </GuideParagraph>
       </GuideSection>
 
-      {/* ── Section 2 ── */}
+      {/* â”€â”€ Section 2 â”€â”€ */}
       <GuideSection id="why-time" heading="Why It Takes Time">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> is a prescription only
@@ -206,9 +206,9 @@ export default function GuideMounjaroTimeline() {
           product each prescription must go through a proper clinical process:</GuideParagraph>
         <GuideBulletList
           items={[
-            "Medical review — a registered clinician reviews your consultation questionnaire and health history",
-            "Eligibility checks — confirmation that you meet the BMI and health criteria for Mounjaro",
-            "Prescription approval — a legally valid prescription is issued by the clinician",
+            "Medical review â€” a registered clinician reviews your consultation questionnaire and health history",
+            "Eligibility checks â€” confirmation that you meet the BMI and health criteria for Mounjaro",
+            "Prescription approval â€” a legally valid prescription is issued by the clinician",
           ]}
         />
         <GuideParagraph>
@@ -220,11 +220,11 @@ export default function GuideMounjaroTimeline() {
 </GuideParagraph>
       </GuideSection>
 
-      {/* ── Section 3 ── */}
+      {/* â”€â”€ Section 3 â”€â”€ */}
       <GuideSection id="cold-chain" heading="Cold Chain Delivery">
         <GuideParagraph>
           <IL href="/what-is-mounjaro">Mounjaro</IL> must be stored between
-          2°C and 8°C throughout the supply chain. This is a regulatory
+          2Â°C and 8Â°C throughout the supply chain. This is a regulatory
           requirement set out in the{" "}
           <EL href="https://www.medicines.org.uk/emc/product/15481">
             official SmPC
@@ -240,9 +240,9 @@ export default function GuideMounjaroTimeline() {
         />
         <GuideCallout variant="info">
           This is one of the reasons why buying from unverified or unregistered
-          pharmacies carries real risk — cold-chain compliance is not
+          pharmacies carries real risk â€” cold-chain compliance is not
           guaranteed. Our{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             pharmacy verification guide
           </IL>{" "}
           explains the storage checks we perform on every listed provider.
@@ -257,7 +257,7 @@ export default function GuideMounjaroTimeline() {
 </GuideParagraph>
       </GuideSection>
 
-      {/* ── Section 4 ── */}
+      {/* â”€â”€ Section 4 â”€â”€ */}
       <GuideSection id="avoid-delays" heading="How to Avoid Delays">
         <GuideParagraph>
           Most delays in receiving{" "}
@@ -265,11 +265,11 @@ export default function GuideMounjaroTimeline() {
           these steps:</GuideParagraph>
         <GuideBulletListRich
           items={[
-            "Complete your consultation questionnaire accurately and thoroughly — incomplete answers are the most common cause of delays.",
+            "Complete your consultation questionnaire accurately and thoroughly â€” incomplete answers are the most common cause of delays.",
             "Respond quickly to any requests for additional information from the clinical team.",
-            "Order early in the week — orders placed on Thursday or Friday may not dispatch until Monday.",
+            "Order early in the week â€” orders placed on Thursday or Friday may not dispatch until Monday.",
             <>
-              Ensure your delivery address is correct and accessible — missed
+              Ensure your delivery address is correct and accessible â€” missed
               deliveries of cold-chain items can affect medication safety. See
               our{" "}
               <IL href="/helpful-guides/mounjaro-delivery-storage-uk">
@@ -279,8 +279,8 @@ export default function GuideMounjaroTimeline() {
             </>,
             <>
               Prefer pharmacies that document cold-chain handling and delivery
-              windows—see our{" "}
-              <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+              windowsâ€”see our{" "}
+              <IL href="/pharmacy-safety-gphc-verification">
                 pharmacy verification standards
               </IL>{" "}
               before you order.
@@ -289,24 +289,24 @@ export default function GuideMounjaroTimeline() {
         />
       </GuideSection>
 
-      {/* ── Key Takeaways ── */}
+      {/* â”€â”€ Key Takeaways â”€â”€ */}
       <GuideKeyTakeaways
         items={[
-          "Most patients receive Mounjaro within 1–3 days of approval, with next-day delivery after dispatch.",
-          "Mounjaro is a prescription-only medicine — a full clinical review is legally required before approval.",
+          "Most patients receive Mounjaro within 1â€“3 days of approval, with next-day delivery after dispatch.",
+          "Mounjaro is a prescription-only medicine â€” a full clinical review is legally required before approval.",
           "Cold-chain packaging is mandatory for Mounjaro delivery; only use verified pharmacies that guarantee this.",
           "Completing your consultation accurately and ordering early in the week are the most effective ways to avoid delays.",
           "Use our Mounjaro price comparison to find providers with fast, compliant delivery included.",
         ]}
       />
 
-      {/* ── Related Guides ── */}
+      {/* â”€â”€ Related Guides â”€â”€ */}
       <GuideRelatedGuides guides={RELATED_GUIDES} />
 
-      {/* ── References ── */}
+      {/* â”€â”€ References â”€â”€ */}
       <GuideReferences items={REFERENCES} />
 
-      {/* ── Disclaimer ── */}
+      {/* â”€â”€ Disclaimer â”€â”€ */}
       <GuideDisclaimer>
         This guide is for informational purposes only. Timelines are
         indicative and may vary by provider, demand, and location.{" "}
@@ -315,7 +315,7 @@ export default function GuideMounjaroTimeline() {
         an appropriate clinical consultation.
       </GuideDisclaimer>
 
-      {/* ── FAQ ── */}
+      {/* â”€â”€ FAQ â”€â”€ */}
       <GuideFaq items={FAQ_ITEMS} />
     </GuideLayout>
   );

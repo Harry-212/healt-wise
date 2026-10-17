@@ -5,7 +5,7 @@ import ArticleSources from "@/components/blog/ArticleSources";
 import React, { useState } from "react";
 import Link from "next/link";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
-import { ArrowLeft, Moon, Sun, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, Moon, Sun, Calendar, Clock, Star, ExternalLink, ShieldCheck, CheckCircle2 } from "lucide-react";
 import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
@@ -17,30 +17,93 @@ import {
 } from "./blog-assets";
 
 const SHARE_PATH = "/blog/best-place-to-start-weight-loss-treatment-online-uk";
-const TITLE =
-  "Best Place to Start Weight Loss Treatment Online UK: Safety, Prices and Provider Checks";
+const TITLE = "Best Online Weight Loss Providers UK (2026)";
 const DESCRIPTION =
-  "Compare safe UK weight loss treatment providers, prices, pharmacy checks and support before starting treatment.";
+  "Looking for the best online weight loss provider in the UK? See our shortlist of GPhC registered pharmacies with prices, support and delivery compared.";
 const HERO_SRC = blogImgPath(BEST_PLACE_HERO_PNG);
 const INLINE_SRC = blogImgPath(BEST_PLACE_INLINE_PNG);
 
 const TOC = [
-  { id: "intro", label: "Where is the best place to start?" },
-  { id: "short-answer", label: "In plain terms" },
-  { id: "safe-provider", label: "What makes a safe UK provider?" },
-  { id: "clinical-assessment", label: "Clinical assessment checks" },
-  { id: "registered-pharmacy", label: "Registered pharmacy checks" },
-  { id: "transparent-pricing", label: "Transparent pricing standards" },
-  {
-    id: "what-to-compare",
-    label: "Weight loss treatment price: What to compare",
-  },
-  { id: "provider-types", label: "The main types of providers" },
-  { id: "why-not-cheapest", label: "Why cheapest is not always best" },
-  { id: "what-to-avoid", label: "What to avoid when comparing" },
-  { id: "comparison-journey", label: "A sensible order to compare providers" },
-  { id: "faq", label: "Frequently Asked Questions" },
+  { id: "shortlist", label: "Our shortlist of online weight loss providers" },
+  { id: "how-to-choose", label: "How to choose a provider" },
+  { id: "how-we-rank", label: "How we rank providers" },
+  { id: "is-it-safe", label: "Is it safe to buy online?" },
+  { id: "faq", label: "Frequently asked questions" },
   { id: "conclusion", label: "Conclusion" },
+];
+
+interface ShortlistProvider {
+  rank: number;
+  name: string;
+  slug: string;
+  rating: number;
+  gphcRegNo: string;
+  whyOnList: string;
+  mounjaroFrom: number;
+  wegovyFrom: number;
+}
+
+const SHORTLIST_PROVIDERS: ShortlistProvider[] = [
+  {
+    rank: 1,
+    name: "Pharmacy Express",
+    slug: "pharmacy-express",
+    rating: 5.0,
+    gphcRegNo: "9012468",
+    whyOnList: "Top-rated 5.0 customer satisfaction on our platform with low starter pricing and fast tracked cold-chain dispatch.",
+    mounjaroFrom: 144.99,
+    wegovyFrom: 119.99,
+  },
+  {
+    rank: 2,
+    name: "Swift Doctor",
+    slug: "swift-doctor",
+    rating: 4.9,
+    gphcRegNo: "9012809",
+    whyOnList: "Outstanding 4.9 customer feedback with fast prescriber assessment times and responsive clinician support.",
+    mounjaroFrom: 149.00,
+    wegovyFrom: 129.00,
+  },
+  {
+    rank: 3,
+    name: "Pharmica",
+    slug: "pharmica",
+    rating: 4.9,
+    gphcRegNo: "9012030",
+    whyOnList: "Established London pharmacy premises with extensive clinical staff, same-day processing, and reliable cold-chain packaging.",
+    mounjaroFrom: 159.99,
+    wegovyFrom: 149.00,
+  },
+  {
+    rank: 4,
+    name: "Dr Weightmans",
+    slug: "dr-weightmans",
+    rating: 4.9,
+    gphcRegNo: "1092500",
+    whyOnList: "Doctor-led clinical service dedicated specifically to medical weight management consultations and careful dose titration.",
+    mounjaroFrom: 145.00,
+    wegovyFrom: 139.00,
+  },
+  {
+    rank: 5,
+    name: "The Care Pharmacy",
+    slug: "care-pharmacy",
+    rating: 4.9,
+    gphcRegNo: "9010308",
+    whyOnList: "Highly regarded patient support, transparent single-pen list pricing, and dependable pharmacist follow-up reviews.",
+    mounjaroFrom: 149.99,
+    wegovyFrom: 140.00,
+  },
+  {
+    rank: 6,
+    name: "Ashcroft Pharmacy",
+    slug: "ashcroft-pharmacy",
+    rating: 4.8,
+    gphcRegNo: "9011964",
+    whyOnList: "Consistent 4.8 rating, competitive starter pen rates, and prompt clinician review on all initial applications.",
+    mounjaroFrom: 149.99,
+    wegovyFrom: 120.00,
+  },
 ];
 
 export default function ArticleClient() {
@@ -101,7 +164,7 @@ export default function ArticleClient() {
           </Link>
           <span>/</span>
           <span className={darkMode ? "text-slate-200" : "text-slate-600"}>
-            Best Place to Start Weight Loss Treatment
+            Best Online Weight Loss Providers UK
           </span>
         </nav>
 
@@ -110,27 +173,26 @@ export default function ArticleClient() {
             className={`mb-8 border-b pb-8 ${darkMode ? "border-slate-800" : "border-slate-200"}`}
           >
             <h1
-              className={`mb-6 text-3xl font-medium leading-[1.15] tracking-tight sm:text-4xl md:text-[44px] ${darkMode ? "text-white" : "text-slate-900"}`}
+              className={`mb-6 text-3xl font-black leading-[1.15] tracking-tight sm:text-4xl md:text-[44px] ${darkMode ? "text-white" : "text-slate-900"}`}
             >
-              Best Place to Start Weight Loss Treatment Online UK: Safety,
-              Prices and Provider Checks
+              Best Online Weight Loss Providers UK (2026)
             </h1>
             <div
               className={`mb-8 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}
             >
               <span className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                23 Jun 2026
+                Updated October 2026
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
-                12 min read
+                8 min read
               </span>
             </div>
 
             <BlogArticleHeroImage
               src={HERO_SRC}
-              alt="An adult searching for weight loss comparison information online, looking focused and hopeful"
+              alt="Comparing online weight loss providers and pharmacy checks UK"
             />
             <div
               id="guide-article-hero-end"
@@ -140,623 +202,282 @@ export default function ArticleClient() {
           </header>
 
           <article
-            className={`space-y-8 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}
+            className={`space-y-10 leading-relaxed ${darkMode ? "text-slate-300" : "text-slate-700"}`}
           >
+            {/* Opening under H1 */}
+            <div
+              className={`rounded-2xl border p-6 sm:p-7 ${darkMode ? "border-emerald-800/40 bg-emerald-950/20" : "border-emerald-900/15 bg-emerald-50/70"}`}
+            >
+              <p className="text-base sm:text-lg leading-relaxed text-slate-800 dark:text-slate-200">
+                The best online weight loss provider for you depends on price, support and delivery. Every provider on this list is a GPhC registered UK pharmacy, and a prescriber checks your health before any medicine is sent. Price, safety and our 5 checks decide the order. No pharmacy can pay to change its place.
+              </p>
+            </div>
+
+            {/* Section 1: Ranked Shortlist */}
             <GuideSection
               darkMode={darkMode}
-              id="intro"
-              heading="Best Place to Start Weight Loss Treatment Online UK: Safety, Prices and Provider Checks"
+              id="shortlist"
+              heading="Our Shortlist of Online Weight Loss Providers"
             >
-              <p className="text-lg md:text-xl">
-                Finding the best place to start weight loss treatment online in
-                the UK can feel confusing. Many websites talk about weight loss
-                injections, weight loss price, fast online consultations,
-                monthly plans, and private pharmacy delivery. However, the
-                safest choice is not simply the cheapest provider or the
-                quickest checkout.
-              </p>
               <p>
-                The better question is:{" "}
-                <strong
-                  className={darkMode ? "text-slate-200" : "text-slate-800"}
-                >
-                  which provider offers regulated treatment, proper clinical
-                  assessment, transparent pricing, clear safety checks, and
-                  ongoing support?
-                </strong>
-              </p>
-              <p>
-                This is where Health Wise can help. We do not push you toward
-                one clinic. Instead, we help you{" "}
-                <Link
-                  href="/"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  compare weight loss treatment prices
-                </Link>
-                , pharmacy safety, delivery, support, and provider differences
-                before you decide.
+                Our shortlist is ranked by independent user satisfaction scores and verified regulatory records already tracked on Healthwise360. Prices reflect our 20 September 2026 price check for standard starter doses.
               </p>
 
-              <div
-                className={`mt-8 rounded-2xl border p-6 ${darkMode ? "border-slate-800 bg-slate-900/50" : "border-slate-200 bg-slate-50/50"}`}
-              >
-                <h3
-                  className={`mb-3 text-lg font-bold ${darkMode ? "text-white" : "text-slate-900"}`}
-                >
-                  What is the best place to start weight loss treatment online
-                  in the UK?
-                </h3>
-                <p className="text-sm leading-relaxed">
-                  Start with a regulated UK provider that checks eligibility,
-                  runs a proper clinical assessment, works with a registered
-                  pharmacy, explains the full cost, and offers support after
-                  approval. Skip unregulated sellers, social media offers, and
-                  deals that look unrealistically cheap.
-                </p>
+              <div className="mt-6 space-y-6">
+                {SHORTLIST_PROVIDERS.map((p) => (
+                  <div
+                    key={p.slug}
+                    className={`rounded-2xl border p-5 sm:p-6 transition-shadow hover:shadow-md ${
+                      darkMode
+                        ? "border-slate-800 bg-slate-900/60"
+                        : "border-slate-200 bg-white shadow-xs"
+                    }`}
+                  >
+                    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4 dark:border-slate-800">
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-700 font-bold text-white text-sm">
+                          #{p.rank}
+                        </span>
+                        <div>
+                          <h3
+                            className={`text-lg font-bold sm:text-xl ${
+                              darkMode ? "text-white" : "text-slate-900"
+                            }`}
+                          >
+                            {p.name}
+                          </h3>
+                          <span className="text-xs text-slate-500 font-mono">
+                            GPhC Reg: {p.gphcRegNo}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
+                        <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
+                        <span>{p.rating.toFixed(1)} / 5</span>
+                      </div>
+                    </div>
+
+                    <p className="mt-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                      {p.whyOnList}
+                    </p>
+
+                    <div className="mt-5 grid grid-cols-2 gap-3 rounded-xl border border-slate-100 bg-slate-50/70 p-3.5 dark:border-slate-800 dark:bg-slate-900/40 sm:grid-cols-2">
+                      <div>
+                        <div className="text-xs text-slate-500 font-medium">Starting Mounjaro:</div>
+                        <div className="text-base font-extrabold text-slate-900 dark:text-white">
+                          £{p.mounjaroFrom.toFixed(2)}
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-500 font-medium">Starting Wegovy:</div>
+                        <div className="text-base font-extrabold text-slate-900 dark:text-white">
+                          £{p.wegovyFrom.toFixed(2)}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-5 flex flex-wrap items-center gap-3 pt-2">
+                      <Link
+                        href={`/pharmacies/${p.slug}`}
+                        className="inline-flex items-center gap-1 rounded-lg bg-emerald-700 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-xs hover:bg-emerald-800 transition"
+                      >
+                        Read {p.name} review →
+                      </Link>
+                      <Link
+                        href="/mounjaro-price-comparison"
+                        className="inline-flex items-center gap-1 rounded-lg border border-slate-300 px-3.5 py-2 text-xs font-semibold text-slate-700 hover:border-slate-400 hover:text-slate-900 dark:border-slate-700 dark:text-slate-300 dark:hover:text-white transition"
+                      >
+                        Compare prices
+                      </Link>
+                    </div>
+                  </div>
+                ))}
               </div>
             </GuideSection>
 
-            <GuideSection
-              darkMode={darkMode}
-              id="short-answer"
-              heading="In Plain Terms"
-            >
-              <p>
-                The safest place to start is a regulated UK service that checks
-                whether treatment suits you, supplies medicine through a
-                registered pharmacy, shows the real monthly cost, and can help
-                if side effects or questions come up later.
-              </p>
-              <p>
-                That matters because weight loss injections such as Mounjaro and
-                Wegovy are prescription-only medicines. They are not ordinary
-                online products. The cheapest website is not automatically the
-                safest one.
-              </p>
-              <p>
-                A good provider should feel careful rather than rushed. You
-                should be able to see who treatment may suit, who should avoid
-                it, what the monthly fee includes, and what happens after the
-                starting dose.
-              </p>
-            </GuideSection>
-
-            <div className="my-10">
+            <div className="my-8">
               <BlogArticleHeroImage
                 src={INLINE_SRC}
-                alt="Hopeful individual looking at tablet interface for weight loss treatment comparisons"
+                alt="Checking provider ratings, GPhC safety, and weight loss treatment costs"
                 priority={false}
                 showFullImage
               />
             </div>
 
+            {/* Section 2: How to choose a provider */}
             <GuideSection
               darkMode={darkMode}
-              id="safe-provider"
-              heading="What Makes a Safe UK Weight Loss Treatment Provider?"
+              id="how-to-choose"
+              heading="How to Choose a Provider"
             >
               <p>
-                A safe provider should not make weight loss treatment feel like
-                a simple product checkout. It should treat the process as a
-                clinical service.
+                When selecting an online weight loss provider, look beyond introductory headlines. We recommend assessing providers across four core criteria:
               </p>
+
+              <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                <div
+                  className={`rounded-xl border p-4 shadow-xs ${
+                    darkMode ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white"
+                  }`}
+                >
+                  <h3 className="font-bold text-slate-900 dark:text-white">
+                    1. Price for your exact dose
+                  </h3>
+                  <p className="mt-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Weight loss injections like Mounjaro and Wegovy follow weekly titration schedules. Lower starter dose rates (e.g., 2.5 mg) do not reflect the ongoing cost at 10 mg or 15 mg. Check prices for every strength before committing.
+                  </p>
+                </div>
+
+                <div
+                  className={`rounded-xl border p-4 shadow-xs ${
+                    darkMode ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white"
+                  }`}
+                >
+                  <h3 className="font-bold text-slate-900 dark:text-white">
+                    2. Prescriber support & clinical access
+                  </h3>
+                  <p className="mt-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Side effects like nausea and digestive symptoms can occur during dose escalation. Choose a service that provides direct access to qualified pharmacist independent prescribers or UK doctors for ongoing guidance.
+                  </p>
+                </div>
+
+                <div
+                  className={`rounded-xl border p-4 shadow-xs ${
+                    darkMode ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white"
+                  }`}
+                >
+                  <h3 className="font-bold text-slate-900 dark:text-white">
+                    3. Cold-chain delivery standards
+                  </h3>
+                  <p className="mt-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Injectables require 2°C to 8°C chilled transit before use. Reputable pharmacies use insulated thermal pouches and ice packs with tracked 24-hour couriers (Royal Mail or DPD) to maintain temperature integrity.
+                  </p>
+                </div>
+
+                <div
+                  className={`rounded-xl border p-4 shadow-xs ${
+                    darkMode ? "border-slate-800 bg-slate-900/40" : "border-slate-200 bg-white"
+                  }`}
+                >
+                  <h3 className="font-bold text-slate-900 dark:text-white">
+                    4. Verified GPhC registration
+                  </h3>
+                  <p className="mt-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                    Always confirm that the dispensing premises holds a valid 7-digit registration number on the official General Pharmaceutical Council register matching the business name and address shown on their site.
+                  </p>
+                </div>
+              </div>
+            </GuideSection>
+
+            {/* Section 3: How we rank providers */}
+            <GuideSection
+              darkMode={darkMode}
+              id="how-we-rank"
+              heading="How We Rank Providers"
+            >
               <p>
-                The most important signals include proper assessment, clear
-                eligibility checks, pharmacy registration, prescription review,
-                transparent pricing, safe delivery, and access to support.
+                Our shortlist is ranked using verified GPhC registration status, published customer feedback scores from independent platforms, transparent list pricing without hidden mandatory subscriptions, and demonstrated cold-chain handling compliance. Healthwise360 operates under strict editorial neutrality: no pharmacy or telehealth service can pay, sponsor, or bid to improve their placement on our shortlist. Learn more on our{" "}
+                <Link
+                  href="/methodology"
+                  className="font-semibold text-emerald-700 underline hover:text-emerald-900 dark:text-emerald-400"
+                >
+                  ranking methodology page
+                </Link>
+                .
               </p>
             </GuideSection>
 
+            {/* Section 4: Is it safe to buy online? */}
             <GuideSection
               darkMode={darkMode}
-              id="clinical-assessment"
-              heading="Clinical Assessment"
+              id="is-it-safe"
+              heading="Is It Safe to Buy Online?"
             >
               <p>
-                A proper clinical assessment should happen before treatment is
-                approved. This may include questions about BMI, medical history,
-                current medication, diabetes status, pregnancy, previous
-                reactions, eating disorder history, and other health conditions.
-              </p>
-              <p>
-                This step matters because weight loss treatment is not suitable
-                for everyone. Side effects and medicine interactions also vary
-                from person to person.
-              </p>
-              <p>
-                If a website seems to offer treatment without a proper
-                assessment, treat that as a warning sign. A responsible provider
-                should slow you down enough to check suitability.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="registered-pharmacy"
-              heading="Registered Pharmacy Checks"
-            >
-              <p>
-                A safe route should involve a registered UK pharmacy or a
-                legitimate regulated service. The pharmacy should be easy to
-                verify, and the site should provide clear details about who
-                supplies the treatment.
-              </p>
-              <p>
-                This is where you should confirm credentials using our guide on{" "}
+                Yes, provided you use an established UK online pharmacy registered with the General Pharmaceutical Council (GPhC) that requires a comprehensive clinical consultation before dispensing. Never buy GLP-1 weight loss injections from social media, unregulated overseas sellers, or websites that omit medical screening. Learn how to independently verify any pharmacy in our{" "}
                 <Link
                   href="/pharmacy-safety-gphc-verification"
-                  className="font-medium text-emerald-600 hover:underline"
+                  className="font-semibold text-emerald-700 underline hover:text-emerald-900 dark:text-emerald-400"
                 >
-                  pharmacy safety and GPhC verification
+                  GPhC verification safety guide
                 </Link>
-                . It walks through the GPhC register checks that a genuine UK
-                supplier should be able to pass.
+                .
               </p>
             </GuideSection>
 
-            <GuideSection
-              darkMode={darkMode}
-              id="transparent-pricing"
-              heading="Transparent Pricing"
-            >
-              <p>
-                A good provider should explain the full weight loss treatment
-                price, not just the first-month headline figure.
-              </p>
-              <p>
-                Many private clinics show a &ldquo;from&rdquo; price. That may
-                only cover a starter dose, a first-month promotion, or a lower
-                strength. So it pays to look at the total cost across the full
-                course, not just month one.
-              </p>
-              <p>A proper price check should include:</p>
-              <ul className="list-disc space-y-3 pl-5">
-                <li>Starter dose price</li>
-                <li>Higher dose price</li>
-                <li>Consultation cost</li>
-                <li>Prescription review</li>
-                <li>Delivery fees</li>
-                <li>Support or coaching fees</li>
-                <li>Maintenance cost</li>
-                <li>Repeat prescription rules</li>
-              </ul>
-              <p>
-                That is where Health Wise tries to be useful: helping you
-                compare real monthly cost, not only the lowest advertised
-                number.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="what-to-compare"
-              heading="Weight Loss Treatment Price: What Users Should Compare"
-            >
-              <p>
-                When people search for weight loss price or treatment cost, they
-                usually want a practical answer: what might I pay each month,
-                and is one provider better value than another?
-              </p>
-              <p>
-                Prices vary because clinics package services differently. Some
-                focus on low medicine prices. Others include coaching, app
-                support, pharmacist contact, or follow-up reviews. Some look
-                cheap at the starting dose and become more expensive later.
-              </p>
-              <p>A fair comparison usually asks:</p>
-              <ul className="list-disc space-y-3 pl-5">
-                <li>
-                  Is the price for Mounjaro, Wegovy, or another
-                  treatment?
-                </li>
-                <li>Is the price based on the starter dose only?</li>
-                <li>Does the price increase at higher doses?</li>
-                <li>Is delivery included?</li>
-                <li>Is clinical support included?</li>
-                <li>What happens if the treatment is not suitable?</li>
-                <li>Is maintenance pricing clear?</li>
-                <li>Can you compare the provider against alternatives?</li>
-              </ul>
-              <p>
-                It also helps to cross-check the latest{" "}
-                <Link
-                  href="/mounjaro-price-comparison"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  Mounjaro price list UK
-                </Link>{" "}
-                and the{" "}
-                <Link
-                  href="/wegovy-price-comparison"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  Wegovy price list UK
-                </Link>{" "}
-                summaries, which track dose-level tiers across major clinics.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="provider-types"
-              heading="The Main Types of Weight Loss Treatment Providers"
-            >
-              <p>
-                Not every provider works the same way. It helps to know the
-                different models before you choose where to start.
-              </p>
-
-              <h3
-                className={`mt-6 text-lg font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
-              >
-                Online Pharmacy Services
-              </h3>
-              <p>
-                Online pharmacy services usually focus on consultation,
-                prescription review, and delivery. These services may be
-                convenient for users who already understand the treatment
-                options and want a regulated online pathway.
-              </p>
-              <p>
-                However, you should still check the pharmacy registration,
-                clinical process, delivery policy, and support options.
-              </p>
-
-              <h3
-                className={`mt-6 text-lg font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
-              >
-                Online Doctor Services
-              </h3>
-              <p>
-                Online doctor services may provide a more structured
-                consultation process. They may include clinician review, medical
-                history checks, and follow-up advice.
-              </p>
-              <p>
-                This can be useful for users who have health questions or need
-                more guidance before deciding whether treatment is suitable.
-              </p>
-
-              <h3
-                className={`mt-6 text-lg font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
-              >
-                Programme-Based Weight Loss Services
-              </h3>
-              <p>
-                Some providers offer treatment as part of a wider programme.
-                This may include coaching, nutrition support, app tracking,
-                behavioural guidance, or ongoing check-ins.
-              </p>
-              <p>
-                These services may cost more, but they can offer extra support.
-                However, the user should still compare the total monthly cost
-                against a pharmacy-only route.
-              </p>
-
-              <h3
-                className={`mt-6 text-lg font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
-              >
-                Independent Comparison Sites
-              </h3>
-              <p>
-                Independent comparison sites such as Health Wise do not
-                prescribe treatment directly. Instead, they help users compare
-                provider options, price structures, pharmacy safety, support,
-                and treatment differences.
-              </p>
-              <p>
-                This role is important because provider-owned pages usually
-                present only their own service. An independent comparison page
-                can help users make a more informed decision before starting a
-                consultation.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="why-not-cheapest"
-              heading="Why Cheapest Is Not Always Best"
-            >
-              <p>
-                It is natural to look for the cheapest weight loss treatment
-                price. However, the cheapest provider may not always be the best
-                choice.
-              </p>
-              <p>
-                A very low price may leave out support, delivery, or follow-up.
-                It may also only apply to the starting dose. Unusually low
-                prices can also be a warning sign if the seller is not properly
-                regulated.
-              </p>
-              <p>A safer value comparison balances price with:</p>
-              <ul className="list-disc space-y-3 pl-5">
-                <li>Pharmacy registration</li>
-                <li>Clinical checks</li>
-                <li>Provider transparency</li>
-                <li>Delivery process</li>
-                <li>Support quality</li>
-                <li>Dose-level pricing</li>
-                <li>Maintenance rules</li>
-                <li>User reviews</li>
-                <li>Clear refund or cancellation information</li>
-              </ul>
-              <p>
-                That is why this guide is not written as a hunt for &ldquo;cheap
-                weight loss injections.&rdquo; The more useful question is how
-                to compare safe treatment prices properly.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="what-to-avoid"
-              heading="What to Avoid When Comparing Providers"
-            >
-              <p>
-                Be careful with any seller that makes weight loss treatment look
-                too easy.
-              </p>
-              <p>Avoid websites or sellers that:</p>
-              <ul className="list-disc space-y-3 pl-5">
-                <li>Offer prescription treatment without proper assessment</li>
-                <li>Sell through social media messages</li>
-                <li>Promise miracle results</li>
-                <li>Advertise unusually low prices</li>
-                <li>Offer bulk deals without clinical review</li>
-                <li>Hide pharmacy registration details</li>
-                <li>Do not explain side effects or suitability</li>
-                <li>Make the checkout feel faster than the safety process</li>
-              </ul>
-              <p>
-                Those checks help you avoid scams and reduce the chance of
-                buying from an unsafe route.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="comparison-journey"
-              heading="A Sensible Order to Compare Providers"
-            >
-              <p>
-                If you are not sure where to begin, do not pick a provider
-                first. Compare the options, then choose a consultation route.
-              </p>
-              <p>A practical order looks like this:</p>
-              <ol className="list-decimal space-y-3 pl-5">
-                <li>
-                  <strong
-                    className={darkMode ? "text-slate-200" : "text-slate-800"}
-                  >
-                    Check your BMI:
-                  </strong>{" "}
-                  Use our{" "}
-                  <Link
-                    href="/tools/bmi-calculator"
-                    className="font-medium text-emerald-600 hover:underline"
-                  >
-                    BMI calculator
-                  </Link>{" "}
-                  to see whether you are likely to meet typical eligibility
-                  criteria before you start a consultation.
-                </li>
-                <li>
-                  <strong
-                    className={darkMode ? "text-slate-200" : "text-slate-800"}
-                  >
-                    Compare Mounjaro and Wegovy:
-                  </strong>{" "}
-                  Understand the main treatment differences before you focus
-                  only on price.
-                </li>
-                <li>
-                  <strong
-                    className={darkMode ? "text-slate-200" : "text-slate-800"}
-                  >
-                    Check Mounjaro prices:
-                  </strong>{" "}
-                  Compare dose-level prices if you are looking at tirzepatide.
-                </li>
-                <li>
-                  <strong
-                    className={darkMode ? "text-slate-200" : "text-slate-800"}
-                  >
-                    Check Wegovy prices:
-                  </strong>{" "}
-                  Compare semaglutide prices and provider options.
-                </li>
-                <li>
-                  <strong
-                    className={darkMode ? "text-slate-200" : "text-slate-800"}
-                  >
-                    Verify pharmacy registration:
-                  </strong>{" "}
-                  Use the GPhC checks to avoid fake or unclear sellers.
-                </li>
-                <li>
-                  <strong
-                    className={darkMode ? "text-slate-200" : "text-slate-800"}
-                  >
-                    Read how we compare prices:
-                  </strong>{" "}
-                  See the independent checks behind our price tables.
-                </li>
-              </ol>
-              <p>
-                Once you have a suitable clinical path, you can also{" "}
-                <Link
-                  href="/tools/weight-loss-tracker"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  track your weight loss progress
-                </Link>{" "}
-                over the following weeks.
-              </p>
-            </GuideSection>
-
+            {/* FAQ */}
             <section
               id="faq"
-              className={`mt-16 border-t pt-10 ${darkMode ? "border-slate-800" : "border-slate-200"}`}
+              className={`mt-12 border-t pt-8 ${darkMode ? "border-slate-800" : "border-slate-200"}`}
             >
               <h2
-                className={`mb-8 text-3xl font-semibold ${darkMode ? "text-white" : "text-slate-900"}`}
+                className={`mb-6 text-2xl font-bold sm:text-3xl ${darkMode ? "text-white" : "text-slate-900"}`}
               >
                 Frequently asked questions
               </h2>
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <div>
                   <h3
-                    className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
+                    className={`text-lg font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    What is the best place to start weight loss treatment online
-                    in the UK?
+                    What is the best place to start weight loss treatment online in the UK?
                   </h3>
-                  <p>
-                    The best place to start is a regulated service that uses
-                    proper clinical assessment, checks eligibility, works with a
-                    registered pharmacy, explains full pricing, and provides
-                    clear support. Health Wise helps users compare these factors
-                    before choosing a consultation route.
+                  <p className="mt-2 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                    The best place to start is a regulated UK provider that checks eligibility through a comprehensive clinical assessment, works with an authentic GPhC-registered pharmacy, displays clear pen-by-pen pricing, and offers qualified prescriber support after dispatch.
                   </p>
                 </div>
                 <div>
                   <h3
-                    className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
+                    className={`text-lg font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Can I buy weight loss injections online in the UK?
+                    Can I buy weight loss injections online without a prescription?
                   </h3>
-                  <p>
-                    Some people may access private weight loss treatment online
-                    after a clinical assessment and valid prescription. Stick to
-                    regulated providers, and avoid unregulated websites or
-                    social media sellers.
+                  <p className="mt-2 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                    No. Mounjaro (tirzepatide) and Wegovy (semaglutide) are legally classified as Prescription-Only Medicines (POM) in the UK. Any seller offering them without an independent clinician consultation and formal prescription is operating illegally.
                   </p>
                 </div>
                 <div>
                   <h3
-                    className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
+                    className={`text-lg font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
                   >
-                    Is the cheapest weight loss treatment provider the best
-                    option?
+                    Is the cheapest weight loss treatment provider the best option?
                   </h3>
-                  <p>
-                    Not always. The cheapest option may leave out delivery,
-                    support, consultation, or clear maintenance pricing. Compare
-                    the full monthly cost, safety checks, and support before you
-                    decide.
-                  </p>
-                </div>
-                <div>
-                  <h3
-                    className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
-                  >
-                    What should I check before starting weight loss treatment
-                    online?
-                  </h3>
-                  <p>
-                    Check the pharmacy registration, clinical assessment
-                    process, treatment suitability, total monthly price,
-                    delivery policy, support options, maintenance pricing, and
-                    whether the provider explains side effects clearly.
-                  </p>
-                </div>
-                <div>
-                  <h3
-                    className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
-                  >
-                    Why do weight loss treatment prices vary so much?
-                  </h3>
-                  <p>
-                    Prices vary because providers may include different
-                    services. Some include consultation, delivery, coaching, app
-                    support, or follow-up reviews. Others may show a lower
-                    medicine-only or starter-dose price.
-                  </p>
-                </div>
-                <div>
-                  <h3
-                    className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
-                  >
-                    Should I compare Mounjaro and Wegovy before choosing a
-                    provider?
-                  </h3>
-                  <p>
-                    Yes. Mounjaro and Wegovy are different treatments with
-                    different pricing, dose structures, and suitability factors.
-                    Comparing treatment options first can help users make a more
-                    informed provider decision.
-                  </p>
-                </div>
-                <div>
-                  <h3
-                    className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
-                  >
-                    What are the warning signs of an unsafe seller?
-                  </h3>
-                  <p>
-                    Warning signs include no clinical assessment, no pharmacy
-                    registration details, social media sales, miracle-result
-                    claims, unusually low prices, bulk offers, and no clear side
-                    effect or suitability information.
-                  </p>
-                </div>
-                <div>
-                  <h3
-                    className={`mb-3 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`}
-                  >
-                    Why use Health Wise before choosing a provider?
-                  </h3>
-                  <p>
-                    Health Wise helps users compare weight loss treatment
-                    prices, pharmacy safety, provider differences, and support
-                    features. This gives users a clearer picture before they
-                    start a private consultation.
+                  <p className="mt-2 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                    Not necessarily. An unusually low starter price may exclude consultation charges, prescription fees, tracked cold-chain delivery, or ongoing clinical follow-up. Always evaluate the total monthly cost across titration and maintenance doses.
                   </p>
                 </div>
               </div>
             </section>
 
+            {/* Conclusion */}
             <GuideSection
               darkMode={darkMode}
               id="conclusion"
               heading="Conclusion"
             >
               <p>
-                The best place to start weight loss treatment online in the UK
-                is not always the cheapest website or the fastest checkout. A
-                safer choice is a regulated provider with proper clinical
-                checks, clear prices, pharmacy verification, and ongoing
-                support.
+                Starting medical weight loss online in the UK is a healthcare decision that requires balancing cost with safety and clinical support. Always verify that your chosen provider is listed on the official GPhC register, that prescribers review your health history thoroughly, and that pricing remains clear at every dose level.
               </p>
               <p>
-                Headline prices can be misleading. A low &ldquo;from&rdquo;
-                figure may only cover the first dose, or may leave out support
-                and delivery. The full monthly cost matters more than the lowest
-                advertised number.
-              </p>
-              <p>
-                Health Wise will not simply tell you where to buy. We focus on
-                how to choose safely, compare providers, spot unsafe sellers,
-                and understand what treatment really costs.
-              </p>
-              <p>
-                If you want to see how we gather and check provider fees, read{" "}
+                To compare live prices across all registered providers, explore our full{" "}
                 <Link
-                  href="/methodology"
-                  className="font-medium text-emerald-600 hover:underline"
+                  href="/mounjaro-price-comparison"
+                  className="font-semibold text-emerald-700 underline hover:text-emerald-900 dark:text-emerald-400"
                 >
-                  how Health Wise compares prices
+                  Mounjaro price comparison
                 </Link>{" "}
-                before you start a consultation.
-              </p>
-              <p
-                className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}
-              >
-                Health Wise does not prescribe or supply medicines. This page is
-                general information and is not medical advice.
+                and{" "}
+                <Link
+                  href="/wegovy-price-comparison"
+                  className="font-semibold text-emerald-700 underline hover:text-emerald-900 dark:text-emerald-400"
+                >
+                  Wegovy price comparison
+                </Link>{" "}
+                tables.
               </p>
             </GuideSection>
+
             <ArticleSources slug="best-place-to-start-weight-loss-treatment-online-uk" darkMode={darkMode} />
           </article>
 

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -147,7 +147,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -252,8 +252,8 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Reality check: private is faster, often days versus multi year queues in worst case stories, yet costlier at about £180 to £350 monthly in quoted bands, and potentially reversible to NHS post stabilisation only when your GP and trust agree shared care. Verify sellers using our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  Reality check: private is faster, often days versus multi year queues in worst case stories, yet costlier at about Â£180 to Â£350 monthly in quoted bands, and potentially reversible to NHS post stabilisation only when your GP and trust agree shared care. Verify sellers using our{" "}
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>{" "}
                   and{" "}
@@ -273,7 +273,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                   Miracle claims debunked: seven day water fasts are dehydration masquerading as fat loss. Healthy pace: about 0.5 to 1 kg weekly maximum in NICE CG189, 2025 style messaging.
                 </p>
 
-                <p className={subh}>Timeline breakdown — GLP 1 plus lifestyle</p>
+                <p className={subh}>Timeline breakdown â€” GLP 1 plus lifestyle</p>
                 <div className={`overflow-x-auto rounded-xl border ${border}`}>
                   <table className={`w-full min-w-[300px] border-collapse text-sm ${p}`}>
                     <thead>
@@ -328,7 +328,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="costs" heading="Medication costs and budgeting in Northern Ireland">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Mounjaro Northern Ireland monthly cost? About £220 to £320 during titration in many quotes. Ozempic? About £180 to £280 off label for weight loss in marketing tables. Wegovy NI? About £200 to £300. Prices vary by dose and provider, so treat numbers as indicative only.
+                  Mounjaro Northern Ireland monthly cost? About Â£220 to Â£320 during titration in many quotes. Ozempic? About Â£180 to Â£280 off label for weight loss in marketing tables. Wegovy NI? About Â£200 to Â£300. Prices vary by dose and provider, so treat numbers as indicative only.
                 </p>
 
                 <p className={p}>Cost breakdown (indicative, private titration):</p>
@@ -343,22 +343,22 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                     <tbody>
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Wegovy</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About £199 at 0.25 mg starter toward about £289 at 2.4 mg maintenance</td>
+                        <td className={`border px-3 py-2 ${tableBorder}`}>About Â£199 at 0.25 mg starter toward about Â£289 at 2.4 mg maintenance</td>
                       </tr>
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Mounjaro</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About £229 at 2.5 mg toward about £319 at 15 mg</td>
+                        <td className={`border px-3 py-2 ${tableBorder}`}>About Â£229 at 2.5 mg toward about Â£319 at 15 mg</td>
                       </tr>
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Ozempic</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About £179 at 0.25 mg toward about £269 at 1 mg, off label for weight loss when clinician agrees</td>
+                        <td className={`border px-3 py-2 ${tableBorder}`}>About Â£179 at 0.25 mg toward about Â£269 at 1 mg, off label for weight loss when clinician agrees</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
 
                 <p className={`mt-4 ${p}`}>
-                  Hidden costs: blood tests about £40 to £80 quarterly when not bundled, delivery about £10, GP visits about £50 if shared care is refused or not included. Pro tip: pharmacy price comparison beats some clinic markups, with about £50 plus monthly savings in marketing comparisons. MHRA warns that counterfeit pens circulate, so verify batch paperwork and registration rather than buying from anonymous social sellers. Compare listed totals on{" "}
+                  Hidden costs: blood tests about Â£40 to Â£80 quarterly when not bundled, delivery about Â£10, GP visits about Â£50 if shared care is refused or not included. Pro tip: pharmacy price comparison beats some clinic markups, with about Â£50 plus monthly savings in marketing comparisons. MHRA warns that counterfeit pens circulate, so verify batch paperwork and registration rather than buying from anonymous social sellers. Compare listed totals on{" "}
                   <Link className={linkCls} href="/mounjaro-price-comparison">
                     Mounjaro price comparison
                   </Link>{" "}
@@ -429,7 +429,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                 </div>
 
                 <p className={`mt-4 ${p}`}>
-                  Local coping: Boots Pharmacy Lisburn may supply over the counter anti nausea products around £5 to £10 when appropriate. Lagan Valley Hospital emergency department remains the correct route for severe pancreatitis symptoms. NHS 111 offers free advice for injection site reactions that worry you after hours. Red flags: vision changes or abdominal pain beyond three days need immediate GP contact. Read{" "}
+                  Local coping: Boots Pharmacy Lisburn may supply over the counter anti nausea products around Â£5 to Â£10 when appropriate. Lagan Valley Hospital emergency department remains the correct route for severe pancreatitis symptoms. NHS 111 offers free advice for injection site reactions that worry you after hours. Red flags: vision changes or abdominal pain beyond three days need immediate GP contact. Read{" "}
                   <Link className={linkCls} href="/helpful-guides/mounjaro-side-effects-uk">
                     Mounjaro side effects UK
                   </Link>{" "}
@@ -466,8 +466,8 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>GLP 1 plus resistance training: marketing cites about plus 5 kg extra loss in some university linked posters (Durham University, 2025 framing)</li>
                   <li>Pre loading protein: about 35% hunger reduction during titration in some behavioural trials</li>
-                  <li>Cold exposure: Lagan winter dips are culturally niche but conversationally linked to brown fat activation stories—only pursue with clinician clearance</li>
-                  <li>Maintenance phase: about 0.5 mg weekly maintenance dosing conversations appear in some 2025 summaries claiming about 70% rebound reduction versus abrupt stop (JAMA, 2025 framing—confirm against your prescription label)</li>
+                  <li>Cold exposure: Lagan winter dips are culturally niche but conversationally linked to brown fat activation storiesâ€”only pursue with clinician clearance</li>
+                  <li>Maintenance phase: about 0.5 mg weekly maintenance dosing conversations appear in some 2025 summaries claiming about 70% rebound reduction versus abrupt stop (JAMA, 2025 framingâ€”confirm against your prescription label)</li>
                 </ul>
 
                 <p className={`mt-4 ${p}`}>
@@ -482,7 +482,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="troubleshoot" heading="Advanced troubleshooting: when progress stalls">
                 <p className={p}>Month 2 plateau checklist:</p>
                 <ol className={`list-decimal space-y-2 pl-6 ${p}`}>
-                  <li>DEXA scan about £80 to £120 to separate true fat change from water shifts</li>
+                  <li>DEXA scan about Â£80 to Â£120 to separate true fat change from water shifts</li>
                   <li>Titrate up only with pharmacist or prescriber approval</li>
                   <li>Carb cycle: three low carb days and four moderate carb days when a dietitian agrees</li>
                   <li>NEAT boost: 12k steps versus 8k on work from home days</li>
@@ -515,7 +515,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Equity gap: about £2,500 yearly private access versus NHS waits creates tension. Community solutions such as walking groups and market swaps still bridge gaps for people outside private budgets, and they matter for semantic success that pairs appetite suppression Lisburn stories with sustainable Northern Ireland slimming habits everyone can attempt without a pen.
+                  Equity gap: about Â£2,500 yearly private access versus NHS waits creates tension. Community solutions such as walking groups and market swaps still bridge gaps for people outside private budgets, and they matter for semantic success that pairs appetite suppression Lisburn stories with sustainable Northern Ireland slimming habits everyone can attempt without a pen.
                 </p>
               </GuideSection>
 
@@ -590,7 +590,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion: Lisburn complete weight loss blueprint">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Best weight loss treatment Lisburn? Monitored GLP 1 with Wegovy or Mounjaro plus Lagan lifestyle DNA plus realistic timelines. From about £200 monthly private quotes to free NHS pathways when you qualify, semantic success blends appetite suppression Lisburn language with sustainable Northern Ireland slimming behaviour, not hashtag promises.
+                  Best weight loss treatment Lisburn? Monitored GLP 1 with Wegovy or Mounjaro plus Lagan lifestyle DNA plus realistic timelines. From about Â£200 monthly private quotes to free NHS pathways when you qualify, semantic success blends appetite suppression Lisburn language with sustainable Northern Ireland slimming behaviour, not hashtag promises.
                 </p>
 
                 <p className={`text-base font-semibold ${strong}`}>Your 90 day starter</p>
@@ -598,7 +598,7 @@ export default function LisburnLocationContent({ loc, shareUrl }: Props) {
                   <li>GP BMI assessment for a free baseline</li>
                   <li>Lagan 10k steps daily when joints tolerate</li>
                   <li>Market protein swaps over deep fried defaults</li>
-                  <li>Pharmacy comparison to save about £50 plus monthly in some quotes</li>
+                  <li>Pharmacy comparison to save about Â£50 plus monthly in some quotes</li>
                   <li>Month 2 titration planning if week four tolerance looks stable</li>
                 </ul>
 

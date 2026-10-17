@@ -1,12 +1,12 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
 import { blogImgPath, BEST_PLACE_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/best-place-to-start-weight-loss-treatment-online-uk";
-const TITLE = "Best Place to Start Weight Loss Treatment UK";
+const TITLE = "Best Online Weight Loss Providers UK (2026)";
 const DESCRIPTION =
-  "Compare safe UK weight loss treatment providers, prices, pharmacy checks and support before starting treatment.";
+  "Looking for the best online weight loss provider in the UK? See our shortlist of GPhC registered pharmacies with prices, support and delivery compared.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BEST_PLACE_HERO_PNG)}`;
 
 export const metadata: Metadata = {

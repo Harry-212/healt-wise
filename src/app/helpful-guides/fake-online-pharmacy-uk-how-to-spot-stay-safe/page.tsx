@@ -84,7 +84,7 @@ const REFERENCES = [
     label: "How we verify UK pharmacies — Health Wise",
     description:
       "Our GPhC-based checks and safety standards for every pharmacy listed on Health Wise.",
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     external: false,
   },
   {
@@ -98,7 +98,7 @@ const REFERENCES = [
 
 const RELATED_GUIDES = [
   {
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     category: "Pharmacy Safety",
     title: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards",
     description:
@@ -214,7 +214,7 @@ export default function GuideFakePharmacy() {
             GPhC register
           </EL>{" "}
           before purchasing. See{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             how Health Wise verifies pharmacies
           </IL>
           .

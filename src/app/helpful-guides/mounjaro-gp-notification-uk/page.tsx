@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -51,7 +51,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "How long does it take for my GP to be notified?",
-    a: "Most pharmacies using digital notification systems complete the process within 24–48 hours. For pharmacies using manual update processes, it may take 3–5 working days. Your GP's record should reflect your Mounjaro treatment within approximately one week of dispensing.",
+    a: "Most pharmacies using digital notification systems complete the process within 24â€“48 hours. For pharmacies using manual update processes, it may take 3â€“5 working days. Your GP's record should reflect your Mounjaro treatment within approximately one week of dispensing.",
   },
   {
     q: "What if I got my Mounjaro prescription from an online pharmacy?",
@@ -65,41 +65,41 @@ const FAQ_ITEMS = [
 
 const REFERENCES = [
   {
-    label: "GPhC — Standards for registered pharmacies",
+    label: "GPhC â€” Standards for registered pharmacies",
     description:
       "The General Pharmaceutical Council's standards for safe and effective practice, including clinical communication requirements.",
     href: "https://www.pharmacyregulation.org/standards/standards-registered-pharmacies",
   },
   {
-    label: "NHS — How your health information is used",
+    label: "NHS â€” How your health information is used",
     description:
       "NHS guidance on how patient health information is shared between clinical services and what rights patients have.",
     href: "https://www.nhs.uk/your-nhs-data-matters/",
   },
   {
-    label: "NICE — Tirzepatide for managing overweight and obesity",
+    label: "NICE â€” Tirzepatide for managing overweight and obesity",
     description:
       "NICE technology appraisal guidance on the use of tirzepatide (Mounjaro) including monitoring and follow-up requirements.",
     href: "https://www.nice.org.uk/guidance/ta1026",
   },
   {
-    label: "MHRA — Prescription-only medicines (POMs)",
+    label: "MHRA â€” Prescription-only medicines (POMs)",
     description:
       "MHRA guidance on the legal classification of prescription-only medicines and the obligations this places on prescribers and dispensers.",
     href: "https://www.gov.uk/government/publications/rules-for-the-sale-supply-and-administration-of-medicines",
   },
   {
-    label: "How we verify UK pharmacies — Health Wise",
+    label: "How we verify UK pharmacies â€” Health Wise",
     description:
       "Our pharmacy verification process, including how we check GPhC registration and regulatory compliance.",
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     external: false,
   },
 ];
 
 const RELATED_GUIDES = [
   {
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     category: "Pharmacy Safety",
     title: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards",
     description:
@@ -119,7 +119,7 @@ const SCHEMA = {
   "@type": "Article",
   headline: "UK Pharmacies & GP Notification: Mounjaro (Complete Guide)",
   description:
-    "Yes—UK pharmacies are required to notify your GP when dispensing Mounjaro. Here's why it happens, how the process works, and what it means for your medical records.",
+    "Yesâ€”UK pharmacies are required to notify your GP when dispensing Mounjaro. Here's why it happens, how the process works, and what it means for your medical records.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
   publisher: {
     "@type": "Organization",
@@ -154,7 +154,7 @@ export default function GuideMounjaroGP() {
       category="Regulation"
       categorySlug="regulation"
       title="Do UK Pharmacies Inform Your GP About Mounjaro? (Complete Guide)"
-      description="Yes—UK pharmacies are required to notify your GP when dispensing Mounjaro. Here's why it happens, how the process works, and what it means for your medical records."
+      description="Yesâ€”UK pharmacies are required to notify your GP when dispensing Mounjaro. Here's why it happens, how the process works, and what it means for your medical records."
       readTime="3 min read"
       lastUpdated="April 2026"
       toc={TOC}
@@ -167,7 +167,7 @@ export default function GuideMounjaroGP() {
           medications like{" "}
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL>.</GuideParagraph>
         <GuideCallout variant="info">
-          This is not about surveillance—it is a patient safety requirement.
+          This is not about surveillanceâ€”it is a patient safety requirement.
           Keeping your GP informed ensures your treatment is properly
           coordinated, reduces the risk of dangerous drug interactions, and
           ensures your medical records remain accurate.
@@ -192,18 +192,18 @@ export default function GuideMounjaroGP() {
         <GuideBulletListRich
           items={[
             <>
-              <strong>Prevent drug interactions</strong> — your GP may be
+              <strong>Prevent drug interactions</strong> â€” your GP may be
               prescribing other medications. Knowing you are taking{" "}
               <IL href="/what-is-mounjaro">Mounjaro</IL> allows them to check
               for interactions and adjust other treatments if necessary.
             </>,
             <>
-              <strong>Maintain accurate medical records</strong> — a complete
+              <strong>Maintain accurate medical records</strong> â€” a complete
               medication history is essential for safe clinical care, especially
               in emergencies.
             </>,
             <>
-              <strong>Ensure long-term care continuity</strong> — your GP
+              <strong>Ensure long-term care continuity</strong> â€” your GP
               needs to be aware of your treatment to provide appropriate
               follow-up, monitoring, and referrals.
             </>,
@@ -220,7 +220,7 @@ export default function GuideMounjaroGP() {
             "You provide your GP's details when registering with the pharmacy or during your consultation",
             "The pharmacy or online prescribing service sends a secure notification to your GP practice",
             "Your GP updates your medical records to include Mounjaro as a current medication",
-            "Future consultations—whether with your GP, a specialist, or another pharmacist—will reflect your Mounjaro treatment",
+            "Future consultationsâ€”whether with your GP, a specialist, or another pharmacistâ€”will reflect your Mounjaro treatment",
           ]}
         />
         <GuideParagraph>
@@ -254,7 +254,7 @@ export default function GuideMounjaroGP() {
           This requirement applies equally to regulated online pharmacies. If a
           pharmacy offers to dispense Mounjaro without notifying your GP and
           frames this as a feature, treat it as a warning sign.{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             See how we verify pharmacy compliance
           </IL>
           .
@@ -269,10 +269,10 @@ export default function GuideMounjaroGP() {
 </GuideParagraph>
         <GuideBulletList
           items={[
-            "Dangerous drug interactions — other medications may be prescribed or adjusted without accounting for Mounjaro",
-            "Missed side effects — without awareness, your GP cannot attribute symptoms to Mounjaro or adjust treatment accordingly",
-            "Incomplete health monitoring — effective Mounjaro treatment requires periodic health checks that your GP may coordinate",
-            "Emergency care risk — in an emergency, clinicians rely on accurate medication records to provide safe treatment",
+            "Dangerous drug interactions â€” other medications may be prescribed or adjusted without accounting for Mounjaro",
+            "Missed side effects â€” without awareness, your GP cannot attribute symptoms to Mounjaro or adjust treatment accordingly",
+            "Incomplete health monitoring â€” effective Mounjaro treatment requires periodic health checks that your GP may coordinate",
+            "Emergency care risk â€” in an emergency, clinicians rely on accurate medication records to provide safe treatment",
           ]}
         />
       </GuideSection>
@@ -285,12 +285,12 @@ export default function GuideMounjaroGP() {
           items={[
             <>
               <strong>Digital systems</strong> (most regulated online
-              pharmacies and modern high-street pharmacies) — notification is
-              typically sent within 24–48 hours of dispensing.
+              pharmacies and modern high-street pharmacies) â€” notification is
+              typically sent within 24â€“48 hours of dispensing.
             </>,
             <>
               <strong>Manual updates</strong> (some smaller or rural pharmacies)
-              — GP records may take 3–5 working days to update.
+              â€” GP records may take 3â€“5 working days to update.
             </>,
           ]}
         />
@@ -304,10 +304,10 @@ export default function GuideMounjaroGP() {
 
       <GuideKeyTakeaways
         items={[
-          "UK pharmacies are required to notify your GP when dispensing Mounjaro—this applies to both local and regulated online pharmacies.",
+          "UK pharmacies are required to notify your GP when dispensing Mounjaroâ€”this applies to both local and regulated online pharmacies.",
           "The notification prevents drug interactions, maintains accurate medical records, and ensures continuity of care.",
-          "Patients cannot opt out—GP notification is a mandatory safety requirement for prescription-only high-risk medications.",
-          "Digital pharmacies typically notify within 24–48 hours; manual systems may take 3–5 working days.",
+          "Patients cannot opt outâ€”GP notification is a mandatory safety requirement for prescription-only high-risk medications.",
+          "Digital pharmacies typically notify within 24â€“48 hours; manual systems may take 3â€“5 working days.",
           "If a pharmacy suggests that bypassing GP notification is a benefit, treat this as a serious red flag.",
         ]}
       />

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -145,7 +145,7 @@ export default function PrestonLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · June 2026
+              Independent guide Â· June 2026
             </span>
           </div>
 
@@ -386,7 +386,7 @@ export default function PrestonLocationContent({ loc, shareUrl }: Props) {
                 <p className={p}>
                   For a practical provider checklist, read our guide to{" "}
                   <Link
-                    href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards"
+                    href="/pharmacy-safety-gphc-verification"
                     className={linkCls}
                   >
                     UK pharmacy safety standards
@@ -624,7 +624,7 @@ export default function PrestonLocationContent({ loc, shareUrl }: Props) {
                     <Link href="/mounjaro-price-comparison" className={linkCls}>
                       Mounjaro price comparison
                     </Link>
-                    <span className={muted}> · </span>
+                    <span className={muted}> Â· </span>
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
                     </Link>

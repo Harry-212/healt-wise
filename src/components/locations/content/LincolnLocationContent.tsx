@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -148,7 +148,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -215,12 +215,12 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Private mirrors a US style &quot;Nebraska Weight Management&quot; telehealth model in marketing only, meaning GPhC registered telehealth prescribes semaglutide or Wegovy from about £189 to £299 monthly in quoted bands. Faster titration is sometimes marketed at about 4 weeks versus NHS style 12 week ramps, but GP shared care varies by practice so you must confirm who holds the prescribing pen and who orders bloods. MHRA cold chain compliance messaging still applies to refrigerated delivery into Lincoln postcodes.
+                  Private mirrors a US style &quot;Nebraska Weight Management&quot; telehealth model in marketing only, meaning GPhC registered telehealth prescribes semaglutide or Wegovy from about Â£189 to Â£299 monthly in quoted bands. Faster titration is sometimes marketed at about 4 weeks versus NHS style 12 week ramps, but GP shared care varies by practice so you must confirm who holds the prescribing pen and who orders bloods. MHRA cold chain compliance messaging still applies to refrigerated delivery into Lincoln postcodes.
                 </p>
 
                 <p className={p}>
                   Critique: private skips NHS waitlists that can stretch about 6 to 18 months for tier 3, yet it can create coordination gaps if your GP was not looped in early. Verify any private route with our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>
                   .
@@ -317,7 +317,7 @@ export default function LincolnLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Lincoln access: private aesthetic clinics within about 45 minutes drive toward Grantham or Newark style catchments appear in local search patterns. Cost bands about £250 to £400 per session are common in marketing. Hedging: results vary about 15 to 30 percent between people, and lifestyle still amplifies or limits device outcomes.
+                  Lincoln access: private aesthetic clinics within about 45 minutes drive toward Grantham or Newark style catchments appear in local search patterns. Cost bands about Â£250 to Â£400 per session are common in marketing. Hedging: results vary about 15 to 30 percent between people, and lifestyle still amplifies or limits device outcomes.
                 </p>
               </GuideSection>
 

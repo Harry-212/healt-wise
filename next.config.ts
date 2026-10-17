@@ -536,6 +536,22 @@ const nextConfig: NextConfig = {
         destination: "/what-is-wegovy",
         permanent: true,
       },
+      // Zero-click pack 4, section D: Move content first, then 301 redirect
+      {
+        source: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+        destination: "/pharmacy-safety-gphc-verification",
+        permanent: true,
+      },
+      {
+        source: "/blog/what-is-bmi-calculator",
+        destination: "/tools/bmi-calculator",
+        permanent: true,
+      },
+      {
+        source: "/blog/can-hormones-cause-belly-fat-after-40",
+        destination: "/blog/why-does-belly-fat-increase-after-40",
+        permanent: true,
+      },
       ...HELPFUL_GUIDE_SLUGS.map((slug) => ({
         source: `/${slug}`,
         destination: `/helpful-guides/${slug}`,

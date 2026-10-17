@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -142,7 +142,7 @@ export default function BrightonAndHoveLocationContent({ loc, shareUrl }: Props)
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · May 2026
+              Independent guide Â· May 2026
             </span>
           </div>
 
@@ -411,7 +411,7 @@ export default function BrightonAndHoveLocationContent({ loc, shareUrl }: Props)
                 <p className={p}>
                   Trails, markets, and group accountability can make routines easier to keep. If you buy online, read{" "}
                   <Link
-                    href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards"
+                    href="/pharmacy-safety-gphc-verification"
                     className={linkCls}
                   >
                     how we verify UK pharmacies
@@ -437,7 +437,7 @@ export default function BrightonAndHoveLocationContent({ loc, shareUrl }: Props)
                         rel="noopener noreferrer"
                         target="_blank"
                       >
-                        {s.label.replace(/\s*—\s*/g, ": ")}
+                        {s.label.replace(/\s*â€”\s*/g, ": ")}
                       </a>
                       <span className={muted}>: {s.note}</span>
                     </li>
@@ -472,23 +472,23 @@ export default function BrightonAndHoveLocationContent({ loc, shareUrl }: Props)
               >
                 <ul className={`list-none space-y-2.5 text-sm ${p}`}>
                   <li>
-                    →{" "}
+                    â†’{" "}
                     <Link href="/compare/wegovy-vs-mounjaro" className={linkCls}>
                       Compare best weight loss treatments in the UK
                     </Link>
                   </li>
                   <li>
-                    →{" "}
+                    â†’{" "}
                     <Link href="/wegovy-price-comparison" className={linkCls}>
                       Wegovy price comparison
                     </Link>
-                    <span className={muted}> · </span>
+                    <span className={muted}> Â· </span>
                     <Link href="/mounjaro-price-comparison" className={linkCls}>
                       Mounjaro price comparison
                     </Link>
                   </li>
                   <li>
-                    →{" "}
+                    â†’{" "}
                     <Link href="/tools/bmi-calculator" className={linkCls}>
                       BMI calculator
                     </Link>

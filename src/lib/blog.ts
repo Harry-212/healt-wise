@@ -221,17 +221,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["mounjaro", "guides"],
   },
   {
-    slug: "what-is-bmi-calculator",
-    title:
-      "BMI Calculator UK: What Your Number Means, How to Use It, and What Comes Next",
-    date: "2026-05-30",
-    category: "Guides",
-    description:
-      "Free BMI calculator for UK adults. Understand your BMI category, NHS thresholds, limitations, weight loss treatment eligibility, and what to do with your result.",
-    heroImage: "/blog/bmi-calculator-hero.png",
-    feedTags: ["guides", "wegovy", "mounjaro", "how-it-works"],
-  },
-  {
     slug: "weight-loss-treatment-price-comparison-uk",
     title:
       "Weight Loss Treatment Price Comparison UK 2026: Mounjaro and Wegovy",
@@ -254,22 +243,12 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
   },
   {
     slug: "why-does-belly-fat-increase-after-40",
-    title: "Why Does Belly Fat Increase After 40? Causes & Solutions",
+    title: "Belly Fat After 40: Hormones and What Helps",
     date: "2026-05-08",
     category: "Guides",
     description:
-      "Discover the real reasons belly fat increases after 40 — from hormonal shifts to metabolic changes. Evidence-based explanations and what you can actually do about it.",
+      "Discover the real reasons belly fat increases after 40 — how oestrogen, testosterone, cortisol, and insulin interact, and what works including GLP-1 options.",
     heroImage: "/blog/1.1-fatloss-og.jpg",
-    feedTags: ["guides"],
-  },
-  {
-    slug: "can-hormones-cause-belly-fat-after-40",
-    title: "Can Hormones Cause Belly Fat After 40",
-    date: "2026-05-08",
-    category: "Guides",
-    description:
-      "Yes — hormones directly drive belly fat after 40. Learn how oestrogen, testosterone, cortisol, and insulin interact to cause abdominal weight gain, and what to do about it.",
-    heroImage: "/blog/2.1-fatloss-og.jpg",
     feedTags: ["guides"],
   },
   {
@@ -431,6 +410,8 @@ const REDIRECTED_BLOG_SLUGS = new Set<string>([
   "glp-1-supplements-uk",
   "understanding-the-mounjaro-kwikpen-a-user-guide",
   "how-does-wegovy-work-to-transform-your-weight-journey",
+  "what-is-bmi-calculator",
+  "can-hormones-cause-belly-fat-after-40",
 ]);
 
 /** Curated long-form `/blog/:slug` App Router articles (each includes an in-page FAQ). */

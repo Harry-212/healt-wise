@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -148,7 +148,7 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -179,7 +179,7 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="best-means" heading="What “best” really means">
+              <GuideSection darkMode={darkMode} id="best-means" heading="What â€œbestâ€ really means">
                 <p className={p}>
                   The best treatment is not the same for everyone. A person with a BMI in the high 20s and no medical problems may do well with a structured lifestyle programme. Someone with obesity plus diabetes, sleep apnoea, or joint pain may need a more medical route. Someone else may have already tried several diets and need a stronger appetite-suppressing option.
                 </p>
@@ -341,7 +341,7 @@ export default function MiltonKeynesLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   One important point: the &quot;best&quot; option is not always the fastest. Sometimes the slower route is safer and more appropriate. If you are checking private access, use our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>{" "}
                   and{" "}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -106,7 +106,7 @@ export default function NewportLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -153,7 +153,7 @@ export default function NewportLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Why combine? Solos underperform. Clinical Obesity (2024) insists integration multiplies gains [DOI: 10.1111/cob.13156]. Newport tip: NHS Gwent board offers tier 2/3 programs (free, GP referral); private GPhC-registered clinics deliver pens faster (£200-350/month).
+                  Why combine? Solos underperform. Clinical Obesity (2024) insists integration multiplies gains [DOI: 10.1111/cob.13156]. Newport tip: NHS Gwent board offers tier 2/3 programs (free, GP referral); private GPhC-registered clinics deliver pens faster (Â£200-350/month).
                 </p>
 
                 <p className={p}>
@@ -269,7 +269,7 @@ export default function NewportLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="access" heading="Accessing Medically Supervised Care in Newport">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  NHS Newport? GP referral to tier 2/3 (free, 5-10% loss). Private? GPhC clinics for GLP-1 (£200-350/month), faster but ensure shared care.
+                  NHS Newport? GP referral to tier 2/3 (free, 5-10% loss). Private? GPhC clinics for GLP-1 (Â£200-350/month), faster but ensure shared care.
                 </p>
 
                 <p className={p}>
@@ -277,7 +277,7 @@ export default function NewportLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Private: Online GPhC-registered clinics (pharmacyregulation.org verify) prescribe Semaglutide/Tirzepatide. Pros: Faster (1-2 weeks), tracking. Cons: £200-350/month (includes delivery titration); may skip GP shared care unless requested.
+                  Private: Online GPhC-registered clinics (pharmacyregulation.org verify) prescribe Semaglutide/Tirzepatide. Pros: Faster (1-2 weeks), tracking. Cons: Â£200-350/month (includes delivery titration); may skip GP shared care unless requested.
                 </p>
 
                 <p className={p}>Checklist before private:</p>
@@ -290,7 +290,7 @@ export default function NewportLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`mt-4 ${p}`}>
                   MHRA alerts: Unlicensed products risky - demand UK supply chain proof. Verify sellers with our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>{" "}
                   and{" "}
@@ -470,7 +470,7 @@ export default function NewportLocationContent({ loc, shareUrl }: Props) {
                   <div className={`rounded-xl border p-5 ${border} ${boxBg}`}>
                     <p className={`text-base font-semibold ${strong}`}>5. How do I access GLP-1 injections like Semaglutide in Newport safely?</p>
                     <p className={`mt-2 text-sm leading-relaxed ${p}`}>
-                      NHS via GP referral (free, waits 3-6 months); private via GPhC-registered clinics (£200-350/month). Verify prescriber/pharmacy, titration plan, cold-chain delivery.
+                      NHS via GP referral (free, waits 3-6 months); private via GPhC-registered clinics (Â£200-350/month). Verify prescriber/pharmacy, titration plan, cold-chain delivery.
                     </p>
                   </div>
 

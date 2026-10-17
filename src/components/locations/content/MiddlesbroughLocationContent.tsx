@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -104,7 +104,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -153,7 +153,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="meaning" heading="What “best weight loss treatment” means in Middlesbrough">
+              <GuideSection darkMode={darkMode} id="meaning" heading="What â€œbest weight loss treatmentâ€ means in Middlesbrough">
                 <p className={`text-lg md:text-xl ${p}`}>
                   The most successful weight loss treatment is not a brand-name injection or a one-week &quot;intensive&quot; - it is a combination of medically supervised support, a calorie-controlled diet, regular physical activity, and long-term behaviour change. For people in Middlesbrough, this often means starting with the NHS weight management services, then considering prescription weight-loss medication (such as GLP-1 injections) if your BMI and health meet the criteria. Surgery and body-contouring are only relevant for a small group of patients with severe obesity or after major weight loss.
                 </p>
@@ -306,7 +306,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`mt-4 ${p}`}>
                   These checks are crucial because not all &quot;online clinics&quot; or aesthetics-only practices take the same care when prescribing high-risk medicines. Your local GP surgery may also be hesitant to share care with some providers, so it is wise to have an honest conversation about who will be responsible for your follow-up. Our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>{" "}
                   and{" "}
@@ -548,7 +548,7 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                 </p>
               </GuideSection>
 
-              <GuideSection darkMode={darkMode} id="timelines" heading="Realistic timelines and what “success” looks like">
+              <GuideSection darkMode={darkMode} id="timelines" heading="Realistic timelines and what â€œsuccessâ€ looks like">
                 <p className={`text-lg md:text-xl ${p}`}>
                   Realistic weight loss in Middlesbrough usually means losing around 0.5-1 kg per week, which can lead to 5-10 kg in 3-6 months and 15-20 kg in about a year, depending on starting weight and adherence. Success is not just a number on the scale; it also includes better blood pressure, improved blood sugar control, increased mobility, and better mental wellbeing. No injection or clinic can guarantee rapid, effortless weight loss without ongoing lifestyle change.
                 </p>

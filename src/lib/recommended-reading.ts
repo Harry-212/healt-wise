@@ -48,6 +48,7 @@ const GUIDE_TITLE_OVERRIDES: Partial<Record<string, string>> = {
 /** Guide slugs redirected to hub pages — omitted from the Keep exploring carousel pool. */
 const EXCLUDED_GUIDE_FROM_RECOMMENDED_READING_SLUGS = new Set<string>([
   "mounjaro-weight-loss-injection-uk",
+  "how-we-verify-uk-pharmacies-gphc-safety-standards",
 ]);
 
 export function getRecommendedReadingPool(): RecommendedItem[] {

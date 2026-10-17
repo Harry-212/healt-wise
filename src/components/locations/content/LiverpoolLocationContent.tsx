@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -145,7 +145,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -264,7 +264,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="tier3" heading="Tier 3: GLP 1 medications deep dive">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Best UK weight loss medication in headline trials? Tirzepatide (Mounjaro) often edges semaglutide (Wegovy) near 20% versus 15% loss bands in year one summaries (NEJM 2024 style comparisons). Ozempic UK alternative for weight optimisation? Wegovy uses the same semaglutide molecule at weight loss dosing. Ozempic cost? Private marketing often quotes about £180 to £250 monthly during titration.
+                  Best UK weight loss medication in headline trials? Tirzepatide (Mounjaro) often edges semaglutide (Wegovy) near 20% versus 15% loss bands in year one summaries (NEJM 2024 style comparisons). Ozempic UK alternative for weight optimisation? Wegovy uses the same semaglutide molecule at weight loss dosing. Ozempic cost? Private marketing often quotes about Â£180 to Â£250 monthly during titration.
                 </p>
 
                 <p className={subh}>Understanding GLP 1 receptor agonists</p>
@@ -310,11 +310,11 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
                     <tbody>
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Wegovy</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About £179 at 0.25 mg toward about £289 at 2.4 mg</td>
+                        <td className={`border px-3 py-2 ${tableBorder}`}>About Â£179 at 0.25 mg toward about Â£289 at 2.4 mg</td>
                       </tr>
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>Mounjaro</td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>About £199 at 2.5 mg toward about £299 at 15 mg</td>
+                        <td className={`border px-3 py-2 ${tableBorder}`}>About Â£199 at 2.5 mg toward about Â£299 at 15 mg</td>
                       </tr>
                       <tr>
                         <td className={`border px-3 py-2 ${tableBorder}`}>NHS</td>
@@ -347,7 +347,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="tier4" heading="Tier 4: non surgical fat reduction technologies">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  CoolSculpting Liverpool? Cryolipolysis freezes targeted fat in about 35 to 60 minute sessions, with marketing near 20 to 25% reduction per area for belly or flanks when you are a suitable pinchable candidate. Quoted bands about £350 to £600 per area appear in local clinic brochures.
+                  CoolSculpting Liverpool? Cryolipolysis freezes targeted fat in about 35 to 60 minute sessions, with marketing near 20 to 25% reduction per area for belly or flanks when you are a suitable pinchable candidate. Quoted bands about Â£350 to Â£600 per area appear in local clinic brochures.
                 </p>
 
                 <p className={p}>
@@ -355,7 +355,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Ultrasound cavitation uses sound waves to disrupt fat cells, with about 15 to 20% reduction claims and cheaper per session quotes near £150, yet maintenance visits stack (Dermatologic Surgery, DOI 10.1097/DSS.000000000003456; 2025).
+                  Ultrasound cavitation uses sound waves to disrupt fat cells, with about 15 to 20% reduction claims and cheaper per session quotes near Â£150, yet maintenance visits stack (Dermatologic Surgery, DOI 10.1097/DSS.000000000003456; 2025).
                 </p>
 
                 <p className={p}>
@@ -439,7 +439,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={`mt-4 ${p}`}>
                   Use our{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     pharmacy verification guide
                   </Link>{" "}
                   and{" "}
@@ -453,7 +453,7 @@ export default function LiverpoolLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="multipliers" heading="Liverpool local multipliers">
                 <ul className={`list-disc space-y-2 pl-6 ${p}`}>
                   <li>Sefton Park: about 4 km loop, about 400 calorie burn for many paces</li>
-                  <li>Great Homer Street Market: fresh mackerel near £4 per kg in seasonal stalls</li>
+                  <li>Great Homer Street Market: fresh mackerel near Â£4 per kg in seasonal stalls</li>
                   <li>Merseyrail active commuting: 10k steps station to stadium days when safe</li>
                   <li>NHS Liverpool tier 2: free eight week style programmes when referred</li>
                   <li>Anfield abseil and charity events that double motivation through team pledges</li>

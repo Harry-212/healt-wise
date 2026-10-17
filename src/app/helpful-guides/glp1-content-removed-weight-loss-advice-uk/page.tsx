@@ -118,7 +118,7 @@ const REFERENCES = [
 
 const RELATED_GUIDES = [
   {
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     category: "Pharmacy Safety",
     title: "How We Verify UK Pharmacies: GPhC Checks Explained",
     description:
@@ -252,7 +252,7 @@ export default function GuideGlp1ContentRemoval() {
             </>,
             <>
               Safety warnings about unregulated providers. Our guide on{" "}
-              <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+              <IL href="/pharmacy-safety-gphc-verification">
                 how we verify UK pharmacies
               </IL>{" "}
               explains why this matters.
@@ -405,7 +405,7 @@ export default function GuideGlp1ContentRemoval() {
             "Greater exposure to misinformation from sources that avoid flagged terms by using obfuscating language.",
             <>
               Difficulty identifying safe, regulated providers. Our{" "}
-              <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+              <IL href="/pharmacy-safety-gphc-verification">
                 pharmacy verification guide
               </IL>{" "}
               explains what to look for.
@@ -437,7 +437,7 @@ export default function GuideGlp1ContentRemoval() {
             </>,
             <>
               Clear pathways to{" "}
-              <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+              <IL href="/pharmacy-safety-gphc-verification">
                 safe, regulated providers
               </IL>{" "}
               who operate within UK law.

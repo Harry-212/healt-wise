@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
@@ -149,7 +149,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
             </span>
             <span className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              Independent guide · 2026
+              Independent guide Â· 2026
             </span>
           </div>
 
@@ -160,7 +160,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
             <article className="space-y-8 leading-relaxed">
               <GuideSection darkMode={darkMode} id="intro" heading={`Why best weight loss treatment in ${name} is local and clinical`}>
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Best in Merthyr Tydfil? NHS Wales dietitian programs (free, 5-10% loss proven), private GLP-1 like Wegovy/Mounjaro for BMI 30+, non-surgical cryolipolysis for stubborn fat. Mounjaro cost Wales? £150-250/month private. 5kg in 7 days? Unsafe—aim 0.5-1kg/week. Kelly Clarkson? GLP-1 + lifestyle. Most effective? Calorie deficit + exercise + behavior change (NICE-backed).
+                  Best in Merthyr Tydfil? NHS Wales dietitian programs (free, 5-10% loss proven), private GLP-1 like Wegovy/Mounjaro for BMI 30+, non-surgical cryolipolysis for stubborn fat. Mounjaro cost Wales? Â£150-250/month private. 5kg in 7 days? Unsafeâ€”aim 0.5-1kg/week. Kelly Clarkson? GLP-1 + lifestyle. Most effective? Calorie deficit + exercise + behavior change (NICE-backed).
                 </p>
 
                 <p className={`text-lg md:text-xl ${p}`}>
@@ -174,21 +174,21 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="smart-tactics" heading="Why Merthyr Tydfil Demands Smart Weight Tactics">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  South Wales obesity? 30% adults (Public Health Wales 2025)—Merthyr mirrors; services via NHS Cwm Taf Morgannwg board, not instant GLP-1. Local hacks: Afan Forest walks burn 300cals/hour.
+                  South Wales obesity? 30% adults (Public Health Wales 2025)â€”Merthyr mirrors; services via NHS Cwm Taf Morgannwg board, not instant GLP-1. Local hacks: Afan Forest walks burn 300cals/hour.
                 </p>
 
                 <p className={p}>
-                  NHS Wales data shows regional overweight at 63%+ Public Health Wales, Obesity Report 2025—Merthyr&apos;s post-industrial mix means transport to clinics matters. Could private speed things? Possibly, but GP loops ensure safety. Nuance: Health boards prioritize lifestyle first; meds follow assessment.
+                  NHS Wales data shows regional overweight at 63%+ Public Health Wales, Obesity Report 2025â€”Merthyr&apos;s post-industrial mix means transport to clinics matters. Could private speed things? Possibly, but GP loops ensure safety. Nuance: Health boards prioritize lifestyle first; meds follow assessment.
                 </p>
 
                 <p className={p}>
-                  Local advantage: Merthyr&apos;s park circuits (Cyfarthfa Park loops) torch 280 calories/hour—free, accessible. Pair with market meat swaps (lean Welsh lamb over pasties).
+                  Local advantage: Merthyr&apos;s park circuits (Cyfarthfa Park loops) torch 280 calories/hourâ€”free, accessible. Pair with market meat swaps (lean Welsh lamb over pasties).
                 </p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="pathways" heading="NHS vs Private Pathways in Merthyr Tydfil">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  NHS route? GP referral to tier 2/3—group sessions, dietitians (free, 5-10% loss proven). Private? Online clinics for Wegovy etc., £150-300/month, GPhC-verified.
+                  NHS route? GP referral to tier 2/3â€”group sessions, dietitians (free, 5-10% loss proven). Private? Online clinics for Wegovy etc., Â£150-300/month, GPhC-verified.
                 </p>
 
                 <p className={p}>
@@ -196,8 +196,8 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Private: GPhC-registered online services deliver refrigerated pens (semaglutide/Wegovy, tirzepatide/Mounjaro). Faster, but check titration (slow dose ramp to cut nausea). Example: MHRA-regulated pharmacies maintain cold chains—vital for efficacy. Read{" "}
-                  <Link className={linkCls} href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+                  Private: GPhC-registered online services deliver refrigerated pens (semaglutide/Wegovy, tirzepatide/Mounjaro). Faster, but check titration (slow dose ramp to cut nausea). Example: MHRA-regulated pharmacies maintain cold chainsâ€”vital for efficacy. Read{" "}
+                  <Link className={linkCls} href="/pharmacy-safety-gphc-verification">
                     how we verify UK pharmacies
                   </Link>{" "}
                   before paying.
@@ -218,11 +218,11 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  GLP-1s mimic gut hormones, slowing emptying. Wegovy: Weekly pen, NHS eligible BMI 35+ (30+ comorbidities). Mounjaro: Adds GIP for extra satiety—trials show 20% loss.
+                  GLP-1s mimic gut hormones, slowing emptying. Wegovy: Weekly pen, NHS eligible BMI 35+ (30+ comorbidities). Mounjaro: Adds GIP for extra satietyâ€”trials show 20% loss.
                 </p>
 
                 <p className={p}>
-                  Side effects? Nausea (titrate slow), gallbladder risks—GP bloods essential. Impossible to ignore: Not forever fixes; pair with 500-cal deficits for 1kg/week. Compare{" "}
+                  Side effects? Nausea (titrate slow), gallbladder risksâ€”GP bloods essential. Impossible to ignore: Not forever fixes; pair with 500-cal deficits for 1kg/week. Compare{" "}
                   <Link className={linkCls} href="/what-is-wegovy">
                     Wegovy
                   </Link>{" "}
@@ -244,15 +244,15 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="mounjaro-cost" heading="Mounjaro Cost in Merthyr Tydfil (FAQ Answer)">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Mounjaro cost Wales? Private £150-250/month (incl. delivery, titration). NHS only severe cases (BMI 40+ comorbidities).
+                  Mounjaro cost Wales? Private Â£150-250/month (incl. delivery, titration). NHS only severe cases (BMI 40+ comorbidities).
                 </p>
 
                 <p className={p}>
-                  Merthyr residents asking &quot;How much does Mounjaro cost in Scotland?&quot; (Wales similar): Private prescriptions range £180-280/month (tirzepatide pens, 4-week supply). NHS Wales covers BMI 40+ with comorbidities like diabetes—waits 6-12 months. Breakdown: £50-80/pen, plus £20-40 delivery. Could vary by provider; GPhC-registered clinics list transparently.
+                  Merthyr residents asking &quot;How much does Mounjaro cost in Scotland?&quot; (Wales similar): Private prescriptions range Â£180-280/month (tirzepatide pens, 4-week supply). NHS Wales covers BMI 40+ with comorbidities like diabetesâ€”waits 6-12 months. Breakdown: Â£50-80/pen, plus Â£20-40 delivery. Could vary by provider; GPhC-registered clinics list transparently.
                 </p>
 
                 <p className={p}>
-                  Hedging: Prices surge if supply tight; MHRA warns batch shifts. Long-term: £2,000+/year—budget for tapers. Compare current listings on{" "}
+                  Hedging: Prices surge if supply tight; MHRA warns batch shifts. Long-term: Â£2,000+/yearâ€”budget for tapers. Compare current listings on{" "}
                   <Link className={linkCls} href="/mounjaro-price-comparison">
                     Mounjaro price comparison
                   </Link>{" "}
@@ -270,15 +270,15 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  What is the best non-surgical weight loss treatment? Merthyr access: Cryolipolysis (CoolSculpting-style) cools 21% fat per area [Aesthetic Surgery Journal, DOI: 10.1093/asj/sjae145; 2024]. Sessions 35-50 mins; downtime minimal. Ultrasound: Sound waves burst cells—20% reduction [Journal of Cosmetic Dermatology, DOI: 10.1111/jocd.16234; 2025].
+                  What is the best non-surgical weight loss treatment? Merthyr access: Cryolipolysis (CoolSculpting-style) cools 21% fat per area [Aesthetic Surgery Journal, DOI: 10.1093/asj/sjae145; 2024]. Sessions 35-50 mins; downtime minimal. Ultrasound: Sound waves burst cellsâ€”20% reduction [Journal of Cosmetic Dermatology, DOI: 10.1111/jocd.16234; 2025].
                 </p>
 
                 <p className={p}>
-                  T3 (thyroid hormone)? Will T3 help you lose weight? Only if hypothyroid (low thyroid); otherwise risky—MHRA flags arrhythmia/cardiac issues. Obesity Reviews (2025) deems ineffective for normal thyroid [DOI: 10.1111/obr.14012].
+                  T3 (thyroid hormone)? Will T3 help you lose weight? Only if hypothyroid (low thyroid); otherwise riskyâ€”MHRA flags arrhythmia/cardiac issues. Obesity Reviews (2025) deems ineffective for normal thyroid [DOI: 10.1111/obr.14012].
                 </p>
 
                 <p className={p}>
-                  Non-surgical edge: Picture Cyfarthfa belly fat—targets without surgery. But lifestyle anchors; solos fade [Clinical Obesity, DOI: 10.1111/cob.13089; 2024].
+                  Non-surgical edge: Picture Cyfarthfa belly fatâ€”targets without surgery. But lifestyle anchors; solos fade [Clinical Obesity, DOI: 10.1111/cob.13089; 2024].
                 </p>
               </GuideSection>
 
@@ -287,7 +287,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                   5kg? 5 weeks (0.75kg/week: walks + protein). 20kg/5 months? Meds + strength (feasible BMI-eligible).
                 </p>
 
-                <p className={p}>No 7-day miracles—unsafe. Safe: 0.5-1kg/week.</p>
+                <p className={p}>No 7-day miraclesâ€”unsafe. Safe: 0.5-1kg/week.</p>
 
                 <p className={p}>
                   Short-term (5kg): Daily 400-cal cut, Quaker&apos;s Walk trails. Track via app. Grid: Week 1-2: Adjust; 3-5: Steady.
@@ -328,7 +328,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="local-challenges" heading="Deep Dive: Merthyr Tydfil-Specific Challenges">
                 <p className={p}>
-                  Valley terrain: Steep hikes burn extra, but foggy winters limit. Obesity 31% (Wales avg, Public Health Wales 2025)—post-industrial shifts mean night work.
+                  Valley terrain: Steep hikes burn extra, but foggy winters limit. Obesity 31% (Wales avg, Public Health Wales 2025)â€”post-industrial shifts mean night work.
                 </p>
 
                 <p className={p}>
@@ -336,7 +336,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Night shifts: Cortisol spikes—mindfulness offsets 4kg [Journal of Health Psychology, DOI: 10.1177/1359105325128765; 2025].
+                  Night shifts: Cortisol spikesâ€”mindfulness offsets 4kg [Journal of Health Psychology, DOI: 10.1177/1359105325128765; 2025].
                 </p>
               </GuideSection>
 
@@ -346,7 +346,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Apps track 20% better [Lancet Digital, 2025]. Acquaintance tracked valley stroll snacks—simplified wins.
+                  Apps track 20% better [Lancet Digital, 2025]. Acquaintance tracked valley stroll snacksâ€”simplified wins.
                 </p>
 
                 <p className={p}>
@@ -354,7 +354,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                 </p>
 
                 <p className={p}>
-                  Celebrity reference: Kelly Clarkson lost 30lbs via GLP-1 + cardio (per Variety interview)—mimic with Welsh trails.
+                  Celebrity reference: Kelly Clarkson lost 30lbs via GLP-1 + cardio (per Variety interview)â€”mimic with Welsh trails.
                 </p>
               </GuideSection>
 
@@ -400,7 +400,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="resources" heading="Merthyr Tydfil Resources for Momentum">
                 <p className={p}>
-                  Cyfarthfa Castle walks, Pontyclun markets. NHS groups—22% success bump [NEJM Public Health, 2025].
+                  Cyfarthfa Castle walks, Pontyclun markets. NHS groupsâ€”22% success bump [NEJM Public Health, 2025].
                 </p>
 
                 <p className={p}>
@@ -421,16 +421,16 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
                   as a starting point, not a diagnosis.
                 </p>
 
-                <p className={p}>Shared care: Some GP surgeries accept—ask upfront.</p>
+                <p className={p}>Shared care: Some GP surgeries acceptâ€”ask upfront.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="prices" heading="Price Breakdowns for Budgeting">
                 <p className={p}>
-                  Wegovy: £180-260/month (semaglutide). Mounjaro: £180-280. Delivery £20-40 (cold chain).
+                  Wegovy: Â£180-260/month (semaglutide). Mounjaro: Â£180-280. Delivery Â£20-40 (cold chain).
                 </p>
 
                 <p className={p}>
-                  NHS: Free if eligible, but waits. Private: Faster, £2,000+/year. Compare{" "}
+                  NHS: Free if eligible, but waits. Private: Faster, Â£2,000+/year. Compare{" "}
                   <Link className={linkCls} href="/mounjaro-price-comparison">
                     Mounjaro prices
                   </Link>{" "}
@@ -474,7 +474,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
               <GuideSection darkMode={darkMode} id="winter" heading="Winter Survival Plan for Merthyr">
                 <p className={p}>Foggy trails? Indoor elliptical. Comfort eating: Herbal teas over hot chocolate.</p>
 
-                <p className={p}>Moisture: Dry skin common—hydrate.</p>
+                <p className={p}>Moisture: Dry skin commonâ€”hydrate.</p>
               </GuideSection>
 
               <GuideSection darkMode={darkMode} id="sources" heading="Key guidance">
@@ -552,7 +552,7 @@ export default function MerthyrTydfilLocationContent({ loc, shareUrl }: Props) {
 
               <GuideSection darkMode={darkMode} id="conclusion" heading="Conclusion: Merthyr Tydfil's Empowered Slimming Path">
                 <p className={`text-lg md:text-xl ${p}`}>
-                  Best weight loss treatment Merthyr Tydfil? NHS foundations + smart private if needed—tailored, monitored, local. From GP chats to valley trails, sustainable wins await. Assess demographics, act safely—your fitter tomorrow starts here.
+                  Best weight loss treatment Merthyr Tydfil? NHS foundations + smart private if neededâ€”tailored, monitored, local. From GP chats to valley trails, sustainable wins await. Assess demographics, act safelyâ€”your fitter tomorrow starts here.
                 </p>
               </GuideSection>
 

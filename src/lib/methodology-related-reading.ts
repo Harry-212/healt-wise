@@ -33,16 +33,6 @@ const METHODOLOGY_RELATED: RecommendedItem[] = [
   },
   {
     kind: "guide",
-    href: helpfulGuidePath("how-we-verify-uk-pharmacies-gphc-safety-standards"),
-    title: "How We Verify UK Pharmacies",
-    description:
-      "GPhC safety standards and checks we apply when listing providers.",
-    imageUrl:
-      GUIDE_IMAGES["how-we-verify-uk-pharmacies-gphc-safety-standards"] ??
-      "/blog/pharmacies.webp",
-  },
-  {
-    kind: "guide",
     href: helpfulGuidePath("fake-online-pharmacy-uk-how-to-spot-stay-safe"),
     title: "Fake Online Pharmacy UK: How to Spot and Stay Safe",
     description:

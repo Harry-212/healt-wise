@@ -1,4 +1,4 @@
-import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
+﻿import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
 import {
@@ -22,7 +22,7 @@ export const metadata = buildGuideShareMetadata({
   title: "Mounjaro Delivery Times UK: Safety First",
   description: "Fast Mounjaro delivery is advertised but prescribing takes time. What's involved, why delays happen, and how to choose a trustworthy UK provider.",
   openGraphTitle: "Mounjaro Delivery Times UK: Safety First",
-  openGraphDescription: "Online pharmacies advertise fast Mounjaro delivery—but responsible prescribing takes time. Here's what the dispensing process involves and how to choose a provider you can trust.",
+  openGraphDescription: "Online pharmacies advertise fast Mounjaro deliveryâ€”but responsible prescribing takes time. Here's what the dispensing process involves and how to choose a provider you can trust.",
 });
 
 
@@ -40,11 +40,11 @@ const TOC = [
 const FAQ_ITEMS = [
   {
     q: "How long does Mounjaro delivery take in the UK?",
-    a: "Delivery time varies by provider and depends on how quickly you complete the consultation, provide required documents, and receive clinical approval. After approval, most regulated online pharmacies dispatch within 1–2 working days, with delivery taking a further 1–2 days via tracked courier. Total time from consultation to receipt is typically 2–5 working days with a reputable provider.",
+    a: "Delivery time varies by provider and depends on how quickly you complete the consultation, provide required documents, and receive clinical approval. After approval, most regulated online pharmacies dispatch within 1â€“2 working days, with delivery taking a further 1â€“2 days via tracked courier. Total time from consultation to receipt is typically 2â€“5 working days with a reputable provider.",
   },
   {
     q: "Is same-day Mounjaro delivery available in the UK?",
-    a: "Same-day delivery is advertised by some providers, but it should be approached with caution. Safe prescribing involves multiple clinical checks that cannot be responsibly completed in minutes. If a provider promises instant or same-day prescribing without adequate review, that is a red flag—not a benefit.",
+    a: "Same-day delivery is advertised by some providers, but it should be approached with caution. Safe prescribing involves multiple clinical checks that cannot be responsibly completed in minutes. If a provider promises instant or same-day prescribing without adequate review, that is a red flagâ€”not a benefit.",
   },
   {
     q: "Why is my Mounjaro order taking so long?",
@@ -52,49 +52,49 @@ const FAQ_ITEMS = [
   },
   {
     q: "What is a Black Triangle medication and does it apply to Mounjaro?",
-    a: "Black Triangle (▼) medicines are those under additional safety monitoring by the MHRA. This status applies to new medicines or those approved under exceptional circumstances. It means healthcare professionals and patients are particularly encouraged to report side effects. At the time of writing, Mounjaro carries Black Triangle status in the UK.",
+    a: "Black Triangle (â–¼) medicines are those under additional safety monitoring by the MHRA. This status applies to new medicines or those approved under exceptional circumstances. It means healthcare professionals and patients are particularly encouraged to report side effects. At the time of writing, Mounjaro carries Black Triangle status in the UK.",
   },
   {
     q: "How is Mounjaro stored during delivery?",
-    a: "Mounjaro must be refrigerated between 2°C and 8°C. Regulated pharmacies use temperature-controlled cold-chain packaging to maintain this during transit. When your pen arrives, check the outer packaging for signs of damage and verify the medication feels appropriately cool. For full storage guidance, see our Mounjaro delivery and storage guide.",
+    a: "Mounjaro must be refrigerated between 2Â°C and 8Â°C. Regulated pharmacies use temperature-controlled cold-chain packaging to maintain this during transit. When your pen arrives, check the outer packaging for signs of damage and verify the medication feels appropriately cool. For full storage guidance, see our Mounjaro delivery and storage guide.",
   },
   {
     q: "Can I trust a Mounjaro provider that promises very fast delivery?",
-    a: "Fast dispatch after a thorough consultation is fine. But promises of rapid delivery that imply skipping clinical review steps should not be trusted. The clinical checks involved in responsible prescribing—identity verification, BMI assessment, medical history review—take time and cannot be skipped without compromising patient safety.",
+    a: "Fast dispatch after a thorough consultation is fine. But promises of rapid delivery that imply skipping clinical review steps should not be trusted. The clinical checks involved in responsible prescribingâ€”identity verification, BMI assessment, medical history reviewâ€”take time and cannot be skipped without compromising patient safety.",
   },
 ];
 
 const REFERENCES = [
   {
-    label: "GPhC — Standards for internet pharmacies",
+    label: "GPhC â€” Standards for internet pharmacies",
     description:
       "GPhC standards that online pharmacies must meet, including prescription verification and safe dispensing requirements.",
     href: "https://www.pharmacyregulation.org/standards/standards-registered-pharmacies",
   },
   {
-    label: "MHRA — Black Triangle scheme",
+    label: "MHRA â€” Black Triangle scheme",
     description:
       "MHRA guidance on medicines under additional monitoring, including how to identify Black Triangle medicines and report side effects.",
     href: "https://www.gov.uk/report-problem-medicine-medical-device",
   },
   {
-    label: "MHRA — Buying prescription medicines safely online",
+    label: "MHRA â€” Buying prescription medicines safely online",
     description:
       "MHRA guidance on how to identify legitimate online pharmacies and avoid unsafe providers.",
     href: "https://fakemeds.campaign.gov.uk/",
   },
   {
-    label: "Mounjaro delivery & storage UK — Health Wise",
+    label: "Mounjaro delivery & storage UK â€” Health Wise",
     description:
       "Temperature rules, safety checks on arrival, and what to do if something looks wrong with your delivery.",
     href: "/helpful-guides/mounjaro-delivery-storage-uk",
     external: false,
   },
   {
-    label: "How we verify UK pharmacies — Health Wise",
+    label: "How we verify UK pharmacies â€” Health Wise",
     description:
       "Our GPhC-based pharmacy verification process and the standards every listed provider must meet.",
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     external: false,
   },
 ];
@@ -105,10 +105,10 @@ const RELATED_GUIDES = [
     category: "Pharmacy Safety",
     title: "Mounjaro Delivery & Storage UK: Temperature Rules & Safety Checks",
     description:
-      "What to check when your Mounjaro arrives—temperature requirements and what to do if something looks wrong.",
+      "What to check when your Mounjaro arrivesâ€”temperature requirements and what to do if something looks wrong.",
   },
   {
-    href: "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
+    href: "/pharmacy-safety-gphc-verification",
     category: "Pharmacy Safety",
     title: "How We Verify UK Pharmacies: GPhC Checks & Safety Standards",
     description:
@@ -121,7 +121,7 @@ const SCHEMA = {
   "@type": "Article",
   headline: "Mounjaro Delivery Times UK: Safety First",
   description:
-    "Online pharmacies advertise fast Mounjaro delivery—but responsible prescribing takes time. Here's what the dispensing process involves and how to choose a provider you can trust.",
+    "Online pharmacies advertise fast Mounjaro deliveryâ€”but responsible prescribing takes time. Here's what the dispensing process involves and how to choose a provider you can trust.",
   author: { "@type": "Organization", name: "Healthwise360 Research Team" },
   publisher: {
     "@type": "Organization",
@@ -156,7 +156,7 @@ export default function GuideMounjaroDeliveryTimes() {
       category="Pharmacy Safety"
       categorySlug="pharmacy-safety"
       title="Mounjaro Delivery Times UK: Why Safety Matters More Than Speed"
-      description="Many online pharmacies advertise fast Mounjaro delivery as a selling point. But the clinical checks required for safe prescribing take time—and a provider that rushes them is a provider that is cutting corners. Here's what responsible dispensing involves."
+      description="Many online pharmacies advertise fast Mounjaro delivery as a selling point. But the clinical checks required for safe prescribing take timeâ€”and a provider that rushes them is a provider that is cutting corners. Here's what responsible dispensing involves."
       readTime="3 min read"
       lastUpdated="April 2026"
       toc={TOC}
@@ -181,7 +181,7 @@ export default function GuideMounjaroDeliveryTimes() {
 </GuideParagraph>
         <GuideBulletList
           items={[
-            "Unrealistically fast delivery promises — clinical review cannot responsibly be done in minutes",
+            "Unrealistically fast delivery promises â€” clinical review cannot responsibly be done in minutes",
             "Overly promotional reviews emphasising speed over safety",
             "Services where a human clinician is not clearly involved in prescription decisions",
             "Platforms that do not ask for medical history or proof of BMI",
@@ -195,7 +195,7 @@ export default function GuideMounjaroDeliveryTimes() {
             GPhC-registered
           </EL>{" "}
           and follow safe prescribing standards. See{" "}
-          <IL href="/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards">
+          <IL href="/pharmacy-safety-gphc-verification">
             how we verify pharmacies
           </IL>
           .
@@ -208,7 +208,7 @@ export default function GuideMounjaroDeliveryTimes() {
           <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> is
           classified as a{" "}
           <EL href="https://www.gov.uk/report-problem-medicine-medical-device">
-            Black Triangle (▼) medication
+            Black Triangle (â–¼) medication
           </EL>{" "}
           by the MHRA. This designation applies to newer medicines under
           additional post market safety monitoring, and signals that extra
@@ -281,7 +281,7 @@ export default function GuideMounjaroDeliveryTimes() {
         </h3>
         <GuideParagraph>
           The medication is labelled, accuracy checked, and packaged including
-          temperature controlled cold chain packaging to maintain the 2°C–8°C
+          temperature controlled cold chain packaging to maintain the 2Â°Câ€“8Â°C
           storage requirement during transit.
 </GuideParagraph>
 
@@ -310,28 +310,28 @@ export default function GuideMounjaroDeliveryTimes() {
         <GuideBulletListRich
           items={[
             <>
-              <strong>Incomplete documentation</strong> — the pharmacy is
+              <strong>Incomplete documentation</strong> â€” the pharmacy is
               waiting for you to upload BMI information, identity documents, or
               medical history.
             </>,
             <>
-              <strong>Clinical review queue</strong> — the prescriber is
+              <strong>Clinical review queue</strong> â€” the prescriber is
               reviewing your details. High-volume periods can extend this.
             </>,
             <>
-              <strong>Additional clinical questions</strong> — a prescriber may
+              <strong>Additional clinical questions</strong> â€” a prescriber may
               need to follow up on an aspect of your health history before
               approving the prescription.
             </>,
             <>
-              <strong>Stock or courier logistics</strong> — occasionally,
+              <strong>Stock or courier logistics</strong> â€” occasionally,
               specific doses may be on short supply, or courier collection
               windows may cause a one-day delay.
             </>,
           ]}
         />
         <GuideCallout variant="info">
-          A delay caused by thorough clinical review is not inefficiency—it is
+          A delay caused by thorough clinical review is not inefficiencyâ€”it is
           the process working as it should. If your provider never asks for
           clinical information and dispatches immediately, that is the scenario
           to be concerned about.
@@ -341,11 +341,11 @@ export default function GuideMounjaroDeliveryTimes() {
       <GuideSection id="what-patients-do" heading="What Patients Should Do">
         <GuideBulletList
           items={[
-            "Allow time for processing — plan your order at least 5–7 working days before you need your next dose",
-            "Respond quickly to any requests from your provider — incomplete consultations are the most common cause of delay",
-            "Check your email and patient portal regularly — many pharmacies send status updates and may need additional information",
-            "Order before you run out — do not wait until your last pen to reorder; build a one-week buffer",
-            "Choose regulated pharmacies — GPhC-registered providers with clear clinical processes, not those focused solely on speed",
+            "Allow time for processing â€” plan your order at least 5â€“7 working days before you need your next dose",
+            "Respond quickly to any requests from your provider â€” incomplete consultations are the most common cause of delay",
+            "Check your email and patient portal regularly â€” many pharmacies send status updates and may need additional information",
+            "Order before you run out â€” do not wait until your last pen to reorder; build a one-week buffer",
+            "Choose regulated pharmacies â€” GPhC-registered providers with clear clinical processes, not those focused solely on speed",
           ]}
         />
       </GuideSection>
@@ -358,26 +358,26 @@ export default function GuideMounjaroDeliveryTimes() {
         <GuideBulletListRich
           items={[
             <>
-              <strong>GPhC registration</strong> — verify at the{" "}
+              <strong>GPhC registration</strong> â€” verify at the{" "}
               <EL href="https://www.pharmacyregulation.org/registers/pharmacy">
                 GPhC register
               </EL>{" "}
               before ordering.
             </>,
             <>
-              <strong>Transparent clinical process</strong> — can you see
+              <strong>Transparent clinical process</strong> â€” can you see
               clearly what assessment steps the prescriber takes?
             </>,
             <>
-              <strong>Patient support access</strong> — can you reach a
+              <strong>Patient support access</strong> â€” can you reach a
               clinician or pharmacist if something goes wrong?
             </>,
             <>
-              <strong>Cold-chain delivery</strong> — do they use temperature-
+              <strong>Cold-chain delivery</strong> â€” do they use temperature-
               controlled packaging to protect the medication in transit?
             </>,
             <>
-              <strong>GP notification policy</strong> — do they notify your GP
+              <strong>GP notification policy</strong> â€” do they notify your GP
               as required? See our guide on{" "}
               <IL href="/helpful-guides/mounjaro-gp-notification-uk">
                 GP notification for Mounjaro
@@ -390,10 +390,10 @@ export default function GuideMounjaroDeliveryTimes() {
 
       <GuideKeyTakeaways
         items={[
-          "Fast delivery claims are not a proxy for quality—responsible prescribing involves clinical steps that take time.",
+          "Fast delivery claims are not a proxy for qualityâ€”responsible prescribing involves clinical steps that take time.",
           "Mounjaro is a Black Triangle medication under additional MHRA monitoring, requiring extra care at every stage of dispensing.",
           "A legitimate prescription involves: prescription review, identity verification, clinical assessment, dispensing, and cold-chain delivery.",
-          "Most delays are safety-related—incomplete documentation or clinical review. Plan your order 5–7 days before you need your next dose.",
+          "Most delays are safety-relatedâ€”incomplete documentation or clinical review. Plan your order 5â€“7 days before you need your next dose.",
           "Choose providers on clinical rigour (GPhC registration, transparent process, GP notification) rather than delivery speed.",
         ]}
       />
