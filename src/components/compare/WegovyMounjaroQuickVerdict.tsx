@@ -5,6 +5,7 @@ export interface WegovyMounjaroQuickVerdictProps {
   mounjaroStarterLow?: string;
   wegovyTopTypical?: string;
   mounjaroTopTypical?: string;
+  pricesChecked?: string;
 }
 
 export default function WegovyMounjaroQuickVerdict({
@@ -12,6 +13,7 @@ export default function WegovyMounjaroQuickVerdict({
   mounjaroStarterLow = "£119.69",
   wegovyTopTypical = "£200",
   mounjaroTopTypical = "£299",
+  pricesChecked = "20 September 2026",
 }: WegovyMounjaroQuickVerdictProps) {
   const comparisonRows = [
     {
@@ -133,6 +135,9 @@ export default function WegovyMounjaroQuickVerdict({
             </table>
           </div>
         </div>
+        <p className="mt-3 text-xs font-medium text-slate-500 md:text-sm">
+          Prices checked {pricesChecked}
+        </p>
 
         {/* In short summary */}
         <div className="mt-8 rounded-2xl border border-slate-200/90 bg-slate-50/70 p-6">

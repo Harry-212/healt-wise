@@ -1,5 +1,8 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
+import { hasHeadingFreeChrome } from '@/lib/seo/heading-free-chrome';
+
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
@@ -39,6 +42,7 @@ function panelGridClass(panel: NavPanel, colCount: number): string {
 }
 
 export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
+  const ColTitle = hasHeadingFreeChrome(usePathname()) ? 'p' : 'h3';
   const [openId, setOpenId] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const navRef = useRef<HTMLUListElement>(null);
@@ -158,7 +162,7 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
                       <div className={gridClass}>
                         {cols.map((col) => (
                           <div key={col.title || col.links[0]?.href} className="min-w-0">
-                            {col.title ? <h3 className="mb-2 border-b border-brand-border pb-1.5 text-[11px] font-bold uppercase tracking-wide text-brand-secondary">{col.title}</h3> : null}
+                            {col.title ? <ColTitle className="mb-2 border-b border-brand-border pb-1.5 text-[11px] font-bold uppercase tracking-wide text-brand-secondary">{col.title}</ColTitle> : null}
                             <ul className="space-y-0.5">
                               {col.links.map((link) => {
                                 const accent = link.accent
