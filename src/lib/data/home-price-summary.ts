@@ -1,5 +1,4 @@
 import "server-only";
-import { isAffiliatePartner } from "./affiliate-partners";
 import {
   getMounjaroCompareProviders,
   getWegovyCompareProviders,
@@ -128,11 +127,8 @@ export function getLivePriceSummary(): HomePriceSummary {
     listed: 48,
   };
 
-  // Cheapest single affiliated pharmacy for the first 3 months of Mounjaro (2.5mg, 5mg, 7.5mg)
-  const mjAffiliatePool = mjProviders.filter((p) => isAffiliatePartner(p.id));
-  const mjThreeMonthCandidates = (
-    mjAffiliatePool.length > 0 ? mjAffiliatePool : mjProviders
-  )
+  // Cheapest single verified pharmacy (affiliate or not) for the first 3 months of Mounjaro (2.5mg, 5mg, 7.5mg)
+  const mjThreeMonthCandidates = mjProviders
     .filter(
       (p) =>
         p.prices["2.5mg"] > 0 && p.prices["5mg"] > 0 && p.prices["7.5mg"] > 0,
@@ -157,11 +153,8 @@ export function getLivePriceSummary(): HomePriceSummary {
     total: 440.07,
   };
 
-  // Cheapest single affiliated pharmacy for the first 3 months of Wegovy (0.25mg, 0.5mg, 1mg)
-  const wgAffiliatePool = wgProviders.filter((p) => isAffiliatePartner(p.id));
-  const wgThreeMonthCandidates = (
-    wgAffiliatePool.length > 0 ? wgAffiliatePool : wgProviders
-  )
+  // Cheapest single verified pharmacy (affiliate or not) for the first 3 months of Wegovy (0.25mg, 0.5mg, 1mg)
+  const wgThreeMonthCandidates = wgProviders
     .map((p) => {
       const m1 = wegovyPriceAmount(p.prices["0.25mg"]);
       const m2 = wegovyPriceAmount(p.prices["0.5mg"]);
@@ -202,16 +195,10 @@ export function getLivePriceSummary(): HomePriceSummary {
       MOUNJARO_DOSE_KEYS.map((k) => [k, p.prices[k] > 0 ? p.prices[k] : null]),
     ) as Record<(typeof MOUNJARO_DOSE_KEYS)[number], number | null>,
   );
-  const mjAffiliatePriceRows = mjAffiliatePool.map((p) =>
-    Object.fromEntries(
-      MOUNJARO_DOSE_KEYS.map((k) => [k, p.prices[k] > 0 ? p.prices[k] : null]),
-    ) as Record<(typeof MOUNJARO_DOSE_KEYS)[number], number | null>,
-  );
   const mjFirstSix = buildFirstMonthsCostEstimate(
     MOUNJARO_DOSE_KEYS,
     6,
     mjPriceRows,
-    mjAffiliatePriceRows,
   );
   const wgFirstSix = buildWegovyFirstSixMonthsCostEstimate(wgProviders);
 

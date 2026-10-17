@@ -1,4 +1,3 @@
-import { isAffiliatePartner } from "./affiliate-partners";
 import {
   WEGOVY_DOSE_KEYS,
   type WegovyUkProviderCompare,
@@ -38,9 +37,8 @@ function doseStat(
   const priced = rows.filter((r) => (r.prices[dose] ?? 0) > 0);
   if (priced.length === 0) return null;
   const price = (r: (typeof rows)[number]) => r.prices[dose] as number;
-  const affiliatePriced = priced.filter((r) => isAffiliatePartner(r.id));
-  const lowPool = affiliatePriced.length > 0 ? affiliatePriced : priced;
-  const lowest = lowPool.reduce((a, b) => (price(a) <= price(b) ? a : b));
+  // Lowest is independent of affiliate status: every verified provider counts.
+  const lowest = priced.reduce((a, b) => (price(a) <= price(b) ? a : b));
   const values = priced.map(price);
   return {
     dose,
@@ -109,9 +107,7 @@ export function cheapestWegovyAtDose(
       price: wegovyPriceAmount(p.prices[dose]),
     }))
     .filter((p): p is WegovyCheapestAtDose => p.price != null && p.price > 0);
-  const affiliatePriced = priced.filter((p) => isAffiliatePartner(p.id));
-  const pool = affiliatePriced.length > 0 ? affiliatePriced : priced;
-  return pool.sort((a, b) => a.price - b.price).slice(0, n);
+  return priced.sort((a, b) => a.price - b.price).slice(0, n);
 }
 
 export type WegovyMonthCostRow = {

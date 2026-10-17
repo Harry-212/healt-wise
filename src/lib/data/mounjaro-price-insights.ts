@@ -1,4 +1,3 @@
-import { isAffiliatePartner } from "./affiliate-partners";
 import {
   MOUNJARO_DOSE_KEYS,
   type MounjaroUkProviderCompare,
@@ -50,11 +49,8 @@ function doseStat<K extends string>(
   const priced = rows.filter((r) => (r.prices[dose] ?? 0) > 0);
   if (priced.length === 0) return null;
   const price = (r: PriceRow<K>) => r.prices[dose] as number;
-  const affiliatePriced = priced.filter((r) =>
-    r.id ? isAffiliatePartner(r.id) : false,
-  );
-  const lowPool = affiliatePriced.length > 0 ? affiliatePriced : priced;
-  const lowest = lowPool.reduce((a, b) => (price(a) <= price(b) ? a : b));
+  // Lowest is independent of affiliate status: every verified provider counts.
+  const lowest = priced.reduce((a, b) => (price(a) <= price(b) ? a : b));
   const values = priced.map(price);
   return {
     dose,
@@ -119,18 +115,14 @@ export function buildMounjaroPriceInsights(
 
 export type CheapestAtDose = { id?: string; name: string; price: number };
 
-/** The `n` cheapest listed providers at one strength, lowest first (affiliated partners prioritised). */
+/** The `n` cheapest listed providers at one strength, lowest first, across all verified providers. */
 export function cheapestProvidersAtDose<K extends string>(
   rows: PriceRow<K>[],
   dose: K,
   n = 3,
 ): CheapestAtDose[] {
   const priced = rows.filter((r) => (r.prices[dose] ?? 0) > 0);
-  const affiliatePriced = priced.filter((r) =>
-    r.id ? isAffiliatePartner(r.id) : false,
-  );
-  const pool = affiliatePriced.length > 0 ? affiliatePriced : priced;
-  return pool
+  return priced
     .map((r) => ({ id: r.id, name: r.name, price: r.prices[dose] as number }))
     .sort((a, b) => a.price - b.price)
     .slice(0, n);
@@ -202,31 +194,24 @@ export type FirstMonthsCostEstimate = {
 
 /**
  * Month-by-month cost for the first `months` strengths of the titration
- * ladder (one pen per month). Each month's low comes from affiliated providers
- * (when provided) and typical comes from all providers in the matrix.
+ * ladder (one pen per month). Low and typical both come from all providers
+ * in the matrix.
  */
 export function buildFirstMonthsCostEstimate<K extends string>(
   ladder: readonly K[],
   months: number,
   priceRows: Record<K, number | null>[],
-  lowPriceRows?: Record<K, number | null>[],
 ): FirstMonthsCostEstimate {
   const steps = ladder.slice(0, months);
-  const lowSource =
-    lowPriceRows && lowPriceRows.length > 0 ? lowPriceRows : priceRows;
   const rows: MonthCostRow[] = steps.map((dose, idx) => {
     const allPrices = priceRows
       .map((row) => row[dose])
       .filter((p): p is number => p != null && p > 0);
-    const lowPrices = lowSource
-      .map((row) => row[dose])
-      .filter((p): p is number => p != null && p > 0);
-    const effectiveLowPrices = lowPrices.length > 0 ? lowPrices : allPrices;
     return {
       month: idx + 1,
       dose,
-      low: effectiveLowPrices.length
-        ? Math.round(Math.min(...effectiveLowPrices) * 100) / 100
+      low: allPrices.length
+        ? Math.round(Math.min(...allPrices) * 100) / 100
         : 0,
       typical: allPrices.length ? Math.round(median(allPrices) * 100) / 100 : 0,
     };
