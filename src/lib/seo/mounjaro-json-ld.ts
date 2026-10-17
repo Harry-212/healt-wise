@@ -20,19 +20,54 @@ export function mounjaroArticleJsonLd(): Record<string, unknown> {
 
 export const MOUNJARO_FAQ_ITEMS: { question: string; answer: string }[] = [
   {
-    question: "What is Mounjaro and how does it work?",
+    question: "Is Mounjaro safe?",
     answer:
-      "Mounjaro (tirzepatide) is a prescription injection used for weight management in eligible adults. It activates both GIP and GLP-1 receptors, helping reduce appetite, slow stomach emptying, and support metabolic control alongside diet and exercise. It is not suitable for everyone—only a qualified clinician can decide.",
+      "Mounjaro is a licensed UK medicine, and many people use it safely under a prescriber's care. Like all medicines, it can cause side effects and it is not safe for everyone. Only get it from a GPhC registered pharmacy after a health check.",
   },
   {
-    question: "How much does Mounjaro cost in the UK?",
+    question: "Is Mounjaro insulin?",
     answer:
-      "Private Mounjaro prices vary by dose and provider. Based on the prices shown in our comparison table, headline order prices often rise with strength; always confirm live pricing, consultation fees, and delivery on the pharmacy site before you pay.",
+      "No. Mounjaro is not insulin. It is also an injection, but it works in a different way. It helps your body make insulin when it is needed and lowers hunger.",
   },
   {
-    question: "How is Mounjaro different from Wegovy?",
+    question: "Is Mounjaro the same as Ozempic?",
     answer:
-      "Wegovy contains semaglutide (a GLP-1 receptor agonist). Mounjaro contains tirzepatide, which targets both GIP and GLP-1 pathways. Dosing schedules, trial data, side-effect profiles, and UK access differ. Compare options with your prescriber and our Wegovy vs Mounjaro hub.",
+      "No. Ozempic contains semaglutide and is made by Novo Nordisk. Mounjaro contains tirzepatide and is made by Lilly. Mounjaro copies two hormones. Ozempic copies one.",
+  },
+  {
+    question: "Is Mounjaro a steroid?",
+    answer:
+      "No. Mounjaro is not a steroid. It copies natural gut hormones.",
+  },
+  {
+    question: "Is Mounjaro the same as tirzepatide?",
+    answer:
+      "Yes and no. Tirzepatide is the medicine. Mounjaro is the brand name of the pen that holds it.",
+  },
+  {
+    question: "Is Mounjaro an injection?",
+    answer:
+      "Yes. You inject it once a week under the skin with a pen called the KwikPen.",
+  },
+  {
+    question: "Is Mounjaro a drug?",
+    answer:
+      "Yes. A drug is a medicine. Mounjaro is a prescription medicine.",
+  },
+  {
+    question: "Is Mounjaro the same as Zepbound?",
+    answer:
+      "It is the same medicine, tirzepatide, with a different brand name. Zepbound is the US brand name. In the UK, you will see Mounjaro.",
+  },
+  {
+    question: "Can I get Mounjaro on the NHS?",
+    answer:
+      "Yes, for some people. GPs in England began prescribing it for weight loss in June 2025, starting with people who have the greatest need. It is also available on the NHS for type 2 diabetes. Ask your GP.",
+  },
+  {
+    question: "What happens if I stop Mounjaro?",
+    answer:
+      "Your hunger may come back, and weight often comes back too. Talk to your prescriber before you stop. They can help you plan.",
   },
 ];
 
