@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
   PHARMACY_PROVIDER_CTA_CLASSNAME,
   PharmacyDossierPage,
@@ -72,6 +73,7 @@ export default function PharmacyMePharmacyContent() {
           </Link>{" "}
           across all leading registered providers.
         </p>
+        <PharmacyPriceTable slug="pharmacy-me" providerName="Pharmacy + Me" />
       </section>
 
       <section>
