@@ -16,7 +16,6 @@ import {
   type MounjaroUkProviderCompare,
 } from "@/lib/data/mounjaro-uk-compare-providers";
 import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
-import { isAffiliatePartner } from "@/lib/data/affiliate-partners";
 import {
   buildMounjaroPriceInsights,
   buildFirstMonthsCostEstimate,
@@ -140,24 +139,15 @@ export default function CompareMounjaroPricesUkPage() {
       MOUNJARO_DOSE_KEYS.map((k) => [k, p.prices[k] > 0 ? p.prices[k] : null]),
     ) as Record<(typeof MOUNJARO_DOSE_KEYS)[number], number | null>,
   );
-  const affiliatePriceRows = MOUNJARO_UK_COMPARE_PROVIDERS.filter((p) =>
-    isAffiliatePartner(p.id),
-  ).map((p) =>
-    Object.fromEntries(
-      MOUNJARO_DOSE_KEYS.map((k) => [k, p.prices[k] > 0 ? p.prices[k] : null]),
-    ) as Record<(typeof MOUNJARO_DOSE_KEYS)[number], number | null>,
-  );
   const annualCosts = buildAnnualCostEstimates(
     MOUNJARO_DOSE_KEYS,
     ["5mg", "7.5mg", "10mg", "12.5mg", "15mg"],
     priceRows,
-    affiliatePriceRows,
   );
   const firstSixMonths = buildFirstMonthsCostEstimate(
     MOUNJARO_DOSE_KEYS,
     6,
     priceRows,
-    affiliatePriceRows,
   );
   const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
   const nameRows = MOUNJARO_UK_COMPARE_PROVIDERS.map((p) => ({

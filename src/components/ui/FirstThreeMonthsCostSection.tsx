@@ -85,7 +85,7 @@ export default function FirstThreeMonthsCostSection({
       </div>
 
       <p className="mt-4 text-xs text-slate-500 sm:text-sm">
-        Prices based on the lowest affiliated pharmacy prices at our latest check ({lastUpdated}).
+        Prices based on the lowest single-pharmacy prices across all verified providers at our latest check ({lastUpdated}).
       </p>
     </HomeSectionCard>
   );

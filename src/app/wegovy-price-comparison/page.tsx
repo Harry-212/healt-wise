@@ -10,7 +10,6 @@ import WegovyPriceSnapshot from "@/components/wegovy/WegovyPriceSnapshot";
 import WegovyPriceByDoseSection from "@/components/wegovy/WegovyPriceByDoseSection";
 import WegovyCheapestSection from "@/components/wegovy/WegovyCheapestSection";
 import WegovyMonthlyCostSection from "@/components/wegovy/WegovyMonthlyCostSection";
-import { isAffiliatePartner } from "@/lib/data/affiliate-partners";
 import { buildAnnualCostEstimates } from "@/lib/data/annual-cost-estimates";
 import { cheapestAcrossDoses } from "@/lib/data/mounjaro-price-insights";
 import {
@@ -146,18 +145,10 @@ export default function CompareWegovyPricesUkPage() {
       WEGOVY_DOSE_KEYS.map((k) => [k, wegovyPriceAmount(p.prices[k])]),
     ) as Record<(typeof WEGOVY_DOSE_KEYS)[number], number | null>,
   );
-  const affiliatePriceRows = WEGOVY_UK_COMPARE_PROVIDERS.filter((p) =>
-    isAffiliatePartner(p.id),
-  ).map((p) =>
-    Object.fromEntries(
-      WEGOVY_DOSE_KEYS.map((k) => [k, wegovyPriceAmount(p.prices[k])]),
-    ) as Record<(typeof WEGOVY_DOSE_KEYS)[number], number | null>,
-  );
   const annualCosts = buildAnnualCostEstimates(
     WEGOVY_DOSE_KEYS,
     ["1mg", "1.7mg", "2.4mg", "7.2mg"],
     priceRows,
-    affiliatePriceRows,
   );
   const nameRows = WEGOVY_UK_COMPARE_PROVIDERS.map((p) => ({
     id: p.id,

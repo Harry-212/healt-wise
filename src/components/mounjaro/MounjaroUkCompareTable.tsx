@@ -19,7 +19,11 @@ import {
 import CompareFilterBar, {
   type CompareSortPreset,
 } from "@/components/compare/CompareFilterBar";
-import { isAffiliatePartner } from "@/lib/data/affiliate-partners";
+import FeaturedPartnersBlock from "@/components/compare/FeaturedPartnersBlock";
+import {
+  AFFILIATE_PARTNERS_MAP,
+  isAffiliatePartner,
+} from "@/lib/data/affiliate-partners";
 import {
   startingPrice,
   MOUNJARO_DOSE_KEYS,
@@ -157,9 +161,6 @@ export default function MounjaroUkCompareTable({
       }
     });
 
-    const partnerRows = rows.filter((r) => isAffiliatePartner(r.id));
-    const standardRows = rows.filter((r) => !isAffiliatePartner(r.id));
-
     const minStart =
       rows.length > 0
         ? Math.min(...rows.map((r) => priceForComposite(r)))
@@ -172,7 +173,7 @@ export default function MounjaroUkCompareTable({
       }
     }
 
-    return { rows, partnerRows, standardRows, minStart, doseMins };
+    return { rows, minStart, doseMins };
   }, [
     providers,
     providerQuery,
@@ -183,6 +184,29 @@ export default function MounjaroUkCompareTable({
     tableSort,
     visibleDoseKeys,
   ]);
+
+  // Featured partners render in their own block, never inside the ranked table.
+  const featuredPartners = useMemo(
+    () =>
+      Object.keys(AFFILIATE_PARTNERS_MAP).flatMap((id) => {
+        const p = providers.find((x) => x.id === id);
+        if (!p) return [];
+        return [
+          {
+            id: p.id,
+            name: p.name,
+            fromPrice: `£${startingPrice(p).toFixed(2)}`,
+            rating: p.rating,
+            gphcRegNo: p.gphcRegNo,
+            profileHref:
+              p.linkProfilePage !== false && hasPharmacyPage(p.id)
+                ? pharmacyProfileHref(p.id)
+                : null,
+          },
+        ];
+      }),
+    [providers],
+  );
 
   const insights = useMemo(() => {
     const { rows } = processed;
@@ -247,6 +271,11 @@ export default function MounjaroUkCompareTable({
           to understand what to check when comparing providers.
         </p>
       ) : null}
+
+      <FeaturedPartnersBlock
+        medicationLabel="Mounjaro"
+        partners={featuredPartners}
+      />
 
       <CompareFilterBar
         accent="violet"
@@ -531,99 +560,7 @@ export default function MounjaroUkCompareTable({
                 </tr>
               ) : (
                 <>
-                  {processed.partnerRows.map((p) => {
-                    const profile = pharmacyProfileHref(p.id);
-                    const linkProfile =
-                      p.linkProfilePage !== false && hasPharmacyPage(p.id);
-                    const tpHref = trustpilotHrefForProvider(
-                      p.name,
-                      p.trustpilotUrl,
-                    );
-
-                    return (
-                      <tr
-                        key={p.id}
-                        className="group border-b border-emerald-100 bg-emerald-50/40 transition hover:bg-emerald-50/70"
-                      >
-                        <td className="sticky left-0 z-10 w-28 border-l-4 border-l-emerald-600 border-r border-emerald-200/80 bg-emerald-50/90 px-2 py-2.5 pl-3 align-middle shadow-[4px_0_12px_-8px_rgba(15,23,42,0.12)] group-hover:bg-emerald-100/70 transition sm:w-36 sm:px-3 sm:pl-4">
-                          <div className="flex flex-col gap-1.5">
-                            {linkProfile ? (
-                              <Link
-                                href={profile}
-                                className="block max-w-24 whitespace-normal wrap-break-word font-bold leading-snug text-emerald-950 underline decoration-emerald-400 underline-offset-2 transition hover:text-emerald-800 sm:max-w-32"
-                              >
-                                {p.name}
-                              </Link>
-                            ) : (
-                              <span className="block max-w-24 whitespace-normal wrap-break-word font-bold leading-snug text-emerald-950 sm:max-w-32">
-                                {p.name}
-                              </span>
-                            )}
-                            <div className="flex flex-wrap items-center gap-1">
-                              <span className="inline-flex items-center gap-1 rounded-full bg-emerald-700 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white shadow-xs">
-                                <Sparkles className="h-2.5 w-2.5" aria-hidden />
-                                Featured Partner
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                        {visibleDoseKeys.map((k) => {
-                          const v = p.prices[k];
-                          return (
-                            <td
-                              key={k}
-                              className="border-b border-emerald-100/90 bg-emerald-50/20 px-1.5 py-2.5 text-center align-middle text-xs font-semibold tabular-nums text-slate-900 sm:px-2 sm:text-sm lg:px-3 xl:px-4"
-                            >
-                              {formatGBP(v)}
-                            </td>
-                          );
-                        })}
-                        <td className="border-b border-emerald-100/90 bg-emerald-50/20 px-2 py-2.5 align-middle tabular-nums font-medium text-slate-900">
-                          <a
-                            href={tpHref}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-emerald-800 underline decoration-emerald-300 underline-offset-2 transition hover:text-emerald-950"
-                          >
-                            <TrustpilotStarIcon className="h-4 w-4 shrink-0 text-amber-500 fill-amber-500" />
-                            {p.rating.toFixed(1)}
-                            <span className="sr-only">
-                              Trustpilot (opens in a new tab)
-                            </span>
-                          </a>
-                        </td>
-                        <td className="border-b border-emerald-100/90 bg-emerald-50/20 px-2 py-2.5 align-middle whitespace-nowrap text-xs text-slate-600">
-                          <ProviderGphcLine
-                            providerId={p.id}
-                            gphcRegNo={p.gphcRegNo}
-                          />
-                        </td>
-                        {hasNotes ? (
-                          <td className="border-b border-emerald-100/90 bg-emerald-50/20 max-w-40 px-2 py-2.5 align-top text-xs leading-snug text-slate-600">
-                            {p.notes?.trim() ? (
-                              <span className="whitespace-pre-line">{p.notes}</span>
-                            ) : (
-                              <span className="text-slate-400">—</span>
-                            )}
-                          </td>
-                        ) : null}
-                      </tr>
-                    );
-                  })}
-
-                  {processed.partnerRows.length > 0 &&
-                    processed.standardRows.length > 0 && (
-                      <tr className="border-y border-slate-200 bg-slate-100/90">
-                        <td
-                          colSpan={colCount}
-                          className="px-4 py-2 text-[11px] font-bold uppercase tracking-wider text-slate-600"
-                        >
-                          All UK Pharmacies ({processed.standardRows.length})
-                        </td>
-                      </tr>
-                    )}
-
-                  {processed.standardRows.map((p) => {
+                  {processed.rows.map((p) => {
                     const start =
                       doseFilter === "all"
                         ? startingPrice(p)
@@ -666,6 +603,12 @@ export default function MounjaroUkCompareTable({
                               </span>
                             )}
                             <div className="flex flex-wrap gap-1">
+                              {isAffiliatePartner(p.id) && (
+                                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-700 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white">
+                                  <Sparkles className="h-2.5 w-2.5" aria-hidden />
+                                  Featured Partner
+                                </span>
+                              )}
                               {isLowestRow && (
                                 <span className="inline-flex items-center rounded-full bg-violet-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
                                   Lowest from
