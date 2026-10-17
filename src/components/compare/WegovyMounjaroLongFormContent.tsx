@@ -81,6 +81,8 @@ export interface WegovyMounjaroLongFormContentProps {
   wegovy72Typical?: string;
   wegovy72Listed?: number;
   wegovyProviderCount?: number;
+  mounjaroProviderCount?: number;
+  pricesChecked?: string;
 }
 
 export default function WegovyMounjaroLongFormContent({
@@ -90,6 +92,8 @@ export default function WegovyMounjaroLongFormContent({
   wegovy72Typical = "£259",
   wegovy72Listed = 48,
   wegovyProviderCount = 62,
+  mounjaroProviderCount = 67,
+  pricesChecked = "20 September 2026",
 }: WegovyMounjaroLongFormContentProps) {
   return (
     <>
@@ -192,8 +196,11 @@ export default function WegovyMounjaroLongFormContent({
             >
               Wegovy vs Mounjaro cost in the UK
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
-              For the same month of treatment, Wegovy costs less than Mounjaro. Mounjaro vs Wegovy cost comes down to the dose you are on. This Wegovy and Mounjaro price comparison uses our 20 September 2026 check. Our Wegovy table covers 62 providers and our Mounjaro table covers 67.
+            <p
+              id="cost-answer"
+              className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg"
+            >
+              For the same month of treatment, Wegovy costs less than Mounjaro. Mounjaro vs Wegovy cost comes down to the dose you are on. This Wegovy and Mounjaro price comparison uses our {pricesChecked} check. Our Wegovy table covers {wegovyProviderCount} providers and our Mounjaro table covers {mounjaroProviderCount}.
             </p>
           </div>
 
@@ -250,6 +257,9 @@ export default function WegovyMounjaroLongFormContent({
                 </tbody>
               </table>
             </div>
+            <p className="border-t border-slate-100 bg-slate-50/60 px-5 py-2.5 text-xs font-medium text-slate-500">
+              Prices checked {pricesChecked}
+            </p>
           </div>
 
           <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-600 md:text-lg">
@@ -337,6 +347,9 @@ export default function WegovyMounjaroLongFormContent({
                 </tbody>
               </table>
             </div>
+            <p className="border-t border-slate-100 bg-slate-50/60 px-5 py-2.5 text-xs font-medium text-slate-500">
+              Prices checked {pricesChecked}
+            </p>
           </div>
 
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">

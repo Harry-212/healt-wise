@@ -42,9 +42,9 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       variant: "violet",
       eyebrow: "Independent UK Comparison",
       titleItalic: "",
-      titleBold: "Wegovy vs Mounjaro",
+      titleBold: "Wegovy vs Mounjaro: Price, Dose and Weight Loss Compared",
       subtitle:
-        "Mounjaro led to more weight loss than Wegovy in a head to head trial. Wegovy usually costs less. Here is how Wegovy vs Mounjaro compares in the UK on weight loss, dose, side effects, NHS access and the real price. A Wegovy starter pen costs from £73 and a Mounjaro starter pen from £119.",
+        "Mounjaro led to more weight loss than Wegovy in a head to head trial. Wegovy usually costs less. Here is how Wegovy vs Mounjaro compares in the UK on weight loss, dose, side effects, NHS access and the real price. A Wegovy starter pen costs from {{wegovyStarterLow}} and a Mounjaro starter pen from {{mounjaroStarterLow}}.",
       snapshotLabel: "Prices checked 20 September 2026 · Same prices as our price pages · No paid rankings",
       navLinks: [
         { href: "#quick-verdict", label: "At a Glance" },
@@ -62,10 +62,10 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       canonicalPath: "/compare/wegovy-vs-mounjaro",
       title: "Wegovy vs Mounjaro UK: Price, Dose and Weight Loss Compared",
       metaDescription:
-        "Wegovy vs Mounjaro side by side: monthly cost, doses, weight loss in trials and side effects. Compare prices at 60+ GPhC registered UK pharmacies.",
-      openGraphTitle: "Wegovy vs Mounjaro UK: Price, Dose and Weight Loss Compared",
+        "Wegovy vs Mounjaro UK: Compare weight loss, dose, side effects, NHS access and the real price at 62 and 67 providers.",
+      openGraphTitle: "Wegovy vs Mounjaro UK: Price, Dose and Results",
       openGraphDescription:
-        "Wegovy vs Mounjaro side by side: monthly cost, doses, weight loss in trials and side effects. Compare prices at 60+ GPhC registered UK pharmacies.",
+        "See how Wegovy and Mounjaro compare on weight loss, dose, side effects and price in the UK. Checked and dated, with no paid rankings.",
       imagePath: OG,
       imageAlt: "Healthwise360 — Wegovy vs Mounjaro UK comparison",
     },

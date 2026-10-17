@@ -25,11 +25,12 @@ import {
 } from "@/lib/routes/compare-faqs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
+import { compareWegovyMounjaroJsonLd } from "@/lib/seo/compare-wegovy-mounjaro-json-ld";
 
 type Props = { params: Promise<{ slug: string }> };
 
 /** Update when the versus-page copy or FAQs change. */
-const COMPARE_PAGES_CONTENT_MODIFIED = "2026-10-16";
+const COMPARE_PAGES_CONTENT_MODIFIED = "2026-10-17";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -93,7 +94,12 @@ export default async function ComparePage({ params }: Props) {
 
   const priceSummary = getLivePriceSummary();
   const webLdName = layout.share.title;
-  const faqItems = getCompareFaqsForSlug(slug);
+  const faqItems = getCompareFaqsForSlug(slug, {
+    wegovySixMonthsLow: priceSummary.firstSixMonths.wegovyLow,
+    mounjaroSixMonthsLow: priceSummary.firstSixMonths.mounjaroLow,
+    wegovySixMonthsTypical: priceSummary.firstSixMonths.wegovyTypical,
+    mounjaroSixMonthsTypical: priceSummary.firstSixMonths.mounjaroTypical,
+  });
   const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
   const pricesLastCheckedIso = COMPARE_PAGES_CONTENT_MODIFIED;
   const webLd = compareWebPageJsonLd(
@@ -103,26 +109,55 @@ export default async function ComparePage({ params }: Props) {
     pricesLastCheckedIso,
   );
 
+  const heroSubtitle = layout.hero.subtitle
+    .replace("{{wegovyStarterLow}}", priceSummary.wegovyStarterLow)
+    .replace("{{mounjaroStarterLow}}", priceSummary.mounjaroStarterLow);
+
   return (
     <>
-      <BreadcrumbJsonLd
-        pageName={webLdName}
-        pagePath={`/compare/${slug}`}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webLd) }}
-      />
-      {faqItems.length > 0 ? (
+      {slug === "wegovy-vs-mounjaro" ? (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(
-              compareFaqPageJsonLd(faqItems, `${siteOrigin()}/compare/${slug}`),
+              compareWegovyMounjaroJsonLd({
+                name: webLdName,
+                description: layout.share.metaDescription,
+                contentModified: pricesLastCheckedIso,
+                pricesChecked: priceSummary.lastUpdated,
+                wegovyProviderCount: priceSummary.wegovyProviderCount,
+                mounjaroProviderCount: priceSummary.mounjaroProviderCount,
+                wegovyLow: priceSummary.wegovyStarterLowNum,
+                wegovyHigh: priceSummary.wegovyTopHighNum,
+                mounjaroLow: priceSummary.mounjaroStarterLowNum,
+                mounjaroHigh: priceSummary.mounjaroTopHighNum,
+                faqItems,
+              }),
             ),
           }}
         />
-      ) : null}
+      ) : (
+        <>
+          <BreadcrumbJsonLd
+            pageName={webLdName}
+            pagePath={`/compare/${slug}`}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(webLd) }}
+          />
+          {faqItems.length > 0 ? (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(
+                  compareFaqPageJsonLd(faqItems, `${siteOrigin()}/compare/${slug}`),
+                ),
+              }}
+            />
+          ) : null}
+        </>
+      )}
 
       <article className="w-full">
         {/* Section 1: Hero */}
@@ -131,7 +166,8 @@ export default async function ComparePage({ params }: Props) {
           eyebrow={layout.hero.eyebrow}
           titleItalic={layout.hero.titleItalic}
           titleBold={layout.hero.titleBold}
-          subtitle={layout.hero.subtitle}
+          subtitle={heroSubtitle}
+          subtitleId="hero-answer"
           snapshotLabel={layout.hero.snapshotLabel}
           navLinks={layout.hero.navLinks}
           showSnapshotPill={!photoHero}
@@ -146,6 +182,7 @@ export default async function ComparePage({ params }: Props) {
           mounjaroStarterLow={priceSummary.mounjaroStarterLow}
           wegovyTopTypical={priceSummary.wegovyTopTypical}
           mounjaroTopTypical={priceSummary.mounjaroTopTypical}
+          pricesChecked={priceSummary.lastUpdated}
         />
 
         {/* Trust Marquee */}
@@ -162,6 +199,8 @@ export default async function ComparePage({ params }: Props) {
             wegovy72Typical={priceSummary.wegovy72Typical}
             wegovy72Listed={priceSummary.wegovy72Listed}
             wegovyProviderCount={priceSummary.wegovyProviderCount}
+            mounjaroProviderCount={priceSummary.mounjaroProviderCount}
+            pricesChecked={priceSummary.lastUpdated}
           />
         ) : (
           <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
