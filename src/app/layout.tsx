@@ -17,6 +17,7 @@ import {
   SITE_SHARE_IMAGE_WIDTH,
 } from "@/lib/site-assets";
 import { OutboundClickTracker } from "@/components/analytics/OutboundClickTracker";
+import { AffiliateTrackingProvider } from "@/hooks/useAffiliateTracking";
 import { AnalyticsProvider } from "@/components/analytics/AnalyticsProvider";
 
 /** Footer is below the fold on every page; split it out of the shared root bundle. */
@@ -91,7 +92,9 @@ export default function RootLayout({
           <NavBar />
           <AnnouncementBar />
           <main className="min-w-0 flex-1 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-            {children}
+            <AffiliateTrackingProvider>
+              {children}
+            </AffiliateTrackingProvider>
             <SiteEndSection />
           </main>
           <Footer />

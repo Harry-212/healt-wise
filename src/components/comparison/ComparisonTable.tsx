@@ -252,7 +252,22 @@ export default function ComparisonTable({
                       <td className="px-4 py-3 text-right">
                         <Link
                           href={href}
-                          className="inline-flex touch-manipulation rounded-lg bg-brand-cta px-3 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:brightness-95 sm:py-2"
+                          className={`inline-flex touch-manipulation rounded-lg bg-brand-cta px-3 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:brightness-95 sm:py-2 ${
+                            p.affiliateUrl ? "hw360-cta" : ""
+                          }`}
+                          {...(p.affiliateUrl
+                            ? {
+                                "data-hw-provider": p.name,
+                                "data-hw-provider-id": p.id,
+                                "data-hw-medication": p.brandOffered,
+                                "data-hw-dose": p.dose.join(", "),
+                                "data-hw-total-pence": Math.round(
+                                  p.totalPrice * 100
+                                ),
+                                "data-hw-monetised": "true",
+                                "data-hw-placement": "organic",
+                              }
+                            : {})}
                         >
                           Check Price
                         </Link>

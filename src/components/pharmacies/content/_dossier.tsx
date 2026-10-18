@@ -7,7 +7,16 @@ import { useState } from "react";
 import { CheckCircle2, ChevronRight, Copy, Home, Tag } from "lucide-react";
 import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
-import { MOUNJARO_UK_COMPARE_LAST_UPDATED } from "@/lib/data/mounjaro-uk-compare-providers";
+import {
+  MOUNJARO_UK_COMPARE_LAST_UPDATED,
+  getMounjaroCompareProviderById,
+  startingPrice as mounjaroStartingPrice,
+} from "@/lib/data/mounjaro-uk-compare-providers";
+import {
+  getWegovyCompareProviderById,
+  startingPrice as wegovyStartingPrice,
+} from "@/lib/data/wegovy-uk-compare-providers";
+import { isAffiliatePartner } from "@/lib/data/affiliate-partners";
 
 /** Same classes as the primary "Visit {provider}" CTA in Document details (use in conclusion links). */
 export const PHARMACY_PROVIDER_CTA_CLASSNAME =
@@ -25,6 +34,11 @@ export function ProviderCta({
   children,
   className = PHARMACY_PROVIDER_CTA_CLASSNAME,
   onCopySuccess,
+  medication,
+  dose = "",
+  totalPence,
+  monetised = true,
+  placement,
 }: {
   url: string;
   name: string;
@@ -33,8 +47,45 @@ export function ProviderCta({
   children: ReactNode;
   className?: string;
   onCopySuccess?: () => void;
+  medication?: string;
+  dose?: string;
+  totalPence?: number;
+  monetised?: boolean | string;
+  placement?: string;
 }) {
   const [justCopied, setJustCopied] = useState(false);
+
+  const providerId = id ?? toProviderId(name);
+  const resolvedPlacement =
+    placement ?? (isAffiliatePartner(providerId) ? "featured" : "organic");
+
+  const resolvedMedication =
+    medication ??
+    (() => {
+      const m = getMounjaroCompareProviderById(providerId);
+      const w = getWegovyCompareProviderById(providerId);
+      return m ? "Mounjaro" : w ? "Wegovy" : "";
+    })();
+
+  const resolvedTotalPence =
+    totalPence ??
+    (() => {
+      const m = getMounjaroCompareProviderById(providerId);
+      const w = getWegovyCompareProviderById(providerId);
+      const priceGbp = m
+        ? mounjaroStartingPrice(m)
+        : w
+          ? wegovyStartingPrice(w)
+          : 0;
+      return priceGbp > 0 ? Math.round(priceGbp * 100) : 0;
+    })();
+
+  const monetisedStr =
+    typeof monetised === "boolean" ? (monetised ? "true" : "false") : String(monetised);
+
+  const classes = className.includes("hw360-cta")
+    ? className
+    : `hw360-cta ${className}`;
 
   const handleClick = () => {
     if (copyCode && copyCode.trim()) {
@@ -55,9 +106,16 @@ export function ProviderCta({
       target="_blank"
       rel="noopener noreferrer"
       data-pharmacy={name}
-      data-provider-id={id ?? toProviderId(name)}
+      data-provider-id={providerId}
+      data-hw-provider={name}
+      data-hw-provider-id={providerId}
+      data-hw-medication={resolvedMedication}
+      data-hw-dose={dose}
+      data-hw-total-pence={resolvedTotalPence}
+      data-hw-monetised={monetisedStr}
+      data-hw-placement={resolvedPlacement}
       onClick={handleClick}
-      className={className}
+      className={classes}
     >
       {justCopied ? (
         <span className="inline-flex items-center justify-center gap-1.5 animate-pulse">
@@ -467,6 +525,13 @@ export function PharmacyDossierPage({
                       setCopied(true);
                       setTimeout(() => setCopied(false), 3000);
                     }}
+                    medication={
+                      scopeLabel.toLowerCase().includes("mounjaro")
+                        ? "Mounjaro"
+                        : scopeLabel.toLowerCase().includes("wegovy")
+                          ? "Wegovy"
+                          : undefined
+                    }
                   >
                     Visit {providerName}
                   </ProviderCta>

@@ -47,7 +47,18 @@ export default function FeaturedPartnersBlock({
             {p.profileHref ? (
               <Link
                 href={p.profileHref}
-                className="font-bold leading-snug text-emerald-950 underline decoration-emerald-400 underline-offset-2 hover:text-emerald-800"
+                className="hw360-cta font-bold leading-snug text-emerald-950 underline decoration-emerald-400 underline-offset-2 hover:text-emerald-800"
+                data-hw-provider={p.name}
+                data-hw-provider-id={p.id}
+                data-hw-medication={medicationLabel}
+                data-hw-dose=""
+                data-hw-total-pence={(() => {
+                  const cleaned = p.fromPrice.replace(/[^0-9.]/g, "");
+                  const num = parseFloat(cleaned);
+                  return Number.isNaN(num) ? 0 : Math.round(num * 100);
+                })()}
+                data-hw-monetised="true"
+                data-hw-placement="featured"
               >
                 {p.name}
               </Link>
