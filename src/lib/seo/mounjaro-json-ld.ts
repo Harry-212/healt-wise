@@ -18,7 +18,24 @@ export function mounjaroArticleJsonLd(): Record<string, unknown> {
   };
 }
 
-export function whatIsMounjaroPageJsonLd(): Record<string, unknown> {
+export type WhatIsMounjaroOfferRange = {
+  /** Lowest listed pen price (GBP) across the tracked pharmacies. */
+  low: number;
+  /** Highest listed pen price (GBP) across the tracked pharmacies. */
+  high: number;
+  /** Number of pharmacies the range covers. */
+  providerCount: number;
+};
+
+/**
+ * `offer` adds an AggregateOffer to the Mounjaro Drug node. Google treats Drug
+ * as a Product, and Product snippets require offers, review or aggregateRating
+ * (Search Console flagged the node as invalid without it). Pass the same
+ * numbers the page body shows so the schema never drifts from the visible copy.
+ */
+export function whatIsMounjaroPageJsonLd(
+  offer?: WhatIsMounjaroOfferRange,
+): Record<string, unknown> {
   const base = siteOrigin();
   const pageUrl = `${base}/what-is-mounjaro`;
 
@@ -124,6 +141,18 @@ export function whatIsMounjaroPageJsonLd(): Record<string, unknown> {
         },
         url: pageUrl,
         sameAs: "https://www.nhs.uk/medicines/tirzepatide/",
+        ...(offer
+          ? {
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "GBP",
+                lowPrice: offer.low.toFixed(2),
+                highPrice: offer.high.toFixed(2),
+                offerCount: offer.providerCount,
+                url: `${base}/mounjaro-price-comparison`,
+              },
+            }
+          : {}),
       },
       {
         "@type": "FAQPage",
