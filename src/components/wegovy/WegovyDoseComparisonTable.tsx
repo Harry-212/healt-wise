@@ -122,7 +122,14 @@ function RowCards({
                 ? "noopener noreferrer sponsored"
                 : "noopener noreferrer"
             }
-            className="mt-4 flex w-full items-center justify-center rounded-xl bg-brand-cta py-3 text-sm font-bold text-slate-900 shadow-sm transition hover:brightness-95"
+            className="hw360-cta mt-4 flex w-full items-center justify-center rounded-xl bg-brand-cta py-3 text-sm font-bold text-slate-900 shadow-sm transition hover:brightness-95"
+            data-hw-provider={row.name}
+            data-hw-provider-id={row.id}
+            data-hw-medication="Wegovy"
+            data-hw-dose={WEGOVY_DOSE_LABEL[dose]}
+            data-hw-total-pence={Math.round(row.priceGbp * 100)}
+            data-hw-monetised={row.isAffiliate ? "true" : "false"}
+            data-hw-placement="organic"
           >
             See offer
           </a>
@@ -221,7 +228,14 @@ function RowTable({
                       ? "noopener noreferrer sponsored"
                       : "noopener noreferrer"
                   }
-                  className="inline-flex rounded-lg bg-brand-cta px-3 py-2 text-xs font-bold text-slate-900 hover:brightness-95"
+                  className="hw360-cta inline-flex rounded-lg bg-brand-cta px-3 py-2 text-xs font-bold text-slate-900 hover:brightness-95"
+                  data-hw-provider={row.name}
+                  data-hw-provider-id={row.id}
+                  data-hw-medication="Wegovy"
+                  data-hw-dose={WEGOVY_DOSE_LABEL[dose]}
+                  data-hw-total-pence={Math.round(row.priceGbp * 100)}
+                  data-hw-monetised={row.isAffiliate ? "true" : "false"}
+                  data-hw-placement="organic"
                 >
                   See offer
                 </a>

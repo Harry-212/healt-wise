@@ -96,7 +96,17 @@ export default function FeaturedProviderBanner({
           </p>
           <Link
             href={profileHref}
-            className="inline-flex items-center justify-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800"
+            className="hw360-cta inline-flex items-center justify-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800"
+            data-hw-provider={providerName}
+            data-hw-provider-id={providerName
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/(^-|-$)/g, "")}
+            data-hw-medication={medicationLabel}
+            data-hw-dose=""
+            data-hw-total-pence={Math.round(headlineFrom * 100)}
+            data-hw-monetised="true"
+            data-hw-placement="featured"
           >
             Visit {providerName}
           </Link>
