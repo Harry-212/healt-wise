@@ -18,6 +18,130 @@ export function mounjaroArticleJsonLd(): Record<string, unknown> {
   };
 }
 
+export function whatIsMounjaroPageJsonLd(): Record<string, unknown> {
+  const base = siteOrigin();
+  const pageUrl = `${base}/what-is-mounjaro`;
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "What Is Mounjaro? How It Works and How Long It Takes (UK)",
+        headline: "What Is Mounjaro?",
+        description:
+          "What is Mounjaro? A weekly tirzepatide injection for weight loss and type 2 diabetes. See how it works, how long it takes, doses and side effects.",
+        inLanguage: "en-GB",
+        isPartOf: { "@id": `${base}/#website` },
+        publisher: { "@id": `${base}/#organization` },
+        about: { "@id": `${pageUrl}#mounjaro` },
+        mainEntity: { "@id": `${pageUrl}#mounjaro` },
+        breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
+        audience: { "@type": "PeopleAudience", audienceType: "Patients" },
+        lastReviewed: "2026-09-20",
+        citation: {
+          "@type": "WebPage",
+          name: "Tirzepatide: a medicine to manage type 2 diabetes and treat obesity",
+          url: "https://www.nhs.uk/medicines/tirzepatide/",
+          publisher: { "@type": "Organization", name: "NHS" },
+        },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["#hero-answer", "#how-it-works-answer"],
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: `${base}/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "What Is Mounjaro?",
+            item: pageUrl,
+          },
+        ],
+      },
+      {
+        "@type": "Drug",
+        "@id": `${pageUrl}#mounjaro`,
+        name: "Mounjaro",
+        proprietaryName: "Mounjaro",
+        nonProprietaryName: "tirzepatide",
+        alternateName: ["Mounjaro KwikPen", "tirzepatide"],
+        activeIngredient: "tirzepatide",
+        description:
+          "Mounjaro is a once weekly injection. The medicine inside it is called tirzepatide. It copies two hormones that your gut makes when you eat. These hormones help you feel full and help control blood sugar. In the UK, Mounjaro is used for type 2 diabetes and for weight loss. You need a prescription to get it.",
+        manufacturer: {
+          "@type": "Organization",
+          name: "Eli Lilly and Company",
+        },
+        drugClass: {
+          "@type": "DrugClass",
+          name: "Dual GIP and GLP-1 receptor agonist",
+        },
+        mechanismOfAction:
+          "Copies two gut hormones, GIP and GLP-1. They tell your brain you are full, slow down how fast food leaves your stomach and help your body control blood sugar.",
+        prescriptionStatus: "https://schema.org/PrescriptionOnly",
+        isAvailableGenerically: false,
+        administrationRoute: "Subcutaneous injection, once a week",
+        dosageForm:
+          "Prefilled injection pen (KwikPen). One pen holds 4 weekly doses.",
+        availableStrength: [
+          { "@type": "DrugStrength", strengthValue: 2.5, strengthUnit: "mg" },
+          { "@type": "DrugStrength", strengthValue: 5, strengthUnit: "mg" },
+          { "@type": "DrugStrength", strengthValue: 7.5, strengthUnit: "mg" },
+          { "@type": "DrugStrength", strengthValue: 10, strengthUnit: "mg" },
+          { "@type": "DrugStrength", strengthValue: 12.5, strengthUnit: "mg" },
+          { "@type": "DrugStrength", strengthValue: 15, strengthUnit: "mg" },
+        ],
+        doseSchedule: {
+          "@type": "RecommendedDoseSchedule",
+          doseValue: 2.5,
+          doseUnit: "mg",
+          frequency: "Once a week",
+          targetPopulation:
+            "Adults starting treatment. The dose may go up every 4 weeks, up to 15 mg.",
+        },
+        pregnancyWarning:
+          "Not suitable if you are pregnant or trying to get pregnant.",
+        breastfeedingWarning: "Not suitable if you are breastfeeding.",
+        warning:
+          "If you take the contraceptive pill, use extra contraception for 4 weeks after you start and after each dose increase. Tell your care team before any operation.",
+        relatedDrug: {
+          "@type": "Drug",
+          name: "Zepbound",
+          nonProprietaryName: "tirzepatide",
+          description: "US brand name for the same medicine.",
+        },
+        url: pageUrl,
+        sameAs: "https://www.nhs.uk/medicines/tirzepatide/",
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        isPartOf: { "@id": `${pageUrl}#webpage` },
+        mainEntity: MOUNJARO_FAQ_ITEMS.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      },
+    ],
+  };
+}
+
 export const MOUNJARO_FAQ_ITEMS: { question: string; answer: string }[] = [
   {
     question: "Is Mounjaro safe?",
