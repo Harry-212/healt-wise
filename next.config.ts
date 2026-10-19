@@ -34,6 +34,14 @@ const CONTENT_SECURITY_POLICY = [
 ].join("; ");
 
 const nextConfig: NextConfig = {
+  /**
+   * Hostinger's build container reports ~63 CPUs but caps the thread count, so
+   * `next build` spawned too many page-data workers and aborted with "OS can't
+   * spawn worker thread" (build of 9875d0f, 19 Oct 2026). Cap the workers.
+   */
+  experimental: {
+    cpus: 4,
+  },
   images: {
     /** Allow `quality` on `<Image>` - include 80 so older chunks / defaults never throw at runtime. */
     qualities: [50, 60, 70, 75, 80, 85, 90],
