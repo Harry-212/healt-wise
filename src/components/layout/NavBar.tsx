@@ -37,16 +37,16 @@ function NavBarAuthCluster() {
 
   if (!isSupabaseConfigured()) {
     return (
-      <div className="hidden shrink-0 items-center gap-2 xl:flex">
+      <div className="hidden shrink-0 items-center gap-2 xl:flex select-none">
         <Link
           href="/my-hub/login"
-          className="text-sm font-semibold text-brand-secondary hover:text-brand-primary"
+          className="text-sm font-semibold text-brand-secondary hover:text-brand-primary select-none"
         >
           Login
         </Link>
         <Link
           href="/my-hub/login?signup=1"
-          className="rounded-lg bg-brand-cta px-4 py-2 text-sm font-bold text-slate-900 shadow-sm transition hover:brightness-95"
+          className="rounded-lg bg-brand-cta px-4 py-2 text-sm font-bold text-slate-900 shadow-sm transition hover:brightness-95 select-none"
         >
           Sign Up
         </Link>
@@ -57,7 +57,7 @@ function NavBarAuthCluster() {
   if (!ready) {
     return (
       <div
-        className="hidden h-9 w-32 shrink-0 animate-pulse rounded-lg bg-slate-200/80 xl:block"
+        className="hidden h-9 w-32 shrink-0 animate-pulse rounded-lg bg-slate-200/80 xl:block select-none"
         aria-hidden
       />
     );
@@ -66,9 +66,9 @@ function NavBarAuthCluster() {
   if (user) {
     const name = user.email ? greetingNameFromEmail(user.email) : "there";
     return (
-      <div className="hidden shrink-0 items-center gap-2 md:gap-3 xl:flex">
+      <div className="hidden shrink-0 items-center gap-2 md:gap-3 xl:flex select-none">
         <span
-          className="max-w-[7.5rem] truncate text-sm font-semibold text-slate-800 xl:max-w-[11rem]"
+          className="max-w-[7.5rem] truncate text-sm font-semibold text-slate-800 xl:max-w-[11rem] select-none"
           title={user.email ?? undefined}
         >
           Hi, {name}
@@ -76,7 +76,7 @@ function NavBarAuthCluster() {
         <button
           type="button"
           onClick={() => void signOut()}
-          className="relative z-20 cursor-pointer rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 hover:shadow active:scale-[0.98]"
+          className="relative z-20 cursor-pointer rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900 hover:shadow active:scale-[0.98] select-none"
         >
           Log out
         </button>
@@ -85,16 +85,16 @@ function NavBarAuthCluster() {
   }
 
   return (
-    <div className="hidden shrink-0 items-center gap-2 xl:flex">
+    <div className="hidden shrink-0 items-center gap-2 xl:flex select-none">
       <Link
         href="/my-hub/login"
-        className="text-sm font-semibold text-brand-secondary hover:text-brand-primary"
+        className="text-sm font-semibold text-brand-secondary hover:text-brand-primary select-none"
       >
         Login
       </Link>
       <Link
         href="/my-hub/login?signup=1"
-        className="rounded-lg bg-brand-cta px-4 py-2 text-sm font-bold text-slate-900 shadow-sm transition hover:brightness-95"
+        className="rounded-lg bg-brand-cta px-4 py-2 text-sm font-bold text-slate-900 shadow-sm transition hover:brightness-95 select-none"
       >
         Sign Up
       </Link>
@@ -119,25 +119,47 @@ export default function NavBar() {
         Fixed (not sticky): `overflow-x: hidden` on html/body breaks sticky positioning
         in common browsers. Spacer below matches bar height + safe-area for notched devices.
       */}
-      <header className="fixed inset-x-0 top-0 z-[90] w-full max-w-full overflow-x-clip overflow-y-visible border-b border-brand-border bg-brand-card/95 pt-[env(safe-area-inset-top,0px)] shadow-sm backdrop-blur supports-[backdrop-filter]:bg-brand-card/90">
-        <div className="relative mx-auto flex h-16 max-w-[1400px] min-h-0 min-w-0 items-center gap-2 px-3 sm:h-24 md:h-28 sm:gap-3 sm:px-4 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-4 lg:px-6 xl:gap-6">
-          <div className="flex min-w-0 shrink-0 justify-start lg:justify-self-start">
+      <header
+        className="hw-header border-b border-brand-border shadow-sm select-none"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          width: "100%",
+          zIndex: 100,
+          backgroundColor: "rgba(255, 255, 255, 0.95)",
+          WebkitBackdropFilter: "blur(12px)",
+          backdropFilter: "blur(12px)",
+          paddingTop: "env(safe-area-inset-top, 0px)",
+          WebkitTransform: "translate3d(0, 0, 0)",
+          transform: "translate3d(0, 0, 0)",
+          WebkitBackfaceVisibility: "hidden",
+          backfaceVisibility: "hidden",
+          WebkitUserSelect: "none",
+          userSelect: "none",
+          WebkitTouchCallout: "none",
+          isolation: "isolate",
+        }}
+      >
+        <div className="relative mx-auto flex h-16 max-w-[1400px] min-h-0 min-w-0 items-center gap-2 px-3 sm:h-24 md:h-28 sm:gap-3 sm:px-4 lg:grid lg:grid-cols-[auto_1fr_auto] lg:items-center lg:gap-4 lg:px-6 xl:gap-6 select-none">
+          <div className="flex min-w-0 shrink-0 justify-start lg:justify-self-start select-none">
             <SiteLogoLink priority />
           </div>
 
           <nav
-            className="hidden min-w-0 justify-self-center lg:flex lg:justify-center"
+            className="hidden min-w-0 justify-self-center lg:flex lg:justify-center select-none"
             aria-label="Main"
           >
             <MegaMenuDesktop panels={NAV_PANELS} />
           </nav>
 
-          <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2 md:gap-3 lg:shrink-0 lg:flex-none lg:justify-self-end">
+          <div className="flex min-w-0 flex-1 items-center justify-end gap-1.5 sm:gap-2 md:gap-3 lg:shrink-0 lg:flex-none lg:justify-self-end select-none">
             <MobileNavDrawer panels={NAV_PANELS} />
             {!hideCompareChrome ? (
               <Link
                 href={HOME_COMPARE_HUB_HREF}
-                className="hidden shrink-0 items-center gap-1.5 rounded-full border border-emerald-300/70 bg-emerald-100 px-3.5 py-2 text-xs font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90 sm:inline-flex sm:justify-center sm:px-4 sm:text-sm"
+                className="hidden shrink-0 items-center gap-1.5 rounded-full border border-emerald-300/70 bg-emerald-100 px-3.5 py-2 text-xs font-semibold text-emerald-950 shadow-sm transition hover:border-emerald-400/80 hover:bg-emerald-200/70 active:bg-emerald-200/90 sm:inline-flex sm:justify-center sm:px-4 sm:text-sm select-none"
               >
                 <Zap
                   className="h-3.5 w-3.5 shrink-0 fill-emerald-950"
@@ -149,7 +171,7 @@ export default function NavBar() {
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-transparent text-slate-600 transition-colors hover:bg-brand-surface hover:text-brand-primary sm:h-11 sm:w-11 sm:rounded-full sm:border-0"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-transparent text-slate-600 transition-colors hover:bg-brand-surface hover:text-brand-primary sm:h-11 sm:w-11 sm:rounded-full sm:border-0 select-none"
               aria-label="Open search"
             >
               <Search className="h-5 w-5" />
@@ -158,9 +180,10 @@ export default function NavBar() {
           </div>
         </div>
       </header>
+      {/* Spacer so content does not slip under fixed header */}
       <div
         aria-hidden
-        className="shrink-0 w-full [height:calc(4rem+env(safe-area-inset-top,0px))] sm:[height:calc(6rem+env(safe-area-inset-top,0px))] md:[height:calc(7rem+env(safe-area-inset-top,0px))]"
+        className="hw-header-spacer shrink-0 w-full"
       />
       {searchOpen ? (
         <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
