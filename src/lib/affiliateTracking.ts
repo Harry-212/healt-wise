@@ -1,9 +1,13 @@
 /**
  * GA4 Affiliate Click Tracking Utility
  *
- * Listens for interactions on `a.hw360-cta` affiliate links and emits
- * `affiliate_click` events to Google Analytics 4 (via gtag) and GTM dataLayer.
+ * Listens for clicks on `a.hw360-cta` links and emits `affiliate_click` events
+ * to Google Analytics 4 (via gtag) and GTM dataLayer. Only the verified
+ * affiliate partners (see AFFILIATE_PARTNER_IDS) are ever sent; clicks on any
+ * other provider are ignored.
  */
+
+import { isAffiliatePartner } from "./data/affiliate-partners.ts";
 
 export interface AffiliateClickEventParams {
   provider: string;
@@ -45,6 +49,27 @@ export function shouldTrackInteraction(
   return true;
 }
 
+function resolveProviderId(anchor: HTMLAnchorElement, provider: string): string {
+  const explicit =
+    anchor.dataset.hwProviderId ||
+    anchor.getAttribute("data-hw-provider-id") ||
+    "";
+  if (explicit) return explicit;
+  return provider
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+/** True when the anchor belongs to one of the verified affiliate partners. */
+export function isAffiliateAnchor(anchor: HTMLAnchorElement): boolean {
+  const provider =
+    anchor.dataset.hwProvider ||
+    anchor.getAttribute("data-hw-provider") ||
+    "";
+  return isAffiliatePartner(resolveProviderId(anchor, provider));
+}
+
 /**
  * Extracts and formats the required affiliate tracking parameters from an anchor element.
  */
@@ -59,21 +84,15 @@ export function extractAffiliateEventParams(
   const total_pence = Number.isNaN(parsedPence) ? 0 : parsedPence;
   const total_gbp = Number((total_pence / 100).toFixed(2));
 
-  const rawMonetised =
-    anchor.dataset.hwMonetised ||
-    anchor.getAttribute("data-hw-monetised");
-  const monetised =
-    rawMonetised == null ? true : rawMonetised.toLowerCase() === "true";
+  const provider =
+    anchor.dataset.hwProvider ||
+    anchor.getAttribute("data-hw-provider") ||
+    "";
+  const provider_id = resolveProviderId(anchor, provider);
 
   return {
-    provider:
-      anchor.dataset.hwProvider ||
-      anchor.getAttribute("data-hw-provider") ||
-      "",
-    provider_id:
-      anchor.dataset.hwProviderId ||
-      anchor.getAttribute("data-hw-provider-id") ||
-      "",
+    provider,
+    provider_id,
     medication:
       anchor.dataset.hwMedication ||
       anchor.getAttribute("data-hw-medication") ||
@@ -91,7 +110,8 @@ export function extractAffiliateEventParams(
       anchor.dataset.hwPlacement ||
       anchor.getAttribute("data-hw-placement") ||
       "organic",
-    monetised,
+    // Derived from the partner list, not from the HTML attribute.
+    monetised: isAffiliatePartner(provider_id),
   };
 }
 
@@ -102,6 +122,7 @@ export function trackAffiliateClick(
   anchor: HTMLAnchorElement
 ): AffiliateClickEventParams | null {
   if (typeof window === "undefined") return null;
+  if (!isAffiliateAnchor(anchor)) return null;
 
   const eventParams = extractAffiliateEventParams(anchor);
 
@@ -125,8 +146,8 @@ export function trackAffiliateClick(
 }
 
 /**
- * Queries all `a.hw360-cta` elements, attaches mousedown + click listeners,
- * and maintains delegated capture listeners to ensure dynamically mounted links are tracked.
+ * Attaches a single delegated, capture-phase `click` listener that tracks
+ * `a.hw360-cta` links, including ones mounted after this runs.
  * Returns a cleanup function.
  */
 export function attachAffiliateTracking(): () => void {
@@ -134,22 +155,7 @@ export function attachAffiliateTracking(): () => void {
     return () => {};
   }
 
-  const handleAnchorInteraction = function (this: HTMLAnchorElement) {
-    if (!shouldTrackInteraction(this)) return;
-    trackAffiliateClick(this);
-  };
-
-  // Direct element listener attachment on all existing a.hw360-cta elements
-  const anchors = Array.from(
-    document.querySelectorAll<HTMLAnchorElement>("a.hw360-cta")
-  );
-  for (const anchor of anchors) {
-    anchor.addEventListener("mousedown", handleAnchorInteraction);
-    anchor.addEventListener("click", handleAnchorInteraction);
-  }
-
-  // Global delegated listener to catch dynamically added or replaced elements
-  const handleDelegatedInteraction = (event: MouseEvent) => {
+  const handleClick = (event: MouseEvent) => {
     const target = event.target as Element | null;
     const anchor = target?.closest("a.hw360-cta") as HTMLAnchorElement | null;
     if (!anchor) return;
@@ -157,24 +163,9 @@ export function attachAffiliateTracking(): () => void {
     trackAffiliateClick(anchor);
   };
 
-  document.addEventListener("mousedown", handleDelegatedInteraction, {
-    capture: true,
-  });
-  document.addEventListener("click", handleDelegatedInteraction, {
-    capture: true,
-  });
-
+  document.addEventListener("click", handleClick, { capture: true });
   return () => {
-    for (const anchor of anchors) {
-      anchor.removeEventListener("mousedown", handleAnchorInteraction);
-      anchor.removeEventListener("click", handleAnchorInteraction);
-    }
-    document.removeEventListener("mousedown", handleDelegatedInteraction, {
-      capture: true,
-    });
-    document.removeEventListener("click", handleDelegatedInteraction, {
-      capture: true,
-    });
+    document.removeEventListener("click", handleClick, { capture: true });
   };
 }
 
