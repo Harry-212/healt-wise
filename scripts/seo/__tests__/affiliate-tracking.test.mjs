@@ -30,7 +30,7 @@ test("extractAffiliateEventParams extracts all params correctly with proper type
   const anchor = new MockAnchorElement(
     {
       "data-hw-provider": "Pharmacy + Me",
-      "data-hw-provider-id": "72",
+      "data-hw-provider-id": "pharmacy-me",
       "data-hw-placement": "organic",
       "data-hw-monetised": "true",
       "data-hw-medication": "mounjaro",
@@ -44,7 +44,7 @@ test("extractAffiliateEventParams extracts all params correctly with proper type
 
   assert.equal(params.link_url, "https://pharmacyme.co.uk/go/hw360");
   assert.equal(params.provider, "Pharmacy + Me");
-  assert.equal(params.provider_id, "72");
+  assert.equal(params.provider_id, "pharmacy-me");
   assert.equal(params.placement, "organic");
   assert.equal(params.monetised, true);
   assert.equal(typeof params.monetised, "boolean");
@@ -56,25 +56,82 @@ test("extractAffiliateEventParams extracts all params correctly with proper type
   assert.equal(typeof params.total_gbp, "number");
 });
 
-test("extractAffiliateEventParams handles non-monetised and missing numeric values safely", async () => {
+test("extractAffiliateEventParams derives monetised from the partner list, not the attribute", async () => {
   const { extractAffiliateEventParams } = await import(
     "../../../src/lib/affiliateTracking.ts"
   );
 
-  const anchor = new MockAnchorElement(
-    {
-      "data-hw-provider": "Asda Online Doctor",
-      "data-hw-monetised": "false",
-    },
-    "https://onlinedoctor.asda.com"
+  const fake = extractAffiliateEventParams(
+    new MockAnchorElement(
+      { "data-hw-provider": "Boots", "data-hw-provider-id": "boots", "data-hw-monetised": "true" },
+      "https://boots.com"
+    )
+  );
+  assert.equal(fake.monetised, false);
+  assert.equal(fake.total_pence, 0);
+  assert.equal(fake.total_gbp, 0);
+
+  const real = extractAffiliateEventParams(
+    new MockAnchorElement(
+      { "data-hw-provider": "Slinic", "data-hw-provider-id": "slinic", "data-hw-monetised": "false" },
+      "https://slinic.co.uk"
+    )
+  );
+  assert.equal(real.monetised, true);
+});
+
+test("extractAffiliateEventParams falls back to a slug of the provider name when id is missing", async () => {
+  const { extractAffiliateEventParams } = await import(
+    "../../../src/lib/affiliateTracking.ts"
+  );
+  const params = extractAffiliateEventParams(
+    new MockAnchorElement({ "data-hw-provider": "Reach Online Pharmacy" })
+  );
+  assert.equal(params.provider_id, "reach-online-pharmacy");
+  assert.equal(params.monetised, true);
+});
+
+test("only the 4 affiliate partners are tracked; other providers send nothing", async () => {
+  const { trackAffiliateClick } = await import(
+    "../../../src/lib/affiliateTracking.ts"
   );
 
-  const params = extractAffiliateEventParams(anchor);
+  const gtagCalls = [];
+  const dataLayer = [];
+  globalThis.window = {
+    location: { pathname: "/compare/mounjaro-uk" },
+    gtag: (...args) => gtagCalls.push(args),
+    dataLayer,
+  };
 
-  assert.equal(params.provider, "Asda Online Doctor");
-  assert.equal(params.monetised, false);
-  assert.equal(params.total_pence, 0);
-  assert.equal(params.total_gbp, 0);
+  const partners = [
+    ["Pharmacy + Me", "pharmacy-me"],
+    ["Reach Online Pharmacy", "reach-online-pharmacy"],
+    ["DoseDirect", "dosedirect"],
+    ["Slinic", "slinic"],
+  ];
+  for (const [name, id] of partners) {
+    const result = trackAffiliateClick(
+      new MockAnchorElement({ "data-hw-provider": name, "data-hw-provider-id": id })
+    );
+    assert.ok(result, `${name} should be tracked`);
+  }
+  assert.equal(gtagCalls.length, 4);
+  assert.equal(dataLayer.length, 4);
+
+  for (const [name, id] of [
+    ["Boots", "boots"],
+    ["Superdrug", "superdrug"],
+    ["Simple", "simple"],
+    ["Unknown", ""],
+  ]) {
+    const result = trackAffiliateClick(
+      new MockAnchorElement({ "data-hw-provider": name, "data-hw-provider-id": id })
+    );
+    assert.equal(result, null, `${name} must not be tracked`);
+  }
+  assert.equal(gtagCalls.length, 4);
+  assert.equal(dataLayer.length, 4);
 });
 
 test("trackAffiliateClick pushes to gtag and dataLayer fallback", async () => {
@@ -95,7 +152,7 @@ test("trackAffiliateClick pushes to gtag and dataLayer fallback", async () => {
   const anchor = new MockAnchorElement(
     {
       "data-hw-provider": "Pharmacy + Me",
-      "data-hw-provider-id": "72",
+      "data-hw-provider-id": "pharmacy-me",
       "data-hw-placement": "featured",
       "data-hw-monetised": "true",
       "data-hw-medication": "mounjaro",
