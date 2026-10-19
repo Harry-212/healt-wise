@@ -35,11 +35,14 @@ export const metadata: Metadata = {
 };
 
 export default function WhatIsMounjaroPage() {
-  const pageJsonLd = whatIsMounjaroPageJsonLd();
-
   // Price insights from 67 GPhC-registered UK providers (enforcing consistent 67 count per SEO spec)
   const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
   const providerCount = 67;
+  const pageJsonLd = whatIsMounjaroPageJsonLd({
+    low: insights?.starter.low ?? 99,
+    high: insights?.top.high ?? 359.95,
+    providerCount,
+  });
   const starterPrice = insights?.starter.low ? `£${insights.starter.low}` : "£99";
   const topPrice = insights?.top.high ? `£${insights.top.high}` : "£359.95";
 
