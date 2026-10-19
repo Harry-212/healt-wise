@@ -3,12 +3,10 @@ import Link from "next/link";
 import { ArrowRight, Check, ExternalLink } from "lucide-react";
 import MounjaroPageToc from "@/components/mounjaro/MounjaroPageToc";
 import {
-  mounjaroArticleJsonLd,
-  mounjaroFaqJsonLd,
+  whatIsMounjaroPageJsonLd,
   MOUNJARO_FAQ_ITEMS,
 } from "@/lib/seo/mounjaro-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
-import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import {
   WHY_CHOOSE_HEALTHWISE360_ALT,
   WHY_CHOOSE_HEALTHWISE360_SRC,
@@ -22,23 +20,22 @@ import { buildMounjaroPriceInsights } from "@/lib/data/mounjaro-price-insights";
 export const metadata: Metadata = {
   ...buildPageShareMetadata({
     canonicalPath: "/what-is-mounjaro",
-    title: "What Is Mounjaro? UK Guide to Doses, Results & Prices",
+    title: "What Is Mounjaro? Everything You Need To Know About",
     metaDescription:
-      "What is Mounjaro (tirzepatide)? UK guide covering how it works, licensed uses, doses, results, side effects and price comparison across 67 GPhC pharmacies.",
-    openGraphTitle: "What Is Mounjaro? UK Guide to Doses, Results & Prices",
+      "What’s Mounjaro? A weekly tirzepatide injection for weight loss and type 2 diabetes. See how it works, how long it takes, doses and side effects.",
+    openGraphTitle: "What Is Mounjaro? How It Works and What to Expect",
     openGraphDescription:
-      "What is Mounjaro (tirzepatide)? UK guide covering how it works, licensed uses, doses, results, side effects and price comparison across 67 GPhC pharmacies.",
+      "A plain English guide to Mounjaro (tirzepatide): how it works, how long it takes, who can take it and what it costs in the UK.",
     imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,
     imageAlt: WHY_CHOOSE_HEALTHWISE360_ALT,
   }),
   title: {
-    absolute: "What Is Mounjaro? UK Guide to Doses, Results & Prices",
+    absolute: "What Is Mounjaro? Everything You Need To Know About",
   },
 };
 
 export default function WhatIsMounjaroPage() {
-  const articleLd = mounjaroArticleJsonLd();
-  const faqLd = mounjaroFaqJsonLd();
+  const pageJsonLd = whatIsMounjaroPageJsonLd();
 
   // Dynamic price insights from 67 GPhC-registered UK providers
   const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
@@ -48,19 +45,9 @@ export default function WhatIsMounjaroPage() {
 
   return (
     <>
-      <BreadcrumbJsonLd
-        sectionName="Information"
-        sectionPath="/helpful-guides"
-        pageName="What is Mounjaro?"
-        pagePath="/what-is-mounjaro"
-      />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
 
       <article className="w-full">
@@ -79,7 +66,10 @@ export default function WhatIsMounjaroPage() {
               <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl md:text-5xl lg:text-[2.75rem] lg:leading-[1.12]">
                 What Is Mounjaro?
               </h1>
-              <p className="mt-4 text-base font-medium leading-relaxed text-slate-800 sm:text-lg">
+              <p
+                id="hero-answer"
+                className="mt-4 text-base font-medium leading-relaxed text-slate-800 sm:text-lg"
+              >
                 Mounjaro is a once weekly injection. The medicine inside it is
                 called tirzepatide. It copies two hormones that your gut makes
                 when you eat. These hormones help you feel full and help control
@@ -290,7 +280,7 @@ export default function WhatIsMounjaroPage() {
                 <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
                   How does Mounjaro work?
                 </h2>
-                <p className="text-base leading-relaxed">
+                <p id="how-it-works-answer" className="text-base leading-relaxed">
                   Mounjaro works by copying two hormones your gut makes after you
                   eat. They are called GIP and GLP-1. They tell your brain you
                   are full. They slow down how fast food leaves your stomach.
@@ -581,7 +571,7 @@ export default function WhatIsMounjaroPage() {
                     href="/tools/mounjaro-click-calculator"
                     className="inline-flex items-center gap-1.5 font-semibold text-emerald-800 underline decoration-emerald-400 underline-offset-4 hover:text-emerald-950"
                   >
-                    Open the Mounjaro click calculator →
+                    Open the click calculator →
                   </Link>
                 </div>
               </div>
@@ -930,9 +920,9 @@ export default function WhatIsMounjaroPage() {
               </div>
 
               <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm space-y-4">
-                <h3 className="text-lg font-bold text-slate-900">
+                <p className="text-lg font-bold text-slate-900">
                   Why use Healthwise360:
-                </h3>
+                </p>
                 <ul className="space-y-3 text-slate-800">
                   <li className="flex items-start gap-2.5">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" strokeWidth={2.5} />
@@ -1032,7 +1022,9 @@ export default function WhatIsMounjaroPage() {
                 {MOUNJARO_FAQ_ITEMS.map((item) => (
                   <details key={item.question} className="group p-5 hover:bg-slate-50/50 transition">
                     <summary className="cursor-pointer list-none font-semibold text-slate-900 flex items-center justify-between [&::-webkit-details-marker]:hidden">
-                      <span>{item.question}</span>
+                      <h3 className="text-base font-semibold text-slate-900 inline">
+                        {item.question}
+                      </h3>
                       <span className="ml-2 text-slate-400 group-open:rotate-180 transition-transform">
                         ▼
                       </span>
@@ -1040,6 +1032,16 @@ export default function WhatIsMounjaroPage() {
                     <p className="mt-3 text-sm leading-relaxed text-slate-700">
                       {item.answer}
                     </p>
+                    {item.question === "Is Mounjaro the same as Ozempic?" && (
+                      <div className="mt-2.5">
+                        <Link
+                          href="/compare/wegovy-vs-mounjaro"
+                          className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-800 underline decoration-emerald-400 underline-offset-4 hover:text-emerald-950"
+                        >
+                          Read our full Mounjaro vs Wegovy comparison →
+                        </Link>
+                      </div>
+                    )}
                   </details>
                 ))}
               </div>
