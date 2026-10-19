@@ -195,3 +195,99 @@ test("shouldTrackInteraction prevents duplicate rapid double-firing", async () =
   assert.equal(shouldTrackInteraction(anchor, 500), false);
 });
 
+
+function makeStorage() {
+  const store = new Map();
+  return {
+    getItem: (k) => (store.has(k) ? store.get(k) : null),
+    setItem: (k, v) => store.set(k, String(v)),
+    removeItem: (k) => store.delete(k),
+  };
+}
+
+test("affiliate click followed by a return emits one affiliate_return with seconds_away", async () => {
+  const { trackAffiliateClick, trackAffiliateReturn } = await import(
+    "../../../src/lib/affiliateTracking.ts"
+  );
+
+  const gtagCalls = [];
+  globalThis.window = {
+    location: { pathname: "/compare/mounjaro-uk" },
+    gtag: (...args) => gtagCalls.push(args),
+    dataLayer: [],
+    sessionStorage: makeStorage(),
+  };
+
+  // No click yet: nothing to report.
+  assert.equal(trackAffiliateReturn("bfcache"), null);
+
+  const realNow = Date.now;
+  const t0 = realNow();
+  Date.now = () => t0;
+  trackAffiliateClick(
+    new MockAnchorElement({
+      "data-hw-provider": "Slinic",
+      "data-hw-provider-id": "slinic",
+    })
+  );
+  Date.now = () => t0 + 42_000;
+  const ret = trackAffiliateReturn("bfcache");
+  Date.now = realNow;
+
+  assert.ok(ret);
+  assert.equal(ret.provider_id, "slinic");
+  assert.equal(ret.seconds_away, 42);
+  assert.equal(ret.return_source, "bfcache");
+  const returns = gtagCalls.filter((c) => c[1] === "affiliate_return");
+  assert.equal(returns.length, 1);
+
+  // Marker is consumed: a second return signal does not double count.
+  assert.equal(trackAffiliateReturn("tab_visible"), null);
+});
+
+test("a return after the 30 minute window is ignored", async () => {
+  const { trackAffiliateClick, trackAffiliateReturn } = await import(
+    "../../../src/lib/affiliateTracking.ts"
+  );
+
+  globalThis.window = {
+    location: { pathname: "/" },
+    gtag: () => {},
+    dataLayer: [],
+    sessionStorage: makeStorage(),
+  };
+
+  const realNow = Date.now;
+  const t0 = realNow();
+  Date.now = () => t0;
+  trackAffiliateClick(
+    new MockAnchorElement({
+      "data-hw-provider": "Slinic",
+      "data-hw-provider-id": "slinic",
+    })
+  );
+  Date.now = () => t0 + 31 * 60 * 1000;
+  assert.equal(trackAffiliateReturn("tab_visible"), null);
+  Date.now = realNow;
+});
+
+test("clicks on internal links do not arm affiliate_return", async () => {
+  const { trackAffiliateClick, trackAffiliateReturn } = await import(
+    "../../../src/lib/affiliateTracking.ts"
+  );
+
+  globalThis.window = {
+    location: { pathname: "/mounjaro-price-comparison", host: "www.healthwise360.co.uk" },
+    gtag: () => {},
+    dataLayer: [],
+    sessionStorage: makeStorage(),
+  };
+
+  trackAffiliateClick(
+    new MockAnchorElement(
+      { "data-hw-provider": "Slinic", "data-hw-provider-id": "slinic" },
+      "https://www.healthwise360.co.uk/pharmacies/slinic"
+    )
+  );
+  assert.equal(trackAffiliateReturn("tab_visible"), null);
+});

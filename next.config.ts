@@ -34,6 +34,14 @@ const CONTENT_SECURITY_POLICY = [
 ].join("; ");
 
 const nextConfig: NextConfig = {
+  /**
+   * Hostinger's build container reports ~63 CPUs but caps the thread count, so
+   * `next build` spawned too many page-data workers and aborted with "OS can't
+   * spawn worker thread" (build of 9875d0f, 19 Oct 2026). Cap the workers.
+   */
+  experimental: {
+    cpus: 4,
+  },
   images: {
     /** Allow `quality` on `<Image>` - include 80 so older chunks / defaults never throw at runtime. */
     qualities: [50, 60, 70, 75, 80, 85, 90],
@@ -109,19 +117,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Apex -> www, any path, preserving path + query. This must live here
-      // (not only in middleware.ts) because middleware does not appear to
-      // execute on this Hostinger deployment — verified 30 Sep 2026 that a
-      // middleware-only redirect (junk-path `/$`) 404s in production while
-      // this next.config.ts `redirects()` list is honoured. Keep it first.
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "healthwise360.co.uk" }],
-        destination: "https://www.healthwise360.co.uk/:path*",
-        permanent: true,
-      },
       // Legacy / mistaken URLs (e.g. ads) — avoid 403/404 noise in Search Console.
-      // Absolute www home so apex + /lander collapses in one hop (middleware also handles this).
+      // These sit above the apex rule on purpose: the apex rule matches every
+      // path, so below it apex /lander went apex -> www/lander -> www/ (two hops).
+      // With an absolute www destination it is a single hop from either host.
       {
         source: "/lander",
         destination: "https://www.healthwise360.co.uk/",
@@ -130,6 +129,18 @@ const nextConfig: NextConfig = {
       {
         source: "/lander/",
         destination: "https://www.healthwise360.co.uk/",
+        permanent: true,
+      },
+      // Apex -> www, any path, preserving path + query. This must live here
+      // (not only in middleware.ts) because middleware does not appear to
+      // execute on this Hostinger deployment — verified 30 Sep 2026 that a
+      // middleware-only redirect (junk-path `/$`) 404s in production while
+      // this next.config.ts `redirects()` list is honoured. Keep it first among the
+      // generic rules (only the absolute-destination /lander rules above it).
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "healthwise360.co.uk" }],
+        destination: "https://www.healthwise360.co.uk/:path*",
         permanent: true,
       },
       // Retired three-treatment hub: content now lives on the Mounjaro vs Wegovy page.
