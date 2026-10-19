@@ -20,7 +20,7 @@ type SiteLogoLinkProps = {
  * into a download.
  */
 const HEADER_LOGO_CLASS =
-  "h-9 w-auto max-w-[118px] object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.08)] sm:h-14 sm:max-w-none md:h-[4.5rem]";
+  "h-9 w-auto max-w-[118px] object-contain object-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.08)] sm:h-14 sm:max-w-none md:h-[4.5rem] select-none pointer-events-auto";
 
 /**
  * Rendered width of HEADER_LOGO_CLASS (800x250 source, 3.2:1): ≤118px on
@@ -43,7 +43,7 @@ export default function SiteLogoLink({
     <Link
       href="/"
       onClick={onClick}
-      className={`group inline-flex min-w-0 items-center py-1 transition-opacity hover:opacity-90 ${className}`}
+      className={`group inline-flex min-w-0 items-center py-1 transition-opacity hover:opacity-90 select-none ${className}`}
       aria-label={`${SITE_BRAND_NAME} home`}
     >
       <Image
@@ -52,6 +52,7 @@ export default function SiteLogoLink({
         title={logoLabel}
         width={width}
         height={height}
+        draggable={false}
         className={imageClassName ?? HEADER_LOGO_CLASS}
         sizes={imageClassName === undefined ? HEADER_LOGO_SIZES : undefined}
         fetchPriority={priority ? "high" : "low"}

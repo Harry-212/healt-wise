@@ -90,7 +90,7 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
       />
 
       <div
-        className={`fixed inset-y-0 right-0 z-310 flex w-[min(100vw,20rem)] max-w-full flex-col bg-white shadow-2xl transition-transform duration-200 ease-out will-change-transform lg:hidden sm:w-[min(100vw,22rem)] ${
+        className={`fixed inset-y-0 right-0 z-310 flex w-[min(100vw,20rem)] max-w-full flex-col bg-white shadow-2xl transition-transform duration-200 ease-out will-change-transform select-none lg:hidden sm:w-[min(100vw,22rem)] ${
           open ? "translate-x-0" : "translate-x-full pointer-events-none"
         }`}
         role="dialog"
@@ -101,6 +101,9 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
           height: "100dvh",
           maxHeight: "100dvh",
           paddingTop: "env(safe-area-inset-top)",
+          WebkitUserSelect: "none",
+          userSelect: "none",
+          WebkitTouchCallout: "none",
         }}
       >
         <div className="flex h-14 shrink-0 items-center justify-between border-b border-slate-200 px-4">
@@ -297,7 +300,12 @@ export default function MobileNavDrawer({ panels }: { panels: NavPanel[] }) {
     <>
       <button
         type="button"
-        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-800 shadow-sm active:bg-slate-50 lg:hidden"
+        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-800 shadow-sm active:bg-slate-50 select-none lg:hidden"
+        style={{
+          WebkitUserSelect: "none",
+          userSelect: "none",
+          WebkitTouchCallout: "none",
+        }}
         aria-label="Open menu"
         aria-expanded={open}
         onClick={() => setOpen(true)}

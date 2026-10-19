@@ -98,14 +98,22 @@ export default function MegaMenuDesktop({ panels }: { panels: NavPanel[] }) {
   };
 
   return (
-    <ul ref={navRef} className="relative flex min-w-0 flex-nowrap items-center justify-center gap-x-0.5 xl:gap-x-1">
+    <ul
+      ref={navRef}
+      className="relative flex min-w-0 flex-nowrap items-center justify-center gap-x-0.5 xl:gap-x-1 select-none"
+      style={{
+        WebkitUserSelect: "none",
+        userSelect: "none",
+        WebkitTouchCallout: "none",
+      }}
+    >
       {panels.map((panel) => {
         if (panel.directHref) {
           return (
-            <li key={panel.id} className="flex shrink-0">
+            <li key={panel.id} className="flex shrink-0 select-none">
               <Link
                 href={panel.directHref}
-                className="inline-flex h-10 items-center whitespace-nowrap rounded-lg px-3 text-[13px] font-semibold leading-none text-brand-secondary transition-colors hover:bg-brand-surface/80 hover:text-brand-cta xl:px-3.5"
+                className="inline-flex h-10 items-center whitespace-nowrap rounded-lg px-3 text-[13px] font-semibold leading-none text-brand-secondary transition-colors hover:bg-brand-surface/80 hover:text-brand-cta xl:px-3.5 select-none"
               >
                 {panel.label}
               </Link>
