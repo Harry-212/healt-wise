@@ -270,3 +270,24 @@ test("a return after the 30 minute window is ignored", async () => {
   assert.equal(trackAffiliateReturn("tab_visible"), null);
   Date.now = realNow;
 });
+
+test("clicks on internal links do not arm affiliate_return", async () => {
+  const { trackAffiliateClick, trackAffiliateReturn } = await import(
+    "../../../src/lib/affiliateTracking.ts"
+  );
+
+  globalThis.window = {
+    location: { pathname: "/mounjaro-price-comparison", host: "www.healthwise360.co.uk" },
+    gtag: () => {},
+    dataLayer: [],
+    sessionStorage: makeStorage(),
+  };
+
+  trackAffiliateClick(
+    new MockAnchorElement(
+      { "data-hw-provider": "Slinic", "data-hw-provider-id": "slinic" },
+      "https://www.healthwise360.co.uk/pharmacies/slinic"
+    )
+  );
+  assert.equal(trackAffiliateReturn("tab_visible"), null);
+});

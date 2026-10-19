@@ -162,6 +162,9 @@ interface PendingAffiliateClick {
 
 function rememberAffiliateClick(params: AffiliateClickEventParams): void {
   try {
+    // Links to our own pages (e.g. /pharmacies/<slug>) never leave the site, so
+    // there is nothing to return from; back there is a client-side navigation.
+    if (new URL(params.link_url).host === window.location.host) return;
     const pending: PendingAffiliateClick = {
       provider: params.provider,
       provider_id: params.provider_id,
