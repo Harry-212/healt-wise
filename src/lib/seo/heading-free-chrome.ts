@@ -4,7 +4,10 @@
  * "Keep exploring" block render their titles as plain text there instead of
  * H2/H3 tags.
  */
-const HEADING_FREE_CHROME_PATHS = new Set(["/compare/wegovy-vs-mounjaro"]);
+const HEADING_FREE_CHROME_PATHS = new Set([
+  "/compare/wegovy-vs-mounjaro",
+  "/what-is-mounjaro",
+]);
 
 export function hasHeadingFreeChrome(pathname: string | null): boolean {
   if (!pathname) return false;
