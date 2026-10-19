@@ -133,6 +133,20 @@ html {
   /* hidden (not clip) so nested overflow-x-auto regions (e.g. wide tables) can scroll on mobile */
   overflow-x: hidden;
   max-width: 100%;
+  /* Ensures Google scroll-to-text fragments and anchor jumps leave clearance under fixed header */
+  scroll-padding-top: calc(4.5rem + env(safe-area-inset-top, 0px));
+}
+
+@media (min-width: 640px) {
+  html {
+    scroll-padding-top: calc(6.5rem + env(safe-area-inset-top, 0px));
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: calc(7.5rem + env(safe-area-inset-top, 0px));
+  }
 }
 
 body {
