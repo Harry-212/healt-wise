@@ -142,18 +142,125 @@ export function trackAffiliateClick(
     });
   }
 
+  rememberAffiliateClick(eventParams);
+
   return eventParams;
+}
+
+const PENDING_KEY = "hw360_affiliate_pending";
+/** A return later than this is treated as a new visit, not a "back". */
+const RETURN_WINDOW_MS = 30 * 60 * 1000;
+
+interface PendingAffiliateClick {
+  provider: string;
+  provider_id: string;
+  medication: string;
+  placement: string;
+  page_path: string;
+  clicked_at: number;
+}
+
+function rememberAffiliateClick(params: AffiliateClickEventParams): void {
+  try {
+    const pending: PendingAffiliateClick = {
+      provider: params.provider,
+      provider_id: params.provider_id,
+      medication: params.medication,
+      placement: params.placement,
+      page_path: params.page_path,
+      clicked_at: Date.now(),
+    };
+    window.sessionStorage.setItem(PENDING_KEY, JSON.stringify(pending));
+  } catch {
+    // Storage unavailable (private mode, tests): return tracking is best-effort.
+  }
+}
+
+/**
+ * Fires `affiliate_return` if the user comes back after an affiliate click.
+ * The pending marker is consumed so each click yields at most one return.
+ * `seconds_away` is the time between the click and coming back.
+ */
+export function trackAffiliateReturn(
+  returnSource: string
+): Record<string, unknown> | null {
+  if (typeof window === "undefined") return null;
+
+  let pending: PendingAffiliateClick | null = null;
+  try {
+    const raw = window.sessionStorage.getItem(PENDING_KEY);
+    if (!raw) return null;
+    window.sessionStorage.removeItem(PENDING_KEY);
+    pending = JSON.parse(raw) as PendingAffiliateClick;
+  } catch {
+    return null;
+  }
+
+  const elapsedMs = Date.now() - Number(pending?.clicked_at);
+  if (!pending || !Number.isFinite(elapsedMs) || elapsedMs < 0) return null;
+  if (elapsedMs > RETURN_WINDOW_MS) return null;
+
+  const eventParams = {
+    provider: pending.provider,
+    provider_id: pending.provider_id,
+    medication: pending.medication,
+    placement: pending.placement,
+    click_page_path: pending.page_path,
+    page_path: window.location.pathname,
+    seconds_away: Math.round(elapsedMs / 1000),
+    return_source: returnSource,
+  };
+
+  if (typeof window.gtag === "function") {
+    window.gtag("event", "affiliate_return", eventParams);
+  }
+  if (typeof window.dataLayer !== "undefined" && Array.isArray(window.dataLayer)) {
+    window.dataLayer.push({ event: "affiliate_return", ...eventParams });
+  }
+  return eventParams;
+}
+
+let initialReturnChecked = false;
+
+function isBackForwardNavigation(): boolean {
+  try {
+    const nav = performance.getEntriesByType("navigation")[0] as
+      | PerformanceNavigationTiming
+      | undefined;
+    return nav?.type === "back_forward";
+  } catch {
+    return false;
+  }
 }
 
 /**
  * Attaches a single delegated, capture-phase `click` listener that tracks
  * `a.hw360-cta` links, including ones mounted after this runs.
+ * Also listens for the user coming back (bfcache restore, tab re-focus, or a
+ * back navigation that reloads the page) to emit `affiliate_return`.
  * Returns a cleanup function.
  */
 export function attachAffiliateTracking(): () => void {
   if (typeof window === "undefined" || typeof document === "undefined") {
     return () => {};
   }
+
+  // Back button without bfcache: the page reloads, so check once per load.
+  if (!initialReturnChecked) {
+    initialReturnChecked = true;
+    if (isBackForwardNavigation()) trackAffiliateReturn("back_forward_load");
+  }
+
+  const handlePageShow = (event: PageTransitionEvent) => {
+    if (event.persisted) trackAffiliateReturn("bfcache");
+  };
+  const handleVisibility = () => {
+    if (document.visibilityState === "visible") {
+      trackAffiliateReturn("tab_visible");
+    }
+  };
+  window.addEventListener("pageshow", handlePageShow);
+  document.addEventListener("visibilitychange", handleVisibility);
 
   const handleClick = (event: MouseEvent) => {
     const target = event.target as Element | null;
@@ -166,6 +273,8 @@ export function attachAffiliateTracking(): () => void {
   document.addEventListener("click", handleClick, { capture: true });
   return () => {
     document.removeEventListener("click", handleClick, { capture: true });
+    window.removeEventListener("pageshow", handlePageShow);
+    document.removeEventListener("visibilitychange", handleVisibility);
   };
 }
 
