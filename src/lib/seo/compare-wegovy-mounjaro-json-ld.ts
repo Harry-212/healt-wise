@@ -38,8 +38,6 @@ export function compareWegovyMounjaroJsonLd(
   const base = siteOrigin().replace(/\/$/, "");
   const url = `${base}/compare/wegovy-vs-mounjaro`;
   const org = { "@id": `${base}/#organization` };
-  const wegovyId = `${url}#wegovy`;
-  const mounjaroId = `${url}#mounjaro`;
   const checkedIso = priceCheckDateKey(input.pricesChecked) ?? input.contentModified;
 
   return {
@@ -55,7 +53,10 @@ export function compareWegovyMounjaroJsonLd(
         inLanguage: "en-GB",
         isPartOf: { "@id": `${base}/#website` },
         publisher: org,
-        about: [{ "@id": wegovyId }, { "@id": mounjaroId }],
+        about: [
+          { "@type": "Thing", name: "Wegovy (semaglutide)" },
+          { "@type": "Thing", name: "Mounjaro (tirzepatide)" },
+        ],
         mainEntity: { "@id": `${url}#price-summary` },
         breadcrumb: { "@id": `${url}#breadcrumb` },
         dateModified: input.contentModified,
@@ -93,55 +94,10 @@ export function compareWegovyMounjaroJsonLd(
           { "@type": "PropertyValue", name: "Typical price", unitText: "GBP" },
           { "@type": "PropertyValue", name: "Highest price", unitText: "GBP" },
         ],
-        about: [{ "@id": wegovyId }, { "@id": mounjaroId }],
-      },
-      {
-        "@type": ["Drug", "Product"],
-        "@id": wegovyId,
-        name: "Wegovy",
-        alternateName: "Wegovy injection pen",
-        nonProprietaryName: "semaglutide",
-        activeIngredient: "semaglutide",
-        brand: { "@type": "Brand", name: "Wegovy" },
-        manufacturer: { "@type": "Organization", name: "Novo Nordisk A/S" },
-        prescriptionStatus: "https://schema.org/PrescriptionOnly",
-        administrationRoute: "Subcutaneous injection, once a week",
-        dosageForm: "Pre-filled injection pen",
-        description:
-          "Weekly weight loss injection. Doses: 0.25 mg, 0.5 mg, 1 mg, 1.7 mg, 2.4 mg and 7.2 mg.",
-        url: `${base}/wegovy-price-comparison`,
-        offers: {
-          "@type": "AggregateOffer",
-          priceCurrency: "GBP",
-          lowPrice: money(input.wegovyLow),
-          highPrice: money(input.wegovyHigh),
-          offerCount: input.wegovyProviderCount,
-          url: `${base}/wegovy-price-comparison`,
-        },
-      },
-      {
-        "@type": ["Drug", "Product"],
-        "@id": mounjaroId,
-        name: "Mounjaro",
-        alternateName: "Mounjaro KwikPen",
-        nonProprietaryName: "tirzepatide",
-        activeIngredient: "tirzepatide",
-        brand: { "@type": "Brand", name: "Mounjaro" },
-        manufacturer: { "@type": "Organization", name: "Eli Lilly and Company" },
-        prescriptionStatus: "https://schema.org/PrescriptionOnly",
-        administrationRoute: "Subcutaneous injection, once a week",
-        dosageForm: "Pre-filled injection pen",
-        description:
-          "Weekly weight loss injection. Doses: 2.5 mg, 5 mg, 7.5 mg, 10 mg, 12.5 mg and 15 mg.",
-        url: `${base}/mounjaro-price-comparison`,
-        offers: {
-          "@type": "AggregateOffer",
-          priceCurrency: "GBP",
-          lowPrice: money(input.mounjaroLow),
-          highPrice: money(input.mounjaroHigh),
-          offerCount: input.mounjaroProviderCount,
-          url: `${base}/mounjaro-price-comparison`,
-        },
+        about: [
+          { "@type": "Thing", name: "Wegovy (semaglutide)" },
+          { "@type": "Thing", name: "Mounjaro (tirzepatide)" },
+        ],
       },
       {
         "@type": "FAQPage",

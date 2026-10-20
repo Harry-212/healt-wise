@@ -146,7 +146,10 @@ function homeSchemaPriceSnapshotDataset(base: string): Record<string, unknown> {
       { "@type": "PropertyValue", name: "Typical price", unitText: "GBP" },
       { "@type": "PropertyValue", name: "Highest price", unitText: "GBP" },
     ],
-    about: [{ "@id": `${base}/#mounjaro` }, { "@id": `${base}/#wegovy` }],
+    about: [
+      { "@type": "Thing", name: "Mounjaro (tirzepatide)" },
+      { "@type": "Thing", name: "Wegovy (semaglutide)" },
+    ],
     keywords: [
       "weight loss injections prices",
       "weight loss injection price comparison uk",
@@ -165,72 +168,8 @@ export interface HomePageJsonLdOptions {
   lastUpdatedDateIso?: string;
 }
 
-function homeSchemaMounjaroProduct(
-  base: string,
-  options?: HomePageJsonLdOptions,
-): Record<string, unknown> {
-  const lowPrice = options?.mounjaroStarterLow ?? "119.69";
-  const highPrice = options?.mounjaroTopHigh ?? "359.95";
-
-  return {
-    "@type": ["Drug", "Product"],
-    "@id": `${base}/#mounjaro`,
-    name: "Mounjaro",
-    alternateName: "Mounjaro KwikPen",
-    nonProprietaryName: "tirzepatide",
-    activeIngredient: "tirzepatide",
-    brand: { "@type": "Brand", name: "Mounjaro" },
-    manufacturer: { "@type": "Organization", name: "Eli Lilly and Company" },
-    prescriptionStatus: "https://schema.org/PrescriptionOnly",
-    administrationRoute: "Subcutaneous injection, once a week",
-    dosageForm: "Pre-filled injection pen",
-    description:
-      "Weekly weight loss injection. Doses from 2.5 mg (starter) to 15 mg. Prices compared at 60+ GPhC registered UK pharmacies.",
-    url: `${base}/mounjaro-price-comparison`,
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "GBP",
-      lowPrice,
-      highPrice,
-      url: `${base}/mounjaro-price-comparison`,
-    },
-  };
-}
-
-function homeSchemaWegovyProduct(
-  base: string,
-  options?: HomePageJsonLdOptions,
-): Record<string, unknown> {
-  const lowPrice = options?.wegovyStarterLow ?? "72.89";
-  const highPrice = options?.wegovyTopHigh ?? "290.00";
-
-  return {
-    "@type": ["Drug", "Product"],
-    "@id": `${base}/#wegovy`,
-    name: "Wegovy",
-    alternateName: "Wegovy FlexTouch",
-    nonProprietaryName: "semaglutide",
-    activeIngredient: "semaglutide",
-    brand: { "@type": "Brand", name: "Wegovy" },
-    manufacturer: { "@type": "Organization", name: "Novo Nordisk" },
-    prescriptionStatus: "https://schema.org/PrescriptionOnly",
-    administrationRoute: "Subcutaneous injection, once a week",
-    dosageForm: "Pre-filled injection pen",
-    description:
-      "Weekly weight loss injection. Doses from 0.25 mg (starter) to 2.4 mg. Prices compared at 60+ GPhC registered UK pharmacies.",
-    url: `${base}/wegovy-price-comparison`,
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "GBP",
-      lowPrice,
-      highPrice,
-      url: `${base}/wegovy-price-comparison`,
-    },
-  };
-}
-
 export function homePageJsonLdGraph(
-  options?: HomePageJsonLdOptions,
+  _options?: HomePageJsonLdOptions,
 ): Record<string, unknown> {
   const base = siteOrigin().replace(/\/$/, "");
   const pageUrl = `${base}/`;
@@ -248,8 +187,8 @@ export function homePageJsonLdGraph(
     author: { "@id": `${base}/#organization` },
     about: [
       { "@type": "Thing", name: "Weight loss injections" },
-      { "@id": `${base}/#mounjaro` },
-      { "@id": `${base}/#wegovy` },
+      { "@type": "Thing", name: "Mounjaro (tirzepatide)" },
+      { "@type": "Thing", name: "Wegovy (semaglutide)" },
     ],
     mainEntity: { "@id": `${base}/#price-snapshot` },
     breadcrumb: { "@id": `${base}/#breadcrumb` },
@@ -296,8 +235,6 @@ export function homePageJsonLdGraph(
       webpage,
       breadcrumb,
       homeSchemaPriceSnapshotDataset(base),
-      homeSchemaMounjaroProduct(base, options),
-      homeSchemaWegovyProduct(base, options),
     ],
   };
 }
