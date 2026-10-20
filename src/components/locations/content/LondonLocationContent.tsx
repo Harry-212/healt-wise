@@ -462,7 +462,14 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                 <Link href="/wegovy-price-comparison" className={linkCls}>
                   Wegovy
                 </Link>{" "}
-                comparison tables.
+                comparison tables. For a local view, read our{" "}
+                <Link
+                  href="/best-weight-loss-treatment-comparison-london"
+                  className={linkCls}
+                >
+                  London weight loss treatment comparison
+                </Link>
+                .
               </p>
             </GuideSection>
 
