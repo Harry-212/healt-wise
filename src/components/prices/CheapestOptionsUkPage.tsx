@@ -1,311 +1,550 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { BarChart3, BookOpen, HelpCircle, Sparkles } from "lucide-react";
 import TrustSignals from "@/components/trust/TrustSignals";
-import { CHEAPEST_OPTIONS_FAQS } from "@/lib/seo/cheapest-options-page-seo";
-import { getCheapestOptionsMarketSummary } from "@/lib/data/cheapest-options-market-summary";
-import { CheapestOptionsEntryPricesChart } from "./CheapestOptionsEntryPricesChart";
+import {
+  formatDose,
+  formatGbp,
+} from "@/lib/data/mounjaro-price-insights";
+import {
+  getCheapestOptionsPageData,
+  type CheapestWinner,
+} from "@/lib/data/cheapest-options-page-data";
 import CheapestOptionsHero from "./CheapestOptionsHero";
 import NotMedicalAdviceBanner from "./NotMedicalAdviceBanner";
 
-function SectionInner({
+const h2Class = "text-2xl font-bold tracking-tight text-slate-900 md:text-3xl";
+const h3Class = "text-xl font-bold text-slate-900";
+const linkClass =
+  "font-semibold text-emerald-800 underline decoration-emerald-400 underline-offset-4 hover:text-emerald-950";
+
+function Section({
+  id,
   children,
-  compact,
-  tightTop,
+  tone = "white",
 }: {
+  id: string;
   children: ReactNode;
-  /** Tighter vertical padding (e.g. single banner under hero) */
-  compact?: boolean;
-  /** Less padding-top when stacked right after the compact disclaimer strip */
-  tightTop?: boolean;
+  tone?: "white" | "soft";
 }) {
-  const y = compact
-    ? "py-4 sm:py-5 md:py-6"
-    : tightTop
-      ? "pt-5 pb-10 sm:pt-6 sm:pb-12 md:pt-8 md:pb-16 lg:pt-10 lg:pb-20"
-      : "py-10 sm:py-12 md:py-16 lg:py-20";
   return (
-    <div
-      className={`mx-auto w-full max-w-6xl px-4 sm:px-5 md:px-8 ${y}`}
+    <section
+      id={id}
+      className={`w-full scroll-mt-28 border-b border-slate-200/80 ${
+        tone === "soft" ? "bg-slate-50/70" : "bg-white"
+      }`}
     >
-      {children}
+      <div className="mx-auto w-full max-w-4xl space-y-5 px-4 py-10 text-base leading-relaxed text-slate-700 sm:px-5 md:px-8 md:py-14">
+        {children}
+      </div>
+    </section>
+  );
+}
+
+function DataTable({
+  head,
+  rows,
+  foot,
+}: {
+  head: string[];
+  rows: string[][];
+  foot?: string[];
+}) {
+  return (
+    <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <table className="w-full min-w-[480px] text-left text-sm">
+        <thead>
+          <tr className="border-b border-slate-200 bg-slate-50">
+            {head.map((h) => (
+              <th key={h} className="px-4 py-3 font-semibold text-slate-900">
+                {h}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-slate-100 text-slate-800">
+          {rows.map((r) => (
+            <tr key={r.join("|")}>
+              {r.map((c, i) => (
+                <td
+                  key={i}
+                  className={`px-4 py-3 ${i === 0 ? "font-medium text-slate-900" : ""}`}
+                >
+                  {c}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+        {foot && (
+          <tfoot>
+            <tr className="border-t border-slate-200 bg-slate-50 font-semibold text-slate-900">
+              {foot.map((c, i) => (
+                <td key={i} className="px-4 py-3">
+                  {c}
+                </td>
+              ))}
+            </tr>
+          </tfoot>
+        )}
+      </table>
     </div>
   );
 }
 
-function SectionLabel({
-  icon: Icon,
-  children,
-}: {
-  icon: React.ComponentType<{ className?: string }>;
-  children: ReactNode;
-}) {
-  return (
-    <p className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-teal-700/90">
-      <Icon className="h-4 w-4 shrink-0" aria-hidden />
-      {children}
-    </p>
+function WinnerName({ w }: { w: CheapestWinner }) {
+  return w.linkProfile ? (
+    <Link href={`/pharmacies/${w.id}`} className={linkClass}>
+      {w.name}
+    </Link>
+  ) : (
+    <strong className="text-slate-900">{w.name}</strong>
   );
 }
 
+function joinDoses(doses: string[]): string {
+  if (doses.length <= 1) return doses.join("");
+  return `${doses.slice(0, -1).join(", ")} and ${doses[doses.length - 1]}`;
+}
+
 export default function CheapestOptionsUkPage() {
-  const s = getCheapestOptionsMarketSummary();
+  const d = getCheapestOptionsPageData();
+  const { wStarter, wLong, mStarter, mTop } = d;
+  const price = (n: number | undefined) => (n ? formatGbp(n) : "—");
+
+  const wStarterLow = price(wStarter?.low);
+  const mStarterLow = price(mStarter?.low);
+  const wLongLow = price(wLong?.low);
+  const mTopLow = price(mTop?.low);
+  const wLongHigh = price(wLong?.high);
+  const wCheaper = d.wegovyCheaperEveryMonth;
+  const pharmacyFloor = `${Math.floor(Math.min(d.wegovyCount, d.mounjaroCount) / 10) * 10}+`;
+
+  const heroAnswer = wCheaper
+    ? `The cheapest weight loss injection in the UK right now is Wegovy, from ${wStarterLow} for a 0.25 mg starter pen at ${wStarter?.lowProvider}. The cheapest Mounjaro starter pen is ${mStarterLow}. We compare the cheapest weight loss injections in the UK at ${pharmacyFloor} GPhC registered pharmacies, so you can find the lowest price for your dose in one place.`
+    : `At our latest check, a Wegovy 0.25 mg starter pen starts from ${wStarterLow} at ${wStarter?.lowProvider}, and a Mounjaro 2.5 mg starter pen starts from ${mStarterLow}. We compare the cheapest weight loss injections in the UK at ${pharmacyFloor} GPhC registered pharmacies, so you can find the lowest price for your dose in one place.`;
+
+  const snapshotRows: string[][] = [
+    ["Wegovy 0.25 mg (starter)", price(wStarter?.low), price(wStarter?.median)],
+    ["Wegovy 2.4 mg (long term)", wLongLow, price(wLong?.median)],
+    ["Mounjaro 2.5 mg (starter)", mStarterLow, price(mStarter?.median)],
+    ["Mounjaro 15 mg (top dose)", mTopLow, price(mTop?.median)],
+  ];
+
+  const sixMonthRows: string[][] = d.wEst.rows.map((w, i) => {
+    const m = d.mEst.rows[i];
+    return [
+      String(w.month),
+      formatDose(w.dose),
+      formatGbp(w.low),
+      formatDose(m.dose),
+      formatGbp(m.low),
+    ];
+  });
 
   return (
     <article className="w-full min-w-0 bg-white">
-      <CheapestOptionsHero />
+      {/* Section 1: Hero */}
+      <CheapestOptionsHero
+        answer={heroAnswer}
+        chips={[
+          `${pharmacyFloor} GPhC registered pharmacies`,
+          "No paid rankings",
+          `Prices checked ${d.wegovyUpdated}`,
+        ]}
+      />
 
       <div className="w-full border-b border-amber-200/60 bg-amber-50/35">
-        <SectionInner compact>
+        <div className="mx-auto w-full max-w-6xl px-4 py-4 sm:px-5 md:px-8">
           <NotMedicalAdviceBanner />
-        </SectionInner>
+        </div>
       </div>
 
-      <section
-        id="overview"
-        className="w-full border-b border-slate-200/80 bg-linear-to-b from-slate-50/90 to-white"
-        aria-labelledby="overview-heading"
-      >
-        <SectionInner tightTop>
-          <SectionLabel icon={Sparkles}>Price intelligence</SectionLabel>
-          <h2
-            id="overview-heading"
-            className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl"
-          >
-            What “cheapest GLP-1 in the UK” really means in 2026
-          </h2>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 md:text-[1.05rem]">
-            People searching{" "}
-            <strong className="font-semibold text-slate-800">
-              Mounjaro price UK
-            </strong>{" "}
-            or{" "}
-            <strong className="font-semibold text-slate-800">
-              cheapest Wegovy UK
-            </strong>{" "}
-            usually want two things: a ballpark for private listings and a way
-            to compare pharmacies fairly. This hub summarises patterns from our
-            latest comparison tables —{" "}
-            <strong className="text-slate-800">not checkout totals</strong> and{" "}
-            <strong className="text-slate-800">not treatment advice</strong>.
+      {/* Section 2: Snapshot */}
+      <Section id="snapshot" tone="soft">
+        <h2 className={h2Class}>Cheapest weight loss injections UK at a glance</h2>
+        <p>
+          Looking for cheap weight loss injections in the UK? Here are the
+          cheapest UK weight loss injections at our latest check (
+          {d.wegovyUpdated}). The lowest listed pen price is the cheapest
+          pharmacy we found. Typical is what most pharmacies charge.
+        </p>
+        <DataTable
+          head={["Medicine and dose", "Lowest", "Typical"]}
+          rows={snapshotRows}
+        />
+        <p className="text-sm text-slate-600">
+          Prices are for the pen only. Delivery is not always included. It
+          depends on the pharmacy.
+        </p>
+        <Link href="/" className={linkClass}>
+          See every dose and pharmacy →
+        </Link>
+      </Section>
+
+      {/* Section 3: Which is cheapest */}
+      <Section id="which-is-cheapest">
+        <h2 className={h2Class}>
+          Which weight loss injection is cheapest in the UK?
+        </h2>
+        {wCheaper ? (
+          <p>
+            Wegovy is the cheapest weight loss injection in the UK at every
+            month of the first 6 in our price tables. The Wegovy starter pen
+            costs from {wStarterLow}, against {mStarterLow} for Mounjaro. On
+            the dose most people stay on, Wegovy 2.4 mg costs from {wLongLow},
+            against {mTopLow} for Mounjaro 15 mg. These are different medicines
+            and different doses, so this is a price comparison, not a like for
+            like one.
           </p>
-          <p className="mt-3 text-sm text-slate-500">{s.snapshotNote}</p>
+        ) : (
+          <p>
+            The Wegovy starter pen costs from {wStarterLow}, against{" "}
+            {mStarterLow} for Mounjaro. On the long term doses, Wegovy 2.4 mg
+            costs from {wLongLow} and Mounjaro 15 mg from {mTopLow}. Compare the
+            dose you will be on.
+          </p>
+        )}
+        <p>
+          So, which is the cheapest injection for weight loss? Look at price
+          alone and the table above answers it. But the cheapest weight loss
+          injection is not always the best one for you. In a head to head trial,
+          people lost more weight on Mounjaro. A prescriber can help you choose.
+        </p>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
-            {(
-              [
-                {
-                  title: "Mounjaro UK listings",
-                  count: s.providerCounts.mounjaro,
-                  hint: "Lowest 2.5 mg pen in table",
-                  amount: s.mounjaro.min25,
-                  who: s.mounjaro.providerAtLowest25,
-                  accent: "ring-violet-200/80 shadow-violet-900/5",
-                  bar: "bg-violet-500",
-                },
-                {
-                  title: "Wegovy UK listings",
-                  count: s.providerCounts.wegovy,
-                  hint: "Lowest 0.25 mg pen in table",
-                  amount: s.wegovy.min025,
-                  who: s.wegovy.providerAtLowest025,
-                  accent: "ring-teal-200/80 shadow-teal-900/5",
-                  bar: "bg-teal-500",
-                },
-              ] as const
-            ).map((card) => (
-              <div
-                key={card.title}
-                className={`relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white p-5 shadow-md ring-1 ${card.accent}`}
-              >
-                <div
-                  className={`absolute left-0 top-0 h-1 w-full ${card.bar}`}
-                  aria-hidden
-                />
-                <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                  {card.title}
-                </p>
-                <p className="mt-2 text-3xl font-bold tabular-nums text-slate-900">
-                  {card.count}
-                  <span className="text-lg font-semibold text-slate-400">
-                    {" "}
-                    pharmacies
-                  </span>
-                </p>
-                <p className="mt-3 text-sm text-slate-600">
-                  {card.hint}:{" "}
-                  <strong className="text-slate-900">£{card.amount}</strong>
-                </p>
-                <p className="mt-1 truncate text-xs text-slate-500" title={card.who}>
-                  {card.who}
-                </p>
-              </div>
-            ))}
-          </div>
-        </SectionInner>
-      </section>
+        <h3 className={h3Class}>Cheapest GLP-1 injections UK</h3>
+        <p>
+          Both are GLP-1 medicines. Wegovy copies one gut hormone, GLP-1.
+          Mounjaro copies two, GIP and GLP-1. Both are weekly injections, and
+          both are prescription only. Here is our cheapest GLP-1 price
+          comparison for the UK.
+        </p>
+        <DataTable
+          head={["", "Wegovy", "Mounjaro"]}
+          rows={[
+            ["Medicine inside", "Semaglutide", "Tirzepatide"],
+            ["Cheapest starter pen", wStarterLow, mStarterLow],
+            [
+              "Cheapest long term pen",
+              `${wLongLow} (2.4 mg)`,
+              `${mTopLow} (15 mg)`,
+            ],
+            [
+              "Pharmacies we check",
+              String(d.wegovyCount),
+              String(d.mounjaroCount),
+            ],
+          ]}
+        />
+        <Link href="/compare/wegovy-vs-mounjaro" className={linkClass}>
+          Read our full Mounjaro vs Wegovy comparison →
+        </Link>
+      </Section>
 
-      <section
-        id="summary"
-        className="w-full border-b border-slate-200/80 bg-white"
-        aria-labelledby="summary-heading"
-      >
-        <SectionInner>
-          <SectionLabel icon={BarChart3}>Market Summary</SectionLabel>
-          <h2
-            id="summary-heading"
-            className="text-2xl font-bold tracking-tight text-slate-900 md:text-[1.65rem]"
-          >
-            Key takeaways from our UK GLP-1 price data
-          </h2>
-          <ul className="mt-8 grid gap-4 md:grid-cols-1 md:gap-5">
-            <li className="flex gap-4 rounded-2xl border border-slate-200/90 bg-slate-50/50 p-5 md:p-6">
-              <span
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-teal-100 text-sm font-bold text-teal-800"
-                aria-hidden
-              >
-                1
-              </span>
-              <div>
-                <p className="font-semibold text-slate-900">
-                  Large spreads between pharmacies are normal
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  In our Wegovy snapshot, listed 2.4 mg pens reach about{" "}
-                  <strong className="text-slate-800">£{s.wegovy.max024}</strong>{" "}
-                  at the top of the range, while 0.25 mg starter pens bottom out
-                  around{" "}
-                  <strong className="text-slate-800">£{s.wegovy.min025}</strong>.
-                  That gap is why like-for-like comparison matters.
-                </p>
-              </div>
+      {/* Section 4: Monthly cost */}
+      <Section id="monthly-cost" tone="soft">
+        <h2 className={h2Class}>Cheapest monthly weight loss injections UK</h2>
+        <p>
+          One pen lasts 4 weeks, so the price of one pen is your monthly cost.
+          The cheapest weight loss injections per month in the UK start at{" "}
+          {price(Math.min(wStarter?.low ?? Infinity, mStarter?.low ?? Infinity))}
+          . But the price goes up as your dose goes up, so look at the first 6
+          months, not just month 1.
+        </p>
+        <h3 className={h3Class}>What your first 6 months cost</h3>
+        <DataTable
+          head={[
+            "Month",
+            "Wegovy dose",
+            "Wegovy lowest",
+            "Mounjaro dose",
+            "Mounjaro lowest",
+          ]}
+          rows={sixMonthRows}
+          foot={[
+            "6 month total",
+            "",
+            formatGbp(d.wEst.totalLow),
+            "",
+            formatGbp(d.mEst.totalLow),
+          ]}
+        />
+        <p>
+          At typical prices, the first 6 months cost about{" "}
+          {formatGbp(Math.round(d.wEst.totalTypical))} for Wegovy and{" "}
+          {formatGbp(Math.round(d.mEst.totalTypical))} for Mounjaro.
+        </p>
+        <p className="text-sm text-slate-600">
+          This table assumes your dose goes up every 4 weeks. Your prescriber
+          decides when, and many people stay on a lower dose for longer. The
+          lowest prices can come from different pharmacies.
+        </p>
+        <h3 className={h3Class}>Cheapest weight loss injection starter dose UK</h3>
+        <p>
+          With weight loss injections, starter dose pens cost the least. The
+          cheapest weight loss pen in the UK is the Wegovy 0.25 mg starter pen,
+          from {wStarterLow}. A cheap starter pen is a good start, but check the
+          price of the dose you will be on in month 3 and beyond. Your
+          maintenance costs matter more over a year.
+        </p>
+      </Section>
+
+      {/* Section 5: Where to buy */}
+      <Section id="where-to-buy">
+        <h2 className={h2Class}>
+          Where is the cheapest place to buy weight loss injections in the UK?
+        </h2>
+        <p>
+          The cheapest place to buy weight loss injections in the UK is a GPhC
+          registered online pharmacy. At our latest check, these pharmacies had
+          the most of the lowest prices:
+        </p>
+        <ul className="list-inside list-disc space-y-2">
+          {d.wWinners.slice(0, 2).map((w) => (
+            <li key={`w-${w.name}`}>
+              <WinnerName w={w} />: cheapest for Wegovy {joinDoses(w.doses)}.
             </li>
-            <li className="flex gap-4 rounded-2xl border border-slate-200/90 bg-slate-50/50 p-5 md:p-6">
-              <span
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-sm font-bold text-violet-800"
-                aria-hidden
-              >
-                2
-              </span>
-              <div>
-                <p className="font-semibold text-slate-900">
-                  Mounjaro vs Wegovy — don’t compare headline pens in isolation
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  Mounjaro listings in this dataset run from about{" "}
-                  <strong className="text-slate-800">£{s.mounjaro.min25}</strong>{" "}
-                  (2.5 mg) up to{" "}
-                  <strong className="text-slate-800">£{s.mounjaro.max15}</strong>{" "}
-                  (15 mg, highest cells). Different molecule, titration, and
-                  bundle rules mean only a clinician can say what fits you.
-                </p>
-              </div>
+          ))}
+          {d.mWinners.slice(0, 2).map((w) => (
+            <li key={`m-${w.name}`}>
+              <WinnerName w={w} />: cheapest for Mounjaro {joinDoses(w.doses)}.
             </li>
-          </ul>
-        </SectionInner>
-      </section>
+          ))}
+        </ul>
+        <p>
+          The cheapest place to get weight loss injections in the UK can change
+          each month, so always look at the date next to the price. Use our price
+          pages for your dose:
+        </p>
+        <p className="flex flex-wrap gap-x-6 gap-y-2">
+          <Link href="/wegovy-price-comparison" className={linkClass}>
+            See every Wegovy dose →
+          </Link>
+          <Link href="/mounjaro-price-comparison" className={linkClass}>
+            See every Mounjaro dose →
+          </Link>
+        </p>
+      </Section>
 
-      <section
-        id="snapshot-chart"
-        className="w-full border-b border-slate-200/80 bg-slate-100/60"
-        aria-labelledby="chart-heading"
-      >
-        <SectionInner>
-          <SectionLabel icon={BarChart3}>Visual snapshot</SectionLabel>
-          <h2
-            id="chart-heading"
-            className="text-2xl font-bold tracking-tight text-slate-900 md:text-[1.65rem]"
-          >
-            Lowest listed “entry” order by brand
-          </h2>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600 md:text-base">
-            This chart answers:{" "}
-            <em>
-              “What is the cheapest cell we currently list for each medicine?”
-            </em>{" "}
-            It does <strong>not</strong> rank which drug is cheaper for your
-            care plan.
-          </p>
-          <div className="mt-8">
-            <CheapestOptionsEntryPricesChart data={s.entryPriceChart} />
-          </div>
-        </SectionInner>
-      </section>
+      {/* Section 6: Buying online */}
+      <Section id="buying-online" tone="soft">
+        <h2 className={h2Class}>
+          Cheapest weight loss injections online: what to check
+        </h2>
+        <p>
+          The cheapest weight loss injections online are only a good deal if the
+          pharmacy is safe. Cheap weight loss injections online should always
+          come from a GPhC registered online pharmacy, with a health check by a
+          qualified prescriber.
+        </p>
+        <ol className="list-inside list-decimal space-y-2">
+          <li>
+            Find the GPhC number on the pharmacy&apos;s website. It is usually in
+            the footer.
+          </li>
+          <li>
+            Check it on the official GPhC register. The name and address should
+            match.
+          </li>
+          <li>
+            Expect a health form. Weight loss injections are a prescription only
+            medicine. A real pharmacy will always ask about your weight, health
+            and other medicines.
+          </li>
+        </ol>
+        <h3 className={h3Class}>Is the cheapest weight loss jab safe?</h3>
+        <p>
+          Yes. Cheap weight loss jabs in the UK are safe if they come from GPhC
+          verified pharmacies after a health check. Be careful if a site sells
+          weight loss injections with no health questions, has no GPhC number,
+          sells &quot;pens&quot; on social media, or charges far less than every
+          pharmacy in our table.
+        </p>
+        <Link href="/pharmacy-safety-gphc-verification" className={linkClass}>
+          Read our pharmacy safety guide →
+        </Link>
+      </Section>
 
-      <section
-        id="faq"
-        className="w-full border-b border-slate-200/80 bg-white"
-        aria-labelledby="faq-heading"
-      >
-        <SectionInner>
-          <SectionLabel icon={HelpCircle}>FAQ</SectionLabel>
-          <h2
-            id="faq-heading"
-            className="text-2xl font-bold tracking-tight text-slate-900 md:text-[1.65rem]"
-          >
-            Questions people ask about cheapest GLP-1 prices in the UK
-          </h2>
-          <p className="mt-3 max-w-3xl text-slate-600">
-            Straight answers for search topics such as private{" "}
-            <strong className="text-slate-800">semaglutide</strong> and{" "}
-            <strong className="text-slate-800">tirzepatide</strong> — with the
-            same clinical caveat: prescribing is not decided on price alone.
-          </p>
-          <div className="mt-8 space-y-3">
-            {CHEAPEST_OPTIONS_FAQS.map((item, i) => (
-              <details
-                key={i}
-                className="group overflow-hidden rounded-2xl border border-slate-200/90 bg-slate-50/40 shadow-sm open:border-teal-200/80 open:bg-white open:shadow-md"
-              >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-left font-semibold text-slate-900 transition hover:bg-white/80 md:px-6 md:py-5 [&::-webkit-details-marker]:hidden">
-                  <span className="pr-2">{item.question}</span>
-                  <span className="shrink-0 rounded-full border border-slate-200 bg-white px-2.5 py-0.5 text-xs font-bold tabular-nums text-slate-500 group-open:border-teal-200 group-open:text-teal-800">
-                    <span className="group-open:hidden">Show</span>
-                    <span className="hidden group-open:inline">Hide</span>
-                  </span>
-                </summary>
-                <div className="border-t border-slate-100 px-5 pb-5 pt-1 text-sm leading-relaxed text-slate-600 md:px-6 md:pb-6">
-                  {item.answer}
-                </div>
-              </details>
-            ))}
-          </div>
-        </SectionInner>
-      </section>
+      {/* Section 7: Hidden costs */}
+      <Section id="hidden-costs">
+        <h2 className={h2Class}>
+          Why the cheapest pen is not always the cheapest overall
+        </h2>
+        <p>
+          The lowest price weight loss injections in the UK can cost more once
+          you add the extras. Check these before you pay:
+        </p>
+        <ul className="list-inside list-disc space-y-2">
+          <li>
+            <strong>Dosage strength.</strong> Higher doses cost more. Compare
+            the dose you will be on.
+          </li>
+          <li>
+            <strong>Consultation fee.</strong> Most are free, but a few
+            pharmacies add one.
+          </li>
+          <li>
+            <strong>Delivery fee.</strong> Pens are sent cold. Many pharmacies
+            charge for this.
+          </li>
+          <li>
+            <strong>Introductory offer.</strong> A low first price can go up in
+            month 2.
+          </li>
+          <li>
+            <strong>Subscriptions.</strong> Some pharmacies lock you into a
+            monthly plan.
+          </li>
+          <li>
+            <strong>Bundles.</strong> Buying 2 or 3 pens at once can lower the
+            price per pen.
+          </li>
+        </ul>
+        <p>
+          The checkout price is what you really pay. A like for like comparison
+          looks at the same dose and the total treatment cost, not just the
+          headline price. The price spread between pharmacies is big: the same
+          Wegovy 2.4 mg pen costs from {wLongLow} to {wLongHigh}.
+        </p>
+      </Section>
+
+      {/* Section 8: Other options */}
+      <Section id="other-options" tone="soft">
+        <h2 className={h2Class}>Cheaper options you may see on Google</h2>
+        <p>
+          You may see other low cost weight loss injections in the UK and cheap
+          weight loss medications online. Here is how they compare.
+        </p>
+        <ul className="list-inside list-disc space-y-3">
+          <li>
+            <strong>Daily injections (liraglutide, such as Nevolat or Saxenda).</strong>{" "}
+            The pen price can look low, but you inject every day and one pen
+            lasts about a week on the full dose. So the month can cost more than
+            it looks.
+          </li>
+          <li>
+            <strong>The Wegovy pill.</strong> A daily tablet with the same
+            medicine as Wegovy. Check the current price before you compare it
+            with the injection.{" "}
+            <Link href="/blog/wegovy-pill-uk" className={linkClass}>
+              Read our Wegovy pill guide →
+            </Link>
+          </li>
+          <li>
+            <strong>Orlistat tablets.</strong> A low cost tablet, not an
+            injection. It works in a different way, and most people lose much
+            less weight than on Wegovy or Mounjaro.
+          </li>
+          <li>
+            <strong>Ozempic.</strong> Ozempic is licensed for type 2 diabetes,
+            not weight loss. UK pharmacies should not sell it to you for weight
+            loss.
+          </li>
+        </ul>
+        <p>
+          Affordable weight loss injections in the UK, like any cheap weight loss
+          injection in the UK, still need a prescription. Cheap weight loss
+          medication from a site with no health check is not safe.
+        </p>
+      </Section>
+
+      {/* Section 9: NHS */}
+      <Section id="nhs">
+        <h2 className={h2Class}>
+          Can you get weight loss injections cheaper on the NHS?
+        </h2>
+        <p>
+          Yes, if you qualify. On the NHS, you pay a normal prescription charge
+          in England, or nothing in Scotland, Wales and Northern Ireland. But
+          only some people can get them right now.
+        </p>
+        <ul className="list-inside list-disc space-y-2">
+          <li>
+            <strong>Mounjaro:</strong> GPs in England can prescribe it for
+            people with the greatest need, starting with a BMI of 40 or more and
+            several weight related health problems.
+          </li>
+          <li>
+            <strong>Wegovy:</strong> through specialist weight management
+            services, usually for a BMI of 35 or more with a weight related
+            health problem, for up to 2 years.
+          </li>
+        </ul>
+        <p>
+          Most people get private weight loss injections in the UK. The cheapest
+          private weight loss injections in the UK are on our price pages. For
+          the cheapest private weight loss treatment in the UK, compare prices
+          for your dose before each order.
+        </p>
+      </Section>
+
+      {/* Section 10: Our checks */}
+      <Section id="how-we-check" tone="soft">
+        <h2 className={h2Class}>How we find the cheapest prices</h2>
+        <p>
+          This cheapest weight loss injections UK comparison only uses
+          pharmacies from our UK pharmacy listings that pass the same 5 checks.
+          No pharmacy can pay to rank higher.
+        </p>
+        <ol className="list-inside list-decimal space-y-2">
+          <li>
+            <strong>GPhC registration.</strong> We check each pharmacy on the
+            official GPhC register.
+          </li>
+          <li>
+            <strong>Safe prescribing.</strong> A prescriber must check your
+            health before any pen is sent.
+          </li>
+          <li>
+            <strong>Full price.</strong> We record the price of every dose in our
+            multi pharmacy price tables.
+          </li>
+          <li>
+            <strong>Delivery.</strong> We check cold packing, delivery times and
+            tracking.
+          </li>
+          <li>
+            <strong>Support.</strong> We look at dose advice and how easy it is
+            to get help.
+          </li>
+        </ol>
+        <p>
+          We check every price in the first week of each month and show the date
+          next to it. We show standard prices. First order codes are not
+          included. Featured partners sit outside the price tables and never
+          change the cheapest price.
+        </p>
+        <Link href="/methodology" className={linkClass}>
+          Read how we check prices →
+        </Link>
+      </Section>
+
+      {/* Section 11: FAQ */}
+      <Section id="faq">
+        <h2 className={h2Class}>FAQs</h2>
+        <div className="divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          {d.faqs.map((item) => (
+            <details key={item.question} className="group p-5">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 [&::-webkit-details-marker]:hidden">
+                <h3 className="text-base font-semibold text-slate-900">
+                  {item.question}
+                </h3>
+                <span className="text-slate-400 transition-transform group-open:rotate-180">
+                  ▼
+                </span>
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-slate-700">
+                {item.answer}
+              </p>
+            </details>
+          ))}
+        </div>
+      </Section>
 
       <div className="w-full border-b border-slate-200/80 bg-linear-to-br from-slate-50 to-white">
-        <SectionInner>
+        <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-5 md:px-8">
           <TrustSignals />
-        </SectionInner>
+        </div>
       </div>
-
-      <section
-        id="methodology"
-        className="w-full border-b border-slate-200/80 bg-white"
-        aria-labelledby="methodology-heading"
-      >
-        <SectionInner>
-          <SectionLabel icon={BookOpen}>Methodology</SectionLabel>
-          <h2
-            id="methodology-heading"
-            className="text-2xl font-bold tracking-tight text-slate-900"
-          >
-            How we build these UK price snapshots
-          </h2>
-          <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">
-            We align provider rows where possible, spell out whether consult and
-            delivery are included, and link to GPhC checks. For edge cases and
-            refresh cadence, read{" "}
-            <Link
-              href="/methodology"
-              className="font-semibold text-brand-primary underline underline-offset-2"
-            >
-              the methodology hub
-            </Link>
-            .
-          </p>
-        </SectionInner>
-      </section>
     </article>
   );
 }

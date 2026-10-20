@@ -2,19 +2,18 @@ import Link from "next/link";
 
 const ITEMS: { href: string; label: string }[] = [
   { href: "#what-is-wegovy", label: "What is Wegovy?" },
+  { href: "#wegovy-facts-at-a-glance", label: "Facts at a glance" },
+  { href: "#wegovy-words-explained", label: "Words explained" },
   { href: "#how-wegovy-works", label: "How it works" },
-  { href: "#wegovy-month-timeline", label: "Month timeline" },
-  { href: "#weight-loss-results", label: "Trial results" },
-  { href: "#dosage-plan", label: "Dosage plan" },
-  { href: "#wegovy-price-uk", label: "Price UK" },
-  { href: "#wegovy-vs-others", label: "vs other treatments" },
-  { href: "#side-effects-safety", label: "Side effects" },
-  { href: "#eligibility-uk", label: "Eligibility" },
-  { href: "#how-to-get-wegovy-uk", label: "How to get in the UK" },
-  { href: "#best-providers", label: "Providers" },
-  { href: "#trust-verification", label: "Trust" },
+  { href: "#what-wegovy-is-used-for", label: "What it is used for" },
+  { href: "#semaglutide-and-ingredients", label: "Semaglutide & ingredients" },
+  { href: "#doses-and-flextouch", label: "Doses & FlexTouch pen" },
+  { href: "#when-wegovy-starts-working", label: "When it starts working" },
+  { href: "#who-can-take-it", label: "Who can take it" },
+  { href: "#is-wegovy-safe", label: "Is it safe?" },
+  { href: "#compare-wegovy-prices", label: "Compare prices" },
+  { href: "#questions-to-ask", label: "Questions to ask" },
   { href: "#faq", label: "FAQ" },
-  { href: "#medical-review", label: "Standards & references" },
 ];
 
 export default function WegovyPageToc() {

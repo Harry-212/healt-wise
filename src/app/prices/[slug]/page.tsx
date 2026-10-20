@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import CheapestOptionsUkPage from "@/components/prices/CheapestOptionsUkPage";
 import { cheapestOptionsUkJsonLd } from "@/lib/seo/cheapest-options-page-seo";
+import { getCheapestOptionsPageData } from "@/lib/data/cheapest-options-page-data";
 import { metadataForPriceSlug } from "@/lib/seo/price-slug-metadata";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import ComparisonTable from "@/components/comparison/ComparisonTable";
@@ -27,7 +28,7 @@ export default async function PricePage({ params }: Props) {
   if (!cfg) notFound();
 
   if (slug === "cheapest-options-uk") {
-    const jsonLd = cheapestOptionsUkJsonLd();
+    const jsonLd = cheapestOptionsUkJsonLd(getCheapestOptionsPageData().faqs);
     return (
       <>
         <BreadcrumbJsonLd

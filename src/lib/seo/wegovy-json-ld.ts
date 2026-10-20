@@ -1,53 +1,136 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
 
-export function wegovyArticleJsonLd(): Record<string, unknown> {
-  const base = siteOrigin();
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "What Is Wegovy? UK Guide to Results, Doses & Costs",
-    description:
-      "Learn how Wegovy works, who may qualify in the UK, expected results, dosage, side effects and typical private treatment costs.",
-    url: `${base}/what-is-wegovy`,
-    dateModified: "2026-04-06",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Healthwise360",
-      url: base,
+export type WhatIsWegovyFaqParams = {
+  /** Lowest listed starter pen price, e.g. "£76.94". */
+  starterLow: string;
+  /** Typical monthly price on 2.4 mg, e.g. "£200". */
+  dose24Typical: string;
+};
+
+export function buildWegovyFaqItems(
+  params?: WhatIsWegovyFaqParams,
+): { question: string; answer: string }[] {
+  const starterLow = params?.starterLow ?? "£76.94";
+  const dose24Typical = params?.dose24Typical ?? "£200";
+  return [
+    {
+      question: "Is Wegovy the same as Ozempic?",
+      answer:
+        "Yes and no. Both contain semaglutide and are made by Novo Nordisk. Wegovy is for weight loss and goes up to higher doses. Ozempic is for type 2 diabetes.",
     },
-  };
+    {
+      question: "Is Wegovy the same as Mounjaro?",
+      answer:
+        "No. Wegovy contains semaglutide and copies one hormone, GLP-1. Mounjaro contains tirzepatide and copies two hormones, GIP and GLP-1. In a head to head trial, people lost more weight on Mounjaro.",
+    },
+    {
+      question: "What is the main side effect of Wegovy?",
+      answer:
+        "Feeling sick (nausea). It is most common in the first weeks and after each dose increase, and it often eases with time.",
+    },
+    {
+      question: "Is Wegovy insulin?",
+      answer:
+        "No. Wegovy is not insulin. It helps your body make its own insulin when blood sugar is high, and it lowers hunger.",
+    },
+    {
+      question: "Is Wegovy available on the NHS?",
+      answer:
+        "Yes, for some people, through specialist weight management services. You usually need a high BMI and a weight related health problem. NHS treatment lasts up to 2 years.",
+    },
+    {
+      question: "How long can you take Wegovy?",
+      answer:
+        "Privately, as long as your prescriber says it is right for you. On the NHS, up to 2 years.",
+    },
+    {
+      question: "What happens if I stop Wegovy?",
+      answer:
+        "Your hunger may come back, and weight often comes back too. Talk to your prescriber before you stop.",
+    },
+    {
+      question: "Can I take Wegovy if I have type 2 diabetes?",
+      answer:
+        "Yes, if a prescriber agrees. It can help you lose weight. Tell them about your diabetes medicines, as your doses may need to change.",
+    },
+    {
+      question: "What happens if I miss a dose?",
+      answer:
+        "If your next dose is more than 2 days away, take it as soon as you remember. If it is less than 2 days away, skip it and take the next one on your usual day.",
+    },
+    {
+      question: "What does Wegovy cost in the UK?",
+      answer: `From ${starterLow} for a starter pen at our latest check. Most people pay about ${dose24Typical} a month on 2.4 mg. See every dose and pharmacy on our Wegovy price page.`,
+    },
+  ];
 }
 
-export const WEGOVY_FAQ_ITEMS: { question: string; answer: string }[] = [
-  {
-    question: "How much does Wegovy cost in the UK?",
-    answer:
-      "Private Wegovy prices vary by dose and provider. Based on the prices shown in our comparison table, headline monthly order prices for common pen strengths often fall roughly between about £169 and £269 before promotions—always confirm live pricing, consultation rules, and delivery on the pharmacy site.",
-  },
-  {
-    question: "Is Wegovy available on the NHS?",
-    answer:
-      "Access depends on local criteria and eligibility. Some patients may receive GLP-1 treatments via NHS specialist weight-management pathways when criteria are met; many people obtain Wegovy through private online clinics or pharmacies after a consultation. Check NHS and local guidance for the latest position.",
-  },
-  {
-    question: "How long before I see results with Wegovy?",
-    answer:
-      "In clinical trials, weight change accumulates over many months alongside diet and activity changes. Individual response varies; your prescriber may adjust dose over time. Do not expect instant results in the first week.",
-  },
-];
+export const WEGOVY_FAQ_ITEMS = buildWegovyFaqItems();
 
-export function wegovyFaqJsonLd(): Record<string, unknown> {
+/**
+ * Page graph for /what-is-wegovy. Deliberately WebPage + FAQPage only (no Drug
+ * or Offer node): Healthwise360 is a comparison site, not a seller, so it
+ * follows the same compliance-audit shape as /what-is-mounjaro.
+ */
+export function whatIsWegovyPageJsonLd(
+  faqItems: { question: string; answer: string }[] = WEGOVY_FAQ_ITEMS,
+): Record<string, unknown> {
+  const base = siteOrigin();
+  const pageUrl = `${base}/what-is-wegovy`;
+
   return {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: WEGOVY_FAQ_ITEMS.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: "What Is Wegovy? How It Works and When It Starts Working (UK)",
+        headline: "What Is Wegovy?",
+        description:
+          "What is Wegovy? A weekly semaglutide injection for weight loss. See how it works, when it starts working, weight loss results, doses and UK prices.",
+        inLanguage: "en-GB",
+        isPartOf: { "@id": `${base}/#website` },
+        publisher: { "@id": `${base}/#organization` },
+        about: { "@type": "Thing", name: "Wegovy (semaglutide)" },
+        mainEntity: { "@id": `${pageUrl}#faq` },
+        breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
+        lastReviewed: "2026-10-19",
+        citation: {
+          "@type": "WebPage",
+          name: "Semaglutide: a medicine to manage type 2 diabetes or treat obesity",
+          url: "https://www.nhs.uk/medicines/semaglutide/",
+          publisher: { "@type": "Organization", name: "NHS" },
+        },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["#hero-answer", "#how-it-works-answer"],
+        },
       },
-    })),
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: `${base}/` },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "What Is Wegovy?",
+            item: pageUrl,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        isPartOf: { "@id": `${pageUrl}#webpage` },
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      },
+    ],
   };
 }
 
