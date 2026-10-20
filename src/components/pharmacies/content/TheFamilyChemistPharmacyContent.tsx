@@ -28,7 +28,7 @@ export default function TheFamilyChemistPharmacyContent() {
       providerName="The Family Chemist"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         { k: "Provider", v: "The Family Chemist" },
         { k: "GPhC", v: "9012915" },
         {

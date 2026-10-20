@@ -31,7 +31,7 @@ export default function PharmacyAdvanceContent() {
       providerName="Pharmacy Advance"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         {
           k: "Provider",
           v: "Pharmacy Advance (GPhC 9012423)",

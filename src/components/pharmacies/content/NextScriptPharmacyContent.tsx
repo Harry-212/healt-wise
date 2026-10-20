@@ -28,7 +28,7 @@ export default function NextScriptPharmacyContent() {
       providerName="Next Script"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         { k: "Provider", v: "Next Script" },
         { k: "GPhC", v: "9012568" },
         {

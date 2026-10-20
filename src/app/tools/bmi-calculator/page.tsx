@@ -11,9 +11,9 @@ import {
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
-const TITLE = "BMI Calculator UK: Free BMI, BMR and TDEE Calculator (Stones & kg)";
+const TITLE = "BMI Calculator UK: BMI, BMR & TDEE | Healthwise360";
 const DESCRIPTION =
-  "Check your BMI in stones and pounds or kg, see the UK BMI chart for adults and work out your BMR and daily calorie needs.";
+  "Calculate your BMI, healthy weight range, BMR and estimated daily energy needs with our free UK calculator. Results are for general information only.";
 
 export const metadata: Metadata = {
   ...buildPageShareMetadata({

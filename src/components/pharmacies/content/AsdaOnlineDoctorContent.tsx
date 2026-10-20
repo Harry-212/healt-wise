@@ -28,8 +28,9 @@ export default function AsdaOnlineDoctorContent() {
       providerName="Asda Online Doctor"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
-        { k: "Provider", v: "Asda Online Doctor (GPhC 1116105)" },
+        { k: "Prices checked", v: "20 September 2026" },
+        { k: "Service", v: "Asda Online Doctor" },
+        { k: "Dispensing pharmacy", v: "Asda Pharmacy (GPhC 1116105)" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat" },
         { k: "Fulfilment", v: "Home delivery" },
       ]}
@@ -301,7 +302,7 @@ export default function AsdaOnlineDoctorContent() {
       <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
         <h2 className="text-xl font-bold text-slate-900">Is Asda Online Doctor legit?</h2>
         <p className="mt-3 leading-relaxed text-slate-800">
-          Asda Online Doctor is listed on the official GPhC register (number 1116105). You can check it yourself on the GPhC website: the name and address should match. A real UK pharmacy will always ask about your health before it sends Mounjaro or Wegovy.
+          Asda Online Doctor is the digital health and consultation service, with prescription treatments dispensed by the registered pharmacy <strong>Asda Pharmacy</strong> (registered with the General Pharmaceutical Council under GPhC number 1116105). You can verify this registration on the official GPhC online register. A legitimate UK pharmacy service will always require a consultation and clinical review before dispensing treatments such as Mounjaro or Wegovy.
         </p>
       </section>
 

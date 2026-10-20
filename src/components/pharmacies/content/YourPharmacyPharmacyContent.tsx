@@ -31,7 +31,7 @@ export default function YourPharmacyPharmacyContent() {
       providerName="YourPharmacy"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         {
           k: "Provider",
           v: "YourPharmacy (GPhC 9012029)",
