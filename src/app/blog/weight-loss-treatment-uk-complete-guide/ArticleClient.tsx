@@ -184,6 +184,17 @@ export default function ArticleClient() {
                 work, who is eligible, what they cost, how to access them
                 safely, and what to realistically expect from treatment.
               </p>
+              <p>
+                For a closer look at what these medicines may offer, read our
+                overview of{" "}
+                <Link
+                  href="/blog/discover-the-powerful-benefits-of-prescription-slimming-injections-uk"
+                  className="font-semibold text-emerald-600 hover:underline"
+                >
+                  the benefits of prescription slimming injections in the UK
+                </Link>
+                .
+              </p>
             </GuideSection>
 
             <GuideSection
@@ -661,6 +672,17 @@ export default function ArticleClient() {
               <p>
                 <strong>Disadvantages:</strong> higher cost than the online
                 pharmacy route, and not all clinics cover all treatments.
+              </p>
+              <p>
+                Whichever route you choose, the medicine should be licensed in
+                the UK. Read{" "}
+                <Link
+                  href="/blog/how-licensed-weight-loss-injections-uk-can-boost-your-journey"
+                  className="font-semibold text-emerald-600 hover:underline"
+                >
+                  how licensed weight loss injections can support your journey
+                </Link>
+                .
               </p>
             </GuideSection>
 

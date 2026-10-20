@@ -364,6 +364,23 @@ export default function PharmacySafetyGphc() {
               </Link>
               .
             </p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-700">
+              You can also{" "}
+              <Link
+                href="/pharmacies"
+                className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+              >
+                browse every pharmacy we review
+              </Link>
+              , or read how UK rules affect online treatment in our{" "}
+              <Link
+                href="/helpful-guides/category/regulation"
+                className="font-semibold text-emerald-800 underline hover:text-emerald-950"
+              >
+                regulation guides
+              </Link>
+              .
+            </p>
           </section>
 
           {/* FAQ Section */}

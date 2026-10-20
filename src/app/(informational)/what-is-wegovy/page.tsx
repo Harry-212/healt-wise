@@ -669,6 +669,20 @@ export default function WhatIsWegovyPage() {
                 <Link href="/pharmacy-safety-gphc-verification" className={linkClass}>
                   Read our pharmacy safety guide →
                 </Link>
+                <p className="text-sm leading-relaxed text-slate-700">
+                  Looking for a provider?{" "}
+                  <Link href="/pharmacies" className={linkClass}>
+                    Browse the pharmacies we review
+                  </Link>
+                  , or read our{" "}
+                  <Link
+                    href="/helpful-guides/category/pharmacy-safety"
+                    className={linkClass}
+                  >
+                    pharmacy safety guides
+                  </Link>
+                  .
+                </p>
               </div>
             </section>
 
@@ -711,6 +725,16 @@ export default function WhatIsWegovyPage() {
               >
                 Read our Wegovy side effects guide →
               </Link>
+              <p className="text-sm leading-relaxed text-slate-700">
+                Struggling with a setback on treatment? Browse all our{" "}
+                <Link
+                  href="/helpful-guides/category/side-effects"
+                  className={linkClass}
+                >
+                  side effects guides
+                </Link>
+                .
+              </p>
             </section>
 
             {/* Section 11: Compare prices */}
@@ -845,6 +869,18 @@ export default function WhatIsWegovyPage() {
                 ))}
               </div>
             </section>
+
+            <p className="text-base leading-relaxed text-slate-700">
+              Want to read more about semaglutide? Browse all our{" "}
+              <Link href="/blog/topic/wegovy" className={linkClass}>
+                Wegovy articles
+              </Link>
+              . Our guides are prepared by our{" "}
+              <Link href="/editorial-team" className={linkClass}>
+                editorial team
+              </Link>
+              .
+            </p>
 
             <div className="space-y-2 border-t border-slate-200 pt-8 text-xs text-slate-500">
               <p>

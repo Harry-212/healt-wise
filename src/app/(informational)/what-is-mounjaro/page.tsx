@@ -848,6 +848,17 @@ export default function WhatIsMounjaroPage() {
                     Read our pharmacy safety guide →
                   </Link>
                 </div>
+                <p className="pt-2 text-sm leading-relaxed text-slate-700">
+                  Looking for a provider?{" "}
+                  <Link href="/pharmacies" className="inline-flex items-center gap-1.5 font-semibold text-emerald-800 underline decoration-emerald-400 underline-offset-4 hover:text-emerald-950">
+                    Browse the pharmacies we review
+                  </Link>
+                  , or read our{" "}
+                  <Link href="/helpful-guides/category/pharmacy-safety" className="inline-flex items-center gap-1.5 font-semibold text-emerald-800 underline decoration-emerald-400 underline-offset-4 hover:text-emerald-950">
+                    pharmacy safety guides
+                  </Link>
+                  .
+                </p>
               </div>
             </section>
 
@@ -895,6 +906,13 @@ export default function WhatIsMounjaroPage() {
                   Read our Mounjaro side effects guide →
                 </Link>
               </div>
+              <p className="text-sm leading-relaxed text-slate-700">
+                Struggling with a setback on treatment? Browse all our{" "}
+                <Link href="/helpful-guides/category/side-effects" className="inline-flex items-center gap-1.5 font-semibold text-emerald-800 underline decoration-emerald-400 underline-offset-4 hover:text-emerald-950">
+                  side effects guides
+                </Link>
+                .
+              </p>
             </section>
 
             {/* =========================================================================
@@ -1051,6 +1069,14 @@ export default function WhatIsMounjaroPage() {
             </section>
 
             {/* Editorial Footer Reference */}
+            <p className="text-base leading-relaxed text-slate-700">
+              Our guides are prepared by our{" "}
+              <Link href="/editorial-team" className="inline-flex items-center gap-1.5 font-semibold text-emerald-800 underline decoration-emerald-400 underline-offset-4 hover:text-emerald-950">
+                editorial team
+              </Link>
+              .
+            </p>
+
             <div className="border-t border-slate-200 pt-8 text-xs text-slate-500 space-y-2">
               <p>
                 <strong>Medical Disclaimer:</strong> Healthwise360 is an

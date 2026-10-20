@@ -64,6 +64,7 @@ import SkinAndShapePharmacyContent from "@/components/pharmacies/content/SkinAnd
 import SimpleOnlinePharmacyContent from "@/components/pharmacies/content/SimpleOnlinePharmacyContent";
 import SlimmingDirectPharmacyContent from "@/components/pharmacies/content/SlimmingDirectPharmacyContent";
 import SlinicPharmacyContent from "@/components/pharmacies/content/SlinicPharmacyContent";
+import RelatedPharmacyLinks from "@/components/pharmacies/RelatedPharmacyLinks";
 import SuperdrugOnlineDoctorContent from "@/components/pharmacies/content/SuperdrugOnlineDoctorContent";
 import SwiftDoctorPharmacyContent from "@/components/pharmacies/content/SwiftDoctorPharmacyContent";
 import SwiftMediPharmacyContent from "@/components/pharmacies/content/SwiftMediPharmacyContent";
@@ -368,6 +369,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <DoseDirectPharmacyContent />
+        <RelatedPharmacyLinks currentSlug="dosedirect" />
       </>
     );
   }
@@ -394,6 +396,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <ReachOnlinePharmacyContent />
+        <RelatedPharmacyLinks currentSlug="reach-online-pharmacy" />
       </>
     );
   }
@@ -419,6 +422,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <PharmacyMePharmacyContent />
+        <RelatedPharmacyLinks currentSlug="pharmacy-me" />
       </>
     );
   }
@@ -623,6 +627,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <JoodLifePharmacyContent />
+        <RelatedPharmacyLinks currentSlug="jood-life" />
       </>
     );
   }
@@ -1103,6 +1108,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <SlinicPharmacyContent />
+        <RelatedPharmacyLinks currentSlug="slinic" />
       </>
     );
   }

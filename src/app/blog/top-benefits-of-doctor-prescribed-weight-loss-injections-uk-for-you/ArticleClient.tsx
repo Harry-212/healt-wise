@@ -224,6 +224,13 @@ export default function ArticleClient() {
                 >
                   understanding prescription weight loss treatments in the UK
                 </Link>
+                . To see why a licensed supplier matters, read{" "}
+                <Link
+                  href="/blog/how-licensed-weight-loss-injections-uk-can-boost-your-journey"
+                  className="font-medium text-brand-primary underline"
+                >
+                  how licensed weight loss injections can support your journey
+                </Link>
                 .
               </p>
             </GuideSection>
