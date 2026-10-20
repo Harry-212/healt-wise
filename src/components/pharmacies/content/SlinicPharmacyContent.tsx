@@ -29,7 +29,7 @@ export default function SlinicPharmacyContent() {
       providerName="Slinic"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         {
           k: "Provider",
           v: "Read & Simonstone Pharmacy Ltd T/A Slinic",

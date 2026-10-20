@@ -105,7 +105,7 @@ export default function CuratePharmacyContent() {
       providerName="Curate"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         { k: "Provider", v: "Curate" },
         { k: "GPhC", v: "9012920" },
         { k: "Treatments compared", v: "Mounjaro · Wegovy" },

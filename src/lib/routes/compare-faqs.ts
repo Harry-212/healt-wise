@@ -60,7 +60,6 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     {
       q: "Are the prices on this page live checkout prices?",
       a: "No. They are the prices listed on each provider website when we checked them, not live checkout prices. Delivery or consultation fees may be extra, so confirm the final total with the provider.",
-      inSchema: false,
     },
     {
       q: "How often do you check prices?",

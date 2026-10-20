@@ -28,7 +28,7 @@ export default function MyLondonPharmacyContent() {
       providerName="My London Pharmacy"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         { k: "Provider", v: "My London Pharmacy" },
         { k: "GPhC", v: "9011790" },
         {

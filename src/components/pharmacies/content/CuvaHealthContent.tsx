@@ -26,7 +26,7 @@ export default function CuvaHealthContent() {
       providerName="Cuva Health"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         { k: "Provider", v: "Cuva Health" },
         { k: "GPhC", v: "9012581" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Liraglutide" },

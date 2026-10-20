@@ -28,7 +28,7 @@ export default function SecondNaturePharmacyContent() {
       providerName="Second Nature"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         { k: "Provider", v: "Second Nature" },
         { k: "GPhC", v: "9013068" },
         {

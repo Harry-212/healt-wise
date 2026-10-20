@@ -24,7 +24,7 @@ export default function DotorPharmacyContent() {
       providerName="Dotor"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         { k: "Provider", v: "Dotor" },
         { k: "GPhC", v: "9012775" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat · Xenical · XLS Medical" },

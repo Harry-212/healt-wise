@@ -28,7 +28,7 @@ export default function LotusWeightLossPharmacyContent() {
       providerName="Lotus Weight Loss"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Last updated", v: "20 September 2026" },
+        { k: "Prices checked", v: "20 September 2026" },
         { k: "Provider", v: "Lotus Weight Loss" },
         { k: "GPhC", v: "9010938" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat" },

@@ -84,11 +84,11 @@ export function bmiCalculatorWebPageJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "BMI Calculator UK: Free BMI, BMR and TDEE Calculator (Stones & kg)",
+    name: "BMI Calculator UK: BMI, BMR & TDEE | Healthwise360",
     headline: "BMI Calculator UK",
     inLanguage: "en-GB",
     description:
-      "Check your BMI in stones and pounds or kg, see the UK BMI chart for adults and work out your BMR and daily calorie needs.",
+      "Calculate your BMI, healthy weight range, BMR and estimated daily energy needs with our free UK calculator. Results are for general information only.",
     url,
     isPartOf: {
       "@type": "WebSite",
