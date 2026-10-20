@@ -1,3 +1,4 @@
+import { Check } from "lucide-react";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import ComparePricePhotoHeroShell from "@/components/compare/ComparePricePhotoHeroShell";
 import {
@@ -6,7 +7,14 @@ import {
 } from "@/lib/site-assets";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 
-export default function CheapestOptionsHero() {
+export default function CheapestOptionsHero({
+  answer,
+  chips,
+}: {
+  /** Opening answer paragraph; rendered with id="hero-answer". */
+  answer: string;
+  chips: string[];
+}) {
   return (
     <header className="w-full">
       <ComparePricePhotoHeroShell
@@ -20,43 +28,46 @@ export default function CheapestOptionsHero() {
             <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400">
               {SITE_BRAND_NAME}
             </p>
-            <p className="mt-1.5 text-xs font-semibold uppercase tracking-wide text-white/55">
-              UK private · Mounjaro · Wegovy
-            </p>
             <h1 className="mt-2 max-w-4xl text-balance text-2xl font-bold leading-tight text-white sm:text-3xl md:text-4xl">
-              Cheapest GLP-1 weight loss treatment in the UK — price snapshot
-              &amp; comparisons
+              Cheapest Weight Loss Injections UK
             </h1>
-            <p className="mt-2.5 max-w-3xl text-base leading-snug text-white/75 sm:text-lg">
-              Answers to common cost questions using our latest multi-pharmacy
-              tables: prices were checked on the dates shown — confirm every
-              figure at checkout and with your prescriber.
-            </p>
-            <p className="mt-3 max-w-3xl text-sm leading-snug text-white/85 md:text-base">
-              Every dose step, pack size, filter, and provider row — the
-              canonical place to compare{" "}
-              <strong className="text-white">Mounjaro</strong> and{" "}
-              <strong className="text-white">Wegovy</strong> side by side.
+            <p
+              id="hero-answer"
+              className="mt-3 max-w-3xl text-base leading-snug text-white/90 sm:text-lg"
+            >
+              {answer}
             </p>
             <ul className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
               <li className="flex-1 sm:flex-none">
                 <CompareHereLink
-                  href="/mounjaro-price-comparison"
-                  label="Compare Mounjaro costs here"
-                  size="footer"
-                  navAccent="violet"
-                  className="w-full sm:min-w-[260px]"
-                />
-              </li>
-              <li className="flex-1 sm:flex-none">
-                <CompareHereLink
                   href="/wegovy-price-comparison"
-                  label="Compare Wegovy costs here"
+                  label="Compare Wegovy prices"
                   size="footer"
                   navAccent="emerald"
                   className="w-full sm:min-w-[260px]"
                 />
               </li>
+              <li className="flex-1 sm:flex-none">
+                <CompareHereLink
+                  href="/mounjaro-price-comparison"
+                  label="Compare Mounjaro prices"
+                  size="footer"
+                  navAccent="violet"
+                  className="w-full sm:min-w-[260px]"
+                />
+              </li>
+            </ul>
+            <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs font-semibold text-white/85 sm:text-sm">
+              {chips.map((chip) => (
+                <li key={chip} className="inline-flex items-center gap-1.5">
+                  <Check
+                    className="h-4 w-4 shrink-0 text-emerald-400"
+                    strokeWidth={2.5}
+                    aria-hidden
+                  />
+                  {chip}
+                </li>
+              ))}
             </ul>
           </div>
         </main>

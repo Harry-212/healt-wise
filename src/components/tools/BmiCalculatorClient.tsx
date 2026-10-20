@@ -395,15 +395,16 @@ export default function BmiCalculatorClient() {
               UK adults · Information only
             </p>
             <h1 className="mx-auto mt-3 max-w-3xl text-balance text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-[2.4rem]">
-              BMI, BMR & Calorie Calculator UK
+              BMI Calculator UK
             </h1>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-300/95 sm:text-base">
-              Free{" "}
-              <strong className="font-semibold text-white">BMI calculator UK</strong>
-              {" "}with body mass index categories, NHS BMI thresholds,{" "}
-              <strong className="font-semibold text-white">BMR</strong>, and{" "}
-              <strong className="font-semibold text-white">calorie needs</strong>
-              {" "}for weight management planning.
+              For adults aged 18 and over. Enter your weight in stones and
+              pounds or kg and your height in feet and inches or cm. See what
+              your{" "}
+              <strong className="font-semibold text-white">BMI</strong> means,
+              then work out your{" "}
+              <strong className="font-semibold text-white">BMR</strong> and
+              daily calorie needs.
             </p>
             {/* Tab pills in hero */}
             <div className="mt-8 inline-flex rounded-full bg-white/10 p-1 shadow-xl ring-1 ring-white/15 backdrop-blur-sm">

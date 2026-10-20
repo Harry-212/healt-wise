@@ -11,9 +11,9 @@ import {
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
-const TITLE = "BMI, BMR & Calorie Calculator UK | Free Online Tool";
+const TITLE = "BMI Calculator UK: Free BMI, BMR and TDEE Calculator (Stones & kg)";
 const DESCRIPTION =
-  "Free BMI calculator UK: body mass index categories, NHS BMI thresholds, BMR calculator and estimated calorie needs for weight management planning.";
+  "Check your BMI in stones and pounds or kg, see the UK BMI chart for adults and work out your BMR and daily calorie needs.";
 
 export const metadata: Metadata = {
   ...buildPageShareMetadata({
@@ -54,36 +54,23 @@ export default function BmiCalculatorPage() {
       <article className="relative z-20 border-t border-slate-200/80 bg-background">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-5 md:px-8 md:py-20">
           <p className="text-xs font-semibold uppercase tracking-wide text-emerald-800">
-            Free online tool
+            Free online tool for adults aged 18 and over
           </p>
-          <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-            What is a BMI calculator?
-          </h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            A{" "}
-            <strong className="font-medium text-slate-900">
-              body mass index calculator
-            </strong>{" "}
-            estimates BMI from your height and weight using{" "}
-            <span className="font-medium text-slate-900">
-              weight ÷ height²
-            </span>{" "}
-            (height in metres, weight in kilograms). This{" "}
-            <strong className="font-medium text-slate-900">BMI calculator UK</strong>{" "}
-            page also estimates{" "}
-            <strong className="font-medium text-slate-900">BMR</strong> and{" "}
-            <strong className="font-medium text-slate-900">calorie needs</strong>{" "}
-            so you can place your number in context—not as a diagnosis.
+            This BMI calculator UK page takes your weight in stones and pounds
+            or kg and your height in feet and inches or cm. It shows your BMI
+            category, then estimates your BMR and daily calorie needs. Children
+            and pregnant women need different charts, so ask a clinician.
           </p>
 
           <h2
             id="bmi-categories"
             className="mt-14 scroll-mt-28 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
           >
-            What Your BMI Number Means: NHS Categories & Thresholds
+            BMI chart UK: what your BMI means
           </h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            For most UK adults aged 18 and over, NHS and World Health Organisation (WHO) clinical classifications define your BMI number as follows:
+            This BMI chart is for adults aged 18 and over. NHS BMI categories, which follow World Health Organization (WHO) classifications, define your BMI number as follows (kg/m2). The same ranges apply to the BMI chart for women, the BMI chart for men, and the BMI chart in stones.
           </p>
 
           <div className="my-6 overflow-hidden rounded-xl border border-slate-200 shadow-xs">
@@ -154,13 +141,84 @@ export default function BmiCalculatorPage() {
             Weight management eligibility — what BMI can (and cannot) tell you
           </h3>
           <p className="mt-3 leading-relaxed text-slate-700">
-            BMI categories help clinicians triage who may benefit from structured weight management support. In the UK, private and NHS prescription treatments such as Mounjaro (tirzepatide) and Wegovy (semaglutide) typically require:
+            BMI categories help clinicians triage who may benefit from structured weight management support. In the UK, prescription weight loss medicines, whether private or on the NHS, typically require:
           </p>
           <ul className="mt-3 space-y-2 text-sm text-slate-700">
             <li>• <strong>BMI of 30 kg/m² or above</strong> without other conditions.</li>
             <li>• <strong>BMI of 27 kg/m² or above</strong> with at least one weight-related medical condition (e.g. hypertension, dyslipidaemia, obstructive sleep apnoea, or pre-diabetes).</li>
             <li>• Reduced by 2.5 kg/m² for individuals from South Asian, Chinese, Black African, or African-Caribbean backgrounds.</li>
           </ul>
+          <p className="mt-3 text-sm leading-relaxed text-slate-700">
+            Each medicine has its own rules, and a prescriber makes the final
+            decision.{" "}
+            <Link
+              href="/helpful-guides/mounjaro-eligibility-bmi-requirements-uk"
+              className="font-medium text-emerald-800 underline underline-offset-2"
+            >
+              Read our BMI eligibility guide
+            </Link>
+            .
+          </p>
+
+          <h2
+            id="bmi-women-men"
+            className="mt-16 scroll-mt-28 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+          >
+            BMI calculator for women and men
+          </h2>
+          <p className="mt-4 leading-relaxed text-slate-700">
+            The BMI calculator for women and the BMI calculator for men use the
+            same formula and the same adult categories, so a BMI of 27 means the
+            same thing on the chart for either. What differs is body
+            composition. At the same BMI, women usually carry more body fat than
+            men, and men usually carry more muscle mass.
+          </p>
+          <p className="mt-4 leading-relaxed text-slate-700">
+            That is why waist circumference helps. The waist limits above are
+            lower for women (80 cm) than for men (94 cm). Pick your sex in the
+            BMR tab of the calculator for a calorie estimate, as the formula
+            uses it.
+          </p>
+
+          <h2
+            id="how-to-calculate-bmi"
+            className="mt-16 scroll-mt-28 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+          >
+            How to calculate BMI
+          </h2>
+          <p className="mt-4 leading-relaxed text-slate-700">
+            A{" "}
+            <strong className="font-medium text-slate-900">
+              body mass index calculator
+            </strong>{" "}
+            works out BMI from your height and weight using{" "}
+            <span className="font-medium text-slate-900">weight ÷ height²</span>{" "}
+            (weight in kilograms, height in metres). A BMI calculator estimates
+            your number so you can place it in context. It is not a diagnosis.
+          </p>
+          <p className="mt-4 leading-relaxed text-slate-700">
+            For example, if you weigh 70 kg and are 1.75 m tall, your height
+            squared is 3.06. Divide 70 by 3.06 and your BMI is about 22.9, which
+            is in the healthy weight range.
+          </p>
+          <p className="mt-4 leading-relaxed text-slate-700">
+            Enter your weight in stones and pounds or kg. This BMI calculator
+            takes stones as well as metric units, and height can be entered in
+            feet and inches or cm. To work it out by hand from stones, convert
+            to kg first: one stone is about 6.35 kg.
+          </p>
+
+          <div className="mt-8 rounded-xl border border-slate-200 bg-slate-50/80 p-5">
+            <h3 className="text-base font-bold text-slate-900">
+              Healthy weight range for your height
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-700">
+              To work out your ideal weight range, use the healthy BMI range of
+              18.5 to 24.9 for your height. At 1.75 m, that is about 57 kg to 76
+              kg (9 st to 12 st). It is a range, not a single target, and
+              muscle mass can move it.
+            </p>
+          </div>
 
           <div className="relative mt-12 aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-200 shadow-lg ring-1 ring-slate-200/80">
             <Image
@@ -177,7 +235,7 @@ export default function BmiCalculatorPage() {
             id="bmr-calorie-needs"
             className="mt-16 scroll-mt-28 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
           >
-            BMR calculator and calorie needs
+            BMR and TDEE calculator: your daily calorie needs
           </h2>
           <p className="mt-4 leading-relaxed text-slate-700">
             Our{" "}
@@ -194,23 +252,23 @@ export default function BmiCalculatorPage() {
             level. Agree low-calorie plans with a GP or dietitian if you have
             medical conditions.
           </p>
-
-          <h2 className="mt-14 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-            Is BMI accurate?
-          </h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            BMI is{" "}
-            <strong className="font-medium text-slate-900">accurate</strong> for
-            summarising weight-for-height. It is{" "}
-            <strong className="font-medium text-slate-900">not accurate</strong>{" "}
-            as a personal body-fat measurement, and it can misclassify muscular
-            people as overweight or miss risk in people with higher visceral fat
-            at a &quot;healthy&quot; BMI.
+            <strong className="font-medium text-slate-900">BMR</strong> is the
+            energy your body uses at rest. The{" "}
+            <strong className="font-medium text-slate-900">TDEE</strong> adds
+            movement and exercise on top, so it is the figure to start from when
+            you plan a calorie deficit. A modest deficit below your TDEE is
+            gentler than eating down to your BMR.
           </p>
           <p className="mt-4 leading-relaxed text-slate-700">
-            Use this page to understand BMI categories, NHS thresholds, BMR, and
-            calorie needs—then take questions to a clinician when health
-            decisions are involved.
+            Want to follow your progress over time?{" "}
+            <Link
+              href="/tools/weight-loss-tracker"
+              className="font-medium text-emerald-800 underline underline-offset-2"
+            >
+              Use our weight loss tracker
+            </Link>
+            .
           </p>
 
           <h2
@@ -220,7 +278,7 @@ export default function BmiCalculatorPage() {
             FAQ
           </h2>
           <h3 className="mt-8 scroll-mt-28 text-lg font-bold text-slate-900">
-            BMI categories &amp; NHS thresholds
+            BMI categories &amp; thresholds
           </h3>
           <dl className="mt-4 space-y-8">
             {BMI_CALCULATOR_FAQ_BMI_ITEMS.map((item) => (

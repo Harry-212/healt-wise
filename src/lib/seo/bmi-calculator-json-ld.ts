@@ -17,6 +17,14 @@ export const BMI_CALCULATOR_FAQ_BMI_ITEMS = [
     q: "Is BMI accurate as a body fat measure?",
     a: "BMI accurately summarises weight-for-height for population screening. It is not an accurate personal body-fat test and can misclassify muscular people or miss risk in people with higher visceral fat at a “healthy” BMI. Waist size, blood tests, and clinical review fill the gaps.",
   },
+  {
+    q: "What is a healthy weight for my height?",
+    a: "Use the healthy BMI range of 18.5 to 24.9 for your height. At 1.75 m, that is about 57 kg to 76 kg. It is a range, not one target, and muscle mass and where you carry fat can move it. A GP or dietitian can help you set a goal that suits you.",
+  },
+  {
+    q: "What is a good BMI for my age and weight?",
+    a: "For adults aged 18 and over, the BMI categories are the same at every age, so a healthy BMI is 18.5 to 24.9. In older adults a clinician may read the number differently, because muscle and bone change with age. If you weigh 70 kg and are 1.75 m tall, your BMI is about 22.9.",
+  },
 ] as const;
 
 export const BMI_CALCULATOR_FAQ_BMR_TDEE_ITEMS = [
@@ -76,9 +84,11 @@ export function bmiCalculatorWebPageJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "BMI, BMR & Calorie Calculator UK | Free Online Tool",
+    name: "BMI Calculator UK: Free BMI, BMR and TDEE Calculator (Stones & kg)",
+    headline: "BMI Calculator UK",
+    inLanguage: "en-GB",
     description:
-      "Free BMI calculator UK with body mass index categories, NHS BMI thresholds, BMR calculator and estimated calorie needs for weight management planning.",
+      "Check your BMI in stones and pounds or kg, see the UK BMI chart for adults and work out your BMR and daily calorie needs.",
     url,
     isPartOf: {
       "@type": "WebSite",
