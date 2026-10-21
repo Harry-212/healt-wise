@@ -104,7 +104,10 @@ function formatPriceNumber(val: number | string | undefined, fallback: string): 
 }
 
 /**
- * Builds the complete Schema graph matching Healthwise360 Cheapest Options UK Schema.txt.
+ * Builds the Schema graph for the page. `#organization` and `#website` come
+ * from the root layout graph, so they are referenced here, not redeclared.
+ * Offer ranges run from the starter pen to the long term dose (Wegovy 2.4 mg,
+ * Mounjaro 15 mg), matching the tables on the page.
  */
 export function cheapestOptionsUkJsonLd(
   input?: CheapestOptionsJsonLdInput,
@@ -125,22 +128,13 @@ export function cheapestOptionsUkJsonLd(
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": `${base}/#organization`,
-        name: "Healthwise360",
-        url: `${base}/`,
-        logo: {
-          "@type": "ImageObject",
-          url: `${base}/logo-health-wise.webp`,
-        },
-      },
-      {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
         url,
-        name: "Cheapest Weight Loss Injections UK 2026: Prices Compared",
+        name: "Cheapest Weight Loss Injections UK: Starter & Monthly Prices",
         headline: "Cheapest Weight Loss Injections UK",
-        description: `Compare the cheapest weight loss injections in the UK. Wegovy and Mounjaro from 60+ GPhC registered pharmacies, with starter pens from £${wLowStr}.`,
+        description:
+          "Find the cheapest weight loss injections in the UK. Compare starter and monthly prices, hidden fees and safe online pharmacies, checked every month.",
         inLanguage: "en-GB",
         isPartOf: { "@id": `${base}/#website` },
         publisher: { "@id": `${base}/#organization` },
@@ -177,7 +171,7 @@ export function cheapestOptionsUkJsonLd(
         "@type": "Dataset",
         "@id": `${url}#price-data`,
         name: "Cheapest weight loss injection prices in the UK",
-        description: `Lowest and typical price of one pen of Wegovy and Mounjaro at the starter and long term doses, from GPhC registered UK pharmacies (${wCount} for Wegovy, ${mCount} for Mounjaro).`,
+        description: `Lowest and typical price of one pen of Wegovy (0.25 mg to 2.4 mg) and Mounjaro (2.5 mg to 15 mg), from GPhC registered UK pharmacies (${wCount} for Wegovy, ${mCount} for Mounjaro).`,
         url,
         creator: { "@id": `${base}/#organization` },
         publisher: { "@id": `${base}/#organization` },
@@ -188,7 +182,7 @@ export function cheapestOptionsUkJsonLd(
         inLanguage: "en-GB",
         license: `${base}/terms-of-service`,
         measurementTechnique:
-          "Listed prices checked on each pharmacy website in the first week of every month",
+          "Listed prices checked on each pharmacy website. The date of the last check is shown on the page.",
         variableMeasured: [
           { "@type": "PropertyValue", name: "Lowest price", unitText: "GBP" },
           { "@type": "PropertyValue", name: "Typical price", unitText: "GBP" },
