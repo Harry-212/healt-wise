@@ -16,7 +16,7 @@ export default function NotMedicalAdviceBanner() {
             This website does not diagnose conditions or prescribe treatment.
           </p>
           <p className="text-amber-950/90">
-            Health Wise publishes educational price snapshots and comparisons
+            Healthwise360 publishes educational price snapshots and comparisons
             only. GLP-1 medicines are prescription-only in the UK: a qualified
             prescriber must assess your history, risks, and eligibility.
             Nothing here replaces that conversation or your pharmacist&apos;s

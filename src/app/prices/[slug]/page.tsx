@@ -28,13 +28,18 @@ export default async function PricePage({ params }: Props) {
   if (!cfg) notFound();
 
   if (slug === "cheapest-options-uk") {
-    const jsonLd = cheapestOptionsUkJsonLd(getCheapestOptionsPageData().faqs);
+    const pageData = getCheapestOptionsPageData();
+    const jsonLd = cheapestOptionsUkJsonLd({
+      wegovyCount: pageData.wegovyCount,
+      mounjaroCount: pageData.mounjaroCount,
+      wegovyLow: pageData.wStarter?.low ?? 76.94,
+      wegovyHigh: pageData.wLong?.high ?? 290.0,
+      mounjaroLow: pageData.mStarter?.low ?? 99.0,
+      mounjaroHigh: pageData.mTop?.high ?? 359.95,
+      faqs: pageData.faqs,
+    });
     return (
       <>
-        <BreadcrumbJsonLd
-          pageName={cfg.keyword}
-          pagePath={`/prices/${slug}`}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

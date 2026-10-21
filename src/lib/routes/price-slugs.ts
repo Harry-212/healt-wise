@@ -3,7 +3,7 @@ export type PriceSlugSeo = {
   description: string;
   openGraphTitle: string;
   openGraphDescription: string;
-  keywords: string[];
+  keywords?: string[];
 };
 
 export type PriceSlugConfig = {
@@ -16,21 +16,12 @@ export const PRICE_SLUGS: Record<string, PriceSlugConfig> = {
   "cheapest-options-uk": {
     keyword: "Cheapest GLP-1 options UK",
     seo: {
-      title: "Cheapest Weight Loss Injections UK | Treatment Price Guide",
+      title: "Cheapest Weight Loss Injections UK: Starter & Monthly Prices",
       description:
-        "Compare private UK costs for Mounjaro and Wegovy. See how dosage, delivery, consultation fees and maintenance costs affect the total.",
-      openGraphTitle: "Cheapest Weight Loss Injections UK | Treatment Price Guide",
+        "Find the cheapest weight loss injections in the UK. Compare starter and monthly prices, hidden fees and safe online pharmacies, checked every month.",
+      openGraphTitle: "Cheapest Weight Loss Injections in the UK: Price Guide",
       openGraphDescription:
-        "Compare private UK costs for Mounjaro and Wegovy. See how dosage, delivery, consultation fees and maintenance costs affect the total.",
-      keywords: [
-        "cheapest GLP-1 UK",
-        "cheapest wegovy UK",
-        "mounjaro price UK cheapest",
-        "weight loss treatments UK prices",
-        "semaglutide price UK",
-        "tirzepatide price UK",
-        "private prescription weight loss UK",
-      ],
+        "The lowest UK prices for weight loss injections, from starter pen to long term dose, plus the hidden costs to check before you pay.",
     },
   },
 };
