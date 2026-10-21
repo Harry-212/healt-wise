@@ -19,7 +19,6 @@ export function metadataForPriceSlug(slug: string): Metadata | null {
         absolute: cfg.seo.title,
       },
       description: cfg.seo.description,
-      keywords: cfg.seo.keywords,
       alternates: { canonical: url },
       openGraph: {
         type: "article",

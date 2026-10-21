@@ -4,6 +4,7 @@ import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import CheapestOptionsUkPage from "@/components/prices/CheapestOptionsUkPage";
 import { cheapestOptionsUkJsonLd } from "@/lib/seo/cheapest-options-page-seo";
 import { getCheapestOptionsPageData } from "@/lib/data/cheapest-options-page-data";
+import { priceCheckDateKey } from "@/lib/data/price-check-dates";
 import { metadataForPriceSlug } from "@/lib/seo/price-slug-metadata";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
 import ComparisonTable from "@/components/comparison/ComparisonTable";
@@ -28,7 +29,21 @@ export default async function PricePage({ params }: Props) {
   if (!cfg) notFound();
 
   if (slug === "cheapest-options-uk") {
-    const jsonLd = cheapestOptionsUkJsonLd(getCheapestOptionsPageData().faqs);
+    const d = getCheapestOptionsPageData();
+    const jsonLd = cheapestOptionsUkJsonLd({
+      faqs: d.faqs,
+      checkedIso: priceCheckDateKey(d.wegovyUpdated),
+      wegovy: {
+        low: d.wStarter?.low ?? 0,
+        high: d.wLong?.high ?? 0,
+        count: d.wegovyCount,
+      },
+      mounjaro: {
+        low: d.mStarter?.low ?? 0,
+        high: d.mTop?.high ?? 0,
+        count: d.mounjaroCount,
+      },
+    });
     return (
       <>
         <BreadcrumbJsonLd
