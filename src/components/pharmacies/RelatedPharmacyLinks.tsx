@@ -1,84 +1,108 @@
 import Link from "next/link";
 
 /**
- * Cross-links between the partner pharmacy reviews, so a reader comparing one
- * provider can reach the others from the review itself. Only reviews that
- * exist as profile pages are listed.
+ * The 5 partner pharmacy review profile destinations.
+ * Listed in alphabetical order by their display label.
  */
-const RELATED: Record<string, { slug: string; name: string; blurb: string }> = {
-  "pharmacy-me": {
-    slug: "pharmacy-me",
-    name: "Pharmacy + Me",
-    blurb: "an online pharmacy with Wegovy and Mounjaro pens",
-  },
-  "reach-online-pharmacy": {
-    slug: "reach-online-pharmacy",
-    name: "Reach Online Pharmacy",
-    blurb: "an online pharmacy with a weight loss service",
-  },
-  dosedirect: {
-    slug: "dosedirect",
-    name: "DoseDirect",
-    blurb: "an online clinic that includes delivery",
-  },
-  slinic: {
-    slug: "slinic",
-    name: "Slinic",
-    blurb: "an online clinic that includes the consultation",
-  },
-  "jood-life": {
-    slug: "jood-life",
-    name: "Jood Life",
-    blurb: "an online weight loss service",
-  },
-};
+interface PharmacyReviewLink {
+  slug: string;
+  label: string;
+  href: string;
+}
 
+const PHARMACY_REVIEWS: PharmacyReviewLink[] = [
+  {
+    slug: "dosedirect",
+    label: "Read our DoseDirect review",
+    href: "/pharmacies/dosedirect",
+  },
+  {
+    slug: "jood-life",
+    label: "Read our Jood Life Pharmacy review",
+    href: "/pharmacies/jood-life",
+  },
+  {
+    slug: "pharmacy-me",
+    label: "Read our Pharmacy + Me review",
+    href: "/pharmacies/pharmacy-me",
+  },
+  {
+    slug: "reach-online-pharmacy",
+    label: "Read our Reach Online Pharmacy review",
+    href: "/pharmacies/reach-online-pharmacy",
+  },
+  {
+    slug: "slinic",
+    label: "Read our Slinic review",
+    href: "/pharmacies/slinic",
+  },
+];
+
+/**
+ * Shared reusable component: Neutral Pharmacy Cross-Links.
+ *
+ * Places a neutral, alphabetical cross-linking block to the other four pharmacy
+ * reviews near the bottom of the review page, after the final provider CTA and
+ * disclaimer, and before "Recommended for you" / "Keep exploring".
+ */
 export default function RelatedPharmacyLinks({
   currentSlug,
 }: {
   currentSlug: string;
 }) {
-  const others = Object.values(RELATED).filter((p) => p.slug !== currentSlug);
-  if (others.length === 0) return null;
+  // Automatically exclude the current pharmacy and preserve strict alphabetical order
+  const filtered = PHARMACY_REVIEWS.filter(
+    (item) => item.slug !== currentSlug,
+  ).sort((a, b) => a.label.localeCompare(b.label));
+
+  if (filtered.length === 0) return null;
 
   return (
-    <aside
-      aria-labelledby="related-pharmacies-heading"
-      className="mx-auto mt-10 max-w-4xl px-4 pb-10 text-sm leading-relaxed text-slate-700 sm:px-5"
+    <section
+      aria-labelledby="compare-other-pharmacies-heading"
+      className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 md:py-10"
     >
-      <h2
-        id="related-pharmacies-heading"
-        className="text-lg font-bold text-slate-900"
-      >
-        Compare other pharmacies we review
-      </h2>
-      <p className="mt-2">
-        Comparing providers before you order? These reviews cover similar
-        services, so you can check the same dose side by side:
-      </p>
-      <ul className="mt-3 list-inside list-disc space-y-1.5">
-        {others.map((p) => (
-          <li key={p.slug}>
-            <Link
-              href={`/pharmacies/${p.slug}`}
-              className="font-semibold text-emerald-800 underline underline-offset-2 hover:text-emerald-950"
-            >
-              {p.name} review
-            </Link>
-            : {p.blurb}.
-          </li>
-        ))}
-      </ul>
-      <p className="mt-3">
-        Or{" "}
-        <Link
-          href="/pharmacies"
-          className="font-semibold text-emerald-800 underline underline-offset-2 hover:text-emerald-950"
+      <div className="rounded-2xl border border-slate-200/90 bg-slate-50/75 p-6 sm:p-8">
+        <h2
+          id="compare-other-pharmacies-heading"
+          className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl"
         >
-          browse every pharmacy we review
-        </Link>
-        .
-      </p>
-    </aside>
+          Compare other pharmacies we review
+        </h2>
+
+        <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
+          Explore our other pharmacy reviews to compare checked prices, delivery
+          information, registration details and available support. Inclusion does
+          not mean that Healthwise360 recommends one provider over another.
+        </p>
+
+        <ul className="mt-5 space-y-2.5">
+          {filtered.map((item) => (
+            <li key={item.slug} className="flex items-center">
+              <Link
+                href={item.href}
+                className="font-semibold text-emerald-800 underline decoration-emerald-400 underline-offset-4 hover:text-emerald-950"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-6 border-t border-slate-200 pt-4 text-xs leading-relaxed text-slate-500 sm:text-sm">
+          Some providers may have a commercial relationship with Healthwise360.
+          This does not affect their position in our price comparison tables.
+        </p>
+
+        <div className="mt-4">
+          <Link
+            href="/pharmacies"
+            className="inline-flex items-center font-semibold text-emerald-800 underline decoration-emerald-500 underline-offset-4 hover:text-emerald-950"
+          >
+            View all pharmacies we review →
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }
