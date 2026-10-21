@@ -14,7 +14,7 @@ export type PriceSlugConfig = {
 
 export const PRICE_SLUGS: Record<string, PriceSlugConfig> = {
   "cheapest-options-uk": {
-    keyword: "Cheapest GLP-1 options UK",
+    keyword: "Cheapest Weight Loss Injections UK",
     seo: {
       title: "Cheapest Weight Loss Injections UK: Starter & Monthly Prices",
       description:
