@@ -2,11 +2,38 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import {
   ADMIN_SESSION_COOKIE,
-  ADMIN_SESSION_VALUE,
+  adminCookieOptions,
+  clearFailedLogins,
+  createAdminSessionToken,
   getAdminDashboardPassword,
+  isLoginLockedOut,
+  recordFailedLogin,
+  verifyAdminPassword,
 } from "@/lib/admin/auth";
 
+export const runtime = "nodejs";
+
+function clientKey(request: NextRequest): string {
+  const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
+  return forwarded || request.headers.get("x-real-ip") || "unknown";
+}
+
 export async function POST(request: NextRequest) {
+  if (!getAdminDashboardPassword()) {
+    return NextResponse.json(
+      { error: "Admin login is not configured" },
+      { status: 503 },
+    );
+  }
+
+  const key = clientKey(request);
+  if (isLoginLockedOut(key)) {
+    return NextResponse.json(
+      { error: "Too many attempts. Try again later." },
+      { status: 429 },
+    );
+  }
+
   let body: unknown;
   try {
     body = await request.json();
@@ -19,17 +46,21 @@ export async function POST(request: NextRequest) {
       ? String((body as { password: unknown }).password ?? "")
       : "";
 
-  if (password !== getAdminDashboardPassword()) {
+  if (!verifyAdminPassword(password)) {
+    recordFailedLogin(key);
     return NextResponse.json({ error: "Incorrect password" }, { status: 401 });
   }
 
+  const token = createAdminSessionToken();
+  if (!token) {
+    return NextResponse.json(
+      { error: "Admin login is not configured" },
+      { status: 503 },
+    );
+  }
+
+  clearFailedLogins(key);
   const response = NextResponse.json({ ok: true });
-  response.cookies.set(ADMIN_SESSION_COOKIE, ADMIN_SESSION_VALUE, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    path: "/",
-    maxAge: 60 * 60 * 24 * 7,
-  });
+  response.cookies.set(ADMIN_SESSION_COOKIE, token, adminCookieOptions());
   return response;
 }
