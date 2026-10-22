@@ -6,13 +6,20 @@ import { jsonValuesForKey } from "./rsc.mjs";
  * pharmacy page. Three strategies, merged per dose:
  *   1. JSON-LD Offers whose name names exactly one dose (most reliable).
  *   2. Shop variant data (WooCommerce `data-product_variations`, Shopify
- *      `variants`): regular/compare-at price is the standard price.
+ *      `variants`).
  *   3. Visible text: a run of dose labels in titration order, each followed by
- *      its price(s). A struck-through price is the standard price; otherwise,
- *      when a dose shows several prices, the highest is taken (promo, points and
- *      "save £x" figures are always lower).
+ *      its price(s).
  * Every dose comes back with a confidence and the method that produced it.
+ *
+ * Standard price = what every customer pays for a one-off purchase without a
+ * code (decision 2026-10-22). A struck-through / compare-at "was" price is
+ * ignored, UNLESS the price table labels the lower price as limited (e.g.
+ * "Standard Price | New Patient Price"): then the struck price is the standard.
+ * When a dose shows several unstruck prices, the highest is taken (plan
+ * discounts, points and "save £x" figures are lower) at medium confidence.
  */
+const LIMITED_PRICE_LABEL =
+  /standard price|regular price|full price|\bRRP\b|new patient(?:s)? price|first[- ](?:order|month|purchase) price|introductory (?:price|offer)|intro (?:price|offer)/i;
 
 const OTHER_MED_NAMES = {
   mounjaro: /wegovy|ozempic|semaglutide|saxenda|foundayo/i,
@@ -74,17 +81,9 @@ function collectOffers(node, parentName, out) {
   }
 }
 
+/** The offer's selling price; a ListPrice/StrikethroughPrice spec is a "was" price and ignored. */
 function standardFromOffer(offer) {
-  // A ListPrice / StrikethroughPrice spec is the standard (pre-discount) price.
-  const specs = [].concat(offer.priceSpecification ?? []);
-  for (const s of specs) {
-    const kind = String(s.priceType ?? "");
-    if (/ListPrice|StrikethroughPrice|SRP|MSRP/i.test(kind)) {
-      const p = parseGbp(s.price);
-      if (isPlausiblePrice(p)) return { price: p, struck: true };
-    }
-  }
-  return { price: parseGbp(offer.price), struck: false };
+  return { price: parseGbp(offer.price) };
 }
 
 export function extractFromJsonLd(html, medication) {
@@ -101,9 +100,9 @@ export function extractFromJsonLd(html, medication) {
     if (tokens.length !== 1) continue;
     const dose = doseKeyFor(medication, tokens[0]);
     if (!dose || doses[dose]) continue;
-    const { price, struck } = standardFromOffer(o.offer);
+    const { price } = standardFromOffer(o.offer);
     if (!isPlausiblePrice(price)) continue;
-    doses[dose] = { price, confidence: "high", method: struck ? "json-ld (list price)" : "json-ld" };
+    doses[dose] = { price, confidence: "high", method: "json-ld" };
   }
   return { doses, aggregate };
 }
@@ -163,12 +162,13 @@ export function extractFromVariants(html, medication) {
   for (const c of candidates) {
     const dose = doseFromLabel(c.label, medication);
     if (!dose || doses[dose]) continue;
-    const standard = isPlausiblePrice(c.regular) && c.regular > c.price ? c.regular : c.price;
-    if (!isPlausiblePrice(standard)) continue;
+    // Selling price; a higher regular/compare-at price is a "was" price.
+    if (!isPlausiblePrice(c.price)) continue;
+    const onSale = isPlausiblePrice(c.regular) && c.regular > c.price;
     doses[dose] = {
-      price: standard,
+      price: c.price,
       confidence: "high",
-      method: `${c.shop} variants${standard === c.regular ? " (regular/compare-at price)" : ""}`,
+      method: `${c.shop} variants${onSale ? ` (sale price; was £${c.regular} ignored)` : ""}`,
     };
   }
   return { doses };
@@ -233,6 +233,9 @@ export function extractFromText(html, medication) {
 
 function pricesForRun(text, run) {
   const doses = {};
+  // The table header sits just before the first dose label ("Dose Standard Price New Patient Price …").
+  const header = text.slice(Math.max(0, run[0].token.start - 80), run[0].token.start);
+  const lowerPriceIsLimited = LIMITED_PRICE_LABEL.test(header);
   run.forEach(({ token, dose, next }, i) => {
     // Rows share a rhythm; the last row gets the same span so it cannot swallow the next table.
     const span = i > 0 ? token.start - run[i - 1].token.start : 300;
@@ -240,8 +243,19 @@ function pricesForRun(text, run) {
     const prices = pricesIn(text.slice(token.end, end));
     if (prices.length === 0) return;
     const struck = prices.filter((p) => p.struck);
-    if (struck.length > 0) {
-      doses[dose] = { price: Math.max(...struck.map((p) => p.price)), confidence: "high", method: "text (struck-through standard price)" };
+    const unstruck = prices.filter((p) => !p.struck);
+    if (struck.length > 0 && (lowerPriceIsLimited || unstruck.length === 0)) {
+      doses[dose] = {
+        price: Math.max(...struck.map((p) => p.price)),
+        confidence: "high",
+        method: lowerPriceIsLimited ? "text (struck standard price; lower price is a labelled limited offer)" : "text (struck-through only)",
+      };
+    } else if (struck.length > 0) {
+      doses[dose] = {
+        price: Math.max(...unstruck.map((p) => p.price)),
+        confidence: "high",
+        method: `text (sale price; was £${Math.max(...struck.map((p) => p.price))} ignored)`,
+      };
     } else if (prices.length === 1) {
       doses[dose] = { price: prices[0].price, confidence: "high", method: "text" };
     } else {

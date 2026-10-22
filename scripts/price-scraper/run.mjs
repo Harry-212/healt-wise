@@ -117,7 +117,12 @@ async function main() {
   }
   if (dropped.length) console.log(`  (${dropped.length} rows dropped: one GPhC number shared by several brands)`);
 
-  const rows = compareAll({ current, pharmacyReads, comparatorRows });
+  const discounts = Object.fromEntries(
+    Object.entries(sources)
+      .filter(([, s]) => s.affiliateDiscount)
+      .map(([id, s]) => [id, s.affiliateDiscount]),
+  );
+  const rows = compareAll({ current, pharmacyReads, comparatorRows, discounts });
   const files = writeReports({
     outDir: opts.out,
     runDate,

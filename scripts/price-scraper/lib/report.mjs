@@ -5,6 +5,8 @@ const gbp = (v) => (typeof v === "number" ? `£${v.toFixed(2)}` : v == null ? "�
 const pct = (v) => (v == null ? "—" : `${v > 0 ? "+" : ""}${v}%`);
 const cell = (s) => String(s ?? "").replace(/\|/g, "\\|");
 
+const discountLabel = (d) => `${d.type === "percent" ? `−${d.value}%` : `−£${d.value}`}${d.code ? ` code ${d.code}` : ""}`;
+
 function countBy(items, key) {
   const out = {};
   for (const i of items) out[i[key]] = (out[i[key]] ?? 0) + 1;
@@ -33,11 +35,11 @@ export function writeReports({ outDir, runDate, rows, pharmacyReads, comparators
   );
 
   // ---- CSV (one line per provider × medication × dose)
-  const header = ["provider_id", "provider", "medication", "dose", "current", "pharmacy_standard", "confidence", "method", "comparator_median", "delta_vs_comparators_pct", "change_vs_current", "action", "pharmacy_status", "comparators"];
+  const header = ["provider_id", "provider", "medication", "dose", "current", "pharmacy_standard", "site_price", "affiliate_discount", "confidence", "method", "comparator_median", "delta_vs_comparators_pct", "change_vs_current", "action", "pharmacy_status", "comparators"];
   const csv = [header.join(",")];
   for (const r of rows) {
     csv.push(
-      [r.providerId, r.provider, r.medication, r.dose, r.current, r.pharmacy, r.pharmacyConfidence, r.pharmacyMethod, r.consensus, r.deltaVsConsensus, r.changeVsCurrent, r.action, r.pharmacyStatus, r.comparators.map((c) => `${c.site}=${c.standard}`).join(" ")]
+      [r.providerId, r.provider, r.medication, r.dose, r.current, r.pharmacy, r.sitePrice, r.affiliateDiscount ? discountLabel(r.affiliateDiscount) : null, r.pharmacyConfidence, r.pharmacyMethod, r.consensus, r.deltaVsConsensus, r.changeVsCurrent, r.action, r.pharmacyStatus, r.comparators.map((c) => `${c.site}=${c.standard}`).join(" ")]
         .map((v) => (v == null ? "" : `"${String(v).replace(/"/g, '""')}"`))
         .join(","),
     );
@@ -85,9 +87,11 @@ export function writeReports({ outDir, runDate, rows, pharmacyReads, comparators
   md.push(`## Proposed changes and items to review (${interesting.length})`, "");
   if (interesting.length === 0) md.push("_None._", "");
   else {
-    md.push("| Pharmacy | Med | Dose | Ours now | Pharmacy (standard) | Change | Comparators (median) | Δ vs comparators | Action | How read |", "|---|---|---|---|---|---|---|---|---|---|");
+    md.push("Affiliate partners are shown at the price after their partner code, so *Site price* = standard price minus the partner discount.", "");
+    md.push("| Pharmacy | Med | Dose | Ours now | Pharmacy (standard) | Site price | Change | Comparators (median) | Δ vs comparators | Action | How read |", "|---|---|---|---|---|---|---|---|---|---|---|");
     for (const r of interesting) {
-      md.push(`| ${r.provider} | ${r.medication} | ${r.dose} | ${gbp(r.current)} | ${gbp(r.pharmacy)} | ${r.changeVsCurrent == null ? "—" : gbp(r.changeVsCurrent)} | ${gbp(r.consensus)} (${r.comparators.length}) | ${pct(r.deltaVsConsensus)} | **${r.action}** | ${cell(r.pharmacyMethod)} |`);
+      const site = r.affiliateDiscount ? `${gbp(r.sitePrice)} (${discountLabel(r.affiliateDiscount)})` : gbp(r.sitePrice);
+      md.push(`| ${r.provider} | ${r.medication} | ${r.dose} | ${gbp(r.current)} | ${gbp(r.pharmacy)} | ${site} | ${r.changeVsCurrent == null ? "—" : gbp(r.changeVsCurrent)} | ${gbp(r.consensus)} (${r.comparators.length}) | ${pct(r.deltaVsConsensus)} | **${r.action}** | ${cell(r.pharmacyMethod)} |`);
     }
     md.push("");
   }

@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { parseRobots, isAllowed, isRefused } from "../lib/http.mjs";
 import { buildMatcher, dropAmbiguousMatches } from "../lib/match.mjs";
-import { compareAll } from "../lib/compare.mjs";
+import { compareAll, applyAffiliateDiscount } from "../lib/compare.mjs";
 import { decodeFlightPayload, jsonObjectsStartingWith } from "../lib/rsc.mjs";
 
 test("robots.txt: '*' group applies; longest rule wins; Allow wins ties", () => {
@@ -74,6 +74,29 @@ test("compare: actions follow the agreed rules", () => {
   assert.equal(byDose["7.5mg"].deltaVsConsensus, 10);
   assert.equal(byDose["10mg"].action, "review"); // medium confidence
   assert.equal(byDose["12.5mg"].action, "manual");
+});
+
+test("affiliate partners: site price is standard minus the partner discount; comparators still use standard", () => {
+  assert.equal(applyAffiliateDiscount(154.99, { type: "percent", value: 10 }), 139.49);
+  assert.equal(applyAffiliateDiscount(132.99, { type: "percent", value: 5 }), 126.34);
+  assert.equal(applyAffiliateDiscount(144.99, { type: "amount", value: 10 }), 134.99);
+  assert.equal(applyAffiliateDiscount(144.99, null), 144.99);
+
+  const current = {
+    mounjaro: { providers: [{ id: "reach", name: "Reach", prices: { "2.5mg": 139.49, "5mg": 150 } }] },
+    wegovy: { providers: [] },
+  };
+  const pharmacyReads = new Map([["reach", { mounjaro: { status: "ok", doses: {
+    "2.5mg": { price: 154.99, confidence: "high" },
+    "5mg": { price: 175.99, confidence: "high" },
+  } } }]]);
+  const comparatorRows = [{ ourId: "reach", medication: "mounjaro", dose: "2.5mg", standard: 154.99, site: "s" }];
+  const rows = compareAll({ current, pharmacyReads, comparatorRows, discounts: { reach: { type: "percent", value: 10 } } });
+  const byDose = Object.fromEntries(rows.map((r) => [r.dose, r]));
+  assert.equal(byDose["2.5mg"].action, "unchanged");
+  assert.equal(byDose["2.5mg"].deltaVsConsensus, 0);
+  assert.equal(byDose["5mg"].sitePrice, 158.39);
+  assert.equal(byDose["5mg"].action, "update");
 });
 
 test("flight payload decoding finds provider objects", () => {

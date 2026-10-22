@@ -1,5 +1,5 @@
 {
-  "_comment": "Per-pharmacy price pages for the monthly standard-price check. Keys are Healthwise360 provider ids. null = URL not confirmed yet (reported as manual). One URL may serve both medications.",
+  "_comment": "Per-pharmacy price pages for the monthly standard-price check. Keys are Healthwise360 provider ids. null = URL not confirmed yet (reported as manual). One URL may serve both medications. affiliateDiscount: affiliate partners are shown on the site at the price after their partner code (client decision 2026-10-22); the check reads the standard price and applies this rule.",
   "providers": {
     "asda-online-doctor": {
       "mounjaro": "https://onlinedoctor.asda.com/uk/mounjaro.html",
@@ -59,7 +59,12 @@
     },
     "dosedirect": {
       "mounjaro": "https://dosedirect.co.uk/weight-loss/",
-      "wegovy": "https://dosedirect.co.uk/weight-loss/"
+      "wegovy": "https://dosedirect.co.uk/weight-loss/",
+      "affiliateDiscount": {
+        "type": "amount",
+        "value": 10,
+        "code": null
+      }
     },
     "dotor": {
       "mounjaro": "https://dotor.co.uk/product/mounjaro/",
@@ -201,7 +206,12 @@
     },
     "pharmacy-me": {
       "mounjaro": "https://pharmacyme.co.uk/",
-      "wegovy": "https://pharmacyme.co.uk/"
+      "wegovy": "https://pharmacyme.co.uk/",
+      "affiliateDiscount": {
+        "type": "percent",
+        "value": 5,
+        "code": "hw360"
+      }
     },
     "pharmacy2u": {
       "mounjaro": "https://www.pharmacy2u.co.uk/online-doctor/weight-loss/mounjaro",
@@ -232,7 +242,12 @@
     },
     "reach-online-pharmacy": {
       "mounjaro": "https://reachonlinepharmacy.com/weight-loss/",
-      "wegovy": "https://reachonlinepharmacy.com/weight-loss/"
+      "wegovy": "https://reachonlinepharmacy.com/weight-loss/",
+      "affiliateDiscount": {
+        "type": "percent",
+        "value": 10,
+        "code": "Welcome10health"
+      }
     },
     "second-nature": {
       "mounjaro": null,

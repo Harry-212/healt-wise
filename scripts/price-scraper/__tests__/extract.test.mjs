@@ -12,13 +12,22 @@ test("plain dose/price table (Asda/MedExpress style)", () => {
   assert.ok(Object.values(r.doses).every((d) => d.confidence === "high"));
 });
 
-test("struck-through price is the standard price (Superdrug style)", () => {
-  const html = ["2.5mg", "5mg", "7.5mg"]
-    .map((d, i) => `<tr><td>${d}</td><td><span style="text-decoration: line-through">£${179 + i * 20}.00</span></td><td>£${143 + i * 16}.20</td><td>£8.95</td></tr>`)
-    .join("");
+const struckRows = ["2.5mg", "5mg", "7.5mg"]
+  .map((d, i) => `<tr><td>${d}</td><td><span style="text-decoration: line-through">£${179 + i * 20}.00</span></td><td>£${143 + i * 16}.20</td><td>£8.95</td></tr>`)
+  .join("");
+
+test("struck price is standard when the table labels the lower price as limited (Superdrug style)", () => {
+  const html = `<tr><th>Dose</th><th>Standard Price</th><th>New Patient Price</th><th>Value of points</th></tr>${struckRows}`;
   const r = extractFromText(html, "mounjaro");
   assert.deepEqual(prices(r), { "2.5mg": 179, "5mg": 199, "7.5mg": 219 });
-  assert.match(r.doses["2.5mg"].method, /struck/);
+  assert.match(r.doses["2.5mg"].method, /limited offer/);
+});
+
+test("unlabelled struck 'was' price is ignored; the selling price is standard (Zava style)", () => {
+  const html = `<p>Dose ZAVA prices</p>${struckRows}`;
+  const r = extractFromText(html, "mounjaro");
+  assert.deepEqual(prices(r), { "2.5mg": 143.2, "5mg": 159.2, "7.5mg": 175.2 });
+  assert.match(r.doses["5mg"].method, /sale price; was £199 ignored/);
 });
 
 test("two prices plus a 'Save' amount: highest non-save price, medium confidence (Zava style)", () => {
@@ -98,7 +107,7 @@ test("prices below the page's own 'from' price are downgraded to low confidence"
   assert.equal(r2.warnings.length, 1);
 });
 
-test("WooCommerce variations: regular price is the standard; '1 Pen x 4 Doses' is a single pen", () => {
+test("WooCommerce variations: selling price is standard ('was' regular ignored); '1 Pen x 4 Doses' is a single pen", () => {
   const variations = [
     { attributes: { attribute_strength: "2.5mg", attribute_quantity: "1 Pen x 4 Doses" }, display_price: 139.99, display_regular_price: 149.99 },
     { attributes: { attribute_strength: "5mg", attribute_quantity: "1 Pen x 4 Doses" }, display_price: 158.98, display_regular_price: 158.98 },
@@ -106,11 +115,11 @@ test("WooCommerce variations: regular price is the standard; '1 Pen x 4 Doses' i
   ];
   const attr = JSON.stringify(variations).replace(/"/g, "&quot;");
   const r = extractFromVariants(`<form data-product_variations="${attr}"></form>`, "mounjaro");
-  assert.deepEqual(prices(r), { "2.5mg": 149.99, "5mg": 158.98 });
-  assert.match(r.doses["2.5mg"].method, /woocommerce.*regular/);
+  assert.deepEqual(prices(r), { "2.5mg": 139.99, "5mg": 158.98 });
+  assert.match(r.doses["2.5mg"].method, /woocommerce.*was £149.99 ignored/);
 });
 
-test("Shopify variants: pence integers, compare-at price, {amount} objects, multi-month packs skipped", () => {
+test("Shopify variants: pence integers, compare-at ignored, {amount} objects, multi-month packs skipped", () => {
   const theme = { variants: [
     { title: "2.5mg", price: 15400, compare_at_price: 16900 },
     { title: "5mg", price: 16800, compare_at_price: null },
@@ -120,7 +129,7 @@ test("Shopify variants: pence integers, compare-at price, {amount} objects, mult
     { title: "3 Months (3 Pens) / 7.5mg", price: { amount: 600, currencyCode: "GBP" } },
   ] };
   const html = `<script>var a=${JSON.stringify(theme)};var b=${JSON.stringify(storefront)};</script>`;
-  assert.deepEqual(prices(extractFromVariants(html, "mounjaro")), { "2.5mg": 169, "5mg": 168, "7.5mg": 221 });
+  assert.deepEqual(prices(extractFromVariants(html, "mounjaro")), { "2.5mg": 154, "5mg": 168, "7.5mg": 221 });
 });
 
 test("prose mentioning doses without a price table yields nothing", () => {
