@@ -508,10 +508,11 @@ export default function CheapestOptionsUkPage() {
           </li>
         </ol>
         <p>
-          We check every price in the first week of each month and show the date
-          next to it. We show standard prices. First order codes are not
-          included. Featured partners sit outside the price tables and never
-          change the cheapest price.
+          We record the standard prices available on the date shown on this page.
+          Prices, fees and offers can change after that date, so check the
+          provider’s final price before proceeding. First-order codes are not
+          included. Featured partners appear separately from the price tables
+          and cannot change the price-based order.
         </p>
         <Link href="/methodology" className={linkClass}>
           Read how we check prices →

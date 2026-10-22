@@ -816,7 +816,7 @@ export default function MethodologyClient() {
                       How We Keep Information Updated
                     </h3>
                     <p className="mt-3 text-slate-600 leading-relaxed">
-                      The UK weight loss treatment market moves rapidly. Prices, stock levels, safety guidelines, and introductory discount codes fluctuate daily.
+                      We review comparison information regularly and display the relevant checking date where available. Prices, stock, delivery fees and offers can change between checks, so visitors should confirm the final details directly with the provider.
                     </p>
                   </div>
 

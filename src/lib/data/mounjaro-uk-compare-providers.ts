@@ -1383,7 +1383,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
     deliveryNote: "DPD 24hr tracked, £4.99 (not included in price)",
     rating: 4.7,
     headlineFrom: 129,
-    gphcRegNo: "1033727",
+    gphcRegNo: "1033729",
     trustpilotUrl: "https://uk.trustpilot.com/review/slinic.co.uk",
     prices: {
       "2.5mg": 129,

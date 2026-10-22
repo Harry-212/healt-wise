@@ -59,7 +59,7 @@ export function buildCheapestOptionsFaqs(
     {
       question: "How often do you check prices?",
       answer:
-        "We check every price in the first week of each month. The date of the last check is shown next to the prices.",
+        "We show the date when the prices on this page were checked. Provider prices, delivery fees and offers can change after that date, so confirm the final amount directly with the provider before proceeding.",
     },
     {
       question: "Which is cheaper, Wegovy or Mounjaro?",
@@ -134,14 +134,20 @@ export function cheapestOptionsUkJsonLd(
         name: "Cheapest Weight Loss Injections UK: Starter & Monthly Prices",
         headline: "Cheapest Weight Loss Injections UK",
         description:
-          "Find the cheapest weight loss injections in the UK. Compare starter and monthly prices, hidden fees and safe online pharmacies, checked every month.",
+          "Compare checked starter-dose and monthly costs from GPhC-registered UK pharmacies. Prices are dated, and provider fees may change after checking.",
         inLanguage: "en-GB",
         isPartOf: { "@id": `${base}/#website` },
         publisher: { "@id": `${base}/#organization` },
         breadcrumb: { "@id": `${url}#breadcrumb` },
         about: [
-          { "@id": `${url}#wegovy` },
-          { "@id": `${url}#mounjaro` },
+          {
+            "@type": "Thing",
+            name: "Wegovy price comparison",
+          },
+          {
+            "@type": "Thing",
+            name: "Mounjaro price comparison",
+          },
         ],
         mainEntity: { "@id": `${url}#price-data` },
         speakable: {
@@ -170,8 +176,9 @@ export function cheapestOptionsUkJsonLd(
       {
         "@type": "Dataset",
         "@id": `${url}#price-data`,
-        name: "Cheapest weight loss injection prices in the UK",
-        description: `Lowest and typical price of one pen of Wegovy (0.25 mg to 2.4 mg) and Mounjaro (2.5 mg to 15 mg), from GPhC registered UK pharmacies (${wCount} for Wegovy, ${mCount} for Mounjaro).`,
+        name: "Cheapest weight loss injection price comparison in the UK",
+        description:
+          "Checked UK pharmacy price-comparison data for Mounjaro and Wegovy, covering listed dose prices, provider counts and the checking date. Healthwise360 provides independent comparison information and does not prescribe, dispense or sell medicines.",
         url,
         creator: { "@id": `${base}/#organization` },
         publisher: { "@id": `${base}/#organization` },
@@ -181,61 +188,51 @@ export function cheapestOptionsUkJsonLd(
         isAccessibleForFree: true,
         inLanguage: "en-GB",
         license: `${base}/terms-of-service`,
-        measurementTechnique:
-          "Listed prices checked on each pharmacy website. The date of the last check is shown on the page.",
-        variableMeasured: [
-          { "@type": "PropertyValue", name: "Lowest price", unitText: "GBP" },
-          { "@type": "PropertyValue", name: "Typical price", unitText: "GBP" },
-        ],
+        measurementTechnique: `Listed prices checked on each pharmacy website. The date of the last check is shown on the page. Method: ${base}/methodology`,
         about: [
-          { "@id": `${url}#wegovy` },
-          { "@id": `${url}#mounjaro` },
+          {
+            "@type": "Thing",
+            name: "Wegovy UK price comparison",
+            url: `${base}/wegovy-price-comparison`,
+          },
+          {
+            "@type": "Thing",
+            name: "Mounjaro UK price comparison",
+            url: `${base}/mounjaro-price-comparison`,
+          },
         ],
-      },
-      {
-        "@type": ["Drug", "Product"],
-        "@id": `${url}#wegovy`,
-        name: "Wegovy",
-        nonProprietaryName: "semaglutide",
-        activeIngredient: "semaglutide",
-        brand: { "@type": "Brand", name: "Wegovy" },
-        manufacturer: { "@type": "Organization", name: "Novo Nordisk" },
-        drugClass: { "@type": "DrugClass", name: "GLP-1 receptor agonist" },
-        prescriptionStatus: "https://schema.org/PrescriptionOnly",
-        administrationRoute: "Subcutaneous injection, once a week",
-        dosageForm: "Prefilled injection pen. One pen holds 4 weekly doses.",
-        offers: {
-          "@type": "AggregateOffer",
-          priceCurrency: "GBP",
-          lowPrice: wLowStr,
-          highPrice: wHighStr,
-          offerCount: wCount,
-          url: `${base}/wegovy-price-comparison`,
-        },
-      },
-      {
-        "@type": ["Drug", "Product"],
-        "@id": `${url}#mounjaro`,
-        name: "Mounjaro",
-        nonProprietaryName: "tirzepatide",
-        activeIngredient: "tirzepatide",
-        brand: { "@type": "Brand", name: "Mounjaro" },
-        manufacturer: { "@type": "Organization", name: "Eli Lilly and Company" },
-        drugClass: {
-          "@type": "DrugClass",
-          name: "Dual GIP and GLP-1 receptor agonist",
-        },
-        prescriptionStatus: "https://schema.org/PrescriptionOnly",
-        administrationRoute: "Subcutaneous injection, once a week",
-        dosageForm: "Prefilled injection pen. One pen holds 4 weekly doses.",
-        offers: {
-          "@type": "AggregateOffer",
-          priceCurrency: "GBP",
-          lowPrice: mLowStr,
-          highPrice: mHighStr,
-          offerCount: mCount,
-          url: `${base}/mounjaro-price-comparison`,
-        },
+        variableMeasured: [
+          {
+            "@type": "PropertyValue",
+            name: "Wegovy price range for one pen, from starter dose to long term dose",
+            minValue: parseFloat(wLowStr),
+            maxValue: parseFloat(wHighStr),
+            unitText: "GBP",
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Mounjaro price range for one pen, from starter dose to long term dose",
+            minValue: parseFloat(mLowStr),
+            maxValue: parseFloat(mHighStr),
+            unitText: "GBP",
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Wegovy pharmacies checked",
+            value: wCount,
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Mounjaro pharmacies checked",
+            value: mCount,
+          },
+          {
+            "@type": "PropertyValue",
+            name: "Dose coverage",
+            value:
+              "Wegovy from the 0.25 mg starter pen to the 2.4 mg long term pen. Mounjaro from the 2.5 mg starter pen to the 15 mg top dose pen.",
+          },
+        ],
       },
       {
         "@type": "FAQPage",
