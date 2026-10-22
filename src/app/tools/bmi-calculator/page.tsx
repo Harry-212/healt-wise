@@ -3,25 +3,26 @@ import Image from "next/image";
 import Link from "next/link";
 import BmiCalculatorClient from "@/components/tools/BmiCalculatorClient";
 import {
-  BMI_CALCULATOR_FAQ_BMI_ITEMS,
-  BMI_CALCULATOR_FAQ_BMR_TDEE_ITEMS,
-  bmiCalculatorFaqJsonLd,
-  bmiCalculatorWebPageJsonLd,
+  BMI_CALCULATOR_FAQS,
+  bmiCalculatorJsonLd,
 } from "@/lib/seo/bmi-calculator-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
-const TITLE = "BMI Calculator UK: BMI, BMR & TDEE | Healthwise360";
+const TITLE = "BMI Calculator UK: BMI, BMR & TDEE Calculator (Stones & kg)";
 const DESCRIPTION =
-  "Calculate your BMI, healthy weight range, BMR and estimated daily energy needs with our free UK calculator. Results are for general information only.";
+  "Free BMI calculator for UK adults. Check your BMI in stones and pounds or kg, see the BMI chart and work out your BMR, TDEE and daily calories.";
+const OG_TITLE = "BMI Calculator UK: Free BMI, BMR and TDEE Calculator";
+const OG_DESCRIPTION =
+  "Free UK BMI, BMR and TDEE calculator for adults. Works in stones, pounds and kg, with a BMI chart and healthy weight range.";
 
 export const metadata: Metadata = {
   ...buildPageShareMetadata({
     canonicalPath: "/tools/bmi-calculator",
     title: TITLE,
     metaDescription: DESCRIPTION,
-    openGraphTitle: TITLE,
-    openGraphDescription: DESCRIPTION,
+    openGraphTitle: OG_TITLE,
+    openGraphDescription: OG_DESCRIPTION,
     imagePath: "/window.svg",
     imageAlt: "Healthwise360 — BMI calculator UK",
   }),
@@ -31,8 +32,7 @@ export const metadata: Metadata = {
 };
 
 export default function BmiCalculatorPage() {
-  const faqLd = bmiCalculatorFaqJsonLd();
-  const webLd = bmiCalculatorWebPageJsonLd();
+  const jsonLd = bmiCalculatorJsonLd();
 
   return (
     <>
@@ -44,11 +44,7 @@ export default function BmiCalculatorPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <BmiCalculatorClient />
       <article className="relative z-20 border-t border-slate-200/80 bg-background">
@@ -275,31 +271,19 @@ export default function BmiCalculatorPage() {
             id="faq"
             className="mt-16 scroll-mt-28 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
           >
-            FAQ
+            FAQs
           </h2>
-          <h3 className="mt-8 scroll-mt-28 text-lg font-bold text-slate-900">
-            BMI categories &amp; thresholds
-          </h3>
-          <dl className="mt-4 space-y-8">
-            {BMI_CALCULATOR_FAQ_BMI_ITEMS.map((item) => (
-              <div key={item.q}>
+          <dl className="mt-8 space-y-8">
+            {BMI_CALCULATOR_FAQS.map((item) => (
+              <div key={item.question}>
                 <dt className="text-lg font-semibold text-slate-900">
-                  {item.q}
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    {item.question}
+                  </h3>
                 </dt>
-                <dd className="mt-2 leading-relaxed text-slate-700">{item.a}</dd>
-              </div>
-            ))}
-          </dl>
-          <h3 className="mt-12 scroll-mt-28 text-lg font-bold text-slate-900">
-            BMR &amp; calorie needs
-          </h3>
-          <dl className="mt-4 space-y-8">
-            {BMI_CALCULATOR_FAQ_BMR_TDEE_ITEMS.map((item) => (
-              <div key={item.q}>
-                <dt className="text-lg font-semibold text-slate-900">
-                  {item.q}
-                </dt>
-                <dd className="mt-2 leading-relaxed text-slate-700">{item.a}</dd>
+                <dd className="mt-2 leading-relaxed text-slate-700">
+                  {item.answer}
+                </dd>
               </div>
             ))}
           </dl>

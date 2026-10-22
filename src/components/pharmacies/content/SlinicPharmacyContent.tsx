@@ -39,7 +39,7 @@ export default function SlinicPharmacyContent() {
           k: "Provider",
           v: "Read & Simonstone Pharmacy Ltd T/A Slinic",
         },
-        { k: "GPhC", v: "1033727" },
+        { k: "GPhC", v: "1033729" },
         {
           k: "Pathway",
           v: "Online assessment & free video consultation · review by a named prescriber",
@@ -57,7 +57,7 @@ export default function SlinicPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            Slinic sells Mounjaro {priceRangePhrase(liveMj) ?? "from £129 (2.5 mg) to £267 (15 mg)"} a pen, and Wegovy {priceRangePhrase(liveWg) ?? "from £83 (0.25 mg) to £350 (7.2 mg)"} a pen, at our {checkedOn} price check. Slinic is registered with the General Pharmaceutical Council (number 1033727), and every order is clinically evaluated before medicine is dispatched. See the price for every dose below, or{" "}
+            Slinic sells Mounjaro {priceRangePhrase(liveMj) ?? "from £129 (2.5 mg) to £267 (15 mg)"} a pen, and Wegovy {priceRangePhrase(liveWg) ?? "from £83 (0.25 mg) to £350 (7.2 mg)"} a pen, at our {checkedOn} price check. Slinic is registered with the General Pharmaceutical Council (number 1033729), and every order is clinically evaluated before medicine is dispatched. See the price for every dose below, or{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"
@@ -79,7 +79,7 @@ export default function SlinicPharmacyContent() {
 
         <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm">
           <p className="text-slate-800 leading-relaxed">
-            <strong className="text-blue-900">About Slinic:</strong> Slinic is a UK-based pharmacy and dedicated weight-management clinic operating as Read &amp; Simonstone Pharmacy Ltd (GPhC 1033727). Founded and led by Shadeia Younis MPharmS—Superintendent Pharmacist and Clinical Lead with over 25 years of UK pharmacy experience—Slinic provides a clinician-supported, medically supervised pathway for adults seeking GLP-1 and dual GIP/GLP-1 treatments including Wegovy and Mounjaro.
+            <strong className="text-blue-900">About Slinic:</strong> Slinic is a UK-based pharmacy and dedicated weight-management clinic operating as Read &amp; Simonstone Pharmacy Ltd (GPhC 1033729). Founded and led by Shadeia Younis MPharmS—Superintendent Pharmacist and Clinical Lead with over 25 years of UK pharmacy experience—Slinic provides a clinician-supported, medically supervised pathway for adults seeking GLP-1 and dual GIP/GLP-1 treatments including Wegovy and Mounjaro.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ export default function SlinicPharmacyContent() {
       <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
         <h2 className="text-xl font-bold text-slate-900">Is Slinic legit?</h2>
         <p className="mt-3 leading-relaxed text-slate-800">
-          Yes. Slinic is the trading name of <strong>Read &amp; Simonstone Pharmacy Ltd</strong>, registered with the General Pharmaceutical Council (GPhC) under registration number <strong>1033727</strong>. The pharmacy operates under the clinical leadership of Superintendent Pharmacist Shadeia Younis MPharmS. Every patient undergoes an online medical assessment and video consultation before any prescription-only weight-loss medication can be dispensed.
+          Yes. Slinic is the trading name of <strong>Read &amp; Simonstone Pharmacy Ltd</strong>, registered with the General Pharmaceutical Council (GPhC) under registration number <strong>1033729</strong>. The pharmacy operates under the clinical leadership of Superintendent Pharmacist Shadeia Younis MPharmS. Every patient undergoes an online medical assessment and video consultation before any prescription-only weight-loss medication can be dispensed.
         </p>
       </section>
 
@@ -162,7 +162,7 @@ export default function SlinicPharmacyContent() {
           {[
             {
               q: "Is Slinic registered with the GPhC?",
-              a: "Yes. Slinic operates under Read & Simonstone Pharmacy Ltd, officially registered with the General Pharmaceutical Council under GPhC registration number 1033727.",
+              a: "Yes. Slinic operates under Read & Simonstone Pharmacy Ltd, officially registered with the General Pharmaceutical Council under GPhC registration number 1033729.",
             },
             {
               q: "Is the video consultation really free?",

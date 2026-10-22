@@ -18,7 +18,7 @@ export const PRICE_SLUGS: Record<string, PriceSlugConfig> = {
     seo: {
       title: "Cheapest Weight Loss Injections UK: Starter & Monthly Prices",
       description:
-        "Find the cheapest weight loss injections in the UK. Compare starter and monthly prices, hidden fees and safe online pharmacies, checked every month.",
+        "Compare checked starter-dose and monthly costs from GPhC-registered UK pharmacies. Prices are dated, and provider fees may change after checking.",
       openGraphTitle: "Cheapest Weight Loss Injections in the UK: Price Guide",
       openGraphDescription:
         "The lowest UK prices for weight loss injections, from starter pen to long term dose, plus the hidden costs to check before you pay.",

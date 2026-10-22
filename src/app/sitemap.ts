@@ -92,6 +92,7 @@ const STATIC_PATHS = [
   "/tools/weight-loss-tracker",
   "/wegovy-faq",
   "/wegovy-price-comparison",
+  "/what-is-foundayo",
   "/what-is-mounjaro",
   "/what-is-wegovy",
 ] as const;

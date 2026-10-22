@@ -1705,7 +1705,7 @@ const SLINIC_FAQ: FaqItem[] = [
   {
     question: "Is Slinic registered with the GPhC?",
     answer:
-      "Yes. Slinic operates under Read & Simonstone Pharmacy Ltd, officially registered with the General Pharmaceutical Council under GPhC registration number 1033727.",
+      "Yes. Slinic operates under Read & Simonstone Pharmacy Ltd, officially registered with the General Pharmaceutical Council under GPhC registration number 1033729.",
   },
   {
     question: "Is the video consultation really free?",
