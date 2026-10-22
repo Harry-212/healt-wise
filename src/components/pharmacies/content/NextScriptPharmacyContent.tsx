@@ -8,6 +8,8 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { getLiveMounjaroProvider } from "@/lib/data/compare-live";
+import { longCheckDate, priceRangePhrase } from "@/lib/data/provider-price-summary";
 
 const providerUrl = "https://nextscript.co.uk/condition/weight-loss/";
 
@@ -15,6 +17,8 @@ const sectionLabel =
   "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
 
 export default function NextScriptPharmacyContent() {
+  const liveMj = getLiveMounjaroProvider("next-script");
+  const checkedOn = longCheckDate(liveMj?.updatedLabel) ?? "20 September 2026";
   const discountCode = "";
   const hasDiscount = false;
 
@@ -28,7 +32,7 @@ export default function NextScriptPharmacyContent() {
       providerName="Next Script"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Prices checked", v: "20 September 2026" },
+        { k: "Prices checked", v: checkedOn },
         { k: "Provider", v: "Next Script" },
         { k: "GPhC", v: "9012568" },
         {
@@ -48,7 +52,7 @@ export default function NextScriptPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            Next Script sells Mounjaro from £131 (2.5 mg) to £266 (15 mg) a pen, at our 20 September 2026 price check. Next Script is listed on the GPhC register (number 9012568), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            Next Script sells Mounjaro {priceRangePhrase(liveMj) ?? "from £131 (2.5 mg) to £266 (15 mg)"} a pen, at our {checkedOn} price check. Next Script is listed on the GPhC register (number 9012568), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"

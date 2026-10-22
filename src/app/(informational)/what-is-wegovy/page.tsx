@@ -11,11 +11,11 @@ import {
   WHY_CHOOSE_HEALTHWISE360_ALT,
   WHY_CHOOSE_HEALTHWISE360_SRC,
 } from "@/lib/site-assets";
-import {
-  WEGOVY_UK_COMPARE_PROVIDERS,
-  WEGOVY_UK_COMPARE_LAST_UPDATED,
-} from "@/lib/data/wegovy-uk-compare-providers";
+import { getLivePriceCheckLabels, getWegovyCompareProviders } from "@/lib/data/compare-live";
 import { buildWegovyPriceInsights } from "@/lib/data/wegovy-price-insights";
+
+/** Live prices; regenerated at most every 5 minutes and when prices are saved. */
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   ...buildPageShareMetadata({
@@ -83,6 +83,8 @@ function TwoColTable({
 }
 
 export default function WhatIsWegovyPage() {
+  const WEGOVY_UK_COMPARE_PROVIDERS = getWegovyCompareProviders();
+  const WEGOVY_UK_COMPARE_LAST_UPDATED = getLivePriceCheckLabels().wegovy;
   const providerCount = WEGOVY_UK_COMPARE_PROVIDERS.length;
   const insights = buildWegovyPriceInsights(WEGOVY_UK_COMPARE_PROVIDERS);
   const starterPrice = `£${insights?.starter.low ?? 76.94}`;

@@ -31,6 +31,8 @@ function revalidateComparePages(medication: CompareMedication) {
   for (const slug of Object.keys(COMPARE_SLUGS)) {
     revalidatePath(`/compare/${slug}`);
   }
+  // Pharmacy pages, /prices, what-is pages and the homepage read the same store.
+  revalidatePath("/", "layout");
 }
 
 export async function POST(_request: NextRequest, context: RouteContext) {

@@ -9,8 +9,12 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { useLiveMounjaroProvider } from "@/lib/data/live-prices-context";
+import { longCheckDate } from "@/lib/data/provider-price-summary";
 
 export default function AsdaOnlineDoctorContent() {
+  const liveMj = useLiveMounjaroProvider("asda-online-doctor");
+  const checkedOn = longCheckDate(liveMj?.updatedLabel) ?? "20 September 2026";
   const providerUrl =
     "https://onlinedoctor.asda.com/uk/weight-loss-treatment.html";
 
@@ -28,7 +32,7 @@ export default function AsdaOnlineDoctorContent() {
       providerName="Asda Online Doctor"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Prices checked", v: "20 September 2026" },
+        { k: "Prices checked", v: checkedOn },
         { k: "Service", v: "Asda Online Doctor" },
         { k: "Dispensing pharmacy", v: "Asda Pharmacy (GPhC 1116105)" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat" },
@@ -42,7 +46,7 @@ export default function AsdaOnlineDoctorContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            Asda Online Doctor is an online UK service for weight loss injections. See its Mounjaro and Wegovy price for every dose below, from our 20 September 2026 price check, or{" "}
+            Asda Online Doctor is an online UK service for weight loss injections. See its Mounjaro and Wegovy price for every dose below, from our {checkedOn} price check, or{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"

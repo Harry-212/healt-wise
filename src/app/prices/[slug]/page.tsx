@@ -13,6 +13,9 @@ import Link from "next/link";
 
 type Props = { params: Promise<{ slug: string }> };
 
+/** Live prices; regenerated at most every 5 minutes and when prices are saved. */
+export const revalidate = 300;
+
 export function generateStaticParams() {
   return Object.keys(PRICE_SLUGS).map((slug) => ({ slug }));
 }

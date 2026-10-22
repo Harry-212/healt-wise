@@ -6,10 +6,14 @@ import {
   PharmacyPriceCompareHint,
   Points,
 } from "./_dossier";
+import { getLiveMounjaroProvider } from "@/lib/data/compare-live";
+import { longCheckDate, priceRangePhrase } from "@/lib/data/provider-price-summary";
 
 const providerUrl = "https://dotor.co.uk/";
 
 export default function DotorPharmacyContent() {
+  const liveMj = getLiveMounjaroProvider("dotor");
+  const checkedOn = longCheckDate(liveMj?.updatedLabel) ?? "20 September 2026";
   /** Paste the live code here when available. */
   const discountCode = "";
   const hasDiscount = false;
@@ -24,7 +28,7 @@ export default function DotorPharmacyContent() {
       providerName="Dotor"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Prices checked", v: "20 September 2026" },
+        { k: "Prices checked", v: checkedOn },
         { k: "Provider", v: "Dotor" },
         { k: "GPhC", v: "9012775" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat · Xenical · XLS Medical" },
@@ -38,7 +42,7 @@ export default function DotorPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            Dotor sells Mounjaro from £131.36 (2.5 mg) to £275.05 (15 mg) a pen, at our 20 September 2026 price check. Dotor is listed on the GPhC register (number 9012775), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            Dotor sells Mounjaro {priceRangePhrase(liveMj) ?? "from £131.36 (2.5 mg) to £275.05 (15 mg)"} a pen, at our {checkedOn} price check. Dotor is listed on the GPhC register (number 9012775), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"

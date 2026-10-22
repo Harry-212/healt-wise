@@ -16,7 +16,11 @@
     "seo:validate:full-site": "node scripts/seo/validate.mjs --scope=full-site",
     "seo:editorial-queue": "node scripts/seo/editorial-queue.mjs",
     "seo:classify": "node scripts/seo/classify.mjs",
-    "seo:test": "node --test \"scripts/seo/__tests__/**/*.test.mjs\""
+    "seo:test": "node --test \"scripts/seo/__tests__/**/*.test.mjs\"",
+    "prices:check": "node scripts/price-scraper/run.mjs",
+    "prices:discover": "node scripts/price-scraper/discover.mjs",
+    "prices:apply": "node scripts/price-scraper/apply.mjs",
+    "prices:test": "node --test \"scripts/price-scraper/__tests__/**/*.test.mjs\""
   },
   "dependencies": {
     "@paper-design/shaders-react": "^0.0.72",

@@ -8,10 +8,14 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { getLiveMounjaroProvider } from "@/lib/data/compare-live";
+import { longCheckDate, priceRangePhrase } from "@/lib/data/provider-price-summary";
 
 const providerUrl = "https://cuvahealth.co.uk/treatment/weight-loss";
 
 export default function CuvaHealthContent() {
+  const liveMj = getLiveMounjaroProvider("cuva-health");
+  const checkedOn = longCheckDate(liveMj?.updatedLabel) ?? "20 September 2026";
   /** Paste the live code here when available. */
   const discountCode = "";
   const hasDiscount = false;
@@ -26,7 +30,7 @@ export default function CuvaHealthContent() {
       providerName="Cuva Health"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Prices checked", v: "20 September 2026" },
+        { k: "Prices checked", v: checkedOn },
         { k: "Provider", v: "Cuva Health" },
         { k: "GPhC", v: "9012581" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Liraglutide" },
@@ -40,7 +44,7 @@ export default function CuvaHealthContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            Cuva Health sells Mounjaro from £139.99 (2.5 mg) to £294.99 (15 mg) a pen, at our 20 September 2026 price check. Cuva Health is listed on the GPhC register (number 9012581), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            Cuva Health sells Mounjaro {priceRangePhrase(liveMj) ?? "from £139.99 (2.5 mg) to £294.99 (15 mg)"} a pen, at our {checkedOn} price check. Cuva Health is listed on the GPhC register (number 9012581), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"
