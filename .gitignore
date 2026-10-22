@@ -55,3 +55,6 @@ next-env.d.ts
 # will overwrite production Saves. Prefer COMPARE_DATA_DIR outside the app.
 /data/mounjaro-compare.json
 /data/wegovy-compare.json
+
+# Monthly price-check output (reports + page cache)
+/scripts/price-scraper/out/

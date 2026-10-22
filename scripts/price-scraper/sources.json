@@ -1,0 +1,313 @@
+{
+  "_comment": "Per-pharmacy price pages for the monthly standard-price check. Keys are Healthwise360 provider ids. null = URL not confirmed yet (reported as manual). One URL may serve both medications.",
+  "providers": {
+    "asda-online-doctor": {
+      "mounjaro": "https://onlinedoctor.asda.com/uk/mounjaro.html",
+      "wegovy": "https://onlinedoctor.asda.com/uk/wegovy.html"
+    },
+    "ashcroft-pharmacy": {
+      "mounjaro": "https://www.ashcroftpharmacy.co.uk/online-doctor/weight-loss/mounjaro/",
+      "wegovy": "https://www.ashcroftpharmacy.co.uk/online-doctor/weight-loss/mounjaro/"
+    },
+    "ayp-healthcare": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "no product page with dose prices found; check manually"
+    },
+    "bolt-pharmacy": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices loaded by JavaScript"
+    },
+    "boots-online-doctor": {
+      "mounjaro": "https://onlinedoctor.boots.com/treatments/mounjaro",
+      "wegovy": "https://onlinedoctor.boots.com/treatments/wegovy/"
+    },
+    "care-pharmacy": {
+      "mounjaro": "https://thecarepharmacy.com/shop/mounjaro-weight-loss-injection/",
+      "wegovy": null,
+      "note": "Wegovy product page returns 404"
+    },
+    "chequp": {
+      "mounjaro": "https://chequp.com/mounjaro/glp-1/",
+      "wegovy": "https://chequp.com/wegovy/glp-1/"
+    },
+    "click2pharmacy": {
+      "mounjaro": "https://click2pharmacy.co.uk/product/mounjaro-weight-loss-injections/",
+      "wegovy": null,
+      "note": "Wegovy price page not found yet"
+    },
+    "cloud-pharmacy": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "Wegovy page lists multi-pen bundles only, no single-pen price"
+    },
+    "curate": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "page shows several plan prices ~£24 below the one-off price; needs a manual look"
+    },
+    "curely": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices loaded by JavaScript"
+    },
+    "cuva-health": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "only 3 of 6 doses on the page, at introductory prices"
+    },
+    "dosedirect": {
+      "mounjaro": "https://dosedirect.co.uk/weight-loss/",
+      "wegovy": "https://dosedirect.co.uk/weight-loss/"
+    },
+    "dotor": {
+      "mounjaro": "https://dotor.co.uk/product/mounjaro/",
+      "wegovy": null,
+      "note": "Mounjaro only on the site"
+    },
+    "dr-weightmans": {
+      "mounjaro": "https://drweightmans.com/product/mounjaro-tirzepatide/",
+      "wegovy": "https://drweightmans.com/product/wegovy-semaglutide/"
+    },
+    "e-surgery": {
+      "mounjaro": "https://e-surgery.com/product/mounjaro-tirzepatide-injection/",
+      "wegovy": "https://e-surgery.com/product/semaglutide-wegovy-injection/"
+    },
+    "envigore": {
+      "mounjaro": "https://envigore.com/mounjaro/",
+      "wegovy": "https://envigore.com/wegovy/"
+    },
+    "farmeci": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices loaded by JavaScript"
+    },
+    "genmeds": {
+      "mounjaro": "https://genmeds.co.uk/treatments/weight-loss/mounjaro",
+      "wegovy": "https://genmeds.co.uk/treatments/weight-loss/wegovy"
+    },
+    "get-a-drip": {
+      "mounjaro": "https://getadrip.shop/products/mounjaro-1",
+      "wegovy": "https://getadrip.shop/products/wegovy-1"
+    },
+    "getweightloss": {
+      "mounjaro": "https://getweightloss.co.uk/medications/mounjaro",
+      "wegovy": "https://getweightloss.co.uk/medications/wegovy"
+    },
+    "goodbody-clinic": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "no product page with dose prices found; check manually"
+    },
+    "happy-pharmacy": {
+      "mounjaro": "https://happypharmacy.co.uk/products/mounjaro",
+      "wegovy": "https://happypharmacy.co.uk/products/wegovy-weight-loss-injection"
+    },
+    "hey-slim": {
+      "mounjaro": "https://www.heyslim.co.uk/medications/mounjaro",
+      "wegovy": "https://www.heyslim.co.uk/medications/wegovy"
+    },
+    "iq-doctor": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices loaded by JavaScript"
+    },
+    "jood-life": {
+      "mounjaro": "https://www.joodlife.com/shop/mounjaro",
+      "wegovy": "https://www.joodlife.com/shop/wegovy"
+    },
+    "juniper": {
+      "mounjaro": "https://www.myjuniper.co.uk/mounjaro-hub",
+      "wegovy": "https://www.myjuniper.co.uk/wegovy-hub"
+    },
+    "live-well-weight-loss": {
+      "mounjaro": "https://livewellweightloss.co.uk/product/mounjaro-injections/",
+      "wegovy": null,
+      "note": "Wegovy product page returns 404"
+    },
+    "lloyds-pharmacy-online-doctor": {
+      "mounjaro": "https://onlinedoctor.lloydspharmacy.com/products/mounjaro-tirzepatide-weight-loss-injection",
+      "wegovy": "https://onlinedoctor.lloydspharmacy.com/products/wegovy-semaglutide-weight-loss-injection"
+    },
+    "lotus-weight-loss": {
+      "mounjaro": "https://www.lotusweightloss.co.uk/products/mounjaro",
+      "wegovy": "https://www.lotusweightloss.co.uk/products/wegovy"
+    },
+    "manchester-chemist": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "no product page with dose prices found; check manually"
+    },
+    "medexpress": {
+      "mounjaro": "https://www.medexpress.co.uk/clinics/weight-loss/mounjaro",
+      "wegovy": "https://www.medexpress.co.uk/clinics/weight-loss/wegovy"
+    },
+    "medhut": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices loaded by JavaScript"
+    },
+    "medicine-marketplace": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "no product page with dose prices found; check manually"
+    },
+    "medino": {
+      "mounjaro": "https://www.medino.com/product/mounjaro-kwikpen-2-5mg-step-1",
+      "wegovy": null,
+      "note": "Wegovy prices loaded by JavaScript"
+    },
+    "msh-weight-loss": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices loaded by JavaScript"
+    },
+    "my-london-pharmacy": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices behind the online-clinic app (JavaScript)"
+    },
+    "next-script": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "Mounjaro prices loaded by JavaScript; Wegovy page shows a different product"
+    },
+    "nulife-pharmacy": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "bot protection (Vercel checkpoint) even for curl"
+    },
+    "numan": {
+      "mounjaro": "https://www.numan.com/weight-loss/mounjaro",
+      "wegovy": "https://www.numan.com/weight-loss/wegovy"
+    },
+    "onlinemeds": {
+      "mounjaro": "https://onlinemeds.co.uk/shop/mounjaro-kwikpen/",
+      "wegovy": "https://onlinemeds.co.uk/shop/wegovy-flextouch/"
+    },
+    "oushk": {
+      "mounjaro": "https://www.oushkpharmacy.com/medications/mounjaro",
+      "wegovy": "https://www.oushkpharmacy.com/medications/wegovy-semaglutide-weight-loss-injection"
+    },
+    "pharmacy-advance": {
+      "mounjaro": "https://pharmacyadvance.co.uk/product/mounjaro-kwikpen/",
+      "wegovy": "https://pharmacyadvance.co.uk/product/wegovy/"
+    },
+    "pharmacy-express": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "booking flow only, no public price page"
+    },
+    "pharmacy-me": {
+      "mounjaro": "https://pharmacyme.co.uk/",
+      "wegovy": "https://pharmacyme.co.uk/"
+    },
+    "pharmacy2u": {
+      "mounjaro": "https://www.pharmacy2u.co.uk/online-doctor/weight-loss/mounjaro",
+      "wegovy": "https://www.pharmacy2u.co.uk/online-doctor/weight-loss/wegovy"
+    },
+    "pharmica": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "bot protection (empty WAF response)"
+    },
+    "pharmulous": {
+      "mounjaro": "https://www.pharmulous.co.uk/online-doctor/weight-loss/mounjaro-injection",
+      "wegovy": "https://www.pharmulous.co.uk/online-doctor/weight-loss/wegovy-injection",
+      "note": "2.5mg and 7.5mg not shown on the page"
+    },
+    "pills2u": {
+      "mounjaro": "https://pills2u.co.uk/shop/mounjaro-weight-loss/",
+      "wegovy": "https://pills2u.co.uk/shop/wegovy-injection/"
+    },
+    "pillsorted": {
+      "mounjaro": "https://www.pillsorted.com/product/mounjaro-injectable-pen/",
+      "wegovy": "https://www.pillsorted.com/product/wegovy-injectable-pen/"
+    },
+    "pillsphere": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices loaded by JavaScript"
+    },
+    "reach-online-pharmacy": {
+      "mounjaro": "https://reachonlinepharmacy.com/weight-loss/",
+      "wegovy": "https://reachonlinepharmacy.com/weight-loss/"
+    },
+    "second-nature": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "programme pricing, no per-pen price page"
+    },
+    "shape8": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "no product page with dose prices found; check manually"
+    },
+    "simple-online-pharmacy": {
+      "mounjaro": "https://www.simpleonlinepharmacy.co.uk/weight-loss/mounjaro/",
+      "wegovy": "https://www.simpleonlinepharmacy.co.uk/weight-loss/wegovy/"
+    },
+    "skin-and-shape": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices loaded by JavaScript"
+    },
+    "slimming-direct": {
+      "mounjaro": "https://slimmingdirect.co.uk/product/mounjaro-weight-loss-injection/",
+      "wegovy": "https://slimmingdirect.co.uk/product/wegovy-weight-loss-injection/"
+    },
+    "slinic": {
+      "mounjaro": "https://slinic.co.uk/condition/weight-loss/",
+      "wegovy": "https://slinic.co.uk/condition/weight-loss/"
+    },
+    "superdrug-online-doctor": {
+      "mounjaro": "https://onlinedoctor.superdrug.com/mounjaro.html",
+      "wegovy": "https://onlinedoctor.superdrug.com/wegovy.html"
+    },
+    "swift-doctor": {
+      "mounjaro": "https://swift-doctor.com/products/mounjaro-1",
+      "wegovy": null,
+      "note": "Mounjaro only on the site"
+    },
+    "swift-medi": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices loaded by JavaScript"
+    },
+    "the-family-chemist": {
+      "mounjaro": "https://www.thefamilychemist.co.uk/mounjaro/",
+      "wegovy": "https://www.thefamilychemist.co.uk/wegovy/"
+    },
+    "the-independent-pharmacy": {
+      "mounjaro": "https://www.theindependentpharmacy.co.uk/weight-loss/mounjaro-injections",
+      "wegovy": "https://www.theindependentpharmacy.co.uk/weight-loss/wegovy-injections"
+    },
+    "tribelle": {
+      "mounjaro": null,
+      "wegovy": null,
+      "note": "prices loaded by JavaScript"
+    },
+    "voy": {
+      "mounjaro": "https://www.joinvoy.com/weight-loss/medications/mounjaro",
+      "wegovy": "https://www.joinvoy.com/weight-loss/medications/wegovy"
+    },
+    "well-pharmacy": {
+      "mounjaro": "https://well.co.uk/weight-management/mounjaro/",
+      "wegovy": null,
+      "note": "Wegovy prices loaded by JavaScript"
+    },
+    "weprescribe": {
+      "mounjaro": "https://weprescribe.co.uk/product/mounjaro-injections-weight-loss-treatment/",
+      "wegovy": "https://weprescribe.co.uk/product/wegovy-injections-weight-loss-treatment/"
+    },
+    "yourpharmacy": {
+      "mounjaro": "https://yourpharmacy.uk/mounjaro/",
+      "wegovy": "https://yourpharmacy.uk/wegovy/"
+    },
+    "zava": {
+      "mounjaro": "https://www.zavamed.com/uk/mounjaro.html",
+      "wegovy": "https://www.zavamed.com/uk/wegovy.html"
+    }
+  }
+}
