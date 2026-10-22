@@ -37,6 +37,17 @@ function safeEqual(a: string, b: string): boolean {
   return timingSafeEqual(ha, hb);
 }
 
+/**
+ * Machine access for the monthly price update (GitHub Actions). Separate from
+ * the dashboard password; when PRICE_APPLY_TOKEN is unset, nothing is accepted.
+ */
+export function verifyPriceApplyToken(authorizationHeader: string | null): boolean {
+  const token = process.env.PRICE_APPLY_TOKEN?.trim();
+  if (!token || token.length < 32) return false;
+  const presented = authorizationHeader?.match(/^Bearer\s+(.+)$/i)?.[1]?.trim() ?? "";
+  return safeEqual(presented, token);
+}
+
 export function verifyAdminPassword(candidate: string): boolean {
   const password = getAdminDashboardPassword();
   if (!password) return false;

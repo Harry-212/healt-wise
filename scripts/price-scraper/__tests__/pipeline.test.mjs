@@ -4,6 +4,26 @@ import { parseRobots, isAllowed, isRefused } from "../lib/http.mjs";
 import { buildMatcher, dropAmbiguousMatches } from "../lib/match.mjs";
 import { compareAll, applyAffiliateDiscount } from "../lib/compare.mjs";
 import { decodeFlightPayload, jsonObjectsStartingWith } from "../lib/rsc.mjs";
+import { buildProposal } from "../lib/proposal.mjs";
+
+test("proposal: only update rows are applied; pages with a review row are not marked checked", () => {
+  const row = (providerId, dose, action, extra = {}) => ({ providerId, provider: providerId, medication: "mounjaro", dose, action, current: 150, sitePrice: 155, ...extra });
+  const p = buildProposal(
+    [
+      row("a", "2.5mg", "update"),
+      row("a", "5mg", "unchanged"),
+      row("a", "7.5mg", "manual"),
+      row("b", "2.5mg", "unchanged"),
+      row("b", "5mg", "review"),
+      row("c", "2.5mg", "manual"),
+    ],
+    "2026-11-02",
+  );
+  assert.equal(p.checkedOn, "2026-11-02");
+  assert.deepEqual(p.updates.map((u) => [u.providerId, u.dose, u.price, u.expectedCurrent]), [["a", "2.5mg", 155, 150]]);
+  assert.deepEqual(p.checked, [{ medication: "mounjaro", providerId: "a" }]);
+  assert.deepEqual(p.review.map((r) => r.providerId), ["b"]);
+});
 
 test("robots.txt: '*' group applies; longest rule wins; Allow wins ties", () => {
   const rules = parseRobots(`User-agent: GPTBot\nDisallow: /\n\nUser-agent: *\nAllow: /\nDisallow: /go/\nAllow: /go/public`);

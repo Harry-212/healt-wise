@@ -19,6 +19,7 @@ import { loadComparators } from "./lib/comparators.mjs";
 import { buildMatcher, dropAmbiguousMatches } from "./lib/match.mjs";
 import { compareAll } from "./lib/compare.mjs";
 import { writeReports } from "./lib/report.mjs";
+import { buildProposal } from "./lib/proposal.mjs";
 import { MEDICATIONS } from "./lib/doses.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -133,10 +134,15 @@ async function main() {
     options: { only: opts.only ? [...opts.only] : null, currentSource: opts.current ? `local ${opts.current}/` : "the live site" },
   });
 
+  const proposal = buildProposal(rows, runDate);
+  const proposalFile = path.join(opts.out, `price-updates-${runDate}.json`);
+  fs.writeFileSync(proposalFile, JSON.stringify(proposal, null, 2) + "\n");
+
   const tally = {};
   for (const r of rows) tally[r.action] = (tally[r.action] ?? 0) + 1;
   console.log(`• Done: ${Object.entries(tally).map(([k, v]) => `${k} ${v}`).join(", ")}`);
   console.log(`  ${files.md}\n  ${files.csv}\n  ${files.json}`);
+  console.log(`• Update proposal (${proposal.updates.length} price changes, ${proposal.checked.length} pages checked, ${proposal.review.length} to review):\n  ${proposalFile}`);
 }
 
 main().catch((err) => {
