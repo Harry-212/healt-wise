@@ -1,14 +1,9 @@
+"use client";
+
 import Link from "next/link";
-import {
-  getMounjaroCompareProviderById,
-  MOUNJARO_DOSE_KEYS,
-  MOUNJARO_UK_COMPARE_LAST_UPDATED,
-} from "@/lib/data/mounjaro-uk-compare-providers";
-import {
-  formatWegovyPriceCell,
-  getWegovyCompareProviderById,
-  WEGOVY_DOSE_KEYS,
-} from "@/lib/data/wegovy-uk-compare-providers";
+import { MOUNJARO_DOSE_KEYS } from "@/lib/data/mounjaro-uk-compare-providers";
+import { formatWegovyPriceCell, WEGOVY_DOSE_KEYS } from "@/lib/data/wegovy-uk-compare-providers";
+import { useLiveMounjaroProvider, useLiveWegovyProvider } from "@/lib/data/live-prices-context";
 
 export default function PharmacyPriceTable({
   slug,
@@ -17,10 +12,11 @@ export default function PharmacyPriceTable({
   slug: string;
   providerName: string;
 }) {
-  const m = getMounjaroCompareProviderById(slug);
-  const w = getWegovyCompareProviderById(slug);
+  const m = useLiveMounjaroProvider(slug);
+  const w = useLiveWegovyProvider(slug);
 
   if (!m && !w) return null;
+  const checkedOn = m?.updatedLabel ?? w?.updatedLabel;
 
   return (
     <section className="my-8 overflow-hidden rounded-xl border border-emerald-900/15 bg-white shadow-sm ring-1 ring-emerald-950/5">
@@ -29,7 +25,7 @@ export default function PharmacyPriceTable({
           {providerName} Prices by Dose
         </h2>
         <p className="mt-1 text-xs text-slate-600">
-          Standard pen prices checked as of {MOUNJARO_UK_COMPARE_LAST_UPDATED}.
+          Standard pen prices checked as of {checkedOn}.
           Includes 4 weekly doses per pen.
         </p>
       </div>

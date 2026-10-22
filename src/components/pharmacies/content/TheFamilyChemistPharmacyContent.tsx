@@ -8,6 +8,8 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { getLiveMounjaroProvider } from "@/lib/data/compare-live";
+import { longCheckDate, priceRangePhrase } from "@/lib/data/provider-price-summary";
 
 const providerUrl = "https://www.thefamilychemist.co.uk";
 
@@ -15,6 +17,8 @@ const sectionLabel =
   "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
 
 export default function TheFamilyChemistPharmacyContent() {
+  const liveMj = getLiveMounjaroProvider("the-family-chemist");
+  const checkedOn = longCheckDate(liveMj?.updatedLabel) ?? "20 September 2026";
   const discountCode = "";
   const hasDiscount = false;
 
@@ -28,7 +32,7 @@ export default function TheFamilyChemistPharmacyContent() {
       providerName="The Family Chemist"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Prices checked", v: "20 September 2026" },
+        { k: "Prices checked", v: checkedOn },
         { k: "Provider", v: "The Family Chemist" },
         { k: "GPhC", v: "9012915" },
         {
@@ -48,7 +52,7 @@ export default function TheFamilyChemistPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            The Family Chemist sells Mounjaro from £164.99 (2.5 mg) to £293.99 (15 mg) a pen, at our 20 September 2026 price check. The Family Chemist is listed on the GPhC register (number 9012915), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            The Family Chemist sells Mounjaro {priceRangePhrase(liveMj) ?? "from £164.99 (2.5 mg) to £293.99 (15 mg)"} a pen, at our {checkedOn} price check. The Family Chemist is listed on the GPhC register (number 9012915), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"

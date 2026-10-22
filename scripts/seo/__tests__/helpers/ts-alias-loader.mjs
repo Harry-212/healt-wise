@@ -12,6 +12,11 @@ import { pathToFileURL } from "node:url";
 const SRC_ROOT = path.resolve(import.meta.dirname, "..", "..", "..", "..", "src");
 
 export async function resolve(specifier, context, nextResolve) {
+  // `server-only` throws outside a React Server environment by design; the
+  // tests run that server code directly, so treat it as the no-op it is there.
+  if (specifier === "server-only") {
+    return { url: "data:text/javascript,export {};", shortCircuit: true };
+  }
   if (specifier.startsWith("@/")) {
     const rest = specifier.slice(2);
     const target = path.join(SRC_ROOT, rest);

@@ -11,67 +11,72 @@ import {
 import {
   providerTableFacts,
   providerTablePriceSentence,
+  type ProviderRows,
   type ProviderTableRow,
 } from "@/lib/data/provider-price-summary";
-
-/** Checked table prices only (same medicine, strength and single pen). */
-const CLOUD_TABLE_PRICES = providerTablePriceSentence("cloud-pharmacy", "Cloud Pharmacy");
-const CLOUD_FACTS = providerTableFacts("cloud-pharmacy");
-/** Cloud Pharmacy is deliberately excluded from the public Mounjaro table (data-quality hold), so only list what is actually shown. */
-const CLOUD_CHECKED_MEDICINES = [
-  CLOUD_FACTS.mounjaro ? "Mounjaro" : null,
-  CLOUD_FACTS.wegovy ? "Wegovy" : null,
-].filter((v): v is string => Boolean(v));
-const CLOUD_CHECKED_MEDICINES_LABEL = CLOUD_CHECKED_MEDICINES.join(" · ") || "See tables";
+import { useLiveProviderRows } from "@/lib/data/live-prices-context";
 
 const providerUrl =
   "https://www.cloudpharmacy.co.uk/online-doctor/weight-loss-treatments/";
 
-/** Provider details we have no recorded source or check date for. Listed openly, not filled in. */
-const CLOUD_UNCONFIRMED = [
-  ...(CLOUD_FACTS.mounjaro
-    ? []
-    : ["Mounjaro pricing (not currently shown in our comparison table)"]),
-  "Delivery services, delivery times and delivery charges",
-  "Packaging and cold-chain handling for injectable pens",
-  "Support channels (phone, email, pharmacist follow-up)",
-  "Availability of other weight-management medicines",
-  "The steps of the consultation and the eligibility criteria Cloud Pharmacy applies",
-  "Any first-order offer, voucher or subscription pricing (our tables use list price only)",
-];
+/** Everything on the page that depends on the checked table prices (same medicine, strength and single pen). */
+function cloudContent(liveRows: ProviderRows) {
+  const CLOUD_TABLE_PRICES = providerTablePriceSentence("cloud-pharmacy", "Cloud Pharmacy", liveRows);
+  const CLOUD_FACTS = providerTableFacts("cloud-pharmacy", liveRows);
+  /** Cloud Pharmacy is deliberately excluded from the public Mounjaro table (data-quality hold), so only list what is actually shown. */
+  const CLOUD_CHECKED_MEDICINES = [
+    CLOUD_FACTS.mounjaro ? "Mounjaro" : null,
+    CLOUD_FACTS.wegovy ? "Wegovy" : null,
+  ].filter((v): v is string => Boolean(v));
+  const CLOUD_CHECKED_MEDICINES_LABEL = CLOUD_CHECKED_MEDICINES.join(" · ") || "See tables";
 
-const CLOUD_FAQ = [
-  {
-    q: "Which medicines does Cloud Pharmacy list in our comparison?",
-    a: `${CLOUD_CHECKED_MEDICINES_LABEL}. It appears in our price tables with the check date shown.`,
-  },
-  ...(CLOUD_FACTS.mounjaro
-    ? []
-    : [
-        {
-          q: "Does this page show Cloud Pharmacy Mounjaro prices?",
-          a: "We do not currently have a verified Cloud Pharmacy Mounjaro price record to display. This page lists the Wegovy prices held in our comparison records. Check Cloud Pharmacy directly for its current Mounjaro availability and prices.",
-        },
-      ]),
-  {
-    q: "How much does Cloud Pharmacy weight loss treatment cost?",
-    a:
-      CLOUD_TABLE_PRICES ??
-      "Cloud Pharmacy's prices vary by medicine and strength; see our comparison tables for the strengths it lists.",
-  },
-  {
-    q: "Does Cloud Pharmacy charge for delivery?",
-    a: "We have not confirmed Cloud Pharmacy's delivery services or charges, so this page does not state them. Check the total at checkout.",
-  },
-  {
-    q: "Is Cloud Pharmacy a registered pharmacy?",
-    a: `Our comparison records list GPhC registration number ${CLOUD_FACTS.gphcRegNo ?? "on file"}. You can confirm it on the GPhC register.`,
-  },
-  {
-    q: "Are non-injection treatments available?",
-    a: "We have not confirmed this for Cloud Pharmacy, so we do not list any. Ask Cloud Pharmacy directly.",
-  },
-];
+  /** Provider details we have no recorded source or check date for. Listed openly, not filled in. */
+  const CLOUD_UNCONFIRMED = [
+    ...(CLOUD_FACTS.mounjaro
+      ? []
+      : ["Mounjaro pricing (not currently shown in our comparison table)"]),
+    "Delivery services, delivery times and delivery charges",
+    "Packaging and cold-chain handling for injectable pens",
+    "Support channels (phone, email, pharmacist follow-up)",
+    "Availability of other weight-management medicines",
+    "The steps of the consultation and the eligibility criteria Cloud Pharmacy applies",
+    "Any first-order offer, voucher or subscription pricing (our tables use list price only)",
+  ];
+
+  const CLOUD_FAQ = [
+    {
+      q: "Which medicines does Cloud Pharmacy list in our comparison?",
+      a: `${CLOUD_CHECKED_MEDICINES_LABEL}. It appears in our price tables with the check date shown.`,
+    },
+    ...(CLOUD_FACTS.mounjaro
+      ? []
+      : [
+          {
+            q: "Does this page show Cloud Pharmacy Mounjaro prices?",
+            a: "We do not currently have a verified Cloud Pharmacy Mounjaro price record to display. This page lists the Wegovy prices held in our comparison records. Check Cloud Pharmacy directly for its current Mounjaro availability and prices.",
+          },
+        ]),
+    {
+      q: "How much does Cloud Pharmacy weight loss treatment cost?",
+      a:
+        CLOUD_TABLE_PRICES ??
+        "Cloud Pharmacy's prices vary by medicine and strength; see our comparison tables for the strengths it lists.",
+    },
+    {
+      q: "Does Cloud Pharmacy charge for delivery?",
+      a: "We have not confirmed Cloud Pharmacy's delivery services or charges, so this page does not state them. Check the total at checkout.",
+    },
+    {
+      q: "Is Cloud Pharmacy a registered pharmacy?",
+      a: `Our comparison records list GPhC registration number ${CLOUD_FACTS.gphcRegNo ?? "on file"}. You can confirm it on the GPhC register.`,
+    },
+    {
+      q: "Are non-injection treatments available?",
+      a: "We have not confirmed this for Cloud Pharmacy, so we do not list any. Ask Cloud Pharmacy directly.",
+    },
+  ];
+  return { CLOUD_FACTS, CLOUD_CHECKED_MEDICINES, CLOUD_CHECKED_MEDICINES_LABEL, CLOUD_UNCONFIRMED, CLOUD_FAQ };
+}
 
 function PriceTable({
   title,
@@ -107,6 +112,9 @@ function PriceTable({
 }
 
 export default function CloudPharmacyContent() {
+  const { CLOUD_FACTS, CLOUD_CHECKED_MEDICINES, CLOUD_CHECKED_MEDICINES_LABEL, CLOUD_UNCONFIRMED, CLOUD_FAQ } = cloudContent(
+    useLiveProviderRows("cloud-pharmacy"),
+  );
   /** Paste the live code here when available. */
   const discountCode = "";
   const hasDiscount = false;

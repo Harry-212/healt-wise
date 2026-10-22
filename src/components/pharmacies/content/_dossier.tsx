@@ -7,15 +7,13 @@ import { useState } from "react";
 import { CheckCircle2, ChevronRight, Copy, Home, Tag } from "lucide-react";
 import SiteLogoLink from "@/components/layout/SiteLogoLink";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
+import { startingPrice as mounjaroStartingPrice } from "@/lib/data/mounjaro-uk-compare-providers";
+import { startingPrice as wegovyStartingPrice } from "@/lib/data/wegovy-uk-compare-providers";
 import {
-  MOUNJARO_UK_COMPARE_LAST_UPDATED,
-  getMounjaroCompareProviderById,
-  startingPrice as mounjaroStartingPrice,
-} from "@/lib/data/mounjaro-uk-compare-providers";
-import {
-  getWegovyCompareProviderById,
-  startingPrice as wegovyStartingPrice,
-} from "@/lib/data/wegovy-uk-compare-providers";
+  useLiveMounjaroProvider,
+  useLivePriceCheckLabels,
+  useLiveWegovyProvider,
+} from "@/lib/data/live-prices-context";
 import { isAffiliatePartner } from "@/lib/data/affiliate-partners";
 
 /** Same classes as the primary "Visit {provider}" CTA in Document details (use in conclusion links). */
@@ -58,20 +56,14 @@ export function ProviderCta({
   const providerId = id ?? toProviderId(name);
   const resolvedPlacement =
     placement ?? (isAffiliatePartner(providerId) ? "featured" : "organic");
+  const m = useLiveMounjaroProvider(providerId);
+  const w = useLiveWegovyProvider(providerId);
 
-  const resolvedMedication =
-    medication ??
-    (() => {
-      const m = getMounjaroCompareProviderById(providerId);
-      const w = getWegovyCompareProviderById(providerId);
-      return m ? "Mounjaro" : w ? "Wegovy" : "";
-    })();
+  const resolvedMedication = medication ?? (m ? "Mounjaro" : w ? "Wegovy" : "");
 
   const resolvedTotalPence =
     totalPence ??
     (() => {
-      const m = getMounjaroCompareProviderById(providerId);
-      const w = getWegovyCompareProviderById(providerId);
       const priceGbp = m
         ? mounjaroStartingPrice(m)
         : w
@@ -408,9 +400,10 @@ export function PharmacyDossierPage({
 
   // Same date the page's price table was checked: the page's own "Last updated"
   // fact when it has one, otherwise the latest price-check date.
+  const liveLabels = useLivePriceCheckLabels();
   const lastUpdated =
     docDetails.find((d) => d.k === "Last updated")?.v ??
-    MOUNJARO_UK_COMPARE_LAST_UPDATED;
+    liveLabels.mounjaro;
 
   const handleCopy = async () => {
     if (!hasDiscountCode) return;

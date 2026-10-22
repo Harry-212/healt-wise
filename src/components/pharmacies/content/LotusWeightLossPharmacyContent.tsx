@@ -8,6 +8,8 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { getLiveMounjaroProvider } from "@/lib/data/compare-live";
+import { longCheckDate, priceRangePhrase } from "@/lib/data/provider-price-summary";
 
 const providerUrl = "https://www.lotusweightloss.co.uk/";
 
@@ -15,6 +17,8 @@ const sectionLabel =
   "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
 
 export default function LotusWeightLossPharmacyContent() {
+  const liveMj = getLiveMounjaroProvider("lotus-weight-loss");
+  const checkedOn = longCheckDate(liveMj?.updatedLabel) ?? "20 September 2026";
   const discountCode = "";
   const hasDiscount = false;
 
@@ -28,7 +32,7 @@ export default function LotusWeightLossPharmacyContent() {
       providerName="Lotus Weight Loss"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Prices checked", v: "20 September 2026" },
+        { k: "Prices checked", v: checkedOn },
         { k: "Provider", v: "Lotus Weight Loss" },
         { k: "GPhC", v: "9010938" },
         { k: "Treatments", v: "Mounjaro · Wegovy · Orlistat" },
@@ -45,7 +49,7 @@ export default function LotusWeightLossPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            Lotus Weight Loss sells Mounjaro from £154 (2.5 mg) to £284 (15 mg) a pen, at our 20 September 2026 price check. Lotus Weight Loss is listed on the GPhC register (number 9010938), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            Lotus Weight Loss sells Mounjaro {priceRangePhrase(liveMj) ?? "from £154 (2.5 mg) to £284 (15 mg)"} a pen, at our {checkedOn} price check. Lotus Weight Loss is listed on the GPhC register (number 9010938), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"
