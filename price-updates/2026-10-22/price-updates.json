@@ -1,0 +1,673 @@
+{
+  "checkedOn": "2026-10-22",
+  "updates": [
+    {
+      "medication": "mounjaro",
+      "providerId": "ashcroft-pharmacy",
+      "provider": "Ashcroft Pharmacy",
+      "dose": "15mg",
+      "price": 284.99,
+      "expectedCurrent": 294.99
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "2.5mg",
+      "price": 149.99,
+      "expectedCurrent": 139.99
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "5mg",
+      "price": 189.99,
+      "expectedCurrent": 164.99
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "7.5mg",
+      "price": 249.99,
+      "expectedCurrent": 224.99
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "10mg",
+      "price": 269.99,
+      "expectedCurrent": 249.99
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "12.5mg",
+      "price": 289.99,
+      "expectedCurrent": 264.99
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "15mg",
+      "price": 319.99,
+      "expectedCurrent": 294.99
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "dosedirect",
+      "provider": "DoseDirect",
+      "dose": "15mg",
+      "price": 268.99,
+      "expectedCurrent": 267.99
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "reach-online-pharmacy",
+      "provider": "Reach Online Pharmacy",
+      "dose": "7.5mg",
+      "price": 217.79,
+      "expectedCurrent": 217.99
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "ashcroft-pharmacy",
+      "provider": "Ashcroft Pharmacy",
+      "dose": "0.25mg",
+      "price": 79.99,
+      "expectedCurrent": 120
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "ashcroft-pharmacy",
+      "provider": "Ashcroft Pharmacy",
+      "dose": "0.5mg",
+      "price": 89.99,
+      "expectedCurrent": 125
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "ashcroft-pharmacy",
+      "provider": "Ashcroft Pharmacy",
+      "dose": "1mg",
+      "price": 99.99,
+      "expectedCurrent": 125
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "ashcroft-pharmacy",
+      "provider": "Ashcroft Pharmacy",
+      "dose": "1.7mg",
+      "price": 144.99,
+      "expectedCurrent": 175
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "ashcroft-pharmacy",
+      "provider": "Ashcroft Pharmacy",
+      "dose": "2.4mg",
+      "price": 209.99,
+      "expectedCurrent": 225
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "ashcroft-pharmacy",
+      "provider": "Ashcroft Pharmacy",
+      "dose": "7.2mg",
+      "price": 225,
+      "expectedCurrent": 249
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "dosedirect",
+      "provider": "DoseDirect",
+      "dose": "0.25mg",
+      "price": 89.99,
+      "expectedCurrent": 99.99
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "0.25mg",
+      "price": 99.99,
+      "expectedCurrent": 89.99
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "0.5mg",
+      "price": 109.99,
+      "expectedCurrent": 110.99
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "1mg",
+      "price": 124.99,
+      "expectedCurrent": 129.99
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "1.7mg",
+      "price": 164.99,
+      "expectedCurrent": 159.99
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "happy-pharmacy",
+      "provider": "Happy Pharmacy",
+      "dose": "2.4mg",
+      "price": 209.99,
+      "expectedCurrent": 194.99
+    }
+  ],
+  "checked": [
+    {
+      "medication": "mounjaro",
+      "providerId": "ashcroft-pharmacy"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "click2pharmacy"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "dotor"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "dr-weightmans"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "genmeds"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "get-a-drip"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "happy-pharmacy"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "hey-slim"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "lloyds-pharmacy-online-doctor"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "lotus-weight-loss"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "medexpress"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "medino"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "numan"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "onlinemeds"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "pharmacy-advance"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "pharmulous"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "swift-doctor"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "care-pharmacy"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "the-independent-pharmacy"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "well-pharmacy"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "weprescribe"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "slinic"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "dosedirect"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "reach-online-pharmacy"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "ashcroft-pharmacy"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "dosedirect"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "dr-weightmans"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "genmeds"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "get-a-drip"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "happy-pharmacy"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "hey-slim"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "lloyds-pharmacy-online-doctor"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "lotus-weight-loss"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "medexpress"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "onlinemeds"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "pharmacy-advance"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "reach-online-pharmacy"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "slinic"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "the-independent-pharmacy"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "weprescribe"
+    }
+  ],
+  "review": [
+    {
+      "medication": "mounjaro",
+      "providerId": "chequp",
+      "provider": "Chequp",
+      "dose": "2.5mg",
+      "current": 189,
+      "pharmacyStandard": 189,
+      "sitePrice": 189,
+      "comparatorMedian": 189,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "chequp",
+      "provider": "Chequp",
+      "dose": "5mg",
+      "current": 219,
+      "pharmacyStandard": 219,
+      "sitePrice": 219,
+      "comparatorMedian": 219,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "chequp",
+      "provider": "Chequp",
+      "dose": "7.5mg",
+      "current": 269,
+      "pharmacyStandard": 269,
+      "sitePrice": 269,
+      "comparatorMedian": 269,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "chequp",
+      "provider": "Chequp",
+      "dose": "10mg",
+      "current": 289,
+      "pharmacyStandard": 289,
+      "sitePrice": 289,
+      "comparatorMedian": 289,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "chequp",
+      "provider": "Chequp",
+      "dose": "12.5mg",
+      "current": 299,
+      "pharmacyStandard": 309,
+      "sitePrice": 309,
+      "comparatorMedian": 309,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "chequp",
+      "provider": "Chequp",
+      "dose": "15mg",
+      "current": 319,
+      "pharmacyStandard": 329,
+      "sitePrice": 329,
+      "comparatorMedian": 329,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "getweightloss",
+      "provider": "Get Weightloss",
+      "dose": "15mg",
+      "current": 269,
+      "pharmacyStandard": 269,
+      "sitePrice": 269,
+      "comparatorMedian": 269,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (2 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "jood-life",
+      "provider": "Jood Life",
+      "dose": "15mg",
+      "current": 288,
+      "pharmacyStandard": 288,
+      "sitePrice": 288,
+      "comparatorMedian": 288,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (2 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "2.5mg",
+      "current": 164.99,
+      "pharmacyStandard": 164.99,
+      "sitePrice": 164.99,
+      "comparatorMedian": 164.99,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (2 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "5mg",
+      "current": 178.99,
+      "pharmacyStandard": 178.99,
+      "sitePrice": 178.99,
+      "comparatorMedian": 176.99,
+      "deltaVsComparatorsPct": 1.1,
+      "method": "text (2 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "7.5mg",
+      "current": 234.99,
+      "pharmacyStandard": 234.99,
+      "sitePrice": 234.99,
+      "comparatorMedian": 234.99,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (2 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "10mg",
+      "current": 258.99,
+      "pharmacyStandard": 258.99,
+      "sitePrice": 258.99,
+      "comparatorMedian": 259.49,
+      "deltaVsComparatorsPct": -0.2,
+      "method": "text (2 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "12.5mg",
+      "current": 278.99,
+      "pharmacyStandard": 278.99,
+      "sitePrice": 278.99,
+      "comparatorMedian": 276.99,
+      "deltaVsComparatorsPct": 0.7,
+      "method": "text (2 prices shown, took highest)"
+    },
+    {
+      "medication": "mounjaro",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "15mg",
+      "current": 293.99,
+      "pharmacyStandard": 293.99,
+      "sitePrice": 293.99,
+      "comparatorMedian": 294.49,
+      "deltaVsComparatorsPct": -0.2,
+      "method": "text (2 prices shown, took highest)"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "getweightloss",
+      "provider": "Get Weightloss",
+      "dose": "2.4mg",
+      "current": 199,
+      "pharmacyStandard": 199,
+      "sitePrice": 199,
+      "comparatorMedian": 199,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (2 prices shown, took highest)"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "jood-life",
+      "provider": "Jood Life",
+      "dose": "2.4mg",
+      "current": 220,
+      "pharmacyStandard": 220,
+      "sitePrice": 220,
+      "comparatorMedian": 220,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (2 prices shown, took highest)"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "numan",
+      "provider": "Numan",
+      "dose": "7.2mg",
+      "current": 319,
+      "pharmacyStandard": 379,
+      "sitePrice": 379,
+      "comparatorMedian": 319,
+      "deltaVsComparatorsPct": 18.8,
+      "method": "text"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "pharmulous",
+      "provider": "Pharmulous",
+      "dose": "0.25mg",
+      "current": 124.98,
+      "pharmacyStandard": 99.99,
+      "sitePrice": 99.99,
+      "comparatorMedian": 94.99,
+      "deltaVsComparatorsPct": 5.3,
+      "method": "json-ld"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "pharmulous",
+      "provider": "Pharmulous",
+      "dose": "0.5mg",
+      "current": 134.98,
+      "pharmacyStandard": 109.99,
+      "sitePrice": 109.99,
+      "comparatorMedian": 99.99,
+      "deltaVsComparatorsPct": 10,
+      "method": "json-ld"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "pharmulous",
+      "provider": "Pharmulous",
+      "dose": "1mg",
+      "current": 144.98,
+      "pharmacyStandard": 119.99,
+      "sitePrice": 119.99,
+      "comparatorMedian": 104.99,
+      "deltaVsComparatorsPct": 14.3,
+      "method": "json-ld"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "pharmulous",
+      "provider": "Pharmulous",
+      "dose": "1.7mg",
+      "current": 174.98,
+      "pharmacyStandard": 159.99,
+      "sitePrice": 159.99,
+      "comparatorMedian": 149.99,
+      "deltaVsComparatorsPct": 6.7,
+      "method": "json-ld"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "pharmulous",
+      "provider": "Pharmulous",
+      "dose": "2.4mg",
+      "current": 224.98,
+      "pharmacyStandard": 209.99,
+      "sitePrice": 209.99,
+      "comparatorMedian": 199.99,
+      "deltaVsComparatorsPct": 5,
+      "method": "json-ld"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "pharmulous",
+      "provider": "Pharmulous",
+      "dose": "7.2mg",
+      "current": "TBC",
+      "pharmacyStandard": 229.99,
+      "sitePrice": 229.99,
+      "comparatorMedian": 209.99,
+      "deltaVsComparatorsPct": 9.5,
+      "method": "json-ld"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "0.25mg",
+      "current": 99.99,
+      "pharmacyStandard": 99.99,
+      "sitePrice": 99.99,
+      "comparatorMedian": 99.99,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "0.5mg",
+      "current": 119.99,
+      "pharmacyStandard": 119.99,
+      "sitePrice": 119.99,
+      "comparatorMedian": 119.99,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "1mg",
+      "current": 124.99,
+      "pharmacyStandard": 124.99,
+      "sitePrice": 124.99,
+      "comparatorMedian": 124.99,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "1.7mg",
+      "current": 168.99,
+      "pharmacyStandard": 149.99,
+      "sitePrice": 149.99,
+      "comparatorMedian": 149.99,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    },
+    {
+      "medication": "wegovy",
+      "providerId": "the-family-chemist",
+      "provider": "The Family Chemist",
+      "dose": "2.4mg",
+      "current": 188.99,
+      "pharmacyStandard": 174.99,
+      "sitePrice": 174.99,
+      "comparatorMedian": 174.99,
+      "deltaVsComparatorsPct": 0,
+      "method": "text (3 prices shown, took highest)"
+    }
+  ]
+}
