@@ -7,6 +7,52 @@ const cell = (s) => String(s ?? "").replace(/\|/g, "\\|");
 
 const discountLabel = (d) => `${d.type === "percent" ? `−${d.value}%` : `−£${d.value}`}${d.code ? ` code ${d.code}` : ""}`;
 
+/** Configured pages the run could not read (bot wall, no prices, failed, missing doses). */
+const MANUAL_STATUSES = new Set(["blocked", "no-prices", "failed", "partial"]);
+
+/**
+ * "Manual check" list: one block per pharmacy × medicine whose page could not
+ * be read, with our price, the comparison sites' prices and a hint per dose,
+ * so a person can confirm it on the pharmacy's site in a minute.
+ */
+export function manualCheckSection(rows) {
+  const groups = new Map();
+  for (const r of rows) {
+    if (r.action !== "manual" || !MANUAL_STATUSES.has(r.pharmacyStatus)) continue;
+    const key = `${r.providerId}|${r.medication}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(r);
+  }
+  const md = [`## Manual check list (${groups.size})`, ""];
+  if (groups.size === 0) {
+    md.push("_Every configured pharmacy page was read._", "");
+    return md;
+  }
+  md.push(
+    "These pages are configured but could not be read this run. Open the page, confirm each standard price, and change any that differ in /admin-dashboard.",
+    "The comparison sites are hints only; the pharmacy's own page is the source of truth.",
+    "",
+  );
+  for (const list of groups.values()) {
+    const first = list[0];
+    md.push(`### ${first.provider} (${first.medication}): ${first.pharmacyStatus}`, "");
+    if (first.pharmacyUrl) md.push(`Page: ${first.pharmacyUrl}`, "");
+    if (first.pharmacyReason) md.push(`Why: ${cell(first.pharmacyReason)}`, "");
+    md.push("| Dose | Ours now | Comparison sites | Hint |", "|---|---|---|---|");
+    for (const r of list) {
+      const sites = r.comparators.length ? r.comparators.map((c) => `${c.site} ${gbp(c.standard)}`).join(", ") : "—";
+      let hint = "no comparison data";
+      if (r.consensus != null && typeof r.current === "number") {
+        const d = Math.round(((r.consensus - r.current) / r.current) * 1000) / 10;
+        hint = Math.abs(d) <= 5 ? "matches comparison sites" : `**check**: comparison sites ${d > 0 ? "+" : ""}${d}%`;
+      }
+      md.push(`| ${r.dose} | ${gbp(r.current)} | ${sites} | ${hint} |`);
+    }
+    md.push("");
+  }
+  return md;
+}
+
 function countBy(items, key) {
   const out = {};
   for (const i of items) out[i[key]] = (out[i[key]] ?? 0) + 1;
@@ -96,8 +142,10 @@ export function writeReports({ outDir, runDate, rows, pharmacyReads, comparators
     md.push("");
   }
 
-  const comparatorOnly = rows.filter((r) => r.action === "manual" && r.consensus != null && typeof r.current === "number" && Math.abs((r.consensus - r.current) / r.current) > 0.05);
-  md.push(`## Not read from the pharmacy yet, but comparison sites disagree with us by >5% (${comparatorOnly.length})`, "");
+  md.push(...manualCheckSection(rows));
+
+  const comparatorOnly = rows.filter((r) => r.action === "manual" && r.pharmacyStatus === "not-configured" && r.consensus != null && typeof r.current === "number" && Math.abs((r.consensus - r.current) / r.current) > 0.05);
+  md.push(`## Not configured yet, but comparison sites disagree with us by >5% (${comparatorOnly.length})`, "");
   md.push("Hints only — the pharmacy's own site is the source of truth; these are worth a manual check.", "");
   if (comparatorOnly.length) {
     md.push("| Pharmacy | Med | Dose | Ours now | Comparators (median) | Sites |", "|---|---|---|---|---|---|");
@@ -107,7 +155,9 @@ export function writeReports({ outDir, runDate, rows, pharmacyReads, comparators
 
   md.push("## Limits of this prototype", "");
   md.push("- Only the pharmacies listed in `scripts/price-scraper/sources.json` are read; the rest show as `manual` until their price-page URLs are added.");
-  md.push("- Pages that need a real browser (prices loaded by JavaScript) are reported, not rendered. Bot-protection challenges are never solved: if both Node and curl get one, the pharmacy is reported as blocked.");
+  md.push("- Pages that need a real browser (prices loaded by JavaScript) are reported, not rendered. Bot-protection challenges are never solved: if both Node and curl get one, the pharmacy is reported as blocked and goes on the manual check list.");
+  md.push("- From GitHub's servers, Cloudflare refuses Asda, Superdrug, Zava and YourPharmacy (data-centre IPs); these are expected on the manual check list each month.");
+  md.push("- A page that loads without prices, or a failed request, is retried once after a pause before it is reported.");
   md.push("- healthcount.app quotes a monthly total that may include delivery, so it can sit slightly above the pen price.");
   fs.writeFileSync(`${base}.md`, md.join("\n"));
 

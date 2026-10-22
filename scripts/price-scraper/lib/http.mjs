@@ -114,9 +114,10 @@ export function createFetcher({ cacheDir, fresh = false }) {
    * GET a URL. Returns { ok, status, body, finalUrl, blocked, reason, fromCache }.
    * `blocked` is set for robots.txt disallows and bot walls.
    */
-  async function get(url) {
+  /** `refresh: true` skips today's cache for this request (used by the retry). */
+  async function get(url, { refresh = false } = {}) {
     const file = cacheDir ? cachePath(url) : null;
-    if (file && !fresh && fs.existsSync(file)) {
+    if (file && !fresh && !refresh && fs.existsSync(file)) {
       return { ...JSON.parse(fs.readFileSync(file, "utf8")), fromCache: true };
     }
     if (!(await robotsAllows(url))) {

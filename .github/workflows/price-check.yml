@@ -68,6 +68,7 @@ jobs:
             console.log(`updates=${p.updates.length}`);
             console.log(`checked=${p.checked.length}`);
             console.log(`review=${p.review.length}`);
+            console.log(`manual=${(p.manual ?? []).length}`);
           ' "$dest" >> "$GITHUB_OUTPUT"
           echo "dir=$dest" >> "$GITHUB_OUTPUT"
 
@@ -81,6 +82,7 @@ jobs:
           UPDATES: ${{ steps.files.outputs.updates }}
           CHECKED: ${{ steps.files.outputs.checked }}
           REVIEW: ${{ steps.files.outputs.review }}
+          MANUAL: ${{ steps.files.outputs.manual }}
         run: |
           branch="price-update/${DAY}"
           git config user.name "healthwise360-price-bot"
@@ -92,7 +94,7 @@ jobs:
           {
             echo "## Monthly price check — ${DAY}"
             echo
-            echo "**${UPDATES} price changes** proposed · **${CHECKED} pharmacy pages** verified · **${REVIEW} items** need a human look."
+            echo "**${UPDATES} price changes** proposed · **${CHECKED} pharmacy pages** verified · **${REVIEW} items** need a human look · **${MANUAL} pharmacy pages** to check by hand (see *Manual check list* in the report)."
             echo
             echo "### How to approve"
             echo "1. Read \`${DIR}/report.md\` (attached below in short)."
@@ -103,7 +105,7 @@ jobs:
             echo
             head -c 55000 "${DIR}/report.md"
           } > pr-body.md
-          url=$(gh pr create --base main --head "$branch" --title "Monthly price check ${DAY}: ${UPDATES} changes, ${REVIEW} to review" --body-file pr-body.md)
+          url=$(gh pr create --base main --head "$branch" --title "Monthly price check ${DAY}: ${UPDATES} changes, ${REVIEW} to review, ${MANUAL} manual" --body-file pr-body.md)
           echo "url=$url" >> "$GITHUB_OUTPUT"
           # PRs opened with GITHUB_TOKEN do not trigger pull_request workflows; start the SEO check explicitly.
           gh workflow run seo-check.yml --ref "$branch" || echo "::warning::Could not start seo-check on $branch"
@@ -122,6 +124,7 @@ jobs:
           UPDATES: ${{ steps.files.outputs.updates }}
           CHECKED: ${{ steps.files.outputs.checked }}
           REVIEW: ${{ steps.files.outputs.review }}
+          MANUAL: ${{ steps.files.outputs.manual }}
           PR_URL: ${{ steps.pr.outputs.url }}
         run: |
           cat > email.txt <<EOF
@@ -130,6 +133,7 @@ jobs:
           Proposed price changes: ${UPDATES}
           Pharmacy pages verified: ${CHECKED}
           Items needing a human look: ${REVIEW}
+          Pharmacy pages to check by hand: ${MANUAL} (see "Manual check list" in report.md)
 
           Review and approve: ${PR_URL}
           Nothing on the website changes until the pull request is merged.

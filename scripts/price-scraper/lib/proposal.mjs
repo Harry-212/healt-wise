@@ -22,8 +22,16 @@ export function buildProposal(rows, runDate) {
     checked.push({ medication, providerId });
   }
 
+  // Configured pages the run could not read: listed for a manual check (report.md has the details).
+  const manual = [];
+  for (const list of byProviderMed.values()) {
+    const r = list.find((x) => x.action === "manual" && ["blocked", "no-prices", "failed", "partial"].includes(x.pharmacyStatus));
+    if (r) manual.push({ medication: r.medication, providerId: r.providerId, provider: r.provider, status: r.pharmacyStatus, url: r.pharmacyUrl });
+  }
+
   return {
     checkedOn: runDate,
+    manual,
     updates: rows
       .filter((r) => r.action === "update")
       .map((r) => ({
