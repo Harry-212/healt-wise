@@ -397,7 +397,10 @@ export default function BmiCalculatorClient() {
             <h1 className="mx-auto mt-3 max-w-3xl text-balance text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-[2.4rem]">
               BMI Calculator UK
             </h1>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-300/95 sm:text-base">
+            <p
+              id="hero-answer"
+              className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-300/95 sm:text-base"
+            >
               For adults aged 18 and over. Enter your weight in stones and
               pounds or kg and your height in feet and inches or cm. See what
               your{" "}

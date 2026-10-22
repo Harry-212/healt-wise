@@ -1,99 +1,143 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
 
-export const BMI_CALCULATOR_FAQ_BMI_ITEMS = [
-  {
-    q: "What is a healthy BMI in the UK?",
-    a: "For most UK adults, a BMI between 18.5 and 24.9 is considered a healthy weight range. Below 18.5 is underweight; 25 to 29.9 is overweight; 30 or above is obese. BMI is a screening tool—not a diagnosis—and doesn't account for muscle mass or where fat is stored.",
-  },
-  {
-    q: "What are the NHS BMI thresholds for adults?",
-    a: "NHS adult categories commonly use: underweight under 18.5, healthy 18.5–24.9, overweight 25–29.9, and obese 30 or above. Some clinical pathways also discuss BMI 27+ when weight-related conditions are present. Ethnicity and body composition can change how a clinician interprets the number.",
-  },
-  {
-    q: "What do BMI categories mean for weight management eligibility?",
-    a: "BMI categories help clinicians triage who may benefit from structured weight management support. Eligibility for any programme or clinical pathway depends on a full assessment—history, comorbidities, medications, and goals—not BMI alone. This calculator cannot decide eligibility for you.",
-  },
-  {
-    q: "Is BMI accurate as a body fat measure?",
-    a: "BMI accurately summarises weight-for-height for population screening. It is not an accurate personal body-fat test and can misclassify muscular people or miss risk in people with higher visceral fat at a “healthy” BMI. Waist size, blood tests, and clinical review fill the gaps.",
-  },
-  {
-    q: "What is a healthy weight for my height?",
-    a: "Use the healthy BMI range of 18.5 to 24.9 for your height. At 1.75 m, that is about 57 kg to 76 kg. It is a range, not one target, and muscle mass and where you carry fat can move it. A GP or dietitian can help you set a goal that suits you.",
-  },
-  {
-    q: "What is a good BMI for my age and weight?",
-    a: "For adults aged 18 and over, the BMI categories are the same at every age, so a healthy BMI is 18.5 to 24.9. In older adults a clinician may read the number differently, because muscle and bone change with age. If you weigh 70 kg and are 1.75 m tall, your BMI is about 22.9.",
-  },
-] as const;
+export type BmiCalculatorFaqItem = {
+  question: string;
+  answer: string;
+};
 
-export const BMI_CALCULATOR_FAQ_BMR_TDEE_ITEMS = [
+export const BMI_CALCULATOR_FAQS: BmiCalculatorFaqItem[] = [
   {
-    q: "What is BMR (Basal Metabolic Rate)?",
-    a: "BMR is an estimate of how many calories your body burns at complete rest—before daily activity, digestion, or exercise. It reflects energy needed for breathing, circulation, cell repair, and other basic functions. It is not the same as how much you should eat in a day; that is closer to TDEE (total daily energy expenditure).",
+    question: "Is BMI accurate?",
+    answer:
+      "BMI is a good guide, but it is not exact. It uses only your height and weight. It does not measure body fat or muscle mass. A very muscular person can have a high BMI. An older adult can have a healthy BMI and still carry too much body fat. That is why we also look at waist size and ethnic background. Think of BMI as a first check, not a diagnosis.",
   },
   {
-    q: "How does Healthwise360 calculate BMR?",
-    a: "We use the Mifflin–St Jeor equation, a widely used formula that takes your weight, height, age, and sex. Like all estimates, it can differ from lab-measured metabolic rate—muscle mass, genetics, thyroid health, and medications can shift real energy needs. Use the number as a planning guide, not a prescription.",
+    question: "What is BMR basal metabolic rate?",
+    answer:
+      "BMR means basal metabolic rate. It is the number of calories your body burns at rest in a day. It is the energy you need just to stay alive.",
   },
   {
-    q: "What is TDEE (Total Daily Energy Expenditure)?",
-    a: "TDEE is an estimate of how many calories you burn across a whole day, including BMR plus the energy from movement, work, fidgeting, digestion, and exercise. Our calculator multiplies your BMR by an activity factor (from sedentary to very active). Pick the level that best matches your typical week, not your best week.",
+    question: "Ideal weight calculator UK: what is my ideal weight?",
+    answer:
+      "There is no one perfect number. The best way is to use an ideal weight calculator UK style and look at a range. Enter your height above, and we show the healthy weight range for you. Anywhere in that range is a good place to be.",
   },
   {
-    q: "What is the difference between BMR and TDEE?",
-    a: "BMR is rest-only; TDEE adds everything you do on top of that. If you ate exactly your BMR every day while still walking, working, and training, you would usually be in a large deficit because TDEE is higher. For weight planning, TDEE (or a clinician’s plan) is usually the more relevant starting point than BMR alone.",
+    question: "What is good BMI for your age and weight?",
+    answer:
+      "For adults, the healthy BMI range is 18.5 to 24.9 at any age. What is good for you depends on your height, not just your age and weight. Ask your GP if you are 65 or over.",
   },
   {
-    q: "How accurate are BMR and TDEE calculators?",
-    a: "They are reasonable population averages, not personalised medical tests. Error margins of roughly 10–20% are common. Athletes, very lean or very muscular people, older adults, and those on certain medicines may sit above or below the estimate. Treat outputs as discussion points with a dietitian or GP—not rigid targets.",
+    question: "What is the difference between BMR and TDEE?",
+    answer:
+      "BMR is what you burn at rest. TDEE is what you burn over the whole day, including movement and exercise. TDEE is always higher than BMR.",
   },
   {
-    q: "How should I use calorie needs for weight management?",
-    a: "Use maintain, mild-deficit, and moderate-deficit estimates as starting ranges, then adjust for energy, hunger, and clinical advice. Very low intakes are not appropriate for everyone. If you have a medical condition, are pregnant, or take regular medicines, agree calorie targets with a healthcare professional.",
+    question: "What is a BMI calculator?",
+    answer:
+      "A BMI calculator is a tool that does the BMI sum for you. You enter your height and weight. It shows your body mass index and your weight group.",
   },
-] as const;
+  {
+    question: "Can children use this tool?",
+    answer:
+      "No. It is for adults aged 18 and over. Ask your GP or school nurse about a child's weight.",
+  },
+];
 
-/** All FAQ entries — used for FAQPage JSON-LD and combined rendering. */
-export const BMI_CALCULATOR_FAQ_ITEMS = [
-  ...BMI_CALCULATOR_FAQ_BMI_ITEMS,
-  ...BMI_CALCULATOR_FAQ_BMR_TDEE_ITEMS,
-] as const;
-
-export function bmiCalculatorFaqJsonLd() {
-  const origin = siteOrigin();
+export function bmiCalculatorJsonLd(): Record<string, unknown> {
+  const origin = siteOrigin().replace(/\/$/, "");
   const url = `${origin}/tools/bmi-calculator`;
+
   return {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: BMI_CALCULATOR_FAQ_ITEMS.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.a,
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        url,
+        name: "BMI Calculator UK: BMI, BMR & TDEE Calculator (Stones & kg)",
+        headline: "BMI Calculator UK",
+        description:
+          "Free BMI calculator for UK adults. Check your BMI in stones and pounds or kg, see the BMI chart and work out your BMR, TDEE and daily calories.",
+        inLanguage: "en-GB",
+        isPartOf: {
+          "@id": `${origin}/#website`,
+        },
+        publisher: {
+          "@id": `${origin}/#organization`,
+        },
+        breadcrumb: {
+          "@id": `${url}#breadcrumb`,
+        },
+        mainEntity: {
+          "@id": `${url}#calculator`,
+        },
+        dateModified: "2026-10-21",
+        audience: {
+          "@type": "PeopleAudience",
+          suggestedMinAge: 18,
+        },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["#hero-answer"],
+        },
       },
-    })),
-    url,
-  };
-}
-
-export function bmiCalculatorWebPageJsonLd() {
-  const origin = siteOrigin();
-  const url = `${origin}/tools/bmi-calculator`;
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "BMI Calculator UK: BMI, BMR & TDEE | Healthwise360",
-    headline: "BMI Calculator UK",
-    inLanguage: "en-GB",
-    description:
-      "Calculate your BMI, healthy weight range, BMR and estimated daily energy needs with our free UK calculator. Results are for general information only.",
-    url,
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Healthwise360",
-      url: origin,
-    },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: `${origin}/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "BMI Calculator UK",
+            item: url,
+          },
+        ],
+      },
+      {
+        "@type": ["WebApplication", "SoftwareApplication"],
+        "@id": `${url}#calculator`,
+        name: "Healthwise360 BMI, BMR and TDEE Calculator",
+        url,
+        description:
+          "Calculates body mass index, healthy weight range, BMR, TDEE and a calorie deficit target for adults aged 18 and over. Accepts stones, pounds, feet and inches, or kg and cm.",
+        applicationCategory: "HealthApplication",
+        operatingSystem: "Any",
+        browserRequirements: "Requires a modern web browser",
+        inLanguage: "en-GB",
+        isAccessibleForFree: true,
+        creator: {
+          "@id": `${origin}/#organization`,
+        },
+        publisher: {
+          "@id": `${origin}/#organization`,
+        },
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "GBP",
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${url}#faq`,
+        isPartOf: {
+          "@id": `${url}#webpage`,
+        },
+        mainEntity: BMI_CALCULATOR_FAQS.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      },
+    ],
   };
 }
