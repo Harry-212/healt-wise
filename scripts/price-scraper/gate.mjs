@@ -9,13 +9,15 @@
 import fs from "node:fs";
 import { fetchUkBankHolidays, firstWorkingDay, ukToday } from "./lib/schedule.mjs";
 
+// "--force" has no value, so check for the key itself (its value is undefined).
 const args = Object.fromEntries(process.argv.slice(2).map((a) => a.replace(/^--/, "").split("=")));
+const forced = "force" in args;
 const today = args.date ?? ukToday();
 const holidays = await fetchUkBankHolidays();
 const first = firstWorkingDay(today, holidays);
-const run = Boolean(args.force) || today === first;
+const run = forced || today === first;
 
-console.log(`UK date ${today}; first working day this month: ${first} → ${run ? "run" : "skip"}${args.force ? " (forced)" : ""}`);
+console.log(`UK date ${today}; first working day this month: ${first} → ${run ? "run" : "skip"}${forced ? " (forced)" : ""}`);
 if (process.env.GITHUB_OUTPUT) {
   fs.appendFileSync(process.env.GITHUB_OUTPUT, `run=${run}\ndate=${today}\n`);
 }
