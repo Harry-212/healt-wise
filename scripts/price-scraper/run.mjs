@@ -13,7 +13,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createFetcher } from "./lib/http.mjs";
-import { extractStandardPrices } from "./lib/extract.mjs";
+import { readPharmacy } from "./lib/read.mjs";
 import { loadCurrentPrices } from "./lib/current.mjs";
 import { loadComparators } from "./lib/comparators.mjs";
 import { buildMatcher, dropAmbiguousMatches } from "./lib/match.mjs";
@@ -39,24 +39,6 @@ function parseArgs(argv) {
 /** Run date in UK time, so a run late on the 1st (UTC) is not filed under the 2nd. */
 function ukDate() {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/London" }).format(new Date());
-}
-
-async function readPharmacy(fetcher, url, medication, note) {
-  if (!url) return { status: "not-configured", reason: note ?? "price-page URL not confirmed yet", doses: {} };
-  const res = await fetcher.get(url);
-  if (!res.ok) {
-    return { status: res.blocked ? "blocked" : "failed", reason: res.reason ?? `HTTP ${res.status}`, url, transport: res.transport ?? null, doses: {} };
-  }
-  const { doses, warnings } = extractStandardPrices(res.body, medication);
-  const n = Object.keys(doses).length;
-  return {
-    status: n === 0 ? "no-prices" : n < 6 ? "partial" : "ok",
-    reason: n === 0 ? "no dose prices in the page HTML (likely loaded by JavaScript)" : null,
-    url,
-    transport: res.transport ?? null,
-    doses,
-    warnings,
-  };
 }
 
 async function main() {
