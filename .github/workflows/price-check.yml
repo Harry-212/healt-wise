@@ -1,0 +1,143 @@
+name: Monthly price check
+
+# Standard-price check on the 1st UK working day of each month (client
+# request). Reads each pharmacy's own site, cross-checks three independent
+# comparison sites, and opens a PR with the report and an update proposal.
+# Nothing on the site changes here: merging the PR triggers price-apply.yml.
+#
+# The cron fires every morning on days 1–7; gate.mjs decides whether today is
+# the first working day in the UK (weekends + England & Wales bank holidays).
+#
+# Secrets used (optional ones skip their step when missing):
+#   SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD, REPORT_EMAIL_TO, REPORT_EMAIL_FROM
+
+on:
+  schedule:
+    - cron: "0 6 1-7 * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Run even if today is not the 1st UK working day"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+concurrency:
+  group: price-check
+  cancel-in-progress: false
+
+jobs:
+  price-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: Is today the 1st UK working day?
+        id: gate
+        run: node scripts/price-scraper/gate.mjs ${{ inputs.force && '--force' || '' }}
+
+      - name: Run the price check
+        if: steps.gate.outputs.run == 'true'
+        run: node scripts/price-scraper/run.mjs --fresh
+
+      - name: Collect the report
+        if: steps.gate.outputs.run == 'true'
+        id: files
+        env:
+          DAY: ${{ steps.gate.outputs.date }}
+        run: |
+          src="scripts/price-scraper/out"
+          dest="price-updates/${DAY}"
+          mkdir -p "$dest"
+          cp "$src/price-updates-${DAY}.json" "$dest/price-updates.json"
+          cp "$src/price-check-${DAY}.md" "$dest/report.md"
+          cp "$src/price-check-${DAY}.csv" "$dest/report.csv"
+          node -e '
+            const p = require("./" + process.argv[1] + "/price-updates.json");
+            console.log(`updates=${p.updates.length}`);
+            console.log(`checked=${p.checked.length}`);
+            console.log(`review=${p.review.length}`);
+          ' "$dest" >> "$GITHUB_OUTPUT"
+          echo "dir=$dest" >> "$GITHUB_OUTPUT"
+
+      - name: Open the review PR
+        if: steps.gate.outputs.run == 'true'
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DAY: ${{ steps.gate.outputs.date }}
+          DIR: ${{ steps.files.outputs.dir }}
+          UPDATES: ${{ steps.files.outputs.updates }}
+          CHECKED: ${{ steps.files.outputs.checked }}
+          REVIEW: ${{ steps.files.outputs.review }}
+        run: |
+          branch="price-update/${DAY}"
+          git config user.name "healthwise360-price-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add "$DIR"
+          git commit -m "chore(prices): monthly price check ${DAY}"
+          git push -u origin "$branch"
+          {
+            echo "## Monthly price check — ${DAY}"
+            echo
+            echo "**${UPDATES} price changes** proposed · **${CHECKED} pharmacy pages** verified · **${REVIEW} items** need a human look."
+            echo
+            echo "### How to approve"
+            echo "1. Read \`${DIR}/report.md\` (attached below in short)."
+            echo "2. In \`${DIR}/price-updates.json\`, delete any line under \`updates\` you do **not** approve. \`review\` items are never applied; change those by hand in /admin-dashboard if needed."
+            echo "3. Merge this PR. **price-apply.yml** then applies \`updates\` to the live site and moves the \"checked\" date of every page under \`checked\`."
+            echo
+            echo "---"
+            echo
+            head -c 55000 "${DIR}/report.md"
+          } > pr-body.md
+          url=$(gh pr create --base main --head "$branch" --title "Monthly price check ${DAY}: ${UPDATES} changes, ${REVIEW} to review" --body-file pr-body.md)
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          # PRs opened with GITHUB_TOKEN do not trigger pull_request workflows; start the SEO check explicitly.
+          gh workflow run seo-check.yml --ref "$branch" || echo "::warning::Could not start seo-check on $branch"
+
+      - name: Email the report
+        if: steps.gate.outputs.run == 'true'
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          REPORT_EMAIL_TO: ${{ secrets.REPORT_EMAIL_TO }}
+          REPORT_EMAIL_FROM: ${{ secrets.REPORT_EMAIL_FROM }}
+          DAY: ${{ steps.gate.outputs.date }}
+          DIR: ${{ steps.files.outputs.dir }}
+          UPDATES: ${{ steps.files.outputs.updates }}
+          CHECKED: ${{ steps.files.outputs.checked }}
+          REVIEW: ${{ steps.files.outputs.review }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+        run: |
+          cat > email.txt <<EOF
+          Healthwise360 monthly price check — ${DAY}
+
+          Proposed price changes: ${UPDATES}
+          Pharmacy pages verified: ${CHECKED}
+          Items needing a human look: ${REVIEW}
+
+          Review and approve: ${PR_URL}
+          Nothing on the website changes until the pull request is merged.
+
+          The full report (report.md) and the dose-by-dose table (report.csv) are attached.
+          EOF
+          python3 scripts/price-scraper/send_report.py \
+            --subject "Healthwise360 price check ${DAY}: ${UPDATES} changes, ${REVIEW} to review" \
+            --body-file email.txt \
+            --attach "${DIR}/report.md" \
+            --attach "${DIR}/report.csv"

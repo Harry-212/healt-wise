@@ -87,11 +87,8 @@ import {
   startingPrice as mounjaroStartingPrice,
   MOUNJARO_DOSE_KEYS,
 } from "@/lib/data/mounjaro-uk-compare-providers";
-import {
-  getLiveMounjaroProvider,
-  getLivePriceCheckLabels,
-  getLiveWegovyProvider,
-} from "@/lib/data/compare-live";
+import { getLiveMounjaroProvider, getLiveWegovyProvider } from "@/lib/data/compare-live";
+import PriceCheckNotice from "@/components/prices/PriceCheckNotice";
 import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
 import { TrustpilotStarIcon } from "@/components/compare/TrustpilotRatingPresentation";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -1403,9 +1400,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           >
             Wegovy pen prices
           </h2>
-          <p className="mt-2 text-sm text-slate-600">
-            Per-strength figures — {getLivePriceCheckLabels().wegovy} snapshot.
-          </p>
+          <PriceCheckNotice lastChecked={w.updatedLabel} className="mt-2 text-sm text-slate-600" />
           <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -1440,9 +1435,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           >
             Mounjaro pen prices
           </h2>
-          <p className="mt-2 text-sm text-slate-600">
-            Per-strength figures — {getLivePriceCheckLabels().mounjaro} snapshot.
-          </p>
+          <PriceCheckNotice lastChecked={m.updatedLabel} className="mt-2 text-sm text-slate-600" />
           <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
             <table className="w-full border-collapse text-sm">
               <thead>

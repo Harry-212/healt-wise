@@ -5,6 +5,21 @@ import { buildMatcher, dropAmbiguousMatches } from "../lib/match.mjs";
 import { compareAll, applyAffiliateDiscount } from "../lib/compare.mjs";
 import { decodeFlightPayload, jsonObjectsStartingWith } from "../lib/rsc.mjs";
 import { buildProposal } from "../lib/proposal.mjs";
+import { firstWorkingDay, ukToday } from "../lib/schedule.mjs";
+
+test("first UK working day skips weekends and bank holidays", () => {
+  const holidays = new Set(["2026-12-25", "2026-12-28", "2027-01-01", "2027-05-03"]);
+  assert.equal(firstWorkingDay("2026-11-15", holidays), "2026-11-02"); // 1 Nov is a Sunday
+  assert.equal(firstWorkingDay("2026-12-09", holidays), "2026-12-01");
+  assert.equal(firstWorkingDay("2027-01-20", holidays), "2027-01-04"); // 1 Jan holiday, then weekend
+  assert.equal(firstWorkingDay("2027-05-10", holidays), "2027-05-04"); // 1–2 May weekend, 3 May holiday
+});
+
+test("UK date follows Europe/London, not UTC", () => {
+  // 23:30 UTC on 31 Oct 2026 (GMT) is still 31 Oct; 23:30 UTC on 31 Jul 2026 (BST) is already 1 Aug.
+  assert.equal(ukToday(new Date("2026-10-31T23:30:00Z")), "2026-10-31");
+  assert.equal(ukToday(new Date("2026-07-31T23:30:00Z")), "2026-08-01");
+});
 
 test("proposal: only update rows are applied; pages with a review row are not marked checked", () => {
   const row = (providerId, dose, action, extra = {}) => ({ providerId, provider: providerId, medication: "mounjaro", dose, action, current: 150, sitePrice: 155, ...extra });

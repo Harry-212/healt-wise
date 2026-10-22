@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MOUNJARO_DOSE_KEYS } from "@/lib/data/mounjaro-uk-compare-providers";
 import { formatWegovyPriceCell, WEGOVY_DOSE_KEYS } from "@/lib/data/wegovy-uk-compare-providers";
 import { useLiveMounjaroProvider, useLiveWegovyProvider } from "@/lib/data/live-prices-context";
+import PriceCheckNotice from "@/components/prices/PriceCheckNotice";
 
 export default function PharmacyPriceTable({
   slug,
@@ -24,10 +25,8 @@ export default function PharmacyPriceTable({
         <h2 className="text-base font-bold text-emerald-950 sm:text-lg">
           {providerName} Prices by Dose
         </h2>
-        <p className="mt-1 text-xs text-slate-600">
-          Standard pen prices checked as of {checkedOn}.
-          Includes 4 weekly doses per pen.
-        </p>
+        <PriceCheckNotice lastChecked={checkedOn} className="mt-1 text-xs text-slate-600" />
+        <p className="text-xs text-slate-600">Standard pen prices. Includes 4 weekly doses per pen.</p>
       </div>
 
       <div className="grid divide-y divide-slate-100 md:grid-cols-2 md:divide-x md:divide-y-0">
