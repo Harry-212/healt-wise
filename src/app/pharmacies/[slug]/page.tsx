@@ -15,6 +15,8 @@ import CuratePharmacyContent from "@/components/pharmacies/content/CuratePharmac
 import CurelyPharmacyContent from "@/components/pharmacies/content/CurelyPharmacyContent";
 import CuvaHealthContent from "@/components/pharmacies/content/CuvaHealthContent";
 import DoseDirectPharmacyContent from "@/components/pharmacies/content/DoseDirectPharmacyContent";
+import IPrescribePharmacyContent from "@/components/pharmacies/content/IPrescribePharmacyContent";
+import SheMedPharmacyContent from "@/components/pharmacies/content/SheMedPharmacyContent";
 import ReachOnlinePharmacyContent from "@/components/pharmacies/content/ReachOnlinePharmacyContent";
 import PharmacyMePharmacyContent from "@/components/pharmacies/content/PharmacyMePharmacyContent";
 import DotorPharmacyContent from "@/components/pharmacies/content/DotorPharmacyContent";
@@ -1099,6 +1101,58 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <SlimmingDirectPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "i-prescribe") {
+    const title =
+      "i-Prescribe Weight Loss Review: Mounjaro & Wegovy Prices";
+    const description =
+      "Is i-Prescribe legit? Our i-Prescribe review covers Mounjaro and Wegovy pen prices, online consultation, Royal Mail delivery and GPhC registration 9012850.";
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyProfileJsonGraph({
+                slug,
+                name: "i-Prescribe",
+                title,
+                description,
+              }),
+            ),
+          }}
+        />
+        <IPrescribePharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "shemed") {
+    const title =
+      "SheMed Weight Loss Review: Women's Programme, Prices & Delivery";
+    const description =
+      "Explore SheMed's women's weight loss programme, including Mounjaro & Wegovy prices, eligibility, included blood tests, clinical support and free UK delivery.";
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyProfileJsonGraph({
+                slug,
+                name: "SheMed",
+                title,
+                description,
+              }),
+            ),
+          }}
+        />
+        <SheMedPharmacyContent />
       </>
     );
   }

@@ -17,6 +17,11 @@ const PHARMACY_REVIEWS: PharmacyReviewLink[] = [
     href: "/pharmacies/dosedirect",
   },
   {
+    slug: "i-prescribe",
+    label: "Read our i-Prescribe review",
+    href: "/pharmacies/i-prescribe",
+  },
+  {
     slug: "jood-life",
     label: "Read our Jood Life Pharmacy review",
     href: "/pharmacies/jood-life",
@@ -30,6 +35,11 @@ const PHARMACY_REVIEWS: PharmacyReviewLink[] = [
     slug: "reach-online-pharmacy",
     label: "Read our Reach Online Pharmacy review",
     href: "/pharmacies/reach-online-pharmacy",
+  },
+  {
+    slug: "shemed",
+    label: "Read our SheMed review",
+    href: "/pharmacies/shemed",
   },
   {
     slug: "slinic",

@@ -109,6 +109,8 @@ test("only the 4 affiliate partners are tracked; other providers send nothing", 
     ["Reach Online Pharmacy", "reach-online-pharmacy"],
     ["DoseDirect", "dosedirect"],
     ["Slinic", "slinic"],
+    ["i-Prescribe", "i-prescribe"],
+    ["SheMed", "shemed"],
   ];
   for (const [name, id] of partners) {
     const result = trackAffiliateClick(
@@ -116,8 +118,8 @@ test("only the 4 affiliate partners are tracked; other providers send nothing", 
     );
     assert.ok(result, `${name} should be tracked`);
   }
-  assert.equal(gtagCalls.length, 4);
-  assert.equal(dataLayer.length, 4);
+  assert.equal(gtagCalls.length, 6);
+  assert.equal(dataLayer.length, 6);
 
   for (const [name, id] of [
     ["Boots", "boots"],
@@ -130,8 +132,8 @@ test("only the 4 affiliate partners are tracked; other providers send nothing", 
     );
     assert.equal(result, null, `${name} must not be tracked`);
   }
-  assert.equal(gtagCalls.length, 4);
-  assert.equal(dataLayer.length, 4);
+  assert.equal(gtagCalls.length, 6);
+  assert.equal(dataLayer.length, 6);
 });
 
 test("trackAffiliateClick pushes to gtag and dataLayer fallback", async () => {
