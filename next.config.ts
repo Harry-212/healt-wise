@@ -117,6 +117,18 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Commercial affiliate redirects (cloaked affiliate URLs)
+      {
+        source: "/go/shemed",
+        destination: "https://www.shemed.co.uk?via=healthwise360&code=HEALTH20",
+        permanent: false,
+      },
+      {
+        source: "/go/i-prescribe",
+        destination:
+          "https://i-prescribe.co.uk/pages/pom?formtype=weight-loss&ref=HW360&utm_source=healthwise360&utm_medium=referral&utm_campaign=weight-loss-referral",
+        permanent: false,
+      },
       // Legacy / mistaken URLs (e.g. ads) — avoid 403/404 noise in Search Console.
       // These sit above the apex rule on purpose: the apex rule matches every
       // path, so below it apex /lander went apex -> www/lander -> www/ (two hops).

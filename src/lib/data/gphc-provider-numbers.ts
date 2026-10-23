@@ -29,6 +29,8 @@ export const GPHC_NUMBER_BY_PROVIDER_ID: Record<string, string> = {
   zava: "9011019",
   "lloyds-pharmacy-online-doctor": "1034444",
   medexpress: "9010617",
+  "i-prescribe": "9012850",
+  shemed: "9012578",
 };
 
 export function gphcNumberForProvider(providerId: string): string | undefined {

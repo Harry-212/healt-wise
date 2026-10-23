@@ -3,13 +3,14 @@ export type AffiliatePartnerInfo = {
   name: string;
   badgeLabel: string;
   code?: string;
+  secondaryCode?: string;
   affiliateUrl: string;
   ctaLabel: string;
   perkSummary?: string;
 };
 
 /**
- * The 4 verified commercial affiliate pharmacies that have an active
+ * The 6 verified commercial affiliate pharmacies that have an active
  * affiliate tracking link and/or voucher discount code.
  */
 export const AFFILIATE_PARTNER_IDS = new Set<string>([
@@ -17,6 +18,8 @@ export const AFFILIATE_PARTNER_IDS = new Set<string>([
   "reach-online-pharmacy",
   "dosedirect",
   "slinic",
+  "i-prescribe",
+  "shemed",
 ]);
 
 export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
@@ -57,6 +60,25 @@ export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
       "https://slinic.co.uk/condition/weight-loss/?utm_source=healthwise&utm_medium=referral&utm_campaign=weight-loss",
     ctaLabel: "Visit Slinic",
     perkSummary: "Free consultation included",
+  },
+  "i-prescribe": {
+    id: "i-prescribe",
+    name: "i-Prescribe",
+    badgeLabel: "Featured Partner",
+    code: "First10",
+    secondaryCode: "HW360",
+    affiliateUrl: "/go/i-prescribe",
+    ctaLabel: "Claim Deal",
+    perkSummary: "Code First10 for £10 off first order · Code HW360 on repeat orders",
+  },
+  shemed: {
+    id: "shemed",
+    name: "SheMed",
+    badgeLabel: "Featured Partner",
+    code: "HEALTH20",
+    affiliateUrl: "/go/shemed",
+    ctaLabel: "Claim Deal",
+    perkSummary: "20% off first order with code HEALTH20 · Free blood test & delivery",
   },
 };
 
