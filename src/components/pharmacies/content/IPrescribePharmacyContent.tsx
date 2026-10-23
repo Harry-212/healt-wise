@@ -52,6 +52,8 @@ export default function IPrescribePharmacyContent() {
         },
       ]}
       discountCode={discountCode}
+      discountCodeLabel="New customers"
+      secondaryDiscount={{ label: "Returning customers", code: "HW360" }}
       hasDiscount={hasDiscount}
       heroProviderLogoSrc="/logo pharmacy/i-prescribe.webp"
       heroProviderLogoAlt="i-Prescribe Online Pharmacy"
@@ -139,7 +141,7 @@ export default function IPrescribePharmacyContent() {
           Ready to begin your consultation with i-Prescribe?
         </h3>
         <p className="mt-2 text-sm text-slate-700">
-          Use code <strong className="font-mono">First10</strong> for £10 off your first order, and <strong className="font-mono">HW360</strong> for ongoing discounts.
+          Use code <strong className="font-mono">First10</strong> for £10 off your first order, and <strong className="font-mono">HW360</strong> for returning customers on follow-up orders.
         </p>
         <div className="mt-5 flex justify-center">
           <ProviderCta
