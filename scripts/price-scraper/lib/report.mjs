@@ -81,11 +81,11 @@ export function writeReports({ outDir, runDate, rows, pharmacyReads, comparators
   );
 
   // ---- CSV (one line per provider × medication × dose)
-  const header = ["provider_id", "provider", "medication", "dose", "current", "pharmacy_standard", "site_price", "affiliate_discount", "confidence", "method", "comparator_median", "delta_vs_comparators_pct", "change_vs_current", "action", "pharmacy_status", "comparators"];
+  const header = ["provider_id", "provider", "medication", "dose", "current", "pharmacy_standard", "standard_price_for_site", "affiliate_code_price", "affiliate_discount", "confidence", "method", "comparator_median", "delta_vs_comparators_pct", "change_vs_current", "action", "pharmacy_status", "comparators"];
   const csv = [header.join(",")];
   for (const r of rows) {
     csv.push(
-      [r.providerId, r.provider, r.medication, r.dose, r.current, r.pharmacy, r.sitePrice, r.affiliateDiscount ? discountLabel(r.affiliateDiscount) : null, r.pharmacyConfidence, r.pharmacyMethod, r.consensus, r.deltaVsConsensus, r.changeVsCurrent, r.action, r.pharmacyStatus, r.comparators.map((c) => `${c.site}=${c.standard}`).join(" ")]
+      [r.providerId, r.provider, r.medication, r.dose, r.current, r.pharmacy, r.sitePrice, r.codePrice, r.affiliateDiscount ? discountLabel(r.affiliateDiscount) : null, r.pharmacyConfidence, r.pharmacyMethod, r.consensus, r.deltaVsConsensus, r.changeVsCurrent, r.action, r.pharmacyStatus, r.comparators.map((c) => `${c.site}=${c.standard}`).join(" ")]
         .map((v) => (v == null ? "" : `"${String(v).replace(/"/g, '""')}"`))
         .join(","),
     );
@@ -133,10 +133,10 @@ export function writeReports({ outDir, runDate, rows, pharmacyReads, comparators
   md.push(`## Proposed changes and items to review (${interesting.length})`, "");
   if (interesting.length === 0) md.push("_None._", "");
   else {
-    md.push("Affiliate partners are shown at the price after their partner code, so *Site price* = standard price minus the partner discount.", "");
+    md.push("*Site price* is always the public one-off standard price. Partner-code prices are shown separately in brackets as *code price*, never used for ranking, and affiliate rows are never applied automatically.", "");
     md.push("| Pharmacy | Med | Dose | Ours now | Pharmacy (standard) | Site price | Change | Comparators (median) | Δ vs comparators | Action | How read |", "|---|---|---|---|---|---|---|---|---|---|---|");
     for (const r of interesting) {
-      const site = r.affiliateDiscount ? `${gbp(r.sitePrice)} (${discountLabel(r.affiliateDiscount)})` : gbp(r.sitePrice);
+      const site = r.affiliateDiscount ? `${gbp(r.sitePrice)} (code price ${gbp(r.codePrice)}, ${discountLabel(r.affiliateDiscount)})` : gbp(r.sitePrice);
       md.push(`| ${r.provider} | ${r.medication} | ${r.dose} | ${gbp(r.current)} | ${gbp(r.pharmacy)} | ${site} | ${r.changeVsCurrent == null ? "—" : gbp(r.changeVsCurrent)} | ${gbp(r.consensus)} (${r.comparators.length}) | ${pct(r.deltaVsConsensus)} | **${r.action}** | ${cell(r.pharmacyMethod)} |`);
     }
     md.push("");

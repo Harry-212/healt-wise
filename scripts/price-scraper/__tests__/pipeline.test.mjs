@@ -111,7 +111,7 @@ test("compare: actions follow the agreed rules", () => {
   assert.equal(byDose["12.5mg"].action, "manual");
 });
 
-test("affiliate partners: site price is standard minus the partner discount; comparators still use standard", () => {
+test("affiliate partners: site price stays the standard price, code price is separate and never auto-applied", () => {
   assert.equal(applyAffiliateDiscount(154.99, { type: "percent", value: 10 }), 139.49);
   assert.equal(applyAffiliateDiscount(132.99, { type: "percent", value: 5 }), 126.34);
   assert.equal(applyAffiliateDiscount(144.99, { type: "amount", value: 10 }), 134.99);
@@ -128,10 +128,12 @@ test("affiliate partners: site price is standard minus the partner discount; com
   const comparatorRows = [{ ourId: "reach", medication: "mounjaro", dose: "2.5mg", standard: 154.99, site: "s" }];
   const rows = compareAll({ current, pharmacyReads, comparatorRows, discounts: { reach: { type: "percent", value: 10 } } });
   const byDose = Object.fromEntries(rows.map((r) => [r.dose, r]));
-  assert.equal(byDose["2.5mg"].action, "unchanged");
+  assert.equal(byDose["2.5mg"].sitePrice, 154.99);
+  assert.equal(byDose["2.5mg"].codePrice, 139.49);
   assert.equal(byDose["2.5mg"].deltaVsConsensus, 0);
-  assert.equal(byDose["5mg"].sitePrice, 158.39);
-  assert.equal(byDose["5mg"].action, "update");
+  assert.equal(byDose["5mg"].sitePrice, 175.99);
+  assert.equal(byDose["5mg"].codePrice, 158.39);
+  for (const d of ["2.5mg", "5mg"]) assert.equal(byDose[d].action, "review");
 });
 
 test("flight payload decoding finds provider objects", () => {

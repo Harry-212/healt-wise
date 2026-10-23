@@ -53,6 +53,8 @@ export function buildProposal(rows, runDate) {
         current: r.current,
         pharmacyStandard: r.pharmacy,
         sitePrice: r.sitePrice,
+        codePrice: r.codePrice,
+        reviewReason: r.reviewReason,
         comparatorMedian: r.consensus,
         deltaVsComparatorsPct: r.deltaVsConsensus,
         method: r.pharmacyMethod,
