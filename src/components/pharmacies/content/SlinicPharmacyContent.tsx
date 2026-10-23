@@ -51,6 +51,7 @@ export default function SlinicPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      contentUpdated="20 September 2026"
       heroProviderLogoSrc="/logo pharmacy/Slinic.webp"
       heroProviderLogoAlt="Slinic"
     >

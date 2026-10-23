@@ -11,8 +11,9 @@ function median(nums) {
 }
 
 /**
- * Affiliate partners are shown at the price after their partner code (client
- * decision). `rule` is { type: "percent" | "amount", value, code }.
+ * Price after a partner code. This is a SEPARATE, labelled figure (`codePrice`):
+ * it never replaces the standard price and never feeds ranking or "lowest
+ * price" (client rule 2026-10-23). `rule` is { type: "percent" | "amount", value, code }.
  */
 export function applyAffiliateDiscount(standard, rule) {
   if (standard == null || !rule) return standard;
@@ -27,8 +28,11 @@ export function applyAffiliateDiscount(standard, rule) {
  *   update    – pharmacy price read with high confidence, agrees with comparators (or none to check)
  *   review    – a price was read but is medium confidence or >5% off the comparators
  *   manual    – no usable pharmacy price; keep ours and check by hand
- * Comparators are matched against the STANDARD price; the affiliate discount
- * only changes what the site shows.
+ * Comparators are matched against the STANDARD price. `sitePrice` is always the
+ * standard one-off price; an affiliate code price is carried separately as
+ * `codePrice`. The data store currently holds code-discounted numbers for
+ * affiliate partners, so those rows are never auto-updated: they go to `review`
+ * until the store has separate standard and code-price fields.
  */
 export function compareAll({ current, pharmacyReads, comparatorRows, discounts = {} }) {
   const rows = [];
@@ -42,14 +46,15 @@ export function compareAll({ current, pharmacyReads, comparatorRows, discounts =
         const comps = comparatorRows.filter((r) => r.ourId === provider.id && r.medication === medication && r.dose === dose);
         const consensus = median(comps.map((c) => c.standard));
         const standard = ph && ph.confidence !== "low" ? ph.price : null;
-        const sitePrice = applyAffiliateDiscount(standard, rule);
+        const sitePrice = standard;
+        const codePrice = applyAffiliateDiscount(standard, rule);
         const delta = standard != null && consensus != null ? (standard - consensus) / consensus : null;
         const discrepancy = delta != null && Math.abs(delta) > DISCREPANCY_THRESHOLD;
         const curNum = typeof cur === "number" && cur > 0 ? cur : null;
 
         let action;
         if (standard == null) action = "manual";
-        else if (discrepancy || ph.confidence !== "high") action = "review";
+        else if (discrepancy || ph.confidence !== "high" || rule) action = "review";
         else if (curNum != null && Math.abs(sitePrice - curNum) < 0.005) action = "unchanged";
         else action = "update";
 
@@ -62,7 +67,9 @@ export function compareAll({ current, pharmacyReads, comparatorRows, discounts =
           currentCheckedLabel: provider.updatedLabel,
           pharmacy: ph?.price ?? null,
           sitePrice,
+          codePrice: rule ? codePrice : null,
           affiliateDiscount: rule,
+          reviewReason: rule ? "affiliate: stored price may be code-discounted; standard and code price must be stored separately" : null,
           pharmacyConfidence: ph?.confidence ?? null,
           pharmacyMethod: ph?.method ?? null,
           pharmacyStatus: read.status,

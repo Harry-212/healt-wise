@@ -375,6 +375,7 @@ export function PharmacyDossierPage({
   heroProviderLogoAlt = "",
   heroProviderLogoClassName,
   heroProviderLogoUnoptimized = false,
+  contentUpdated,
   children,
 }: {
   slugLabel: string;
@@ -393,6 +394,8 @@ export function PharmacyDossierPage({
   heroProviderLogoAlt?: string;
   heroProviderLogoClassName?: string;
   heroProviderLogoUnoptimized?: boolean;
+  /** Date the page's written content last changed; kept separate from the price-check date. */
+  contentUpdated?: string;
   children: ReactNode;
 }) {
   const [copied, setCopied] = useState(false);
@@ -563,7 +566,11 @@ export function PharmacyDossierPage({
               {subtitle}
             </p>
             <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-emerald-900/10 pt-3 text-sm font-semibold text-slate-700 sm:text-base">
-              <span className="font-mono">Last updated {lastUpdated}</span>
+              {contentUpdated ? (
+                <span className="font-mono">Page content last updated {contentUpdated}</span>
+              ) : (
+                <span className="font-mono">Last updated {lastUpdated}</span>
+              )}
               <span className="text-slate-400" aria-hidden>
                 ·
               </span>

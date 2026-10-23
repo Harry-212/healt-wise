@@ -1,5 +1,5 @@
 {
-  "_comment": "Per-pharmacy price pages for the monthly standard-price check. Keys are Healthwise360 provider ids. null = URL not confirmed yet (reported as manual). One URL may serve both medications. affiliateDiscount: affiliate partners are shown on the site at the price after their partner code (client decision 2026-10-22); the check reads the standard price and applies this rule.",
+  "_comment": "Per-pharmacy price pages for the monthly standard-price check. Keys are Healthwise360 provider ids. null = URL not confirmed yet (reported as manual). One URL may serve both medications. affiliateDiscount: code-discount rule for affiliate partners. Rule 2026-10-23: the standard one-off price drives the site price and ranking; the code price is stored and shown separately and never replaces it.",
   "providers": {
     "asda-online-doctor": {
       "mounjaro": "https://onlinedoctor.asda.com/uk/mounjaro.html",
