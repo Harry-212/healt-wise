@@ -73,8 +73,8 @@ test("extractAffiliateEventParams derives monetised from the partner list, not t
 
   const real = extractAffiliateEventParams(
     new MockAnchorElement(
-      { "data-hw-provider": "Slinic", "data-hw-provider-id": "slinic", "data-hw-monetised": "false" },
-      "https://slinic.co.uk"
+      { "data-hw-provider": "DoseDirect", "data-hw-provider-id": "dosedirect", "data-hw-monetised": "false" },
+      "https://dosedirect.co.uk"
     )
   );
   assert.equal(real.monetised, true);
@@ -91,7 +91,7 @@ test("extractAffiliateEventParams falls back to a slug of the provider name when
   assert.equal(params.monetised, true);
 });
 
-test("only the 4 affiliate partners are tracked; other providers send nothing", async () => {
+test("only the 5 affiliate partners are tracked; other providers send nothing", async () => {
   const { trackAffiliateClick } = await import(
     "../../../src/lib/affiliateTracking.ts"
   );
@@ -108,7 +108,6 @@ test("only the 4 affiliate partners are tracked; other providers send nothing", 
     ["Pharmacy + Me", "pharmacy-me"],
     ["Reach Online Pharmacy", "reach-online-pharmacy"],
     ["DoseDirect", "dosedirect"],
-    ["Slinic", "slinic"],
     ["i-Prescribe", "i-prescribe"],
     ["SheMed", "shemed"],
   ];
@@ -118,8 +117,8 @@ test("only the 4 affiliate partners are tracked; other providers send nothing", 
     );
     assert.ok(result, `${name} should be tracked`);
   }
-  assert.equal(gtagCalls.length, 6);
-  assert.equal(dataLayer.length, 6);
+  assert.equal(gtagCalls.length, 5);
+  assert.equal(dataLayer.length, 5);
 
   for (const [name, id] of [
     ["Boots", "boots"],
@@ -132,8 +131,8 @@ test("only the 4 affiliate partners are tracked; other providers send nothing", 
     );
     assert.equal(result, null, `${name} must not be tracked`);
   }
-  assert.equal(gtagCalls.length, 6);
-  assert.equal(dataLayer.length, 6);
+  assert.equal(gtagCalls.length, 5);
+  assert.equal(dataLayer.length, 5);
 });
 
 test("trackAffiliateClick pushes to gtag and dataLayer fallback", async () => {
@@ -228,8 +227,8 @@ test("affiliate click followed by a return emits one affiliate_return with secon
   Date.now = () => t0;
   trackAffiliateClick(
     new MockAnchorElement({
-      "data-hw-provider": "Slinic",
-      "data-hw-provider-id": "slinic",
+      "data-hw-provider": "DoseDirect",
+      "data-hw-provider-id": "dosedirect",
     })
   );
   Date.now = () => t0 + 42_000;
@@ -237,7 +236,7 @@ test("affiliate click followed by a return emits one affiliate_return with secon
   Date.now = realNow;
 
   assert.ok(ret);
-  assert.equal(ret.provider_id, "slinic");
+  assert.equal(ret.provider_id, "dosedirect");
   assert.equal(ret.seconds_away, 42);
   assert.equal(ret.return_source, "bfcache");
   const returns = gtagCalls.filter((c) => c[1] === "affiliate_return");
@@ -264,8 +263,8 @@ test("a return after the 30 minute window is ignored", async () => {
   Date.now = () => t0;
   trackAffiliateClick(
     new MockAnchorElement({
-      "data-hw-provider": "Slinic",
-      "data-hw-provider-id": "slinic",
+      "data-hw-provider": "DoseDirect",
+      "data-hw-provider-id": "dosedirect",
     })
   );
   Date.now = () => t0 + 31 * 60 * 1000;
@@ -287,8 +286,8 @@ test("clicks on internal links do not arm affiliate_return", async () => {
 
   trackAffiliateClick(
     new MockAnchorElement(
-      { "data-hw-provider": "Slinic", "data-hw-provider-id": "slinic" },
-      "https://www.healthwise360.co.uk/pharmacies/slinic"
+      { "data-hw-provider": "DoseDirect", "data-hw-provider-id": "dosedirect" },
+      "https://www.healthwise360.co.uk/pharmacies/dosedirect"
     )
   );
   assert.equal(trackAffiliateReturn("tab_visible"), null);

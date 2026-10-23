@@ -41,11 +41,6 @@ const PHARMACY_REVIEWS: PharmacyReviewLink[] = [
     label: "Read our SheMed review",
     href: "/pharmacies/shemed",
   },
-  {
-    slug: "slinic",
-    label: "Read our Slinic review",
-    href: "/pharmacies/slinic",
-  },
 ];
 
 /**

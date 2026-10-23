@@ -107,7 +107,6 @@ export const PHARMACY_LANDING_PROVIDER_NAMES: Record<string, string> = {
   "care-pharmacy": "The Care Pharmacy",
   "simple-online-pharmacy": "Simple Online Pharmacy",
   "slimming-direct": "Slimming Direct",
-  slinic: "Slinic",
   "superdrug-online-doctor": "Superdrug Online Doctor",
   "swift-doctor": "Swift Doctor",
   "swift-medi": "SwiftMedi",

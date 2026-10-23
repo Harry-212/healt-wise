@@ -205,10 +205,12 @@ const TRUSTPILOT_URL_BY_PROVIDER_ID: Record<string, string> = {
   zava: "https://uk.trustpilot.com/review/zavamed.com/uk",
 };
 
-const HIDDEN_MOUNJARO_COMPARE_PROVIDER_IDS = new Set([
+/** Providers kept in the stored data but never shown on the site (Mounjaro and Wegovy). */
+const HIDDEN_COMPARE_PROVIDER_IDS = new Set([
   "cloud-pharmacy",
   "fella-health",
   "quickmeds",
+  "slinic",
 ]);
 
 function enrichMounjaroProvider(
@@ -224,7 +226,7 @@ function enrichMounjaroProvider(
 export function readMounjaroCompareProviders(): MounjaroUkProviderCompare[] {
   const store = getMounjaroStore();
   return store.providers
-    .filter((p) => !HIDDEN_MOUNJARO_COMPARE_PROVIDER_IDS.has(p.id))
+    .filter((p) => !HIDDEN_COMPARE_PROVIDER_IDS.has(p.id))
     .map(enrichMounjaroProvider);
 }
 
@@ -239,12 +241,14 @@ function sortProvidersByName<T extends { name: string }>(providers: T[]): T[] {
 
 /** Live Wegovy list for public pages (A–Z by pharmacy name). */
 export function readWegovyCompareProviders(): WegovyUkProviderCompare[] {
-  return sortProvidersByName(getWegovyStore().providers);
+  return sortProvidersByName(
+    getWegovyStore().providers.filter((p) => !HIDDEN_COMPARE_PROVIDER_IDS.has(p.id)),
+  );
 }
 
 /** Full Wegovy list for admin (A–Z by pharmacy name). */
 export function readWegovyCompareProvidersAdmin(): WegovyUkProviderCompare[] {
-  return sortProvidersByName(getWegovyStore().providers);
+  return readWegovyCompareProviders();
 }
 
 export function getMounjaroLastUpdatedLabel(): string {
