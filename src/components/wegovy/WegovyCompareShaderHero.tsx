@@ -34,8 +34,8 @@ export default function WegovyCompareShaderHero({
   cheapestProvider?: string;
   providerCount?: number;
 }) {
-  const displayPrice = cheapestPrice != null ? formatGbp(cheapestPrice) : "£83";
-  const displayProvider = cheapestProvider || "Slinic";
+  const displayPrice = cheapestPrice != null ? formatGbp(cheapestPrice) : "£72.89";
+  const displayProvider = cheapestProvider || "our cheapest listed pharmacy";
   const displayCount = providerCount != null ? providerCount : 62;
   const displayDate = lastUpdated || "20 September 2026";
 

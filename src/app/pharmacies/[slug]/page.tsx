@@ -65,7 +65,6 @@ import Shape8PharmacyContent from "@/components/pharmacies/content/Shape8Pharmac
 import SkinAndShapePharmacyContent from "@/components/pharmacies/content/SkinAndShapePharmacyContent";
 import SimpleOnlinePharmacyContent from "@/components/pharmacies/content/SimpleOnlinePharmacyContent";
 import SlimmingDirectPharmacyContent from "@/components/pharmacies/content/SlimmingDirectPharmacyContent";
-import SlinicPharmacyContent from "@/components/pharmacies/content/SlinicPharmacyContent";
 import RelatedPharmacyLinks from "@/components/pharmacies/RelatedPharmacyLinks";
 import SuperdrugOnlineDoctorContent from "@/components/pharmacies/content/SuperdrugOnlineDoctorContent";
 import SwiftDoctorPharmacyContent from "@/components/pharmacies/content/SwiftDoctorPharmacyContent";
@@ -154,7 +153,6 @@ import {
   shape8PharmacyLandingJsonGraph,
   simpleOnlinePharmacyLandingJsonGraph,
   slimmingDirectPharmacyLandingJsonGraph,
-  slinicPharmacyLandingJsonGraph,
   superdrugOnlineDoctorLandingJsonGraph,
   swiftDoctorPharmacyLandingJsonGraph,
   swiftMediPharmacyLandingJsonGraph,
@@ -1153,21 +1151,6 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <SheMedPharmacyContent />
-      </>
-    );
-  }
-
-  if (slug === "slinic") {
-    return (
-      <>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(slinicPharmacyLandingJsonGraph()),
-          }}
-        />
-        <SlinicPharmacyContent />
-        <RelatedPharmacyLinks currentSlug="slinic" />
       </>
     );
   }
