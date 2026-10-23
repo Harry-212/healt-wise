@@ -212,10 +212,7 @@ export default function WegovyUkCompareTable({
           {
             id: p.id,
             name: p.name,
-            fromPrice:
-              AFFILIATE_PARTNERS_MAP[id]?.featuredFromPrice ??
-              `£${startingPrice(p).toFixed(2)}`,
-            priceLabel: AFFILIATE_PARTNERS_MAP[id]?.featuredPriceLabel,
+            fromPrice: `£${startingPrice(p).toFixed(2)}`,
             rating: p.rating,
             gphcRegNo: p.gphcRegNo,
             profileHref:
