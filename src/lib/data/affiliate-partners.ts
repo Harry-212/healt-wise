@@ -7,9 +7,6 @@ export type AffiliatePartnerInfo = {
   affiliateUrl: string;
   ctaLabel: string;
   perkSummary?: string;
-  /** Featured-partner card wording when a generic label and fixed "from" price are used instead of the medicine name and ranked price. */
-  featuredPriceLabel?: string;
-  featuredFromPrice?: string;
 };
 
 /**
@@ -69,8 +66,6 @@ export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
     badgeLabel: "Featured Partner",
     code: "HEALTH20",
     affiliateUrl: "/go/shemed",
-    featuredPriceLabel: "Treatment",
-    featuredFromPrice: "£179",
     ctaLabel: "Claim Deal",
     perkSummary: "20% off first order with code HEALTH20 · Free blood test & delivery",
   },
