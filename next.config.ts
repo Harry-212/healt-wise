@@ -120,7 +120,7 @@ const nextConfig: NextConfig = {
       // Commercial affiliate redirects (cloaked affiliate URLs)
       {
         source: "/go/shemed",
-        destination: "https://www.shemed.co.uk?via=healthwise360&code=HEALTH20",
+        destination: "https://www.shemed.co.uk/treatment?via=healthwise360&code=HEALTH20",
         permanent: false,
       },
       {
