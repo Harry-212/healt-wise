@@ -269,18 +269,35 @@ export function Points({ items }: { items: string[] }) {
   );
 }
 
+type SecondaryDiscount = { label: string; code: string };
+
 function DiscountCodeBox({
   discountCode,
+  discountCodeLabel = "Code",
+  secondaryDiscount,
   hasDiscount,
   copied,
   onCopy,
 }: {
   discountCode: string;
+  discountCodeLabel?: string;
+  secondaryDiscount?: SecondaryDiscount;
   hasDiscount: boolean;
   copied: boolean;
   onCopy: () => void;
 }) {
   const hasDiscountCode = discountCode.trim().length > 0;
+  const [secondaryCopied, setSecondaryCopied] = useState(false);
+  const copySecondary = async () => {
+    if (!secondaryDiscount) return;
+    try {
+      await navigator.clipboard.writeText(secondaryDiscount.code);
+      setSecondaryCopied(true);
+      setTimeout(() => setSecondaryCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy", err);
+    }
+  };
 
   return (
     <section
@@ -305,22 +322,38 @@ function DiscountCodeBox({
                 provider&apos;s site. Always confirm live pricing before payment.
               </p>
             </div>
-            <div
-              onClick={hasDiscountCode ? onCopy : undefined}
-              className={`shrink-0 self-center rounded-md border border-emerald-800/20 bg-emerald-50/40 px-4 py-3.5 text-center shadow-sm sm:self-start min-w-30 sm:min-w-32 ${
-                hasDiscountCode ? "cursor-pointer hover:bg-emerald-100/70 transition" : ""
-              }`}
-              title={hasDiscountCode ? "Click to copy code" : undefined}
-            >
-              <p className="font-mono text-xs font-bold uppercase tracking-widest text-emerald-900/75">
-                Code
-              </p>
-              <p
-                className="mt-1 font-mono text-xl font-extrabold tracking-tight text-emerald-950 tabular-nums"
-                aria-live="polite"
+            <div className="flex shrink-0 flex-col gap-3 self-center sm:self-start">
+              <div
+                onClick={hasDiscountCode ? onCopy : undefined}
+                className={`rounded-md border border-emerald-800/20 bg-emerald-50/40 px-4 py-3.5 text-center shadow-sm min-w-30 sm:min-w-32 ${
+                  hasDiscountCode ? "cursor-pointer hover:bg-emerald-100/70 transition" : ""
+                }`}
+                title={hasDiscountCode ? "Click to copy code" : undefined}
               >
-                {hasDiscountCode ? discountCode : "—"}
-              </p>
+                <p className="font-mono text-xs font-bold uppercase tracking-widest text-emerald-900/75">
+                  {discountCodeLabel}
+                </p>
+                <p
+                  className="mt-1 font-mono text-xl font-extrabold tracking-tight text-emerald-950 tabular-nums"
+                  aria-live="polite"
+                >
+                  {hasDiscountCode ? discountCode : "—"}
+                </p>
+              </div>
+              {secondaryDiscount ? (
+                <div
+                  onClick={copySecondary}
+                  className="cursor-pointer rounded-md border border-emerald-800/20 bg-emerald-50/40 px-4 py-3.5 text-center shadow-sm transition hover:bg-emerald-100/70 min-w-30 sm:min-w-32"
+                  title="Click to copy code"
+                >
+                  <p className="font-mono text-xs font-bold uppercase tracking-widest text-emerald-900/75">
+                    {secondaryDiscount.label}
+                  </p>
+                  <p className="mt-1 font-mono text-xl font-extrabold tracking-tight text-emerald-950 tabular-nums">
+                    {secondaryCopied ? "Copied" : secondaryDiscount.code}
+                  </p>
+                </div>
+              ) : null}
             </div>
           </div>
           <div className="mt-auto flex flex-col gap-3 border-t border-dashed border-emerald-900/18 pt-5 sm:flex-row sm:items-center sm:justify-between">
@@ -328,7 +361,9 @@ function DiscountCodeBox({
               {!hasDiscountCode
                 ? "Promotional code will be shown here when available."
                 : hasDiscount
-                  ? "This code is currently flagged as active (verify at checkout)."
+                  ? secondaryDiscount
+                    ? "These codes are currently flagged as active (verify at checkout)."
+                    : "This code is currently flagged as active (verify at checkout)."
                   : "Confirm validity on the provider site before you pay."}
             </p>
             <button
@@ -376,6 +411,8 @@ export function PharmacyDossierPage({
   heroProviderLogoClassName,
   heroProviderLogoUnoptimized = false,
   contentUpdated,
+  discountCodeLabel,
+  secondaryDiscount,
   children,
 }: {
   slugLabel: string;
@@ -396,6 +433,10 @@ export function PharmacyDossierPage({
   heroProviderLogoUnoptimized?: boolean;
   /** Date the page's written content last changed; kept separate from the price-check date. */
   contentUpdated?: string;
+  /** Label above the main code (default "Code"), e.g. "New customers". */
+  discountCodeLabel?: string;
+  /** Optional second code shown under the main one, e.g. for returning customers. */
+  secondaryDiscount?: SecondaryDiscount;
   children: ReactNode;
 }) {
   const [copied, setCopied] = useState(false);
@@ -554,6 +595,8 @@ export function PharmacyDossierPage({
 
             <DiscountCodeBox
               discountCode={discountCode}
+              discountCodeLabel={discountCodeLabel}
+              secondaryDiscount={secondaryDiscount}
               hasDiscount={hasDiscount}
               copied={copied}
               onCopy={handleCopy}
