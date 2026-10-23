@@ -196,7 +196,10 @@ export default function MounjaroUkCompareTable({
           {
             id: p.id,
             name: p.name,
-            fromPrice: `£${startingPrice(p).toFixed(2)}`,
+            fromPrice:
+              AFFILIATE_PARTNERS_MAP[id]?.featuredFromPrice ??
+              `£${startingPrice(p).toFixed(2)}`,
+            priceLabel: AFFILIATE_PARTNERS_MAP[id]?.featuredPriceLabel,
             rating: p.rating,
             gphcRegNo: p.gphcRegNo,
             profileHref:

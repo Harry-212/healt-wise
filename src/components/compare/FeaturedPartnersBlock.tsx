@@ -8,6 +8,8 @@ export type FeaturedPartnerCard = {
   name: string;
   /** "From" price already formatted for display. */
   fromPrice: string;
+  /** Replaces the medicine name in "<label> from £x" when set. */
+  priceLabel?: string;
   rating: number;
   gphcRegNo?: string;
   profileHref: string | null;
@@ -68,7 +70,7 @@ export default function FeaturedPartnersBlock({
               </span>
             )}
             <p className="text-xs text-slate-600">
-              {medicationLabel} from{" "}
+              {p.priceLabel ?? medicationLabel} from{" "}
               <span className="text-base font-bold tabular-nums text-slate-900">
                 {p.fromPrice}
               </span>
