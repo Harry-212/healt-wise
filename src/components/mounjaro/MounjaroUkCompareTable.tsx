@@ -1,5 +1,6 @@
 "use client";
 
+import PriceCheckNotice from "@/components/prices/PriceCheckNotice";
 import Link from "next/link";
 import { startTransition, useMemo, useState } from "react";
 import {
@@ -255,10 +256,7 @@ export default function MounjaroUkCompareTable({
           Latest price update {pricesLastChecked}
         </span>
       </div>
-      <p className="-mt-2 px-1 text-xs text-slate-600">
-        All standard retail prices are reviewed in the first week of every
-        month and changed if required.
-      </p>
+      <PriceCheckNotice lastChecked={pricesLastChecked} className="-mt-2 px-1 text-xs text-slate-600" />
       {showCostGuideLink ? (
         <p className="mt-2 px-1 text-xs text-slate-600">
           Read our guide to{" "}

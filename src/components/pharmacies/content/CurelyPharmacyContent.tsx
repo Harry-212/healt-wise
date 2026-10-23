@@ -11,12 +11,10 @@ import {
 import {
   providerTableFacts,
   providerTablePriceSentence,
+  type ProviderTableFacts,
   type ProviderTableRow,
 } from "@/lib/data/provider-price-summary";
-
-/** Checked table prices only (same medicine, strength and single pen). */
-const CURELY_TABLE_PRICES = providerTablePriceSentence("curely", "Curely");
-const CURELY_FACTS = providerTableFacts("curely");
+import { useLiveProviderRows } from "@/lib/data/live-prices-context";
 
 const providerUrl = "https://www.curely.co.uk/online-doctor/weight-loss";
 
@@ -30,7 +28,8 @@ const CURELY_UNCONFIRMED = [
   "Any first-order offer, voucher or subscription pricing (our tables use list price only)",
 ];
 
-const CURELY_FAQ = [
+/** FAQ built from the checked table prices (same medicine, strength and single pen). */
+const curelyFaq = (CURELY_TABLE_PRICES: string | null, CURELY_FACTS: ProviderTableFacts) => [
   {
     q: "Which medicines does Curely list in our comparison?",
     a: "Mounjaro and Wegovy. Both appear in our price tables with the check date shown.",
@@ -89,6 +88,10 @@ function PriceTable({
 }
 
 export default function CurelyPharmacyContent() {
+  const liveRows = useLiveProviderRows("curely");
+  const CURELY_TABLE_PRICES = providerTablePriceSentence("curely", "Curely", liveRows);
+  const CURELY_FACTS = providerTableFacts("curely", liveRows);
+  const CURELY_FAQ = curelyFaq(CURELY_TABLE_PRICES, CURELY_FACTS);
   /** Paste the live code here when available. */
   const discountCode = "";
   const hasDiscount = false;

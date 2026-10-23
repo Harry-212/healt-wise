@@ -11,6 +11,8 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { useLiveMounjaroProvider } from "@/lib/data/live-prices-context";
+import { longCheckDate } from "@/lib/data/provider-price-summary";
 
 const providerUrl = "https://yourpharmacy.uk/";
 
@@ -18,6 +20,8 @@ const sectionLabel =
   "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
 
 export default function YourPharmacyPharmacyContent() {
+  const liveMj = useLiveMounjaroProvider("yourpharmacy");
+  const checkedOn = longCheckDate(liveMj?.updatedLabel) ?? "20 September 2026";
   const discountCode = "";
   const hasDiscount = false;
 
@@ -31,7 +35,7 @@ export default function YourPharmacyPharmacyContent() {
       providerName="YourPharmacy"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Prices checked", v: "20 September 2026" },
+        { k: "Prices checked", v: checkedOn },
         {
           k: "Provider",
           v: "YourPharmacy (GPhC 9012029)",
@@ -53,7 +57,7 @@ export default function YourPharmacyPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            YourPharmacy is an online UK service for weight loss injections. See its Mounjaro and Wegovy price for every dose below, from our 20 September 2026 price check, or{" "}
+            YourPharmacy is an online UK service for weight loss injections. See its Mounjaro and Wegovy price for every dose below, from our {checkedOn} price check, or{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"

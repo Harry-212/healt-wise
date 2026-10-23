@@ -1,5 +1,6 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
-import { providerTableFacts, providerTablePriceSentence } from "@/lib/data/provider-price-summary";
+import { providerTableFacts, providerTablePriceSentence, type ProviderRows } from "@/lib/data/provider-price-summary";
+import { getLiveMounjaroProvider, getLiveWegovyProvider } from "@/lib/data/compare-live";
 
 const FAQ_BASE = "https://schema.org";
 
@@ -258,7 +259,8 @@ const CURATE_FAQ: FaqItem[] = [
   },
 ];
 
-const CURELY_FAQ: FaqItem[] = [
+/** Built per request from the live comparison rows, so the schema matches the page. */
+const curelyFaq = (rows: ProviderRows): FaqItem[] => [
   {
     question: "Which medicines does Curely list in our comparison?",
     answer:
@@ -267,7 +269,7 @@ const CURELY_FAQ: FaqItem[] = [
   {
     question: "How much does Curely weight loss treatment cost?",
     answer:
-      providerTablePriceSentence("curely", "Curely") ??
+      providerTablePriceSentence("curely", "Curely", rows) ??
       "Curely's prices vary by medicine and strength; see our comparison tables for the strengths it lists.",
   },
   {
@@ -277,7 +279,7 @@ const CURELY_FAQ: FaqItem[] = [
   },
   {
     question: "Is Curely a registered pharmacy?",
-    answer: `Our comparison records list GPhC registration number ${providerTableFacts("curely").gphcRegNo ?? "on file"}. You can confirm it on the GPhC register.`,
+    answer: `Our comparison records list GPhC registration number ${providerTableFacts("curely", rows).gphcRegNo ?? "on file"}. You can confirm it on the GPhC register.`,
   },
   {
     question: "Are non-injection treatments available?",
@@ -2524,7 +2526,9 @@ export function curelyPharmacyLandingJsonGraph(): Record<string, unknown> {
         { name: "Curely", item: url },
       ]),
       {
-        ...faqPageEntity(CURELY_FAQ),
+        ...faqPageEntity(
+          curelyFaq({ mounjaro: getLiveMounjaroProvider("curely"), wegovy: getLiveWegovyProvider("curely") }),
+        ),
         "@id": `${url}#faq`,
         url,
       },

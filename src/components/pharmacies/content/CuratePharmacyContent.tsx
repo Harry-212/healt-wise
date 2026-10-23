@@ -12,12 +12,12 @@ import {
 import {
   providerTableFacts,
   providerTablePriceSentence,
+  type ProviderTableFacts,
   type ProviderTableRow,
 } from "@/lib/data/provider-price-summary";
-
-/** Checked table prices only (same medicine, strength and single pen). */
-const CURATE_TABLE_PRICES = providerTablePriceSentence("curate", "Curate");
-const CURATE_FACTS = providerTableFacts("curate");
+import { useLiveProviderRows } from "@/lib/data/live-prices-context";
+import { useLiveMounjaroProvider } from "@/lib/data/live-prices-context";
+import { longCheckDate, priceRangePhrase } from "@/lib/data/provider-price-summary";
 
 const providerUrl = "https://www.curatehealth.co.uk/collections/weight-loss";
 
@@ -32,7 +32,8 @@ const CURATE_UNCONFIRMED = [
   "Any first-order offer, voucher or subscription pricing (our tables use list price only)",
 ];
 
-const CURATE_FAQ = [
+/** FAQ built from the checked table prices (same medicine, strength and single pen). */
+const curateFaq = (CURATE_TABLE_PRICES: string | null, CURATE_FACTS: ProviderTableFacts) => [
   {
     q: "Which medicines does Curate list in our comparison?",
     a: "Mounjaro and Wegovy. Both appear in our price tables with the check date shown.",
@@ -91,6 +92,12 @@ function PriceTable({
 }
 
 export default function CuratePharmacyContent() {
+  const liveMj = useLiveMounjaroProvider("curate");
+  const checkedOn = longCheckDate(liveMj?.updatedLabel) ?? "20 September 2026";
+  const liveRows = useLiveProviderRows("curate");
+  const CURATE_TABLE_PRICES = providerTablePriceSentence("curate", "Curate", liveRows);
+  const CURATE_FACTS = providerTableFacts("curate", liveRows);
+  const CURATE_FAQ = curateFaq(CURATE_TABLE_PRICES, CURATE_FACTS);
   /** Paste the live code here when available. */
   const discountCode = "";
   const hasDiscount = false;
@@ -105,7 +112,7 @@ export default function CuratePharmacyContent() {
       providerName="Curate"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Prices checked", v: "20 September 2026" },
+        { k: "Prices checked", v: checkedOn },
         { k: "Provider", v: "Curate" },
         { k: "GPhC", v: "9012920" },
         { k: "Treatments compared", v: "Mounjaro · Wegovy" },
@@ -118,7 +125,7 @@ export default function CuratePharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            Curate sells Mounjaro from £189 (2.5 mg) to £329 (15 mg) a pen, at our 20 September 2026 price check. Curate is listed on the GPhC register (number 9012920), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
+            Curate sells Mounjaro {priceRangePhrase(liveMj) ?? "from £189 (2.5 mg) to £329 (15 mg)"} a pen, at our {checkedOn} price check. Curate is listed on the GPhC register (number 9012920), and a prescriber checks your health before any medicine is sent. See the price for every dose below, or{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"

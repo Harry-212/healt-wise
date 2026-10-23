@@ -18,6 +18,9 @@ import {
 } from "@/lib/site-assets";
 
 /** Below-the-fold client sections (framer-motion / heavy UI) load in separate chunks for faster TTI. */
+/** Price summary comes from the live store; regenerated at most every 5 minutes and when prices are saved. */
+export const revalidate = 300;
+
 const AboutSection2 = dynamic(() => import("@/components/ui/about-section-2"));
 const ChooseYourPathSection = dynamic(
   () => import("@/components/ui/ChooseYourPathSection"),

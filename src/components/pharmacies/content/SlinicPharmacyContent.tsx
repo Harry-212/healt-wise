@@ -8,6 +8,8 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { getLiveMounjaroProvider, getLiveWegovyProvider } from "@/lib/data/compare-live";
+import { longCheckDate, priceRangePhrase } from "@/lib/data/provider-price-summary";
 
 const providerUrl =
   "https://slinic.co.uk/condition/weight-loss/?utm_source=healthwise&utm_medium=referral&utm_campaign=weight-loss";
@@ -16,6 +18,9 @@ const sectionLabel =
   "font-sans text-xs font-bold uppercase tracking-[0.2em] text-emerald-900/90 sm:text-sm";
 
 export default function SlinicPharmacyContent() {
+  const liveMj = getLiveMounjaroProvider("slinic");
+  const liveWg = getLiveWegovyProvider("slinic");
+  const checkedOn = longCheckDate(liveMj?.updatedLabel) ?? "20 September 2026";
   const discountCode = "";
   const hasDiscount = false;
 
@@ -29,7 +34,7 @@ export default function SlinicPharmacyContent() {
       providerName="Slinic"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Prices checked", v: "20 September 2026" },
+        { k: "Prices checked", v: checkedOn },
         {
           k: "Provider",
           v: "Read & Simonstone Pharmacy Ltd T/A Slinic",
@@ -52,7 +57,7 @@ export default function SlinicPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            Slinic sells Mounjaro from £129 (2.5 mg) to £267 (15 mg) a pen, and Wegovy from £83 (0.25 mg starter dose) to £350 (7.2 mg) a pen, at our 20 September 2026 price check. Slinic is registered with the General Pharmaceutical Council (number 1033729), and every order is clinically evaluated before medicine is dispatched. See the price for every dose below, or{" "}
+            Slinic sells Mounjaro {priceRangePhrase(liveMj) ?? "from £129 (2.5 mg) to £267 (15 mg)"} a pen, and Wegovy {priceRangePhrase(liveWg) ?? "from £83 (0.25 mg) to £350 (7.2 mg)"} a pen, at our {checkedOn} price check. Slinic is registered with the General Pharmaceutical Council (number 1033729), and every order is clinically evaluated before medicine is dispatched. See the price for every dose below, or{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"

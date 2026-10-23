@@ -81,18 +81,16 @@ import YourPharmacyPharmacyContent from "@/components/pharmacies/content/YourPha
 import ZavaPharmacyContent from "@/components/pharmacies/content/ZavaPharmacyContent";
 import {
   formatWegovyPriceCell,
-  getWegovyCompareProviderById,
   pharmacyProfileHref,
   startingPrice as wegovyStartingPrice,
   WEGOVY_DOSE_KEYS,
-  WEGOVY_UK_COMPARE_LAST_UPDATED,
 } from "@/lib/data/wegovy-uk-compare-providers";
 import {
-  getMounjaroCompareProviderById,
   startingPrice as mounjaroStartingPrice,
   MOUNJARO_DOSE_KEYS,
-  MOUNJARO_UK_COMPARE_LAST_UPDATED,
 } from "@/lib/data/mounjaro-uk-compare-providers";
+import { getLiveMounjaroProvider, getLiveWegovyProvider } from "@/lib/data/compare-live";
+import PriceCheckNotice from "@/components/prices/PriceCheckNotice";
 import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
 import { TrustpilotStarIcon } from "@/components/compare/TrustpilotRatingPresentation";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -174,6 +172,13 @@ import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
 type Props = { params: Promise<{ slug: string }> };
 
+/**
+ * Prices come from the live store (admin edits + monthly update). Pages are
+ * regenerated at most every 5 minutes, and at once when prices are saved
+ * (revalidatePath in the admin and price-apply routes).
+ */
+export const revalidate = 300;
+
 export function generateStaticParams() {
   return allPharmacySlugs().map((slug) => ({ slug }));
 }
@@ -187,8 +192,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return pharmacyReviewMetadata({ providerName: landingName, canonical });
   }
 
-  const w = getWegovyCompareProviderById(slug);
-  const m = getMounjaroCompareProviderById(slug);
+  const w = getLiveWegovyProvider(slug);
+  const m = getLiveMounjaroProvider(slug);
   const name = w?.name ?? m?.name;
   if (!name) return { title: "Pharmacy" };
 
@@ -1335,8 +1340,8 @@ export default async function PharmacyProfilePage({ params }: Props) {
     );
   }
 
-  const w = getWegovyCompareProviderById(slug);
-  const m = getMounjaroCompareProviderById(slug);
+  const w = getLiveWegovyProvider(slug);
+  const m = getLiveMounjaroProvider(slug);
   if (!w && !m) notFound();
 
   const displayName = w?.name ?? m!.name;
@@ -1449,9 +1454,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           >
             Wegovy pen prices
           </h2>
-          <p className="mt-2 text-sm text-slate-600">
-            Per-strength figures — {WEGOVY_UK_COMPARE_LAST_UPDATED} snapshot.
-          </p>
+          <PriceCheckNotice lastChecked={w.updatedLabel} className="mt-2 text-sm text-slate-600" />
           <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
             <table className="w-full border-collapse text-sm">
               <thead>
@@ -1486,9 +1489,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
           >
             Mounjaro pen prices
           </h2>
-          <p className="mt-2 text-sm text-slate-600">
-            Per-strength figures — {MOUNJARO_UK_COMPARE_LAST_UPDATED} snapshot.
-          </p>
+          <PriceCheckNotice lastChecked={m.updatedLabel} className="mt-2 text-sm text-slate-600" />
           <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
             <table className="w-full border-collapse text-sm">
               <thead>

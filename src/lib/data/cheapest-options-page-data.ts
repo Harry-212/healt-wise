@@ -1,14 +1,10 @@
+import { MOUNJARO_DOSE_KEYS } from "@/lib/data/mounjaro-uk-compare-providers";
+import { WEGOVY_DOSE_KEYS, wegovyPriceAmount } from "@/lib/data/wegovy-uk-compare-providers";
 import {
-  MOUNJARO_DOSE_KEYS,
-  MOUNJARO_UK_COMPARE_LAST_UPDATED,
-  MOUNJARO_UK_COMPARE_PROVIDERS,
-} from "@/lib/data/mounjaro-uk-compare-providers";
-import {
-  WEGOVY_DOSE_KEYS,
-  WEGOVY_UK_COMPARE_LAST_UPDATED,
-  WEGOVY_UK_COMPARE_PROVIDERS,
-  wegovyPriceAmount,
-} from "@/lib/data/wegovy-uk-compare-providers";
+  getLivePriceCheckLabels,
+  getMounjaroCompareProviders,
+  getWegovyCompareProviders,
+} from "@/lib/data/compare-live";
 import {
   buildFirstMonthsCostEstimate,
   buildMounjaroPriceInsights,
@@ -62,8 +58,9 @@ function groupWinners(
  * FAQ and schema can never disagree with the price tables.
  */
 export function getCheapestOptionsPageData() {
-  const wProviders = WEGOVY_UK_COMPARE_PROVIDERS;
-  const mProviders = MOUNJARO_UK_COMPARE_PROVIDERS;
+  const wProviders = getWegovyCompareProviders();
+  const mProviders = getMounjaroCompareProviders();
+  const checked = getLivePriceCheckLabels();
 
   const wInsights = buildWegovyPriceInsights(wProviders);
   const mInsights = buildMounjaroPriceInsights(mProviders);
@@ -132,8 +129,8 @@ export function getCheapestOptionsPageData() {
   return {
     wegovyCount: wProviders.length,
     mounjaroCount: mProviders.length,
-    wegovyUpdated: WEGOVY_UK_COMPARE_LAST_UPDATED,
-    mounjaroUpdated: MOUNJARO_UK_COMPARE_LAST_UPDATED,
+    wegovyUpdated: checked.wegovy,
+    mounjaroUpdated: checked.mounjaro,
     wStarter,
     wLong,
     mStarter,

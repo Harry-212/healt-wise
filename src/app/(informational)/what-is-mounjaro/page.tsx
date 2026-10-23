@@ -11,11 +11,11 @@ import {
   WHY_CHOOSE_HEALTHWISE360_ALT,
   WHY_CHOOSE_HEALTHWISE360_SRC,
 } from "@/lib/site-assets";
-import {
-  MOUNJARO_UK_COMPARE_PROVIDERS,
-  MOUNJARO_UK_COMPARE_LAST_UPDATED,
-} from "@/lib/data/mounjaro-uk-compare-providers";
+import { getLivePriceCheckLabels, getMounjaroCompareProviders } from "@/lib/data/compare-live";
 import { buildMounjaroPriceInsights } from "@/lib/data/mounjaro-price-insights";
+
+/** Live prices; regenerated at most every 5 minutes and when prices are saved. */
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   ...buildPageShareMetadata({
@@ -35,6 +35,8 @@ export const metadata: Metadata = {
 };
 
 export default function WhatIsMounjaroPage() {
+  const MOUNJARO_UK_COMPARE_PROVIDERS = getMounjaroCompareProviders();
+  const MOUNJARO_UK_COMPARE_LAST_UPDATED = getLivePriceCheckLabels().mounjaro;
   // Price insights from 67 GPhC-registered UK providers (enforcing consistent 67 count per SEO spec)
   const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
   const providerCount = 67;

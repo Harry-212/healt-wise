@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { MOUNJARO_UK_COMPARE_LAST_UPDATED } from "@/lib/data/mounjaro-uk-compare-providers";
+import { useLiveMounjaroProvider, useLivePriceCheckLabels } from "@/lib/data/live-prices-context";
 import {
   ArrowRight,
   CheckCircle2,
@@ -50,6 +50,8 @@ function Points({ items }: { items: string[] }) {
 
 export default function BoltPharmacyContent() {
   const [copied, setCopied] = useState(false);
+  const liveLabels = useLivePriceCheckLabels();
+  const lastUpdated = useLiveMounjaroProvider("bolt-pharmacy")?.updatedLabel ?? liveLabels.mounjaro;
   /** Empty until you provide the live code — then set the string here. */
   const discountCode = "";
   const hasDiscount = false;
@@ -142,7 +144,7 @@ export default function BoltPharmacyContent() {
               </p>
               <dl className="mt-5 min-h-0 flex-1 space-y-0 text-base text-slate-800">
                 {[
-                  { k: "Last updated", v: MOUNJARO_UK_COMPARE_LAST_UPDATED },
+                  { k: "Last updated", v: lastUpdated },
                   { k: "Provider", v: "Bolt Pharmacy" },
                   { k: "Treatments", v: "Mounjaro · Wegovy" },
                   { k: "Fulfilment", v: "Home delivery" },
@@ -248,7 +250,7 @@ export default function BoltPharmacyContent() {
               expect before you choose a provider.
             </p>
             <div className="mt-3 flex flex-wrap items-center gap-2 border-t border-emerald-900/10 pt-3 text-sm font-semibold text-slate-700 sm:text-base">
-              <span className="font-mono">Last updated {MOUNJARO_UK_COMPARE_LAST_UPDATED}</span>
+              <span className="font-mono">Last updated {lastUpdated}</span>
               <span className="text-slate-400" aria-hidden>
                 ·
               </span>
