@@ -87,6 +87,7 @@ const HIDDEN_MOUNJARO_COMPARE_PROVIDER_IDS = new Set([
   "cloud-pharmacy",
   "fella-health",
   "quickmeds",
+  "slinic",
 ]);
 
 export type MounjaroUkProviderCompare = {

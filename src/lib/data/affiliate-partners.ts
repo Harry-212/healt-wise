@@ -7,9 +7,6 @@ export type AffiliatePartnerInfo = {
   affiliateUrl: string;
   ctaLabel: string;
   perkSummary?: string;
-  /** Featured-partner card wording when a generic label and fixed "from" price are used instead of the medicine name and ranked price. */
-  featuredPriceLabel?: string;
-  featuredFromPrice?: string;
 };
 
 /**
@@ -20,7 +17,6 @@ export const AFFILIATE_PARTNER_IDS = new Set<string>([
   "pharmacy-me",
   "reach-online-pharmacy",
   "dosedirect",
-  "slinic",
   "i-prescribe",
   "shemed",
 ]);
@@ -54,16 +50,6 @@ export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
     ctaLabel: "Start Consultation",
     perkSummary: "Free delivery included",
   },
-  slinic: {
-    id: "slinic",
-    name: "Slinic",
-    badgeLabel: "Featured Partner",
-    code: undefined,
-    affiliateUrl:
-      "https://slinic.co.uk/condition/weight-loss/?utm_source=healthwise&utm_medium=referral&utm_campaign=weight-loss",
-    ctaLabel: "Visit Slinic",
-    perkSummary: "Free consultation included",
-  },
   "i-prescribe": {
     id: "i-prescribe",
     name: "i-Prescribe",
@@ -80,8 +66,6 @@ export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
     badgeLabel: "Featured Partner",
     code: "HEALTH20",
     affiliateUrl: "/go/shemed",
-    featuredPriceLabel: "Treatment",
-    featuredFromPrice: "£59",
     ctaLabel: "Claim Deal",
     perkSummary: "20% off first order with code HEALTH20 · Free blood test & delivery",
   },
