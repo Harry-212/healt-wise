@@ -25,12 +25,19 @@ export const EXTRA_PHARMACY_LANDING_SLUGS: readonly string[] = [
   "quickmeds",
 ];
 
+/**
+ * Providers removed from the site entirely. They stay in the stored compare data but must not
+ * get a page, sitemap entry, llms.txt line or "All Pharmacies" listing (their URL now 404s).
+ */
+export const RETIRED_PHARMACY_SLUGS: ReadonlySet<string> = new Set(["slinic"]);
+
 /** Every `/pharmacies/:slug` that `generateStaticParams` builds (sitemap + llms must match). */
 export function allPharmacySlugs(): string[] {
   const ids = new Set<string>();
   for (const p of WEGOVY_UK_COMPARE_PROVIDERS) ids.add(p.id);
   for (const p of MOUNJARO_UK_COMPARE_PROVIDERS) ids.add(p.id);
   for (const s of EXTRA_PHARMACY_LANDING_SLUGS) ids.add(s);
+  for (const s of RETIRED_PHARMACY_SLUGS) ids.delete(s);
   return [...ids].sort();
 }
 
