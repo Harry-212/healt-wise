@@ -82,7 +82,7 @@ function roundMoney(n: number): number {
 }
 
 function parseWegovyCell(v: unknown): WegovyPriceCell | null {
-  if (v === "TBC" || v === "OOS") return v;
+  if (v === "TBC" || v === "OOS" || v === "N/A") return v;
   if (isFiniteNumber(v)) return roundMoney(v);
   if (typeof v === "string" && v.trim() !== "") {
     const n = Number.parseFloat(v);
