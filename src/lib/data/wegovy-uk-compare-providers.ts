@@ -9,7 +9,8 @@ export const WEGOVY_UK_COMPARE_LAST_UPDATED = "20 September 2026";
 
 export type WegovyUkCompareBadge = "mostPopular" | "bestValue";
 
-export type WegovyPriceCell = number | "TBC" | "OOS";
+/** "N/A" = the provider does not list this strength; "TBC" = not yet checked. */
+export type WegovyPriceCell = number | "TBC" | "OOS" | "N/A";
 
 export type WegovyUkProviderCompare = {
   id: string;
@@ -112,13 +113,14 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "2.4mg": 233.28,
     "7.2mg": 284.28,
   },
+  // Pay-per-order prices (no plan, no £40 new-patient reward). Checked 26 Oct 2026.
   curate: {
-    "0.25mg": 108,
-    "0.5mg": 128,
-    "1mg": 135,
-    "1.7mg": 178,
-    "2.4mg": 204,
-    "7.2mg": "TBC",
+    "0.25mg": 125,
+    "0.5mg": 125,
+    "1mg": 125,
+    "1.7mg": 175,
+    "2.4mg": 225,
+    "7.2mg": 265,
   },
   curely: {
     "0.25mg": 99.49,
@@ -320,6 +322,8 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "2.4mg": 199,
     "7.2mg": "TBC",
   },
+  // 7.2mg: Numan's dose table says £319 but its FAQ says £379 (checked 26 Oct 2026).
+  // Keep £319 until Numan confirms which is correct.
   numan: {
     "0.25mg": 149,
     "0.5mg": 179,
@@ -568,16 +572,18 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "2.4mg": 183.34,
     "7.2mg": 185.24,
   },
+  // i-Prescribe does not list Wegovy 7.2mg (checked 26 Oct 2026).
   "i-prescribe": {
     "0.25mg": 129.99,
     "0.5mg": 149.99,
     "1mg": 169.99,
     "1.7mg": 199.99,
     "2.4mg": 229.99,
-    "7.2mg": "TBC",
+    "7.2mg": "N/A",
   },
+  // Standard (non-introductory) prices; first-order offers are not stored here.
   shemed: {
-    "0.25mg": 79.0,
+    "0.25mg": 139.0,
     "0.5mg": 139.0,
     "1mg": 139.0,
     "1.7mg": 159.0,
@@ -672,8 +678,9 @@ const WEGOVY_CHECKED_20_SEP_2026 = new Set<string>([
 const WEGOVY_UPDATED_LABEL_OVERRIDE: Record<string, string> = {
   "reach-online-pharmacy": "27 Sep 2026",
   "pharmacy-me": "12 Oct 2026",
-  "i-prescribe": "23 Oct 2026",
-  shemed: "23 Oct 2026",
+  "i-prescribe": "26 Oct 2026",
+  curate: "26 Oct 2026",
+  shemed: "26 Oct 2026",
 };
 
 function providerSeedToWegovy(
