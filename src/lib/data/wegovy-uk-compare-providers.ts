@@ -381,12 +381,12 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "7.2mg": 279.99,
   },
   pharmulous: {
-    "0.25mg": 124.98,
-    "0.5mg": 134.98,
-    "1mg": 144.98,
-    "1.7mg": 174.98,
-    "2.4mg": 224.98,
-    "7.2mg": "TBC",
+    "0.25mg": 94.99,
+    "0.5mg": 99.99,
+    "1mg": 104.99,
+    "1.7mg": 149.99,
+    "2.4mg": 199.99,
+    "7.2mg": 209.99,
   },
   pills2u: {
     "0.25mg": 94.99,
@@ -681,6 +681,7 @@ const WEGOVY_UPDATED_LABEL_OVERRIDE: Record<string, string> = {
   "i-prescribe": "26 Oct 2026",
   curate: "26 Oct 2026",
   shemed: "26 Oct 2026",
+  pharmulous: "26 Oct 2026",
 };
 
 function providerSeedToWegovy(

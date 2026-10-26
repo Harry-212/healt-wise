@@ -39,6 +39,10 @@ function LockedCell({
   );
 }
 
+/** Agreed definition of the price stored in the main comparison tables. */
+const STANDARD_PRICE_RULE =
+  "Healthwise360's main comparison tables use the normal publicly available price for one treatment unit or monthly supply, without a promotional code, new-customer discount or long-term commitment. Delivery and compulsory fees are displayed separately where verified. Introductory, subscription and discount-code prices may be shown separately with their conditions.";
+
 /** Round to 2 decimal places (pence) for stable price editing. */
 function roundMoney(n: number): number {
   return Math.round(n * 100) / 100;
@@ -623,6 +627,10 @@ export default function AdminDashboard() {
                 Provider, rating, GPhC and updated date are locked. Edit dose
                 prices and notes, then save.
               </p>
+              <p className="mt-1 max-w-3xl text-xs text-slate-500">
+                <span className="font-medium text-slate-700">Price rule: </span>
+                {STANDARD_PRICE_RULE}
+              </p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
               <p className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-600">
@@ -880,7 +888,8 @@ export default function AdminDashboard() {
           <p className="mt-4 text-xs text-slate-500">
             Price cells use a numeric stepper (0.01 steps) and always show two
             decimal places on the public compare pages (e.g. £149.00). Existing
-            Wegovy TBC/OOS cells stay until you enter a number.
+            Wegovy TBC/OOS/N/A cells stay until you enter a number. N/A means
+            the provider does not list that strength; TBC means not yet checked.
           </p>
         </main>
       </div>

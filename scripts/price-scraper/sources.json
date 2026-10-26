@@ -225,7 +225,7 @@
     "pharmulous": {
       "mounjaro": "https://www.pharmulous.co.uk/online-doctor/weight-loss/mounjaro-injection",
       "wegovy": "https://www.pharmulous.co.uk/online-doctor/weight-loss/wegovy-injection",
-      "note": "2.5mg and 7.5mg not shown on the page"
+      "note": "prices read from the page's embedded product records; its JSON-LD lags behind them"
     },
     "pills2u": {
       "mounjaro": "https://pills2u.co.uk/shop/mounjaro-weight-loss/",
