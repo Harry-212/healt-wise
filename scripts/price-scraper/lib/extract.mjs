@@ -174,6 +174,39 @@ export function extractFromVariants(html, medication) {
   return { doses };
 }
 
+// ---------------------------------------------------------------- Shop records
+
+/**
+ * Pharmulous embeds its live product records (the data behind the price
+ * checker) in the page as escaped JSON: `"size":"1 x 1.7mg","quantity":"1 Pen",
+ * …,"label_count":1,…,"price":149.99,"price_exvat":149.99,"sale_price":0`.
+ * Its JSON-LD offers lag behind those records (9 Sep markup vs 24 Oct prices),
+ * so the records win. Only single-pen records are read; "2 x …" packs are not.
+ * A non-zero `sale_price` is a promotion, so the list `price` stays the standard.
+ */
+export function extractFromShopRecords(html, medication) {
+  const text = html
+    .replace(/&quot;/g, '"')
+    .replace(/\\+\//g, "/")
+    .replace(/\\+"/g, '"');
+  const doses = {};
+  const record = /"size":"1 x (\d{1,2}(?:\.\d{1,2})?)mg\s*"([^{}]*?)"price":(\d+(?:\.\d+)?),"price_exvat":\d+(?:\.\d+)?,"sale_price":(\d+(?:\.\d+)?)/g;
+  for (const m of text.matchAll(record)) {
+    if (!/"label_count":1\b/.test(m[2]) || /"hide":1\b/.test(m[2])) continue;
+    const dose = doseKeyFor(medication, Number.parseFloat(m[1]));
+    const price = parseGbp(m[3]);
+    if (!dose || doses[dose] || !isPlausiblePrice(price)) continue;
+    const sale = parseGbp(m[4]);
+    const onSale = sale > 0 && sale < price;
+    doses[dose] = {
+      price,
+      confidence: "high",
+      method: `shop records${onSale ? ` (sale price £${sale} ignored)` : ""}`,
+    };
+  }
+  return { doses };
+}
+
 // ---------------------------------------------------------------- Text
 
 function mgTokens(text) {
@@ -271,14 +304,15 @@ function pricesForRun(text, run) {
 
 // ---------------------------------------------------------------- Merge
 
-/** Per-dose merge: JSON-LD, then shop variants, then text; sanity-checks against the page's own price range. */
+/** Per-dose merge: shop records, JSON-LD, shop variants, then text; sanity-checks against the page's own price range. */
 export function extractStandardPrices(html, medication) {
+  const sr = extractFromShopRecords(html, medication);
   const ld = extractFromJsonLd(html, medication);
   const vr = extractFromVariants(html, medication);
   const tx = extractFromText(html, medication);
   const doses = {};
   for (const dose of DOSES[medication]) {
-    const hit = ld.doses[dose] ?? vr.doses[dose] ?? tx.doses[dose];
+    const hit = sr.doses[dose] ?? ld.doses[dose] ?? vr.doses[dose] ?? tx.doses[dose];
     if (hit) doses[dose] = { ...hit };
   }
 

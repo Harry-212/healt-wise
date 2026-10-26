@@ -31,6 +31,9 @@ const instrumentSerif = Instrument_Serif({
 const TOC_FIXED_TOP_PX = 112;
 const ACTIVE_SECTION_TOP_PX = 148;
 const HERO_END_ID = "methodology-hero-end";
+/** Agreed definition of the price shown in the main comparison tables. */
+const STANDARD_PRICE_RULE =
+  "Healthwise360's main comparison tables use the normal publicly available price for one treatment unit or monthly supply, without a promotional code, new-customer discount or long-term commitment. Delivery and compulsory fees are displayed separately where verified. Introductory, subscription and discount-code prices may be shown separately with their conditions.";
 /** SiteEndSection — hide TOC before recommended articles carousel. */
 const KEEP_EXPLORING_ID = "keep-exploring";
 const SCROLL_OFFSET_PX = 112;
@@ -550,6 +553,10 @@ export default function MethodologyClient() {
                       </p>
                     </div>
                   </div>
+
+                  <p className="text-sm leading-relaxed text-slate-700">
+                    {STANDARD_PRICE_RULE}
+                  </p>
                 </section>
 
                 {/* Why We Look Beyond the Cheapest Price */}

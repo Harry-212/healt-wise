@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { extractStandardPrices, extractFromJsonLd, extractFromText, extractFromVariants } from "../lib/extract.mjs";
+import { extractStandardPrices, extractFromJsonLd, extractFromText, extractFromVariants, extractFromShopRecords } from "../lib/extract.mjs";
 
 const prices = (r) => Object.fromEntries(Object.entries(r.doses).map(([d, v]) => [d, v.price]));
 
@@ -135,4 +135,54 @@ test("Shopify variants: pence integers, compare-at ignored, {amount} objects, mu
 test("prose mentioning doses without a price table yields nothing", () => {
   const html = "Doses go from 2.5mg to 5mg, then 7.5mg, 10mg, 12.5mg and 15mg. Plans from £149 a month.";
   assert.deepEqual(extractFromText(html, "mounjaro").doses, {});
+});
+
+// Pharmulous regression: its JSON-LD offers lag behind the live product records
+// that feed the price checker, so the 2 November run must read the records.
+const pharmulousRecord = (strength, pens, price, sale = 0) => ({
+  id: 1, item_id: 75, size: `${pens} x ${strength}`, quantity: pens === 1 ? "1 Pen" : `${pens} Pens`,
+  pack_size: 1, label_count: pens, strength, colour: "", price, price_exvat: price, sale_price: sale, hide: 0,
+});
+const pharmulousHtml = (records, staleLd) => {
+  const escaped = JSON.stringify(records).replace(/"/g, "&quot;").replace(/\//g, "\/");
+  return `<script type="application/ld+json">${JSON.stringify(staleLd)}</script><div :variants="${escaped}"></div>`;
+};
+
+test("Pharmulous: live product records win over stale JSON-LD; multi-pen packs ignored", () => {
+  const staleLd = {
+    "@type": "Product",
+    name: "Wegovy Injection",
+    offers: [
+      { "@type": "Offer", name: "Wegovy 0.25mg", price: "99.99" },
+      { "@type": "Offer", name: "Wegovy 0.5mg", price: "109.99" },
+      { "@type": "Offer", name: "Wegovy 7.2mg", price: "229.99" },
+    ],
+  };
+  const html = pharmulousHtml([
+    pharmulousRecord("0.25mg", 1, 94.99),
+    pharmulousRecord("0.5mg", 1, 99.99),
+    pharmulousRecord("0.5mg", 2, 189.99),
+    pharmulousRecord("7.2mg", 1, 209.99),
+  ], staleLd);
+  const r = extractStandardPrices(html, "wegovy");
+  assert.deepEqual(prices(r), { "0.25mg": 94.99, "0.5mg": 99.99, "7.2mg": 209.99 });
+  assert.match(r.doses["0.5mg"].method, /shop records/);
+});
+
+test("Pharmulous: a non-zero sale_price is a promotion, the list price stays standard", () => {
+  const html = pharmulousHtml([pharmulousRecord("2.5mg", 1, 144.99, 129.99)], {});
+  const r = extractFromShopRecords(html, "mounjaro");
+  assert.deepEqual(prices(r), { "2.5mg": 144.99 });
+  assert.match(r.doses["2.5mg"].method, /sale price £129.99 ignored/);
+});
+
+test("Pharmulous: a trailing space in the size label ('1 x 7.2mg ') still reads", () => {
+  const record = { ...pharmulousRecord("7.2mg", 1, 209.99), size: "1 x 7.2mg " };
+  assert.deepEqual(prices(extractFromShopRecords(pharmulousHtml([record], {}), "wegovy")), { "7.2mg": 209.99 });
+});
+
+test("Pharmulous: records also read when the JSON is escaped twice", () => {
+  const rec = JSON.stringify([pharmulousRecord("1.7mg", 1, 149.99)]);
+  const html = `<div data-x="${JSON.stringify(rec).replace(/"/g, "&quot;")}"></div>`;
+  assert.deepEqual(prices(extractFromShopRecords(html, "wegovy")), { "1.7mg": 149.99 });
 });

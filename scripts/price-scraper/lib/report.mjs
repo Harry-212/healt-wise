@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { STANDARD_PRICE_RULE } from "./standard-price-rule.mjs";
 
 const gbp = (v) => (typeof v === "number" ? `£${v.toFixed(2)}` : v == null ? "—" : String(v));
 const pct = (v) => (v == null ? "—" : `${v > 0 ? "+" : ""}${v}%`);
@@ -98,6 +99,11 @@ export function writeReports({ outDir, runDate, rows, pharmacyReads, comparators
   const providersTotal = new Set(rows.map((r) => r.providerId)).size;
   const md = [];
   md.push(`# Price check — ${runDate}`, "");
+  md.push(`> **Standard-price rule.** ${STANDARD_PRICE_RULE}`, "");
+  md.push(
+    "Reviewer checklist: (1) confirm every proposed price is the normal public price, not a code, first-order, subscription or plan price; (2) a price shown only after a code or first-order reward is stored separately, never in the table; (3) delivery and consultation fees are only called \"included\" when the checkout shows it; (4) a strength the provider does not list is \"N/A\", not \"TBC\".",
+    "",
+  );
   md.push("> Prototype run. **Nothing on the website was changed.** This report shows what the monthly update *would* do.", "");
   md.push("## Summary", "");
   md.push(`- Providers on Healthwise360: **${providersTotal}** (Mounjaro ${current.mounjaro.providers.length}, Wegovy ${current.wegovy.providers.length}); current prices read from ${options.currentSource}.`);
