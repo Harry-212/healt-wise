@@ -547,6 +547,21 @@ export default function AdminDashboard() {
     );
   }
 
+  /** Marks a Wegovy strength as not offered ("N/A") or back to not yet checked ("TBC"). */
+  function setWegovyCellStatus(
+    index: number,
+    dose: (typeof WEGOVY_DOSE_KEYS)[number],
+    status: "N/A" | "TBC",
+  ) {
+    setWegovyRows((rows) =>
+      rows.map((row, i) =>
+        i === index
+          ? { ...row, prices: { ...row.prices, [dose]: status } }
+          : row,
+      ),
+    );
+  }
+
   const rowCount =
     activeTab === "mounjaro" ? mounjaroRows.length : wegovyRows.length;
 
@@ -844,10 +859,38 @@ export default function AdminDashboard() {
                                 value={
                                   typeof cell === "number" ? cell : null
                                 }
-                                onCommit={(n) =>
-                                  updateWegovyPrice(index, dose, n)
-                                }
+                                onCommit={(n) => {
+                                  // A stray focus/blur on an N/A or TBC cell must not turn it into £0.
+                                  if (n === 0 && typeof cell !== "number") return;
+                                  updateWegovyPrice(index, dose, n);
+                                }}
                               />
+                              {typeof cell !== "number" && (
+                                <span className="mt-0.5 block text-[10px] font-medium text-slate-500">
+                                  {cell}
+                                </span>
+                              )}
+                              {cell === "N/A" ? (
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    setWegovyCellStatus(index, dose, "TBC")
+                                  }
+                                  className="mt-0.5 block text-[10px] text-slate-400 underline hover:text-slate-600"
+                                >
+                                  clear N/A
+                                </button>
+                              ) : typeof cell !== "number" ? (
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    setWegovyCellStatus(index, dose, "N/A")
+                                  }
+                                  className="mt-0.5 block text-[10px] text-slate-400 underline hover:text-slate-600"
+                                >
+                                  not offered
+                                </button>
+                              ) : null}
                             </td>
                           );
                         })}
