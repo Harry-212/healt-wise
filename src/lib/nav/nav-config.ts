@@ -76,6 +76,7 @@ export const NAV_PANELS: NavPanel[] = [
         links: [
           { label: "Mounjaro", href: "/what-is-mounjaro", icon: "syringe" },
           { label: "Wegovy", href: "/what-is-wegovy", icon: "syringe" },
+          { label: "Foundayo", href: "/what-is-foundayo", icon: "pill" },
         ],
       },
       {
