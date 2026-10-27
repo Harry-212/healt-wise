@@ -12,16 +12,9 @@ import {
   pillH3Class,
 } from "@/components/prices/PillPricePageParts";
 import TrustSignals from "@/components/trust/TrustSignals";
-import {
-  PILL_PRICES_LAST_CHECKED_LABEL,
-  WEGOVY_PILL_DOSES,
-  cheapestAtDose,
-  doseRange,
-  formatPillGbp,
-  stepUpTotals,
-} from "@/lib/data/pill-prices";
-import { WEGOVY_PILL_PRICE_ROWS } from "@/lib/data/pill-price-rows";
-import { pillPriceJsonLd, type PillFaq } from "@/lib/seo/pill-price-json-ld";
+import { PILL_PRICES_LAST_CHECKED_LABEL, formatPillGbp } from "@/lib/data/pill-prices";
+import { buildWegovyPillPriceCopy, joinList } from "@/lib/data/wegovy-pill-price-copy";
+import { pillPriceJsonLd } from "@/lib/seo/pill-price-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 import {
   WHY_CHOOSE_HEALTHWISE360_ALT,
@@ -30,8 +23,8 @@ import {
 
 const PATH = "/wegovy-pill-price-comparison";
 const TITLE = "Wegovy Pill Price Comparison UK: Compare Prices by Dose";
-const DESCRIPTION =
-  "Compare Wegovy pill prices from 41 UK providers by dose, from £89 to £269 a month. Listed prices, last checked 24 October 2026.";
+const COPY = buildWegovyPillPriceCopy();
+const DESCRIPTION = COPY.description;
 
 /**
  * Draft: kept out of search results (and the sitemap) until Harry confirms the
@@ -52,59 +45,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const FAQS: PillFaq[] = [
-  {
-    question: "How much does the Wegovy pill cost in the UK?",
-    answer:
-      "On this page, listed monthly prices run from £89 for the 1.5mg dose to £269 for the 25mg dose. Listed prices, last checked 24 October 2026, confirm at checkout.",
-  },
-  {
-    question: "What is the cheapest Wegovy pill price?",
-    answer:
-      "For the 1.5mg dose the lowest listed price is £89 at Ashcroft Pharmacy. For 4mg, 9mg and 25mg the lowest listed prices are £97, £112 and £158 at Medicine Marketplace.",
-  },
-  {
-    question: "Do Wegovy pill prices change by dose?",
-    answer:
-      "Yes. Each dose has its own price, and prices rise with the dose. The 1.5mg dose is the lowest priced and the 25mg dose the highest.",
-  },
-  {
-    question: "How much do all four doses cost?",
-    answer:
-      "One month at each of 1.5mg, 4mg, 9mg and 25mg costs from £457 to £796 across the providers on this page, a gap of £339.",
-  },
-  {
-    question: "Is the Wegovy pill cheaper than the injection?",
-    answer:
-      "We do not compare the two on this page because the injection is priced and dosed differently. Compare the listed monthly price of each against your prescriber's advice.",
-  },
-  {
-    question: "Does the listed price include delivery?",
-    answer:
-      "Not always. Some providers list delivery separately or add it at checkout, so check the final total before you order.",
-  },
-  {
-    question: "Is the Wegovy pill available on the NHS?",
-    answer:
-      "Not at the moment. The MHRA approved the tablet on 11 June 2026, and the NHS has not made it available yet.",
-  },
-  {
-    question: "Why do prices differ between providers?",
-    answer:
-      "Providers set their own prices and include different services. Some prices also come from comparison sites, which is why each row shows its source.",
-  },
-];
-
 export default function WegovyPillPriceComparisonPage() {
-  const rows = WEGOVY_PILL_PRICE_ROWS;
-  const ranges = WEGOVY_PILL_DOSES.map((_, i) => doseRange(rows, i));
-  const cheapest = WEGOVY_PILL_DOSES.map((_, i) => cheapestAtDose(rows, i));
-  const totals = stepUpTotals(rows);
-  const gap = Math.round((totals[totals.length - 1].total - totals[0].total) * 100) / 100;
-
-  const first = ranges[0];
-  const last = ranges[ranges.length - 1];
-  const heroAnswer = `Listed Wegovy pill prices from ${rows.length} UK providers run from ${formatPillGbp(first.lowest)} a month for the ${WEGOVY_PILL_DOSES[0]} dose to ${formatPillGbp(last.highest)} a month for the ${WEGOVY_PILL_DOSES[WEGOVY_PILL_DOSES.length - 1]} dose. Pick a dose below to see every provider, cheapest first. Listed prices, last checked ${PILL_PRICES_LAST_CHECKED_LABEL}, confirm at checkout.`;
+  const { doses, rows, ranges, cheapest, totals, gap, countWord, bareDoses, laterDoses, heroAnswer, faqs } = COPY;
 
   const jsonLd = pillPriceJsonLd({
     path: PATH,
@@ -114,7 +56,7 @@ export default function WegovyPillPriceComparisonPage() {
     aboutName: "Wegovy pill prices in the UK",
     breadcrumbName: "Wegovy Pill Price Comparison UK",
     dateModified: "2026-10-26",
-    faqs: FAQS,
+    faqs,
   });
 
   return (
@@ -163,8 +105,8 @@ export default function WegovyPillPriceComparisonPage() {
               <TrustTile icon={Layers} value={String(rows.length)} label="UK providers compared" />
               <TrustTile
                 icon={ListChecks}
-                value={String(WEGOVY_PILL_DOSES.length)}
-                label="doses: 1.5mg, 4mg, 9mg and 25mg"
+                value={String(doses.length)}
+                label={`doses: ${joinList(doses)}`}
               />
               <TrustTile
                 icon={CalendarCheck}
@@ -183,7 +125,7 @@ export default function WegovyPillPriceComparisonPage() {
               so. Each row shows where the price was taken from.
             </p>
             <PillPriceTable
-              doses={WEGOVY_PILL_DOSES}
+              doses={doses}
               rows={rows}
               lastCheckedLabel={PILL_PRICES_LAST_CHECKED_LABEL}
             />
@@ -202,7 +144,7 @@ export default function WegovyPillPriceComparisonPage() {
               lowest listed price on a pharmacy&apos;s own website.
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
-              {WEGOVY_PILL_DOSES.map((dose, i) => (
+              {doses.map((dose, i) => (
                 <CheapestCard
                   key={dose}
                   dose={dose}
@@ -219,9 +161,9 @@ export default function WegovyPillPriceComparisonPage() {
 
           {/* Section 5: Step up */}
           <section id="step-up" className="scroll-mt-28 space-y-5">
-            <h2 className={pillH2Class}>What the four doses cost in total</h2>
+            <h2 className={pillH2Class}>What the {countWord} doses cost in total</h2>
             <p>
-              The Wegovy tablet starts at 1.5mg once a day and moves up to 4mg, 9mg and 25mg,
+              The Wegovy tablet starts at {doses[0]} once a day and moves up to {laterDoses},
               with at least one month at each dose, according to the MHRA approval announced on
               11 June 2026. The tables below show the minimum cost of one month at each dose,
               using the listed prices above.
@@ -238,7 +180,7 @@ export default function WegovyPillPriceComparisonPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-slate-800">
-                  {WEGOVY_PILL_DOSES.map((dose, i) => (
+                  {doses.map((dose, i) => (
                     <tr key={dose}>
                       <th scope="row" className="px-3 py-3 text-left font-medium text-slate-900">{dose}</th>
                       <td className="px-3 py-3 tabular-nums">{formatPillGbp(ranges[i].lowest)}</td>
@@ -248,7 +190,7 @@ export default function WegovyPillPriceComparisonPage() {
                 </tbody>
               </table>
             </div>
-            <h3 className={pillH3Class}>Total for one month at each of the four doses</h3>
+            <h3 className={pillH3Class}>Total for one month at each of the {countWord} doses</h3>
             <PillStepUpTable
               rows={totals}
               totalLabel="Total"
@@ -258,7 +200,7 @@ export default function WegovyPillPriceComparisonPage() {
             <p>
               The gap between the lowest and highest total is {formatPillGbp(gap)}. Your
               prescriber decides your dose, and some people stay longer on a dose. Totals are one
-              month of each dose, 1.5, 4, 9 and 25mg, and exclude delivery and consultation fees.
+              month of each dose, {bareDoses}, and exclude delivery and consultation fees.
             </p>
           </section>
 
@@ -322,7 +264,7 @@ export default function WegovyPillPriceComparisonPage() {
           {/* Section 9: FAQ */}
           <section id="faq" className="scroll-mt-28 space-y-4">
             <h2 className={pillH2Class}>FAQs</h2>
-            <FaqAccordion faqs={FAQS} />
+            <FaqAccordion faqs={faqs} />
           </section>
         </div>
 
