@@ -277,7 +277,7 @@ export default function ArticleClient() {
                 </Link>
                 , semaglutide, tirzepatide, or{" "}
                 <Link
-                  href="/blog/wegovy-pill-uk"
+                  href="/what-is-wegovy-pill"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Wegovy Tablet

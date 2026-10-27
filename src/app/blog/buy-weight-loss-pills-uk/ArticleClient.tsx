@@ -418,7 +418,7 @@ export default function ArticleClient() {
                 tablets over injections. For more on how it works and how it
                 compares with injectable Wegovy, read our{" "}
                 <Link
-                  href="/blog/wegovy-pill-uk"
+                  href="/what-is-wegovy-pill"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Wegovy Tablet UK guide

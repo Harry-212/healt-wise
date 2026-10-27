@@ -192,7 +192,7 @@ export default function ArticleClient() {
                   Mounjaro
                 </Link>
                 , semaglutide, tirzepatide, or{" "}
-                <Link href="/blog/wegovy-pill-uk" className={linkClass}>
+                <Link href="/what-is-wegovy-pill" className={linkClass}>
                   Wegovy Tablet
                 </Link>
                 , the safest approach is usually simple: increase fibre

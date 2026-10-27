@@ -483,9 +483,14 @@ export default function WhatIsWegovyPage() {
                   medicine. It is a separate product from the weekly injection on
                   this page.
                 </p>
-                <Link href="/blog/wegovy-pill-uk" className={linkClass}>
-                  Read our Wegovy pill guide →
-                </Link>
+                <div className="flex flex-wrap gap-4 pt-1">
+                  <Link href="/what-is-wegovy-pill" className={linkClass}>
+                    What is the Wegovy pill? →
+                  </Link>
+                  <Link href="/wegovy-tablet-faqs" className={linkClass}>
+                    Wegovy tablet FAQ →
+                  </Link>
+                </div>
               </div>
             </section>
 

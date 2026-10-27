@@ -41,6 +41,7 @@ const EXCLUDED_SITEMAP_PATHS = new Set<string>([
   "/blog/injectable-obesity-treatments-uk-what-works-and-what-doesnt",
   "/blog/understanding-prescription-weight-loss-injections-uk",
   "/blog/what-is-wegovy-pill",
+  "/blog/wegovy-pill-uk",
   "/blog/the-truth-about-mounjaro-dosage-for-weight-loss-effectiveness",
   "/blog/does-mounjaro-really-work-for-weight-loss-find-out-here",
   "/blog/discover-if-mounjaro-is-safe-for-weight-loss-and-right-for-you",
@@ -95,6 +96,8 @@ const STATIC_PATHS = [
   "/what-is-foundayo",
   "/what-is-mounjaro",
   "/what-is-wegovy",
+  "/wegovy-tablet-faqs",
+  "/what-is-wegovy-pill",
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
