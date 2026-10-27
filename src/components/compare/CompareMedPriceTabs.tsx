@@ -159,18 +159,18 @@ function WegovyPillPanel() {
       </p>
       <div className="mt-6 flex flex-wrap gap-4">
         <Link
-          href="/blog/wegovy-pill-uk"
+          href="/what-is-wegovy-pill"
           className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
         >
           <Pill className="h-4 w-4" aria-hidden />
-          Wegovy Tablet UK: price, availability and safety
+          What is the Wegovy Pill?
         </Link>
         <Link
-          href="/blog/wegovy-pill-uk"
+          href="/wegovy-tablet-faqs"
           className="inline-flex items-center gap-2 text-sm font-semibold text-brand-primary underline-offset-2 hover:underline"
         >
           <Pill className="h-4 w-4" aria-hidden />
-          What is Wegovy Tablet?
+          Wegovy Tablet FAQs
         </Link>
       </div>
     </motion.div>

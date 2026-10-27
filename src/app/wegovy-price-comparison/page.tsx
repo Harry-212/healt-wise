@@ -519,6 +519,15 @@ export default function CompareWegovyPricesUkPage() {
               at the prices in our table. Ask your GP, and compare Wegovy prices
               here if you go private.
             </p>
+            <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+              Prefer an oral medication instead of weekly injections? Read our complete guide to{" "}
+              <Link
+                href="/what-is-wegovy-pill"
+                className="font-semibold text-emerald-800 underline decoration-emerald-400 underline-offset-4 hover:text-emerald-950"
+              >
+                What is the Wegovy pill?
+              </Link>
+            </p>
           </div>
         </section>
 
