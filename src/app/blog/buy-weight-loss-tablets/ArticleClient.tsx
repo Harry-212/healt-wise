@@ -604,7 +604,22 @@ export default function ArticleClient() {
                     the UK on June 11, 2026. However, live market availability
                     is still early and uneven. Pharmacy Online already shows a
                     pre-order entry, while Oxford lists a Wegovy tablet entry as
-                    out of stock, so you should expect rapid changes.
+                    out of stock, so you should expect rapid changes. For a plain guide to
+                    the tablet, read{" "}
+                    <Link
+                      href="/what-is-wegovy-pill"
+                      className="font-medium text-emerald-600 hover:underline"
+                    >
+                      Wegovy pill explained
+                    </Link>{" "}
+                    and our{" "}
+                    <Link
+                      href="/wegovy-tablet-faqs"
+                      className="font-medium text-emerald-600 hover:underline"
+                    >
+                      Wegovy tablet FAQ
+                    </Link>
+                    .
                   </p>
                 </div>
               </div>

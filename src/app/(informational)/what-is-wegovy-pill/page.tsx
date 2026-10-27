@@ -423,8 +423,26 @@ export default function WhatIsWegovyPillPage() {
           <div className="border-t border-slate-200 pt-8 text-xs text-slate-500">
             <p>
               Last reviewed: October 2026. Sources include regulatory filings
-              with the MHRA, the OASIS 4 clinical trial report, and clinical
-              guidelines from the General Pharmaceutical Council and NICE.
+              with the{" "}
+              <a
+                href="https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                MHRA
+              </a>
+              , the OASIS 4 clinical trial report, and clinical guidelines from
+              the{" "}
+              <a
+                href="https://www.pharmacyregulation.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                General Pharmaceutical Council
+              </a>{" "}
+              and NICE.
             </p>
           </div>
         </div>
