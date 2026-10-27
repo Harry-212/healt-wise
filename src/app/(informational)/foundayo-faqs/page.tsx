@@ -40,7 +40,7 @@ const h3Class = "text-lg font-bold text-slate-900 sm:text-xl";
 /** Phrases inside the approved answers that become internal links; the text itself is unchanged. */
 const ANSWER_LINKS: { phrase: string; href: string }[] = [
   { phrase: "BMI calculator", href: "/tools/bmi-calculator" },
-  { phrase: "Wegovy pill guide", href: "/blog/wegovy-pill-uk" },
+  { phrase: "Wegovy pill guide", href: "/what-is-wegovy-pill" },
   { phrase: "Wegovy vs Mounjaro comparison", href: "/compare/wegovy-vs-mounjaro" },
 ];
 

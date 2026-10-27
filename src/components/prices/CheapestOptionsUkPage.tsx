@@ -425,7 +425,7 @@ export default function CheapestOptionsUkPage() {
             <strong>The Wegovy pill.</strong> A daily tablet with the same
             medicine as Wegovy. Check the current price before you compare it
             with the injection.{" "}
-            <Link href="/blog/wegovy-pill-uk" className={linkClass}>
+            <Link href="/what-is-wegovy-pill" className={linkClass}>
               Read our Wegovy pill guide →
             </Link>
           </li>

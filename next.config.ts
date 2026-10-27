@@ -506,7 +506,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/what-is-wegovy-pill",
-        destination: "/blog/wegovy-pill-uk",
+        destination: "/what-is-wegovy-pill",
+        permanent: true,
+      },
+      {
+        source: "/blog/wegovy-pill-uk",
+        destination: "/what-is-wegovy-pill",
         permanent: true,
       },
       {

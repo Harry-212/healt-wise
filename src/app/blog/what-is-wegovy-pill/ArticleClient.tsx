@@ -321,7 +321,7 @@ export default function ArticleClient() {
                 availability, safety, and treatment differences clearly. For a
                 full UK overview, see our{" "}
                 <Link
-                  href="/blog/wegovy-pill-uk"
+                  href="/what-is-wegovy-pill"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Wegovy Tablet UK guide
@@ -420,7 +420,7 @@ export default function ArticleClient() {
               <p>
                 For a deeper comparison, read the{" "}
                 <Link
-                  href="/blog/wegovy-pill-uk"
+                  href="/what-is-wegovy-pill"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Wegovy Tablet UK guide
@@ -862,7 +862,7 @@ export default function ArticleClient() {
               <ul className="list-disc space-y-3 pl-5">
                 <li>
                   <Link
-                    href="/blog/wegovy-pill-uk"
+                    href="/what-is-wegovy-pill"
                     className="font-medium text-emerald-600 hover:underline"
                   >
                     Wegovy Tablet UK guide
@@ -1042,7 +1042,7 @@ export default function ArticleClient() {
               <p>
                 For Healthwise360, this article should support the main{" "}
                 <Link
-                  href="/blog/wegovy-pill-uk"
+                  href="/what-is-wegovy-pill"
                   className="font-medium text-emerald-600 hover:underline"
                 >
                   Wegovy Tablet UK guide

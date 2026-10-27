@@ -489,7 +489,7 @@ export default function WhatIsFoundayoPage() {
             </p>
             <p>
               Read our{" "}
-              <Link href="/blog/wegovy-pill-uk" className={linkClass}>
+              <Link href="/what-is-wegovy-pill" className={linkClass}>
                 Wegovy pill guide
               </Link>
               .
