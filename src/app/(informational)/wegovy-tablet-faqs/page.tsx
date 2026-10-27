@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import TrustSignals from "@/components/trust/TrustSignals";
-import { WEGOVY_TABLET_FAQ_SECTIONS } from "@/lib/seo/wegovy-tablet-faqs-data";
+import {
+  WEGOVY_TABLET_FAQ_SECTIONS,
+  splitListAnswer,
+  type WegovyTabletFaq,
+} from "@/lib/seo/wegovy-tablet-faqs-data";
 import {
   WEGOVY_TABLET_FAQS_DESCRIPTION,
   WEGOVY_TABLET_FAQS_PATH,
@@ -33,6 +37,9 @@ const linkClass =
   "font-semibold text-emerald-800 underline decoration-emerald-400 underline-offset-4 hover:text-emerald-950";
 const h2Class = "text-2xl font-bold tracking-tight text-slate-900 md:text-3xl";
 const h3Class = "text-lg font-bold text-slate-900 sm:text-xl";
+const MHRA_URL =
+  "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency";
+const GPHC_URL = "https://www.pharmacyregulation.org/";
 
 /** Phrases inside the approved answers that become internal/external links without changing wording. */
 const ANSWER_LINKS: { phrase: string; href: string; external?: boolean }[] = [
@@ -94,6 +101,25 @@ function withLinks(text: string): ReactNode {
   }
 
   return <>{nodes}</>;
+}
+
+function renderAnswer(faq: WegovyTabletFaq): ReactNode {
+  const list = splitListAnswer(faq);
+  if (!list) return <p className="leading-relaxed">{withLinks(faq.answer)}</p>;
+  const items = list.items.map((item) => (
+    <li key={item}>{withLinks(item)}</li>
+  ));
+  return (
+    <div className="space-y-2 leading-relaxed">
+      <p>{withLinks(list.intro)}</p>
+      {list.ordered ? (
+        <ol className="list-decimal space-y-1 pl-6">{items}</ol>
+      ) : (
+        <ul className="list-disc space-y-1 pl-6">{items}</ul>
+      )}
+      {list.outro ? <p>{withLinks(list.outro)}</p> : null}
+    </div>
+  );
 }
 
 export default function WegovyTabletFaqsPage() {
@@ -173,7 +199,7 @@ export default function WegovyTabletFaqsPage() {
               {section.faqs.map((faq) => (
                 <div key={faq.question} className="space-y-2">
                   <h3 className={h3Class}>{faq.question}</h3>
-                  <p className="leading-relaxed">{withLinks(faq.answer)}</p>
+                  {renderAnswer(faq)}
                 </div>
               ))}
             </section>
@@ -254,7 +280,7 @@ export default function WegovyTabletFaqsPage() {
               {sectionBeforeStart.faqs.map((faq) => (
                 <div key={faq.question} className="space-y-2">
                   <h3 className={h3Class}>{faq.question}</h3>
-                  <p className="leading-relaxed">{withLinks(faq.answer)}</p>
+                  {renderAnswer(faq)}
                 </div>
               ))}
             </section>
@@ -263,8 +289,15 @@ export default function WegovyTabletFaqsPage() {
           <div className="border-t border-slate-200 pt-8 text-xs text-slate-500">
             <p>
               Last reviewed: October 2026. Sources include product information
-              published by the MHRA, clinical trial publications, and official
-              guidance from the General Pharmaceutical Council.
+              published by the{" "}
+              <a href={MHRA_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                MHRA
+              </a>
+              , clinical trial publications, and official guidance from the{" "}
+              <a href={GPHC_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                General Pharmaceutical Council
+              </a>
+              .
             </p>
           </div>
         </div>

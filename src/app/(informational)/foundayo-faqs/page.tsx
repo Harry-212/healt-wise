@@ -44,6 +44,14 @@ const ANSWER_LINKS: { phrase: string; href: string }[] = [
   { phrase: "Wegovy vs Mounjaro comparison", href: "/compare/wegovy-vs-mounjaro" },
 ];
 
+/** Extra link shown under an approved answer, outside the answer text and the schema. */
+const SEE_ALSO: Record<string, { label: string; href: string }> = {
+  "How is Foundayo different from the Wegovy pill?": {
+    label: "Wegovy tablet FAQ",
+    href: "/wegovy-tablet-faqs",
+  },
+};
+
 function withLinks(answer: string): ReactNode {
   const link = ANSWER_LINKS.find((l) => answer.includes(l.phrase));
   if (!link) return answer;
@@ -108,6 +116,14 @@ export default function FoundayoFaqsPage() {
                 <div key={faq.question} className="space-y-2">
                   <h3 className={h3Class}>{faq.question}</h3>
                   <p>{withLinks(faq.answer)}</p>
+                  {SEE_ALSO[faq.question] ? (
+                    <p className="text-sm text-slate-600">
+                      See also:{" "}
+                      <Link href={SEE_ALSO[faq.question].href} className={linkClass}>
+                        {SEE_ALSO[faq.question].label}
+                      </Link>
+                    </p>
+                  ) : null}
                 </div>
               ))}
             </section>

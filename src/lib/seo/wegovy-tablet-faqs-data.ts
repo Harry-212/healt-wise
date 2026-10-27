@@ -4,6 +4,54 @@
  * identical. Change them here only.
  */
 export type WegovyTabletFaq = { question: string; answer: string };
+export type WegovyTabletFaqList = {
+  ordered: boolean;
+  intro: string;
+  items: string[];
+  outro?: string;
+};
+
+/**
+ * Splits the "step by step" and "dosing chart" answers into an intro, list
+ * items and a closing sentence so the page can show a real list. The pieces
+ * joined with a space must equal the schema answer; otherwise this returns
+ * null and the page shows the answer as plain text.
+ */
+export function splitListAnswer(faq: {
+  question: string;
+  answer: string;
+}): WegovyTabletFaqList | null {
+  const colon = faq.answer.indexOf(": ");
+  if (colon === -1) return null;
+  const intro = faq.answer.slice(0, colon + 1);
+  const rest = faq.answer.slice(colon + 2);
+  let list: WegovyTabletFaqList | null = null;
+
+  if (faq.question.startsWith("What are the step by step")) {
+    const sentences = rest.split(/(?<=\.)\s+/);
+    list = {
+      ordered: true,
+      intro,
+      items: sentences.slice(0, -1),
+      outro: sentences[sentences.length - 1],
+    };
+  } else if (faq.question.startsWith("What does the Wegovy pill dosing chart")) {
+    const matches = [...rest.matchAll(/Step \d: .*?(?<=[a-z])\./g)];
+    const last = matches[matches.length - 1];
+    if (!last) return null;
+    list = {
+      ordered: false,
+      intro,
+      items: matches.map((m) => m[0]),
+      outro: rest.slice(last.index + last[0].length).trim() || undefined,
+    };
+  }
+
+  if (!list || list.items.length === 0) return null;
+  const rebuilt = [list.intro, ...list.items, list.outro].filter(Boolean).join(" ");
+  return rebuilt === faq.answer ? list : null;
+}
+
 export type WegovyTabletFaqSection = {
   id: string;
   heading: string;
