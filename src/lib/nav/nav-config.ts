@@ -54,6 +54,16 @@ export const NAV_PANELS: NavPanel[] = [
             emphasize: true,
           },
           {
+            label: "Foundayo prices",
+            href: "/foundayo-price-comparison",
+            icon: "pound",
+          },
+          {
+            label: "Wegovy pill prices",
+            href: "/wegovy-pill-price-comparison",
+            icon: "pound",
+          },
+          {
             label: "Compare Option UK",
             href: "/prices/cheapest-options-uk",
             icon: "pound",
