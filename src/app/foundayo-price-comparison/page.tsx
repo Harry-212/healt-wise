@@ -35,11 +35,6 @@ const TITLE = "Foundayo Price Comparison UK: Compare Prices by Dose";
 const DESCRIPTION =
   "Compare Foundayo prices from 15 UK providers by dose, from £73 to £199.99 a month. Listed prices, last checked 24 October 2026.";
 
-/**
- * Draft: kept out of search results (and the sitemap) until the medical
- * reviewer is added and Jeff approves the disclosure wording. Remove `robots`
- * and add PATH to the sitemap to publish.
- */
 export const metadata: Metadata = {
   ...buildPageShareMetadata({
     canonicalPath: PATH,
@@ -51,11 +46,9 @@ export const metadata: Metadata = {
     imageAlt: WHY_CHOOSE_HEALTHWISE360_ALT,
   }),
   title: { absolute: TITLE },
-  robots: { index: false, follow: false },
 };
 
-/** Flip to true when the Wegovy tablet price comparison page is live. */
-const WEGOVY_PILL_PRICE_PAGE_LIVE = false;
+const WEGOVY_PILL_PRICE_PAGE_LIVE = true;
 
 const FAQS: PillFaq[] = [
   {
@@ -103,7 +96,7 @@ const FAQS: PillFaq[] = [
 function withLinks(faq: PillFaq) {
   const links: { phrase: string; href: string }[] = [
     { phrase: "Mounjaro price comparison", href: "/mounjaro-price-comparison" },
-    // Added when /wegovy-pill-price-comparison goes live.
+    { phrase: "Wegovy tablet price comparison", href: "/wegovy-pill-price-comparison" },
   ];
   const link = links.find((l) => faq.answer.includes(l.phrase));
   if (!link) return faq.answer;
