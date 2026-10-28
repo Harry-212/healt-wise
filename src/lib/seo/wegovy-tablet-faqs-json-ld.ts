@@ -41,7 +41,7 @@ export function wegovyTabletFaqsJsonLd(): Record<string, unknown> {
         "@id": `${url}#webpage`,
         url,
         name: WEGOVY_TABLET_FAQS_TITLE,
-        headline: "Wegovy Tablet UK FAQs: Your All Questions are Answered Here",
+        headline: "Wegovy Tablet FAQs: UK Questions and Answers",
         description: WEGOVY_TABLET_FAQS_DESCRIPTION,
         inLanguage: "en-GB",
         isPartOf: { "@id": `${base}/#website` },
@@ -51,7 +51,7 @@ export function wegovyTabletFaqsJsonLd(): Record<string, unknown> {
           "@type": "Thing",
           name: "Wegovy tablet (oral semaglutide)",
         },
-        dateModified: "2026-10-23",
+        dateModified: "2026-10-27",
         audience: {
           "@type": "PeopleAudience",
           suggestedMinAge: 18,

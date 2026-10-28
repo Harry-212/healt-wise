@@ -41,7 +41,7 @@ export function whatIsWegovyPillJsonLd(): Record<string, unknown> {
         "@id": `${url}#webpage`,
         url,
         name: WHAT_IS_WEGOVY_PILL_TITLE,
-        headline: "What Is the Wegovy Pill? Everything You Need To Know About",
+        headline: "What Is the Wegovy Pill? A Plain UK Guide",
         description: WHAT_IS_WEGOVY_PILL_DESCRIPTION,
         inLanguage: "en-GB",
         isPartOf: { "@id": `${base}/#website` },
@@ -51,7 +51,7 @@ export function whatIsWegovyPillJsonLd(): Record<string, unknown> {
           "@type": "Thing",
           name: "Wegovy tablet (oral semaglutide)",
         },
-        dateModified: "2026-10-24",
+        dateModified: "2026-10-27",
         audience: {
           "@type": "PeopleAudience",
           suggestedMinAge: 18,
