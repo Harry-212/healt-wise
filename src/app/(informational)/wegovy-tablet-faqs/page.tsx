@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonicalPath: WEGOVY_TABLET_FAQS_PATH,
     title: WEGOVY_TABLET_FAQS_TITLE,
     metaDescription: WEGOVY_TABLET_FAQS_DESCRIPTION,
-    openGraphTitle: "Wegovy Tablet FAQ UK: Questions and Answers",
+    openGraphTitle: "Wegovy Tablet FAQs: UK Questions and Answers",
     openGraphDescription:
       "Plain English answers on the Wegovy tablet in the UK: how it works, how to take it, doses, weight loss and safety.",
     imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,
@@ -148,7 +148,7 @@ export default function WegovyTabletFaqsPage() {
                 UK Treatment FAQs
               </span>
               <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl md:text-5xl lg:text-[2.75rem] lg:leading-[1.12]">
-                Wegovy Tablet FAQ: Questions and Answers for the UK
+                Wegovy Tablet FAQs: UK Questions and Answers
               </h1>
               <p
                 id="hero-answer"
@@ -288,7 +288,7 @@ export default function WegovyTabletFaqsPage() {
 
           <div className="border-t border-slate-200 pt-8 text-xs text-slate-500">
             <p>
-              Last reviewed: October 2026. Sources include product information
+              Last updated: 27 October 2026. Sources include product information
               published by the{" "}
               <a href={MHRA_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
                 MHRA

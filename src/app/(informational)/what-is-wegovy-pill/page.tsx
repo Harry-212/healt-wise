@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     canonicalPath: WHAT_IS_WEGOVY_PILL_PATH,
     title: WHAT_IS_WEGOVY_PILL_TITLE,
     metaDescription: WHAT_IS_WEGOVY_PILL_DESCRIPTION,
-    openGraphTitle: "What Is the Wegovy Pill? Everything You Need To Know About",
+    openGraphTitle: "What Is the Wegovy Pill? A Plain UK Guide",
     openGraphDescription:
       "A plain UK guide to the Wegovy pill: what is in it, how it works, whether it works and where it stands in the UK.",
     imagePath: WHY_CHOOSE_HEALTHWISE360_SRC,
@@ -418,7 +418,7 @@ export default function WhatIsWegovyPillPage() {
 
           <div className="border-t border-slate-200 pt-8 text-xs text-slate-500">
             <p>
-              Last reviewed: October 2026. Sources include regulatory filings
+              Last updated: 27 October 2026. Sources include regulatory filings
               with the{" "}
               <a
                 href="https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency"
