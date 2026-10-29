@@ -738,13 +738,7 @@ export default function ArticleClient() {
                 <li>Small handful of nuts and fruit</li>
               </ul>
               <p>
-                These are general ideas, not a personalised meal plan. When time
-                or appetite makes cooking difficult, browse our{" "}
-                <Link href="/time-saver" className={linkClass}>
-                  quick complete meal options
-                </Link>{" "}
-                for practical alternatives that still provide structured
-                nutrition.
+                These are general ideas, not a personalised meal plan.
               </p>
             </GuideSection>
 
@@ -813,28 +807,6 @@ export default function ArticleClient() {
                 Food-first fibre remains the best starting point for most
                 people. However, smaller appetites and busy routines can make
                 balanced meals harder to prepare every day.
-              </p>
-              <p>
-                Healthwise360&apos;s{" "}
-                <Link href="/eat-healthier" className={linkClass}>
-                  healthier eating collection
-                </Link>{" "}
-                includes complete nutrition options for building more consistent
-                routines. If your focus is appetite management and portion
-                control, explore products designed to{" "}
-                <Link href="/support-weight-management" className={linkClass}>
-                  support weight management
-                </Link>
-                .
-              </p>
-              <p>
-                Fibre works best alongside enough protein, so our{" "}
-                <Link href="/protein-and-fitness" className={linkClass}>
-                  high-protein nutrition collection
-                </Link>{" "}
-                may also help when whole meals feel too large. These products
-                are practical nutrition support, not substitutes for prescribed
-                treatment or professional advice.
               </p>
               <p>
                 Treatment choice should still be based on clinical suitability.
