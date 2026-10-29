@@ -230,7 +230,7 @@ export default function WhatIsFoundayoPage() {
               You start on 0.8 mg once a day. Your prescriber may raise the dose
               in steps, no sooner than every 30 days. The highest dose is 17.2 mg
               a day. For every dose step, read our{" "}
-              <Link href="/helpful-guides/foundayo-uk" className={linkClass}>
+              <Link href="/foundayo-faqs" className={linkClass}>
                 Foundayo Q&A
               </Link>
               .
@@ -465,7 +465,7 @@ export default function WhatIsFoundayoPage() {
             </p>
             <p>
               For more detail, read our{" "}
-              <Link href="/helpful-guides/foundayo-uk" className={linkClass}>
+              <Link href="/foundayo-faqs" className={linkClass}>
                 Foundayo Q&A
               </Link>
               .
