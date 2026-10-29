@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import PriceComparisonCta from "@/components/prices/PriceComparisonCta";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import {
   AnimatePresence,
@@ -10,7 +10,6 @@ import {
   useSpring,
 } from "framer-motion";
 import {
-  Zap,
   Calculator,
   Grid3X3,
   Syringe,
@@ -132,8 +131,24 @@ function ClickChart() {
   );
 }
 
+/**
+ * Recognised standard labelled doses open their dose section on the price page.
+ * Any partial or unusual value goes to the general page: no dose or pen is suggested.
+ */
+const STANDARD_DOSES_MG = [2.5, 5, 7.5, 10, 12.5, 15];
+const PRICE_PAGE = "/mounjaro-price-comparison";
+
+function priceComparisonHref(desiredDose: number): string {
+  if (!STANDARD_DOSES_MG.includes(desiredDose)) return PRICE_PAGE;
+  return `${PRICE_PAGE}#mounjaro-${`${desiredDose}mg`.replace(".", "-")}-price`;
+}
+
 /* ══════════════════════════════════════════════════════════════════ */
-export default function MounjaroClickCalculatorClient() {
+export default function MounjaroClickCalculatorClient({
+  priceCheckedLabel,
+}: {
+  priceCheckedLabel: string;
+}) {
   const [tab, setTab] = useState<Tab>("calculator");
   const [penStrengthStr, setPenStrengthStr] = useState("5");
   const [desiredDoseStr, setDesiredDoseStr] = useState("2.5");
@@ -152,6 +167,7 @@ export default function MounjaroClickCalculatorClient() {
   /* derived values */
   const penStrength = useMemo(() => pn(penStrengthStr), [penStrengthStr]);
   const desiredDose = useMemo(() => pn(desiredDoseStr), [desiredDoseStr]);
+  const priceHref = priceComparisonHref(desiredDose);
   const clicks = useMemo(
     () => calculateClicks(penStrength, desiredDose),
     [penStrength, desiredDose],
@@ -460,39 +476,20 @@ export default function MounjaroClickCalculatorClient() {
                             </div>
                           )}
 
-                          <div className="flex flex-wrap justify-center gap-x-5 gap-y-4 pt-6 xl:gap-x-8">
-                            <Link
-                              href="/compare/wegovy-vs-mounjaro"
-                              className="inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-violet-600 px-5 text-base font-semibold text-white transition hover:bg-violet-700 shadow-sm sm:w-auto sm:min-w-48 xl:px-7"
-                            >
-                              Compare GLP-1s{" "}
-                              <Zap
-                                className="inline h-5 w-5 fill-current"
-                                aria-hidden
-                              />
-                            </Link>
-                            {(() => {
-                              const validDoses = [2.5, 5, 7.5, 10, 12.5, 15];
-                              const selectedDose = validDoses.includes(desiredDose)
-                                ? desiredDose
-                                : validDoses.includes(penStrength)
-                                  ? penStrength
-                                  : 2.5;
-                              const doseSlug = `${selectedDose}mg`.replace(".", "-");
-                              const priceHref = `/mounjaro-price-comparison#mounjaro-${doseSlug}-price`;
-                              return (
-                                <Link
-                                  href={priceHref}
-                                  onClick={() =>
-                                    trackCalculatorToPriceComparison(priceHref)
-                                  }
-                                  className="inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-emerald-700 px-5 text-base font-bold text-white shadow-sm transition hover:bg-emerald-800 sm:w-auto sm:min-w-48 xl:px-7"
-                                >
-                                  Compare prices for Mounjaro {selectedDose} mg →
-                                </Link>
-                              );
-                            })()}
-                          </div>
+                          <PriceComparisonCta
+                            heading="Compare checked Mounjaro prices"
+                            body="See standard prices and additional charges from the UK providers listed in our comparison."
+                            primary={{
+                              label: "Compare Mounjaro prices",
+                              href: priceHref,
+                              onClick: () => trackCalculatorToPriceComparison(priceHref),
+                            }}
+                            secondary={{
+                              label: "Compare Mounjaro and Wegovy",
+                              href: "/compare/wegovy-vs-mounjaro",
+                            }}
+                            lastChecked={priceCheckedLabel}
+                          />
                         </motion.div>
                       )}
                     </div>

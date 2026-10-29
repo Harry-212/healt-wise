@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
+import { getMounjaroLastUpdatedLabel } from "@/lib/data/compare-store";
 import { blogImgPath, MOUNJARO_CLICK_CALCULATOR_UK_HERO_WEBP } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
@@ -191,7 +192,7 @@ export default function MounjaroClickCalculatorUkPage() {
           }),
         }}
       />
-      <ArticleClient />
+      <ArticleClient priceCheckedLabel={getMounjaroLastUpdatedLabel()} />
     </>
   );
 }

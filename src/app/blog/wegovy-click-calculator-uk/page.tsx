@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import ArticleClient from "./ArticleClient";
+import { getWegovyLastUpdatedLabel } from "@/lib/data/compare-store";
 import {
   blogImgPath,
   WEGOVY_CLICK_CALCULATOR_UK_HERO_WEBP,
@@ -163,7 +164,7 @@ export default function WegovyClickCalculatorUkPage() {
           }),
         }}
       />
-      <ArticleClient />
+      <ArticleClient priceCheckedLabel={getWegovyLastUpdatedLabel()} />
     </>
   );
 }

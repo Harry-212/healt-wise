@@ -1,3 +1,4 @@
+import { getWegovyLastUpdatedLabel } from "@/lib/data/compare-store";
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -41,7 +42,7 @@ export default function WegovyClickCalculatorPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
 
-      <WegovyClickCalculatorClient />
+      <WegovyClickCalculatorClient priceCheckedLabel={getWegovyLastUpdatedLabel()} />
       
       <article className="relative z-20 border-t border-slate-200/80 bg-background">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-5 md:px-8 md:py-20">
