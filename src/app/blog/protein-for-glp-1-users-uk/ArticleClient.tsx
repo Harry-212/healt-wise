@@ -515,16 +515,8 @@ export default function ArticleClient() {
               </p>
               <p>
                 Therefore, users should choose carefully and avoid products that
-                promise unrealistic weight loss. If you do want a practical
-                option when meals feel hard, browse our{" "}
-                <Link
-                  href="/protein-and-fitness"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  high-protein nutrition collection
-                </Link>{" "}
-                for complete protein shakes, bars, and starter kits rather than
-                random &ldquo;GLP-1 alternative&rdquo; supplements.
+                promise unrealistic weight loss, including random
+                &ldquo;GLP-1 alternative&rdquo; supplements.
               </p>
             </GuideSection>
 
@@ -888,17 +880,7 @@ export default function ArticleClient() {
                 <li>Protein shake if food is difficult</li>
               </ul>
               <p>
-                These are general ideas, not a personalised diet plan. If
-                mornings feel rushed or appetite is too low for a full plate,
-                our{" "}
-                <Link
-                  href="/time-saver"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  time-saver meal options
-                </Link>{" "}
-                can help bridge the gap without turning every meal into a
-                complicated prep job.
+                These are general ideas, not a personalised diet plan.
               </p>
             </GuideSection>
 
@@ -915,47 +897,8 @@ export default function ArticleClient() {
                 protein target without forcing large portions.
               </p>
               <p>
-                Healthwise360 curates nutrition collections for exactly this
-                kind of practical support. If you want higher protein without
-                gimmicky &ldquo;natural Ozempic&rdquo; marketing, start with our{" "}
-                <Link
-                  href="/protein-and-fitness"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  protein and fitness collection
-                </Link>
-                . If your goal is steadier habits around fullness and routine,
-                explore options that{" "}
-                <Link
-                  href="/support-weight-management"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  support weight management
-                </Link>
-                .
-              </p>
-              <p>
-                Some people also prefer simpler everyday meals while they adjust
-                to smaller appetites. Our{" "}
-                <Link
-                  href="/eat-healthier"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  eat healthier collection
-                </Link>{" "}
-                focuses on complete nutrition for day-to-day eating, while the{" "}
-                <Link
-                  href="/time-saver"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  time saver collection
-                </Link>{" "}
-                is useful when you need something quick between appointments,
-                work, or training.
-              </p>
-              <p>
-                These products are nutrition support, not prescription
-                treatment. They should sit alongside food-first habits and
+                Protein shakes and similar products are nutrition support, not
+                prescription treatment. They should sit alongside food-first habits and
                 clinical advice, not replace{" "}
                 <Link
                   href="/what-is-wegovy"
@@ -1124,15 +1067,7 @@ export default function ArticleClient() {
               <p>
                 However, protein powder is not essential for everyone. It may
                 help some users, but it should not replace balanced meals,
-                clinical advice, or prescribed weight loss treatment. When food
-                alone feels difficult, practical options from our{" "}
-                <Link
-                  href="/protein-and-fitness"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  protein and fitness collection
-                </Link>{" "}
-                can support nutrition without pretending to be a medicine.
+                clinical advice, or prescribed weight loss treatment.
               </p>
               <p>
                 Health Wise aims to give a safer, clearer comparison-led guide:

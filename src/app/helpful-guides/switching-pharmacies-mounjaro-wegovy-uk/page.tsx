@@ -410,7 +410,7 @@ export default function GuideSwitchingPharmacy() {
           prescription.
         </GuideParagraph>
         <div className="mt-4">
-          <EL href="https://www.pharmacyregulation.org/standards/guidance/prescribing">
+          <EL href="https://www.pharmacyregulation.org/pharmacists/standards-and-guidance-pharmacy-professionals/guidance-pharmacy-professionals#prescribing">
             GPhC guidance for pharmacist prescribers
           </EL>
         </div>
