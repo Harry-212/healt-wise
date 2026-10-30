@@ -58,3 +58,10 @@ next-env.d.ts
 
 # Monthly price-check output (reports + page cache)
 /scripts/price-scraper/out/
+
+# Reports and evidence (local only, never commit)
+/[Hh]ealthwise360-*.docx
+/[Hh]ealthwise360-*.md
+/[Hh]ealthwise360-*.csv
+/[Hh]ealthwise360_*.docx
+/evidence/
