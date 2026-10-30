@@ -76,6 +76,24 @@ function AnimNum({
 }
 
 /* ── chart component ──────────────────────────────────────────────── */
+function MedicalWarning({ className = "" }: { className?: string }) {
+  return (
+    <div className={`rounded-xl bg-amber-50 border border-amber-200 p-4 ${className}`}>
+      <div className="flex items-start gap-2.5">
+        <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+        <div>
+          <p className="text-sm font-semibold text-amber-900">Medical Warning</p>
+          <p className="mt-1 text-xs leading-relaxed text-amber-800">
+            Adjusting your Mounjaro dose by counting clicks is considered
+            off-label use. Always consult your prescriber before changing your
+            dosage protocol.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ClickChart() {
   return (
     <div className="w-full overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
@@ -359,21 +377,8 @@ export default function MounjaroClickCalculatorClient() {
                         </div>
                       </div>
 
-                      <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
-                        <div className="flex items-start gap-2.5">
-                          <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                          <div>
-                            <p className="text-sm font-semibold text-amber-900">
-                              Medical Warning
-                            </p>
-                            <p className="mt-1 text-xs leading-relaxed text-amber-800">
-                              Adjusting your Mounjaro dose by counting clicks is
-                              considered off-label use. Always consult your
-                              prescriber before changing your dosage protocol.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                      {/* Desktop: stays under the inputs. On mobile it moves below the result. */}
+                      <MedicalWarning className="hidden lg:block" />
                     </div>
 
                     {/* ── Right: results ────────────────────────────── */}
@@ -430,6 +435,30 @@ export default function MounjaroClickCalculatorClient() {
                             </div>
                           </div>
 
+                          <MedicalWarning className="lg:hidden" />
+
+                          {(() => {
+                            const validDoses = [2.5, 5, 7.5, 10, 12.5, 15];
+                            const selectedDose = validDoses.includes(desiredDose)
+                              ? desiredDose
+                              : validDoses.includes(penStrength)
+                                ? penStrength
+                                : 2.5;
+                            const doseSlug = `${selectedDose}mg`.replace(".", "-");
+                            const priceHref = `/mounjaro-price-comparison#mounjaro-${doseSlug}-price`;
+                            return (
+                              <Link
+                                href={priceHref}
+                                onClick={() =>
+                                  trackCalculatorToPriceComparison(priceHref)
+                                }
+                                className="inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-emerald-700 px-5 text-base font-bold text-white shadow-sm transition hover:bg-emerald-800"
+                              >
+                                Compare prices for Mounjaro {selectedDose} mg →
+                              </Link>
+                            );
+                          })()}
+
                           <p className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs leading-relaxed text-slate-600">
                             <strong className="font-semibold text-slate-800">
                               Important:
@@ -471,30 +500,10 @@ export default function MounjaroClickCalculatorClient() {
                                 aria-hidden
                               />
                             </Link>
-                            {(() => {
-                              const validDoses = [2.5, 5, 7.5, 10, 12.5, 15];
-                              const selectedDose = validDoses.includes(desiredDose)
-                                ? desiredDose
-                                : validDoses.includes(penStrength)
-                                  ? penStrength
-                                  : 2.5;
-                              const doseSlug = `${selectedDose}mg`.replace(".", "-");
-                              const priceHref = `/mounjaro-price-comparison#mounjaro-${doseSlug}-price`;
-                              return (
-                                <Link
-                                  href={priceHref}
-                                  onClick={() =>
-                                    trackCalculatorToPriceComparison(priceHref)
-                                  }
-                                  className="inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-full bg-emerald-700 px-5 text-base font-bold text-white shadow-sm transition hover:bg-emerald-800 sm:w-auto sm:min-w-48 xl:px-7"
-                                >
-                                  Compare prices for Mounjaro {selectedDose} mg →
-                                </Link>
-                              );
-                            })()}
                           </div>
                         </motion.div>
                       )}
+                      {!hasResult && <MedicalWarning className="mt-6 lg:hidden" />}
                     </div>
                   </motion.div>
                 ) : (
