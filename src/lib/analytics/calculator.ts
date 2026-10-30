@@ -39,9 +39,37 @@ export function trackCalculatorArticleToTool(href: string) {
   });
 }
 
+/**
+ * Path only. `sanitizeLinkUrl` returns relative hrefs untouched, and the
+ * calculator's dose-tab link ends in `#mounjaro-5mg-price`, which would send
+ * the dose the visitor entered to GA4.
+ */
+function pathOnly(href: string): string {
+  return sanitizeLinkUrl(href.split(/[?#]/)[0]);
+}
+
 /** Click on a calculator page's link/CTA to the price comparison page. */
 export function trackCalculatorToPriceComparison(href: string) {
   sendCalculatorEvent("calculator_to_price_comparison", {
-    link_url: sanitizeLinkUrl(href),
+    link_url: pathOnly(href),
+  });
+}
+
+export type PriceCtaMedicine = "Mounjaro" | "Wegovy";
+export type PriceCtaPosition = "middle" | "end";
+
+/**
+ * Click on an in-article price-comparison CTA. Allow-listed parameters only:
+ * source page (`page_path`), medicine category, destination and CTA position.
+ */
+export function trackArticleToPriceComparison(
+  medicine: PriceCtaMedicine,
+  position: PriceCtaPosition,
+  href: string,
+) {
+  sendCalculatorEvent("article_to_price_comparison", {
+    medicine_category: medicine,
+    cta_position: position,
+    link_url: pathOnly(href),
   });
 }

@@ -5,9 +5,11 @@ import ArticleSources from "@/components/blog/ArticleSources";
 import React, { useState } from "react";
 import Link from "next/link";
 import {
+  trackArticleToPriceComparison,
   trackCalculatorArticleToTool,
   trackCalculatorToPriceComparison,
 } from "@/lib/analytics/calculator";
+import PriceComparisonCta from "@/components/prices/PriceComparisonCta";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
@@ -36,7 +38,11 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-export default function ArticleClient() {
+export default function ArticleClient({
+  priceCheckedLabel,
+}: {
+  priceCheckedLabel: string;
+}) {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
@@ -635,6 +641,19 @@ export default function ArticleClient() {
               </p>
             </GuideSection>
 
+            <PriceComparisonCta
+              darkMode={darkMode}
+              heading="Compare checked Mounjaro prices"
+              body="Compare standard prices, delivery charges and provider details across the UK pharmacies listed by Healthwise360. Check the final price and prescribing requirements on the provider’s website."
+              primary={{
+                label: "Compare Mounjaro prices",
+                href: "/mounjaro-price-comparison",
+                onClick: () =>
+                  trackArticleToPriceComparison("Mounjaro", "middle", "/mounjaro-price-comparison"),
+              }}
+              lastChecked={priceCheckedLabel}
+            />
+
             <GuideSection
               darkMode={darkMode}
               id="fifth-dose"
@@ -1098,6 +1117,22 @@ export default function ArticleClient() {
               prescriber. Do not adjust your Mounjaro dose without clinical
               guidance.
             </p>
+            <PriceComparisonCta
+              darkMode={darkMode}
+              heading="Ready to compare current Mounjaro prices?"
+              primary={{
+                label: "Compare Mounjaro prices",
+                href: "/mounjaro-price-comparison",
+                onClick: () =>
+                  trackArticleToPriceComparison("Mounjaro", "end", "/mounjaro-price-comparison"),
+              }}
+              secondary={{
+                label: "Use the Mounjaro calculator",
+                href: "/tools/mounjaro-click-calculator",
+                onClick: () => trackCalculatorArticleToTool("/tools/mounjaro-click-calculator"),
+              }}
+              lastChecked={priceCheckedLabel}
+            />
             <ArticleSources slug="mounjaro-click-calculator-uk" darkMode={darkMode} />
           </article>
 

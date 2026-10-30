@@ -5,9 +5,11 @@ import ArticleSources from "@/components/blog/ArticleSources";
 import React, { useState } from "react";
 import Link from "next/link";
 import {
+  trackArticleToPriceComparison,
   trackCalculatorArticleToTool,
   trackCalculatorToPriceComparison,
 } from "@/lib/analytics/calculator";
+import PriceComparisonCta from "@/components/prices/PriceComparisonCta";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
 import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
@@ -37,7 +39,11 @@ const TOC = [
   { id: "conclusion", label: "Conclusion" },
 ];
 
-export default function ArticleClient() {
+export default function ArticleClient({
+  priceCheckedLabel,
+}: {
+  priceCheckedLabel: string;
+}) {
   const [darkMode, setDarkMode] = useState(false);
   const h3 = `mb-3 mt-6 text-xl font-bold ${darkMode ? "text-slate-200" : "text-slate-800"}`;
 
@@ -764,6 +770,18 @@ export default function ArticleClient() {
               id="cost-per-dose"
               heading="Wegovy Cost Per Dose: Using the Click Calculator for Price Estimates"
             >
+              <PriceComparisonCta
+                darkMode={darkMode}
+                heading="Compare checked Wegovy prices"
+                body="Compare standard Wegovy prices, delivery charges and provider details across the UK pharmacies listed by Healthwise360."
+                primary={{
+                  label: "Compare Wegovy prices",
+                  href: "/wegovy-price-comparison",
+                  onClick: () =>
+                    trackArticleToPriceComparison("Wegovy", "middle", "/wegovy-price-comparison"),
+                }}
+                lastChecked={priceCheckedLabel}
+              />
               <p>
                 One practical application of the Wegovy click calculator that
                 goes beyond dose verification is{" "}
@@ -1180,6 +1198,22 @@ export default function ArticleClient() {
                 the dosage instructions confirmed by your prescriber.
               </p>
             </GuideSection>
+            <PriceComparisonCta
+              darkMode={darkMode}
+              heading="Compare current Wegovy prices"
+              primary={{
+                label: "Compare Wegovy prices",
+                href: "/wegovy-price-comparison",
+                onClick: () =>
+                  trackArticleToPriceComparison("Wegovy", "end", "/wegovy-price-comparison"),
+              }}
+              secondary={{
+                label: "Use the Wegovy calculator",
+                href: "/tools/wegovy-click-calculator",
+                onClick: () => trackCalculatorArticleToTool("/tools/wegovy-click-calculator"),
+              }}
+              lastChecked={priceCheckedLabel}
+            />
             <ArticleSources slug="wegovy-click-calculator-uk" darkMode={darkMode} />
           </article>
 
