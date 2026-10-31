@@ -648,12 +648,7 @@ export default function ReadingLocationContent({ loc, shareUrl }: Props) {
                     All UK location articles
                   </Link>
                   , or compare nearby guides for{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-oxford"
-                    className={linkCls}
-                  >
-                    Oxford
-                  </Link>{" "}
+                  Oxford{" "}
                   and{" "}
                   <Link
                     href="/blog/weight-loss-treatment-london"

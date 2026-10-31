@@ -444,17 +444,11 @@ export default function NeathPortTalbotLocationContent({ loc, shareUrl }: Props)
                     UK locations index
                   </Link>
                   . Nearby:{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-swansea">
-                    Swansea
-                  </Link>
+                  Swansea
                   ,{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-cardiff">
-                    Cardiff
-                  </Link>
+                  Cardiff
                   ,{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-merthyr-tydfil">
-                    Merthyr Tydfil
-                  </Link>
+                  Merthyr Tydfil
                   .
                 </p>
               </GuideSection>

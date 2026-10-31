@@ -709,26 +709,11 @@ export default function PeterboroughLocationContent({ loc, shareUrl }: Props) {
                     All UK location articles
                   </Link>
                   , or compare nearby guides for{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-cambridge"
-                    className={linkCls}
-                  >
-                    Cambridge
-                  </Link>
+                  Cambridge
                   ,{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-northampton"
-                    className={linkCls}
-                  >
-                    Northampton
-                  </Link>
+                  Northampton
                   , and{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-leicester"
-                    className={linkCls}
-                  >
-                    Leicester
-                  </Link>
+                  Leicester
                   .
                 </p>
               </section>

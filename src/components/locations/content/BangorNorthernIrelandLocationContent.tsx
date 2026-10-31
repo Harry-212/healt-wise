@@ -536,26 +536,11 @@ export default function BangorNorthernIrelandLocationContent({
                 <p className={p}>
                   Because {PLACE} sits close to Belfast, many readers compare
                   HSC access and courier cut-offs with our{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-belfast"
-                    className={linkCls}
-                  >
-                    Belfast guide
-                  </Link>
+                  Belfast guide
                   ,{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-armagh"
-                    className={linkCls}
-                  >
-                    Armagh guide
-                  </Link>
+                  Armagh guide
                   , and{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-newry"
-                    className={linkCls}
-                  >
-                    Newry guide
-                  </Link>
+                  Newry guide
                   —same medicines, different practical friction.
                 </p>
                 <p className={`text-sm ${muted}`}>
@@ -805,33 +790,13 @@ export default function BangorNorthernIrelandLocationContent({
                 </p>
                 <p className={`mt-2 leading-relaxed ${muted}`}>
                   Nearby:{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-belfast"
-                    className={linkCls}
-                  >
-                    Belfast
-                  </Link>
+                  Belfast
                   ,{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-armagh"
-                    className={linkCls}
-                  >
-                    Armagh
-                  </Link>
+                  Armagh
                   ,{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-newry"
-                    className={linkCls}
-                  >
-                    Newry
-                  </Link>
+                  Newry
                   ,{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-lisburn"
-                    className={linkCls}
-                  >
-                    Lisburn
-                  </Link>
+                  Lisburn
                   .
                 </p>
               </section>

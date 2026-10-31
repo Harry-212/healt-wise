@@ -707,26 +707,11 @@ export default function PlymouthLocationContent({ loc, shareUrl }: Props) {
                     All UK location articles
                   </Link>
                   , or compare nearby guides for{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-exeter"
-                    className={linkCls}
-                  >
-                    Exeter
-                  </Link>
+                  Exeter
                   ,{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-truro"
-                    className={linkCls}
-                  >
-                    Truro
-                  </Link>
+                  Truro
                   , and{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-bournemouth"
-                    className={linkCls}
-                  >
-                    Bournemouth
-                  </Link>
+                  Bournemouth
                   .
                 </p>
               </section>

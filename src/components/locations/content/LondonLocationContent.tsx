@@ -1481,19 +1481,9 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                   Reading
                 </Link>
                 ,{" "}
-                <Link
-                  href="/blog/best-weight-loss-treatment-in-oxford"
-                  className={linkCls}
-                >
-                  Oxford
-                </Link>{" "}
+                Oxford{" "}
                 and{" "}
-                <Link
-                  href="/blog/best-weight-loss-treatment-in-luton"
-                  className={linkCls}
-                >
-                  Luton
-                </Link>
+                Luton
                 .
               </p>
             </section>
