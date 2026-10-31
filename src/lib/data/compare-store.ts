@@ -6,6 +6,7 @@ import type {
   MounjaroCompareStore,
   WegovyCompareStore,
 } from "./compare-types";
+import { AFFILIATE_PARTNER_IDS } from "./affiliate-partners";
 import { buildMounjaroSeedStore, buildWegovySeedStore } from "./compare-seed";
 import type { MounjaroUkProviderCompare } from "./mounjaro-uk-compare-providers";
 import type { WegovyUkProviderCompare } from "./wegovy-uk-compare-providers";
@@ -130,88 +131,18 @@ export function saveWegovyStore(store: WegovyCompareStore): void {
 }
 
 const TRUSTPILOT_URL_BY_PROVIDER_ID: Record<string, string> = {
-  "asda-online-doctor": "https://uk.trustpilot.com/review/onlinedoctor.asda.com",
-  "ashcroft-pharmacy": "https://uk.trustpilot.com/review/ashcroftpharmacy.co.uk",
-  "ayp-healthcare": "https://uk.trustpilot.com/review/ayp.healthcare",
-  "bolt-pharmacy": "https://uk.trustpilot.com/review/boltpharmacy.co.uk",
-  "boots-online-doctor": "https://www.trustpilot.com/review/onlinedoctor.boots.com",
-  chequp: "https://uk.trustpilot.com/review/chequp.com",
-  click2pharmacy: "https://uk.trustpilot.com/review/click2pharmacy.co.uk",
-  "cloud-pharmacy": "https://uk.trustpilot.com/review/www.cloudpharmacy.co.uk",
-  curate: "https://uk.trustpilot.com/review/curatehealth.co.uk",
-  curely: "https://uk.trustpilot.com/review/curely.co.uk",
-  "cuva-health": "https://www.trustpilot.com/review/cuvahealth.co.uk",
-  dotor: "https://www.trustpilot.com/review/dotor.co.uk",
-  "dr-weightmans": "https://www.trustpilot.com/review/drweightmans.com",
-  "e-surgery": "https://uk.trustpilot.com/review/e-surgery.com",
-  envigore: "https://www.trustpilot.com/review/envigore.com",
-  farmeci: "https://uk.trustpilot.com/review/www.farmeci.com",
-  "fella-health": "https://uk.trustpilot.com/review/fellahealth.com",
-  genmeds: "https://uk.trustpilot.com/review/genmeds.co.uk",
-  "get-a-drip": "https://uk.trustpilot.com/review/getadrip.shop",
-  getweightloss: "https://uk.trustpilot.com/review/getweightloss.co.uk",
-  "goodbody-clinic": "https://uk.trustpilot.com/review/goodbodyclinic.com",
-  "happy-pharmacy": "https://www.trustpilot.com/review/happypharmacy.co.uk",
-  "hey-slim": "https://www.trustpilot.com/review/heyslim.co.uk",
-  "iq-doctor": "https://uk.trustpilot.com/review/iqdoctor.co.uk",
-  "jood-life": "https://www.trustpilot.com/review/joodlife.com",
-  juniper: "https://uk.trustpilot.com/review/myjuniper.co.uk",
-  "live-well-weight-loss":
-    "https://www.trustpilot.com/review/livewellweightloss.co.uk",
-  "lloyds-pharmacy-online-doctor":
-    "https://uk.trustpilot.com/review/onlinedoctor.lloydspharmacy.com",
-  "lotus-weight-loss": "https://uk.trustpilot.com/review/lotusweightloss.co.uk",
-  "manchester-chemist": "https://uk.trustpilot.com/review/manchesterchemist.com",
-  medexpress: "https://uk.trustpilot.com/review/www.medexpress.co.uk",
-  medhut: "https://uk.trustpilot.com/review/medhut.co.uk",
-  "medicine-marketplace":
-    "https://www.trustpilot.com/review/medicinemarketplace.com",
-  medino: "https://uk.trustpilot.com/review/medino.com",
-  "msh-weight-loss": "https://uk.trustpilot.com/review/mshweightloss.co.uk",
-  "my-london-pharmacy": "https://uk.trustpilot.com/review/mylondonpharmacy.co.uk",
-  "next-script": "https://uk.trustpilot.com/review/nextscript.co.uk",
-  "nulife-pharmacy": "https://www.trustpilot.com/review/thenulife.com",
-  numan: "https://uk.trustpilot.com/review/numan.com",
-  onlinemeds: "https://www.trustpilot.com/review/onlinemeds.co.uk",
-  oushk: "https://uk.trustpilot.com/review/oushkpharmacy.com",
-  "pharmacy-advance": "https://uk.trustpilot.com/review/pharmacyadvance.co.uk",
-  "pharmacy-express": "https://www.trustpilot.com/review/pharmacy-express.co.uk",
-  pharmacy2u: "https://uk.trustpilot.com/review/www.pharmacy2u.co.uk",
-  pharmica: "https://uk.trustpilot.com/review/pharmica.co.uk",
-  pharmulous: "https://uk.trustpilot.com/review/pharmulous.co.uk",
-  pills2u: "https://www.trustpilot.com/review/pills2u.co.uk",
-  pillsorted: "https://uk.trustpilot.com/review/pillsorted.com",
-  pillsphere: "https://uk.trustpilot.com/review/pillsphere.com",
-  quickmeds: "https://uk.trustpilot.com/review/quickmeds.co.uk",
-  "second-nature": "https://uk.trustpilot.com/review/secondnature.io",
-  shape8: "https://www.trustpilot.com/review/shape8.com",
-  "simple-online-pharmacy":
-    "https://uk.trustpilot.com/review/simpleonlinepharmacy.co.uk",
-  "slimming-direct": "https://uk.trustpilot.com/review/slimmingdirect.co.uk",
-  "skin-and-shape": "https://uk.trustpilot.com/review/skinandshape.co.uk",
-  "superdrug-online-doctor":
-    "https://uk.trustpilot.com/review/onlinedoctor.superdrug.com",
-  "swift-doctor": "https://www.trustpilot.com/review/swift-doctor.com",
-  "swift-medi": "https://uk.trustpilot.com/review/swiftmedi.co.uk",
-  "care-pharmacy": "https://uk.trustpilot.com/review/thecarepharmacy.com",
-  "the-family-chemist": "https://uk.trustpilot.com/review/thefamilychemist.co.uk",
-  "the-independent-pharmacy":
-    "https://uk.trustpilot.com/review/www.theindependentpharmacy.co.uk",
-  tribelle: "https://uk.trustpilot.com/review/tribelle.co.uk",
-  voy: "https://uk.trustpilot.com/review/www.joinvoy.com",
-  "well-pharmacy": "https://uk.trustpilot.com/review/www.well.co.uk",
-  weprescribe: "https://uk.trustpilot.com/review/weprescribe.co.uk",
-  yourpharmacy: "https://uk.trustpilot.com/review/yourpharmacy.uk",
-  zava: "https://uk.trustpilot.com/review/zavamed.com/uk",
+  "pharmacy-me": "https://uk.trustpilot.com/review/pharmacyme.co.uk",
+  "i-prescribe": "https://uk.trustpilot.com/review/i-prescribe.co.uk",
+  shemed: "https://uk.trustpilot.com/review/shemed.co.uk",
 };
 
-/** Providers kept in the stored data but never shown on the site (Mounjaro and Wegovy). */
-const HIDDEN_COMPARE_PROVIDER_IDS = new Set([
-  "cloud-pharmacy",
-  "fella-health",
-  "quickmeds",
-  "slinic",
-]);
+/**
+ * Only affiliate partners are shown on the site. The stored JSON may still hold
+ * other providers (kept so they can be re-added later); they are never read here.
+ */
+function isShownProvider(p: { id: string }): boolean {
+  return AFFILIATE_PARTNER_IDS.has(p.id);
+}
 
 function enrichMounjaroProvider(
   p: MounjaroUkProviderCompare,
@@ -226,7 +157,7 @@ function enrichMounjaroProvider(
 export function readMounjaroCompareProviders(): MounjaroUkProviderCompare[] {
   const store = getMounjaroStore();
   return store.providers
-    .filter((p) => !HIDDEN_COMPARE_PROVIDER_IDS.has(p.id))
+    .filter(isShownProvider)
     .map(enrichMounjaroProvider);
 }
 
@@ -242,7 +173,7 @@ function sortProvidersByName<T extends { name: string }>(providers: T[]): T[] {
 /** Live Wegovy list for public pages (A–Z by pharmacy name). */
 export function readWegovyCompareProviders(): WegovyUkProviderCompare[] {
   return sortProvidersByName(
-    getWegovyStore().providers.filter((p) => !HIDDEN_COMPARE_PROVIDER_IDS.has(p.id)),
+    getWegovyStore().providers.filter(isShownProvider),
   );
 }
 

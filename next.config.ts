@@ -4,6 +4,7 @@ import {
   GONE_BLOG_PAGE_LOCATIONS_QUERY_PATHS,
   GONE_EXACT_PATHS,
   GONE_LOCATION_CITY_SLUGS,
+  GONE_PHARMACY_SLUGS,
   GONE_REWRITE_DESTINATION,
 } from "./src/lib/seo/gone-paths";
 
@@ -95,6 +96,10 @@ const nextConfig: NextConfig = {
         ...GONE_BLOG_PAGE_LOCATIONS_QUERY_PATHS.map((source) => ({
           source,
           has: [{ type: "query" as const, key: "topic", value: "locations" }],
+          destination: GONE_REWRITE_DESTINATION,
+        })),
+        ...GONE_PHARMACY_SLUGS.map((slug) => ({
+          source: `/pharmacies/${slug}`,
           destination: GONE_REWRITE_DESTINATION,
         })),
         ...GONE_LOCATION_CITY_SLUGS.map((city) => ({

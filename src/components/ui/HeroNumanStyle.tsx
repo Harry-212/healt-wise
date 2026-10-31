@@ -65,8 +65,8 @@ export default function HeroNumanStyle({
                 className="mt-2.5 max-w-2xl text-sm font-medium leading-relaxed text-slate-700 sm:text-base"
               >
                 A Wegovy starter pen costs from {wegovyStarterLow}, and a Mounjaro starter
-                pen from {mounjaroStarterLow}. We check weight loss injection prices at 60+
-                GPhC registered UK pharmacies, so you can see the real price
+                pen from {mounjaroStarterLow}. We check weight loss injection prices at our
+                GPhC registered UK pharmacy partners, so you can see the real price
                 of every dose before you pay.
               </p>
               <p className="mt-1 text-xs text-slate-500 sm:text-[13px]">

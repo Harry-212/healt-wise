@@ -57,10 +57,10 @@ export const ABOUT_PAGE_FAQS: {
   {
     question: "Does Healthwise360 compare every provider?",
     answer:
-      "No. Healthwise360's directory includes more than 60 providers, but coverage varies by treatment and comparison page. Visit our provider and pharmacy directory to see current listings.",
+      "No. Healthwise360's directory includes our partner pharmacies, but coverage varies by treatment and comparison page. Visit our provider and pharmacy directory to see current listings.",
     answerRich: [
       {
-        text: "No. Healthwise360's directory includes more than 60 providers, but coverage varies by treatment and comparison page. Visit our ",
+        text: "No. Healthwise360's directory includes our partner pharmacies, but coverage varies by treatment and comparison page. Visit our ",
       },
       { text: "provider and pharmacy directory", href: "/pharmacies" },
       { text: " to see current listings." },

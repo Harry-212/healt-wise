@@ -155,8 +155,7 @@ export default function ArticleClient() {
               This guide compares typical UK private prices for Mounjaro and
               Wegovy, including dose-level costs and the additional charges
               worth checking before choosing a provider. Healthwise360 also
-              tracks advertised prices across more than 60 UK weight-management
-              providers, allowing you to compare the same medication and dose
+              tracks advertised prices across our partner UK weight-management providers, allowing you to compare the same medication and dose
               between different providers rather than relying only on headline
               offers.
             </p>
@@ -571,7 +570,7 @@ export default function ArticleClient() {
                 article published several months ago can become outdated even if
                 the treatment information remains accurate. Healthwise360
                 maintains a live provider matrix separately from this guide,
-                covering more than 60 UK weight-management providers at the time
+                covering our partner UK weight-management providers at the time
                 this page was last updated, so you can check current prices by
                 treatment and dose.
               </p>
@@ -865,7 +864,7 @@ export default function ArticleClient() {
                     >
                       comparison matrix
                     </Link>{" "}
-                    covering more than 60 UK weight-management providers. You
+                    covering our partner UK weight-management providers. You
                     can filter and compare provider prices at individual dose
                     levels and review corresponding pharmacy and provider
                     information.
@@ -923,8 +922,7 @@ export default function ArticleClient() {
                 supplying pharmacy.
               </p>
               <p>
-                Healthwise360 tracks current advertised prices across more than
-                60 UK weight-management providers to make that comparison
+                Healthwise360 tracks current advertised prices across our partner UK weight-management providers to make that comparison
                 easier.
               </p>
               <CtaButton primary>

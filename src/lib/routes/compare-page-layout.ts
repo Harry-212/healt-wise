@@ -62,7 +62,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       canonicalPath: "/compare/wegovy-vs-mounjaro",
       title: "Wegovy vs Mounjaro UK: Price, Dose and Weight Loss Compared",
       metaDescription:
-        "Wegovy vs Mounjaro UK: Compare weight loss, dose, side effects, NHS access and the real price at 62 and 67 providers.",
+        "Wegovy vs Mounjaro UK: Compare weight loss, dose, side effects, NHS access and the real price at our partner pharmacies.",
       openGraphTitle: "Wegovy vs Mounjaro UK: Price, Dose and Results",
       openGraphDescription:
         "See how Wegovy and Mounjaro compare on weight loss, dose, side effects and price in the UK. Checked and dated, with no paid rankings.",

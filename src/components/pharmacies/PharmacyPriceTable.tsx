@@ -38,7 +38,7 @@ export default function PharmacyPriceTable({
               href="/mounjaro-price-comparison"
               className="text-xs font-semibold text-emerald-800 underline hover:text-emerald-950"
             >
-              Compare all 67 →
+              Compare all prices →
             </Link>
           </div>
           {m ? (
@@ -71,7 +71,7 @@ export default function PharmacyPriceTable({
               href="/wegovy-price-comparison"
               className="text-xs font-semibold text-emerald-800 underline hover:text-emerald-950"
             >
-              Compare all 62 →
+              Compare all prices →
             </Link>
           </div>
           {w ? (

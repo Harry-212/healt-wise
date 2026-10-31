@@ -121,7 +121,7 @@ export default function WeightLossTreatmentPriceComparisonPage() {
         name: "Where can I compare weight loss treatment prices from different UK providers?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Healthwise360 maintains an interactive comparison matrix covering more than 60 UK weight-management providers. You can filter and compare provider prices at individual dose levels and review corresponding pharmacy and provider information.",
+          text: "Healthwise360 maintains an interactive comparison matrix covering our partner UK weight-management providers. You can filter and compare provider prices at individual dose levels and review corresponding pharmacy and provider information.",
         },
       },
     ],

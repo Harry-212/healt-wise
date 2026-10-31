@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     canonicalPath: "/mounjaro-price-comparison",
     title: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
     metaDescription:
-      "Compare Mounjaro prices at 67 GPhC registered UK pharmacies. Find the cheapest Mounjaro in the UK for every dose, from 2.5 mg to 15 mg.",
+      "Compare Mounjaro prices at our GPhC registered UK pharmacy partners. Find the cheapest Mounjaro in the UK for every dose, from 2.5 mg to 15 mg.",
     openGraphTitle: "Mounjaro Price Comparison UK: Cheapest Price by Dose",
     openGraphDescription:
-      "See the lowest Mounjaro price for every dose at 67 UK pharmacies. Checked and dated, with no paid rankings.",
+      "See the lowest Mounjaro price for every dose at our UK pharmacy partners. Checked and dated, with no paid rankings.",
     imagePath: "/mounjaro healt wise.png",
     imageAlt: "Compare Mounjaro prices UK — Healthwise360",
   }),
@@ -70,7 +70,7 @@ function compareWebPageJsonLd(providers: MounjaroUkProviderCompare[]) {
     "@id": `${pageUrl}#webpage`,
     name: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
     description:
-      "Compare Mounjaro prices at 67 GPhC registered UK pharmacies. Find the cheapest Mounjaro in the UK for every dose, from 2.5 mg to 15 mg.",
+      "Compare Mounjaro prices at our GPhC registered UK pharmacy partners. Find the cheapest Mounjaro in the UK for every dose, from 2.5 mg to 15 mg.",
     url: pageUrl,
     dateModified: "2026-10-15",
     isPartOf: {

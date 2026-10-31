@@ -20,7 +20,7 @@ const DOSE_EXTRAS: DoseExtra[] = [
   {
     dose: "0.5mg",
     anchorId: "wegovy-0-5mg-price",
-    note: "Our Wegovy 0.5 mg price comparison for the UK covers all 62 pharmacies. Most people move to 0.5 mg in month 2.",
+    note: "Our Wegovy 0.5 mg price comparison for the UK covers every pharmacy we list. Most people move to 0.5 mg in month 2.",
   },
   {
     dose: "1mg",
@@ -40,7 +40,7 @@ const DOSE_EXTRAS: DoseExtra[] = [
   {
     dose: "7.2mg",
     anchorId: "wegovy-7-2mg-price",
-    note: "7.2 mg is the highest dose, and only 48 of our 62 pharmacies sell it so far. One pharmacy lists it at £570, so always check the price twice.",
+    note: "7.2 mg is the highest dose, and not every pharmacy sells it yet, so check the price before you order.",
   },
 ];
 

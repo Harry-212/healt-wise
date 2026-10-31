@@ -379,12 +379,7 @@ export default function ArticleClient() {
                 clinical review, follow-up, delivery, and guidance on what
                 happens if the treatment is not suitable. For a deeper look at
                 how one major provider handles weight loss treatment, read our{" "}
-                <Link
-                  href="/pharmacies/zava"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  Zava weight loss review
-                </Link>
+                Zava weight loss review
                 .
               </p>
 
