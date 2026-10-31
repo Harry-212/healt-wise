@@ -1,5 +1,11 @@
 import type { NextConfig } from "next";
 import { HELPFUL_GUIDE_SLUGS } from "./src/lib/helpful-guide-slugs";
+import {
+  GONE_BLOG_PAGE_LOCATIONS_QUERY_PATHS,
+  GONE_EXACT_PATHS,
+  GONE_LOCATION_CITY_SLUGS,
+  GONE_REWRITE_DESTINATION,
+} from "./src/lib/seo/gone-paths";
 
 /**
  * Site-wide CSP for XSS / injection mitigation.
@@ -75,6 +81,32 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  /**
+   * Permanently removed URLs answer 410 Gone. Redirects run before rewrites, so
+   * none of these paths may also appear in `redirects()` below.
+   */
+  async rewrites() {
+    return {
+      beforeFiles: [
+        ...GONE_EXACT_PATHS.map((source) => ({
+          source,
+          destination: GONE_REWRITE_DESTINATION,
+        })),
+        ...GONE_BLOG_PAGE_LOCATIONS_QUERY_PATHS.map((source) => ({
+          source,
+          has: [{ type: "query" as const, key: "topic", value: "locations" }],
+          destination: GONE_REWRITE_DESTINATION,
+        })),
+        ...GONE_LOCATION_CITY_SLUGS.map((city) => ({
+          source: `/blog/best-weight-loss-treatment-in-${city}`,
+          destination: GONE_REWRITE_DESTINATION,
+        })),
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
+
   async headers() {
     return [
       {
@@ -219,38 +251,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/blog/locations-in-uk",
-        destination: "/blog/topic/locations",
-        permanent: true,
-      },
-      {
-        source: "/compare/best-weight-loss-injections-uk",
-        destination: "/compare/wegovy-vs-mounjaro",
-        permanent: true,
-      },
-      {
         source: "/compare/best-weight-loss-treatments-uk",
         destination: "/compare/wegovy-vs-mounjaro",
-        permanent: true,
-      },
-      {
-        source: "/pharmacies/chemist4u",
-        destination: "/mounjaro-price-comparison",
-        permanent: true,
-      },
-      {
-        source: "/pharmacies/click-pharmacy",
-        destination: "/mounjaro-price-comparison",
-        permanent: true,
-      },
-      {
-        source: "/pharmacies/phlo-clinic",
-        destination: "/mounjaro-price-comparison",
-        permanent: true,
-      },
-      {
-        source: "/pharmacies/simply-meds-online",
-        destination: "/mounjaro-price-comparison",
         permanent: true,
       },
       {
@@ -316,18 +318,6 @@ const nextConfig: NextConfig = {
       {
         source: "/blog/saxenda-vs-mounjaro-vs-wegovy-price-uk",
         destination: "/compare/wegovy-vs-mounjaro",
-        permanent: true,
-      },
-      // No standalone /compare index — Wegovy vs Mounjaro is the hub
-      // (the three-treatment page was retired; see above).
-      {
-        source: "/compare",
-        destination: "/compare/wegovy-vs-mounjaro",
-        permanent: true,
-      },
-      {
-        source: "/helpful-guides/mounjaro-weight-loss-treatment-uk",
-        destination: "/helpful-guides/mounjaro-weight-loss-injection-uk",
         permanent: true,
       },
       {
