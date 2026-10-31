@@ -224,9 +224,6 @@ export default function WegovyMounjaroLongFormContent({
                       Lowest
                     </th>
                     <th scope="col" className="px-5 py-3.5 font-bold">
-                      Typical
-                    </th>
-                    <th scope="col" className="px-5 py-3.5 font-bold">
                       Highest
                     </th>
                   </tr>
@@ -246,9 +243,6 @@ export default function WegovyMounjaroLongFormContent({
                       <td className="px-5 py-3.5 font-semibold text-emerald-800 tabular-nums">
                         {row.lowest}
                       </td>
-                      <td className="px-5 py-3.5 font-medium text-slate-800 tabular-nums">
-                        {row.typical}
-                      </td>
                       <td className="px-5 py-3.5 text-slate-600 tabular-nums">
                         {row.highest}
                       </td>
@@ -264,7 +258,7 @@ export default function WegovyMounjaroLongFormContent({
 
           <div className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-slate-600 md:text-lg">
             <p>
-              Prices are for the pen only. Delivery is usually extra. Typical means the middle price. The Wegovy vs Mounjaro price gap is clear in this table. You can see the Wegovy vs Mounjaro price in the UK, dose by dose, on our two price pages:
+              Prices are for the pen only. Delivery is usually extra. The Wegovy vs Mounjaro price gap is clear in this table. You can see the Wegovy vs Mounjaro price in the UK, dose by dose, on our two price pages:
             </p>
             <div className="flex flex-wrap items-center gap-3">
               <Link
