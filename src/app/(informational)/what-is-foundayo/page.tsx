@@ -229,11 +229,7 @@ export default function WhatIsFoundayoPage() {
             <p>
               You start on 0.8 mg once a day. Your prescriber may raise the dose
               in steps, no sooner than every 30 days. The highest dose is 17.2 mg
-              a day. For every dose step, read our{" "}
-              <Link href="/helpful-guides/foundayo-uk" className={linkClass}>
-                Foundayo Q&A
-              </Link>
-              .
+              a day.
             </p>
           </section>
 
@@ -462,13 +458,6 @@ export default function WhatIsFoundayoPage() {
             <p>
               You can report a suspected side effect to the MHRA Yellow Card
               scheme.
-            </p>
-            <p>
-              For more detail, read our{" "}
-              <Link href="/helpful-guides/foundayo-uk" className={linkClass}>
-                Foundayo Q&A
-              </Link>
-              .
             </p>
           </section>
 
