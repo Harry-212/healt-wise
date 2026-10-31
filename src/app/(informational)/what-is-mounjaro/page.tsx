@@ -37,9 +37,9 @@ export const metadata: Metadata = {
 export default function WhatIsMounjaroPage() {
   const MOUNJARO_UK_COMPARE_PROVIDERS = getMounjaroCompareProviders();
   const MOUNJARO_UK_COMPARE_LAST_UPDATED = getLivePriceCheckLabels().mounjaro;
-  // Price insights from 67 GPhC-registered UK providers (enforcing consistent 67 count per SEO spec)
+  // Price insights from the GPhC-registered UK partner pharmacies in the live table
   const insights = buildMounjaroPriceInsights(MOUNJARO_UK_COMPARE_PROVIDERS);
-  const providerCount = 67;
+  const providerCount = MOUNJARO_UK_COMPARE_PROVIDERS.length;
   const pageJsonLd = whatIsMounjaroPageJsonLd({
     low: insights?.starter.low ?? 99,
     high: insights?.top.high ?? 359.95,

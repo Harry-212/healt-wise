@@ -16,11 +16,11 @@ import {
 const SCHEMA_LANGUAGE = "en-GB";
 
 const SITE_DESCRIPTION =
-  "Independent UK price comparison for weight loss injections. We compare Mounjaro and Wegovy prices at 60+ GPhC registered pharmacies. We do not sell, prescribe or send medicines.";
+  "Independent UK price comparison for weight loss injections. We compare Mounjaro and Wegovy prices at our GPhC registered pharmacy partners. We do not sell, prescribe or send medicines.";
 
 const HOME_PAGE_NAME = "Weight Loss Injections Price Comparison UK";
 const HOME_PAGE_DESCRIPTION =
-  "Compare weight loss injection prices at 60+ GPhC registered UK pharmacies. See Mounjaro from £119 and Wegovy from £73, at every dose.";
+  "Compare weight loss injection prices at our GPhC registered UK pharmacy partners, at every dose.";
 
 const SITE_KNOWS_ABOUT = [
   "Weight loss injections price comparison UK",
@@ -129,7 +129,7 @@ function homeSchemaPriceSnapshotDataset(base: string): Record<string, unknown> {
     "@id": `${base}/#price-snapshot`,
     name: "UK weight loss injection prices by dose: Mounjaro and Wegovy",
     description:
-      "Lowest, typical and highest price of a 4 week Mounjaro and Wegovy pen at 60+ GPhC registered UK pharmacies, from the Healthwise360 price check on 20 September 2026.",
+      "Lowest, typical and highest price of a 4 week Mounjaro and Wegovy pen at our GPhC registered UK pharmacy partners, from the Healthwise360 price check on 20 September 2026.",
     url: `${base}/`,
     creator: { "@id": `${base}/#organization` },
     publisher: { "@id": `${base}/#organization` },

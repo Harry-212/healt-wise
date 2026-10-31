@@ -89,7 +89,7 @@ export default function AboutSection2() {
               </span>{" "}
               site for weight loss injections. We compare{" "}
               <span className={hlAccent}>Mounjaro and Wegovy prices</span> at
-              60+ GPhC-registered pharmacies, so you can see the full cost
+              our GPhC-registered pharmacy partners, so you can see the full cost
               before you start a consultation.
             </TimelineContent>
 

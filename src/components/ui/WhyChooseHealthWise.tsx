@@ -37,7 +37,7 @@ const FEATURES: {
   },
   {
     id: "gphc",
-    title: "60+ GPhC registered pharmacies",
+    title: "GPhC registered pharmacies",
     desc: "Each one shows its GPhC number, so you can check it yourself.",
     icon: ShieldCheck,
   },

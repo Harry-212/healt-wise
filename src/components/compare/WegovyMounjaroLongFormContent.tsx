@@ -91,8 +91,8 @@ export default function WegovyMounjaroLongFormContent({
   wegovy72Low = "£175.49",
   wegovy72Typical = "£259",
   wegovy72Listed = 48,
-  wegovyProviderCount = 62,
-  mounjaroProviderCount = 67,
+  wegovyProviderCount = 5,
+  mounjaroProviderCount = 5,
   pricesChecked = "20 September 2026",
 }: WegovyMounjaroLongFormContentProps) {
   return (
@@ -717,7 +717,7 @@ export default function WegovyMounjaroLongFormContent({
                 <strong className="font-semibold text-slate-900">Both medicines in one place.</strong> A full Wegovy vs Mounjaro comparison with prices.
               </li>
               <li>
-                <strong className="font-semibold text-slate-900">More providers.</strong> 62 for Wegovy and 67 for Mounjaro, each with its GPhC number.
+                <strong className="font-semibold text-slate-900">Every provider checked.</strong> Each pharmacy listed comes with its GPhC number.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">The real cost.</strong> The price of every dose, plus your first 6 months total.

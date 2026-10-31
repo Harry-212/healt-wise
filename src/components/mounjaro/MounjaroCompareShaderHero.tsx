@@ -84,7 +84,7 @@ export default function MounjaroCompareShaderHero({
                 The cheapest Mounjaro in the UK is {formatGbp(cheapestPrice)}{" "}
                 for a 2.5 mg starter pen at {cheapestProvider}. We compare
                 Mounjaro prices at{" "}
-                {providerCount != null ? providerCount : "60+"} GPhC
+                {providerCount != null ? providerCount : "our"} GPhC
                 registered UK pharmacies, so you can find the best price for
                 Mounjaro at every dose in under a minute.
               </>
@@ -117,7 +117,7 @@ export default function MounjaroCompareShaderHero({
               <span>Prices checked {lastUpdated}</span>
             ) : null}
             <span>
-              {providerCount != null ? providerCount : "60+"} GPhC registered
+              {providerCount != null ? providerCount : "our"} GPhC registered
               pharmacies
             </span>
             <span>No paid rankings</span>

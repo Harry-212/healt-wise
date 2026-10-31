@@ -55,11 +55,7 @@ function layoutForSlug(slug: string): ComparePageLayoutConfig | null {
 
 /** Provider counts in the description follow the live price tables. */
 function liveMetaDescription(description: string): string {
-  const { wegovyProviderCount, mounjaroProviderCount } = getLivePriceSummary();
-  return description.replace(
-    "at 62 and 67 providers",
-    `at ${wegovyProviderCount} and ${mounjaroProviderCount} providers`,
-  );
+  return description;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
