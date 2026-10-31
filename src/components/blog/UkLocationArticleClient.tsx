@@ -352,16 +352,6 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                     limitation is deliberate: comparison journalism sits next to medicine; it must not
                     pretend to replace it.
                   </p>
-                  <p className={muted}>
-                    Example location guide:{" "}
-                    <Link
-                      href="/blog/best-weight-loss-treatment-in-manchester"
-                      className="font-medium text-emerald-600 underline-offset-2 hover:underline"
-                    >
-                      Manchester
-                    </Link>
-                    .
-                  </p>
                   <p>
                     If you want the house rules in plain English:{" "}
                     <Link

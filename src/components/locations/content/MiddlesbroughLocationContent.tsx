@@ -753,17 +753,11 @@ export default function MiddlesbroughLocationContent({ loc, shareUrl }: Props) {
                     UK locations index
                   </Link>
                   . Nearby:{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-durham">
-                    Durham
-                  </Link>
+                  Durham
                   ,{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-newcastle-upon-tyne">
-                    Newcastle upon Tyne
-                  </Link>
+                  Newcastle upon Tyne
                   ,{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-york">
-                    York
-                  </Link>
+                  York
                   .
                 </p>
               </GuideSection>

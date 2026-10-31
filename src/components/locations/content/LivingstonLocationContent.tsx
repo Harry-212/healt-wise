@@ -189,13 +189,9 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
 
                 <p className={p}>
                   Local edge: Almond Valley Heritage Centre trails burn about 280 calories hourly for many brisk paces. Pair loops with market vegetables for base deficits. Compare Scotland context on{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-edinburgh">
-                    Edinburgh
-                  </Link>{" "}
+                  Edinburgh{" "}
                   and{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-glasgow">
-                    Glasgow
-                  </Link>{" "}
+                  Glasgow{" "}
                   guides when you commute between boards.
                 </p>
 
@@ -610,9 +606,7 @@ export default function LivingstonLocationContent({ loc, shareUrl }: Props) {
                     UK locations index
                   </Link>
                   . Nearby:{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-dundee">
-                    Dundee
-                  </Link>
+                  Dundee
                   .
                 </p>
               </GuideSection>

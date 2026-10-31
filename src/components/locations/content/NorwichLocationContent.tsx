@@ -576,17 +576,13 @@ export default function NorwichLocationContent({ loc, shareUrl }: Props) {
                     UK locations index
                   </Link>
                   . Nearby:{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-cambridge">
-                    Cambridge
-                  </Link>
+                  Cambridge
                   ,{" "}
                   <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-peterborough">
                     Peterborough
                   </Link>
                   ,{" "}
-                  <Link className={linkCls} href="/blog/best-weight-loss-treatment-in-colchester">
-                    Colchester
-                  </Link>
+                  Colchester
                   .
                 </p>
               </GuideSection>

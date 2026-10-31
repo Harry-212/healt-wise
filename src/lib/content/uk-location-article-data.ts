@@ -482,7 +482,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How to beat winter weight gain in the Orchard County?",
-        a: `Prioritise sleep, keep protein and vegetables easy to reach on dark evenings, and schedule short indoor workouts when the weather turns. Pair those basics with realistic medical support if you qualify—neighbours often compare notes with guides for [Belfast](/blog/best-weight-loss-treatment-in-belfast) or [Newry](/blog/best-weight-loss-treatment-in-newry) because HSC pathways and courier access can feel similar across Northern Ireland.`,
+        a: `Prioritise sleep, keep protein and vegetables easy to reach on dark evenings, and schedule short indoor workouts when the weather turns. Pair those basics with realistic medical support if you qualify—neighbours often compare notes with guides for Belfast or Newry because HSC pathways and courier access can feel similar across Northern Ireland.`,
       },
       {
         q: "Are supplements essential for the best results?",

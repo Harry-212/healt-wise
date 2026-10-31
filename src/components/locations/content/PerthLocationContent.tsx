@@ -690,26 +690,11 @@ export default function PerthLocationContent({ loc, shareUrl }: Props) {
                     All UK location articles
                   </Link>
                   , or compare nearby guides for{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-dundee"
-                    className={linkCls}
-                  >
-                    Dundee
-                  </Link>
+                  Dundee
                   ,{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-edinburgh"
-                    className={linkCls}
-                  >
-                    Edinburgh
-                  </Link>
+                  Edinburgh
                   , and{" "}
-                  <Link
-                    href="/blog/best-weight-loss-treatment-in-glasgow"
-                    className={linkCls}
-                  >
-                    Glasgow
-                  </Link>
+                  Glasgow
                   .
                 </p>
               </section>
