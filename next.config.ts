@@ -106,6 +106,12 @@ const nextConfig: NextConfig = {
           source: `/blog/best-weight-loss-treatment-in-${city}`,
           destination: GONE_REWRITE_DESTINATION,
         })),
+        // Old `/blog/uk-weight-loss/<city>` URLs. `/blog/uk-weight-loss/london`
+        // is a redirect, and redirects run first, so London is unaffected.
+        {
+          source: "/blog/uk-weight-loss/:slug",
+          destination: GONE_REWRITE_DESTINATION,
+        },
       ],
       afterFiles: [],
       fallback: [],
@@ -343,11 +349,6 @@ const nextConfig: NextConfig = {
       {
         source: "/blog/uk-weight-loss/london",
         destination: "/blog/weight-loss-treatment-london",
-        permanent: true,
-      },
-      {
-        source: "/blog/uk-weight-loss/:slug",
-        destination: "/blog/best-weight-loss-treatment-in-:slug",
         permanent: true,
       },
       {

@@ -1440,12 +1440,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                   All UK location articles
                 </Link>
                 , or compare nearby guides for{" "}
-                <Link
-                  href="/blog/best-weight-loss-treatment-in-reading"
-                  className={linkCls}
-                >
-                  Reading
-                </Link>
+                Reading
                 ,{" "}
                 Oxford{" "}
                 and{" "}
