@@ -64,7 +64,8 @@
     "browserslist": "^4.28.7",
     "fflate": "^0.8.3",
     "nanoid": "^3.3.18",
-    "@humanfs/node": "^0.16.8"
+    "@humanfs/node": "^0.16.8",
+    "minimatch": "^11.0.1"
   },
   "browserslist": [
     "defaults",
