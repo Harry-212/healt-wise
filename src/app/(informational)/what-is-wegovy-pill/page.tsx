@@ -408,7 +408,11 @@ export default function WhatIsWegovyPillPage() {
                 Wegovy tablet FAQs
               </Link>{" "}
               for how to take it, when to take it and what to ask your
-              prescriber. To read about the weekly injection, go to{" "}
+              prescriber. If you are looking at providers, you can{" "}
+              <Link href="/wegovy-pill-price-comparison" className={linkClass}>
+                compare UK providers
+              </Link>
+              . To read about the weekly injection, go to{" "}
               <Link href="/what-is-wegovy" className={linkClass}>
                 What is Wegovy
               </Link>
