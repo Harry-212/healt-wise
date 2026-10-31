@@ -32,29 +32,11 @@ export type UkWeightLossLocation = {
 
 /** GOV.UK list of UK cities (2022) — two Bangors disambiguated; excludes Crown Dependencies. */
 const UK_CITIES: readonly (readonly [string, string, UkNation])[] = [
-  ["hereford", "Hereford", "England"],
   ["london", "London", "England"],
-  ["norwich", "Norwich", "England"],
-  ["peterborough", "Peterborough", "England"],
-  ["plymouth", "Plymouth", "England"],
-  ["ripon", "Ripon", "England"],
-  ["salford", "Salford", "England"],
-  ["southampton", "Southampton", "England"],
-  ["bangor-northern-ireland", "Bangor, Northern Ireland", "Northern Ireland"],
-  ["perth", "Perth", "Scotland"],
-  ["newport", "Newport", "Wales"],
-  ["st-davids", "St Davids", "Wales"],
 ] as const;
 
 /** Large towns (not always city status) — extra long-tail coverage. */
 const UK_TOWNS: readonly (readonly [string, string, UkNation])[] = [
-  ["reading", "Reading", "England"],
-  ["huddersfield", "Huddersfield", "England"],
-  ["middlesbrough", "Middlesbrough", "England"],
-  ["warrington", "Warrington", "England"],
-  ["east-kilbride", "East Kilbride", "Scotland"],
-  ["livingston", "Livingston", "Scotland"],
-  ["neath-port-talbot", "Neath Port Talbot", "Wales"],
 ] as const;
 
 function buildLongtails(
