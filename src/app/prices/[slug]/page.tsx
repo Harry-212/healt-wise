@@ -6,8 +6,6 @@ import { cheapestOptionsUkJsonLd } from "@/lib/seo/cheapest-options-page-seo";
 import { getCheapestOptionsPageData } from "@/lib/data/cheapest-options-page-data";
 import { metadataForPriceSlug } from "@/lib/seo/price-slug-metadata";
 import { PRICE_SLUGS } from "@/lib/routes/price-slugs";
-import ComparisonTable from "@/components/comparison/ComparisonTable";
-import { HOME_PREVIEW_PROVIDERS } from "@/lib/data/home-preview-providers";
 import TrustSignals from "@/components/trust/TrustSignals";
 import Link from "next/link";
 
@@ -92,16 +90,6 @@ export default async function PricePage({ params }: Props) {
           </p>
         </section>
 
-        <section className="mt-10 space-y-4">
-          <h2 className="text-xl font-semibold text-slate-900">
-            Cheapest providers &amp; comparison table
-          </h2>
-          <p className="text-sm text-slate-600">
-            Filter by medication and sort by price to shortlist options, then
-            verify GPhC registration and prescribing routes.
-          </p>
-          <ComparisonTable providers={HOME_PREVIEW_PROVIDERS} />
-        </section>
       </article>
     </>
   );

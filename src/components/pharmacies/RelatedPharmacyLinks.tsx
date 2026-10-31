@@ -22,11 +22,6 @@ const PHARMACY_REVIEWS: PharmacyReviewLink[] = [
     href: "/pharmacies/i-prescribe",
   },
   {
-    slug: "jood-life",
-    label: "Read our Jood Life Pharmacy review",
-    href: "/pharmacies/jood-life",
-  },
-  {
     slug: "pharmacy-me",
     label: "Read our Pharmacy + Me review",
     href: "/pharmacies/pharmacy-me",

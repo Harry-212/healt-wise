@@ -479,12 +479,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               heading="2. My London Pharmacy"
             >
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link
-                  href="/pharmacies/my-london-pharmacy"
-                  className={linkCls}
-                >
-                  My London Pharmacy
-                </Link>{" "}
+                My London Pharmacy{" "}
                 is an online pharmacy operating from Greenford in Greater London.
               </p>
               <p className={p}>
@@ -530,9 +525,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
 
             <GuideSection darkMode={darkMode} id="pharmica" heading="3. Pharmica">
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link href="/pharmacies/pharmica" className={linkCls}>
-                  Pharmica
-                </Link>{" "}
+                Pharmica{" "}
                 is an online pharmacy with company details published at 236
                 Gray&apos;s Inn Road, London WC1X 8HB.
               </p>
@@ -570,9 +563,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
 
             <GuideSection darkMode={darkMode} id="zava" heading="4. ZAVA">
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link href="/pharmacies/zava" className={linkCls}>
-                  ZAVA
-                </Link>{" "}
+                ZAVA{" "}
                 is an online doctor service with a London address at 46 Essex
                 Road, London N1 8LN.
               </p>
@@ -614,9 +605,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
 
             <GuideSection darkMode={darkMode} id="numan" heading="5. Numan">
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link href="/pharmacies/numan" className={linkCls}>
-                  Numan
-                </Link>{" "}
+                Numan{" "}
                 is a UK digital healthcare provider with a registered office at
                 Farringdon Point, 33 Farringdon Road, London EC1M 3JF.
               </p>
@@ -670,9 +659,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               heading="6. Get A Drip"
             >
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link href="/pharmacies/get-a-drip" className={linkCls}>
-                  Get A Drip
-                </Link>{" "}
+                Get A Drip{" "}
                 operates a combination of digital services, mobile services and
                 physical clinic locations.
               </p>
@@ -715,9 +702,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
 
             <GuideSection darkMode={darkMode} id="juniper" heading="7. Juniper">
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link href="/pharmacies/juniper" className={linkCls}>
-                  Juniper
-                </Link>{" "}
+                Juniper{" "}
                 provides a digital weight-management programme designed primarily
                 for women.
               </p>
@@ -766,12 +751,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               heading="8. Boots Online Doctor"
             >
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link
-                  href="/pharmacies/boots-online-doctor"
-                  className={linkCls}
-                >
-                  Boots Online Doctor
-                </Link>{" "}
+                Boots Online Doctor{" "}
                 provides an online weight-management service with delivery and,
                 for some prescriptions, collection through Boots stores.
               </p>
@@ -808,12 +788,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               heading="9. Superdrug Online Doctor"
             >
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link
-                  href="/pharmacies/superdrug-online-doctor"
-                  className={linkCls}
-                >
-                  Superdrug Online Doctor
-                </Link>{" "}
+                Superdrug Online Doctor{" "}
                 provides remote clinical assessments, prescribing where
                 appropriate and delivery or selected pharmacy collection.
               </p>
@@ -851,12 +826,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               heading="10. LloydsPharmacy Online Doctor"
             >
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link
-                  href="/pharmacies/lloyds-pharmacy-online-doctor"
-                  className={linkCls}
-                >
-                  LloydsPharmacy Online Doctor
-                </Link>{" "}
+                LloydsPharmacy Online Doctor{" "}
                 provides a national online weight-management service available to
                 London residents.
               </p>
@@ -898,9 +868,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               heading="11. MedExpress"
             >
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link href="/pharmacies/medexpress" className={linkCls}>
-                  MedExpress
-                </Link>{" "}
+                MedExpress{" "}
                 is a UK online doctor and pharmacy service that delivers to
                 London.
               </p>
@@ -942,9 +910,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               heading="12. Pharmacy2U"
             >
               <p className={`text-lg md:text-xl ${p}`}>
-                <Link href="/pharmacies/pharmacy2u" className={linkCls}>
-                  Pharmacy2U
-                </Link>{" "}
+                Pharmacy2U{" "}
                 operates a CQC-registered Online Doctor service providing
                 weight-management consultations and delivery across the UK,
                 including London.

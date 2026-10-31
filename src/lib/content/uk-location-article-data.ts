@@ -2083,11 +2083,11 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "Are all the services listed physical London clinics?",
-        a: `No. Some have London offices or pharmacy premises, some operate physical London locations, and others are national online providers delivering to London. Examples include [My London Pharmacy](/pharmacies/my-london-pharmacy), [ZAVA](/pharmacies/zava) and [Get A Drip](/pharmacies/get-a-drip).`,
+        a: `No. Some have London offices or pharmacy premises, some operate physical London locations, and others are national online providers delivering to London. Examples include My London Pharmacy, ZAVA and Get A Drip.`,
       },
       {
         q: "Can I attend My London Pharmacy in person?",
-        a: `Its weight-management service is primarily online. Do not assume that the Greenford premises provides walk-in consultations without confirming directly. See the [My London Pharmacy](/pharmacies/my-london-pharmacy) page for current service details.`,
+        a: `Its weight-management service is primarily online. Do not assume that the Greenford premises provides walk-in consultations without confirming directly. See the My London Pharmacy page for current service details.`,
       },
       {
         q: "Which services offer face-to-face appointments?",

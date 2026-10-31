@@ -432,26 +432,11 @@ export default function ArticleClient() {
                 , and several provider reviews highlight discreet or tracked
                 delivery. It can also help to look at how individual pharmacies
                 are assessed, such as the dossiers for{" "}
-                <Link
-                  href="/pharmacies/click2pharmacy"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  Click2Pharmacy
-                </Link>
+                Click2Pharmacy
                 ,{" "}
-                <Link
-                  href="/pharmacies/genmeds"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  GenMeds
-                </Link>
+                GenMeds
                 , and{" "}
-                <Link
-                  href="/pharmacies/ashcroft-pharmacy"
-                  className="font-medium text-emerald-600 hover:underline"
-                >
-                  Ashcroft Pharmacy
-                </Link>
+                Ashcroft Pharmacy
                 , so you can compare whether a provider offers the kind of
                 support you actually want after approval. If you want the full
                 criteria behind those reviews, our{" "}

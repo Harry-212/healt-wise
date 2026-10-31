@@ -1,44 +1,13 @@
-import { MOUNJARO_UK_COMPARE_PROVIDERS } from "@/lib/data/mounjaro-uk-compare-providers";
-import { WEGOVY_UK_COMPARE_PROVIDERS } from "@/lib/data/wegovy-uk-compare-providers";
+import { AFFILIATE_PARTNER_IDS } from "@/lib/data/affiliate-partners";
 
 /**
- * Slugs with custom landing pages not (yet) in compare tables — keep in sync with `/pharmacies/[slug]`.
- *
- * Excludes "get-weight-loss", "getadrip", and "pharmacy-xpress": these are alternate
- * spellings of "getweightloss", "get-a-drip", and "pharmacy-express" (which already have
- * compare-table entries). Duplicating the same review under two slugs produced identical
- * titles/descriptions and an unlinked twin page, so those three now 308-redirect to their
- * canonical slug in `/pharmacies/[slug]` instead of being statically generated here.
+ * Only the affiliate partners have a `/pharmacies/:slug` profile page. Every other
+ * pharmacy was removed on 2026-10-31 and answers 410 Gone (see `lib/seo/gone-paths.ts`).
  */
-export const EXTRA_PHARMACY_LANDING_SLUGS: readonly string[] = [
-  "ayp-healthcare",
-  "bolt-pharmacy",
-  "cloud-pharmacy",
-  "fella-health",
-  "farmeci",
-  "fylde-clinic",
-  "genmeds",
-  "goodbody-clinic",
-  "happy-pharmacy",
-  "hey-slim",
-  "medicspot",
-  "quickmeds",
-];
-
-/**
- * Providers removed from the site entirely. They stay in the stored compare data but must not
- * get a page, sitemap entry, llms.txt line or "All Pharmacies" listing (their URL now 404s).
- */
-export const RETIRED_PHARMACY_SLUGS: ReadonlySet<string> = new Set(["slinic"]);
 
 /** Every `/pharmacies/:slug` that `generateStaticParams` builds (sitemap + llms must match). */
 export function allPharmacySlugs(): string[] {
-  const ids = new Set<string>();
-  for (const p of WEGOVY_UK_COMPARE_PROVIDERS) ids.add(p.id);
-  for (const p of MOUNJARO_UK_COMPARE_PROVIDERS) ids.add(p.id);
-  for (const s of EXTRA_PHARMACY_LANDING_SLUGS) ids.add(s);
-  for (const s of RETIRED_PHARMACY_SLUGS) ids.delete(s);
-  return [...ids].sort();
+  return [...AFFILIATE_PARTNER_IDS].sort();
 }
 
 let cachedPharmacyPageSlugs: Set<string> | null = null;
