@@ -5,7 +5,7 @@ import ArticleSources from "@/components/blog/ArticleSources";
 import React, { useState } from "react";
 import Link from "next/link";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
-import { ArrowLeft, Moon, Sun, Calendar, Clock, Star, ExternalLink, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Moon, Sun, Calendar, Clock, ExternalLink, ShieldCheck, CheckCircle2 } from "lucide-react";
 import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import { GuideSection } from "@/components/guide/GuideLayout";
@@ -17,93 +17,19 @@ import {
 } from "./blog-assets";
 
 const SHARE_PATH = "/blog/best-place-to-start-weight-loss-treatment-online-uk";
-const TITLE = "Best Online Weight Loss Providers UK (2026)";
+const TITLE =
+  "Best Place to Start Weight Loss Treatment Online UK: Safety, Prices and Provider Checks";
 const DESCRIPTION =
-  "Looking for the best online weight loss provider in the UK? See our shortlist of GPhC registered pharmacies with prices, support and delivery compared.";
+  "Compare safe UK weight loss treatment providers, prices, pharmacy checks and support before starting treatment.";
 const HERO_SRC = blogImgPath(BEST_PLACE_HERO_PNG);
 const INLINE_SRC = blogImgPath(BEST_PLACE_INLINE_PNG);
 
 const TOC = [
-  { id: "shortlist", label: "Our shortlist of online weight loss providers" },
+  { id: "compare-providers", label: "Compare providers on Healthwise360" },
   { id: "how-to-choose", label: "How to choose a provider" },
-  { id: "how-we-rank", label: "How we rank providers" },
   { id: "is-it-safe", label: "Is it safe to buy online?" },
   { id: "faq", label: "Frequently asked questions" },
   { id: "conclusion", label: "Conclusion" },
-];
-
-interface ShortlistProvider {
-  rank: number;
-  name: string;
-  slug: string;
-  rating: number;
-  gphcRegNo: string;
-  whyOnList: string;
-  mounjaroFrom: number;
-  wegovyFrom: number;
-}
-
-const SHORTLIST_PROVIDERS: ShortlistProvider[] = [
-  {
-    rank: 1,
-    name: "Pharmacy Express",
-    slug: "pharmacy-express",
-    rating: 5.0,
-    gphcRegNo: "9012468",
-    whyOnList: "Top-rated 5.0 customer satisfaction on our platform with low starter pricing and fast tracked cold-chain dispatch.",
-    mounjaroFrom: 144.99,
-    wegovyFrom: 119.99,
-  },
-  {
-    rank: 2,
-    name: "Swift Doctor",
-    slug: "swift-doctor",
-    rating: 4.9,
-    gphcRegNo: "9012809",
-    whyOnList: "Outstanding 4.9 customer feedback with fast prescriber assessment times and responsive clinician support.",
-    mounjaroFrom: 149.00,
-    wegovyFrom: 129.00,
-  },
-  {
-    rank: 3,
-    name: "Pharmica",
-    slug: "pharmica",
-    rating: 4.9,
-    gphcRegNo: "9012030",
-    whyOnList: "Established London pharmacy premises with extensive clinical staff, same-day processing, and reliable cold-chain packaging.",
-    mounjaroFrom: 159.99,
-    wegovyFrom: 149.00,
-  },
-  {
-    rank: 4,
-    name: "Dr Weightmans",
-    slug: "dr-weightmans",
-    rating: 4.9,
-    gphcRegNo: "1092500",
-    whyOnList: "Doctor-led clinical service dedicated specifically to medical weight management consultations and careful dose titration.",
-    mounjaroFrom: 145.00,
-    wegovyFrom: 139.00,
-  },
-  {
-    rank: 5,
-    name: "The Care Pharmacy",
-    slug: "care-pharmacy",
-    rating: 4.9,
-    gphcRegNo: "9010308",
-    whyOnList: "Highly regarded patient support, transparent single-pen list pricing, and dependable pharmacist follow-up reviews.",
-    mounjaroFrom: 149.99,
-    wegovyFrom: 140.00,
-  },
-  {
-    rank: 6,
-    name: "Ashcroft Pharmacy",
-    slug: "ashcroft-pharmacy",
-    rating: 4.8,
-    gphcRegNo: "9011964",
-    whyOnList: "Consistent 4.8 rating, competitive starter pen rates, and prompt clinician review on all initial applications.",
-    mounjaroFrom: 149.99,
-    wegovyFrom: 120.00,
-  },
 ];
 
 export default function ArticleClient() {
@@ -164,7 +90,7 @@ export default function ArticleClient() {
           </Link>
           <span>/</span>
           <span className={darkMode ? "text-slate-200" : "text-slate-600"}>
-            Best Online Weight Loss Providers UK
+            Best Place to Start Weight Loss Treatment Online UK
           </span>
         </nav>
 
@@ -175,14 +101,14 @@ export default function ArticleClient() {
             <h1
               className={`mb-6 text-3xl font-black leading-[1.15] tracking-tight sm:text-4xl md:text-[44px] ${darkMode ? "text-white" : "text-slate-900"}`}
             >
-              Best Online Weight Loss Providers UK (2026)
+              {TITLE}
             </h1>
             <div
               className={`mb-8 flex flex-wrap items-center gap-6 text-sm font-medium ${darkMode ? "text-slate-400" : "text-slate-600"}`}
             >
               <span className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                Updated October 2026
+                Updated November 2026
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
@@ -209,85 +135,31 @@ export default function ArticleClient() {
               className={`rounded-2xl border p-6 sm:p-7 ${darkMode ? "border-emerald-800/40 bg-emerald-950/20" : "border-emerald-900/15 bg-emerald-50/70"}`}
             >
               <p className="text-base sm:text-lg leading-relaxed text-slate-800 dark:text-slate-200">
-                The best online weight loss provider for you depends on price, support and delivery. Every provider on this list is a GPhC registered UK pharmacy, and a prescriber checks your health before any medicine is sent. Price, safety and our 5 checks decide the order. No pharmacy can pay to change its place.
+                The best online weight loss provider for you depends on price, support and delivery. Check that the pharmacy is GPhC registered and that a prescriber reviews your health before any medicine is sent.
               </p>
             </div>
 
-            {/* Section 1: Ranked Shortlist */}
+            {/* Section 1: Where to compare providers (no ranking) */}
             <GuideSection
               darkMode={darkMode}
-              id="shortlist"
-              heading="Our Shortlist of Online Weight Loss Providers"
+              id="compare-providers"
+              heading="Compare Providers on Healthwise360"
             >
               <p>
-                Our shortlist is ranked by independent user satisfaction scores and verified regulatory records already tracked on Healthwise360. Prices reflect our 20 September 2026 price check for standard starter doses.
+                Healthwise360 compares selected partner providers, not the whole UK market. Providers are listed A–Z, and the order is never influenced by commission, affiliate status or discount codes. See the{" "}
+                <Link href="/pharmacies" className="font-semibold text-emerald-700 underline hover:text-emerald-900 dark:text-emerald-400">
+                  partner pharmacy directory
+                </Link>
+                , or compare dated prices by dose on the{" "}
+                <Link href="/mounjaro-price-comparison" className="font-semibold text-emerald-700 underline hover:text-emerald-900 dark:text-emerald-400">
+                  Mounjaro
+                </Link>{" "}
+                and{" "}
+                <Link href="/wegovy-price-comparison" className="font-semibold text-emerald-700 underline hover:text-emerald-900 dark:text-emerald-400">
+                  Wegovy
+                </Link>{" "}
+                price comparison pages.
               </p>
-
-              <div className="mt-6 space-y-6">
-                {SHORTLIST_PROVIDERS.map((p) => (
-                  <div
-                    key={p.slug}
-                    className={`rounded-2xl border p-5 sm:p-6 transition-shadow hover:shadow-md ${
-                      darkMode
-                        ? "border-slate-800 bg-slate-900/60"
-                        : "border-slate-200 bg-white shadow-xs"
-                    }`}
-                  >
-                    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4 dark:border-slate-800">
-                      <div className="flex items-center gap-3">
-                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-700 font-bold text-white text-sm">
-                          #{p.rank}
-                        </span>
-                        <div>
-                          <h3
-                            className={`text-lg font-bold sm:text-xl ${
-                              darkMode ? "text-white" : "text-slate-900"
-                            }`}
-                          >
-                            {p.name}
-                          </h3>
-                          <span className="text-xs text-slate-500 font-mono">
-                            GPhC Reg: {p.gphcRegNo}
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
-                        <Star className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
-                        <span>{p.rating.toFixed(1)} / 5</span>
-                      </div>
-                    </div>
-
-                    <p className="mt-4 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
-                      {p.whyOnList}
-                    </p>
-
-                    <div className="mt-5 grid grid-cols-2 gap-3 rounded-xl border border-slate-100 bg-slate-50/70 p-3.5 dark:border-slate-800 dark:bg-slate-900/40 sm:grid-cols-2">
-                      <div>
-                        <div className="text-xs text-slate-500 font-medium">Starting Mounjaro:</div>
-                        <div className="text-base font-extrabold text-slate-900 dark:text-white">
-                          £{p.mounjaroFrom.toFixed(2)}
-                        </div>
-                      </div>
-                      <div>
-                        <div className="text-xs text-slate-500 font-medium">Starting Wegovy:</div>
-                        <div className="text-base font-extrabold text-slate-900 dark:text-white">
-                          £{p.wegovyFrom.toFixed(2)}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="mt-5 flex flex-wrap items-center gap-3 pt-2">
-                      <Link
-                        href="/mounjaro-price-comparison"
-                        className="inline-flex items-center gap-1 rounded-lg border border-slate-300 px-3.5 py-2 text-xs font-semibold text-slate-700 hover:border-slate-400 hover:text-slate-900 dark:border-slate-700 dark:text-slate-300 dark:hover:text-white transition"
-                      >
-                        Compare prices
-                      </Link>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </GuideSection>
 
             <div className="my-8">
@@ -362,24 +234,6 @@ export default function ArticleClient() {
                   </p>
                 </div>
               </div>
-            </GuideSection>
-
-            {/* Section 3: How we rank providers */}
-            <GuideSection
-              darkMode={darkMode}
-              id="how-we-rank"
-              heading="How We Rank Providers"
-            >
-              <p>
-                Our shortlist is ranked using verified GPhC registration status, published customer feedback scores from independent platforms, transparent list pricing without hidden mandatory subscriptions, and demonstrated cold-chain handling compliance. Healthwise360 operates under strict editorial neutrality: no pharmacy or telehealth service can pay, sponsor, or bid to improve their placement on our shortlist. Learn more on our{" "}
-                <Link
-                  href="/methodology"
-                  className="font-semibold text-emerald-700 underline hover:text-emerald-900 dark:text-emerald-400"
-                >
-                  ranking methodology page
-                </Link>
-                .
-              </p>
             </GuideSection>
 
             {/* Section 4: Is it safe to buy online? */}
