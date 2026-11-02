@@ -26,6 +26,7 @@ import {
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 import { compareWegovyMounjaroJsonLd } from "@/lib/seo/compare-wegovy-mounjaro-json-ld";
+import { dateModifiedWithPriceCheck } from "@/lib/data/price-check";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -107,7 +108,7 @@ export default async function ComparePage({ params }: Props) {
     mounjaroSixMonthsTypical: priceSummary.firstSixMonths.mounjaroTypical,
   });
   const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
-  const pricesLastCheckedIso = COMPARE_PAGES_CONTENT_MODIFIED;
+  const pricesLastCheckedIso = dateModifiedWithPriceCheck(COMPARE_PAGES_CONTENT_MODIFIED);
   const webLd = compareWebPageJsonLd(
     slug,
     webLdName,

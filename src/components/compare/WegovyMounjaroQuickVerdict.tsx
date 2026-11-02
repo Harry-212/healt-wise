@@ -1,4 +1,5 @@
 import { Sparkles } from "lucide-react";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 export interface WegovyMounjaroQuickVerdictProps {
   wegovyStarterLow?: string;
@@ -13,7 +14,7 @@ export default function WegovyMounjaroQuickVerdict({
   mounjaroStarterLow = "£119.69",
   wegovyTopTypical = "£200",
   mounjaroTopTypical = "£299",
-  pricesChecked = "31 October 2026",
+  pricesChecked = PRICE_CHECK_DATE_LONG,
 }: WegovyMounjaroQuickVerdictProps) {
   const comparisonRows = [
     {

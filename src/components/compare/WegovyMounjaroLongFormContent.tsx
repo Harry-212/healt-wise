@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 /**
  * Editorial long-form content for `/compare/wegovy-vs-mounjaro`.
@@ -93,7 +94,7 @@ export default function WegovyMounjaroLongFormContent({
   wegovy72Listed = 48,
   wegovyProviderCount = 6,
   mounjaroProviderCount = 6,
-  pricesChecked = "31 October 2026",
+  pricesChecked = PRICE_CHECK_DATE_LONG,
 }: WegovyMounjaroLongFormContentProps) {
   return (
     <>

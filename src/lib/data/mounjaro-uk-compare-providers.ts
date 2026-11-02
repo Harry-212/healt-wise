@@ -1,8 +1,9 @@
 import { getProvider } from "./providers";
+import { PRICE_CHECK_DATE_LONG, PRICE_CHECK_DATE_SHORT } from "./price-check";
 
 /** Illustrative UK Mounjaro pen prices — confirm live rates on each pharmacy. */
 
-export const MOUNJARO_UK_COMPARE_LAST_UPDATED = "31 October 2026";
+export const MOUNJARO_UK_COMPARE_LAST_UPDATED = PRICE_CHECK_DATE_LONG;
 
 export type MounjaroUkCompareBadge = "mostPopular" | "bestValue";
 
@@ -59,7 +60,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
       "12.5mg": 248.99,
       "15mg": 267.99,
     },
-    updatedLabel: "8 Oct 2026",
+    updatedLabel: PRICE_CHECK_DATE_SHORT,
     consultationIncluded: true,
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
@@ -80,7 +81,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
       "12.5mg": 267.29,
       "15mg": 290.69,
     },
-    updatedLabel: "27 Sep 2026",
+    updatedLabel: PRICE_CHECK_DATE_SHORT,
     consultationIncluded: true,
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
@@ -100,7 +101,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
       "12.5mg": 239.39,
       "15mg": 259.34,
     },
-    updatedLabel: "12 Oct 2026",
+    updatedLabel: PRICE_CHECK_DATE_SHORT,
     consultationIncluded: true,
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
@@ -121,7 +122,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
       "12.5mg": 320.0,
       "15mg": 340.0,
     },
-    updatedLabel: "23 Oct 2026",
+    updatedLabel: PRICE_CHECK_DATE_SHORT,
     consultationIncluded: true,
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
@@ -142,7 +143,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
       "12.5mg": 319.0,
       "15mg": 319.0,
     },
-    updatedLabel: "26 Oct 2026",
+    updatedLabel: PRICE_CHECK_DATE_SHORT,
     consultationIncluded: true,
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
   },
@@ -163,7 +164,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
       "12.5mg": 259.99,
       "15mg": 279.99,
     },
-    updatedLabel: "31 Oct 2026",
+    updatedLabel: PRICE_CHECK_DATE_SHORT,
     consultationIncluded: true,
     ctaHref: "/go/solira",
   },
