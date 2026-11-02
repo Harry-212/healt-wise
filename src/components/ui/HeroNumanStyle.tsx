@@ -5,6 +5,7 @@ import {
   HOMEPAGE_HERO_LIFESTYLE_ALT,
   HOMEPAGE_HERO_LIFESTYLE_SRC,
 } from "@/lib/site-assets";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 export interface HeroNumanStyleProps {
   wegovyStarterLow?: string;
@@ -15,7 +16,7 @@ export interface HeroNumanStyleProps {
 export default function HeroNumanStyle({
   wegovyStarterLow = "£72.89",
   mounjaroStarterLow = "£119.69",
-  pricesChecked = "31 October 2026",
+  pricesChecked = PRICE_CHECK_DATE_LONG,
 }: HeroNumanStyleProps) {
   return (
     <section

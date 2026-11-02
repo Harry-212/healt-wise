@@ -16,6 +16,7 @@ import {
 } from "@/lib/site-assets";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { formatGbp } from "@/lib/data/wegovy-price-insights";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 const instrumentSerif = Instrument_Serif({
   weight: "400",
@@ -37,7 +38,7 @@ export default function WegovyCompareShaderHero({
   const displayPrice = cheapestPrice != null ? formatGbp(cheapestPrice) : "£72.89";
   const displayProvider = cheapestProvider || "our cheapest listed pharmacy";
   const displayCount = providerCount != null ? providerCount : 62;
-  const displayDate = lastUpdated || "31 October 2026";
+  const displayDate = lastUpdated || PRICE_CHECK_DATE_LONG;
 
   return (
     <ComparePricePhotoHeroShell

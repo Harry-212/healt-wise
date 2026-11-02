@@ -1,6 +1,7 @@
 import Link from "next/link";
 import HomeSectionCard from "@/components/ui/HomeSectionCard";
 import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 const DEFAULT_ROWS: HomePriceSnapshotRow[] = [
   { dose: "Mounjaro 2.5 mg (starter)", lowest: "£119.69", typical: "£154", highest: "£229" },
@@ -16,7 +17,7 @@ export interface PriceSnapshotSectionProps {
 
 export default function PriceSnapshotSection({
   rows = DEFAULT_ROWS,
-  lastUpdated = "31 October 2026",
+  lastUpdated = PRICE_CHECK_DATE_LONG,
 }: PriceSnapshotSectionProps) {
   return (
     <HomeSectionCard id="price-snapshot">

@@ -1,4 +1,5 @@
 import type { PageShareMetadataInput } from "@/lib/seo/share-metadata";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 export type CompareMedicationTab = "wegovy" | "mounjaro";
 
@@ -45,7 +46,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       titleBold: "Wegovy vs Mounjaro: Price, Dose and Weight Loss Compared",
       subtitle:
         "Mounjaro led to more weight loss than Wegovy in a head to head trial. Wegovy usually costs less. Here is how Wegovy vs Mounjaro compares in the UK on weight loss, dose, side effects, NHS access and the real price. A Wegovy starter pen costs from {{wegovyStarterLow}} and a Mounjaro starter pen from {{mounjaroStarterLow}}.",
-      snapshotLabel: "Prices checked 31 October 2026 · Same prices as our price pages · No paid rankings",
+      snapshotLabel: `Prices checked ${PRICE_CHECK_DATE_LONG} · Same prices as our price pages · No paid rankings`,
       navLinks: [
         { href: "#quick-verdict", label: "At a Glance" },
         { href: "#difference", label: "Difference" },

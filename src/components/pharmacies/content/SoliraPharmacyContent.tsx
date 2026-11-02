@@ -10,6 +10,7 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 const providerUrl = "/go/solira";
 
@@ -31,7 +32,7 @@ export default function SoliraPharmacyContent() {
       providerName="Solira"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Checked", v: "31 October 2026" },
+        { k: "Checked", v: PRICE_CHECK_DATE_LONG },
         {
           k: "Provider",
           v: "QCP1 Ltd, trading as Solira (QuickCare Pharmacy)",
@@ -87,7 +88,7 @@ export default function SoliraPharmacyContent() {
               Solira Oral Weight Loss Tablets Pricing (30-Day Supply)
             </h2>
             <p className="mt-1 text-xs text-slate-600">
-              Prices verified as of 31 October 2026. Includes pharmacist consultation. £2.99 Royal Mail Tracked 48 delivery charged at checkout.
+              Prices verified as of {PRICE_CHECK_DATE_LONG}. Includes pharmacist consultation. £2.99 Royal Mail Tracked 48 delivery charged at checkout.
             </p>
           </div>
 

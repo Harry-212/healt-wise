@@ -12,6 +12,7 @@ import {
   SITE_BUSINESS_PHONE_TEL,
   SITE_SOCIAL_PROFILES_ORG_SAFE,
 } from "@/lib/site-contact";
+import { PRICE_CHECK_DATE_ISO, PRICE_CHECK_DATE_LONG, dateModifiedWithPriceCheck } from "@/lib/data/price-check";
 
 const SCHEMA_LANGUAGE = "en-GB";
 
@@ -129,12 +130,12 @@ function homeSchemaPriceSnapshotDataset(base: string): Record<string, unknown> {
     "@id": `${base}/#price-snapshot`,
     name: "UK weight loss injection prices by dose: Mounjaro and Wegovy",
     description:
-      "Lowest, typical and highest price of a 4 week Mounjaro and Wegovy pen at our GPhC registered UK pharmacy partners, from the Healthwise360 price check on 31 October 2026.",
+      `Lowest, typical and highest price of a 4 week Mounjaro and Wegovy pen at our GPhC registered UK pharmacy partners, from the Healthwise360 price check on ${PRICE_CHECK_DATE_LONG}.`,
     url: `${base}/`,
     creator: { "@id": `${base}/#organization` },
     publisher: { "@id": `${base}/#organization` },
-    dateModified: "2026-10-31",
-    temporalCoverage: "2026-10-31",
+    dateModified: PRICE_CHECK_DATE_ISO,
+    temporalCoverage: PRICE_CHECK_DATE_ISO,
     spatialCoverage: { "@type": "Place", name: "United Kingdom" },
     isAccessibleForFree: true,
     inLanguage: SCHEMA_LANGUAGE,
@@ -192,7 +193,7 @@ export function homePageJsonLdGraph(
     ],
     mainEntity: { "@id": `${base}/#price-snapshot` },
     breadcrumb: { "@id": `${base}/#breadcrumb` },
-    dateModified: "2026-10-14",
+    dateModified: dateModifiedWithPriceCheck("2026-10-14"),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["#hero-answer", "#cost-answer"],

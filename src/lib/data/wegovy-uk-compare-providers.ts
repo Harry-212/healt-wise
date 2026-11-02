@@ -4,8 +4,9 @@ import {
   MOUNJARO_UK_COMPARE_PROVIDERS,
   type MounjaroUkProviderCompare,
 } from "./mounjaro-uk-compare-providers";
+import { PRICE_CHECK_DATE_LONG, PRICE_CHECK_DATE_SHORT } from "./price-check";
 
-export const WEGOVY_UK_COMPARE_LAST_UPDATED = "31 October 2026";
+export const WEGOVY_UK_COMPARE_LAST_UPDATED = PRICE_CHECK_DATE_LONG;
 
 export type WegovyUkCompareBadge = "mostPopular" | "bestValue";
 
@@ -119,18 +120,6 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
 
 const WEGOVY_EXTRA_PROVIDER_SEEDS: MounjaroUkProviderCompare[] = [];
 
-/** Rows re-checked by the client on 20 Sep 2026; others keep their earlier label. */
-const WEGOVY_CHECKED_20_SEP_2026 = new Set<string>([]);
-
-/** Providers checked on a date other than the two the ternary below covers (20 Sep / fallback). */
-const WEGOVY_UPDATED_LABEL_OVERRIDE: Record<string, string> = {
-  "reach-online-pharmacy": "27 Sep 2026",
-  "pharmacy-me": "12 Oct 2026",
-  "i-prescribe": "26 Oct 2026",
-  shemed: "26 Oct 2026",
-  solira: "31 Oct 2026",
-};
-
 function providerSeedToWegovy(
   provider: MounjaroUkProviderCompare,
 ): WegovyUkProviderCompare | null {
@@ -147,9 +136,7 @@ function providerSeedToWegovy(
     trustpilotUrl: provider.trustpilotUrl,
     linkProfilePage: provider.linkProfilePage,
     prices,
-    updatedLabel:
-      WEGOVY_UPDATED_LABEL_OVERRIDE[provider.id] ??
-      (WEGOVY_CHECKED_20_SEP_2026.has(provider.id) ? "20 Sep 2026" : "May 2026"),
+    updatedLabel: PRICE_CHECK_DATE_SHORT,
     consultationIncluded: provider.consultationIncluded,
     badges: provider.badges,
     ctaHref: "/what-is-wegovy#how-to-get-wegovy-uk",

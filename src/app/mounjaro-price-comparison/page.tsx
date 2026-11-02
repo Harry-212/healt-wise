@@ -32,6 +32,7 @@ import {
   mounjaroCompareUkFaqJsonLd,
 } from "@/lib/seo/mounjaro-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
+import { dateModifiedWithPriceCheck } from "@/lib/data/price-check";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -72,7 +73,7 @@ function compareWebPageJsonLd(providers: MounjaroUkProviderCompare[]) {
     description:
       "Compare Mounjaro prices at our GPhC registered UK pharmacy partners. Find the cheapest Mounjaro in the UK for every dose, from 2.5 mg to 15 mg.",
     url: pageUrl,
-    dateModified: "2026-10-15",
+    dateModified: dateModifiedWithPriceCheck("2026-10-15"),
     isPartOf: {
       "@id": `${base}/#website`,
     },

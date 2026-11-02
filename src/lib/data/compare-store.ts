@@ -8,6 +8,7 @@ import type {
 } from "./compare-types";
 import { AFFILIATE_PARTNER_IDS } from "./affiliate-partners";
 import { getProvider } from "./providers";
+import { PRICE_CHECK_DATE_LONG, PRICE_CHECK_DATE_SHORT } from "./price-check";
 import { buildMounjaroSeedStore, buildWegovySeedStore } from "./compare-seed";
 import type { MounjaroUkProviderCompare } from "./mounjaro-uk-compare-providers";
 import type { WegovyUkProviderCompare } from "./wegovy-uk-compare-providers";
@@ -145,6 +146,7 @@ function enrichMounjaroProvider(
   return {
     ...p,
     trustpilotUrl: getProvider(p.id)?.trustpilotUrl ?? p.trustpilotUrl,
+    updatedLabel: PRICE_CHECK_DATE_SHORT,
   };
 }
 
@@ -168,7 +170,9 @@ function sortProvidersByName<T extends { name: string }>(providers: T[]): T[] {
 /** Live Wegovy list for public pages (A–Z by pharmacy name). */
 export function readWegovyCompareProviders(): WegovyUkProviderCompare[] {
   return sortProvidersByName(
-    getWegovyStore().providers.filter(isShownProvider),
+    getWegovyStore()
+      .providers.filter(isShownProvider)
+      .map((p) => ({ ...p, updatedLabel: PRICE_CHECK_DATE_SHORT })),
   );
 }
 
@@ -178,9 +182,9 @@ export function readWegovyCompareProvidersAdmin(): WegovyUkProviderCompare[] {
 }
 
 export function getMounjaroLastUpdatedLabel(): string {
-  return getMounjaroStore().lastUpdated;
+  return PRICE_CHECK_DATE_LONG;
 }
 
 export function getWegovyLastUpdatedLabel(): string {
-  return getWegovyStore().lastUpdated;
+  return PRICE_CHECK_DATE_LONG;
 }

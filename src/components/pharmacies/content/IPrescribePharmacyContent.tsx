@@ -10,6 +10,7 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 const providerUrl = "/go/i-prescribe";
 
@@ -32,7 +33,7 @@ export default function IPrescribePharmacyContent() {
       providerName="i-Prescribe"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Checked", v: "23 October 2026" },
+        { k: "Checked", v: PRICE_CHECK_DATE_LONG },
         {
           k: "Provider",
           v: "I Prescribe Limited trading as i-Prescribe Online Pharmacy",

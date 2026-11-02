@@ -13,6 +13,7 @@ import {
   ShaderBackground,
   type HeroShaderVariant,
 } from "@/components/ui/hero-shader";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 const instrumentSerif = Instrument_Serif({
   weight: "400",
@@ -59,7 +60,7 @@ export default function CompareTreatmentsHero({
   heroPhotoAlt = "",
   highlightNavLinks = false,
   subtitleId,
-  pricesChecked = "31 October 2026",
+  pricesChecked = PRICE_CHECK_DATE_LONG,
 }: {
   variant: HeroShaderVariant;
   eyebrow: string;

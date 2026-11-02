@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { dateModifiedWithPriceCheck } from "@/lib/data/price-check";
 import { ArrowRight } from "lucide-react";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import WegovyCompareChartsSection from "@/components/compare/WegovyCompareChartsSection";
@@ -73,7 +74,7 @@ function compareWebPageJsonLd(providers: WegovyUkProviderCompare[]) {
     description:
       "Compare Wegovy pen prices from 0.25 mg to 7.2 mg across regulated UK pharmacies. See delivery costs, provider ratings and the date each price was last checked.",
     url: pageUrl,
-    dateModified: "2026-09-25",
+    dateModified: dateModifiedWithPriceCheck("2026-09-25"),
     isPartOf: {
       "@id": `${base}/#website`,
     },

@@ -10,6 +10,7 @@ import {
   Points,
   ProviderCta,
 } from "./_dossier";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 const providerUrl = "/go/shemed";
 
@@ -32,7 +33,7 @@ export default function SheMedPharmacyContent() {
       providerName="SheMed"
       providerUrl={providerUrl}
       docDetails={[
-        { k: "Checked", v: "23 October 2026" },
+        { k: "Checked", v: PRICE_CHECK_DATE_LONG },
         {
           k: "Provider",
           v: "SheMed (pharmacy fulfilment by eMed Healthcare UK Limited)",

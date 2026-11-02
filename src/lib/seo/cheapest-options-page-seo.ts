@@ -1,5 +1,6 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { activeProviderCount } from "@/lib/data/providers";
+import { PRICE_CHECK_DATE_ISO } from "@/lib/data/price-check";
 
 const PATH = "/prices/cheapest-options-uk";
 
@@ -122,7 +123,7 @@ export function cheapestOptionsUkJsonLd(
   const wHighStr = formatPriceNumber(input?.wegovyHigh, "290.00");
   const mLowStr = formatPriceNumber(input?.mounjaroLow, "99.00");
   const mHighStr = formatPriceNumber(input?.mounjaroHigh, "359.95");
-  const dateModified = input?.dateModified ?? "2026-09-20";
+  const dateModified = input?.dateModified ?? PRICE_CHECK_DATE_ISO;
   const faqs = input?.faqs ?? CHEAPEST_OPTIONS_FAQS;
 
   return {

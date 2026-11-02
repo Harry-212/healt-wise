@@ -1,5 +1,6 @@
 import HomeSectionCard from "@/components/ui/HomeSectionCard";
 import type { HomePriceSummary } from "@/lib/data/home-price-summary";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 export interface FirstThreeMonthsCostSectionProps {
   data?: HomePriceSummary["firstThreeMonths"];
@@ -38,7 +39,7 @@ const DEFAULT_DATA: HomePriceSummary["firstThreeMonths"] = {
 
 export default function FirstThreeMonthsCostSection({
   data = DEFAULT_DATA,
-  lastUpdated = "31 October 2026",
+  lastUpdated = PRICE_CHECK_DATE_LONG,
 }: FirstThreeMonthsCostSectionProps) {
   const rows = data.rows ?? DEFAULT_DATA.rows;
 
