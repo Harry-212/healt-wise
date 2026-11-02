@@ -798,7 +798,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 For current verified pricing across all five Wegovy dose
-                strengths from 64+ GPhC-registered UK pharmacies, see the{" "}
+                strengths from the partner pharmacies in our comparison, see the{" "}
                 <Link href="/wegovy-price-comparison" className={linkClass} onClick={() => trackCalculatorToPriceComparison("/wegovy-price-comparison")}>
                   Wegovy price comparison at Healthwise360
                 </Link>{" "}

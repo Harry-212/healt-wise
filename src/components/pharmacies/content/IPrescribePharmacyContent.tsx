@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import { dossierOfferProps } from "@/lib/data/providers";
+import { useLiveMounjaroProvider, useLiveWegovyProvider } from "@/lib/data/live-prices-context";
+import { formatGbp } from "@/lib/data/mounjaro-price-insights";
+import { getWegovyCompareProviderById, wegovyPriceAmount } from "@/lib/data/wegovy-uk-compare-providers";
+import { getMounjaroCompareProviderById } from "@/lib/data/mounjaro-uk-compare-providers";
 import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import RelatedPharmacyLinks from "@/components/pharmacies/RelatedPharmacyLinks";
 import {
@@ -24,6 +28,14 @@ export default function IPrescribePharmacyContent() {
   const { discountCode, hasDiscount, discountCodeLabel, secondaryDiscount, offerTerms } =
     dossierOfferProps("i-prescribe");
   const repeatCode = secondaryDiscount?.code ?? "";
+  // Live row when the store has one, else the checked seed row, so the sentence never renders blank.
+  const mj = useLiveMounjaroProvider("i-prescribe") ?? getMounjaroCompareProviderById("i-prescribe");
+  const wg = useLiveWegovyProvider("i-prescribe") ?? getWegovyCompareProviderById("i-prescribe");
+  const money = (n: number | null | undefined) => (n == null ? "" : formatGbp(n));
+  const mjLow = money(mj?.prices["2.5mg"]);
+  const mjHigh = money(mj?.prices["15mg"]);
+  const wgLow = money(wg ? wegovyPriceAmount(wg.prices["0.25mg"]) : null);
+  const wgHigh = money(wg ? wegovyPriceAmount(wg.prices["2.4mg"]) : null);
 
   return (
     <PharmacyDossierPage
@@ -67,7 +79,7 @@ export default function IPrescribePharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            i-Prescribe supplies Mounjaro from £160 (2.5 mg) up to £340 (15 mg), and Wegovy from £129.99 (0.25 mg) up to £229.99 (2.4 mg) as of our October 2026 price review. Operating under GPhC registration 9012850, every patient assessment is clinically reviewed before medicine is dispensed. Compare pricing across all doses below, or explore our complete{" "}
+            i-Prescribe supplies Mounjaro from {mjLow} (2.5 mg) up to {mjHigh} (15 mg), and Wegovy from {wgLow} (0.25 mg) up to {wgHigh} (2.4 mg) as of our {PRICE_CHECK_DATE_LONG} price check. Operating under GPhC registration 9012850, every patient assessment is clinically reviewed before medicine is dispensed. Compare pricing across all doses below, or explore our complete{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"
@@ -119,7 +131,7 @@ export default function IPrescribePharmacyContent() {
         <p className={sectionLabel}>Key features &amp; service inclusions</p>
         <Points
           items={[
-            "Transparent pricing on all doses of Mounjaro (from £160) and Wegovy (from £129.99).",
+            `Transparent pricing on all doses of Mounjaro (from ${mjLow}) and Wegovy (from ${wgLow}).`,
             "Initial medical questionnaire and prescriber consultation included at no extra cost.",
             `£10 discount on initial purchase with code ${discountCode}.`,
             `Follow-up order discounts available with voucher code ${repeatCode}.`,

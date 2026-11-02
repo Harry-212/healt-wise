@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import { dossierOfferProps } from "@/lib/data/providers";
+import { useLiveMounjaroProvider, useLiveWegovyProvider } from "@/lib/data/live-prices-context";
+import { formatGbp } from "@/lib/data/mounjaro-price-insights";
+import { getWegovyCompareProviderById } from "@/lib/data/wegovy-uk-compare-providers";
+import { getMounjaroCompareProviderById } from "@/lib/data/mounjaro-uk-compare-providers";
 import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import RelatedPharmacyLinks from "@/components/pharmacies/RelatedPharmacyLinks";
 import {
@@ -22,6 +26,11 @@ const paragraphClass = "text-slate-800 leading-relaxed";
 
 export default function SheMedPharmacyContent() {
   const { discountCode, hasDiscount, offerTerms } = dossierOfferProps("shemed");
+  // Live row when the store has one, else the checked seed row, so the sentence never renders blank.
+  const mj = useLiveMounjaroProvider("shemed") ?? getMounjaroCompareProviderById("shemed");
+  const wg = useLiveWegovyProvider("shemed") ?? getWegovyCompareProviderById("shemed");
+  const mjStandard = mj ? formatGbp(mj.headlineFrom) : "";
+  const wgStandard = wg ? formatGbp(wg.headlineFrom) : "";
 
   return (
     <PharmacyDossierPage
@@ -65,7 +74,7 @@ export default function SheMedPharmacyContent() {
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
           <p className="text-base leading-relaxed text-slate-800">
-            SheMed offers introductory weight loss plans starting from £59 on longer commitment terms, with Mounjaro starting from £179 (first month, £229 standard retail) and Wegovy from £79 (first month, £139 standard retail). Operates in partnership with eMed Healthcare UK Ltd (GPhC 9012578, CQC 1-1690359844). View full dose-by-dose prices below, or see our comprehensive{" "}
+            SheMed offers introductory weight loss plans starting from £59 on longer commitment terms, with Mounjaro starting from £179 (first month, {mjStandard} standard retail) and Wegovy from £79 (first month, {wgStandard} standard retail). Operates in partnership with eMed Healthcare UK Ltd (GPhC 9012578, CQC 1-1690359844). View full dose-by-dose prices below, or see our comprehensive{" "}
             <Link
               href="/mounjaro-price-comparison"
               className="font-semibold text-emerald-800 underline hover:text-emerald-950"

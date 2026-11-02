@@ -1100,7 +1100,7 @@ export default function ArticleClient() {
                     >
                       weight loss treatment price comparison guide
                     </Link>{" "}
-                    covers more than 64 GPhC registered pharmacies across all
+                    covers the partner pharmacies in our comparison across all
                     three treatments and all dose strengths. The{" "}
                     <Link
                       href="/compare/wegovy-vs-mounjaro"
