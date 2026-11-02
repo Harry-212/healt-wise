@@ -161,7 +161,7 @@ export default function GuideEarlyWeightLoss() {
       readTime="3 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="fast-at-first" heading="Why You Lose Weight Quickly at First">
         <GuideParagraph>

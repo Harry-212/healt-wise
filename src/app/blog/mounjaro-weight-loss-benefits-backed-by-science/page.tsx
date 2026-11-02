@@ -100,7 +100,7 @@ export default function MounjaroWeightLossBenefitsArticlePage() {
 <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }),
+          __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }),
         }}
       />
       <ArticleClient />

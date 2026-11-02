@@ -154,7 +154,7 @@ export default function FibreForGlp1UsersPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            ...articleSchema,
+            "@context": "https://schema.org",
             "@graph": [articleSchema, breadcrumbSchema, faqSchema],
           }),
         }}

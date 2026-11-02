@@ -166,7 +166,7 @@ export default function GuideMounjaroMenopause() {
       readTime="5 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="why-weight-gain" heading="Why Weight Gain Happens During Menopause">
         <GuideParagraph>

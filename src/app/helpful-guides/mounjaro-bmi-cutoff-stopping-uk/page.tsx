@@ -165,7 +165,7 @@ export default function GuideMounjaroBMICutoff() {
       readTime="4 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="bmi-problem" heading="The Problem with BMI-Based Cutoffs">
         <GuideParagraph>

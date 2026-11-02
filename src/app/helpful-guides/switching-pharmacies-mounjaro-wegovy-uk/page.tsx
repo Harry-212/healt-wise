@@ -217,7 +217,7 @@ export default function GuideSwitchingPharmacy() {
       readTime="4 min read"
       lastUpdated="October 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <div className="mb-8 rounded-xl border border-emerald-900/15 bg-emerald-50/60 p-5 shadow-sm sm:p-6">
         <p className="text-lg font-bold text-emerald-950 sm:text-xl">
