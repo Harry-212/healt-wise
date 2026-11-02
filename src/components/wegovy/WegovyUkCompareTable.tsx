@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { orderProviders, type OrderingRule } from "@/lib/compare/provider-ordering";
 import { standardDeliveryFee } from "@/lib/data/providers";
+import { PARTNER_BADGE_LABEL } from "@/lib/data/partner-labels";
 import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import {
   GphcColumnHeaderContent,
@@ -617,7 +618,7 @@ export default function WegovyUkCompareTable({
                               {isAffiliatePartner(p.id) && (
                                 <span className="inline-flex items-center gap-1 rounded-full bg-emerald-700 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white">
                                   <Sparkles className="h-2.5 w-2.5" aria-hidden />
-                                  Featured Partner
+                                  {PARTNER_BADGE_LABEL}
                                 </span>
                               )}
                               {isLowestRow && (
