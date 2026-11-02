@@ -11,6 +11,8 @@ import {
   ChevronsUpDown,
   Sparkles,
 } from "lucide-react";
+import { orderProviders, type OrderingRule } from "@/lib/compare/provider-ordering";
+import { standardDeliveryFee } from "@/lib/data/providers";
 import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import {
   GphcColumnHeaderContent,
@@ -47,6 +49,7 @@ type DoseFilter = "all" | WegovyDoseColumnKey;
 type WegovyTableSort =
   | { key: "composite"; dir: "asc" | "desc" }
   | { key: "dose"; dose: WegovyDoseColumnKey; dir: "asc" | "desc" }
+  | { key: "total"; dir: "asc" | "desc" }
   | { key: "rating"; dir: "asc" | "desc" }
   | { key: "provider"; dir: "asc" | "desc" };
 
@@ -55,6 +58,8 @@ function wegovySortToPreset(s: WegovyTableSort): CompareSortPreset {
     case "composite":
     case "dose":
       return s.dir === "asc" ? "price-asc" : "price-desc";
+    case "total":
+      return s.dir === "asc" ? "total-asc" : "total-desc";
     case "rating":
       return s.dir === "desc" ? "rating-desc" : "rating-asc";
     case "provider":
@@ -68,6 +73,10 @@ function presetToWegovySort(v: CompareSortPreset): WegovyTableSort {
       return { key: "composite", dir: "asc" };
     case "price-desc":
       return { key: "composite", dir: "desc" };
+    case "total-asc":
+      return { key: "total", dir: "asc" };
+    case "total-desc":
+      return { key: "total", dir: "desc" };
     case "rating-desc":
       return { key: "rating", dir: "desc" };
     case "rating-asc":
@@ -77,17 +86,6 @@ function presetToWegovySort(v: CompareSortPreset): WegovyTableSort {
     case "provider-desc":
       return { key: "provider", dir: "desc" };
   }
-}
-
-function compareNullablePrices(
-  a: number | null,
-  b: number | null,
-  dir: "asc" | "desc",
-) {
-  if (a == null && b == null) return 0;
-  if (a == null) return 1;
-  if (b == null) return -1;
-  return (a - b) * (dir === "asc" ? 1 : -1);
 }
 
 function doseHeaderLabel(key: WegovyDoseColumnKey): string {
@@ -150,29 +148,31 @@ export default function WegovyUkCompareTable({
         ? startingPrice(p)
         : (wegovyPriceAmount(p.prices[doseFilter]) ?? Number.POSITIVE_INFINITY);
 
-    rows = [...rows].sort((a, b) => {
-      switch (tableSort.key) {
-        case "provider":
-          return tableSort.dir === "asc"
-            ? a.name.localeCompare(b.name)
-            : b.name.localeCompare(a.name);
-        case "rating":
-          return tableSort.dir === "desc"
-            ? b.rating - a.rating
-            : a.rating - b.rating;
-        case "dose":
-          {
-            const aPrice = wegovyPriceAmount(a.prices[tableSort.dose]);
-            const bPrice = wegovyPriceAmount(b.prices[tableSort.dose]);
-            return compareNullablePrices(aPrice, bPrice, tableSort.dir);
-          }
-        case "composite":
-          return (
-            (priceForComposite(a) - priceForComposite(b)) *
-            (tableSort.dir === "asc" ? 1 : -1)
-          );
-      }
-    });
+    const orderingRule: OrderingRule =
+      tableSort.key === "provider"
+        ? "alphabetical"
+        : tableSort.key === "rating"
+          ? "rating"
+          : tableSort.key === "total"
+            ? "total-price"
+            : "retail-price";
+    rows = orderProviders(
+      rows,
+      (p) => {
+        const retail =
+          tableSort.key === "dose"
+            ? wegovyPriceAmount(p.prices[tableSort.dose])
+            : priceForComposite(p);
+        return {
+          name: p.name,
+          retail: retail != null && Number.isFinite(retail) ? retail : null,
+          deliveryFee: standardDeliveryFee(p.id),
+          rating: p.rating,
+        };
+      },
+      orderingRule,
+      tableSort.dir,
+    );
 
     const minStart =
       rows.length > 0

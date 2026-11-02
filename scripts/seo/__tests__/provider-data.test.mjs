@@ -71,6 +71,7 @@ test("controlled removal and addition update the count, the A-Z list and the red
     name: "Aaa Test Partner",
     active: true,
     gphcNumber: "9999999",
+    standardDeliveryFee: 0,
     affiliate: {
       outboundUrl: "/go/test-partner",
       destinationUrl: "https://example.com/offer",

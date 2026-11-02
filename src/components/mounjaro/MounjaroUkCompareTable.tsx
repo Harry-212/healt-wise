@@ -11,6 +11,8 @@ import {
   ChevronsUpDown,
   Sparkles,
 } from "lucide-react";
+import { orderProviders, type OrderingRule } from "@/lib/compare/provider-ordering";
+import { standardDeliveryFee } from "@/lib/data/providers";
 import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import {
   GphcColumnHeaderContent,
@@ -46,6 +48,7 @@ type DoseFilter = "all" | MounjaroDoseColumnKey;
 type MounjaroTableSort =
   | { key: "composite"; dir: "asc" | "desc" }
   | { key: "dose"; dose: MounjaroDoseColumnKey; dir: "asc" | "desc" }
+  | { key: "total"; dir: "asc" | "desc" }
   | { key: "rating"; dir: "asc" | "desc" }
   | { key: "provider"; dir: "asc" | "desc" };
 
@@ -54,6 +57,8 @@ function mounjaroSortToPreset(s: MounjaroTableSort): CompareSortPreset {
     case "composite":
     case "dose":
       return s.dir === "asc" ? "price-asc" : "price-desc";
+    case "total":
+      return s.dir === "asc" ? "total-asc" : "total-desc";
     case "rating":
       return s.dir === "desc" ? "rating-desc" : "rating-asc";
     case "provider":
@@ -67,6 +72,10 @@ function presetToMounjaroSort(v: CompareSortPreset): MounjaroTableSort {
       return { key: "composite", dir: "asc" };
     case "price-desc":
       return { key: "composite", dir: "desc" };
+    case "total-asc":
+      return { key: "total", dir: "asc" };
+    case "total-desc":
+      return { key: "total", dir: "desc" };
     case "rating-desc":
       return { key: "rating", dir: "desc" };
     case "rating-asc":
@@ -139,28 +148,28 @@ export default function MounjaroUkCompareTable({
     const priceForComposite = (p: MounjaroUkProviderCompare) =>
       doseFilter === "all" ? startingPrice(p) : p.prices[doseFilter];
 
-    rows = [...rows].sort((a, b) => {
-      switch (tableSort.key) {
-        case "provider":
-          return tableSort.dir === "asc"
-            ? a.name.localeCompare(b.name)
-            : b.name.localeCompare(a.name);
-        case "rating":
-          return tableSort.dir === "desc"
-            ? b.rating - a.rating
-            : a.rating - b.rating;
-        case "dose":
-          return (
-            (a.prices[tableSort.dose] - b.prices[tableSort.dose]) *
-            (tableSort.dir === "asc" ? 1 : -1)
-          );
-        case "composite":
-          return (
-            (priceForComposite(a) - priceForComposite(b)) *
-            (tableSort.dir === "asc" ? 1 : -1)
-          );
-      }
-    });
+    const orderingRule: OrderingRule =
+      tableSort.key === "provider"
+        ? "alphabetical"
+        : tableSort.key === "rating"
+          ? "rating"
+          : tableSort.key === "total"
+            ? "total-price"
+            : "retail-price";
+    rows = orderProviders(
+      rows,
+      (p) => ({
+        name: p.name,
+        retail:
+          tableSort.key === "dose"
+            ? p.prices[tableSort.dose]
+            : priceForComposite(p),
+        deliveryFee: standardDeliveryFee(p.id),
+        rating: p.rating,
+      }),
+      orderingRule,
+      tableSort.dir,
+    );
 
     const minStart =
       rows.length > 0

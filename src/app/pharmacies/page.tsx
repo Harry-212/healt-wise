@@ -84,7 +84,12 @@ export default function PharmaciesIndexPage() {
             </Link>
           </div>
 
-          <ul className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <p className="mt-6 max-w-3xl text-sm leading-relaxed text-emerald-900/75">
+            Pharmacies are listed A–Z. Order is never influenced by commission,
+            affiliate status or discount codes.
+          </p>
+
+          <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {providers.map(({ slug, name }) => (
               <li key={slug}>
                 <Link
