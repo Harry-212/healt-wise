@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { HELPFUL_GUIDE_SLUGS } from "./src/lib/helpful-guide-slugs";
+import { affiliateRedirects } from "./src/lib/data/providers";
 import {
   GONE_BLOG_PAGE_LOCATIONS_QUERY_PATHS,
   GONE_EXACT_PATHS,
@@ -161,23 +162,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // Commercial affiliate redirects (cloaked affiliate URLs)
-      {
-        source: "/go/solira",
-        destination:
-          "https://withsolira.com/treatments/mounjaro?utm_source=healthwise360.co.uk&utm_medium=affiliate&utm_campaign=healthwise360_trial",
-        permanent: false,
-      },
-      {
-        source: "/go/shemed",
-        destination: "https://www.shemed.co.uk/treatment?via=healthwise360&code=HEALTH20",
-        permanent: false,
-      },
-      {
-        source: "/go/i-prescribe",
-        destination:
-          "https://i-prescribe.co.uk/pages/pom?formtype=weight-loss&ref=HW360&utm_source=healthwise360&utm_medium=referral&utm_campaign=weight-loss-referral",
-        permanent: false,
-      },
+      ...affiliateRedirects().map((r) => ({ ...r, permanent: false })),
       // Legacy / mistaken URLs (e.g. ads) — avoid 403/404 noise in Search Console.
       // These sit above the apex rule on purpose: the apex rule matches every
       // path, so below it apex /lander went apex -> www/lander -> www/ (two hops).

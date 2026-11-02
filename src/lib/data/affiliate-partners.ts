@@ -1,3 +1,5 @@
+import { activeProviders, type ProviderRecord } from "./providers.ts";
+
 export type AffiliatePartnerInfo = {
   id: string;
   name: string;
@@ -9,76 +11,30 @@ export type AffiliatePartnerInfo = {
   perkSummary?: string;
 };
 
-/**
- * The 6 verified commercial affiliate pharmacies that have an active
- * affiliate tracking link and/or voucher discount code.
- */
-export const AFFILIATE_PARTNER_IDS = new Set<string>([
-  "pharmacy-me",
-  "reach-online-pharmacy",
-  "dosedirect",
-  "i-prescribe",
-  "shemed",
-  "solira",
-]);
+function toPartnerInfo(p: ProviderRecord): AffiliatePartnerInfo {
+  const a = p.affiliate;
+  return {
+    id: p.id,
+    name: p.name,
+    badgeLabel: a.badgeLabel,
+    code: a.code,
+    secondaryCode: a.secondaryCode,
+    affiliateUrl: a.outboundUrl,
+    ctaLabel: a.ctaLabel,
+    perkSummary: a.perkSummary,
+  };
+}
 
-export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
-  "pharmacy-me": {
-    id: "pharmacy-me",
-    name: "Pharmacy + Me",
-    badgeLabel: "Featured Partner",
-    code: "hw360",
-    affiliateUrl: "https://pharmacyme.co.uk/go/hw360",
-    ctaLabel: "Claim Deal",
-    perkSummary: "Use code hw360",
-  },
-  "reach-online-pharmacy": {
-    id: "reach-online-pharmacy",
-    name: "Reach Online Pharmacy",
-    badgeLabel: "Featured Partner",
-    code: "Welcome10health",
-    affiliateUrl: "https://reachonlinepharmacy.com/weight-loss/",
-    ctaLabel: "Claim Deal",
-    perkSummary: "Use code Welcome10health",
-  },
-  dosedirect: {
-    id: "dosedirect",
-    name: "DoseDirect",
-    badgeLabel: "Featured Partner",
-    code: undefined,
-    affiliateUrl:
-      "https://questionnaire.semble.io/eb4dacb08b394c9c1a9ea4f4d0be2cb1a9c4cd2c",
-    ctaLabel: "Start Consultation",
-    perkSummary: "Free delivery included",
-  },
-  "i-prescribe": {
-    id: "i-prescribe",
-    name: "i-Prescribe",
-    badgeLabel: "Featured Partner",
-    code: "First10",
-    secondaryCode: "HW360",
-    affiliateUrl: "/go/i-prescribe",
-    ctaLabel: "Claim Deal",
-    perkSummary: "Code First10 for £10 off first order · Code HW360 on repeat orders",
-  },
-  shemed: {
-    id: "shemed",
-    name: "SheMed",
-    badgeLabel: "Featured Partner",
-    code: "HEALTH20",
-    affiliateUrl: "/go/shemed",
-    ctaLabel: "Claim Deal",
-    perkSummary: "20% off first order with code HEALTH20 · Free blood test & delivery",
-  },
-  solira: {
-    id: "solira",
-    name: "Solira",
-    badgeLabel: "Featured Partner",
-    affiliateUrl: "/go/solira",
-    ctaLabel: "Start Consultation",
-    perkSummary: "Pharmacist-led care · Tracked chilled delivery",
-  },
-};
+/**
+ * The active commercial affiliate partners, derived from the central provider
+ * data (`providers.ts`). Do not list partners here: set `active` there.
+ */
+export const AFFILIATE_PARTNER_IDS = new Set<string>(
+  activeProviders().map((p) => p.id),
+);
+
+export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> =
+  Object.fromEntries(activeProviders().map((p) => [p.id, toPartnerInfo(p)]));
 
 export function isAffiliatePartner(id: string): boolean {
   return AFFILIATE_PARTNER_IDS.has(id);

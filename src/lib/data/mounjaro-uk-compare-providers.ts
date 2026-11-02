@@ -1,15 +1,10 @@
+import { getProvider } from "./providers";
+
 /** Illustrative UK Mounjaro pen prices — confirm live rates on each pharmacy. */
 
 export const MOUNJARO_UK_COMPARE_LAST_UPDATED = "31 October 2026";
 
 export type MounjaroUkCompareBadge = "mostPopular" | "bestValue";
-
-const TRUSTPILOT_URL_BY_PROVIDER_ID: Record<string, string> = {
-  "pharmacy-me": "https://uk.trustpilot.com/review/pharmacyme.co.uk",
-  "i-prescribe": "https://uk.trustpilot.com/review/i-prescribe.co.uk",
-  shemed: "https://uk.trustpilot.com/review/shemed.co.uk",
-  solira: "https://uk.trustpilot.com/review/withsolira.com",
-};
 
 export type MounjaroUkProviderCompare = {
   id: string;
@@ -177,7 +172,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
 export const MOUNJARO_UK_COMPARE_PROVIDERS: MounjaroUkProviderCompare[] =
   MOUNJARO_UK_COMPARE_PROVIDERS_BASE.map((p) => ({
     ...p,
-    trustpilotUrl: TRUSTPILOT_URL_BY_PROVIDER_ID[p.id] ?? p.trustpilotUrl,
+    trustpilotUrl: getProvider(p.id)?.trustpilotUrl ?? p.trustpilotUrl,
   }));
 
 export function getMounjaroCompareProviderById(

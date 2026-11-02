@@ -1,47 +1,20 @@
 import Link from "next/link";
+import { activeProviders } from "@/lib/data/providers";
 
-/**
- * The 6 partner pharmacy review profile destinations.
- * Listed in alphabetical order by their display label.
- */
 interface PharmacyReviewLink {
   slug: string;
   label: string;
   href: string;
 }
 
-const PHARMACY_REVIEWS: PharmacyReviewLink[] = [
-  {
-    slug: "dosedirect",
-    label: "Read our DoseDirect review",
-    href: "/pharmacies/dosedirect",
-  },
-  {
-    slug: "i-prescribe",
-    label: "Read our i-Prescribe review",
-    href: "/pharmacies/i-prescribe",
-  },
-  {
-    slug: "pharmacy-me",
-    label: "Read our Pharmacy + Me review",
-    href: "/pharmacies/pharmacy-me",
-  },
-  {
-    slug: "reach-online-pharmacy",
-    label: "Read our Reach Online Pharmacy review",
-    href: "/pharmacies/reach-online-pharmacy",
-  },
-  {
-    slug: "shemed",
-    label: "Read our SheMed review",
-    href: "/pharmacies/shemed",
-  },
-  {
-    slug: "solira",
-    label: "Read our Solira review",
-    href: "/pharmacies/solira",
-  },
-];
+/** Every active partner's review page, A–Z, from the central provider data. */
+function pharmacyReviews(): PharmacyReviewLink[] {
+  return activeProviders().map((p) => ({
+    slug: p.id,
+    label: `Read our ${p.name} review`,
+    href: `/pharmacies/${p.id}`,
+  }));
+}
 
 /**
  * Shared reusable component: Neutral Pharmacy Cross-Links.
@@ -56,7 +29,7 @@ export default function RelatedPharmacyLinks({
   currentSlug: string;
 }) {
   // Automatically exclude the current pharmacy and preserve strict alphabetical order
-  const filtered = PHARMACY_REVIEWS.filter(
+  const filtered = pharmacyReviews().filter(
     (item) => item.slug !== currentSlug,
   ).sort((a, b) => a.label.localeCompare(b.label));
 
