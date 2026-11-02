@@ -203,10 +203,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/best-weight-loss-treatment-comparison-london"
+                    href="/blog/weight-loss-treatment-london"
                     className={FOOTER_NAV_LINK}
                   >
-                    <span>London Treatment Comparison</span>
+                    <span>London Weight Loss Guide</span>
                     <ChevronRight
                       className={FOOTER_NAV_LINK_CHEVRON}
                       aria-hidden

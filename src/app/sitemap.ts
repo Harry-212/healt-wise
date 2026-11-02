@@ -53,6 +53,7 @@ const EXCLUDED_SITEMAP_PATHS = new Set<string>([
   "/blog/understanding-the-mounjaro-kwikpen-a-user-guide",
   "/blog/how-does-wegovy-work-to-transform-your-weight-journey",
   /** Redirected pages (Zero-click pack 4, section D) */
+  "/best-weight-loss-treatment-comparison-london",
   "/helpful-guides/how-we-verify-uk-pharmacies-gphc-safety-standards",
   "/blog/what-is-bmi-calculator",
   "/blog/can-hormones-cause-belly-fat-after-40",
@@ -63,7 +64,6 @@ const STATIC_PATHS = [
   "/",
   "/about",
   "/about/ssot",
-  "/best-weight-loss-treatment-comparison-london",
   "/blog",
   "/contact",
   "/diet",
@@ -114,7 +114,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const HIGH_PRIORITY_HUBS = new Set<string>([
     "/wegovy-price-comparison",
     "/mounjaro-price-comparison",
-    "/best-weight-loss-treatment-comparison-london",
     "/blog",
     "/pharmacies",
     HELPFUL_GUIDES_HUB_PATH,

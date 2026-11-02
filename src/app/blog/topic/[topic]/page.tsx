@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: { canonical: url },
     // These list pages overlap heavily with /blog; keep them live and crawlable
     // but out of the index/sitemap.
-    robots: ["guides", "mounjaro", "locations", "how-it-works"].includes(raw)
+    robots: ["guides", "mounjaro", "how-it-works"].includes(raw)
       ? { index: false, follow: true }
       : undefined,
     openGraph: {

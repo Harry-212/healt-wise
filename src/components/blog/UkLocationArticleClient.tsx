@@ -15,7 +15,6 @@ import {
   UK_LOCATION_SOURCES,
 } from "@/lib/content/uk-location-article-data";
 import {
-  UK_WEIGHT_LOSS_FLAT_INDEX_PATH,
   type UkWeightLossLocation,
 } from "@/lib/data/uk-weight-loss-locations";
 import { capitalizeHeadingWords } from "@/lib/text/heading-case";
@@ -113,7 +112,7 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
       <div className="mx-auto max-w-7xl px-4 pb-24 pt-8 sm:px-6 sm:pt-10 md:pt-12 lg:px-8">
         <div className="mb-10 flex items-center justify-between">
           <Link
-            href="/blog/topic/locations"
+            href="/blog"
             className={`flex items-center gap-3 text-sm font-medium transition-opacity hover:opacity-75 ${darkMode ? "text-slate-300" : "text-slate-900"}`}
           >
             <div
@@ -462,16 +461,6 @@ export default function UkLocationArticleClient({ loc, shareUrl }: Props) {
                 className={`scroll-mt-28 rounded-xl border p-5 text-sm ${border} ${darkMode ? "bg-slate-900/60" : "bg-slate-50"}`}
               >
                 <h2 className={`text-xl font-semibold ${strong}`}>{titles.moreUk}</h2>
-                <p className={`mt-2 leading-relaxed ${p}`}>
-                  Browse every UK city guide in the paginated blog grid:{" "}
-                  <Link
-                    href={UK_WEIGHT_LOSS_FLAT_INDEX_PATH}
-                    className="font-medium text-emerald-600 underline-offset-2 transition-colors hover:text-emerald-500 hover:underline"
-                  >
-                    All UK location articles
-                  </Link>
-                  .
-                </p>
                 <p className={`mt-2 leading-relaxed ${muted}`}>
                   Definitions:{" "}
                   <Link href="/what-is-mounjaro" className={linkCls}>

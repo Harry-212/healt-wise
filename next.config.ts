@@ -163,6 +163,24 @@ const nextConfig: NextConfig = {
     return [
       // Commercial affiliate redirects (cloaked affiliate URLs)
       ...affiliateRedirects().map((r) => ({ ...r, permanent: false })),
+      // London consolidation (Tasks 109, 110): the comparison page and the locations
+      // archive both point straight at the retained guide. Absolute www
+      // destination so the apex host is a single hop too, never a chain.
+      {
+        source: "/best-weight-loss-treatment-comparison-london",
+        destination: "https://www.healthwise360.co.uk/blog/weight-loss-treatment-london",
+        permanent: true,
+      },
+      {
+        source: "/blog/topic/locations",
+        destination: "https://www.healthwise360.co.uk/blog/weight-loss-treatment-london",
+        permanent: true,
+      },
+      {
+        source: "/blog/uk-weight-loss",
+        destination: "https://www.healthwise360.co.uk/blog/weight-loss-treatment-london",
+        permanent: true,
+      },
       // Legacy / mistaken URLs (e.g. ads) — avoid 403/404 noise in Search Console.
       // These sit above the apex rule on purpose: the apex rule matches every
       // path, so below it apex /lander went apex -> www/lander -> www/ (two hops).

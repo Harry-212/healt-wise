@@ -100,7 +100,7 @@ function getUkWeightLossLocationPostMetas(): BlogPostMeta[] {
     category: "Locations in UK",
     description: buildUkLocationMetaDescription(loc),
     heroImage: loc.hero.url,
-    feedTags: ["locations"],
+    feedTags: [],
   }));
 }
 
@@ -597,7 +597,6 @@ export function getBlogPageFeed(
     "how-it-works",
     "guides",
     "safety",
-    "locations",
   ]);
   const activeTopic: BlogFeedTag | "all" = topicSet.has(topicRaw)
     ? (topicRaw as BlogFeedTag)
