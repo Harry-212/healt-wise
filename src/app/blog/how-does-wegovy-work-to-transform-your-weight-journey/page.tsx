@@ -96,7 +96,7 @@ export default function WegovyArticlePage() {
       />
 <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...ARTICLE_SCHEMA, "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA] }) }}
       />
       <ArticleClient />
     </>

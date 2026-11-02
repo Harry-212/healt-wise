@@ -160,7 +160,7 @@ export default function GuideMounjaroDeliveryTimes() {
       readTime="3 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="fast-delivery-misleading" heading="Why Fast Delivery Can Be Misleading">
         <GuideParagraph>

@@ -170,7 +170,7 @@ export default function GuideMounjaroStorage() {
       readTime="3 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       {/* â”€â”€ Section 1 â”€â”€ */}
       <GuideSection id="storage" heading="Storage Requirements">

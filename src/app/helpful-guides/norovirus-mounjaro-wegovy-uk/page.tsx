@@ -158,7 +158,7 @@ export default function GuideNorovirus() {
       readTime="4 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="how-affects" heading="How Norovirus Affects GLP-1 Medication Users">
         <GuideParagraph>

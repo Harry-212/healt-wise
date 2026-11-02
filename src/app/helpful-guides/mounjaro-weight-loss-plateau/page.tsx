@@ -159,7 +159,7 @@ export default function GuideMounjaroPlateau() {
       readTime="4 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       {/* ── Section 1 ── */}
       <GuideSection id="fast-start" heading="Why Weight Loss Is Faster at the Start">

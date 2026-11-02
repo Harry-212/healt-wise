@@ -153,7 +153,7 @@ export default function GuideMounjaroVitamins() {
       readTime="4 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="supplement-advice" heading="Be Careful with Supplement Advice Online">
         <GuideParagraph>

@@ -118,8 +118,8 @@ export default function MounjaroInjectionsGameChangerPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            ...ARTICLE_SCHEMA,
-            '@graph': [ARTICLE_SCHEMA, FAQ_SCHEMA],
+            "@context": "https://schema.org",
+            "@graph": [ARTICLE_SCHEMA, FAQ_SCHEMA],
           }),
         }}
       />

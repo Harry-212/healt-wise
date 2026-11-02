@@ -167,7 +167,7 @@ export default function GuideMounjaroHealthBenefits() {
       readTime="5 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="weight-loss" heading="1. Significant and Sustainable Weight Loss">
         <GuideParagraph>

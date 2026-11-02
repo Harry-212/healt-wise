@@ -144,7 +144,7 @@ export default function GuideMounjaroHotWeather() {
       readTime="3 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="heat-body" heading="Mounjaro, Heat, and Your Body">
         <GuideParagraph>

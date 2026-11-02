@@ -162,7 +162,7 @@ export default function GuideMounjaroSideEffects() {
       readTime="5 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       <GuideSection id="common-side-effects" heading="Common Side Effects">
         <GuideParagraph>

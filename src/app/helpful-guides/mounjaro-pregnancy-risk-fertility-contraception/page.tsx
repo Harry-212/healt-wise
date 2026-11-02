@@ -177,7 +177,7 @@ export default function GuideMounjaroPregnancy() {
       readTime="4 min read"
       lastUpdated="April 2026"
       toc={TOC}
-      schemaJson={{ ...SCHEMA, "@graph": [SCHEMA, FAQ_SCHEMA] }}
+      schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
       {/* ── Section 1 ── */}
       <GuideSection id="understanding" heading="Understanding Mounjaro and Pregnancy">
