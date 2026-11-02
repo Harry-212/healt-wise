@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { dossierOfferProps } from "@/lib/data/providers";
 import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import RelatedPharmacyLinks from "@/components/pharmacies/RelatedPharmacyLinks";
 import {
@@ -20,8 +21,9 @@ const sectionLabel =
 const paragraphClass = "text-slate-800 leading-relaxed";
 
 export default function IPrescribePharmacyContent() {
-  const discountCode = "First10";
-  const hasDiscount = true;
+  const { discountCode, hasDiscount, discountCodeLabel, secondaryDiscount, offerTerms } =
+    dossierOfferProps("i-prescribe");
+  const repeatCode = secondaryDiscount?.code ?? "";
 
   return (
     <PharmacyDossierPage
@@ -53,9 +55,10 @@ export default function IPrescribePharmacyContent() {
         },
       ]}
       discountCode={discountCode}
-      discountCodeLabel="New customers"
-      secondaryDiscount={{ label: "Returning customers", code: "HW360" }}
+      discountCodeLabel={discountCodeLabel}
+      secondaryDiscount={secondaryDiscount}
       hasDiscount={hasDiscount}
+      offerTerms={offerTerms}
       heroProviderLogoSrc="/logo pharmacy/i-prescribe.webp"
       heroProviderLogoAlt="i-Prescribe Online Pharmacy"
       heroProviderLogoClassName="h-10 w-auto max-w-[min(100%,18rem)] object-contain object-center sm:h-12 md:h-14 md:max-w-[min(100%,22rem)]"
@@ -93,8 +96,8 @@ export default function IPrescribePharmacyContent() {
         <p className={paragraphClass}>
           Its clinical approach focuses on clinical suitability, responsible prescribing, and helping patients understand their treatment options before making a decision. Healthwise360 users can claim{" "}
           <strong>£10 off their first purchase</strong> with voucher code{" "}
-          <span className="font-mono font-bold text-emerald-900 bg-emerald-100/70 px-1.5 py-0.5 rounded">First10</span>, and access ongoing savings on repeat orders using code{" "}
-          <span className="font-mono font-bold text-emerald-900 bg-emerald-100/70 px-1.5 py-0.5 rounded">HW360</span>.
+          <span className="font-mono font-bold text-emerald-900 bg-emerald-100/70 px-1.5 py-0.5 rounded">{discountCode}</span>, and access ongoing savings on repeat orders using code{" "}
+          <span className="font-mono font-bold text-emerald-900 bg-emerald-100/70 px-1.5 py-0.5 rounded">{repeatCode}</span>.
         </p>
       </section>
 
@@ -118,8 +121,8 @@ export default function IPrescribePharmacyContent() {
           items={[
             "Transparent pricing on all doses of Mounjaro (from £160) and Wegovy (from £129.99).",
             "Initial medical questionnaire and prescriber consultation included at no extra cost.",
-            "£10 discount on initial purchase with code First10.",
-            "Follow-up order discounts available with voucher code HW360.",
+            `£10 discount on initial purchase with code ${discountCode}.`,
+            `Follow-up order discounts available with voucher code ${repeatCode}.`,
             "Fully licensed UK pharmacy registered with the General Pharmaceutical Council (GPhC 9012850).",
             "Flexible Royal Mail delivery: Tracked 48 (£4.99) or Tracked 24 (£5.99).",
             "Ongoing treatment monitoring, review check-ins, and direct patient support.",
@@ -142,13 +145,13 @@ export default function IPrescribePharmacyContent() {
           Ready to begin your consultation with i-Prescribe?
         </h3>
         <p className="mt-2 text-sm text-slate-700">
-          Use code <strong className="font-mono">First10</strong> for £10 off your first order, and <strong className="font-mono">HW360</strong> for returning customers on follow-up orders.
+          Use code <strong className="font-mono">{discountCode}</strong> for £10 off your first order, and <strong className="font-mono">{repeatCode}</strong> for returning customers on follow-up orders.
         </p>
         <div className="mt-5 flex justify-center">
           <ProviderCta
             url={providerUrl}
             name="i-Prescribe"
-            copyCode="First10"
+            copyCode={discountCode}
             className={PHARMACY_PROVIDER_CTA_CLASSNAME}
           >
             Visit i-Prescribe

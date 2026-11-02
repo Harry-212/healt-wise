@@ -1,4 +1,4 @@
-import { activeProviders, type ProviderRecord } from "./providers.ts";
+import { activeProviders, offerCodes, offerPerkSummary, type ProviderRecord } from "./providers.ts";
 
 export type AffiliatePartnerInfo = {
   id: string;
@@ -17,11 +17,11 @@ function toPartnerInfo(p: ProviderRecord): AffiliatePartnerInfo {
     id: p.id,
     name: p.name,
     badgeLabel: a.badgeLabel,
-    code: a.code,
-    secondaryCode: a.secondaryCode,
+    code: offerCodes(p)[0],
+    secondaryCode: offerCodes(p)[1],
     affiliateUrl: a.outboundUrl,
     ctaLabel: a.ctaLabel,
-    perkSummary: a.perkSummary,
+    perkSummary: offerPerkSummary(p),
   };
 }
 

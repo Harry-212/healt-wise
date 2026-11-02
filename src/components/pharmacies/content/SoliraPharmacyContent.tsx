@@ -1,5 +1,6 @@
 "use client";
 
+import { dossierOfferProps } from "@/lib/data/providers";
 import Link from "next/link";
 import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import RelatedPharmacyLinks from "@/components/pharmacies/RelatedPharmacyLinks";
@@ -20,8 +21,8 @@ const sectionLabel =
 const paragraphClass = "text-slate-800 leading-relaxed";
 
 export default function SoliraPharmacyContent() {
-  const discountCode = "";
-  const hasDiscount = false;
+  const { discountCode, hasDiscount, discountCodeLabel, secondaryDiscount, offerTerms } =
+    dossierOfferProps("solira");
   return (
     <PharmacyDossierPage
       slugLabel="Solira"
@@ -55,6 +56,9 @@ export default function SoliraPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      discountCodeLabel={discountCodeLabel}
+      secondaryDiscount={secondaryDiscount}
+      offerTerms={offerTerms}
       heroProviderWordmark="Solira"
     >
       <section className="space-y-4">

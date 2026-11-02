@@ -1,5 +1,6 @@
 "use client";
 
+import { dossierOfferProps } from "@/lib/data/providers";
 import Link from "next/link";
 import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import {
@@ -18,8 +19,8 @@ const sectionLabel =
 const paragraphClass = "text-slate-800 leading-relaxed";
 
 export default function PharmacyMePharmacyContent() {
-  const discountCode = "hw360";
-  const hasDiscount = true;
+  const { discountCode, hasDiscount, discountCodeLabel, secondaryDiscount, offerTerms } =
+    dossierOfferProps("pharmacy-me");
 
   return (
     <PharmacyDossierPage
@@ -47,6 +48,9 @@ export default function PharmacyMePharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      discountCodeLabel={discountCodeLabel}
+      secondaryDiscount={secondaryDiscount}
+      offerTerms={offerTerms}
       heroProviderLogoSrc="/logo pharmacy/pharmacy-me.webp"
       heroProviderLogoAlt="Pharmacy + Me"
       heroProviderLogoClassName="h-10 w-auto max-w-[min(100%,20rem)] object-contain object-center sm:h-12 md:h-14 md:max-w-[min(100%,24rem)]"
@@ -133,7 +137,7 @@ export default function PharmacyMePharmacyContent() {
           copyCode={discountCode}
           className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} mt-4`}
         >
-          Visit Pharmacy + Me (Use Code hw360)
+          Visit Pharmacy + Me (Use Code {discountCode})
         </ProviderCta>
       </section>
     </PharmacyDossierPage>

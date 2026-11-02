@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { dossierOfferProps } from "@/lib/data/providers";
 import PharmacyPriceTable from "@/components/pharmacies/PharmacyPriceTable";
 import RelatedPharmacyLinks from "@/components/pharmacies/RelatedPharmacyLinks";
 import {
@@ -20,8 +21,7 @@ const sectionLabel =
 const paragraphClass = "text-slate-800 leading-relaxed";
 
 export default function SheMedPharmacyContent() {
-  const discountCode = "HEALTH20";
-  const hasDiscount = true;
+  const { discountCode, hasDiscount, offerTerms } = dossierOfferProps("shemed");
 
   return (
     <PharmacyDossierPage
@@ -56,6 +56,7 @@ export default function SheMedPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      offerTerms={offerTerms}
       heroProviderLogoSrc="/logo pharmacy/shemed.webp"
       heroProviderLogoAlt="SheMed Women's Health & Weight Management"
       heroProviderLogoClassName="h-10 w-auto max-w-[min(100%,18rem)] object-contain object-center sm:h-12 md:h-14 md:max-w-[min(100%,22rem)]"
@@ -93,7 +94,7 @@ export default function SheMedPharmacyContent() {
         <p className={paragraphClass}>
           Healthwise360 users can take advantage of an exclusive{" "}
           <strong>20% discount on their first order</strong> using voucher code{" "}
-          <span className="font-mono font-bold text-emerald-900 bg-emerald-100/70 px-1.5 py-0.5 rounded">HEALTH20</span>.
+          <span className="font-mono font-bold text-emerald-900 bg-emerald-100/70 px-1.5 py-0.5 rounded">{discountCode}</span>.
         </p>
       </section>
 
@@ -115,7 +116,7 @@ export default function SheMedPharmacyContent() {
         <Points
           items={[
             "At-home biomarker blood screening and comprehensive clinical assessment.",
-            "Introductory pricing with code HEALTH20 for 20% off your initial order.",
+            `Introductory pricing with code ${discountCode} for 20% off your initial order.`,
             "Free discreet next-day medication delivery (£0.00 standard delivery charge).",
             "Personalised weight management guidance tailored to women's hormonal health.",
             "Ongoing access to UK-registered clinicians and prescribers.",
@@ -141,13 +142,13 @@ export default function SheMedPharmacyContent() {
           Ready to explore SheMed&apos;s women-focused weight loss programme?
         </h3>
         <p className="mt-2 text-sm text-slate-700">
-          Apply voucher code <strong className="font-mono">HEALTH20</strong> at checkout to receive 20% off your first month, including at-home blood testing and free delivery.
+          Apply voucher code <strong className="font-mono">{discountCode}</strong> at checkout to receive 20% off your first month, including at-home blood testing and free delivery.
         </p>
         <div className="mt-5 flex justify-center">
           <ProviderCta
             url={providerUrl}
             name="SheMed"
-            copyCode="HEALTH20"
+            copyCode={discountCode}
             className={PHARMACY_PROVIDER_CTA_CLASSNAME}
           >
             Visit SheMed

@@ -276,6 +276,7 @@ function DiscountCodeBox({
   discountCodeLabel = "Code",
   secondaryDiscount,
   hasDiscount,
+  offerTerms,
   copied,
   onCopy,
 }: {
@@ -283,6 +284,7 @@ function DiscountCodeBox({
   discountCodeLabel?: string;
   secondaryDiscount?: SecondaryDiscount;
   hasDiscount: boolean;
+  offerTerms?: string[];
   copied: boolean;
   onCopy: () => void;
 }) {
@@ -321,6 +323,17 @@ function DiscountCodeBox({
                 When a public code is available, you can try it at checkout on the
                 provider&apos;s site. Always confirm live pricing before payment.
               </p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                Offers are shown separately: the retail prices in our tables never
+                include a discount code or introductory price.
+              </p>
+              {offerTerms && offerTerms.length > 0 ? (
+                <ul className="mt-2 space-y-1 text-sm leading-relaxed text-slate-600">
+                  {offerTerms.map((t) => (
+                    <li key={t}>{t}</li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
             <div className="flex shrink-0 flex-col gap-3 self-center sm:self-start">
               <div
@@ -414,6 +427,7 @@ export function PharmacyDossierPage({
   contentUpdated,
   discountCodeLabel,
   secondaryDiscount,
+  offerTerms,
   children,
 }: {
   slugLabel: string;
@@ -434,6 +448,8 @@ export function PharmacyDossierPage({
   heroProviderLogoUnoptimized?: boolean;
   /** Text stand-in for providers with no logo file; ignored when `heroProviderLogoSrc` is set. */
   heroProviderWordmark?: string;
+  /** One visible terms line per discount code, from the provider's offers. */
+  offerTerms?: string[];
   /** Date the page's written content last changed; kept separate from the price-check date. */
   contentUpdated?: string;
   /** Label above the main code (default "Code"), e.g. "New customers". */
@@ -607,6 +623,7 @@ export function PharmacyDossierPage({
               discountCodeLabel={discountCodeLabel}
               secondaryDiscount={secondaryDiscount}
               hasDiscount={hasDiscount}
+              offerTerms={offerTerms}
               copied={copied}
               onCopy={handleCopy}
             />

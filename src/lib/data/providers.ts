@@ -17,6 +17,26 @@
  * reads it) may rank or order providers by commission.
  */
 
+/**
+ * A discount code, introductory price or other promotion. Offers are stored and
+ * shown separately from retail prices: they carry no price fields, and no table,
+ * ranking or "from" price may read them. The standard retail price is the only
+ * price used to compare providers.
+ */
+export type ProviderOffer = {
+  kind: "discount-code" | "introductory" | "subscription";
+  /** Short label for the code box, e.g. "New customers". */
+  label?: string;
+  code?: string;
+  /** The offer as shown on cards, e.g. "Code First10 for £10 off first order". */
+  summary: string;
+  /**
+   * Which orders the offer applies to. Leave unset until the provider's terms
+   * are confirmed; `offersWithUnconfirmedTerms()` lists those for follow-up.
+   */
+  appliesTo?: "first-order" | "repeat-orders";
+};
+
 export type ProviderRecord = {
   /** URL slug: profile page is `/pharmacies/<id>`; also the tracking provider id. */
   id: string;
@@ -48,10 +68,11 @@ export type ProviderRecord = {
     priceSourceUrl?: string;
     ctaLabel: string;
     badgeLabel: string;
-    code?: string;
-    secondaryCode?: string;
-    perkSummary?: string;
+    /** Non-promotional inclusions shown beside the offers, e.g. "Free delivery included". */
+    includedExtras?: string[];
   };
+  /** Promotions, kept apart from retail prices. */
+  offers: ProviderOffer[];
 };
 
 export const PROVIDERS: readonly ProviderRecord[] = [
@@ -66,9 +87,10 @@ export const PROVIDERS: readonly ProviderRecord[] = [
       outboundUrl: "https://pharmacyme.co.uk/go/hw360",
       ctaLabel: "Claim Deal",
       badgeLabel: "Featured Partner",
-      code: "hw360",
-      perkSummary: "Use code hw360",
     },
+    offers: [
+      { kind: "discount-code", code: "hw360", summary: "Use code hw360" },
+    ],
   },
   {
     id: "reach-online-pharmacy",
@@ -81,9 +103,14 @@ export const PROVIDERS: readonly ProviderRecord[] = [
       outboundUrl: "https://reachonlinepharmacy.com/weight-loss/",
       ctaLabel: "Claim Deal",
       badgeLabel: "Featured Partner",
-      code: "Welcome10health",
-      perkSummary: "Use code Welcome10health",
     },
+    offers: [
+      {
+        kind: "discount-code",
+        code: "Welcome10health",
+        summary: "Use code Welcome10health",
+      },
+    ],
   },
   {
     id: "dosedirect",
@@ -97,8 +124,9 @@ export const PROVIDERS: readonly ProviderRecord[] = [
         "https://questionnaire.semble.io/eb4dacb08b394c9c1a9ea4f4d0be2cb1a9c4cd2c",
       ctaLabel: "Start Consultation",
       badgeLabel: "Featured Partner",
-      perkSummary: "Free delivery included",
+      includedExtras: ["Free delivery included"],
     },
+    offers: [],
   },
   {
     id: "i-prescribe",
@@ -113,10 +141,23 @@ export const PROVIDERS: readonly ProviderRecord[] = [
         "https://i-prescribe.co.uk/pages/pom?formtype=weight-loss&ref=HW360&utm_source=healthwise360&utm_medium=referral&utm_campaign=weight-loss-referral",
       ctaLabel: "Claim Deal",
       badgeLabel: "Featured Partner",
-      code: "First10",
-      secondaryCode: "HW360",
-      perkSummary: "Code First10 for £10 off first order · Code HW360 on repeat orders",
     },
+    offers: [
+      {
+        kind: "discount-code",
+        label: "New customers",
+        code: "First10",
+        summary: "Code First10 for £10 off first order",
+        appliesTo: "first-order",
+      },
+      {
+        kind: "discount-code",
+        label: "Returning customers",
+        code: "HW360",
+        summary: "Code HW360 on repeat orders",
+        appliesTo: "repeat-orders",
+      },
+    ],
   },
   {
     id: "shemed",
@@ -131,9 +172,16 @@ export const PROVIDERS: readonly ProviderRecord[] = [
         "https://www.shemed.co.uk/treatment?via=healthwise360&code=HEALTH20",
       ctaLabel: "Claim Deal",
       badgeLabel: "Featured Partner",
-      code: "HEALTH20",
-      perkSummary: "20% off first order with code HEALTH20 · Free blood test & delivery",
+      includedExtras: ["Free blood test & delivery"],
     },
+    offers: [
+      {
+        kind: "discount-code",
+        code: "HEALTH20",
+        summary: "20% off first order with code HEALTH20",
+        appliesTo: "first-order",
+      },
+    ],
   },
   {
     id: "solira",
@@ -147,10 +195,56 @@ export const PROVIDERS: readonly ProviderRecord[] = [
         "https://withsolira.com/treatments/mounjaro?utm_source=healthwise360.co.uk&utm_medium=affiliate&utm_campaign=healthwise360_trial",
       ctaLabel: "Start Consultation",
       badgeLabel: "Featured Partner",
-      perkSummary: "Pharmacist-led care · Tracked chilled delivery",
+      includedExtras: ["Pharmacist-led care", "Tracked chilled delivery"],
     },
+    offers: [],
   },
 ];
+
+/** Offer summaries then included extras, joined for cards: "Code X for £10 off first order · Free delivery included". */
+export function offerPerkSummary(p: ProviderRecord): string | undefined {
+  const parts = [...p.offers.map((o) => o.summary), ...(p.affiliate.includedExtras ?? [])];
+  return parts.length ? parts.join(" · ") : undefined;
+}
+
+/** The provider's discount codes in listed order (first is the main code). */
+export function offerCodes(p: ProviderRecord): string[] {
+  return p.offers.flatMap((o) => (o.code ? [o.code] : []));
+}
+
+/** Visible terms line for an offer. Never states a condition the provider has not confirmed. */
+export function offerTermsText(o: ProviderOffer): string {
+  if (o.appliesTo === "first-order") return "First order only. Confirm the terms at checkout.";
+  if (o.appliesTo === "repeat-orders") return "Repeat orders only. Confirm the terms at checkout.";
+  return "Confirm the terms at checkout.";
+}
+
+/** Offers whose first-order / repeat-order terms are not yet confirmed: the follow-up list for Harry. */
+export function offersWithUnconfirmedTerms(): { providerId: string; code?: string }[] {
+  return activeProviders().flatMap((p) =>
+    p.offers.filter((o) => !o.appliesTo).map((o) => ({ providerId: p.id, code: o.code })),
+  );
+}
+
+/** Props the pharmacy profile "Discounts & offers" box needs, from the provider's offers. */
+export function dossierOfferProps(id: string): {
+  discountCode: string;
+  hasDiscount: boolean;
+  discountCodeLabel?: string;
+  secondaryDiscount?: { label: string; code: string };
+  offerTerms: string[];
+} {
+  const p = getProvider(id);
+  const offers = p?.offers.filter((o) => o.code) ?? [];
+  const [main, second] = offers;
+  return {
+    discountCode: main?.code ?? "",
+    hasDiscount: offers.length > 0,
+    discountCodeLabel: main?.label,
+    secondaryDiscount: second?.code ? { label: second.label ?? "Code", code: second.code } : undefined,
+    offerTerms: offers.map((o) => `${o.code}: ${offerTermsText(o)}`),
+  };
+}
 
 /** Case-insensitive alphabetical order by name: the only default ordering. */
 function byName(a: ProviderRecord, b: ProviderRecord): number {
@@ -200,6 +294,14 @@ export function validateProviders(
     seen.add(p.id);
     if (!p.name.trim()) problems.push(`${p.id}: name is empty`);
     if (!/^\d{6,7}$/.test(p.gphcNumber)) problems.push(`${p.id}: gphcNumber must be 6-7 digits`);
+    const allowedOfferKeys = new Set(["kind", "label", "code", "summary", "appliesTo"]);
+    for (const o of p.offers) {
+      for (const key of Object.keys(o)) {
+        if (!allowedOfferKeys.has(key)) problems.push(`${p.id}: offers may not carry "${key}" (offers hold no prices)`);
+      }
+      if (!o.summary.trim()) problems.push(`${p.id}: offer summary is empty`);
+      if (o.kind === "discount-code" && !o.code?.trim()) problems.push(`${p.id}: discount-code offer needs a code`);
+    }
     const out = p.affiliate.outboundUrl;
     if (out.startsWith("/go/")) {
       if (out !== `/go/${p.id}`) problems.push(`${p.id}: cloaked outboundUrl must be /go/${p.id}`);

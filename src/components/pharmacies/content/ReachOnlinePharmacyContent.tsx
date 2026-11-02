@@ -1,5 +1,6 @@
 "use client";
 
+import { dossierOfferProps } from "@/lib/data/providers";
 import Link from "next/link";
 import {
   PHARMACY_PROVIDER_CTA_CLASSNAME,
@@ -17,8 +18,8 @@ const sectionLabel =
 const paragraphClass = "text-slate-800 leading-relaxed";
 
 export default function ReachOnlinePharmacyContent() {
-  const discountCode = "Welcome10health";
-  const hasDiscount = true;
+  const { discountCode, hasDiscount, discountCodeLabel, secondaryDiscount, offerTerms } =
+    dossierOfferProps("reach-online-pharmacy");
 
   return (
     <PharmacyDossierPage
@@ -46,6 +47,9 @@ export default function ReachOnlinePharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
+      discountCodeLabel={discountCodeLabel}
+      secondaryDiscount={secondaryDiscount}
+      offerTerms={offerTerms}
       heroProviderLogoSrc="/logo pharmacy/Reach Online Pharmacy.webp"
       heroProviderLogoAlt="Reach Online Pharmacy"
       heroProviderLogoClassName="h-10 w-auto max-w-[min(100%,20rem)] object-contain object-center sm:h-12 md:h-14 md:max-w-[min(100%,24rem)]"
@@ -134,7 +138,7 @@ export default function ReachOnlinePharmacyContent() {
           copyCode={discountCode}
           className={`${PHARMACY_PROVIDER_CTA_CLASSNAME} mt-4`}
         >
-          Visit Reach Online Pharmacy (Use Code Welcome10health)
+          Visit Reach Online Pharmacy (Use Code {discountCode})
         </ProviderCta>
       </section>
     </PharmacyDossierPage>
