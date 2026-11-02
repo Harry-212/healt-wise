@@ -26,11 +26,6 @@ const TITLE = "Wegovy Pill Price Comparison UK: Compare Prices by Dose";
 const COPY = buildWegovyPillPriceCopy();
 const DESCRIPTION = COPY.description;
 
-/**
- * Draft: kept out of search results (and the sitemap) until Harry confirms the
- * open price checks (25mg on sale, Ashcroft, Curely and Dotor) and Jeff
- * confirms the URL. Remove `robots` and add PATH to the sitemap to publish.
- */
 export const metadata: Metadata = {
   ...buildPageShareMetadata({
     canonicalPath: PATH,
@@ -42,7 +37,6 @@ export const metadata: Metadata = {
     imageAlt: WHY_CHOOSE_HEALTHWISE360_ALT,
   }),
   title: { absolute: TITLE },
-  robots: { index: false, follow: false },
 };
 
 export default function WegovyPillPriceComparisonPage() {

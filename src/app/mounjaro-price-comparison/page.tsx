@@ -59,6 +59,11 @@ const MOUNJARO_RESOURCE_LINKS = [
     title: "Mounjaro FAQ",
     description: "Read common UK questions about fees, doses, and policies.",
   },
+  {
+    href: "/foundayo-price-comparison",
+    title: "Foundayo price comparison",
+    description: "See listed Foundayo tablet prices by dose.",
+  },
 ] as const;
 
 function compareWebPageJsonLd(providers: MounjaroUkProviderCompare[]) {

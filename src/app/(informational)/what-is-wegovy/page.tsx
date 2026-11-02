@@ -490,6 +490,9 @@ export default function WhatIsWegovyPage() {
                   <Link href="/wegovy-tablet-faqs" className={linkClass}>
                     Wegovy tablet FAQ →
                   </Link>
+                  <Link href="/wegovy-pill-price-comparison" className={linkClass}>
+                    Wegovy pill price comparison →
+                  </Link>
                 </div>
               </div>
             </section>
