@@ -10,7 +10,6 @@ import {
   BookOpen,
   ChevronDown,
   LayoutGrid,
-  MapPin,
   Pill,
   Syringe,
 } from "lucide-react";
@@ -40,12 +39,6 @@ const FILTER_OPTIONS: FilterOption[] = [
   { id: "how-it-works", label: "How it works", icon: BookOpen, description: "Mechanism & effectiveness" },
   { id: "guides", label: "How-to & dosage", icon: Syringe, description: "Dosing, treatments & instructions" },
   { id: "safety", label: "Costs & safety", icon: BadgePoundSterling, description: "UK cost, eligibility & safety" },
-  {
-    id: "locations",
-    label: "Locations in UK",
-    icon: MapPin,
-    description: "City & town weight loss treatment guides",
-  },
 ];
 
 function topicHref(topic: FilterId): string {

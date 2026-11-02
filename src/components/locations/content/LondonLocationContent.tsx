@@ -7,10 +7,7 @@ import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
 import { GuideSection } from "@/components/guide/GuideLayout";
 import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
-import {
-  UK_WEIGHT_LOSS_FLAT_INDEX_PATH,
-  type UkWeightLossLocation,
-} from "@/lib/data/uk-weight-loss-locations";
+import type { UkWeightLossLocation } from "@/lib/data/uk-weight-loss-locations";
 import { capitalizeHeadingWords } from "@/lib/text/heading-case";
 
 type Props = {
@@ -51,7 +48,6 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
       { id: "conclusion", label: "Final considerations" },
       { id: "next-steps", label: "Practical next steps" },
       { id: "disclaimer", label: "Disclaimer" },
-      { id: "more-uk", label: "Other places in the UK" },
     ],
     [],
   );
@@ -74,7 +70,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
       <div className="mx-auto max-w-7xl px-4 pb-24 pt-8 sm:px-6 sm:pt-10 md:pt-12 lg:px-8">
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <Link
-            href="/blog/topic/locations"
+            href="/blog"
             className={`flex items-center gap-3 text-sm font-medium transition-opacity hover:opacity-75 ${
               darkMode ? "text-slate-300" : "text-slate-900"
             }`}
@@ -127,8 +123,8 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
             Home
           </Link>
           <span>/</span>
-          <Link href="/blog/topic/locations" className={linkCls}>
-            Locations
+          <Link href="/blog" className={linkCls}>
+            Blog
           </Link>
           <span>/</span>
           <span className={strong}>London</span>
@@ -462,14 +458,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                 <Link href="/wegovy-price-comparison" className={linkCls}>
                   Wegovy
                 </Link>{" "}
-                comparison tables. For a local view, read our{" "}
-                <Link
-                  href="/best-weight-loss-treatment-comparison-london"
-                  className={linkCls}
-                >
-                  London weight loss treatment comparison
-                </Link>
-                .
+                comparison tables.
               </p>
             </GuideSection>
 
@@ -1419,28 +1408,6 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                 confirm provider registration, current prices, eligibility
                 requirements and treatment suitability with a qualified
                 healthcare professional.
-              </p>
-            </section>
-
-            <section
-              id="more-uk"
-              className={`scroll-mt-28 rounded-xl border p-5 text-sm ${border} ${
-                darkMode ? "bg-slate-900/60" : "bg-slate-50"
-              }`}
-            >
-              <h2 className={`text-xl font-semibold ${strong}`}>
-                Other places in the UK
-              </h2>
-              <p className={`mt-2 leading-relaxed ${p}`}>
-                Browse every UK city guide{" "}
-                <Link
-                  href={UK_WEIGHT_LOSS_FLAT_INDEX_PATH}
-                  className={linkCls}
-                >
-                  All UK location articles
-                </Link>
-
-                .
               </p>
             </section>
           </article>

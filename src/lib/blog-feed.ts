@@ -4,8 +4,7 @@ export type BlogFeedTag =
   | "mounjaro"
   | "how-it-works"
   | "guides"
-  | "safety"
-  | "locations";
+  | "safety";
 
 export const BLOG_HUB_PATH = "/blog";
 
@@ -15,7 +14,6 @@ export const BLOG_FEED_TAGS = [
   "how-it-works",
   "guides",
   "safety",
-  "locations",
 ] as const satisfies ReadonlyArray<BlogFeedTag>;
 
 const BLOG_FEED_TAG_SET = new Set<string>(BLOG_FEED_TAGS);
