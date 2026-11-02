@@ -83,30 +83,6 @@ export default function WeightLossInjectionShortagesUkPage() {
           text: "Contact your prescriber or pharmacist promptly for advice. Do not improvise doses or switch products without medical guidance, as titration and monitoring requirements differ.",
         },
       },
-      {
-        "@type": "Question",
-        name: "Are all weight loss treatments affected equally by shortages?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Not necessarily. Availability can vary by product, strength, region and supplier. One brand may be easier to obtain than another at a given time.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can a clinician suggest an alternative if your usual treatment is unavailable?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Sometimes yes—alternatives depend on your medical history, eligibility and what is licensed and available. Only a qualified prescriber should decide whether to change medicine or dose.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How can you stay informed about supply while staying safe?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Use reputable pharmacy updates, follow your clinician’s advice, and rely on regulated UK supply routes. Be wary of social media stock claims and counterfeit products.",
-        },
-      },
     ],
   };
 

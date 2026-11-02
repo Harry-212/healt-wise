@@ -56,12 +56,7 @@ function blogHubJsonLd(canonicalUrl: string): Record<string, unknown> {
     name: BLOG_HUB_TITLE,
     description: BLOG_HUB_DESCRIPTION,
     inLanguage: "en-GB",
-    isPartOf: {
-      "@type": "WebSite",
-      "@id": `${siteOrigin()}/#website`,
-      name: "Healthwise360",
-      url: siteOrigin(),
-    },
+    isPartOf: { "@id": `${siteOrigin()}/#website` },
   };
 }
 

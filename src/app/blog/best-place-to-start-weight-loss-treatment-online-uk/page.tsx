@@ -96,58 +96,10 @@ export default function BestPlaceToStartWeightLossPage() {
       },
       {
         "@type": "Question",
-        name: "Can I buy weight loss injections online in the UK?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Some people may access private weight loss treatment online after a clinical assessment and valid prescription. However, users should only use regulated providers and should avoid unregulated websites or social media sellers.",
-        },
-      },
-      {
-        "@type": "Question",
         name: "Is the cheapest weight loss treatment provider the best option?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Not always. The cheapest provider may not include delivery, support, consultation, or clear maintenance pricing. Therefore, users should compare full monthly cost, safety checks, and provider support before deciding.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What should I check before starting weight loss treatment online?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Check the pharmacy registration, clinical assessment process, treatment suitability, total monthly price, delivery policy, support options, maintenance pricing, and whether the provider explains side effects clearly.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Why do weight loss treatment prices vary so much?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Prices vary because providers may include different services. Some include consultation, delivery, coaching, app support, or follow-up reviews. Others may show a lower medicine-only or starter-dose price.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Should I compare Mounjaro and Wegovy before choosing a provider?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Mounjaro and Wegovy are different treatments with different pricing, dose structures, and suitability factors. Comparing treatment options first can help users make a more informed provider decision.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What are the warning signs of an unsafe seller?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Warning signs include no clinical assessment, no pharmacy registration details, social media sales, miracle-result claims, unusually low prices, bulk offers, and no clear side effect or suitability information.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Why use Health Wise before choosing a provider?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Health Wise helps users compare weight loss treatment prices, pharmacy safety, provider differences, and support features. This gives users a clearer picture before they start a private consultation.",
         },
       },
     ],
