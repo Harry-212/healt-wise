@@ -10,6 +10,7 @@ import {
   type CheapestWinner,
 } from "@/lib/data/cheapest-options-page-data";
 import CheapestOptionsHero from "./CheapestOptionsHero";
+import { activeProviderCount } from "@/lib/data/providers";
 import NotMedicalAdviceBanner from "./NotMedicalAdviceBanner";
 
 const h2Class = "text-2xl font-bold tracking-tight text-slate-900 md:text-3xl";
@@ -117,11 +118,12 @@ export default function CheapestOptionsUkPage() {
   const mTopLow = price(mTop?.low);
   const wLongHigh = price(wLong?.high);
   const wCheaper = d.wegovyCheaperEveryMonth;
-  const pharmacyFloor = `${Math.floor(Math.min(d.wegovyCount, d.mounjaroCount) / 10) * 10}+`;
+  // Exact live count of active partners from the central provider data: never rounded or hard-coded.
+  const partnerCount = activeProviderCount();
 
   const heroAnswer = wCheaper
-    ? `The cheapest weight loss injection in the UK right now is Wegovy, from ${wStarterLow} for a 0.25 mg starter pen at ${wStarter?.lowProvider}. The cheapest Mounjaro starter pen is ${mStarterLow}. We compare the cheapest weight loss injections in the UK at ${pharmacyFloor} GPhC registered pharmacies, so you can find the lowest price for your dose in one place.`
-    : `At our latest check, a Wegovy 0.25 mg starter pen starts from ${wStarterLow} at ${wStarter?.lowProvider}, and a Mounjaro 2.5 mg starter pen starts from ${mStarterLow}. We compare the cheapest weight loss injections in the UK at ${pharmacyFloor} GPhC registered pharmacies, so you can find the lowest price for your dose in one place.`;
+    ? `The cheapest weight loss injection in the UK right now is Wegovy, from ${wStarterLow} for a 0.25 mg starter pen at ${wStarter?.lowProvider}. The cheapest Mounjaro starter pen is ${mStarterLow}. We compare the cheapest weight loss injections in the UK at ${partnerCount} GPhC registered partner pharmacies, so you can find the lowest price for your dose in one place.`
+    : `At our latest check, a Wegovy 0.25 mg starter pen starts from ${wStarterLow} at ${wStarter?.lowProvider}, and a Mounjaro 2.5 mg starter pen starts from ${mStarterLow}. We compare the cheapest weight loss injections in the UK at ${partnerCount} GPhC registered partner pharmacies, so you can find the lowest price for your dose in one place.`;
 
   const snapshotRows: string[][] = [
     ["Wegovy 0.25 mg (starter)", price(wStarter?.low), price(wStarter?.median)],
@@ -147,7 +149,7 @@ export default function CheapestOptionsUkPage() {
       <CheapestOptionsHero
         answer={heroAnswer}
         chips={[
-          `${pharmacyFloor} GPhC registered pharmacies`,
+          `${partnerCount} GPhC registered partner pharmacies`,
           "No paid rankings",
           `Prices checked ${d.wegovyUpdated}`,
         ]}

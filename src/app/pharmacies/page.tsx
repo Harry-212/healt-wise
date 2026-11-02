@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, ShieldCheck } from "lucide-react";
-import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
-import { landingProviderName } from "@/lib/seo/pharmacy-review-seo";
+import { activeProviders } from "@/lib/data/providers";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import { withDefaultShareImage } from "@/lib/seo/default-share-image";
@@ -28,21 +27,8 @@ export const metadata: Metadata = withDefaultShareImage({
   },
 });
 
-function displayName(slug: string): string {
-  return (
-    landingProviderName(slug) ??
-    slug
-      .split("-")
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-      .join(" ")
-  );
-}
-
 export default function PharmaciesIndexPage() {
-  const slugs = allPharmacySlugs();
-  const providers = slugs
-    .map((slug) => ({ slug, name: displayName(slug) }))
-    .sort((a, b) => a.name.localeCompare(b.name));
+  const providers = activeProviders().map((p) => ({ slug: p.id, name: p.name }));
 
   return (
     <>

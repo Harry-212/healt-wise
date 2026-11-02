@@ -7,6 +7,7 @@ import type {
   WegovyCompareStore,
 } from "./compare-types";
 import { AFFILIATE_PARTNER_IDS } from "./affiliate-partners";
+import { getProvider } from "./providers";
 import { buildMounjaroSeedStore, buildWegovySeedStore } from "./compare-seed";
 import type { MounjaroUkProviderCompare } from "./mounjaro-uk-compare-providers";
 import type { WegovyUkProviderCompare } from "./wegovy-uk-compare-providers";
@@ -130,13 +131,6 @@ export function saveWegovyStore(store: WegovyCompareStore): void {
   wegovyCacheMtime = fileMtime(filePath);
 }
 
-const TRUSTPILOT_URL_BY_PROVIDER_ID: Record<string, string> = {
-  "pharmacy-me": "https://uk.trustpilot.com/review/pharmacyme.co.uk",
-  "i-prescribe": "https://uk.trustpilot.com/review/i-prescribe.co.uk",
-  shemed: "https://uk.trustpilot.com/review/shemed.co.uk",
-  solira: "https://uk.trustpilot.com/review/withsolira.com",
-};
-
 /**
  * Only affiliate partners are shown on the site. The stored JSON may still hold
  * other providers (kept so they can be re-added later); they are never read here.
@@ -150,7 +144,7 @@ function enrichMounjaroProvider(
 ): MounjaroUkProviderCompare {
   return {
     ...p,
-    trustpilotUrl: TRUSTPILOT_URL_BY_PROVIDER_ID[p.id] ?? p.trustpilotUrl,
+    trustpilotUrl: getProvider(p.id)?.trustpilotUrl ?? p.trustpilotUrl,
   };
 }
 

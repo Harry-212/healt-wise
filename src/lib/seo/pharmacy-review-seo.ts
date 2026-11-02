@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { withDefaultShareImage } from "@/lib/seo/default-share-image";
+import { getActiveProvider } from "@/lib/data/providers";
 
 /**
  * Standard pharmacy profile SEO:
@@ -43,14 +44,7 @@ export function pharmacyReviewMetadata(opts: {
   });
 }
 
-/** Slugs with custom dossier landings — keep in sync with `/pharmacies/[slug]` branches. */
-export const PHARMACY_LANDING_PROVIDER_NAMES: Record<string, string> = {
-  "pharmacy-me": "Pharmacy + Me",
-  "i-prescribe": "i-Prescribe",
-  shemed: "SheMed",
-  solira: "Solira",
-};
-
+/** Display name for an active partner's `/pharmacies/<slug>` page; undefined otherwise. */
 export function landingProviderName(slug: string): string | undefined {
-  return PHARMACY_LANDING_PROVIDER_NAMES[slug];
+  return getActiveProvider(slug)?.name;
 }

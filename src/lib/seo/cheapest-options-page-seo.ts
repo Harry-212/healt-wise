@@ -1,4 +1,5 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { activeProviderCount } from "@/lib/data/providers";
 
 const PATH = "/prices/cheapest-options-uk";
 
@@ -115,8 +116,8 @@ export function cheapestOptionsUkJsonLd(
   const base = siteOrigin().replace(/\/$/, "");
   const url = `${base}${PATH}`;
 
-  const wCount = input?.wegovyCount ?? 63;
-  const mCount = input?.mounjaroCount ?? 68;
+  const wCount = input?.wegovyCount ?? activeProviderCount();
+  const mCount = input?.mounjaroCount ?? activeProviderCount();
   const wLowStr = formatPriceNumber(input?.wegovyLow, "76.94");
   const wHighStr = formatPriceNumber(input?.wegovyHigh, "290.00");
   const mLowStr = formatPriceNumber(input?.mounjaroLow, "99.00");
