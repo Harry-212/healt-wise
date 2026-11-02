@@ -77,6 +77,7 @@ test("controlled removal and addition update the count, the A-Z list and the red
       ctaLabel: "Start",
       badgeLabel: "Featured Partner",
     },
+    offers: [],
   };
   assert.deepEqual(validateProviders([...PROVIDERS, added]), []);
   PROVIDERS.push(added);
