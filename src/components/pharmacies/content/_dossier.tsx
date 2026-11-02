@@ -410,6 +410,7 @@ export function PharmacyDossierPage({
   heroProviderLogoAlt = "",
   heroProviderLogoClassName,
   heroProviderLogoUnoptimized = false,
+  heroProviderWordmark,
   contentUpdated,
   discountCodeLabel,
   secondaryDiscount,
@@ -431,6 +432,8 @@ export function PharmacyDossierPage({
   heroProviderLogoAlt?: string;
   heroProviderLogoClassName?: string;
   heroProviderLogoUnoptimized?: boolean;
+  /** Text stand-in for providers with no logo file; ignored when `heroProviderLogoSrc` is set. */
+  heroProviderWordmark?: string;
   /** Date the page's written content last changed; kept separate from the price-check date. */
   contentUpdated?: string;
   /** Label above the main code (default "Code"), e.g. "New customers". */
@@ -502,6 +505,12 @@ export function PharmacyDossierPage({
             className={heroProviderLogoClassName}
             unoptimized={heroProviderLogoUnoptimized}
           />
+        ) : heroProviderWordmark ? (
+          <div className="mb-5 flex justify-center sm:mb-6">
+            <span className="font-sans text-3xl font-extrabold uppercase tracking-[0.18em] text-emerald-900 sm:text-4xl">
+              {heroProviderWordmark}
+            </span>
+          </div>
         ) : null}
 
         <div className="relative mb-8">

@@ -15,7 +15,7 @@ export interface HeroNumanStyleProps {
 export default function HeroNumanStyle({
   wegovyStarterLow = "£72.89",
   mounjaroStarterLow = "£119.69",
-  pricesChecked = "20 September 2026",
+  pricesChecked = "31 October 2026",
 }: HeroNumanStyleProps) {
   return (
     <section

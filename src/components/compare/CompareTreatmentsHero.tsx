@@ -59,7 +59,7 @@ export default function CompareTreatmentsHero({
   heroPhotoAlt = "",
   highlightNavLinks = false,
   subtitleId,
-  pricesChecked = "20 September 2026",
+  pricesChecked = "31 October 2026",
 }: {
   variant: HeroShaderVariant;
   eyebrow: string;

@@ -91,7 +91,7 @@ test("extractAffiliateEventParams falls back to a slug of the provider name when
   assert.equal(params.monetised, true);
 });
 
-test("only the 5 affiliate partners are tracked; other providers send nothing", async () => {
+test("only the 6 affiliate partners are tracked; other providers send nothing", async () => {
   const { trackAffiliateClick } = await import(
     "../../../src/lib/affiliateTracking.ts"
   );
@@ -110,6 +110,7 @@ test("only the 5 affiliate partners are tracked; other providers send nothing", 
     ["DoseDirect", "dosedirect"],
     ["i-Prescribe", "i-prescribe"],
     ["SheMed", "shemed"],
+    ["Solira", "solira"],
   ];
   for (const [name, id] of partners) {
     const result = trackAffiliateClick(
@@ -117,8 +118,8 @@ test("only the 5 affiliate partners are tracked; other providers send nothing", 
     );
     assert.ok(result, `${name} should be tracked`);
   }
-  assert.equal(gtagCalls.length, 5);
-  assert.equal(dataLayer.length, 5);
+  assert.equal(gtagCalls.length, 6);
+  assert.equal(dataLayer.length, 6);
 
   for (const [name, id] of [
     ["Boots", "boots"],
@@ -131,8 +132,8 @@ test("only the 5 affiliate partners are tracked; other providers send nothing", 
     );
     assert.equal(result, null, `${name} must not be tracked`);
   }
-  assert.equal(gtagCalls.length, 5);
-  assert.equal(dataLayer.length, 5);
+  assert.equal(gtagCalls.length, 6);
+  assert.equal(dataLayer.length, 6);
 });
 
 test("trackAffiliateClick pushes to gtag and dataLayer fallback", async () => {

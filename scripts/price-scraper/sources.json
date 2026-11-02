@@ -27,6 +27,10 @@
         "value": 10,
         "code": "Welcome10health"
       }
+    },
+    "solira": {
+      "mounjaro": "https://withsolira.com/treatments/mounjaro",
+      "wegovy": "https://withsolira.com/treatments/wegovy"
     }
   }
 }

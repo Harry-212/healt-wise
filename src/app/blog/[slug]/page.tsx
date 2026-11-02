@@ -10,6 +10,7 @@ import { UkLocationFaqProvider } from "@/components/locations/UkLocationFaqProvi
 import {
   getAllSlugs,
   getAllUkLocationArticleSlugs,
+  getIndexedUkLocationArticleSlugs,
   getPostBySlug,
   isIndexedUkLocationCitySlug,
   parseCitySlugFromUkArticleSlug,
@@ -56,7 +57,7 @@ const blogMarkdownComponents: Partial<Components> = {
 
 export function generateStaticParams() {
   const md = getAllSlugs().map((slug) => ({ slug }));
-  const loc = getAllUkLocationArticleSlugs().map((slug) => ({ slug }));
+  const loc = getIndexedUkLocationArticleSlugs().map((slug) => ({ slug }));
   return [...md, ...loc];
 }
 
@@ -90,6 +91,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const citySlug = parseCitySlugFromUkArticleSlug(slug);
   if (!citySlug) return {};
+  if (!isIndexedUkLocationCitySlug(citySlug)) return {};
   const loc = getUkWeightLossLocationBySlug(citySlug);
   if (!loc) return {};
   const title = buildUkLocationTitle(loc);
@@ -167,6 +169,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const citySlug = parseCitySlugFromUkArticleSlug(slug);
   if (!citySlug) notFound();
+  if (!isIndexedUkLocationCitySlug(citySlug)) notFound();
   const loc = getUkWeightLossLocationBySlug(citySlug);
   if (!loc) notFound();
 

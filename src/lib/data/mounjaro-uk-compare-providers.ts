@@ -1,6 +1,6 @@
 /** Illustrative UK Mounjaro pen prices — confirm live rates on each pharmacy. */
 
-export const MOUNJARO_UK_COMPARE_LAST_UPDATED = "20 September 2026";
+export const MOUNJARO_UK_COMPARE_LAST_UPDATED = "31 October 2026";
 
 export type MounjaroUkCompareBadge = "mostPopular" | "bestValue";
 
@@ -8,6 +8,7 @@ const TRUSTPILOT_URL_BY_PROVIDER_ID: Record<string, string> = {
   "pharmacy-me": "https://uk.trustpilot.com/review/pharmacyme.co.uk",
   "i-prescribe": "https://uk.trustpilot.com/review/i-prescribe.co.uk",
   shemed: "https://uk.trustpilot.com/review/shemed.co.uk",
+  solira: "https://uk.trustpilot.com/review/withsolira.com",
 };
 
 export type MounjaroUkProviderCompare = {
@@ -149,6 +150,27 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
     updatedLabel: "26 Oct 2026",
     consultationIncluded: true,
     ctaHref: "/what-is-mounjaro#how-to-get-mounjaro-uk",
+  },
+  {
+    id: "solira",
+    name: "Solira",
+    deliveryNote: "£3.99 Royal Mail Tracked 24 chilled",
+    notes: "Pharmacist-led consultation included · Tracked chilled delivery",
+    rating: 4.7,
+    headlineFrom: 119.99,
+    gphcRegNo: "9013213",
+    trustpilotUrl: "https://uk.trustpilot.com/review/withsolira.com",
+    prices: {
+      "2.5mg": 119.99,
+      "5mg": 159.99,
+      "7.5mg": 219.99,
+      "10mg": 249.99,
+      "12.5mg": 259.99,
+      "15mg": 279.99,
+    },
+    updatedLabel: "31 Oct 2026",
+    consultationIncluded: true,
+    ctaHref: "/go/solira",
   },
 ];
 

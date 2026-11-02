@@ -48,6 +48,7 @@ export const PHARMACY_LANDING_PROVIDER_NAMES: Record<string, string> = {
   "pharmacy-me": "Pharmacy + Me",
   "i-prescribe": "i-Prescribe",
   shemed: "SheMed",
+  solira: "Solira",
 };
 
 export function landingProviderName(slug: string): string | undefined {

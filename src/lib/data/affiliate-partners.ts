@@ -19,6 +19,7 @@ export const AFFILIATE_PARTNER_IDS = new Set<string>([
   "dosedirect",
   "i-prescribe",
   "shemed",
+  "solira",
 ]);
 
 export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
@@ -68,6 +69,14 @@ export const AFFILIATE_PARTNERS_MAP: Record<string, AffiliatePartnerInfo> = {
     affiliateUrl: "/go/shemed",
     ctaLabel: "Claim Deal",
     perkSummary: "20% off first order with code HEALTH20 · Free blood test & delivery",
+  },
+  solira: {
+    id: "solira",
+    name: "Solira",
+    badgeLabel: "Featured Partner",
+    affiliateUrl: "/go/solira",
+    ctaLabel: "Start Consultation",
+    perkSummary: "Pharmacist-led care · Tracked chilled delivery",
   },
 };
 
