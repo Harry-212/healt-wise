@@ -44,3 +44,22 @@ test("profile prose does not repeat prices that live in the data", () => {
   assert.ok(!sheMed.includes("£229 standard retail"), "SheMed Mounjaro standard retail is hard-coded");
   assert.ok(!sheMed.includes("£139 standard retail"), "SheMed Wegovy standard retail is hard-coded");
 });
+
+test("the best-place article no longer ranks or names removed providers (Task 113)", () => {
+  const dir = "src/app/blog/best-place-to-start-weight-loss-treatment-online-uk/";
+  const text = (readFileSync(dir + "ArticleClient.tsx", "utf8") + readFileSync(dir + "page.tsx", "utf8")).toLowerCase();
+  for (const needle of [
+    "shortlist",
+    "how we rank",
+    "pharmacy express",
+    "swift doctor",
+    "pharmica",
+    "dr weightmans",
+    "care pharmacy",
+    "ashcroft",
+    "best online weight loss providers",
+    "20 september 2026",
+  ]) {
+    assert.ok(!text.includes(needle), `ranking content is back: "${needle}"`);
+  }
+});

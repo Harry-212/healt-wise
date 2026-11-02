@@ -4,9 +4,10 @@ import { blogImgPath, BEST_PLACE_HERO_PNG } from "./blog-assets";
 import { siteOrigin } from "@/lib/seo/site-origin";
 
 const PATH = "/blog/best-place-to-start-weight-loss-treatment-online-uk";
-const TITLE = "Best Online Weight Loss Providers UK (2026)";
+const TITLE =
+  "Best Place to Start Weight Loss Treatment Online UK: Safety, Prices and Provider Checks";
 const DESCRIPTION =
-  "Looking for the best online weight loss provider in the UK? See our shortlist of GPhC registered pharmacies with prices, support and delivery compared.";
+  "Compare safe UK weight loss treatment providers, prices, pharmacy checks and support before starting treatment.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BEST_PLACE_HERO_PNG)}`;
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
     url: `${siteOrigin()}${PATH}`,
     type: "article",
     publishedTime: "2026-06-23T00:00:00.000Z",
+    modifiedTime: "2026-11-02T00:00:00.000Z",
     images: [
       {
         url: HERO_IMAGE,
@@ -48,6 +50,7 @@ export default function BestPlaceToStartWeightLossPage() {
     author: { "@type": "Organization", name: "Healthwise360 Research Team" },
     publisher: { "@type": "Organization", name: "Healthwise360", logo: { "@type": "ImageObject", url: "https://www.healthwise360.co.uk/logo-health-wise.webp" } },
     datePublished: "2026-06-23",
+    dateModified: "2026-11-02",
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${siteOrigin()}${PATH}`,
