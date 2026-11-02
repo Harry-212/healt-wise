@@ -70,12 +70,7 @@ export default async function BlogTopicPage({ params }: Props) {
     name: title,
     description,
     inLanguage: "en-GB",
-    isPartOf: {
-      "@type": "WebSite",
-      "@id": `${siteOrigin()}/#website`,
-      name: "Healthwise360",
-      url: siteOrigin(),
-    },
+    isPartOf: { "@id": `${siteOrigin()}/#website` },
   };
 
   return (

@@ -69,14 +69,6 @@ export default function WeeklyWeightLossInjectionsUkPage() {
       },
       {
         "@type": "Question",
-        name: "Can you lose 10kg in 2 months with Ozempic?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "It is possible for some people, but it is ambitious and depends on starting weight, dose, lifestyle, and individual response. Ozempic is primarily licensed for type 2 diabetes, while Wegovy is licensed for weight management in the UK—use the medicine that is clinically appropriate and prescribed to you.",
-        },
-      },
-      {
-        "@type": "Question",
         name: "What is the 3-3-3 rule for weight loss?",
         acceptedAnswer: {
           "@type": "Answer",
@@ -89,22 +81,6 @@ export default function WeeklyWeightLossInjectionsUkPage() {
         acceptedAnswer: {
           "@type": "Answer",
           text: "Kelly Clarkson has discussed weight change in the context of diet, walking, health factors, and medical support under clinician guidance. Celebrity results usually involve multiple factors, so it is best not to assume one single “secret” applies to everyone.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can you get weekly weight loss treatments on the NHS in the UK?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Sometimes, but eligibility is strict and access varies by region. It often involves BMI thresholds, weight-related conditions, and referral into specialist weight management services with lifestyle support.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What happens after you stop weekly treatments?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Many people find appetite increases again, and weight regain can occur if habits and support are not maintained. Stopping or switching should be planned with your prescriber, especially around dosing schedules and side effects.",
         },
       },
     ],

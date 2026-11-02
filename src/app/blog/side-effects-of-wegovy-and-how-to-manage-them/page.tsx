@@ -77,22 +77,6 @@ export default function WegovySideEffectsPage() {
       },
       {
         "@type": "Question",
-        name: "Can your prescriber change your Wegovy dose if side effects are difficult?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Dose adjustments should only be made by a qualified prescriber. If side effects are ongoing or severe, contact your healthcare professional promptly rather than adjusting the pen yourself.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "When should you seek urgent medical advice on Wegovy?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Seek urgent care for severe abdominal pain, persistent vomiting, signs of allergic reaction, or symptoms that concern you. GLP-1 medicines have important warnings in official information—read your patient leaflet and follow local guidance.",
-        },
-      },
-      {
-        "@type": "Question",
         name: "Does tiredness from Wegovy usually improve?",
         acceptedAnswer: {
           "@type": "Answer",

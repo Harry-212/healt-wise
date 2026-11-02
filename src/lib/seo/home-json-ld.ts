@@ -4,100 +4,14 @@ import {
   HOME_COMPARE_HUB_HREF,
 } from "@/lib/routes/home-compare-hub";
 import { siteOrigin } from "@/lib/seo/site-origin";
-import { SITE_LOGO_SRC } from "@/lib/site-assets";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
-import {
-  SITE_BUSINESS_ADDRESS,
-  SITE_BUSINESS_EMAIL,
-  SITE_BUSINESS_PHONE_TEL,
-  SITE_SOCIAL_PROFILES_ORG_SAFE,
-} from "@/lib/site-contact";
 import { PRICE_CHECK_DATE_ISO, PRICE_CHECK_DATE_LONG, dateModifiedWithPriceCheck } from "@/lib/data/price-check";
 
 const SCHEMA_LANGUAGE = "en-GB";
 
-const SITE_DESCRIPTION =
-  "Independent UK price comparison for weight loss injections. We compare Mounjaro and Wegovy prices at our GPhC registered pharmacy partners. We do not sell, prescribe or send medicines.";
-
 const HOME_PAGE_NAME = "Weight Loss Injections Price Comparison UK";
 const HOME_PAGE_DESCRIPTION =
   "Compare weight loss injection prices at our GPhC registered UK pharmacy partners, at every dose.";
-
-const SITE_KNOWS_ABOUT = [
-  "Weight loss injections price comparison UK",
-  "Weight loss injection prices",
-  "Cost of weight loss injections in the UK",
-  "Mounjaro prices UK",
-  "Wegovy prices UK",
-  "Mounjaro vs Wegovy",
-  "Tirzepatide",
-  "Semaglutide",
-  "GLP-1 price comparison UK",
-  "Weight loss jab prices UK",
-  "Weight loss treatment prices UK",
-  "Online pharmacy weight loss injections",
-  "GPhC pharmacy registration checks",
-  "Mounjaro click calculator",
-  "Wegovy click calculator",
-  "BMI calculator",
-];
-
-function homeSchemaLogoUrl(base: string): string {
-  return `${base}${SITE_LOGO_SRC}`;
-}
-
-function homeSchemaLogoImage(base: string): Record<string, unknown> {
-  const logoUrl = homeSchemaLogoUrl(base);
-
-  return {
-    "@type": "ImageObject",
-    "@id": `${base}/#/schema/logo/image/`,
-    url: logoUrl,
-    contentUrl: logoUrl,
-    caption: SITE_BRAND_NAME,
-    inLanguage: SCHEMA_LANGUAGE,
-  };
-}
-
-function homeSchemaOrganization(base: string): Record<string, unknown> {
-  const logoId = `${base}/#/schema/logo/image/`;
-
-  return {
-    "@type": "Organization",
-    "@id": `${base}/#organization`,
-    name: SITE_BRAND_NAME,
-    url: `${base}/`,
-    email: SITE_BUSINESS_EMAIL,
-    foundingDate: "2026",
-    description: SITE_DESCRIPTION,
-    logo: { "@id": logoId },
-    image: { "@id": logoId },
-    founder: {
-      "@id": `${base}/editorial-team/alistair-greenwood#person`,
-    },
-    areaServed: { "@type": "Country", name: "United Kingdom" },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: SITE_BUSINESS_ADDRESS.street,
-      addressLocality: SITE_BUSINESS_ADDRESS.city,
-      postalCode: SITE_BUSINESS_ADDRESS.postcode,
-      addressCountry: "GB",
-    },
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        email: SITE_BUSINESS_EMAIL,
-        telephone: SITE_BUSINESS_PHONE_TEL,
-        areaServed: "GB",
-        availableLanguage: ["English"],
-      },
-    ],
-    sameAs: [...SITE_SOCIAL_PROFILES_ORG_SAFE],
-    knowsAbout: SITE_KNOWS_ABOUT,
-    publishingPrinciples: `${base}/editorial-policy`,
-  };
-}
 
 function homeSchemaPerson(base: string): Record<string, unknown> {
   return {
@@ -109,18 +23,6 @@ function homeSchemaPerson(base: string): Record<string, unknown> {
     description:
       "Founder of Healthwise360 and weight-management pricing researcher. Not a healthcare professional.",
     worksFor: { "@id": `${base}/#organization` },
-  };
-}
-
-function homeSchemaWebsite(base: string): Record<string, unknown> {
-  return {
-    "@type": "WebSite",
-    "@id": `${base}/#website`,
-    url: `${base}/`,
-    name: SITE_BRAND_NAME,
-    description: SITE_DESCRIPTION,
-    inLanguage: SCHEMA_LANGUAGE,
-    publisher: { "@id": `${base}/#organization` },
   };
 }
 
@@ -229,9 +131,8 @@ export function homePageJsonLdGraph(
   return {
     "@context": "https://schema.org",
     "@graph": [
-      homeSchemaWebsite(base),
-      homeSchemaOrganization(base),
-      homeSchemaLogoImage(base),
+      // Organization and WebSite are defined once, in the site-wide graph
+      // (`shared-json-ld.ts`); the nodes below reference them by @id.
       homeSchemaPerson(base),
       webpage,
       breadcrumb,
