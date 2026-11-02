@@ -5,7 +5,7 @@ import {
   type MounjaroUkProviderCompare,
 } from "./mounjaro-uk-compare-providers";
 
-export const WEGOVY_UK_COMPARE_LAST_UPDATED = "20 September 2026";
+export const WEGOVY_UK_COMPARE_LAST_UPDATED = "31 October 2026";
 
 export type WegovyUkCompareBadge = "mostPopular" | "bestValue";
 
@@ -107,6 +107,14 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "2.4mg": 159.0,
     "7.2mg": 239.0,
   },
+  solira: {
+    "0.25mg": 64.99,
+    "0.5mg": 87.99,
+    "1mg": 99.99,
+    "1.7mg": 139.99,
+    "2.4mg": 189.99,
+    "7.2mg": 229.00,
+  },
 };
 
 const WEGOVY_EXTRA_PROVIDER_SEEDS: MounjaroUkProviderCompare[] = [];
@@ -120,6 +128,7 @@ const WEGOVY_UPDATED_LABEL_OVERRIDE: Record<string, string> = {
   "pharmacy-me": "12 Oct 2026",
   "i-prescribe": "26 Oct 2026",
   shemed: "26 Oct 2026",
+  solira: "31 Oct 2026",
 };
 
 function providerSeedToWegovy(

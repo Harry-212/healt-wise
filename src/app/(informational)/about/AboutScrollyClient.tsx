@@ -182,7 +182,7 @@ const SECTIONS: Section[] = [
   {
     title: "Providers and pharmacies we include",
     paragraphs: [
-      "Healthwise360 covers its partner pharmacies in its directory. Coverage varies between individual treatment and price comparison pages.",
+      "Healthwise360 compares selected partner providers, not the whole UK market. All included partners are GPhC-registered UK pharmacies.",
       "Pharmacies with verifiable GPhC registration credentials can request inclusion. We check those credentials before adding the pharmacy. Listing a provider does not mean we recommend it for every reader or assess its suitability for an individual.",
     ],
     links: [
@@ -240,7 +240,7 @@ const AT_A_GLANCE: { fact: string; detail: string }[] = [
   },
   {
     fact: "Directory coverage",
-    detail: "Partner pharmacies; coverage varies by comparison page",
+    detail: "Selected partner providers, not the whole UK market",
   },
   {
     fact: "Price checks",

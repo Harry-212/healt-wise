@@ -91,9 +91,9 @@ export default function WegovyMounjaroLongFormContent({
   wegovy72Low = "£175.49",
   wegovy72Typical = "£259",
   wegovy72Listed = 48,
-  wegovyProviderCount = 5,
-  mounjaroProviderCount = 5,
-  pricesChecked = "20 September 2026",
+  wegovyProviderCount = 6,
+  mounjaroProviderCount = 6,
+  pricesChecked = "31 October 2026",
 }: WegovyMounjaroLongFormContentProps) {
   return (
     <>

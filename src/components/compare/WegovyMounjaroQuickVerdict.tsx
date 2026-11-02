@@ -13,7 +13,7 @@ export default function WegovyMounjaroQuickVerdict({
   mounjaroStarterLow = "£119.69",
   wegovyTopTypical = "£200",
   mounjaroTopTypical = "£299",
-  pricesChecked = "20 September 2026",
+  pricesChecked = "31 October 2026",
 }: WegovyMounjaroQuickVerdictProps) {
   const comparisonRows = [
     {

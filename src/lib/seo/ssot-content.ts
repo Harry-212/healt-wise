@@ -106,7 +106,7 @@ export const SSOT_INCLUSION = {
   kicker: "Inclusion",
   title: "Pharmacy Inclusion",
   paragraphs: [
-    "GPhC-registered pharmacies may request inclusion on Healthwise360 and will be added once their registration credentials have been verified. GPhC means the General Pharmaceutical Council.",
+    "Healthwise360 compares selected partner providers, not the whole UK market. All included partners are GPhC-registered UK pharmacies whose registration credentials have been verified.",
   ],
   links: [{ label: "Request inclusion", href: "/contact" }],
 };

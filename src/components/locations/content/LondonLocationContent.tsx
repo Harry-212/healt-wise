@@ -1439,12 +1439,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                 >
                   All UK location articles
                 </Link>
-                , or compare nearby guides for{" "}
-                Reading
-                ,{" "}
-                Oxford{" "}
-                and{" "}
-                Luton
+
                 .
               </p>
             </section>

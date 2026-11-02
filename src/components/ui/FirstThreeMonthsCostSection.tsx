@@ -38,7 +38,7 @@ const DEFAULT_DATA: HomePriceSummary["firstThreeMonths"] = {
 
 export default function FirstThreeMonthsCostSection({
   data = DEFAULT_DATA,
-  lastUpdated = "20 September 2026",
+  lastUpdated = "31 October 2026",
 }: FirstThreeMonthsCostSectionProps) {
   const rows = data.rows ?? DEFAULT_DATA.rows;
 

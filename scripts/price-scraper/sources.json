@@ -27,6 +27,28 @@
         "value": 10,
         "code": "Welcome10health"
       }
+    },
+    "i-prescribe": {
+      "mounjaro": "https://i-prescribe.co.uk/pages/pom?formtype=weight-loss",
+      "wegovy": "https://i-prescribe.co.uk/pages/pom?formtype=weight-loss",
+      "affiliateDiscount": {
+        "type": "amount",
+        "value": 10,
+        "code": "First10"
+      }
+    },
+    "shemed": {
+      "mounjaro": "https://www.shemed.co.uk/treatment",
+      "wegovy": "https://www.shemed.co.uk/treatment",
+      "affiliateDiscount": {
+        "type": "percent",
+        "value": 20,
+        "code": "HEALTH20"
+      }
+    },
+    "solira": {
+      "mounjaro": "https://withsolira.com/treatments/mounjaro",
+      "wegovy": "https://withsolira.com/treatments/wegovy"
     }
   }
 }

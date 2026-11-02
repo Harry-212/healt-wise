@@ -16,7 +16,7 @@ export interface PriceSnapshotSectionProps {
 
 export default function PriceSnapshotSection({
   rows = DEFAULT_ROWS,
-  lastUpdated = "20 September 2026",
+  lastUpdated = "31 October 2026",
 }: PriceSnapshotSectionProps) {
   return (
     <HomeSectionCard id="price-snapshot">

@@ -45,7 +45,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       titleBold: "Wegovy vs Mounjaro: Price, Dose and Weight Loss Compared",
       subtitle:
         "Mounjaro led to more weight loss than Wegovy in a head to head trial. Wegovy usually costs less. Here is how Wegovy vs Mounjaro compares in the UK on weight loss, dose, side effects, NHS access and the real price. A Wegovy starter pen costs from {{wegovyStarterLow}} and a Mounjaro starter pen from {{mounjaroStarterLow}}.",
-      snapshotLabel: "Prices checked 20 September 2026 · Same prices as our price pages · No paid rankings",
+      snapshotLabel: "Prices checked 31 October 2026 · Same prices as our price pages · No paid rankings",
       navLinks: [
         { href: "#quick-verdict", label: "At a Glance" },
         { href: "#difference", label: "Difference" },
@@ -62,7 +62,7 @@ export const COMPARE_PAGE_LAYOUT: Record<string, ComparePageLayoutConfig> = {
       canonicalPath: "/compare/wegovy-vs-mounjaro",
       title: "Wegovy vs Mounjaro UK: Price, Dose and Weight Loss Compared",
       metaDescription:
-        "Wegovy vs Mounjaro UK: Compare weight loss, dose, side effects, NHS access and the real price at our partner pharmacies.",
+        "Wegovy vs Mounjaro UK: Compare weight loss, dose, side effects, NHS access and verified prices across selected partner providers.",
       openGraphTitle: "Wegovy vs Mounjaro UK: Price, Dose and Results",
       openGraphDescription:
         "See how Wegovy and Mounjaro compare on weight loss, dose, side effects and price in the UK. Checked and dated, with no paid rankings.",

@@ -162,6 +162,12 @@ const nextConfig: NextConfig = {
     return [
       // Commercial affiliate redirects (cloaked affiliate URLs)
       {
+        source: "/go/solira",
+        destination:
+          "https://withsolira.com/treatments/mounjaro?utm_source=healthwise360.co.uk&utm_medium=affiliate&utm_campaign=healthwise360_trial",
+        permanent: false,
+      },
+      {
         source: "/go/shemed",
         destination: "https://www.shemed.co.uk/treatment?via=healthwise360&code=HEALTH20",
         permanent: false,

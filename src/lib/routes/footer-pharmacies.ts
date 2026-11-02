@@ -10,4 +10,5 @@ export const FOOTER_PHARMACY_LINKS: ReadonlyArray<{
   { href: "/pharmacies/pharmacy-me", label: "Pharmacy + Me" },
   { href: "/pharmacies/reach-online-pharmacy", label: "Reach Online Pharmacy" },
   { href: "/pharmacies/shemed", label: "SheMed" },
+  { href: "/pharmacies/solira", label: "Solira" },
 ];

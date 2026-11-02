@@ -5,6 +5,7 @@ import IPrescribePharmacyContent from "@/components/pharmacies/content/IPrescrib
 import PharmacyMePharmacyContent from "@/components/pharmacies/content/PharmacyMePharmacyContent";
 import ReachOnlinePharmacyContent from "@/components/pharmacies/content/ReachOnlinePharmacyContent";
 import SheMedPharmacyContent from "@/components/pharmacies/content/SheMedPharmacyContent";
+import SoliraPharmacyContent from "@/components/pharmacies/content/SoliraPharmacyContent";
 import RelatedPharmacyLinks from "@/components/pharmacies/RelatedPharmacyLinks";
 import { allPharmacySlugs } from "@/lib/routes/all-pharmacy-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
@@ -178,6 +179,31 @@ export default async function PharmacyProfilePage({ params }: Props) {
           }}
         />
         <SheMedPharmacyContent />
+      </>
+    );
+  }
+
+  if (slug === "solira") {
+    const title = "Solira Weight Loss UK | Prices, Reviews & Delivery";
+    const description =
+      "Explore Solira's UK weight loss programme, pharmacist consultations, treatment prices, eligibility, ongoing support and delivery charges.";
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              pharmacyProfileJsonGraph({
+                slug,
+                name: "Solira",
+                title,
+                description,
+              }),
+            ),
+          }}
+        />
+        <SoliraPharmacyContent />
       </>
     );
   }
