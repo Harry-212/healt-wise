@@ -15,17 +15,11 @@ function* sourceFiles(dir) {
   }
 }
 
-// Unpublished (noindex) drafts that still describe the old 15-provider Foundayo
-// dataset. Task 114 rebuilds them from approved partners only; remove this
-// entry then so the guard covers them too.
-const DRAFTS_AWAITING_TASK_114 = [join("src", "app", "foundayo-price-comparison")];
-
 test("no source file states a fixed double or triple digit provider count", () => {
   const count =
     /\b(?:more than |over )?\d{2,3}\+? (?:GPhC[- ]registered )?(?:UK )?(?:online )?(?:pharmacies|providers)\b/i;
   const offenders = [];
   for (const file of sourceFiles(join(process.cwd(), "src"))) {
-    if (DRAFTS_AWAITING_TASK_114.some((d) => relative(process.cwd(), file).startsWith(d))) continue;
     const lines = readFileSync(file, "utf8").split("\n");
     lines.forEach((line, i) => {
       if (/^\s*(\/\/|\*|\/\*)/.test(line)) return;

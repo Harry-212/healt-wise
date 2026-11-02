@@ -23,6 +23,7 @@ import {
   stepUpTotals,
 } from "@/lib/data/pill-prices";
 import { FOUNDAYO_PRICE_ROWS } from "@/lib/data/pill-price-rows";
+import { buildFoundayoPriceCopy } from "@/lib/data/foundayo-price-copy";
 import { pillPriceJsonLd, type PillFaq } from "@/lib/seo/pill-price-json-ld";
 import { buildPageShareMetadata } from "@/lib/seo/share-metadata";
 import {
@@ -32,8 +33,8 @@ import {
 
 const PATH = "/foundayo-price-comparison";
 const TITLE = "Foundayo Price Comparison UK: Compare Prices by Dose";
-const DESCRIPTION =
-  "Compare Foundayo prices from 15 UK providers by dose, from £73 to £199.99 a month. Listed prices, last checked 24 October 2026.";
+const COPY = buildFoundayoPriceCopy(FOUNDAYO_PRICE_ROWS);
+const DESCRIPTION = COPY.description;
 
 /**
  * Draft: kept out of search results (and the sitemap) until the medical
@@ -60,8 +61,7 @@ const WEGOVY_PILL_PRICE_PAGE_LIVE = false;
 const FAQS: PillFaq[] = [
   {
     question: "How much does Foundayo cost in the UK?",
-    answer:
-      "Across the 15 providers we list, one month of Foundayo costs between £73 and £199.99, depending on the dose. The 0.8mg dose is listed from £73 to £129. The 17.2mg dose is listed from £130 to £199.99. Prices were last checked on 24 October 2026.",
+    answer: COPY.costAnswer,
   },
   {
     question: "How much is Foundayo per month?",
@@ -70,8 +70,7 @@ const FAQS: PillFaq[] = [
   },
   {
     question: "Where can you find the cheapest Foundayo tablets?",
-    answer:
-      "Of the 15 providers we list, Medicine Marketplace has the lowest listed price at every dose, starting at £73 for 0.8mg. On a pharmacy's own website, Medino is lowest, starting at £94.99. Check the price, any fees and the stock at checkout before you order.",
+    answer: COPY.cheapestAnswer,
   },
   {
     question: "What is included in the Foundayo price?",
@@ -130,7 +129,7 @@ export default function FoundayoPriceComparisonPage() {
 
   const first = ranges[0];
   const last = ranges[ranges.length - 1];
-  const heroAnswer = `Foundayo prices in the UK, across the ${rows.length} providers listed here, run from ${formatPillGbp(first.lowest)} to ${formatPillGbp(first.highest)} a month for the ${FOUNDAYO_DOSES[0]} starting dose and from ${formatPillGbp(last.lowest)} to ${formatPillGbp(last.highest)} a month for the ${FOUNDAYO_DOSES[FOUNDAYO_DOSES.length - 1]} dose.`;
+  const heroAnswer = COPY.heroAnswer;
 
   const jsonLd = pillPriceJsonLd({
     path: PATH,
@@ -251,9 +250,10 @@ export default function FoundayoPriceComparisonPage() {
               ))}
             </div>
             <p className="text-sm text-slate-600">
-              Medicine Marketplace&apos;s prices come from a comparison site, so confirm them
-              at checkout before you rely on them. Check the stock, any consultation fee and any
-              delivery fee before you decide.
+              {COPY.hasComparisonRows
+                ? "Prices marked as coming from a comparison site should be confirmed at checkout before you rely on them. "
+                : ""}
+              Check the stock, any consultation fee and any delivery fee before you decide.
             </p>
           </section>
 
@@ -331,11 +331,7 @@ export default function FoundayoPriceComparisonPage() {
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                 <p>
-                  <strong className="text-slate-950">Sources.</strong> For five providers
-                  (Boots, Medino, Pharmacy2U, Superdrug and Zava) we read the price on the
-                  provider&apos;s own website. For the other ten, the price comes from
-                  independent comparison sites and has not been checked at the
-                  provider&apos;s checkout.
+                  <strong className="text-slate-950">Sources.</strong> {COPY.sourcesText}
                 </p>
               </div>
               <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">

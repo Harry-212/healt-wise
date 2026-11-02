@@ -27,9 +27,10 @@ const COPY = buildWegovyPillPriceCopy();
 const DESCRIPTION = COPY.description;
 
 /**
- * Draft: kept out of search results (and the sitemap) until Harry confirms the
- * open price checks (25mg on sale, Ashcroft, Curely and Dotor) and Jeff
- * confirms the URL. Remove `robots` and add PATH to the sitemap to publish.
+ * Draft: kept out of search results (and the sitemap). Publication checklist:
+ * `reports/task-114-115-publication-checklist.md` (partner-only rows with
+ * Harry's price and dose confirmation, 25mg on sale, Jeff's URL approval).
+ * Remove `robots` and add PATH to the sitemap to publish.
  */
 export const metadata: Metadata = {
   ...buildPageShareMetadata({
@@ -131,8 +132,10 @@ export default function WegovyPillPriceComparisonPage() {
             />
             <p className="text-sm text-slate-600">
               Pharmacy website means the price was taken from the provider&apos;s own website.
-              Comparison site means the price was taken from comparewegovyprices.co.uk. Listed
-              prices, last checked {PILL_PRICES_LAST_CHECKED_LABEL}, confirm at checkout.
+              {rows.some((r) => r.source === "comparison")
+                ? " Comparison site means the price was taken from an independent comparison site."
+                : ""}{" "}
+              Listed prices, last checked {PILL_PRICES_LAST_CHECKED_LABEL}, confirm at checkout.
             </p>
           </section>
 

@@ -1,6 +1,8 @@
 export type PillPriceSource = "pharmacy" | "comparison";
 
 export type PillPriceRow = {
+  /** Id of an active partner in `providers.ts`; the name below is read from it. */
+  providerId: string;
   provider: string;
   /** One monthly price per dose, in dose order. `null` means not listed. */
   prices: (number | null)[];
