@@ -1,3 +1,5 @@
+import { PARTNER_BADGE_LABEL } from "./partner-labels.ts";
+
 /**
  * Central provider-partner data: the one place a partner is added, paused or
  * removed. Everything that lists partners (affiliate registry, `/pharmacies`
@@ -93,7 +95,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
     affiliate: {
       outboundUrl: "https://pharmacyme.co.uk/go/hw360",
       ctaLabel: "Claim Deal",
-      badgeLabel: "Featured Partner",
+      badgeLabel: PARTNER_BADGE_LABEL,
     },
     offers: [
       { kind: "discount-code", code: "hw360", summary: "Use code hw360" },
@@ -110,7 +112,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
     affiliate: {
       outboundUrl: "https://reachonlinepharmacy.com/weight-loss/",
       ctaLabel: "Claim Deal",
-      badgeLabel: "Featured Partner",
+      badgeLabel: PARTNER_BADGE_LABEL,
     },
     offers: [
       {
@@ -132,7 +134,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
       outboundUrl:
         "https://questionnaire.semble.io/eb4dacb08b394c9c1a9ea4f4d0be2cb1a9c4cd2c",
       ctaLabel: "Start Consultation",
-      badgeLabel: "Featured Partner",
+      badgeLabel: PARTNER_BADGE_LABEL,
       includedExtras: ["Free delivery included"],
     },
     offers: [],
@@ -150,7 +152,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
       destinationUrl:
         "https://i-prescribe.co.uk/pages/pom?formtype=weight-loss&ref=HW360&utm_source=healthwise360&utm_medium=referral&utm_campaign=weight-loss-referral",
       ctaLabel: "Claim Deal",
-      badgeLabel: "Featured Partner",
+      badgeLabel: PARTNER_BADGE_LABEL,
     },
     offers: [
       {
@@ -182,7 +184,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
       destinationUrl:
         "https://www.shemed.co.uk/treatment?via=healthwise360&code=HEALTH20",
       ctaLabel: "Claim Deal",
-      badgeLabel: "Featured Partner",
+      badgeLabel: PARTNER_BADGE_LABEL,
       includedExtras: ["Free blood test & delivery"],
     },
     offers: [
@@ -206,7 +208,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
       destinationUrl:
         "https://withsolira.com/treatments/mounjaro?utm_source=healthwise360.co.uk&utm_medium=affiliate&utm_campaign=healthwise360_trial",
       ctaLabel: "Start Consultation",
-      badgeLabel: "Featured Partner",
+      badgeLabel: PARTNER_BADGE_LABEL,
       includedExtras: ["Pharmacist-led care", "Tracked chilled delivery"],
     },
     offers: [],

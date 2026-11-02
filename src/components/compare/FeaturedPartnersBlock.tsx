@@ -1,4 +1,9 @@
 import Link from "next/link";
+import {
+  PARTNER_BADGE_LABEL,
+  PARTNER_BLOCK_HEADING,
+  partnerBlockAriaLabel,
+} from "@/lib/data/partner-labels";
 import { Sparkles } from "lucide-react";
 import ProviderGphcLine from "@/components/compare/ProviderGphcLine";
 import { TrustpilotStarIcon } from "@/components/compare/TrustpilotRatingPresentation";
@@ -28,11 +33,11 @@ export default function FeaturedPartnersBlock({
   if (partners.length === 0) return null;
   return (
     <section
-      aria-label={`Featured ${medicationLabel} partners`}
+      aria-label={partnerBlockAriaLabel(medicationLabel)}
       className="rounded-2xl border border-emerald-200/80 bg-emerald-50/40 p-4 shadow-sm sm:p-5"
     >
       <h3 className="text-sm font-bold uppercase tracking-wide text-emerald-900">
-        Featured partners
+        {PARTNER_BLOCK_HEADING}
       </h3>
       <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {partners.map((p) => (
@@ -42,7 +47,7 @@ export default function FeaturedPartnersBlock({
           >
             <span className="inline-flex w-max items-center gap-1 rounded-full bg-emerald-700 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-white">
               <Sparkles className="h-2.5 w-2.5" aria-hidden />
-              Featured Partner
+              {PARTNER_BADGE_LABEL}
             </span>
             {p.profileHref ? (
               <Link
