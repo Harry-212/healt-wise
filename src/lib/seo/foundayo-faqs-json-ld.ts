@@ -19,24 +19,8 @@ export function foundayoFaqsJsonLd(): Record<string, unknown> {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${base}/#organization`,
-        name: "Healthwise360",
-        url: `${base}/`,
-        logo: {
-          "@type": "ImageObject",
-          url: `${base}/logo-health-wise.webp`,
-        },
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${base}/#website`,
-        name: "Healthwise360",
-        url: `${base}/`,
-        inLanguage: "en-GB",
-        publisher: { "@id": `${base}/#organization` },
-      },
+      // Organization and WebSite are defined once, in the site-wide graph
+      // (`shared-json-ld.ts`); this page references them by @id.
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,

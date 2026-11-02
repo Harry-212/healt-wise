@@ -80,12 +80,7 @@ export default async function BlogTopicPaginatedPage({ params }: Props) {
     name: blogTopicTitle(raw, page),
     description: blogTopicDescription(raw),
     inLanguage: "en-GB",
-    isPartOf: {
-      "@type": "WebSite",
-      "@id": `${siteOrigin()}/#website`,
-      name: "Healthwise360",
-      url: siteOrigin(),
-    },
+    isPartOf: { "@id": `${siteOrigin()}/#website` },
   };
 
   return (

@@ -80,14 +80,6 @@ export default function ArticleClient() {
       },
       {
         "@type": "Question",
-        name: "Can I get these treatments through the NHS?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "NHS access is usually limited to people who meet BMI and health risk criteria and are referred into specialist weight management pathways. Private prescribing is more widely available but can be expensive.",
-        },
-      },
-      {
-        "@type": "Question",
         name: "Will I gain weight back if I stop?",
         acceptedAnswer: {
           "@type": "Answer",

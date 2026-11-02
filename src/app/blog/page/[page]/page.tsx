@@ -88,12 +88,7 @@ export default async function BlogPaginatedPage({
     name: blogHubListingTitle(page),
     description: BLOG_HUB_DESCRIPTION,
     inLanguage: "en-GB",
-    isPartOf: {
-      "@type": "WebSite",
-      "@id": `${siteOrigin()}/#website`,
-      name: "Healthwise360",
-      url: siteOrigin(),
-    },
+    isPartOf: { "@id": `${siteOrigin()}/#website` },
   };
 
   return (
