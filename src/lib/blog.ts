@@ -412,6 +412,11 @@ const REDIRECTED_BLOG_SLUGS = new Set<string>([
   "how-does-wegovy-work-to-transform-your-weight-journey",
   "what-is-bmi-calculator",
   "can-hormones-cause-belly-fat-after-40",
+  /** next.config.ts permanent redirects that were missing here, so the feed and llms.txt still listed them. */
+  "wegovy-pill-uk",
+  "buy-weight-loss-injections-online-uk",
+  "buy-weight-loss-injections-uk",
+  "can-i-buy-weight-loss-injections-online",
 ]);
 
 /** Curated long-form `/blog/:slug` App Router articles (each includes an in-page FAQ). */
@@ -546,7 +551,9 @@ export function getAllPostsMeta(): BlogPostMeta[] {
 
   const fromLocations = getUkWeightLossLocationPostMetas();
 
-  return [...fromMarkdown, ...CURATED_APP_ROUTER_POSTS, ...fromLocations].sort(
+  return [...fromMarkdown, ...CURATED_APP_ROUTER_POSTS, ...fromLocations]
+    .filter((m) => !REDIRECTED_BLOG_SLUGS.has(m.slug))
+    .sort(
     (a, b) => {
       const ba = feedSortBand(a);
       const bb = feedSortBand(b);

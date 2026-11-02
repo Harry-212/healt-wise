@@ -6,12 +6,14 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 const PATH = "/blog/best-place-to-start-weight-loss-treatment-online-uk";
 const TITLE =
   "Best Place to Start Weight Loss Treatment Online UK: Safety, Prices and Provider Checks";
+/** Search title: the full H1 below is 103 characters, well past what search results show. */
+const META_TITLE = "Best Place to Start Weight Loss Treatment Online UK";
 const DESCRIPTION =
   "Compare safe UK weight loss treatment providers, prices, pharmacy checks and support before starting treatment.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(BEST_PLACE_HERO_PNG)}`;
 
 export const metadata: Metadata = {
-  title: TITLE,
+  title: { absolute: META_TITLE },
   description: DESCRIPTION,
   keywords:
     "best place to start weight loss treatment online uk, buy weight loss injections uk, weight loss treatment prices, mounjaro price list uk, wegovy price list uk, pharmacy safety uk, weight loss online clinic, compare weight loss providers, online prescription weight loss",
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
     canonical: `${siteOrigin()}${PATH}`,
   },
   openGraph: {
-    title: TITLE,
+    title: META_TITLE,
     description: DESCRIPTION,
     url: `${siteOrigin()}${PATH}`,
     type: "article",
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: TITLE,
+    title: META_TITLE,
     description: DESCRIPTION,
     images: [HERO_IMAGE],
   },
