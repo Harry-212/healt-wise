@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * The 5 partner pharmacy review profile destinations.
+ * The 6 partner pharmacy review profile destinations.
  * Listed in alphabetical order by their display label.
  */
 interface PharmacyReviewLink {
@@ -36,12 +36,17 @@ const PHARMACY_REVIEWS: PharmacyReviewLink[] = [
     label: "Read our SheMed review",
     href: "/pharmacies/shemed",
   },
+  {
+    slug: "solira",
+    label: "Read our Solira review",
+    href: "/pharmacies/solira",
+  },
 ];
 
 /**
  * Shared reusable component: Neutral Pharmacy Cross-Links.
  *
- * Places a neutral, alphabetical cross-linking block to the other four pharmacy
+ * Places a neutral, alphabetical cross-linking block to the other partner pharmacy
  * reviews near the bottom of the review page, after the final provider CTA and
  * disclaimer, and before "Recommended for you" / "Keep exploring".
  */

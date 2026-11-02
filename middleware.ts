@@ -8,22 +8,6 @@ import {
 import { updateSession } from "@/lib/supabase/middleware";
 
 export async function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-  if (
-    (pathname.startsWith("/blog/best-weight-loss-treatment-in-") &&
-      pathname !== "/blog/best-weight-loss-treatment-in-london") ||
-    (pathname.startsWith("/blog/uk-weight-loss/") &&
-      pathname !== "/blog/uk-weight-loss/london")
-  ) {
-    return new Response("410 Gone - This location page has been permanently retired.", {
-      status: 410,
-      headers: {
-        "Content-Type": "text/plain; charset=utf-8",
-        "X-Robots-Tag": "noindex, nofollow, noarchive",
-      },
-    });
-  }
-
   const junk = junkPathRedirect(request);
   if (junk) return junk;
   const lander = landerRedirect(request);

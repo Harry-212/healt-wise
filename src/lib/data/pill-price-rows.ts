@@ -4,6 +4,7 @@ import type { PillPriceRow } from "./pill-prices";
 export const FOUNDAYO_PRICE_ROWS: PillPriceRow[] = [
   { provider: "Medicine Marketplace", prices: [73, 77, 85, 105, 130, 130], source: "comparison" },
   { provider: "Ashcroft Pharmacy", prices: [77.99, 89, 94.99, 110, 135, 150], source: "comparison" },
+  { provider: "Solira", prices: [79.99, 84.99, 89.99, 107.99, 134.99, 139.99], source: "pharmacy" },
   { provider: "Medino", prices: [94.99, 109, 109, 129, 159, 159], source: "pharmacy" },
   { provider: "Boots", prices: [99, 119, 149, 169, 189, 199], source: "pharmacy" },
   { provider: "Click 2 Pharmacy", prices: [99, 124.99, 129.99, 159.99, 189.99, 199.99], source: "comparison" },
@@ -21,6 +22,7 @@ export const FOUNDAYO_PRICE_ROWS: PillPriceRow[] = [
 
 /** Wegovy pill listed monthly prices (1.5, 4, 9, 25mg). Source: client page content, collected 24 October 2026. */
 export const WEGOVY_PILL_PRICE_ROWS: PillPriceRow[] = [
+  { provider: "Solira", prices: [79.99, 94.99, 114.99, 169.99], source: "pharmacy" },
   { provider: "Ashcroft Pharmacy", prices: [89, 99, 120, 170], source: "pharmacy" },
   { provider: "Medicine Marketplace", prices: [90, 97, 112, 158], source: "comparison" },
   { provider: "Curely", prices: [94.43, 98.89, 116.67, 177.78], source: "comparison" },

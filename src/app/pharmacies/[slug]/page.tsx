@@ -184,7 +184,7 @@ export default async function PharmacyProfilePage({ params }: Props) {
   }
 
   if (slug === "solira") {
-    const title = "Solira Weight Loss UK | Prices, Reviews & Delivery";
+    const title = "Solira Weight Loss UK | Prices & Delivery";
     const description =
       "Explore Solira's UK weight loss programme, pharmacist consultations, treatment prices, eligibility, ongoing support and delivery charges.";
 

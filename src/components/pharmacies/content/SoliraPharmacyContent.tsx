@@ -25,7 +25,7 @@ export default function SoliraPharmacyContent() {
     <PharmacyDossierPage
       slugLabel="Solira"
       fileRef="HW-SOLIRA-2026"
-      title="Solira Weight Loss UK | Prices, Reviews & Delivery"
+      title="Solira Weight Loss UK | Prices & Delivery"
       subtitle="Independent provider review of Solira (QuickCare Pharmacy, GPhC 9013213): pharmacist-led weight management programme, Mounjaro, Wegovy & Foundayo treatment options, clinical consultations, tracked cold-chain delivery fees, and monthly treatment costs (information only — not medical advice)."
       scopeLabel="Scope: Mounjaro · Wegovy · Wegovy tablets · Foundayo · Pharmacist consultations · Royal Mail Tracked delivery"
       providerName="Solira"
@@ -34,7 +34,7 @@ export default function SoliraPharmacyContent() {
         { k: "Checked", v: "31 October 2026" },
         {
           k: "Provider",
-          v: "Solira (trading as QuickCare Pharmacy, QCP1 Ltd)",
+          v: "QCP1 Ltd, trading as Solira (QuickCare Pharmacy)",
         },
         { k: "GPhC Reg", v: "9013213" },
         { k: "Superintendent", v: "Jimah Alsaai MPharm" },
@@ -54,9 +54,7 @@ export default function SoliraPharmacyContent() {
       ]}
       discountCode={discountCode}
       hasDiscount={hasDiscount}
-      heroProviderLogoAlt="Solira Weight Loss Programme UK"
-      heroProviderLogoClassName="h-10 w-auto max-w-[min(100%,18rem)] object-contain object-center sm:h-12 md:h-14 md:max-w-[min(100%,22rem)]"
-      heroProviderLogoUnoptimized
+      heroProviderWordmark="Solira"
     >
       <section className="space-y-4">
         <div className="mb-6 rounded-xl border border-emerald-900/15 bg-emerald-50/70 p-5 shadow-sm sm:p-6">
@@ -227,7 +225,7 @@ export default function SoliraPharmacyContent() {
       <section className="space-y-4">
         <p className={sectionLabel}>Clinical Governance &amp; GPhC Registration</p>
         <p className={paragraphClass}>
-          Solira is operated by <strong>QCP1 Ltd</strong>, trading as <strong>QuickCare Pharmacy</strong>. The dispensing pharmacy is fully registered with the General Pharmaceutical Council under premises registration number <strong>9013213</strong>.
+          Solira is the online service of <strong>QuickCare Pharmacy</strong>, owned by <strong>QCP1 Ltd</strong> (trading as Solira). The dispensing pharmacy is registered with the General Pharmaceutical Council under premises registration number <strong>9013213</strong>.
         </p>
         <p className={paragraphClass}>
           The Superintendent Pharmacist is <strong>Jimah Alsaai MPharm</strong>, who holds personal responsibility for clinical oversight, consultation reviews, and safe dispensing protocols. Patients can independently verify registration records on the official GPhC pharmacy register.

@@ -5,6 +5,7 @@
 export const GPHC_NUMBER_BY_PROVIDER_ID: Record<string, string> = {
   "i-prescribe": "9012850",
   shemed: "9012578",
+  solira: "9013213",
 };
 
 export function gphcNumberForProvider(providerId: string): string | undefined {

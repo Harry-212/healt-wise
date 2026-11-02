@@ -156,7 +156,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
     name: "Solira",
     deliveryNote: "£3.99 Royal Mail Tracked 24 chilled",
     notes: "Pharmacist-led consultation included · Tracked chilled delivery",
-    rating: 4.8,
+    rating: 4.7,
     headlineFrom: 119.99,
     gphcRegNo: "9013213",
     trustpilotUrl: "https://uk.trustpilot.com/review/withsolira.com",
