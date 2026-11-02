@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
+import { ORDERING_RULES_SUMMARY } from "@/lib/compare/provider-ordering";
 import type { ReactNode } from "react";
 import { useState } from "react";
 
@@ -9,6 +10,8 @@ export type CompareAccent = "violet" | "emerald" | "sky";
 export type CompareSortPreset =
   | "price-asc"
   | "price-desc"
+  | "total-asc"
+  | "total-desc"
   | "rating-desc"
   | "rating-asc"
   | "provider-asc"
@@ -57,6 +60,8 @@ const ACCENT_CLASSES: Record<
 const DEFAULT_SORT_OPTIONS: { value: CompareSortPreset; label: string }[] = [
   { value: "price-asc", label: "Cost (Low to High)" },
   { value: "price-desc", label: "Cost (High to Low)" },
+  { value: "total-asc", label: "Cost incl. delivery (Low to High)" },
+  { value: "total-desc", label: "Cost incl. delivery (High to Low)" },
   { value: "rating-desc", label: "Trustpilot (High to Low)" },
   { value: "rating-asc", label: "Trustpilot (Low to High)" },
   { value: "provider-asc", label: "Provider (A → Z)" },
@@ -203,6 +208,10 @@ export default function CompareFilterBar<T extends string>({
           </div>
         </div>
       ) : null}
+      <p className="mt-3 border-t border-slate-200/80 pt-3 text-xs leading-relaxed text-slate-600">
+        <span className="font-semibold text-slate-700">How we order providers: </span>
+        {ORDERING_RULES_SUMMARY}
+      </p>
     </div>
   );
 }

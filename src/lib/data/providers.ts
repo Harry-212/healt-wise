@@ -51,6 +51,12 @@ export type ProviderRecord = {
   logoAlt?: string;
   /** GPhC premises registration number. */
   gphcNumber: string;
+  /**
+   * Standard delivery fee in pounds (0 = free), used only to order by total
+   * price. Taken from the delivery note shown in the compare tables (the lowest
+   * listed standard tracked fee); Harry confirms exact fees with Task 99.
+   */
+  standardDeliveryFee: number;
   trustpilotUrl?: string;
   affiliate: {
     /** URL every outbound button uses: a cloaked `/go/<id>` path or a direct link. */
@@ -82,6 +88,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
     active: true,
     logoSrc: "/logo pharmacy/pharmacy-me.webp",
     gphcNumber: "9012604",
+    standardDeliveryFee: 4.99,
     trustpilotUrl: "https://uk.trustpilot.com/review/pharmacyme.co.uk",
     affiliate: {
       outboundUrl: "https://pharmacyme.co.uk/go/hw360",
@@ -98,6 +105,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
     active: true,
     logoSrc: "/logo pharmacy/Reach Online Pharmacy.webp",
     gphcNumber: "1093332",
+    standardDeliveryFee: 4.99,
     trustpilotUrl: "https://uk.trustpilot.com/review/reachonlinepharmacy.com",
     affiliate: {
       outboundUrl: "https://reachonlinepharmacy.com/weight-loss/",
@@ -118,6 +126,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
     active: true,
     logoSrc: "/logo pharmacy/DoseDirect.webp",
     gphcNumber: "9012841",
+    standardDeliveryFee: 0,
     trustpilotUrl: "https://uk.trustpilot.com/review/dosedirect.co.uk",
     affiliate: {
       outboundUrl:
@@ -134,6 +143,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
     active: true,
     logoSrc: "/logo pharmacy/i-prescribe.webp",
     gphcNumber: "9012850",
+    standardDeliveryFee: 4.99,
     trustpilotUrl: "https://uk.trustpilot.com/review/i-prescribe.co.uk",
     affiliate: {
       outboundUrl: "/go/i-prescribe",
@@ -165,6 +175,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
     active: true,
     logoSrc: "/logo pharmacy/shemed.webp",
     gphcNumber: "9012578",
+    standardDeliveryFee: 0,
     trustpilotUrl: "https://uk.trustpilot.com/review/shemed.co.uk",
     affiliate: {
       outboundUrl: "/go/shemed",
@@ -188,6 +199,7 @@ export const PROVIDERS: readonly ProviderRecord[] = [
     name: "Solira",
     active: true,
     gphcNumber: "9013213",
+    standardDeliveryFee: 3.99,
     trustpilotUrl: "https://uk.trustpilot.com/review/withsolira.com",
     affiliate: {
       outboundUrl: "/go/solira",
@@ -246,6 +258,11 @@ export function dossierOfferProps(id: string): {
   };
 }
 
+/** Standard delivery fee for ordering by total price; null when the provider is unknown. */
+export function standardDeliveryFee(id: string): number | null {
+  return getProvider(id)?.standardDeliveryFee ?? null;
+}
+
 /** Case-insensitive alphabetical order by name: the only default ordering. */
 function byName(a: ProviderRecord, b: ProviderRecord): number {
   return a.name.localeCompare(b.name, "en-GB", { sensitivity: "base" });
@@ -293,6 +310,7 @@ export function validateProviders(
     if (seen.has(p.id)) problems.push(`${p.id}: duplicate id`);
     seen.add(p.id);
     if (!p.name.trim()) problems.push(`${p.id}: name is empty`);
+    if (!(p.standardDeliveryFee >= 0)) problems.push(`${p.id}: standardDeliveryFee must be 0 or more`);
     if (!/^\d{6,7}$/.test(p.gphcNumber)) problems.push(`${p.id}: gphcNumber must be 6-7 digits`);
     const allowedOfferKeys = new Set(["kind", "label", "code", "summary", "appliesTo"]);
     for (const o of p.offers) {
