@@ -513,7 +513,7 @@ export default function CheapestOptionsUkPage() {
           We record the standard prices available on the date shown on this page.
           Prices, fees and offers can change after that date, so check the
           provider’s final price before proceeding. First-order codes are not
-          included. Featured partners appear separately from the price tables
+          included. Partner pharmacies appear separately from the price tables
           and cannot change the price-based order.
         </p>
         <Link href="/methodology" className={linkClass}>

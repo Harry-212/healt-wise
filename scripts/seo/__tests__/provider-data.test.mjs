@@ -76,7 +76,7 @@ test("controlled removal and addition update the count, the A-Z list and the red
       outboundUrl: "/go/test-partner",
       destinationUrl: "https://example.com/offer",
       ctaLabel: "Start",
-      badgeLabel: "Featured Partner",
+      badgeLabel: "Partner Pharmacy",
     },
     offers: [],
   };
