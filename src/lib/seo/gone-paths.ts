@@ -24,6 +24,9 @@ export const GONE_EXACT_PATHS: readonly string[] = [
   "/$",
   "/mg",
   "/Disclaimer",
+  "/helpful-guides/glp1-content-removed-weight-loss-advice-uk",
+  "/support-weight-management",
+  "/time-saver",
 ];
 
 /** `/blog/page/4?topic=locations` — only the query variant that Search Console reported. */

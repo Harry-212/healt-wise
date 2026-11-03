@@ -365,15 +365,6 @@ const ALL_GUIDES = [
     category: "Safety Checks" as Category,
     readTime: "3 min read",
   },
-  {
-    slug: "glp1-content-removed-weight-loss-advice-uk",
-    title:
-      "Why Weight Loss Treatment Content Is Being Removed by Social Media: Impact on Weight Loss Advice in the UK",
-    description:
-      "Platforms are restricting content about Mounjaro and Wegovy. We examine what's being removed, why it matters, and how to find trustworthy guidance.",
-    category: "Regulation" as Category,
-    readTime: "4 min read",
-  },
 ];
 
 type Props = {
