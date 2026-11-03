@@ -11,12 +11,12 @@
  */
 
 /** Badge on a partner's row or card. */
-export const PARTNER_BADGE_LABEL = "Featured Partner";
+export const PARTNER_BADGE_LABEL = "Partner Pharmacy";
 
 /** Heading of the block of partner cards above a comparison table. */
-export const PARTNER_BLOCK_HEADING = "Featured partners";
+export const PARTNER_BLOCK_HEADING = "Partner pharmacies";
 
-/** Accessible name of that block, e.g. "Featured Mounjaro partners". */
+/** Accessible name of that block, e.g. "Mounjaro partner pharmacies". */
 export function partnerBlockAriaLabel(medicationLabel: string): string {
-  return `Featured ${medicationLabel} partners`;
+  return `${medicationLabel} partner pharmacies`;
 }
