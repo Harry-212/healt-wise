@@ -136,5 +136,4 @@ export const GUIDE_IMAGES: Record<string, string> = {
   /** Doctor writing medical records — GP notification process */
   "mounjaro-gp-notification-uk":                     IMG.doctorWriting,
   /** "Censored" text over image — GLP-1 content removal from platforms */
-  "glp1-content-removed-weight-loss-advice-uk":      IMG.censoredContent,
 };

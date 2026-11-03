@@ -14,6 +14,13 @@ import {
 import { BLOG_FEED_TAGS, blogTopicHubPath } from "@/lib/blog-feed";
 
 const EXCLUDED_SITEMAP_PATHS = new Set<string>([
+  "/price-alerts",
+  "/support-weight-management",
+  "/time-saver",
+  "/helpful-guides/glp1-content-removed-weight-loss-advice-uk",
+  "/blog/best-place-to-start-weight-loss-treatment-online-uk",
+  "/blog/top-benefits-of-doctor-prescribed-weight-loss-injections-uk-for-you",
+  "/blog/weekly-weight-loss-injections-uk-what-they-may-actually-do",
   "/$",
   "/blog/locations-in-uk",
   /** Consolidated via permanentRedirect() into /blog/can-i-buy-weight-loss-injections-uk — redirect stubs don't belong in the sitemap. */

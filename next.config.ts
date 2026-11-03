@@ -161,6 +161,22 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Medium Priority SEO Plan redirects (Pages 1, 7, 10)
+      {
+        source: "/blog/best-place-to-start-weight-loss-treatment-online-uk",
+        destination: "/pharmacies",
+        permanent: true,
+      },
+      {
+        source: "/blog/top-benefits-of-doctor-prescribed-weight-loss-injections-uk-for-you",
+        destination: "/helpful-guides/mounjaro-wegovy-health-benefits-uk",
+        permanent: true,
+      },
+      {
+        source: "/blog/weekly-weight-loss-injections-uk-what-they-may-actually-do",
+        destination: "/blog/weight-loss-treatment-uk-complete-guide",
+        permanent: true,
+      },
       // Commercial affiliate redirects (cloaked affiliate URLs)
       ...affiliateRedirects().map((r) => ({ ...r, permanent: false })),
       // London consolidation (Tasks 109, 110): the comparison page and the locations

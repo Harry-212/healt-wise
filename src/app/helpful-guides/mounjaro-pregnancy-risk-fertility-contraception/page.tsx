@@ -119,13 +119,6 @@ const RELATED_GUIDES = [
     description:
       "Learn how we validate every pharmacy on our platform before listing—including cold-chain compliance for Mounjaro.",
   },
-  {
-    href: "/helpful-guides/glp1-content-removed-weight-loss-advice-uk",
-    category: "Regulation",
-    title: "Why GLP-1 Content Is Being Removed",
-    description:
-      "Social media restrictions are limiting access to information about Mounjaro, Wegovy, and GLP-1 treatments.",
-  },
 ];
 
 const SCHEMA = {

@@ -125,7 +125,6 @@ export const HELPFUL_GUIDE_SLUGS = [
   "kwikpen-disposal-recycling-uk",
   "travel-insurance-mounjaro-users-uk",
   "mounjaro-hot-weather-safety-uk",
-  "glp1-content-removed-weight-loss-advice-uk",
 ] as const;
 
 export type HelpfulGuideSlug = (typeof HELPFUL_GUIDE_SLUGS)[number];
@@ -191,8 +190,6 @@ export const HELPFUL_GUIDE_DESCRIPTIONS: Record<HelpfulGuideSlug, string> = {
     "Travelling on Mounjaro is usually straightforward. What insurers ask, why you must declare tirzepatide, what cover to look for, and a pre-trip checklist.",
   "mounjaro-hot-weather-safety-uk":
     "Mounjaro raises dehydration risk in hot weather. UK summer safety: hydration targets, sun protection, GLP-1 digestive symptoms, and when to seek help.",
-  "glp1-content-removed-weight-loss-advice-uk":
-    "Social media is restricting Mounjaro and Wegovy content. We examine what is being removed, the regulatory context, and what patients are losing.",
 };
 
 const SLUG_SET = new Set<string>(HELPFUL_GUIDE_SLUGS);

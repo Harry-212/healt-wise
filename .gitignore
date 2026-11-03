@@ -65,3 +65,5 @@ next-env.d.ts
 /[Hh]ealthwise360-*.csv
 /[Hh]ealthwise360_*.docx
 /evidence/
+
+/backups/

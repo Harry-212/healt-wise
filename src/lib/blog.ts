@@ -168,16 +168,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
     feedTags: ["guides", "safety", "wegovy"],
   },
   {
-    slug: "best-place-to-start-weight-loss-treatment-online-uk",
-    title: "Best Place to Start Weight Loss Treatment Online UK: Safety, Prices and Provider Checks",
-    date: "2026-06-23",
-    category: "Guides",
-    description:
-      "Compare safe UK weight loss treatment providers, prices, pharmacy checks and support before starting treatment.",
-    heroImage: "/blog/best-place-to-start-weight-loss-hero.png",
-    feedTags: ["guides", "safety", "mounjaro", "wegovy"],
-  },
-  {
     slug: "are-glp-1-supplements-real",
     title: "Are GLP-1 Supplements Real or Just Marketing? UK Safety Guide",
     date: "2026-06-22",
@@ -250,29 +240,6 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
       "Discover the real reasons belly fat increases after 40 — how oestrogen, testosterone, cortisol, and insulin interact, and what works including GLP-1 options.",
     heroImage: "/blog/1.1-fatloss-og.jpg",
     feedTags: ["guides"],
-  },
-  {
-    slug: "weekly-weight-loss-injections-uk-what-they-may-actually-do",
-    title: "Weekly Weight Loss Treatments in the UK: What They May Actually Do",
-    date: "2026-04-25",
-    category: "Guides",
-    description:
-      "Weekly weight loss treatments in the UK explained: how Wegovy and Mounjaro may affect appetite, access (NHS vs private), side effects, and what happens after stopping.",
-    heroImage:
-      "https://images.pexels.com/photos/5726708/pexels-photo-5726708.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    feedTags: ["wegovy", "mounjaro", "guides", "how-it-works"],
-  },
-  {
-    slug: "top-benefits-of-doctor-prescribed-weight-loss-injections-uk-for-you",
-    title:
-      "Top Benefits of Doctor Prescribed Weight Loss Treatments UK for You",
-    date: "2026-05-07",
-    category: "Guides",
-    description:
-      "Discover the top benefits of doctor prescribed weight loss treatments in the UK, including appetite control, medical support, and what to ask your clinician before choosing Wegovy or Mounjaro.",
-    heroImage:
-      "/blog/Ttop%20Benefits%20of%20Doctor%20Prescribed%20Weight%20Loss%20Injections%20UK%20for%20You%20-%20Copy.webp",
-    feedTags: ["wegovy", "mounjaro", "guides", "how-it-works"],
   },
   {
     slug: "mounjaro-vs-ozempic-smart-comparisons-for-better-results",
@@ -397,6 +364,9 @@ export const CURATED_APP_ROUTER_POSTS: BlogPostMeta[] = [
 
 /** Redirected `/blog/:slug` duplicate slugs (Zero-click pack 1, section B). */
 const REDIRECTED_BLOG_SLUGS = new Set<string>([
+  "best-place-to-start-weight-loss-treatment-online-uk",
+  "top-benefits-of-doctor-prescribed-weight-loss-injections-uk-for-you",
+  "weekly-weight-loss-injections-uk-what-they-may-actually-do",
   "mounjaro-vs-wegovy-key-differences-explained",
   "injectable-obesity-treatments-uk-what-works-and-what-doesnt",
   "understanding-prescription-weight-loss-injections-uk",

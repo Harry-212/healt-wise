@@ -16,7 +16,6 @@ export type RecommendedItem = {
 
 /** Blog slugs still on `/blog` but omitted from the Keep exploring carousel pool. */
 const EXCLUDED_FROM_RECOMMENDED_READING_SLUGS = new Set<string>([
-  "top-benefits-of-doctor-prescribed-weight-loss-injections-uk-for-you",
 ]);
 
 const ACRONYMS: Record<string, string> = {
@@ -41,8 +40,6 @@ function labelFromGuideSlug(slug: string): string {
 
 /** Canonical display titles for guides where the slug-derived label is misleading. */
 const GUIDE_TITLE_OVERRIDES: Partial<Record<string, string>> = {
-  "glp1-content-removed-weight-loss-advice-uk":
-    "Weight Loss Advice Removed by Social Media",
 };
 
 /** Guide slugs redirected to hub pages — omitted from the Keep exploring carousel pool. */
