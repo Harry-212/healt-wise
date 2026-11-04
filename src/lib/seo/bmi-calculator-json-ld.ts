@@ -117,11 +117,8 @@ export function bmiCalculatorJsonLd(): Record<string, unknown> {
         publisher: {
           "@id": `${origin}/#organization`,
         },
-        offers: {
-          "@type": "Offer",
-          price: "0",
-          priceCurrency: "GBP",
-        },
+        // No "offers": this is an independent comparison site, and Offer/Product types
+        // are not allowed without legal approval. isAccessibleForFree already says it is free.
       },
       {
         "@type": "FAQPage",
