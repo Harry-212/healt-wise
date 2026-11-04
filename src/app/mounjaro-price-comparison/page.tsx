@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     canonicalPath: "/mounjaro-price-comparison",
     title: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
     metaDescription:
-      "Compare Mounjaro prices at our GPhC registered UK pharmacy partners. Compare Mounjaro prices by dose across our listed partner pharmacies, from 2.5 mg to 15 mg.",
+      "Compare Mounjaro prices by dose across our listed GPhC-registered partner pharmacies, from 2.5 mg to 15 mg.",
     openGraphTitle: "Mounjaro Price Comparison UK: Cheapest Price by Dose",
     openGraphDescription:
       "See the lowest Mounjaro price for every dose at our UK pharmacy partners. Checked and dated, with no paid rankings.",
@@ -72,7 +72,7 @@ function compareWebPageJsonLd(providers: MounjaroUkProviderCompare[]) {
     "@id": `${pageUrl}#webpage`,
     name: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
     description:
-      "Compare Mounjaro prices at our GPhC registered UK pharmacy partners. Compare Mounjaro prices by dose across our listed partner pharmacies, from 2.5 mg to 15 mg.",
+      "Compare Mounjaro prices by dose across our listed GPhC-registered partner pharmacies, from 2.5 mg to 15 mg.",
     url: pageUrl,
     dateModified: dateModifiedWithPriceCheck("2026-10-15"),
     isPartOf: {
