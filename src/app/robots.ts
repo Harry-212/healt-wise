@@ -7,7 +7,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/my-hub", "/auth/", "/admin-dashboard"],
+      // /go/* are cloaked affiliate redirects to partner sites: nothing to index or crawl.
+      disallow: ["/api/", "/my-hub", "/auth/", "/admin-dashboard", "/go/"],
     },
     sitemap: `${base}/sitemap.xml`,
   };
