@@ -108,7 +108,6 @@ export const HELPFUL_GUIDE_SLUGS = [
   "mounjaro-gp-notification-uk",
   "switching-pharmacies-mounjaro-wegovy-uk",
   "mounjaro-calorie-cycling-weight-loss",
-  "mounjaro-early-weight-loss-why-it-slows",
   "mounjaro-nutrition-guide-uk",
   "mounjaro-menopause-weight-loss-uk",
   "mounjaro-wegovy-health-benefits-uk",
@@ -156,8 +155,6 @@ export const HELPFUL_GUIDE_DESCRIPTIONS: Record<HelpfulGuideSlug, string> = {
     "Want to switch pharmacy for Mounjaro or Wegovy? How to compare regulated providers, what documents you need, and how to switch safely.",
   "mounjaro-calorie-cycling-weight-loss":
     "Calorie cycling complements Mounjaro's appetite regulation—helping prevent plateaus and improve long-term adherence to treatment in the UK.",
-  "mounjaro-early-weight-loss-why-it-slows":
-    "Rapid early weight loss on Mounjaro is normal—but why does it slow? The biology behind initial results, what plateaus mean, and how to keep progressing.",
   "mounjaro-nutrition-guide-uk":
     "Mounjaro controls appetite—but what you eat determines results quality. A practical, evidence-based guide to nutrition while using tirzepatide in the UK.",
   "mounjaro-menopause-weight-loss-uk":

@@ -217,15 +217,6 @@ const ALL_GUIDES = [
     readTime: "4 min read",
   },
   {
-    slug: "mounjaro-early-weight-loss-why-it-slows",
-    title:
-      "Why Weight Loss Is Faster at the Start on Mounjaro (And Why It Slows Down)",
-    description:
-      "Rapid early weight loss on Mounjaro is normal—but why does it slow? We explain the biology, what plateaus mean, and how to keep progressing sustainably.",
-    category: "Medications" as Category,
-    readTime: "3 min read",
-  },
-  {
     slug: "mounjaro-nutrition-guide-uk",
     title:
       "Mounjaro Nutrition Guide: What to Eat for Better Weight Loss Results",

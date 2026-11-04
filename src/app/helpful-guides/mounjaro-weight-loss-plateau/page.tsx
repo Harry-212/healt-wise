@@ -30,12 +30,17 @@ const TOC = [
   { id: "fast-start", label: "Why Weight Loss Is Faster at the Start" },
   { id: "slows-down", label: "Why Progress Slows Over Time" },
   { id: "what-matters", label: "What Actually Matters" },
+  { id: "dont-compare", label: "Don't Compare Your Progress" },
   { id: "maintain", label: "How to Maintain Progress" },
   { id: "references", label: "Sources & Further Reading" },
   { id: "faq", label: "Frequently Asked Questions" },
 ];
 
 const FAQ_ITEMS = [
+  {
+    q: "Why did I lose weight so fast in the first weeks on Mounjaro?",
+    a: "Early weight loss on Mounjaro is typically a combination of reduced calorie intake due to suppressed appetite, loss of excess water weight (which accompanies glycogen depletion), and some initial fat loss. Water weight is lost rapidly but is not the same as fat loss—this is why the scale can drop significantly in the first few weeks.",
+  },
   {
     q: "Why did my weight loss stop on Mounjaro?",
     a: "Plateaus are normal and often indicate your body is adapting. Metabolic adaptation means your body is expending fewer calories at your new lower weight. This does not mean Mounjaro has stopped working—it may mean a dosage review or lifestyle adjustment is needed.",
@@ -98,11 +103,11 @@ const RELATED_GUIDES = [
       "Starting doses, titration steps, and practical dosing facts that support safer progress.",
   },
   {
-    href: "/helpful-guides/mounjaro-early-weight-loss-why-it-slows",
-    category: "Medications",
-    title: "Why Early Weight Loss Slows on Mounjaro",
+    href: "/helpful-guides/mounjaro-calorie-cycling-weight-loss",
+    category: "Nutrition",
+    title: "Mounjaro Calorie Cycling: A Smarter Approach",
     description:
-      "The biology behind rapid initial results, why progress slows, and what that means for your dose.",
+      "A flexible nutrition strategy to complement Mounjaro's appetite regulation and prevent plateau-related slowdowns.",
   },
   {
     href: "/tools/weight-loss-tracker",
@@ -130,7 +135,7 @@ const SCHEMA = {
     },
   },
   datePublished: "2026-04-09",
-  dateModified: "2026-04-09",
+  dateModified: "2026-11-04",
   about: [{ "@type": "Thing", name: "Mounjaro (tirzepatide)" }],
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -156,8 +161,8 @@ export default function GuideMounjaroPlateau() {
       categorySlug="medications"
       title="Why Weight Loss Slows on Mounjaro: Understanding Plateaus & Long-Term Progress"
       description="Early results on Mounjaro can feel rapid—then progress slows. This is completely normal. Here's the science behind why it happens and what to focus on for sustained results."
-      readTime="4 min read"
-      lastUpdated="April 2026"
+      readTime="5 min read"
+      lastUpdated="November 2026"
       toc={TOC}
       schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
@@ -172,6 +177,7 @@ export default function GuideMounjaroPlateau() {
           items={[
             "Reduced appetite — leading to a sharp initial reduction in calorie intake",
             "Initial water weight loss, which occurs quickly and visibly on the scale",
+            "Initial fat loss — once calorie intake is consistently below expenditure, fat loss begins, and it may be faster when the initial deficit is large",
             "Quick metabolic response to the drug's effects on blood sugar and insulin",
           ]}
         />
@@ -199,6 +205,7 @@ export default function GuideMounjaroPlateau() {
           items={[
             "Metabolic adaptation — the body conserves energy more efficiently at a lower weight",
             "Fat loss is slower than water loss — actual fat tissue requires a sustained caloric deficit to reduce",
+            "Adaptive thermogenesis — prolonged calorie restriction can lower energy expenditure beyond what body weight alone explains; this is a survival mechanism, not a personal failing",
             "Natural plateaus — temporary periods where weight stabilises before resuming decline",
           ]}
         />
@@ -224,6 +231,9 @@ export default function GuideMounjaroPlateau() {
               "weight tracker to monitor trends over time.",
             "Blood sugar control — particularly important for patients with type 2 diabetes or insulin resistance.",
             "Clothing fit — a more reliable indicator of fat loss than daily scale readings.",
+            "Body measurements (waist, hips, chest) — these often change even when weight is static.",
+            "Sleep quality and duration.",
+            "Fitness improvements — strength, endurance, or general activity levels.",
           ]}
         />
         <GuideParagraph>
@@ -232,6 +242,26 @@ export default function GuideMounjaroPlateau() {
           visualise your progress over weeks and months not just day to day.
           Trends matter far more than daily fluctuations.
 </GuideParagraph>
+      </GuideSection>
+
+      {/* ── Section 3b ── */}
+      <GuideSection id="dont-compare" heading="Don't Compare Your Progress">
+        <GuideParagraph>
+          Weight loss varies significantly between individuals, even among
+          people taking the same dose of{" "}
+          <IL href="/what-is-mounjaro">Mounjaro</IL>. Comparing your results
+          to others on social media, in forums, or against clinical trial
+          averages is rarely helpful and often misleading.
+        </GuideParagraph>
+        <GuideParagraph>Individual outcomes depend on:</GuideParagraph>
+        <GuideBulletList
+          items={[
+            "Starting weight — people with higher starting BMI often lose more weight in absolute terms",
+            "Hormonal response — individual variation in GLP-1 and GIP receptor sensitivity",
+            "Lifestyle factors — diet quality, physical activity, sleep, and stress levels all affect the rate of loss",
+            "Dose — higher doses generally produce greater weight loss, but are reached over time via the titration schedule",
+          ]}
+        />
       </GuideSection>
 
       {/* ── Section 4 ── */}
@@ -251,6 +281,13 @@ export default function GuideMounjaroPlateau() {
               for practical meal planning tips.
             </>,
             "Add strength training — resistance exercise helps maintain muscle and sustain metabolic rate",
+            <>
+              Calorie cycling — see our guide on{" "}
+              <IL href="/helpful-guides/mounjaro-calorie-cycling-weight-loss">
+                Mounjaro calorie cycling
+              </IL>
+              .
+            </>,
             "Stay consistent — missing doses or reverting to old eating patterns will slow progress",
           ]}
         />
@@ -280,6 +317,7 @@ export default function GuideMounjaroPlateau() {
           "Early weight loss on Mounjaro is faster partly due to water weight, not just fat loss.",
           "Slowing weight loss after the initial phase is normal—metabolic adaptation is a natural physiological response.",
           "Progress should be measured beyond the scale: energy, body composition, blood sugar, and clothing fit all matter.",
+          "Individual results vary widely; do not compare your progress to clinical trial averages or other patients.",
           "Adjusting calorie intake, increasing protein and fibre, and adding strength training help sustain progress.",
           "A prolonged plateau should prompt a conversation with your clinician about dosage or lifestyle adjustments.",
         ]}

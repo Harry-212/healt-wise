@@ -115,13 +115,6 @@ const RELATED_GUIDES = [
       "Vary your daily intake to prevent metabolic adaptation and improve long-term adherence alongside Mounjaro.",
   },
   {
-    href: "/helpful-guides/mounjaro-early-weight-loss-why-it-slows",
-    category: "Medications",
-    title: "Why Weight Loss Is Faster at the Start on Mounjaro",
-    description:
-      "Understand the biology behind rapid early results—and why slowing progress is normal, not failure.",
-  },
-  {
     href: "/helpful-guides/mounjaro-weight-loss-plateau",
     category: "Medications",
     title: "Why Weight Loss Slows on Mounjaro: Plateaus Explained",

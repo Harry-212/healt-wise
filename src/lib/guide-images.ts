@@ -76,8 +76,6 @@ export const GUIDE_IMAGES: Record<string, string> = {
   "switching-wegovy-to-mounjaro-uk":                 IMG.deliveryBox,
   /** Custom hero — multivitamins + Mounjaro UK */
   "mounjaro-multivitamins-uk":                       "/blog/multivitamin.webp",
-  /** Woman running — early rapid weight loss = active momentum */
-  "mounjaro-early-weight-loss-why-it-slows":         IMG.running,
   /** Custom hero — Mounjaro + menopause UK */
   "mounjaro-menopause-weight-loss-uk":
     "/blog/Mounjaro%20and%20Menopause.webp",
