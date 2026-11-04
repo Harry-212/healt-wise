@@ -177,6 +177,14 @@ const nextConfig: NextConfig = {
         destination: "/blog/weight-loss-treatment-uk-complete-guide",
         permanent: true,
       },
+      // Task 124: the early-weight-loss guide is merged into the plateau guide.
+      // Absolute www destination so the apex host is a single hop too, never a chain.
+      {
+        source: "/helpful-guides/mounjaro-early-weight-loss-why-it-slows",
+        destination: "https://www.healthwise360.co.uk/helpful-guides/mounjaro-weight-loss-plateau",
+        permanent: true,
+      },
+
       // Commercial affiliate redirects (cloaked affiliate URLs)
       ...affiliateRedirects().map((r) => ({ ...r, permanent: false })),
       // London consolidation (Tasks 109, 110): the comparison page and the locations

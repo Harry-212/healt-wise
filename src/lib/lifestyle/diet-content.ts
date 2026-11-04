@@ -134,7 +134,6 @@ export const DIET_INTERNAL_LINKS = [
   { href: "/helpful-guides/mounjaro-side-effects-uk", label: "Mounjaro side effects UK" },
   { href: "/helpful-guides/mounjaro-calorie-cycling-weight-loss", label: "Calorie cycling & Mounjaro" },
   { href: "/helpful-guides/mounjaro-weight-loss-plateau", label: "Weight loss plateaus" },
-  { href: "/helpful-guides/mounjaro-early-weight-loss-why-it-slows", label: "Why early loss slows" },
   { href: "/tools/bmi-calculator", label: "BMI & calorie calculator" },
   { href: "/blog", label: "Blog" },
   { href: "/wegovy-price-comparison", label: "Compare Wegovy prices UK" },

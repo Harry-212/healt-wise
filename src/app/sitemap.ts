@@ -57,6 +57,8 @@ const EXCLUDED_SITEMAP_PATHS = new Set<string>([
   "/blog/the-surprising-mounjaro-side-effects-you-might-experience",
   "/blog/mounjaro-weight-loss-injections-game-changer",
   "/blog/glp-1-supplements-uk",
+  /** Merged into the plateau guide and redirected (Task 124). */
+  "/helpful-guides/mounjaro-early-weight-loss-why-it-slows",
   "/blog/understanding-the-mounjaro-kwikpen-a-user-guide",
   "/blog/how-does-wegovy-work-to-transform-your-weight-journey",
   /** Redirected pages (Zero-click pack 4, section D) */

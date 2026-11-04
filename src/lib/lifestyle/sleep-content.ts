@@ -156,7 +156,6 @@ export const SLEEP_INTERNAL_LINKS = [
   { href: "/helpful-guides/mounjaro-nutrition-guide-uk", label: "Mounjaro nutrition guide UK" },
   { href: "/helpful-guides/mounjaro-side-effects-uk", label: "Mounjaro side effects UK" },
   { href: "/helpful-guides/mounjaro-weight-loss-plateau", label: "Weight loss plateaus" },
-  { href: "/helpful-guides/mounjaro-early-weight-loss-why-it-slows", label: "Why early loss slows" },
   { href: "/tools/bmi-calculator", label: "BMI & calorie calculator" },
   { href: "/tools/weight-loss-tracker", label: "Weight loss tracker" },
   { href: "/blog", label: "Blog" },
