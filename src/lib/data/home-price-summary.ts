@@ -22,7 +22,6 @@ import {
 export type HomePriceSnapshotRow = {
   dose: string;
   lowest: string;
-  typical: string;
   highest: string;
 };
 
@@ -206,25 +205,21 @@ export function getLivePriceSummary(): HomePriceSummary {
     {
       dose: "Mounjaro 2.5 mg (starter)",
       lowest: formatGbp(mjStarter.low),
-      typical: formatGbp(mjStarter.median),
       highest: formatGbp(mjStarter.high),
     },
     {
       dose: "Mounjaro 15 mg (top dose)",
       lowest: formatGbp(mjTop.low),
-      typical: formatGbp(mjTop.median),
       highest: formatGbp(mjTop.high),
     },
     {
       dose: "Wegovy 0.25 mg (starter)",
       lowest: formatGbp(wgStarter.low),
-      typical: formatGbp(wgStarter.median),
       highest: formatGbp(wgStarter.high),
     },
     {
       dose: "Wegovy 2.4 mg (top dose)",
       lowest: formatGbp(wgTop.low),
-      typical: formatGbp(wgTop.median),
       highest: formatGbp(wgTop.high),
     },
   ];
@@ -233,25 +228,21 @@ export function getLivePriceSummary(): HomePriceSummary {
     {
       dose: "Wegovy 0.25 mg (starter)",
       lowest: formatGbp(wgStarter.low),
-      typical: formatGbp(wgStarter.median),
       highest: formatGbp(wgStarter.high),
     },
     {
       dose: "Wegovy 2.4 mg (usual top dose)",
       lowest: formatGbp(wgTop.low),
-      typical: formatGbp(wgTop.median),
       highest: formatGbp(wgTop.high),
     },
     {
       dose: "Mounjaro 2.5 mg (starter)",
       lowest: formatGbp(mjStarter.low),
-      typical: formatGbp(mjStarter.median),
       highest: formatGbp(mjStarter.high),
     },
     {
       dose: "Mounjaro 15 mg (top dose)",
       lowest: formatGbp(mjTop.low),
-      typical: formatGbp(mjTop.median),
       highest: formatGbp(mjTop.high),
     },
   ];
