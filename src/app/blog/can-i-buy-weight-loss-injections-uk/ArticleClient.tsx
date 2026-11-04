@@ -252,7 +252,7 @@ export default function ArticleClient() {
             <GuideSection
               darkMode={darkMode}
               id="why-search"
-              heading="Why People Ask â€œCan I Buy Weight Loss Injectionsâ€"
+              heading="Why People Ask “Can I Buy Weight Loss Injections”"
             >
               <p>
                 People asking this are often close to taking action, but they
@@ -896,7 +896,7 @@ export default function ArticleClient() {
               <p>
                 Health Wise focuses on independent comparison, safety checks,
                 price transparency, and clear guidance before you start a
-                consultation â€” rather than pushing a single treatment funnel.
+                consultation — rather than pushing a single treatment funnel.
               </p>
               <p
                 className={`text-sm ${darkMode ? "text-slate-400" : "text-slate-500"}`}

@@ -115,7 +115,7 @@ export default function ArticleClient() {
 
             <BlogArticleHeroImage
               src={HERO_SRC}
-              alt="Prescription slimming injections in the UK â€” Wegovy and Mounjaro under clinical oversight"
+              alt="Prescription slimming injections in the UK — Wegovy and Mounjaro under clinical oversight"
             />
             <div
               id="guide-article-hero-end"
@@ -380,7 +380,7 @@ export default function ArticleClient() {
                     Kelly Clarkson has spoken publicly about dietary changes,
                     walking, and physician guided medical support. There has
                     been speculation around weight loss medications, but her own
-                    explanation suggests multiple factors were involvedâ€”which
+                    explanation suggests multiple factors were involved—which
                     sounds realistic.
                   </p>
                 </div>
@@ -439,7 +439,7 @@ export default function ArticleClient() {
                     How Much Do They Cost?
                   </h3>
                   <p>
-                    Private costs may range from around Â£150 to Â£300 monthly,
+                    Private costs may range from around £150 to £300 monthly,
                     though this varies. NHS access may be much cheaper if you
                     qualify.
                   </p>

@@ -112,7 +112,7 @@ export default function ArticleClient() {
 
             <BlogArticleHeroImage
               src={HERO_SRC}
-              alt="UK prescription weight loss treatment â€” GLP-1 class medicine used with diet, activity, and clinical follow-up"
+              alt="UK prescription weight loss treatment — GLP-1 class medicine used with diet, activity, and clinical follow-up"
             />
             <div
               id="guide-article-hero-end"
@@ -152,7 +152,7 @@ export default function ArticleClient() {
               </p>
               <p>That can support lower calorie intake.</p>
               <p>
-                But this often gets lost in the hypeâ€”these medicines generally
+                But this often gets lost in the hype—these medicines generally
                 do not replace the boring fundamentals. Nutrition still matters.
                 Movement still matters. Sleep probably matters more than many
                 people realise.
@@ -272,7 +272,7 @@ export default function ArticleClient() {
                 worth acknowledging.
               </p>
               <p>
-                Private pricing often starts around Â£130+, though dose
+                Private pricing often starts around £130+, though dose
                 escalation can raise costs considerably.
               </p>
               <SubHeading darkMode={darkMode}>
@@ -290,7 +290,7 @@ export default function ArticleClient() {
                 perspectives probably have merit.
               </p>
               <p>
-                Starting private costs often begin near Â£149, but maintenance
+                Starting private costs often begin near £149, but maintenance
                 dosing can climb much higher.
               </p>
               <p>
@@ -335,7 +335,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 But private treatment introduces another issue: sustainability.
-                Â£150 per month can become Â£250. Then more. Over a year, that may
+                £150 per month can become £250. Then more. Over a year, that may
                 exceed several thousand pounds. For some patients, that may be
                 manageable. For others, it may make long term treatment
                 unrealistic. That practical question often deserves more
@@ -390,7 +390,7 @@ export default function ArticleClient() {
               </p>
               <p>
                 Counterfeit products are another concern, particularly via
-                social media sellers and unregulated websitesâ€”something MHRA
+                social media sellers and unregulated websites—something MHRA
                 warnings have highlighted. Only licensed prescribing routes
                 should be considered. Our{" "}
                 <Link
