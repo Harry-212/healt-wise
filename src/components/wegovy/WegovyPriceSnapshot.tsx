@@ -40,9 +40,10 @@ export default function WegovyPriceSnapshot({
           Wegovy prices UK at a glance
         </h2>
         <p className="mt-4 leading-relaxed text-slate-600">
-          Wegovy pricing in the UK goes up with your dose. The cheapest Wegovy
-          price in the UK is {formatGbp(insights.starter.low)}, for the starter
-          pen. Here are the prices of Wegovy in the UK in four numbers.
+          Wegovy pricing in the UK goes up with your dose. The lowest listed
+          Wegovy starter-pen price among the partner pharmacies we checked is{" "}
+          {formatGbp(insights.starter.low)}. Here are the prices of Wegovy in
+          the UK in four numbers.
         </p>
         <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200/90 shadow-sm">
           <table className="w-full border-collapse text-left text-sm">

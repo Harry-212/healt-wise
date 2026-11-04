@@ -82,10 +82,11 @@ export default function WegovyCompareShaderHero({
           </h1>
 
           <p className="mx-auto mb-4 max-w-2xl text-pretty text-sm font-light leading-relaxed text-white/75 lg:mx-0 md:text-base">
-            The cheapest Wegovy in the UK is {displayPrice} for a 0.25 mg
-            starter pen at {displayProvider}. We compare Wegovy prices at{" "}
-            {displayCount} GPhC registered UK pharmacies, so you can find the
-            best price for Wegovy in the UK at every dose in under a minute.
+            Among the partner pharmacies we checked, the lowest listed price
+            for a Wegovy 0.25 mg starter pen is {displayPrice} at{" "}
+            {displayProvider}. Compare Wegovy prices by dose across our listed
+            partner pharmacies. Our comparison covers selected partners, rather
+            than the whole UK market.
           </p>
 
           <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:justify-start">

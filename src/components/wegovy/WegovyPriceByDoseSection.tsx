@@ -25,7 +25,7 @@ const DOSE_EXTRAS: DoseExtra[] = [
   {
     dose: "1mg",
     anchorId: "wegovy-1mg-price",
-    note: "That is the same price as its 0.5 mg pen. Our Wegovy 1mg price comparison for the UK shows every pharmacy that sells it.",
+    note: "That is the same price as its 0.5 mg pen. Our Wegovy 1 mg price comparison shows the partner pharmacies in our table that list this strength.",
   },
   {
     dose: "1.7mg",
@@ -66,8 +66,9 @@ export default function WegovyPriceByDoseSection({
         </h2>
         <p className="mt-4 leading-relaxed text-slate-600">
           The Wegovy pen price goes up with each dose. Find your dose below to
-          see the lowest, typical and highest price we found. Each pen holds 4
-          weekly doses, so we also show the price per week.
+          see the lowest, typical and highest listed price among our checked
+          partner pharmacies. Each pen holds 4 weekly doses, so we also show
+          the price per week.
         </p>
 
         <div className="mt-8 space-y-8">
@@ -82,16 +83,17 @@ export default function WegovyPriceByDoseSection({
                   Wegovy {formatDose(d.dose)} price UK
                 </h3>
                 <p className="mt-2 leading-relaxed text-slate-600">
-                  The cheapest Wegovy {formatDose(d.dose)} pen is{" "}
-                  {formatGbp(d.low)} at {d.lowProvider}, or{" "}
-                  {weeklyPrice(d.low)} a week. Most pharmacies charge about{" "}
+                  Among our checked partner listings, the lowest Wegovy{" "}
+                  {formatDose(d.dose)} pen price is {formatGbp(d.low)} at{" "}
+                  {d.lowProvider}, or {weeklyPrice(d.low)} a week. The median
+                  price among our checked partner listings is{" "}
                   {formatGbp(d.median)}, and the highest price is{" "}
                   {formatGbp(d.high)}.{extra?.note ? ` ${extra.note}` : ""}
                 </p>
                 {cheapest.length > 0 ? (
                   <p className="mt-2 text-sm text-slate-500">
                     <strong className="font-semibold text-slate-700">
-                      Cheapest 3:
+                      Three lowest-priced partner listings:
                     </strong>{" "}
                     {cheapest.map((c, idx) => (
                       <span key={c.id}>

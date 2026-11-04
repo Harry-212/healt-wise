@@ -32,7 +32,7 @@ function homeSchemaPriceSnapshotDataset(base: string): Record<string, unknown> {
     "@id": `${base}/#price-snapshot`,
     name: "UK weight loss injection prices by dose: Mounjaro and Wegovy",
     description:
-      `Lowest, typical and highest price of a 4 week Mounjaro and Wegovy pen at our GPhC registered UK pharmacy partners, from the Healthwise360 price check on ${PRICE_CHECK_DATE_LONG}.`,
+      `Lowest and highest listed price of a 4 week Mounjaro and Wegovy pen at our partner pharmacies, from the Healthwise360 price check on ${PRICE_CHECK_DATE_LONG}.`,
     url: `${base}/`,
     creator: { "@id": `${base}/#organization` },
     publisher: { "@id": `${base}/#organization` },
@@ -46,7 +46,6 @@ function homeSchemaPriceSnapshotDataset(base: string): Record<string, unknown> {
       "Listed prices checked on each pharmacy website in the first week of every month",
     variableMeasured: [
       { "@type": "PropertyValue", name: "Lowest price", unitText: "GBP" },
-      { "@type": "PropertyValue", name: "Typical price", unitText: "GBP" },
       { "@type": "PropertyValue", name: "Highest price", unitText: "GBP" },
     ],
     about: [

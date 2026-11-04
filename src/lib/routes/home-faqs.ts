@@ -13,8 +13,8 @@ export function buildHomePageFaqs(
       a: `A starter pen costs from ${wegovyStarterLow} (Wegovy) or ${mounjaroStarterLow} (Mounjaro) a month. Higher doses cost more, up to ${mounjaroTopHigh} a month for Mounjaro 15 mg. Prices change often, so check our table for the latest price.`,
     },
     {
-      q: "Which pharmacy has the cheapest weight loss injections?",
-      a: "The cheapest pharmacy changes often and is different for each dose. Our price table shows the cheapest price from our latest check first, so you can compare weight loss treatment prices in the UK for every dose.",
+      q: "Which of your partner pharmacies has the lowest listed price?",
+      a: "The lowest listed price varies by medicine and dose. Compare the partner pharmacies in our tables for your prescribed dose, check the price-check date, and review delivery charges and any offer conditions. Our comparison covers selected partners, rather than the whole UK market.",
     },
     {
       q: "Is Mounjaro or Wegovy better for weight loss?",

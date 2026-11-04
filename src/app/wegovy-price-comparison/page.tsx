@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { dateModifiedWithPriceCheck } from "@/lib/data/price-check";
 import { ArrowRight } from "lucide-react";
+import ComparisonCoverageNote from "@/components/compare/ComparisonCoverageNote";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import WegovyCompareChartsSection from "@/components/compare/WegovyCompareChartsSection";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
@@ -233,7 +234,7 @@ export default function CompareWegovyPricesUkPage() {
         >
           <div className="mx-auto max-w-7xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Compare Wegovy prices UK at every pharmacy
+              Compare Wegovy prices at our partner pharmacies
             </h2>
             <p className="mt-3 max-w-3xl text-slate-600">
               This is our full Wegovy UK price comparison. It shows the price of
@@ -255,7 +256,9 @@ export default function CompareWegovyPricesUkPage() {
                 <li>Tap a pharmacy to see its full review.</li>
               </ol>
             </div>
-            <div className="mt-10">
+            <ComparisonCoverageNote className="mt-6" />
+
+            <div className="mt-6">
               <WegovyUkCompareTable
                 providers={WEGOVY_UK_COMPARE_PROVIDERS}
                 lastUpdated={wegovyLastUpdated}

@@ -61,8 +61,9 @@ export default function MounjaroPriceByDoseSection({
         <p className="mt-4 leading-relaxed text-slate-600">
           Mounjaro pen prices go up with each dose. This Mounjaro pen price
           comparison for the UK shows every dose. Find your dose below to
-          see the lowest, typical and highest price we found. Each pen holds
-          4 weekly doses, so we also show the price per week.
+          see the lowest, typical and highest listed price among our checked
+          partner pharmacies. Each pen holds 4 weekly doses, so we also show
+          the price per week.
         </p>
 
         <div className="mt-8 space-y-8">
@@ -75,16 +76,17 @@ export default function MounjaroPriceByDoseSection({
                   Mounjaro {formatDose(d.dose)} price UK
                 </h3>
                 <p className="mt-2 leading-relaxed text-slate-600">
-                  The cheapest Mounjaro {formatDose(d.dose)} pen is{" "}
-                  {formatGbp(d.low)} at {d.lowProvider}, or{" "}
-                  {weeklyPrice(d.low)} a week. Most pharmacies charge about{" "}
+                  Among our checked partner listings, the lowest Mounjaro{" "}
+                  {formatDose(d.dose)} pen price is {formatGbp(d.low)} at{" "}
+                  {d.lowProvider}, or {weeklyPrice(d.low)} a week. The median
+                  price among our checked partner listings is{" "}
                   {formatGbp(d.median)}, and the highest price is{" "}
                   {formatGbp(d.high)}.{extra?.note ? ` ${extra.note}` : ""}
                 </p>
                 {cheapest.length > 0 ? (
                   <p className="mt-2 text-sm text-slate-500">
                     <strong className="font-semibold text-slate-700">
-                      Cheapest 3:
+                      Three lowest-priced partner listings:
                     </strong>{" "}
                     {cheapest
                       .map((c) => `${c.name} ${formatGbp(c.price)}`)
