@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HomeSectionCard from "@/components/ui/HomeSectionCard";
+import ComparisonCoverageNote from "@/components/compare/ComparisonCoverageNote";
 import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
 import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
@@ -29,6 +30,8 @@ export default function PriceSnapshotSection({
         week pen costs right now, from the cheapest to the most expensive
         pharmacy we check.
       </p>
+
+      <ComparisonCoverageNote statistics="Lowest and highest" className="mt-4" />
 
       <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
         <table className="w-full min-w-[480px] border-collapse text-left text-sm">
@@ -62,7 +65,7 @@ export default function PriceSnapshotSection({
           className="group inline-flex items-center text-sm font-semibold text-emerald-800 transition hover:text-emerald-950 sm:text-base"
         >
           <span className="underline underline-offset-4 decoration-emerald-500/50 group-hover:decoration-emerald-700">
-            See every pharmacy and dose
+            See our partner pharmacies and listed doses
           </span>
           <span className="ml-1.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">
             →

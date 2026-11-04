@@ -10,6 +10,7 @@ import MounjaroPriceSnapshot from "@/components/mounjaro/MounjaroPriceSnapshot";
 import MounjaroPriceByDoseSection from "@/components/mounjaro/MounjaroPriceByDoseSection";
 import MounjaroCheapestSection from "@/components/mounjaro/MounjaroCheapestSection";
 import MounjaroMonthlyCostSection from "@/components/mounjaro/MounjaroMonthlyCostSection";
+import ComparisonCoverageNote from "@/components/compare/ComparisonCoverageNote";
 import NhsAccessSection from "@/components/compare/NhsAccessSection";
 import {
   MOUNJARO_DOSE_KEYS,
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     canonicalPath: "/mounjaro-price-comparison",
     title: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
     metaDescription:
-      "Compare Mounjaro prices at our GPhC registered UK pharmacy partners. Find the cheapest Mounjaro in the UK for every dose, from 2.5 mg to 15 mg.",
+      "Compare Mounjaro prices at our GPhC registered UK pharmacy partners. Compare Mounjaro prices by dose across our listed partner pharmacies, from 2.5 mg to 15 mg.",
     openGraphTitle: "Mounjaro Price Comparison UK: Cheapest Price by Dose",
     openGraphDescription:
       "See the lowest Mounjaro price for every dose at our UK pharmacy partners. Checked and dated, with no paid rankings.",
@@ -71,7 +72,7 @@ function compareWebPageJsonLd(providers: MounjaroUkProviderCompare[]) {
     "@id": `${pageUrl}#webpage`,
     name: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
     description:
-      "Compare Mounjaro prices at our GPhC registered UK pharmacy partners. Find the cheapest Mounjaro in the UK for every dose, from 2.5 mg to 15 mg.",
+      "Compare Mounjaro prices at our GPhC registered UK pharmacy partners. Compare Mounjaro prices by dose across our listed partner pharmacies, from 2.5 mg to 15 mg.",
     url: pageUrl,
     dateModified: dateModifiedWithPriceCheck("2026-10-15"),
     isPartOf: {
@@ -257,7 +258,9 @@ export default function CompareMounjaroPricesUkPage() {
               chart in one.
             </p>
 
-            <div className="mt-8">
+            <ComparisonCoverageNote className="mt-6" />
+
+            <div className="mt-6">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50/80 px-3.5 py-1 text-xs font-semibold text-violet-800">
                 <CalendarClock className="h-3.5 w-3.5" aria-hidden />
                 Prices checked {mounjaroLastUpdated}

@@ -295,8 +295,8 @@ export function buildWegovyCompareUkFaqItems(
       answer: `Wegovy costs from ${starterWeekly} a week in the UK. One pen holds 4 weekly doses, so the weekly price is the pen price divided by 4. On 2.4 mg, it is from ${dose24Weekly} a week.`,
     },
     {
-      question: "What is the cheapest Wegovy provider in the UK?",
-      answer: `${cheapestLeader} had the lowest price for ${cheapestLeaderWins} of the ${cheapestTotalDoses} doses in our latest check.`,
+      question: "Which of our partner pharmacies has the lowest listed Wegovy price?",
+      answer: `Among the partner pharmacies we checked, ${cheapestLeader} had the lowest listed price for ${cheapestLeaderWins} of the ${cheapestTotalDoses} doses in our latest check.`,
     },
     {
       question: "What's the cheapest place to get Wegovy?",

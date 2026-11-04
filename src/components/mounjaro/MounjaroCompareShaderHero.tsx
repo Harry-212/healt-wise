@@ -81,19 +81,18 @@ export default function MounjaroCompareShaderHero({
           >
             {cheapestPrice != null && cheapestProvider ? (
               <>
-                The cheapest Mounjaro in the UK is {formatGbp(cheapestPrice)}{" "}
-                for a 2.5 mg starter pen at {cheapestProvider}. We compare
-                Mounjaro prices at{" "}
-                {providerCount != null ? providerCount : "our"} GPhC
-                registered UK pharmacies, so you can find the best price for
-                Mounjaro at every dose in under a minute.
+                Among the partner pharmacies we checked, the lowest listed
+                price for a Mounjaro 2.5 mg starter pen is{" "}
+                {formatGbp(cheapestPrice)} at {cheapestProvider}. Compare
+                Mounjaro prices by dose across our listed partner pharmacies.
+                Our comparison covers selected partners, rather than the whole
+                UK market.
               </>
             ) : (
               <>
-                Compare real Mounjaro (tirzepatide) prices across UK
-                pharmacies. See starting pen costs, estimated monthly spend,
-                and every dose column in one interactive table — with
-                regulated context and independent methodology.
+                Compare Mounjaro prices by dose across our listed partner
+                pharmacies. Our comparison covers selected partners, rather
+                than the whole UK market.
               </>
             )}
           </p>

@@ -12,6 +12,7 @@ import {
 
 import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
 import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
+import ComparisonCoverageNote from "@/components/compare/ComparisonCoverageNote";
 
 /**
  * Editorial long-form content for `/compare/wegovy-vs-mounjaro`.
@@ -201,7 +202,12 @@ export default function WegovyMounjaroLongFormContent({
             </p>
           </div>
 
-          <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm">
+          <ComparisonCoverageNote
+            statistics="Lowest and highest"
+            className="mt-8"
+          />
+
+          <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-sm">
             <div className="border-b border-slate-200 bg-slate-50/80 px-5 py-3.5">
               <p className="text-sm font-bold text-slate-900 md:text-base">
                 Wegovy vs Mounjaro prices at our latest check

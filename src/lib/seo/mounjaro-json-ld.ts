@@ -288,10 +288,10 @@ export function buildMounjaroCompareUkFaqItems(
       answer: `Mounjaro costs from ${ctx.starterWeekly} a week in the UK. One pen holds 4 weekly doses, so the weekly price is the pen price divided by 4. On 15 mg, it is from ${ctx.topWeekly} a week.`,
     },
     {
-      question: "Who is the cheapest Mounjaro supplier in the UK right now?",
+      question: "Which of our partner pharmacies has the lowest listed Mounjaro price?",
       answer: ctx.cheapestException
-        ? `${ctx.cheapestLeader} had the lowest price for ${ctx.cheapestLeaderWins} of the ${ctx.cheapestTotalDoses} doses in our latest check. ${ctx.cheapestException.provider} was cheapest for ${ctx.cheapestException.dose.replace("mg", " mg")} at ${gbp(ctx.cheapestException.price)}.`
-        : `${ctx.cheapestLeader} had the lowest price for ${ctx.cheapestLeaderWins} of the ${ctx.cheapestTotalDoses} doses in our latest check.`,
+        ? `Among the partner pharmacies we checked, ${ctx.cheapestLeader} had the lowest listed price for ${ctx.cheapestLeaderWins} of the ${ctx.cheapestTotalDoses} doses in our latest check. ${ctx.cheapestException.provider} was cheapest for ${ctx.cheapestException.dose.replace("mg", " mg")} at ${gbp(ctx.cheapestException.price)}.`
+        : `Among the partner pharmacies we checked, ${ctx.cheapestLeader} had the lowest listed price for ${ctx.cheapestLeaderWins} of the ${ctx.cheapestTotalDoses} doses in our latest check.`,
     },
     {
       question: "What is the cheapest way to get Mounjaro?",
