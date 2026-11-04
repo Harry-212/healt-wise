@@ -34,20 +34,20 @@ export default function PriceSnapshotSection({
       <ComparisonCoverageNote statistics="Lowest and highest" className="mt-4" />
 
       <div className="mt-6 overflow-x-auto rounded-xl border border-slate-200">
-        <table className="w-full min-w-[480px] border-collapse text-left text-sm">
+        <table className="w-full border-collapse text-left text-sm">
           <thead>
             <tr className="bg-slate-50 text-slate-600">
-              <th scope="col" className="px-4 py-3 font-semibold">Medicine and dose</th>
-              <th scope="col" className="px-4 py-3 font-semibold">Lowest</th>
-              <th scope="col" className="px-4 py-3 font-semibold">Highest</th>
+              <th scope="col" className="px-3 py-3 font-semibold sm:px-4">Medicine and dose</th>
+              <th scope="col" className="px-3 py-3 font-semibold sm:px-4">Lowest</th>
+              <th scope="col" className="px-3 py-3 font-semibold sm:px-4">Highest</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((row) => (
               <tr key={row.dose} className="border-t border-slate-200">
-                <td className="px-4 py-3 font-medium text-slate-900">{row.dose}</td>
-                <td className="px-4 py-3 text-slate-700">{row.lowest}</td>
-                <td className="px-4 py-3 text-slate-700">{row.highest}</td>
+                <td className="px-3 py-3 font-medium text-slate-900 sm:px-4">{row.dose}</td>
+                <td className="px-3 py-3 text-slate-700 sm:px-4">{row.lowest}</td>
+                <td className="px-3 py-3 text-slate-700 sm:px-4">{row.highest}</td>
               </tr>
             ))}
           </tbody>
