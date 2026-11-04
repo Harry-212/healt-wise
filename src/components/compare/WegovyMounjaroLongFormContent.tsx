@@ -22,25 +22,21 @@ const DEFAULT_LATEST_PRICE_CHECK_ROWS: HomePriceSnapshotRow[] = [
   {
     dose: "Wegovy 0.25 mg (starter)",
     lowest: "£72.89",
-    typical: "£100",
     highest: "£205",
   },
   {
     dose: "Wegovy 2.4 mg (usual top dose)",
     lowest: "£173.69",
-    typical: "£200",
     highest: "£290",
   },
   {
     dose: "Mounjaro 2.5 mg (starter)",
     lowest: "£119.69",
-    typical: "£154",
     highest: "£229",
   },
   {
     dose: "Mounjaro 15 mg (top dose)",
     lowest: "£245.69",
-    typical: "£299",
     highest: "£359.95",
   },
 ];

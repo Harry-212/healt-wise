@@ -4,10 +4,10 @@ import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
 import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 const DEFAULT_ROWS: HomePriceSnapshotRow[] = [
-  { dose: "Mounjaro 2.5 mg (starter)", lowest: "£119.69", typical: "£154", highest: "£229" },
-  { dose: "Mounjaro 15 mg (top dose)", lowest: "£245.69", typical: "£299", highest: "£359.95" },
-  { dose: "Wegovy 0.25 mg (starter)", lowest: "£72.89", typical: "£100", highest: "£205" },
-  { dose: "Wegovy 2.4 mg (top dose)", lowest: "£173.69", typical: "£200", highest: "£290" },
+  { dose: "Mounjaro 2.5 mg (starter)", lowest: "£119.69", highest: "£229" },
+  { dose: "Mounjaro 15 mg (top dose)", lowest: "£245.69", highest: "£359.95" },
+  { dose: "Wegovy 0.25 mg (starter)", lowest: "£72.89", highest: "£205" },
+  { dose: "Wegovy 2.4 mg (top dose)", lowest: "£173.69", highest: "£290" },
 ];
 
 export interface PriceSnapshotSectionProps {
@@ -36,7 +36,6 @@ export default function PriceSnapshotSection({
             <tr className="bg-slate-50 text-slate-600">
               <th scope="col" className="px-4 py-3 font-semibold">Medicine and dose</th>
               <th scope="col" className="px-4 py-3 font-semibold">Lowest</th>
-              <th scope="col" className="px-4 py-3 font-semibold">Typical</th>
               <th scope="col" className="px-4 py-3 font-semibold">Highest</th>
             </tr>
           </thead>
@@ -45,7 +44,6 @@ export default function PriceSnapshotSection({
               <tr key={row.dose} className="border-t border-slate-200">
                 <td className="px-4 py-3 font-medium text-slate-900">{row.dose}</td>
                 <td className="px-4 py-3 text-slate-700">{row.lowest}</td>
-                <td className="px-4 py-3 text-slate-700">{row.typical}</td>
                 <td className="px-4 py-3 text-slate-700">{row.highest}</td>
               </tr>
             ))}
