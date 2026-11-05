@@ -195,7 +195,11 @@ export default function GuideMounjaroMenopause() {
               <strong>Increased visceral fat</strong> — fat redistribution
               shifts from hips and thighs to the abdomen, significantly
               increasing the risk of cardiovascular disease and type 2
-              diabetes.
+              diabetes. Read{" "}
+              <IL href="/blog/why-does-belly-fat-increase-after-40">
+                why belly fat increases after 40
+              </IL>
+              .
             </>,
             <>
               <strong>Stronger cravings</strong> — hormonal disruption affects
