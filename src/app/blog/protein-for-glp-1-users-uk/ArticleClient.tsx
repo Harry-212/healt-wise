@@ -616,6 +616,17 @@ export default function ArticleClient() {
                 alone.
               </p>
               <p>
+                Age and hormones can also change where the body stores fat.
+                Read{" "}
+                <Link
+                  href="/blog/why-does-belly-fat-increase-after-40"
+                  className="font-medium text-emerald-600 hover:underline"
+                >
+                  Belly fat after 40: why it increases
+                </Link>
+                .
+              </p>
+              <p>
                 While tracking progress, it can help to{" "}
                 <Link
                   href="/tools/weight-loss-tracker"

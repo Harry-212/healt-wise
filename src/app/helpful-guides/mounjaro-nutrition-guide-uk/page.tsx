@@ -108,6 +108,13 @@ const REFERENCES = [
 
 const RELATED_GUIDES = [
   {
+    href: "/blog/why-does-belly-fat-increase-after-40",
+    category: "Weight management",
+    title: "Why Does Belly Fat Increase After 40?",
+    description:
+      "How hormones and fat storage change in midlife, explained in plain UK language.",
+  },
+  {
     href: "/helpful-guides/mounjaro-calorie-cycling-weight-loss",
     category: "Nutrition",
     title: "Mounjaro Calorie Cycling: A Smarter Approach to Weight Loss",
