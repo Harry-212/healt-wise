@@ -27,6 +27,8 @@ export const GONE_EXACT_PATHS: readonly string[] = [
   "/helpful-guides/glp1-content-removed-weight-loss-advice-uk",
   "/support-weight-management",
   "/time-saver",
+  /** Retired 5 Nov 2026 (Task 13, Jeff's 3 Nov instruction): the price-alerts page had no backend. */
+  "/price-alerts",
 ];
 
 /** `/blog/page/4?topic=locations` — only the query variant that Search Console reported. */
