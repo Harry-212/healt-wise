@@ -34,3 +34,9 @@ test("homepage has no keyword-variation paragraph", () => {
   assert.ok(!t.includes("GLP 1 price comparison UK"));
   assert.ok(!t.includes("weight loss injection price checker UK"));
 });
+
+test("London SEO title carries no brand suffix (the site title template adds it once)", () => {
+  const t = read("src/lib/content/uk-location-article-data.ts");
+  assert.ok(t.includes('return "Weight Loss Treatment in London";'));
+  assert.ok(!t.includes("in London | Healthwise360"));
+});
