@@ -12,11 +12,12 @@ test("business address is 88 Wood Street, E17 3NU everywhere it is written", () 
   for (const f of [
     "src/app/(informational)/privacy-policy/page.tsx",
     "src/lib/seo/ssot-content.ts",
-    "src/components/locations/content/LondonLocationContent.tsx",
   ]) {
     assert.ok(read(f).includes("88 Wood Street"), f);
     assert.ok(!/195[-–]?(197)? ?Wood/.test(read(f)), f);
   }
+  // The rebuilt London page (Nov 2026 brief) carries no address; it must not carry the old one.
+  assert.ok(!/195[-–]?(197)? ?Wood/.test(read("src/components/locations/content/LondonLocationContent.tsx")));
 });
 
 test("the embedded map and Google Maps links are removed", () => {

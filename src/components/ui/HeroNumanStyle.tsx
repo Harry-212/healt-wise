@@ -14,8 +14,6 @@ export interface HeroNumanStyleProps {
 }
 
 export default function HeroNumanStyle({
-  wegovyStarterLow = "£72.89",
-  mounjaroStarterLow = "£119.69",
   pricesChecked = PRICE_CHECK_DATE_LONG,
 }: HeroNumanStyleProps) {
   return (
@@ -60,21 +58,18 @@ export default function HeroNumanStyle({
                 Weight Loss Injections Price Comparison UK
               </h1>
 
-              {/* Description & disclaimer */}
+              {/* SECTION 1: Intro Description */}
               <p
                 id="hero-answer"
                 className="mt-2.5 max-w-2xl text-sm font-medium leading-relaxed text-slate-700 sm:text-base"
               >
-                A Wegovy starter pen costs from {wegovyStarterLow}, and a Mounjaro starter
-                pen from {mounjaroStarterLow}. We check weight loss injection prices at our
-                GPhC registered UK pharmacy partners, so you can see the real price
-                of every dose before you pay.
-              </p>
-              <p className="mt-1 text-xs text-slate-500 sm:text-[13px]">
-                Healthwise360 is an independent comparison and information service. We do not prescribe or dispense medicines.
+                Weight loss injections price comparison UK, made simple: see the lowest checked price among our
+                selected provider partners for Mounjaro and Wegovy, with the delivery fee shown on each partner card.
+                Compare weight loss injection prices by strength, check each pharmacy on the GPhC register, and read
+                plain UK guides before you decide. Prices were checked on {pricesChecked}.
               </p>
 
-              {/* Action buttons */}
+              {/* SECTION 1: Action buttons */}
               <div className="mt-4 flex flex-col gap-2.5 sm:flex-row sm:items-center">
                 <Link
                   href="/mounjaro-price-comparison"
@@ -108,23 +103,19 @@ export default function HeroNumanStyle({
                 </Link>
               </div>
 
-              {/* Trust checklist */}
-              <div className="mt-4 border-t border-slate-200/80 pt-3 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs font-semibold text-slate-700 sm:text-[13px]">
+              {/* SECTION 2: Trust bar (3 items in a row) */}
+              <div className="mt-4 border-t border-slate-200/80 pt-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold text-slate-700 sm:text-[13px]">
                 <div className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-emerald-600 shrink-0" strokeWidth={2.5} />
-                  <span>Prices checked {pricesChecked}</span>
+                  <span>Prices checked on {pricesChecked}</span>
                 </div>
                 <div className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-emerald-600 shrink-0" strokeWidth={2.5} />
-                  <span>GPhC registered pharmacies only</span>
+                  <span>Every partner is a GPhC registered pharmacy</span>
                 </div>
                 <div className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-emerald-600 shrink-0" strokeWidth={2.5} />
-                  <span>No paid rankings</span>
-                </div>
-                <div className="inline-flex items-center gap-1.5">
-                  <Check className="h-4 w-4 text-emerald-600 shrink-0" strokeWidth={2.5} />
-                  <span>Price for every dose</span>
+                  <span>We compare. We do not prescribe or sell medicines</span>
                 </div>
               </div>
             </div>

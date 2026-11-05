@@ -45,11 +45,14 @@ const FreeToolsSection = dynamic(
 const WhyChooseHealthWise = dynamic(
   () => import("@/components/ui/WhyChooseHealthWise"),
 );
+const HomeContentNov2026 = dynamic(
+  () => import("@/components/home/HomeContentNov2026"),
+);
 
 const HOME_SEO_TITLE =
   "Weight Loss Injections Price Comparison UK | Healthwise360";
 const HOME_SEO_DESCRIPTION =
-  "Compare weight loss injection prices at our GPhC registered UK pharmacy partners, at every dose.";
+  "Weight loss injections price comparison UK, made simple: see the lowest checked price among our selected provider partners for Mounjaro and Wegovy, with the delivery fee shown on each partner card.";
 const HOME_OG_TITLE = "Compare Weight Loss Injection Prices in the UK";
 const HOME_OG_DESCRIPTION =
   "Mounjaro and Wegovy prices at our GPhC registered UK pharmacy partners, for every dose. Free, independent and no paid rankings.";
@@ -116,6 +119,8 @@ export default function Homepage() {
         pricesChecked={priceSummary.lastUpdated}
       />
       <div className="flex flex-col gap-0 pt-0">
+        <HomeContentNov2026 />
+
         <PriceSnapshotSection
           rows={priceSummary.snapshotRows}
           lastUpdated={priceSummary.lastUpdated}

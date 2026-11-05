@@ -2,72 +2,168 @@
 
 import Link from "next/link";
 import React, { useMemo, useState } from "react";
-import { ArrowLeft, Calendar, Clock, Moon, Sun } from "lucide-react";
+import { ArrowLeft, ChevronDown, ExternalLink, Moon, Sun } from "lucide-react";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
-import BlogArticleColumn from "@/components/blog/BlogArticleColumn";
-import { GuideSection } from "@/components/guide/GuideLayout";
-import { GuideSharePanel } from "@/components/guide/GuideSharePanel";
 import type { UkWeightLossLocation } from "@/lib/data/uk-weight-loss-locations";
-import { capitalizeHeadingWords } from "@/lib/text/heading-case";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 type Props = {
   loc: UkWeightLossLocation;
   shareUrl: string;
 };
 
-const PAGE_TITLE =
-  "Weight Loss Treatment in London: Clinics, Pharmacies and Online Services";
+const TOC = [
+  { id: "hero", label: "Overview & Hero" },
+  { id: "three-routes", label: "Three Routes at a Glance" },
+  { id: "nhs-management", label: "NHS Weight Management" },
+  { id: "private-clinics", label: "Private Clinics in London" },
+  { id: "online-pharmacies", label: "Online Pharmacies" },
+  { id: "selected-partners", label: "Our Selected Partners" },
+  { id: "partner-prices", label: "Prices at Our Partners" },
+  { id: "check-provider", label: "How to Check Any Provider" },
+  { id: "questions-to-ask", label: "Questions to Ask" },
+  { id: "how-we-are-paid", label: "How Healthwise360 Is Paid" },
+  { id: "faqs", label: "Frequently Asked Questions" },
+  { id: "sources-review", label: "Sources & Review Date" },
+];
+
+const PARTNER_CARDS = [
+  {
+    name: "DoseDirect",
+    gphc: "9012841",
+    gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012841",
+    medicines: "Mounjaro and Wegovy",
+    deliveryLondon: "Yes",
+    href: "/go/dosedirect",
+  },
+  {
+    name: "i-Prescribe",
+    gphc: "9012850",
+    gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012850",
+    medicines: "Mounjaro and Wegovy",
+    deliveryLondon: "Yes",
+    href: "/go/iprescribe",
+  },
+  {
+    name: "Pharmacy + Me",
+    gphc: "9012604",
+    gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012604",
+    medicines: "Mounjaro and Wegovy",
+    deliveryLondon: "Yes",
+    href: "/go/pharmacy-plus-me",
+  },
+  {
+    name: "Reach Online Pharmacy",
+    gphc: "1093332",
+    gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/1093332",
+    medicines: "Mounjaro and Wegovy",
+    deliveryLondon: "Yes",
+    href: "/go/reach",
+  },
+  {
+    name: "SheMed",
+    gphc: "9012578",
+    gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012578",
+    medicines: "Mounjaro and Wegovy",
+    deliveryLondon: "Yes",
+    href: "/go/shemed",
+  },
+  {
+    name: "Solira",
+    gphc: "9013213",
+    gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9013213",
+    medicines: "Mounjaro and Wegovy",
+    deliveryLondon: "Yes",
+    href: "/go/solira",
+  },
+];
+
+const MOUNJARO_PRICES = [
+  { partner: "DoseDirect", p2_5: "£144.99", p5: "£165.99", p7_5: "£217.99", p10: "£241.99", p12_5: "£258.99", p15: "£278.99", fee: "Included" },
+  { partner: "i-Prescribe", p2_5: "£160.00", p5: "£190.00", p7_5: "£260.00", p10: "£290.00", p12_5: "£320.00", p15: "£340.00", fee: "Included" },
+  { partner: "Pharmacy + Me", p2_5: "£132.99", p5: "£149.99", p7_5: "£205.99", p10: "£232.99", p12_5: "£251.99", p15: "£272.99", fee: "Included" },
+  { partner: "Reach Online Pharmacy", p2_5: "£154.99", p5: "£175.99", p7_5: "£241.99", p10: "£265.99", p12_5: "£296.99", p15: "£322.99", fee: "Included" },
+  { partner: "SheMed", p2_5: "£229.00", p5: "£229.00", p7_5: "£279.00", p10: "£279.00", p12_5: "£319.00", p15: "£319.00", fee: "Included" },
+  { partner: "Solira", p2_5: "£119.99", p5: "£159.99", p7_5: "£219.99", p10: "£249.99", p12_5: "£259.99", p15: "£279.99", fee: "Included" },
+];
+
+const WEGOVY_PRICES = [
+  { partner: "DoseDirect", p0_25: "£99.99", p0_5: "£114.99", p1: "£119.99", p1_7: "£149.99", p2_4: "£199.99", p7_2: "Not listed", fee: "Included" },
+  { partner: "i-Prescribe", p0_25: "£129.99", p0_5: "£149.99", p1: "£169.99", p1_7: "£199.99", p2_4: "£229.99", p7_2: "Not listed", fee: "Included" },
+  { partner: "Pharmacy + Me", p0_25: "£80.99", p0_5: "£80.99", p1: "£80.99", p1_7: "£136.99", p2_4: "£192.99", p7_2: "£194.99", fee: "Included" },
+  { partner: "Reach Online Pharmacy", p0_25: "£94.99", p0_5: "£99.99", p1: "£103.99", p1_7: "£174.99", p2_4: "£228.99", p7_2: "£272.99", fee: "Included" },
+  { partner: "SheMed", p0_25: "£139.00", p0_5: "£139.00", p1: "£139.00", p1_7: "£159.00", p2_4: "£159.00", p7_2: "£239.00", fee: "Included" },
+  { partner: "Solira", p0_25: "£64.99", p0_5: "£87.99", p1: "£99.99", p1_7: "£139.99", p2_4: "£189.99", p7_2: "£229.00", fee: "Included" },
+];
+
+const FAQS = [
+  {
+    q: "Can I get weight loss treatment on the NHS in London?",
+    a: "Possibly. It depends on your GP, your borough, your integrated care board and whether you meet the criteria. Ask your GP what is available near you.",
+  },
+  {
+    q: "Do I need a prescription for weight loss injections in London?",
+    a: "Yes. Mounjaro and Wegovy are prescription only medicines in the UK, wherever you live.",
+  },
+  {
+    q: "How do I get Mounjaro in London?",
+    a: "Mounjaro is a prescription only medicine. You can ask your GP about NHS access, or complete an online health check with a registered pharmacy, or see a private clinic. A prescriber decides whether it is suitable for you.",
+  },
+  {
+    q: "How much does weight loss treatment cost in London?",
+    a: "It depends on the route. NHS treatment is free at the point of use for people who qualify. Private clinics and online pharmacies set their own prices. Section 7 shows the dated pen prices of our selected partners, with the consultation fee beside them.",
+  },
+  {
+    q: "Is it safe to use an online pharmacy if I live in London?",
+    a: "It can be, if the pharmacy is registered with the GPhC and a prescriber reviews your health first. Check the register before you order.",
+  },
+  {
+    q: "Is a clinic better than an online pharmacy?",
+    a: "Not necessarily. It depends on how you prefer to be assessed and supported. Either should be registered, and either should check your health before treatment.",
+  },
+  {
+    q: "Can I collect from a pharmacy in London?",
+    a: "Most of our partners deliver to your home. Collection depends on the partner.",
+  },
+  {
+    q: "How quickly will my medicine arrive?",
+    a: "It differs by provider. Many send by tracked courier within a few days of approval.",
+  },
+  {
+    q: "Do the prices include delivery?",
+    a: "Not always. Delivery charges differ by partner, so check them on the partner's site. The consultation fee is shown in the tables above.",
+  },
+  {
+    q: "How do I check a clinic or pharmacy?",
+    a: "Use the steps in section 8. Pharmacies are on the GPhC register, and clinics that give medical treatment in England are on the CQC register.",
+  },
+  {
+    q: "Does Healthwise360 recommend a provider?",
+    a: "No. We list selected partners from A to Z and do not rank them. A prescriber decides what is suitable for you.",
+  },
+];
 
 export default function LondonLocationContent({ loc, shareUrl }: Props) {
   const [darkMode, setDarkMode] = useState(false);
-  const { nation, hero } = loc;
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const toc = useMemo(
-    () => [
-      { id: "intro", label: "London overview" },
-      { id: "quick-comparison", label: "Quick comparison" },
-      { id: "healthwise360", label: "1. Healthwise360" },
-      { id: "my-london-pharmacy", label: "2. My London Pharmacy" },
-      { id: "pharmica", label: "3. Pharmica" },
-      { id: "zava", label: "4. ZAVA" },
-      { id: "numan", label: "5. Numan" },
-      { id: "get-a-drip", label: "6. Get A Drip" },
-      { id: "juniper", label: "7. Juniper" },
-      { id: "boots", label: "8. Boots Online Doctor" },
-      { id: "superdrug", label: "9. Superdrug Online Doctor" },
-      { id: "lloyds", label: "10. LloydsPharmacy Online Doctor" },
-      { id: "medexpress", label: "11. MedExpress" },
-      { id: "pharmacy2u", label: "12. Pharmacy2U" },
-      { id: "nhs", label: "NHS support in London" },
-      { id: "nhs-digital", label: "NHS Digital programme" },
-      { id: "compare-factors", label: "How to compare services" },
-      { id: "pharmacy-check", label: "Verify an online pharmacy" },
-      { id: "advertising-note", label: "Advertising and editorial note" },
-      { id: "questions", label: "Questions to ask" },
-      { id: "faq", label: "Frequently Asked Questions" },
-      { id: "conclusion", label: "Final considerations" },
-      { id: "next-steps", label: "Practical next steps" },
-      { id: "disclaimer", label: "Disclaimer" },
-    ],
-    [],
-  );
+  const toggleFaq = (idx: number) => {
+    setOpenFaq(openFaq === idx ? null : idx);
+  };
 
-  const p = darkMode ? "text-slate-300" : "text-slate-700";
-  const muted = darkMode ? "text-slate-400" : "text-slate-600";
-  const strong = darkMode ? "text-white" : "text-slate-900";
-  const border = darkMode ? "border-slate-700" : "border-slate-200";
-  const boxBg = darkMode ? "bg-slate-900/80" : "bg-slate-50/90";
-  const tableBorder = darkMode ? "border-slate-700" : "border-slate-200";
-  const linkCls =
-    "font-medium text-emerald-600 underline-offset-2 hover:underline";
+  const bg = darkMode ? "bg-slate-950 text-slate-100" : "bg-white text-slate-800";
+  const cardBg = darkMode ? "bg-slate-900 border-slate-800" : "bg-slate-50/80 border-slate-200";
+  const cardBorder = darkMode ? "border-slate-800" : "border-slate-200";
+  const mutedText = darkMode ? "text-slate-400" : "text-slate-600";
+  const headingText = darkMode ? "text-white" : "text-slate-900";
+  const tableHeaderBg = darkMode ? "bg-slate-800 text-slate-200" : "bg-slate-100 text-slate-800";
+  const tableBorderCls = darkMode ? "border-slate-800 divide-slate-800" : "border-slate-200 divide-slate-200";
+  const tableRowHover = darkMode ? "hover:bg-slate-900/60" : "hover:bg-slate-50";
 
   return (
-    <div
-      className={`w-full font-sans transition-colors duration-300 ${
-        darkMode ? "bg-slate-950 text-slate-300" : "bg-white text-slate-800"
-      }`}
-    >
+    <div className={`w-full font-sans transition-colors duration-300 ${bg}`}>
       <div className="mx-auto max-w-7xl px-4 pb-24 pt-8 sm:px-6 sm:pt-10 md:pt-12 lg:px-8">
+        {/* Navigation & Dark Mode */}
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <Link
             href="/blog"
@@ -86,1340 +182,475 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
           </Link>
 
           <div className="flex items-center gap-3">
-            <Moon
-              className={`h-4 w-4 ${
-                darkMode ? "text-slate-300" : "text-slate-700"
-              }`}
-            />
+            <Moon className={`h-4 w-4 ${darkMode ? "text-slate-300" : "text-slate-700"}`} />
             <button
               type="button"
               onClick={() => setDarkMode(!darkMode)}
               className={`relative flex h-6 w-12 items-center rounded-full p-1 shadow-inner transition-colors ${
-                darkMode ? "bg-slate-700" : "bg-slate-200"
+                darkMode ? "bg-emerald-600" : "bg-slate-200"
               }`}
               aria-label="Toggle dark mode"
             >
               <div
-                className={`h-4 w-4 rounded-full shadow transition-all ${
-                  darkMode
-                    ? "translate-x-6 bg-slate-900"
-                    : "translate-x-0 bg-white"
+                className={`h-4 w-4 rounded-full bg-white shadow-md transition-transform duration-200 ${
+                  darkMode ? "translate-x-6" : "translate-x-0"
                 }`}
               />
             </button>
-            <Sun
-              className={`h-4 w-4 ${
-                darkMode ? "text-yellow-400" : "text-slate-400"
-              }`}
-            />
+            <Sun className={`h-4 w-4 ${darkMode ? "text-slate-300" : "text-slate-700"}`} />
           </div>
         </div>
 
-        <nav
-          aria-label="Breadcrumb"
-          className={`mb-8 flex flex-wrap items-center gap-2 text-xs font-medium ${muted}`}
-        >
-          <Link href="/" className={linkCls}>
-            Home
-          </Link>
-          <span>/</span>
-          <Link href="/blog" className={linkCls}>
-            Blog
-          </Link>
-          <span>/</span>
-          <span className={strong}>London</span>
-        </nav>
-
-        <header className="mb-12">
-          <p className="mb-2 text-xs font-semibold tracking-wide text-emerald-600">
-            {capitalizeHeadingWords("Locations in UK")}
-          </p>
-          <h1
-            className={`mb-6 text-4xl font-medium leading-[1.1] tracking-tight md:text-5xl lg:text-[54px] ${
-              darkMode ? "text-white" : "text-slate-900"
-            }`}
-          >
-            {PAGE_TITLE}
-          </h1>
-          <div
-            className={`mb-10 flex flex-wrap items-center gap-6 text-sm font-medium ${muted}`}
-          >
-            <span className="flex items-center gap-2">
-              <Calendar className="h-4 w-4" />
-              {nation}
-            </span>
-            <span className="flex items-center gap-2">
-              <Clock className="h-4 w-4" />
-              Independent guide · July 2026
-            </span>
-          </div>
-
-          <BlogArticleHeroImage src={hero.url} alt={hero.alt} />
-          <div
-            id="guide-article-hero-end"
-            aria-hidden
-            className="pointer-events-none h-0 w-full overflow-hidden"
+        {/* Hero Image */}
+        <div className="mb-10">
+          <BlogArticleHeroImage
+            src={loc.hero.url}
+            alt={loc.hero.alt}
           />
-        </header>
-        <BlogArticleColumn toc={toc} darkMode={darkMode}>
-          <article className="space-y-8 leading-relaxed">
-            <GuideSection
-              darkMode={darkMode}
-              id="intro"
-              heading="Weight Loss Treatment in London: Clinics, Pharmacies and Online Services"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                London residents have access to a wide range of
-                weight-management services, from NHS behavioural programmes and
-                specialist clinics to private online pharmacies, digital health
-                platforms and in-person consultations.
-              </p>
-              <p className={p}>
-                Having more options does not necessarily make choosing a service
-                easier. Prices, consultation methods, ongoing support, delivery
-                charges and eligibility requirements can differ considerably
-                between providers.
-              </p>
-              <p className={p}>
-                This guide explains the main routes available and profiles
-                several services accessible to London residents. It begins with
-                Healthwise360 as a comparison resource, followed by London-based
-                services and national providers delivering across the capital.
-              </p>
-              <div
-                className={`mt-4 rounded-xl border border-amber-200 bg-amber-50/90 p-4 text-sm leading-relaxed text-amber-950 ${
-                  darkMode ? "border-amber-700/60 bg-amber-950/40 text-amber-100" : ""
-                }`}
-              >
-                <p>
-                  <strong>Important:</strong> Healthwise360 is a comparison
-                  website. It is not a pharmacy, clinic, prescriber or medicine
-                  supplier. Provider inclusion is not a clinical recommendation,
-                  and prescription treatment remains subject to an individual
-                  assessment by a qualified healthcare professional.
-                </p>
-              </div>
-            </GuideSection>
+        </div>
 
-            <GuideSection
-              darkMode={darkMode}
-              id="quick-comparison"
-              heading="Quick comparison"
-            >
-              <div className={`overflow-x-auto rounded-xl border ${border}`}>
-                <table
-                  className={`w-full min-w-[720px] border-collapse text-sm ${p}`}
-                >
-                  <thead>
-                    <tr
-                      className={
-                        darkMode ? "bg-slate-800/80" : "bg-slate-100"
-                      }
-                    >
-                      <th
-                        className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}
-                      >
-                        Service
-                      </th>
-                      <th
-                        className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}
-                      >
-                        Type
-                      </th>
-                      <th
-                        className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}
-                      >
-                        London connection
-                      </th>
-                      <th
-                        className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}
-                      >
-                        Consultation model
-                      </th>
-                      <th
-                        className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}
-                      >
-                        Useful for
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      [
-                        "Healthwise360",
-                        "Comparison resource",
-                        "Based in London",
-                        "No clinical consultations",
-                        "Comparing providers, prices and service details",
-                      ],
-                      [
-                        "My London Pharmacy",
-                        "Online pharmacy",
-                        "Pharmacy premises in Greenford",
-                        "Online assessment",
-                        "London-based dispensing and delivery",
-                      ],
-                      [
-                        "Pharmica",
-                        "Online pharmacy",
-                        "Based on Gray's Inn Road",
-                        "Online assessment",
-                        "Central London-based online access",
-                      ],
-                      [
-                        "ZAVA",
-                        "Online doctor",
-                        "Business address in Islington",
-                        "Online doctor assessment",
-                        "Remote consultations and delivery",
-                      ],
-                      [
-                        "Numan",
-                        "Digital health programme",
-                        "Registered office in Farringdon",
-                        "Online clinical programme",
-                        "Coaching and ongoing digital support",
-                      ],
-                      [
-                        "Get A Drip",
-                        "Clinic and online service",
-                        "Multiple London locations",
-                        "Online and selected clinic access",
-                        "People seeking a hybrid service",
-                      ],
-                      [
-                        "Juniper",
-                        "Digital weight-management programme",
-                        "UK online service available in London",
-                        "Remote clinical programme",
-                        "Coaching-led support",
-                      ],
-                      [
-                        "Boots Online Doctor",
-                        "National pharmacy service",
-                        "Online plus London store presence",
-                        "Online assessment",
-                        "Delivery or collection options",
-                      ],
-                      [
-                        "Superdrug Online Doctor",
-                        "National online service",
-                        "London high-street presence",
-                        "Online doctor assessment",
-                        "Online ordering and selected collection",
-                      ],
-                      [
-                        "LloydsPharmacy Online Doctor",
-                        "National online service",
-                        "Available throughout London",
-                        "Online clinical assessment",
-                        "Remote treatment and support",
-                      ],
-                      [
-                        "MedExpress",
-                        "National online provider",
-                        "Delivers to London",
-                        "Remote prescribing",
-                        "Online assessment and home delivery",
-                      ],
-                      [
-                        "Pharmacy2U",
-                        "National online pharmacy",
-                        "Delivers across London",
-                        "CQC-registered online doctor",
-                        "Online access and delivery",
-                      ],
-                    ].map((row) => (
-                      <tr key={row[0]}>
-                        {row.map((cell) => (
-                          <td
-                            key={`${row[0]}-${cell}`}
-                            className={`border px-3 py-2 ${tableBorder}`}
-                          >
-                            {cell}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className={`mt-4 ${p}`}>
-                The services are grouped by type rather than ranked by medical
-                quality. Healthwise360 appears first because it is the comparison
-                resource publishing this guide. You can also start with our{" "}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          {/* Main Content */}
+          <div className="lg:col-span-8">
+            {/* SECTION 1: HERO */}
+            <section id="hero" className="mb-12 scroll-mt-20">
+              <h1 className={`text-balance text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl ${headingText}`}>
+                Weight Loss Treatment in London: NHS, Clinics and Online Pharmacies
+              </h1>
+              <p className={`mt-6 text-base leading-relaxed sm:text-lg ${mutedText}`}>
+                If you live in London, there are three main routes to weight loss treatment, including weight loss injections:
+                the NHS, a private clinic and an online pharmacy that delivers to your home. They differ in cost, how you are
+                assessed and how much support you get. This guide explains each route, how to check a provider is
+                registered, and what our selected provider partners charge. Healthwise360 compares providers. We do not
+                prescribe, dispense or deliver medicines.
+              </p>
+              <p className="mt-4 text-sm italic text-slate-500">
+                Healthwise360 may earn commission when visitors use some partner links. Providers cannot pay for a higher ranking.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  href="/compare/wegovy-vs-mounjaro"
-                  className={linkCls}
+                  href="/mounjaro-price-comparison"
+                  className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700"
                 >
-                  UK weight loss treatment comparison
+                  Compare Mounjaro prices
                 </Link>
-                .
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="healthwise360"
-              heading="1. Healthwise360: compare weight-management providers"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                Healthwise360 is a London-based comparison website that helps
-                users review private UK weight-management providers before
-                beginning a consultation.
-              </p>
-              <p className={p}>The platform compares information such as:</p>
-              <ul className={`list-disc space-y-2 pl-5 ${p}`}>
-                <li>Provider prices.</li>
-                <li>Delivery charges.</li>
-                <li>Consultation fees.</li>
-                <li>Available dose prices.</li>
-                <li>Pharmacy details.</li>
-                <li>Ongoing-support arrangements.</li>
-                <li>Provider terms.</li>
-                <li>Estimated total costs.</li>
-              </ul>
-              <p className={p}>
-                Healthwise360 explains that it compares providers but does not
-                prescribe, dispense, store or deliver medicines. Its{" "}
-                <Link href="/methodology" className={linkCls}>
-                  methodology
-                </Link>{" "}
-                considers listed treatment prices, consultation costs, delivery
-                charges and mandatory additional fees when estimating the
-                potential total cost to a patient.
-              </p>
-
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Healthwise360 contact details
-              </h3>
-              <div
-                className={`mt-2 space-y-1 rounded-xl border p-4 text-sm ${border} ${boxBg} ${p}`}
-              >
-                <p>
-                  <strong className={strong}>Business name:</strong>{" "}
-                  Healthwise360
-                </p>
-                <p>
-                  <strong className={strong}>Address:</strong> 88 Wood Street,
-                  London E17 3NU, United Kingdom
-                </p>
-                <p>
-                  <strong className={strong}>Phone:</strong> +44 7469 549154
-                </p>
-                <p>
-                  <strong className={strong}>Service type:</strong> Independent
-                  comparison and educational website
-                </p>
-                <p>
-                  <strong className={strong}>Clinical service:</strong> None
-                </p>
-                <p>
-                  <strong className={strong}>Prescribing service:</strong> None
-                </p>
-                <p>
-                  <strong className={strong}>Pharmacy service:</strong> None
-                </p>
-              </div>
-              <p className={`mt-4 ${p}`}>
-                Healthwise360 should be used to research and compare services.
-                Any clinical consultation, prescription, payment and supply
-                agreement takes place directly between the patient and their
-                selected provider.
-              </p>
-
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                What Healthwise360 can help users compare
-              </h3>
-              <p className={`mt-2 ${p}`}>
-                Healthwise360 may be useful for people who want to:
-              </p>
-              <ul className={`list-disc space-y-2 pl-5 ${p}`}>
-                <li>
-                  Compare the total cost rather than only the advertised starting
-                  price.
-                </li>
-                <li>Check whether delivery is included.</li>
-                <li>Review how providers conduct consultations.</li>
-                <li>Identify the dispensing pharmacy.</li>
-                <li>Compare ongoing clinical or coaching support.</li>
-                <li>Understand whether prices increase at later doses.</li>
-                <li>Find questions to ask before starting treatment.</li>
-              </ul>
-              <p className={p}>
-                Users should confirm live prices and eligibility information on
-                the provider&apos;s website before paying because pharmacy
-                prices, stock and prescribing arrangements can change. Start with
-                the{" "}
-                <Link href="/mounjaro-price-comparison" className={linkCls}>
-                  Mounjaro
-                </Link>{" "}
-                and{" "}
-                <Link href="/wegovy-price-comparison" className={linkCls}>
-                  Wegovy
-                </Link>{" "}
-                comparison tables.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="my-london-pharmacy"
-              heading="2. My London Pharmacy"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                My London Pharmacy{" "}
-                is an online pharmacy operating from Greenford in Greater London.
-              </p>
-              <p className={p}>
-                Its official website lists pharmacy premises at Unit 33, Taunton
-                Road, Greenford, UB6 8UQ, with GPhC registration number 9012851.
-                The service provides online consultations, clinician review and
-                delivery rather than functioning as a conventional walk-in
-                weight-management clinic.
-              </p>
-              <p className={p}>A typical process involves:</p>
-              <ol className={`list-decimal space-y-2 pl-5 ${p}`}>
-                <li>Completing an online medical questionnaire.</li>
-                <li>Providing requested health and identity information.</li>
-                <li>Waiting for clinical review.</li>
-                <li>Receiving approval or additional questions.</li>
-                <li>Having approved treatment dispensed and delivered.</li>
-              </ol>
-              <p className={p}>
-                The provider states that its clinical team reviews applications
-                before an order is approved.
-              </p>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Points to check
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>Whether delivery is included.</li>
-                <li>How frequently progress is reviewed.</li>
-                <li>Which services are included at each price.</li>
-                <li>What happens when a higher dose is prescribed.</li>
-                <li>Whether GP information is requested.</li>
-                <li>What support is available for side effects.</li>
-                <li>
-                  Whether the listed Greenford premises matches the GPhC
-                  register.
-                </li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> People who
-                prefer a London-based online pharmacy with remote assessment and
-                home delivery.
-              </p>
-            </GuideSection>
-
-            <GuideSection darkMode={darkMode} id="pharmica" heading="3. Pharmica">
-              <p className={`text-lg md:text-xl ${p}`}>
-                Pharmica{" "}
-                is an online pharmacy with company details published at 236
-                Gray&apos;s Inn Road, London WC1X 8HB.
-              </p>
-              <p className={p}>
-                The service operates primarily online rather than as a
-                conventional walk-in weight-management clinic. Its website
-                provides remote access to consultations, prescribing and pharmacy
-                fulfilment.
-              </p>
-              <p className={p}>
-                Its central London address gives it a genuine London connection,
-                but users should not assume that all consultations take place
-                face to face.
-              </p>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Points to compare
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>Consultation and assessment requirements.</li>
-                <li>Current provider and pharmacy registration.</li>
-                <li>Delivery options and charges.</li>
-                <li>Whether follow-up reviews are included.</li>
-                <li>Contact options for clinical questions.</li>
-                <li>How the service handles dose changes.</li>
-                <li>
-                  Whether the displayed price includes all mandatory fees.
-                </li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> London
-                residents who want an online pharmacy whose company and
-                dispensing operations are based in central London.
-              </p>
-            </GuideSection>
-
-            <GuideSection darkMode={darkMode} id="zava" heading="4. ZAVA">
-              <p className={`text-lg md:text-xl ${p}`}>
-                ZAVA{" "}
-                is an online doctor service with a London address at 46 Essex
-                Road, London N1 8LN.
-              </p>
-              <p className={p}>
-                The service provides remote consultations for a range of health
-                conditions, including weight management. Patients normally
-                communicate with doctors and the patient-care team through a
-                secure online account rather than attending a conventional
-                clinic.
-              </p>
-              <p className={p}>ZAVA&apos;s model may include:</p>
-              <ul className={`list-disc space-y-2 pl-5 ${p}`}>
-                <li>Online medical assessment.</li>
-                <li>Doctor review.</li>
-                <li>Secure account messaging.</li>
-                <li>Prescription fulfilment where appropriate.</li>
-                <li>Home delivery.</li>
-                <li>Patient-care support.</li>
-              </ul>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Points to compare
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>Which pharmacy dispenses approved prescriptions.</li>
-                <li>Consultation and delivery charges.</li>
-                <li>Response times for clinical questions.</li>
-                <li>Follow-up arrangements.</li>
-                <li>Refund terms if an application is declined.</li>
-                <li>
-                  Whether ongoing support is included or separately charged.
-                </li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> London
-                residents who prefer a remote doctor service with a London-based
-                administrative presence.
-              </p>
-            </GuideSection>
-
-            <GuideSection darkMode={darkMode} id="numan" heading="5. Numan">
-              <p className={`text-lg md:text-xl ${p}`}>
-                Numan{" "}
-                is a UK digital healthcare provider with a registered office at
-                Farringdon Point, 33 Farringdon Road, London EC1M 3JF.
-              </p>
-              <p className={p}>
-                The company describes itself as CQC regulated and lists a
-                GPhC-licensed pharmacy. Its weight-management service combines
-                clinical review with digital tools and health coaching rather
-                than operating purely as a medicine-only pharmacy.
-              </p>
-              <p className={p}>The programme may include:</p>
-              <ul className={`list-disc space-y-2 pl-5 ${p}`}>
-                <li>Health-history assessment.</li>
-                <li>Clinician-backed treatment planning.</li>
-                <li>Digital progress tracking.</li>
-                <li>Health coaching.</li>
-                <li>Repeat reviews.</li>
-                <li>Pharmacy fulfilment.</li>
-                <li>Home delivery.</li>
-              </ul>
-              <p className={p}>
-                Because Numan offers a broader programme, users should compare
-                the total package price with simpler pharmacy-only services.
-              </p>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Points to compare
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>
-                  Whether coaching is included in the advertised price.
-                </li>
-                <li>Minimum programme duration.</li>
-                <li>Cancellation terms.</li>
-                <li>Pricing after an introductory period.</li>
-                <li>How often clinical reviews take place.</li>
-                <li>
-                  Whether the patient can contact a clinician directly.
-                </li>
-                <li>
-                  Which tests or monitoring may be recommended.
-                </li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> People seeking
-                a digital programme combining prescribing, tracking and coaching.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="get-a-drip"
-              heading="6. Get A Drip"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                Get A Drip{" "}
-                operates a combination of digital services, mobile services and
-                physical clinic locations.
-              </p>
-              <p className={p}>
-                Its published London locations include Canary Wharf, High Street
-                Kensington, Kingston, Redbridge, Shoreditch and Westfield London,
-                alongside several mobile or pop-up locations. The company also
-                offers an online eligibility assessment and delivery model.
-              </p>
-              <p className={p}>
-                This gives it a stronger physical London presence than many
-                online-only providers. However, not every London location
-                necessarily offers the same service.
-              </p>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Before booking, confirm
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>
-                  Whether weight-management consultations are available at the
-                  selected location.
-                </li>
-                <li>Whether the consultation is online or in person.</li>
-                <li>Which pharmacy dispenses treatment.</li>
-                <li>Whether follow-up is digital or clinic-based.</li>
-                <li>
-                  Which locations are permanent, mobile or temporary.
-                </li>
-                <li>What is included in the programme fee.</li>
-                <li>
-                  Whether blood tests or other services are optional or required.
-                </li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> London
-                residents seeking a hybrid model with online access and potential
-                clinic-based support.
-              </p>
-            </GuideSection>
-
-            <GuideSection darkMode={darkMode} id="juniper" heading="7. Juniper">
-              <p className={`text-lg md:text-xl ${p}`}>
-                Juniper{" "}
-                provides a digital weight-management programme designed primarily
-                for women.
-              </p>
-              <p className={p}>
-                Its service combines remote clinical assessment, treatment where
-                appropriate, digital tracking, nutrition support and health
-                coaching. Juniper describes its programme as a supported service
-                rather than a simple online pharmacy transaction.
-              </p>
-              <p className={p}>Programme features may include:</p>
-              <ul className={`list-disc space-y-2 pl-5 ${p}`}>
-                <li>Clinical consultations.</li>
-                <li>Personalised treatment planning.</li>
-                <li>Digital access to a care team.</li>
-                <li>Nutrition and exercise guidance.</li>
-                <li>Side-effect support.</li>
-                <li>Progress tracking.</li>
-                <li>Ongoing dose review.</li>
-              </ul>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Points to compare
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>Monthly programme cost.</li>
-                <li>Treatment and services included.</li>
-                <li>Cancellation or pause conditions.</li>
-                <li>Access to prescribers.</li>
-                <li>Frequency of reviews.</li>
-                <li>
-                  Whether blood testing is required or optional.
-                </li>
-                <li>
-                  Which partner pharmacy dispenses prescriptions.
-                </li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> Women who
-                value structured coaching and continued digital support rather
-                than a medicine-only service.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="boots"
-              heading="8. Boots Online Doctor"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                Boots Online Doctor{" "}
-                provides an online weight-management service with delivery and,
-                for some prescriptions, collection through Boots stores.
-              </p>
-              <p className={p}>
-                The service describes its model as combining clinical care,
-                ongoing check-ins, lifestyle resources and optional coaching.
-                Boots has a substantial high-street presence throughout London,
-                although the online doctor service is managed digitally.
-              </p>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Useful features to check
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>Home delivery or store collection.</li>
-                <li>
-                  Whether a particular London store supports collection.
-                </li>
-                <li>Included lifestyle-support resources.</li>
-                <li>Additional cost for individual coaching.</li>
-                <li>Repeat-prescription arrangements.</li>
-                <li>Availability at the time of consultation.</li>
-                <li>Pricing at later treatment stages.</li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> People who
-                prefer a recognised national pharmacy brand and may value store
-                collection.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="superdrug"
-              heading="9. Superdrug Online Doctor"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                Superdrug Online Doctor{" "}
-                provides remote clinical assessments, prescribing where
-                appropriate and delivery or selected pharmacy collection.
-              </p>
-              <p className={p}>
-                Superdrug has numerous London stores, but the online service
-                should not be confused with an in-store specialist
-                weight-management clinic. Its doctors assess suitability remotely
-                and monitor treatment through the online service.
-              </p>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Points to compare
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>
-                  Whether collection is available at the user&apos;s preferred
-                  London store.
-                </li>
-                <li>Home-delivery fees.</li>
-                <li>Prescriber response times.</li>
-                <li>Frequency of ongoing reviews.</li>
-                <li>Which pharmacy fulfils delivery orders.</li>
-                <li>Support available for side effects.</li>
-                <li>Total price after introductory offers end.</li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> London
-                residents who want remote doctor access with the possibility of
-                using a familiar high-street pharmacy network.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="lloyds"
-              heading="10. LloydsPharmacy Online Doctor"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                LloydsPharmacy Online Doctor{" "}
-                provides a national online weight-management service available to
-                London residents.
-              </p>
-              <p className={p}>
-                The service offers online clinical assessment, prescription
-                options where appropriate and ongoing lifestyle information. Its
-                current programme pages describe clinical support and multiple
-                treatment formats, although specific availability and pricing can
-                change.
-              </p>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Points to compare
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>
-                  Whether consultation fees are separate from treatment costs.
-                </li>
-                <li>Delivery charges.</li>
-                <li>Current prescribing options.</li>
-                <li>Included clinical support.</li>
-                <li>Terms for repeat treatment.</li>
-                <li>
-                  Contact arrangements for urgent side-effect concerns.
-                </li>
-                <li>
-                  Whether any advertised discount applies only to new patients.
-                </li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> People looking
-                for a national online doctor service with a recognisable pharmacy
-                brand.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="medexpress"
-              heading="11. MedExpress"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                MedExpress{" "}
-                is a UK online doctor and pharmacy service that delivers to
-                London.
-              </p>
-              <p className={p}>
-                The service uses remote prescribing and states that treatment is
-                recommended by UK-licensed clinicians when considered
-                appropriate. Its weight-management pages identify the medical
-                team and describe clinician review and delivery.
-              </p>
-              <p className={p}>
-                MedExpress should be presented as an online provider serving
-                London, not as a physical London clinic. Its published company
-                information references pharmacy operations outside London.
-              </p>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Points to compare
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>Total delivery cost.</li>
-                <li>Clinical-review process.</li>
-                <li>Support when side effects occur.</li>
-                <li>
-                  Requirements for photographs, identity or medical records.
-                </li>
-                <li>What happens if a dose is not tolerated.</li>
-                <li>Repeat-order timing.</li>
-                <li>Refund and cancellation policies.</li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> London
-                residents comfortable completing consultations and follow-up
-                remotely.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="pharmacy2u"
-              heading="12. Pharmacy2U"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                Pharmacy2U{" "}
-                operates a CQC-registered Online Doctor service providing
-                weight-management consultations and delivery across the UK,
-                including London.
-              </p>
-              <p className={p}>
-                Its service includes online assessments, clinician review and
-                delivery of approved treatment. It also publishes educational
-                material on weight management, healthy eating and post-treatment
-                planning.
-              </p>
-              <h3 className={`mt-6 text-lg font-semibold ${strong}`}>
-                Points to compare
-              </h3>
-              <ul className={`mt-2 list-disc space-y-2 pl-5 ${p}`}>
-                <li>Delivery times and charges.</li>
-                <li>Consultation costs.</li>
-                <li>Ongoing clinical-support arrangements.</li>
-                <li>Current provider prices.</li>
-                <li>Repeat-prescription process.</li>
-                <li>
-                  How the provider supports patients stopping treatment.
-                </li>
-                <li>Pharmacy and prescriber registration.</li>
-              </ul>
-              <p className={p}>
-                <strong className={strong}>Best suited to:</strong> People who
-                want a large national online pharmacy with delivery throughout
-                London.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="nhs"
-              heading="NHS weight-management support in London"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                Private online treatment is not the only option.
-              </p>
-              <p className={p}>London residents may be able to access:</p>
-              <ul className={`list-disc space-y-2 pl-5 ${p}`}>
-                <li>GP support.</li>
-                <li>Borough-funded healthy-weight programmes.</li>
-                <li>Specialist weight-management services.</li>
-                <li>Dietitian support.</li>
-                <li>NHS behavioural programmes.</li>
-                <li>Bariatric assessment.</li>
-                <li>
-                  NHS prescription treatment for eligible patients.
-                </li>
-              </ul>
-              <p className={p}>
-                Access varies by borough, integrated care board, BMI, medical
-                history and local capacity.
-              </p>
-              <p className={p}>
-                The NHS advises people to check their GP practice or local
-                integrated care board for available services. Prescription
-                weight-management medicines are generally used alongside
-                nutrition and physical-activity support and remain subject to
-                eligibility and clinical assessment. A{" "}
-                <Link href="/tools/bmi-calculator" className={linkCls}>
-                  BMI calculator
-                </Link>{" "}
-                can help you prepare for that conversation.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="nhs-digital"
-              heading="NHS Digital Weight Management Programme"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                Eligible London residents may qualify for the NHS Digital Weight
-                Management Programme.
-              </p>
-              <p className={p}>
-                The service is a free 12-week online behavioural and lifestyle
-                programme for adults living with obesity who also have diabetes,
-                hypertension or both. It can be accessed using a smartphone,
-                tablet or computer.
-              </p>
-              <p className={p}>
-                Eligibility and referral should be confirmed through a GP
-                practice or the relevant NHS pathway.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="compare-factors"
-              heading="How these services should be compared"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                Do not choose solely on the lowest advertised starting price.
-              </p>
-              <p className={p}>Compare:</p>
-              <div className={`overflow-x-auto rounded-xl border ${border}`}>
-                <table
-                  className={`w-full min-w-[480px] border-collapse text-sm ${p}`}
-                >
-                  <thead>
-                    <tr
-                      className={
-                        darkMode ? "bg-slate-800/80" : "bg-slate-100"
-                      }
-                    >
-                      <th
-                        className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}
-                      >
-                        Factor
-                      </th>
-                      <th
-                        className={`border px-3 py-2 text-left font-semibold ${tableBorder}`}
-                      >
-                        What to check
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      [
-                        "Regulation",
-                        "Pharmacy, prescriber and healthcare-service registration",
-                      ],
-                      [
-                        "Consultation",
-                        "Questionnaire, video, telephone or in-person assessment",
-                      ],
-                      [
-                        "Total cost",
-                        "Treatment, consultation, delivery and mandatory fees",
-                      ],
-                      [
-                        "Ongoing support",
-                        "Reviews, clinician access, coaching and side-effect help",
-                      ],
-                      [
-                        "Delivery",
-                        "Courier, temperature control and missed-delivery policy",
-                      ],
-                      [
-                        "GP communication",
-                        "Whether and when the provider contacts your GP",
-                      ],
-                      [
-                        "Maintenance",
-                        "Support after weight loss or when treatment stops",
-                      ],
-                      [
-                        "Cancellation",
-                        "Notice periods, refunds and subscription conditions",
-                      ],
-                      [
-                        "Clinical access",
-                        "How quickly a patient can reach a clinician",
-                      ],
-                      [
-                        "Transparency",
-                        "Clear pharmacy, prescriber and company information",
-                      ],
-                    ].map(([factor, check]) => (
-                      <tr key={factor}>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>
-                          {factor}
-                        </td>
-                        <td className={`border px-3 py-2 ${tableBorder}`}>
-                          {check}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className={`mt-4 ${p}`}>
-                Healthwise360&apos;s{" "}
-                <Link href="/methodology" className={linkCls}>
-                  methodology
-                </Link>{" "}
-                calculates estimated total cost by combining the listed price
-                with assessment, delivery and mandatory additional charges where
-                available.
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="pharmacy-check"
-              heading="How to verify an online pharmacy"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                Before paying a provider:
-              </p>
-              <ol className={`list-decimal space-y-2 pl-5 ${p}`}>
-                <li>Find the dispensing pharmacy&apos;s legal name.</li>
-                <li>Find its GPhC registration number.</li>
-                <li>Search the number on the official GPhC register.</li>
-                <li>
-                  Confirm that the registered name and address match.
-                </li>
-                <li>Check the prescriber&apos;s professional registration.</li>
-                <li>Confirm that a clinical assessment is required.</li>
-                <li>Read the delivery and temperature-control policy.</li>
-                <li>
-                  Check how side effects and urgent concerns are handled.
-                </li>
-                <li>Review cancellation and refund terms.</li>
-                <li>
-                  Avoid social-media sellers and personal bank-transfer requests.
-                </li>
-              </ol>
-              <p className={p}>
-                The GPhC maintains the official register of pharmacy premises and
-                advises patients to check the registration of online health
-                services before using them. All pharmacies operating in Great
-                Britain, including internet pharmacies, must be registered and
-                meet GPhC standards. Follow our{" "}
                 <Link
-                  href="/pharmacy-safety-gphc-verification"
-                  className={linkCls}
+                  href="/wegovy-price-comparison"
+                  className="inline-flex items-center justify-center rounded-xl bg-teal-700 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-800"
                 >
-                  pharmacy safety and GPhC verification guide
-                </Link>{" "}
-                and{" "}
-                <Link
-                  href="/helpful-guides/fake-online-pharmacy-uk-how-to-spot-stay-safe"
-                  className={linkCls}
-                >
-                  fake online pharmacy checklist
+                  Compare Wegovy prices
                 </Link>
-                .
-              </p>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="advertising-note"
-              heading="Important advertising and editorial note"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                Prescription-only medicines cannot legally be advertised directly
-                or indirectly to the UK public.
-              </p>
-              <p className={p}>For that reason, this page should remain focused on:</p>
-              <ul className={`list-disc space-y-2 pl-5 ${p}`}>
-                <li>Weight-management services.</li>
-                <li>Consultation methods.</li>
-                <li>Provider verification.</li>
-                <li>Costs and fees.</li>
-                <li>Clinical-support arrangements.</li>
-                <li>NHS and private access.</li>
-                <li>Questions patients should ask.</li>
-              </ul>
-              <p className={p}>Avoid promotional calls to action such as:</p>
-              <ul className={`list-disc space-y-2 pl-5 ${p}`}>
-                <li>&quot;Buy injections now.&quot;</li>
-                <li>&quot;Order treatment today.&quot;</li>
-                <li>&quot;Get the cheapest pen.&quot;</li>
-                <li>&quot;Guaranteed approval.&quot;</li>
-                <li>&quot;Lose weight fast.&quot;</li>
-              </ul>
-              <p className={p}>
-                ASA and CAP guidance states that prescription-only medicines and
-                prescription-only medical treatments must not be advertised to
-                the public. Regulators have also taken action against advertising
-                that implies weight-loss prescription medicines without
-                explicitly naming them.
-              </p>
-              <p className={p}>Use neutral calls to action such as:</p>
-              <ul className={`list-disc space-y-2 pl-5 ${p}`}>
-                <li>Compare weight-management providers.</li>
-                <li>Review provider costs and support.</li>
-                <li>Check pharmacy registration.</li>
-                <li>Understand consultation options.</li>
-                <li>Speak to a qualified healthcare professional.</li>
-              </ul>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="questions"
-              heading="Questions to ask before selecting a provider"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>Ask each provider:</p>
-              <ol className={`list-decimal space-y-2 pl-5 ${p}`}>
-                <li>Who will assess my consultation?</li>
-                <li>How can I verify the prescriber?</li>
-                <li>Which pharmacy will dispense my prescription?</li>
-                <li>What is the pharmacy&apos;s GPhC number?</li>
-                <li>Is delivery included in the displayed price?</li>
-                <li>Does the price change later?</li>
-                <li>How often will my progress be reviewed?</li>
-                <li>Can I contact a clinician directly?</li>
-                <li>What support is available for side effects?</li>
-                <li>Will you contact my GP?</li>
-                <li>What happens if my application is declined?</li>
-                <li>
-                  What happens if a delivery is late or arrives warm?
-                </li>
-                <li>Is there a subscription or minimum commitment?</li>
-                <li>
-                  What support is provided when treatment ends?
-                </li>
-                <li>How are complaints and refunds handled?</li>
-              </ol>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="faq"
-              heading="Frequently asked questions"
-            >
-              <div className="space-y-6">
-                <div>
-                  <h3 className={`text-lg font-semibold ${strong}`}>
-                    Is Healthwise360 a London pharmacy?
-                  </h3>
-                  <p className={`mt-2 ${p}`}>
-                    No. Healthwise360 is a London-based provider-comparison and
-                    educational website. It does not prescribe, dispense or
-                    deliver medicines.
-                  </p>
-                </div>
-                <div>
-                  <h3 className={`text-lg font-semibold ${strong}`}>
-                    Why is Healthwise360 listed first?
-                  </h3>
-                  <p className={`mt-2 ${p}`}>
-                    Healthwise360 is listed first because it is the comparison
-                    resource publishing the guide. It is shown separately from
-                    clinics, pharmacies and prescribing platforms so users are
-                    not misled about its role.
-                  </p>
-                </div>
-                <div>
-                  <h3 className={`text-lg font-semibold ${strong}`}>
-                    Are all the services listed physical London clinics?
-                  </h3>
-                  <p className={`mt-2 ${p}`}>
-                    No. Some have London offices or pharmacy premises, some
-                    operate physical London locations, and others are national
-                    online providers delivering to London.
-                  </p>
-                </div>
-                <div>
-                  <h3 className={`text-lg font-semibold ${strong}`}>
-                    Can I attend My London Pharmacy in person?
-                  </h3>
-                  <p className={`mt-2 ${p}`}>
-                    Its weight-management service is primarily online. Do not
-                    assume that the Greenford premises provides walk-in
-                    consultations without confirming directly.
-                  </p>
-                </div>
-                <div>
-                  <h3 className={`text-lg font-semibold ${strong}`}>
-                    Which services offer face-to-face appointments?
-                  </h3>
-                  <p className={`mt-2 ${p}`}>
-                    Get A Drip lists several London locations, but service
-                    availability differs between locations. Boots and Superdrug
-                    have high-street stores, although their online doctor
-                    assessments are generally completed remotely.
-                  </p>
-                </div>
-                <div>
-                  <h3 className={`text-lg font-semibold ${strong}`}>
-                    Does inclusion mean Healthwise360 recommends a provider?
-                  </h3>
-                  <p className={`mt-2 ${p}`}>
-                    No. Inclusion means the service is relevant to London
-                    residents and can be compared. It does not mean that a
-                    provider is clinically appropriate for every person.
-                  </p>
-                </div>
-                <div>
-                  <h3 className={`text-lg font-semibold ${strong}`}>
-                    Can a provider guarantee approval?
-                  </h3>
-                  <p className={`mt-2 ${p}`}>
-                    No. Prescription treatment requires a clinical assessment. A
-                    responsible prescriber may decline an application.
-                  </p>
-                </div>
-                <div>
-                  <h3 className={`text-lg font-semibold ${strong}`}>
-                    Should I use the provider with the lowest price?
-                  </h3>
-                  <p className={`mt-2 ${p}`}>
-                    Not necessarily. Compare total cost, registration, clinical
-                    assessment, ongoing support, delivery arrangements and
-                    later-stage pricing.
-                  </p>
-                </div>
-                <div>
-                  <h3 className={`text-lg font-semibold ${strong}`}>
-                    Can I get NHS weight-management support in London?
-                  </h3>
-                  <p className={`mt-2 ${p}`}>
-                    Possibly. Access depends on your borough, GP practice,
-                    integrated care board, BMI, medical history and current local
-                    service capacity.
-                  </p>
-                </div>
               </div>
-            </GuideSection>
+            </section>
 
-            <GuideSection
-              darkMode={darkMode}
-              id="conclusion"
-              heading="Final considerations"
-            >
-              <p className={`text-lg md:text-xl ${p}`}>
-                London residents can choose from NHS support, local pharmacies,
-                physical clinics and national digital providers.
-              </p>
-              <p className={p}>
-                The most suitable service is not automatically the nearest clinic
-                or the provider advertising the lowest introductory price. A
-                reliable decision should consider:
-              </p>
-              <ul className={`list-disc space-y-2 pl-5 ${p}`}>
-                <li>Regulation.</li>
-                <li>Clinical assessment.</li>
-                <li>Total ongoing cost.</li>
-                <li>Access to qualified support.</li>
-                <li>Delivery and storage arrangements.</li>
-                <li>Follow-up.</li>
-                <li>Cancellation terms.</li>
-                <li>Long-term maintenance planning.</li>
-              </ul>
-              <p className={p}>
-                Healthwise360 can be used as a starting point to compare
-                providers, but the final decision should be made after checking
-                current information and completing an individual clinical
-                assessment with the selected service.
-              </p>
-              <div
-                className={`mt-6 rounded-xl border p-4 text-sm leading-relaxed ${border} ${boxBg}`}
-              >
-                <p className={p}>
-                  Health Wise compares UK providers independently. Read our{" "}
-                  <Link href="/methodology" className={linkCls}>
-                    methodology
-                  </Link>{" "}
-                  and{" "}
-                  <Link href="/editorial-policy" className={linkCls}>
-                    editorial policy
-                  </Link>
-                  .
-                </p>
-              </div>
-            </GuideSection>
-
-            <GuideSection
-              darkMode={darkMode}
-              id="next-steps"
-              heading="Practical next steps for London residents"
-            >
-              <ul className={`list-none space-y-2.5 text-sm ${p}`}>
-                <li>
-                  <Link
-                    href="/compare/wegovy-vs-mounjaro"
-                    className={linkCls}
-                  >
-                    Compare best weight loss treatments in the UK
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools/bmi-calculator" className={linkCls}>
-                    Check your BMI before a GP or clinic appointment
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/mounjaro-price-comparison" className={linkCls}>
-                    Mounjaro price comparison
-                  </Link>
-                    <span className={muted}> · </span>
-                    <Link href="/wegovy-price-comparison" className={linkCls}>
-                    Wegovy price comparison
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/pharmacy-safety-gphc-verification"
-                    className={linkCls}
-                  >
-                    Verify pharmacy safety and GPhC registration
-                  </Link>
-                </li>
-              </ul>
-            </GuideSection>
-
-            <section
-              id="disclaimer"
-              className="scroll-mt-28 rounded-xl border border-amber-200 bg-amber-50/90 p-4 text-sm leading-relaxed text-amber-950"
-            >
-              <h2 className="text-xl font-semibold text-amber-950">
-                Disclaimer
+            {/* SECTION 2: THREE ROUTES AT A GLANCE */}
+            <section id="three-routes" className="mb-12 scroll-mt-20">
+              <h2 className={`text-2xl font-bold tracking-tight sm:text-3xl ${headingText}`}>
+                Three routes to weight loss treatment in London
               </h2>
-              <p className="mt-2">
-                This article provides general comparison and educational
-                information. It is not medical advice, diagnosis or treatment.
-                Healthwise360 does not prescribe or dispense medicines. Always
-                confirm provider registration, current prices, eligibility
-                requirements and treatment suitability with a qualified
-                healthcare professional.
+              <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+                <div className={`rounded-2xl border p-6 shadow-sm transition-all ${cardBg}`}>
+                  <h3 className={`text-lg font-semibold ${headingText}`}>NHS</h3>
+                  <p className={`mt-3 text-sm leading-relaxed ${mutedText}`}>
+                    Free at the point of use. Access depends on your GP, your borough and your integrated care board, and there can be a wait.
+                  </p>
+                </div>
+                <div className={`rounded-2xl border p-6 shadow-sm transition-all ${cardBg}`}>
+                  <h3 className={`text-lg font-semibold ${headingText}`}>Private clinic</h3>
+                  <p className={`mt-3 text-sm leading-relaxed ${mutedText}`}>
+                    You are assessed by a clinician, sometimes in person. Costs vary, and clinics that give medical treatment in England should be registered with the Care Quality Commission.
+                  </p>
+                </div>
+                <div className={`rounded-2xl border p-6 shadow-sm transition-all ${cardBg}`}>
+                  <h3 className={`text-lg font-semibold ${headingText}`}>Online pharmacy</h3>
+                  <p className={`mt-3 text-sm leading-relaxed ${mutedText}`}>
+                    You complete an online health check, a prescriber reviews it, and a registered pharmacy sends the medicine to you. The pharmacy should be on the General Pharmaceutical Council register.
+                  </p>
+                </div>
+              </div>
+              <p className={`mt-6 text-sm font-medium ${mutedText}`}>
+                None of these is right for everyone. A prescriber decides whether a medicine is suitable for you.
               </p>
             </section>
-          </article>
 
-          <div className="mt-14">
-            <GuideSharePanel
-              url={shareUrl}
-              title={PAGE_TITLE}
-              description="Compare NHS support, London-based clinics, online pharmacies and weight-management services available to London residents, including costs and safety checks."
-            />
+            {/* SECTION 3: NHS WEIGHT MANAGEMENT IN LONDON */}
+            <section id="nhs-management" className="mb-12 scroll-mt-20">
+              <h2 className={`text-2xl font-bold tracking-tight sm:text-3xl ${headingText}`}>
+                NHS weight management in London
+              </h2>
+              <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
+                Your GP is the first step. They can tell you about NHS weight management support in your area, and refer
+                you to a specialist service if you qualify. Support differs between London boroughs, because services are
+                arranged by five integrated care boards.
+              </p>
+              <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
+                In England, GPs can prescribe Mounjaro for weight management to people with the greatest need, following
+                NICE guidance. At first this meant people with a BMI of 40 or more and several weight related health
+                conditions, and more people will qualify over time. Wegovy is also available through NHS specialist services
+                for eligible people.
+              </p>
+              <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
+                The NHS Digital Weight Management Programme is a free 12 week online programme for adults with
+                obesity who also have type 2 diabetes, high blood pressure or both. Your GP can refer you.
+              </p>
+              <div className="mt-6">
+                <Link
+                  href="/tools/bmi-calculator"
+                  className="inline-flex items-center justify-center rounded-xl border border-emerald-600 bg-transparent px-5 py-2.5 text-sm font-semibold text-emerald-600 transition hover:bg-emerald-50 dark:hover:bg-emerald-950/30"
+                >
+                  Check your BMI
+                </Link>
+              </div>
+            </section>
+
+            {/* SECTION 4: PRIVATE CLINICS IN LONDON */}
+            <section id="private-clinics" className="mb-12 scroll-mt-20">
+              <h2 className={`text-2xl font-bold tracking-tight sm:text-3xl ${headingText}`}>
+                Private weight loss clinics in London
+              </h2>
+              <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
+                A private weight loss clinic in London may offer weight management with an in person or video consultation.
+                Clinics are found across central, north, south, east and west London, from Harley Street and Mayfair to the
+                outer boroughs. Before you book, ask:
+              </p>
+              <ul className={`mt-4 list-disc space-y-2.5 pl-6 text-sm sm:text-base ${mutedText}`}>
+                <li>Is the clinic registered with the Care Quality Commission? You can check this on the CQC website.</li>
+                <li>Who will assess you, and what is their professional registration?</li>
+                <li>Which pharmacy supplies the medicine, and what is its GPhC number?</li>
+                <li>What is included in the price, and what is charged extra?</li>
+                <li>How often are you reviewed, and who do you contact with a side effect?</li>
+              </ul>
+              <p className={`mt-4 text-sm italic ${mutedText}`}>
+                Prices at clinics differ from online pharmacy prices, and they are not tracked on Healthwise360.
+              </p>
+            </section>
+
+            {/* SECTION 5: ONLINE PHARMACIES THAT DELIVER TO LONDON */}
+            <section id="online-pharmacies" className="mb-12 scroll-mt-20">
+              <h2 className={`text-2xl font-bold tracking-tight sm:text-3xl ${headingText}`}>
+                Online pharmacies that deliver to London
+              </h2>
+              <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
+                An online weight loss pharmacy works the same way wherever you live in London. You answer health
+                questions, a prescriber reviews your answers, and, if treatment is suitable, a registered pharmacy dispenses
+                and sends it. Delivery to London is usually by tracked courier, and many providers deliver within a few days
+                of approval. Timing differs by provider.
+              </p>
+              <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
+                In Great Britain, all pharmacies, including online ones, must be registered with the General Pharmaceutical
+                Council. See section 8 for how to check.
+              </p>
+            </section>
+
+            {/* SECTION 6: OUR SELECTED PROVIDER PARTNERS */}
+            <section id="selected-partners" className="mb-12 scroll-mt-20">
+              <h2 className={`text-2xl font-bold tracking-tight sm:text-3xl ${headingText}`}>
+                Our selected provider partners that deliver to London
+              </h2>
+              <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
+                These are our selected provider partners, listed from A to Z. The order is never set by commission, affiliate
+                status or discount codes. Each was GPhC registered when we last checked on 3 November 2026.
+              </p>
+              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                {PARTNER_CARDS.map((p) => (
+                  <div key={p.name} className={`flex flex-col justify-between rounded-2xl border p-6 shadow-sm ${cardBg}`}>
+                    <div>
+                      <h3 className={`text-xl font-bold ${headingText}`}>{p.name}</h3>
+                      <p className="mt-2 text-sm text-slate-500">
+                        GPhC registration number{" "}
+                        <a
+                          href={p.gphcUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-semibold text-emerald-600 underline hover:text-emerald-700"
+                        >
+                          {p.gphc}
+                        </a>
+                      </p>
+                      <div className="mt-4 space-y-1.5 text-sm text-slate-600 dark:text-slate-400">
+                        <p><span className="font-medium text-slate-900 dark:text-slate-200">Medicines supplied:</span> {p.medicines}</p>
+                        <p><span className="font-medium text-slate-900 dark:text-slate-200">Delivery to London:</span> {p.deliveryLondon}</p>
+                      </div>
+                    </div>
+                    <div className="mt-6">
+                      <Link
+                        href={p.href}
+                        className="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700"
+                      >
+                        Visit {p.name}
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <Link
+                  href="/pharmacies"
+                  className="inline-flex items-center justify-center rounded-xl border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+                >
+                  See all our partners
+                </Link>
+              </div>
+            </section>
+
+            {/* SECTION 7: PRICES AT OUR PARTNERS */}
+            <section id="partner-prices" className="mb-12 scroll-mt-20">
+              <h2 className={`text-2xl font-bold tracking-tight sm:text-3xl ${headingText}`}>
+                Weight loss injection prices in London at our selected partners
+              </h2>
+              <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
+                These are the prices our partners listed in their price schedules, checked on {PRICE_CHECK_DATE_LONG}.
+                Each price is for one pen (four weekly doses) at that strength. The consultation fee is shown for each partner. Delivery charges differ
+                by partner, so check them on the partner's site. Prices change, so confirm the current price on the partner's
+                site before you pay. Partners are listed A to Z.
+              </p>
+
+              {/* Mounjaro Table */}
+              <div className="mt-8">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 className={`text-xl font-bold ${headingText}`}>Mounjaro, price per pen by dose</h3>
+                  <span className="text-xs text-slate-500 font-medium">Checked {PRICE_CHECK_DATE_LONG}</span>
+                </div>
+                <div className={`overflow-x-auto rounded-xl border ${cardBorder}`}>
+                  <table className={`min-w-full divide-y text-left text-xs sm:text-sm ${tableBorderCls}`}>
+                    <thead className={tableHeaderBg}>
+                      <tr>
+                        <th className="px-3.5 py-3 font-semibold">Partner</th>
+                        <th className="px-3 py-3 font-semibold">2.5 mg</th>
+                        <th className="px-3 py-3 font-semibold">5 mg</th>
+                        <th className="px-3 py-3 font-semibold">7.5 mg</th>
+                        <th className="px-3 py-3 font-semibold">10 mg</th>
+                        <th className="px-3 py-3 font-semibold">12.5 mg</th>
+                        <th className="px-3 py-3 font-semibold">15 mg</th>
+                        <th className="px-3 py-3 font-semibold">Consultation</th>
+                      </tr>
+                    </thead>
+                    <tbody className={`divide-y ${tableBorderCls}`}>
+                      {MOUNJARO_PRICES.map((r) => (
+                        <tr key={r.partner} className={tableRowHover}>
+                          <td className="px-3.5 py-3 font-medium text-slate-900 dark:text-slate-100">{r.partner}</td>
+                          <td className="px-3 py-3">{r.p2_5}</td>
+                          <td className="px-3 py-3">{r.p5}</td>
+                          <td className="px-3 py-3">{r.p7_5}</td>
+                          <td className="px-3 py-3">{r.p10}</td>
+                          <td className="px-3 py-3">{r.p12_5}</td>
+                          <td className="px-3 py-3">{r.p15}</td>
+                          <td className="px-3 py-3 text-emerald-600 font-medium">{r.fee}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Wegovy Table */}
+              <div className="mt-8">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 className={`text-xl font-bold ${headingText}`}>Wegovy, price per pen by dose</h3>
+                  <span className="text-xs text-slate-500 font-medium">Checked {PRICE_CHECK_DATE_LONG}</span>
+                </div>
+                <div className={`overflow-x-auto rounded-xl border ${cardBorder}`}>
+                  <table className={`min-w-full divide-y text-left text-xs sm:text-sm ${tableBorderCls}`}>
+                    <thead className={tableHeaderBg}>
+                      <tr>
+                        <th className="px-3.5 py-3 font-semibold">Partner</th>
+                        <th className="px-3 py-3 font-semibold">0.25 mg</th>
+                        <th className="px-3 py-3 font-semibold">0.5 mg</th>
+                        <th className="px-3 py-3 font-semibold">1 mg</th>
+                        <th className="px-3 py-3 font-semibold">1.7 mg</th>
+                        <th className="px-3 py-3 font-semibold">2.4 mg</th>
+                        <th className="px-3 py-3 font-semibold">7.2 mg</th>
+                        <th className="px-3 py-3 font-semibold">Consultation</th>
+                      </tr>
+                    </thead>
+                    <tbody className={`divide-y ${tableBorderCls}`}>
+                      {WEGOVY_PRICES.map((r) => (
+                        <tr key={r.partner} className={tableRowHover}>
+                          <td className="px-3.5 py-3 font-medium text-slate-900 dark:text-slate-100">{r.partner}</td>
+                          <td className="px-3 py-3">{r.p0_25}</td>
+                          <td className="px-3 py-3">{r.p0_5}</td>
+                          <td className="px-3 py-3">{r.p1}</td>
+                          <td className="px-3 py-3">{r.p1_7}</td>
+                          <td className="px-3 py-3">{r.p2_4}</td>
+                          <td className="px-3 py-3">{r.p7_2}</td>
+                          <td className="px-3 py-3 text-emerald-600 font-medium">{r.fee}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <p className={`mt-6 text-sm ${mutedText}`}>
+                A low price for one dose does not show the full cost of treatment, because the dose goes up over time and
+                fees differ. Our comparison pages show every dose side by side.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <Link
+                  href="/mounjaro-price-comparison"
+                  className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700"
+                >
+                  Compare Mounjaro prices
+                </Link>
+                <Link
+                  href="/wegovy-price-comparison"
+                  className="inline-flex items-center justify-center rounded-xl bg-teal-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-800"
+                >
+                  Compare Wegovy prices
+                </Link>
+              </div>
+            </section>
+
+            {/* SECTION 8: HOW TO CHECK ANY PROVIDER */}
+            <section id="check-provider" className="mb-12 scroll-mt-20">
+              <h2 className={`text-2xl font-bold tracking-tight sm:text-3xl ${headingText}`}>
+                How to check a weight loss provider is registered
+              </h2>
+              <ol className={`mt-4 list-decimal space-y-3 pl-6 text-sm sm:text-base ${mutedText}`}>
+                <li>Find the pharmacy's legal name and GPhC number on its website, usually in the footer.</li>
+                <li>Look it up on the GPhC register and check that the name and address match.</li>
+                <li>Check a clinic on the CQC register, if it gives medical treatment in England.</li>
+                <li>Check the prescriber. A doctor, pharmacist or nurse prescriber has a professional registration you can search.</li>
+                <li>Look for a health check. A real provider asks about your weight, health and medicines before any medicine is supplied.</li>
+                <li>Walk away from sellers on social media, messaging apps or beauty salons, and from anyone who offers prescription medicine without a prescription.</li>
+              </ol>
+              <div className="mt-6">
+                <a
+                  href="https://www.pharmacyregulation.org/registers/pharmacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700"
+                >
+                  Check the GPhC register
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </section>
+
+            {/* SECTION 9: QUESTIONS TO ASK A PROVIDER */}
+            <section id="questions-to-ask" className="mb-12 scroll-mt-20">
+              <h2 className={`text-2xl font-bold tracking-tight sm:text-3xl ${headingText}`}>
+                Questions to ask before you start
+              </h2>
+              <ul className={`mt-4 list-disc space-y-2.5 pl-6 text-sm sm:text-base ${mutedText}`}>
+                <li>Who will assess me, and how can I check their registration?</li>
+                <li>Which pharmacy will dispense my medicine?</li>
+                <li>What is the full cost, including delivery and any consultation fee?</li>
+                <li>Will the price change when my dose goes up?</li>
+                <li>How often will I be reviewed?</li>
+                <li>Who can I contact about a side effect?</li>
+                <li>Will you tell my GP?</li>
+                <li>What happens if my application is declined?</li>
+              </ul>
+            </section>
+
+            {/* SECTION 10: HOW HEALTHWISE360 IS PAID */}
+            <section id="how-we-are-paid" className="mb-12 scroll-mt-20">
+              <h2 className={`text-2xl font-bold tracking-tight sm:text-3xl ${headingText}`}>
+                How Healthwise360 is paid
+              </h2>
+              <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
+                Healthwise360 is a comparison and information site. We do not sell, prescribe or send medicines. Our
+                selected provider partners are listed A to Z. Healthwise360 may earn commission when visitors use some partner links. Commercial relationships do not determine the ordering of providers in our price-sorted comparison tables. Providers cannot pay for a higher ranking. Promotional prices and discount codes are displayed separately from standard retail prices.
+              </p>
+            </section>
+
+            {/* SECTION 11: FAQS */}
+            <section id="faqs" className="mb-12 scroll-mt-20">
+              <h2 className={`text-2xl font-bold tracking-tight sm:text-3xl ${headingText}`}>
+                Frequently asked questions
+              </h2>
+              <div className="mt-6 divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+                {FAQS.map((faq, idx) => (
+                  <div key={faq.q} className="py-4">
+                    <button
+                      type="button"
+                      onClick={() => toggleFaq(idx)}
+                      className="flex w-full items-start justify-between text-left"
+                    >
+                      <h3 className={`text-base font-semibold sm:text-lg ${headingText}`}>
+                        {faq.q}
+                      </h3>
+                      <ChevronDown
+                        className={`ml-4 h-5 w-5 shrink-0 transition-transform duration-200 ${
+                          openFaq === idx ? "rotate-180 text-emerald-600" : "text-slate-400"
+                        }`}
+                      />
+                    </button>
+                    {openFaq === idx && (
+                      <div className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:text-base">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* SECTION 12: SOURCES, REVIEW DATE AND MEDICAL NOTE */}
+            <section id="sources-review" className="mb-12 scroll-mt-20 border-t pt-8 border-slate-200 dark:border-slate-800">
+              <h2 className={`text-xl font-bold ${headingText}`}>Sources</h2>
+              <p className={`mt-3 text-sm leading-relaxed ${mutedText}`}>
+                General Pharmaceutical Council, register of pharmacies. Care Quality Commission, find a service. NHS,
+                weight management and the NHS Digital Weight Management Programme. NICE, tirzepatide for managing
+                overweight and obesity (TA1026). NICE, semaglutide for managing overweight and obesity (TA875). MHRA,
+                buying medicines safely online.
+              </p>
+              <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50/80 p-5 dark:border-slate-800 dark:bg-slate-900/60">
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                  Last updated: 3 November 2026.
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                  This page is for information and is not medical advice. Mounjaro and Wegovy are prescription only
+                  medicines. Speak to a prescriber or pharmacist about whether treatment is suitable for you.
+                </p>
+              </div>
+            </section>
           </div>
-        </BlogArticleColumn>
+
+          {/* Sticky Sidebar */}
+          <div className="hidden lg:col-span-4 lg:block">
+            <div className="sticky top-24 space-y-6">
+              <div className={`rounded-2xl border p-6 shadow-sm ${cardBg}`}>
+                <h3 className={`text-sm font-semibold uppercase tracking-wider ${mutedText}`}>
+                  Table of Contents
+                </h3>
+                <nav className="mt-4 flex flex-col space-y-2.5 text-sm">
+                  {TOC.map((item) => (
+                    <a
+                      key={item.id}
+                      href={`#${item.id}`}
+                      className="text-slate-600 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+
+              <div className={`rounded-2xl border p-6 shadow-sm ${cardBg}`}>
+                <h4 className={`text-sm font-semibold ${headingText}`}>Need price comparison?</h4>
+                <p className={`mt-2 text-xs leading-relaxed ${mutedText}`}>
+                  Compare full dose ranges and delivery costs across our verified partner pharmacies.
+                </p>
+                <div className="mt-4 flex flex-col gap-2">
+                  <Link
+                    href="/mounjaro-price-comparison"
+                    className="text-center rounded-lg bg-emerald-600 px-3 py-2 text-xs font-semibold text-white hover:bg-emerald-700"
+                  >
+                    Mounjaro Prices
+                  </Link>
+                  <Link
+                    href="/wegovy-price-comparison"
+                    className="text-center rounded-lg bg-teal-700 px-3 py-2 text-xs font-semibold text-white hover:bg-teal-800"
+                  >
+                    Wegovy Prices
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
