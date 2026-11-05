@@ -6,6 +6,7 @@ import { ArrowLeft, ChevronDown, ExternalLink, Moon, Sun } from "lucide-react";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import type { UkWeightLossLocation } from "@/lib/data/uk-weight-loss-locations";
 import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
+import { getProvider } from "@/lib/data/providers";
 
 type Props = {
   loc: UkWeightLossLocation;
@@ -34,7 +35,7 @@ const PARTNER_CARDS = [
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012841",
     medicines: "Mounjaro and Wegovy",
     deliveryLondon: "Yes",
-    href: "/go/dosedirect",
+    providerId: "dosedirect",
   },
   {
     name: "i-Prescribe",
@@ -42,7 +43,7 @@ const PARTNER_CARDS = [
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012850",
     medicines: "Mounjaro and Wegovy",
     deliveryLondon: "Yes",
-    href: "/go/iprescribe",
+    providerId: "i-prescribe",
   },
   {
     name: "Pharmacy + Me",
@@ -50,7 +51,7 @@ const PARTNER_CARDS = [
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012604",
     medicines: "Mounjaro and Wegovy",
     deliveryLondon: "Yes",
-    href: "/go/pharmacy-plus-me",
+    providerId: "pharmacy-me",
   },
   {
     name: "Reach Online Pharmacy",
@@ -58,7 +59,7 @@ const PARTNER_CARDS = [
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/1093332",
     medicines: "Mounjaro and Wegovy",
     deliveryLondon: "Yes",
-    href: "/go/reach",
+    providerId: "reach-online-pharmacy",
   },
   {
     name: "SheMed",
@@ -66,7 +67,7 @@ const PARTNER_CARDS = [
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012578",
     medicines: "Mounjaro and Wegovy",
     deliveryLondon: "Yes",
-    href: "/go/shemed",
+    providerId: "shemed",
   },
   {
     name: "Solira",
@@ -74,7 +75,7 @@ const PARTNER_CARDS = [
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9013213",
     medicines: "Mounjaro and Wegovy",
     deliveryLondon: "Yes",
-    href: "/go/solira",
+    providerId: "solira",
   },
 ];
 
@@ -373,12 +374,23 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                       </div>
                     </div>
                     <div className="mt-6">
-                      <Link
-                        href={p.href}
-                        className="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700"
+                      <a
+                        href={getProvider(p.providerId)?.affiliate.outboundUrl ?? "/pharmacies"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-pharmacy={p.name}
+                        data-provider-id={p.providerId}
+                        data-hw-provider={p.name}
+                        data-hw-provider-id={p.providerId}
+                        data-hw-medication="Mounjaro and Wegovy"
+                        data-hw-dose=""
+                        data-hw-total-pence={0}
+                        data-hw-monetised="true"
+                        data-hw-placement="london-partner-card"
+                        className="hw360-cta inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700"
                       >
                         Visit {p.name}
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 ))}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { ExternalLink } from "lucide-react";
 import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
+import { getProvider } from "@/lib/data/providers";
 
 const MJ_GLANCE_PRICES = [
   { strength: "2.5mg", price: "£119.99" },
@@ -30,7 +31,7 @@ const PARTNER_CARDS_HOMEPAGE = [
     wgFrom: "£99.99",
     delivery: "Included",
     included: "Consultation, delivery, same day dispatch before 1pm, tracked cold chain packaging",
-    href: "/go/dosedirect",
+    providerId: "dosedirect",
   },
   {
     name: "i-Prescribe",
@@ -40,7 +41,7 @@ const PARTNER_CARDS_HOMEPAGE = [
     wgFrom: "£129.99",
     delivery: "Delivery charge shown before you pay",
     included: "Consultation",
-    href: "/go/iprescribe",
+    providerId: "i-prescribe",
   },
   {
     name: "Pharmacy + Me",
@@ -50,7 +51,7 @@ const PARTNER_CARDS_HOMEPAGE = [
     wgFrom: "£80.99",
     delivery: "£4.99 (Royal Mail Tracked 24)",
     included: "Consultation",
-    href: "/go/pharmacy-plus-me",
+    providerId: "pharmacy-me",
   },
   {
     name: "Reach Online Pharmacy",
@@ -60,7 +61,7 @@ const PARTNER_CARDS_HOMEPAGE = [
     wgFrom: "£94.99",
     delivery: "£4.99 standard, £5.99 tracked, £9.99 next day",
     included: "Consultation, needles and sharps container",
-    href: "/go/reach",
+    providerId: "reach-online-pharmacy",
   },
   {
     name: "SheMed",
@@ -70,7 +71,7 @@ const PARTNER_CARDS_HOMEPAGE = [
     wgFrom: "£139.00",
     delivery: "Free standard delivery",
     included: "Consultation, blood screening, delivery",
-    href: "/go/shemed",
+    providerId: "shemed",
   },
   {
     name: "Solira",
@@ -80,7 +81,7 @@ const PARTNER_CARDS_HOMEPAGE = [
     wgFrom: "£64.99",
     delivery: "£3.99 for pens",
     included: "Consultation",
-    href: "/go/solira",
+    providerId: "solira",
   },
 ];
 
@@ -266,12 +267,23 @@ export default function HomeContentNov2026() {
                 </div>
               </div>
               <div className="mt-5">
-                <Link
-                  href={p.href}
-                  className="inline-flex w-full items-center justify-center rounded-lg bg-slate-900 px-3.5 py-2 text-xs font-semibold text-white shadow-sm hover:bg-slate-800 transition"
+                <a
+                  href={getProvider(p.providerId)?.affiliate.outboundUrl ?? "/pharmacies"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-pharmacy={p.name}
+                  data-provider-id={p.providerId}
+                  data-hw-provider={p.name}
+                  data-hw-provider-id={p.providerId}
+                  data-hw-medication="Mounjaro and Wegovy"
+                  data-hw-dose=""
+                  data-hw-total-pence={0}
+                  data-hw-monetised="true"
+                  data-hw-placement="homepage-partner-card"
+                  className="hw360-cta inline-flex w-full items-center justify-center rounded-lg bg-slate-900 px-3.5 py-2 text-xs font-semibold text-white shadow-sm hover:bg-slate-800 transition"
                 >
                   Visit partner
-                </Link>
+                </a>
               </div>
             </div>
           ))}
