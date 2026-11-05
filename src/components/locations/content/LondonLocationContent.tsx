@@ -5,6 +5,7 @@ import React, { useMemo, useState } from "react";
 import { ArrowLeft, ChevronDown, ExternalLink, Moon, Sun } from "lucide-react";
 import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import type { UkWeightLossLocation } from "@/lib/data/uk-weight-loss-locations";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 type Props = {
   loc: UkWeightLossLocation;
@@ -224,7 +225,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                 prescribe, dispense or deliver medicines.
               </p>
               <p className="mt-4 text-sm italic text-slate-500">
-                Healthwise360 may earn a commission if you use a partner link. This never changes the order or what we say.
+                Healthwise360 may earn commission when visitors use some partner links. Providers cannot pay for a higher ranking.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
@@ -398,8 +399,8 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                 Weight loss injection prices in London at our selected partners
               </h2>
               <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
-                These are the prices our partners listed in their price schedules, dated 27 September to 1 November 2026.
-                Prices are for the pen only, per dose. The consultation fee is shown for each partner. Delivery charges differ
+                These are the prices our partners listed in their price schedules, checked on {PRICE_CHECK_DATE_LONG}.
+                Each price is for one pen (four weekly doses) at that strength. The consultation fee is shown for each partner. Delivery charges differ
                 by partner, so check them on the partner's site. Prices change, so confirm the current price on the partner's
                 site before you pay. Partners are listed A to Z.
               </p>
@@ -408,7 +409,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               <div className="mt-8">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                   <h3 className={`text-xl font-bold ${headingText}`}>Mounjaro, price per pen by dose</h3>
-                  <span className="text-xs text-slate-500 font-medium">Checked 27 September to 1 November 2026</span>
+                  <span className="text-xs text-slate-500 font-medium">Checked {PRICE_CHECK_DATE_LONG}</span>
                 </div>
                 <div className={`overflow-x-auto rounded-xl border ${cardBorder}`}>
                   <table className={`min-w-full divide-y text-left text-xs sm:text-sm ${tableBorderCls}`}>
@@ -446,7 +447,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               <div className="mt-8">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                   <h3 className={`text-xl font-bold ${headingText}`}>Wegovy, price per pen by dose</h3>
-                  <span className="text-xs text-slate-500 font-medium">Checked 27 September to 1 November 2026</span>
+                  <span className="text-xs text-slate-500 font-medium">Checked {PRICE_CHECK_DATE_LONG}</span>
                 </div>
                 <div className={`overflow-x-auto rounded-xl border ${cardBorder}`}>
                   <table className={`min-w-full divide-y text-left text-xs sm:text-sm ${tableBorderCls}`}>
@@ -550,8 +551,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               </h2>
               <p className={`mt-4 text-base leading-relaxed ${mutedText}`}>
                 Healthwise360 is a comparison and information site. We do not sell, prescribe or send medicines. Our
-                selected provider partners pay us a commission when someone follows a partner link and becomes a
-                customer. This does not change the A to Z order, the checks we apply, or what we say about a medicine.
+                selected provider partners are listed A to Z. Healthwise360 may earn commission when visitors use some partner links. Commercial relationships do not determine the ordering of providers in our price-sorted comparison tables. Providers cannot pay for a higher ranking. Promotional prices and discount codes are displayed separately from standard retail prices.
               </p>
             </section>
 
@@ -598,7 +598,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
               </p>
               <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50/80 p-5 dark:border-slate-800 dark:bg-slate-900/60">
                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                  Last reviewed: 3 November 2026. Reviewed by: Healthwise360 editorial team.
+                  Last updated: 3 November 2026.
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
                   This page is for information and is not medical advice. Mounjaro and Wegovy are prescription only

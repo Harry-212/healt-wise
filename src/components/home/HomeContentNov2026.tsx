@@ -162,9 +162,8 @@ export default function HomeContentNov2026() {
           <p>
             How much do weight loss injections cost per month? It is the price of the pen for the strength you are on,
             plus any consultation fee and delivery charge. Treatment starts on the lowest strength, and the cost of
-            weight loss injections UK pharmacies charge rises when your prescriber moves you up a strength. How
-            much are weight loss injections UK buyers pay in the end? Add the pen, the consultation and the delivery,
-            and compare that total.
+            weight loss injections UK pharmacies charge rises when your prescriber moves you up a strength. What do
+            you pay in the end? Add the pen, the consultation and the delivery, and compare that total.
           </p>
         </div>
       </section>
@@ -375,27 +374,12 @@ export default function HomeContentNov2026() {
 
         <div className="mt-8 space-y-4">
           <h3 className="text-lg font-bold text-slate-900">
-            Weight loss price comparison UK: other ways people search
+            How to compare weight loss injection prices
           </h3>
           <p className="text-sm text-slate-700 leading-relaxed">
-            People ask the same question in different words: weight loss jab prices UK, weight loss jabs price
-            comparison, weight loss treatment prices UK, weight loss medication price comparison UK or GLP 1 price
-            comparison UK. They all mean what a prescription weight loss injection costs, pharmacy by pharmacy.
-            Our weight loss price comparison UK tables and cards answer all of them, and a weight loss injection
-            price checker UK shoppers can use should show the date, the delivery charge and the complete cost.
-            Each partner is an online pharmacy for weight loss injection supply, and a prescriber assesses you first.
-            Use the weight loss injections cost comparison UK list above, and the weight loss injections UK price
-            comparison tables in section 4, to check the total before you order.
-          </p>
-
-          <h3 className="text-lg font-bold text-slate-900 pt-2">
-            Compare weight loss injection prices UK: a short way to do it
-          </h3>
-          <p className="text-sm text-slate-700 leading-relaxed">
-            To compare weight loss injection prices UK partners list, start with the strength you were prescribed, read
-            the lowest checked price, then open the partner card and compare weight loss injections prices UK
-            delivery and consultation charges. A UK weight loss injections price comparison, or a weight loss injection
-            price comparison UK buyers can trust, is one that shows its date and its method.
+            Start with the strength you were prescribed and read the lowest checked price. Then open the partner card
+            and compare the delivery and consultation charges. A price comparison you can trust shows its date and its
+            method, and each partner is a registered pharmacy that supplies only after a prescriber has assessed you.
           </p>
         </div>
 
@@ -445,9 +429,8 @@ export default function HomeContentNov2026() {
             partners may change, so the list can grow or change over time.
           </p>
           <p>
-            Healthwise360 does not prescribe or sell medicines. We may earn a commission when you use a link to a
-            partner, at no extra cost to you. That does not change the price you pay. Read our affiliate disclosure and
-            how we compare in full.
+            Healthwise360 does not prescribe or sell medicines. Healthwise360 may earn commission when visitors use some partner links. Commercial relationships do not determine the ordering of providers in our price-sorted comparison tables. Providers cannot pay for a higher ranking. Promotional prices and discount codes are displayed separately from standard retail prices.
+            Read our affiliate disclosure and how we compare in full.
           </p>
         </div>
         <div className="mt-6 flex flex-wrap gap-4">
