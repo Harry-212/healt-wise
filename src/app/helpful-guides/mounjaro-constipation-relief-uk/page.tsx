@@ -87,7 +87,7 @@ const REFERENCES = [
   {
     label: "Mounjaro side effects guide — Health Wise",
     description:
-      "Our complete guide to managing all Mounjaro side effects—from nausea and constipation to injection site reactions.",
+      "The Mounjaro side effects listed in the UK patient leaflet, from very common to rare.",
     href: "/helpful-guides/mounjaro-side-effects-uk",
     external: false,
   },
@@ -104,9 +104,9 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-side-effects-uk",
     category: "Side Effects",
-    title: "Mounjaro Side Effects: What to Expect and How to Manage Them",
+    title: "Mounjaro Side Effects UK: What the Patient Leaflet Says",
     description:
-      "A complete overview of all Mounjaro side effects—digestive, systemic, and rare—with management strategies for each.",
+      "The Mounjaro side effects listed in the UK patient leaflet, from very common to rare, and when to get help.",
   },
   {
     href: "/helpful-guides/mounjaro-nutrition-guide-uk",

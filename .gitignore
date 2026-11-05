@@ -64,6 +64,10 @@ next-env.d.ts
 /[Hh]ealthwise360-*.md
 /[Hh]ealthwise360-*.csv
 /[Hh]ealthwise360_*.docx
+/[Hh]ealthwise360-*.xlsx
+/[Hh]ealthwise360_*.xlsx
+/task-*-evidence/
+/generate_docx.py
 /evidence/
 
 /backups/

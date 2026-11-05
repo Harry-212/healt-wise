@@ -298,12 +298,11 @@ const ALL_GUIDES = [
   },
   {
     slug: "mounjaro-side-effects-uk",
-    title:
-      "Mounjaro Side Effects: What to Expect and How to Manage Them (UK Guide)",
+    title: "Mounjaro Side Effects UK: What the Patient Leaflet Says",
     description:
-      "A complete, honest overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—and evidence-based strategies to manage each one.",
+      "The Mounjaro side effects listed in the UK patient leaflet, from very common to rare, and when to get help.",
     category: "Side Effects" as Category,
-    readTime: "5 min read",
+    readTime: "6 min read",
   },
   {
     slug: "restarting-mounjaro-after-break-uk",
