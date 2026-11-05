@@ -108,9 +108,9 @@ const RELATED_GUIDES = [
   {
     href: "/helpful-guides/mounjaro-side-effects-uk",
     category: "Medications",
-    title: "Mounjaro Side Effects UK: What to Expect",
+    title: "Mounjaro Side Effects UK: What the Patient Leaflet Says",
     description:
-      "Common and serious side effects, when to seek help, and how to manage early treatment symptoms.",
+      "The Mounjaro side effects listed in the UK patient leaflet, from very common to rare, and when to get help.",
   },
   {
     href: "/pharmacy-safety-gphc-verification",
