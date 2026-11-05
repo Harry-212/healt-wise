@@ -29,7 +29,7 @@ export const SSOT_PAGE_FAQS: { question: string; answer: string }[] = [
   {
     question: "Does Healthwise360 accept sponsorship?",
     answer:
-      "No. Healthwise360 does not accept sponsorship. It may earn commission through affiliate links, with relevant relationships disclosed where they apply.",
+      "No. Healthwise360 does not accept sponsorship. Healthwise360 may earn commission when visitors use some partner links. Commercial relationships do not determine the ordering of providers in our price-sorted comparison tables. Providers cannot pay for a higher ranking. Promotional prices and discount codes are displayed separately from standard retail prices.",
   },
   {
     question: "Can a pharmacy request inclusion?",

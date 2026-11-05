@@ -4,7 +4,8 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 
 // Medium Priority No Index Plan (2 Nov 2026), Agus steps: pages 1, 7 and 10 redirect
-// permanently, pages 11, 18 and 19 return 410, page 17 is noindex, and none of them
+// permanently, pages 11, 17, 18 and 19 return 410 (page 17, /price-alerts, moved from noindex
+// to 410 under Task 13), and none of them
 // is in the sitemap or linked from the site.
 const REDIRECTS = {
   "/blog/best-place-to-start-weight-loss-treatment-online-uk": "/pharmacies",
@@ -17,6 +18,7 @@ const GONE = [
   "/helpful-guides/glp1-content-removed-weight-loss-advice-uk",
   "/support-weight-management",
   "/time-saver",
+  "/price-alerts",
 ];
 const NOINDEX = "/price-alerts";
 
@@ -38,18 +40,12 @@ test("pages 1, 7 and 10 each have one permanent redirect, and the target does no
   }
 });
 
-test("pages 11, 18 and 19 return 410 and page 11's route is gone", () => {
+test("pages 11, 17, 18 and 19 return 410 and page 11's route is gone", () => {
   const gone = readFileSync("src/lib/seo/gone-paths.ts", "utf8");
   for (const path of GONE) {
     assert.equal(gone.split(`"${path}"`).length - 1, 1, `${path} must be in GONE_EXACT_PATHS once`);
   }
   assert.ok(!existsSync("src/app/helpful-guides/glp1-content-removed-weight-loss-advice-uk"));
-});
-
-test("page 17 is noindex but still reachable", () => {
-  const page = readFileSync("src/app/(informational)/price-alerts/page.tsx", "utf8");
-  assert.match(page, /robots:\s*\{\s*index:\s*false/);
-  assert.ok(!readFileSync("src/lib/seo/gone-paths.ts", "utf8").includes(`"${NOINDEX}"`));
 });
 
 test("every page in the plan is excluded from the sitemap", () => {

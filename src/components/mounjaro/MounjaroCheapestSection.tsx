@@ -35,26 +35,25 @@ export default function MounjaroCheapestSection({
     <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
       <div className="mx-auto max-w-3xl px-4 md:px-8">
         <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-          Where is the cheapest Mounjaro in the UK?
+          Which partner pharmacy lists the lowest Mounjaro price?
         </h2>
         {cheapestAcross ? (
           <p className="mt-4 leading-relaxed text-slate-600">
-            In our latest check, {cheapestAcross.leader} was the cheapest
-            place to buy Mounjaro in the UK for {cheapestAcross.leaderWins}{" "}
-            of the {cheapestAcross.totalDoses} doses. For most people, that
-            makes it the cheapest place to get Mounjaro in the UK right now.{" "}
+            In our latest check, {cheapestAcross.leader} listed the lowest
+            Mounjaro price among our checked partner pharmacies for{" "}
+            {cheapestAcross.leaderWins} of the {cheapestAcross.totalDoses}{" "}
+            doses.{" "}
             {cheapestAcross.exceptions.map((ex, i) => (
               <span key={ex.dose}>
-                {ex.provider} was cheapest for {ex.dose.replace("mg", " mg")},
+                {ex.provider} listed the lowest price for {ex.dose.replace("mg", " mg")},
                 {ex.marginPence > 0
                   ? ` by just ${ex.marginPence}p`
                   : ""}
                 .{i < cheapestAcross.exceptions.length - 1 ? " " : " "}
               </span>
             ))}
-            Who is the cheapest for Mounjaro can change each month, so always
-            look at the date next to the price. For the best value Mounjaro
-            in the UK, check the price of the dose you will be on, not just
+            Which partner lists the lowest Mounjaro price can change each month, so always
+            look at the date next to the price. For the best value, check the price of the dose you will be on, not just
             the starter pen.
           </p>
         ) : null}
@@ -75,14 +74,13 @@ export default function MounjaroCheapestSection({
           Cheap Mounjaro in the UK: when is a price too low?
         </h3>
         <p className="mt-2 leading-relaxed text-slate-600">
-          The lowest price Mounjaro pen we found is{" "}
-          {formatGbp(cheapestStarterPrice)}. The cheapest Mounjaro online in
-          the UK is only a good deal if the pharmacy is safe. Only use a
+          The lowest listed price for a Mounjaro pen among our checked partner pharmacies is{" "}
+          {formatGbp(cheapestStarterPrice)}. A low Mounjaro price is only a good deal if the pharmacy is safe. Only use a
           pharmacy that asks about your health and shows a GPhC number. The
           best place to buy Mounjaro in the UK is a GPhC registered pharmacy
           with a fair price for your dose. Be careful if a site sells
           Mounjaro with no health questions, has no GPhC number, or charges
-          far less than every pharmacy in our table.
+          far less than the partner pharmacies in our table.
         </p>
       </div>
     </section>

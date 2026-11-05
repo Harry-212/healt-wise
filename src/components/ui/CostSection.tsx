@@ -36,11 +36,11 @@ export default function CostSection({
         How much do weight loss injections cost in the UK?
       </h2>
       <p id="cost-answer" className="mt-3 max-w-3xl text-base leading-relaxed text-slate-700 sm:text-lg">
-        In the UK, weight loss injections cost from about {wegovyStarterLow} a month for a
+        Among our checked partner pharmacies, weight loss injections are listed from about {wegovyStarterLow} a month for a
         Wegovy starter pen and {mounjaroStarterLow} for a Mounjaro starter pen. The price
         rises as your dose goes up, to as much as {mounjaroTopHigh} a month for a
         Mounjaro 15 mg pen. The same Mounjaro 2.5 mg pen costs {mounjaroStarterLow} at one
-        pharmacy and {mounjaroStarterHigh} at another, a {mounjaroStarterDiff} difference.
+        partner pharmacy and {mounjaroStarterHigh} at another, a {mounjaroStarterDiff} difference.
       </p>
 
       <p className="mt-5 text-base font-semibold text-slate-900">
@@ -59,9 +59,9 @@ export default function CostSection({
         How much are weight loss injections in the UK each month?
       </h3>
       <p className="mt-2 max-w-3xl text-base leading-relaxed text-slate-700">
-        Most pharmacies charge about £100 (Wegovy) to £154 (Mounjaro) for a
-        starter pen, and about £200 (Wegovy 2.4 mg) to £299 (Mounjaro 15 mg)
-        on the usual top dose.
+        Among our checked partner pharmacies, starter pens are listed from{" "}
+        {wegovyStarterLow} (Wegovy) and {mounjaroStarterLow} (Mounjaro). The
+        highest listed Mounjaro 15 mg price is {mounjaroTopHigh}.
       </p>
     </HomeSectionCard>
   );

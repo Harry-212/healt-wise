@@ -27,7 +27,7 @@ export const OFFICIAL_INFO: OfficialInfoRow[] = [
   { field: "Website", detail: "healthwise360.co.uk", href: "/" },
   { field: "Contact email", detail: "contact@healthwise360.co.uk", href: "mailto:contact@healthwise360.co.uk" },
   { field: "Telephone", detail: "07469 549154", href: "tel:+447469549154" },
-  { field: "Contact address", detail: "195–197 Wood Street, London, E17 3NU, United Kingdom" },
+  { field: "Contact address", detail: "88 Wood Street, London, E17 3NU, United Kingdom" },
   { field: "Website framework", detail: "Next.js" },
 ];
 
@@ -116,7 +116,7 @@ export const SSOT_SPONSORSHIP = {
   title: "Sponsorship and Affiliate Relationships",
   paragraphs: [
     "Healthwise360 does not accept sponsorship.",
-    "Healthwise360 may earn commission through affiliate links. Relevant commercial relationships are disclosed where they apply. Affiliate relationships do not change the published comparison criteria or pharmacy verification results.",
+    "Healthwise360 may earn commission when visitors use some partner links. Commercial relationships do not determine the ordering of providers in our price-sorted comparison tables. Providers cannot pay for a higher ranking. Promotional prices and discount codes are displayed separately from standard retail prices.",
   ],
 };
 

@@ -714,7 +714,7 @@ export default function WegovyMounjaroLongFormContent({
                 <strong className="font-semibold text-slate-900">Both medicines in one place.</strong> A full Wegovy vs Mounjaro comparison with prices.
               </li>
               <li>
-                <strong className="font-semibold text-slate-900">Every provider checked.</strong> Each pharmacy listed comes with its GPhC number.
+                <strong className="font-semibold text-slate-900">Every listed partner checked.</strong> Each partner pharmacy listed comes with its GPhC number.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">The real cost.</strong> The price of every dose, plus your first 6 months total.
@@ -728,7 +728,7 @@ export default function WegovyMounjaroLongFormContent({
             </ul>
 
             <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
-              We check every price in the first week of each month and show the date. Healthwise360 does not currently earn commission from providers on this page.
+              We check every price in the first week of each month and show the date. Healthwise360 may earn commission when visitors use some partner links; providers cannot pay for a higher ranking.
             </p>
 
             <div className="mt-6">
