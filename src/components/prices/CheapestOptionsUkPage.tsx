@@ -293,12 +293,12 @@ export default function CheapestOptionsUkPage() {
       {/* Section 5: Where to buy */}
       <Section id="where-to-buy">
         <h2 className={h2Class}>
-          Where is the cheapest place to buy weight loss injections in the UK?
+          Where are the lowest listed weight loss injection prices?
         </h2>
         <p>
-          The cheapest place to buy weight loss injections in the UK is a GPhC
-          registered online pharmacy. At our latest check, these pharmacies had
-          the most of the lowest prices:
+          Among our checked partner pharmacies, these GPhC registered
+          pharmacies had the most of the lowest listed prices at our latest
+          check:
         </p>
         <ul className="list-inside list-disc space-y-2">
           {d.wWinners.slice(0, 2).map((w) => (

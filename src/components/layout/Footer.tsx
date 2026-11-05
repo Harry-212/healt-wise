@@ -20,7 +20,6 @@ import {
 } from "@/lib/site-contact";
 import { HOMEPAGE_PRICE_HUB_LABELS } from "@/lib/text/homepage-brand-labels";
 import SiteLogoLink from "@/components/layout/SiteLogoLink";
-import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 import SiteSocialLinks from "@/components/layout/SiteSocialLinks";
 import RevealOnView from "@/components/ui/RevealOnView";
 import { GooglePreferredSourceButton } from "@/components/analytics/GooglePreferredSourceButton";
@@ -142,10 +141,6 @@ export default function Footer() {
                   </a>
                 </span>
               </address>
-              <BusinessLocationMap
-                className="mt-4"
-                heightClassName="h-44 sm:h-48"
-              />
             </div>
           </div>
 

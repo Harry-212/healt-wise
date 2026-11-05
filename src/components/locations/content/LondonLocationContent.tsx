@@ -401,7 +401,7 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                   Healthwise360
                 </p>
                 <p>
-                  <strong className={strong}>Address:</strong> 195 Wood St,
+                  <strong className={strong}>Address:</strong> 88 Wood Street,
                   London E17 3NU, United Kingdom
                 </p>
                 <p>

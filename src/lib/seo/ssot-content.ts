@@ -27,7 +27,7 @@ export const OFFICIAL_INFO: OfficialInfoRow[] = [
   { field: "Website", detail: "healthwise360.co.uk", href: "/" },
   { field: "Contact email", detail: "contact@healthwise360.co.uk", href: "mailto:contact@healthwise360.co.uk" },
   { field: "Telephone", detail: "07469 549154", href: "tel:+447469549154" },
-  { field: "Contact address", detail: "195–197 Wood Street, London, E17 3NU, United Kingdom" },
+  { field: "Contact address", detail: "88 Wood Street, London, E17 3NU, United Kingdom" },
   { field: "Website framework", detail: "Next.js" },
 ];
 

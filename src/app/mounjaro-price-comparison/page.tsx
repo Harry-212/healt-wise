@@ -282,7 +282,7 @@ export default function CompareMounjaroPricesUkPage() {
           />
         ) : null}
 
-        {/* Section 5: Cheapest (H2: Where is the cheapest Mounjaro in the UK?) */}
+        {/* Section 5: Cheapest (H2: Which partner pharmacy lists the lowest Mounjaro price?) */}
         <MounjaroCheapestSection
           cheapestAcross={cheapestAcross}
           cheapestStarterPrice={insights?.starter.low ?? 0}

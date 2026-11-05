@@ -12,7 +12,6 @@ import {
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { ContactForm } from "./ContactForm";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
-import BusinessLocationMap from "@/components/contact/BusinessLocationMap";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -113,13 +112,6 @@ export default function ContactPage() {
                 </span>
               </address>
             </div>
-
-            <BusinessLocationMap
-              className="mt-6 max-w-md sm:mx-auto lg:mx-0"
-              heightClassName="h-56 sm:h-64"
-              variant="light"
-              linkClassName="text-sm font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
-            />
           </div>
 
           <div className="relative flex flex-col justify-start lg:pl-2">
