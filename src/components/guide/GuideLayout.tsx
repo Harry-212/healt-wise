@@ -362,19 +362,29 @@ export function GuideDisclaimer({ children }: { children: React.ReactNode }) {
 
 export function GuideFaq({
   items,
+  heading = "Frequently Asked Questions",
+  questionsAsHeadings = false,
 }: {
   items: { q: string; a: React.ReactNode }[];
+  /** Section heading (H2). */
+  heading?: string;
+  /** Render each question as an H3 inside its summary, so it is a real heading. */
+  questionsAsHeadings?: boolean;
 }) {
   return (
     <section id="faq" className="scroll-mt-28">
       <h2 className="text-xl font-semibold text-slate-900">
-        Frequently Asked Questions
+        {heading}
       </h2>
       <dl className="mt-5 divide-y divide-slate-200">
         {items.map((item, i) => (
           <details key={i} className="group py-4">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-medium text-slate-900 marker:hidden [&::-webkit-details-marker]:hidden">
-              {item.q}
+              {questionsAsHeadings ? (
+                <h3 className="text-base font-medium text-slate-900">{item.q}</h3>
+              ) : (
+                item.q
+              )}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
