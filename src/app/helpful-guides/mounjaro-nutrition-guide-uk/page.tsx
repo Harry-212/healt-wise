@@ -376,7 +376,9 @@ export default function GuideMounjaroNutrition() {
           Some patients on Mounjaro report that greasy or high-fat meals worsen
           nausea—a common early side effect. Limiting processed and fatty foods
           can also reduce gastrointestinal discomfort during the initial weeks
-          of treatment.
+          of treatment. See the{" "}
+          <IL href="/helpful-guides/mounjaro-side-effects-uk">common Mounjaro side effects</IL> listed in the
+          UK patient leaflet.
         </GuideCallout>
       </GuideSection>
 

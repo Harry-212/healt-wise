@@ -378,7 +378,9 @@ export default function GuideMounjaroSkinPain() {
             MHRA Yellow Card Scheme
           </EL>
           , which monitors real world drug safety and helps identify emerging
-          adverse effects.</GuideParagraph>
+          adverse effects. To see how skin symptoms fit among all the listed
+          effects, read our guide to the{" "}
+          <IL href="/helpful-guides/mounjaro-side-effects-uk">side effects of Mounjaro</IL>.</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways

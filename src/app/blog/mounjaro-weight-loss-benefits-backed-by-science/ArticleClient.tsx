@@ -326,6 +326,17 @@ export default function ArticleClient() {
                 and fluids can ease constipation; smaller, frequent meals can
                 help early nausea.
               </p>
+              <p>
+                The UK patient leaflet groups every listed effect by frequency.
+                Read{" "}
+                <Link
+                  href="/helpful-guides/mounjaro-side-effects-uk"
+                  className="font-medium text-emerald-600 hover:underline"
+                >
+                  the side effects listed in the patient leaflet
+                </Link>
+                .
+              </p>
             </GuideSection>
 
             <GuideSection

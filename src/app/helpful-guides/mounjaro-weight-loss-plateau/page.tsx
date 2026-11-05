@@ -335,7 +335,8 @@ export default function GuideMounjaroPlateau() {
         professional medical advice. Always consult a qualified healthcare
         professional regarding your{" "}
         <IL href="/what-is-mounjaro">Mounjaro</IL> treatment and any concerns
-        about progress or side effects.
+        about progress or{" "}
+        <IL href="/helpful-guides/mounjaro-side-effects-uk">Mounjaro side effects</IL>.
       </GuideDisclaimer>
 
       {/* ── FAQ ── */}

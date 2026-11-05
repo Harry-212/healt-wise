@@ -345,8 +345,9 @@ export default function GuideMounjaroEligibility() {
         <GuideParagraph>
           When restarting, providers will almost always begin at the lowest
           dose (2.5mg) and re titrate gradually regardless of the dose you
-          were previously taking. This reduces the risk of side effects and
-          allows your body to readapt.
+          were previously taking. This reduces the risk of{" "}
+          <IL href="/helpful-guides/mounjaro-side-effects-uk">Mounjaro side effects</IL> and allows your body
+          to readapt.
 </GuideParagraph>
         <GuideParagraph>
           If you are considering switching providers to restart or continue

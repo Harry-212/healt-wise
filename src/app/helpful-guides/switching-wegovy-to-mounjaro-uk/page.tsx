@@ -253,6 +253,8 @@ export default function GuideSwitchingWegovy() {
           <IL href="/what-is-mounjaro">Mounjaro</IL> requires a structured
           approach. Never overlap both medications they both act on the GLP 1
           receptor and combining them significantly increases side effect risk.
+          Read about{" "}
+          <IL href="/helpful-guides/mounjaro-side-effects-uk">Mounjaro side effects UK</IL> before you start.
 </GuideParagraph>
         <GuideParagraph>
           The standard transition protocol is:</GuideParagraph>
