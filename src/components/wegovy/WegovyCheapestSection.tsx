@@ -35,16 +35,16 @@ export default function WegovyCheapestSection({
     <section className="border-b border-slate-200/80 bg-white py-12 md:py-16">
       <div className="mx-auto max-w-3xl px-4 md:px-8">
         <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-          Where is the cheapest Wegovy in the UK?
+          Which partner pharmacy lists the lowest Wegovy price?
         </h2>
         {cheapestAcross ? (
           <p className="mt-4 leading-relaxed text-slate-600">
-            In our latest check, {cheapestAcross.leader} was the cheapest place
-            to buy Wegovy in the UK for {cheapestAcross.leaderWins} of the{" "}
-            {cheapestAcross.totalDoses} doses.{" "}
+            In our latest check, {cheapestAcross.leader} listed the lowest Wegovy
+            price among our checked partner pharmacies for{" "}
+            {cheapestAcross.leaderWins} of the {cheapestAcross.totalDoses} doses.{" "}
             {cheapestAcross.exceptions.map((ex, i) => (
               <span key={ex.dose}>
-                {ex.provider} was cheapest for {ex.dose.replace("mg", " mg")}
+                {ex.provider} listed the lowest price for {ex.dose.replace("mg", " mg")}
                 {ex.marginPence > 0 ? `, by just ${ex.marginPence}p` : ""}.
                 {i < cheapestAcross.exceptions.length - 1 ? " " : " "}
               </span>
@@ -54,7 +54,7 @@ export default function WegovyCheapestSection({
           </p>
         ) : (
           <p className="mt-4 leading-relaxed text-slate-600">
-            The cheapest place to get Wegovy depends on your dose. Always look
+            Which partner lists the lowest Wegovy price depends on your dose. Always look
             at the date next to the price, as this can change each month.
           </p>
         )}

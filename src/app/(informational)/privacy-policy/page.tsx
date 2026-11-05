@@ -87,7 +87,7 @@ export default function PrivacyPolicyPage() {
           title: "Contact",
           paragraphs: [
             "Healthwise360",
-            "195–197 Wood Street, London, E17 3NU, United Kingdom",
+            "88 Wood Street, London, E17 3NU, United Kingdom",
             "Email: contact@healthwise360.co.uk",
             "Telephone: +44 7469 549154",
           ],
