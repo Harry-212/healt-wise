@@ -43,3 +43,9 @@ test("links go to live pages, not to redirected URLs", () => {
   for (const href of ["/what-is-mounjaro", "/helpful-guides/mounjaro-constipation-relief-uk", "/helpful-guides/mounjaro-skin-pain-causes-treatment", "/blog/mounjaro-dosage-for-weight-loss-facts-you-can-trust"]) assert.ok(t.includes(`"${href}"`), href);
   assert.ok(!t.includes("the-truth-about-mounjaro-dosage"));
 });
+
+test("shared card descriptions no longer promise management strategies", () => {
+  const slugs = readFileSync("src/lib/helpful-guide-slugs.ts", "utf8");
+  assert.ok(!slugs.includes("evidence-based management strategies for each"));
+  assert.ok(slugs.includes("The Mounjaro side effects listed in the UK patient leaflet, from very common to rare, and when to get help."));
+});
