@@ -174,7 +174,7 @@ export const HELPFUL_GUIDE_DESCRIPTIONS: Record<HelpfulGuideSlug, string> = {
   "mounjaro-constipation-relief-uk":
     "Constipation is a common Mounjaro side effect. Why it happens and the most effective hydration, fibre, movement and OTC strategies to ease it.",
   "mounjaro-side-effects-uk":
-    "A complete overview of Mounjaro side effects—from common digestive symptoms to rare serious reactions—with evidence-based management strategies for each.",
+    "The Mounjaro side effects listed in the UK patient leaflet, from very common to rare, and when to get help.",
   "restarting-mounjaro-after-break-uk":
     "Restarting Mounjaro after a break is often possible even if your BMI has dropped. How break length affects restart dose and what providers need.",
   "mounjaro-delivery-times-uk":
