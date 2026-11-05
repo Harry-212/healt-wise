@@ -31,9 +31,15 @@ export const GONE_EXACT_PATHS: readonly string[] = [
   "/price-alerts",
 ];
 
-/** `/blog/page/4?topic=locations` — only the query variant that Search Console reported. */
+/**
+ * `/blog/page/<n>?topic=locations`: the removed locations topic filter. Search Console reported
+ * pages 2 to 5; plain `/blog/page/<n>` (no topic query) stays a normal archive page.
+ */
 export const GONE_BLOG_PAGE_LOCATIONS_QUERY_PATHS: readonly string[] = [
+  "/blog/page/2",
+  "/blog/page/3",
   "/blog/page/4",
+  "/blog/page/5",
 ];
 
 /** City slugs whose `/blog/best-weight-loss-treatment-in-<slug>` article was removed. */
