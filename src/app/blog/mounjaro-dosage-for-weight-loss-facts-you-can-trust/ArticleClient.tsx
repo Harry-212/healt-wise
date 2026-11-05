@@ -271,6 +271,16 @@ export default function ArticleClient() {
                 rapidly [1].
               </p>
               <p>
+                For the full list by how often they happen, read our guide to{" "}
+                <Link
+                  href="/helpful-guides/mounjaro-side-effects-uk"
+                  className="font-medium text-emerald-600 hover:underline"
+                >
+                  Mounjaro side effects by dose
+                </Link>
+                .
+              </p>
+              <p>
                 Even though serious complications are less common, you should be
                 aware of them. Some studies indicate a possible risk of thyroid
                 tumours in animal trials, although it is unknown whether this
