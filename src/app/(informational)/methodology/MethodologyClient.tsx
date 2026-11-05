@@ -803,7 +803,7 @@ export default function MethodologyClient() {
                       Affiliate Links & Commercial Relationships
                     </h3>
                     <p className="mt-3 text-slate-600 leading-relaxed">
-                      Healthwise360 does not currently earn commission from any provider listed on this site. If we introduce affiliate or referral links in future, we will label them clearly and update this policy.
+                      Healthwise360 may earn commission when visitors use some partner links. Commercial relationships do not determine the ordering of providers in our price-sorted comparison tables. Providers cannot pay for a higher ranking. Promotional prices and discount codes are displayed separately from standard retail prices.
                     </p>
                   </div>
 

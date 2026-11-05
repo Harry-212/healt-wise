@@ -6,9 +6,9 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import { withDefaultShareImage } from "@/lib/seo/default-share-image";
 
-const TITLE = "All UK Weight Loss Pharmacies | Healthwise360";
+const TITLE = "Weight Loss Treatment Partner Pharmacies UK";
 const DESCRIPTION =
-  "Every UK pharmacy reviewed by Healthwise360: GPhC-registered providers of Mounjaro and Wegovy, with independent pricing and safety reviews.";
+  "Review selected UK partner pharmacies offering private Mounjaro, Wegovy and other weight-management treatments. Compare registration details, support, delivery and prices.";
 
 export const metadata: Metadata = withDefaultShareImage({
   title: { absolute: TITLE },
@@ -35,7 +35,7 @@ export default function PharmaciesIndexPage() {
       <BreadcrumbJsonLd
         sectionName="Information"
         sectionPath="/helpful-guides"
-        pageName="All Pharmacies"
+        pageName="Partner Pharmacies"
         pagePath="/pharmacies"
       />
       <div className="bg-linear-to-b from-[#e6f4ea] via-white to-white px-4 pb-16 pt-10 sm:px-6 lg:pb-24">
@@ -53,18 +53,18 @@ export default function PharmaciesIndexPage() {
               <li aria-hidden className="text-emerald-800/50">
                 →
               </li>
-              <li className="text-emerald-950">All Pharmacies</li>
+              <li className="text-emerald-950">Partner Pharmacies</li>
             </ol>
           </nav>
 
           <h1 className="text-balance text-3xl font-bold leading-tight tracking-tight text-emerald-950 sm:text-4xl lg:text-5xl">
-            Every UK weight loss pharmacy we review
+            Compare Our UK Partner Pharmacies
           </h1>
           <p className="mt-4 max-w-3xl text-lg leading-relaxed text-emerald-900/85">
-            Independent reviews of {providers.length} GPhC-registered UK
-            online pharmacies and clinics offering Mounjaro or Wegovy —
-            treatment prices, consultation process, delivery and clinical
-            support. See our{" "}
+            Independent reviews of {providers.length} selected GPhC-registered
+            UK partner pharmacies offering Mounjaro or Wegovy — treatment
+            prices, consultation process, delivery and clinical support. This
+            directory covers our partners, not every UK pharmacy. See our{" "}
             <Link
               href="/pharmacy-safety-gphc-verification"
               className="font-semibold text-emerald-800 underline decoration-emerald-400/80 underline-offset-4 hover:text-emerald-950"
@@ -85,7 +85,7 @@ export default function PharmaciesIndexPage() {
           </div>
 
           <p className="mt-6 max-w-3xl text-sm leading-relaxed text-emerald-900/75">
-            Pharmacies are listed A–Z. Order is never influenced by commission,
+            Partner pharmacies are listed A–Z. Order is never influenced by commission,
             affiliate status or discount codes.
           </p>
 

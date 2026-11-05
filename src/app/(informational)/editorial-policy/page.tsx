@@ -75,7 +75,7 @@ export default function EditorialPolicyPage() {
           title: "Commercial relationships and conflicts",
           paragraphs: [
             "Editorial decisions are not sold. We do not accept payment to rank a provider higher, to remove criticism, or to disguise advertising as editorial content.",
-            "Healthwise360 does not currently earn commission from any provider listed on this site. If we introduce affiliate or referral links in future, we will label them clearly next to the relevant module and update this policy. Commercial relationships never change how providers are ranked or the prices we show.",
+            "Healthwise360 may earn commission when visitors use some partner links. Commercial relationships do not determine the ordering of providers in our price-sorted comparison tables. Providers cannot pay for a higher ranking. Promotional prices and discount codes are displayed separately from standard retail prices.",
           ],
         },
         {

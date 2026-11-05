@@ -186,11 +186,11 @@ export default function CheapestOptionsUkPage() {
       {/* Section 3: Which is cheapest */}
       <Section id="which-is-cheapest">
         <h2 className={h2Class}>
-          Which weight loss injection is cheapest in the UK?
+          Which weight loss injection has the lowest listed price?
         </h2>
         {wCheaper ? (
           <p>
-            Wegovy is the cheapest weight loss injection in the UK at every
+            Among our checked partner pharmacies, Wegovy has the lowest listed price at every
             month of the first 6 in our price tables. The Wegovy starter pen
             costs from {wStarterLow}, against {mStarterLow} for Mounjaro. On
             the dose most people stay on, Wegovy 2.4 mg costs from {wLongLow},
@@ -207,8 +207,8 @@ export default function CheapestOptionsUkPage() {
           </p>
         )}
         <p>
-          So, which is the cheapest injection for weight loss? Look at price
-          alone and the table above answers it. But the cheapest weight loss
+          So, which injection has the lowest listed price? Look at price
+          alone and the table above answers it among our partner pharmacies. But the cheapest weight loss
           injection is not always the best one for you. In a head to head trial,
           people lost more weight on Mounjaro. A prescriber can help you choose.
         </p>

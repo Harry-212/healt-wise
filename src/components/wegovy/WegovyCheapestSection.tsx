@@ -75,13 +75,13 @@ export default function WegovyCheapestSection({
           Cheap Wegovy online: when is a price too low?
         </h3>
         <p className="mt-2 leading-relaxed text-slate-600">
-          The lowest Wegovy price we found is {formatGbp(starterLow)}. The
-          cheapest Wegovy online in the UK is only a good deal if the pharmacy
+          The lowest listed Wegovy price among our checked partner pharmacies is {formatGbp(starterLow)}. A
+          low Wegovy price is only a good deal if the pharmacy
           is safe. Only use a pharmacy that asks about your health and shows a
           GPhC number. The best place to buy Wegovy in the UK is a GPhC
           registered pharmacy with a fair price for your dose. Be careful if a
           site sells Wegovy with no health questions, has no GPhC number, or
-          charges far less than every pharmacy in our table.
+          charges far less than the partner pharmacies in our table.
         </p>
       </div>
     </section>

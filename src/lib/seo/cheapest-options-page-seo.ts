@@ -33,10 +33,10 @@ export function buildCheapestOptionsFaqs(
   const p = params;
   return [
     {
-      question: "What is the cheapest weight loss injection in the UK?",
+      question: "Which weight loss injection has the lowest listed price among our partner pharmacies?",
       answer: p.wegovyCheaperEveryMonth
-        ? `Wegovy, from ${p.wegovyStarter} for a 0.25 mg starter pen at our latest check. The cheapest Mounjaro starter pen is ${p.mounjaroStarter}.`
-        : `At our latest check, a Wegovy 0.25 mg starter pen starts from ${p.wegovyStarter} and a Mounjaro 2.5 mg starter pen starts from ${p.mounjaroStarter}. Compare the dose you will actually be on.`,
+        ? `Among our checked partner pharmacies, Wegovy, from ${p.wegovyStarter} for a 0.25 mg starter pen at our latest check. The lowest listed Mounjaro starter pen is ${p.mounjaroStarter}.`
+        : `Among our checked partner pharmacies, at our latest check, a Wegovy 0.25 mg starter pen starts from ${p.wegovyStarter} and a Mounjaro 2.5 mg starter pen starts from ${p.mounjaroStarter}. Compare the dose you will actually be on.`,
     },
     {
       question: "Are the cheapest weight loss injections in the UK safe?",
