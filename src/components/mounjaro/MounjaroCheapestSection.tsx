@@ -75,14 +75,13 @@ export default function MounjaroCheapestSection({
           Cheap Mounjaro in the UK: when is a price too low?
         </h3>
         <p className="mt-2 leading-relaxed text-slate-600">
-          The lowest price Mounjaro pen we found is{" "}
-          {formatGbp(cheapestStarterPrice)}. The cheapest Mounjaro online in
-          the UK is only a good deal if the pharmacy is safe. Only use a
+          The lowest listed price for a Mounjaro pen among our checked partner pharmacies is{" "}
+          {formatGbp(cheapestStarterPrice)}. A low Mounjaro price is only a good deal if the pharmacy is safe. Only use a
           pharmacy that asks about your health and shows a GPhC number. The
           best place to buy Mounjaro in the UK is a GPhC registered pharmacy
           with a fair price for your dose. Be careful if a site sells
           Mounjaro with no health questions, has no GPhC number, or charges
-          far less than every pharmacy in our table.
+          far less than the partner pharmacies in our table.
         </p>
       </div>
     </section>

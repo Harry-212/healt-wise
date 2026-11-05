@@ -41,17 +41,17 @@ export const revalidate = 0;
 export const metadata: Metadata = {
   ...buildPageShareMetadata({
     canonicalPath: "/mounjaro-price-comparison",
-    title: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
+    title: "Mounjaro Price Comparison UK 2026: Prices by Dose",
     metaDescription:
       "Compare Mounjaro prices by dose across our listed GPhC-registered partner pharmacies, from 2.5 mg to 15 mg.",
-    openGraphTitle: "Mounjaro Price Comparison UK: Cheapest Price by Dose",
+    openGraphTitle: "Mounjaro Price Comparison UK: Prices by Dose",
     openGraphDescription:
       "See the lowest Mounjaro price for every dose at our UK pharmacy partners. Checked and dated, with no paid rankings.",
     imagePath: "/mounjaro healt wise.png",
     imageAlt: "Compare Mounjaro prices UK — Healthwise360",
   }),
   title: {
-    absolute: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
+    absolute: "Mounjaro Price Comparison UK 2026: Prices by Dose",
   },
 };
 
@@ -70,7 +70,7 @@ function compareWebPageJsonLd(providers: MounjaroUkProviderCompare[]) {
   const webpage = {
     "@type": "CollectionPage",
     "@id": `${pageUrl}#webpage`,
-    name: "Mounjaro Price Comparison UK 2026: Cheapest Prices by Dose",
+    name: "Mounjaro Price Comparison UK 2026: Prices by Dose",
     description:
       "Compare Mounjaro prices by dose across our listed GPhC-registered partner pharmacies, from 2.5 mg to 15 mg.",
     url: pageUrl,
@@ -223,18 +223,18 @@ export default function CompareMounjaroPricesUkPage() {
           <TrustBarMarquee />
         </section>
 
-        {/* Section 3: Price table (H2: Compare Mounjaro prices UK at every pharmacy) */}
+        {/* Section 3: Price table (H2: Compare Mounjaro prices at our partner pharmacies) */}
         <section
           id="mounjaro-compare-table"
           className="scroll-mt-28 border-b border-slate-200/80 bg-background py-12 md:py-16"
         >
           <div className="mx-auto max-w-7xl px-4 md:px-8">
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-              Compare Mounjaro prices UK at every pharmacy
+              Compare Mounjaro prices at our partner pharmacies
             </h2>
             <p className="mt-3 max-w-3xl text-slate-600">
               This is our full Mounjaro price comparison table for the UK. It
-              shows the price of every dose at {providerCount} pharmacies,
+              shows the price of every dose at {providerCount} partner pharmacies,
               with each pharmacy&apos;s rating and GPhC number. Each row also
               shows the delivery charge and the total, so you see what you
               will really pay.
