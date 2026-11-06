@@ -11,7 +11,7 @@
  */
 
 /** Badge on a partner's row or card. */
-export const PARTNER_BADGE_LABEL = "Partner Pharmacy";
+export const PARTNER_BADGE_LABEL = "Partner pharmacy";
 
 /** Heading of the block of partner cards above a comparison table. */
 export const PARTNER_BLOCK_HEADING = "Partner pharmacies";
