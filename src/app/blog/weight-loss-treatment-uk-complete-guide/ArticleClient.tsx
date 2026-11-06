@@ -684,6 +684,16 @@ export default function ArticleClient() {
                 </Link>
                 .
               </p>
+              <p>
+                If you live in the capital, our guide to{" "}
+                <Link
+                  href="/blog/weight-loss-treatment-london"
+                  className="font-semibold text-emerald-600 hover:underline"
+                >
+                  weight loss treatment in London
+                </Link>{" "}
+                looks at access and provider options for Londoners.
+              </p>
             </GuideSection>
 
             <GuideSection
