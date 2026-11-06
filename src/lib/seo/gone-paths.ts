@@ -29,6 +29,9 @@ export const GONE_EXACT_PATHS: readonly string[] = [
   "/time-saver",
   /** Retired 5 Nov 2026 (Task 13, Jeff's 3 Nov instruction): the price-alerts page had no backend. */
   "/price-alerts",
+  /** Retired 6 Nov 2026 (Task 136): the Huel pages were removed in PR #112 and answered 404. */
+  "/protein-and-fitness",
+  "/eat-healthier",
 ];
 
 /**
