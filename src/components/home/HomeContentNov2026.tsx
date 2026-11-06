@@ -335,7 +335,7 @@ export default function HomeContentNov2026() {
               Wegovy contains semaglutide, which acts on the GLP-1 receptor. Doses start at 0.25mg and rise over
               several steps. It is licensed for weight management in adults with the same BMI ranges. The two
               medicines must not be used together. Read{" "}
-              <Link href="/blog/what-is-wegovy-pill" className="font-semibold text-teal-600 underline">
+              <Link href="/what-is-wegovy" className="font-semibold text-teal-600 underline">
                 what is Wegovy
               </Link>
               , or{" "}
@@ -453,7 +453,7 @@ export default function HomeContentNov2026() {
             How we compare
           </Link>
           <Link
-            href="/affiliate-disclosure"
+            href="/methodology#affiliate-links"
             className="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
           >
             Read our affiliate disclosure
