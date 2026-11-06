@@ -20,7 +20,7 @@ export type OfficialInfoRow = {
 
 export const OFFICIAL_INFO: OfficialInfoRow[] = [
   { field: "Brand name", detail: "Healthwise360" },
-  { field: "Business activity", detail: "Online weight-management provider and price comparison" },
+  { field: "Business activity", detail: "Independent UK weight-management comparison publisher" },
   { field: "Founded", detail: "2026" },
   { field: "Founder", detail: "Alistair Greenwood" },
   { field: "Areas served", detail: "England, Scotland and Wales" },
