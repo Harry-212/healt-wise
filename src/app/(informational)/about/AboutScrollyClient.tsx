@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowRight, Mail, MapPin, Phone, Star } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import { HOME_COMPARE_HUB_HREF } from "@/lib/routes/home-compare-hub";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { ABOUT_PAGE_FAQS } from "@/lib/seo/about-page-seo";
@@ -15,7 +15,6 @@ import {
   SITE_BUSINESS_PHONE_TEL,
 } from "@/lib/site-contact";
 
-const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/W7BW5zDda48eJWzJ7";
 
 const EXPLORE_LINKS = [
   { label: "Compare Mounjaro and Wegovy", href: HOME_COMPARE_HUB_HREF },
@@ -505,35 +504,6 @@ export default function AboutScrollyClient() {
                 </tbody>
               </table>
             </div>
-          </RevealBlock>
-        </div>
-      </section>
-
-      {/* Reviews */}
-      <section className="border-t border-brand-border bg-brand-card px-4 py-14 sm:px-6 md:px-10 md:py-20">
-        <div className="mx-auto max-w-3xl">
-          <RevealBlock>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-600">
-              Reviews
-            </p>
-            <div className="flex items-center gap-1" aria-hidden>
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-emerald-500 text-emerald-500" />
-              ))}
-            </div>
-            <h2 className="mt-3 text-balance text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">
-              Rated 5 out of 5 from 2 Google reviews
-            </h2>
-            <p className="mt-3 max-w-2xl text-pretty text-base leading-relaxed text-slate-600">
-              Checked on 2 October 2026.
-            </p>
-            <Link
-              href={GOOGLE_REVIEWS_URL}
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800"
-            >
-              Read Healthwise360 reviews on Google
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </Link>
           </RevealBlock>
         </div>
       </section>
