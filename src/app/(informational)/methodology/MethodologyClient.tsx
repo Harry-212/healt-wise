@@ -18,7 +18,10 @@ import {
   FileText,
 } from "lucide-react";
 import Link from "next/link";
-import { useMonthYearLabel } from "@/lib/hooks/useTodayLabel";
+
+/** Date of the last substantive methodology update. Edit this when the methodology text changes. */
+const METHODOLOGY_LAST_UPDATED_ISO = "2026-11-06";
+const METHODOLOGY_LAST_UPDATED_LABEL = "6 November 2026";
 
 const instrumentSerif = Instrument_Serif({
   weight: "400",
@@ -100,7 +103,6 @@ export default function MethodologyClient() {
   const tocAnchorRef = useRef<HTMLDivElement>(null);
   const tocNavRef = useRef<HTMLElement>(null);
   const reduceMotion = useReducedMotion();
-  const lastReviewed = useMonthYearLabel("July 2026");
 
   const syncTocCoords = () => {
     const el = tocAnchorRef.current;
@@ -251,13 +253,13 @@ export default function MethodologyClient() {
           <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-slate-500 sm:mt-7">
             <span className="flex items-center gap-1.5">
               <Calendar className="h-4 w-4 text-slate-400" />
-              Last reviewed:{" "}
-              <time dateTime={lastReviewed ?? undefined}>{lastReviewed ?? "July 2026"}</time>
+              Last updated:{" "}
+              <time dateTime={METHODOLOGY_LAST_UPDATED_ISO}>{METHODOLOGY_LAST_UPDATED_LABEL}</time>
             </span>
             <span className="hidden sm:inline text-slate-300">•</span>
             <span className="flex items-center gap-1.5 text-emerald-700 font-semibold">
               <ShieldCheck className="h-4 w-4 text-emerald-600" />
-              100% Independent Comparison
+              Independent comparison information
             </span>
           </div>
 
@@ -426,7 +428,7 @@ export default function MethodologyClient() {
                       What We Compare
                     </h3>
                     <p className="mt-3 text-slate-600 leading-relaxed">
-                      We continuously track and audit UK provider offerings across several dimensions to expose the full picture, ensuring patients can review total path costs rather than misleading introductory offers.
+                      We record and review pricing and service information for the selected partner pharmacies included in our comparison. We compare standard retail prices, delivery charges and other compulsory fees where this information is available. Our comparison does not cover the whole UK market.
                     </p>
                   </div>
 
