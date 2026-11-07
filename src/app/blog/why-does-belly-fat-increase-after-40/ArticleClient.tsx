@@ -166,12 +166,12 @@ export default function ArticleClient() {
               </p>
               <p>
                 If your changes line up with menopause timing, you might also
-                find the UK-focused guidance in{" "}
+                find the UK-focused guidance on{" "}
                 <Link
                   href="/helpful-guides/mounjaro-menopause-weight-loss-uk"
                   className="font-medium text-brand-primary underline"
                 >
-                  Menopause &amp; weight (UK guide)
+                  Mounjaro and menopause
                 </Link>{" "}
                 useful as a broader context for how hormones can shift hunger,
                 sleep, and energy.
@@ -508,16 +508,6 @@ export default function ArticleClient() {
                 you understand your body and take meaningful action.
               </p>
               <p className="font-semibold">Explore our related guides:</p>
-              <p>
-                Hormones and weight management in midlife: explore our practical guide to{" "}
-                <Link
-                  href="/helpful-guides/mounjaro-menopause-weight-loss-uk"
-                  className="font-medium text-brand-primary underline"
-                >
-                  Menopause &amp; weight (UK guide)
-                </Link>
-                .
-              </p>
               <p>
                 Is Visceral Fat Different from Belly Fat? The visceral section
                 above breaks down what matters most: where it sits, why it is

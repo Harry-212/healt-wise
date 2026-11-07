@@ -747,6 +747,16 @@ export default function WhatIsMounjaroPage() {
                   </li>
                   <li>a prescriber says it is right for you</li>
                 </ul>
+                <p className="leading-relaxed">
+                  Going through perimenopause or menopause? Read our guide to{" "}
+                  <Link
+                    href="/helpful-guides/mounjaro-menopause-weight-loss-uk"
+                    className="font-medium text-brand-primary underline"
+                  >
+                    Mounjaro and menopause
+                  </Link>
+                  .
+                </p>
 
                 <p className="mt-4 font-semibold text-slate-900">
                   Mounjaro may not be right if:

@@ -301,9 +301,9 @@ export default function ArticleClient() {
                   href="/helpful-guides/mounjaro-menopause-weight-loss-uk"
                   className="font-medium text-brand-primary underline"
                 >
-                  Menopause and weight (UK guide)
+                  Mounjaro during menopause
                 </Link>{" "}
-                touches on overlapping hormonal and lifestyle themes if you want
+                guide touches on overlapping hormonal and lifestyle themes if you want
                 UK focused context alongside this stress focused piece.
               </p>
             </GuideSection>

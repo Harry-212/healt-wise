@@ -356,6 +356,12 @@ export default function GuideMounjaroEligibility() {
             switching pharmacies for Mounjaro or Wegovy
           </IL>
           .</GuideParagraph>
+        <GuideParagraph>
+          Going through the change of life? Read about{" "}
+          <IL href="/helpful-guides/mounjaro-menopause-weight-loss-uk">
+            Mounjaro in perimenopause and menopause
+          </IL>
+          .</GuideParagraph>
       </GuideSection>
 
       <GuideKeyTakeaways
