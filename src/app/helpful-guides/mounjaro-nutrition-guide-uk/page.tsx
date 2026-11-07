@@ -108,6 +108,13 @@ const REFERENCES = [
 
 const RELATED_GUIDES = [
   {
+    href: "/helpful-guides/mounjaro-menopause-weight-loss-uk",
+    category: "Medications",
+    title: "Mounjaro and Menopause",
+    description:
+      "A UK guide to Mounjaro, menopause and weight.",
+  },
+  {
     href: "/blog/why-does-belly-fat-increase-after-40",
     category: "Weight management",
     title: "Why Does Belly Fat Increase After 40?",

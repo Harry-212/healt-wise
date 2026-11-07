@@ -357,7 +357,8 @@ export default function GuideMounjaroSideEffects() {
           <strong>Contraception.</strong> The leaflet advises women with obesity or overweight who use the oral
           contraceptive pill to think about a non oral method, or to add a barrier method such as a condom, for 4 weeks
           after starting Mounjaro and for 4 weeks after each increase in dose. Ask your prescriber or pharmacist what
-          suits you.
+          suits you. If you also use HRT, read our guide to{" "}
+          <IL href="/helpful-guides/mounjaro-menopause-weight-loss-uk">Mounjaro and HRT</IL>.
         </GuideParagraph>
         <GuideParagraph>
           <strong>People without diabetes.</strong> Some effects are listed for people using Mounjaro for weight
