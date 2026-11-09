@@ -68,7 +68,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
     id: "reach-online-pharmacy",
     name: "Reach Online Pharmacy",
     deliveryNote:
-      "From £4.99 (standard, 2-3 days); tracked 24/48h £5.99; guaranteed 1pm next-day (temp-controlled) £9.99",
+      "Tracked 24 £5.99; Tracked 48 £4.99; next day before 1pm £9.99",
     rating: 4.5,
     headlineFrom: 139.49,
     gphcRegNo: "1093332",
@@ -108,7 +108,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
   {
     id: "i-prescribe",
     name: "i-Prescribe",
-    deliveryNote: "Royal Mail Tracked from £4.99",
+    deliveryNote: "Royal Mail Tracked 24 £5.99; Tracked 48 £4.99",
     notes: "Code First10 (£10 off first order) · Code HW360 on repeat orders",
     rating: 4.7,
     headlineFrom: 160.0,
@@ -150,7 +150,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
   {
     id: "solira",
     name: "Solira",
-    deliveryNote: "£3.99 Royal Mail Tracked 24 chilled",
+    deliveryNote: "Royal Mail Tracked 24 chilled £3.99; Tracked 48 £2.99 (tablets only)",
     notes: "Pharmacist-led consultation included · Tracked chilled delivery",
     rating: 4.7,
     headlineFrom: 119.99,
@@ -160,7 +160,7 @@ export const MOUNJARO_UK_COMPARE_PROVIDERS_BASE: MounjaroUkProviderCompare[] = [
       "2.5mg": 119.99,
       "5mg": 159.99,
       "7.5mg": 219.99,
-      "10mg": 249.99,
+      "10mg": 244.99,
       "12.5mg": 259.99,
       "15mg": 279.99,
     },

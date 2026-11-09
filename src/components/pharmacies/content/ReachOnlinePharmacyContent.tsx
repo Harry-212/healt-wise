@@ -88,10 +88,9 @@ export default function ReachOnlinePharmacyContent() {
           <p className={paragraphClass}>
             Orders approved by 4pm are dispatched the next day, using Royal
             Mail or courier tracked delivery. Delivery is charged separately
-            from the treatment price: standard delivery (2-3 days) costs
-            £4.99, tracked 24/48-hour delivery costs £5.99, and guaranteed
-            1pm next-day delivery for temperature-controlled products costs
-            £9.99.
+            from the treatment price: Tracked 48 delivery costs £4.99,
+            Tracked 24 delivery costs £5.99, and next-day delivery for orders
+            placed before 1pm costs £9.99.
           </p>
           <p className={paragraphClass}>
             Reach includes a short online clinical consultation with every
