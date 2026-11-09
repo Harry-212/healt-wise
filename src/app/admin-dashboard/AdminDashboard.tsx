@@ -41,7 +41,7 @@ function LockedCell({
 
 /** Agreed definition of the price stored in the main comparison tables. */
 const STANDARD_PRICE_RULE =
-  "Healthwise360's main comparison tables use the normal publicly available price for one treatment unit or monthly supply, without a promotional code, new-customer discount or long-term commitment. Delivery and compulsory fees are displayed separately where verified. Introductory, subscription and discount-code prices may be shown separately with their conditions.";
+  "Healthwise360's main comparison tables use the normal retail price confirmed for each selected partner for one treatment unit or monthly supply, without a promotional code, new-customer discount or long-term commitment. Delivery and compulsory fees are displayed separately where verified. Introductory, subscription and discount-code prices may be shown separately with their conditions.";
 
 /** Round to 2 decimal places (pence) for stable price editing. */
 function roundMoney(n: number): number {

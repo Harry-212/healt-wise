@@ -24,7 +24,7 @@ export const SSOT_PAGE_FAQS: { question: string; answer: string }[] = [
   {
     question: "How often are prices checked?",
     answer:
-      "Prices are typically checked monthly using various sources. Readers should check the date attached to the relevant comparison and confirm current prices directly with the provider.",
+      "Prices are typically checked monthly using information supplied directly by selected partner pharmacies and providers, including confirmation by email where applicable. Readers should check the date attached to the relevant comparison and confirm current prices directly with the provider.",
   },
   {
     question: "Does Healthwise360 accept sponsorship?",

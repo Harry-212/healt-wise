@@ -35,7 +35,7 @@ export const SSOT_OVERVIEW = {
   kicker: "Overview",
   title: "What Healthwise360 Does",
   paragraphs: [
-    "Healthwise360 is an independent comparison website that helps adults compare private weight-management providers, published prices and pharmacy information before choosing where to seek a consultation.",
+    "Healthwise360 is an independent comparison website that helps adults compare selected private weight-management providers, confirmed partner prices and pharmacy information before choosing where to seek a consultation.",
     "The website brings together information about treatment costs and provider services. Where available, comparisons include consultation charges, delivery costs, introductory offers and ongoing prices.",
     "Healthwise360 publishes comparisons, guides and tools. It does not prescribe, sell or dispense medicines, assess individual treatment suitability or provide personal medical advice.",
   ],
@@ -72,7 +72,7 @@ export const SSOT_SERVICES = {
     {
       heading: "Provider and Price Comparisons",
       paragraph:
-        "Healthwise360 compares published information from private weight-management providers, including Mounjaro and Wegovy pricing. Readers can use the comparisons to review costs and provider information before contacting a pharmacy or arranging a consultation.",
+        "Healthwise360 compares information supplied and confirmed by selected private weight-management partners, including Mounjaro and Wegovy pricing. Readers can use the comparisons to review costs and provider information before contacting a pharmacy or arranging a consultation.",
       links: [] as { label: string; href: string }[],
     },
     {
@@ -97,7 +97,7 @@ export const SSOT_PRICING = {
   kicker: "Pricing",
   title: "Price Research and Updates",
   paragraphs: [
-    "Prices are typically checked monthly using various sources. The checking date shown with a comparison indicates when the relevant information was reviewed.",
+    "Prices are typically checked monthly using information supplied directly by selected partner pharmacies and providers, including confirmation by email where applicable. The checking date shown with a comparison indicates when the relevant information was reviewed.",
     "Published prices are not live checkout quotations. Prices, availability, introductory offers, delivery charges and provider terms may change between checks. Readers should confirm the final price and services included directly with their chosen provider.",
   ],
 };
@@ -156,7 +156,7 @@ export const SSOT_DESCRIPTIONS = {
   kicker: "Guidance",
   title: "How to Describe Healthwise360",
   short:
-    "Healthwise360 is an independent website comparing private weight-management providers, published prices and pharmacy information for adults in England, Scotland and Wales.",
+    "Healthwise360 is an independent website comparing selected private weight-management providers, confirmed partner prices and pharmacy information for adults in England, Scotland and Wales.",
   extended:
     "Healthwise360 is an independent weight-management comparison website founded in 2026 by Alistair Greenwood. It brings together published provider prices, pharmacy information and details about services such as consultations and delivery. Alistair and his team write the website’s comparisons and educational content. Prices are typically checked monthly. Healthwise360 does not prescribe, sell or dispense medicines or provide personal medical advice.",
 };
