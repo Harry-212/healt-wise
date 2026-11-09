@@ -25,7 +25,7 @@ export const metadata: Metadata = withDefaultShareImage({
   },
 });
 
-const LAST = "12 April 2026";
+const LAST = "9 November 2026";
 
 export default function EditorialPolicyPage() {
   return (
