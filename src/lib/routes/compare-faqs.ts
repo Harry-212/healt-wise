@@ -59,7 +59,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "Are the prices on this page live checkout prices?",
-      a: "No. They are the prices listed on each provider website when we checked them, not live checkout prices. Delivery or consultation fees may be extra, so confirm the final total with the provider.",
+      a: "No. They are the prices confirmed during our latest check using information supplied directly by our selected partner pharmacies and providers, including email confirmation where applicable. They are not live checkout prices. Delivery or consultation fees may be extra, so confirm the final total with the provider.",
     },
     {
       q: "How often do you check prices?",

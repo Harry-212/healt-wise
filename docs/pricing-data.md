@@ -2,7 +2,7 @@
 
 ## The standard-price rule
 
-Healthwise360's main comparison tables use the normal publicly available price for one treatment unit or monthly supply, without a promotional code, new-customer discount or long-term commitment. Delivery and compulsory fees are displayed separately where verified. Introductory, subscription and discount-code prices may be shown separately with their conditions.
+Healthwise360's main comparison tables use the normal retail price confirmed for each selected partner for one treatment unit or monthly supply, without a promotional code, new-customer discount or long-term commitment. Delivery and compulsory fees are displayed separately where verified. Introductory, subscription and discount-code prices may be shown separately with their conditions.
 
 The same wording is in `scripts/price-scraper/lib/standard-price-rule.mjs`, the methodology page, the admin dashboard and the monthly report. `npm run prices:test` fails if any of them drifts from this text.
 

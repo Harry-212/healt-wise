@@ -36,7 +36,7 @@ const ACTIVE_SECTION_TOP_PX = 148;
 const HERO_END_ID = "methodology-hero-end";
 /** Agreed definition of the price shown in the main comparison tables. */
 const STANDARD_PRICE_RULE =
-  "Healthwise360's main comparison tables use the normal publicly available price for one treatment unit or monthly supply, without a promotional code, new-customer discount or long-term commitment. Delivery and compulsory fees are displayed separately where verified. Introductory, subscription and discount-code prices may be shown separately with their conditions.";
+  "Healthwise360's main comparison tables use the normal retail price confirmed for each selected partner for one treatment unit or monthly supply, without a promotional code, new-customer discount or long-term commitment. Delivery and compulsory fees are displayed separately where verified. Introductory, subscription and discount-code prices may be shown separately with their conditions.";
 /** SiteEndSection — hide TOC before recommended articles carousel. */
 const KEEP_EXPLORING_ID = "keep-exploring";
 const SCROLL_OFFSET_PX = 112;
@@ -832,7 +832,7 @@ export default function MethodologyClient() {
                   <div className="rounded-xl border border-slate-200/60 bg-slate-50 p-5">
                     <p className="text-xs leading-relaxed text-slate-500 font-medium uppercase tracking-wider mb-2">Patient Check Guidelines:</p>
                     <p className="text-sm leading-relaxed text-slate-600">
-                      While we review and update comparison tables constantly, no comparison engine can guarantee prices are accurate down to the exact second. Always double-check final checkout costs, shipping policies, subscription clauses, and pharmacy credentials on the provider’s secure site before making a payment.
+                      While we review and update comparison tables regularly, no comparison engine can guarantee prices are accurate down to the exact second. Always double-check final checkout costs, shipping policies, subscription clauses, and pharmacy credentials on the provider’s secure site before making a payment.
                     </p>
                   </div>
                 </section>
@@ -856,7 +856,7 @@ export default function MethodologyClient() {
                       "Public UK Healthcare Regulations",
                       "NICE & NHS Clinical Guidelines",
                       "MHRA Safety Alerts & Guidance",
-                      "Verified Direct-Provider Clarifications"
+                      "Direct confirmations and price schedules supplied by partner pharmacies and providers, including by email"
                     ].map((tag, idx) => (
                       <span key={idx} className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-3xs">
                         <FileText className="h-3.5 w-3.5 text-slate-400" />

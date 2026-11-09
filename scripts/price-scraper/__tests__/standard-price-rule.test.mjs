@@ -7,7 +7,7 @@ const read = (p) => fs.readFileSync(new URL(`../../../${p}`, import.meta.url), "
 
 test("the standard-price rule keeps its agreed elements", () => {
   for (const part of [
-    "normal publicly available price",
+    "normal retail price confirmed for each selected partner",
     "one treatment unit or monthly supply",
     "without a promotional code, new-customer discount or long-term commitment",
     "Delivery and compulsory fees are displayed separately where verified",

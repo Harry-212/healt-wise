@@ -5,4 +5,4 @@
  * docs/pricing-data.md carry exactly this wording.
  */
 export const STANDARD_PRICE_RULE =
-  "Healthwise360's main comparison tables use the normal publicly available price for one treatment unit or monthly supply, without a promotional code, new-customer discount or long-term commitment. Delivery and compulsory fees are displayed separately where verified. Introductory, subscription and discount-code prices may be shown separately with their conditions.";
+  "Healthwise360's main comparison tables use the normal retail price confirmed for each selected partner for one treatment unit or monthly supply, without a promotional code, new-customer discount or long-term commitment. Delivery and compulsory fees are displayed separately where verified. Introductory, subscription and discount-code prices may be shown separately with their conditions.";

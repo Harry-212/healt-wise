@@ -37,7 +37,7 @@ export default function EditorialPolicyPage() {
         pagePath="/editorial-policy"
       />
     <LegalScrollyClient
-      eyebrow="Health Wise"
+      eyebrow="HEALTHWISE360"
       title="Editorial policy"
       lead="How we write, verify, and update content—so you can trust what you read and know where the boundaries are."
       lastUpdated={LAST}
@@ -46,7 +46,7 @@ export default function EditorialPolicyPage() {
           kicker: "Mission",
           title: "Independent information for UK patients",
           paragraphs: [
-            "Health Wise publishes comparison and educational material about weight-loss treatments available in the UK, with an emphasis on regulated pathways, transparent methodology, and plain-language explanations.",
+            "Healthwise360 publishes comparison and educational material about weight-loss treatments available in the UK, with an emphasis on regulated pathways, transparent methodology, and plain-language explanations.",
             "We are not a pharmacy, clinic, or prescription service. Nothing on this site replaces personalised medical advice from a qualified prescriber who knows your history.",
           ],
         },
@@ -62,7 +62,7 @@ export default function EditorialPolicyPage() {
           kicker: "Accuracy",
           title: "How we aim to keep content reliable",
           paragraphs: [
-            "We cross-check pricing and policy details against public sources and provider pages, and we describe our verification approach where it helps you validate claims yourself (for example, GPhC registration checks).",
+            "We check pricing and service details using information supplied directly by selected partner pharmacies and providers, including confirmation by email where applicable. We verify pharmacy registration using official GPhC records and use authoritative sources for regulatory and clinical information.",
             "Markets and prices change quickly. When we discover a material error, we correct the page and, when practical, note the change at the bottom of the article or in our changelog-style updates.",
           ],
           bullets: [
