@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { load as parseYaml } from "js-yaml";
+import { BLOG_ARTICLE_FOLDER_SLUGS } from "@/lib/generated/blog-article-slugs";
 import type { BlogFeedTag } from "@/lib/blog-feed";
 import {
   blogMetaToFeedArticle,
@@ -428,19 +429,21 @@ export function getAllSlugs(): string[] {
  */
 function blogArticleSlugsOnDisk(): string[] {
   const base = path.join(process.cwd(), "src", "app", "blog");
-  if (!fs.existsSync(base)) return [];
-  return fs
-    .readdirSync(base, { withFileTypes: true })
-    .filter((e) => e.isDirectory())
-    .map((e) => e.name)
-    .filter(
-      (slug) =>
-        slug !== "[slug]" &&
-        slug !== "page" &&
-        !REDIRECTED_BLOG_SLUGS.has(slug) &&
-        fs.existsSync(path.join(base, slug, "page.tsx")),
-    )
-    .sort();
+  // The deployed server has no src folder (the sitemap is rebuilt there when prices are
+  // saved), so fall back to the list generated at build time.
+  const slugs = !fs.existsSync(base)
+    ? [...BLOG_ARTICLE_FOLDER_SLUGS]
+    : fs
+        .readdirSync(base, { withFileTypes: true })
+        .filter((e) => e.isDirectory())
+        .map((e) => e.name)
+        .filter(
+          (slug) =>
+            slug !== "[slug]" &&
+            slug !== "page" &&
+            fs.existsSync(path.join(base, slug, "page.tsx")),
+        );
+  return slugs.filter((slug) => !REDIRECTED_BLOG_SLUGS.has(slug)).sort();
 }
 
 /** Unique `/blog/:slug` targets for sitemap and llms (markdown + disk routes + indexed UK location articles). */
