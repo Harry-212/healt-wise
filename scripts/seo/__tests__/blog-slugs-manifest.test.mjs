@@ -16,9 +16,11 @@ test("the list is not empty and has no dynamic or pagination folders", () => {
   assert.ok(!slugs.includes("[slug]") && !slugs.includes("page"));
 });
 
-test("blog.ts falls back to the generated list when src/app/blog is missing", () => {
+test("blog.ts reads the generated list and never the source folders at runtime", () => {
   const t = readFileSync("src/lib/blog.ts", "utf8");
-  assert.ok(t.includes("BLOG_ARTICLE_FOLDER_SLUGS"));
+  const fn = t.slice(t.indexOf("function blogArticleSlugsOnDisk"), t.indexOf("/** Unique `/blog/:slug` targets"));
+  assert.ok(fn.includes("BLOG_ARTICLE_FOLDER_SLUGS"));
+  assert.ok(!/readdirSync|existsSync|process\.cwd/.test(fn), "no disk access in the slug list");
 });
 
 test("npm run build regenerates the list first", () => {

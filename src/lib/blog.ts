@@ -428,22 +428,12 @@ export function getAllSlugs(): string[] {
  * Excludes dynamic `[slug]` (Markdown) and `page` (pagination).
  */
 function blogArticleSlugsOnDisk(): string[] {
-  const base = path.join(process.cwd(), "src", "app", "blog");
-  // The deployed server has no src folder (the sitemap is rebuilt there when prices are
-  // saved), so fall back to the list generated at build time.
-  const slugs = !fs.existsSync(base)
-    ? [...BLOG_ARTICLE_FOLDER_SLUGS]
-    : fs
-        .readdirSync(base, { withFileTypes: true })
-        .filter((e) => e.isDirectory())
-        .map((e) => e.name)
-        .filter(
-          (slug) =>
-            slug !== "[slug]" &&
-            slug !== "page" &&
-            fs.existsSync(path.join(base, slug, "page.tsx")),
-        );
-  return slugs.filter((slug) => !REDIRECTED_BLOG_SLUGS.has(slug)).sort();
+  // Never read src/app/blog here: the sitemap and llms.txt are rebuilt on the server when
+  // prices are saved, and the deployed server does not hold the source folders (an earlier
+  // attempt that only fell back when the folder was missing still lost 23 articles). The list
+  // is generated from the folders before every build (scripts/generate-blog-slugs.mjs) and a
+  // test checks the committed file matches them.
+  return BLOG_ARTICLE_FOLDER_SLUGS.filter((slug) => !REDIRECTED_BLOG_SLUGS.has(slug)).sort();
 }
 
 /** Unique `/blog/:slug` targets for sitemap and llms (markdown + disk routes + indexed UK location articles). */
