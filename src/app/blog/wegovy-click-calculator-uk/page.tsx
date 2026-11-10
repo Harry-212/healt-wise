@@ -10,7 +10,7 @@ import { SITE_ARTICLE_AUTHOR, SITE_BRAND_NAME } from "@/lib/site-brand";
 
 const PATH = "/blog/wegovy-click-calculator-uk";
 const TITLE =
-  "How Many Clicks Is a Wegovy Dose? FlexTouch Chart UK";
+  "Wegovy Clicks per Dose: FlexTouch Chart UK";
 const DESCRIPTION =
   "How many clicks is your Wegovy dose? FlexTouch click chart for every UK pen strength, the 7.2 mg update and what the clicks mean.";
 const HERO_IMAGE = `${siteOrigin()}${blogImgPath(WEGOVY_CLICK_CALCULATOR_UK_HERO_WEBP)}`;
