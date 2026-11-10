@@ -395,7 +395,8 @@ export default function GuideMounjaroSideEffects() {
         <GuideParagraph>
           <strong>Avoid dehydration.</strong> The leaflet says fluid loss from nausea, vomiting or diarrhoea can reduce
           kidney function, and that it is important to avoid dehydration by drinking plenty of fluids. Contact your
-          doctor with any questions.
+          doctor with any questions. For food ideas when you feel sick, see{" "}
+          <IL href="/helpful-guides/mounjaro-nutrition-guide-uk">what to eat on Mounjaro with nausea</IL>.
         </GuideParagraph>
         <GuideParagraph>
           <strong>Low blood sugar.</strong> If you use Mounjaro with a sulphonylurea or insulin, the leaflet lists signs
