@@ -7,10 +7,27 @@ import BlogArticleHeroImage from "@/components/blog/BlogArticleHeroImage";
 import type { UkWeightLossLocation } from "@/lib/data/uk-weight-loss-locations";
 import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 import { getProvider } from "@/lib/data/providers";
+import {
+  MOUNJARO_DOSE_KEYS,
+  MOUNJARO_UK_COMPARE_PROVIDERS,
+  type MounjaroUkProviderCompare,
+} from "@/lib/data/mounjaro-uk-compare-providers";
+import {
+  WEGOVY_DOSE_KEYS,
+  WEGOVY_UK_COMPARE_PROVIDERS,
+  formatWegovyPriceCell,
+  type WegovyUkProviderCompare,
+} from "@/lib/data/wegovy-uk-compare-providers";
 
 type Props = {
   loc: UkWeightLossLocation;
   shareUrl: string;
+  /**
+   * Live price rows from the central store (admin edits + monthly update), read
+   * on the server. Without them the page falls back to the static seed rows.
+   */
+  mounjaroProviders?: MounjaroUkProviderCompare[];
+  wegovyProviders?: WegovyUkProviderCompare[];
 };
 
 const TOC = [
@@ -79,23 +96,10 @@ const PARTNER_CARDS = [
   },
 ];
 
-const MOUNJARO_PRICES = [
-  { partner: "DoseDirect", p2_5: "£144.99", p5: "£165.99", p7_5: "£217.99", p10: "£241.99", p12_5: "£258.99", p15: "£278.99", fee: "Included" },
-  { partner: "i-Prescribe", p2_5: "£160.00", p5: "£190.00", p7_5: "£260.00", p10: "£290.00", p12_5: "£320.00", p15: "£340.00", fee: "Included" },
-  { partner: "Pharmacy + Me", p2_5: "£132.99", p5: "£149.99", p7_5: "£205.99", p10: "£232.99", p12_5: "£251.99", p15: "£272.99", fee: "Included" },
-  { partner: "Reach Online Pharmacy", p2_5: "£154.99", p5: "£175.99", p7_5: "£241.99", p10: "£265.99", p12_5: "£296.99", p15: "£322.99", fee: "Included" },
-  { partner: "SheMed", p2_5: "£229.00", p5: "£229.00", p7_5: "£279.00", p10: "£279.00", p12_5: "£319.00", p15: "£319.00", fee: "Included" },
-  { partner: "Solira", p2_5: "£119.99", p5: "£159.99", p7_5: "£219.99", p10: "£244.99", p12_5: "£259.99", p15: "£279.99", fee: "Included" },
-];
-
-const WEGOVY_PRICES = [
-  { partner: "DoseDirect", p0_25: "£99.99", p0_5: "£114.99", p1: "£119.99", p1_7: "£149.99", p2_4: "£199.99", p7_2: "Not listed", fee: "Included" },
-  { partner: "i-Prescribe", p0_25: "£129.99", p0_5: "£149.99", p1: "£169.99", p1_7: "£199.99", p2_4: "£229.99", p7_2: "Not listed", fee: "Included" },
-  { partner: "Pharmacy + Me", p0_25: "£80.99", p0_5: "£80.99", p1: "£80.99", p1_7: "£136.99", p2_4: "£192.99", p7_2: "£194.99", fee: "Included" },
-  { partner: "Reach Online Pharmacy", p0_25: "£94.99", p0_5: "£99.99", p1: "£103.99", p1_7: "£174.99", p2_4: "£228.99", p7_2: "£272.99", fee: "Included" },
-  { partner: "SheMed", p0_25: "£139.00", p0_5: "£139.00", p1: "£139.00", p1_7: "£159.00", p2_4: "£159.00", p7_2: "£239.00", fee: "Included" },
-  { partner: "Solira", p0_25: "£64.99", p0_5: "£87.99", p1: "£99.99", p1_7: "£139.99", p2_4: "£189.99", p7_2: "£229.00", fee: "Included" },
-];
+/** Consultation column: derived from the central price rows, never typed here. */
+function consultationLabel(included: boolean): string {
+  return included ? "Included" : "Not included";
+}
 
 const FAQS = [
   {
@@ -144,7 +148,26 @@ const FAQS = [
   },
 ];
 
-export default function LondonLocationContent({ loc, shareUrl }: Props) {
+export default function LondonLocationContent({
+  loc,
+  shareUrl,
+  mounjaroProviders = MOUNJARO_UK_COMPARE_PROVIDERS,
+  wegovyProviders = WEGOVY_UK_COMPARE_PROVIDERS,
+}: Props) {
+  // Partners stay A to Z (PARTNER_CARDS order); every price comes from the central rows.
+  const mounjaroRows = PARTNER_CARDS.flatMap((c) => {
+    const row =
+      mounjaroProviders.find((p) => p.id === c.providerId) ??
+      MOUNJARO_UK_COMPARE_PROVIDERS.find((p) => p.id === c.providerId);
+    return row ? [{ name: c.name, row }] : [];
+  });
+  const wegovyRows = PARTNER_CARDS.flatMap((c) => {
+    const row =
+      wegovyProviders.find((p) => p.id === c.providerId) ??
+      WEGOVY_UK_COMPARE_PROVIDERS.find((p) => p.id === c.providerId);
+    return row ? [{ name: c.name, row }] : [];
+  });
+  const formatMounjaro = (n: number) => (n > 0 ? `£${n.toFixed(2)}` : "Not listed");
   const [darkMode, setDarkMode] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -438,16 +461,13 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                       </tr>
                     </thead>
                     <tbody className={`divide-y ${tableBorderCls}`}>
-                      {MOUNJARO_PRICES.map((r) => (
-                        <tr key={r.partner} className={tableRowHover}>
-                          <td className="px-3.5 py-3 font-medium text-slate-900 dark:text-slate-100">{r.partner}</td>
-                          <td className="px-3 py-3">{r.p2_5}</td>
-                          <td className="px-3 py-3">{r.p5}</td>
-                          <td className="px-3 py-3">{r.p7_5}</td>
-                          <td className="px-3 py-3">{r.p10}</td>
-                          <td className="px-3 py-3">{r.p12_5}</td>
-                          <td className="px-3 py-3">{r.p15}</td>
-                          <td className="px-3 py-3 text-emerald-600 font-medium">{r.fee}</td>
+                      {mounjaroRows.map(({ name, row }) => (
+                        <tr key={row.id} className={tableRowHover}>
+                          <td className="px-3.5 py-3 font-medium text-slate-900 dark:text-slate-100">{name}</td>
+                          {MOUNJARO_DOSE_KEYS.map((k) => (
+                            <td key={k} className="px-3 py-3">{formatMounjaro(row.prices[k])}</td>
+                          ))}
+                          <td className="px-3 py-3 text-emerald-600 font-medium">{consultationLabel(row.consultationIncluded)}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -476,16 +496,17 @@ export default function LondonLocationContent({ loc, shareUrl }: Props) {
                       </tr>
                     </thead>
                     <tbody className={`divide-y ${tableBorderCls}`}>
-                      {WEGOVY_PRICES.map((r) => (
-                        <tr key={r.partner} className={tableRowHover}>
-                          <td className="px-3.5 py-3 font-medium text-slate-900 dark:text-slate-100">{r.partner}</td>
-                          <td className="px-3 py-3">{r.p0_25}</td>
-                          <td className="px-3 py-3">{r.p0_5}</td>
-                          <td className="px-3 py-3">{r.p1}</td>
-                          <td className="px-3 py-3">{r.p1_7}</td>
-                          <td className="px-3 py-3">{r.p2_4}</td>
-                          <td className="px-3 py-3">{r.p7_2}</td>
-                          <td className="px-3 py-3 text-emerald-600 font-medium">{r.fee}</td>
+                      {wegovyRows.map(({ name, row }) => (
+                        <tr key={row.id} className={tableRowHover}>
+                          <td className="px-3.5 py-3 font-medium text-slate-900 dark:text-slate-100">{name}</td>
+                          {WEGOVY_DOSE_KEYS.map((k) => (
+                            <td key={k} className="px-3 py-3">
+                              {row.prices[k] === "N/A" || row.prices[k] === "TBC"
+                                ? "Not listed"
+                                : formatWegovyPriceCell(row.prices[k])}
+                            </td>
+                          ))}
+                          <td className="px-3 py-3 text-emerald-600 font-medium">{consultationLabel(row.consultationIncluded)}</td>
                         </tr>
                       ))}
                     </tbody>
