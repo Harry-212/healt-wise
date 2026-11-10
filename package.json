@@ -6,6 +6,7 @@
     "clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true});\"",
     "dev": "next dev",
     "dev:webpack": "next dev --webpack",
+    "prebuild": "node scripts/generate-blog-slugs.mjs",
     "build": "next build --webpack",
     "build:turbo": "next build",
     "start": "next start",
