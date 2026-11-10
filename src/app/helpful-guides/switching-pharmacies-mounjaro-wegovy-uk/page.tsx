@@ -19,10 +19,10 @@ import {
 
 export const metadata = buildGuideShareMetadata({
   slug: "switching-pharmacies-mounjaro-wegovy-uk",
-  title: "How to Switch Pharmacy for Mounjaro or Wegovy (UK 2026)",
+  title: "Switch Pharmacy for Mounjaro or Wegovy (UK)",
   description:
     "Switch pharmacy for Mounjaro or Wegovy in 5 simple steps. What to tell the new pharmacy, how to avoid a missed dose and how to find a cheaper price.",
-  openGraphTitle: "How to Switch Pharmacy for Mounjaro or Wegovy (UK 2026)",
+  openGraphTitle: "Switch Pharmacy for Mounjaro or Wegovy (UK)",
 });
 
 

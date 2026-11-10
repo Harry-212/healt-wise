@@ -14,7 +14,7 @@ import {
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
-const TITLE = "How to Check an Online Pharmacy Is GPhC Registered (UK)";
+const TITLE = "Check an Online Pharmacy Is GPhC Registered";
 const DESCRIPTION =
   "Check if a UK online pharmacy is safe in 3 steps: find the GPhC number, check the register and expect a health questionnaire. Red flags to avoid.";
 
