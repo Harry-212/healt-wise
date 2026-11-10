@@ -894,7 +894,14 @@ export default function WhatIsMounjaroPage() {
               <p className="text-base leading-relaxed text-slate-700">
                 <strong>What can help:</strong> eat small meals, stop eating when
                 you feel full, drink water, and tell your prescriber if it does
-                not get better.
+                not get better. For more, read our guide to{" "}
+                <Link
+                  href="/helpful-guides/mounjaro-nutrition-guide-uk"
+                  className="font-medium text-emerald-700 underline underline-offset-2 hover:text-emerald-900"
+                >
+                  Mounjaro nutrition and foods to avoid
+                </Link>
+                .
               </p>
 
               <div className="rounded-xl border border-red-200 bg-red-50/70 p-5 text-sm text-red-950 space-y-2">

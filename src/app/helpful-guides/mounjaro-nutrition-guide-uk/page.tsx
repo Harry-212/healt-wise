@@ -1,12 +1,12 @@
 import { helpfulGuidePath } from "@/lib/helpful-guide-slugs";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { buildGuideShareMetadata } from "@/lib/seo/guide-share-metadata";
+import { SITE_ARTICLE_AUTHOR_NAME } from "@/lib/site-brand";
 import {
   GuideLayout,
   GuideSection,
   GuideParagraph,
   GuideBulletList,
-  GuideKeyTakeaways,
   GuideDisclaimer,
   GuideFaq,
   GuideReferences,
@@ -16,93 +16,153 @@ import {
   EL,
 } from "@/components/guide/GuideLayout";
 
+const PAGE_TITLE =
+  "What to Eat on Mounjaro in the UK: Foods to Eat, Foods to Avoid and Side Effects";
+const META_DESCRIPTION =
+  "What to eat on Mounjaro in the UK: what the leaflet and NHS say about food, foods to avoid, nausea, alcohol and when to speak to your prescriber.";
+const INTRO =
+  "Mounjaro (tirzepatide) reduces appetite, so many people eat less than before. That makes it worth knowing what to eat on Mounjaro, which foods can make side effects worse, and where to get personal advice. This guide sets out what the patient leaflet, NHS England and NHS hospital patient information say. It is for information only. It is not a diet plan and it does not replace advice from your prescriber or a dietitian.";
+
 export const metadata = buildGuideShareMetadata({
   slug: "mounjaro-nutrition-guide-uk",
-  title: "Mounjaro Nutrition Guide UK: What to Eat",
-  description: "Mounjaro controls appetite—but what you eat determines results quality. A practical, evidence-based guide to nutrition while using tirzepatide in the UK.",
-  openGraphTitle: "Mounjaro Nutrition Guide UK: What to Eat",
+  title: "What to Eat on Mounjaro UK: Foods to Avoid",
+  description: META_DESCRIPTION,
+  openGraphTitle: "What to Eat on Mounjaro UK: Foods to Avoid",
 });
 
-
 const TOC = [
-  { id: "why-nutrition-matters", label: "Why Nutrition Still Matters" },
-  { id: "protein", label: "1. Prioritise Protein" },
-  { id: "carbs", label: "2. Choose Low-Glycaemic Carbs" },
-  { id: "fibre", label: "3. Increase Fibre Intake" },
-  { id: "fats", label: "4. Include Healthy Fats" },
-  { id: "hydration", label: "5. Stay Hydrated" },
-  { id: "processed-foods", label: "6. Limit Processed Foods" },
-  { id: "mindful-eating", label: "7. Practice Mindful Eating" },
-  { id: "balanced-meals", label: "8. Build Balanced Meals" },
+  { id: "leaflet", label: "What the leaflet says about eating on Mounjaro" },
+  { id: "mounjaro-diet", label: "Is there a Mounjaro diet?" },
+  { id: "best-foods", label: "Best foods to eat on Mounjaro" },
+  { id: "foods-to-avoid", label: "Foods to avoid or limit on Mounjaro" },
+  {
+    id: "side-effects-food",
+    label: "What to eat with nausea, constipation, diarrhoea or heartburn",
+  },
+  { id: "low-appetite", label: "What to eat on Mounjaro when you are not hungry" },
+  { id: "drinks-alcohol", label: "Drinks, fluids and alcohol on Mounjaro" },
+  { id: "meal-ideas", label: "Meal ideas on Mounjaro" },
+  { id: "urgent-help", label: "When to speak to your prescriber or get urgent help" },
+  { id: "nhs-dietitians", label: "NHS support and dietitians" },
+  { id: "faq", label: "Frequently asked questions" },
   { id: "references", label: "Sources & Further Reading" },
-  { id: "faq", label: "Frequently Asked Questions" },
 ];
 
+/** Visible FAQ text and FAQPage schema are both built from this array, so they can never differ. */
 const FAQ_ITEMS = [
   {
-    q: "Do I still need to eat well if Mounjaro reduces my appetite?",
-    a: "Yes—this is one of the most important points. Mounjaro reduces how much you want to eat, but it does not determine what you eat. Poor food quality on a smaller volume leads to nutrient deficiencies, muscle loss, and fatigue. The quality of your diet remains a major factor in determining your long-term results.",
+    q: "What should I eat on Mounjaro?",
+    a: "There is no set list. The NHS Eatwell Guide is a good guide to a balanced diet: fruit and vegetables, starchy carbohydrates, protein foods, dairy or alternatives, and a small amount of oils. Small, regular meals suit many people because Mounjaro slows stomach emptying.",
   },
   {
-    q: "How much protein should I eat while on Mounjaro?",
-    a: "Most clinical guidance for weight loss recommends 1.2–1.6g of protein per kilogram of body weight per day. This is higher than the standard RDA because a meaningful proportion of weight loss can come from muscle mass without adequate protein intake. A registered dietitian can calculate a personalised target.",
+    q: "Do I still need to eat well if my appetite is low?",
+    a: "Yes. Mounjaro changes how much you want to eat, not what your body needs. When you eat less, the food you choose matters more. If you are eating very little, speak to your prescriber.",
+  },
+  {
+    q: "What foods should I avoid on Mounjaro?",
+    a: "Nothing has to be avoided completely. NHS hospital patient information names very sweet, spicy, fatty and fried foods, large portions and strong smelling foods as common triggers for nausea. A food diary can help you spot your own.",
+  },
+  {
+    q: "How much protein should I eat on Mounjaro?",
+    a: "The leaflet gives no figure. How much protein you need depends on your age, size, activity and health, so a dietitian can work out an amount for you. Protein foods include fish, eggs, poultry, beans, lentils, tofu and dairy.",
   },
   {
     q: "Should I avoid carbohydrates on Mounjaro?",
-    a: "No—carbohydrates are not inherently harmful. The focus should be on quality: choose low-glycaemic, high-fibre options (oats, brown rice, whole grains, vegetables) that provide sustained energy and support blood sugar stability. Highly refined carbohydrates (white bread, sugary snacks) offer little nutritional value and can cause blood sugar spikes.",
+    a: "There is no instruction to avoid them. The NHS Eatwell Guide includes starchy carbohydrates, with wholegrain choices for extra fibre. If you want to change how you eat, discuss it with your prescriber or a dietitian first.",
   },
   {
-    q: "What should I eat when I have very little appetite on Mounjaro?",
-    a: "When appetite is significantly suppressed, prioritise nutrient-dense foods that deliver maximum nutrition per calorie: eggs, Greek yoghurt, lean protein, avocado, and vegetables. Liquid nutrition (protein shakes, smoothies) can help maintain intake when solid food is unappealing. Never force large meals—listen to your body, but aim for nutritional completeness.",
+    q: "Can I drink alcohol on Mounjaro?",
+    a: "The NHS says it is best to avoid alcohol while using tirzepatide, because it can make side effects such as nausea worse. Ask your prescriber about your own situation.",
   },
   {
-    q: "Are there foods I should avoid completely on Mounjaro?",
-    a: "There are no absolute prohibitions, but certain foods are worth limiting. Ultra-processed foods, sugary snacks, and high-saturated-fat options tend to be calorie-dense, nutritionally poor, and can worsen nausea—a common early side effect of Mounjaro. Alcohol can also interact with blood sugar regulation and is best consumed minimally.",
+    q: "Can I follow keto or intermittent fasting on Mounjaro?",
+    a: "The leaflet does not set a diet, and this page cannot say whether a particular diet suits you. Skipping meals or cutting out food groups can be hard when your appetite is already reduced, and it can matter if you take insulin or a sulphonylurea. Speak to your prescriber or a dietitian first.",
   },
   {
-    q: "Can I follow a specific diet plan (keto, Mediterranean, intermittent fasting) on Mounjaro?",
-    a: "Many dietary approaches are compatible with Mounjaro. The Mediterranean diet, in particular, aligns well—it is high in protein, fibre, and healthy fats, and has strong evidence for cardiovascular and metabolic health. Ketogenic approaches can work but require careful monitoring. Intermittent fasting is generally compatible, but should be discussed with your clinician as it may affect blood sugar management.",
+    q: "What should I eat on injection day?",
+    a: "No food has to be eaten or avoided on injection day. The leaflet says the weekly dose can be taken at any time of day, with or without meals. If you feel sick afterwards, small plain meals are usually easier.",
+  },
+];
+
+const SIDE_EFFECT_ROWS: { effect: string; consider: string; against: string }[] = [
+  {
+    effect: "Nausea or vomiting",
+    consider:
+      "Small, regular meals and snacks, because an empty stomach can make nausea worse. Eating slowly. Sitting upright or slightly reclined after eating. Plain, dry foods such as toast or crackers. Ginger or peppermint tea. Sipping fluids between meals.",
+    against: "Very sweet, spicy, fatty or fried foods. Large portions. Strong smelling foods.",
+  },
+  {
+    effect: "Constipation",
+    consider:
+      "Plenty of fluids. Fruit and vegetables. Wholegrain foods, beans and pulses. Staying active. Speak to a pharmacist before using a laxative.",
+    against: "Processed foods and refined carbohydrates. Too much alcohol or caffeine.",
+  },
+  {
+    effect: "Diarrhoea",
+    consider:
+      "Plenty of fluids to replace what is lost. Small meals of soft, easily digested foods. A food diary to spot triggers. Speak to a doctor if it does not settle.",
+    against:
+      "High-fibre foods while it lasts. Spicy or fatty foods. Alcohol, strong tea or coffee, and pure fruit juice.",
+  },
+  {
+    effect: "Heartburn or reflux",
+    consider:
+      "Smaller amounts at regular times. Not skipping meals. Sitting upright to eat. Finishing the evening meal a few hours before bed.",
+    against:
+      "Large meals. Lying down soon after eating. Alcohol. For some people, tea, coffee, fizzy drinks, citrus, tomato, garlic, spicy or fatty foods.",
   },
 ];
 
 const REFERENCES = [
   {
-    label: "NHS Eatwell Guide",
-    description:
-      "The UK government's evidence-based framework for a balanced diet, covering proportions of each food group for adults.",
-    href: "https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/",
+    label: "Mounjaro KwikPen patient information leaflet (emc)",
+    description: "The UK patient leaflet: use with a reduced-calorie diet, dehydration advice and when to get urgent help.",
+    href: "https://www.medicines.org.uk/emc/product/15483/pil",
   },
   {
-    label: "British Dietetic Association — Protein and muscle health",
-    description:
-      "BDA evidence summary on protein requirements for weight management and muscle preservation.",
-    href: "https://www.bda.uk.com/resource/healthy-eating.html",
-  },
-  {
-    label: "NHS — Fibre in your diet",
-    description:
-      "NHS guidance on dietary fibre—recommended intake, best sources, and health benefits.",
-    href: "https://www.nhs.uk/live-well/eat-well/digestive-health/how-to-get-more-fibre-into-your-diet/",
+    label: "NHS England — weight management injections",
+    description: "How tirzepatide (Mounjaro) is offered on the NHS, and the diet and activity support that goes with it.",
+    href: "https://www.england.nhs.uk/medicines-for-obesity/weight-management-injections/",
   },
   {
     label: "NICE — Tirzepatide for managing overweight and obesity (TA1026)",
-    description:
-      "NICE guidance on tirzepatide including the importance of lifestyle intervention (diet and exercise) alongside medication.",
+    description: "NICE recommends tirzepatide as an addition to a reduced-calorie diet and increased physical activity.",
     href: "https://www.nice.org.uk/guidance/ta1026",
   },
   {
-    label: "Mounjaro calorie cycling guide — Health Wise",
-    description:
-      "How to structure calorie intake throughout the week to complement Mounjaro and prevent plateaus.",
-    href: "/helpful-guides/mounjaro-calorie-cycling-weight-loss",
-    external: false,
+    label: "NHS — The Eatwell Guide",
+    description: "The UK's standard picture of a balanced diet, with the proportion of each food group.",
+    href: "https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/",
   },
   {
-    label: "Why weight loss slows on Mounjaro — Health Wise",
-    description:
-      "Understanding Mounjaro plateaus, metabolic adaptation, and the role of nutrition in long-term progress.",
-    href: "/helpful-guides/mounjaro-weight-loss-plateau",
-    external: false,
+    label: "NHS — How to get more fibre into your diet",
+    description: "NHS advice on fibre, including the 30 g a day target for adults.",
+    href: "https://www.nhs.uk/live-well/eat-well/digestive-health/how-to-get-more-fibre-into-your-diet/",
+  },
+  {
+    label: "Cambridge University Hospitals — dietary advice for people with type 2 diabetes using tirzepatide (Mounjaro)",
+    description: "NHS hospital patient information used for the food advice on side effects, small meals and low appetite.",
+    href: "https://www.cuh.nhs.uk/patient-information/dietary-advice-for-people-with-type-2-diabetes-using-tirzepatide-mounjaro/",
+  },
+  {
+    label: "NHS — Tirzepatide (Mounjaro)",
+    description: "NHS medicine information, including food, drink and alcohol with tirzepatide.",
+    href: "https://www.nhs.uk/medicines/tirzepatide/",
+  },
+  {
+    label: "NHS — Water, drinks and hydration",
+    description: "How much fluid adults are advised to drink and which drinks count.",
+    href: "https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/water-drinks-nutrition/",
+  },
+  {
+    label: "MHRA Yellow Card scheme",
+    description: "Report a suspected side effect of a medicine.",
+    href: "https://yellowcard.mhra.gov.uk",
+  },
+  {
+    label: "British Dietetic Association — find a dietitian",
+    description: "Directory of dietitians.",
+    href: "https://www.bda.uk.com/find-a-dietitian.html",
   },
 ];
 
@@ -111,8 +171,7 @@ const RELATED_GUIDES = [
     href: "/helpful-guides/mounjaro-menopause-weight-loss-uk",
     category: "Medications",
     title: "Mounjaro and Menopause",
-    description:
-      "A UK guide to Mounjaro, menopause and weight.",
+    description: "A UK guide to Mounjaro, menopause and weight.",
   },
   {
     href: "/blog/why-does-belly-fat-increase-after-40",
@@ -121,36 +180,16 @@ const RELATED_GUIDES = [
     description:
       "How hormones and fat storage change in midlife, explained in plain UK language.",
   },
-  {
-    href: "/helpful-guides/mounjaro-calorie-cycling-weight-loss",
-    category: "Nutrition",
-    title: "Mounjaro Calorie Cycling: A Smarter Approach to Weight Loss",
-    description:
-      "Vary your daily intake to prevent metabolic adaptation and improve long-term adherence alongside Mounjaro.",
-  },
-  {
-    href: "/helpful-guides/mounjaro-weight-loss-plateau",
-    category: "Medications",
-    title: "Why Weight Loss Slows on Mounjaro: Plateaus Explained",
-    description:
-      "What plateaus mean on tirzepatide, and practical steps to keep progress on track.",
-  },
-  {
-    href: "/helpful-guides/mounjaro-multivitamins-uk",
-    category: "Nutrition",
-    title: "Mounjaro Multivitamins UK: Do You Need Them?",
-    description:
-      "When supplements help on a reduced appetite—and when food-first nutrition is enough.",
-  },
 ];
+
+const PAGE_PATH = helpfulGuidePath("mounjaro-nutrition-guide-uk");
 
 const SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Mounjaro Nutrition Guide UK: What to Eat",
-  description:
-    "Mounjaro controls appetite—but what you eat determines the quality of your results. A practical, evidence-based guide to nutrition while using tirzepatide in the UK.",
-  author: { "@type": "Organization", name: "Healthwise360 Research Team" },
+  headline: PAGE_TITLE,
+  description: META_DESCRIPTION,
+  author: { "@type": "Organization", name: SITE_ARTICLE_AUTHOR_NAME },
   publisher: {
     "@type": "Organization",
     name: "Healthwise360",
@@ -159,11 +198,12 @@ const SCHEMA = {
       url: `${siteOrigin()}/logo-health-wise.webp`,
     },
   },
+  inLanguage: "en-GB",
   datePublished: "2026-04-09",
-  dateModified: "2026-04-09",
+  dateModified: "2026-11-10",
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": `${siteOrigin()}${helpfulGuidePath("mounjaro-nutrition-guide-uk")}`,
+    "@id": `${siteOrigin()}${PAGE_PATH}`,
   },
 };
 
@@ -183,289 +223,308 @@ export default function GuideMounjaroNutrition() {
       slug="mounjaro-nutrition-guide-uk"
       category="Nutrition"
       categorySlug="nutrition"
-      title="Mounjaro Nutrition Guide UK: What to Eat for Better Weight Loss Results"
-      description="Mounjaro significantly reduces appetite—but the quality of what you eat still determines the quality of your results. This evidence-based guide covers the key dietary principles for getting the most from tirzepatide treatment."
-      readTime="5 min read"
-      lastUpdated="April 2026"
+      title={PAGE_TITLE}
+      description={INTRO}
+      readTime="9 min read"
+      lastUpdated="November 2026"
       toc={TOC}
       schemaJson={{ "@context": "https://schema.org", "@graph": [SCHEMA, FAQ_SCHEMA] }}
     >
-      <GuideSection id="why-nutrition-matters" heading="Why Nutrition Still Matters">
+      <GuideCallout variant="tip">
+        <p className="font-semibold">At a glance</p>
+        <ul className="mt-2 list-disc space-y-1 pl-5">
+          <li>
+            There is no set Mounjaro diet. The leaflet and NHS England describe Mounjaro as used
+            with a reduced-calorie diet and regular physical activity.
+          </li>
+          <li>
+            Mounjaro slows how quickly the stomach empties, so large, rich or fatty meals can bring
+            on nausea or heartburn.
+          </li>
+          <li>Side effects are most common when you start and when the dose goes up.</li>
+          <li>
+            Drinking enough matters, because vomiting or diarrhoea can lead to dehydration.
+          </li>
+          <li>
+            If you are unsure what to eat, ask your prescriber, pharmacist or a registered
+            dietitian.
+          </li>
+        </ul>
+        <p className="mt-3">
+          New to the medicine? Read <IL href="/what-is-mounjaro">what Mounjaro is</IL>.
+        </p>
+      </GuideCallout>
+
+      <GuideSection id="leaflet" heading="What the leaflet says about eating on Mounjaro">
         <GuideParagraph>
-          <IL href="/what-is-mounjaro">Mounjaro (tirzepatide)</IL> works by
-          suppressing appetite and regulating blood sugar making it
-          significantly easier to eat less. But the medication controls
-          quantity, not quality. What you choose to eat within your reduced
-          intake determines your energy levels, body composition, and the
-          sustainability of your results.</GuideParagraph>
-        <GuideParagraph>
-          A structured nutrition approach alongside{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL> improves:
-</GuideParagraph>
+          The UK patient leaflet for Mounjaro KwikPen does not list foods to eat or avoid. It makes
+          two points that matter for eating:
+        </GuideParagraph>
         <GuideBulletList
           items={[
-            "Energy levels throughout the day — nutrient-dense food sustains energy even in a calorie deficit",
-            "Fat loss efficiency — protein and fibre preserve muscle mass and maximise fat loss relative to total weight lost",
-            "Long-term sustainability — a balanced, flexible diet is easier to maintain than extreme restriction",
+            "Mounjaro is used together with a reduced-calorie diet and increased physical activity, and the leaflet asks you to follow the dietary and activity advice from your doctor, nurse or pharmacist.",
+            "When you start treatment you may lose fluids through vomiting, nausea or diarrhoea. This can reduce kidney function, so the leaflet says it is important to avoid dehydration by drinking plenty of fluids, and to contact your doctor if you have concerns.",
           ]}
         />
-        <GuideCallout variant="info">
-          The{" "}
-          <EL href="https://www.nice.org.uk/guidance/ta1026">
-            NICE guidance on tirzepatide (TA1026)
+        <GuideParagraph>
+          NHS England says the same about diet: if Mounjaro is recommended you need to eat a
+          balanced, reduced-calorie diet and take part in regular physical activity while taking it.
+        </GuideParagraph>
+      </GuideSection>
+
+      <GuideSection id="mounjaro-diet" heading="Is there a Mounjaro diet?">
+        <GuideParagraph>
+          No. There is no official Mounjaro diet, and no named diet plan comes with the medicine.
+          NICE recommends tirzepatide as an addition to a reduced-calorie diet and increased
+          physical activity, not as a replacement for them.
+        </GuideParagraph>
+        <GuideParagraph>
+          That is why any “Mounjaro diet plan” you find online, including PDFs and seven day plans,
+          is one company&apos;s suggestion and not part of the leaflet or NHS guidance. A plan that
+          suits you depends on your health, your other medicines and your food preferences. A
+          registered dietitian can build one with you.
+        </GuideParagraph>
+        <GuideParagraph>
+          Some people also ask about changing how many calories they eat across the week. Our guide
+          to{" "}
+          <IL href="/helpful-guides/mounjaro-calorie-cycling-weight-loss">
+            calorie cycling on Mounjaro
+          </IL>{" "}
+          explains what is known.
+        </GuideParagraph>
+      </GuideSection>
+
+      <GuideSection id="best-foods" heading="Best foods to eat on Mounjaro">
+        <GuideParagraph>
+          No food is known to be a must on Mounjaro. The NHS Eatwell Guide is the UK&apos;s standard
+          picture of a balanced diet, and it is a sensible starting point whether or not you take
+          Mounjaro. It shows:
+        </GuideParagraph>
+        <GuideBulletList
+          items={[
+            "Fruit and vegetables: just over a third of the plate. The NHS suggests five portions a day.",
+            "Starchy carbohydrates: just over a third. Wholegrain choices such as wholemeal bread, brown rice, oats and potatoes with their skins add fibre.",
+            "Protein foods: beans, pulses, fish, eggs, poultry and other meat, tofu and similar foods. Dairy or dairy alternatives sit alongside them.",
+            "Oils and spreads: a small amount, mostly unsaturated.",
+          ]}
+        />
+        <GuideParagraph>
+          The NHS says adults should aim for 30 g of fibre a day, and most people eat less. Fibre
+          can help with constipation, which is a common Mounjaro side effect.
+        </GuideParagraph>
+        <GuideParagraph>
+          Protein foods are filling. How much protein you need depends on your age, size, activity
+          and health, so this page gives no figure. A dietitian can work out an amount for you.
+        </GuideParagraph>
+        <GuideParagraph>
+          When you eat less overall, it helps if the food you do eat is varied. If you are eating
+          very little or avoiding whole food groups, tell your prescriber.
+        </GuideParagraph>
+        <GuideParagraph>
+          For more on two of these food groups, see our guides to{" "}
+          <IL href="/blog/protein-for-glp-1-users-uk">protein for GLP-1 users</IL> and{" "}
+          <IL href="/blog/fibre-for-glp-1-users">fibre for GLP-1 users</IL>.
+        </GuideParagraph>
+      </GuideSection>
+
+      <GuideSection id="foods-to-avoid" heading="Foods to avoid or limit on Mounjaro">
+        <GuideParagraph>
+          Nothing has to be avoided completely, and there is no list from the leaflet. Because
+          Mounjaro slows stomach emptying, some foods tend to make side effects worse. NHS hospital
+          patient information names very sweet, spicy, fatty and fried foods, large portions and
+          strong smelling foods. The examples below are ours:
+        </GuideParagraph>
+        <GuideBulletList
+          items={[
+            "Fatty and fried foods. Chips, fried chicken, pastries and creamy sauces take longer to digest and can bring on nausea, bloating or heartburn.",
+            "Very sweet foods and drinks. Sugary snacks and sweet drinks can add to nausea in some people.",
+            "Spicy foods. These can irritate the stomach and add to heartburn or diarrhoea.",
+            "Large portions. A big meal on top of slower stomach emptying is a common trigger. Small, regular meals are usually easier.",
+            "Strong smelling foods, if you feel sick.",
+            "Fizzy drinks, which some people find worsen reflux.",
+            "Alcohol. See the drinks section below.",
+          ]}
+        />
+        <GuideParagraph>
+          Keeping a food and symptom diary can help you spot which foods bother you. Triggers vary
+          from person to person.
+        </GuideParagraph>
+      </GuideSection>
+
+      <GuideSection
+        id="side-effects-food"
+        heading="What to eat with nausea, constipation, diarrhoea or heartburn"
+      >
+        <GuideParagraph>
+          These side effects are common, especially at the start and after a dose increase. The
+          table below follows an NHS hospital patient leaflet written for people with type 2
+          diabetes who use tirzepatide. The food advice for side effects applies more widely, but it
+          is general information and not personal advice.
+        </GuideParagraph>
+        <div className="w-full overflow-x-auto rounded-xl border border-slate-200">
+          <table className="w-full min-w-[40rem] border-collapse text-left text-sm">
+            <thead>
+              <tr className="border-b border-slate-200 bg-slate-50">
+                <th scope="col" className="px-4 py-3 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  Side effect
+                </th>
+                <th scope="col" className="px-4 py-3 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  What people are advised to consider
+                </th>
+                <th scope="col" className="px-4 py-3 text-xs font-bold uppercase tracking-wide text-slate-500">
+                  What is advised against
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 bg-white">
+              {SIDE_EFFECT_ROWS.map((row) => (
+                <tr key={row.effect}>
+                  <th scope="row" className="px-4 py-3 align-top font-medium text-slate-900">
+                    {row.effect}
+                  </th>
+                  <td className="px-4 py-3 align-top leading-relaxed text-slate-700">{row.consider}</td>
+                  <td className="px-4 py-3 align-top leading-relaxed text-slate-700">{row.against}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <GuideParagraph>
+          For more on each side effect, see our{" "}
+          <IL href="/helpful-guides/mounjaro-side-effects-uk">Mounjaro side effects guide</IL>. For
+          constipation in particular, read our{" "}
+          <IL href="/helpful-guides/mounjaro-constipation-relief-uk">
+            Mounjaro constipation relief guide
+          </IL>
+          .
+        </GuideParagraph>
+      </GuideSection>
+
+      <GuideSection id="low-appetite" heading="What to eat on Mounjaro when you are not hungry">
+        <GuideParagraph>
+          Many people notice they feel full quickly or forget to eat. NHS hospital patient
+          information suggests small, regular meals with snacks in between, because an empty stomach
+          can make nausea worse. Eating slowly gives your stomach time to settle.
+        </GuideParagraph>
+        <GuideParagraph>
+          Plain, nourishing choices are easier when appetite is low: yoghurt, eggs, soup, porridge,
+          fruit, or a small sandwich. Sipping fluids through the day helps too.
+        </GuideParagraph>
+        <GuideParagraph>
+          If you are eating very little for several days, speak to your prescriber. If weight loss
+          is slowing instead, see{" "}
+          <IL href="/helpful-guides/mounjaro-weight-loss-plateau">
+            why weight loss slows on Mounjaro
+          </IL>
+          .
+        </GuideParagraph>
+      </GuideSection>
+
+      <GuideSection id="drinks-alcohol" heading="Drinks, fluids and alcohol on Mounjaro">
+        <GuideParagraph>
+          <span className="font-semibold">Fluids.</span> The patient leaflet says it is important to
+          avoid dehydration, because vomiting, nausea or diarrhoea can cause you to lose fluids. The
+          NHS suggests 6 to 8 glasses of fluid a day for most adults, and more when it is hot or
+          when you are losing fluid. Water, lower-fat milk, sugar-free drinks and tea and coffee all
+          count.
+        </GuideParagraph>
+        <GuideParagraph>
+          <span className="font-semibold">Alcohol.</span> The NHS says it is best to avoid alcohol
+          while using tirzepatide, because it can make side effects such as nausea worse. NHS
+          hospital patient information also advises limiting it with diarrhoea or constipation, and
+          avoiding it with reflux. If you also take insulin or a sulphonylurea, alcohol can add to
+          the risk of low blood sugar, so ask your diabetes team.
+        </GuideParagraph>
+        <GuideParagraph>
+          <span className="font-semibold">Fizzy and sweet drinks.</span> Some people find these
+          worsen reflux. A food and symptom diary can show whether they affect you.
+        </GuideParagraph>
+      </GuideSection>
+
+      <GuideSection id="meal-ideas" heading="Meal ideas on Mounjaro">
+        <GuideParagraph>
+          These are ideas based on the NHS Eatwell Guide, not a plan. Choose what suits you, and
+          adjust for allergies, medicines and your dietitian&apos;s advice.
+        </GuideParagraph>
+        <GuideBulletList
+          items={[
+            "Breakfast: porridge with fruit. Eggs on wholemeal toast. Plain yoghurt with berries.",
+            "Lunch: bean and vegetable soup with bread. A chicken and salad wrap. Tuna and sweetcorn on a jacket potato.",
+            "Dinner: baked fish with potatoes and green vegetables. Lentil dhal with rice. Chicken and vegetable stir fry with noodles.",
+            "Snacks: fruit. Plain yoghurt. Oatcakes with cottage cheese. A small handful of unsalted nuts.",
+          ]}
+        />
+        <GuideParagraph>
+          On days when you feel sick, plain foods such as toast, crackers, rice or a banana are often
+          easier.
+        </GuideParagraph>
+        <GuideParagraph>
+          Some people ask whether they need extra vitamins when they eat less. See our{" "}
+          <IL href="/helpful-guides/mounjaro-multivitamins-uk">Mounjaro and multivitamins guide</IL>.
+        </GuideParagraph>
+      </GuideSection>
+
+      <GuideSection
+        id="urgent-help"
+        heading="When to speak to your prescriber or get urgent help"
+      >
+        <GuideParagraph>
+          Get medical help straight away if you have severe pain in your stomach and back that does
+          not go away, with or without vomiting. The patient leaflet lists this as a possible sign
+          of inflammation of the pancreas (pancreatitis).
+        </GuideParagraph>
+        <GuideParagraph>Contact your prescriber, GP or pharmacist if:</GuideParagraph>
+        <GuideBulletList
+          items={[
+            "vomiting or diarrhoea means you cannot keep fluids down, or it does not settle",
+            "you are eating very little for several days",
+            "heartburn, constipation or nausea is severe or does not improve",
+            "you take insulin or a sulphonylurea, because your doses may need to change when you eat less",
+            "you are thinking about starting a restrictive diet",
+          ]}
+        />
+        <GuideParagraph>
+          You can also report a suspected side effect through the{" "}
+          <EL href="https://yellowcard.mhra.gov.uk">MHRA Yellow Card scheme</EL>.
+        </GuideParagraph>
+      </GuideSection>
+
+      <GuideSection id="nhs-dietitians" heading="NHS support and dietitians">
+        <GuideParagraph>
+          A registered dietitian can set personal food targets that this page cannot. Ask your GP
+          about dietitian support, or search the British Dietetic Association&apos;s{" "}
+          <EL href="https://www.bda.uk.com/find-a-dietitian.html">directory of dietitians</EL>.
+        </GuideParagraph>
+        <GuideParagraph>
+          NHS England says that tirzepatide (Mounjaro) is offered on the NHS in a phased way, first
+          to people with the highest clinical need, with support that can include dietitians. See
+          the{" "}
+          <EL href="https://www.england.nhs.uk/medicines-for-obesity/weight-management-injections/">
+            NHS England page on weight management injections
           </EL>{" "}
-          explicitly states that Mounjaro should be used as an adjunct to a
-          reduced-calorie diet and increased physical activity—not as a
-          standalone treatment. Nutrition is not optional; it is part of the
-          clinical framework.
-        </GuideCallout>
+          to check how it applies to you.
+        </GuideParagraph>
       </GuideSection>
 
-      <GuideSection id="protein" heading="1. Prioritise Protein">
-        <GuideParagraph>
-          Protein is the most important macronutrient to prioritise while using{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL>. When in a calorie
-          deficit, the body can break down muscle tissue for energy a process
-          that slows metabolism and reduces long term results. Adequate protein
-          intake helps prevent this.
-</GuideParagraph>
-        <GuideParagraph>
-          Protein supports:
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Muscle preservation — critical during weight loss to maintain metabolic rate",
-            "Satiety — protein is the most filling macronutrient, supporting Mounjaro's appetite-suppressing effect",
-            "Metabolic function — protein has a higher thermic effect than carbohydrates or fats (your body burns more calories digesting it)",
-          ]}
-        />
-        <GuideParagraph>
-          Best protein sources for Mounjaro patients:
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Lean meats — chicken breast, turkey, lean beef",
-            "Fish and seafood — salmon, cod, tuna, prawns",
-            "Eggs — one of the most nutrient-dense, versatile protein sources",
-            "Dairy — Greek yoghurt, cottage cheese, low-fat cheese",
-            "Plant proteins — lentils, chickpeas, tofu, edamame, tempeh",
-          ]}
-        />
-        <GuideCallout variant="tip">
-          Target approximately 1.2–1.6g of protein per kilogram of body weight
-          per day. For a 90kg individual, that is 108–144g of protein daily. A
-          registered dietitian can calculate a more precise target based on
-          your situation.
-        </GuideCallout>
-      </GuideSection>
-
-      <GuideSection id="carbs" heading="2. Choose Low-Glycaemic Carbs">
-        <GuideParagraph>
-          Carbohydrates are not the enemy but the type matters. Low glycaemic
-          index (GI) foods release energy more slowly, helping to stabilise
-          blood sugar levels. This is particularly important alongside{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL>, which already works in
-          part by improving insulin response.
-</GuideParagraph>
-        <GuideParagraph>
-          Good low GI carbohydrate choices include:
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Oats — slow-releasing energy, high in beta-glucan (soluble fibre)",
-            "Brown rice and quinoa — higher fibre, more sustained energy than white rice",
-            "Whole grain bread and pasta — lower GI than refined versions",
-            "Sweet potato — more nutritious and slower-releasing than white potato",
-            "Non-starchy vegetables — broccoli, spinach, peppers, courgette",
-          ]}
-        />
-        <GuideParagraph>
-          Limit high GI refined carbohydrates (white bread, pastries, sugary
-          breakfast cereals)   they cause rapid blood sugar spikes and
-          subsequent hunger, working against Mounjaro's stabilising effect.</GuideParagraph>
-      </GuideSection>
-
-      <GuideSection id="fibre" heading="3. Increase Fibre Intake">
-        <GuideParagraph>
-          Fibre is consistently under consumed in UK diets, yet it plays a
-          critical role in supporting weight loss and gut health. The{" "}
-          <EL href="https://www.nhs.uk/live-well/eat-well/digestive-health/how-to-get-more-fibre-into-your-diet/">
-            NHS recommends 30g of fibre per day
-          </EL>{" "}
-          for adults most people consume considerably less.
-</GuideParagraph>
-        <GuideParagraph>
-          Fibre improves:
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Digestion — supports healthy gut motility and reduces constipation (a potential side effect of GLP-1 medications)",
-            "Satiety — soluble fibre slows gastric emptying and helps you feel full longer",
-            "Gut health — fermentable fibres feed beneficial gut bacteria, supporting the microbiome",
-          ]}
-        />
-        <GuideParagraph>
-          High fibre foods to include:
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Vegetables — especially leafy greens, broccoli, Brussels sprouts",
-            "Fruits — berries, apples, pears (with skin), kiwi",
-            "Legumes — lentils, chickpeas, black beans, kidney beans",
-            "Whole grains — oats, barley, brown rice, whole wheat",
-          ]}
-        />
-      </GuideSection>
-
-      <GuideSection id="fats" heading="4. Include Healthy Fats">
-        <GuideParagraph>
-          Dietary fat is essential not optional. Healthy fats support brain
-          function, hormonal balance, and the absorption of fat soluble
-          vitamins (A, D, E, K). When appetite is significantly reduced by{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL>, ensuring adequate fat
-          intake from quality sources becomes especially important.
-</GuideParagraph>
-        <GuideParagraph>
-          Good sources of healthy fats:
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Avocado — rich in monounsaturated fats and potassium",
-            "Nuts and seeds — almonds, walnuts, chia seeds, flaxseeds",
-            "Olive oil — primary fat source in the Mediterranean diet; anti-inflammatory",
-            "Oily fish — salmon, mackerel, sardines (also excellent protein sources)",
-            "Eggs — contain both protein and healthy fat in a single food",
-          ]}
-        />
-        <GuideParagraph>
-          Limit saturated fats (found in fatty meats, butter, full fat dairy,
-          and ultra processed foods) and avoid trans fats (partially
-          hydrogenated oils found in some processed baked goods) entirely.
-</GuideParagraph>
-      </GuideSection>
-
-      <GuideSection id="hydration" heading="5. Stay Hydrated">
-        <GuideParagraph>
-          Adequate hydration supports appetite control, digestion, and
-          metabolism all of which interact with how{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL> functions. Dehydration
-          can also temporarily affect the scale, masking genuine fat loss and
-          causing unnecessary concern.</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Aim for 6–8 glasses (approximately 1.5–2 litres) of water per day — more if physically active or in warm weather",
-            "Drink before meals — a glass of water before eating can enhance Mounjaro's satiety effect",
-            "Limit caffeinated and alcoholic drinks — they can contribute to dehydration and may affect blood sugar regulation",
-            "Herbal teas and sparkling water are good alternatives to plain water for variety",
-          ]}
-        />
-      </GuideSection>
-
-      <GuideSection id="processed-foods" heading="6. Limit Processed Foods">
-        <GuideParagraph>
-          Ultra processed foods are a key driver of poor nutritional outcomes
-          even at lower calorie levels. They tend to be low in protein, fibre,
-          and micronutrients while being high in refined carbohydrates,
-          saturated fats, sugar, and sodium.
-</GuideParagraph>
-        <GuideParagraph>
-          Limit or avoid:
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Sugary snacks and confectionery — deliver empty calories with no nutritional benefit",
-            "Ultra-processed ready meals — typically high in sodium, saturated fat, and additives",
-            "High-saturated-fat fast food — calorie-dense and nutritionally poor",
-            "Sugary drinks — rapidly absorbed glucose that spikes blood sugar despite Mounjaro's regulation",
-          ]}
-        />
-        <GuideCallout variant="warning">
-          Some patients on Mounjaro report that greasy or high-fat meals worsen
-          nausea—a common early side effect. Limiting processed and fatty foods
-          can also reduce gastrointestinal discomfort during the initial weeks
-          of treatment. See the{" "}
-          <IL href="/helpful-guides/mounjaro-side-effects-uk">common Mounjaro side effects</IL> listed in the
-          UK patient leaflet.
-        </GuideCallout>
-      </GuideSection>
-
-      <GuideSection id="mindful-eating" heading="7. Practice Mindful Eating">
-        <GuideParagraph>
-          <IL href="/what-is-mounjaro">Mounjaro</IL> significantly reduces
-          appetite, but it does not eliminate the habit of eating quickly or
-          eating past fullness. Mindful eating techniques help you tune into
-          your body's actual hunger and satiety signals particularly important
-          when those signals are being pharmacologically altered.
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Eat slowly — it takes approximately 20 minutes for fullness signals to reach the brain; rushing a meal often leads to overeating",
-            "Remove distractions — eating in front of screens disrupts awareness of portion size and satiety",
-            "Recognise fullness cues — learn to stop eating when satisfied, not when the plate is empty; Mounjaro lowers the threshold where fullness occurs",
-            "Chew thoroughly — supports digestion and slows the eating pace naturally",
-          ]}
-        />
-      </GuideSection>
-
-      <GuideSection id="balanced-meals" heading="8. Build Balanced Meals">
-        <GuideParagraph>
-          The simplest practical framework is to ensure every meal contains a
-          combination of protein, complex carbohydrates, and healthy fat. This
-          approach naturally improves satiety, blood sugar stability, and
-          nutritional completeness without requiring calorie counting.
-</GuideParagraph>
-        <GuideParagraph>
-          A balanced meal example:
-</GuideParagraph>
-        <GuideBulletList
-          items={[
-            "Grilled salmon (protein + healthy fat) + brown rice or quinoa (complex carb) + roasted vegetables (fibre + micronutrients)",
-            "Chicken breast (protein) + sweet potato (low-GI carb) + spinach salad with olive oil dressing (fibre + healthy fat)",
-            "Lentil and vegetable curry (plant protein + fibre) + whole grain bread (complex carb) + Greek yoghurt (protein + probiotic)",
-          ]}
-        />
-        <GuideParagraph>
-          For evidence based UK dietary guidance, the{" "}
-          <EL href="https://www.nhs.uk/live-well/eat-well/food-guidelines-and-food-labels/the-eatwell-guide/">
-            NHS Eatwell Guide
-          </EL>{" "}
-          provides a practical framework for proportioning food groups. The
-          British Dietetic Association's{" "}
-          <EL href="https://www.bda.uk.com/resource/weight-loss.html">
-            weight management resources
-          </EL>{" "}
-          are also valuable for those seeking professional dietary support.</GuideParagraph>
-        <GuideCallout variant="tip">
-          Nutrition is the multiplier—not the replacement—for{" "}
-          <IL href="/what-is-mounjaro">Mounjaro</IL>. The medication manages
-          appetite; your food choices determine the quality of what you build
-          on that foundation.
-        </GuideCallout>
-      </GuideSection>
-
-      <GuideKeyTakeaways
-        items={[
-          "Mounjaro controls how much you eat; nutrition determines the quality of your results.",
-          "Prioritise protein (1.2–1.6g/kg/day) to preserve muscle mass and support satiety during weight loss.",
-          "Choose low-GI carbohydrates and high-fibre foods to stabilise blood sugar and support digestion.",
-          "Include healthy fats (avocado, oily fish, nuts, olive oil) for hormonal balance and fat-soluble vitamin absorption.",
-          "Limit ultra-processed foods—they worsen nausea, offer poor nutrition, and undermine the quality of your weight loss.",
-          "Build balanced meals combining protein, complex carbs, and healthy fat; practice mindful eating to tune into satiety cues.",
-        ]}
+      <GuideFaq
+        items={FAQ_ITEMS}
+        heading="Frequently asked questions"
+        questionsAsHeadings
       />
 
       <GuideRelatedGuides guides={RELATED_GUIDES} />
       <GuideReferences items={REFERENCES} />
 
-      <GuideDisclaimer>
-        This guide is for informational purposes only and does not constitute
-        personalised dietary or medical advice. For a nutrition plan tailored
-        to your specific needs, consult a registered dietitian. Always discuss
-        significant dietary changes with your prescribing clinician while using{" "}
-        <IL href="/what-is-mounjaro">Mounjaro</IL>.
-      </GuideDisclaimer>
+      <p className="text-xs text-slate-400">
+        Written and maintained by the {SITE_ARTICLE_AUTHOR_NAME}. Last updated November 2026.
+      </p>
 
-      <GuideFaq items={FAQ_ITEMS} />
+      <GuideDisclaimer>
+        This guide is for informational purposes only and does not constitute personalised dietary
+        or medical advice. For a nutrition plan tailored to your specific needs, consult a registered
+        dietitian. Always discuss significant dietary changes with your prescribing clinician while
+        using <IL href="/what-is-mounjaro">Mounjaro</IL>.
+      </GuideDisclaimer>
     </GuideLayout>
   );
 }

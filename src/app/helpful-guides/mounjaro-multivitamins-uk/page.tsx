@@ -179,7 +179,8 @@ export default function GuideMounjaroVitamins() {
           appetite, leading to smaller portion sizes. While this is central to
           how it supports weight loss, it may also reduce overall nutrient
           intake particularly if meals become very small or food variety
-          decreases.
+          decreases. For food-first advice, see our guide on{" "}
+          <IL href="/helpful-guides/mounjaro-nutrition-guide-uk">what to eat on Mounjaro</IL>.
 </GuideParagraph>
         <GuideParagraph>
           A daily multivitamin can help:</GuideParagraph>
