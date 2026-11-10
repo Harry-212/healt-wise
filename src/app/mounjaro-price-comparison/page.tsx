@@ -622,6 +622,16 @@ export default function CompareMounjaroPricesUkPage() {
             </div>
           </div>
         </section>
+
+        <section id="mounjaro-also-searched-as" className="bg-white py-8 md:py-10">
+          <div className="mx-auto max-w-3xl px-4 md:px-8">
+            <p className="text-sm leading-relaxed text-slate-600 md:text-base">
+              <strong className="font-semibold text-slate-900">Mounjaro prices:</strong>{" "}
+              Also searched as: monjaro prices, munjaro prices, manjaro prices –
+              you&apos;re in the right place for Mounjaro pricing.
+            </p>
+          </div>
+        </section>
       </article>
     </>
   );
