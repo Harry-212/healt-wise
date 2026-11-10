@@ -42,7 +42,7 @@ export default function MounjaroClickCalculatorUkPage() {
   const pageUrl = `${siteOrigin()}${PATH}`;
   
   const webpage = {
-    "@type": "BlogPosting",
+    "@type": "WebPage",
     "@id": `${pageUrl}#webpage`,
     url: pageUrl,
     name: TITLE,
