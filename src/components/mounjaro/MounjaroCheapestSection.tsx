@@ -24,6 +24,11 @@ const CHEAPEST_WAY_STEPS = [
   },
 ];
 
+/** Formats a price gap in pence as pounds (e.g. 1195 -> £11.95); under £1 stays in pence. */
+function formatMargin(pence: number): string {
+  return pence >= 100 ? `£${(pence / 100).toFixed(2)}` : `${pence}p`;
+}
+
 export default function MounjaroCheapestSection({
   cheapestAcross,
   cheapestStarterPrice,
@@ -47,7 +52,7 @@ export default function MounjaroCheapestSection({
               <span key={ex.dose}>
                 {ex.provider} listed the lowest price for {ex.dose.replace("mg", " mg")},
                 {ex.marginPence > 0
-                  ? ` by just ${ex.marginPence}p`
+                  ? ` by just ${formatMargin(ex.marginPence)}`
                   : ""}
                 .{i < cheapestAcross.exceptions.length - 1 ? " " : " "}
               </span>
