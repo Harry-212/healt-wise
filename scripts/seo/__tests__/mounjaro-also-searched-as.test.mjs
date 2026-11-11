@@ -11,9 +11,13 @@ test("the 'Also searched as' line is on the Mounjaro price comparison page", () 
   const t = text();
   assert.ok(t.includes("Mounjaro prices:"));
   assert.ok(
-    t.includes("Also searched as: monjaro prices, munjaro prices, manjaro prices"),
+    t.includes("Also searched as: monjaro, munjaro &amp; manjaro prices"),
   );
-  assert.ok(t.includes("you&apos;re in the right place for Mounjaro pricing."));
+  assert.ok(
+    t.includes(
+      "you&apos;re in the right place for weight management price comparison.",
+    ),
+  );
 });
 
 test("the line is the last block of the article, after the closing call to action", () => {

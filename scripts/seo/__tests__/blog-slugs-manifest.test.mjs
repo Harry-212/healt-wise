@@ -6,8 +6,8 @@ import { listBlogArticleFolders, renderManifest } from "../../generate-blog-slug
 // The sitemap lost 23 blog articles whenever it was rebuilt on the server (no src folder there).
 // It now falls back to this build-time list, so the committed file must match the folders.
 test("the committed blog slug list matches the folders under src/app/blog", () => {
-  const committed = readFileSync("src/lib/generated/blog-article-slugs.ts", "utf8");
-  assert.equal(committed, renderManifest(listBlogArticleFolders()), "run: node scripts/generate-blog-slugs.mjs");
+  const committed = readFileSync("src/lib/generated/blog-article-slugs.ts", "utf8").replace(/\r\n/g, "\n");
+  assert.equal(committed, renderManifest(listBlogArticleFolders()).replace(/\r\n/g, "\n"), "run: node scripts/generate-blog-slugs.mjs");
 });
 
 test("the list is not empty and has no dynamic or pagination folders", () => {
