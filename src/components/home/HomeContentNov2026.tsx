@@ -3,84 +3,109 @@ import React from "react";
 import { ExternalLink } from "lucide-react";
 import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 import { getProvider } from "@/lib/data/providers";
+import {
+  MOUNJARO_DOSE_KEYS,
+  MOUNJARO_UK_COMPARE_PROVIDERS,
+  type MounjaroDoseColumnKey,
+  type MounjaroUkProviderCompare,
+} from "@/lib/data/mounjaro-uk-compare-providers";
+import {
+  WEGOVY_DOSE_KEYS,
+  WEGOVY_UK_COMPARE_PROVIDERS,
+  wegovyPriceAmount,
+  type WegovyDoseColumnKey,
+  type WegovyUkProviderCompare,
+} from "@/lib/data/wegovy-uk-compare-providers";
 
-const MJ_GLANCE_PRICES = [
-  { strength: "2.5mg", price: "£119.99" },
-  { strength: "5mg", price: "£149.99" },
-  { strength: "7.5mg", price: "£205.99" },
-  { strength: "10mg", price: "£232.99" },
-  { strength: "12.5mg", price: "£251.99" },
-  { strength: "15mg", price: "£272.99" },
-];
+function getMounjaroLowest(dose: MounjaroDoseColumnKey, providers: MounjaroUkProviderCompare[]): string {
+  const nums = providers.flatMap((p) => {
+    const v = p.prices[dose];
+    return typeof v === "number" && v > 0 ? [v] : [];
+  });
+  return nums.length ? `£${Math.min(...nums).toFixed(2)}` : "TBC";
+}
 
-const WEGOVY_GLANCE_PRICES = [
-  { strength: "0.25mg", price: "£64.99" },
-  { strength: "0.5mg", price: "£80.99" },
-  { strength: "1mg", price: "£80.99" },
-  { strength: "1.7mg", price: "£136.99" },
-  { strength: "2.4mg", price: "£159.00" },
-  { strength: "7.2mg", price: "£194.99" },
-];
+function getWegovyLowest(dose: WegovyDoseColumnKey, providers: WegovyUkProviderCompare[]): string {
+  const nums = providers.flatMap((p) => {
+    const v = wegovyPriceAmount(p.prices[dose]);
+    return v != null && v > 0 ? [v] : [];
+  });
+  return nums.length ? `£${Math.min(...nums).toFixed(2)}` : "TBC";
+}
 
-const PARTNER_CARDS_HOMEPAGE = [
+function getProviderMounjaroFrom(providerId: string, providers: MounjaroUkProviderCompare[]): string {
+  const p = providers.find((x) => x.id === providerId);
+  if (!p) return "";
+  const nums = MOUNJARO_DOSE_KEYS.flatMap((k) => {
+    const v = p.prices[k];
+    return typeof v === "number" && v > 0 ? [v] : [];
+  });
+  return nums.length ? `£${Math.min(...nums).toFixed(2)}` : "";
+}
+
+function getProviderWegovyFrom(providerId: string, providers: WegovyUkProviderCompare[]): string {
+  const p = providers.find((x) => x.id === providerId);
+  if (!p) return "";
+  const nums = WEGOVY_DOSE_KEYS.flatMap((k) => {
+    const v = wegovyPriceAmount(p.prices[k]);
+    return v != null && v > 0 ? [v] : [];
+  });
+  return nums.length ? `£${Math.min(...nums).toFixed(2)}` : "";
+}
+
+const PARTNER_STATIC_META = [
   {
     name: "DoseDirect",
     gphc: "9012841",
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012841",
-    mjFrom: "£144.99",
-    wgFrom: "£99.99",
     delivery: "Included",
     included: "Consultation, delivery, same day dispatch before 1pm, tracked cold chain packaging",
+    repeatOrder: "Same pen price; not separately stated",
     providerId: "dosedirect",
   },
   {
     name: "i-Prescribe",
     gphc: "9012850",
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012850",
-    mjFrom: "£160.00",
-    wgFrom: "£129.99",
     delivery: "£4.99 Tracked 48, £5.99 Tracked 24",
     included: "Consultation",
+    repeatOrder: "Same pen price; not separately stated",
     providerId: "i-prescribe",
   },
   {
     name: "Pharmacy + Me",
     gphc: "9012604",
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012604",
-    mjFrom: "£132.99",
-    wgFrom: "£80.99",
     delivery: "£4.99 (Royal Mail Tracked 24)",
     included: "Consultation",
+    repeatOrder: "Same pen price; not separately stated",
     providerId: "pharmacy-me",
   },
   {
     name: "Reach Online Pharmacy",
     gphc: "1093332",
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/1093332",
-    mjFrom: "£154.99",
-    wgFrom: "£94.99",
     delivery: "£4.99 Tracked 48, £5.99 Tracked 24, £9.99 next day before 1pm",
     included: "Consultation, needles and sharps container",
+    repeatOrder: "Same pen price; not separately stated",
     providerId: "reach-online-pharmacy",
   },
   {
     name: "SheMed",
     gphc: "9012578",
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9012578",
-    mjFrom: "£229.00",
-    wgFrom: "£139.00",
     delivery: "Free standard delivery",
     included: "Consultation, blood screening, delivery",
+    repeatOrder: "Same pen price; not separately stated",
     providerId: "shemed",
   },
   {
     name: "Solira",
     gphc: "9013213",
     gphcUrl: "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9013213",
-    mjFrom: "£119.99",
-    wgFrom: "£64.99",
     delivery: "£3.99 for pens, £2.99 for tablets",
     included: "Consultation",
+    repeatOrder: "Same pen price; not separately stated",
     providerId: "solira",
   },
 ];
@@ -94,58 +119,43 @@ const COST_FACTORS = [
   { cost: "Extras", check: "Whether needles and a sharps bin are included" },
 ];
 
-const FULL_PARTNER_TABLE = [
-  {
-    partner: "DoseDirect",
-    firstOrder: "Mounjaro from £144.99, Wegovy from £99.99",
-    repeatOrder: "Same pen price; not separately stated",
-    fee: "Included",
-    delivery: "Included",
-    included: "Consultation, delivery, same day dispatch before 1pm, tracked cold chain packaging",
-  },
-  {
-    partner: "i-Prescribe",
-    firstOrder: "Mounjaro from £160.00, Wegovy from £129.99",
-    repeatOrder: "Same pen price; not separately stated",
-    fee: "Included",
-    delivery: "£4.99 Tracked 48, £5.99 Tracked 24",
-    included: "Consultation",
-  },
-  {
-    partner: "Pharmacy + Me",
-    firstOrder: "Mounjaro from £132.99, Wegovy from £80.99",
-    repeatOrder: "Same pen price; not separately stated",
-    fee: "Included",
-    delivery: "£4.99 (Royal Mail Tracked 24)",
-    included: "Consultation",
-  },
-  {
-    partner: "Reach Online Pharmacy",
-    firstOrder: "Mounjaro from £154.99, Wegovy from £94.99",
-    repeatOrder: "Same pen price; not separately stated",
-    fee: "Included",
-    delivery: "£4.99 Tracked 48, £5.99 Tracked 24, £9.99 next day before 1pm",
-    included: "Consultation, needles and sharps container",
-  },
-  {
-    partner: "SheMed",
-    firstOrder: "Mounjaro from £229.00, Wegovy from £139.00",
-    repeatOrder: "Same pen price; not separately stated",
-    fee: "Included",
-    delivery: "Free standard delivery",
-    included: "Consultation, blood screening, delivery",
-  },
-  {
-    partner: "Solira",
-    firstOrder: "Mounjaro from £119.99, Wegovy from £64.99",
-    repeatOrder: "Same pen price; not separately stated",
-    fee: "Included",
-    delivery: "£3.99 for pens, £2.99 for tablets",
-    included: "Consultation",
-  },
-];
+type Props = {
+  mounjaroProviders?: MounjaroUkProviderCompare[];
+  wegovyProviders?: WegovyUkProviderCompare[];
+};
 
-export default function HomeContentNov2026() {
+export default function HomeContentNov2026({
+  mounjaroProviders = MOUNJARO_UK_COMPARE_PROVIDERS,
+  wegovyProviders = WEGOVY_UK_COMPARE_PROVIDERS,
+}: Props) {
+  const mjGlancePrices = MOUNJARO_DOSE_KEYS.map((dose) => ({
+    strength: dose,
+    price: getMounjaroLowest(dose, mounjaroProviders),
+  }));
+
+  const wegovyGlancePrices = WEGOVY_DOSE_KEYS.map((dose) => ({
+    strength: dose,
+    price: getWegovyLowest(dose, wegovyProviders),
+  }));
+
+  const partnerCards = PARTNER_STATIC_META.map((p) => ({
+    ...p,
+    mjFrom: getProviderMounjaroFrom(p.providerId, mounjaroProviders),
+    wgFrom: getProviderWegovyFrom(p.providerId, wegovyProviders),
+  }));
+
+  const fullPartnerTable = PARTNER_STATIC_META.map((p) => {
+    const mjFrom = getProviderMounjaroFrom(p.providerId, mounjaroProviders);
+    const wgFrom = getProviderWegovyFrom(p.providerId, wegovyProviders);
+    return {
+      partner: p.name,
+      firstOrder: `Mounjaro from ${mjFrom}, Wegovy from ${wgFrom}`,
+      repeatOrder: p.repeatOrder,
+      fee: "Included",
+      delivery: p.delivery,
+      included: p.included,
+    };
+  });
   return (
     <div className="w-full max-w-[1200px] mx-auto px-4 md:px-8 space-y-16 py-12">
       {/* SECTION 3: Answer block */}
@@ -192,7 +202,7 @@ export default function HomeContentNov2026() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
-                {MJ_GLANCE_PRICES.map((row) => (
+                {mjGlancePrices.map((row) => (
                   <tr key={row.strength} className="hover:bg-slate-50/50">
                     <td className="px-4 py-2.5 font-medium text-slate-900">{row.strength}</td>
                     <td className="px-4 py-2.5 text-emerald-700 font-semibold">{row.price}</td>
@@ -215,7 +225,7 @@ export default function HomeContentNov2026() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
-                {WEGOVY_GLANCE_PRICES.map((row) => (
+                {wegovyGlancePrices.map((row) => (
                   <tr key={row.strength} className="hover:bg-slate-50/50">
                     <td className="px-4 py-2.5 font-medium text-slate-900">{row.strength}</td>
                     <td className="px-4 py-2.5 text-teal-700 font-semibold">{row.price}</td>
@@ -244,7 +254,7 @@ export default function HomeContentNov2026() {
         </p>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PARTNER_CARDS_HOMEPAGE.map((p) => (
+          {partnerCards.map((p) => (
             <div key={p.name} className="flex flex-col justify-between rounded-xl border border-slate-200 p-5 bg-slate-50/50 hover:border-slate-300 transition">
               <div>
                 <h3 className="text-lg font-bold text-slate-900">{p.name}</h3>
@@ -409,7 +419,7 @@ export default function HomeContentNov2026() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              {FULL_PARTNER_TABLE.map((r) => (
+              {fullPartnerTable.map((r) => (
                 <tr key={r.partner} className="hover:bg-slate-50/50">
                   <td className="px-3 py-3 font-bold text-slate-900 whitespace-nowrap">{r.partner}</td>
                   <td className="px-3 py-3 text-slate-700">{r.firstOrder}</td>

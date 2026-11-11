@@ -10,6 +10,7 @@ import CompareFaqSection from "@/components/compare/CompareFaqSection";
 import { compareFaqPageJsonLd } from "@/lib/routes/compare-faqs";
 import { buildHomePageFaqs } from "@/lib/routes/home-faqs";
 import { getLivePriceSummary } from "@/lib/data/home-price-summary";
+import { getMounjaroCompareProviders, getWegovyCompareProviders } from "@/lib/data/compare-live";
 import {
   SITE_SHARE_IMAGE_ALT,
   SITE_SHARE_IMAGE_HEIGHT,
@@ -119,7 +120,10 @@ export default function Homepage() {
         pricesChecked={priceSummary.lastUpdated}
       />
       <div className="flex flex-col gap-0 pt-0">
-        <HomeContentNov2026 />
+        <HomeContentNov2026
+          mounjaroProviders={getMounjaroCompareProviders()}
+          wegovyProviders={getWegovyCompareProviders()}
+        />
 
         <PriceSnapshotSection
           rows={priceSummary.snapshotRows}
