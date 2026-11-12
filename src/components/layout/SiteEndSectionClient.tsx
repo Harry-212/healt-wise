@@ -131,6 +131,10 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
     return shuffled.slice(0, CARD_COUNT);
   }, [pool, dayKey, pathname]);
 
+  // /wegovy-price-comparison has its own approved "Keep exploring" section (page
+  // content, Nov 2026), so the sitewide carousel is not rendered there.
+  if (normalizePath(pathname ?? "") === "/wegovy-price-comparison") return null;
+
   // The About page gets a fixed, non-rotating set of links instead of the
   // usual "Keep exploring" carousel (client request, 30 Sep 2026).
   if (isAbout) {

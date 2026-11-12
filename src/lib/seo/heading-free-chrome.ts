@@ -8,6 +8,7 @@ const HEADING_FREE_CHROME_PATHS = new Set([
   "/compare/wegovy-vs-mounjaro",
   "/mounjaro-price-comparison",
   "/what-is-mounjaro",
+  "/wegovy-price-comparison",
 ]);
 
 export function hasHeadingFreeChrome(pathname: string | null): boolean {
