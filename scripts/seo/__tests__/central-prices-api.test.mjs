@@ -18,7 +18,7 @@ test("GET /api/v1/prices returns both medications by default with full security 
   assert.equal(res.status, 200);
 
   // Security & Robots headers
-  assert.equal(res.headers.get("access-control-allow-origin"), "*");
+  assert.equal(res.headers.get("access-control-allow-origin"), null);
   assert.equal(res.headers.get("x-robots-tag"), "noindex, nofollow, noarchive");
   assert.ok(res.headers.get("cache-control")?.includes("public"));
   assert.ok(res.headers.get("cache-control")?.includes("s-maxage="));
@@ -174,9 +174,12 @@ test("robots.txt disallows /api/ and sitemap excludes /api/", () => {
 });
 
 test("OPTIONS /api/v1/prices returns 204 with CORS and X-Robots-Tag", async () => {
-  const res = await OPTIONS();
+  const res = await OPTIONS(new Request("http://localhost:3000/api/v1/prices", {
+    method: "OPTIONS",
+    headers: { origin: "https://pencompare.co.uk" },
+  }));
   assert.equal(res.status, 204);
-  assert.equal(res.headers.get("access-control-allow-origin"), "*");
+  assert.equal(res.headers.get("access-control-allow-origin"), "https://pencompare.co.uk");
   assert.equal(res.headers.get("x-robots-tag"), "noindex, nofollow, noarchive");
   assert.ok(res.headers.get("access-control-allow-methods")?.includes("GET"));
 });
@@ -227,4 +230,25 @@ test("health endpoint reports ok with six providers per medicine", async () => {
   assert.equal(json.status, "ok");
   assert.deepEqual(json.providers, { mounjaro: 6, wegovy: 6 });
   assert.equal(res.headers.get("x-robots-tag"), "noindex, nofollow, noarchive");
+});
+
+test("CORS allows pencompare.co.uk and no other origin", async () => {
+  resetRateLimits();
+  const ok = await GET(new Request("http://localhost:3000/api/v1/prices", {
+    headers: { "x-forwarded-for": "10.0.2.1", origin: "https://www.pencompare.co.uk" },
+  }));
+  assert.equal(ok.headers.get("access-control-allow-origin"), "https://www.pencompare.co.uk");
+  assert.equal(ok.headers.get("vary"), "Origin");
+
+  const other = await GET(new Request("http://localhost:3000/api/v1/prices", {
+    headers: { "x-forwarded-for": "10.0.2.2", origin: "https://evil.example" },
+  }));
+  assert.equal(other.status, 200);
+  assert.equal(other.headers.get("access-control-allow-origin"), null);
+
+  const preflight = await OPTIONS(new Request("http://localhost:3000/api/v1/prices", {
+    method: "OPTIONS",
+    headers: { origin: "https://evil.example" },
+  }));
+  assert.equal(preflight.headers.get("access-control-allow-origin"), null);
 });

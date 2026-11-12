@@ -14,4 +14,4 @@
 | 12 | `/api/v1/prices/health` (200 ok / 503 failing) polled every 6 h by `.github/workflows/pricing-feed-health.yml`; a failed run notifies via GitHub. | health route, workflow |
 | 13 | No price or date is modified by any of this. | - |
 
-Open decision: CORS is still `*`; restrict to pencompare.co.uk if the feed is not meant for third parties.
+CORS: browser access is limited to https://pencompare.co.uk and https://www.pencompare.co.uk (`ALLOWED_ORIGINS` in the route). Server-to-server calls are unaffected. Add origins there to open the feed further.

@@ -54,16 +54,32 @@ interface CacheEntry {
 const responseCache = new Map<string, CacheEntry>();
 const CACHE_TTL_MS = 60_000; // 60 seconds
 
-/** Error responses must never be stored by a shared cache. */
-function errorHeaders(rateLimit: RateLimitResult): Record<string, string> {
-  return { ...buildHeaders(rateLimit), "Cache-Control": "no-store" };
+/**
+ * Browser access (CORS) is limited to the sister site for now. Server-to-server
+ * calls are not affected by CORS. Add origins here to open the feed further.
+ */
+const ALLOWED_ORIGINS: readonly string[] = [
+  "https://pencompare.co.uk",
+  "https://www.pencompare.co.uk",
+];
+
+function corsHeaders(request: Request): Record<string, string> {
+  const origin = request.headers.get("origin");
+  return origin && ALLOWED_ORIGINS.includes(origin)
+    ? { "Access-Control-Allow-Origin": origin, Vary: "Origin" }
+    : { Vary: "Origin" };
 }
 
-function buildHeaders(rateLimit: RateLimitResult): Record<string, string> {
+/** Error responses must never be stored by a shared cache. */
+function errorHeaders(request: Request, rateLimit: RateLimitResult): Record<string, string> {
+  return { ...buildHeaders(request, rateLimit), "Cache-Control": "no-store" };
+}
+
+function buildHeaders(request: Request, rateLimit: RateLimitResult): Record<string, string> {
   return {
-    "Access-Control-Allow-Origin": "*",
+    ...corsHeaders(request),
     "Access-Control-Allow-Methods": "GET, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    "Access-Control-Allow-Headers": "Content-Type",
     "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
     "X-Robots-Tag": "noindex, nofollow, noarchive",
     "X-RateLimit-Limit": String(rateLimit.limit),
@@ -140,7 +156,7 @@ export async function GET(request: Request) {
       {
         status: 429,
         headers: {
-          "Access-Control-Allow-Origin": "*",
+          ...corsHeaders(request),
           "Cache-Control": "no-store",
           "Retry-After": String(rateLimit.retryAfter ?? 60),
           "X-Robots-Tag": "noindex, nofollow, noarchive",
@@ -152,7 +168,7 @@ export async function GET(request: Request) {
     );
   }
 
-  const headers = buildHeaders(rateLimit);
+  const headers = buildHeaders(request, rateLimit);
   const url = new URL(request.url);
   const rawMedicine = url.searchParams.get("medicine");
   const medicine = rawMedicine?.trim().toLowerCase();
@@ -171,7 +187,7 @@ export async function GET(request: Request) {
       },
       {
         status: 400,
-        headers: errorHeaders(rateLimit),
+        headers: errorHeaders(request, rateLimit),
       },
     );
   }
@@ -198,7 +214,7 @@ export async function GET(request: Request) {
         },
         {
           status: 400,
-          headers: errorHeaders(rateLimit),
+          headers: errorHeaders(request, rateLimit),
         },
       );
     }
@@ -258,13 +274,13 @@ export async function GET(request: Request) {
   });
 }
 
-export async function OPTIONS() {
+export async function OPTIONS(request: Request) {
   return new Response(null, {
     status: 204,
     headers: {
-      "Access-Control-Allow-Origin": "*",
+      ...corsHeaders(request),
       "Access-Control-Allow-Methods": "GET, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      "Access-Control-Allow-Headers": "Content-Type",
       "X-Robots-Tag": "noindex, nofollow, noarchive",
     },
   });
