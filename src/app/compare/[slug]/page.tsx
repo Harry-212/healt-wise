@@ -106,6 +106,9 @@ export default async function ComparePage({ params }: Props) {
     mounjaroSixMonthsLow: priceSummary.firstSixMonths.mounjaroLow,
     wegovySixMonthsTypical: priceSummary.firstSixMonths.wegovyTypical,
     mounjaroSixMonthsTypical: priceSummary.firstSixMonths.mounjaroTypical,
+    wegovyStarterLow: priceSummary.wegovyStarterLow,
+    mounjaroStarterLow: priceSummary.mounjaroStarterLow,
+    pricesChecked: priceSummary.lastUpdated,
   });
   const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
   const pricesLastCheckedIso = dateModifiedWithPriceCheck(COMPARE_PAGES_CONTENT_MODIFIED);
@@ -184,14 +187,18 @@ export default async function ComparePage({ params }: Props) {
           heroPhotoAlt={photoHero?.alt}
         />
 
-        {/* Section 2: Quick comparison */}
-        <WegovyMounjaroQuickVerdict
-          wegovyStarterLow={priceSummary.wegovyStarterLow}
-          mounjaroStarterLow={priceSummary.mounjaroStarterLow}
-          wegovyTopTypical={priceSummary.wegovyTopTypical}
-          mounjaroTopTypical={priceSummary.mounjaroTopTypical}
-          pricesChecked={priceSummary.lastUpdated}
-        />
+        {/* Section 2: Quick comparison. /compare/wegovy-vs-mounjaro has its own
+            "at a glance" section in WegovyMounjaroLongFormContent, so this older
+            block would repeat the same H2 there. */}
+        {slug !== "wegovy-vs-mounjaro" ? (
+          <WegovyMounjaroQuickVerdict
+            wegovyStarterLow={priceSummary.wegovyStarterLow}
+            mounjaroStarterLow={priceSummary.mounjaroStarterLow}
+            wegovyTopTypical={priceSummary.wegovyTopTypical}
+            mounjaroTopTypical={priceSummary.mounjaroTopTypical}
+            pricesChecked={priceSummary.lastUpdated}
+          />
+        ) : null}
 
         {/* Trust Marquee */}
         <section className="w-full border-b border-slate-200/80">
