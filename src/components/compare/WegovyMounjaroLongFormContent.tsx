@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 
 import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
-import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 import ComparisonCoverageNote from "@/components/compare/ComparisonCoverageNote";
 import { getMounjaroCompareProviders } from "@/lib/data/compare-live";
 import { getWegovyCompareProviders } from "@/lib/data/compare-live";
@@ -25,61 +24,31 @@ import { formatGbp } from "@/lib/data/wegovy-price-insights";
  * Implements the 11 sections of the upgraded Wegovy vs Mounjaro Page Content specification.
  */
 
-const DEFAULT_LATEST_PRICE_CHECK_ROWS: HomePriceSnapshotRow[] = [
-  {
-    dose: "Wegovy 0.25 mg (starter)",
-    lowest: "£72.89",
-    highest: "£205",
-  },
-  {
-    dose: "Wegovy 2.4 mg (usual top dose)",
-    lowest: "£173.69",
-    highest: "£290",
-  },
-  {
-    dose: "Mounjaro 2.5 mg (starter)",
-    lowest: "£119.69",
-    highest: "£229",
-  },
-  {
-    dose: "Mounjaro 15 mg (top dose)",
-    lowest: "£245.69",
-    highest: "£359.95",
-  },
-];
-
-const DEFAULT_FIRST_SIX_MONTHS = {
-  wegovyLow: "£701.04",
-  wegovyTypical: "£914",
-  mounjaroLow: "£1,110.74",
-  mounjaroTypical: "£1,408",
-};
-
 export interface WegovyMounjaroLongFormContentProps {
-  priceRows?: HomePriceSnapshotRow[];
-  firstSixMonths?: {
+  priceRows: HomePriceSnapshotRow[];
+  firstSixMonths: {
     wegovyLow: string;
     wegovyTypical: string;
     mounjaroLow: string;
     mounjaroTypical: string;
   };
-  wegovy72Low?: string;
-  wegovy72Typical?: string;
-  wegovy72Listed?: number;
-  wegovyProviderCount?: number;
-  mounjaroProviderCount?: number;
-  pricesChecked?: string;
+  wegovy72Low: string;
+  wegovy72Typical: string;
+  wegovy72Listed: number;
+  wegovyProviderCount: number;
+  mounjaroProviderCount: number;
+  pricesChecked: string;
 }
 
 export default function WegovyMounjaroLongFormContent({
-  priceRows = DEFAULT_LATEST_PRICE_CHECK_ROWS,
-  firstSixMonths = DEFAULT_FIRST_SIX_MONTHS,
-  wegovy72Low = "£175.49",
-  wegovy72Typical = "£259",
-  wegovy72Listed = 48,
-  wegovyProviderCount = 6,
-  mounjaroProviderCount = 6,
-  pricesChecked = PRICE_CHECK_DATE_LONG,
+  priceRows,
+  firstSixMonths,
+  wegovy72Low,
+  wegovy72Typical,
+  wegovy72Listed,
+  wegovyProviderCount,
+  mounjaroProviderCount,
+  pricesChecked,
 }: WegovyMounjaroLongFormContentProps) {
   const mounjaroProviders = getMounjaroCompareProviders();
   const wegovyProviders = getWegovyCompareProviders();
@@ -96,24 +65,24 @@ export default function WegovyMounjaroLongFormContent({
   const table0Rows = [
     {
       label: "Starting dose (Wegovy 0.25 mg, Mounjaro 2.5 mg)",
-      wLow: wStartPriced.length > 0 ? formatGbp(Math.min(...wStartPriced)) : "£72.89",
-      wHigh: wStartPriced.length > 0 ? formatGbp(Math.max(...wStartPriced)) : "£205",
-      mLow: mStartPriced.length > 0 ? formatGbp(Math.min(...mStartPriced)) : "£119.69",
-      mHigh: mStartPriced.length > 0 ? formatGbp(Math.max(...mStartPriced)) : "£229",
+      wLow: wStartPriced.length > 0 ? formatGbp(Math.min(...wStartPriced)) : "Not listed",
+      wHigh: wStartPriced.length > 0 ? formatGbp(Math.max(...wStartPriced)) : "Not listed",
+      mLow: mStartPriced.length > 0 ? formatGbp(Math.min(...mStartPriced)) : "Not listed",
+      mHigh: mStartPriced.length > 0 ? formatGbp(Math.max(...mStartPriced)) : "Not listed",
     },
     {
       label: "Mid dose (Wegovy 1.0 mg, Mounjaro 7.5 mg)",
-      wLow: wMidPriced.length > 0 ? formatGbp(Math.min(...wMidPriced)) : "£98.99",
-      wHigh: wMidPriced.length > 0 ? formatGbp(Math.max(...wMidPriced)) : "£210",
-      mLow: mMidPriced.length > 0 ? formatGbp(Math.min(...mMidPriced)) : "£169.69",
-      mHigh: mMidPriced.length > 0 ? formatGbp(Math.max(...mMidPriced)) : "£269",
+      wLow: wMidPriced.length > 0 ? formatGbp(Math.min(...wMidPriced)) : "Not listed",
+      wHigh: wMidPriced.length > 0 ? formatGbp(Math.max(...wMidPriced)) : "Not listed",
+      mLow: mMidPriced.length > 0 ? formatGbp(Math.min(...mMidPriced)) : "Not listed",
+      mHigh: mMidPriced.length > 0 ? formatGbp(Math.max(...mMidPriced)) : "Not listed",
     },
     {
       label: "Usual top dose (Wegovy 2.4 mg, Mounjaro 15 mg)",
-      wLow: wTopPriced.length > 0 ? formatGbp(Math.min(...wTopPriced)) : "£173.69",
-      wHigh: wTopPriced.length > 0 ? formatGbp(Math.max(...wTopPriced)) : "£290",
-      mLow: mTopPriced.length > 0 ? formatGbp(Math.min(...mTopPriced)) : "£245.69",
-      mHigh: mTopPriced.length > 0 ? formatGbp(Math.max(...mTopPriced)) : "£359.95",
+      wLow: wTopPriced.length > 0 ? formatGbp(Math.min(...wTopPriced)) : "Not listed",
+      wHigh: wTopPriced.length > 0 ? formatGbp(Math.max(...wTopPriced)) : "Not listed",
+      mLow: mTopPriced.length > 0 ? formatGbp(Math.min(...mTopPriced)) : "Not listed",
+      mHigh: mTopPriced.length > 0 ? formatGbp(Math.max(...mTopPriced)) : "Not listed",
     },
   ];
 
@@ -134,51 +103,59 @@ export default function WegovyMounjaroLongFormContent({
     };
   });
 
-  // Table 2: 6 Month titration steps
-  const titrationSchedule = [
-    {
-      month: "1",
-      wDose: "0.25 mg",
-      wLow: wStartPriced.length > 0 ? formatGbp(Math.min(...wStartPriced)) : "£72.89",
-      mDose: "2.5 mg",
-      mLow: mStartPriced.length > 0 ? formatGbp(Math.min(...mStartPriced)) : "£119.69",
-    },
-    {
-      month: "2",
-      wDose: "0.5 mg",
-      wLow: "£93.99",
-      mDose: "5 mg",
-      mLow: "£149.69",
-    },
-    {
-      month: "3",
-      wDose: "1.0 mg",
-      wLow: "£98.99",
-      mDose: "7.5 mg",
-      mLow: "£169.69",
-    },
-    {
-      month: "4",
-      wDose: "1.7 mg",
-      wLow: "£139.99",
-      mDose: "10 mg",
-      mLow: "£199.69",
-    },
-    {
-      month: "5",
-      wDose: "2.4 mg",
-      wLow: "£173.69",
-      mDose: "12.5 mg",
-      mLow: "£225.69",
-    },
-    {
-      month: "6",
-      wDose: "2.4 mg",
-      wLow: "£173.69",
-      mDose: "15 mg",
-      mLow: "£245.69",
-    },
-  ];
+  // Table 2: 6 month titration steps, every price is the lowest listed standard
+  // price at that dose, and the totals are summed from these same rows.
+  const lowestAt = (values: Array<number | null | undefined>): number | null => {
+    const priced = values.filter((n): n is number => typeof n === "number" && n > 0);
+    return priced.length > 0 ? Math.min(...priced) : null;
+  };
+  const WEGOVY_STEPS = [
+    ["0.25 mg", "0.25mg"],
+    ["0.5 mg", "0.5mg"],
+    ["1.0 mg", "1mg"],
+    ["1.7 mg", "1.7mg"],
+    ["2.4 mg", "2.4mg"],
+    ["2.4 mg", "2.4mg"],
+  ] as const;
+  const MOUNJARO_STEPS = [
+    ["2.5 mg", "2.5mg"],
+    ["5 mg", "5mg"],
+    ["7.5 mg", "7.5mg"],
+    ["10 mg", "10mg"],
+    ["12.5 mg", "12.5mg"],
+    ["15 mg", "15mg"],
+  ] as const;
+  const titrationRaw = WEGOVY_STEPS.map(([wDose, wKey], i) => {
+    const [mDose, mKey] = MOUNJARO_STEPS[i];
+    return {
+      month: String(i + 1),
+      wDose,
+      mDose,
+      wValue: lowestAt(
+        wegovyProviders.map((p) => wegovyPriceAmount(p.prices[wKey as keyof typeof p.prices])),
+      ),
+      mValue: lowestAt(
+        mounjaroProviders.map((p) => p.prices[mKey as keyof typeof p.prices] as number),
+      ),
+    };
+  });
+  const titrationSchedule = titrationRaw.map((r) => ({
+    month: r.month,
+    wDose: r.wDose,
+    mDose: r.mDose,
+    wLow: r.wValue != null ? formatGbp(r.wValue) : "Not listed",
+    mLow: r.mValue != null ? formatGbp(r.mValue) : "Not listed",
+  }));
+  const sumOrNull = (vals: Array<number | null>): number | null =>
+    vals.every((v) => v != null)
+      ? Math.round((vals as number[]).reduce((a, b) => a + b, 0) * 100) / 100
+      : null;
+  const wegovySixMonthTotal = sumOrNull(titrationRaw.map((r) => r.wValue));
+  const mounjaroSixMonthTotal = sumOrNull(titrationRaw.map((r) => r.mValue));
+  const wegovySixMonthLow =
+    wegovySixMonthTotal != null ? formatGbp(wegovySixMonthTotal) : firstSixMonths.wegovyLow;
+  const mounjaroSixMonthLow =
+    mounjaroSixMonthTotal != null ? formatGbp(mounjaroSixMonthTotal) : firstSixMonths.mounjaroLow;
 
   // Table 3: Offers
   const partnerOffers = PROVIDERS.filter((p) => p.active).map((p) => {
@@ -218,7 +195,7 @@ export default function WegovyMounjaroLongFormContent({
               </p>
               <p>
                 <strong className="font-semibold text-slate-900">Estimated 6 month cost:</strong>{" "}
-                Wegovy {firstSixMonths.wegovyLow} to {firstSixMonths.wegovyTypical}; Mounjaro {firstSixMonths.mounjaroLow} to {firstSixMonths.mounjaroTypical}. This is an estimate, see section 3.2.
+                Wegovy {wegovySixMonthLow} to {firstSixMonths.wegovyTypical}; Mounjaro {mounjaroSixMonthLow} to {firstSixMonths.mounjaroTypical}. This is an estimate, see section 3.2.
               </p>
               <p className="text-xs text-slate-500 font-medium pt-2 border-t border-slate-200">
                 Prices checked: {pricesChecked}.
@@ -389,9 +366,9 @@ export default function WegovyMounjaroLongFormContent({
                   <tr className="bg-emerald-50/70 font-bold text-slate-900">
                     <td className="px-4 py-3.5">6 month total</td>
                     <td className="px-4 py-3.5">—</td>
-                    <td className="px-4 py-3.5 text-teal-900 tabular-nums">{firstSixMonths.wegovyLow}</td>
+                    <td className="px-4 py-3.5 text-teal-900 tabular-nums">{wegovySixMonthLow}</td>
                     <td className="px-4 py-3.5">—</td>
-                    <td className="px-4 py-3.5 text-emerald-900 tabular-nums">{firstSixMonths.mounjaroLow}</td>
+                    <td className="px-4 py-3.5 text-emerald-900 tabular-nums">{mounjaroSixMonthLow}</td>
                   </tr>
                 </tbody>
               </table>
@@ -616,7 +593,7 @@ export default function WegovyMounjaroLongFormContent({
             <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-700 sm:text-base">
               <li>The lowest Wegovy starting dose price was {table0Rows[0].wLow} and the highest was {table0Rows[0].wHigh}.</li>
               <li>The lowest Mounjaro starting dose price was {table0Rows[0].mLow} and the highest was {table0Rows[0].mHigh}.</li>
-              <li>Over an estimated 6 months, the lowest total we found was {firstSixMonths.wegovyLow} for Wegovy and {firstSixMonths.mounjaroLow} for Mounjaro (section 3.2).</li>
+              <li>Over an estimated 6 months, the lowest total we found was {wegovySixMonthLow} for Wegovy and {mounjaroSixMonthLow} for Mounjaro (section 3.2).</li>
               <li>The price gap between the two is larger at the top dose than at the starting dose.</li>
               <li>Standard and offer prices are shown separately, so an offer does not change the totals above.</li>
             </ul>
