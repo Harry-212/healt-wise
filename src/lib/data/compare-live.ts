@@ -5,8 +5,14 @@ import {
   readMounjaroCompareProviders,
   readWegovyCompareProviders,
 } from "./compare-store";
-import type { MounjaroUkProviderCompare } from "./mounjaro-uk-compare-providers";
-import type { WegovyUkProviderCompare } from "./wegovy-uk-compare-providers";
+import {
+  MOUNJARO_UK_COMPARE_PROVIDERS,
+  type MounjaroUkProviderCompare,
+} from "./mounjaro-uk-compare-providers";
+import {
+  WEGOVY_UK_COMPARE_PROVIDERS,
+  type WegovyUkProviderCompare,
+} from "./wegovy-uk-compare-providers";
 
 /**
  * Live prices (the JSON edited in /admin-dashboard and by the monthly price
@@ -15,11 +21,13 @@ import type { WegovyUkProviderCompare } from "./wegovy-uk-compare-providers";
  */
 
 export function getMounjaroCompareProviders(): MounjaroUkProviderCompare[] {
-  return readMounjaroCompareProviders();
+  const providers = readMounjaroCompareProviders();
+  return providers.length > 0 ? providers : MOUNJARO_UK_COMPARE_PROVIDERS;
 }
 
 export function getWegovyCompareProviders(): WegovyUkProviderCompare[] {
-  return readWegovyCompareProviders();
+  const providers = readWegovyCompareProviders();
+  return providers.length > 0 ? providers : WEGOVY_UK_COMPARE_PROVIDERS;
 }
 
 export function getLiveMounjaroProvider(id: string): MounjaroUkProviderCompare | undefined {
