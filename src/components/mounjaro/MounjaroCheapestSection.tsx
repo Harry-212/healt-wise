@@ -1,10 +1,11 @@
+import Link from "next/link";
 import type { CheapestAcrossDoses } from "@/lib/data/mounjaro-price-insights";
 import { formatGbp } from "@/lib/data/mounjaro-price-insights";
 
 const CHEAPEST_WAY_STEPS = [
   {
     title: "Compare the dose you will be on.",
-    desc: "A cheap starter pen can mean a costly 7.5 mg pen later.",
+    desc: "A low priced starter pen can mean a higher priced 7.5 mg pen later.",
   },
   {
     title: "Add the delivery cost.",
@@ -12,15 +13,15 @@ const CHEAPEST_WAY_STEPS = [
   },
   {
     title: "Check the month 2 price.",
-    desc: "A low first order price can jump in month 2.",
+    desc: "A low first order price can change in month 2.",
   },
   {
     title: "Ask about 2 or 3 pen bundles.",
     desc: "Some pharmacies charge less per pen.",
   },
   {
-    title: "Switch if it saves you money.",
-    desc: "You can move to a cheaper GPhC pharmacy. They will do a new health check first.",
+    title: "You can move to another GPhC registered pharmacy.",
+    desc: "They will do a new health check first.",
   },
 ];
 
@@ -73,6 +74,16 @@ export default function MounjaroCheapestSection({
               {step.desc}
             </li>
           ))}
+          <li>
+            See our full{" "}
+            <Link
+              href="/prices/cheapest-options-uk"
+              className="font-semibold text-violet-800 underline-offset-2 hover:underline"
+            >
+              cheapest options page
+            </Link>{" "}
+            for the lowest listed price by treatment.
+          </li>
         </ul>
 
         <h3 className="mt-8 text-lg font-bold text-slate-900">
@@ -80,10 +91,10 @@ export default function MounjaroCheapestSection({
         </h3>
         <p className="mt-2 leading-relaxed text-slate-600">
           The lowest listed price for a Mounjaro pen among our checked partner pharmacies is{" "}
-          {formatGbp(cheapestStarterPrice)}. A low Mounjaro price is only a good deal if the pharmacy is safe. Only use a
-          pharmacy that asks about your health and shows a GPhC number. The
-          best place to buy Mounjaro in the UK is a GPhC registered pharmacy
-          with a fair price for your dose. Be careful if a site sells
+          {formatGbp(cheapestStarterPrice)}. A low Mounjaro price is only worth considering if the pharmacy is safe. Use a
+          pharmacy that asks about your health and shows a GPhC number. A GPhC
+          registered pharmacy with a fair price for your dose is a safer place
+          to buy Mounjaro in the UK. Be careful if a site sells
           Mounjaro with no health questions, has no GPhC number, or charges
           far less than the partner pharmacies in our table.
         </p>

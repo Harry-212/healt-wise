@@ -22,7 +22,7 @@ test("the 'Also searched as' line is on the Mounjaro price comparison page", () 
 
 test("the line is the last block of the article, after the closing call to action", () => {
   const t = text();
-  const cta = t.indexOf("Ready to compare and next-step your care?");
+  const cta = t.indexOf("Ready to compare?");
   const line = t.indexOf("Also searched as:");
   const end = t.indexOf("</article>");
   assert.ok(cta > 0 && line > cta && end > line);

@@ -2,41 +2,23 @@ import Link from "next/link";
 import type { MounjaroDoseStat, CheapestAtDose } from "@/lib/data/mounjaro-price-insights";
 import { formatDose, formatGbp } from "@/lib/data/mounjaro-price-insights";
 
-type DoseExtra = {
-  dose: string;
-  /** Dose-specific closing remark that doesn't generalise from the numbers alone. */
-  note: string;
-};
-
-const DOSE_EXTRAS: DoseExtra[] = [
-  {
-    dose: "2.5mg",
-    note:
-      "2.5 mg is the starter dose, so this is the Mounjaro injection 2.5 mg price you pay in your first month.",
-  },
-  {
-    dose: "5mg",
-    note:
-      "Our Mounjaro 5mg price comparison for the UK covers all the pharmacies in our table. Most people move to 5 mg in month 2.",
-  },
-  {
-    dose: "7.5mg",
-    note:
-      "The Mounjaro 7.5 mg price is the most searched of all doses, so use the table for a full Mounjaro 7.5mg price comparison in the UK before you choose a pharmacy.",
-  },
-  {
-    dose: "10mg",
-    note: "",
-  },
-  {
-    dose: "12.5mg",
-    note: "This dose has the biggest price gap for the same pen.",
-  },
-  {
-    dose: "15mg",
-    note: "15 mg is the top dose.",
-  },
-];
+/** Dose-specific closing remark that doesn't generalise from the numbers alone. */
+function doseNote(stat: MounjaroDoseStat): string {
+  switch (stat.dose) {
+    case "2.5mg":
+      return "The patient leaflet says the starting dose is 2.5 mg once a week for four weeks, after which your doctor decides on the next dose. This is the Mounjaro injection 2.5 mg price. A KwikPen holds four weekly doses, so the weekly figure is the pen price divided by four.";
+    case "5mg":
+      return "The leaflet says your doctor increases the dose to 5 mg after four weeks at 2.5 mg. Our Mounjaro 5mg price comparison for the UK covers all the pharmacies in our table.";
+    case "7.5mg":
+      return "Your doctor may increase the dose in steps of 2.5 mg, and the leaflet says to stay on each dose for at least 4 weeks before the next. 7.5 mg is one of those steps, and one of the most searched doses, so use the table for a full Mounjaro 7.5mg price comparison in the UK before you choose a pharmacy.";
+    case "12.5mg":
+      return `At this dose the gap between the lowest and highest listed price is ${formatGbp(Math.round((stat.high - stat.low) * 100) / 100)}.`;
+    case "15mg":
+      return "15 mg is the top dose in the patient leaflet.";
+    default:
+      return "";
+  }
+}
 
 function weeklyPrice(low: number): string {
   return formatGbp(Math.round((low / 4) * 100) / 100);
@@ -68,7 +50,7 @@ export default function MounjaroPriceByDoseSection({
 
         <div className="mt-8 space-y-8">
           {doses.map((d) => {
-            const extra = DOSE_EXTRAS.find((e) => e.dose === d.dose);
+            const note = doseNote(d);
             const cheapest = cheapestByDose[d.dose] ?? [];
             return (
               <div key={d.dose} id={`mounjaro-${d.dose.replace('.', '-')}-price`} className="scroll-mt-28">
@@ -81,12 +63,12 @@ export default function MounjaroPriceByDoseSection({
                   {d.lowProvider}, or {weeklyPrice(d.low)} a week. The median
                   price among our checked partner listings is{" "}
                   {formatGbp(d.median)}, and the highest price is{" "}
-                  {formatGbp(d.high)}.{extra?.note ? ` ${extra.note}` : ""}
+                  {formatGbp(d.high)}.{note ? ` ${note}` : ""}
                 </p>
                 {cheapest.length > 0 ? (
                   <p className="mt-2 text-sm text-slate-500">
                     <strong className="font-semibold text-slate-700">
-                      Three lowest-priced partner listings:
+                      Three lowest priced partner listings:
                     </strong>{" "}
                     {cheapest
                       .map((c) => `${c.name} ${formatGbp(c.price)}`)
@@ -100,7 +82,7 @@ export default function MounjaroPriceByDoseSection({
 
         <p className="mt-8 text-sm leading-relaxed text-slate-500">
           Each pharmacy name links to its review in the table above. Need
-          help with the pen?{" "}
+          help with the pen? Try our{" "}
           <Link
             href="/tools/mounjaro-click-calculator"
             className="font-semibold text-violet-800 underline-offset-2 hover:underline"
