@@ -13,57 +13,56 @@ export type CompareFaqPriceFigures = {
   mounjaroSixMonthsLow: string;
   wegovySixMonthsTypical: string;
   mounjaroSixMonthsTypical: string;
+  wegovyStarterLow?: string;
+  mounjaroStarterLow?: string;
+  pricesChecked?: string;
 };
 
 export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
   "wegovy-vs-mounjaro": [
     {
+      q: "Is Wegovy cheaper than Mounjaro?",
+      a: "It depends on the dose. At the starting dose, the lowest price we found was {wegovyStarterLow} for Wegovy and {mounjaroStarterLow} for Mounjaro (checked {pricesChecked}). See section 3 for every dose.",
+    },
+    {
+      q: "How much does Wegovy vs Mounjaro cost for the first month?",
+      a: "The lowest first month price we found was {wegovyStarterLow} for Wegovy and {mounjaroStarterLow} for Mounjaro. See the partner table in section 3.1.",
+    },
+    {
+      q: "How much does 6 months of Wegovy or Mounjaro cost?",
+      a: "Our estimate is {wegovySixMonthsLow} for Wegovy and {mounjaroSixMonthsLow} for Mounjaro, using the lowest standard prices and the usual dose steps. It is an estimate and your plan may differ. See section 3.2.",
+    },
+    {
+      q: "Why is Wegovy cheaper than Mounjaro at some doses?",
+      a: "The two medicines have different manufacturers, different dose steps and different partner pricing, so the gap changes from dose to dose. We show the price at each dose rather than one average.",
+    },
+    {
+      q: "What does the price include?",
+      a: "This varies by partner. See section 4 for the pen, consultation, delivery and dose change details we could confirm.",
+    },
+    {
+      q: "Are offers and codes included in the prices you show?",
+      a: "No. Standard prices and offer prices are shown separately (section 3.3). Offers can change or end.",
+    },
+    {
+      q: "When were these prices checked?",
+      a: "On {pricesChecked}. The date is also shown under each table.",
+    },
+    {
       q: "Is Mounjaro better than Wegovy?",
-      a: "In a head to head trial, people lost more weight on Mounjaro: 20.2% against 13.7% over 72 weeks. But better depends on you. Cost, side effects and your health all matter. A prescriber will help you choose.",
-    },
-    {
-      q: "Is Wegovy as good as Mounjaro?",
-      a: "Wegovy also works well. In its main trial, people lost 14.9% of their body weight on average. Mounjaro led to more weight loss in the head to head trial, but Wegovy costs less. The best choice depends on you.",
-    },
-    {
-      q: "Is Wegovy or Mounjaro more effective?",
-      a: "On average, Mounjaro was more effective in the head to head trial. Each person responds in their own way, so a prescriber looks at your health and your goals.",
+      a: "In the SURMOUNT-5 trial, people on the maximum dose of tirzepatide (Mounjaro) lost more weight on average than people on semaglutide (Wegovy), 20.2% against 13.7% at 72 weeks. Which one is suitable for you is a decision for your prescriber. See section 6.",
     },
     {
       q: "Is Wegovy the same as Mounjaro?",
-      a: "No. They have different medicines. Wegovy has semaglutide and Mounjaro has tirzepatide. They have different makers and different doses. Never swap one for the other without a prescriber.",
-    },
-    {
-      q: "Why are people switching from Mounjaro to Wegovy?",
-      a: "Cost is a common reason. Lilly raised the price it charges UK pharmacies in September 2025, and Wegovy usually costs less for the same month. Some people switch because of side effects or supply. A prescriber must plan any switch.",
-    },
-    {
-      q: "Which costs less, Wegovy or Mounjaro?",
-      a: "Wegovy costs less for the same month of treatment. In our Wegovy vs Mounjaro price comparison, the first 6 months add up to {wegovySixMonthsLow} for Wegovy and {mounjaroSixMonthsLow} for Mounjaro at the lowest prices. At typical prices they add up to {wegovySixMonthsTypical} and {mounjaroSixMonthsTypical}.",
-    },
-    {
-      q: "Which has fewer side effects?",
-      a: "They are about the same. Both mainly cause stomach problems such as nausea, vomiting, diarrhoea and constipation. Read the patient leaflet for the full list.",
-    },
-    {
-      q: "Can I switch from Wegovy to Mounjaro, or the other way?",
-      a: "Yes, but only with a prescriber. They will choose a safe starting dose for the new medicine. Do not stop or change on your own.",
-    },
-    {
-      q: "Can I take Wegovy and Mounjaro together?",
-      a: "No. They work in a similar way, so you should never take both at the same time. Your prescriber will choose one.",
+      a: "No. They contain different active ingredients: semaglutide in Wegovy and tirzepatide in Mounjaro. See section 5.",
     },
     {
       q: "Can I get Wegovy or Mounjaro on the NHS?",
-      a: "Sometimes. Some GPs in England can prescribe Mounjaro, and Wegovy is given through NHS specialist weight management services. Rules and waiting times differ by area. Ask your GP.",
+      a: "Both can be prescribed on the NHS only to people who meet set criteria, and access depends on where you live. See section 8 for the official guidance.",
     },
     {
-      q: "Are the prices on this page live checkout prices?",
-      a: "No. They are the prices confirmed during our latest check using information supplied directly by our selected partner pharmacies and providers, including email confirmation where applicable. They are not live checkout prices. Delivery or consultation fees may be extra, so confirm the final total with the provider.",
-    },
-    {
-      q: "How often do you check prices?",
-      a: "We check every price in the first week of each month. The date of the last check is shown next to the prices.",
+      q: "Where can I see every dose price?",
+      a: "On our Mounjaro price comparison and Wegovy price comparison pages.",
     },
   ],
 };
