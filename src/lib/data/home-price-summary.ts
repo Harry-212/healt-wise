@@ -86,7 +86,7 @@ export function getLivePriceSummary(): HomePriceSummary {
     dose: "2.5mg",
     low: 119.69,
     median: 152,
-    high: 229,
+    high: 179,
     lowProvider: "Pharmacy + Me",
     listed: mjProviders.length,
   };

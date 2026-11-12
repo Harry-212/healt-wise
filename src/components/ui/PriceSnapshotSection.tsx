@@ -5,7 +5,7 @@ import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
 import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 const DEFAULT_ROWS: HomePriceSnapshotRow[] = [
-  { dose: "Mounjaro 2.5 mg (starter)", lowest: "£119.69", highest: "£229" },
+  { dose: "Mounjaro 2.5 mg (starter)", lowest: "£119.69", highest: "£179" },
   { dose: "Mounjaro 15 mg (top dose)", lowest: "£245.69", highest: "£359.95" },
   { dose: "Wegovy 0.25 mg (starter)", lowest: "£72.89", highest: "£205" },
   { dose: "Wegovy 2.4 mg (top dose)", lowest: "£173.69", highest: "£290" },
