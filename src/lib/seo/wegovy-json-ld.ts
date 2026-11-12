@@ -255,8 +255,11 @@ export function wegovyClickCalculatorFaqJsonLd(): Record<string, unknown> {
 }
 
 export type WegovyCompareFaqParams = {
+  checkDate?: string;
   starterLow: string;
   starterWeekly: string;
+  dose10Low?: string;
+  dose17Low?: string;
   dose24Low: string;
   dose24High: string;
   dose24Typical: string;
@@ -270,8 +273,11 @@ export type WegovyCompareFaqParams = {
 export function buildWegovyCompareUkFaqItems(
   params?: WegovyCompareFaqParams,
 ): { question: string; answer: string }[] {
+  const checkDate = params?.checkDate ?? "November 2026";
   const starterLow = params?.starterLow ?? "£72.89";
   const starterWeekly = params?.starterWeekly ?? "£18.22";
+  const dose10Low = params?.dose10Low ?? "£98.99";
+  const dose17Low = params?.dose17Low ?? "£139.99";
   const dose24Low = params?.dose24Low ?? "£173.69";
   const dose24High = params?.dose24High ?? "£290";
   const dose24Typical = params?.dose24Typical ?? "£200";
@@ -284,64 +290,77 @@ export function buildWegovyCompareUkFaqItems(
   return [
     {
       question: "What is the price of Wegovy in the UK?",
-      answer: `Wegovy costs from ${starterLow} to ${dose24High} for one pen in the UK, on doses from 0.25 mg to 2.4 mg. The 7.2 mg pen costs from ${dose72Low}. The price depends on your dose and your pharmacy.`,
+      answer: `Among the six partners we checked on ${checkDate}, pen prices run from ${starterLow} for 0.25 mg to ${dose24Low} for 2.4 mg. Each pen holds four weekly doses of one strength.`,
     },
     {
       question: "How much is Wegovy per month?",
-      answer: `One pen lasts a month. So Wegovy costs from ${starterLow} a month on the starter dose and from ${dose24Low} a month on 2.4 mg. Most people pay about ${dose24Typical} a month on 2.4 mg.`,
+      answer: `One pen holds four weekly doses, so the price of one pen is the cost for a month. At the lowest listed prices it runs from ${starterLow} at 0.25 mg to ${dose24Low} at 2.4 mg.`,
     },
     {
       question: "How much is Wegovy per week?",
-      answer: `Wegovy costs from ${starterWeekly} a week in the UK. One pen holds 4 weekly doses, so the weekly price is the pen price divided by 4. On 2.4 mg, it is from ${dose24Weekly} a week.`,
+      answer: `Divide the pen price by four. At the lowest listed prices, that is ${starterWeekly} a week at 0.25 mg and ${dose24Weekly} a week at 2.4 mg.`,
+    },
+    {
+      question: "What is the price of Wegovy 1 mg and 1.7 mg?",
+      answer: `On ${checkDate}, the lowest listed Wegovy 1 mg pen is ${dose10Low} and the lowest 1.7 mg pen is ${dose17Low}. The 1.7 mg pen is where the price steps up most.`,
+    },
+    {
+      question: "What is the Wegovy 7.2 mg price?",
+      answer: `On ${checkDate}, the lowest listed Wegovy 7.2 mg pen is ${dose72Low}. Only some partners list this dose so far.`,
     },
     {
       question: "Which of our partner pharmacies has the lowest listed Wegovy price?",
-      answer: `Among the partner pharmacies we checked, ${cheapestLeader} had the lowest listed price for ${cheapestLeaderWins} of the ${cheapestTotalDoses} doses in our latest check.`,
+      answer: `On ${checkDate}, ${cheapestLeader} listed the lowest price for ${cheapestLeaderWins} of the ${cheapestTotalDoses} doses. This changes from month to month.`,
     },
     {
-      question: "What's the cheapest place to get Wegovy?",
+      question: "What is the cheapest place to get Wegovy?",
       answer:
-        "A GPhC registered online pharmacy, if you pay privately. Compare the dose you will be on, add delivery, and check the month 2 price. Our table sorts the cheapest Wegovy prices first.",
+        "It depends on your dose. Compare the price at the dose you will be on, add delivery, and check the GPhC number. See our lowest price options page.",
     },
     {
       question: "Is cheap Wegovy safe?",
       answer:
-        "Yes, if it comes from a GPhC registered pharmacy and a prescriber checks your health first. Never buy from a site that does not ask about your health.",
+        "A low price is only worth considering at a GPhC registered pharmacy that asks about your health before it prescribes. Be careful with sites that ask no health questions or show no GPhC number.",
     },
     {
       question: "Can you buy Wegovy in the UK?",
       answer:
-        "Yes. Wegovy jabs in the UK need a prescription. An online pharmacy can give you one after a health check, or you may get it on the NHS if you qualify.",
+        "Yes, with a prescription. Wegovy is a prescription only medicine, so a prescriber must check your health first.",
     },
     {
       question: "Is the Wegovy price going up?",
       answer:
-        "Each pharmacy sets its own price, and some change it every month. Prices can go up or down at any time. We check them every month and show the date, so you see the latest price before you order.",
+        "Prices change between checks. The table in section 7 shows how the lowest listed price at each dose has moved since our first check.",
     },
     {
       question: "Will Wegovy get cheaper in the UK?",
       answer:
-        "No one can say for sure. The best way to pay less today is to compare prices for your dose before each order.",
+        "Nobody can say for certain. We record standard prices every month, so you can see the direction of prices in section 7.",
     },
     {
       question: "Do Wegovy prices include delivery?",
       answer:
-        "Not always. It depends on the pharmacy. Many add a delivery charge at checkout because the pen must stay cold, so always check the final price before you pay.",
+        "The dose prices in our table are standard prices and do not include delivery. The table shows each delivery charge, and the provider confirms the final total.",
+    },
+    {
+      question: "Do Wegovy packs include needles?",
+      answer:
+        "The patient leaflet says each pack holds one pen and 4 disposable needles. Check with the partner that needles are sent with your pen.",
     },
     {
       question: "Can I switch pharmacy to get a better price?",
       answer:
-        "Yes. A new pharmacy will do its own health check first. Tell them your current dose so you can carry on without a break.",
+        "Yes. You can move to another GPhC registered pharmacy. They will do a new health check first.",
     },
     {
-      question: "What are the best websites to compare Wegovy prices in the UK?",
+      question: "Do you compare online pharmacies?",
       answer:
-        "Pick a site that checks every pharmacy's GPhC number, shows the date of each price, covers every dose and does not let pharmacies pay to rank higher. Healthwise360 does all four.",
+        "Yes. We compare selected GPhC registered partner pharmacies, not the whole UK market.",
     },
     {
       question: "How often do you check Wegovy prices?",
       answer:
-        "We check every price in the first week of each month. The date of the last check is shown next to the prices.",
+        "We check standard prices directly with each pharmacy on the first working day of every month. The date of the last check is shown above the table.",
     },
   ];
 }
