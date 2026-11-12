@@ -106,6 +106,9 @@ export default async function ComparePage({ params }: Props) {
     mounjaroSixMonthsLow: priceSummary.firstSixMonths.mounjaroLow,
     wegovySixMonthsTypical: priceSummary.firstSixMonths.wegovyTypical,
     mounjaroSixMonthsTypical: priceSummary.firstSixMonths.mounjaroTypical,
+    wegovyStarterLow: priceSummary.wegovyStarterLow,
+    mounjaroStarterLow: priceSummary.mounjaroStarterLow,
+    pricesChecked: priceSummary.lastUpdated,
   });
   const photoHero = COMPARE_SLUG_PHOTO_HERO[slug];
   const pricesLastCheckedIso = dateModifiedWithPriceCheck(COMPARE_PAGES_CONTENT_MODIFIED);
