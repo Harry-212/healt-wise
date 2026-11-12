@@ -1,0 +1,30 @@
+name: Pricing feed health
+
+# Task 149 item 12. Checks the LIVE feed every 6 hours and fails (red run plus
+# GitHub failure notification) if the health endpoint is not OK or the feed
+# does not return six providers per medicine. Read-only: it never changes data.
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  feed-health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check health endpoint
+        run: |
+          code=$(curl -s -o health.json -w '%{http_code}' --max-time 20 "https://www.healthwise360.co.uk/api/v1/prices/health")
+          cat health.json; echo
+          test "$code" = "200"
+      - name: Check feed content
+        run: |
+          curl -fsS --max-time 20 "https://www.healthwise360.co.uk/api/v1/prices" -o feed.json
+          node -e '
+            const j = JSON.parse(require("fs").readFileSync("feed.json","utf8"));
+            if (!j.success) throw new Error("success=false");
+            for (const m of ["mounjaro","wegovy"]) {
+              if (!Array.isArray(j.data[m]) || j.data[m].length !== 6) throw new Error(m + " provider count != 6");
+            }
+          '
