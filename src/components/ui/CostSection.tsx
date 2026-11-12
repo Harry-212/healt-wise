@@ -27,8 +27,8 @@ export default function CostSection({
   wegovyStarterLow = "£72.89",
   mounjaroStarterLow = "£119.69",
   mounjaroTopHigh = "£359.95",
-  mounjaroStarterHigh = "£229",
-  mounjaroStarterDiff = "£109.31",
+  mounjaroStarterHigh = "£179",
+  mounjaroStarterDiff = "£59.31",
 }: CostSectionProps) {
   return (
     <HomeSectionCard>

@@ -1698,7 +1698,7 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "What is the typical monthly cost for tirzepatide (Mounjaro) in Northern Ireland?",
-        a: `Private quotes often land about £220 to £320 monthly during titration, with starter pens near £229 at 2.5 mg bands and maintenance quotes near £319 at 15 mg bands in marketing materials. Pharmacy comparison can save about £50 plus monthly versus clinic markups in some quotes. NHS supply is free at point of use when tier 3 criteria match and capacity exists. Compare totals on [Mounjaro price comparison](/mounjaro-price-comparison).`,
+        a: `Private quotes often land about £220 to £320 monthly during titration, with starter pens near £179 at 2.5 mg bands and maintenance quotes near £319 at 15 mg bands in marketing materials. Pharmacy comparison can save about £50 plus monthly versus clinic markups in some quotes. NHS supply is free at point of use when tier 3 criteria match and capacity exists. Compare totals on [Mounjaro price comparison](/mounjaro-price-comparison).`,
       },
       {
         q: "What BMI qualifies for semaglutide diabetes treatment in Northern Ireland?",
