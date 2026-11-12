@@ -18,7 +18,7 @@ test("GET /api/v1/prices returns both medications by default with full security 
   assert.equal(res.status, 200);
 
   // Security & Robots headers
-  assert.equal(res.headers.get("access-control-allow-origin"), null);
+  assert.equal(res.headers.get("access-control-allow-origin"), "https://pencompare.co.uk");
   assert.equal(res.headers.get("x-robots-tag"), "noindex, nofollow, noarchive");
   assert.ok(res.headers.get("cache-control")?.includes("public"));
   assert.ok(res.headers.get("cache-control")?.includes("s-maxage="));
@@ -232,23 +232,19 @@ test("health endpoint reports ok with six providers per medicine", async () => {
   assert.equal(res.headers.get("x-robots-tag"), "noindex, nofollow, noarchive");
 });
 
-test("CORS allows pencompare.co.uk and no other origin", async () => {
+test("CORS header is a constant, so the CDN cannot cache a wrong or missing value", async () => {
   resetRateLimits();
-  const ok = await GET(new Request("http://localhost:3000/api/v1/prices", {
-    headers: { "x-forwarded-for": "10.0.2.1", origin: "https://www.pencompare.co.uk" },
+  const noOrigin = await GET(new Request("http://localhost:3000/api/v1/prices", {
+    headers: { "x-forwarded-for": "10.0.2.1" },
   }));
-  assert.equal(ok.headers.get("access-control-allow-origin"), "https://www.pencompare.co.uk");
-  assert.equal(ok.headers.get("vary"), "Origin");
-
   const other = await GET(new Request("http://localhost:3000/api/v1/prices", {
     headers: { "x-forwarded-for": "10.0.2.2", origin: "https://evil.example" },
   }));
-  assert.equal(other.status, 200);
-  assert.equal(other.headers.get("access-control-allow-origin"), null);
-
-  const preflight = await OPTIONS(new Request("http://localhost:3000/api/v1/prices", {
-    method: "OPTIONS",
-    headers: { origin: "https://evil.example" },
+  const pen = await GET(new Request("http://localhost:3000/api/v1/prices", {
+    headers: { "x-forwarded-for": "10.0.2.3", origin: "https://pencompare.co.uk" },
   }));
-  assert.equal(preflight.headers.get("access-control-allow-origin"), null);
+  for (const res of [noOrigin, other, pen]) {
+    assert.equal(res.status, 200);
+    assert.equal(res.headers.get("access-control-allow-origin"), "https://pencompare.co.uk");
+  }
 });

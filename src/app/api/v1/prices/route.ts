@@ -55,19 +55,16 @@ const responseCache = new Map<string, CacheEntry>();
 const CACHE_TTL_MS = 60_000; // 60 seconds
 
 /**
- * Browser access (CORS) is limited to the sister site for now. Server-to-server
- * calls are not affected by CORS. Add origins here to open the feed further.
+ * Browser access (CORS) is limited to the sister site for now. The header is a
+ * constant, not reflected from the request Origin: the host CDN caches this
+ * feed and ignores `Vary: Origin`, so a per-request value could be cached
+ * without the header (or for the wrong origin) and break the sister site for
+ * the cache lifetime. Server-to-server calls are not affected by CORS.
  */
-const ALLOWED_ORIGINS: readonly string[] = [
-  "https://pencompare.co.uk",
-  "https://www.pencompare.co.uk",
-];
+const CORS_ALLOWED_ORIGIN = "https://pencompare.co.uk";
 
-function corsHeaders(request: Request): Record<string, string> {
-  const origin = request.headers.get("origin");
-  return origin && ALLOWED_ORIGINS.includes(origin)
-    ? { "Access-Control-Allow-Origin": origin, Vary: "Origin" }
-    : { Vary: "Origin" };
+function corsHeaders(): Record<string, string> {
+  return { "Access-Control-Allow-Origin": CORS_ALLOWED_ORIGIN };
 }
 
 /** Error responses must never be stored by a shared cache. */
@@ -77,7 +74,7 @@ function errorHeaders(request: Request, rateLimit: RateLimitResult): Record<stri
 
 function buildHeaders(request: Request, rateLimit: RateLimitResult): Record<string, string> {
   return {
-    ...corsHeaders(request),
+    ...corsHeaders(),
     "Access-Control-Allow-Methods": "GET, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
     "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
@@ -156,7 +153,7 @@ export async function GET(request: Request) {
       {
         status: 429,
         headers: {
-          ...corsHeaders(request),
+          ...corsHeaders(),
           "Cache-Control": "no-store",
           "Retry-After": String(rateLimit.retryAfter ?? 60),
           "X-Robots-Tag": "noindex, nofollow, noarchive",
@@ -274,11 +271,11 @@ export async function GET(request: Request) {
   });
 }
 
-export async function OPTIONS(request: Request) {
+export async function OPTIONS() {
   return new Response(null, {
     status: 204,
     headers: {
-      ...corsHeaders(request),
+      ...corsHeaders(),
       "Access-Control-Allow-Methods": "GET, OPTIONS",
       "Access-Control-Allow-Headers": "Content-Type",
       "X-Robots-Tag": "noindex, nofollow, noarchive",
