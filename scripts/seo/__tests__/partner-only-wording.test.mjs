@@ -23,8 +23,16 @@ const FILES = {
   note: "src/components/compare/ComparisonCoverageNote.tsx",
 };
 
+test("Mounjaro hero follows the Nov 2026 page content: partner scope, dose range and per-dose lowest prices", () => {
+  const t = read(FILES.mjHero);
+  assert.ok(t.includes("Our comparison covers selected GPhC registered partners, not the whole UK market."));
+  assert.ok(t.includes("Lowest listed Mounjaro price UK by dose:"));
+  assert.ok(t.includes("listed pen prices run from"));
+  assert.ok(!/The cheapest (Mounjaro|Wegovy) in the UK is/.test(t));
+});
+
 test("hero sentences name the lowest listed partner price and the partner scope", () => {
-  for (const f of [FILES.mjHero, FILES.wgHero]) {
+  for (const f of [FILES.wgHero]) {
     const t = read(f);
     assert.match(t, /Among the partner pharmacies we checked, the lowest listed price for a (Mounjaro 2\.5|Wegovy 0\.25) mg starter pen is/);
     assert.match(t, /Our comparison covers selected partners, rather than the whole UK market\./);
@@ -43,11 +51,15 @@ test("Wegovy heading, 1 mg note and starter summary no longer claim every pharma
 });
 
 test("dose summaries are qualified as partner listings and keep the live values", () => {
+  const listingLabel = {
+    [FILES.mjDose]: "Three lowest priced partner listings:",
+    [FILES.wgDose]: "Three lowest-priced partner listings:",
+  };
   for (const f of [FILES.mjDose, FILES.wgDose]) {
     const t = read(f);
     assert.ok(t.includes("Among our checked partner listings, the lowest"));
     assert.ok(t.includes("The median price among our checked partner listings is"));
-    assert.ok(t.includes("Three lowest-priced partner listings:"));
+    assert.ok(t.includes(listingLabel[f]));
     assert.ok(!t.includes("Most pharmacies charge about"));
     assert.ok(!t.includes("Cheapest 3:"));
     assert.ok(t.includes("formatGbp(d.low)") && t.includes("formatGbp(d.median)") && t.includes("formatGbp(d.high)"));

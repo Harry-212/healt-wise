@@ -254,23 +254,25 @@ export function mounjaroClickCalculatorFaqJsonLd(): Record<string, unknown> {
 
 export type MounjaroFaqContext = {
   providerCount: number;
+  /** Date of the latest price check, as shown on the page. */
+  checkDate: string;
   starterLow: number;
-  starterMedian: number;
+  starterHigh: number;
   starterWeekly: string;
   topHigh: number;
-  topMedian: number;
   topWeekly: string;
+  /** 7.5 mg pen range and weekly price at the lowest listed price. */
+  mid: { low: number; high: number; weekly: string };
   cheapestLeader: string;
   cheapestLeaderWins: number;
   cheapestTotalDoses: number;
-  cheapestException?: { dose: string; provider: string; price: number };
 };
 
 /**
- * Mounjaro price comparison FAQs (Task: Mounjaro price page content,
- * approved copy). Numbers are interpolated from the live comparison table
+ * Mounjaro price comparison FAQs, in the order given in the approved page
+ * content (Nov 2026). Numbers are interpolated from the live comparison table
  * via `MounjaroFaqContext` so they never drift from the price table above
- * them — same approach as the rest of this page's derived figures.
+ * them, and the visible FAQ and the FAQPage schema use the same items.
  */
 export function buildMounjaroCompareUkFaqItems(
   ctx: MounjaroFaqContext,
@@ -281,64 +283,77 @@ export function buildMounjaroCompareUkFaqItems(
   return [
     {
       question: "What is the price of Mounjaro in the UK?",
-      answer: `Mounjaro costs from ${gbp(ctx.starterLow)} to ${gbp(ctx.topHigh)} for one pen in the UK. The price depends on your dose and your pharmacy. A typical starter pen costs ${gbp(ctx.starterMedian)}.`,
+      answer: `Among the ${ctx.providerCount} partners we checked on ${ctx.checkDate}, pen prices run from ${gbp(ctx.starterLow)} for 2.5 mg to ${gbp(ctx.topHigh)} for 15 mg. Each pen holds four weekly doses of one strength.`,
     },
     {
       question: "How much is Mounjaro per week?",
-      answer: `Mounjaro costs from ${ctx.starterWeekly} a week in the UK. One pen holds 4 weekly doses, so the weekly price is the pen price divided by 4. On 15 mg, it is from ${ctx.topWeekly} a week.`,
+      answer: `Divide the pen price by four, because each pen holds four weekly doses. At the lowest listed prices, that is from ${ctx.starterWeekly} a week at 2.5 mg to ${ctx.topWeekly} a week at 15 mg.`,
+    },
+    {
+      question: "What is the Mounjaro price for 7.5 mg in the UK?",
+      answer: `Among our checked partners, a 7.5 mg pen is listed from ${gbp(ctx.mid.low)} to ${gbp(ctx.mid.high)} on ${ctx.checkDate}, which is about ${ctx.mid.weekly} a week at the lowest price. Check the table for the partner you are considering.`,
+    },
+    {
+      question: "How much is the Mounjaro 2.5 mg injection?",
+      answer: `A 2.5 mg pen is listed from ${gbp(ctx.starterLow)} to ${gbp(ctx.starterHigh)} on ${ctx.checkDate} among our checked partners. This is the starting dose in the patient leaflet, so the price you pay later may be different.`,
     },
     {
       question: "Which of our partner pharmacies has the lowest listed Mounjaro price?",
-      answer: ctx.cheapestException
-        ? `Among the partner pharmacies we checked, ${ctx.cheapestLeader} had the lowest listed price for ${ctx.cheapestLeaderWins} of the ${ctx.cheapestTotalDoses} doses in our latest check. ${ctx.cheapestException.provider} was cheapest for ${ctx.cheapestException.dose.replace("mg", " mg")} at ${gbp(ctx.cheapestException.price)}.`
-        : `Among the partner pharmacies we checked, ${ctx.cheapestLeader} had the lowest listed price for ${ctx.cheapestLeaderWins} of the ${ctx.cheapestTotalDoses} doses in our latest check.`,
+      answer: `On ${ctx.checkDate}, ${ctx.cheapestLeader} listed the lowest price for ${ctx.cheapestLeaderWins} of the ${ctx.cheapestTotalDoses} doses. This can change each month, so check the date next to the price.`,
     },
     {
       question: "What is the cheapest way to get Mounjaro?",
       answer:
-        "Compare prices for the dose you will be on, add delivery, and check the month 2 price. Bundles of 2 or 3 pens can also lower the price per pen. Our table sorts the cheapest Mounjaro prices first.",
+        "Compare the price for the dose you will be on, add delivery and any fees, check the month 2 price, and check the GPhC number. See our full cheapest options page.",
     },
     {
       question: "Is cheap Mounjaro safe?",
       answer:
-        "Yes, if it comes from a GPhC registered pharmacy and a prescriber checks your health first. Never buy from a site that does not ask about your health.",
+        "A low price is only worth considering at a GPhC registered pharmacy that asks about your health before it prescribes. Be careful with sites that ask no health questions or show no GPhC number. You can check any pharmacy on the official GPhC register.",
     },
     {
       question: "Why does Mounjaro cost more at higher doses?",
-      answer: `Each pen holds more medicine at higher doses, so pharmacies charge more. The typical pen goes from ${gbp(ctx.starterMedian)} at 2.5 mg to ${gbp(ctx.topMedian)} at 15 mg.`,
+      answer:
+        "Pharmacies pay more for the higher dose pens, so the listed price goes up with the dose. The manufacturer's list price rose most for the 12.5 mg and 15 mg pens in September 2025.",
     },
     {
       question: "Why did Mounjaro prices go up?",
       answer:
-        "In September 2025, Lilly, the company that makes Mounjaro, raised the price it charges UK pharmacies. Most pharmacies raised their prices after that. This is why comparing prices before each order can save you money.",
+        "The manufacturer raised the UK list price of Mounjaro from 1 September 2025, with the largest rise on the 12.5 mg and 15 mg pens. Partners passed it on in different ways.",
     },
     {
       question: "Is the price the same for every Mounjaro KwikPen?",
-      answer: `No. Each KwikPen holds 4 weekly doses, and the price changes with the dose and the pharmacy. Our table is a Mounjaro KwikPen price comparison for the UK: the same pen at ${ctx.providerCount} pharmacies.`,
+      answer:
+        "No. The price depends on the dose strength. Each pen holds four doses of one strength, and your prescriber decides which strength you use.",
     },
     {
       question: "Is tirzepatide the same as Mounjaro?",
-      answer:
-        "Yes. Tirzepatide is the medicine inside Mounjaro. When you look up Mounjaro tirzepatide prices, you are looking at the same pen. Our table works as a tirzepatide price comparison too, so you can compare tirzepatide prices in the UK here.",
+      answer: "Mounjaro is the brand name, and tirzepatide is the active ingredient.",
     },
     {
       question: "Do Mounjaro prices include delivery?",
       answer:
-        "Usually not. Most pharmacies add a delivery charge at checkout because the pen must stay cold. Always check the final price before you pay.",
+        "The dose prices in our table are standard prices and do not include delivery. Pens must be kept cold, so most pharmacies charge for delivery. The table shows each delivery charge, and the provider confirms the final total.",
     },
     {
       question: "Can I switch pharmacy to get a better price?",
       answer:
-        "Yes. A new pharmacy will do its own health check first. Tell them your current dose so you can carry on without a break.",
+        "Yes. You can move to another GPhC registered pharmacy. They will do a new health check first.",
     },
     {
       question: "Do you compare online pharmacies?",
-      answer: `Yes. This Mounjaro online pharmacy price comparison covers ${ctx.providerCount} UK online pharmacies and clinics. Each one has a GPhC number you can check.`,
+      answer:
+        "Yes. We compare selected GPhC registered partner pharmacies, not the whole UK market.",
     },
     {
       question: "How often do you check Mounjaro prices?",
       answer:
-        "We check every price in the first week of each month. The date of the last check is shown next to the prices.",
+        "We check standard prices directly with each pharmacy on the first working day of every month. The date of the last check is shown above the table.",
+    },
+    {
+      question: "Is Mounjaro cheaper on the NHS?",
+      answer:
+        "Some people can get Mounjaro on the NHS if they meet the NICE criteria. Access depends on local services, so your GP can tell you if you are eligible.",
     },
   ];
 }

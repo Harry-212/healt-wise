@@ -10,11 +10,11 @@ export default function MounjaroPriceSnapshot({
 }) {
   const rows = [
     {
-      label: `Cheapest Mounjaro price, starter pen (${formatDose(insights.starter.dose)})`,
+      label: `Lowest listed price, starter pen (${formatDose(insights.starter.dose)})`,
       value: formatGbp(insights.starter.low),
     },
     {
-      label: `Cheapest top dose pen (${formatDose(insights.top.dose)})`,
+      label: `Lowest listed price, top dose pen (${formatDose(insights.top.dose)})`,
       value: formatGbp(insights.top.low),
     },
     {
@@ -44,7 +44,7 @@ export default function MounjaroPriceSnapshot({
           <table className="w-full border-collapse text-left text-sm">
             <thead className="bg-slate-50 text-xs font-semibold uppercase tracking-wide text-slate-500">
               <tr>
-                <th className="px-4 py-3">Dose type</th>
+                <th className="px-4 py-3">Item</th>
                 <th className="px-4 py-3">Price</th>
               </tr>
             </thead>

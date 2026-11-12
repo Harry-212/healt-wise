@@ -79,6 +79,16 @@ const HOME_HUB_LINKS = [
   { href: "/methodology", publicLabel: "Methodology", brandLabel: null },
 ] as const;
 
+/** Approved "Keep exploring" cards for /mounjaro-price-comparison (page content, Nov 2026), in order. */
+const MOUNJARO_PRICE_PAGE_PICKS = [
+  "/blog/mounjaro-weight-loss-benefits-backed-by-science",
+  "/helpful-guides/mounjaro-constipation-relief-uk",
+  "/blog/protein-for-glp-1-users-uk",
+  "/helpful-guides/mounjaro-eligibility-bmi-requirements-uk",
+  "/blog/weight-loss-treatment-price-comparison-uk",
+  "/helpful-guides/mounjaro-skin-pain-causes-treatment",
+] as const;
+
 const ABOUT_RESEARCH_LINKS = [
   { href: "/methodology", label: "Our comparison methodology" },
   { href: "/pharmacy-safety-gphc-verification", label: "Pharmacy safety and GPhC verification" },
@@ -100,6 +110,13 @@ export default function SiteEndSectionClient({ pool, dayKey }: Props) {
     const path = normalizePath(pathname ?? "");
     if (path === "/methodology") {
       return getMethodologyRelatedReading().slice(0, CARD_COUNT);
+    }
+    if (path === "/mounjaro-price-comparison") {
+      const fixed = MOUNJARO_PRICE_PAGE_PICKS.flatMap((href) => {
+        const item = pool.find((x) => normalizePath(x.href) === href);
+        return item ? [item] : [];
+      });
+      if (fixed.length > 0) return fixed;
     }
     const filtered =
       path && path !== "/"

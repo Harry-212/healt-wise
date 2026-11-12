@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import CompareHereLink from "@/components/ui/CompareHereLink";
-import { Instrument_Serif } from "next/font/google";
 import { ArrowRight } from "lucide-react";
 import ComparePricePhotoHeroShell from "@/components/compare/ComparePricePhotoHeroShell";
 import {
@@ -19,11 +18,6 @@ import {
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import { formatGbp } from "@/lib/data/mounjaro-price-insights";
 
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 /** Narrower than the shell default (DEV-09, 9 Oct 2026): Mounjaro's hero content
  * ran taller than the viewport. Only this page's minimums are reduced —
@@ -32,14 +26,12 @@ const MOUNJARO_HERO_MIN_H = "min-h-[480px] sm:min-h-[520px] lg:min-h-[560px]";
 
 export default function MounjaroCompareShaderHero({
   lastUpdated,
-  cheapestPrice,
-  cheapestProvider,
   providerCount,
+  lowestByDose,
 }: {
   lastUpdated?: string;
-  cheapestPrice?: number;
-  cheapestProvider?: string;
   providerCount?: number;
+  lowestByDose?: { dose: string; price: number }[];
 }) {
   return (
     <ComparePricePhotoHeroShell
@@ -79,22 +71,38 @@ export default function MounjaroCompareShaderHero({
             id="hero-answer"
             className="mx-auto mb-4 max-w-2xl text-pretty text-sm font-light leading-relaxed text-white/75 lg:mx-0 md:text-base"
           >
-            {cheapestPrice != null && cheapestProvider ? (
+            {lowestByDose && lowestByDose.length > 1 && providerCount != null ? (
               <>
-                Among the partner pharmacies we checked, the lowest listed
-                price for a Mounjaro 2.5 mg starter pen is{" "}
-                {formatGbp(cheapestPrice)} at {cheapestProvider}. Compare
-                Mounjaro prices by dose across our listed partner pharmacies.
-                Our comparison covers selected partners, rather than the whole
-                UK market.
+                Mounjaro prices in the UK rise with each dose. Among the{" "}
+                {providerCount} partners we checked on {lastUpdated}, listed
+                pen prices run from {formatGbp(lowestByDose[0].price)} for{" "}
+                {lowestByDose[0].dose.replace("mg", " mg")} to{" "}
+                {formatGbp(lowestByDose[lowestByDose.length - 1].price)} for{" "}
+                {lowestByDose[lowestByDose.length - 1].dose.replace("mg", " mg")}.
+                Your own dose matters more than the starter pen, so use the
+                dose links below.
               </>
             ) : (
               <>
                 Compare Mounjaro prices by dose across our listed partner
-                pharmacies. Our comparison covers selected partners, rather
-                than the whole UK market.
+                pharmacies.
               </>
             )}
+          </p>
+          {lowestByDose && lowestByDose.length > 0 ? (
+            <p className="mx-auto mb-4 max-w-2xl text-pretty text-sm leading-relaxed text-white/75 lg:mx-0 md:text-base">
+              <strong className="font-semibold text-white">
+                Lowest listed Mounjaro price UK by dose:
+              </strong>{" "}
+              {lowestByDose
+                .map((d) => `${d.dose.replace("mg", " mg")} from ${formatGbp(d.price)}`)
+                .join(", ")}
+              .
+            </p>
+          ) : null}
+          <p className="mx-auto mb-4 max-w-2xl text-pretty text-sm leading-relaxed text-white/75 lg:mx-0">
+            Our comparison covers selected GPhC registered partners, not the
+            whole UK market.
           </p>
 
           <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:justify-start">

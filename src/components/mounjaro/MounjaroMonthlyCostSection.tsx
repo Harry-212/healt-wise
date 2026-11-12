@@ -43,6 +43,9 @@ export default function MounjaroMonthlyCostSection({
         <h3 className="mt-8 text-lg font-bold text-slate-900">
           What your first 6 months cost
         </h3>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          Estimated cost of the first 6 months of Mounjaro, by month and dose.
+        </p>
         <div className="mt-4 overflow-x-auto rounded-xl border border-slate-200 bg-white">
           <table className="w-full text-left text-sm">
             <caption className="sr-only">
@@ -76,8 +79,8 @@ export default function MounjaroMonthlyCostSection({
           </table>
         </div>
         <p className="mt-3 text-xs leading-relaxed text-slate-500">
-          This table assumes your dose goes up every 4 weeks until you reach your target strength. Your
-          prescriber decides when and whether to escalate, and many people stay on an intermediate dose longer.
+          This table assumes your dose goes up every 4 weeks until you reach the top dose. Your
+          prescriber decides when and whether the dose goes up, and many people stay on an intermediate dose longer.
         </p>
 
         {/* H3: Full year cost */}
@@ -85,10 +88,10 @@ export default function MounjaroMonthlyCostSection({
           Mounjaro cost for a full year
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          Mounjaro usually starts at 2.5 mg once a week for four weeks, then
-          increases in 2.5 mg steps no sooner than every four weeks, up to
-          15 mg. Year one therefore includes several months on lower-priced
-          pens before any maintenance strength. Based on 13 pens a year across {providerCount} UK pharmacies.
+          The patient leaflet says Mounjaro starts at 2.5 mg once a week for
+          four weeks, then goes up in 2.5 mg steps, with at least 4 weeks on
+          each dose, up to 15 mg. Year one therefore includes several months
+          on lower priced pens. Based on 13 pens a year across {providerCount} UK pharmacies.
         </p>
 
         {annualCosts.yearOne.length > 0 ? (
@@ -141,7 +144,7 @@ export default function MounjaroMonthlyCostSection({
         ) : null}
 
         <p className="mt-3 text-xs leading-relaxed text-slate-500">
-          Based on 13 pens per calendar year. Year one includes titration doses. Ongoing annual cost assumes 13 pens at the stated maintenance dose. Standard cold-chain delivery and consultation fees are excluded.
+          Based on 13 pens per calendar year. Year one includes the lower doses on the way up. The yearly cost after that assumes 13 pens at the stated dose. Standard cold chain delivery and consultation fees are excluded.
         </p>
       </div>
     </section>
