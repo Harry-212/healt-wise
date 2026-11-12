@@ -627,8 +627,8 @@ export default function CompareMounjaroPricesUkPage() {
           <div className="mx-auto max-w-3xl px-4 md:px-8">
             <p className="text-sm leading-relaxed text-slate-600 md:text-base">
               <strong className="font-semibold text-slate-900">Mounjaro prices:</strong>{" "}
-              Also searched as: monjaro prices, munjaro prices, manjaro prices –
-              you&apos;re in the right place for Mounjaro pricing.
+              Also searched as: monjaro, munjaro &amp; manjaro prices –
+              you&apos;re in the right place for weight management price comparison.
             </p>
           </div>
         </section>
