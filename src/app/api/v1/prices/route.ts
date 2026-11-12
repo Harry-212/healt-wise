@@ -28,6 +28,8 @@ export interface PublicPriceProvider {
   gphcRegNo: string;
   rating: number;
   deliveryNote: string;
+  /** Lowest delivery charge in GBP parsed from deliveryNote; 0 = free, null = see deliveryNote. */
+  deliveryFeeFromGbp: number | null;
   consultationIncluded: boolean;
   priceCheckDate: string;
   updatedLabel: string;
@@ -52,6 +54,11 @@ interface CacheEntry {
 const responseCache = new Map<string, CacheEntry>();
 const CACHE_TTL_MS = 60_000; // 60 seconds
 
+/** Error responses must never be stored by a shared cache. */
+function errorHeaders(rateLimit: RateLimitResult): Record<string, string> {
+  return { ...buildHeaders(rateLimit), "Cache-Control": "no-store" };
+}
+
 function buildHeaders(rateLimit: RateLimitResult): Record<string, string> {
   return {
     "Access-Control-Allow-Origin": "*",
@@ -63,6 +70,12 @@ function buildHeaders(rateLimit: RateLimitResult): Record<string, string> {
     "X-RateLimit-Remaining": String(rateLimit.remaining),
     "X-RateLimit-Reset": String(rateLimit.reset),
   };
+}
+
+function parseDeliveryFeeFrom(note: string): number | null {
+  const amounts = [...note.matchAll(/£\s?(\d+(?:\.\d{1,2})?)/g)].map((m) => Number(m[1]));
+  if (amounts.length > 0) return Math.min(...amounts);
+  return /\bfree\b/i.test(note) ? 0 : null;
 }
 
 function sanitizeProvider(
@@ -83,6 +96,7 @@ function sanitizeProvider(
     gphcRegNo: p.gphcRegNo,
     rating: p.rating,
     deliveryNote: p.deliveryNote,
+    deliveryFeeFromGbp: parseDeliveryFeeFrom(p.deliveryNote),
     consultationIncluded: p.consultationIncluded,
     priceCheckDate: PRICE_CHECK_DATE_LONG,
     updatedLabel: p.updatedLabel || PRICE_CHECK_DATE_SHORT,
@@ -127,6 +141,7 @@ export async function GET(request: Request) {
         status: 429,
         headers: {
           "Access-Control-Allow-Origin": "*",
+          "Cache-Control": "no-store",
           "Retry-After": String(rateLimit.retryAfter ?? 60),
           "X-Robots-Tag": "noindex, nofollow, noarchive",
           "X-RateLimit-Limit": String(rateLimit.limit),
@@ -156,7 +171,7 @@ export async function GET(request: Request) {
       },
       {
         status: 400,
-        headers,
+        headers: errorHeaders(rateLimit),
       },
     );
   }
@@ -183,7 +198,7 @@ export async function GET(request: Request) {
         },
         {
           status: 400,
-          headers,
+          headers: errorHeaders(rateLimit),
         },
       );
     }
@@ -201,12 +216,21 @@ export async function GET(request: Request) {
   }
 
   const lastUpdated = getLivePriceCheckLabels();
+  // A dosage belongs to exactly one medicine, so it must only filter (and
+  // only return) that medicine's providers.
+  const dosageMedicine: ValidMedicine | undefined = !dosage
+    ? undefined
+    : (MOUNJARO_DOSES as readonly string[]).includes(dosage)
+      ? "mounjaro"
+      : "wegovy";
   const mounjaroProviders = getMounjaroCompareProviders().map((p) =>
-    sanitizeProvider(p, dosage),
+    sanitizeProvider(p, dosageMedicine === "mounjaro" ? dosage : undefined),
   );
   const wegovyProviders = getWegovyCompareProviders().map((p) =>
-    sanitizeProvider(p, dosage),
+    sanitizeProvider(p, dosageMedicine === "wegovy" ? dosage : undefined),
   );
+  const wantMounjaro = medicine ? medicine === "mounjaro" : dosageMedicine !== "wegovy";
+  const wantWegovy = medicine ? medicine === "wegovy" : dosageMedicine !== "mounjaro";
 
   const payload: Record<string, unknown> = {
     success: true,
@@ -220,20 +244,10 @@ export async function GET(request: Request) {
     },
   };
 
-  if (medicine === "mounjaro") {
-    payload.data = {
-      mounjaro: mounjaroProviders,
-    };
-  } else if (medicine === "wegovy") {
-    payload.data = {
-      wegovy: wegovyProviders,
-    };
-  } else {
-    payload.data = {
-      mounjaro: mounjaroProviders,
-      wegovy: wegovyProviders,
-    };
-  }
+  payload.data = {
+    ...(wantMounjaro ? { mounjaro: mounjaroProviders } : {}),
+    ...(wantWegovy ? { wegovy: wegovyProviders } : {}),
+  };
 
   // Store in cache
   responseCache.set(cacheKey, { cachedAt: now, payload });

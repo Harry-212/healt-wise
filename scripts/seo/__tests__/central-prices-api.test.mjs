@@ -180,3 +180,51 @@ test("OPTIONS /api/v1/prices returns 204 with CORS and X-Robots-Tag", async () =
   assert.equal(res.headers.get("x-robots-tag"), "noindex, nofollow, noarchive");
   assert.ok(res.headers.get("access-control-allow-methods")?.includes("GET"));
 });
+
+test("dosage without medicine only returns the medicine that owns the dose", async () => {
+  resetRateLimits();
+  const res = await GET(new Request("http://localhost:3000/api/v1/prices?dosage=0.25mg", {
+    headers: { "x-forwarded-for": "10.0.1.1" },
+  }));
+  const json = await res.json();
+  assert.equal(json.data.mounjaro, undefined);
+  for (const p of json.data.wegovy) assert.deepEqual(Object.keys(p.prices), ["0.25mg"]);
+});
+
+test("error responses are not cacheable", async () => {
+  resetRateLimits();
+  const res = await GET(new Request("http://localhost:3000/api/v1/prices?medicine=nope", {
+    headers: { "x-forwarded-for": "10.0.1.2" },
+  }));
+  assert.equal(res.status, 400);
+  assert.equal(res.headers.get("cache-control"), "no-store");
+});
+
+test("providers expose a structured delivery fee", async () => {
+  resetRateLimits();
+  const res = await GET(new Request("http://localhost:3000/api/v1/prices", {
+    headers: { "x-forwarded-for": "10.0.1.3" },
+  }));
+  const json = await res.json();
+  for (const p of [...json.data.mounjaro, ...json.data.wegovy]) {
+    assert.ok(p.deliveryFeeFromGbp === null || typeof p.deliveryFeeFromGbp === "number");
+  }
+});
+
+test("rate limiter ignores a spoofed first x-forwarded-for entry", async () => {
+  const { getClientIp } = await import("@/lib/api/rate-limiter.ts");
+  const req = new Request("http://localhost:3000/api/v1/prices", {
+    headers: { "x-forwarded-for": "1.2.3.4, 203.0.113.9" },
+  });
+  assert.equal(getClientIp(req), "203.0.113.9");
+});
+
+test("health endpoint reports ok with six providers per medicine", async () => {
+  const { GET: health } = await import("@/app/api/v1/prices/health/route.ts");
+  const res = health();
+  assert.equal(res.status, 200);
+  const json = await res.json();
+  assert.equal(json.status, "ok");
+  assert.deepEqual(json.providers, { mounjaro: 6, wegovy: 6 });
+  assert.equal(res.headers.get("x-robots-tag"), "noindex, nofollow, noarchive");
+});

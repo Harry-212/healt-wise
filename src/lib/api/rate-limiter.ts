@@ -7,6 +7,19 @@ interface RateLimitRecord {
 }
 
 const ipRequestMap = new Map<string, RateLimitRecord>();
+const MAX_TRACKED_IPS = 5000;
+let lastSweep = 0;
+
+/** Drop expired records so the map cannot grow without bound. */
+function sweep(now: number, windowMs: number): void {
+  if (now - lastSweep < windowMs && ipRequestMap.size < MAX_TRACKED_IPS) return;
+  lastSweep = now;
+  for (const [key, rec] of ipRequestMap) {
+    if (rec.timestamps.length === 0 || rec.timestamps[rec.timestamps.length - 1] <= now - windowMs) {
+      ipRequestMap.delete(key);
+    }
+  }
+}
 
 export interface RateLimitOptions {
   /** Maximum requests allowed in the window (default: 60). */
@@ -34,6 +47,7 @@ export function checkRateLimit(
   const windowMs = options.windowMs ?? 60_000;
   const now = Date.now();
   const windowStart = now - windowMs;
+  sweep(now, windowMs);
 
   let record = ipRequestMap.get(ip);
   if (!record) {
@@ -72,17 +86,20 @@ export function checkRateLimit(
  * Helper to extract client IP from incoming request headers.
  */
 export function getClientIp(request: Request): string {
-  const forwardedFor = request.headers.get("x-forwarded-for");
-  if (forwardedFor) {
-    return forwardedFor.split(",")[0].trim();
+  // The first x-forwarded-for entry is client-supplied and can be spoofed to
+  // dodge the limit. The last entry is the one appended by our own proxy.
+  const cfConnectingIp = request.headers.get("cf-connecting-ip");
+  if (cfConnectingIp) {
+    return cfConnectingIp.trim();
   }
   const realIp = request.headers.get("x-real-ip");
   if (realIp) {
     return realIp.trim();
   }
-  const cfConnectingIp = request.headers.get("cf-connecting-ip");
-  if (cfConnectingIp) {
-    return cfConnectingIp.trim();
+  const forwardedFor = request.headers.get("x-forwarded-for");
+  if (forwardedFor) {
+    const parts = forwardedFor.split(",").map((x) => x.trim()).filter(Boolean);
+    if (parts.length > 0) return parts[parts.length - 1];
   }
   return "127.0.0.1";
 }
