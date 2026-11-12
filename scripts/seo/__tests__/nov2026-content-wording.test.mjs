@@ -37,6 +37,6 @@ test("homepage has no keyword-variation paragraph", () => {
 
 test("London SEO title carries no brand suffix (the site title template adds it once)", () => {
   const t = read("src/lib/content/uk-location-article-data.ts");
-  assert.ok(t.includes('return "Weight Loss Treatment in London";'));
+  assert.ok(t.includes('return "Weight Loss Treatment in London: Online Partners Compared";'));
   assert.ok(!t.includes("in London | Healthwise360"));
 });
