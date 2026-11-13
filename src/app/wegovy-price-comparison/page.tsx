@@ -465,7 +465,7 @@ export default function CompareWegovyPricesUkPage() {
               </ol>
             </div>
 
-            <ComparisonCoverageNote className="mt-6" />
+            <ComparisonCoverageNote className="mt-6" freeToUse />
 
             <div className="mt-6">
               <WegovyUkCompareTable
