@@ -62,10 +62,10 @@ test("Mounjaro and Wegovy frequency FAQs (visible and schema share one list) use
 
 test("price notices near the tables, methodology and editorial policy use the approved wording", () => {
   assert.match(read("src/components/prices/PriceCheckNotice.tsx"), /PRICE_CHECK_SCHEDULE_TEXT = PRICE_CHECK_FREQUENCY_TEXT/);
-  assert.match(read("src/components/ui/PriceVerificationDisclaimer.tsx"), /const text = PRICE_CHECK_FREQUENCY_TEXT/);
-  assert.match(read("src/app/(informational)/methodology/MethodologyClient.tsx"), /\{PRICE_CHECK_FREQUENCY_TEXT\}/);
+  assert.match(read("src/components/ui/PriceVerificationDisclaimer.tsx"), /STANDARD_PRICE_VERIFICATION_TEXT = PRICE_CHECK_FREQUENCY_TEXT/);
+  assert.match(read("src/app/(informational)/methodology/MethodologyClient.tsx"), /<PriceVerificationDisclaimer variant="inline"/);
   assert.match(read("src/app/(informational)/editorial-policy/page.tsx"), /^\s*PRICE_CHECK_FREQUENCY_TEXT,$/m);
-  assert.match(read("src/components/compare/WegovyMounjaroLongFormContent.tsx"), /\{PRICE_CHECK_FREQUENCY_TEXT\} Last checked: \{pricesChecked\}/);
+  assert.match(read("src/components/compare/WegovyMounjaroLongFormContent.tsx"), /<PriceVerificationDisclaimer variant="inline" checkDate=\{pricesChecked\}/);
   assert.match(read("src/lib/seo/compare-wegovy-mounjaro-json-ld.ts"), /measurementTechnique:\s*PRICE_CHECK_FREQUENCY_TEXT/);
   assert.match(read("src/lib/seo/home-json-ld.ts"), /measurementTechnique:\s*PRICE_CHECK_FREQUENCY_TEXT/);
 });

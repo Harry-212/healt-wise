@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
-import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
+import PriceVerificationDisclaimer from "@/components/ui/PriceVerificationDisclaimer";
 import { Instrument_Serif } from "next/font/google";
 import { useReducedMotion } from "framer-motion";
 import {
@@ -825,8 +825,9 @@ export default function MethodologyClient() {
                       <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-50 text-emerald-700 text-xs font-extrabold border border-emerald-100">11</span>
                       How We Keep Information Updated
                     </h3>
-                    <p className="mt-3 text-slate-600 leading-relaxed">
-                      {PRICE_CHECK_FREQUENCY_TEXT} Stock, delivery fees and offers can also change between checks, so visitors should confirm the final details directly with the provider.
+                    <PriceVerificationDisclaimer variant="inline" className="mt-3 text-slate-600 leading-relaxed" />
+                    <p className="mt-2 text-slate-600 leading-relaxed">
+                      Stock, delivery fees and offers can also change between checks, so visitors should confirm the final details directly with the provider.
                     </p>
                   </div>
 
