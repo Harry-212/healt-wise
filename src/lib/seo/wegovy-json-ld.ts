@@ -1,4 +1,5 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
 
 export type WhatIsWegovyFaqParams = {
   /** Lowest listed starter pen price, e.g. "£76.94". */
@@ -335,7 +336,7 @@ export function buildWegovyCompareUkFaqItems(
     {
       question: "Will Wegovy get cheaper in the UK?",
       answer:
-        "Nobody can say for certain. We record standard prices every month, so you can see the direction of prices in section 7.",
+        "Nobody can say for certain. We record standard prices at every completed price verification, so you can see the direction of prices in section 7.",
     },
     {
       question: "Do Wegovy prices include delivery?",
@@ -360,7 +361,7 @@ export function buildWegovyCompareUkFaqItems(
     {
       question: "How often do you check Wegovy prices?",
       answer:
-        "We check standard prices directly with each pharmacy on the first working day of every month. The date of the last check is shown above the table.",
+        PRICE_CHECK_FREQUENCY_TEXT,
     },
   ];
 }

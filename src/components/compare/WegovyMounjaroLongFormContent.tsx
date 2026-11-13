@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
 import {
   ArrowRight,
   ClipboardList,
@@ -240,7 +241,10 @@ export default function WegovyMounjaroLongFormContent({
               The price you pay for the same month of treatment changes with the dose, and the two medicines step up at different points. Prices below are from selected partner pharmacies and were checked on {pricesChecked}.
             </p>
             <p className="mt-2 text-sm text-slate-500">
-              Prices checked: {pricesChecked}. Full tables by partner:{" "}
+              {PRICE_CHECK_FREQUENCY_TEXT} Last checked: {pricesChecked}.
+            </p>
+            <p className="mt-2 text-sm text-slate-500">
+              Full tables by partner:{" "}
               <Link href="/mounjaro-price-comparison" className="font-semibold text-emerald-800 underline hover:text-emerald-950">Mounjaro</Link> and{" "}
               <Link href="/wegovy-price-comparison" className="font-semibold text-teal-800 underline hover:text-teal-950">Wegovy</Link>.
             </p>

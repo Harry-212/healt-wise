@@ -243,7 +243,7 @@ const AT_A_GLANCE: { fact: string; detail: string }[] = [
   },
   {
     fact: "Price checks",
-    detail: "Typically monthly; check the date shown on each comparison",
+    detail: "Reviewed monthly; the date shown on each comparison is the latest completed verification",
   },
   {
     fact: "Content production",

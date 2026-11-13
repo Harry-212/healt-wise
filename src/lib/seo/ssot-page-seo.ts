@@ -1,4 +1,5 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
 
 const PATH = "/about/ssot";
 
@@ -24,7 +25,7 @@ export const SSOT_PAGE_FAQS: { question: string; answer: string }[] = [
   {
     question: "How often are prices checked?",
     answer:
-      "Prices are typically checked monthly using information supplied directly by selected partner pharmacies and providers, including confirmation by email where applicable. Readers should check the date attached to the relevant comparison and confirm current prices directly with the provider.",
+      PRICE_CHECK_FREQUENCY_TEXT,
   },
   {
     question: "Does Healthwise360 accept sponsorship?",

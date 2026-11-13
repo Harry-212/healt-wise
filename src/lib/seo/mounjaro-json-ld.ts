@@ -1,4 +1,5 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
 
 export function mounjaroArticleJsonLd(): Record<string, unknown> {
   const base = siteOrigin();
@@ -348,7 +349,7 @@ export function buildMounjaroCompareUkFaqItems(
     {
       question: "How often do you check Mounjaro prices?",
       answer:
-        "We check standard prices directly with each pharmacy on the first working day of every month. The date of the last check is shown above the table.",
+        PRICE_CHECK_FREQUENCY_TEXT,
     },
     {
       question: "Is Mounjaro cheaper on the NHS?",

@@ -1,4 +1,5 @@
 import React from "react";
+import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
 import { ShieldCheck } from "lucide-react";
 
 interface PriceVerificationDisclaimerProps {
@@ -14,8 +15,7 @@ export default function PriceVerificationDisclaimer({
   className = "",
   variant = "card",
 }: PriceVerificationDisclaimerProps) {
-  const text =
-    "Standard retail prices are reviewed monthly using each partner pharmacy’s website and information supplied directly by the pharmacy. The date shown is the date of the latest completed price verification. Prices may change between checks, so confirm the final price and any additional charges with the pharmacy before ordering.";
+  const text = PRICE_CHECK_FREQUENCY_TEXT;
 
   if (variant === "inline") {
     return (

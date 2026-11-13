@@ -1,4 +1,5 @@
 import { HELPFUL_GUIDES_HUB_PATH } from "@/lib/helpful-guide-slugs";
+import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
 import {
   HOME_COMPARE_CTA_LABEL,
   HOME_COMPARE_HUB_HREF,
@@ -43,7 +44,7 @@ function homeSchemaPriceSnapshotDataset(base: string): Record<string, unknown> {
     inLanguage: SCHEMA_LANGUAGE,
     license: `${base}/terms-of-service`,
     measurementTechnique:
-      "Listed prices checked on each pharmacy website in the first week of every month",
+      PRICE_CHECK_FREQUENCY_TEXT,
     variableMeasured: [
       { "@type": "PropertyValue", name: "Lowest price", unitText: "GBP" },
       { "@type": "PropertyValue", name: "Highest price", unitText: "GBP" },
