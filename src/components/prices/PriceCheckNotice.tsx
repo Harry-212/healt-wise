@@ -1,11 +1,11 @@
 import { longCheckDate } from "@/lib/data/provider-price-summary";
+import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
 
-/** Wording agreed with the client for every price table (Oct 2026). */
-export const PRICE_CHECK_SCHEDULE_TEXT =
-  "Standard prices are checked directly with each pharmacy on the 1st working day of every month.";
+/** Approved Option C wording for every price table (Task 142, 11 Nov 2026). */
+export const PRICE_CHECK_SCHEDULE_TEXT = PRICE_CHECK_FREQUENCY_TEXT;
 
 /**
- * "Standard prices are checked … every month. Last checked: 2 November 2026."
+ * "<approved wording> Last checked: 2 November 2026."
  * `lastChecked` is the store's or the provider's check date ("2 Nov 2026" or
  * "2 November 2026"). No hooks, so it renders in server and client components.
  */

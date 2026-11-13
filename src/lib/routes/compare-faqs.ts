@@ -1,3 +1,5 @@
+import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
+
 /** FAQ copy for `/compare/[slug]` — informational only; not medical advice. */
 
 export type CompareFaqItem = {
@@ -46,7 +48,7 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
     },
     {
       q: "When were these prices checked?",
-      a: "On {pricesChecked}. The date is also shown under each table.",
+      a: `Prices were last checked on {pricesChecked}. ${PRICE_CHECK_FREQUENCY_TEXT}`,
     },
     {
       q: "Is Mounjaro better than Wegovy?",

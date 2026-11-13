@@ -450,7 +450,7 @@ export default function CompareWegovyPricesUkPage() {
               This table shows the standard price of every dose at {providerCount} partner pharmacies, with each pharmacy&apos;s rating, GPhC number and delivery charge. Where a partner does not list a dose, the table says Not listed.
             </p>
             <p className="mt-2 max-w-3xl text-sm text-slate-500">
-              Prices checked {wegovyLastUpdated}. Standard prices are checked directly with each pharmacy on the first working day of every month.{" "}
+              Prices checked {wegovyLastUpdated}.{" "}
               <Link href="/methodology" className="font-semibold text-emerald-800 underline hover:text-emerald-950">
                 How our comparison works
               </Link>
@@ -751,7 +751,7 @@ export default function CompareWegovyPricesUkPage() {
               How Wegovy prices have changed
             </h2>
             <p className="mt-4 leading-relaxed text-slate-600">
-              We record the standard price at each partner on the first working day of every month. The table shows the lowest listed price at each dose since our first check.
+              We record the standard price at each partner at every completed price verification. The table shows the lowest listed price at each dose since our first check.
             </p>
             <p className="mt-2 text-sm text-slate-500">
               Prices can go up or down between checks. A lower price today does not mean it will stay lower.
@@ -954,7 +954,7 @@ export default function CompareWegovyPricesUkPage() {
                 <strong className="font-semibold text-slate-900">A prescriber checks your health</strong> before any pen is sent.
               </li>
               <li>
-                <strong className="font-semibold text-slate-900">The standard price of every dose</strong> is recorded each month.
+                <strong className="font-semibold text-slate-900">The standard price of every dose</strong> is recorded at every completed price verification.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">Delivery:</strong> cold packing, delivery times and tracking.

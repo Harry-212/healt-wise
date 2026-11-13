@@ -1,4 +1,5 @@
 import { priceCheckDateKey } from "@/lib/data/price-check-dates";
+import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
 import type { CompareFaqItem } from "@/lib/routes/compare-faqs";
 import { siteOrigin } from "./site-origin";
 
@@ -88,7 +89,7 @@ export function compareWegovyMounjaroJsonLd(
         inLanguage: "en-GB",
         license: `${base}/terms-of-service`,
         measurementTechnique:
-          "Listed prices checked on each provider website in the first week of every month",
+          PRICE_CHECK_FREQUENCY_TEXT,
         variableMeasured: [
           { "@type": "PropertyValue", name: "Lowest price", unitText: "GBP" },
           { "@type": "PropertyValue", name: "Typical price", unitText: "GBP" },
