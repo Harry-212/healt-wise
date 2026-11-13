@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
+import PriceVerificationDisclaimer from "@/components/ui/PriceVerificationDisclaimer";
 import { Instrument_Serif } from "next/font/google";
 import { useReducedMotion } from "framer-motion";
 import {
@@ -18,7 +19,6 @@ import {
   FileText,
 } from "lucide-react";
 import Link from "next/link";
-import PriceVerificationDisclaimer from "@/components/ui/PriceVerificationDisclaimer";
 
 /** Date of the last substantive methodology update. Edit this when the methodology text changes. */
 const METHODOLOGY_LAST_UPDATED_ISO = "2026-11-06";
@@ -825,17 +825,16 @@ export default function MethodologyClient() {
                       <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-50 text-emerald-700 text-xs font-extrabold border border-emerald-100">11</span>
                       How We Keep Information Updated
                     </h3>
-                    <p className="mt-3 text-slate-600 leading-relaxed">
-                      We review comparison information regularly and display the relevant checking date where available. Prices, stock, delivery fees and offers can change between checks, so visitors should confirm the final details directly with the provider.
+                    <PriceVerificationDisclaimer variant="inline" className="mt-3 text-slate-600 leading-relaxed" />
+                    <p className="mt-2 text-slate-600 leading-relaxed">
+                      Stock, delivery fees and offers can also change between checks, so visitors should confirm the final details directly with the provider.
                     </p>
                   </div>
-
-                  <PriceVerificationDisclaimer />
 
                   <div className="rounded-xl border border-slate-200/60 bg-slate-50 p-5">
                     <p className="text-xs leading-relaxed text-slate-500 font-medium uppercase tracking-wider mb-2">Patient Check Guidelines:</p>
                     <p className="text-sm leading-relaxed text-slate-600">
-                      While we review and update comparison tables regularly, no comparison engine can guarantee prices are accurate down to the exact second. Always double-check final checkout costs, shipping policies, subscription clauses, and pharmacy credentials on the provider’s secure site before making a payment.
+                      No comparison engine can guarantee prices are accurate down to the exact second. Always double-check final checkout costs, shipping policies, subscription clauses, and pharmacy credentials on the provider’s secure site before making a payment.
                     </p>
                   </div>
                 </section>

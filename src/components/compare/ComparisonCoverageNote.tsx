@@ -8,9 +8,12 @@ import Link from "next/link";
 export default function ComparisonCoverageNote({
   statistics = "Lowest, typical and highest",
   className = "",
+  freeToUse = false,
 }: {
   statistics?: "Lowest, typical and highest" | "Lowest and highest";
   className?: string;
+  /** Task 151: prefix the approved "Healthwise360 is free to use." sentence (Wegovy comparison page only). */
+  freeToUse?: boolean;
 }) {
   return (
     <p
@@ -18,6 +21,7 @@ export default function ComparisonCoverageNote({
       className={`max-w-3xl text-sm leading-relaxed text-slate-600 ${className}`.trim()}
     >
       <strong className="font-semibold text-slate-800">Comparison coverage:</strong>{" "}
+      {freeToUse ? "Healthwise360 is free to use. " : null}
       We compare selected partner pharmacies, rather than the whole UK market.{" "}
       {statistics} prices shown are calculated from the partner listings
       included in this comparison. Check the price-check date and any

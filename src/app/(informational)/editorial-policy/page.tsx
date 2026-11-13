@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
 import LegalScrollyClient from "@/components/legal/LegalScrollyClient";
 import { siteOrigin } from "@/lib/seo/site-origin";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
@@ -62,9 +63,9 @@ export default function EditorialPolicyPage() {
           kicker: "Accuracy",
           title: "How we aim to keep content reliable",
           paragraphs: [
-            "Standard retail prices are reviewed monthly using each partner pharmacy’s website and information supplied directly by the pharmacy. The date shown is the date of the latest completed price verification. Prices may change between checks, so confirm the final price and any additional charges with the pharmacy before ordering.",
             "We check pricing and service details using information supplied directly by selected partner pharmacies and providers, including confirmation by email where applicable. We verify pharmacy registration using official GPhC records and use authoritative sources for regulatory and clinical information.",
             "Markets and prices change quickly. When we discover a material error, we correct the page and, when practical, note the change at the bottom of the article or in our changelog-style updates.",
+            PRICE_CHECK_FREQUENCY_TEXT,
           ],
           bullets: [
             "We distinguish clearly between facts, our interpretation, and general educational context.",

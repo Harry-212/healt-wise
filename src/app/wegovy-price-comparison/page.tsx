@@ -3,7 +3,6 @@ import Link from "next/link";
 import { dateModifiedWithPriceCheck } from "@/lib/data/price-check";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import ComparisonCoverageNote from "@/components/compare/ComparisonCoverageNote";
-import PriceVerificationDisclaimer from "@/components/ui/PriceVerificationDisclaimer";
 import CompareHereLink from "@/components/ui/CompareHereLink";
 import TrustBarMarquee from "@/components/trust/TrustBarMarquee";
 import WegovyCompareShaderHero from "@/components/wegovy/WegovyCompareShaderHero";
@@ -250,7 +249,7 @@ export default function CompareWegovyPricesUkPage() {
         dose24Weekly: formatGbp(
           Math.round((stat24.low / 4) * 100) / 100,
         ),
-        dose72Low: formatGbp(stat72?.low ?? 175.49),
+        dose72Low: formatGbp(stat72?.low ?? 194.99),
         cheapestLeader: cheapestAcross?.leader ?? insights.starter.lowProvider,
         cheapestLeaderWins:
           cheapestAcross?.leaderWins ?? WEGOVY_DOSE_KEYS.length,
@@ -466,8 +465,7 @@ export default function CompareWegovyPricesUkPage() {
               </ol>
             </div>
 
-            <ComparisonCoverageNote className="mt-6" />
-            <PriceVerificationDisclaimer checkDate={wegovyLastUpdated} className="mt-4 max-w-3xl" />
+            <ComparisonCoverageNote className="mt-6" freeToUse />
 
             <div className="mt-6">
               <WegovyUkCompareTable
@@ -753,7 +751,7 @@ export default function CompareWegovyPricesUkPage() {
               How Wegovy prices have changed
             </h2>
             <p className="mt-4 leading-relaxed text-slate-600">
-              We record standard retail prices for each partner monthly using the latest completed verification. The table shows the lowest listed price at each dose since our first check.
+              We record the standard price at each partner at every completed price verification. The table shows the lowest listed price at each dose since our first check.
             </p>
             <p className="mt-2 text-sm text-slate-500">
               Prices can go up or down between checks. A lower price today does not mean it will stay lower.
@@ -956,7 +954,7 @@ export default function CompareWegovyPricesUkPage() {
                 <strong className="font-semibold text-slate-900">A prescriber checks your health</strong> before any pen is sent.
               </li>
               <li>
-                <strong className="font-semibold text-slate-900">The standard price of every dose</strong> is recorded each month.
+                <strong className="font-semibold text-slate-900">The standard price of every dose</strong> is recorded at every completed price verification.
               </li>
               <li>
                 <strong className="font-semibold text-slate-900">Delivery:</strong> cold packing, delivery times and tracking.

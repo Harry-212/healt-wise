@@ -11,7 +11,6 @@ import MounjaroPriceByDoseSection from "@/components/mounjaro/MounjaroPriceByDos
 import MounjaroCheapestSection from "@/components/mounjaro/MounjaroCheapestSection";
 import MounjaroMonthlyCostSection from "@/components/mounjaro/MounjaroMonthlyCostSection";
 import ComparisonCoverageNote from "@/components/compare/ComparisonCoverageNote";
-import PriceVerificationDisclaimer from "@/components/ui/PriceVerificationDisclaimer";
 import NhsAccessSection from "@/components/compare/NhsAccessSection";
 import {
   MOUNJARO_DOSE_KEYS,
@@ -256,7 +255,6 @@ export default function CompareMounjaroPricesUkPage() {
               </ol>
             </div>
             <ComparisonCoverageNote className="mt-6" />
-            <PriceVerificationDisclaimer checkDate={mounjaroLastUpdated} className="mt-4 max-w-3xl" />
 
             <div className="mt-6">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50/80 px-3.5 py-1 text-xs font-semibold text-violet-800">

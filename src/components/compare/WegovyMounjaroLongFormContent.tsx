@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PriceVerificationDisclaimer from "@/components/ui/PriceVerificationDisclaimer";
 import {
   ArrowRight,
   ClipboardList,
@@ -13,7 +14,6 @@ import {
 
 import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
 import ComparisonCoverageNote from "@/components/compare/ComparisonCoverageNote";
-import PriceVerificationDisclaimer from "@/components/ui/PriceVerificationDisclaimer";
 import { getMounjaroCompareProviders } from "@/lib/data/compare-live";
 import { getWegovyCompareProviders } from "@/lib/data/compare-live";
 import { PROVIDERS } from "@/lib/data/providers";
@@ -240,8 +240,9 @@ export default function WegovyMounjaroLongFormContent({
             <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
               The price you pay for the same month of treatment changes with the dose, and the two medicines step up at different points. Prices below are from selected partner pharmacies and were checked on {pricesChecked}.
             </p>
+            <PriceVerificationDisclaimer variant="inline" checkDate={pricesChecked} className="mt-2 text-sm text-slate-500" />
             <p className="mt-2 text-sm text-slate-500">
-              Prices checked: {pricesChecked}. Full tables by partner:{" "}
+              Full tables by partner:{" "}
               <Link href="/mounjaro-price-comparison" className="font-semibold text-emerald-800 underline hover:text-emerald-950">Mounjaro</Link> and{" "}
               <Link href="/wegovy-price-comparison" className="font-semibold text-teal-800 underline hover:text-teal-950">Wegovy</Link>.
             </p>
@@ -283,7 +284,6 @@ export default function WegovyMounjaroLongFormContent({
                 </tbody>
               </table>
             </div>
-            <PriceVerificationDisclaimer checkDate={pricesChecked} className="mt-6" />
           </div>
 
           {/* 3.1 First month cost */}

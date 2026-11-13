@@ -1,29 +1,45 @@
 import React from "react";
 import { ShieldCheck } from "lucide-react";
+import {
+  PRICE_CHECK_DATE_LONG,
+  PRICE_CHECK_FREQUENCY_TEXT,
+} from "@/lib/data/price-check";
 
-export const STANDARD_PRICE_VERIFICATION_TEXT =
-  "Standard retail prices are reviewed monthly using each partner pharmacy’s website and information supplied directly by the pharmacy. The date shown is the date of the latest completed price verification. Prices may change between checks, so confirm the final price and any additional charges with the pharmacy before ordering.";
+/** Same sentence as PRICE_CHECK_FREQUENCY_TEXT: the approved Option C wording lives only there. */
+export const STANDARD_PRICE_VERIFICATION_TEXT = PRICE_CHECK_FREQUENCY_TEXT;
 
 export interface PriceVerificationDisclaimerProps {
   className?: string;
   variant?: "card" | "inline";
-  checkDate?: string;
+  /**
+   * Date of the latest completed price verification, already formatted ("31 October 2026").
+   * Omit it to use the central price-check date, so the date always follows the latest
+   * completed verification. Pass `null` to show the wording without a date (used where a
+   * page has no check date of its own).
+   */
+  checkDate?: string | null;
 }
 
+const DEFAULT_INLINE_CLASS = "text-xs sm:text-sm leading-relaxed text-slate-600 dark:text-slate-400";
+
 /**
- * Standard Price Verification Disclaimer component (Nov 2026).
- * Reusable text block and component standardizing price verification wording across Healthwise360.
+ * The one reusable price-verification block (Jeff, 13 Nov 2026): the approved wording plus
+ * the dynamic latest-check date. Methodology, the price comparison pages, the Wegovy vs
+ * Mounjaro page and the table notices all render this block, so a wording change is made
+ * once in `PRICE_CHECK_FREQUENCY_TEXT` and a new check date once in `PRICE_CHECK_DATE_ISO`.
  */
 export default function PriceVerificationDisclaimer({
   className = "",
   variant = "card",
   checkDate,
 }: PriceVerificationDisclaimerProps) {
+  const date = checkDate === undefined ? PRICE_CHECK_DATE_LONG : checkDate;
+
   if (variant === "inline") {
     return (
-      <p className={`text-xs sm:text-sm leading-relaxed text-slate-600 dark:text-slate-400 ${className}`.trim()}>
+      <p className={className.trim() || DEFAULT_INLINE_CLASS} data-price-verification>
         {STANDARD_PRICE_VERIFICATION_TEXT}
-        {checkDate ? ` (Checked: ${checkDate})` : ""}
+        {date ? ` Last checked: ${date}.` : null}
       </p>
     );
   }
@@ -32,6 +48,7 @@ export default function PriceVerificationDisclaimer({
     <div
       role="note"
       aria-label="Price verification notice"
+      data-price-verification
       className={`rounded-2xl border border-emerald-100 bg-emerald-50/70 p-4 sm:p-5 dark:border-emerald-950/40 dark:bg-emerald-950/20 ${className}`.trim()}
     >
       <div className="flex items-start gap-3.5">
@@ -43,11 +60,11 @@ export default function PriceVerificationDisclaimer({
             <p className="text-xs font-semibold uppercase tracking-wider text-emerald-900 dark:text-emerald-300">
               Price Verification Standard
             </p>
-            {checkDate && (
+            {date ? (
               <span className="text-xs font-medium text-emerald-800 dark:text-emerald-300">
-                Latest check: {checkDate}
+                Latest check: {date}
               </span>
-            )}
+            ) : null}
           </div>
           <p className="text-xs sm:text-sm leading-relaxed text-slate-700 dark:text-slate-300">
             {STANDARD_PRICE_VERIFICATION_TEXT}

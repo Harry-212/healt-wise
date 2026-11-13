@@ -36,6 +36,15 @@ export const PRICE_CHECK_DATE_LONG = formatIso(PRICE_CHECK_DATE_ISO, false);
 export const PRICE_CHECK_DATE_SHORT = formatIso(PRICE_CHECK_DATE_ISO, true);
 
 /**
+ * The one approved price-check-frequency wording (Task 142, Option C, approved by Harry
+ * on 11 November 2026). Every visible statement, FAQ answer and JSON-LD field about how
+ * often prices are checked uses this text. It never states a date: the date shown next to
+ * it comes from PRICE_CHECK_DATE_LONG, so it stays the latest completed verification.
+ */
+export const PRICE_CHECK_FREQUENCY_TEXT =
+  "Standard retail prices are reviewed monthly using each partner pharmacy’s website and information supplied directly by the pharmacy. The date shown is the date of the latest completed price verification. Prices may change between checks, so confirm the final price and any additional charges with the pharmacy before ordering.";
+
+/**
  * `dateModified` for a page that shows prices: the later of the page's own
  * content-edit date and the price-check date, so schema never claims the page
  * was last modified before the prices on it were checked.

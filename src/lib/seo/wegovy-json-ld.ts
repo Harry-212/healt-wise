@@ -1,4 +1,6 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
+import { PRICE_CHECK_DATE_ISO, PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
+import { alistairGreenwoodAuthorJsonLd } from "@/lib/seo/author-ref";
 
 export type WhatIsWegovyFaqParams = {
   /** Lowest listed starter pen price, e.g. "£76.94". */
@@ -10,7 +12,7 @@ export type WhatIsWegovyFaqParams = {
 export function buildWegovyFaqItems(
   params?: WhatIsWegovyFaqParams,
 ): { question: string; answer: string }[] {
-  const starterLow = params?.starterLow ?? "£76.94";
+  const starterLow = params?.starterLow ?? "£64.99";
   const dose24Typical = params?.dose24Typical ?? "£200";
   return [
     {
@@ -92,10 +94,13 @@ export function whatIsWegovyPageJsonLd(
         inLanguage: "en-GB",
         isPartOf: { "@id": `${base}/#website` },
         publisher: { "@id": `${base}/#organization` },
+        author: alistairGreenwoodAuthorJsonLd(base),
         about: { "@type": "Thing", name: "Wegovy (semaglutide)" },
         mainEntity: { "@id": `${pageUrl}#faq` },
         breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
-        lastReviewed: "2026-10-19",
+        // Same date the page shows as "Last updated". No lastReviewed/reviewedBy: the page
+        // has no separately identified reviewer (Task 150).
+        dateModified: PRICE_CHECK_DATE_ISO,
         citation: {
           "@type": "WebPage",
           name: "Semaglutide: a medicine to manage type 2 diabetes or treat obesity",
@@ -274,16 +279,16 @@ export function buildWegovyCompareUkFaqItems(
   params?: WegovyCompareFaqParams,
 ): { question: string; answer: string }[] {
   const checkDate = params?.checkDate ?? "November 2026";
-  const starterLow = params?.starterLow ?? "£72.89";
-  const starterWeekly = params?.starterWeekly ?? "£18.22";
+  const starterLow = params?.starterLow ?? "£64.99";
+  const starterWeekly = params?.starterWeekly ?? "£16.25";
   const dose10Low = params?.dose10Low ?? "£98.99";
   const dose17Low = params?.dose17Low ?? "£139.99";
-  const dose24Low = params?.dose24Low ?? "£173.69";
+  const dose24Low = params?.dose24Low ?? "£159";
   const dose24High = params?.dose24High ?? "£290";
   const dose24Typical = params?.dose24Typical ?? "£200";
-  const dose24Weekly = params?.dose24Weekly ?? "£43.42";
-  const dose72Low = params?.dose72Low ?? "£175.49";
-  const cheapestLeader = params?.cheapestLeader ?? "Pharmacy + Me";
+  const dose24Weekly = params?.dose24Weekly ?? "£39.75";
+  const dose72Low = params?.dose72Low ?? "£194.99";
+  const cheapestLeader = params?.cheapestLeader ?? "Solira";
   const cheapestLeaderWins = params?.cheapestLeaderWins ?? 6;
   const cheapestTotalDoses = params?.cheapestTotalDoses ?? 6;
 
@@ -335,7 +340,7 @@ export function buildWegovyCompareUkFaqItems(
     {
       question: "Will Wegovy get cheaper in the UK?",
       answer:
-        "Nobody can say for certain. We record standard prices every month, so you can see the direction of prices in section 7.",
+        "Nobody can say for certain. We record standard prices at every completed price verification, so you can see the direction of prices in section 7.",
     },
     {
       question: "Do Wegovy prices include delivery?",
@@ -360,7 +365,7 @@ export function buildWegovyCompareUkFaqItems(
     {
       question: "How often do you check Wegovy prices?",
       answer:
-        "Standard retail prices are reviewed monthly using each partner pharmacy’s website and information supplied directly by the pharmacy. The date shown is the date of the latest completed price verification. Prices may change between checks, so confirm the final price and any additional charges with the pharmacy before ordering.",
+        PRICE_CHECK_FREQUENCY_TEXT,
     },
   ];
 }

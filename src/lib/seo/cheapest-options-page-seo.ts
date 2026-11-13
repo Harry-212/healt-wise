@@ -17,7 +17,7 @@ export type CheapestOptionsFaqParams = {
 };
 
 const DEFAULT_PARAMS: CheapestOptionsFaqParams = {
-  wegovyStarter: "£76.94",
+  wegovyStarter: "£64.99",
   mounjaroStarter: "£99",
   wegovySixMonths: "£618",
   mounjaroSixMonths: "£1,044",
@@ -119,7 +119,7 @@ export function cheapestOptionsUkJsonLd(
 
   const wCount = input?.wegovyCount ?? activeProviderCount();
   const mCount = input?.mounjaroCount ?? activeProviderCount();
-  const wLowStr = formatPriceNumber(input?.wegovyLow, "76.94");
+  const wLowStr = formatPriceNumber(input?.wegovyLow, "64.99");
   const wHighStr = formatPriceNumber(input?.wegovyHigh, "290.00");
   const mLowStr = formatPriceNumber(input?.mounjaroLow, "99.00");
   const mHighStr = formatPriceNumber(input?.mounjaroHigh, "359.95");

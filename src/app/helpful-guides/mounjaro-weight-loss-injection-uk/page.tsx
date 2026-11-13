@@ -98,7 +98,7 @@ const REFERENCES = [
   {
     label: "Compare Mounjaro prices UK — Health Wise",
     description:
-      "Verified price comparison for Mounjaro across GPhC-registered UK pharmacies, updated regularly.",
+      "Verified price comparison for Mounjaro across GPhC-registered UK pharmacies, with the latest price-check date shown.",
     href: "/mounjaro-price-comparison",
     external: false,
   },

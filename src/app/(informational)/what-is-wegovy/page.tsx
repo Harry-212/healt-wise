@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import WegovyPageToc from "@/components/wegovy/WegovyPageToc";
+import GuideAuthorByline from "@/components/ui/GuideAuthorByline";
 import {
   buildWegovyFaqItems,
   whatIsWegovyPageJsonLd,
@@ -87,7 +88,7 @@ export default function WhatIsWegovyPage() {
   const WEGOVY_UK_COMPARE_LAST_UPDATED = getLivePriceCheckLabels().wegovy;
   const providerCount = WEGOVY_UK_COMPARE_PROVIDERS.length;
   const insights = buildWegovyPriceInsights(WEGOVY_UK_COMPARE_PROVIDERS);
-  const starterPrice = `£${insights?.starter.low ?? 76.94}`;
+  const starterPrice = `£${insights?.starter.low ?? 64.99}`;
   const dose24Low = `£${insights?.top.low ?? 135}`;
   const dose24Typical = `£${insights?.top.median ?? 200}`;
   const dose24High = `£${insights?.top.high ?? 290}`;
@@ -149,8 +150,15 @@ export default function WhatIsWegovyPage() {
               </div>
 
               <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-slate-200/80 pt-4 text-xs font-semibold text-slate-600 sm:text-sm">
+                <div className="inline-flex items-center gap-1.5">
+                  <Check
+                    className="h-4 w-4 shrink-0 text-emerald-600"
+                    strokeWidth={2.5}
+                  />
+                  <GuideAuthorByline />
+                </div>
                 {[
-                  `Last reviewed ${WEGOVY_UK_COMPARE_LAST_UPDATED}`,
+                  `Last updated ${WEGOVY_UK_COMPARE_LAST_UPDATED}`,
                   "No paid rankings",
                   `${providerCount} GPhC pharmacies tracked`,
                 ].map((chip) => (
