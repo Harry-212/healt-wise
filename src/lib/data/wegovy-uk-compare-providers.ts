@@ -83,12 +83,12 @@ const WEGOVY_PRICE_ROWS: Record<string, WegovyPriceRow> = {
     "7.2mg": 245.69,
   },
   "pharmacy-me": {
-    "0.25mg": 76.94,
-    "0.5mg": 76.94,
-    "1mg": 76.94,
-    "1.7mg": 130.14,
-    "2.4mg": 183.34,
-    "7.2mg": 185.24,
+    "0.25mg": 80.99,
+    "0.5mg": 80.99,
+    "1mg": 80.99,
+    "1.7mg": 136.99,
+    "2.4mg": 192.99,
+    "7.2mg": 194.99,
   },
   // i-Prescribe does not list Wegovy 7.2mg (checked 26 Oct 2026).
   "i-prescribe": {
