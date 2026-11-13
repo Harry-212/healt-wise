@@ -22,7 +22,7 @@ const PAGES = [
 ];
 
 for (const [slug, build, pageFile] of PAGES) {
-  test(`/${slug}: structured data names Alistair as author by reference, keeps publisher, adds no reviewer`, () => {
+  test(`/${slug}: structured data names Alistair as author by reference, keeps publisher, adds no reviewer`, async () => {
     const graph = build()["@graph"];
     const webpage = graph.find((n) => n["@type"] === "WebPage");
     assert.deepEqual(webpage.author, {
@@ -31,7 +31,12 @@ for (const [slug, build, pageFile] of PAGES) {
       name: "Alistair Greenwood",
       url: `${base}/editorial-team/alistair-greenwood`,
     });
-    assert.deepEqual(webpage.publisher, { "@id": `${base}/#organization` });
+    // Publisher keeps the shared Organization @id and repeats the shared logo on the page (PenSEO PUBLISHER_LOGO_MISSING).
+    const { sharedGraphJsonLd } = await import("@/lib/seo/shared-json-ld.ts");
+    const sharedOrg = sharedGraphJsonLd()["@graph"].find((n) => n["@type"] === "Organization");
+    assert.equal(webpage.publisher["@id"], `${base}/#organization`);
+    assert.equal(webpage.publisher.name, sharedOrg.name);
+    assert.deepEqual(webpage.publisher.logo, sharedOrg.logo, "same logo as the shared Organization");
     assert.equal(graph.filter((n) => n["@type"] === "Person").length, 0, "no second Person node on the page");
     const json = JSON.stringify(graph);
     assert.ok(!/reviewedBy|lastReviewed/.test(json), "no reviewer fields");

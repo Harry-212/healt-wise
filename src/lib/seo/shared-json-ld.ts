@@ -9,6 +9,25 @@ import {
 } from "@/lib/site-contact";
 
 /**
+ * Publisher block for an article-like page: the same Organization @id as the shared graph,
+ * repeated with its name and logo so a reader of one page alone still sees the logo
+ * (PenSEO PUBLISHER_LOGO_MISSING). Values come from the same constants as the shared graph.
+ */
+export function publisherOrganizationJsonLd(base: string): Record<string, unknown> {
+  return {
+    "@type": "Organization",
+    "@id": `${base}/#organization`,
+    name: SITE_BRAND_NAME,
+    url: `${base}/`,
+    logo: {
+      "@type": "ImageObject",
+      "@id": `${base}/#logo`,
+      url: `${base}${SITE_LOGO_SRC}`,
+    },
+  };
+}
+
+/**
  * Site-wide shared graph containing Organization and WebSite entities.
  */
 export function sharedGraphJsonLd(): Record<string, unknown> {
