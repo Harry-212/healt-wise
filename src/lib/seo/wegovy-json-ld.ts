@@ -1,5 +1,6 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
-import { PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
+import { PRICE_CHECK_DATE_ISO, PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
+import { alistairGreenwoodAuthorJsonLd } from "@/lib/seo/author-ref";
 
 export type WhatIsWegovyFaqParams = {
   /** Lowest listed starter pen price, e.g. "£76.94". */
@@ -93,10 +94,13 @@ export function whatIsWegovyPageJsonLd(
         inLanguage: "en-GB",
         isPartOf: { "@id": `${base}/#website` },
         publisher: { "@id": `${base}/#organization` },
+        author: alistairGreenwoodAuthorJsonLd(base),
         about: { "@type": "Thing", name: "Wegovy (semaglutide)" },
         mainEntity: { "@id": `${pageUrl}#faq` },
         breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
-        lastReviewed: "2026-10-19",
+        // Same date the page shows as "Last updated". No lastReviewed/reviewedBy: the page
+        // has no separately identified reviewer (Task 150).
+        dateModified: PRICE_CHECK_DATE_ISO,
         citation: {
           "@type": "WebPage",
           name: "Semaglutide: a medicine to manage type 2 diabetes or treat obesity",
