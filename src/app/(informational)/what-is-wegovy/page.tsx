@@ -87,7 +87,7 @@ export default function WhatIsWegovyPage() {
   const WEGOVY_UK_COMPARE_LAST_UPDATED = getLivePriceCheckLabels().wegovy;
   const providerCount = WEGOVY_UK_COMPARE_PROVIDERS.length;
   const insights = buildWegovyPriceInsights(WEGOVY_UK_COMPARE_PROVIDERS);
-  const starterPrice = `£${insights?.starter.low ?? 76.94}`;
+  const starterPrice = `£${insights?.starter.low ?? 64.99}`;
   const dose24Low = `£${insights?.top.low ?? 135}`;
   const dose24Typical = `£${insights?.top.median ?? 200}`;
   const dose24High = `£${insights?.top.high ?? 290}`;

@@ -31,7 +31,7 @@ function formatMargin(pence: number): string {
 
 export default function WegovyCheapestSection({
   cheapestAcross,
-  starterLow = 72.89,
+  starterLow = 64.99,
 }: {
   cheapestAcross?: CheapestAcrossDoses | null;
   starterLow?: number;

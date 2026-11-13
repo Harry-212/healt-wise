@@ -34,9 +34,9 @@ const YEAR_ONE_AND_AFTER_ROWS = [
 ];
 
 export default function WegovyMonthlyCostSection({
-  starterLow = 72.89,
-  topLow = 173.69,
-  topHigh = 290,
+  starterLow = 64.99,
+  topLow = 159,
+  topHigh = 229.99,
   firstSixMonths,
   annualCosts,
 }: {

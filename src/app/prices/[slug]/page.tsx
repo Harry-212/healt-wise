@@ -33,7 +33,7 @@ export default async function PricePage({ params }: Props) {
     const jsonLd = cheapestOptionsUkJsonLd({
       wegovyCount: pageData.wegovyCount,
       mounjaroCount: pageData.mounjaroCount,
-      wegovyLow: pageData.wStarter?.low ?? 76.94,
+      wegovyLow: pageData.wStarter?.low ?? 64.99,
       wegovyHigh: pageData.wLong?.high ?? 290.0,
       mounjaroLow: pageData.mStarter?.low ?? 99.0,
       mounjaroHigh: pageData.mTop?.high ?? 359.95,
