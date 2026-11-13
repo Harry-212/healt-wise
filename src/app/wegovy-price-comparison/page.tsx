@@ -63,17 +63,17 @@ const EXPLORE_LINKS = [
     desc: "Compare monthly costs, dosing ladders, clinical trial results and side effect profiles side by side.",
   },
   {
-    href: "/blog/wegovy-side-effects-management",
+    href: "/blog/side-effects-of-wegovy-and-how-to-manage-them",
     title: "Side effects of Wegovy and how to manage them",
     desc: "Practical clinician advice on managing common side effects like nausea and titration adjustment.",
   },
   {
-    href: "/blog/switching-from-wegovy-to-mounjaro",
+    href: "/helpful-guides/switching-wegovy-to-mounjaro-uk",
     title: "Switching from Wegovy to Mounjaro in the UK",
     desc: "What prescribers look for when transitioning between GLP-1 and dual GIP/GLP-1 treatments.",
   },
   {
-    href: "/blog/wegovy-injection-instructions",
+    href: "/blog/easy-to-follow-wegovy-injection-instructions-you-can-trust",
     title: "Easy to follow Wegovy injection instructions",
     desc: "Step-by-step guidance on pen preparation, injection sites, priming and safe needle disposal.",
   },
@@ -657,7 +657,7 @@ export default function CompareWegovyPricesUkPage() {
                 Wegovy click calculator
               </Link>{" "}
               or read the{" "}
-              <Link href="/blog/wegovy-click-calculator-guide" className="font-semibold text-emerald-800 underline hover:text-emerald-950">
+              <Link href="/blog/wegovy-click-calculator-uk" className="font-semibold text-emerald-800 underline hover:text-emerald-950">
                 Wegovy click calculator guide
               </Link>.
             </p>

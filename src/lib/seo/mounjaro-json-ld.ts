@@ -1,6 +1,7 @@
 import { siteOrigin } from "@/lib/seo/site-origin";
 import { PRICE_CHECK_DATE_ISO, PRICE_CHECK_FREQUENCY_TEXT } from "@/lib/data/price-check";
 import { alistairGreenwoodAuthorJsonLd } from "@/lib/seo/author-ref";
+import { publisherOrganizationJsonLd } from "@/lib/seo/shared-json-ld";
 
 export function mounjaroArticleJsonLd(): Record<string, unknown> {
   const base = siteOrigin();
@@ -54,7 +55,7 @@ export function whatIsMounjaroPageJsonLd(
           "What is Mounjaro? A weekly tirzepatide injection for weight loss and type 2 diabetes. See how it works, how long it takes, doses and side effects.",
         inLanguage: "en-GB",
         isPartOf: { "@id": `${base}/#website` },
-        publisher: { "@id": `${base}/#organization` },
+        publisher: publisherOrganizationJsonLd(base),
         author: alistairGreenwoodAuthorJsonLd(base),
         about: { "@type": "Thing", name: "Mounjaro (tirzepatide)" },
         mainEntity: { "@id": `${pageUrl}#faq` },
