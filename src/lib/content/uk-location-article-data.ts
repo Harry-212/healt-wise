@@ -375,7 +375,7 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
     return "Best weight loss treatment Livingston Scotland: NHS and private access, GLP 1 (Wegovy and Mounjaro) guide, 20 kg in 5 months plan, doctor talk tips, West Lothian hacks for safe slimming.";
   }
   if (loc.slug === "london") {
-    return "Weight loss treatment in London: compare NHS, clinic and online pharmacy routes, check registration and see dated prices from our selected partners.";
+    return "Compare selected online partners that deliver weight loss treatment to London: prices, what each includes and how to check a provider. Checked 12 November 2026.";
   }
   if (loc.slug === "londonderry") {
     return "Best weight loss treatment Londonderry NI: medically supervised plans, NHS and private GLP 1 access, Wegovy and Mounjaro context, realistic weight loss timelines, trustworthy clinic checks.";
@@ -2075,47 +2075,35 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
     return [
       {
         q: "Can I get weight loss treatment on the NHS in London?",
-        a: "Possibly. It depends on your GP, your borough, your integrated care board and whether you meet the criteria. Ask your GP what is available near you.",
+        a: "Some people can, if they meet set criteria, and access depends on your area. Ask your GP, and see the official guidance in section 3.1.",
       },
       {
         q: "Do I need a prescription for weight loss injections in London?",
-        a: "Yes. Mounjaro and Wegovy are prescription only medicines in the UK, wherever you live.",
+        a: "Yes. Mounjaro and Wegovy are prescription only medicines, so a prescriber must check your health first. Our online partners do this through an online consultation.",
       },
       {
         q: "How do I get Mounjaro in London?",
-        a: "Mounjaro is a prescription only medicine. You can ask your GP about NHS access, or complete an online health check with a registered pharmacy, or see a private clinic. A prescriber decides whether it is suitable for you.",
+        a: "You can ask your GP about NHS options, or use a registered online pharmacy, which carries out an online consultation and delivers to your home. See section 6 and our Mounjaro price comparison.",
       },
       {
         q: "How much does weight loss treatment cost in London?",
-        a: "It depends on the route. NHS treatment is free at the point of use for people who qualify. Private clinics and online pharmacies set their own prices. Section 7 shows the dated pen prices of our selected partners, with the consultation fee beside them.",
+        a: "Prices are the same for London addresses as for the rest of the UK. On 12 November 2026, the lowest standard price we found was £119.99 for Mounjaro 2.5 mg (the starting dose) and £64.99 for Wegovy 0.25 mg. See section 5 and the full price pages.",
       },
       {
         q: "Is it safe to use an online pharmacy if I live in London?",
-        a: "It can be, if the pharmacy is registered with the GPhC and a prescriber reviews your health first. Check the register before you order.",
+        a: "It can be, if the pharmacy and prescriber are registered and ask about your health before prescribing. See section 7 for how to check.",
       },
       {
         q: "Is a clinic better than an online pharmacy?",
-        a: "Not necessarily. It depends on how you prefer to be assessed and supported. Either should be registered, and either should check your health before treatment.",
-      },
-      {
-        q: "Can I collect from a pharmacy in London?",
-        a: "Most of our partners deliver to your home. Collection depends on the partner.",
-      },
-      {
-        q: "How quickly will my medicine arrive?",
-        a: "It differs by provider. Many send by tracked courier within a few days of approval.",
+        a: "They suit different people. A clinic offers face to face appointments, usually at a higher cost. An online pharmacy is convenient and delivers to you. Which is suitable for you is a decision for your prescriber.",
       },
       {
         q: "Do the prices include delivery?",
-        a: "Not always. Delivery charges differ by partner, so check them on the partner's site. The consultation fee is shown in the tables above.",
-      },
-      {
-        q: "How do I check a clinic or pharmacy?",
-        a: "Use the steps in section 8. Pharmacies are on the GPhC register, and clinics that give medical treatment in England are on the CQC register.",
+        a: "Not always. DoseDirect and SheMed include delivery, and the other partners charge for it separately. The prices we show are standard prices and may not include consultation fees at every partner. Check the final total with the partner. See section 4.",
       },
       {
         q: "Does Healthwise360 recommend a provider?",
-        a: "No. We list selected partners from A to Z and do not rank them. A prescriber decides what is suitable for you.",
+        a: "No. We compare selected partners and show their prices and details. See section 9 for how we are paid.",
       },
     ];
   }
