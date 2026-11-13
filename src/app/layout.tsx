@@ -10,6 +10,8 @@ import { siteOrigin } from "@/lib/seo/site-origin";
 import { sharedGraphJsonLd } from "@/lib/seo/shared-json-ld";
 import { SITE_BRAND_NAME } from "@/lib/site-brand";
 import {
+  SITE_APPLE_TOUCH_ICON_SRC,
+  SITE_FAVICON_SMALL_SRC,
   SITE_FAVICON_SRC,
   SITE_SHARE_IMAGE_ALT,
   SITE_SHARE_IMAGE_HEIGHT,
@@ -59,8 +61,11 @@ export const metadata: Metadata = {
     images: [SITE_SHARE_IMAGE_SRC],
   },
   icons: {
-    icon: [{ url: SITE_FAVICON_SRC, type: "image/png" }],
-    apple: [{ url: SITE_FAVICON_SRC, type: "image/png" }],
+    icon: [
+      { url: SITE_FAVICON_SMALL_SRC, type: "image/png", sizes: "48x48" },
+      { url: SITE_FAVICON_SRC, type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: SITE_APPLE_TOUCH_ICON_SRC, type: "image/png", sizes: "180x180" }],
   },
 };
 

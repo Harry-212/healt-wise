@@ -59,8 +59,14 @@ export const WHY_CHOOSE_HEALTHWISE360_SRC =
 export const WHY_CHOOSE_HEALTHWISE360_ALT =
   "Why choose Health Wise — independent UK weight loss treatment comparison";
 
-/** Favicon (`public/newiconhealthwise360.png`). */
-export const SITE_FAVICON_SRC = "/newiconhealthwise360.png";
+/**
+ * Favicons. The original artwork (`public/newiconhealthwise360.png`) is 1254 x 1254 and 1.1 MB, which the
+ * browser downloaded on every page. These resized copies are 5 to 47 KB. Sizes are multiples of 48 px, as
+ * Google requires for the favicon shown in search results.
+ */
+export const SITE_FAVICON_SRC = "/icon-192.png";
+export const SITE_FAVICON_SMALL_SRC = "/icon-48.png";
+export const SITE_APPLE_TOUCH_ICON_SRC = "/apple-touch-icon.png";
 
 /** Blog hero + listing: Top Benefits of Doctor Prescribed… (`public/blog/Ttop Benefits… - Copy.webp`). */
 export const BLOG_TOP_BENEFITS_DOCTOR_PRESCRIBED_IMAGE =

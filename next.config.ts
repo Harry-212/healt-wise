@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { HELPFUL_GUIDE_SLUGS } from "./src/lib/helpful-guide-slugs";
+import { BLOG_FEED_TAGS } from "./src/lib/blog-feed";
 import { affiliateRedirects } from "./src/lib/data/providers";
 import {
   GONE_BLOG_PAGE_LOCATIONS_QUERY_PATHS,
@@ -161,6 +162,16 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Legacy `/blog?topic=<tag>` -> the static topic hub. This used to live in the /blog page
+      // (searchParams + permanentRedirect), which forced /blog to render on every request and
+      // skip the cache. It is a config redirect now so /blog can be prerendered.
+      // (`/blog?topic=locations` is handled by the 410 rewrite above, not here.)
+      ...BLOG_FEED_TAGS.map((topic) => ({
+        source: "/blog",
+        has: [{ type: "query" as const, key: "topic", value: topic }],
+        destination: `/blog/topic/${topic}`,
+        permanent: true,
+      })),
       // Medium Priority SEO Plan redirects (Pages 1, 7, 10)
       {
         source: "/blog/best-place-to-start-weight-loss-treatment-online-uk",

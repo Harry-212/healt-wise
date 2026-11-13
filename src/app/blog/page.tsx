@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-import { permanentRedirect } from "next/navigation";
 import BlogClient from "./BlogClient";
 import { getBlogPageFeed } from "@/lib/blog";
-import {
-  blogHubPath,
-  blogTopicHubPath,
-  resolveBlogTopicFilter,
-} from "@/lib/blog-feed";
+import { blogHubPath } from "@/lib/blog-feed";
 import {
   BLOG_HUB_DESCRIPTION,
   BLOG_HUB_TITLE,
@@ -32,18 +27,10 @@ function blogHubMetadata(canonicalPath: string): Metadata {
   });
 }
 
-export async function generateMetadata({
-  searchParams,
-}: {
-  searchParams: Promise<{ topic?: string }>;
-}): Promise<Metadata> {
-  const { topic: rawTopic } = await searchParams;
-  const activeTopic = resolveBlogTopicFilter(rawTopic);
-  if (activeTopic !== "all") {
-    // Legacy ?topic= URLs redirect; metadata still points at the canonical static path.
-    return blogHubMetadata(blogTopicHubPath(activeTopic));
-  }
-
+// This page reads no request data, so it is prerendered and cached like the other static pages.
+// Legacy `/blog?topic=` URLs are redirected to the topic hubs in middleware
+// (legacyFilterQueryRedirect), so the page itself no longer needs `searchParams`.
+export function generateMetadata(): Metadata {
   return blogHubMetadata(blogHubPath("all"));
 }
 
@@ -60,17 +47,7 @@ function blogHubJsonLd(canonicalUrl: string): Record<string, unknown> {
   };
 }
 
-export default async function BlogIndexPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ topic?: string }>;
-}) {
-  const { topic } = await searchParams;
-  const activeTopic = resolveBlogTopicFilter(topic);
-  if (activeTopic !== "all") {
-    permanentRedirect(blogTopicHubPath(activeTopic));
-  }
-
+export default function BlogIndexPage() {
   const { articles, totalPages } = getBlogPageFeed(1, { topic: "all" });
   const canonicalUrl = `${siteOrigin()}/blog`;
 
