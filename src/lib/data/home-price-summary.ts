@@ -84,46 +84,46 @@ export function getLivePriceSummary(): HomePriceSummary {
 
   const mjStarter = mjInsights?.starter ?? {
     dose: "2.5mg",
-    low: 119.69,
-    median: 152,
+    low: 119.99,
+    median: 137.24,
     high: 179,
-    lowProvider: "Pharmacy + Me",
+    lowProvider: "Solira",
     listed: mjProviders.length,
   };
   const mjTop = mjInsights?.top ?? {
     dose: "15mg",
-    low: 245.69,
-    median: 299,
-    high: 359.95,
+    low: 264.99,
+    median: 285.34,
+    high: 340,
     lowProvider: "Pharmacy + Me",
     listed: mjProviders.length,
   };
 
   const wgStarter = wgInsights?.starter ?? {
     dose: "0.25mg",
-    low: 72.89,
-    median: 100,
-    high: 205,
-    lowProvider: "Pharmacy + Me",
+    low: 64.99,
+    median: 92.74,
+    high: 139,
+    lowProvider: "Solira",
     listed: wgProviders.length,
   };
   const wgTop =
     wgInsights?.doses.find((d) => d.dose === "2.4mg") ??
     wgInsights?.top ?? {
       dose: "2.4mg",
-      low: 173.69,
-      median: 200,
-      high: 290,
-      lowProvider: "Pharmacy + Me",
+      low: 159,
+      median: 191.49,
+      high: 229.99,
+      lowProvider: "SheMed",
       listed: wgProviders.length,
     };
   const wg72 = wgInsights?.doses.find((d) => d.dose === "7.2mg") ?? {
     dose: "7.2mg",
-    low: 175.49,
-    median: 259,
-    high: 350,
+    low: 194.99,
+    median: 234,
+    high: 245.69,
     lowProvider: "Pharmacy + Me",
-    listed: 48,
+    listed: 4,
   };
 
   // Cheapest single verified pharmacy (affiliate or not) for the first 3 months of Mounjaro (2.5mg, 5mg, 7.5mg)
@@ -146,10 +146,10 @@ export function getLivePriceSummary(): HomePriceSummary {
 
   const mjBest3 = mjThreeMonthCandidates[0] ?? {
     name: "Pharmacy + Me",
-    m1: 119.69,
-    m2: 134.99,
-    m3: 185.39,
-    total: 440.07,
+    m1: 129.99,
+    m2: 147.99,
+    m3: 199.99,
+    total: 477.97,
   };
 
   // Cheapest single verified pharmacy (affiliate or not) for the first 3 months of Wegovy (0.25mg, 0.5mg, 1mg)
@@ -182,10 +182,10 @@ export function getLivePriceSummary(): HomePriceSummary {
 
   const wgBest3 = wgThreeMonthCandidates[0] ?? {
     name: "Pharmacy + Me",
-    m1: 72.89,
-    m2: 72.89,
-    m3: 72.89,
-    total: 218.67,
+    m1: 80.99,
+    m2: 80.99,
+    m3: 80.99,
+    total: 242.97,
   };
 
   // First 6 months estimates

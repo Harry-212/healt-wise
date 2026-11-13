@@ -7,8 +7,8 @@ export interface MounjaroVsWegovySectionProps {
 }
 
 export default function MounjaroVsWegovySection({
-  mounjaroStarterLow = "£119.69",
-  wegovyStarterLow = "£72.89",
+  mounjaroStarterLow = "£119.99",
+  wegovyStarterLow = "£64.99",
 }: MounjaroVsWegovySectionProps) {
   const rows = [
     { feature: "Medicine inside", mounjaro: "Tirzepatide", wegovy: "Semaglutide" },

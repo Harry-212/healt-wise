@@ -10,8 +10,8 @@ export interface WegovyMounjaroQuickVerdictProps {
 }
 
 export default function WegovyMounjaroQuickVerdict({
-  wegovyStarterLow = "£72.89",
-  mounjaroStarterLow = "£119.69",
+  wegovyStarterLow = "£64.99",
+  mounjaroStarterLow = "£119.99",
   wegovyTopTypical = "£200",
   mounjaroTopTypical = "£299",
   pricesChecked = PRICE_CHECK_DATE_LONG,

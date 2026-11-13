@@ -249,7 +249,7 @@ export default function CompareWegovyPricesUkPage() {
         dose24Weekly: formatGbp(
           Math.round((stat24.low / 4) * 100) / 100,
         ),
-        dose72Low: formatGbp(stat72?.low ?? 175.49),
+        dose72Low: formatGbp(stat72?.low ?? 194.99),
         cheapestLeader: cheapestAcross?.leader ?? insights.starter.lowProvider,
         cheapestLeaderWins:
           cheapestAcross?.leaderWins ?? WEGOVY_DOSE_KEYS.length,

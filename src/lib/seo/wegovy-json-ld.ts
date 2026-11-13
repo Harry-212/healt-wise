@@ -10,7 +10,7 @@ export type WhatIsWegovyFaqParams = {
 export function buildWegovyFaqItems(
   params?: WhatIsWegovyFaqParams,
 ): { question: string; answer: string }[] {
-  const starterLow = params?.starterLow ?? "£76.94";
+  const starterLow = params?.starterLow ?? "£64.99";
   const dose24Typical = params?.dose24Typical ?? "£200";
   return [
     {
@@ -274,16 +274,16 @@ export function buildWegovyCompareUkFaqItems(
   params?: WegovyCompareFaqParams,
 ): { question: string; answer: string }[] {
   const checkDate = params?.checkDate ?? "November 2026";
-  const starterLow = params?.starterLow ?? "£72.89";
-  const starterWeekly = params?.starterWeekly ?? "£18.22";
+  const starterLow = params?.starterLow ?? "£64.99";
+  const starterWeekly = params?.starterWeekly ?? "£16.25";
   const dose10Low = params?.dose10Low ?? "£98.99";
   const dose17Low = params?.dose17Low ?? "£139.99";
-  const dose24Low = params?.dose24Low ?? "£173.69";
+  const dose24Low = params?.dose24Low ?? "£159";
   const dose24High = params?.dose24High ?? "£290";
   const dose24Typical = params?.dose24Typical ?? "£200";
-  const dose24Weekly = params?.dose24Weekly ?? "£43.42";
-  const dose72Low = params?.dose72Low ?? "£175.49";
-  const cheapestLeader = params?.cheapestLeader ?? "Pharmacy + Me";
+  const dose24Weekly = params?.dose24Weekly ?? "£39.75";
+  const dose72Low = params?.dose72Low ?? "£194.99";
+  const cheapestLeader = params?.cheapestLeader ?? "Solira";
   const cheapestLeaderWins = params?.cheapestLeaderWins ?? 6;
   const cheapestTotalDoses = params?.cheapestTotalDoses ?? 6;
 
