@@ -35,8 +35,11 @@ test("homepage has no keyword-variation paragraph", () => {
   assert.ok(!t.includes("weight loss injection price checker UK"));
 });
 
-test("London SEO title carries no brand suffix (the site title template adds it once)", () => {
+test("London SEO title is Jeff's 57-character title, with no brand suffix typed into the string", () => {
   const t = read("src/lib/content/uk-location-article-data.ts");
-  assert.ok(t.includes('return "Weight Loss Treatment in London";'));
+  assert.ok(t.includes('return "Weight Loss Treatment in London: Online Partners Compared";'));
+  assert.equal("Weight Loss Treatment in London: Online Partners Compared".length, 57);
   assert.ok(!t.includes("in London | Healthwise360"));
+  // The page applies it as an absolute title so the 57 characters are not extended by the site template.
+  assert.ok(read("src/app/blog/[slug]/page.tsx").includes('loc.slug === "london" ? { absolute: title } : title'));
 });

@@ -99,7 +99,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `${siteOrigin()}/blog/${slug}`;
   const indexable = isIndexedUkLocationCitySlug(citySlug);
   return {
-    title,
+    // London's SEO title is exactly Jeff's 57-character title, so it skips the site title template.
+    title: loc.slug === "london" ? { absolute: title } : title,
     description,
     alternates: { canonical: url },
     robots: indexable
@@ -177,7 +178,10 @@ export default async function BlogPostPage({ params }: Props) {
   const title = buildUkLocationTitle(loc);
   const description = buildUkLocationMetaDescription(loc);
   const faqItems = buildLocationFaq(loc);
-  const faqLd = locationFaqJsonLd(faqItems);
+  // Jeff's final London content (12 Nov): "FAQ schema is added later, after the database is
+  // confirmed". The visible FAQ stays; the FAQPage JSON-LD is held back for these pages.
+  const faqSchemaOnHold = loc.slug === "london";
+  const faqLd = faqSchemaOnHold ? null : locationFaqJsonLd(faqItems);
   const articleLd = locationArticleJsonLd({
     url: canonical,
     title,
@@ -197,10 +201,12 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-      />
+      {faqLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      ) : null}
       <UkLocationFaqProvider faqItems={faqItems}>
         <LocationContentRenderer slug={citySlug} loc={loc} shareUrl={canonical} />
       </UkLocationFaqProvider>
