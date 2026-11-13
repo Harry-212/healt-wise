@@ -1,5 +1,6 @@
 import type { UkNation, UkWeightLossLocation } from "@/lib/data/uk-weight-loss-locations";
 import { SITE_ARTICLE_AUTHOR, SITE_BRAND_NAME } from "@/lib/site-brand";
+import { PRICE_CHECK_DATE_LONG } from "@/lib/data/price-check";
 
 /** `a` may include markdown links `[label](/path)` for on-page rendering; JSON-LD uses plain text. */
 export type FaqItem = { q: string; a: string };
@@ -172,7 +173,8 @@ export function buildUkLocationTitle(loc: UkWeightLossLocation): string {
     return "Best Weight Loss Treatment Livingston: West Lothian's Guide to Real, Safe Slimming";
   }
   if (loc.slug === "london") {
-    return "Weight Loss Treatment in London";
+    // 57 characters, from Jeff's final London content (12 Nov). The page uses an absolute title.
+    return "Weight Loss Treatment in London: Online Partners Compared";
   }
   if (loc.slug === "londonderry") {
     return "Best Weight Loss Treatment Londonderry: What Actually Works for Safe, Lasting Results";
@@ -375,7 +377,8 @@ export function buildUkLocationMetaDescription(loc: UkWeightLossLocation): strin
     return "Best weight loss treatment Livingston Scotland: NHS and private access, GLP 1 (Wegovy and Mounjaro) guide, 20 kg in 5 months plan, doctor talk tips, West Lothian hacks for safe slimming.";
   }
   if (loc.slug === "london") {
-    return "Compare selected online partners that deliver weight loss treatment to London: prices, what each includes and how to check a provider. Checked 12 November 2026.";
+    // One price-check date on the whole page: the central, dynamic date.
+    return `Compare selected online partners that deliver weight loss treatment to London: prices, what each includes and how to check a provider. Checked ${PRICE_CHECK_DATE_LONG}.`;
   }
   if (loc.slug === "londonderry") {
     return "Best weight loss treatment Londonderry NI: medically supervised plans, NHS and private GLP 1 access, Wegovy and Mounjaro context, realistic weight loss timelines, trustworthy clinic checks.";
@@ -2087,7 +2090,10 @@ export function buildLocationFaq(loc: UkWeightLossLocation): FaqItem[] {
       },
       {
         q: "How much does weight loss treatment cost in London?",
-        a: "Prices are the same for London addresses as for the rest of the UK. On 12 November 2026, the lowest standard price we found was £119.99 for Mounjaro 2.5 mg (the starting dose) and £64.99 for Wegovy 0.25 mg. See section 5 and the full price pages.",
+        // Dormant: the London FAQPage schema is on hold (see src/app/blog/[slug]/page.tsx). The visible
+        // answer is built from the live price rows in LondonLocationContent; rebuild this one the same
+        // way before the schema is switched back on.
+        a: `Prices are the same for London addresses as for the rest of the UK. On ${PRICE_CHECK_DATE_LONG}, the lowest standard price we found was £119.99 for Mounjaro 2.5 mg (the starting dose) and £64.99 for Wegovy 0.25 mg. See section 5 and the full price pages.`,
       },
       {
         q: "Is it safe to use an online pharmacy if I live in London?",

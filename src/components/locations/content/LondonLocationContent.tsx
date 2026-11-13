@@ -105,7 +105,12 @@ const PARTNER_CARDS: PartnerMeta[] = [
   },
 ];
 
-const FAQS = [
+/**
+ * Visible FAQ list. The cost answer (10.4) is built from the same live price rows and the same central
+ * check date as the table, so the FAQ can never show a different date or price from section 5.
+ */
+function buildFaqs(lowest: { mounjaroStart: string; wegovyStart: string }) {
+  return [
   {
     q: "Can I get weight loss treatment on the NHS in London?",
     a: "Some people can, if they meet set criteria, and access depends on your area. Ask your GP, and see the official guidance in section 3.1.",
@@ -120,7 +125,7 @@ const FAQS = [
   },
   {
     q: "How much does weight loss treatment cost in London?",
-    a: "Prices are the same for London addresses as for the rest of the UK. On 12 November 2026, the lowest standard price we found was \u00A3119.99 for Mounjaro 2.5 mg (the starting dose) and \u00A364.99 for Wegovy 0.25 mg. See section 5 and the full price pages.",
+    a: `Prices are the same for London addresses as for the rest of the UK. On ${PRICE_CHECK_DATE_LONG}, the lowest standard price we found was ${lowest.mounjaroStart} for Mounjaro 2.5 mg (the starting dose) and ${lowest.wegovyStart} for Wegovy 0.25 mg. See section 5 and the full price pages.`,
   },
   {
     q: "Is it safe to use an online pharmacy if I live in London?",
@@ -138,7 +143,8 @@ const FAQS = [
     q: "Does Healthwise360 recommend a provider?",
     a: "No. We compare selected partners and show their prices and details. See section 9 for how we are paid.",
   },
-];
+  ];
+}
 
 // Price formatting helper that returns currency string without typed pound-digit literals in source
 function formatAmount(val: number | string | undefined | null): string {
@@ -239,6 +245,15 @@ export default function LondonLocationContent({
       wgTop: minMaxFor("wgTopNum"),
     };
   }, [partnerData]);
+
+  const faqs = useMemo(
+    () =>
+      buildFaqs({
+        mounjaroStart: formatAmount(stats.mjStart.minVal),
+        wegovyStart: formatAmount(stats.wgStart.minVal),
+      }),
+    [stats],
+  );
 
   const bg = darkMode ? "bg-slate-950 text-slate-100" : "bg-white text-slate-800";
   const cardBg = darkMode ? "bg-slate-900 border-slate-800" : "bg-slate-50/80 border-slate-200";
@@ -751,7 +766,7 @@ export default function LondonLocationContent({
                 London weight loss treatment FAQs
               </h2>
               <div className="mt-6 divide-y divide-slate-200 border-y border-slate-200 dark:divide-slate-800 dark:border-slate-800">
-                {FAQS.map((faq, idx) => (
+                {faqs.map((faq, idx) => (
                   <div key={faq.q} className="py-4">
                     <button
                       type="button"
