@@ -24,7 +24,7 @@ export const SSOT_PAGE_FAQS: { question: string; answer: string }[] = [
   {
     question: "How often are prices checked?",
     answer:
-      "Prices are typically checked monthly using information supplied directly by selected partner pharmacies and providers, including confirmation by email where applicable. Readers should check the date attached to the relevant comparison and confirm current prices directly with the provider.",
+      "Standard retail prices are reviewed monthly using each partner pharmacy’s website and information supplied directly by the pharmacy. The date shown is the date of the latest completed price verification. Prices may change between checks, so confirm the final price and any additional charges with the pharmacy before ordering.",
   },
   {
     question: "Does Healthwise360 accept sponsorship?",

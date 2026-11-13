@@ -97,7 +97,7 @@ export const SSOT_PRICING = {
   kicker: "Pricing",
   title: "Price Research and Updates",
   paragraphs: [
-    "Prices are typically checked monthly using information supplied directly by selected partner pharmacies and providers, including confirmation by email where applicable. The checking date shown with a comparison indicates when the relevant information was reviewed.",
+    "Standard retail prices are reviewed monthly using each partner pharmacy’s website and information supplied directly by the pharmacy. The date shown is the date of the latest completed price verification. Prices may change between checks, so confirm the final price and any additional charges with the pharmacy before ordering.",
     "Published prices are not live checkout quotations. Prices, availability, introductory offers, delivery charges and provider terms may change between checks. Readers should confirm the final price and services included directly with their chosen provider.",
   ],
 };
@@ -158,7 +158,7 @@ export const SSOT_DESCRIPTIONS = {
   short:
     "Healthwise360 is an independent website comparing selected private weight-management providers, confirmed partner prices and pharmacy information for adults in England, Scotland and Wales.",
   extended:
-    "Healthwise360 is an independent weight-management comparison website founded in 2026 by Alistair Greenwood. It brings together published provider prices, pharmacy information and details about services such as consultations and delivery. Alistair and his team write the website’s comparisons and educational content. Prices are typically checked monthly. Healthwise360 does not prescribe, sell or dispense medicines or provide personal medical advice.",
+    "Healthwise360 is an independent weight-management comparison website founded in 2026 by Alistair Greenwood. It brings together published provider prices, pharmacy information and details about services such as consultations and delivery. Alistair and his team write the website’s comparisons and educational content. Standard retail prices are reviewed monthly using partner pharmacy websites and direct pharmacy updates. Healthwise360 does not prescribe, sell or dispense medicines or provide personal medical advice.",
 };
 
 export const PUBLISHER_GUIDANCE: string[] = [
@@ -166,7 +166,7 @@ export const PUBLISHER_GUIDANCE: string[] = [
   "It is not a pharmacy, clinic or prescribing service.",
   "Its current geographical focus is England, Scotland and Wales.",
   "Its contact address should be labelled as a contact address.",
-  "Prices are typically checked monthly and should not be described as live.",
+  "Standard retail prices are reviewed monthly and should not be described as live.",
   "Pharmacy inclusion does not mean that the pharmacy is owned or operated by Healthwise360.",
   "Personal social accounts listed for Alistair Greenwood should not be presented as separate Healthwise360 business accounts.",
 ];

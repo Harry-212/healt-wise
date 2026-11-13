@@ -18,6 +18,7 @@ import {
   FileText,
 } from "lucide-react";
 import Link from "next/link";
+import PriceVerificationDisclaimer from "@/components/ui/PriceVerificationDisclaimer";
 
 /** Date of the last substantive methodology update. Edit this when the methodology text changes. */
 const METHODOLOGY_LAST_UPDATED_ISO = "2026-11-06";
@@ -828,6 +829,8 @@ export default function MethodologyClient() {
                       We review comparison information regularly and display the relevant checking date where available. Prices, stock, delivery fees and offers can change between checks, so visitors should confirm the final details directly with the provider.
                     </p>
                   </div>
+
+                  <PriceVerificationDisclaimer />
 
                   <div className="rounded-xl border border-slate-200/60 bg-slate-50 p-5">
                     <p className="text-xs leading-relaxed text-slate-500 font-medium uppercase tracking-wider mb-2">Patient Check Guidelines:</p>

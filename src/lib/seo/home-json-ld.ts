@@ -43,7 +43,7 @@ function homeSchemaPriceSnapshotDataset(base: string): Record<string, unknown> {
     inLanguage: SCHEMA_LANGUAGE,
     license: `${base}/terms-of-service`,
     measurementTechnique:
-      "Listed prices checked on each pharmacy website in the first week of every month",
+      "Standard retail prices reviewed monthly using partner pharmacy websites and direct pharmacy updates",
     variableMeasured: [
       { "@type": "PropertyValue", name: "Lowest price", unitText: "GBP" },
       { "@type": "PropertyValue", name: "Highest price", unitText: "GBP" },

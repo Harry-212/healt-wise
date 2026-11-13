@@ -45,8 +45,8 @@ export const COMPARE_PAGE_FAQS: Record<string, CompareFaqItem[]> = {
       a: "No. Standard prices and offer prices are shown separately (section 3.3). Offers can change or end.",
     },
     {
-      q: "When were these prices checked?",
-      a: "On {pricesChecked}. The date is also shown under each table.",
+      q: "How often are prices checked?",
+      a: "Standard retail prices are reviewed monthly using each partner pharmacy’s website and information supplied directly by the pharmacy. The date shown ({pricesChecked}) is the date of the latest completed price verification. Prices may change between checks, so confirm the final price and any additional charges with the pharmacy before ordering.",
     },
     {
       q: "Is Mounjaro better than Wegovy?",

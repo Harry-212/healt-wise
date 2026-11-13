@@ -88,7 +88,7 @@ export function compareWegovyMounjaroJsonLd(
         inLanguage: "en-GB",
         license: `${base}/terms-of-service`,
         measurementTechnique:
-          "Listed prices checked on each provider website in the first week of every month",
+          "Standard retail prices reviewed monthly using partner pharmacy websites and direct pharmacy updates",
         variableMeasured: [
           { "@type": "PropertyValue", name: "Lowest price", unitText: "GBP" },
           { "@type": "PropertyValue", name: "Typical price", unitText: "GBP" },

@@ -360,7 +360,7 @@ export function buildWegovyCompareUkFaqItems(
     {
       question: "How often do you check Wegovy prices?",
       answer:
-        "We check standard prices directly with each pharmacy on the first working day of every month. The date of the last check is shown above the table.",
+        "Standard retail prices are reviewed monthly using each partner pharmacy’s website and information supplied directly by the pharmacy. The date shown is the date of the latest completed price verification. Prices may change between checks, so confirm the final price and any additional charges with the pharmacy before ordering.",
     },
   ];
 }

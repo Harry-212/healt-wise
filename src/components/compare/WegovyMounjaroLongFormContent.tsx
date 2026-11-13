@@ -13,6 +13,7 @@ import {
 
 import type { HomePriceSnapshotRow } from "@/lib/data/home-price-summary";
 import ComparisonCoverageNote from "@/components/compare/ComparisonCoverageNote";
+import PriceVerificationDisclaimer from "@/components/ui/PriceVerificationDisclaimer";
 import { getMounjaroCompareProviders } from "@/lib/data/compare-live";
 import { getWegovyCompareProviders } from "@/lib/data/compare-live";
 import { PROVIDERS } from "@/lib/data/providers";
@@ -282,6 +283,7 @@ export default function WegovyMounjaroLongFormContent({
                 </tbody>
               </table>
             </div>
+            <PriceVerificationDisclaimer checkDate={pricesChecked} className="mt-6" />
           </div>
 
           {/* 3.1 First month cost */}
