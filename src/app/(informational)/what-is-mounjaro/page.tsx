@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Check, ExternalLink } from "lucide-react";
 import MounjaroPageToc from "@/components/mounjaro/MounjaroPageToc";
+import GuideAuthorByline from "@/components/ui/GuideAuthorByline";
 import {
   whatIsMounjaroPageJsonLd,
   MOUNJARO_FAQ_ITEMS,
@@ -109,7 +110,11 @@ export default function WhatIsMounjaroPage() {
               <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-slate-200/80 pt-4 text-xs font-semibold text-slate-600 sm:text-sm">
                 <div className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-emerald-600 shrink-0" strokeWidth={2.5} />
-                  <span>Last reviewed {MOUNJARO_UK_COMPARE_LAST_UPDATED}</span>
+                  <GuideAuthorByline />
+                </div>
+                <div className="inline-flex items-center gap-1.5">
+                  <Check className="h-4 w-4 text-emerald-600 shrink-0" strokeWidth={2.5} />
+                  <span>Last updated {MOUNJARO_UK_COMPARE_LAST_UPDATED}</span>
                 </div>
                 <div className="inline-flex items-center gap-1.5">
                   <Check className="h-4 w-4 text-emerald-600 shrink-0" strokeWidth={2.5} />
